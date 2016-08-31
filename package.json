@@ -1,0 +1,18 @@
+{
+  "name": "ultra_cart_rest_api_v2",
+  "version": "2.0.0",
+  "description": "This_is_the_next_generation_UltraCart_REST_API___",
+  "license": "Apache-2.0",
+  "main": "src/com.ultracart.admin.v2.swagger/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive"
+  },
+  "dependencies": {
+    "superagent": "1.7.1"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}
