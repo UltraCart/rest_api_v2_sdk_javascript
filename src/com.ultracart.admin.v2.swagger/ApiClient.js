@@ -55,9 +55,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://localhost/rest/admin/v2
+     * @default https://secure.ultracart.com/rest/admin/v2
      */
-    this.basePath = 'https://localhost/rest/admin/v2'.replace(/\/+$/, '');
+    this.basePath = 'https://secure.ultracart.com/rest/admin/v2'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
