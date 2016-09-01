@@ -38,7 +38,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var opts = { 
-  'parentCategoryId': 56 // Integer | The parent category to retrieve items for.  Unspecified means all items on the account.  0 = root
+  'parentCategoryId': 56, // Integer | The parent category to retrieve items for.  Unspecified means all items on the account.  0 = root
+  'limit': 56, // Integer | The maximum number of records to return on this one API call.
+  'offset': 56, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'since': "since_example", // String | Fetch items that have been created/modified since this date/time.
+  'sort': "sort_example", // String | The sort order of the items.  See documentation for examples
+  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -56,6 +62,12 @@ apiInstance.itemItemsGet(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **parentCategoryId** | **Integer**| The parent category to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root | [optional] 
+ **limit** | **Integer**| The maximum number of records to return on this one API call. | [optional] 
+ **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] 
+ **since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 
+ **sort** | **String**| The sort order of the items.  See documentation for examples | [optional] 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -129,7 +141,7 @@ null (empty response body)
 
 <a name="itemItemsMerchantItemOidGet"></a>
 # **itemItemsMerchantItemOidGet**
-> ItemResponse itemItemsMerchantItemOidGet(merchantItemOid)
+> ItemResponse itemItemsMerchantItemOidGet(merchantItemOid, opts)
 
 Retrieve an item
 
@@ -154,6 +166,10 @@ var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var merchantItemOid = 56; // Integer | The item oid to retrieve.
 
+var opts = { 
+  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -162,7 +178,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.itemItemsMerchantItemOidGet(merchantItemOid, callback);
+apiInstance.itemItemsMerchantItemOidGet(merchantItemOid, opts, callback);
 ```
 
 ### Parameters
@@ -170,6 +186,8 @@ apiInstance.itemItemsMerchantItemOidGet(merchantItemOid, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **merchantItemOid** | **Integer**| The item oid to retrieve. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
