@@ -102,30 +102,37 @@
   }
 
   /**
+   * True if the item has an approved review
    * @member {Boolean} has_approved_review
    */
   exports.prototype['has_approved_review'] = undefined;
   /**
+   * True if the item has a review
    * @member {Boolean} has_review
    */
   exports.prototype['has_review'] = undefined;
   /**
+   * Number of approved reviews
    * @member {Integer} review_count
    */
   exports.prototype['review_count'] = undefined;
   /**
+   * Overall score of reviews
    * @member {Number} review_overall
    */
   exports.prototype['review_overall'] = undefined;
   /**
+   * Review template name
    * @member {String} review_template_name
    */
   exports.prototype['review_template_name'] = undefined;
   /**
+   * Review template object identifier
    * @member {Integer} review_template_oid
    */
   exports.prototype['review_template_oid'] = undefined;
   /**
+   * True if the item is reviewable
    * @member {Boolean} reviewable
    */
   exports.prototype['reviewable'] = undefined;

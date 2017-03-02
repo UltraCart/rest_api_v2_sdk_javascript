@@ -84,33 +84,38 @@
         obj['no_realtime_charge'] = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
       }
       if (data.hasOwnProperty('payment_method_validity')) {
-        obj['payment_method_validity'] = ApiClient.convertToType(data['payment_method_validity'], 'String');
+        obj['payment_method_validity'] = ApiClient.convertToType(data['payment_method_validity'], ['String']);
       }
       if (data.hasOwnProperty('rotating_transaction_gateway_codes')) {
-        obj['rotating_transaction_gateway_codes'] = ApiClient.convertToType(data['rotating_transaction_gateway_codes'], 'String');
+        obj['rotating_transaction_gateway_codes'] = ApiClient.convertToType(data['rotating_transaction_gateway_codes'], ['String']);
       }
     }
     return obj;
   }
 
   /**
+   * True if prepaid cards should be blocked from buying this item
    * @member {Boolean} block_prepaid
    */
   exports.prototype['block_prepaid'] = undefined;
   /**
+   * Credit card transaction type
    * @member {String} credit_card_transaction_type
    */
   exports.prototype['credit_card_transaction_type'] = undefined;
   /**
+   * True if no real-time charge should be performed on this item.
    * @member {Boolean} no_realtime_charge
    */
   exports.prototype['no_realtime_charge'] = undefined;
   /**
-   * @member {String} payment_method_validity
+   * Payment method validity
+   * @member {Array.<String>} payment_method_validity
    */
   exports.prototype['payment_method_validity'] = undefined;
   /**
-   * @member {String} rotating_transaction_gateway_codes
+   * Rotating transaction gateway codes
+   * @member {Array.<String>} rotating_transaction_gateway_codes
    */
   exports.prototype['rotating_transaction_gateway_codes'] = undefined;
 

@@ -126,54 +126,67 @@
   }
 
   /**
+   * Allocated to placed orders
    * @member {Number} allocated_to_placed_orders
    */
   exports.prototype['allocated_to_placed_orders'] = undefined;
   /**
+   * Allocated to shopping carts
    * @member {Number} allocated_to_shopping_carts
    */
   exports.prototype['allocated_to_shopping_carts'] = undefined;
   /**
+   * Available to allocate
    * @member {Number} available_to_allocate
    */
   exports.prototype['available_to_allocate'] = undefined;
   /**
+   * Desired inventory level
    * @member {Number} desired_inventory_level
    */
   exports.prototype['desired_inventory_level'] = undefined;
   /**
+   * Distribution center code
    * @member {String} distribution_center_code
    */
   exports.prototype['distribution_center_code'] = undefined;
   /**
+   * Distribution center object identifier
    * @member {Integer} distribution_center_oid
    */
   exports.prototype['distribution_center_oid'] = undefined;
   /**
+   * Estimated time of arrival
    * @member {String} eta
    */
   exports.prototype['eta'] = undefined;
   /**
+   * True if this distribution center handles this item
    * @member {Boolean} handles
    */
   exports.prototype['handles'] = undefined;
   /**
+   * Inventory level
    * @member {Number} inventory_level
    */
   exports.prototype['inventory_level'] = undefined;
   /**
+   * Maximum back-order
    * @member {Integer} maximum_backorder
    */
   exports.prototype['maximum_backorder'] = undefined;
   /**
+   * Reorder inventory level (triggers notification)
    * @member {Number} reorder_inventory_level
    */
   exports.prototype['reorder_inventory_level'] = undefined;
   /**
+   * SKU
    * @member {String} sku
    */
   exports.prototype['sku'] = undefined;
   /**
+   * Stock picking location
    * @member {String} stock_picking_location
    */
   exports.prototype['stock_picking_location'] = undefined;

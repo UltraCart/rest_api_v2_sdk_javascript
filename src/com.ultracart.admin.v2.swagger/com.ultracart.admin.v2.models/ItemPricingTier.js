@@ -94,10 +94,12 @@
   }
 
   /**
+   * True if this is the default tier
    * @member {Boolean} default_tier
    */
   exports.prototype['default_tier'] = undefined;
   /**
+   * Discounts
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTierDiscount>} discounts
    */
   exports.prototype['discounts'] = undefined;
@@ -106,10 +108,12 @@
    */
   exports.prototype['limit'] = undefined;
   /**
+   * Pricing tier name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
+   * Pricing tier object identifier
    * @member {Integer} pricing_tier_oid
    */
   exports.prototype['pricing_tier_oid'] = undefined;

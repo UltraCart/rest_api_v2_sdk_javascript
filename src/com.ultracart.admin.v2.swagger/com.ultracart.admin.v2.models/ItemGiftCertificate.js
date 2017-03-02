@@ -82,10 +82,12 @@
   }
 
   /**
+   * True if the purchase of this item generates a gift certificate
    * @member {Boolean} gift_certificate
    */
   exports.prototype['gift_certificate'] = undefined;
   /**
+   * The number of days that the gift certificate is good for (optional)
    * @member {Integer} gift_certificate_expiration_days
    */
   exports.prototype['gift_certificate_expiration_days'] = undefined;

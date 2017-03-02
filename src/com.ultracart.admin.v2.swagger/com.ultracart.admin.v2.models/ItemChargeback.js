@@ -82,10 +82,12 @@
   }
 
   /**
+   * Addendums
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargebackAddendum>} addendums
    */
   exports.prototype['addendums'] = undefined;
   /**
+   * Adjustment requests
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest>} adjustment_requests
    */
   exports.prototype['adjustment_requests'] = undefined;

@@ -60,9 +60,6 @@
 
 
 
-
-
-
   };
 
   /**
@@ -76,15 +73,6 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('ITEM_META_DESCRIPTION')) {
-        obj['ITEM_META_DESCRIPTION'] = ApiClient.convertToType(data['ITEM_META_DESCRIPTION'], 'String');
-      }
-      if (data.hasOwnProperty('ITEM_META_KEYWORDS')) {
-        obj['ITEM_META_KEYWORDS'] = ApiClient.convertToType(data['ITEM_META_KEYWORDS'], 'String');
-      }
-      if (data.hasOwnProperty('ITEM_META_TITLE')) {
-        obj['ITEM_META_TITLE'] = ApiClient.convertToType(data['ITEM_META_TITLE'], 'String');
-      }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
@@ -102,30 +90,22 @@
   }
 
   /**
-   * @member {String} ITEM_META_DESCRIPTION
-   */
-  exports.prototype['ITEM_META_DESCRIPTION'] = undefined;
-  /**
-   * @member {String} ITEM_META_KEYWORDS
-   */
-  exports.prototype['ITEM_META_KEYWORDS'] = undefined;
-  /**
-   * @member {String} ITEM_META_TITLE
-   */
-  exports.prototype['ITEM_META_TITLE'] = undefined;
-  /**
+   * Attribute name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
+   * Attribute translated text instance identifier
    * @member {Integer} translated_text_instance_oid
    */
   exports.prototype['translated_text_instance_oid'] = undefined;
   /**
+   * Attribute type
    * @member {String} type
    */
   exports.prototype['type'] = undefined;
   /**
+   * Attribute value
    * @member {String} value
    */
   exports.prototype['value'] = undefined;

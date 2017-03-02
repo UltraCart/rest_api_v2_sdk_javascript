@@ -86,18 +86,43 @@
   }
 
   /**
+   * Restrict item id
    * @member {String} restrict_merchant_item_id
    */
   exports.prototype['restrict_merchant_item_id'] = undefined;
   /**
+   * Restrict item object identifier
    * @member {Integer} restrict_merchant_item_oid
    */
   exports.prototype['restrict_merchant_item_oid'] = undefined;
   /**
-   * @member {String} type
+   * Restriction type
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRestrictionItem.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "can not be purchased with"
+     * @const
+     */
+    "can not be purchased with": "can not be purchased with",
+    /**
+     * value: "can only be purchased with"
+     * @const
+     */
+    "can only be purchased with": "can only be purchased with",
+    /**
+     * value: "must be purchased with"
+     * @const
+     */
+    "must be purchased with": "must be purchased with"  };
 
 
   return exports;

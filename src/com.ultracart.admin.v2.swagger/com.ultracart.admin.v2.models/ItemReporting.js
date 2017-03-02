@@ -75,18 +75,20 @@
         obj['report_as_upsell'] = ApiClient.convertToType(data['report_as_upsell'], 'Boolean');
       }
       if (data.hasOwnProperty('report_pickable_quantities')) {
-        obj['report_pickable_quantities'] = ApiClient.convertToType(data['report_pickable_quantities'], 'String');
+        obj['report_pickable_quantities'] = ApiClient.convertToType(data['report_pickable_quantities'], ['Integer']);
       }
     }
     return obj;
   }
 
   /**
+   * Report as an upsell
    * @member {Boolean} report_as_upsell
    */
   exports.prototype['report_as_upsell'] = undefined;
   /**
-   * @member {String} report_pickable_quantities
+   * Report pickable quantities
+   * @member {Array.<Integer>} report_pickable_quantities
    */
   exports.prototype['report_pickable_quantities'] = undefined;
 

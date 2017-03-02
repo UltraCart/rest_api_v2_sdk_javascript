@@ -72,8 +72,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('country')) {
-        obj['country'] = ApiClient.convertToType(data['country'], 'String');
+      if (data.hasOwnProperty('country_code')) {
+        obj['country_code'] = ApiClient.convertToType(data['country_code'], 'String');
       }
       if (data.hasOwnProperty('state')) {
         obj['state'] = ApiClient.convertToType(data['state'], 'String');
@@ -86,18 +86,38 @@
   }
 
   /**
-   * @member {String} country
+   * Country code (ISO-3166 two letter)
+   * @member {String} country_code
    */
-  exports.prototype['country'] = undefined;
+  exports.prototype['country_code'] = undefined;
   /**
+   * State
    * @member {String} state
    */
   exports.prototype['state'] = undefined;
   /**
-   * @member {String} validity
+   * Validity
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingDestinationRestriction.ValidityEnum} validity
    */
   exports.prototype['validity'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>validity</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ValidityEnum = {
+    /**
+     * value: "valid only for"
+     * @const
+     */
+    "valid only for": "valid only for",
+    /**
+     * value: "invalid for"
+     * @const
+     */
+    "invalid for": "invalid for"  };
 
 
   return exports;

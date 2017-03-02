@@ -82,10 +82,12 @@
   }
 
   /**
+   * Package name
    * @member {String} package_name
    */
   exports.prototype['package_name'] = undefined;
   /**
+   * Package object identifier
    * @member {Integer} package_oid
    */
   exports.prototype['package_oid'] = undefined;

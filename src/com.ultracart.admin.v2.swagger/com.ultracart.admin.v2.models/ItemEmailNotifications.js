@@ -82,10 +82,12 @@
   }
 
   /**
+   * Skip receipt email to customer
    * @member {Boolean} skip_receipt
    */
   exports.prototype['skip_receipt'] = undefined;
   /**
+   * Skip shipment notification to customer
    * @member {Boolean} skip_shipment_notification
    */
   exports.prototype['skip_shipment_notification'] = undefined;

@@ -86,14 +86,17 @@
   }
 
   /**
+   * WishList Member instance description
    * @member {String} wishlist_member_instance_description
    */
   exports.prototype['wishlist_member_instance_description'] = undefined;
   /**
+   * WishList Member instance object identifier
    * @member {Integer} wishlist_member_instance_oid
    */
   exports.prototype['wishlist_member_instance_oid'] = undefined;
   /**
+   * WishList Member SKU
    * @member {String} wishlist_member_sku
    */
   exports.prototype['wishlist_member_sku'] = undefined;

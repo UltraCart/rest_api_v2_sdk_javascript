@@ -82,10 +82,12 @@
   }
 
   /**
+   * Digital item object identifier
    * @member {Integer} digital_item_oid
    */
   exports.prototype['digital_item_oid'] = undefined;
   /**
+   * Original filename
    * @member {String} original_filename
    */
   exports.prototype['original_filename'] = undefined;

@@ -94,22 +94,27 @@
   }
 
   /**
+   * Auction ID
    * @member {String} auction_id
    */
   exports.prototype['auction_id'] = undefined;
   /**
+   * Price
    * @member {Number} price
    */
   exports.prototype['price'] = undefined;
   /**
+   * Seller
    * @member {String} seller
    */
   exports.prototype['seller'] = undefined;
   /**
+   * Shipping
    * @member {Number} shipping
    */
   exports.prototype['shipping'] = undefined;
   /**
+   * Total
    * @member {Number} total
    */
   exports.prototype['total'] = undefined;

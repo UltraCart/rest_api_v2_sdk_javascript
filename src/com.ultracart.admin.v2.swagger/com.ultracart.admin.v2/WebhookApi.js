@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummariesResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequestResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequest'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummariesResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequestResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/WebhooksResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Webhook'), require('../com.ultracart.admin.v2.models/WebhookLogSummariesResponse'), require('../com.ultracart.admin.v2.models/WebhookLogResponse'), require('../com.ultracart.admin.v2.models/WebhookSampleRequestResponse'), require('../com.ultracart.admin.v2.models/WebhookSampleRequest'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/WebhooksResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/WebhookResponse'), require('../com.ultracart.admin.v2.models/Webhook'), require('../com.ultracart.admin.v2.models/WebhookLogSummariesResponse'), require('../com.ultracart.admin.v2.models/WebhookLogResponse'), require('../com.ultracart.admin.v2.models/WebhookSampleRequestResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.WebhookApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.WebhooksResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Webhook, root.UltraCartRestApiV2.WebhookLogSummariesResponse, root.UltraCartRestApiV2.WebhookLogResponse, root.UltraCartRestApiV2.WebhookSampleRequestResponse, root.UltraCartRestApiV2.WebhookSampleRequest);
+    root.UltraCartRestApiV2.WebhookApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.WebhooksResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.WebhookResponse, root.UltraCartRestApiV2.Webhook, root.UltraCartRestApiV2.WebhookLogSummariesResponse, root.UltraCartRestApiV2.WebhookLogResponse, root.UltraCartRestApiV2.WebhookSampleRequestResponse);
   }
-}(this, function(ApiClient, WebhooksResponse, ErrorResponse, Webhook, WebhookLogSummariesResponse, WebhookLogResponse, WebhookSampleRequestResponse, WebhookSampleRequest) {
+}(this, function(ApiClient, WebhooksResponse, ErrorResponse, WebhookResponse, Webhook, WebhookLogSummariesResponse, WebhookLogResponse, WebhookSampleRequestResponse) {
   'use strict';
 
   /**
@@ -67,16 +67,26 @@
     /**
      * Retrieve webhooks
      * Retrieves the webhooks associated with this application. 
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.limit The maximum number of records to return on this one API call. (default to 100)
+     * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts.sort The sort order of the webhooks.  See documentation for examples
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse}
      */
-    this.webhookWebhooksGet = function(callback) {
+    this.webhookWebhooksGet = function(opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        '_limit': opts['limit'],
+        '_offset': opts['offset'],
+        '_sort': opts['sort'],
+        '_placeholders': opts['placeholders']
       };
       var headerParams = {
       };
@@ -99,18 +109,21 @@
      * Callback function to receive the result of the webhookWebhooksPost operation.
      * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Add a webhook
-     * Adds a new webhook on the account 
+     * Adds a new webhook on the account.  If you add a new webhook with the authentication_type set to basic, but do not specify the basic_username and basic_password, UltraCart will automatically generate random ones and return them.  This allows your application to have simpler logic on the setup of a secure webhook. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook} webhook Webhook to create
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse}
      */
-    this.webhookWebhooksPost = function(webhook, callback) {
+    this.webhookWebhooksPost = function(webhook, opts, callback) {
+      opts = opts || {};
       var postBody = webhook;
 
       // verify the required parameter 'webhook' is set
@@ -122,6 +135,7 @@
       var pathParams = {
       };
       var queryParams = {
+        '_placeholders': opts['placeholders']
       };
       var headerParams = {
       };
@@ -129,9 +143,9 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
-      var returnType = WebhooksResponse;
+      var returnType = WebhookResponse;
 
       return this.apiClient.callApi(
         '/webhook/webhooks', 'POST',
@@ -197,10 +211,15 @@
      * Retrieve the log summaries
      * Retrieves the log summary information for a given webhook.  This is useful for displaying all the various logs that can be viewed. 
      * @param {Integer} webhookOid The webhook oid to retrieve log summaries for.
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.limit The maximum number of records to return on this one API call. (default to 100)
+     * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts.since Fetch log summaries that have been delivered since this date/time.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksWebhookOidLogsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummariesResponse}
      */
-    this.webhookWebhooksWebhookOidLogsGet = function(webhookOid, callback) {
+    this.webhookWebhooksWebhookOidLogsGet = function(webhookOid, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'webhookOid' is set
@@ -213,6 +232,9 @@
         'webhookOid': webhookOid
       };
       var queryParams = {
+        '_limit': opts['limit'],
+        '_offset': opts['offset'],
+        '_since': opts['since']
       };
       var headerParams = {
       };
@@ -288,7 +310,7 @@
      * Callback function to receive the result of the webhookWebhooksWebhookOidPut operation.
      * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksWebhookOidPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -297,10 +319,13 @@
      * Update a webhook on the account 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook} webhook Webhook to update
      * @param {Integer} webhookOid The webhook oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksWebhookOidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse}
      */
-    this.webhookWebhooksWebhookOidPut = function(webhook, webhookOid, callback) {
+    this.webhookWebhooksWebhookOidPut = function(webhook, webhookOid, opts, callback) {
+      opts = opts || {};
       var postBody = webhook;
 
       // verify the required parameter 'webhook' is set
@@ -318,6 +343,7 @@
         'webhookOid': webhookOid
       };
       var queryParams = {
+        '_placeholders': opts['placeholders']
       };
       var headerParams = {
       };
@@ -325,9 +351,9 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
-      var returnType = WebhooksResponse;
+      var returnType = WebhookResponse;
 
       return this.apiClient.callApi(
         '/webhook/webhooks/{webhookOid}', 'PUT',
@@ -378,110 +404,12 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
       var returnType = WebhookSampleRequestResponse;
 
       return this.apiClient.callApi(
         '/webhook/webhooks/{webhookOid}/reflow/{eventName}', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the webhookWebhooksWebhookOidSamplesGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksWebhookOidSamplesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequestResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve a sample notification.
-     * Retrieves a sample notification for the webhook.  This provides as example of what the notifications that can be delivered will look like. 
-     * @param {Integer} webhookOid The webhook oid to retrieve samples for.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksWebhookOidSamplesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequestResponse}
-     */
-    this.webhookWebhooksWebhookOidSamplesGet = function(webhookOid, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'webhookOid' is set
-      if (webhookOid == undefined || webhookOid == null) {
-        throw "Missing the required parameter 'webhookOid' when calling webhookWebhooksWebhookOidSamplesGet";
-      }
-
-
-      var pathParams = {
-        'webhookOid': webhookOid
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = WebhookSampleRequestResponse;
-
-      return this.apiClient.callApi(
-        '/webhook/webhooks/{webhookOid}/samples', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the webhookWebhooksWebhookOidValidatePost operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksWebhookOidValidatePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Send test message to an endpoint.
-     * Performs a test of the webhook endpoint given the specified sample request and returns the log associated with the response. 
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequest} samples Samples to send in the test
-     * @param {Integer} webhookOid The webhook oid that is being tested.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi~webhookWebhooksWebhookOidValidatePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogResponse}
-     */
-    this.webhookWebhooksWebhookOidValidatePost = function(samples, webhookOid, callback) {
-      var postBody = samples;
-
-      // verify the required parameter 'samples' is set
-      if (samples == undefined || samples == null) {
-        throw "Missing the required parameter 'samples' when calling webhookWebhooksWebhookOidValidatePost";
-      }
-
-      // verify the required parameter 'webhookOid' is set
-      if (webhookOid == undefined || webhookOid == null) {
-        throw "Missing the required parameter 'webhookOid' when calling webhookWebhooksWebhookOidValidatePost";
-      }
-
-
-      var pathParams = {
-        'webhookOid': webhookOid
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = WebhookLogResponse;
-
-      return this.apiClient.callApi(
-        '/webhook/webhooks/{webhookOid}/validate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

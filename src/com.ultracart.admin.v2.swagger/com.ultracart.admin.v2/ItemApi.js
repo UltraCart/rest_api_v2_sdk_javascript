@@ -66,13 +66,14 @@
 
     /**
      * Retrieve items
-     * Retrieves a group of items from the account.  If no parameters are specified, all items will be returned. 
+     * Retrieves a group of items from the account.  If no parameters are specified, all items will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {Object} opts Optional parameters
-     * @param {Integer} opts.parentCategoryId The parent category to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root
-     * @param {Integer} opts.limit The maximum number of records to return on this one API call.
-     * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index.
+     * @param {Integer} opts.parentCategoryId The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root
+     * @param {String} opts.parentCategoryPath The parent category path to retrieve items for.  Unspecified means all items on the account.  / &#x3D; root
+     * @param {Integer} opts.limit The maximum number of records to return on this one API call. (Default 100, Max 2000) (default to 100)
+     * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts.since Fetch items that have been created/modified since this date/time.
-     * @param {String} opts.sort The sort order of the items.  See documentation for examples
+     * @param {String} opts.sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
      * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~itemItemsGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -87,6 +88,7 @@
       };
       var queryParams = {
         'parent_category_id': opts['parentCategoryId'],
+        'parent_category_path': opts['parentCategoryPath'],
         '_limit': opts['limit'],
         '_offset': opts['offset'],
         '_since': opts['since'],
@@ -219,7 +221,7 @@
     /**
      * Update an item
      * Update a new item on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item} item Item to create
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item} item Item to update
      * @param {Integer} merchantItemOid The item oid to update.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~itemItemsMerchantItemOidPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse}
@@ -249,7 +251,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
       var returnType = ItemResponse;
 
@@ -294,7 +296,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
       var returnType = ItemResponse;
 

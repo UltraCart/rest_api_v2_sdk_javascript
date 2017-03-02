@@ -82,10 +82,12 @@
   }
 
   /**
+   * On or before date
    * @member {String} on_or_before_date
    */
   exports.prototype['on_or_before_date'] = undefined;
   /**
+   * Unit cost
    * @member {Number} unit_cost
    */
   exports.prototype['unit_cost'] = undefined;

@@ -78,6 +78,7 @@
   }
 
   /**
+   * Notifications
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemInstantPaymentNotification>} notifications
    */
   exports.prototype['notifications'] = undefined;

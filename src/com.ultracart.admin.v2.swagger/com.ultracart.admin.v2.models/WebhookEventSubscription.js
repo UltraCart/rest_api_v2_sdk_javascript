@@ -106,34 +106,42 @@
   }
 
   /**
+   * Comment about the event to provide further clarification to the end user
    * @member {String} comments
    */
   exports.prototype['comments'] = undefined;
   /**
+   * True if the event is deprecated.  See the API change log for details on when it will be discontinued.
    * @member {Boolean} deprecated_flag
    */
   exports.prototype['deprecated_flag'] = undefined;
   /**
+   * True if the event is discontinued.  See the API change log for details on migration details.
    * @member {Boolean} discontinued_flag
    */
   exports.prototype['discontinued_flag'] = undefined;
   /**
+   * Description of the event
    * @member {String} event_description
    */
   exports.prototype['event_description'] = undefined;
   /**
+   * Event name
    * @member {String} event_name
    */
   exports.prototype['event_name'] = undefined;
   /**
+   * The expand string for the notification object.  See the individual resource _expand documentation for valid values.
    * @member {String} expansion
    */
   exports.prototype['expansion'] = undefined;
   /**
+   * True if this is event is subscribed to
    * @member {Boolean} subscribed
    */
   exports.prototype['subscribed'] = undefined;
   /**
+   * The webhook event object identifier
    * @member {Integer} webhook_event_oid
    */
   exports.prototype['webhook_event_oid'] = undefined;

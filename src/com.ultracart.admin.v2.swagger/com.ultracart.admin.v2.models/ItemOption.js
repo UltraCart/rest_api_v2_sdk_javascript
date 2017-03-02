@@ -130,62 +130,118 @@
   }
 
   /**
+   * Cost if specified
    * @member {Number} cost_if_specified
    */
   exports.prototype['cost_if_specified'] = undefined;
   /**
+   * Cost per letter
    * @member {Number} cost_per_letter
    */
   exports.prototype['cost_per_letter'] = undefined;
   /**
+   * Cost per line
    * @member {Number} cost_per_line
    */
   exports.prototype['cost_per_line'] = undefined;
   /**
+   * Ignore this option on the order if the default value is selected
    * @member {Boolean} ignore_if_default
    */
   exports.prototype['ignore_if_default'] = undefined;
   /**
+   * Label
    * @member {String} label
    */
   exports.prototype['label'] = undefined;
   /**
+   * Label translated text instance ID
    * @member {Integer} label_translated_text_instance_oid
    */
   exports.prototype['label_translated_text_instance_oid'] = undefined;
   /**
+   * Name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
+   * Name translated text instance ID
    * @member {Integer} name_translated_text_instance_oid
    */
   exports.prototype['name_translated_text_instance_oid'] = undefined;
   /**
+   * One time fee
    * @member {Boolean} one_time_fee
    */
   exports.prototype['one_time_fee'] = undefined;
   /**
+   * Option object identifier
    * @member {Integer} option_oid
    */
   exports.prototype['option_oid'] = undefined;
   /**
+   * True if the customer is required to specify an answer
    * @member {Boolean} required
    */
   exports.prototype['required'] = undefined;
   /**
+   * True if this is a system option
    * @member {Boolean} system_option
    */
   exports.prototype['system_option'] = undefined;
   /**
-   * @member {String} type
+   * Type of option
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOption.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
   /**
+   * Values
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOptionValue>} values
    */
   exports.prototype['values'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "dropdown"
+     * @const
+     */
+    "dropdown": "dropdown",
+    /**
+     * value: "file attachment"
+     * @const
+     */
+    "file attachment": "file attachment",
+    /**
+     * value: "fixed"
+     * @const
+     */
+    "fixed": "fixed",
+    /**
+     * value: "hidden"
+     * @const
+     */
+    "hidden": "hidden",
+    /**
+     * value: "multiline"
+     * @const
+     */
+    "multiline": "multiline",
+    /**
+     * value: "radio"
+     * @const
+     */
+    "radio": "radio",
+    /**
+     * value: "single"
+     * @const
+     */
+    "single": "single"  };
 
 
   return exports;

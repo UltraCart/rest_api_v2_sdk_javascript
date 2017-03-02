@@ -134,66 +134,103 @@
   }
 
   /**
+   * Cost
    * @member {Number} cost
    */
   exports.prototype['cost'] = undefined;
   /**
+   * Each additional item markup
    * @member {Number} each_additional_item_markup
    */
   exports.prototype['each_additional_item_markup'] = undefined;
   /**
+   * Filter to this method if available
    * @member {Boolean} filter_to_if_available
    */
   exports.prototype['filter_to_if_available'] = undefined;
   /**
+   * First item markup
    * @member {Number} first_item_markup
    */
   exports.prototype['first_item_markup'] = undefined;
   /**
+   * Fixed shipping cost
    * @member {Number} fixed_shipping_cost
    */
   exports.prototype['fixed_shipping_cost'] = undefined;
   /**
+   * Flat fee markup
    * @member {Number} flat_fee_markup
    */
   exports.prototype['flat_fee_markup'] = undefined;
   /**
+   * Free shipping
    * @member {Boolean} free_shipping
    */
   exports.prototype['free_shipping'] = undefined;
   /**
+   * Per item fee markup
    * @member {Number} per_item_fee_markup
    */
   exports.prototype['per_item_fee_markup'] = undefined;
   /**
+   * Percentage markup
    * @member {Number} percentage_markup
    */
   exports.prototype['percentage_markup'] = undefined;
   /**
+   * Percentage of item markup
    * @member {Number} percentage_of_item_markup
    */
   exports.prototype['percentage_of_item_markup'] = undefined;
   /**
+   * Relax restrictions on upsell
    * @member {Boolean} relax_restrictions_on_upsell
    */
   exports.prototype['relax_restrictions_on_upsell'] = undefined;
   /**
+   * Shipping method name
    * @member {String} shipping_method
    */
   exports.prototype['shipping_method'] = undefined;
   /**
+   * Shipping method object identifier
    * @member {Integer} shipping_method_oid
    */
   exports.prototype['shipping_method_oid'] = undefined;
   /**
-   * @member {String} shipping_method_validity
+   * Shipping method validity
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingMethod.ShippingMethodValidityEnum} shipping_method_validity
    */
   exports.prototype['shipping_method_validity'] = undefined;
   /**
+   * Signature required
    * @member {Boolean} signature_required
    */
   exports.prototype['signature_required'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>shipping_method_validity</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ShippingMethodValidityEnum = {
+    /**
+     * value: "invalid for"
+     * @const
+     */
+    "invalid for": "invalid for",
+    /**
+     * value: "valid for"
+     * @const
+     */
+    "valid for": "valid for",
+    /**
+     * value: "valid only for"
+     * @const
+     */
+    "valid only for": "valid only for"  };
 
 
   return exports;

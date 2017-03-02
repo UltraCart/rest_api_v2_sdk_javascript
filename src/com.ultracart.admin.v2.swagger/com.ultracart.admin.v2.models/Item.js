@@ -270,6 +270,7 @@
    */
   exports.prototype['ccbill'] = undefined;
   /**
+   * Channel Partner Item Mapping
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChannelPartnerMapping>} channelPartnerMappings
    */
   exports.prototype['channelPartnerMappings'] = undefined;
@@ -286,14 +287,17 @@
    */
   exports.prototype['content'] = undefined;
   /**
+   * Date/time of creation
    * @member {String} creation_dts
    */
   exports.prototype['creation_dts'] = undefined;
   /**
+   * Description of the item up to 500 characters.
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
   /**
+   * Description translated text instance id
    * @member {Integer} description_translated_text_instance_oid
    */
   exports.prototype['description_translated_text_instance_oid'] = undefined;
@@ -326,6 +330,7 @@
    */
   exports.prototype['identifiers'] = undefined;
   /**
+   * True if this item is inactive and can not be purchased
    * @member {Boolean} inactive
    */
   exports.prototype['inactive'] = undefined;
@@ -338,6 +343,7 @@
    */
   exports.prototype['internal'] = undefined;
   /**
+   * True if this item is a kit
    * @member {Boolean} kit
    */
   exports.prototype['kit'] = undefined;
@@ -346,26 +352,32 @@
    */
   exports.prototype['kit_definition'] = undefined;
   /**
+   * Date/time of last modification
    * @member {String} last_modified_dts
    */
   exports.prototype['last_modified_dts'] = undefined;
   /**
+   * UltraCart merchant ID owning item
    * @member {String} merchant_id
    */
   exports.prototype['merchant_id'] = undefined;
   /**
+   * Unique item id assigned to this item
    * @member {String} merchant_item_id
    */
   exports.prototype['merchant_item_id'] = undefined;
   /**
+   * Unique object identifier for this item
    * @member {Integer} merchant_item_oid
    */
   exports.prototype['merchant_item_oid'] = undefined;
   /**
+   * Options
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOption>} options
    */
   exports.prototype['options'] = undefined;
   /**
+   * Parent category of the item.  Zero indicates the root folder.
    * @member {Integer} parent_category_id
    */
   exports.prototype['parent_category_id'] = undefined;
@@ -418,14 +430,17 @@
    */
   exports.prototype['tax'] = undefined;
   /**
+   * 3rd Party Email Marketing
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing>} third_party_email_marketing
    */
   exports.prototype['third_party_email_marketing'] = undefined;
   /**
+   * Variant Items
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariantItem>} variant_items
    */
   exports.prototype['variant_items'] = undefined;
   /**
+   * Variations
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariation>} variations
    */
   exports.prototype['variations'] = undefined;

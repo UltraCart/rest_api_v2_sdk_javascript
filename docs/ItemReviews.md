@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hasApprovedReview** | **Boolean** |  | [optional] 
-**hasReview** | **Boolean** |  | [optional] 
-**reviewCount** | **Integer** |  | [optional] 
-**reviewOverall** | **Number** |  | [optional] 
-**reviewTemplateName** | **String** |  | [optional] 
-**reviewTemplateOid** | **Integer** |  | [optional] 
-**reviewable** | **Boolean** |  | [optional] 
+**hasApprovedReview** | **Boolean** | True if the item has an approved review | [optional] 
+**hasReview** | **Boolean** | True if the item has a review | [optional] 
+**reviewCount** | **Integer** | Number of approved reviews | [optional] 
+**reviewOverall** | **Number** | Overall score of reviews | [optional] 
+**reviewTemplateName** | **String** | Review template name | [optional] 
+**reviewTemplateOid** | **Integer** | Review template object identifier | [optional] 
+**reviewable** | **Boolean** | True if the item is reviewable | [optional] 
 
 

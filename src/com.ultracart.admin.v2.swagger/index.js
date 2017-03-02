@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ApiUserApplicationProfile', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Distance', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/HTTPHeader', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAccounting', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAmember', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStep', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemCCBill', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChannelPartnerMapping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargeback', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargebackAddendum', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemCheckout', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContent', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentAssignment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentAttribute', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentMultimedia', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemDigitalDelivery', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemDigitalItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbay', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayCategorySpecific', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayMarketListing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEmailNotifications', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEnrollment123', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemGiftCertificate', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemGoogleProductSearch', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemIdentifiers', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemInstantPaymentNotification', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemInstantPaymentNotifications', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemInternal', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemKitComponent', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemKitDefinition', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOptionValue', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOptionValueAdditionalItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOptionValueDigitalItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPaymentProcessing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPhysical', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTier', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTierDiscount', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTierLimit', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRealtimePricing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRelated', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRelatedItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemReporting', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRestriction', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRestrictionItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRevguard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemReviews', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemSalesforce', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShipping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingCase', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingDestinationMarkup', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingDestinationRestriction', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingDistributionCenter', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingMethod', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingPackageRequirement', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemTax', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemTaxExemption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariantItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariation', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariationOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemWishlistMember', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ResultSet', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/TempMultimedia', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/TempMultimediaResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookEventCategory', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookEventSubscription', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLog', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummariesResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummary', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequestResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Weight', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ApiUserApplicationProfile', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderItemOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrdersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Cart', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartAffiliate', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartBuysafe', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCheckout', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCoupon', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCustomerProfile', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCustomerProfileAddress', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCustomerProfileCreditCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartFinalizeOrderRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartFinalizeOrderRequestOptions', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartFinalizeOrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartGift', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartGiftCertificate', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemAttribute', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemMultimedia', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemMultimediaThumbnail', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemOptionValue', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemPhysical', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemVariationSelection', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartKitComponentOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartMarketing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPayment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentAmazon', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentCheck', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentCreditCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentPurchaseOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileLoginRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileLoginResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileRegisterRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileRegisterResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettings', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsGift', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsGiftWrap', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPayment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPaymentAmazon', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPaymentPayPal', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsProvince', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsShipping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsShippingCalendar', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsShippingEstimate', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsTaxes', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsTerms', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartShipping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSummary', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartTaxes', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartUpsellAfter', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartValidationRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartValidationResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutHandoffRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutHandoffResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Distance', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/DistributionCenter', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/DistributionCentersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/FulfillmentInventory', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/FulfillmentShipment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/HTTPHeader', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAccounting', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAmember', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStep', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemCCBill', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChannelPartnerMapping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargeback', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargebackAddendum', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemCheckout', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContent', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentAssignment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentAttribute', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentMultimedia', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemDigitalDelivery', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemDigitalItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbay', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayCategorySpecific', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayMarketListing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEmailNotifications', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEnrollment123', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemGiftCertificate', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemGoogleProductSearch', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemIdentifiers', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemInstantPaymentNotification', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemInstantPaymentNotifications', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemInternal', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemKitComponent', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemKitDefinition', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOptionValue', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOptionValueAdditionalItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemOptionValueDigitalItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPaymentProcessing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPhysical', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTier', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTierDiscount', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTierLimit', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRealtimePricing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRelated', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRelatedItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemReporting', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRestriction', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRestrictionItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRevguard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemReviews', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemSalesforce', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShipping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingCase', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingDestinationMarkup', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingDestinationRestriction', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingDistributionCenter', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingMethod', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingPackageRequirement', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemTax', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemTaxExemption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariantItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariation', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariationOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemWishlistMember', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OauthRevokeSuccessResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OauthTokenResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderAffiliate', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderAffiliateLedger', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderAutoOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderBuysafe', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderChannelPartner', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderCheckout', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderCoupon', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderDigitalItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderDigitalOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderEdi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderFraudScore', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderGift', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderGiftCertificate', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderInternal', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItem', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemEdi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemEdiIdentification', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemEdiLot', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemOption', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemOptionFileAttachment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderLinkedShipment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderMarketing', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPayment', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentCheck', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentCreditCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentECheck', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentTransaction', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentTransactionDetail', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderQuote', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderSalesforce', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderShipping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderSummary', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderTaxes', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ResultSet', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/TempMultimedia', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/TempMultimediaResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookEventCategory', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookEventSubscription', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLog', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummariesResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummary', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequestResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhooksResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Weight', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CheckoutApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/FulfillmentApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OauthApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./com.ultracart.admin.v2.models/ApiUserApplicationProfile'), require('./com.ultracart.admin.v2.models/Distance'), require('./com.ultracart.admin.v2.models/Error'), require('./com.ultracart.admin.v2.models/ErrorResponse'), require('./com.ultracart.admin.v2.models/HTTPHeader'), require('./com.ultracart.admin.v2.models/Item'), require('./com.ultracart.admin.v2.models/ItemAccounting'), require('./com.ultracart.admin.v2.models/ItemAmember'), require('./com.ultracart.admin.v2.models/ItemAutoOrder'), require('./com.ultracart.admin.v2.models/ItemAutoOrderStep'), require('./com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule'), require('./com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing'), require('./com.ultracart.admin.v2.models/ItemCCBill'), require('./com.ultracart.admin.v2.models/ItemChannelPartnerMapping'), require('./com.ultracart.admin.v2.models/ItemChargeback'), require('./com.ultracart.admin.v2.models/ItemChargebackAddendum'), require('./com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest'), require('./com.ultracart.admin.v2.models/ItemCheckout'), require('./com.ultracart.admin.v2.models/ItemContent'), require('./com.ultracart.admin.v2.models/ItemContentAssignment'), require('./com.ultracart.admin.v2.models/ItemContentAttribute'), require('./com.ultracart.admin.v2.models/ItemContentMultimedia'), require('./com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail'), require('./com.ultracart.admin.v2.models/ItemDigitalDelivery'), require('./com.ultracart.admin.v2.models/ItemDigitalItem'), require('./com.ultracart.admin.v2.models/ItemEbay'), require('./com.ultracart.admin.v2.models/ItemEbayCategorySpecific'), require('./com.ultracart.admin.v2.models/ItemEbayMarketListing'), require('./com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis'), require('./com.ultracart.admin.v2.models/ItemEmailNotifications'), require('./com.ultracart.admin.v2.models/ItemEnrollment123'), require('./com.ultracart.admin.v2.models/ItemGiftCertificate'), require('./com.ultracart.admin.v2.models/ItemGoogleProductSearch'), require('./com.ultracart.admin.v2.models/ItemIdentifiers'), require('./com.ultracart.admin.v2.models/ItemInstantPaymentNotification'), require('./com.ultracart.admin.v2.models/ItemInstantPaymentNotifications'), require('./com.ultracart.admin.v2.models/ItemInternal'), require('./com.ultracart.admin.v2.models/ItemKitComponent'), require('./com.ultracart.admin.v2.models/ItemKitDefinition'), require('./com.ultracart.admin.v2.models/ItemOption'), require('./com.ultracart.admin.v2.models/ItemOptionValue'), require('./com.ultracart.admin.v2.models/ItemOptionValueAdditionalItem'), require('./com.ultracart.admin.v2.models/ItemOptionValueDigitalItem'), require('./com.ultracart.admin.v2.models/ItemPaymentProcessing'), require('./com.ultracart.admin.v2.models/ItemPhysical'), require('./com.ultracart.admin.v2.models/ItemPricing'), require('./com.ultracart.admin.v2.models/ItemPricingTier'), require('./com.ultracart.admin.v2.models/ItemPricingTierDiscount'), require('./com.ultracart.admin.v2.models/ItemPricingTierLimit'), require('./com.ultracart.admin.v2.models/ItemRealtimePricing'), require('./com.ultracart.admin.v2.models/ItemRelated'), require('./com.ultracart.admin.v2.models/ItemRelatedItem'), require('./com.ultracart.admin.v2.models/ItemReporting'), require('./com.ultracart.admin.v2.models/ItemResponse'), require('./com.ultracart.admin.v2.models/ItemRestriction'), require('./com.ultracart.admin.v2.models/ItemRestrictionItem'), require('./com.ultracart.admin.v2.models/ItemRevguard'), require('./com.ultracart.admin.v2.models/ItemReviews'), require('./com.ultracart.admin.v2.models/ItemSalesforce'), require('./com.ultracart.admin.v2.models/ItemShipping'), require('./com.ultracart.admin.v2.models/ItemShippingCase'), require('./com.ultracart.admin.v2.models/ItemShippingDestinationMarkup'), require('./com.ultracart.admin.v2.models/ItemShippingDestinationRestriction'), require('./com.ultracart.admin.v2.models/ItemShippingDistributionCenter'), require('./com.ultracart.admin.v2.models/ItemShippingMethod'), require('./com.ultracart.admin.v2.models/ItemShippingPackageRequirement'), require('./com.ultracart.admin.v2.models/ItemTax'), require('./com.ultracart.admin.v2.models/ItemTaxExemption'), require('./com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing'), require('./com.ultracart.admin.v2.models/ItemVariantItem'), require('./com.ultracart.admin.v2.models/ItemVariation'), require('./com.ultracart.admin.v2.models/ItemVariationOption'), require('./com.ultracart.admin.v2.models/ItemWishlistMember'), require('./com.ultracart.admin.v2.models/ItemsResponse'), require('./com.ultracart.admin.v2.models/ResponseMetadata'), require('./com.ultracart.admin.v2.models/ResultSet'), require('./com.ultracart.admin.v2.models/TempMultimedia'), require('./com.ultracart.admin.v2.models/TempMultimediaResponse'), require('./com.ultracart.admin.v2.models/Webhook'), require('./com.ultracart.admin.v2.models/WebhookEventCategory'), require('./com.ultracart.admin.v2.models/WebhookEventSubscription'), require('./com.ultracart.admin.v2.models/WebhookLog'), require('./com.ultracart.admin.v2.models/WebhookLogResponse'), require('./com.ultracart.admin.v2.models/WebhookLogSummariesResponse'), require('./com.ultracart.admin.v2.models/WebhookLogSummary'), require('./com.ultracart.admin.v2.models/WebhookSampleRequest'), require('./com.ultracart.admin.v2.models/WebhookSampleRequestResponse'), require('./com.ultracart.admin.v2.models/WebhooksResponse'), require('./com.ultracart.admin.v2.models/Weight'), require('./com.ultracart.admin.v2/ItemApi'), require('./com.ultracart.admin.v2/WebhookApi'));
+    module.exports = factory(require('./ApiClient'), require('./com.ultracart.admin.v2.models/ApiUserApplicationProfile'), require('./com.ultracart.admin.v2.models/AutoOrder'), require('./com.ultracart.admin.v2.models/AutoOrderItem'), require('./com.ultracart.admin.v2.models/AutoOrderItemOption'), require('./com.ultracart.admin.v2.models/AutoOrderResponse'), require('./com.ultracart.admin.v2.models/AutoOrdersResponse'), require('./com.ultracart.admin.v2.models/BaseResponse'), require('./com.ultracart.admin.v2.models/Cart'), require('./com.ultracart.admin.v2.models/CartAffiliate'), require('./com.ultracart.admin.v2.models/CartBilling'), require('./com.ultracart.admin.v2.models/CartBuysafe'), require('./com.ultracart.admin.v2.models/CartCheckout'), require('./com.ultracart.admin.v2.models/CartCoupon'), require('./com.ultracart.admin.v2.models/CartCustomerProfile'), require('./com.ultracart.admin.v2.models/CartCustomerProfileAddress'), require('./com.ultracart.admin.v2.models/CartCustomerProfileCreditCard'), require('./com.ultracart.admin.v2.models/CartFinalizeOrderRequest'), require('./com.ultracart.admin.v2.models/CartFinalizeOrderRequestOptions'), require('./com.ultracart.admin.v2.models/CartFinalizeOrderResponse'), require('./com.ultracart.admin.v2.models/CartGift'), require('./com.ultracart.admin.v2.models/CartGiftCertificate'), require('./com.ultracart.admin.v2.models/CartItem'), require('./com.ultracart.admin.v2.models/CartItemAttribute'), require('./com.ultracart.admin.v2.models/CartItemMultimedia'), require('./com.ultracart.admin.v2.models/CartItemMultimediaThumbnail'), require('./com.ultracart.admin.v2.models/CartItemOption'), require('./com.ultracart.admin.v2.models/CartItemOptionValue'), require('./com.ultracart.admin.v2.models/CartItemPhysical'), require('./com.ultracart.admin.v2.models/CartItemVariationSelection'), require('./com.ultracart.admin.v2.models/CartKitComponentOption'), require('./com.ultracart.admin.v2.models/CartMarketing'), require('./com.ultracart.admin.v2.models/CartPayment'), require('./com.ultracart.admin.v2.models/CartPaymentAmazon'), require('./com.ultracart.admin.v2.models/CartPaymentCheck'), require('./com.ultracart.admin.v2.models/CartPaymentCreditCard'), require('./com.ultracart.admin.v2.models/CartPaymentPurchaseOrder'), require('./com.ultracart.admin.v2.models/CartProfileLoginRequest'), require('./com.ultracart.admin.v2.models/CartProfileLoginResponse'), require('./com.ultracart.admin.v2.models/CartProfileRegisterRequest'), require('./com.ultracart.admin.v2.models/CartProfileRegisterResponse'), require('./com.ultracart.admin.v2.models/CartResponse'), require('./com.ultracart.admin.v2.models/CartSettings'), require('./com.ultracart.admin.v2.models/CartSettingsBilling'), require('./com.ultracart.admin.v2.models/CartSettingsGift'), require('./com.ultracart.admin.v2.models/CartSettingsGiftWrap'), require('./com.ultracart.admin.v2.models/CartSettingsPayment'), require('./com.ultracart.admin.v2.models/CartSettingsPaymentAmazon'), require('./com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard'), require('./com.ultracart.admin.v2.models/CartSettingsPaymentPayPal'), require('./com.ultracart.admin.v2.models/CartSettingsProvince'), require('./com.ultracart.admin.v2.models/CartSettingsShipping'), require('./com.ultracart.admin.v2.models/CartSettingsShippingCalendar'), require('./com.ultracart.admin.v2.models/CartSettingsShippingEstimate'), require('./com.ultracart.admin.v2.models/CartSettingsTaxes'), require('./com.ultracart.admin.v2.models/CartSettingsTerms'), require('./com.ultracart.admin.v2.models/CartShipping'), require('./com.ultracart.admin.v2.models/CartSummary'), require('./com.ultracart.admin.v2.models/CartTaxes'), require('./com.ultracart.admin.v2.models/CartUpsellAfter'), require('./com.ultracart.admin.v2.models/CartValidationRequest'), require('./com.ultracart.admin.v2.models/CartValidationResponse'), require('./com.ultracart.admin.v2.models/CheckoutHandoffRequest'), require('./com.ultracart.admin.v2.models/CheckoutHandoffResponse'), require('./com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest'), require('./com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse'), require('./com.ultracart.admin.v2.models/Currency'), require('./com.ultracart.admin.v2.models/Customer'), require('./com.ultracart.admin.v2.models/CustomerBilling'), require('./com.ultracart.admin.v2.models/CustomerCard'), require('./com.ultracart.admin.v2.models/CustomerPricingTier'), require('./com.ultracart.admin.v2.models/CustomerResponse'), require('./com.ultracart.admin.v2.models/CustomerShipping'), require('./com.ultracart.admin.v2.models/CustomersResponse'), require('./com.ultracart.admin.v2.models/Distance'), require('./com.ultracart.admin.v2.models/DistributionCenter'), require('./com.ultracart.admin.v2.models/DistributionCentersResponse'), require('./com.ultracart.admin.v2.models/Error'), require('./com.ultracart.admin.v2.models/ErrorResponse'), require('./com.ultracart.admin.v2.models/FulfillmentInventory'), require('./com.ultracart.admin.v2.models/FulfillmentShipment'), require('./com.ultracart.admin.v2.models/HTTPHeader'), require('./com.ultracart.admin.v2.models/Item'), require('./com.ultracart.admin.v2.models/ItemAccounting'), require('./com.ultracart.admin.v2.models/ItemAmember'), require('./com.ultracart.admin.v2.models/ItemAutoOrder'), require('./com.ultracart.admin.v2.models/ItemAutoOrderStep'), require('./com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule'), require('./com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing'), require('./com.ultracart.admin.v2.models/ItemCCBill'), require('./com.ultracart.admin.v2.models/ItemChannelPartnerMapping'), require('./com.ultracart.admin.v2.models/ItemChargeback'), require('./com.ultracart.admin.v2.models/ItemChargebackAddendum'), require('./com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest'), require('./com.ultracart.admin.v2.models/ItemCheckout'), require('./com.ultracart.admin.v2.models/ItemContent'), require('./com.ultracart.admin.v2.models/ItemContentAssignment'), require('./com.ultracart.admin.v2.models/ItemContentAttribute'), require('./com.ultracart.admin.v2.models/ItemContentMultimedia'), require('./com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail'), require('./com.ultracart.admin.v2.models/ItemDigitalDelivery'), require('./com.ultracart.admin.v2.models/ItemDigitalItem'), require('./com.ultracart.admin.v2.models/ItemEbay'), require('./com.ultracart.admin.v2.models/ItemEbayCategorySpecific'), require('./com.ultracart.admin.v2.models/ItemEbayMarketListing'), require('./com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis'), require('./com.ultracart.admin.v2.models/ItemEmailNotifications'), require('./com.ultracart.admin.v2.models/ItemEnrollment123'), require('./com.ultracart.admin.v2.models/ItemGiftCertificate'), require('./com.ultracart.admin.v2.models/ItemGoogleProductSearch'), require('./com.ultracart.admin.v2.models/ItemIdentifiers'), require('./com.ultracart.admin.v2.models/ItemInstantPaymentNotification'), require('./com.ultracart.admin.v2.models/ItemInstantPaymentNotifications'), require('./com.ultracart.admin.v2.models/ItemInternal'), require('./com.ultracart.admin.v2.models/ItemKitComponent'), require('./com.ultracart.admin.v2.models/ItemKitDefinition'), require('./com.ultracart.admin.v2.models/ItemOption'), require('./com.ultracart.admin.v2.models/ItemOptionValue'), require('./com.ultracart.admin.v2.models/ItemOptionValueAdditionalItem'), require('./com.ultracart.admin.v2.models/ItemOptionValueDigitalItem'), require('./com.ultracart.admin.v2.models/ItemPaymentProcessing'), require('./com.ultracart.admin.v2.models/ItemPhysical'), require('./com.ultracart.admin.v2.models/ItemPricing'), require('./com.ultracart.admin.v2.models/ItemPricingTier'), require('./com.ultracart.admin.v2.models/ItemPricingTierDiscount'), require('./com.ultracart.admin.v2.models/ItemPricingTierLimit'), require('./com.ultracart.admin.v2.models/ItemRealtimePricing'), require('./com.ultracart.admin.v2.models/ItemRelated'), require('./com.ultracart.admin.v2.models/ItemRelatedItem'), require('./com.ultracart.admin.v2.models/ItemReporting'), require('./com.ultracart.admin.v2.models/ItemResponse'), require('./com.ultracart.admin.v2.models/ItemRestriction'), require('./com.ultracart.admin.v2.models/ItemRestrictionItem'), require('./com.ultracart.admin.v2.models/ItemRevguard'), require('./com.ultracart.admin.v2.models/ItemReviews'), require('./com.ultracart.admin.v2.models/ItemSalesforce'), require('./com.ultracart.admin.v2.models/ItemShipping'), require('./com.ultracart.admin.v2.models/ItemShippingCase'), require('./com.ultracart.admin.v2.models/ItemShippingDestinationMarkup'), require('./com.ultracart.admin.v2.models/ItemShippingDestinationRestriction'), require('./com.ultracart.admin.v2.models/ItemShippingDistributionCenter'), require('./com.ultracart.admin.v2.models/ItemShippingMethod'), require('./com.ultracart.admin.v2.models/ItemShippingPackageRequirement'), require('./com.ultracart.admin.v2.models/ItemTax'), require('./com.ultracart.admin.v2.models/ItemTaxExemption'), require('./com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing'), require('./com.ultracart.admin.v2.models/ItemVariantItem'), require('./com.ultracart.admin.v2.models/ItemVariation'), require('./com.ultracart.admin.v2.models/ItemVariationOption'), require('./com.ultracart.admin.v2.models/ItemWishlistMember'), require('./com.ultracart.admin.v2.models/ItemsResponse'), require('./com.ultracart.admin.v2.models/OauthRevokeSuccessResponse'), require('./com.ultracart.admin.v2.models/OauthTokenResponse'), require('./com.ultracart.admin.v2.models/Order'), require('./com.ultracart.admin.v2.models/OrderAffiliate'), require('./com.ultracart.admin.v2.models/OrderAffiliateLedger'), require('./com.ultracart.admin.v2.models/OrderAutoOrder'), require('./com.ultracart.admin.v2.models/OrderBilling'), require('./com.ultracart.admin.v2.models/OrderBuysafe'), require('./com.ultracart.admin.v2.models/OrderChannelPartner'), require('./com.ultracart.admin.v2.models/OrderCheckout'), require('./com.ultracart.admin.v2.models/OrderCoupon'), require('./com.ultracart.admin.v2.models/OrderDigitalItem'), require('./com.ultracart.admin.v2.models/OrderDigitalOrder'), require('./com.ultracart.admin.v2.models/OrderEdi'), require('./com.ultracart.admin.v2.models/OrderFraudScore'), require('./com.ultracart.admin.v2.models/OrderGift'), require('./com.ultracart.admin.v2.models/OrderGiftCertificate'), require('./com.ultracart.admin.v2.models/OrderInternal'), require('./com.ultracart.admin.v2.models/OrderItem'), require('./com.ultracart.admin.v2.models/OrderItemEdi'), require('./com.ultracart.admin.v2.models/OrderItemEdiIdentification'), require('./com.ultracart.admin.v2.models/OrderItemEdiLot'), require('./com.ultracart.admin.v2.models/OrderItemOption'), require('./com.ultracart.admin.v2.models/OrderItemOptionFileAttachment'), require('./com.ultracart.admin.v2.models/OrderLinkedShipment'), require('./com.ultracart.admin.v2.models/OrderMarketing'), require('./com.ultracart.admin.v2.models/OrderPayment'), require('./com.ultracart.admin.v2.models/OrderPaymentCheck'), require('./com.ultracart.admin.v2.models/OrderPaymentCreditCard'), require('./com.ultracart.admin.v2.models/OrderPaymentECheck'), require('./com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder'), require('./com.ultracart.admin.v2.models/OrderPaymentTransaction'), require('./com.ultracart.admin.v2.models/OrderPaymentTransactionDetail'), require('./com.ultracart.admin.v2.models/OrderQuote'), require('./com.ultracart.admin.v2.models/OrderResponse'), require('./com.ultracart.admin.v2.models/OrderSalesforce'), require('./com.ultracart.admin.v2.models/OrderShipping'), require('./com.ultracart.admin.v2.models/OrderSummary'), require('./com.ultracart.admin.v2.models/OrderTaxes'), require('./com.ultracart.admin.v2.models/OrdersResponse'), require('./com.ultracart.admin.v2.models/ResponseMetadata'), require('./com.ultracart.admin.v2.models/ResultSet'), require('./com.ultracart.admin.v2.models/TempMultimedia'), require('./com.ultracart.admin.v2.models/TempMultimediaResponse'), require('./com.ultracart.admin.v2.models/Webhook'), require('./com.ultracart.admin.v2.models/WebhookEventCategory'), require('./com.ultracart.admin.v2.models/WebhookEventSubscription'), require('./com.ultracart.admin.v2.models/WebhookLog'), require('./com.ultracart.admin.v2.models/WebhookLogResponse'), require('./com.ultracart.admin.v2.models/WebhookLogSummariesResponse'), require('./com.ultracart.admin.v2.models/WebhookLogSummary'), require('./com.ultracart.admin.v2.models/WebhookResponse'), require('./com.ultracart.admin.v2.models/WebhookSampleRequest'), require('./com.ultracart.admin.v2.models/WebhookSampleRequestResponse'), require('./com.ultracart.admin.v2.models/WebhooksResponse'), require('./com.ultracart.admin.v2.models/Weight'), require('./com.ultracart.admin.v2/AutoorderApi'), require('./com.ultracart.admin.v2/CheckoutApi'), require('./com.ultracart.admin.v2/CustomerApi'), require('./com.ultracart.admin.v2/FulfillmentApi'), require('./com.ultracart.admin.v2/ItemApi'), require('./com.ultracart.admin.v2/OauthApi'), require('./com.ultracart.admin.v2/OrderApi'), require('./com.ultracart.admin.v2/WebhookApi'));
   }
-}(function(ApiClient, ApiUserApplicationProfile, Distance, Error, ErrorResponse, HTTPHeader, Item, ItemAccounting, ItemAmember, ItemAutoOrder, ItemAutoOrderStep, ItemAutoOrderStepArbitraryUnitCostSchedule, ItemAutoOrderStepGrandfatherPricing, ItemCCBill, ItemChannelPartnerMapping, ItemChargeback, ItemChargebackAddendum, ItemChargebackAdjustmentRequest, ItemCheckout, ItemContent, ItemContentAssignment, ItemContentAttribute, ItemContentMultimedia, ItemContentMultimediaThumbnail, ItemDigitalDelivery, ItemDigitalItem, ItemEbay, ItemEbayCategorySpecific, ItemEbayMarketListing, ItemEbayMarketPlaceAnalysis, ItemEmailNotifications, ItemEnrollment123, ItemGiftCertificate, ItemGoogleProductSearch, ItemIdentifiers, ItemInstantPaymentNotification, ItemInstantPaymentNotifications, ItemInternal, ItemKitComponent, ItemKitDefinition, ItemOption, ItemOptionValue, ItemOptionValueAdditionalItem, ItemOptionValueDigitalItem, ItemPaymentProcessing, ItemPhysical, ItemPricing, ItemPricingTier, ItemPricingTierDiscount, ItemPricingTierLimit, ItemRealtimePricing, ItemRelated, ItemRelatedItem, ItemReporting, ItemResponse, ItemRestriction, ItemRestrictionItem, ItemRevguard, ItemReviews, ItemSalesforce, ItemShipping, ItemShippingCase, ItemShippingDestinationMarkup, ItemShippingDestinationRestriction, ItemShippingDistributionCenter, ItemShippingMethod, ItemShippingPackageRequirement, ItemTax, ItemTaxExemption, ItemThirdPartyEmailMarketing, ItemVariantItem, ItemVariation, ItemVariationOption, ItemWishlistMember, ItemsResponse, ResponseMetadata, ResultSet, TempMultimedia, TempMultimediaResponse, Webhook, WebhookEventCategory, WebhookEventSubscription, WebhookLog, WebhookLogResponse, WebhookLogSummariesResponse, WebhookLogSummary, WebhookSampleRequest, WebhookSampleRequestResponse, WebhooksResponse, Weight, ItemApi, WebhookApi) {
+}(function(ApiClient, ApiUserApplicationProfile, AutoOrder, AutoOrderItem, AutoOrderItemOption, AutoOrderResponse, AutoOrdersResponse, BaseResponse, Cart, CartAffiliate, CartBilling, CartBuysafe, CartCheckout, CartCoupon, CartCustomerProfile, CartCustomerProfileAddress, CartCustomerProfileCreditCard, CartFinalizeOrderRequest, CartFinalizeOrderRequestOptions, CartFinalizeOrderResponse, CartGift, CartGiftCertificate, CartItem, CartItemAttribute, CartItemMultimedia, CartItemMultimediaThumbnail, CartItemOption, CartItemOptionValue, CartItemPhysical, CartItemVariationSelection, CartKitComponentOption, CartMarketing, CartPayment, CartPaymentAmazon, CartPaymentCheck, CartPaymentCreditCard, CartPaymentPurchaseOrder, CartProfileLoginRequest, CartProfileLoginResponse, CartProfileRegisterRequest, CartProfileRegisterResponse, CartResponse, CartSettings, CartSettingsBilling, CartSettingsGift, CartSettingsGiftWrap, CartSettingsPayment, CartSettingsPaymentAmazon, CartSettingsPaymentCreditCard, CartSettingsPaymentPayPal, CartSettingsProvince, CartSettingsShipping, CartSettingsShippingCalendar, CartSettingsShippingEstimate, CartSettingsTaxes, CartSettingsTerms, CartShipping, CartSummary, CartTaxes, CartUpsellAfter, CartValidationRequest, CartValidationResponse, CheckoutHandoffRequest, CheckoutHandoffResponse, CheckoutSetupBrowserKeyRequest, CheckoutSetupBrowserKeyResponse, Currency, Customer, CustomerBilling, CustomerCard, CustomerPricingTier, CustomerResponse, CustomerShipping, CustomersResponse, Distance, DistributionCenter, DistributionCentersResponse, Error, ErrorResponse, FulfillmentInventory, FulfillmentShipment, HTTPHeader, Item, ItemAccounting, ItemAmember, ItemAutoOrder, ItemAutoOrderStep, ItemAutoOrderStepArbitraryUnitCostSchedule, ItemAutoOrderStepGrandfatherPricing, ItemCCBill, ItemChannelPartnerMapping, ItemChargeback, ItemChargebackAddendum, ItemChargebackAdjustmentRequest, ItemCheckout, ItemContent, ItemContentAssignment, ItemContentAttribute, ItemContentMultimedia, ItemContentMultimediaThumbnail, ItemDigitalDelivery, ItemDigitalItem, ItemEbay, ItemEbayCategorySpecific, ItemEbayMarketListing, ItemEbayMarketPlaceAnalysis, ItemEmailNotifications, ItemEnrollment123, ItemGiftCertificate, ItemGoogleProductSearch, ItemIdentifiers, ItemInstantPaymentNotification, ItemInstantPaymentNotifications, ItemInternal, ItemKitComponent, ItemKitDefinition, ItemOption, ItemOptionValue, ItemOptionValueAdditionalItem, ItemOptionValueDigitalItem, ItemPaymentProcessing, ItemPhysical, ItemPricing, ItemPricingTier, ItemPricingTierDiscount, ItemPricingTierLimit, ItemRealtimePricing, ItemRelated, ItemRelatedItem, ItemReporting, ItemResponse, ItemRestriction, ItemRestrictionItem, ItemRevguard, ItemReviews, ItemSalesforce, ItemShipping, ItemShippingCase, ItemShippingDestinationMarkup, ItemShippingDestinationRestriction, ItemShippingDistributionCenter, ItemShippingMethod, ItemShippingPackageRequirement, ItemTax, ItemTaxExemption, ItemThirdPartyEmailMarketing, ItemVariantItem, ItemVariation, ItemVariationOption, ItemWishlistMember, ItemsResponse, OauthRevokeSuccessResponse, OauthTokenResponse, Order, OrderAffiliate, OrderAffiliateLedger, OrderAutoOrder, OrderBilling, OrderBuysafe, OrderChannelPartner, OrderCheckout, OrderCoupon, OrderDigitalItem, OrderDigitalOrder, OrderEdi, OrderFraudScore, OrderGift, OrderGiftCertificate, OrderInternal, OrderItem, OrderItemEdi, OrderItemEdiIdentification, OrderItemEdiLot, OrderItemOption, OrderItemOptionFileAttachment, OrderLinkedShipment, OrderMarketing, OrderPayment, OrderPaymentCheck, OrderPaymentCreditCard, OrderPaymentECheck, OrderPaymentPurchaseOrder, OrderPaymentTransaction, OrderPaymentTransactionDetail, OrderQuote, OrderResponse, OrderSalesforce, OrderShipping, OrderSummary, OrderTaxes, OrdersResponse, ResponseMetadata, ResultSet, TempMultimedia, TempMultimediaResponse, Webhook, WebhookEventCategory, WebhookEventSubscription, WebhookLog, WebhookLogResponse, WebhookLogSummariesResponse, WebhookLogSummary, WebhookResponse, WebhookSampleRequest, WebhookSampleRequestResponse, WebhooksResponse, Weight, AutoorderApi, CheckoutApi, CustomerApi, FulfillmentApi, ItemApi, OauthApi, OrderApi, WebhookApi) {
   'use strict';
 
   /**
@@ -76,10 +76,380 @@
      */
     ApiUserApplicationProfile: ApiUserApplicationProfile,
     /**
+     * The AutoOrder model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrder}
+     */
+    AutoOrder: AutoOrder,
+    /**
+     * The AutoOrderItem model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderItem}
+     */
+    AutoOrderItem: AutoOrderItem,
+    /**
+     * The AutoOrderItemOption model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderItemOption}
+     */
+    AutoOrderItemOption: AutoOrderItemOption,
+    /**
+     * The AutoOrderResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    AutoOrderResponse: AutoOrderResponse,
+    /**
+     * The AutoOrdersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrdersResponse}
+     */
+    AutoOrdersResponse: AutoOrdersResponse,
+    /**
+     * The BaseResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse}
+     */
+    BaseResponse: BaseResponse,
+    /**
+     * The Cart model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Cart}
+     */
+    Cart: Cart,
+    /**
+     * The CartAffiliate model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartAffiliate}
+     */
+    CartAffiliate: CartAffiliate,
+    /**
+     * The CartBilling model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartBilling}
+     */
+    CartBilling: CartBilling,
+    /**
+     * The CartBuysafe model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartBuysafe}
+     */
+    CartBuysafe: CartBuysafe,
+    /**
+     * The CartCheckout model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCheckout}
+     */
+    CartCheckout: CartCheckout,
+    /**
+     * The CartCoupon model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCoupon}
+     */
+    CartCoupon: CartCoupon,
+    /**
+     * The CartCustomerProfile model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCustomerProfile}
+     */
+    CartCustomerProfile: CartCustomerProfile,
+    /**
+     * The CartCustomerProfileAddress model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCustomerProfileAddress}
+     */
+    CartCustomerProfileAddress: CartCustomerProfileAddress,
+    /**
+     * The CartCustomerProfileCreditCard model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartCustomerProfileCreditCard}
+     */
+    CartCustomerProfileCreditCard: CartCustomerProfileCreditCard,
+    /**
+     * The CartFinalizeOrderRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartFinalizeOrderRequest}
+     */
+    CartFinalizeOrderRequest: CartFinalizeOrderRequest,
+    /**
+     * The CartFinalizeOrderRequestOptions model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartFinalizeOrderRequestOptions}
+     */
+    CartFinalizeOrderRequestOptions: CartFinalizeOrderRequestOptions,
+    /**
+     * The CartFinalizeOrderResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartFinalizeOrderResponse}
+     */
+    CartFinalizeOrderResponse: CartFinalizeOrderResponse,
+    /**
+     * The CartGift model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartGift}
+     */
+    CartGift: CartGift,
+    /**
+     * The CartGiftCertificate model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartGiftCertificate}
+     */
+    CartGiftCertificate: CartGiftCertificate,
+    /**
+     * The CartItem model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItem}
+     */
+    CartItem: CartItem,
+    /**
+     * The CartItemAttribute model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemAttribute}
+     */
+    CartItemAttribute: CartItemAttribute,
+    /**
+     * The CartItemMultimedia model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemMultimedia}
+     */
+    CartItemMultimedia: CartItemMultimedia,
+    /**
+     * The CartItemMultimediaThumbnail model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemMultimediaThumbnail}
+     */
+    CartItemMultimediaThumbnail: CartItemMultimediaThumbnail,
+    /**
+     * The CartItemOption model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemOption}
+     */
+    CartItemOption: CartItemOption,
+    /**
+     * The CartItemOptionValue model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemOptionValue}
+     */
+    CartItemOptionValue: CartItemOptionValue,
+    /**
+     * The CartItemPhysical model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemPhysical}
+     */
+    CartItemPhysical: CartItemPhysical,
+    /**
+     * The CartItemVariationSelection model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartItemVariationSelection}
+     */
+    CartItemVariationSelection: CartItemVariationSelection,
+    /**
+     * The CartKitComponentOption model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartKitComponentOption}
+     */
+    CartKitComponentOption: CartKitComponentOption,
+    /**
+     * The CartMarketing model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartMarketing}
+     */
+    CartMarketing: CartMarketing,
+    /**
+     * The CartPayment model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPayment}
+     */
+    CartPayment: CartPayment,
+    /**
+     * The CartPaymentAmazon model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentAmazon}
+     */
+    CartPaymentAmazon: CartPaymentAmazon,
+    /**
+     * The CartPaymentCheck model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentCheck}
+     */
+    CartPaymentCheck: CartPaymentCheck,
+    /**
+     * The CartPaymentCreditCard model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentCreditCard}
+     */
+    CartPaymentCreditCard: CartPaymentCreditCard,
+    /**
+     * The CartPaymentPurchaseOrder model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentPurchaseOrder}
+     */
+    CartPaymentPurchaseOrder: CartPaymentPurchaseOrder,
+    /**
+     * The CartProfileLoginRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileLoginRequest}
+     */
+    CartProfileLoginRequest: CartProfileLoginRequest,
+    /**
+     * The CartProfileLoginResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileLoginResponse}
+     */
+    CartProfileLoginResponse: CartProfileLoginResponse,
+    /**
+     * The CartProfileRegisterRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileRegisterRequest}
+     */
+    CartProfileRegisterRequest: CartProfileRegisterRequest,
+    /**
+     * The CartProfileRegisterResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartProfileRegisterResponse}
+     */
+    CartProfileRegisterResponse: CartProfileRegisterResponse,
+    /**
+     * The CartResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartResponse}
+     */
+    CartResponse: CartResponse,
+    /**
+     * The CartSettings model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettings}
+     */
+    CartSettings: CartSettings,
+    /**
+     * The CartSettingsBilling model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsBilling}
+     */
+    CartSettingsBilling: CartSettingsBilling,
+    /**
+     * The CartSettingsGift model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsGift}
+     */
+    CartSettingsGift: CartSettingsGift,
+    /**
+     * The CartSettingsGiftWrap model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsGiftWrap}
+     */
+    CartSettingsGiftWrap: CartSettingsGiftWrap,
+    /**
+     * The CartSettingsPayment model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPayment}
+     */
+    CartSettingsPayment: CartSettingsPayment,
+    /**
+     * The CartSettingsPaymentAmazon model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPaymentAmazon}
+     */
+    CartSettingsPaymentAmazon: CartSettingsPaymentAmazon,
+    /**
+     * The CartSettingsPaymentCreditCard model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard}
+     */
+    CartSettingsPaymentCreditCard: CartSettingsPaymentCreditCard,
+    /**
+     * The CartSettingsPaymentPayPal model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsPaymentPayPal}
+     */
+    CartSettingsPaymentPayPal: CartSettingsPaymentPayPal,
+    /**
+     * The CartSettingsProvince model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsProvince}
+     */
+    CartSettingsProvince: CartSettingsProvince,
+    /**
+     * The CartSettingsShipping model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsShipping}
+     */
+    CartSettingsShipping: CartSettingsShipping,
+    /**
+     * The CartSettingsShippingCalendar model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsShippingCalendar}
+     */
+    CartSettingsShippingCalendar: CartSettingsShippingCalendar,
+    /**
+     * The CartSettingsShippingEstimate model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsShippingEstimate}
+     */
+    CartSettingsShippingEstimate: CartSettingsShippingEstimate,
+    /**
+     * The CartSettingsTaxes model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsTaxes}
+     */
+    CartSettingsTaxes: CartSettingsTaxes,
+    /**
+     * The CartSettingsTerms model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSettingsTerms}
+     */
+    CartSettingsTerms: CartSettingsTerms,
+    /**
+     * The CartShipping model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartShipping}
+     */
+    CartShipping: CartShipping,
+    /**
+     * The CartSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartSummary}
+     */
+    CartSummary: CartSummary,
+    /**
+     * The CartTaxes model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartTaxes}
+     */
+    CartTaxes: CartTaxes,
+    /**
+     * The CartUpsellAfter model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartUpsellAfter}
+     */
+    CartUpsellAfter: CartUpsellAfter,
+    /**
+     * The CartValidationRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartValidationRequest}
+     */
+    CartValidationRequest: CartValidationRequest,
+    /**
+     * The CartValidationResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartValidationResponse}
+     */
+    CartValidationResponse: CartValidationResponse,
+    /**
+     * The CheckoutHandoffRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutHandoffRequest}
+     */
+    CheckoutHandoffRequest: CheckoutHandoffRequest,
+    /**
+     * The CheckoutHandoffResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutHandoffResponse}
+     */
+    CheckoutHandoffResponse: CheckoutHandoffResponse,
+    /**
+     * The CheckoutSetupBrowserKeyRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest}
+     */
+    CheckoutSetupBrowserKeyRequest: CheckoutSetupBrowserKeyRequest,
+    /**
+     * The CheckoutSetupBrowserKeyResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse}
+     */
+    CheckoutSetupBrowserKeyResponse: CheckoutSetupBrowserKeyResponse,
+    /**
+     * The Currency model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Currency}
+     */
+    Currency: Currency,
+    /**
+     * The Customer model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer}
+     */
+    Customer: Customer,
+    /**
+     * The CustomerBilling model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerBilling}
+     */
+    CustomerBilling: CustomerBilling,
+    /**
+     * The CustomerCard model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerCard}
+     */
+    CustomerCard: CustomerCard,
+    /**
+     * The CustomerPricingTier model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerPricingTier}
+     */
+    CustomerPricingTier: CustomerPricingTier,
+    /**
+     * The CustomerResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
+     */
+    CustomerResponse: CustomerResponse,
+    /**
+     * The CustomerShipping model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerShipping}
+     */
+    CustomerShipping: CustomerShipping,
+    /**
+     * The CustomersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse}
+     */
+    CustomersResponse: CustomersResponse,
+    /**
      * The Distance model constructor.
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Distance}
      */
     Distance: Distance,
+    /**
+     * The DistributionCenter model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/DistributionCenter}
+     */
+    DistributionCenter: DistributionCenter,
+    /**
+     * The DistributionCentersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/DistributionCentersResponse}
+     */
+    DistributionCentersResponse: DistributionCentersResponse,
     /**
      * The Error model constructor.
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Error}
@@ -90,6 +460,16 @@
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse}
      */
     ErrorResponse: ErrorResponse,
+    /**
+     * The FulfillmentInventory model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/FulfillmentInventory}
+     */
+    FulfillmentInventory: FulfillmentInventory,
+    /**
+     * The FulfillmentShipment model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/FulfillmentShipment}
+     */
+    FulfillmentShipment: FulfillmentShipment,
     /**
      * The HTTPHeader model constructor.
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/HTTPHeader}
@@ -441,6 +821,206 @@
      */
     ItemsResponse: ItemsResponse,
     /**
+     * The OauthRevokeSuccessResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OauthRevokeSuccessResponse}
+     */
+    OauthRevokeSuccessResponse: OauthRevokeSuccessResponse,
+    /**
+     * The OauthTokenResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OauthTokenResponse}
+     */
+    OauthTokenResponse: OauthTokenResponse,
+    /**
+     * The Order model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order}
+     */
+    Order: Order,
+    /**
+     * The OrderAffiliate model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderAffiliate}
+     */
+    OrderAffiliate: OrderAffiliate,
+    /**
+     * The OrderAffiliateLedger model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderAffiliateLedger}
+     */
+    OrderAffiliateLedger: OrderAffiliateLedger,
+    /**
+     * The OrderAutoOrder model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderAutoOrder}
+     */
+    OrderAutoOrder: OrderAutoOrder,
+    /**
+     * The OrderBilling model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderBilling}
+     */
+    OrderBilling: OrderBilling,
+    /**
+     * The OrderBuysafe model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderBuysafe}
+     */
+    OrderBuysafe: OrderBuysafe,
+    /**
+     * The OrderChannelPartner model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderChannelPartner}
+     */
+    OrderChannelPartner: OrderChannelPartner,
+    /**
+     * The OrderCheckout model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderCheckout}
+     */
+    OrderCheckout: OrderCheckout,
+    /**
+     * The OrderCoupon model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderCoupon}
+     */
+    OrderCoupon: OrderCoupon,
+    /**
+     * The OrderDigitalItem model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderDigitalItem}
+     */
+    OrderDigitalItem: OrderDigitalItem,
+    /**
+     * The OrderDigitalOrder model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderDigitalOrder}
+     */
+    OrderDigitalOrder: OrderDigitalOrder,
+    /**
+     * The OrderEdi model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderEdi}
+     */
+    OrderEdi: OrderEdi,
+    /**
+     * The OrderFraudScore model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderFraudScore}
+     */
+    OrderFraudScore: OrderFraudScore,
+    /**
+     * The OrderGift model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderGift}
+     */
+    OrderGift: OrderGift,
+    /**
+     * The OrderGiftCertificate model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderGiftCertificate}
+     */
+    OrderGiftCertificate: OrderGiftCertificate,
+    /**
+     * The OrderInternal model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderInternal}
+     */
+    OrderInternal: OrderInternal,
+    /**
+     * The OrderItem model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItem}
+     */
+    OrderItem: OrderItem,
+    /**
+     * The OrderItemEdi model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemEdi}
+     */
+    OrderItemEdi: OrderItemEdi,
+    /**
+     * The OrderItemEdiIdentification model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemEdiIdentification}
+     */
+    OrderItemEdiIdentification: OrderItemEdiIdentification,
+    /**
+     * The OrderItemEdiLot model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemEdiLot}
+     */
+    OrderItemEdiLot: OrderItemEdiLot,
+    /**
+     * The OrderItemOption model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemOption}
+     */
+    OrderItemOption: OrderItemOption,
+    /**
+     * The OrderItemOptionFileAttachment model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderItemOptionFileAttachment}
+     */
+    OrderItemOptionFileAttachment: OrderItemOptionFileAttachment,
+    /**
+     * The OrderLinkedShipment model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderLinkedShipment}
+     */
+    OrderLinkedShipment: OrderLinkedShipment,
+    /**
+     * The OrderMarketing model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderMarketing}
+     */
+    OrderMarketing: OrderMarketing,
+    /**
+     * The OrderPayment model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPayment}
+     */
+    OrderPayment: OrderPayment,
+    /**
+     * The OrderPaymentCheck model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentCheck}
+     */
+    OrderPaymentCheck: OrderPaymentCheck,
+    /**
+     * The OrderPaymentCreditCard model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentCreditCard}
+     */
+    OrderPaymentCreditCard: OrderPaymentCreditCard,
+    /**
+     * The OrderPaymentECheck model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentECheck}
+     */
+    OrderPaymentECheck: OrderPaymentECheck,
+    /**
+     * The OrderPaymentPurchaseOrder model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder}
+     */
+    OrderPaymentPurchaseOrder: OrderPaymentPurchaseOrder,
+    /**
+     * The OrderPaymentTransaction model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentTransaction}
+     */
+    OrderPaymentTransaction: OrderPaymentTransaction,
+    /**
+     * The OrderPaymentTransactionDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentTransactionDetail}
+     */
+    OrderPaymentTransactionDetail: OrderPaymentTransactionDetail,
+    /**
+     * The OrderQuote model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderQuote}
+     */
+    OrderQuote: OrderQuote,
+    /**
+     * The OrderResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse}
+     */
+    OrderResponse: OrderResponse,
+    /**
+     * The OrderSalesforce model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderSalesforce}
+     */
+    OrderSalesforce: OrderSalesforce,
+    /**
+     * The OrderShipping model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderShipping}
+     */
+    OrderShipping: OrderShipping,
+    /**
+     * The OrderSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderSummary}
+     */
+    OrderSummary: OrderSummary,
+    /**
+     * The OrderTaxes model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderTaxes}
+     */
+    OrderTaxes: OrderTaxes,
+    /**
+     * The OrdersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse}
+     */
+    OrdersResponse: OrdersResponse,
+    /**
      * The ResponseMetadata model constructor.
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ResponseMetadata}
      */
@@ -496,6 +1076,11 @@
      */
     WebhookLogSummary: WebhookLogSummary,
     /**
+     * The WebhookResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse}
+     */
+    WebhookResponse: WebhookResponse,
+    /**
      * The WebhookSampleRequest model constructor.
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookSampleRequest}
      */
@@ -516,10 +1101,40 @@
      */
     Weight: Weight,
     /**
+     * The AutoorderApi service constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi}
+     */
+    AutoorderApi: AutoorderApi,
+    /**
+     * The CheckoutApi service constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CheckoutApi}
+     */
+    CheckoutApi: CheckoutApi,
+    /**
+     * The CustomerApi service constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi}
+     */
+    CustomerApi: CustomerApi,
+    /**
+     * The FulfillmentApi service constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/FulfillmentApi}
+     */
+    FulfillmentApi: FulfillmentApi,
+    /**
      * The ItemApi service constructor.
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi}
      */
     ItemApi: ItemApi,
+    /**
+     * The OauthApi service constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OauthApi}
+     */
+    OauthApi: OauthApi,
+    /**
+     * The OrderApi service constructor.
+     * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi}
+     */
+    OrderApi: OrderApi,
     /**
      * The WebhookApi service constructor.
      * @property {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi}

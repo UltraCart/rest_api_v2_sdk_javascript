@@ -94,22 +94,27 @@
   }
 
   /**
+   * Application logo URL
    * @member {String} api_application_logo_url
    */
   exports.prototype['api_application_logo_url'] = undefined;
   /**
+   * Application description
    * @member {String} application_description
    */
   exports.prototype['application_description'] = undefined;
   /**
+   * Application name
    * @member {String} application_name
    */
   exports.prototype['application_name'] = undefined;
   /**
+   * Developer name
    * @member {String} developer_name
    */
   exports.prototype['developer_name'] = undefined;
   /**
+   * Developer website
    * @member {String} developer_website
    */
   exports.prototype['developer_website'] = undefined;

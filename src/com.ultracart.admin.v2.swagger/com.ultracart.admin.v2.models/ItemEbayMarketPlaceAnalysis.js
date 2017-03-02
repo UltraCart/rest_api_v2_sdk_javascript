@@ -114,30 +114,37 @@
   }
 
   /**
+   * Adjusted price
    * @member {Number} adjusted_price
    */
   exports.prototype['adjusted_price'] = undefined;
   /**
+   * Adjusted shipping
    * @member {Number} adjusted_shipping
    */
   exports.prototype['adjusted_shipping'] = undefined;
   /**
+   * Adjusted total
    * @member {Number} adjusted_total
    */
   exports.prototype['adjusted_total'] = undefined;
   /**
+   * Cost of goods sold
    * @member {Number} cogs
    */
   exports.prototype['cogs'] = undefined;
   /**
+   * Final value fee
    * @member {Number} final_value_fee
    */
   exports.prototype['final_value_fee'] = undefined;
   /**
+   * Minimum advertised price
    * @member {Number} minimum_advertised_price
    */
   exports.prototype['minimum_advertised_price'] = undefined;
   /**
+   * Other listings
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayMarketListing>} other_listings
    */
   exports.prototype['other_listings'] = undefined;
@@ -146,10 +153,12 @@
    */
   exports.prototype['our_listing'] = undefined;
   /**
+   * Overhead
    * @member {Number} overhead
    */
   exports.prototype['overhead'] = undefined;
   /**
+   * Profit potential
    * @member {Number} profit_potential
    */
   exports.prototype['profit_potential'] = undefined;

@@ -1,6 +1,6 @@
 # UltraCartRestApiV2.ItemApi
 
-All URIs are relative to *https://secure.ultracart.com/rest/admin/v2*
+All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Retrieve items
 
-Retrieves a group of items from the account.  If no parameters are specified, all items will be returned. 
+Retrieves a group of items from the account.  If no parameters are specified, all items will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
 ### Example
 ```javascript
@@ -38,11 +38,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var opts = { 
-  'parentCategoryId': 56, // Integer | The parent category to retrieve items for.  Unspecified means all items on the account.  0 = root
-  'limit': 56, // Integer | The maximum number of records to return on this one API call.
-  'offset': 56, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'parentCategoryId': 56, // Integer | The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
+  'parentCategoryPath': "parentCategoryPath_example", // String | The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
+  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Default 100, Max 2000)
+  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
   'since': "since_example", // String | Fetch items that have been created/modified since this date/time.
-  'sort': "sort_example", // String | The sort order of the items.  See documentation for examples
+  'sort': "sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
   'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
@@ -61,11 +62,12 @@ apiInstance.itemItemsGet(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parentCategoryId** | **Integer**| The parent category to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root | [optional] 
- **limit** | **Integer**| The maximum number of records to return on this one API call. | [optional] 
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] 
+ **parentCategoryId** | **Integer**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root | [optional] 
+ **parentCategoryPath** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / &#x3D; root | [optional] 
+ **limit** | **Integer**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
+ **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 
- **sort** | **String**| The sort order of the items.  See documentation for examples | [optional] 
+ **sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
  **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
@@ -227,7 +229,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var item = new UltraCartRestApiV2.Item(); // Item | Item to create
+var item = new UltraCartRestApiV2.Item(); // Item | Item to update
 
 var merchantItemOid = 56; // Integer | The item oid to update.
 
@@ -246,7 +248,7 @@ apiInstance.itemItemsMerchantItemOidPut(item, merchantItemOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item** | [**Item**](Item.md)| Item to create | 
+ **item** | [**Item**](Item.md)| Item to update | 
  **merchantItemOid** | **Integer**| The item oid to update. | 
 
 ### Return type
@@ -259,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
 <a name="itemItemsPost"></a>
@@ -316,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
 <a name="itemTempMultimediaPost"></a>

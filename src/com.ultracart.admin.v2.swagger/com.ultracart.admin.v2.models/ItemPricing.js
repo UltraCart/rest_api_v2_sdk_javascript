@@ -142,70 +142,87 @@
   }
 
   /**
+   * Allow arbitrary cost
    * @member {Boolean} allow_arbitrary_cost
    */
   exports.prototype['allow_arbitrary_cost'] = undefined;
   /**
+   * Arbitrary cost velocity code
    * @member {String} arbitrary_cost_velocity_code
    */
   exports.prototype['arbitrary_cost_velocity_code'] = undefined;
   /**
+   * Automatic pricing tier name
    * @member {String} automatic_pricing_tier_name
    */
   exports.prototype['automatic_pricing_tier_name'] = undefined;
   /**
+   * Automatic pricing tier object identifier
    * @member {Integer} automatic_pricing_tier_oid
    */
   exports.prototype['automatic_pricing_tier_oid'] = undefined;
   /**
+   * Cost of goods sold
    * @member {Number} cogs
    */
   exports.prototype['cogs'] = undefined;
   /**
+   * Cost
    * @member {Number} cost
    */
   exports.prototype['cost'] = undefined;
   /**
+   * Currency code
    * @member {String} currency_code
    */
   exports.prototype['currency_code'] = undefined;
   /**
+   * Manufacturer suggested retail price
    * @member {Number} manufacturer_suggested_retail_price
    */
   exports.prototype['manufacturer_suggested_retail_price'] = undefined;
   /**
+   * Maximum arbitrary cost
    * @member {Number} maximum_arbitrary_cost
    */
   exports.prototype['maximum_arbitrary_cost'] = undefined;
   /**
+   * Minimum advertised price
    * @member {Number} minimum_advertised_price
    */
   exports.prototype['minimum_advertised_price'] = undefined;
   /**
+   * Minimum arbitrary cost
    * @member {Number} minimum_arbitrary_cost
    */
   exports.prototype['minimum_arbitrary_cost'] = undefined;
   /**
+   * Mix and match group
    * @member {String} mix_and_match_group
    */
   exports.prototype['mix_and_match_group'] = undefined;
   /**
+   * Mix and match group object identifier
    * @member {Integer} mix_and_match_group_oid
    */
   exports.prototype['mix_and_match_group_oid'] = undefined;
   /**
+   * Sale cost
    * @member {Number} sale_cost
    */
   exports.prototype['sale_cost'] = undefined;
   /**
+   * Sale end
    * @member {String} sale_end
    */
   exports.prototype['sale_end'] = undefined;
   /**
+   * Sale start
    * @member {String} sale_start
    */
   exports.prototype['sale_start'] = undefined;
   /**
+   * Tiers
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemPricingTier>} tiers
    */
   exports.prototype['tiers'] = undefined;

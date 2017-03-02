@@ -90,18 +90,22 @@
   }
 
   /**
+   * Barcode
    * @member {String} barcode
    */
   exports.prototype['barcode'] = undefined;
   /**
+   * Manufacturer Name
    * @member {String} manufacturer_name
    */
   exports.prototype['manufacturer_name'] = undefined;
   /**
+   * Manufacturer SKU
    * @member {String} manufacturer_sku
    */
   exports.prototype['manufacturer_sku'] = undefined;
   /**
+   * UNSPSC
    * @member {String} unspsc
    */
   exports.prototype['unspsc'] = undefined;

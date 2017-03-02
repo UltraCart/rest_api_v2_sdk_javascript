@@ -86,18 +86,38 @@
   }
 
   /**
+   * Related item id
    * @member {String} related_merchant_item_id
    */
   exports.prototype['related_merchant_item_id'] = undefined;
   /**
+   * Related item object identifier
    * @member {Integer} related_merchant_item_oid
    */
   exports.prototype['related_merchant_item_oid'] = undefined;
   /**
-   * @member {String} type
+   * Relationship type
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRelatedItem.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "System"
+     * @const
+     */
+    "System": "System",
+    /**
+     * value: "UserDefined"
+     * @const
+     */
+    "UserDefined": "UserDefined"  };
 
 
   return exports;

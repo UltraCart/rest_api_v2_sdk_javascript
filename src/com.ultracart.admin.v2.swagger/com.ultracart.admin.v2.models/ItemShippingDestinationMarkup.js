@@ -75,8 +75,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('country')) {
-        obj['country'] = ApiClient.convertToType(data['country'], 'String');
+      if (data.hasOwnProperty('country_code')) {
+        obj['country_code'] = ApiClient.convertToType(data['country_code'], 'String');
       }
       if (data.hasOwnProperty('flat_fee')) {
         obj['flat_fee'] = ApiClient.convertToType(data['flat_fee'], 'Number');
@@ -98,26 +98,32 @@
   }
 
   /**
-   * @member {String} country
+   * Country code (ISO-3166 two letter)
+   * @member {String} country_code
    */
-  exports.prototype['country'] = undefined;
+  exports.prototype['country_code'] = undefined;
   /**
+   * Flat fee
    * @member {Number} flat_fee
    */
   exports.prototype['flat_fee'] = undefined;
   /**
+   * Per item
    * @member {Number} per_item
    */
   exports.prototype['per_item'] = undefined;
   /**
+   * Postal code
    * @member {String} postal_code
    */
   exports.prototype['postal_code'] = undefined;
   /**
+   * Shipping method
    * @member {String} shipping_method
    */
   exports.prototype['shipping_method'] = undefined;
   /**
+   * State
    * @member {String} state
    */
   exports.prototype['state'] = undefined;

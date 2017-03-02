@@ -94,22 +94,27 @@
   }
 
   /**
+   * File creation date
    * @member {String} creation_dts
    */
   exports.prototype['creation_dts'] = undefined;
   /**
+   * Description of the digital item
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
   /**
+   * File size
    * @member {Integer} file_size
    */
   exports.prototype['file_size'] = undefined;
   /**
+   * Mime type associated with the file
    * @member {String} mime_type
    */
   exports.prototype['mime_type'] = undefined;
   /**
+   * Original filename
    * @member {String} original_filename
    */
   exports.prototype['original_filename'] = undefined;

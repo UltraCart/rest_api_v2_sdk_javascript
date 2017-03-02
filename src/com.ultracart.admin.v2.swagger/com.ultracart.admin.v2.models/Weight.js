@@ -82,14 +82,38 @@
   }
 
   /**
-   * @member {String} uom
+   * Unit of measure
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Weight.UomEnum} uom
    */
   exports.prototype['uom'] = undefined;
   /**
+   * Weight
    * @member {Number} value
    */
   exports.prototype['value'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>uom</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.UomEnum = {
+    /**
+     * value: "KG"
+     * @const
+     */
+    "KG": "KG",
+    /**
+     * value: "LB"
+     * @const
+     */
+    "LB": "LB",
+    /**
+     * value: "OZ"
+     * @const
+     */
+    "OZ": "OZ"  };
 
 
   return exports;

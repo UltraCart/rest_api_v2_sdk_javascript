@@ -82,10 +82,12 @@
   }
 
   /**
+   * The number of days that the customer should be given access to the item
    * @member {Integer} amember_payment_duration_days
    */
   exports.prototype['amember_payment_duration_days'] = undefined;
   /**
+   * A-member product id give customer access to when they purchase this item
    * @member {String} amember_product_id
    */
   exports.prototype['amember_product_id'] = undefined;

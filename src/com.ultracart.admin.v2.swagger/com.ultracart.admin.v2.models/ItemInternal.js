@@ -78,6 +78,7 @@
   }
 
   /**
+   * Memo
    * @member {String} memo
    */
   exports.prototype['memo'] = undefined;

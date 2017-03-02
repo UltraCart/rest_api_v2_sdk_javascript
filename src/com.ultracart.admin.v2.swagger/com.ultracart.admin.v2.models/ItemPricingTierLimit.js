@@ -86,14 +86,17 @@
   }
 
   /**
+   * Cumulative order limit
    * @member {Integer} cumulative_order_limit
    */
   exports.prototype['cumulative_order_limit'] = undefined;
   /**
+   * Individual order limit
    * @member {Integer} individual_order_limit
    */
   exports.prototype['individual_order_limit'] = undefined;
   /**
+   * Multiple quantity
    * @member {Integer} multiple_quantity
    */
   exports.prototype['multiple_quantity'] = undefined;

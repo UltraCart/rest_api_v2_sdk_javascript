@@ -82,14 +82,33 @@
   }
 
   /**
-   * @member {String} uom
+   * Unit of measure
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Distance.UomEnum} uom
    */
   exports.prototype['uom'] = undefined;
   /**
+   * The distance measured in UOM
    * @member {Number} value
    */
   exports.prototype['value'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>uom</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.UomEnum = {
+    /**
+     * value: "IN"
+     * @const
+     */
+    "IN": "IN",
+    /**
+     * value: "CM"
+     * @const
+     */
+    "CM": "CM"  };
 
 
   return exports;

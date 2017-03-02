@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**components** | [**[ItemKitComponent]**](ItemKitComponent.md) |  | [optional] 
+**components** | [**[ItemKitComponent]**](ItemKitComponent.md) | Components | [optional] 
 
 

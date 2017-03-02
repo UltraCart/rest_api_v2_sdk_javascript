@@ -98,10 +98,12 @@
    */
   exports.prototype['metadata'] = undefined;
   /**
+   * Indicates if API call was successful
    * @member {Boolean} success
    */
   exports.prototype['success'] = undefined;
   /**
+   * Webhook log summaries
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookLogSummary>} webhook_log_summaries
    */
   exports.prototype['webhook_log_summaries'] = undefined;

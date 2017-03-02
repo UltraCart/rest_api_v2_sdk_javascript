@@ -98,26 +98,32 @@
   }
 
   /**
+   * Description of the activation code
    * @member {String} activation_code_description
    */
   exports.prototype['activation_code_description'] = undefined;
   /**
+   * The number of activation codes whcih should generate a warning email
    * @member {Integer} activation_code_low_warning
    */
   exports.prototype['activation_code_low_warning'] = undefined;
   /**
+   * The URL to retrieve activation codes from in real-time
    * @member {String} activation_code_realtime_url
    */
   exports.prototype['activation_code_realtime_url'] = undefined;
   /**
+   * Shared secret used when communicating with the real-time URL
    * @member {String} activation_code_shared_secret
    */
   exports.prototype['activation_code_shared_secret'] = undefined;
   /**
+   * Type of activation code
    * @member {String} activation_code_type
    */
   exports.prototype['activation_code_type'] = undefined;
   /**
+   * Digital items that customer can download when this item is purchased
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemDigitalItem>} digital_items
    */
   exports.prototype['digital_items'] = undefined;

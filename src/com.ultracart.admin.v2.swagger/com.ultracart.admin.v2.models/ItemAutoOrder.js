@@ -71,9 +71,6 @@
 
 
 
-
-
-
   };
 
   /**
@@ -93,41 +90,32 @@
       if (data.hasOwnProperty('auth_test_amount')) {
         obj['auth_test_amount'] = ApiClient.convertToType(data['auth_test_amount'], 'Number');
       }
+      if (data.hasOwnProperty('auto_order_cancel_item_id')) {
+        obj['auto_order_cancel_item_id'] = ApiClient.convertToType(data['auto_order_cancel_item_id'], 'String');
+      }
       if (data.hasOwnProperty('auto_order_cancel_item_oid')) {
         obj['auto_order_cancel_item_oid'] = ApiClient.convertToType(data['auto_order_cancel_item_oid'], 'Integer');
       }
       if (data.hasOwnProperty('auto_order_downgrade_items')) {
-        obj['auto_order_downgrade_items'] = ApiClient.convertToType(data['auto_order_downgrade_items'], 'String');
+        obj['auto_order_downgrade_items'] = ApiClient.convertToType(data['auto_order_downgrade_items'], ['String']);
       }
       if (data.hasOwnProperty('auto_order_paused')) {
         obj['auto_order_paused'] = ApiClient.convertToType(data['auto_order_paused'], 'Boolean');
       }
       if (data.hasOwnProperty('auto_order_schedules')) {
-        obj['auto_order_schedules'] = ApiClient.convertToType(data['auto_order_schedules'], 'Integer');
+        obj['auto_order_schedules'] = ApiClient.convertToType(data['auto_order_schedules'], ['String']);
       }
       if (data.hasOwnProperty('auto_order_upgrade_items')) {
-        obj['auto_order_upgrade_items'] = ApiClient.convertToType(data['auto_order_upgrade_items'], 'String');
+        obj['auto_order_upgrade_items'] = ApiClient.convertToType(data['auto_order_upgrade_items'], ['String']);
       }
       if (data.hasOwnProperty('auto_order_upsell')) {
         obj['auto_order_upsell'] = ApiClient.convertToType(data['auto_order_upsell'], 'Boolean');
-      }
-      if (data.hasOwnProperty('auto_order_upsell_delay')) {
-        obj['auto_order_upsell_delay'] = ApiClient.convertToType(data['auto_order_upsell_delay'], 'Integer');
-      }
-      if (data.hasOwnProperty('auto_order_upsell_merchant_item_oid')) {
-        obj['auto_order_upsell_merchant_item_oid'] = ApiClient.convertToType(data['auto_order_upsell_merchant_item_oid'], 'Integer');
       }
       if (data.hasOwnProperty('auto_order_upsell_no_easy_cancel')) {
         obj['auto_order_upsell_no_easy_cancel'] = ApiClient.convertToType(data['auto_order_upsell_no_easy_cancel'], 'Boolean');
       }
       if (data.hasOwnProperty('auto_order_upsell_one_per_customer')) {
         obj['auto_order_upsell_one_per_customer'] = ApiClient.convertToType(data['auto_order_upsell_one_per_customer'], 'Boolean');
-      }
-      if (data.hasOwnProperty('auto_order_upsell_repeat_count')) {
-        obj['auto_order_upsell_repeat_count'] = ApiClient.convertToType(data['auto_order_upsell_repeat_count'], 'Integer');
-      }
-      if (data.hasOwnProperty('auto_order_upsell_schedule')) {
-        obj['auto_order_upsell_schedule'] = ApiClient.convertToType(data['auto_order_upsell_schedule'], 'String');
       }
       if (data.hasOwnProperty('auto_orderable')) {
         obj['auto_orderable'] = ApiClient.convertToType(data['auto_orderable'], 'Boolean');
@@ -146,74 +134,77 @@
   }
 
   /**
+   * Amount to try and authorize for the future rebill
    * @member {Number} auth_future_amount
    */
   exports.prototype['auth_future_amount'] = undefined;
   /**
+   * Amount to try and test authorize
    * @member {Number} auth_test_amount
    */
   exports.prototype['auth_test_amount'] = undefined;
   /**
+   * Item id to attempt charging the customer for if they cancel
+   * @member {String} auto_order_cancel_item_id
+   */
+  exports.prototype['auto_order_cancel_item_id'] = undefined;
+  /**
+   * Item object identifier to attempt charging the customer for if they cancel
    * @member {Integer} auto_order_cancel_item_oid
    */
   exports.prototype['auto_order_cancel_item_oid'] = undefined;
   /**
-   * @member {String} auto_order_downgrade_items
+   * List of downgrade items presented to customer service representatives
+   * @member {Array.<String>} auto_order_downgrade_items
    */
   exports.prototype['auto_order_downgrade_items'] = undefined;
   /**
+   * True if the rebill processing of this item is paused
    * @member {Boolean} auto_order_paused
    */
   exports.prototype['auto_order_paused'] = undefined;
   /**
-   * @member {Integer} auto_order_schedules
+   * The user selectable schedules that are available
+   * @member {Array.<String>} auto_order_schedules
    */
   exports.prototype['auto_order_schedules'] = undefined;
   /**
-   * @member {String} auto_order_upgrade_items
+   * List of upgrade items presented to customer service representatives
+   * @member {Array.<String>} auto_order_upgrade_items
    */
   exports.prototype['auto_order_upgrade_items'] = undefined;
   /**
+   * True if this item uses a fixed upsell step schedule
    * @member {Boolean} auto_order_upsell
    */
   exports.prototype['auto_order_upsell'] = undefined;
   /**
-   * @member {Integer} auto_order_upsell_delay
-   */
-  exports.prototype['auto_order_upsell_delay'] = undefined;
-  /**
-   * @member {Integer} auto_order_upsell_merchant_item_oid
-   */
-  exports.prototype['auto_order_upsell_merchant_item_oid'] = undefined;
-  /**
+   * Do not send the easy cancel email to the customer
    * @member {Boolean} auto_order_upsell_no_easy_cancel
    */
   exports.prototype['auto_order_upsell_no_easy_cancel'] = undefined;
   /**
+   * Limit the purchase of this item to one per customer
    * @member {Boolean} auto_order_upsell_one_per_customer
    */
   exports.prototype['auto_order_upsell_one_per_customer'] = undefined;
   /**
-   * @member {Integer} auto_order_upsell_repeat_count
-   */
-  exports.prototype['auto_order_upsell_repeat_count'] = undefined;
-  /**
-   * @member {String} auto_order_upsell_schedule
-   */
-  exports.prototype['auto_order_upsell_schedule'] = undefined;
-  /**
+   * True if this item can be automatically ordered by the customer
    * @member {Boolean} auto_orderable
    */
   exports.prototype['auto_orderable'] = undefined;
   /**
+   * True if other auto orders for this customer should be canceled when this item is ordered
    * @member {Boolean} cancel_other_auto_orders
    */
   exports.prototype['cancel_other_auto_orders'] = undefined;
   /**
+   * True if the customer should be given free shipping
    * @member {Boolean} free_shipping_auto_order
    */
   exports.prototype['free_shipping_auto_order'] = undefined;
   /**
+   * The rebill steps if this auto order is an upsell
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStep>} steps
    */
   exports.prototype['steps'] = undefined;

@@ -78,6 +78,7 @@
   }
 
   /**
+   * Components
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemKitComponent>} components
    */
   exports.prototype['components'] = undefined;

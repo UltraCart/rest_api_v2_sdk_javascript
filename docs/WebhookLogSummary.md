@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deliveryDts** | **String** |  | [optional] 
-**requestId** | **String** |  | [optional] 
-**success** | **Boolean** |  | [optional] 
+**deliveryDts** | **String** | Date/time of the delivery | [optional] 
+**requestId** | **String** | Request id | [optional] 
+**success** | **Boolean** | True if the notification was successful | [optional] 
 
 

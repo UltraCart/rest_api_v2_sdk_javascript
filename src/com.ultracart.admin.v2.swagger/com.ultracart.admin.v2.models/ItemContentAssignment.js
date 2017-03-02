@@ -94,22 +94,27 @@
   }
 
   /**
+   * Page (group) object identifier
    * @member {Integer} group_oid
    */
   exports.prototype['group_oid'] = undefined;
   /**
+   * Page (group) path
    * @member {String} group_path
    */
   exports.prototype['group_path'] = undefined;
   /**
+   * StoreFront host name
    * @member {String} host
    */
   exports.prototype['host'] = undefined;
   /**
+   * Sort order (optional)
    * @member {Integer} sort_order
    */
   exports.prototype['sort_order'] = undefined;
   /**
+   * URL part if the item id is not used
    * @member {String} url_part
    */
   exports.prototype['url_part'] = undefined;

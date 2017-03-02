@@ -82,10 +82,12 @@
   }
 
   /**
+   * Name of the HTTP header
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
+   * Value of the HTTP header
    * @member {String} value
    */
   exports.prototype['value'] = undefined;

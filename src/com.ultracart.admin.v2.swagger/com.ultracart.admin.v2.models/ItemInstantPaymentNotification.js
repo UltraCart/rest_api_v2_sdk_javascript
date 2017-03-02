@@ -86,14 +86,17 @@
   }
 
   /**
+   * True for HTTP POST instead of GET
    * @member {Boolean} post_operation
    */
   exports.prototype['post_operation'] = undefined;
   /**
+   * Successful response text
    * @member {String} successful_response_text
    */
   exports.prototype['successful_response_text'] = undefined;
   /**
+   * URL
    * @member {String} url
    */
   exports.prototype['url'] = undefined;

@@ -90,18 +90,22 @@
   }
 
   /**
+   * A technical message meant to be read by a developer
    * @member {String} developer_message
    */
   exports.prototype['developer_message'] = undefined;
   /**
+   * HTTP status code
    * @member {String} error_code
    */
   exports.prototype['error_code'] = undefined;
   /**
+   * Additional information often a link to additional documentation
    * @member {String} more_info
    */
   exports.prototype['more_info'] = undefined;
   /**
+   * An end-user friendly message suitable for display to the customer
    * @member {String} user_message
    */
   exports.prototype['user_message'] = undefined;

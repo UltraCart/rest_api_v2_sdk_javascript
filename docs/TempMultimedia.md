@@ -3,12 +3,27 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filename** | **String** |  | [optional] 
-**height** | **Integer** |  | [optional] 
-**multimediaType** | **String** |  | [optional] 
-**size** | **Integer** |  | [optional] 
-**tempMultimediaOid** | **Integer** |  | [optional] 
-**url** | **String** |  | [optional] 
-**width** | **Integer** |  | [optional] 
+**filename** | **String** | Filename | [optional] 
+**height** | **Integer** | Height | [optional] 
+**multimediaType** | **String** | Multimedia type | [optional] 
+**size** | **Integer** | Size | [optional] 
+**tempMultimediaOid** | **Integer** | Temporary multimedia object identifier | [optional] 
+**url** | **String** | URL | [optional] 
+**width** | **Integer** | Width | [optional] 
+
+
+<a name="MultimediaTypeEnum"></a>
+## Enum: MultimediaTypeEnum
+
+
+* `Image` (value: `"Image"`)
+
+* `PDF` (value: `"PDF"`)
+
+* `Text` (value: `"Text"`)
+
+* `Video` (value: `"Video"`)
+
+
 
 

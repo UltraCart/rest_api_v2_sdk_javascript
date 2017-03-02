@@ -102,8 +102,8 @@
       if (data.hasOwnProperty('pause_days')) {
         obj['pause_days'] = ApiClient.convertToType(data['pause_days'], 'Integer');
       }
-      if (data.hasOwnProperty('pause_unit_date')) {
-        obj['pause_unit_date'] = ApiClient.convertToType(data['pause_unit_date'], 'String');
+      if (data.hasOwnProperty('pause_until_date')) {
+        obj['pause_until_date'] = ApiClient.convertToType(data['pause_until_date'], 'String');
       }
       if (data.hasOwnProperty('preshipment_notice_days')) {
         obj['preshipment_notice_days'] = ApiClient.convertToType(data['preshipment_notice_days'], 'Integer');
@@ -134,66 +134,98 @@
   }
 
   /**
+   * If the schedule is arbitrary, then this is the number of days
    * @member {Integer} arbitrary_schedule_days
    */
   exports.prototype['arbitrary_schedule_days'] = undefined;
   /**
+   * Arbitrary unit cost used to override the regular item cost
    * @member {Number} arbitrary_unit_cost
    */
   exports.prototype['arbitrary_unit_cost'] = undefined;
   /**
+   * Arbitrary unit costs schedules for more advanced discounting by rebill attempt
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule>} arbitrary_unit_cost_schedules
    */
   exports.prototype['arbitrary_unit_cost_schedules'] = undefined;
   /**
+   * Grand-father pricing configuration if the rebill schedule has changed over time
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing>} grandfather_pricing
    */
   exports.prototype['grandfather_pricing'] = undefined;
   /**
+   * Managed by (defaults to UltraCart)
    * @member {String} managed_by
    */
   exports.prototype['managed_by'] = undefined;
   /**
+   * Number of days to pause
    * @member {Integer} pause_days
    */
   exports.prototype['pause_days'] = undefined;
   /**
-   * @member {String} pause_unit_date
+   * Wait for this step to happen until the specified date
+   * @member {String} pause_until_date
    */
-  exports.prototype['pause_unit_date'] = undefined;
+  exports.prototype['pause_until_date'] = undefined;
   /**
+   * If set, a pre-shipment notice is sent to the customer this many days in advance
    * @member {Integer} preshipment_notice_days
    */
   exports.prototype['preshipment_notice_days'] = undefined;
   /**
+   * Item id to rebill
    * @member {String} recurring_merchant_item_id
    */
   exports.prototype['recurring_merchant_item_id'] = undefined;
   /**
+   * Item object identifier to rebill
    * @member {Integer} recurring_merchant_item_oid
    */
   exports.prototype['recurring_merchant_item_oid'] = undefined;
   /**
+   * Number of times to rebill.  Last step can be null for infinite
    * @member {Integer} repeat_count
    */
   exports.prototype['repeat_count'] = undefined;
   /**
+   * Frequency of the rebill
    * @member {String} schedule
    */
   exports.prototype['schedule'] = undefined;
   /**
+   * Email list name to subscribe the customer to when the rebill occurs
    * @member {String} subscribe_email_list_name
    */
   exports.prototype['subscribe_email_list_name'] = undefined;
   /**
+   * Email list identifier to subscribe the customer to when this rebill occurs
    * @member {Integer} subscribe_email_list_oid
    */
   exports.prototype['subscribe_email_list_oid'] = undefined;
   /**
-   * @member {String} type
+   * Type of step (item or pause)
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemAutoOrderStep.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "item"
+     * @const
+     */
+    "item": "item",
+    /**
+     * value: "pause"
+     * @const
+     */
+    "pause": "pause"  };
 
 
   return exports;

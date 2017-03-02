@@ -86,14 +86,17 @@
   }
 
   /**
+   * True to suppress buySAFE
    * @member {Boolean} suppress_buysafe
    */
   exports.prototype['suppress_buysafe'] = undefined;
   /**
+   * Terms for purchasing this item
    * @member {String} terms
    */
   exports.prototype['terms'] = undefined;
   /**
+   * Terms translated text instance identifier
    * @member {Integer} terms_translated_text_instance_oid
    */
   exports.prototype['terms_translated_text_instance_oid'] = undefined;

@@ -82,10 +82,12 @@
   }
 
   /**
+   * QuickBooks item name if different than the item id
    * @member {String} accounting_code
    */
   exports.prototype['accounting_code'] = undefined;
   /**
+   * QuickBooks class if you are classifying items on your invoices/receipts
    * @member {String} qb_class
    */
   exports.prototype['qb_class'] = undefined;

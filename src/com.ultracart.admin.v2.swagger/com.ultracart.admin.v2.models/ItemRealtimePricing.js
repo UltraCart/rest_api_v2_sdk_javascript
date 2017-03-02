@@ -86,14 +86,17 @@
   }
 
   /**
+   * Real-time pricing provider parameters
    * @member {String} realtime_pricing_parameter
    */
   exports.prototype['realtime_pricing_parameter'] = undefined;
   /**
+   * Real-time pricing provider name
    * @member {String} realtime_pricing_provider
    */
   exports.prototype['realtime_pricing_provider'] = undefined;
   /**
+   * Real-time pricing provide object identifier
    * @member {Integer} realtime_pricing_provider_oid
    */
   exports.prototype['realtime_pricing_provider_oid'] = undefined;

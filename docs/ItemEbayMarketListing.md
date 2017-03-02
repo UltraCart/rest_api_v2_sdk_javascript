@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**auctionId** | **String** |  | [optional] 
-**price** | **Number** |  | [optional] 
-**seller** | **String** |  | [optional] 
-**shipping** | **Number** |  | [optional] 
-**total** | **Number** |  | [optional] 
+**auctionId** | **String** | Auction ID | [optional] 
+**price** | **Number** | Price | [optional] 
+**seller** | **String** | Seller | [optional] 
+**shipping** | **Number** | Shipping | [optional] 
+**total** | **Number** | Total | [optional] 
 
 

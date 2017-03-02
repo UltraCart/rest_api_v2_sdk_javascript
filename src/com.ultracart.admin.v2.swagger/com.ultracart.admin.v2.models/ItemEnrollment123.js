@@ -78,6 +78,7 @@
   }
 
   /**
+   * Enrolment 123 product code
    * @member {String} enrollment123_product_code
    */
   exports.prototype['enrollment123_product_code'] = undefined;

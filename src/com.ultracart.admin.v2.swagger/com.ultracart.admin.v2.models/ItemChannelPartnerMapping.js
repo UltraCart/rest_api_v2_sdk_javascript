@@ -142,70 +142,87 @@
   }
 
   /**
+   * Barcode UA (EDI only)
    * @member {String} barcode_ua
    */
   exports.prototype['barcode_ua'] = undefined;
   /**
+   * Barcode UC (EDI only)
    * @member {String} barcode_uc
    */
   exports.prototype['barcode_uc'] = undefined;
   /**
+   * Barcode UI (EDI only)
    * @member {String} barcode_ui
    */
   exports.prototype['barcode_ui'] = undefined;
   /**
+   * Barcode UK (EDI only)
    * @member {String} barcode_uk
    */
   exports.prototype['barcode_uk'] = undefined;
   /**
+   * Buyer DPCI (EDI only)
    * @member {String} buyer_dpci
    */
   exports.prototype['buyer_dpci'] = undefined;
   /**
+   * Buyer item number (EDI only)
    * @member {String} buyer_item_number
    */
   exports.prototype['buyer_item_number'] = undefined;
   /**
+   * Channel partner code
    * @member {String} channel_partner_code
    */
   exports.prototype['channel_partner_code'] = undefined;
   /**
+   * Channel partner object identifier
    * @member {Integer} channel_partner_oid
    */
   exports.prototype['channel_partner_oid'] = undefined;
   /**
+   * From Item ID
    * @member {String} from_item_id
    */
   exports.prototype['from_item_id'] = undefined;
   /**
+   * From SKU
    * @member {String} from_sku
    */
   exports.prototype['from_sku'] = undefined;
   /**
+   * Mutually defined number (EDI only)
    * @member {String} mutually_defined_number
    */
   exports.prototype['mutually_defined_number'] = undefined;
   /**
+   * Ratio (Channel Partner)
    * @member {Integer} quantity_ratio_cp
    */
   exports.prototype['quantity_ratio_cp'] = undefined;
   /**
+   * Ratio (UltraCart)
    * @member {Integer} quantity_ratio_uc
    */
   exports.prototype['quantity_ratio_uc'] = undefined;
   /**
+   * SKU
    * @member {String} sku
    */
   exports.prototype['sku'] = undefined;
   /**
+   * Unit of measure
    * @member {String} unit_of_measure
    */
   exports.prototype['unit_of_measure'] = undefined;
   /**
+   * Vendor number (EDI only)
    * @member {String} vendor_number
    */
   exports.prototype['vendor_number'] = undefined;
   /**
+   * Vendor style number (EDI only)
    * @member {String} vendor_style_number
    */
   exports.prototype['vendor_style_number'] = undefined;

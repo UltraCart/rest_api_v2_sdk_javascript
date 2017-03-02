@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**additionalMerchantItemId** | **String** |  | [optional] 
-**additionalMerchantItemOid** | **Integer** |  | [optional] 
+**additionalMerchantItemId** | **String** | Additional item id | [optional] 
+**additionalMerchantItemOid** | **Integer** | Additional item object identifier | [optional] 
 
 

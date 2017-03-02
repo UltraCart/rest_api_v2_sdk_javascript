@@ -102,34 +102,68 @@
   }
 
   /**
+   * Filename
    * @member {String} filename
    */
   exports.prototype['filename'] = undefined;
   /**
+   * Height
    * @member {Integer} height
    */
   exports.prototype['height'] = undefined;
   /**
-   * @member {String} multimedia_type
+   * Multimedia type
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/TempMultimedia.MultimediaTypeEnum} multimedia_type
    */
   exports.prototype['multimedia_type'] = undefined;
   /**
+   * Size
    * @member {Integer} size
    */
   exports.prototype['size'] = undefined;
   /**
+   * Temporary multimedia object identifier
    * @member {Integer} temp_multimedia_oid
    */
   exports.prototype['temp_multimedia_oid'] = undefined;
   /**
+   * URL
    * @member {String} url
    */
   exports.prototype['url'] = undefined;
   /**
+   * Width
    * @member {Integer} width
    */
   exports.prototype['width'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>multimedia_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.MultimediaTypeEnum = {
+    /**
+     * value: "Image"
+     * @const
+     */
+    "Image": "Image",
+    /**
+     * value: "PDF"
+     * @const
+     */
+    "PDF": "PDF",
+    /**
+     * value: "Text"
+     * @const
+     */
+    "Text": "Text",
+    /**
+     * value: "Video"
+     * @const
+     */
+    "Video": "Video"  };
 
 
   return exports;

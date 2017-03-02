@@ -98,26 +98,32 @@
   }
 
   /**
+   * Height of the thumbnail
    * @member {Integer} height
    */
   exports.prototype['height'] = undefined;
   /**
+   * HTTP URL to view the thumbnail
    * @member {String} http_url
    */
   exports.prototype['http_url'] = undefined;
   /**
+   * HTTPS URL to view the thumbnail
    * @member {String} https_url
    */
   exports.prototype['https_url'] = undefined;
   /**
+   * True if PNG, false if JPEG
    * @member {Boolean} png_format
    */
   exports.prototype['png_format'] = undefined;
   /**
+   * True if the thumbnail is square
    * @member {Boolean} square
    */
   exports.prototype['square'] = undefined;
   /**
+   * Width of the thumbnail
    * @member {Integer} width
    */
   exports.prototype['width'] = undefined;

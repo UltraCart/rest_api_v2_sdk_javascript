@@ -3,8 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**country** | **String** |  | [optional] 
-**state** | **String** |  | [optional] 
-**validity** | **String** |  | [optional] 
+**countryCode** | **String** | Country code (ISO-3166 two letter) | [optional] 
+**state** | **String** | State | [optional] 
+**validity** | **String** | Validity | [optional] 
+
+
+<a name="ValidityEnum"></a>
+## Enum: ValidityEnum
+
+
+* `valid only for` (value: `"valid only for"`)
+
+* `invalid for` (value: `"invalid for"`)
+
+
 
 

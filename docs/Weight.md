@@ -3,7 +3,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uom** | **String** |  | [optional] 
-**value** | **Number** |  | [optional] 
+**uom** | **String** | Unit of measure | [optional] 
+**value** | **Number** | Weight | [optional] 
+
+
+<a name="UomEnum"></a>
+## Enum: UomEnum
+
+
+* `KG` (value: `"KG"`)
+
+* `LB` (value: `"LB"`)
+
+* `OZ` (value: `"OZ"`)
+
+
 
 

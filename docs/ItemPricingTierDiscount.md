@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cost** | **Number** |  | [optional] 
-**quantity** | **Integer** |  | [optional] 
+**cost** | **Number** | Cost | [optional] 
+**quantity** | **Integer** | Quantity | [optional] 
 
 

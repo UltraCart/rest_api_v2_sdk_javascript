@@ -86,14 +86,17 @@
   }
 
   /**
+   * Name of the event category
    * @member {String} event_category
    */
   exports.prototype['event_category'] = undefined;
   /**
+   * The events within the category.  Individual subscription flags contained within the child object.
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookEventSubscription>} events
    */
   exports.prototype['events'] = undefined;
   /**
+   * True if all the events within this category are subscribed.  This is a convenience flag to make user interfaces easier.
    * @member {Boolean} subscribed
    */
   exports.prototype['subscribed'] = undefined;

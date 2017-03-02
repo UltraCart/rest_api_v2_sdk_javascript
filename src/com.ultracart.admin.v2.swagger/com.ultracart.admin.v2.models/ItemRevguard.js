@@ -102,30 +102,37 @@
   }
 
   /**
+   * Canceled CSR prompt group
    * @member {Integer} revguard_canceled_csr_prompt_group
    */
   exports.prototype['revguard_canceled_csr_prompt_group'] = undefined;
   /**
+   * IVR prompt group
    * @member {Integer} revguard_canceled_ivr_prompt_group
    */
   exports.prototype['revguard_canceled_ivr_prompt_group'] = undefined;
   /**
+   * Canceled web prompt group
    * @member {Integer} revguard_canceled_web_prompt_group
    */
   exports.prototype['revguard_canceled_web_prompt_group'] = undefined;
   /**
+   * Client brand
    * @member {Integer} revguard_client_brand
    */
   exports.prototype['revguard_client_brand'] = undefined;
   /**
+   * CSR prompt group
    * @member {Integer} revguard_csr_prompt_group
    */
   exports.prototype['revguard_csr_prompt_group'] = undefined;
   /**
+   * IVR prompt group
    * @member {Integer} revguard_ivr_prompt_group
    */
   exports.prototype['revguard_ivr_prompt_group'] = undefined;
   /**
+   * Web prompt group
    * @member {Integer} revguard_web_prompt_group
    */
   exports.prototype['revguard_web_prompt_group'] = undefined;

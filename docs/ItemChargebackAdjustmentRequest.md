@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chargebackAdjustmentRequestOid** | **Integer** |  | [optional] 
-**description** | **String** |  | [optional] 
-**reasonCode** | **String** |  | [optional] 
+**chargebackAdjustmentRequestOid** | **Integer** | Chargeback adjustment request object identifier | [optional] 
+**description** | **String** | Description | [optional] 
+**reasonCode** | **String** | Reason code | [optional] 
 
 

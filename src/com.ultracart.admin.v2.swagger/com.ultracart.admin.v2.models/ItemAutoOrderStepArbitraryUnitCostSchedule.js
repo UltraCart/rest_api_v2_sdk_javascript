@@ -71,8 +71,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('arbitrary_unit_Cost')) {
-        obj['arbitrary_unit_Cost'] = ApiClient.convertToType(data['arbitrary_unit_Cost'], 'Number');
+      if (data.hasOwnProperty('arbitrary_unit_cost')) {
+        obj['arbitrary_unit_cost'] = ApiClient.convertToType(data['arbitrary_unit_cost'], 'Number');
       }
       if (data.hasOwnProperty('retry_days')) {
         obj['retry_days'] = ApiClient.convertToType(data['retry_days'], 'Integer');
@@ -82,10 +82,12 @@
   }
 
   /**
-   * @member {Number} arbitrary_unit_Cost
+   * Arbitrary unit cost
+   * @member {Number} arbitrary_unit_cost
    */
-  exports.prototype['arbitrary_unit_Cost'] = undefined;
+  exports.prototype['arbitrary_unit_cost'] = undefined;
   /**
+   * Retry days
    * @member {Integer} retry_days
    */
   exports.prototype['retry_days'] = undefined;

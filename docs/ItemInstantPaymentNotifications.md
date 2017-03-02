@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**notifications** | [**[ItemInstantPaymentNotification]**](ItemInstantPaymentNotification.md) |  | [optional] 
+**notifications** | [**[ItemInstantPaymentNotification]**](ItemInstantPaymentNotification.md) | Notifications | [optional] 
 
 

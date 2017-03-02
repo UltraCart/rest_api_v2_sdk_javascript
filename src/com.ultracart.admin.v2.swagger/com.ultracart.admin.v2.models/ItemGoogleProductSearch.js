@@ -262,190 +262,237 @@
   }
 
   /**
+   * Adwords grouping
    * @member {String} adwords_grouping
    */
   exports.prototype['adwords_grouping'] = undefined;
   /**
+   * Adwords label 1
    * @member {String} adwords_label1
    */
   exports.prototype['adwords_label1'] = undefined;
   /**
+   * Adwords label 2
    * @member {String} adwords_label2
    */
   exports.prototype['adwords_label2'] = undefined;
   /**
+   * Adwords label 3
    * @member {String} adwords_label3
    */
   exports.prototype['adwords_label3'] = undefined;
   /**
+   * Adwords label 4
    * @member {String} adwords_label4
    */
   exports.prototype['adwords_label4'] = undefined;
   /**
+   * Adwords label 5
    * @member {String} adwords_label5
    */
   exports.prototype['adwords_label5'] = undefined;
   /**
+   * Age group
    * @member {String} age_group
    */
   exports.prototype['age_group'] = undefined;
   /**
+   * Available at physical store
    * @member {Boolean} available_at_physical_store
    */
   exports.prototype['available_at_physical_store'] = undefined;
   /**
+   * Book - author
    * @member {String} book_author
    */
   exports.prototype['book_author'] = undefined;
   /**
+   * Book - format
    * @member {String} book_format
    */
   exports.prototype['book_format'] = undefined;
   /**
+   * Bood - ISBN
    * @member {String} book_isbn
    */
   exports.prototype['book_isbn'] = undefined;
   /**
+   * Book - publisher
    * @member {String} book_publisher
    */
   exports.prototype['book_publisher'] = undefined;
   /**
+   * Category description
    * @member {String} category_description
    */
   exports.prototype['category_description'] = undefined;
   /**
+   * Color
    * @member {String} color
    */
   exports.prototype['color'] = undefined;
   /**
+   * Condition
    * @member {String} condition
    */
   exports.prototype['condition'] = undefined;
   /**
+   * Custom label 0
    * @member {String} custom_label0
    */
   exports.prototype['custom_label0'] = undefined;
   /**
+   * Custom label 1
    * @member {String} custom_label1
    */
   exports.prototype['custom_label1'] = undefined;
   /**
+   * Custom label 2
    * @member {String} custom_label2
    */
   exports.prototype['custom_label2'] = undefined;
   /**
+   * Custom label 3
    * @member {String} custom_label3
    */
   exports.prototype['custom_label3'] = undefined;
   /**
+   * Custom label 4
    * @member {String} custom_label4
    */
   exports.prototype['custom_label4'] = undefined;
   /**
+   * Gender
    * @member {String} gender
    */
   exports.prototype['gender'] = undefined;
   /**
+   * Google product category
    * @member {String} google_product_category
    */
   exports.prototype['google_product_category'] = undefined;
   /**
+   * Music - artist
    * @member {String} music_artist
    */
   exports.prototype['music_artist'] = undefined;
   /**
+   * Music - format
    * @member {String} music_format
    */
   exports.prototype['music_format'] = undefined;
   /**
+   * Music - release date
    * @member {String} music_release_date
    */
   exports.prototype['music_release_date'] = undefined;
   /**
+   * Omit from feed
    * @member {Boolean} omit_from_feed
    */
   exports.prototype['omit_from_feed'] = undefined;
   /**
+   * Product type
    * @member {String} product_type
    */
   exports.prototype['product_type'] = undefined;
   /**
+   * Promotion ID 1
    * @member {String} promotion_id1
    */
   exports.prototype['promotion_id1'] = undefined;
   /**
+   * Promotion ID 10
    * @member {String} promotion_id10
    */
   exports.prototype['promotion_id10'] = undefined;
   /**
+   * Promotion ID 2
    * @member {String} promotion_id2
    */
   exports.prototype['promotion_id2'] = undefined;
   /**
+   * Promotion ID 3
    * @member {String} promotion_id3
    */
   exports.prototype['promotion_id3'] = undefined;
   /**
+   * Promotion ID 4
    * @member {String} promotion_id4
    */
   exports.prototype['promotion_id4'] = undefined;
   /**
+   * Promotion ID 5
    * @member {String} promotion_id5
    */
   exports.prototype['promotion_id5'] = undefined;
   /**
+   * Promotion ID 6
    * @member {String} promotion_id6
    */
   exports.prototype['promotion_id6'] = undefined;
   /**
+   * Promotion ID 7
    * @member {String} promotion_id7
    */
   exports.prototype['promotion_id7'] = undefined;
   /**
+   * Promotion ID 8
    * @member {String} promotion_id8
    */
   exports.prototype['promotion_id8'] = undefined;
   /**
+   * Promotion ID 9
    * @member {String} promotion_id9
    */
   exports.prototype['promotion_id9'] = undefined;
   /**
+   * Search date/time
    * @member {String} search_dts
    */
   exports.prototype['search_dts'] = undefined;
   /**
+   * Search lowest price
    * @member {Number} search_lowest_price
    */
   exports.prototype['search_lowest_price'] = undefined;
   /**
+   * Search lowest URL
    * @member {String} search_lowest_url
    */
   exports.prototype['search_lowest_url'] = undefined;
   /**
+   * Search position
    * @member {Integer} search_position
    */
   exports.prototype['search_position'] = undefined;
   /**
+   * Size
    * @member {String} size
    */
   exports.prototype['size'] = undefined;
   /**
+   * Video - director
    * @member {String} video_director
    */
   exports.prototype['video_director'] = undefined;
   /**
+   * Video - format
    * @member {String} video_format
    */
   exports.prototype['video_format'] = undefined;
   /**
+   * Video - rating
    * @member {String} video_rating
    */
   exports.prototype['video_rating'] = undefined;
   /**
+   * Video - release date
    * @member {String} video_release_date
    */
   exports.prototype['video_release_date'] = undefined;
   /**
+   * Video - starring
    * @member {String} video_starring
    */
   exports.prototype['video_starring'] = undefined;

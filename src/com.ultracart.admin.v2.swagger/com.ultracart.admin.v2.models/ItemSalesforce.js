@@ -82,10 +82,12 @@
   }
 
   /**
+   * Salesforce.com pricebook id
    * @member {String} sfdc_pricebook_id
    */
   exports.prototype['sfdc_pricebook_id'] = undefined;
   /**
+   * Salesforce.com product id
    * @member {String} sfdc_product_id
    */
   exports.prototype['sfdc_product_id'] = undefined;

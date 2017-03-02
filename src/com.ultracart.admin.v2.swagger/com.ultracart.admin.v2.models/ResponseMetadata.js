@@ -82,6 +82,7 @@
   }
 
   /**
+   * Payload name
    * @member {String} payload_name
    */
   exports.prototype['payload_name'] = undefined;

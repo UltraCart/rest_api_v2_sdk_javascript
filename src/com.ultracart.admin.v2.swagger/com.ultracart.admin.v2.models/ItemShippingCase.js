@@ -90,18 +90,22 @@
   }
 
   /**
+   * Case label
    * @member {String} case_label
    */
   exports.prototype['case_label'] = undefined;
   /**
+   * Case item id
    * @member {String} case_merchant_item_id
    */
   exports.prototype['case_merchant_item_id'] = undefined;
   /**
+   * Case item object identifier
    * @member {Integer} case_merchant_item_oid
    */
   exports.prototype['case_merchant_item_oid'] = undefined;
   /**
+   * Case quantity
    * @member {Integer} quantity
    */
   exports.prototype['quantity'] = undefined;

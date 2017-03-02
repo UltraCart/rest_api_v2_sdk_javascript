@@ -86,14 +86,17 @@
   }
 
   /**
+   * Chargeback adjustment request object identifier
    * @member {Integer} chargeback_adjustment_request_oid
    */
   exports.prototype['chargeback_adjustment_request_oid'] = undefined;
   /**
+   * Description
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
   /**
+   * Reason code
    * @member {String} reason_code
    */
   exports.prototype['reason_code'] = undefined;

@@ -74,8 +74,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('component_Cost')) {
-        obj['component_Cost'] = ApiClient.convertToType(data['component_Cost'], 'Number');
+      if (data.hasOwnProperty('component_cost')) {
+        obj['component_cost'] = ApiClient.convertToType(data['component_cost'], 'Number');
       }
       if (data.hasOwnProperty('component_description')) {
         obj['component_description'] = ApiClient.convertToType(data['component_description'], 'String');
@@ -94,22 +94,27 @@
   }
 
   /**
-   * @member {Number} component_Cost
+   * Component item cost
+   * @member {Number} component_cost
    */
-  exports.prototype['component_Cost'] = undefined;
+  exports.prototype['component_cost'] = undefined;
   /**
+   * Component item description
    * @member {String} component_description
    */
   exports.prototype['component_description'] = undefined;
   /**
+   * Component item ID
    * @member {String} component_merchant_item_id
    */
   exports.prototype['component_merchant_item_id'] = undefined;
   /**
+   * Component item object identifier
    * @member {Integer} component_merchant_item_oid
    */
   exports.prototype['component_merchant_item_oid'] = undefined;
   /**
+   * Quantity
    * @member {Integer} quantity
    */
   exports.prototype['quantity'] = undefined;

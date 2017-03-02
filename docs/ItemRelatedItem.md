@@ -3,8 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**relatedMerchantItemId** | **String** |  | [optional] 
-**relatedMerchantItemOid** | **Integer** |  | [optional] 
-**type** | **String** |  | [optional] 
+**relatedMerchantItemId** | **String** | Related item id | [optional] 
+**relatedMerchantItemOid** | **Integer** | Related item object identifier | [optional] 
+**type** | **String** | Relationship type | [optional] 
+
+
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
+
+
+* `System` (value: `"System"`)
+
+* `UserDefined` (value: `"UserDefined"`)
+
+
 
 

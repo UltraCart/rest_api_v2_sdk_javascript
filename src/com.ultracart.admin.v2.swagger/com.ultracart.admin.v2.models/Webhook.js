@@ -71,6 +71,7 @@
 
 
 
+
   };
 
   /**
@@ -86,6 +87,9 @@
 
       if (data.hasOwnProperty('api_user_oid')) {
         obj['api_user_oid'] = ApiClient.convertToType(data['api_user_oid'], 'Integer');
+      }
+      if (data.hasOwnProperty('api_version')) {
+        obj['api_version'] = ApiClient.convertToType(data['api_version'], 'String');
       }
       if (data.hasOwnProperty('application_profile')) {
         obj['application_profile'] = ApiUserApplicationProfile.constructFromObject(data['application_profile']);
@@ -134,66 +138,114 @@
   }
 
   /**
+   * Populated if webhook associated with an API user
    * @member {Integer} api_user_oid
    */
   exports.prototype['api_user_oid'] = undefined;
+  /**
+   * Version of the API objects that are sent in notifications
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook.ApiVersionEnum} api_version
+   */
+  exports.prototype['api_version'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ApiUserApplicationProfile} application_profile
    */
   exports.prototype['application_profile'] = undefined;
   /**
-   * @member {String} authentication_type
+   * The type of authentication this webhook will use when communicating with your server
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Webhook.AuthenticationTypeEnum} authentication_type
    */
   exports.prototype['authentication_type'] = undefined;
   /**
+   * Basic authentication password
    * @member {String} basic_password
    */
   exports.prototype['basic_password'] = undefined;
   /**
+   * Basic authentication user name
    * @member {String} basic_username
    */
   exports.prototype['basic_username'] = undefined;
   /**
+   * The number of consecutive failures that have occurred trying to deliver notifications to the target server
    * @member {Integer} consecutive_failures
    */
   exports.prototype['consecutive_failures'] = undefined;
   /**
+   * True if the webhook has been disabled
    * @member {Boolean} disabled
    */
   exports.prototype['disabled'] = undefined;
   /**
+   * The categories of events.  Individual events and subscriptions are handled in the child objects.  _placeholders parameter effects the population of this on a retrieval.
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookEventCategory>} event_categories
    */
   exports.prototype['event_categories'] = undefined;
   /**
+   * The maximum number of events in the payload that UltraCart will deliver
    * @member {Integer} maximum_events
    */
   exports.prototype['maximum_events'] = undefined;
   /**
+   * The maximum size of the payload that UltraCart will deliver
    * @member {Integer} maximum_size
    */
   exports.prototype['maximum_size'] = undefined;
   /**
+   * The UltraCart merchant ID that owns this webhook
    * @member {String} merchant_id
    */
   exports.prototype['merchant_id'] = undefined;
   /**
+   * The next time UltraCart will attempt delivery if failures have been occurring
    * @member {String} next_retry_after
    */
   exports.prototype['next_retry_after'] = undefined;
   /**
+   * The number of pending events for this webhook
    * @member {Integer} pending
    */
   exports.prototype['pending'] = undefined;
   /**
+   * The object identifier for this webhook
    * @member {Integer} webhook_oid
    */
   exports.prototype['webhook_oid'] = undefined;
   /**
+   * The URL to deliver events to.  Must be HTTPS for customer related information.
    * @member {String} webhook_url
    */
   exports.prototype['webhook_url'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>api_version</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ApiVersionEnum = {
+    /**
+     * value: "2016-10-01"
+     * @const
+     */
+    "01": "2016-10-01"  };
+
+  /**
+   * Allowed values for the <code>authentication_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.AuthenticationTypeEnum = {
+    /**
+     * value: "none"
+     * @const
+     */
+    "none": "none",
+    /**
+     * value: "basic"
+     * @const
+     */
+    "basic": "basic"  };
 
 
   return exports;

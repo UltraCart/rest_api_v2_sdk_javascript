@@ -55,15 +55,16 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://secure.ultracart.com/rest/admin/v2
+     * @default https://secure.ultracart.com/rest/v2
      */
-    this.basePath = 'https://secure.ultracart.com/rest/admin/v2'.replace(/\/+$/, '');
+    this.basePath = 'https://secure.ultracart.com/rest/v2'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
      */
     this.authentications = {
+      'ultraCartBrowserApiKey': {type: 'apiKey', 'in': 'header', name: 'x-ultracart-browser-key'},
       'ultraCartOauth': {type: 'oauth2'},
       'ultraCartSimpleApiKey': {type: 'apiKey', 'in': 'header', name: 'x-ultracart-simple-key'}
     };

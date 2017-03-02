@@ -94,6 +94,7 @@
    */
   exports.prototype['error'] = undefined;
   /**
+   * items
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item>} items
    */
   exports.prototype['items'] = undefined;
@@ -102,6 +103,7 @@
    */
   exports.prototype['metadata'] = undefined;
   /**
+   * Indicates if API call was successful
    * @member {Boolean} success
    */
   exports.prototype['success'] = undefined;

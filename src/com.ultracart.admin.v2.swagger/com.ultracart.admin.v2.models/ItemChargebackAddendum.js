@@ -90,18 +90,22 @@
   }
 
   /**
+   * Chargeback addendum object identifier
    * @member {Integer} chargeback_addendum_oid
    */
   exports.prototype['chargeback_addendum_oid'] = undefined;
   /**
+   * Description
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
   /**
+   * Size of the file
    * @member {Integer} file_size
    */
   exports.prototype['file_size'] = undefined;
   /**
+   * Number of pages
    * @member {Integer} pages
    */
   exports.prototype['pages'] = undefined;

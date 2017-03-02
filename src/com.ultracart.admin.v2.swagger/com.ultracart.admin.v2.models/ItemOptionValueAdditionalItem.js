@@ -82,10 +82,12 @@
   }
 
   /**
+   * Additional item id
    * @member {String} additional_merchant_item_id
    */
   exports.prototype['additional_merchant_item_id'] = undefined;
   /**
+   * Additional item object identifier
    * @member {Integer} additional_merchant_item_oid
    */
   exports.prototype['additional_merchant_item_oid'] = undefined;

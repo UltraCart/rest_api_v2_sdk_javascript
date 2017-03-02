@@ -90,18 +90,22 @@
   }
 
   /**
+   * Request
    * @member {String} request
    */
   exports.prototype['request'] = undefined;
   /**
+   * Request headers
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/HTTPHeader>} request_headers
    */
   exports.prototype['request_headers'] = undefined;
   /**
+   * Request id
    * @member {String} request_id
    */
   exports.prototype['request_id'] = undefined;
   /**
+   * URI to send request to
    * @member {String} uri
    */
   exports.prototype['uri'] = undefined;

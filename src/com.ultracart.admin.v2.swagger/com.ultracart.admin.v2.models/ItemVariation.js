@@ -94,22 +94,27 @@
   }
 
   /**
+   * Default text
    * @member {String} default_text
    */
   exports.prototype['default_text'] = undefined;
   /**
+   * Default text translated text instance id
    * @member {Integer} default_text_translated_text_instance_oid
    */
   exports.prototype['default_text_translated_text_instance_oid'] = undefined;
   /**
+   * Name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
+   * Name translated text instance id
    * @member {Integer} name_translated_text_instance_oid
    */
   exports.prototype['name_translated_text_instance_oid'] = undefined;
   /**
+   * Options
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemVariationOption>} options
    */
   exports.prototype['options'] = undefined;

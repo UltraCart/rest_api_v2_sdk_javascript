@@ -106,34 +106,42 @@
   }
 
   /**
+   * Exclude coupons
    * @member {Boolean} exclude_coupon
    */
   exports.prototype['exclude_coupon'] = undefined;
   /**
+   * Exclude from free promotion
    * @member {Boolean} exclude_from_free_promotion
    */
   exports.prototype['exclude_from_free_promotion'] = undefined;
   /**
+   * Items
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRestrictionItem>} items
    */
   exports.prototype['items'] = undefined;
   /**
+   * Maximum quantity
    * @member {Integer} maximum_quantity
    */
   exports.prototype['maximum_quantity'] = undefined;
   /**
+   * Minimum quantity (defaults to 1)
    * @member {Integer} minimum_quantity
    */
   exports.prototype['minimum_quantity'] = undefined;
   /**
+   * Multiple of quantity
    * @member {Integer} multiple_quantity
    */
   exports.prototype['multiple_quantity'] = undefined;
   /**
+   * One per customer
    * @member {Boolean} one_per_customer
    */
   exports.prototype['one_per_customer'] = undefined;
   /**
+   * Purchase separately
    * @member {Boolean} purchase_separately
    */
   exports.prototype['purchase_separately'] = undefined;

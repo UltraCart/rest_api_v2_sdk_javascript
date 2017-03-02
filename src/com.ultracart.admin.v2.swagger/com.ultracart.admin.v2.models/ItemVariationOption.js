@@ -90,18 +90,22 @@
   }
 
   /**
+   * True if default option
    * @member {Boolean} default_option
    */
   exports.prototype['default_option'] = undefined;
   /**
+   * Multimedia object identifier
    * @member {Integer} merchant_item_multimedia_oid
    */
   exports.prototype['merchant_item_multimedia_oid'] = undefined;
   /**
+   * Translated text instance id
    * @member {Integer} translated_text_instance_oid
    */
   exports.prototype['translated_text_instance_oid'] = undefined;
   /**
+   * Value
    * @member {String} value
    */
   exports.prototype['value'] = undefined;

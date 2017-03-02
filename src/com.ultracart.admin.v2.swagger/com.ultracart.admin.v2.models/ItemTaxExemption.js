@@ -94,22 +94,27 @@
   }
 
   /**
+   * City
    * @member {String} city
    */
   exports.prototype['city'] = undefined;
   /**
+   * Country code (ISO-3166 two letter)
    * @member {String} country_code
    */
   exports.prototype['country_code'] = undefined;
   /**
+   * County
    * @member {String} county
    */
   exports.prototype['county'] = undefined;
   /**
+   * Postal code
    * @member {String} postal_code
    */
   exports.prototype['postal_code'] = undefined;
   /**
+   * State code
    * @member {String} state_code
    */
   exports.prototype['state_code'] = undefined;

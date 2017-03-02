@@ -86,14 +86,17 @@
   }
 
   /**
+   * True to suppress system calculated relationships
    * @member {Boolean} no_system_calculated_related_items
    */
   exports.prototype['no_system_calculated_related_items'] = undefined;
   /**
+   * Not relatable
    * @member {Boolean} not_relatable
    */
   exports.prototype['not_relatable'] = undefined;
   /**
+   * Related items
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemRelatedItem>} related_items
    */
   exports.prototype['related_items'] = undefined;

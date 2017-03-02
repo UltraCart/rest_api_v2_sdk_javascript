@@ -82,10 +82,12 @@
   }
 
   /**
+   * Cost
    * @member {Number} cost
    */
   exports.prototype['cost'] = undefined;
   /**
+   * Quantity
    * @member {Integer} quantity
    */
   exports.prototype['quantity'] = undefined;

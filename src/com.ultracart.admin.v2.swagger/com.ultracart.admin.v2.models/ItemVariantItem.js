@@ -98,26 +98,32 @@
   }
 
   /**
+   * Description
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
   /**
+   * Multimedia object identifier
    * @member {Integer} merchant_item_multimedia_oid
    */
   exports.prototype['merchant_item_multimedia_oid'] = undefined;
   /**
+   * Variant item id
    * @member {String} variant_merchant_item_id
    */
   exports.prototype['variant_merchant_item_id'] = undefined;
   /**
+   * Variant item object identifier
    * @member {Integer} variant_merchant_item_oid
    */
   exports.prototype['variant_merchant_item_oid'] = undefined;
   /**
+   * Variation options
    * @member {Array.<String>} variation_options
    */
   exports.prototype['variation_options'] = undefined;
   /**
+   * Variations
    * @member {Array.<String>} variations
    */
   exports.prototype['variations'] = undefined;

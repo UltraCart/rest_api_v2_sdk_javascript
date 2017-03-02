@@ -118,46 +118,57 @@
   }
 
   /**
+   * StoreFront assignments
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentAssignment>} assignments
    */
   exports.prototype['assignments'] = undefined;
   /**
+   * StoreFront attributes
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentAttribute>} attributes
    */
   exports.prototype['attributes'] = undefined;
   /**
+   * Exclude from search
    * @member {Boolean} exclude_from_search
    */
   exports.prototype['exclude_from_search'] = undefined;
   /**
+   * Exclude from the top sellers list in the StoreFront
    * @member {Boolean} exclude_from_top_sellers
    */
   exports.prototype['exclude_from_top_sellers'] = undefined;
   /**
+   * Extended description (max 2000 characters)
    * @member {String} extended_description
    */
   exports.prototype['extended_description'] = undefined;
   /**
+   * Extneded description text translation instance identifier
    * @member {Integer} extended_description_translated_text_instance_oid
    */
   exports.prototype['extended_description_translated_text_instance_oid'] = undefined;
   /**
+   * Multimedia
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentMultimedia>} multimedia
    */
   exports.prototype['multimedia'] = undefined;
   /**
+   * True if the item is new
    * @member {Boolean} new_item
    */
   exports.prototype['new_item'] = undefined;
   /**
+   * The date the item should no longer be considered new
    * @member {String} new_item_end
    */
   exports.prototype['new_item_end'] = undefined;
   /**
+   * The date the item should start being considered new
    * @member {String} new_item_start
    */
   exports.prototype['new_item_start'] = undefined;
   /**
+   * Legacy view URL (not used by StoreFronts)
    * @member {String} view_url
    */
   exports.prototype['view_url'] = undefined;

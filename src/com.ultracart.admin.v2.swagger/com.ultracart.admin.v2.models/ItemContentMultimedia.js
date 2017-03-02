@@ -134,66 +134,113 @@
   }
 
   /**
+   * URL where the image can be downloaded from the cloud
    * @member {String} cloud_url
    */
   exports.prototype['cloud_url'] = undefined;
   /**
+   * Expiration date of the cloud URL
    * @member {String} cloud_url_expiration
    */
   exports.prototype['cloud_url_expiration'] = undefined;
   /**
+   * Code assigned to the file
    * @member {String} code
    */
   exports.prototype['code'] = undefined;
   /**
+   * Description
    * @member {String} description
    */
   exports.prototype['description'] = undefined;
   /**
+   * True to exclude from multimedia gallery
    * @member {Boolean} exclude_from_gallery
    */
   exports.prototype['exclude_from_gallery'] = undefined;
   /**
+   * File name
    * @member {String} file_name
    */
   exports.prototype['file_name'] = undefined;
   /**
+   * Height of the image
    * @member {Integer} height
    */
   exports.prototype['height'] = undefined;
   /**
+   * Item multimedia object identifier
    * @member {Integer} merchant_item_multimedia_oid
    */
   exports.prototype['merchant_item_multimedia_oid'] = undefined;
   /**
+   * True if the multimedia is an orphan of the active StoreFront themes
    * @member {Boolean} orphan
    */
   exports.prototype['orphan'] = undefined;
   /**
+   * True if the object is a place holder that can be populated
    * @member {Boolean} placeholder
    */
   exports.prototype['placeholder'] = undefined;
   /**
+   * Temporary multimedia object identifier assigned if uploading new multimedia
    * @member {Integer} temp_multimedia_oid
    */
   exports.prototype['temp_multimedia_oid'] = undefined;
   /**
+   * Thumbnails of this image
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail>} thumbnails
    */
   exports.prototype['thumbnails'] = undefined;
   /**
-   * @member {String} type
+   * Type of file
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemContentMultimedia.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
   /**
+   * URL to download file
    * @member {String} url
    */
   exports.prototype['url'] = undefined;
   /**
+   * Width of the image
    * @member {Integer} width
    */
   exports.prototype['width'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "Image"
+     * @const
+     */
+    "Image": "Image",
+    /**
+     * value: "PDF"
+     * @const
+     */
+    "PDF": "PDF",
+    /**
+     * value: "Text"
+     * @const
+     */
+    "Text": "Text",
+    /**
+     * value: "Unknown"
+     * @const
+     */
+    "Unknown": "Unknown",
+    /**
+     * value: "Video"
+     * @const
+     */
+    "Video": "Video"  };
 
 
   return exports;

@@ -86,14 +86,17 @@
   }
 
   /**
+   * Exemptions
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemTaxExemption>} exemptions
    */
   exports.prototype['exemptions'] = undefined;
   /**
+   * True if tax free
    * @member {Boolean} tax_free
    */
   exports.prototype['tax_free'] = undefined;
   /**
+   * Taxable cost if different than regular cost
    * @member {Number} taxable_cost
    */
   exports.prototype['taxable_cost'] = undefined;

@@ -114,42 +114,52 @@
   }
 
   /**
+   * Date/time of delivery
    * @member {String} delivery_dts
    */
   exports.prototype['delivery_dts'] = undefined;
   /**
+   * Number of milliseconds to process the notification
    * @member {Integer} duration
    */
   exports.prototype['duration'] = undefined;
   /**
+   * Request payload (first 100,000 characters)
    * @member {String} request
    */
   exports.prototype['request'] = undefined;
   /**
+   * Request headers sent to the server
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/HTTPHeader>} request_headers
    */
   exports.prototype['request_headers'] = undefined;
   /**
+   * Request id is a unique string that you can look up in the logs
    * @member {String} request_id
    */
   exports.prototype['request_id'] = undefined;
   /**
+   * Response payload (first 100,000 characters)
    * @member {String} response
    */
   exports.prototype['response'] = undefined;
   /**
+   * Response headers received from the server
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/HTTPHeader>} response_headers
    */
   exports.prototype['response_headers'] = undefined;
   /**
+   * HTTP status code received from the server
    * @member {Integer} status_code
    */
   exports.prototype['status_code'] = undefined;
   /**
+   * True if the delivery was successful
    * @member {Boolean} success
    */
   exports.prototype['success'] = undefined;
   /**
+   * URI of the webhook delivered to
    * @member {String} uri
    */
   exports.prototype['uri'] = undefined;

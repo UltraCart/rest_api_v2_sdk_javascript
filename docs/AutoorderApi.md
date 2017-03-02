@@ -1,0 +1,234 @@
+# UltraCartRestApiV2.AutoorderApi
+
+All URIs are relative to *https://secure.ultracart.com/rest/v2*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**autoOrderAutoOrdersAutoOrderOidGet**](AutoorderApi.md#autoOrderAutoOrdersAutoOrderOidGet) | **GET** /auto_order/auto_orders/{auto_order_oid} | Retrieve an auto order
+[**autoOrderAutoOrdersAutoOrderOidPut**](AutoorderApi.md#autoOrderAutoOrdersAutoOrderOidPut) | **PUT** /auto_order/auto_orders/{auto_order_oid} | Update an auto order
+[**autoOrderAutoOrdersGet**](AutoorderApi.md#autoOrderAutoOrdersGet) | **GET** /auto_order/auto_orders | Retrieve auto orders
+
+
+<a name="autoOrderAutoOrdersAutoOrderOidGet"></a>
+# **autoOrderAutoOrdersAutoOrderOidGet**
+> AutoOrderResponse autoOrderAutoOrdersAutoOrderOidGet(autoOrderOid, opts)
+
+Retrieve an auto order
+
+Retrieves a single auto order using the specified auto order oid. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.AutoorderApi();
+
+var autoOrderOid = 56; // Integer | The auto order oid to retrieve.
+
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.autoOrderAutoOrdersAutoOrderOidGet(autoOrderOid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autoOrderOid** | **Integer**| The auto order oid to retrieve. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="autoOrderAutoOrdersAutoOrderOidPut"></a>
+# **autoOrderAutoOrdersAutoOrderOidPut**
+> AutoOrderResponse autoOrderAutoOrdersAutoOrderOidPut(autoOrder, autoOrderOid)
+
+Update an auto order
+
+Update an auto order on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.AutoorderApi();
+
+var autoOrder = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
+
+var autoOrderOid = 56; // Integer | The auto order oid to update.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.autoOrderAutoOrdersAutoOrderOidPut(autoOrder, autoOrderOid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autoOrder** | [**AutoOrder**](AutoOrder.md)| Auto order to update | 
+ **autoOrderOid** | **Integer**| The auto order oid to update. | 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="autoOrderAutoOrdersGet"></a>
+# **autoOrderAutoOrdersGet**
+> AutoOrdersResponse autoOrderAutoOrdersGet(opts)
+
+Retrieve auto orders
+
+Retrieves auto orders from the account.  If no parameters are specified, all auto orders will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.AutoorderApi();
+
+var opts = { 
+  'autoOrderCode': "autoOrderCode_example", // String | Auto order code
+  'originalOrderId': "originalOrderId_example", // String | Original order id
+  'firstName': "firstName_example", // String | First name
+  'lastName': "lastName_example", // String | Last name
+  'company': "company_example", // String | Company
+  'city': "city_example", // String | City
+  'state': "state_example", // String | State
+  'postalCode': "postalCode_example", // String | Postal code
+  'countryCode': "countryCode_example", // String | Country code (ISO-3166 two letter)
+  'phone': "phone_example", // String | Phone
+  'email': "email_example", // String | Email
+  'originalOrderDateBegin': "originalOrderDateBegin_example", // String | Original order date begin
+  'originalOrderDateEnd': "originalOrderDateEnd_example", // String | Original order date end
+  'nextShipmentDateBegin': "nextShipmentDateBegin_example", // String | Next shipment date begin
+  'nextShipmentDateEnd': "nextShipmentDateEnd_example", // String | Next shipment date end
+  'cardType': "cardType_example", // String | Card type
+  'itemId': "itemId_example", // String | Item ID
+  'status': "status_example", // String | Status
+  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Max 200)
+  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'since': "since_example", // String | Fetch auto orders that have been created/modified since this date/time.
+  'sort': "sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.autoOrderAutoOrdersGet(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autoOrderCode** | **String**| Auto order code | [optional] 
+ **originalOrderId** | **String**| Original order id | [optional] 
+ **firstName** | **String**| First name | [optional] 
+ **lastName** | **String**| Last name | [optional] 
+ **company** | **String**| Company | [optional] 
+ **city** | **String**| City | [optional] 
+ **state** | **String**| State | [optional] 
+ **postalCode** | **String**| Postal code | [optional] 
+ **countryCode** | **String**| Country code (ISO-3166 two letter) | [optional] 
+ **phone** | **String**| Phone | [optional] 
+ **email** | **String**| Email | [optional] 
+ **originalOrderDateBegin** | **String**| Original order date begin | [optional] 
+ **originalOrderDateEnd** | **String**| Original order date end | [optional] 
+ **nextShipmentDateBegin** | **String**| Next shipment date begin | [optional] 
+ **nextShipmentDateEnd** | **String**| Next shipment date end | [optional] 
+ **cardType** | **String**| Card type | [optional] 
+ **itemId** | **String**| Item ID | [optional] 
+ **status** | **String**| Status | [optional] 
+ **limit** | **Integer**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **since** | **String**| Fetch auto orders that have been created/modified since this date/time. | [optional] 
+ **sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**AutoOrdersResponse**](AutoOrdersResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+

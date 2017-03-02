@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**componentCost** | **Number** |  | [optional] 
-**componentDescription** | **String** |  | [optional] 
-**componentMerchantItemId** | **String** |  | [optional] 
-**componentMerchantItemOid** | **Integer** |  | [optional] 
-**quantity** | **Integer** |  | [optional] 
+**componentCost** | **Number** | Component item cost | [optional] 
+**componentDescription** | **String** | Component item description | [optional] 
+**componentMerchantItemId** | **String** | Component item ID | [optional] 
+**componentMerchantItemOid** | **Integer** | Component item object identifier | [optional] 
+**quantity** | **Integer** | Quantity | [optional] 
 
 

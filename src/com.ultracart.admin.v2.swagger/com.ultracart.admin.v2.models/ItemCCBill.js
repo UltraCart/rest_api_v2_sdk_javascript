@@ -98,26 +98,32 @@
   }
 
   /**
+   * Allowed currencies
    * @member {String} ccbill_allowed_currencies
    */
   exports.prototype['ccbill_allowed_currencies'] = undefined;
   /**
+   * Allowed types
    * @member {String} ccbill_allowed_types
    */
   exports.prototype['ccbill_allowed_types'] = undefined;
   /**
+   * Currency code
    * @member {String} ccbill_currency_code
    */
   exports.prototype['ccbill_currency_code'] = undefined;
   /**
+   * Form name
    * @member {String} ccbill_form_name
    */
   exports.prototype['ccbill_form_name'] = undefined;
   /**
+   * Sub-account id
    * @member {String} ccbill_subaccount_id
    */
   exports.prototype['ccbill_subaccount_id'] = undefined;
   /**
+   * Subscription type id
    * @member {String} ccbill_subscription_type_id
    */
   exports.prototype['ccbill_subscription_type_id'] = undefined;

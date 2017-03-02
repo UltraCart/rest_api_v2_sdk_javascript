@@ -3,12 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ITEM_META_DESCRIPTION** | **String** |  | [optional] 
-**ITEM_META_KEYWORDS** | **String** |  | [optional] 
-**ITEM_META_TITLE** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**translatedTextInstanceOid** | **Integer** |  | [optional] 
-**type** | **String** |  | [optional] 
-**value** | **String** |  | [optional] 
+**name** | **String** | Attribute name | [optional] 
+**translatedTextInstanceOid** | **Integer** | Attribute translated text instance identifier | [optional] 
+**type** | **String** | Attribute type | [optional] 
+**value** | **String** | Attribute value | [optional] 
 
 

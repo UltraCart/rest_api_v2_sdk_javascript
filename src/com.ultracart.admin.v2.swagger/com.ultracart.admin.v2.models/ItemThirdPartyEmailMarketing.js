@@ -94,26 +94,98 @@
   }
 
   /**
+   * Add tags
    * @member {Array.<String>} add_tags
    */
   exports.prototype['add_tags'] = undefined;
   /**
-   * @member {String} provider_name
+   * Provider name
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing.ProviderNameEnum} provider_name
    */
   exports.prototype['provider_name'] = undefined;
   /**
+   * Remove tags
    * @member {Array.<String>} remove_tags
    */
   exports.prototype['remove_tags'] = undefined;
   /**
+   * Subscribe to lists
    * @member {Array.<String>} subscribe_lists
    */
   exports.prototype['subscribe_lists'] = undefined;
   /**
+   * Unsubscribe from lists
    * @member {Array.<String>} unsubscribe_lists
    */
   exports.prototype['unsubscribe_lists'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>provider_name</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ProviderNameEnum = {
+    /**
+     * value: "ActiveCampaign"
+     * @const
+     */
+    "ActiveCampaign": "ActiveCampaign",
+    /**
+     * value: "AWeber"
+     * @const
+     */
+    "AWeber": "AWeber",
+    /**
+     * value: "Campaign Monitor"
+     * @const
+     */
+    "Campaign Monitor": "Campaign Monitor",
+    /**
+     * value: "ConstantContact"
+     * @const
+     */
+    "ConstantContact": "ConstantContact",
+    /**
+     * value: "Emma"
+     * @const
+     */
+    "Emma": "Emma",
+    /**
+     * value: "GetResponse"
+     * @const
+     */
+    "GetResponse": "GetResponse",
+    /**
+     * value: "iContact"
+     * @const
+     */
+    "iContact": "iContact",
+    /**
+     * value: "Klaviyo"
+     * @const
+     */
+    "Klaviyo": "Klaviyo",
+    /**
+     * value: "Lyris"
+     * @const
+     */
+    "Lyris": "Lyris",
+    /**
+     * value: "LyrisHQ"
+     * @const
+     */
+    "LyrisHQ": "LyrisHQ",
+    /**
+     * value: "MailChimp"
+     * @const
+     */
+    "MailChimp": "MailChimp",
+    /**
+     * value: "SilverPop"
+     * @const
+     */
+    "SilverPop": "SilverPop"  };
 
 
   return exports;

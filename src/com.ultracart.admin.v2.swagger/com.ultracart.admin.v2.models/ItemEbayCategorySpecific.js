@@ -82,10 +82,12 @@
   }
 
   /**
+   * Name of the category specification field
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
+   * Value
    * @member {String} value
    */
   exports.prototype['value'] = undefined;

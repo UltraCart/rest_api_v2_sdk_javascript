@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**excludeCoupon** | **Boolean** |  | [optional] 
-**excludeFromFreePromotion** | **Boolean** |  | [optional] 
-**items** | [**[ItemRestrictionItem]**](ItemRestrictionItem.md) |  | [optional] 
-**maximumQuantity** | **Integer** |  | [optional] 
-**minimumQuantity** | **Integer** |  | [optional] 
-**multipleQuantity** | **Integer** |  | [optional] 
-**onePerCustomer** | **Boolean** |  | [optional] 
-**purchaseSeparately** | **Boolean** |  | [optional] 
+**excludeCoupon** | **Boolean** | Exclude coupons | [optional] 
+**excludeFromFreePromotion** | **Boolean** | Exclude from free promotion | [optional] 
+**items** | [**[ItemRestrictionItem]**](ItemRestrictionItem.md) | Items | [optional] 
+**maximumQuantity** | **Integer** | Maximum quantity | [optional] 
+**minimumQuantity** | **Integer** | Minimum quantity (defaults to 1) | [optional] 
+**multipleQuantity** | **Integer** | Multiple of quantity | [optional] 
+**onePerCustomer** | **Boolean** | One per customer | [optional] 
+**purchaseSeparately** | **Boolean** | Purchase separately | [optional] 
 
 

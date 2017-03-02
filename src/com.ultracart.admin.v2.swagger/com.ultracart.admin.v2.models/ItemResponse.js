@@ -102,6 +102,7 @@
    */
   exports.prototype['metadata'] = undefined;
   /**
+   * Indicates if API call was successful
    * @member {Boolean} success
    */
   exports.prototype['success'] = undefined;

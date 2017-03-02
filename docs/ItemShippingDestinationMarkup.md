@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**country** | **String** |  | [optional] 
-**flatFee** | **Number** |  | [optional] 
-**perItem** | **Number** |  | [optional] 
-**postalCode** | **String** |  | [optional] 
-**shippingMethod** | **String** |  | [optional] 
-**state** | **String** |  | [optional] 
+**countryCode** | **String** | Country code (ISO-3166 two letter) | [optional] 
+**flatFee** | **Number** | Flat fee | [optional] 
+**perItem** | **Number** | Per item | [optional] 
+**postalCode** | **String** | Postal code | [optional] 
+**shippingMethod** | **String** | Shipping method | [optional] 
+**state** | **String** | State | [optional] 
 
 

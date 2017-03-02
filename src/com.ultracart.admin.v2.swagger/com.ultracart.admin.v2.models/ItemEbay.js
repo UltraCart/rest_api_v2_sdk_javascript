@@ -312,8 +312,8 @@
       if (data.hasOwnProperty('marketplace_profitable')) {
         obj['marketplace_profitable'] = ApiClient.convertToType(data['marketplace_profitable'], 'Boolean');
       }
-      if (data.hasOwnProperty('next_attemp_dts')) {
-        obj['next_attemp_dts'] = ApiClient.convertToType(data['next_attemp_dts'], 'String');
+      if (data.hasOwnProperty('next_attempt_dts')) {
+        obj['next_attempt_dts'] = ApiClient.convertToType(data['next_attempt_dts'], 'String');
       }
       if (data.hasOwnProperty('next_listing_duration')) {
         obj['next_listing_duration'] = ApiClient.convertToType(data['next_listing_duration'], 'String');
@@ -350,163 +350,203 @@
   }
 
   /**
+   * True if the item is active for listing
    * @member {Boolean} active
    */
   exports.prototype['active'] = undefined;
   /**
+   * e-Bay category ID
    * @member {Integer} category_id
    */
   exports.prototype['category_id'] = undefined;
   /**
+   * Answers to category specific questions
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbayCategorySpecific>} category_specifics
    */
   exports.prototype['category_specifics'] = undefined;
   /**
+   * Description of the condition (e-Bay constant)
    * @member {String} condition_description
    */
   exports.prototype['condition_description'] = undefined;
   /**
+   * Numerical ID of the condition (e-Bay constant)
    * @member {Integer} condition_id
    */
   exports.prototype['condition_id'] = undefined;
   /**
+   * Number of consecutive failures trying to list this item
    * @member {Integer} consecutive_failures
    */
   exports.prototype['consecutive_failures'] = undefined;
   /**
+   * e-Bay Store category 1
    * @member {Integer} custom_category1
    */
   exports.prototype['custom_category1'] = undefined;
   /**
+   * e-Bay Store category 2
    * @member {Integer} custom_category2
    */
   exports.prototype['custom_category2'] = undefined;
   /**
+   * Maximum number of days it will take to ship the item
    * @member {Integer} dispatch_time_max
    */
   exports.prototype['dispatch_time_max'] = undefined;
   /**
+   * Domestic 1 method additional item cost
    * @member {Number} domestic_1_additional_cost
    */
   exports.prototype['domestic_1_additional_cost'] = undefined;
   /**
+   * Domestic 1 method first item cost
    * @member {Number} domestic_1_first_cost
    */
   exports.prototype['domestic_1_first_cost'] = undefined;
   /**
+   * Domestic 2 method additional item cost
    * @member {Number} domestic_2_additional_cost
    */
   exports.prototype['domestic_2_additional_cost'] = undefined;
   /**
+   * Domestic 2 method first item cost
    * @member {Number} domestic_2_first_cost
    */
   exports.prototype['domestic_2_first_cost'] = undefined;
   /**
+   * Domestic 3 method additional item cost
    * @member {Number} domestic_3_additional_cost
    */
   exports.prototype['domestic_3_additional_cost'] = undefined;
   /**
+   * Domestic 3 method first item cost
    * @member {Number} domestic_3_first_cost
    */
   exports.prototype['domestic_3_first_cost'] = undefined;
   /**
+   * Domestic 4 method additional item cost
    * @member {Number} domestic_4_additional_cost
    */
   exports.prototype['domestic_4_additional_cost'] = undefined;
   /**
+   * Domestic 4 method first item cost
    * @member {Number} domestic_4_first_cost
    */
   exports.prototype['domestic_4_first_cost'] = undefined;
   /**
+   * If listed, this is the e-Bay auction id
    * @member {String} ebay_auction_id
    */
   exports.prototype['ebay_auction_id'] = undefined;
   /**
+   * e-Bay specific inventory
    * @member {Integer} ebay_specific_inventory
    */
   exports.prototype['ebay_specific_inventory'] = undefined;
   /**
+   * The template name to use hwen rendering the e-Bay listing
    * @member {String} ebay_template_name
    */
   exports.prototype['ebay_template_name'] = undefined;
   /**
+   * The template object identifier to use when rendering the e-Bay listing
    * @member {Integer} ebay_template_oid
    */
   exports.prototype['ebay_template_oid'] = undefined;
   /**
+   * Date/time of the auction end
    * @member {String} end_time
    */
   exports.prototype['end_time'] = undefined;
   /**
+   * True if item receives free shipping
    * @member {Boolean} free_shipping
    */
   exports.prototype['free_shipping'] = undefined;
   /**
+   * The method that is free for free shipping
    * @member {String} free_shipping_method
    */
   exports.prototype['free_shipping_method'] = undefined;
   /**
+   * International 1 method additional item cost
    * @member {Number} international_1_additional_cost
    */
   exports.prototype['international_1_additional_cost'] = undefined;
   /**
+   * International 1 method first item cost
    * @member {Number} international_1_first_cost
    */
   exports.prototype['international_1_first_cost'] = undefined;
   /**
+   * International 2 method additional item cost
    * @member {Number} international_2_additional_cost
    */
   exports.prototype['international_2_additional_cost'] = undefined;
   /**
+   * International 2 method first item cost
    * @member {Number} international_2_first_cost
    */
   exports.prototype['international_2_first_cost'] = undefined;
   /**
+   * International 3 method additional item cost
    * @member {Number} international_3_additional_cost
    */
   exports.prototype['international_3_additional_cost'] = undefined;
   /**
+   * International 3 method first item cost
    * @member {Number} international_3_first_cost
    */
   exports.prototype['international_3_first_cost'] = undefined;
   /**
+   * International 4 method additional item cost
    * @member {Number} international_4_additional_cost
    */
   exports.prototype['international_4_additional_cost'] = undefined;
   /**
+   * International 4 method first item cost
    * @member {Number} international_4_first_cost
    */
   exports.prototype['international_4_first_cost'] = undefined;
   /**
+   * Date/time of the last status check
    * @member {String} last_status_dts
    */
   exports.prototype['last_status_dts'] = undefined;
   /**
+   * Current listing dispatch time maximum
    * @member {Integer} listed_dispatch_time_max
    */
   exports.prototype['listed_dispatch_time_max'] = undefined;
   /**
+   * The template object identifier used for the listing
    * @member {Integer} listed_ebay_template_oid
    */
   exports.prototype['listed_ebay_template_oid'] = undefined;
   /**
+   * Date/time of the listing
    * @member {String} listing_dts
    */
   exports.prototype['listing_dts'] = undefined;
   /**
+   * The duration of the listing
    * @member {String} listing_duration
    */
   exports.prototype['listing_duration'] = undefined;
   /**
+   * Price to list the item at
    * @member {Number} listing_price
    */
   exports.prototype['listing_price'] = undefined;
   /**
+   * The price to list the item at if different than the regular UltraCart item price
    * @member {Number} listing_price_override
    */
   exports.prototype['listing_price_override'] = undefined;
   /**
-   * @member {String} listing_type
+   * The type of e-Bay listing
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbay.ListingTypeEnum} listing_type
    */
   exports.prototype['listing_type'] = undefined;
   /**
@@ -514,118 +554,173 @@
    */
   exports.prototype['marketplace_analysis'] = undefined;
   /**
+   * True if marketplace analysis should be performed
    * @member {Boolean} marketplace_analysis_perform
    */
   exports.prototype['marketplace_analysis_perform'] = undefined;
   /**
+   * Marketplace FVF percentage
    * @member {Number} marketplace_final_value_fee_percentage
    */
   exports.prototype['marketplace_final_value_fee_percentage'] = undefined;
   /**
+   * Date/time of the marketplace analysis last check
    * @member {String} marketplace_last_check_dts
    */
   exports.prototype['marketplace_last_check_dts'] = undefined;
   /**
+   * True if we are the lowest offer in the marketplace
    * @member {Boolean} marketplace_lowest
    */
   exports.prototype['marketplace_lowest'] = undefined;
   /**
+   * True if another seller is violating MAP
    * @member {Boolean} marketplace_map_violation
    */
   exports.prototype['marketplace_map_violation'] = undefined;
   /**
+   * Marketplace multiplier
    * @member {Number} marketplace_multiplier
    */
   exports.prototype['marketplace_multiplier'] = undefined;
   /**
+   * Marketplace other price
    * @member {Number} marketplace_other_price
    */
   exports.prototype['marketplace_other_price'] = undefined;
   /**
+   * Marketplace other seller
    * @member {String} marketplace_other_seller
    */
   exports.prototype['marketplace_other_seller'] = undefined;
   /**
+   * Marketplace other shipping
    * @member {Number} marketplace_other_shipping
    */
   exports.prototype['marketplace_other_shipping'] = undefined;
   /**
+   * Marketplace other total
    * @member {Number} marketplace_other_total
    */
   exports.prototype['marketplace_other_total'] = undefined;
   /**
+   * Marketplace our additional profit potential
    * @member {Number} marketplace_our_additional_profit_potential
    */
   exports.prototype['marketplace_our_additional_profit_potential'] = undefined;
   /**
+   * Marketplace our price
    * @member {Number} marketplace_our_price
    */
   exports.prototype['marketplace_our_price'] = undefined;
   /**
+   * Marketplace our profit
    * @member {Number} marketplace_our_profit
    */
   exports.prototype['marketplace_our_profit'] = undefined;
   /**
+   * Marketplace our shipping
    * @member {Number} marketplace_our_shipping
    */
   exports.prototype['marketplace_our_shipping'] = undefined;
   /**
+   * Marketplace our total
    * @member {Number} marketplace_our_total
    */
   exports.prototype['marketplace_our_total'] = undefined;
   /**
+   * Marketplace overhead
    * @member {Number} marketplace_overhead
    */
   exports.prototype['marketplace_overhead'] = undefined;
   /**
+   * True if our listing is profitable to sell
    * @member {Boolean} marketplace_profitable
    */
   exports.prototype['marketplace_profitable'] = undefined;
   /**
-   * @member {String} next_attemp_dts
+   * Date/time for the next attempt to list
+   * @member {String} next_attempt_dts
    */
-  exports.prototype['next_attemp_dts'] = undefined;
+  exports.prototype['next_attempt_dts'] = undefined;
   /**
+   * The next listing duration to use when the current listing ends.
    * @member {String} next_listing_duration
    */
   exports.prototype['next_listing_duration'] = undefined;
   /**
+   * True if the item should not qualify for promotional shipping
    * @member {Boolean} no_promotional_shipping
    */
   exports.prototype['no_promotional_shipping'] = undefined;
   /**
+   * Packaging and handling costs
    * @member {Number} packaging_handling_costs
    */
   exports.prototype['packaging_handling_costs'] = undefined;
   /**
+   * Previous e-Bay auction id
    * @member {String} previous_ebay_auction_id
    */
   exports.prototype['previous_ebay_auction_id'] = undefined;
   /**
+   * Quantity available of the item
    * @member {Integer} quantity
    */
   exports.prototype['quantity'] = undefined;
   /**
+   * Reserve price
    * @member {Number} reserve_price
    */
   exports.prototype['reserve_price'] = undefined;
   /**
+   * How to send the item dimensions and weights to e-Bay
    * @member {String} send_dimensions_and_weight
    */
   exports.prototype['send_dimensions_and_weight'] = undefined;
   /**
+   * Date/time of the auction start
    * @member {String} start_time
    */
   exports.prototype['start_time'] = undefined;
   /**
+   * Status of the item's listing
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
   /**
+   * Typical number of days it will take to ship the item
    * @member {Integer} target_dispatch_time_max
    */
   exports.prototype['target_dispatch_time_max'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>listing_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ListingTypeEnum = {
+    /**
+     * value: ""
+     * @const
+     */
+    "": "",
+    /**
+     * value: "Auction"
+     * @const
+     */
+    "Auction": "Auction",
+    /**
+     * value: "Fixed"
+     * @const
+     */
+    "Fixed": "Fixed",
+    /**
+     * value: "Store"
+     * @const
+     */
+    "Store": "Store"  };
 
 
   return exports;

@@ -1,6 +1,6 @@
 # UltraCartRestApiV2.WebhookApi
 
-All URIs are relative to *https://secure.ultracart.com/rest/admin/v2*
+All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,13 +11,11 @@ Method | HTTP request | Description
 [**webhookWebhooksWebhookOidLogsRequestIdGet**](WebhookApi.md#webhookWebhooksWebhookOidLogsRequestIdGet) | **GET** /webhook/webhooks/{webhookOid}/logs/{requestId} | Retrieve an individual log
 [**webhookWebhooksWebhookOidPut**](WebhookApi.md#webhookWebhooksWebhookOidPut) | **PUT** /webhook/webhooks/{webhookOid} | Update a webhook
 [**webhookWebhooksWebhookOidReflowEventNamePost**](WebhookApi.md#webhookWebhooksWebhookOidReflowEventNamePost) | **POST** /webhook/webhooks/{webhookOid}/reflow/{eventName} | Resend events to the webhook endpoint.
-[**webhookWebhooksWebhookOidSamplesGet**](WebhookApi.md#webhookWebhooksWebhookOidSamplesGet) | **GET** /webhook/webhooks/{webhookOid}/samples | Retrieve a sample notification.
-[**webhookWebhooksWebhookOidValidatePost**](WebhookApi.md#webhookWebhooksWebhookOidValidatePost) | **POST** /webhook/webhooks/{webhookOid}/validate | Send test message to an endpoint.
 
 
 <a name="webhookWebhooksGet"></a>
 # **webhookWebhooksGet**
-> WebhooksResponse webhookWebhooksGet()
+> WebhooksResponse webhookWebhooksGet(opts)
 
 Retrieve webhooks
 
@@ -40,6 +38,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
+var opts = { 
+  'limit': 100, // Integer | The maximum number of records to return on this one API call.
+  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'sort': "sort_example", // String | The sort order of the webhooks.  See documentation for examples
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -47,11 +52,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.webhookWebhooksGet(callback);
+apiInstance.webhookWebhooksGet(opts, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**| The maximum number of records to return on this one API call. | [optional] [default to 100]
+ **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **sort** | **String**| The sort order of the webhooks.  See documentation for examples | [optional] 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -68,11 +79,11 @@ This endpoint does not need any parameter.
 
 <a name="webhookWebhooksPost"></a>
 # **webhookWebhooksPost**
-> WebhooksResponse webhookWebhooksPost(webhook)
+> WebhookResponse webhookWebhooksPost(webhook, opts)
 
 Add a webhook
 
-Adds a new webhook on the account 
+Adds a new webhook on the account.  If you add a new webhook with the authentication_type set to basic, but do not specify the basic_username and basic_password, UltraCart will automatically generate random ones and return them.  This allows your application to have simpler logic on the setup of a secure webhook. 
 
 ### Example
 ```javascript
@@ -93,6 +104,9 @@ var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
 var webhook = new UltraCartRestApiV2.Webhook(); // Webhook | Webhook to create
 
+var opts = { 
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -101,7 +115,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.webhookWebhooksPost(webhook, callback);
+apiInstance.webhookWebhooksPost(webhook, opts, callback);
 ```
 
 ### Parameters
@@ -109,10 +123,11 @@ apiInstance.webhookWebhooksPost(webhook, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook** | [**Webhook**](Webhook.md)| Webhook to create | 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
-[**WebhooksResponse**](WebhooksResponse.md)
+[**WebhookResponse**](WebhookResponse.md)
 
 ### Authorization
 
@@ -120,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
 <a name="webhookWebhooksWebhookOidDelete"></a>
@@ -182,7 +197,7 @@ null (empty response body)
 
 <a name="webhookWebhooksWebhookOidLogsGet"></a>
 # **webhookWebhooksWebhookOidLogsGet**
-> WebhookLogSummariesResponse webhookWebhooksWebhookOidLogsGet(webhookOid)
+> WebhookLogSummariesResponse webhookWebhooksWebhookOidLogsGet(webhookOid, opts)
 
 Retrieve the log summaries
 
@@ -207,6 +222,11 @@ var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
 var webhookOid = 56; // Integer | The webhook oid to retrieve log summaries for.
 
+var opts = { 
+  'limit': 100, // Integer | The maximum number of records to return on this one API call.
+  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'since': "since_example" // String | Fetch log summaries that have been delivered since this date/time.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -215,7 +235,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.webhookWebhooksWebhookOidLogsGet(webhookOid, callback);
+apiInstance.webhookWebhooksWebhookOidLogsGet(webhookOid, opts, callback);
 ```
 
 ### Parameters
@@ -223,6 +243,9 @@ apiInstance.webhookWebhooksWebhookOidLogsGet(webhookOid, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhookOid** | **Integer**| The webhook oid to retrieve log summaries for. | 
+ **limit** | **Integer**| The maximum number of records to return on this one API call. | [optional] [default to 100]
+ **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **since** | **String**| Fetch log summaries that have been delivered since this date/time. | [optional] 
 
 ### Return type
 
@@ -299,7 +322,7 @@ Name | Type | Description  | Notes
 
 <a name="webhookWebhooksWebhookOidPut"></a>
 # **webhookWebhooksWebhookOidPut**
-> WebhooksResponse webhookWebhooksWebhookOidPut(webhook, webhookOid)
+> WebhookResponse webhookWebhooksWebhookOidPut(webhook, webhookOid, opts)
 
 Update a webhook
 
@@ -326,6 +349,9 @@ var webhook = new UltraCartRestApiV2.Webhook(); // Webhook | Webhook to update
 
 var webhookOid = 56; // Integer | The webhook oid to update.
 
+var opts = { 
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -334,7 +360,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.webhookWebhooksWebhookOidPut(webhook, webhookOid, callback);
+apiInstance.webhookWebhooksWebhookOidPut(webhook, webhookOid, opts, callback);
 ```
 
 ### Parameters
@@ -343,10 +369,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook** | [**Webhook**](Webhook.md)| Webhook to update | 
  **webhookOid** | **Integer**| The webhook oid to update. | 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
-[**WebhooksResponse**](WebhooksResponse.md)
+[**WebhookResponse**](WebhookResponse.md)
 
 ### Authorization
 
@@ -354,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
 <a name="webhookWebhooksWebhookOidReflowEventNamePost"></a>
@@ -414,123 +441,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="webhookWebhooksWebhookOidSamplesGet"></a>
-# **webhookWebhooksWebhookOidSamplesGet**
-> WebhookSampleRequestResponse webhookWebhooksWebhookOidSamplesGet(webhookOid)
-
-Retrieve a sample notification.
-
-Retrieves a sample notification for the webhook.  This provides as example of what the notifications that can be delivered will look like. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.WebhookApi();
-
-var webhookOid = 56; // Integer | The webhook oid to retrieve samples for.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.webhookWebhooksWebhookOidSamplesGet(webhookOid, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhookOid** | **Integer**| The webhook oid to retrieve samples for. | 
-
-### Return type
-
-[**WebhookSampleRequestResponse**](WebhookSampleRequestResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="webhookWebhooksWebhookOidValidatePost"></a>
-# **webhookWebhooksWebhookOidValidatePost**
-> WebhookLogResponse webhookWebhooksWebhookOidValidatePost(samples, webhookOid)
-
-Send test message to an endpoint.
-
-Performs a test of the webhook endpoint given the specified sample request and returns the log associated with the response. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.WebhookApi();
-
-var samples = new UltraCartRestApiV2.WebhookSampleRequest(); // WebhookSampleRequest | Samples to send in the test
-
-var webhookOid = 56; // Integer | The webhook oid that is being tested.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.webhookWebhooksWebhookOidValidatePost(samples, webhookOid, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **samples** | [**WebhookSampleRequest**](WebhookSampleRequest.md)| Samples to send in the test | 
- **webhookOid** | **Integer**| The webhook oid that is being tested. | 
-
-### Return type
-
-[**WebhookLogResponse**](WebhookLogResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 

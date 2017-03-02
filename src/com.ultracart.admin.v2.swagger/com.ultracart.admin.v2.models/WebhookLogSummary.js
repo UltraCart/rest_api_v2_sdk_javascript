@@ -86,14 +86,17 @@
   }
 
   /**
+   * Date/time of the delivery
    * @member {String} delivery_dts
    */
   exports.prototype['delivery_dts'] = undefined;
   /**
+   * Request id
    * @member {String} request_id
    */
   exports.prototype['request_id'] = undefined;
   /**
+   * True if the notification was successful
    * @member {Boolean} success
    */
   exports.prototype['success'] = undefined;
