@@ -57,6 +57,52 @@
 
 
     /**
+     * Callback function to receive the result of the customerCustomersCustomerProfileOidDelete operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a customer
+     * Delete a customer on the UltraCart account. 
+     * @param {Integer} customerProfileOid The customer_profile_oid to delete.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
+     */
+    this.customerCustomersCustomerProfileOidDelete = function(customerProfileOid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'customerProfileOid' is set
+      if (customerProfileOid == undefined || customerProfileOid == null) {
+        throw "Missing the required parameter 'customerProfileOid' when calling customerCustomersCustomerProfileOidDelete";
+      }
+
+
+      var pathParams = {
+        'customer_profile_oid': customerProfileOid
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = CustomerResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the customerCustomersCustomerProfileOidGet operation.
      * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidGetCallback
      * @param {String} error Error message, if any.
@@ -258,6 +304,51 @@
 
       return this.apiClient.callApi(
         '/customer/customers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the customerCustomersPost operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a customer
+     * Insert a customer on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer} customer Customer to insert
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
+     */
+    this.customerCustomersPost = function(customer, callback) {
+      var postBody = customer;
+
+      // verify the required parameter 'customer' is set
+      if (customer == undefined || customer == null) {
+        throw "Missing the required parameter 'customer' when calling customerCustomersPost";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = CustomerResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -313,10 +313,13 @@
      * Update a new order on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order} order Order to update
      * @param {String} orderId The order id to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse}
      */
-    this.orderOrdersOrderIdPut = function(order, orderId, callback) {
+    this.orderOrdersOrderIdPut = function(order, orderId, opts, callback) {
+      opts = opts || {};
       var postBody = order;
 
       // verify the required parameter 'order' is set
@@ -334,6 +337,7 @@
         'order_id': orderId
       };
       var queryParams = {
+        '_expand': opts['expand']
       };
       var headerParams = {
       };

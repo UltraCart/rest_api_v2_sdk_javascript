@@ -4,10 +4,69 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**customerCustomersCustomerProfileOidDelete**](CustomerApi.md#customerCustomersCustomerProfileOidDelete) | **DELETE** /customer/customers/{customer_profile_oid} | Delete a customer
 [**customerCustomersCustomerProfileOidGet**](CustomerApi.md#customerCustomersCustomerProfileOidGet) | **GET** /customer/customers/{customer_profile_oid} | Retrieve a customer
 [**customerCustomersCustomerProfileOidPut**](CustomerApi.md#customerCustomersCustomerProfileOidPut) | **PUT** /customer/customers/{customer_profile_oid} | Update a customer
 [**customerCustomersGet**](CustomerApi.md#customerCustomersGet) | **GET** /customer/customers | Retrieve customers
+[**customerCustomersPost**](CustomerApi.md#customerCustomersPost) | **POST** /customer/customers | Insert a customer
 
+
+<a name="customerCustomersCustomerProfileOidDelete"></a>
+# **customerCustomersCustomerProfileOidDelete**
+> CustomerResponse customerCustomersCustomerProfileOidDelete(customerProfileOid)
+
+Delete a customer
+
+Delete a customer on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CustomerApi();
+
+var customerProfileOid = 56; // Integer | The customer_profile_oid to delete.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.customerCustomersCustomerProfileOidDelete(customerProfileOid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customerProfileOid** | **Integer**| The customer_profile_oid to delete. | 
+
+### Return type
+
+[**CustomerResponse**](CustomerResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
 
 <a name="customerCustomersCustomerProfileOidGet"></a>
 # **customerCustomersCustomerProfileOidGet**
@@ -248,5 +307,62 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="customerCustomersPost"></a>
+# **customerCustomersPost**
+> CustomerResponse customerCustomersPost(customer)
+
+Insert a customer
+
+Insert a customer on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CustomerApi();
+
+var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to insert
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.customerCustomersPost(customer, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer** | [**Customer**](Customer.md)| Customer to insert | 
+
+### Return type
+
+[**CustomerResponse**](CustomerResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 

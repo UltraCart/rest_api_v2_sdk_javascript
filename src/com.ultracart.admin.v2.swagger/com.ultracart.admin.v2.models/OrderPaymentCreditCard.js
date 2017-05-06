@@ -200,7 +200,12 @@
      * value: "VISA"
      * @const
      */
-    "VISA": "VISA"  };
+    "VISA": "VISA",
+    /**
+     * value: "Visa"
+     * @const
+     */
+    "Visa": "Visa"  };
 
 
   return exports;

@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 
 * `VISA` (value: `"VISA"`)
 
+* `Visa` (value: `"Visa"`)
+
 
 
 

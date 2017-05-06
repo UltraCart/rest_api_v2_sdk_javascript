@@ -225,10 +225,10 @@
    */
   exports.ApiVersionEnum = {
     /**
-     * value: "2016-10-01"
+     * value: "2017-03-01"
      * @const
      */
-    "01": "2016-10-01"  };
+    "01": "2017-03-01"  };
 
   /**
    * Allowed values for the <code>authentication_type</code> property.

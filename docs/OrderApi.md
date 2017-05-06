@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 <a name="orderOrdersOrderIdPut"></a>
 # **orderOrdersOrderIdPut**
-> OrderResponse orderOrdersOrderIdPut(order, orderId)
+> OrderResponse orderOrdersOrderIdPut(order, orderId, opts)
 
 Update an order
 
@@ -335,6 +335,9 @@ var order = new UltraCartRestApiV2.Order(); // Order | Order to update
 
 var orderId = "orderId_example"; // String | The order id to update.
 
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -343,7 +346,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.orderOrdersOrderIdPut(order, orderId, callback);
+apiInstance.orderOrdersOrderIdPut(order, orderId, opts, callback);
 ```
 
 ### Parameters
@@ -352,6 +355,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order** | [**Order**](Order.md)| Order to update | 
  **orderId** | **String**| The order id to update. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
