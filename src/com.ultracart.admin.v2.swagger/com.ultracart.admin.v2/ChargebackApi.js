@@ -165,10 +165,13 @@
      * Update a chargeback on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDispute} chargeback Chargeback to update
      * @param {Integer} chargebackDisputeOid The chargeback_dispute_oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksChargebackDisputeOidPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.chargebackChargebacksChargebackDisputeOidPut = function(chargeback, chargebackDisputeOid, callback) {
+    this.chargebackChargebacksChargebackDisputeOidPut = function(chargeback, chargebackDisputeOid, opts, callback) {
+      opts = opts || {};
       var postBody = chargeback;
 
       // verify the required parameter 'chargeback' is set
@@ -186,6 +189,7 @@
         'chargeback_dispute_oid': chargebackDisputeOid
       };
       var queryParams = {
+        '_expand': opts['expand']
       };
       var headerParams = {
       };
@@ -281,10 +285,13 @@
      * Insert a chargeback
      * Insert a chargeback on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDispute} chargeback Chargeback to insert
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.chargebackChargebacksPost = function(chargeback, callback) {
+    this.chargebackChargebacksPost = function(chargeback, opts, callback) {
+      opts = opts || {};
       var postBody = chargeback;
 
       // verify the required parameter 'chargeback' is set
@@ -296,6 +303,7 @@
       var pathParams = {
       };
       var queryParams = {
+        '_expand': opts['expand']
       };
       var headerParams = {
       };

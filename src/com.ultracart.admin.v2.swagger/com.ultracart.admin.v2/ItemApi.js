@@ -223,10 +223,14 @@
      * Update a new item on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item} item Item to update
      * @param {Integer} merchantItemOid The item oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~itemItemsMerchantItemOidPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse}
      */
-    this.itemItemsMerchantItemOidPut = function(item, merchantItemOid, callback) {
+    this.itemItemsMerchantItemOidPut = function(item, merchantItemOid, opts, callback) {
+      opts = opts || {};
       var postBody = item;
 
       // verify the required parameter 'item' is set
@@ -244,6 +248,8 @@
         'merchant_item_oid': merchantItemOid
       };
       var queryParams = {
+        '_expand': opts['expand'],
+        '_placeholders': opts['placeholders']
       };
       var headerParams = {
       };
@@ -274,10 +280,14 @@
      * Create an item
      * Create a new item on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item} item Item to create
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~itemItemsPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse}
      */
-    this.itemItemsPost = function(item, callback) {
+    this.itemItemsPost = function(item, opts, callback) {
+      opts = opts || {};
       var postBody = item;
 
       // verify the required parameter 'item' is set
@@ -289,6 +299,8 @@
       var pathParams = {
       };
       var queryParams = {
+        '_expand': opts['expand'],
+        '_placeholders': opts['placeholders']
       };
       var headerParams = {
       };

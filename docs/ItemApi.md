@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 <a name="itemItemsMerchantItemOidPut"></a>
 # **itemItemsMerchantItemOidPut**
-> ItemResponse itemItemsMerchantItemOidPut(item, merchantItemOid)
+> ItemResponse itemItemsMerchantItemOidPut(item, merchantItemOid, opts)
 
 Update an item
 
@@ -233,6 +233,10 @@ var item = new UltraCartRestApiV2.Item(); // Item | Item to update
 
 var merchantItemOid = 56; // Integer | The item oid to update.
 
+var opts = { 
+  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -241,7 +245,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.itemItemsMerchantItemOidPut(item, merchantItemOid, callback);
+apiInstance.itemItemsMerchantItemOidPut(item, merchantItemOid, opts, callback);
 ```
 
 ### Parameters
@@ -250,6 +254,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **item** | [**Item**](Item.md)| Item to update | 
  **merchantItemOid** | **Integer**| The item oid to update. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -266,7 +272,7 @@ Name | Type | Description  | Notes
 
 <a name="itemItemsPost"></a>
 # **itemItemsPost**
-> ItemResponse itemItemsPost(item)
+> ItemResponse itemItemsPost(item, opts)
 
 Create an item
 
@@ -291,6 +297,10 @@ var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var item = new UltraCartRestApiV2.Item(); // Item | Item to create
 
+var opts = { 
+  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -299,7 +309,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.itemItemsPost(item, callback);
+apiInstance.itemItemsPost(item, opts, callback);
 ```
 
 ### Parameters
@@ -307,6 +317,8 @@ apiInstance.itemItemsPost(item, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **item** | [**Item**](Item.md)| Item to create | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 

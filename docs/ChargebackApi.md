@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 <a name="chargebackChargebacksChargebackDisputeOidPut"></a>
 # **chargebackChargebacksChargebackDisputeOidPut**
-> ChargebackDisputeResponse chargebackChargebacksChargebackDisputeOidPut(chargeback, chargebackDisputeOid)
+> ChargebackDisputeResponse chargebackChargebacksChargebackDisputeOidPut(chargeback, chargebackDisputeOid, opts)
 
 Update a chargeback
 
@@ -158,6 +158,9 @@ var chargeback = new UltraCartRestApiV2.ChargebackDispute(); // ChargebackDisput
 
 var chargebackDisputeOid = 56; // Integer | The chargeback_dispute_oid to update.
 
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -166,7 +169,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.chargebackChargebacksChargebackDisputeOidPut(chargeback, chargebackDisputeOid, callback);
+apiInstance.chargebackChargebacksChargebackDisputeOidPut(chargeback, chargebackDisputeOid, opts, callback);
 ```
 
 ### Parameters
@@ -175,6 +178,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to update | 
  **chargebackDisputeOid** | **Integer**| The chargeback_dispute_oid to update. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -271,7 +275,7 @@ Name | Type | Description  | Notes
 
 <a name="chargebackChargebacksPost"></a>
 # **chargebackChargebacksPost**
-> ChargebackDisputeResponse chargebackChargebacksPost(chargeback)
+> ChargebackDisputeResponse chargebackChargebacksPost(chargeback, opts)
 
 Insert a chargeback
 
@@ -296,6 +300,9 @@ var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
 var chargeback = new UltraCartRestApiV2.ChargebackDispute(); // ChargebackDispute | Chargeback to insert
 
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -304,7 +311,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.chargebackChargebacksPost(chargeback, callback);
+apiInstance.chargebackChargebacksPost(chargeback, opts, callback);
 ```
 
 ### Parameters
@@ -312,6 +319,7 @@ apiInstance.chargebackChargebacksPost(chargeback, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to insert | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 

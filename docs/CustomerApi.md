@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 <a name="customerCustomersCustomerProfileOidPut"></a>
 # **customerCustomersCustomerProfileOidPut**
-> CustomerResponse customerCustomersCustomerProfileOidPut(customer, customerProfileOid)
+> CustomerResponse customerCustomersCustomerProfileOidPut(customer, customerProfileOid, opts)
 
 Update a customer
 
@@ -158,6 +158,9 @@ var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to upda
 
 var customerProfileOid = 56; // Integer | The customer_profile_oid to update.
 
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -166,7 +169,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.customerCustomersCustomerProfileOidPut(customer, customerProfileOid, callback);
+apiInstance.customerCustomersCustomerProfileOidPut(customer, customerProfileOid, opts, callback);
 ```
 
 ### Parameters
@@ -175,6 +178,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer** | [**Customer**](Customer.md)| Customer to update | 
  **customerProfileOid** | **Integer**| The customer_profile_oid to update. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -311,7 +315,7 @@ Name | Type | Description  | Notes
 
 <a name="customerCustomersPost"></a>
 # **customerCustomersPost**
-> CustomerResponse customerCustomersPost(customer)
+> CustomerResponse customerCustomersPost(customer, opts)
 
 Insert a customer
 
@@ -336,6 +340,9 @@ var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
 var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to insert
 
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -344,7 +351,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.customerCustomersPost(customer, callback);
+apiInstance.customerCustomersPost(customer, opts, callback);
 ```
 
 ### Parameters
@@ -352,6 +359,7 @@ apiInstance.customerCustomersPost(customer, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer** | [**Customer**](Customer.md)| Customer to insert | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 

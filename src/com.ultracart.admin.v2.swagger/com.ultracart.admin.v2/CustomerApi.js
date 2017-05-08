@@ -165,10 +165,13 @@
      * Update a customer on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer} customer Customer to update
      * @param {Integer} customerProfileOid The customer_profile_oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.customerCustomersCustomerProfileOidPut = function(customer, customerProfileOid, callback) {
+    this.customerCustomersCustomerProfileOidPut = function(customer, customerProfileOid, opts, callback) {
+      opts = opts || {};
       var postBody = customer;
 
       // verify the required parameter 'customer' is set
@@ -186,6 +189,7 @@
         'customer_profile_oid': customerProfileOid
       };
       var queryParams = {
+        '_expand': opts['expand']
       };
       var headerParams = {
       };
@@ -321,10 +325,13 @@
      * Insert a customer
      * Insert a customer on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer} customer Customer to insert
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.customerCustomersPost = function(customer, callback) {
+    this.customerCustomersPost = function(customer, opts, callback) {
+      opts = opts || {};
       var postBody = customer;
 
       // verify the required parameter 'customer' is set
@@ -336,6 +343,7 @@
       var pathParams = {
       };
       var queryParams = {
+        '_expand': opts['expand']
       };
       var headerParams = {
       };
