@@ -65,7 +65,7 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.ItemAutoOrderStepArbitraryUnitCostSchedule);
     });
 
-    it('should have the property arbitraryUnitCost (base name: "arbitrary_unit_Cost")', function() {
+    it('should have the property arbitraryUnitCost (base name: "arbitrary_unit_cost")', function() {
       // uncomment below and update the code to test the property arbitraryUnitCost
       //var instane = new UltraCartRestApiV2.ItemAutoOrderStepArbitraryUnitCostSchedule();
       //expect(instance).to.be();

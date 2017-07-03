@@ -4,14 +4,14 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**autoOrderAutoOrdersAutoOrderOidGet**](AutoorderApi.md#autoOrderAutoOrdersAutoOrderOidGet) | **GET** /auto_order/auto_orders/{auto_order_oid} | Retrieve an auto order
-[**autoOrderAutoOrdersAutoOrderOidPut**](AutoorderApi.md#autoOrderAutoOrdersAutoOrderOidPut) | **PUT** /auto_order/auto_orders/{auto_order_oid} | Update an auto order
-[**autoOrderAutoOrdersGet**](AutoorderApi.md#autoOrderAutoOrdersGet) | **GET** /auto_order/auto_orders | Retrieve auto orders
+[**getAutoOrder**](AutoorderApi.md#getAutoOrder) | **GET** /auto_order/auto_orders/{auto_order_oid} | Retrieve an auto order
+[**getAutoOrders**](AutoorderApi.md#getAutoOrders) | **GET** /auto_order/auto_orders | Retrieve auto orders
+[**updateAutoOrder**](AutoorderApi.md#updateAutoOrder) | **PUT** /auto_order/auto_orders/{auto_order_oid} | Update an auto order
 
 
-<a name="autoOrderAutoOrdersAutoOrderOidGet"></a>
-# **autoOrderAutoOrdersAutoOrderOidGet**
-> AutoOrderResponse autoOrderAutoOrdersAutoOrderOidGet(autoOrderOid, opts)
+<a name="getAutoOrder"></a>
+# **getAutoOrder**
+> AutoOrderResponse getAutoOrder(autoOrderOid, opts)
 
 Retrieve an auto order
 
@@ -47,7 +47,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.autoOrderAutoOrdersAutoOrderOidGet(autoOrderOid, opts, callback);
+apiInstance.getAutoOrder(autoOrderOid, opts, callback);
 ```
 
 ### Parameters
@@ -70,69 +70,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="autoOrderAutoOrdersAutoOrderOidPut"></a>
-# **autoOrderAutoOrdersAutoOrderOidPut**
-> AutoOrderResponse autoOrderAutoOrdersAutoOrderOidPut(autoOrder, autoOrderOid)
-
-Update an auto order
-
-Update an auto order on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.AutoorderApi();
-
-var autoOrder = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
-
-var autoOrderOid = 56; // Integer | The auto order oid to update.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.autoOrderAutoOrdersAutoOrderOidPut(autoOrder, autoOrderOid, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **autoOrder** | [**AutoOrder**](AutoOrder.md)| Auto order to update | 
- **autoOrderOid** | **Integer**| The auto order oid to update. | 
-
-### Return type
-
-[**AutoOrderResponse**](AutoOrderResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
-
-<a name="autoOrderAutoOrdersGet"></a>
-# **autoOrderAutoOrdersGet**
-> AutoOrdersResponse autoOrderAutoOrdersGet(opts)
+<a name="getAutoOrders"></a>
+# **getAutoOrders**
+> AutoOrdersResponse getAutoOrders(opts)
 
 Retrieve auto orders
 
@@ -188,7 +128,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.autoOrderAutoOrdersGet(opts, callback);
+apiInstance.getAutoOrders(opts, callback);
 ```
 
 ### Parameters
@@ -230,5 +170,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateAutoOrder"></a>
+# **updateAutoOrder**
+> AutoOrderResponse updateAutoOrder(autoOrder, autoOrderOid, opts)
+
+Update an auto order
+
+Update an auto order on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.AutoorderApi();
+
+var autoOrder = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
+
+var autoOrderOid = 56; // Integer | The auto order oid to update.
+
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateAutoOrder(autoOrder, autoOrderOid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autoOrder** | [**AutoOrder**](AutoOrder.md)| Auto order to update | 
+ **autoOrderOid** | **Integer**| The auto order oid to update. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 

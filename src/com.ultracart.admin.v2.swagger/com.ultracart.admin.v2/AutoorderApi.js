@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrder', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrdersResponse'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrdersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrder'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AutoOrderResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/AutoOrder'), require('../com.ultracart.admin.v2.models/AutoOrdersResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AutoOrderResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/AutoOrdersResponse'), require('../com.ultracart.admin.v2.models/AutoOrder'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoorderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.AutoOrder, root.UltraCartRestApiV2.AutoOrdersResponse);
+    root.UltraCartRestApiV2.AutoorderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.AutoOrdersResponse, root.UltraCartRestApiV2.AutoOrder);
   }
-}(this, function(ApiClient, AutoOrderResponse, ErrorResponse, AutoOrder, AutoOrdersResponse) {
+}(this, function(ApiClient, AutoOrderResponse, ErrorResponse, AutoOrdersResponse, AutoOrder) {
   'use strict';
 
   /**
@@ -57,8 +57,8 @@
 
 
     /**
-     * Callback function to receive the result of the autoOrderAutoOrdersAutoOrderOidGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~autoOrderAutoOrdersAutoOrderOidGetCallback
+     * Callback function to receive the result of the getAutoOrder operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrderCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -70,16 +70,16 @@
      * @param {Integer} autoOrderOid The auto order oid to retrieve.
      * @param {Object} opts Optional parameters
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~autoOrderAutoOrdersAutoOrderOidGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse}
      */
-    this.autoOrderAutoOrdersAutoOrderOidGet = function(autoOrderOid, opts, callback) {
+    this.getAutoOrder = function(autoOrderOid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'autoOrderOid' is set
       if (autoOrderOid == undefined || autoOrderOid == null) {
-        throw "Missing the required parameter 'autoOrderOid' when calling autoOrderAutoOrdersAutoOrderOidGet";
+        throw "Missing the required parameter 'autoOrderOid' when calling getAutoOrder";
       }
 
 
@@ -107,60 +107,8 @@
     }
 
     /**
-     * Callback function to receive the result of the autoOrderAutoOrdersAutoOrderOidPut operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~autoOrderAutoOrdersAutoOrderOidPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update an auto order
-     * Update an auto order on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrder} autoOrder Auto order to update
-     * @param {Integer} autoOrderOid The auto order oid to update.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~autoOrderAutoOrdersAutoOrderOidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse}
-     */
-    this.autoOrderAutoOrdersAutoOrderOidPut = function(autoOrder, autoOrderOid, callback) {
-      var postBody = autoOrder;
-
-      // verify the required parameter 'autoOrder' is set
-      if (autoOrder == undefined || autoOrder == null) {
-        throw "Missing the required parameter 'autoOrder' when calling autoOrderAutoOrdersAutoOrderOidPut";
-      }
-
-      // verify the required parameter 'autoOrderOid' is set
-      if (autoOrderOid == undefined || autoOrderOid == null) {
-        throw "Missing the required parameter 'autoOrderOid' when calling autoOrderAutoOrdersAutoOrderOidPut";
-      }
-
-
-      var pathParams = {
-        'auto_order_oid': autoOrderOid
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
-      var accepts = ['application/json'];
-      var returnType = AutoOrderResponse;
-
-      return this.apiClient.callApi(
-        '/auto_order/auto_orders/{auto_order_oid}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the autoOrderAutoOrdersGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~autoOrderAutoOrdersGetCallback
+     * Callback function to receive the result of the getAutoOrders operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrdersCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrdersResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -193,10 +141,10 @@
      * @param {String} opts.since Fetch auto orders that have been created/modified since this date/time.
      * @param {String} opts.sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~autoOrderAutoOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrdersResponse}
      */
-    this.autoOrderAutoOrdersGet = function(opts, callback) {
+    this.getAutoOrders = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -240,6 +188,62 @@
 
       return this.apiClient.callApi(
         '/auto_order/auto_orders', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateAutoOrder operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~updateAutoOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update an auto order
+     * Update an auto order on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrder} autoOrder Auto order to update
+     * @param {Integer} autoOrderOid The auto order oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~updateAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    this.updateAutoOrder = function(autoOrder, autoOrderOid, opts, callback) {
+      opts = opts || {};
+      var postBody = autoOrder;
+
+      // verify the required parameter 'autoOrder' is set
+      if (autoOrder == undefined || autoOrder == null) {
+        throw "Missing the required parameter 'autoOrder' when calling updateAutoOrder";
+      }
+
+      // verify the required parameter 'autoOrderOid' is set
+      if (autoOrderOid == undefined || autoOrderOid == null) {
+        throw "Missing the required parameter 'autoOrderOid' when calling updateAutoOrder";
+      }
+
+
+      var pathParams = {
+        'auto_order_oid': autoOrderOid
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = AutoOrderResponse;
+
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/{auto_order_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

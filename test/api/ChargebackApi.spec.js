@@ -59,50 +59,50 @@
   }
 
   describe('ChargebackApi', function() {
-    describe('chargebackChargebacksChargebackDisputeOidDelete', function() {
-      it('should call chargebackChargebacksChargebackDisputeOidDelete successfully', function(done) {
-        //uncomment below and update the code to test chargebackChargebacksChargebackDisputeOidDelete
-        //instance.chargebackChargebacksChargebackDisputeOidDelete(pet, function(error) {
+    describe('deleteChargeback', function() {
+      it('should call deleteChargeback successfully', function(done) {
+        //uncomment below and update the code to test deleteChargeback
+        //instance.deleteChargeback(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chargebackChargebacksChargebackDisputeOidGet', function() {
-      it('should call chargebackChargebacksChargebackDisputeOidGet successfully', function(done) {
-        //uncomment below and update the code to test chargebackChargebacksChargebackDisputeOidGet
-        //instance.chargebackChargebacksChargebackDisputeOidGet(pet, function(error) {
+    describe('getChargebackDispute', function() {
+      it('should call getChargebackDispute successfully', function(done) {
+        //uncomment below and update the code to test getChargebackDispute
+        //instance.getChargebackDispute(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chargebackChargebacksChargebackDisputeOidPut', function() {
-      it('should call chargebackChargebacksChargebackDisputeOidPut successfully', function(done) {
-        //uncomment below and update the code to test chargebackChargebacksChargebackDisputeOidPut
-        //instance.chargebackChargebacksChargebackDisputeOidPut(pet, function(error) {
+    describe('getChargebackDisputes', function() {
+      it('should call getChargebackDisputes successfully', function(done) {
+        //uncomment below and update the code to test getChargebackDisputes
+        //instance.getChargebackDisputes(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chargebackChargebacksGet', function() {
-      it('should call chargebackChargebacksGet successfully', function(done) {
-        //uncomment below and update the code to test chargebackChargebacksGet
-        //instance.chargebackChargebacksGet(pet, function(error) {
+    describe('insertChargeback', function() {
+      it('should call insertChargeback successfully', function(done) {
+        //uncomment below and update the code to test insertChargeback
+        //instance.insertChargeback(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('chargebackChargebacksPost', function() {
-      it('should call chargebackChargebacksPost successfully', function(done) {
-        //uncomment below and update the code to test chargebackChargebacksPost
-        //instance.chargebackChargebacksPost(pet, function(error) {
+    describe('updateChargeback', function() {
+      it('should call updateChargeback successfully', function(done) {
+        //uncomment below and update the code to test updateChargeback
+        //instance.updateChargeback(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

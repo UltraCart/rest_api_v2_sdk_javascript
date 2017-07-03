@@ -413,8 +413,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property nextAttempDts (base name: "next_attemp_dts")', function() {
-      // uncomment below and update the code to test the property nextAttempDts
+    it('should have the property nextAttemptDts (base name: "next_attempt_dts")', function() {
+      // uncomment below and update the code to test the property nextAttemptDts
       //var instane = new UltraCartRestApiV2.ItemEbay();
       //expect(instance).to.be();
     });

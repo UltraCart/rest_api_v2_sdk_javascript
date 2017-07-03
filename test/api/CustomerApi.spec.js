@@ -59,30 +59,50 @@
   }
 
   describe('CustomerApi', function() {
-    describe('customerCustomersCustomerProfileOidGet', function() {
-      it('should call customerCustomersCustomerProfileOidGet successfully', function(done) {
-        //uncomment below and update the code to test customerCustomersCustomerProfileOidGet
-        //instance.customerCustomersCustomerProfileOidGet(pet, function(error) {
+    describe('deleteCustomer', function() {
+      it('should call deleteCustomer successfully', function(done) {
+        //uncomment below and update the code to test deleteCustomer
+        //instance.deleteCustomer(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('customerCustomersCustomerProfileOidPut', function() {
-      it('should call customerCustomersCustomerProfileOidPut successfully', function(done) {
-        //uncomment below and update the code to test customerCustomersCustomerProfileOidPut
-        //instance.customerCustomersCustomerProfileOidPut(pet, function(error) {
+    describe('getCustomer', function() {
+      it('should call getCustomer successfully', function(done) {
+        //uncomment below and update the code to test getCustomer
+        //instance.getCustomer(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('customerCustomersGet', function() {
-      it('should call customerCustomersGet successfully', function(done) {
-        //uncomment below and update the code to test customerCustomersGet
-        //instance.customerCustomersGet(pet, function(error) {
+    describe('getCustomers', function() {
+      it('should call getCustomers successfully', function(done) {
+        //uncomment below and update the code to test getCustomers
+        //instance.getCustomers(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('insertCustomer', function() {
+      it('should call insertCustomer successfully', function(done) {
+        //uncomment below and update the code to test insertCustomer
+        //instance.insertCustomer(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateCustomer', function() {
+      it('should call updateCustomer successfully', function(done) {
+        //uncomment below and update the code to test updateCustomer
+        //instance.updateCustomer(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

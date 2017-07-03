@@ -65,8 +65,8 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.ItemShippingDestinationRestriction);
     });
 
-    it('should have the property country (base name: "country")', function() {
-      // uncomment below and update the code to test the property country
+    it('should have the property countryCode (base name: "country_code")', function() {
+      // uncomment below and update the code to test the property countryCode
       //var instane = new UltraCartRestApiV2.ItemShippingDestinationRestriction();
       //expect(instance).to.be();
     });

@@ -77,6 +77,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoOrderCancelItemId (base name: "auto_order_cancel_item_id")', function() {
+      // uncomment below and update the code to test the property autoOrderCancelItemId
+      //var instane = new UltraCartRestApiV2.ItemAutoOrder();
+      //expect(instance).to.be();
+    });
+
     it('should have the property autoOrderCancelItemOid (base name: "auto_order_cancel_item_oid")', function() {
       // uncomment below and update the code to test the property autoOrderCancelItemOid
       //var instane = new UltraCartRestApiV2.ItemAutoOrder();
@@ -113,18 +119,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property autoOrderUpsellDelay (base name: "auto_order_upsell_delay")', function() {
-      // uncomment below and update the code to test the property autoOrderUpsellDelay
-      //var instane = new UltraCartRestApiV2.ItemAutoOrder();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property autoOrderUpsellMerchantItemOid (base name: "auto_order_upsell_merchant_item_oid")', function() {
-      // uncomment below and update the code to test the property autoOrderUpsellMerchantItemOid
-      //var instane = new UltraCartRestApiV2.ItemAutoOrder();
-      //expect(instance).to.be();
-    });
-
     it('should have the property autoOrderUpsellNoEasyCancel (base name: "auto_order_upsell_no_easy_cancel")', function() {
       // uncomment below and update the code to test the property autoOrderUpsellNoEasyCancel
       //var instane = new UltraCartRestApiV2.ItemAutoOrder();
@@ -133,18 +127,6 @@
 
     it('should have the property autoOrderUpsellOnePerCustomer (base name: "auto_order_upsell_one_per_customer")', function() {
       // uncomment below and update the code to test the property autoOrderUpsellOnePerCustomer
-      //var instane = new UltraCartRestApiV2.ItemAutoOrder();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property autoOrderUpsellRepeatCount (base name: "auto_order_upsell_repeat_count")', function() {
-      // uncomment below and update the code to test the property autoOrderUpsellRepeatCount
-      //var instane = new UltraCartRestApiV2.ItemAutoOrder();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property autoOrderUpsellSchedule (base name: "auto_order_upsell_schedule")', function() {
-      // uncomment below and update the code to test the property autoOrderUpsellSchedule
       //var instane = new UltraCartRestApiV2.ItemAutoOrder();
       //expect(instance).to.be();
     });

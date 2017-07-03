@@ -59,50 +59,50 @@
   }
 
   describe('FulfillmentApi', function() {
-    describe('fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut', function() {
-      it('should call fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut successfully', function(done) {
-        //uncomment below and update the code to test fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut
-        //instance.fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut(pet, function(error) {
+    describe('acknowledgeOrders', function() {
+      it('should call acknowledgeOrders successfully', function(done) {
+        //uncomment below and update the code to test acknowledgeOrders
+        //instance.acknowledgeOrders(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('fulfillmentDistributionCentersDistributionCenterCodeInventoryPost', function() {
-      it('should call fulfillmentDistributionCentersDistributionCenterCodeInventoryPost successfully', function(done) {
-        //uncomment below and update the code to test fulfillmentDistributionCentersDistributionCenterCodeInventoryPost
-        //instance.fulfillmentDistributionCentersDistributionCenterCodeInventoryPost(pet, function(error) {
+    describe('getDistributionCenterOrders', function() {
+      it('should call getDistributionCenterOrders successfully', function(done) {
+        //uncomment below and update the code to test getDistributionCenterOrders
+        //instance.getDistributionCenterOrders(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('fulfillmentDistributionCentersDistributionCenterCodeOrdersGet', function() {
-      it('should call fulfillmentDistributionCentersDistributionCenterCodeOrdersGet successfully', function(done) {
-        //uncomment below and update the code to test fulfillmentDistributionCentersDistributionCenterCodeOrdersGet
-        //instance.fulfillmentDistributionCentersDistributionCenterCodeOrdersGet(pet, function(error) {
+    describe('getDistributionCenters', function() {
+      it('should call getDistributionCenters successfully', function(done) {
+        //uncomment below and update the code to test getDistributionCenters
+        //instance.getDistributionCenters(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost', function() {
-      it('should call fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost successfully', function(done) {
-        //uncomment below and update the code to test fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost
-        //instance.fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost(pet, function(error) {
+    describe('shipOrders', function() {
+      it('should call shipOrders successfully', function(done) {
+        //uncomment below and update the code to test shipOrders
+        //instance.shipOrders(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('fulfillmentDistributionCentersGet', function() {
-      it('should call fulfillmentDistributionCentersGet successfully', function(done) {
-        //uncomment below and update the code to test fulfillmentDistributionCentersGet
-        //instance.fulfillmentDistributionCentersGet(pet, function(error) {
+    describe('updateInventory', function() {
+      it('should call updateInventory successfully', function(done) {
+        //uncomment below and update the code to test updateInventory
+        //instance.updateInventory(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -65,7 +65,7 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.ItemKitComponent);
     });
 
-    it('should have the property componentCost (base name: "component_Cost")', function() {
+    it('should have the property componentCost (base name: "component_cost")', function() {
       // uncomment below and update the code to test the property componentCost
       //var instane = new UltraCartRestApiV2.ItemKitComponent();
       //expect(instance).to.be();

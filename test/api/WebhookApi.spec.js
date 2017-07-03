@@ -59,90 +59,70 @@
   }
 
   describe('WebhookApi', function() {
-    describe('webhookWebhooksGet', function() {
-      it('should call webhookWebhooksGet successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksGet
-        //instance.webhookWebhooksGet(pet, function(error) {
+    describe('deleteWebhook', function() {
+      it('should call deleteWebhook successfully', function(done) {
+        //uncomment below and update the code to test deleteWebhook
+        //instance.deleteWebhook(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('webhookWebhooksPost', function() {
-      it('should call webhookWebhooksPost successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksPost
-        //instance.webhookWebhooksPost(pet, function(error) {
+    describe('getWebhookLog', function() {
+      it('should call getWebhookLog successfully', function(done) {
+        //uncomment below and update the code to test getWebhookLog
+        //instance.getWebhookLog(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('webhookWebhooksWebhookOidDelete', function() {
-      it('should call webhookWebhooksWebhookOidDelete successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksWebhookOidDelete
-        //instance.webhookWebhooksWebhookOidDelete(pet, function(error) {
+    describe('getWebhookLogSummaries', function() {
+      it('should call getWebhookLogSummaries successfully', function(done) {
+        //uncomment below and update the code to test getWebhookLogSummaries
+        //instance.getWebhookLogSummaries(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('webhookWebhooksWebhookOidLogsGet', function() {
-      it('should call webhookWebhooksWebhookOidLogsGet successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksWebhookOidLogsGet
-        //instance.webhookWebhooksWebhookOidLogsGet(pet, function(error) {
+    describe('getWebhooks', function() {
+      it('should call getWebhooks successfully', function(done) {
+        //uncomment below and update the code to test getWebhooks
+        //instance.getWebhooks(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('webhookWebhooksWebhookOidLogsRequestIdGet', function() {
-      it('should call webhookWebhooksWebhookOidLogsRequestIdGet successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksWebhookOidLogsRequestIdGet
-        //instance.webhookWebhooksWebhookOidLogsRequestIdGet(pet, function(error) {
+    describe('insertWebhook', function() {
+      it('should call insertWebhook successfully', function(done) {
+        //uncomment below and update the code to test insertWebhook
+        //instance.insertWebhook(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('webhookWebhooksWebhookOidPut', function() {
-      it('should call webhookWebhooksWebhookOidPut successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksWebhookOidPut
-        //instance.webhookWebhooksWebhookOidPut(pet, function(error) {
+    describe('resendEvent', function() {
+      it('should call resendEvent successfully', function(done) {
+        //uncomment below and update the code to test resendEvent
+        //instance.resendEvent(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('webhookWebhooksWebhookOidReflowEventNamePost', function() {
-      it('should call webhookWebhooksWebhookOidReflowEventNamePost successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksWebhookOidReflowEventNamePost
-        //instance.webhookWebhooksWebhookOidReflowEventNamePost(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('webhookWebhooksWebhookOidSamplesGet', function() {
-      it('should call webhookWebhooksWebhookOidSamplesGet successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksWebhookOidSamplesGet
-        //instance.webhookWebhooksWebhookOidSamplesGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('webhookWebhooksWebhookOidValidatePost', function() {
-      it('should call webhookWebhooksWebhookOidValidatePost successfully', function(done) {
-        //uncomment below and update the code to test webhookWebhooksWebhookOidValidatePost
-        //instance.webhookWebhooksWebhookOidValidatePost(pet, function(error) {
+    describe('updateWebhook', function() {
+      it('should call updateWebhook successfully', function(done) {
+        //uncomment below and update the code to test updateWebhook
+        //instance.updateWebhook(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

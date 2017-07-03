@@ -4,16 +4,16 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chargebackChargebacksChargebackDisputeOidDelete**](ChargebackApi.md#chargebackChargebacksChargebackDisputeOidDelete) | **DELETE** /chargeback/chargebacks/{chargeback_dispute_oid} | Delete a chargeback
-[**chargebackChargebacksChargebackDisputeOidGet**](ChargebackApi.md#chargebackChargebacksChargebackDisputeOidGet) | **GET** /chargeback/chargebacks/{chargeback_dispute_oid} | Retrieve a chargeback
-[**chargebackChargebacksChargebackDisputeOidPut**](ChargebackApi.md#chargebackChargebacksChargebackDisputeOidPut) | **PUT** /chargeback/chargebacks/{chargeback_dispute_oid} | Update a chargeback
-[**chargebackChargebacksGet**](ChargebackApi.md#chargebackChargebacksGet) | **GET** /chargeback/chargebacks | Retrieve chargebacks
-[**chargebackChargebacksPost**](ChargebackApi.md#chargebackChargebacksPost) | **POST** /chargeback/chargebacks | Insert a chargeback
+[**deleteChargeback**](ChargebackApi.md#deleteChargeback) | **DELETE** /chargeback/chargebacks/{chargeback_dispute_oid} | Delete a chargeback
+[**getChargebackDispute**](ChargebackApi.md#getChargebackDispute) | **GET** /chargeback/chargebacks/{chargeback_dispute_oid} | Retrieve a chargeback
+[**getChargebackDisputes**](ChargebackApi.md#getChargebackDisputes) | **GET** /chargeback/chargebacks | Retrieve chargebacks
+[**insertChargeback**](ChargebackApi.md#insertChargeback) | **POST** /chargeback/chargebacks | Insert a chargeback
+[**updateChargeback**](ChargebackApi.md#updateChargeback) | **PUT** /chargeback/chargebacks/{chargeback_dispute_oid} | Update a chargeback
 
 
-<a name="chargebackChargebacksChargebackDisputeOidDelete"></a>
-# **chargebackChargebacksChargebackDisputeOidDelete**
-> ChargebackDisputeResponse chargebackChargebacksChargebackDisputeOidDelete(chargebackDisputeOid)
+<a name="deleteChargeback"></a>
+# **deleteChargeback**
+> ChargebackDisputeResponse deleteChargeback(chargebackDisputeOid)
 
 Delete a chargeback
 
@@ -46,7 +46,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.chargebackChargebacksChargebackDisputeOidDelete(chargebackDisputeOid, callback);
+apiInstance.deleteChargeback(chargebackDisputeOid, callback);
 ```
 
 ### Parameters
@@ -68,9 +68,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
-<a name="chargebackChargebacksChargebackDisputeOidGet"></a>
-# **chargebackChargebacksChargebackDisputeOidGet**
-> ChargebackDisputeResponse chargebackChargebacksChargebackDisputeOidGet(chargebackDisputeOid, opts)
+<a name="getChargebackDispute"></a>
+# **getChargebackDispute**
+> ChargebackDisputeResponse getChargebackDispute(chargebackDisputeOid, opts)
 
 Retrieve a chargeback
 
@@ -106,7 +106,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.chargebackChargebacksChargebackDisputeOidGet(chargebackDisputeOid, opts, callback);
+apiInstance.getChargebackDispute(chargebackDisputeOid, opts, callback);
 ```
 
 ### Parameters
@@ -129,73 +129,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="chargebackChargebacksChargebackDisputeOidPut"></a>
-# **chargebackChargebacksChargebackDisputeOidPut**
-> ChargebackDisputeResponse chargebackChargebacksChargebackDisputeOidPut(chargeback, chargebackDisputeOid, opts)
-
-Update a chargeback
-
-Update a chargeback on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.ChargebackApi();
-
-var chargeback = new UltraCartRestApiV2.ChargebackDispute(); // ChargebackDispute | Chargeback to update
-
-var chargebackDisputeOid = 56; // Integer | The chargeback_dispute_oid to update.
-
-var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.chargebackChargebacksChargebackDisputeOidPut(chargeback, chargebackDisputeOid, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to update | 
- **chargebackDisputeOid** | **Integer**| The chargeback_dispute_oid to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
-
-### Return type
-
-[**ChargebackDisputeResponse**](ChargebackDisputeResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
-
-<a name="chargebackChargebacksGet"></a>
-# **chargebackChargebacksGet**
-> ChargebackDisputesResponse chargebackChargebacksGet(opts)
+<a name="getChargebackDisputes"></a>
+# **getChargebackDisputes**
+> ChargebackDisputesResponse getChargebackDisputes(opts)
 
 Retrieve chargebacks
 
@@ -240,7 +176,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.chargebackChargebacksGet(opts, callback);
+apiInstance.getChargebackDisputes(opts, callback);
 ```
 
 ### Parameters
@@ -273,9 +209,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="chargebackChargebacksPost"></a>
-# **chargebackChargebacksPost**
-> ChargebackDisputeResponse chargebackChargebacksPost(chargeback, opts)
+<a name="insertChargeback"></a>
+# **insertChargeback**
+> ChargebackDisputeResponse insertChargeback(chargeback, opts)
 
 Insert a chargeback
 
@@ -311,7 +247,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.chargebackChargebacksPost(chargeback, opts, callback);
+apiInstance.insertChargeback(chargeback, opts, callback);
 ```
 
 ### Parameters
@@ -319,6 +255,70 @@ apiInstance.chargebackChargebacksPost(chargeback, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to insert | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**ChargebackDisputeResponse**](ChargebackDisputeResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateChargeback"></a>
+# **updateChargeback**
+> ChargebackDisputeResponse updateChargeback(chargeback, chargebackDisputeOid, opts)
+
+Update a chargeback
+
+Update a chargeback on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.ChargebackApi();
+
+var chargeback = new UltraCartRestApiV2.ChargebackDispute(); // ChargebackDispute | Chargeback to update
+
+var chargebackDisputeOid = 56; // Integer | The chargeback_dispute_oid to update.
+
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateChargeback(chargeback, chargebackDisputeOid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to update | 
+ **chargebackDisputeOid** | **Integer**| The chargeback_dispute_oid to update. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

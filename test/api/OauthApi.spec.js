@@ -59,20 +59,20 @@
   }
 
   describe('OauthApi', function() {
-    describe('oauthRevokePost', function() {
-      it('should call oauthRevokePost successfully', function(done) {
-        //uncomment below and update the code to test oauthRevokePost
-        //instance.oauthRevokePost(pet, function(error) {
+    describe('oauthAccessToken', function() {
+      it('should call oauthAccessToken successfully', function(done) {
+        //uncomment below and update the code to test oauthAccessToken
+        //instance.oauthAccessToken(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('oauthTokenPost', function() {
-      it('should call oauthTokenPost successfully', function(done) {
-        //uncomment below and update the code to test oauthTokenPost
-        //instance.oauthTokenPost(pet, function(error) {
+    describe('oauthRevoke', function() {
+      it('should call oauthRevoke successfully', function(done) {
+        //uncomment below and update the code to test oauthRevoke
+        //instance.oauthRevoke(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -59,30 +59,30 @@
   }
 
   describe('AutoorderApi', function() {
-    describe('autoOrderAutoOrdersAutoOrderOidGet', function() {
-      it('should call autoOrderAutoOrdersAutoOrderOidGet successfully', function(done) {
-        //uncomment below and update the code to test autoOrderAutoOrdersAutoOrderOidGet
-        //instance.autoOrderAutoOrdersAutoOrderOidGet(pet, function(error) {
+    describe('getAutoOrder', function() {
+      it('should call getAutoOrder successfully', function(done) {
+        //uncomment below and update the code to test getAutoOrder
+        //instance.getAutoOrder(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('autoOrderAutoOrdersAutoOrderOidPut', function() {
-      it('should call autoOrderAutoOrdersAutoOrderOidPut successfully', function(done) {
-        //uncomment below and update the code to test autoOrderAutoOrdersAutoOrderOidPut
-        //instance.autoOrderAutoOrdersAutoOrderOidPut(pet, function(error) {
+    describe('getAutoOrders', function() {
+      it('should call getAutoOrders successfully', function(done) {
+        //uncomment below and update the code to test getAutoOrders
+        //instance.getAutoOrders(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('autoOrderAutoOrdersGet', function() {
-      it('should call autoOrderAutoOrdersGet successfully', function(done) {
-        //uncomment below and update the code to test autoOrderAutoOrdersGet
-        //instance.autoOrderAutoOrdersGet(pet, function(error) {
+    describe('updateAutoOrder', function() {
+      it('should call updateAutoOrder successfully', function(done) {
+        //uncomment below and update the code to test updateAutoOrder
+        //instance.updateAutoOrder(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

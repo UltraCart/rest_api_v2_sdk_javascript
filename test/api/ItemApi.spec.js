@@ -59,60 +59,60 @@
   }
 
   describe('ItemApi', function() {
-    describe('itemItemsGet', function() {
-      it('should call itemItemsGet successfully', function(done) {
-        //uncomment below and update the code to test itemItemsGet
-        //instance.itemItemsGet(pet, function(error) {
+    describe('deleteItem', function() {
+      it('should call deleteItem successfully', function(done) {
+        //uncomment below and update the code to test deleteItem
+        //instance.deleteItem(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('itemItemsMerchantItemOidDelete', function() {
-      it('should call itemItemsMerchantItemOidDelete successfully', function(done) {
-        //uncomment below and update the code to test itemItemsMerchantItemOidDelete
-        //instance.itemItemsMerchantItemOidDelete(pet, function(error) {
+    describe('getItem', function() {
+      it('should call getItem successfully', function(done) {
+        //uncomment below and update the code to test getItem
+        //instance.getItem(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('itemItemsMerchantItemOidGet', function() {
-      it('should call itemItemsMerchantItemOidGet successfully', function(done) {
-        //uncomment below and update the code to test itemItemsMerchantItemOidGet
-        //instance.itemItemsMerchantItemOidGet(pet, function(error) {
+    describe('getItems', function() {
+      it('should call getItems successfully', function(done) {
+        //uncomment below and update the code to test getItems
+        //instance.getItems(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('itemItemsMerchantItemOidPut', function() {
-      it('should call itemItemsMerchantItemOidPut successfully', function(done) {
-        //uncomment below and update the code to test itemItemsMerchantItemOidPut
-        //instance.itemItemsMerchantItemOidPut(pet, function(error) {
+    describe('insertItem', function() {
+      it('should call insertItem successfully', function(done) {
+        //uncomment below and update the code to test insertItem
+        //instance.insertItem(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('itemItemsPost', function() {
-      it('should call itemItemsPost successfully', function(done) {
-        //uncomment below and update the code to test itemItemsPost
-        //instance.itemItemsPost(pet, function(error) {
+    describe('updateItem', function() {
+      it('should call updateItem successfully', function(done) {
+        //uncomment below and update the code to test updateItem
+        //instance.updateItem(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('itemTempMultimediaPost', function() {
-      it('should call itemTempMultimediaPost successfully', function(done) {
-        //uncomment below and update the code to test itemTempMultimediaPost
-        //instance.itemTempMultimediaPost(pet, function(error) {
+    describe('uploadTemporaryMultimedia', function() {
+      it('should call uploadTemporaryMultimedia successfully', function(done) {
+        //uncomment below and update the code to test uploadTemporaryMultimedia
+        //instance.uploadTemporaryMultimedia(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

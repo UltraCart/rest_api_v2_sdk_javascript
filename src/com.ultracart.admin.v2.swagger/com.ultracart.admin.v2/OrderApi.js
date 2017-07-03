@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/OrdersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/Order'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'), require('../com.ultracart.admin.v2.models/Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.OrdersResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.OrdersResponse, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, OrdersResponse, ErrorResponse, BaseResponse, OrderResponse, Order) {
+}(this, function(ApiClient, BaseResponse, ErrorResponse, OrderResponse, OrdersResponse, Order) {
   'use strict';
 
   /**
@@ -57,8 +57,149 @@
 
 
     /**
-     * Callback function to receive the result of the orderOrdersGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersGetCallback
+     * Callback function to receive the result of the cancelOrder operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~cancelOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cancel an order
+     * Cancel an order on the UltraCart account.  If the success flag is false, then consult the error message for why it failed. 
+     * @param {String} orderId The order id to cancel.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~cancelOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse}
+     */
+    this.cancelOrder = function(orderId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'orderId' is set
+      if (orderId == undefined || orderId == null) {
+        throw "Missing the required parameter 'orderId' when calling cancelOrder";
+      }
+
+
+      var pathParams = {
+        'order_id': orderId
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = BaseResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/cancel', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteOrder operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~deleteOrderCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete an order
+     * Delete an order on the UltraCart account. 
+     * @param {String} orderId The order id to delete.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~deleteOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteOrder = function(orderId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'orderId' is set
+      if (orderId == undefined || orderId == null) {
+        throw "Missing the required parameter 'orderId' when calling deleteOrder";
+      }
+
+
+      var pathParams = {
+        'order_id': orderId
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrder operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~getOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an order
+     * Retrieves a single order using the specified order id. 
+     * @param {String} orderId The order id to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~getOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.getOrder = function(orderId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'orderId' is set
+      if (orderId == undefined || orderId == null) {
+        throw "Missing the required parameter 'orderId' when calling getOrder";
+      }
+
+
+      var pathParams = {
+        'order_id': orderId
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrders operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~getOrdersCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -99,10 +240,10 @@
      * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts.sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
      * @param {String} opts.expand The object expansion to perform on the result.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~getOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse}
      */
-    this.orderOrdersGet = function(opts, callback) {
+    this.getOrders = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -160,205 +301,8 @@
     }
 
     /**
-     * Callback function to receive the result of the orderOrdersOrderIdCancelPost operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdCancelPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Cancel an order
-     * Cancel an order on the UltraCart account.  If the success flag is false, then consult the error message for why it failed. 
-     * @param {String} orderId The order id to cancel.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdCancelPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse}
-     */
-    this.orderOrdersOrderIdCancelPost = function(orderId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'orderId' is set
-      if (orderId == undefined || orderId == null) {
-        throw "Missing the required parameter 'orderId' when calling orderOrdersOrderIdCancelPost";
-      }
-
-
-      var pathParams = {
-        'order_id': orderId
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = BaseResponse;
-
-      return this.apiClient.callApi(
-        '/order/orders/{order_id}/cancel', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the orderOrdersOrderIdDelete operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete an order
-     * Delete an order on the UltraCart account. 
-     * @param {String} orderId The order id to delete.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.orderOrdersOrderIdDelete = function(orderId, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'orderId' is set
-      if (orderId == undefined || orderId == null) {
-        throw "Missing the required parameter 'orderId' when calling orderOrdersOrderIdDelete";
-      }
-
-
-      var pathParams = {
-        'order_id': orderId
-      };
-      var queryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/order/orders/{order_id}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the orderOrdersOrderIdGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve an order
-     * Retrieves a single order using the specified order id. 
-     * @param {String} orderId The order id to retrieve.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse}
-     */
-    this.orderOrdersOrderIdGet = function(orderId, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'orderId' is set
-      if (orderId == undefined || orderId == null) {
-        throw "Missing the required parameter 'orderId' when calling orderOrdersOrderIdGet";
-      }
-
-
-      var pathParams = {
-        'order_id': orderId
-      };
-      var queryParams = {
-        '_expand': opts['expand']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = OrderResponse;
-
-      return this.apiClient.callApi(
-        '/order/orders/{order_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the orderOrdersOrderIdPut operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update an order
-     * Update a new order on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order} order Order to update
-     * @param {String} orderId The order id to update.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse}
-     */
-    this.orderOrdersOrderIdPut = function(order, orderId, opts, callback) {
-      opts = opts || {};
-      var postBody = order;
-
-      // verify the required parameter 'order' is set
-      if (order == undefined || order == null) {
-        throw "Missing the required parameter 'order' when calling orderOrdersOrderIdPut";
-      }
-
-      // verify the required parameter 'orderId' is set
-      if (orderId == undefined || orderId == null) {
-        throw "Missing the required parameter 'orderId' when calling orderOrdersOrderIdPut";
-      }
-
-
-      var pathParams = {
-        'order_id': orderId
-      };
-      var queryParams = {
-        '_expand': opts['expand']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
-      var accepts = ['application/json'];
-      var returnType = OrderResponse;
-
-      return this.apiClient.callApi(
-        '/order/orders/{order_id}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the orderOrdersOrderIdResendReceiptPost operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdResendReceiptPostCallback
+     * Callback function to receive the result of the resendReceipt operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~resendReceiptCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -368,15 +312,15 @@
      * Resend receipt
      * Resend the receipt for an order on the UltraCart account. 
      * @param {String} orderId The order id to resend the receipt for.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdResendReceiptPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~resendReceiptCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.orderOrdersOrderIdResendReceiptPost = function(orderId, callback) {
+    this.resendReceipt = function(orderId, callback) {
       var postBody = null;
 
       // verify the required parameter 'orderId' is set
       if (orderId == undefined || orderId == null) {
-        throw "Missing the required parameter 'orderId' when calling orderOrdersOrderIdResendReceiptPost";
+        throw "Missing the required parameter 'orderId' when calling resendReceipt";
       }
 
 
@@ -403,8 +347,8 @@
     }
 
     /**
-     * Callback function to receive the result of the orderOrdersOrderIdResendShipmentConfirmationPost operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdResendShipmentConfirmationPostCallback
+     * Callback function to receive the result of the resendShipmentConfirmation operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~resendShipmentConfirmationCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -414,15 +358,15 @@
      * Resend shipment confirmation
      * Resend shipment confirmation for an order on the UltraCart account. 
      * @param {String} orderId The order id to resend the shipment notification for.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~orderOrdersOrderIdResendShipmentConfirmationPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~resendShipmentConfirmationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.orderOrdersOrderIdResendShipmentConfirmationPost = function(orderId, callback) {
+    this.resendShipmentConfirmation = function(orderId, callback) {
       var postBody = null;
 
       // verify the required parameter 'orderId' is set
       if (orderId == undefined || orderId == null) {
-        throw "Missing the required parameter 'orderId' when calling orderOrdersOrderIdResendShipmentConfirmationPost";
+        throw "Missing the required parameter 'orderId' when calling resendShipmentConfirmation";
       }
 
 
@@ -443,6 +387,62 @@
 
       return this.apiClient.callApi(
         '/order/orders/{order_id}/resend_shipment_confirmation', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateOrder operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~updateOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update an order
+     * Update a new order on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order} order Order to update
+     * @param {String} orderId The order id to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~updateOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.updateOrder = function(order, orderId, opts, callback) {
+      opts = opts || {};
+      var postBody = order;
+
+      // verify the required parameter 'order' is set
+      if (order == undefined || order == null) {
+        throw "Missing the required parameter 'order' when calling updateOrder";
+      }
+
+      // verify the required parameter 'orderId' is set
+      if (orderId == undefined || orderId == null) {
+        throw "Missing the required parameter 'orderId' when calling updateOrder";
+      }
+
+
+      var pathParams = {
+        'order_id': orderId
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

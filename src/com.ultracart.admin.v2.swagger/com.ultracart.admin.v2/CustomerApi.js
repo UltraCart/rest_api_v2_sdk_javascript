@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomersResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/Customer'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomersResponse);
+    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.Customer);
   }
-}(this, function(ApiClient, CustomerResponse, ErrorResponse, Customer, CustomersResponse) {
+}(this, function(ApiClient, CustomerResponse, ErrorResponse, CustomersResponse, Customer) {
   'use strict';
 
   /**
@@ -57,8 +57,8 @@
 
 
     /**
-     * Callback function to receive the result of the customerCustomersCustomerProfileOidDelete operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidDeleteCallback
+     * Callback function to receive the result of the deleteCustomer operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~deleteCustomerCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -68,15 +68,15 @@
      * Delete a customer
      * Delete a customer on the UltraCart account. 
      * @param {Integer} customerProfileOid The customer_profile_oid to delete.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~deleteCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.customerCustomersCustomerProfileOidDelete = function(customerProfileOid, callback) {
+    this.deleteCustomer = function(customerProfileOid, callback) {
       var postBody = null;
 
       // verify the required parameter 'customerProfileOid' is set
       if (customerProfileOid == undefined || customerProfileOid == null) {
-        throw "Missing the required parameter 'customerProfileOid' when calling customerCustomersCustomerProfileOidDelete";
+        throw "Missing the required parameter 'customerProfileOid' when calling deleteCustomer";
       }
 
 
@@ -103,8 +103,8 @@
     }
 
     /**
-     * Callback function to receive the result of the customerCustomersCustomerProfileOidGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidGetCallback
+     * Callback function to receive the result of the getCustomer operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomerCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -116,16 +116,16 @@
      * @param {Integer} customerProfileOid The customer oid to retrieve.
      * @param {Object} opts Optional parameters
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.customerCustomersCustomerProfileOidGet = function(customerProfileOid, opts, callback) {
+    this.getCustomer = function(customerProfileOid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'customerProfileOid' is set
       if (customerProfileOid == undefined || customerProfileOid == null) {
-        throw "Missing the required parameter 'customerProfileOid' when calling customerCustomersCustomerProfileOidGet";
+        throw "Missing the required parameter 'customerProfileOid' when calling getCustomer";
       }
 
 
@@ -153,64 +153,8 @@
     }
 
     /**
-     * Callback function to receive the result of the customerCustomersCustomerProfileOidPut operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update a customer
-     * Update a customer on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer} customer Customer to update
-     * @param {Integer} customerProfileOid The customer_profile_oid to update.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersCustomerProfileOidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
-     */
-    this.customerCustomersCustomerProfileOidPut = function(customer, customerProfileOid, opts, callback) {
-      opts = opts || {};
-      var postBody = customer;
-
-      // verify the required parameter 'customer' is set
-      if (customer == undefined || customer == null) {
-        throw "Missing the required parameter 'customer' when calling customerCustomersCustomerProfileOidPut";
-      }
-
-      // verify the required parameter 'customerProfileOid' is set
-      if (customerProfileOid == undefined || customerProfileOid == null) {
-        throw "Missing the required parameter 'customerProfileOid' when calling customerCustomersCustomerProfileOidPut";
-      }
-
-
-      var pathParams = {
-        'customer_profile_oid': customerProfileOid
-      };
-      var queryParams = {
-        '_expand': opts['expand']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
-      var accepts = ['application/json'];
-      var returnType = CustomerResponse;
-
-      return this.apiClient.callApi(
-        '/customer/customers/{customer_profile_oid}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the customerCustomersGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersGetCallback
+     * Callback function to receive the result of the getCustomers operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomersCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -252,10 +196,10 @@
      * @param {String} opts.since Fetch customers that have been created/modified since this date/time.
      * @param {String} opts.sort The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse}
      */
-    this.customerCustomersGet = function(opts, callback) {
+    this.getCustomers = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -314,8 +258,8 @@
     }
 
     /**
-     * Callback function to receive the result of the customerCustomersPost operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersPostCallback
+     * Callback function to receive the result of the insertCustomer operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~insertCustomerCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -327,16 +271,16 @@
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer} customer Customer to insert
      * @param {Object} opts Optional parameters
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~customerCustomersPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~insertCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.customerCustomersPost = function(customer, opts, callback) {
+    this.insertCustomer = function(customer, opts, callback) {
       opts = opts || {};
       var postBody = customer;
 
       // verify the required parameter 'customer' is set
       if (customer == undefined || customer == null) {
-        throw "Missing the required parameter 'customer' when calling customerCustomersPost";
+        throw "Missing the required parameter 'customer' when calling insertCustomer";
       }
 
 
@@ -357,6 +301,62 @@
 
       return this.apiClient.callApi(
         '/customer/customers', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomer operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~updateCustomerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a customer
+     * Update a customer on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer} customer Customer to update
+     * @param {Integer} customerProfileOid The customer_profile_oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~updateCustomerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
+     */
+    this.updateCustomer = function(customer, customerProfileOid, opts, callback) {
+      opts = opts || {};
+      var postBody = customer;
+
+      // verify the required parameter 'customer' is set
+      if (customer == undefined || customer == null) {
+        throw "Missing the required parameter 'customer' when calling updateCustomer";
+      }
+
+      // verify the required parameter 'customerProfileOid' is set
+      if (customerProfileOid == undefined || customerProfileOid == null) {
+        throw "Missing the required parameter 'customerProfileOid' when calling updateCustomer";
+      }
+
+
+      var pathParams = {
+        'customer_profile_oid': customerProfileOid
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = CustomerResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

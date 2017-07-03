@@ -4,29 +4,92 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**checkoutBrowserKeyPut**](CheckoutApi.md#checkoutBrowserKeyPut) | **PUT** /checkout/browser_key | Setup Browser Application
-[**checkoutCartCartIdGet**](CheckoutApi.md#checkoutCartCartIdGet) | **GET** /checkout/cart/{cart_id} | Get cart (by cart id)
-[**checkoutCartFinalizeOrderPost**](CheckoutApi.md#checkoutCartFinalizeOrderPost) | **POST** /checkout/cart/finalizeOrder | Finalize Order
-[**checkoutCartGet**](CheckoutApi.md#checkoutCartGet) | **GET** /checkout/cart | Get cart
-[**checkoutCartHandoffPost**](CheckoutApi.md#checkoutCartHandoffPost) | **POST** /checkout/cart/handoff | Handoff cart
-[**checkoutCartProfileLoginPost**](CheckoutApi.md#checkoutCartProfileLoginPost) | **POST** /checkout/cart/profile/login | Profile login
-[**checkoutCartProfileLogoutPost**](CheckoutApi.md#checkoutCartProfileLogoutPost) | **POST** /checkout/cart/profile/logout | Profile logout
-[**checkoutCartProfileRegisterPost**](CheckoutApi.md#checkoutCartProfileRegisterPost) | **POST** /checkout/cart/profile/register | Profile registration
-[**checkoutCartPut**](CheckoutApi.md#checkoutCartPut) | **PUT** /checkout/cart | Update cart
-[**checkoutCartValidatePost**](CheckoutApi.md#checkoutCartValidatePost) | **POST** /checkout/cart/validate | Validate
-[**checkoutCityStatePost**](CheckoutApi.md#checkoutCityStatePost) | **POST** /checkout/city_state | City/State for Zip
-[**checkoutRelatedItemsItemIdPost**](CheckoutApi.md#checkoutRelatedItemsItemIdPost) | **POST** /checkout/relatedItems/{item_id} | Related items (specific item)
-[**checkoutRelatedItemsPost**](CheckoutApi.md#checkoutRelatedItemsPost) | **POST** /checkout/related_items | Related items
-[**checkoutReturnReturnCodeGet**](CheckoutApi.md#checkoutReturnReturnCodeGet) | **GET** /checkout/return/{return_code} | Get cart (by return code)
+[**cityState**](CheckoutApi.md#cityState) | **POST** /checkout/city_state | City/State for Zip
+[**finalizeOrder**](CheckoutApi.md#finalizeOrder) | **POST** /checkout/cart/finalizeOrder | Finalize Order
+[**getCart**](CheckoutApi.md#getCart) | **GET** /checkout/cart | Get cart
+[**getCartByCartId**](CheckoutApi.md#getCartByCartId) | **GET** /checkout/cart/{cart_id} | Get cart (by cart id)
+[**getCartByReturnCode**](CheckoutApi.md#getCartByReturnCode) | **GET** /checkout/return/{return_code} | Get cart (by return code)
+[**handoffCart**](CheckoutApi.md#handoffCart) | **POST** /checkout/cart/handoff | Handoff cart
+[**login**](CheckoutApi.md#login) | **POST** /checkout/cart/profile/login | Profile login
+[**logout**](CheckoutApi.md#logout) | **POST** /checkout/cart/profile/logout | Profile logout
+[**register**](CheckoutApi.md#register) | **POST** /checkout/cart/profile/register | Profile registration
+[**relatedItemsForCart**](CheckoutApi.md#relatedItemsForCart) | **POST** /checkout/related_items | Related items
+[**relatedItemsForItem**](CheckoutApi.md#relatedItemsForItem) | **POST** /checkout/relatedItems/{item_id} | Related items (specific item)
+[**setupBrowserKey**](CheckoutApi.md#setupBrowserKey) | **PUT** /checkout/browser_key | Setup Browser Application
+[**updateCart**](CheckoutApi.md#updateCart) | **PUT** /checkout/cart | Update cart
+[**validateCart**](CheckoutApi.md#validateCart) | **POST** /checkout/cart/validate | Validate
 
 
-<a name="checkoutBrowserKeyPut"></a>
-# **checkoutBrowserKeyPut**
-> CheckoutSetupBrowserKeyResponse checkoutBrowserKeyPut(browserKeyRequest)
+<a name="cityState"></a>
+# **cityState**
+> ItemsResponse cityState(cart)
 
-Setup Browser Application
+City/State for Zip
 
-Setup a browser key authenticated application with checkout permissions.  This REST call must be made with an authentication scheme that is not browser key.  The new application will be linked to the application that makes this call.  If this application is disabled / deleted, then so will the application setup by this call.  The purpose of this call is to allow an OAuth applicaiton, such as the Wordpress plugin, to setup the proper browser based authentication for the REST checkout API to use. 
+Look up the city and state for the shipping zip code.  Useful for building an auto complete for parts of the shipping address 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CheckoutApi();
+
+var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.cityState(cart, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart** | [**Cart**](Cart.md)| Cart | 
+
+### Return type
+
+[**ItemsResponse**](ItemsResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="finalizeOrder"></a>
+# **finalizeOrder**
+> CartFinalizeOrderResponse finalizeOrder(finalizeRequest)
+
+Finalize Order
+
+Finalize the cart into an order.  This method can not be called with browser key authentication.  It is ONLY meant for server side code to call. 
 
 ### Example
 ```javascript
@@ -45,7 +108,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var browserKeyRequest = new UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest(); // CheckoutSetupBrowserKeyRequest | Setup browser key request
+var finalizeRequest = new UltraCartRestApiV2.CartFinalizeOrderRequest(); // CartFinalizeOrderRequest | Finalize request
 
 
 var callback = function(error, data, response) {
@@ -55,18 +118,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutBrowserKeyPut(browserKeyRequest, callback);
+apiInstance.finalizeOrder(finalizeRequest, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **browserKeyRequest** | [**CheckoutSetupBrowserKeyRequest**](CheckoutSetupBrowserKeyRequest.md)| Setup browser key request | 
+ **finalizeRequest** | [**CartFinalizeOrderRequest**](CartFinalizeOrderRequest.md)| Finalize request | 
 
 ### Return type
 
-[**CheckoutSetupBrowserKeyResponse**](CheckoutSetupBrowserKeyResponse.md)
+[**CartFinalizeOrderResponse**](CartFinalizeOrderResponse.md)
 
 ### Authorization
 
@@ -77,9 +140,73 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutCartCartIdGet"></a>
-# **checkoutCartCartIdGet**
-> CartResponse checkoutCartCartIdGet(cartId, opts)
+<a name="getCart"></a>
+# **getCart**
+> CartResponse getCart(opts)
+
+Get cart
+
+If the cookie is set on the browser making the request then it will return their active cart.  Otherwise it will create a new cart. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CheckoutApi();
+
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getCart(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**CartResponse**](CartResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getCartByCartId"></a>
+# **getCartByCartId**
+> CartResponse getCartByCartId(cartId, opts)
 
 Get cart (by cart id)
 
@@ -121,7 +248,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutCartCartIdGet(cartId, opts, callback);
+apiInstance.getCartByCartId(cartId, opts, callback);
 ```
 
 ### Parameters
@@ -144,70 +271,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutCartFinalizeOrderPost"></a>
-# **checkoutCartFinalizeOrderPost**
-> CartFinalizeOrderResponse checkoutCartFinalizeOrderPost(finalizeRequest)
+<a name="getCartByReturnCode"></a>
+# **getCartByReturnCode**
+> CartResponse getCartByReturnCode(returnCode, opts)
 
-Finalize Order
+Get cart (by return code)
 
-Finalize the cart into an order.  This method can not be called with browser key authentication.  It is ONLY meant for server side code to call. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.CheckoutApi();
-
-var finalizeRequest = new UltraCartRestApiV2.CartFinalizeOrderRequest(); // CartFinalizeOrderRequest | Finalize request
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.checkoutCartFinalizeOrderPost(finalizeRequest, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **finalizeRequest** | [**CartFinalizeOrderRequest**](CartFinalizeOrderRequest.md)| Finalize request | 
-
-### Return type
-
-[**CartFinalizeOrderResponse**](CartFinalizeOrderResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="checkoutCartGet"></a>
-# **checkoutCartGet**
-> CartResponse checkoutCartGet(opts)
-
-Get cart
-
-If the cookie is set on the browser making the request then it will return their active cart.  Otherwise it will create a new cart. 
+Get a cart specified by the return code parameter. 
 
 ### Example
 ```javascript
@@ -232,6 +302,8 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
+var returnCode = "returnCode_example"; // String | Return code to lookup cart ID by
+
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
@@ -243,13 +315,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutCartGet(opts, callback);
+apiInstance.getCartByReturnCode(returnCode, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **returnCode** | **String**| Return code to lookup cart ID by | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
@@ -265,9 +338,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutCartHandoffPost"></a>
-# **checkoutCartHandoffPost**
-> CheckoutHandoffResponse checkoutCartHandoffPost(handoffRequest, opts)
+<a name="handoffCart"></a>
+# **handoffCart**
+> CheckoutHandoffResponse handoffCart(handoffRequest, opts)
 
 Handoff cart
 
@@ -309,7 +382,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutCartHandoffPost(handoffRequest, opts, callback);
+apiInstance.handoffCart(handoffRequest, opts, callback);
 ```
 
 ### Parameters
@@ -332,9 +405,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutCartProfileLoginPost"></a>
-# **checkoutCartProfileLoginPost**
-> CartProfileLoginResponse checkoutCartProfileLoginPost(loginRequest, opts)
+<a name="login"></a>
+# **login**
+> CartProfileLoginResponse login(loginRequest, opts)
 
 Profile login
 
@@ -376,7 +449,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutCartProfileLoginPost(loginRequest, opts, callback);
+apiInstance.login(loginRequest, opts, callback);
 ```
 
 ### Parameters
@@ -399,9 +472,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutCartProfileLogoutPost"></a>
-# **checkoutCartProfileLogoutPost**
-> CartResponse checkoutCartProfileLogoutPost(cart, opts)
+<a name="logout"></a>
+# **logout**
+> CartResponse logout(cart, opts)
 
 Profile logout
 
@@ -443,7 +516,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutCartProfileLogoutPost(cart, opts, callback);
+apiInstance.logout(cart, opts, callback);
 ```
 
 ### Parameters
@@ -466,9 +539,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutCartProfileRegisterPost"></a>
-# **checkoutCartProfileRegisterPost**
-> CartProfileRegisterResponse checkoutCartProfileRegisterPost(registerRequest, opts)
+<a name="register"></a>
+# **register**
+> CartProfileRegisterResponse register(registerRequest, opts)
 
 Profile registration
 
@@ -510,7 +583,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutCartProfileRegisterPost(registerRequest, opts, callback);
+apiInstance.register(registerRequest, opts, callback);
 ```
 
 ### Parameters
@@ -533,13 +606,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutCartPut"></a>
-# **checkoutCartPut**
-> CartResponse checkoutCartPut(cart, opts)
+<a name="relatedItemsForCart"></a>
+# **relatedItemsForCart**
+> ItemsResponse relatedItemsForCart(cart, opts)
 
-Update cart
+Related items
 
-Update the cart. 
+Retrieve all the related items for the cart contents.  Expansion is limited to content, content.assignments, content.attributes, content.multimedia, content.multimedia.thumbnails, options, pricing, and pricing.tiers. 
 
 ### Example
 ```javascript
@@ -567,7 +640,7 @@ var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -577,7 +650,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutCartPut(cart, opts, callback);
+apiInstance.relatedItemsForCart(cart, opts, callback);
 ```
 
 ### Parameters
@@ -585,137 +658,7 @@ apiInstance.checkoutCartPut(cart, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart** | [**Cart**](Cart.md)| Cart | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
-
-### Return type
-
-[**CartResponse**](CartResponse.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="checkoutCartValidatePost"></a>
-# **checkoutCartValidatePost**
-> CartValidationResponse checkoutCartValidatePost(validationRequest, opts)
-
-Validate
-
-Validate the cart for errors.  Specific checks can be passed and multiple validations can occur throughout your checkout flow. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.CheckoutApi();
-
-var validationRequest = new UltraCartRestApiV2.CartValidationRequest(); // CartValidationRequest | Validation request
-
-var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.checkoutCartValidatePost(validationRequest, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **validationRequest** | [**CartValidationRequest**](CartValidationRequest.md)| Validation request | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
-
-### Return type
-
-[**CartValidationResponse**](CartValidationResponse.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="checkoutCityStatePost"></a>
-# **checkoutCityStatePost**
-> ItemsResponse checkoutCityStatePost(cart)
-
-City/State for Zip
-
-Look up the city and state for the shipping zip code.  Useful for building an auto complete for parts of the shipping address 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.CheckoutApi();
-
-var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.checkoutCityStatePost(cart, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cart** | [**Cart**](Cart.md)| Cart | 
+ **expand** | **String**| The object expansion to perform on the result.  See item resource documentation for examples | [optional] 
 
 ### Return type
 
@@ -730,9 +673,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutRelatedItemsItemIdPost"></a>
-# **checkoutRelatedItemsItemIdPost**
-> ItemsResponse checkoutRelatedItemsItemIdPost(itemId, cart, opts)
+<a name="relatedItemsForItem"></a>
+# **relatedItemsForItem**
+> ItemsResponse relatedItemsForItem(itemId, cart, opts)
 
 Related items (specific item)
 
@@ -776,7 +719,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutRelatedItemsItemIdPost(itemId, cart, opts, callback);
+apiInstance.relatedItemsForItem(itemId, cart, opts, callback);
 ```
 
 ### Parameters
@@ -800,13 +743,70 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutRelatedItemsPost"></a>
-# **checkoutRelatedItemsPost**
-> ItemsResponse checkoutRelatedItemsPost(cart, opts)
+<a name="setupBrowserKey"></a>
+# **setupBrowserKey**
+> CheckoutSetupBrowserKeyResponse setupBrowserKey(browserKeyRequest)
 
-Related items
+Setup Browser Application
 
-Retrieve all the related items for the cart contents.  Expansion is limited to content, content.assignments, content.attributes, content.multimedia, content.multimedia.thumbnails, options, pricing, and pricing.tiers. 
+Setup a browser key authenticated application with checkout permissions.  This REST call must be made with an authentication scheme that is not browser key.  The new application will be linked to the application that makes this call.  If this application is disabled / deleted, then so will the application setup by this call.  The purpose of this call is to allow an OAuth applicaiton, such as the Wordpress plugin, to setup the proper browser based authentication for the REST checkout API to use. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CheckoutApi();
+
+var browserKeyRequest = new UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest(); // CheckoutSetupBrowserKeyRequest | Setup browser key request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.setupBrowserKey(browserKeyRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **browserKeyRequest** | [**CheckoutSetupBrowserKeyRequest**](CheckoutSetupBrowserKeyRequest.md)| Setup browser key request | 
+
+### Return type
+
+[**CheckoutSetupBrowserKeyResponse**](CheckoutSetupBrowserKeyResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateCart"></a>
+# **updateCart**
+> CartResponse updateCart(cart, opts)
+
+Update cart
+
+Update the cart. 
 
 ### Example
 ```javascript
@@ -834,7 +834,7 @@ var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -844,7 +844,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutRelatedItemsPost(cart, opts, callback);
+apiInstance.updateCart(cart, opts, callback);
 ```
 
 ### Parameters
@@ -852,11 +852,11 @@ apiInstance.checkoutRelatedItemsPost(cart, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart** | [**Cart**](Cart.md)| Cart | 
- **expand** | **String**| The object expansion to perform on the result.  See item resource documentation for examples | [optional] 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
-[**ItemsResponse**](ItemsResponse.md)
+[**CartResponse**](CartResponse.md)
 
 ### Authorization
 
@@ -867,13 +867,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="checkoutReturnReturnCodeGet"></a>
-# **checkoutReturnReturnCodeGet**
-> CartResponse checkoutReturnReturnCodeGet(returnCode, opts)
+<a name="validateCart"></a>
+# **validateCart**
+> CartValidationResponse validateCart(validationRequest, opts)
 
-Get cart (by return code)
+Validate
 
-Get a cart specified by the return code parameter. 
+Validate the cart for errors.  Specific checks can be passed and multiple validations can occur throughout your checkout flow. 
 
 ### Example
 ```javascript
@@ -898,7 +898,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var returnCode = "returnCode_example"; // String | Return code to lookup cart ID by
+var validationRequest = new UltraCartRestApiV2.CartValidationRequest(); // CartValidationRequest | Validation request
 
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -911,19 +911,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkoutReturnReturnCodeGet(returnCode, opts, callback);
+apiInstance.validateCart(validationRequest, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **returnCode** | **String**| Return code to lookup cart ID by | 
+ **validationRequest** | [**CartValidationRequest**](CartValidationRequest.md)| Validation request | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
-[**CartResponse**](CartResponse.md)
+[**CartValidationResponse**](CartValidationResponse.md)
 
 ### Authorization
 

@@ -4,16 +4,16 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut**](FulfillmentApi.md#fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut) | **PUT** /fulfillment/distribution_centers/{distribution_center_code}/acknowledgements | Acknowledge receipt of orders.
-[**fulfillmentDistributionCentersDistributionCenterCodeInventoryPost**](FulfillmentApi.md#fulfillmentDistributionCentersDistributionCenterCodeInventoryPost) | **POST** /fulfillment/distribution_centers/{distribution_center_code}/inventory | Update inventory
-[**fulfillmentDistributionCentersDistributionCenterCodeOrdersGet**](FulfillmentApi.md#fulfillmentDistributionCentersDistributionCenterCodeOrdersGet) | **GET** /fulfillment/distribution_centers/{distribution_center_code}/orders | Retrieve orders queued up for this distribution center.
-[**fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost**](FulfillmentApi.md#fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost) | **POST** /fulfillment/distribution_centers/{distribution_center_code}/shipments | Mark orders as shipped
-[**fulfillmentDistributionCentersGet**](FulfillmentApi.md#fulfillmentDistributionCentersGet) | **GET** /fulfillment/distribution_centers | Retrieve distribution centers
+[**acknowledgeOrders**](FulfillmentApi.md#acknowledgeOrders) | **PUT** /fulfillment/distribution_centers/{distribution_center_code}/acknowledgements | Acknowledge receipt of orders.
+[**getDistributionCenterOrders**](FulfillmentApi.md#getDistributionCenterOrders) | **GET** /fulfillment/distribution_centers/{distribution_center_code}/orders | Retrieve orders queued up for this distribution center.
+[**getDistributionCenters**](FulfillmentApi.md#getDistributionCenters) | **GET** /fulfillment/distribution_centers | Retrieve distribution centers
+[**shipOrders**](FulfillmentApi.md#shipOrders) | **POST** /fulfillment/distribution_centers/{distribution_center_code}/shipments | Mark orders as shipped
+[**updateInventory**](FulfillmentApi.md#updateInventory) | **POST** /fulfillment/distribution_centers/{distribution_center_code}/inventory | Update inventory
 
 
-<a name="fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut"></a>
-# **fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut**
-> fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut(distributionCenterCode, orderIds)
+<a name="acknowledgeOrders"></a>
+# **acknowledgeOrders**
+> acknowledgeOrders(distributionCenterCode, orderIds)
 
 Acknowledge receipt of orders.
 
@@ -48,7 +48,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.fulfillmentDistributionCentersDistributionCenterCodeAcknowledgementsPut(distributionCenterCode, orderIds, callback);
+apiInstance.acknowledgeOrders(distributionCenterCode, orderIds, callback);
 ```
 
 ### Parameters
@@ -71,69 +71,9 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="fulfillmentDistributionCentersDistributionCenterCodeInventoryPost"></a>
-# **fulfillmentDistributionCentersDistributionCenterCodeInventoryPost**
-> fulfillmentDistributionCentersDistributionCenterCodeInventoryPost(distributionCenterCode, inventories)
-
-Update inventory
-
-Update the inventory for items associated with this distribution center 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.FulfillmentApi();
-
-var distributionCenterCode = "distributionCenterCode_example"; // String | Distribution center code
-
-var inventories = [new UltraCartRestApiV2.FulfillmentInventory()]; // [FulfillmentInventory] | Inventory updates (limit 500)
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.fulfillmentDistributionCentersDistributionCenterCodeInventoryPost(distributionCenterCode, inventories, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **distributionCenterCode** | **String**| Distribution center code | 
- **inventories** | [**[FulfillmentInventory]**](FulfillmentInventory.md)| Inventory updates (limit 500) | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="fulfillmentDistributionCentersDistributionCenterCodeOrdersGet"></a>
-# **fulfillmentDistributionCentersDistributionCenterCodeOrdersGet**
-> OrdersResponse fulfillmentDistributionCentersDistributionCenterCodeOrdersGet(distributionCenterCode)
+<a name="getDistributionCenterOrders"></a>
+# **getDistributionCenterOrders**
+> OrdersResponse getDistributionCenterOrders(distributionCenterCode)
 
 Retrieve orders queued up for this distribution center.
 
@@ -166,7 +106,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.fulfillmentDistributionCentersDistributionCenterCodeOrdersGet(distributionCenterCode, callback);
+apiInstance.getDistributionCenterOrders(distributionCenterCode, callback);
 ```
 
 ### Parameters
@@ -188,9 +128,60 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost"></a>
-# **fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost**
-> fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost(distributionCenterCode, shipments)
+<a name="getDistributionCenters"></a>
+# **getDistributionCenters**
+> DistributionCentersResponse getDistributionCenters()
+
+Retrieve distribution centers
+
+Retrieves the distribution centers that this user has access to. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.FulfillmentApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getDistributionCenters(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DistributionCentersResponse**](DistributionCentersResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="shipOrders"></a>
+# **shipOrders**
+> shipOrders(distributionCenterCode, shipments)
 
 Mark orders as shipped
 
@@ -225,7 +216,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.fulfillmentDistributionCentersDistributionCenterCodeShipmentsPost(distributionCenterCode, shipments, callback);
+apiInstance.shipOrders(distributionCenterCode, shipments, callback);
 ```
 
 ### Parameters
@@ -248,13 +239,13 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="fulfillmentDistributionCentersGet"></a>
-# **fulfillmentDistributionCentersGet**
-> DistributionCentersResponse fulfillmentDistributionCentersGet()
+<a name="updateInventory"></a>
+# **updateInventory**
+> updateInventory(distributionCenterCode, inventories)
 
-Retrieve distribution centers
+Update inventory
 
-Retrieves the distribution centers that this user has access to. 
+Update the inventory for items associated with this distribution center 
 
 ### Example
 ```javascript
@@ -273,22 +264,31 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.FulfillmentApi();
 
+var distributionCenterCode = "distributionCenterCode_example"; // String | Distribution center code
+
+var inventories = [new UltraCartRestApiV2.FulfillmentInventory()]; // [FulfillmentInventory] | Inventory updates (limit 500)
+
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
-apiInstance.fulfillmentDistributionCentersGet(callback);
+apiInstance.updateInventory(distributionCenterCode, inventories, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **distributionCenterCode** | **String**| Distribution center code | 
+ **inventories** | [**[FulfillmentInventory]**](FulfillmentInventory.md)| Inventory updates (limit 500) | 
 
 ### Return type
 
-[**DistributionCentersResponse**](DistributionCentersResponse.md)
+null (empty response body)
 
 ### Authorization
 

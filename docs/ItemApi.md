@@ -4,17 +4,137 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**itemItemsGet**](ItemApi.md#itemItemsGet) | **GET** /item/items | Retrieve items
-[**itemItemsMerchantItemOidDelete**](ItemApi.md#itemItemsMerchantItemOidDelete) | **DELETE** /item/items/{merchant_item_oid} | Delete an item
-[**itemItemsMerchantItemOidGet**](ItemApi.md#itemItemsMerchantItemOidGet) | **GET** /item/items/{merchant_item_oid} | Retrieve an item
-[**itemItemsMerchantItemOidPut**](ItemApi.md#itemItemsMerchantItemOidPut) | **PUT** /item/items/{merchant_item_oid} | Update an item
-[**itemItemsPost**](ItemApi.md#itemItemsPost) | **POST** /item/items | Create an item
-[**itemTempMultimediaPost**](ItemApi.md#itemTempMultimediaPost) | **POST** /item/temp_multimedia | Upload an image to the temporary multimedia.
+[**deleteItem**](ItemApi.md#deleteItem) | **DELETE** /item/items/{merchant_item_oid} | Delete an item
+[**getItem**](ItemApi.md#getItem) | **GET** /item/items/{merchant_item_oid} | Retrieve an item
+[**getItems**](ItemApi.md#getItems) | **GET** /item/items | Retrieve items
+[**insertItem**](ItemApi.md#insertItem) | **POST** /item/items | Create an item
+[**updateItem**](ItemApi.md#updateItem) | **PUT** /item/items/{merchant_item_oid} | Update an item
+[**uploadTemporaryMultimedia**](ItemApi.md#uploadTemporaryMultimedia) | **POST** /item/temp_multimedia | Upload an image to the temporary multimedia.
 
 
-<a name="itemItemsGet"></a>
-# **itemItemsGet**
-> ItemsResponse itemItemsGet(opts)
+<a name="deleteItem"></a>
+# **deleteItem**
+> deleteItem(merchantItemOid)
+
+Delete an item
+
+Delete an item on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.ItemApi();
+
+var merchantItemOid = 56; // Integer | The item oid to delete.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.deleteItem(merchantItemOid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchantItemOid** | **Integer**| The item oid to delete. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getItem"></a>
+# **getItem**
+> ItemResponse getItem(merchantItemOid, opts)
+
+Retrieve an item
+
+Retrieves a single item using the specified item oid. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.ItemApi();
+
+var merchantItemOid = 56; // Integer | The item oid to retrieve.
+
+var opts = { 
+  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getItem(merchantItemOid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchantItemOid** | **Integer**| The item oid to retrieve. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+
+### Return type
+
+[**ItemResponse**](ItemResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getItems"></a>
+# **getItems**
+> ItemsResponse getItems(opts)
 
 Retrieve items
 
@@ -55,7 +175,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.itemItemsGet(opts, callback);
+apiInstance.getItems(opts, callback);
 ```
 
 ### Parameters
@@ -84,70 +204,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="itemItemsMerchantItemOidDelete"></a>
-# **itemItemsMerchantItemOidDelete**
-> itemItemsMerchantItemOidDelete(merchantItemOid)
+<a name="insertItem"></a>
+# **insertItem**
+> ItemResponse insertItem(item, opts)
 
-Delete an item
+Create an item
 
-Delete an item on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-var merchantItemOid = 56; // Integer | The item oid to delete.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.itemItemsMerchantItemOidDelete(merchantItemOid, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantItemOid** | **Integer**| The item oid to delete. | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="itemItemsMerchantItemOidGet"></a>
-# **itemItemsMerchantItemOidGet**
-> ItemResponse itemItemsMerchantItemOidGet(merchantItemOid, opts)
-
-Retrieve an item
-
-Retrieves a single item using the specified item oid. 
+Create a new item on the UltraCart account. 
 
 ### Example
 ```javascript
@@ -166,7 +229,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var merchantItemOid = 56; // Integer | The item oid to retrieve.
+var item = new UltraCartRestApiV2.Item(); // Item | Item to create
 
 var opts = { 
   'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
@@ -180,14 +243,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.itemItemsMerchantItemOidGet(merchantItemOid, opts, callback);
+apiInstance.insertItem(item, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantItemOid** | **Integer**| The item oid to retrieve. | 
+ **item** | [**Item**](Item.md)| Item to create | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
  **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
@@ -201,12 +264,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
-<a name="itemItemsMerchantItemOidPut"></a>
-# **itemItemsMerchantItemOidPut**
-> ItemResponse itemItemsMerchantItemOidPut(item, merchantItemOid, opts)
+<a name="updateItem"></a>
+# **updateItem**
+> ItemResponse updateItem(item, merchantItemOid, opts)
 
 Update an item
 
@@ -245,7 +308,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.itemItemsMerchantItemOidPut(item, merchantItemOid, opts, callback);
+apiInstance.updateItem(item, merchantItemOid, opts, callback);
 ```
 
 ### Parameters
@@ -270,72 +333,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
-<a name="itemItemsPost"></a>
-# **itemItemsPost**
-> ItemResponse itemItemsPost(item, opts)
-
-Create an item
-
-Create a new item on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-var item = new UltraCartRestApiV2.Item(); // Item | Item to create
-
-var opts = { 
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.itemItemsPost(item, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **item** | [**Item**](Item.md)| Item to create | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
-
-### Return type
-
-[**ItemResponse**](ItemResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
-
-<a name="itemTempMultimediaPost"></a>
-# **itemTempMultimediaPost**
-> TempMultimediaResponse itemTempMultimediaPost(file)
+<a name="uploadTemporaryMultimedia"></a>
+# **uploadTemporaryMultimedia**
+> TempMultimediaResponse uploadTemporaryMultimedia(file)
 
 Upload an image to the temporary multimedia.
 
@@ -368,7 +368,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.itemTempMultimediaPost(file, callback);
+apiInstance.uploadTemporaryMultimedia(file, callback);
 ```
 
 ### Parameters

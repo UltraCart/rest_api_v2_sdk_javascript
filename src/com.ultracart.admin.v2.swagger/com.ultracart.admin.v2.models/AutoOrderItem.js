@@ -75,6 +75,9 @@
 
 
 
+
+
+
   };
 
   /**
@@ -106,6 +109,9 @@
       if (data.hasOwnProperty('arbitrary_unit_cost_remaining_orders')) {
         obj['arbitrary_unit_cost_remaining_orders'] = ApiClient.convertToType(data['arbitrary_unit_cost_remaining_orders'], 'Integer');
       }
+      if (data.hasOwnProperty('auto_order_item_oid')) {
+        obj['auto_order_item_oid'] = ApiClient.convertToType(data['auto_order_item_oid'], 'Integer');
+      }
       if (data.hasOwnProperty('frequency')) {
         obj['frequency'] = ApiClient.convertToType(data['frequency'], 'String');
       }
@@ -135,6 +141,12 @@
       }
       if (data.hasOwnProperty('original_quantity')) {
         obj['original_quantity'] = ApiClient.convertToType(data['original_quantity'], 'Number');
+      }
+      if (data.hasOwnProperty('paypal_payer_id')) {
+        obj['paypal_payer_id'] = ApiClient.convertToType(data['paypal_payer_id'], 'String');
+      }
+      if (data.hasOwnProperty('paypal_recurring_payment_profile_id')) {
+        obj['paypal_recurring_payment_profile_id'] = ApiClient.convertToType(data['paypal_recurring_payment_profile_id'], 'String');
       }
       if (data.hasOwnProperty('preshipment_notice_sent')) {
         obj['preshipment_notice_sent'] = ApiClient.convertToType(data['preshipment_notice_sent'], 'Boolean');
@@ -179,6 +191,11 @@
    * @member {Integer} arbitrary_unit_cost_remaining_orders
    */
   exports.prototype['arbitrary_unit_cost_remaining_orders'] = undefined;
+  /**
+   * Primary key of AutoOrderItem
+   * @member {Integer} auto_order_item_oid
+   */
+  exports.prototype['auto_order_item_oid'] = undefined;
   /**
    * Frequency of the rebill if not a fixed schedule
    * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderItem.FrequencyEnum} frequency
@@ -229,6 +246,16 @@
    * @member {Number} original_quantity
    */
   exports.prototype['original_quantity'] = undefined;
+  /**
+   * The PayPal Payer ID tied to this item
+   * @member {String} paypal_payer_id
+   */
+  exports.prototype['paypal_payer_id'] = undefined;
+  /**
+   * The PayPal Profile ID tied to this item
+   * @member {String} paypal_recurring_payment_profile_id
+   */
+  exports.prototype['paypal_recurring_payment_profile_id'] = undefined;
   /**
    * True if the preshipment notice associated with the next rebill has been sent
    * @member {Boolean} preshipment_notice_sent

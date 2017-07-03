@@ -4,16 +4,16 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**customerCustomersCustomerProfileOidDelete**](CustomerApi.md#customerCustomersCustomerProfileOidDelete) | **DELETE** /customer/customers/{customer_profile_oid} | Delete a customer
-[**customerCustomersCustomerProfileOidGet**](CustomerApi.md#customerCustomersCustomerProfileOidGet) | **GET** /customer/customers/{customer_profile_oid} | Retrieve a customer
-[**customerCustomersCustomerProfileOidPut**](CustomerApi.md#customerCustomersCustomerProfileOidPut) | **PUT** /customer/customers/{customer_profile_oid} | Update a customer
-[**customerCustomersGet**](CustomerApi.md#customerCustomersGet) | **GET** /customer/customers | Retrieve customers
-[**customerCustomersPost**](CustomerApi.md#customerCustomersPost) | **POST** /customer/customers | Insert a customer
+[**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /customer/customers/{customer_profile_oid} | Delete a customer
+[**getCustomer**](CustomerApi.md#getCustomer) | **GET** /customer/customers/{customer_profile_oid} | Retrieve a customer
+[**getCustomers**](CustomerApi.md#getCustomers) | **GET** /customer/customers | Retrieve customers
+[**insertCustomer**](CustomerApi.md#insertCustomer) | **POST** /customer/customers | Insert a customer
+[**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /customer/customers/{customer_profile_oid} | Update a customer
 
 
-<a name="customerCustomersCustomerProfileOidDelete"></a>
-# **customerCustomersCustomerProfileOidDelete**
-> CustomerResponse customerCustomersCustomerProfileOidDelete(customerProfileOid)
+<a name="deleteCustomer"></a>
+# **deleteCustomer**
+> CustomerResponse deleteCustomer(customerProfileOid)
 
 Delete a customer
 
@@ -46,7 +46,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.customerCustomersCustomerProfileOidDelete(customerProfileOid, callback);
+apiInstance.deleteCustomer(customerProfileOid, callback);
 ```
 
 ### Parameters
@@ -68,9 +68,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
-<a name="customerCustomersCustomerProfileOidGet"></a>
-# **customerCustomersCustomerProfileOidGet**
-> CustomerResponse customerCustomersCustomerProfileOidGet(customerProfileOid, opts)
+<a name="getCustomer"></a>
+# **getCustomer**
+> CustomerResponse getCustomer(customerProfileOid, opts)
 
 Retrieve a customer
 
@@ -106,7 +106,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.customerCustomersCustomerProfileOidGet(customerProfileOid, opts, callback);
+apiInstance.getCustomer(customerProfileOid, opts, callback);
 ```
 
 ### Parameters
@@ -129,73 +129,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="customerCustomersCustomerProfileOidPut"></a>
-# **customerCustomersCustomerProfileOidPut**
-> CustomerResponse customerCustomersCustomerProfileOidPut(customer, customerProfileOid, opts)
-
-Update a customer
-
-Update a customer on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.CustomerApi();
-
-var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to update
-
-var customerProfileOid = 56; // Integer | The customer_profile_oid to update.
-
-var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.customerCustomersCustomerProfileOidPut(customer, customerProfileOid, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer** | [**Customer**](Customer.md)| Customer to update | 
- **customerProfileOid** | **Integer**| The customer_profile_oid to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
-
-### Return type
-
-[**CustomerResponse**](CustomerResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
-
-<a name="customerCustomersGet"></a>
-# **customerCustomersGet**
-> CustomersResponse customerCustomersGet(opts)
+<a name="getCustomers"></a>
+# **getCustomers**
+> CustomersResponse getCustomers(opts)
 
 Retrieve customers
 
@@ -260,7 +196,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.customerCustomersGet(opts, callback);
+apiInstance.getCustomers(opts, callback);
 ```
 
 ### Parameters
@@ -313,9 +249,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="customerCustomersPost"></a>
-# **customerCustomersPost**
-> CustomerResponse customerCustomersPost(customer, opts)
+<a name="insertCustomer"></a>
+# **insertCustomer**
+> CustomerResponse insertCustomer(customer, opts)
 
 Insert a customer
 
@@ -351,7 +287,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.customerCustomersPost(customer, opts, callback);
+apiInstance.insertCustomer(customer, opts, callback);
 ```
 
 ### Parameters
@@ -359,6 +295,70 @@ apiInstance.customerCustomersPost(customer, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer** | [**Customer**](Customer.md)| Customer to insert | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**CustomerResponse**](CustomerResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateCustomer"></a>
+# **updateCustomer**
+> CustomerResponse updateCustomer(customer, customerProfileOid, opts)
+
+Update a customer
+
+Update a customer on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CustomerApi();
+
+var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to update
+
+var customerProfileOid = 56; // Integer | The customer_profile_oid to update.
+
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateCustomer(customer, customerProfileOid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer** | [**Customer**](Customer.md)| Customer to update | 
+ **customerProfileOid** | **Integer**| The customer_profile_oid to update. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

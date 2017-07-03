@@ -83,8 +83,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property nextOffset (base name: "next_offset")', function() {
+      // uncomment below and update the code to test the property nextOffset
+      //var instane = new UltraCartRestApiV2.ResultSet();
+      //expect(instance).to.be();
+    });
+
     it('should have the property offset (base name: "offset")', function() {
       // uncomment below and update the code to test the property offset
+      //var instane = new UltraCartRestApiV2.ResultSet();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property totalRecords (base name: "total_records")', function() {
+      // uncomment below and update the code to test the property totalRecords
       //var instane = new UltraCartRestApiV2.ResultSet();
       //expect(instance).to.be();
     });

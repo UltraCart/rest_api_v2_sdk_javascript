@@ -65,24 +65,6 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.ItemContentAttribute);
     });
 
-    it('should have the property ITEM_META_DESCRIPTION (base name: "ITEM_META_DESCRIPTION")', function() {
-      // uncomment below and update the code to test the property ITEM_META_DESCRIPTION
-      //var instane = new UltraCartRestApiV2.ItemContentAttribute();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ITEM_META_KEYWORDS (base name: "ITEM_META_KEYWORDS")', function() {
-      // uncomment below and update the code to test the property ITEM_META_KEYWORDS
-      //var instane = new UltraCartRestApiV2.ItemContentAttribute();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ITEM_META_TITLE (base name: "ITEM_META_TITLE")', function() {
-      // uncomment below and update the code to test the property ITEM_META_TITLE
-      //var instane = new UltraCartRestApiV2.ItemContentAttribute();
-      //expect(instance).to.be();
-    });
-
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instane = new UltraCartRestApiV2.ItemContentAttribute();

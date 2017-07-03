@@ -59,140 +59,140 @@
   }
 
   describe('CheckoutApi', function() {
-    describe('checkoutBrowserKeyPut', function() {
-      it('should call checkoutBrowserKeyPut successfully', function(done) {
-        //uncomment below and update the code to test checkoutBrowserKeyPut
-        //instance.checkoutBrowserKeyPut(pet, function(error) {
+    describe('cityState', function() {
+      it('should call cityState successfully', function(done) {
+        //uncomment below and update the code to test cityState
+        //instance.cityState(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartCartIdGet', function() {
-      it('should call checkoutCartCartIdGet successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartCartIdGet
-        //instance.checkoutCartCartIdGet(pet, function(error) {
+    describe('finalizeOrder', function() {
+      it('should call finalizeOrder successfully', function(done) {
+        //uncomment below and update the code to test finalizeOrder
+        //instance.finalizeOrder(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartFinalizeOrderPost', function() {
-      it('should call checkoutCartFinalizeOrderPost successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartFinalizeOrderPost
-        //instance.checkoutCartFinalizeOrderPost(pet, function(error) {
+    describe('getCart', function() {
+      it('should call getCart successfully', function(done) {
+        //uncomment below and update the code to test getCart
+        //instance.getCart(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartGet', function() {
-      it('should call checkoutCartGet successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartGet
-        //instance.checkoutCartGet(pet, function(error) {
+    describe('getCartByCartId', function() {
+      it('should call getCartByCartId successfully', function(done) {
+        //uncomment below and update the code to test getCartByCartId
+        //instance.getCartByCartId(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartHandoffPost', function() {
-      it('should call checkoutCartHandoffPost successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartHandoffPost
-        //instance.checkoutCartHandoffPost(pet, function(error) {
+    describe('getCartByReturnCode', function() {
+      it('should call getCartByReturnCode successfully', function(done) {
+        //uncomment below and update the code to test getCartByReturnCode
+        //instance.getCartByReturnCode(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartProfileLoginPost', function() {
-      it('should call checkoutCartProfileLoginPost successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartProfileLoginPost
-        //instance.checkoutCartProfileLoginPost(pet, function(error) {
+    describe('handoffCart', function() {
+      it('should call handoffCart successfully', function(done) {
+        //uncomment below and update the code to test handoffCart
+        //instance.handoffCart(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartProfileLogoutPost', function() {
-      it('should call checkoutCartProfileLogoutPost successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartProfileLogoutPost
-        //instance.checkoutCartProfileLogoutPost(pet, function(error) {
+    describe('login', function() {
+      it('should call login successfully', function(done) {
+        //uncomment below and update the code to test login
+        //instance.login(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartProfileRegisterPost', function() {
-      it('should call checkoutCartProfileRegisterPost successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartProfileRegisterPost
-        //instance.checkoutCartProfileRegisterPost(pet, function(error) {
+    describe('logout', function() {
+      it('should call logout successfully', function(done) {
+        //uncomment below and update the code to test logout
+        //instance.logout(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartPut', function() {
-      it('should call checkoutCartPut successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartPut
-        //instance.checkoutCartPut(pet, function(error) {
+    describe('register', function() {
+      it('should call register successfully', function(done) {
+        //uncomment below and update the code to test register
+        //instance.register(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCartValidatePost', function() {
-      it('should call checkoutCartValidatePost successfully', function(done) {
-        //uncomment below and update the code to test checkoutCartValidatePost
-        //instance.checkoutCartValidatePost(pet, function(error) {
+    describe('relatedItemsForCart', function() {
+      it('should call relatedItemsForCart successfully', function(done) {
+        //uncomment below and update the code to test relatedItemsForCart
+        //instance.relatedItemsForCart(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutCityStatePost', function() {
-      it('should call checkoutCityStatePost successfully', function(done) {
-        //uncomment below and update the code to test checkoutCityStatePost
-        //instance.checkoutCityStatePost(pet, function(error) {
+    describe('relatedItemsForItem', function() {
+      it('should call relatedItemsForItem successfully', function(done) {
+        //uncomment below and update the code to test relatedItemsForItem
+        //instance.relatedItemsForItem(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutRelatedItemsItemIdPost', function() {
-      it('should call checkoutRelatedItemsItemIdPost successfully', function(done) {
-        //uncomment below and update the code to test checkoutRelatedItemsItemIdPost
-        //instance.checkoutRelatedItemsItemIdPost(pet, function(error) {
+    describe('setupBrowserKey', function() {
+      it('should call setupBrowserKey successfully', function(done) {
+        //uncomment below and update the code to test setupBrowserKey
+        //instance.setupBrowserKey(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutRelatedItemsPost', function() {
-      it('should call checkoutRelatedItemsPost successfully', function(done) {
-        //uncomment below and update the code to test checkoutRelatedItemsPost
-        //instance.checkoutRelatedItemsPost(pet, function(error) {
+    describe('updateCart', function() {
+      it('should call updateCart successfully', function(done) {
+        //uncomment below and update the code to test updateCart
+        //instance.updateCart(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('checkoutReturnReturnCodeGet', function() {
-      it('should call checkoutReturnReturnCodeGet successfully', function(done) {
-        //uncomment below and update the code to test checkoutReturnReturnCodeGet
-        //instance.checkoutReturnReturnCodeGet(pet, function(error) {
+    describe('validateCart', function() {
+      it('should call validateCart successfully', function(done) {
+        //uncomment below and update the code to test validateCart
+        //instance.validateCart(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

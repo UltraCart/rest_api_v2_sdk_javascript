@@ -101,6 +101,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoOrderItemOid (base name: "auto_order_item_oid")', function() {
+      // uncomment below and update the code to test the property autoOrderItemOid
+      //var instane = new UltraCartRestApiV2.AutoOrderItem();
+      //expect(instance).to.be();
+    });
+
     it('should have the property frequency (base name: "frequency")', function() {
       // uncomment below and update the code to test the property frequency
       //var instane = new UltraCartRestApiV2.AutoOrderItem();
@@ -157,6 +163,18 @@
 
     it('should have the property originalQuantity (base name: "original_quantity")', function() {
       // uncomment below and update the code to test the property originalQuantity
+      //var instane = new UltraCartRestApiV2.AutoOrderItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property paypalPayerId (base name: "paypal_payer_id")', function() {
+      // uncomment below and update the code to test the property paypalPayerId
+      //var instane = new UltraCartRestApiV2.AutoOrderItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property paypalRecurringPaymentProfileId (base name: "paypal_recurring_payment_profile_id")', function() {
+      // uncomment below and update the code to test the property paypalRecurringPaymentProfileId
       //var instane = new UltraCartRestApiV2.AutoOrderItem();
       //expect(instance).to.be();
     });

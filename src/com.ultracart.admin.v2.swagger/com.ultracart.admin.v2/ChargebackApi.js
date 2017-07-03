@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDispute', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputesResponse'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputesResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDispute'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChargebackDisputeResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ChargebackDispute'), require('../com.ultracart.admin.v2.models/ChargebackDisputesResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChargebackDisputeResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ChargebackDisputesResponse'), require('../com.ultracart.admin.v2.models/ChargebackDispute'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ChargebackApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChargebackDisputeResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ChargebackDispute, root.UltraCartRestApiV2.ChargebackDisputesResponse);
+    root.UltraCartRestApiV2.ChargebackApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChargebackDisputeResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ChargebackDisputesResponse, root.UltraCartRestApiV2.ChargebackDispute);
   }
-}(this, function(ApiClient, ChargebackDisputeResponse, ErrorResponse, ChargebackDispute, ChargebackDisputesResponse) {
+}(this, function(ApiClient, ChargebackDisputeResponse, ErrorResponse, ChargebackDisputesResponse, ChargebackDispute) {
   'use strict';
 
   /**
@@ -57,8 +57,8 @@
 
 
     /**
-     * Callback function to receive the result of the chargebackChargebacksChargebackDisputeOidDelete operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksChargebackDisputeOidDeleteCallback
+     * Callback function to receive the result of the deleteChargeback operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~deleteChargebackCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -68,15 +68,15 @@
      * Delete a chargeback
      * Delete a chargeback on the UltraCart account. 
      * @param {Integer} chargebackDisputeOid The chargeback_dispute_oid to delete.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksChargebackDisputeOidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~deleteChargebackCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.chargebackChargebacksChargebackDisputeOidDelete = function(chargebackDisputeOid, callback) {
+    this.deleteChargeback = function(chargebackDisputeOid, callback) {
       var postBody = null;
 
       // verify the required parameter 'chargebackDisputeOid' is set
       if (chargebackDisputeOid == undefined || chargebackDisputeOid == null) {
-        throw "Missing the required parameter 'chargebackDisputeOid' when calling chargebackChargebacksChargebackDisputeOidDelete";
+        throw "Missing the required parameter 'chargebackDisputeOid' when calling deleteChargeback";
       }
 
 
@@ -103,8 +103,8 @@
     }
 
     /**
-     * Callback function to receive the result of the chargebackChargebacksChargebackDisputeOidGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksChargebackDisputeOidGetCallback
+     * Callback function to receive the result of the getChargebackDispute operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~getChargebackDisputeCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -116,16 +116,16 @@
      * @param {Integer} chargebackDisputeOid The chargeback dispute oid to retrieve.
      * @param {Object} opts Optional parameters
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksChargebackDisputeOidGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~getChargebackDisputeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.chargebackChargebacksChargebackDisputeOidGet = function(chargebackDisputeOid, opts, callback) {
+    this.getChargebackDispute = function(chargebackDisputeOid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'chargebackDisputeOid' is set
       if (chargebackDisputeOid == undefined || chargebackDisputeOid == null) {
-        throw "Missing the required parameter 'chargebackDisputeOid' when calling chargebackChargebacksChargebackDisputeOidGet";
+        throw "Missing the required parameter 'chargebackDisputeOid' when calling getChargebackDispute";
       }
 
 
@@ -153,64 +153,8 @@
     }
 
     /**
-     * Callback function to receive the result of the chargebackChargebacksChargebackDisputeOidPut operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksChargebackDisputeOidPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update a chargeback
-     * Update a chargeback on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDispute} chargeback Chargeback to update
-     * @param {Integer} chargebackDisputeOid The chargeback_dispute_oid to update.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksChargebackDisputeOidPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse}
-     */
-    this.chargebackChargebacksChargebackDisputeOidPut = function(chargeback, chargebackDisputeOid, opts, callback) {
-      opts = opts || {};
-      var postBody = chargeback;
-
-      // verify the required parameter 'chargeback' is set
-      if (chargeback == undefined || chargeback == null) {
-        throw "Missing the required parameter 'chargeback' when calling chargebackChargebacksChargebackDisputeOidPut";
-      }
-
-      // verify the required parameter 'chargebackDisputeOid' is set
-      if (chargebackDisputeOid == undefined || chargebackDisputeOid == null) {
-        throw "Missing the required parameter 'chargebackDisputeOid' when calling chargebackChargebacksChargebackDisputeOidPut";
-      }
-
-
-      var pathParams = {
-        'chargeback_dispute_oid': chargebackDisputeOid
-      };
-      var queryParams = {
-        '_expand': opts['expand']
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
-      var accepts = ['application/json'];
-      var returnType = ChargebackDisputeResponse;
-
-      return this.apiClient.callApi(
-        '/chargeback/chargebacks/{chargeback_dispute_oid}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the chargebackChargebacksGet operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksGetCallback
+     * Callback function to receive the result of the getChargebackDisputes operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~getChargebackDisputesCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -232,10 +176,10 @@
      * @param {String} opts.since Fetch chargebacks that have been created/modified since this date/time.
      * @param {String} opts.sort The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~getChargebackDisputesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputesResponse}
      */
-    this.chargebackChargebacksGet = function(opts, callback) {
+    this.getChargebackDisputes = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -274,8 +218,8 @@
     }
 
     /**
-     * Callback function to receive the result of the chargebackChargebacksPost operation.
-     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksPostCallback
+     * Callback function to receive the result of the insertChargeback operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~insertChargebackCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -287,16 +231,16 @@
      * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDispute} chargeback Chargeback to insert
      * @param {Object} opts Optional parameters
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~chargebackChargebacksPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~insertChargebackCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.chargebackChargebacksPost = function(chargeback, opts, callback) {
+    this.insertChargeback = function(chargeback, opts, callback) {
       opts = opts || {};
       var postBody = chargeback;
 
       // verify the required parameter 'chargeback' is set
       if (chargeback == undefined || chargeback == null) {
-        throw "Missing the required parameter 'chargeback' when calling chargebackChargebacksPost";
+        throw "Missing the required parameter 'chargeback' when calling insertChargeback";
       }
 
 
@@ -317,6 +261,62 @@
 
       return this.apiClient.callApi(
         '/chargeback/chargebacks', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateChargeback operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~updateChargebackCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a chargeback
+     * Update a chargeback on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDispute} chargeback Chargeback to update
+     * @param {Integer} chargebackDisputeOid The chargeback_dispute_oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ChargebackApi~updateChargebackCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ChargebackDisputeResponse}
+     */
+    this.updateChargeback = function(chargeback, chargebackDisputeOid, opts, callback) {
+      opts = opts || {};
+      var postBody = chargeback;
+
+      // verify the required parameter 'chargeback' is set
+      if (chargeback == undefined || chargeback == null) {
+        throw "Missing the required parameter 'chargeback' when calling updateChargeback";
+      }
+
+      // verify the required parameter 'chargebackDisputeOid' is set
+      if (chargebackDisputeOid == undefined || chargebackDisputeOid == null) {
+        throw "Missing the required parameter 'chargebackDisputeOid' when calling updateChargeback";
+      }
+
+
+      var pathParams = {
+        'chargeback_dispute_oid': chargebackDisputeOid
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = ChargebackDisputeResponse;
+
+      return this.apiClient.callApi(
+        '/chargeback/chargebacks/{chargeback_dispute_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

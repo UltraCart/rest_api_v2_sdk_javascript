@@ -101,8 +101,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property pauseUnitDate (base name: "pause_unit_date")', function() {
-      // uncomment below and update the code to test the property pauseUnitDate
+    it('should have the property pauseUntilDate (base name: "pause_until_date")', function() {
+      // uncomment below and update the code to test the property pauseUntilDate
       //var instane = new UltraCartRestApiV2.ItemAutoOrderStep();
       //expect(instance).to.be();
     });

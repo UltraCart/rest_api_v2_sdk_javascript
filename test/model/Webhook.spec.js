@@ -71,6 +71,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property apiVersion (base name: "api_version")', function() {
+      // uncomment below and update the code to test the property apiVersion
+      //var instane = new UltraCartRestApiV2.Webhook();
+      //expect(instance).to.be();
+    });
+
     it('should have the property applicationProfile (base name: "application_profile")', function() {
       // uncomment below and update the code to test the property applicationProfile
       //var instane = new UltraCartRestApiV2.Webhook();

@@ -4,18 +4,193 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**orderOrdersGet**](OrderApi.md#orderOrdersGet) | **GET** /order/orders | Retrieve orders
-[**orderOrdersOrderIdCancelPost**](OrderApi.md#orderOrdersOrderIdCancelPost) | **POST** /order/orders/{order_id}/cancel | Cancel an order
-[**orderOrdersOrderIdDelete**](OrderApi.md#orderOrdersOrderIdDelete) | **DELETE** /order/orders/{order_id} | Delete an order
-[**orderOrdersOrderIdGet**](OrderApi.md#orderOrdersOrderIdGet) | **GET** /order/orders/{order_id} | Retrieve an order
-[**orderOrdersOrderIdPut**](OrderApi.md#orderOrdersOrderIdPut) | **PUT** /order/orders/{order_id} | Update an order
-[**orderOrdersOrderIdResendReceiptPost**](OrderApi.md#orderOrdersOrderIdResendReceiptPost) | **POST** /order/orders/{order_id}/resend_receipt | Resend receipt
-[**orderOrdersOrderIdResendShipmentConfirmationPost**](OrderApi.md#orderOrdersOrderIdResendShipmentConfirmationPost) | **POST** /order/orders/{order_id}/resend_shipment_confirmation | Resend shipment confirmation
+[**cancelOrder**](OrderApi.md#cancelOrder) | **POST** /order/orders/{order_id}/cancel | Cancel an order
+[**deleteOrder**](OrderApi.md#deleteOrder) | **DELETE** /order/orders/{order_id} | Delete an order
+[**getOrder**](OrderApi.md#getOrder) | **GET** /order/orders/{order_id} | Retrieve an order
+[**getOrders**](OrderApi.md#getOrders) | **GET** /order/orders | Retrieve orders
+[**resendReceipt**](OrderApi.md#resendReceipt) | **POST** /order/orders/{order_id}/resend_receipt | Resend receipt
+[**resendShipmentConfirmation**](OrderApi.md#resendShipmentConfirmation) | **POST** /order/orders/{order_id}/resend_shipment_confirmation | Resend shipment confirmation
+[**updateOrder**](OrderApi.md#updateOrder) | **PUT** /order/orders/{order_id} | Update an order
 
 
-<a name="orderOrdersGet"></a>
-# **orderOrdersGet**
-> OrdersResponse orderOrdersGet(opts)
+<a name="cancelOrder"></a>
+# **cancelOrder**
+> BaseResponse cancelOrder(orderId)
+
+Cancel an order
+
+Cancel an order on the UltraCart account.  If the success flag is false, then consult the error message for why it failed. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+var orderId = "orderId_example"; // String | The order id to cancel.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.cancelOrder(orderId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **String**| The order id to cancel. | 
+
+### Return type
+
+[**BaseResponse**](BaseResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="deleteOrder"></a>
+# **deleteOrder**
+> deleteOrder(orderId)
+
+Delete an order
+
+Delete an order on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+var orderId = "orderId_example"; // String | The order id to delete.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.deleteOrder(orderId, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **String**| The order id to delete. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getOrder"></a>
+# **getOrder**
+> OrderResponse getOrder(orderId, opts)
+
+Retrieve an order
+
+Retrieves a single order using the specified order id. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+var orderId = "orderId_example"; // String | The order id to retrieve.
+
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getOrder(orderId, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **String**| The order id to retrieve. | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**OrderResponse**](OrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getOrders"></a>
+# **getOrders**
+> OrdersResponse getOrders(opts)
 
 Retrieve orders
 
@@ -79,7 +254,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.orderOrdersGet(opts, callback);
+apiInstance.getOrders(opts, callback);
 ```
 
 ### Parameters
@@ -131,13 +306,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="orderOrdersOrderIdCancelPost"></a>
-# **orderOrdersOrderIdCancelPost**
-> BaseResponse orderOrdersOrderIdCancelPost(orderId)
+<a name="resendReceipt"></a>
+# **resendReceipt**
+> BaseResponse resendReceipt(orderId)
 
-Cancel an order
+Resend receipt
 
-Cancel an order on the UltraCart account.  If the success flag is false, then consult the error message for why it failed. 
+Resend the receipt for an order on the UltraCart account. 
 
 ### Example
 ```javascript
@@ -156,7 +331,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to cancel.
+var orderId = "orderId_example"; // String | The order id to resend the receipt for.
 
 
 var callback = function(error, data, response) {
@@ -166,14 +341,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.orderOrdersOrderIdCancelPost(orderId, callback);
+apiInstance.resendReceipt(orderId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to cancel. | 
+ **orderId** | **String**| The order id to resend the receipt for. | 
 
 ### Return type
 
@@ -188,70 +363,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="orderOrdersOrderIdDelete"></a>
-# **orderOrdersOrderIdDelete**
-> orderOrdersOrderIdDelete(orderId)
+<a name="resendShipmentConfirmation"></a>
+# **resendShipmentConfirmation**
+> BaseResponse resendShipmentConfirmation(orderId)
 
-Delete an order
+Resend shipment confirmation
 
-Delete an order on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.OrderApi();
-
-var orderId = "orderId_example"; // String | The order id to delete.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.orderOrdersOrderIdDelete(orderId, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to delete. | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="orderOrdersOrderIdGet"></a>
-# **orderOrdersOrderIdGet**
-> OrderResponse orderOrdersOrderIdGet(orderId, opts)
-
-Retrieve an order
-
-Retrieves a single order using the specified order id. 
+Resend shipment confirmation for an order on the UltraCart account. 
 
 ### Example
 ```javascript
@@ -270,11 +388,8 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to retrieve.
+var orderId = "orderId_example"; // String | The order id to resend the shipment notification for.
 
-var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -283,19 +398,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.orderOrdersOrderIdGet(orderId, opts, callback);
+apiInstance.resendShipmentConfirmation(orderId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **orderId** | **String**| The order id to resend the shipment notification for. | 
 
 ### Return type
 
-[**OrderResponse**](OrderResponse.md)
+[**BaseResponse**](BaseResponse.md)
 
 ### Authorization
 
@@ -306,9 +420,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="orderOrdersOrderIdPut"></a>
-# **orderOrdersOrderIdPut**
-> OrderResponse orderOrdersOrderIdPut(order, orderId, opts)
+<a name="updateOrder"></a>
+# **updateOrder**
+> OrderResponse updateOrder(order, orderId, opts)
 
 Update an order
 
@@ -346,7 +460,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.orderOrdersOrderIdPut(order, orderId, opts, callback);
+apiInstance.updateOrder(order, orderId, opts, callback);
 ```
 
 ### Parameters
@@ -368,119 +482,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
-
-<a name="orderOrdersOrderIdResendReceiptPost"></a>
-# **orderOrdersOrderIdResendReceiptPost**
-> BaseResponse orderOrdersOrderIdResendReceiptPost(orderId)
-
-Resend receipt
-
-Resend the receipt for an order on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.OrderApi();
-
-var orderId = "orderId_example"; // String | The order id to resend the receipt for.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.orderOrdersOrderIdResendReceiptPost(orderId, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to resend the receipt for. | 
-
-### Return type
-
-[**BaseResponse**](BaseResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="orderOrdersOrderIdResendShipmentConfirmationPost"></a>
-# **orderOrdersOrderIdResendShipmentConfirmationPost**
-> BaseResponse orderOrdersOrderIdResendShipmentConfirmationPost(orderId)
-
-Resend shipment confirmation
-
-Resend shipment confirmation for an order on the UltraCart account. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.OrderApi();
-
-var orderId = "orderId_example"; // String | The order id to resend the shipment notification for.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.orderOrdersOrderIdResendShipmentConfirmationPost(orderId, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to resend the shipment notification for. | 
-
-### Return type
-
-[**BaseResponse**](BaseResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 

@@ -59,70 +59,70 @@
   }
 
   describe('OrderApi', function() {
-    describe('orderOrdersGet', function() {
-      it('should call orderOrdersGet successfully', function(done) {
-        //uncomment below and update the code to test orderOrdersGet
-        //instance.orderOrdersGet(pet, function(error) {
+    describe('cancelOrder', function() {
+      it('should call cancelOrder successfully', function(done) {
+        //uncomment below and update the code to test cancelOrder
+        //instance.cancelOrder(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('orderOrdersOrderIdCancelPost', function() {
-      it('should call orderOrdersOrderIdCancelPost successfully', function(done) {
-        //uncomment below and update the code to test orderOrdersOrderIdCancelPost
-        //instance.orderOrdersOrderIdCancelPost(pet, function(error) {
+    describe('deleteOrder', function() {
+      it('should call deleteOrder successfully', function(done) {
+        //uncomment below and update the code to test deleteOrder
+        //instance.deleteOrder(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('orderOrdersOrderIdDelete', function() {
-      it('should call orderOrdersOrderIdDelete successfully', function(done) {
-        //uncomment below and update the code to test orderOrdersOrderIdDelete
-        //instance.orderOrdersOrderIdDelete(pet, function(error) {
+    describe('getOrder', function() {
+      it('should call getOrder successfully', function(done) {
+        //uncomment below and update the code to test getOrder
+        //instance.getOrder(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('orderOrdersOrderIdGet', function() {
-      it('should call orderOrdersOrderIdGet successfully', function(done) {
-        //uncomment below and update the code to test orderOrdersOrderIdGet
-        //instance.orderOrdersOrderIdGet(pet, function(error) {
+    describe('getOrders', function() {
+      it('should call getOrders successfully', function(done) {
+        //uncomment below and update the code to test getOrders
+        //instance.getOrders(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('orderOrdersOrderIdPut', function() {
-      it('should call orderOrdersOrderIdPut successfully', function(done) {
-        //uncomment below and update the code to test orderOrdersOrderIdPut
-        //instance.orderOrdersOrderIdPut(pet, function(error) {
+    describe('resendReceipt', function() {
+      it('should call resendReceipt successfully', function(done) {
+        //uncomment below and update the code to test resendReceipt
+        //instance.resendReceipt(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('orderOrdersOrderIdResendReceiptPost', function() {
-      it('should call orderOrdersOrderIdResendReceiptPost successfully', function(done) {
-        //uncomment below and update the code to test orderOrdersOrderIdResendReceiptPost
-        //instance.orderOrdersOrderIdResendReceiptPost(pet, function(error) {
+    describe('resendShipmentConfirmation', function() {
+      it('should call resendShipmentConfirmation successfully', function(done) {
+        //uncomment below and update the code to test resendShipmentConfirmation
+        //instance.resendShipmentConfirmation(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('orderOrdersOrderIdResendShipmentConfirmationPost', function() {
-      it('should call orderOrdersOrderIdResendShipmentConfirmationPost successfully', function(done) {
-        //uncomment below and update the code to test orderOrdersOrderIdResendShipmentConfirmationPost
-        //instance.orderOrdersOrderIdResendShipmentConfirmationPost(pet, function(error) {
+    describe('updateOrder', function() {
+      it('should call updateOrder successfully', function(done) {
+        //uncomment below and update the code to test updateOrder
+        //instance.updateOrder(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

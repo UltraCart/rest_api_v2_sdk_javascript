@@ -95,8 +95,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property countryOfOrigin (base name: "country_of_origin")', function() {
-      // uncomment below and update the code to test the property countryOfOrigin
+    it('should have the property countryCodeOfOrigin (base name: "country_code_of_origin")', function() {
+      // uncomment below and update the code to test the property countryCodeOfOrigin
       //var instane = new UltraCartRestApiV2.ItemShipping();
       //expect(instance).to.be();
     });
@@ -229,6 +229,12 @@
 
     it('should have the property packageRequirements (base name: "package_requirements")', function() {
       // uncomment below and update the code to test the property packageRequirements
+      //var instane = new UltraCartRestApiV2.ItemShipping();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property perishableClassName (base name: "perishable_class_name")', function() {
+      // uncomment below and update the code to test the property perishableClassName
       //var instane = new UltraCartRestApiV2.ItemShipping();
       //expect(instance).to.be();
     });
