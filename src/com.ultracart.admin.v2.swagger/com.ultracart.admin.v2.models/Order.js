@@ -393,7 +393,12 @@
      * value: "Least Cost Routing"
      * @const
      */
-    "Least Cost Routing": "Least Cost Routing"  };
+    "Least Cost Routing": "Least Cost Routing",
+    /**
+     * value: "Unknown"
+     * @const
+     */
+    "Unknown": "Unknown"  };
 
 
   return exports;

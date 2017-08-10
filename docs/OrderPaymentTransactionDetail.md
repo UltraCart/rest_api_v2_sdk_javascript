@@ -8,14 +8,3 @@ Name | Type | Description | Notes
 **value** | **String** | Value | [optional] 
 
 
-<a name="TypeEnum"></a>
-## Enum: TypeEnum
-
-
-* `` (value: `""`)
-
-* `AuthTicket` (value: `"AuthTicket"`)
-
-
-
-

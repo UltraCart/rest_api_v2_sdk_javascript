@@ -40,18 +40,3 @@ Name | Type | Description | Notes
 
 
 
-<a name="CustomerPhoneInBillingLocationEnum"></a>
-## Enum: CustomerPhoneInBillingLocationEnum
-
-
-* `` (value: `""`)
-
-* `No` (value: `"No"`)
-
-* `NotFound` (value: `"NotFound"`)
-
-* `Yes` (value: `"Yes"`)
-
-
-
-

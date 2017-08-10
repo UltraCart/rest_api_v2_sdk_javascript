@@ -546,7 +546,7 @@
   exports.prototype['listing_price_override'] = undefined;
   /**
    * The type of e-Bay listing
-   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEbay.ListingTypeEnum} listing_type
+   * @member {String} listing_type
    */
   exports.prototype['listing_type'] = undefined;
   /**
@@ -694,33 +694,6 @@
    */
   exports.prototype['target_dispatch_time_max'] = undefined;
 
-
-  /**
-   * Allowed values for the <code>listing_type</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.ListingTypeEnum = {
-    /**
-     * value: ""
-     * @const
-     */
-    "": "",
-    /**
-     * value: "Auction"
-     * @const
-     */
-    "Auction": "Auction",
-    /**
-     * value: "Fixed"
-     * @const
-     */
-    "Fixed": "Fixed",
-    /**
-     * value: "Store"
-     * @const
-     */
-    "Store": "Store"  };
 
 
   return exports;

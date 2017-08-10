@@ -180,7 +180,7 @@
   exports.prototype['country_match'] = undefined;
   /**
    * Whether the customer's phone number is located in the area of the billing address
-   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderFraudScore.CustomerPhoneInBillingLocationEnum} customer_phone_in_billing_location
+   * @member {String} customer_phone_in_billing_location
    */
   exports.prototype['customer_phone_in_billing_location'] = undefined;
   /**
@@ -266,33 +266,6 @@
      * @const
      */
     "NA": "NA",
-    /**
-     * value: "No"
-     * @const
-     */
-    "No": "No",
-    /**
-     * value: "NotFound"
-     * @const
-     */
-    "NotFound": "NotFound",
-    /**
-     * value: "Yes"
-     * @const
-     */
-    "Yes": "Yes"  };
-
-  /**
-   * Allowed values for the <code>customer_phone_in_billing_location</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.CustomerPhoneInBillingLocationEnum = {
-    /**
-     * value: ""
-     * @const
-     */
-    "": "",
     /**
      * value: "No"
      * @const

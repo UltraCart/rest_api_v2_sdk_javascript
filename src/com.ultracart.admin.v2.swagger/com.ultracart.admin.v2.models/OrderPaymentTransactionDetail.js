@@ -92,7 +92,7 @@
   exports.prototype['name'] = undefined;
   /**
    * Type
-   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderPaymentTransactionDetail.TypeEnum} type
+   * @member {String} type
    */
   exports.prototype['type'] = undefined;
   /**
@@ -101,23 +101,6 @@
    */
   exports.prototype['value'] = undefined;
 
-
-  /**
-   * Allowed values for the <code>type</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.TypeEnum = {
-    /**
-     * value: ""
-     * @const
-     */
-    "": "",
-    /**
-     * value: "AuthTicket"
-     * @const
-     */
-    "AuthTicket": "AuthTicket"  };
 
 
   return exports;

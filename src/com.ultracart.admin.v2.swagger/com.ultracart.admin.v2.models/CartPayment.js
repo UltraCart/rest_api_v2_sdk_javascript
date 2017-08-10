@@ -61,6 +61,7 @@
 
 
 
+
   };
 
   /**
@@ -89,6 +90,9 @@
       if (data.hasOwnProperty('purchase_order')) {
         obj['purchase_order'] = CartPaymentPurchaseOrder.constructFromObject(data['purchase_order']);
       }
+      if (data.hasOwnProperty('rtg_code')) {
+        obj['rtg_code'] = ApiClient.convertToType(data['rtg_code'], 'String');
+      }
     }
     return obj;
   }
@@ -114,6 +118,11 @@
    * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CartPaymentPurchaseOrder} purchase_order
    */
   exports.prototype['purchase_order'] = undefined;
+  /**
+   * Rotating transaction gateway code
+   * @member {String} rtg_code
+   */
+  exports.prototype['rtg_code'] = undefined;
 
 
 

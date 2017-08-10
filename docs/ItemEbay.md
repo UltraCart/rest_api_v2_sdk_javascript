@@ -74,18 +74,3 @@ Name | Type | Description | Notes
 **targetDispatchTimeMax** | **Integer** | Typical number of days it will take to ship the item | [optional] 
 
 
-<a name="ListingTypeEnum"></a>
-## Enum: ListingTypeEnum
-
-
-* `` (value: `""`)
-
-* `Auction` (value: `"Auction"`)
-
-* `Fixed` (value: `"Fixed"`)
-
-* `Store` (value: `"Store"`)
-
-
-
-
