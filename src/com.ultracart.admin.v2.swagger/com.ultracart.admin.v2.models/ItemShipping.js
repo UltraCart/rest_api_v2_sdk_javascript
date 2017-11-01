@@ -103,6 +103,7 @@
 
 
 
+
   };
 
   /**
@@ -130,6 +131,9 @@
       }
       if (data.hasOwnProperty('cases')) {
         obj['cases'] = ApiClient.convertToType(data['cases'], [ItemShippingCase]);
+      }
+      if (data.hasOwnProperty('collect_serial_numbers')) {
+        obj['collect_serial_numbers'] = ApiClient.convertToType(data['collect_serial_numbers'], 'Boolean');
       }
       if (data.hasOwnProperty('country_code_of_origin')) {
         obj['country_code_of_origin'] = ApiClient.convertToType(data['country_code_of_origin'], 'String');
@@ -286,6 +290,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemShippingCase>} cases
    */
   exports.prototype['cases'] = undefined;
+  /**
+   * This item is on pre-order
+   * @member {Boolean} collect_serial_numbers
+   */
+  exports.prototype['collect_serial_numbers'] = undefined;
   /**
    * Country code of origin for customs forms.  (ISO-3166 two letter code)
    * @member {String} country_code_of_origin

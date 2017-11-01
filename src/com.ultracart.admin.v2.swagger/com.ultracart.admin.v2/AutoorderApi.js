@@ -107,6 +107,106 @@
     }
 
     /**
+     * Callback function to receive the result of the getAutoOrderByCode operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrderByCodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an auto order
+     * Retrieves a single auto order using the specified reference (original) order id. 
+     * @param {String} autoOrderCode The auto order oid to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrderByCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    this.getAutoOrderByCode = function(autoOrderCode, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'autoOrderCode' is set
+      if (autoOrderCode == undefined || autoOrderCode == null) {
+        throw "Missing the required parameter 'autoOrderCode' when calling getAutoOrderByCode";
+      }
+
+
+      var pathParams = {
+        'auto_order_code': autoOrderCode
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AutoOrderResponse;
+
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/code/{auto_order_code}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAutoOrderByReferenceOrderId operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrderByReferenceOrderIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an auto order
+     * Retrieves a single auto order using the specified reference (original) order id. 
+     * @param {String} referenceOrderId The auto order oid to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrderByReferenceOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    this.getAutoOrderByReferenceOrderId = function(referenceOrderId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'referenceOrderId' is set
+      if (referenceOrderId == undefined || referenceOrderId == null) {
+        throw "Missing the required parameter 'referenceOrderId' when calling getAutoOrderByReferenceOrderId";
+      }
+
+
+      var pathParams = {
+        'reference_order_id': referenceOrderId
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AutoOrderResponse;
+
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/reference_order_id/{reference_order_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getAutoOrders operation.
      * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi~getAutoOrdersCallback
      * @param {String} error Error message, if any.

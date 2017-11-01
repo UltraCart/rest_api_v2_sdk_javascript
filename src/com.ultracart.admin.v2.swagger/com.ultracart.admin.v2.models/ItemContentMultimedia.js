@@ -199,7 +199,7 @@
    */
   exports.prototype['type'] = undefined;
   /**
-   * URL to download file
+   * URL to download file (on new multimedia record this can be a URL for UltraCart to fetch)
    * @member {String} url
    */
   exports.prototype['url'] = undefined;

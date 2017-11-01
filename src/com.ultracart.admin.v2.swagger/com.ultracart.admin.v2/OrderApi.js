@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderQuery', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'), require('../com.ultracart.admin.v2.models/Order'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'), require('../com.ultracart.admin.v2.models/OrderQuery'), require('../com.ultracart.admin.v2.models/Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.OrdersResponse, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.OrdersResponse, root.UltraCartRestApiV2.OrderQuery, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, BaseResponse, ErrorResponse, OrderResponse, OrdersResponse, Order) {
+}(this, function(ApiClient, BaseResponse, ErrorResponse, OrderResponse, OrdersResponse, OrderQuery, Order) {
   'use strict';
 
   /**
@@ -295,6 +295,127 @@
 
       return this.apiClient.callApi(
         '/order/orders', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrdersByQuery operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~getOrdersByQueryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve orders
+     * Retrieves a group of orders from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the orders returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderQuery} orderQuery Order query
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
+     * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts.sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts.expand The object expansion to perform on the result.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~getOrdersByQueryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrdersResponse}
+     */
+    this.getOrdersByQuery = function(orderQuery, opts, callback) {
+      opts = opts || {};
+      var postBody = orderQuery;
+
+      // verify the required parameter 'orderQuery' is set
+      if (orderQuery == undefined || orderQuery == null) {
+        throw "Missing the required parameter 'orderQuery' when calling getOrdersByQuery";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_limit': opts['limit'],
+        '_offset': opts['offset'],
+        '_sort': opts['sort'],
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OrdersResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/query', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the refundOrder operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~refundOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Refund an order
+     * Perform a refund operation on an order and then update the order if successful 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order} order Order to refund
+     * @param {String} orderId The order id to refund.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.rejectAfterRefund Reject order after refund (default to false)
+     * @param {Boolean} opts.skipCustomerNotification Skip customer email notification (default to false)
+     * @param {Boolean} opts.autoOrderCancel Cancel associated auto orders (default to false)
+     * @param {Boolean} opts.manualRefund Consider a manual refund done externally (default to false)
+     * @param {Boolean} opts.reverseAffiliateTransactions Reverse affiliate transactions (default to true)
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi~refundOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.refundOrder = function(order, orderId, opts, callback) {
+      opts = opts || {};
+      var postBody = order;
+
+      // verify the required parameter 'order' is set
+      if (order == undefined || order == null) {
+        throw "Missing the required parameter 'order' when calling refundOrder";
+      }
+
+      // verify the required parameter 'orderId' is set
+      if (orderId == undefined || orderId == null) {
+        throw "Missing the required parameter 'orderId' when calling refundOrder";
+      }
+
+
+      var pathParams = {
+        'order_id': orderId
+      };
+      var queryParams = {
+        'reject_after_refund': opts['rejectAfterRefund'],
+        'skip_customer_notification': opts['skipCustomerNotification'],
+        'auto_order_cancel': opts['autoOrderCancel'],
+        'manual_refund': opts['manualRefund'],
+        'reverse_affiliate_transactions': opts['reverseAffiliateTransactions'],
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/refund', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

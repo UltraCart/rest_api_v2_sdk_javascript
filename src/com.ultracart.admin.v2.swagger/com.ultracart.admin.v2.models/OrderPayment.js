@@ -270,6 +270,11 @@
      */
     "Credit Card": "Credit Card",
     /**
+     * value: "eBay"
+     * @const
+     */
+    "eBay": "eBay",
+    /**
      * value: "eCheck"
      * @const
      */

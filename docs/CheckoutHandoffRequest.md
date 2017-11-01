@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 
 * `view` (value: `"view"`)
 
+* `affirm` (value: `"affirm"`)
+
 
 
 

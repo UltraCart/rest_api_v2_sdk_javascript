@@ -73,6 +73,7 @@
 
 
 
+
   };
 
   /**
@@ -97,6 +98,9 @@
       }
       if (data.hasOwnProperty('barcode_uk')) {
         obj['barcode_uk'] = ApiClient.convertToType(data['barcode_uk'], 'String');
+      }
+      if (data.hasOwnProperty('buyer_catalog_number')) {
+        obj['buyer_catalog_number'] = ApiClient.convertToType(data['buyer_catalog_number'], 'String');
       }
       if (data.hasOwnProperty('buyer_dpci')) {
         obj['buyer_dpci'] = ApiClient.convertToType(data['buyer_dpci'], 'String');
@@ -161,6 +165,11 @@
    * @member {String} barcode_uk
    */
   exports.prototype['barcode_uk'] = undefined;
+  /**
+   * Buyer catalog number (EDI only)
+   * @member {String} buyer_catalog_number
+   */
+  exports.prototype['buyer_catalog_number'] = undefined;
   /**
    * Buyer DPCI (EDI only)
    * @member {String} buyer_dpci

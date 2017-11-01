@@ -42,6 +42,8 @@ Name | Type | Description | Notes
 
 * `Credit Card` (value: `"Credit Card"`)
 
+* `eBay` (value: `"eBay"`)
+
 * `eCheck` (value: `"eCheck"`)
 
 * `Money Order` (value: `"Money Order"`)

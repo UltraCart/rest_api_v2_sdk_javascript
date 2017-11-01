@@ -63,6 +63,7 @@
 
 
 
+
   };
 
   /**
@@ -96,6 +97,9 @@
       }
       if (data.hasOwnProperty('customer_profile_oid')) {
         obj['customer_profile_oid'] = ApiClient.convertToType(data['customer_profile_oid'], 'Integer');
+      }
+      if (data.hasOwnProperty('last_used_dts')) {
+        obj['last_used_dts'] = ApiClient.convertToType(data['last_used_dts'], 'String');
       }
     }
     return obj;
@@ -136,6 +140,11 @@
    * @member {Integer} customer_profile_oid
    */
   exports.prototype['customer_profile_oid'] = undefined;
+  /**
+   * Last used date
+   * @member {String} last_used_dts
+   */
+  exports.prototype['last_used_dts'] = undefined;
 
 
 

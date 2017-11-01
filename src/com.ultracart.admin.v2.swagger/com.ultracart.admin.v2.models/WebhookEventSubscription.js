@@ -64,6 +64,7 @@
 
 
 
+
   };
 
   /**
@@ -97,6 +98,9 @@
       }
       if (data.hasOwnProperty('subscribed')) {
         obj['subscribed'] = ApiClient.convertToType(data['subscribed'], 'Boolean');
+      }
+      if (data.hasOwnProperty('supports_reflow')) {
+        obj['supports_reflow'] = ApiClient.convertToType(data['supports_reflow'], 'Boolean');
       }
       if (data.hasOwnProperty('webhook_event_oid')) {
         obj['webhook_event_oid'] = ApiClient.convertToType(data['webhook_event_oid'], 'Integer');
@@ -140,6 +144,11 @@
    * @member {Boolean} subscribed
    */
   exports.prototype['subscribed'] = undefined;
+  /**
+   * True if the event can be triggered to reflow existing records
+   * @member {Boolean} supports_reflow
+   */
+  exports.prototype['supports_reflow'] = undefined;
   /**
    * The webhook event object identifier
    * @member {Integer} webhook_event_oid

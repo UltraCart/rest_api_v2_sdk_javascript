@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/Customer'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/Customer'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.Customer);
+    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.Customer);
   }
-}(this, function(ApiClient, CustomerResponse, ErrorResponse, CustomersResponse, Customer) {
+}(this, function(ApiClient, CustomerResponse, ErrorResponse, CustomersResponse, CustomerQuery, Customer) {
   'use strict';
 
   /**
@@ -252,6 +252,102 @@
 
       return this.apiClient.callApi(
         '/customer/customers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomersByQuery operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomersByQueryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve customers by query
+     * Retrieves customers from the account.  If no parameters are specified, all customers will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerQuery} customerQuery Customer query
+     * @param {Object} opts Optional parameters
+     * @param {Integer} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts.since Fetch customers that have been created/modified since this date/time.
+     * @param {String} opts.sort The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomersByQueryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse}
+     */
+    this.getCustomersByQuery = function(customerQuery, opts, callback) {
+      opts = opts || {};
+      var postBody = customerQuery;
+
+      // verify the required parameter 'customerQuery' is set
+      if (customerQuery == undefined || customerQuery == null) {
+        throw "Missing the required parameter 'customerQuery' when calling getCustomersByQuery";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_limit': opts['limit'],
+        '_offset': opts['offset'],
+        '_since': opts['since'],
+        '_sort': opts['sort'],
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CustomersResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/query', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEditorValues operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getEditorValuesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve values needed for a customer profile editor
+     * Retrieve values needed for a customer profile editor. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getEditorValuesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse}
+     */
+    this.getEditorValues = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CustomerResponse;
+
+      return this.apiClient.callApi(
+        '/customer/editor_values', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -162,7 +162,12 @@
      * value: "view"
      * @const
      */
-    "view": "view"  };
+    "view": "view",
+    /**
+     * value: "affirm"
+     * @const
+     */
+    "affirm": "affirm"  };
 
 
   return exports;

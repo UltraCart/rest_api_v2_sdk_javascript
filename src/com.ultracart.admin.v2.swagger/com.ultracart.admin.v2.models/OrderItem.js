@@ -434,7 +434,7 @@
    */
   exports.prototype['quantity'] = undefined;
   /**
-   * Quantity refunded on this item
+   * Quantity refunded on this item (read only except refund operation)
    * @member {Number} quantity_refunded
    */
   exports.prototype['quantity_refunded'] = undefined;

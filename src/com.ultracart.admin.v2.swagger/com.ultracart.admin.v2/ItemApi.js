@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsRequest', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/ItemsRequest'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.TempMultimediaResponse);
+    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ItemsRequest, root.UltraCartRestApiV2.TempMultimediaResponse);
   }
-}(this, function(ApiClient, ErrorResponse, ItemResponse, ItemsResponse, Item, TempMultimediaResponse) {
+}(this, function(ApiClient, ErrorResponse, ItemResponse, ItemsResponse, Item, ItemsRequest, TempMultimediaResponse) {
   'use strict';
 
   /**
@@ -148,6 +148,58 @@
 
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getItemByMerchantItemId operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~getItemByMerchantItemIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an item by item id
+     * Retrieves a single item using the specified item id. 
+     * @param {String} merchantItemId The item id to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~getItemByMerchantItemIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemResponse}
+     */
+    this.getItemByMerchantItemId = function(merchantItemId, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'merchantItemId' is set
+      if (merchantItemId == undefined || merchantItemId == null) {
+        throw "Missing the required parameter 'merchantItemId' when calling getItemByMerchantItemId";
+      }
+
+
+      var pathParams = {
+        'merchant_item_id': merchantItemId
+      };
+      var queryParams = {
+        '_expand': opts['expand'],
+        '_placeholders': opts['placeholders']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ItemResponse;
+
+      return this.apiClient.callApi(
+        '/item/items/merchant_item_id/{merchant_item_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -314,6 +366,59 @@
 
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateItems operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~updateItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update multiple items
+     * Update multiple item on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsRequest} itemsRequest Items to update (synchronous maximum 20 / asynchronous maximum 100)
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Boolean} opts.async True if the operation should be run async.  No result returned
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/ItemApi~updateItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemsResponse}
+     */
+    this.updateItems = function(itemsRequest, opts, callback) {
+      opts = opts || {};
+      var postBody = itemsRequest;
+
+      // verify the required parameter 'itemsRequest' is set
+      if (itemsRequest == undefined || itemsRequest == null) {
+        throw "Missing the required parameter 'itemsRequest' when calling updateItems";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_expand': opts['expand'],
+        '_placeholders': opts['placeholders'],
+        '_async': opts['async']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = ItemsResponse;
+
+      return this.apiClient.callApi(
+        '/item/items/batch', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

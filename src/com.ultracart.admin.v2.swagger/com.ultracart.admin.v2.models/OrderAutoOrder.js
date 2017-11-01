@@ -59,6 +59,7 @@
 
 
 
+
   };
 
   /**
@@ -75,6 +76,9 @@
       if (data.hasOwnProperty('auto_order_code')) {
         obj['auto_order_code'] = ApiClient.convertToType(data['auto_order_code'], 'String');
       }
+      if (data.hasOwnProperty('auto_order_oid')) {
+        obj['auto_order_oid'] = ApiClient.convertToType(data['auto_order_oid'], 'Integer');
+      }
       if (data.hasOwnProperty('original_order_id')) {
         obj['original_order_id'] = ApiClient.convertToType(data['original_order_id'], 'String');
       }
@@ -86,10 +90,15 @@
   }
 
   /**
-   * Unique identifier assigned to the auto order
+   * Unique code assigned to the auto order
    * @member {String} auto_order_code
    */
   exports.prototype['auto_order_code'] = undefined;
+  /**
+   * Unique identifier assigned to the auto order
+   * @member {Integer} auto_order_oid
+   */
+  exports.prototype['auto_order_oid'] = undefined;
   /**
    * Orignal order id that started this auto order sequence
    * @member {String} original_order_id
