@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 <a name="getEditorValues"></a>
 # **getEditorValues**
-> CustomerResponse getEditorValues()
+> CustomerEditorValues getEditorValues()
 
 Retrieve values needed for a customer profile editor
 
@@ -360,7 +360,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CustomerResponse**](CustomerResponse.md)
+[**CustomerEditorValues**](CustomerEditorValues.md)
 
 ### Authorization
 
