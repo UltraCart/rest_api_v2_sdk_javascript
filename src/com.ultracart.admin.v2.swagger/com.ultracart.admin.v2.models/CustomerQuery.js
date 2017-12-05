@@ -45,7 +45,7 @@
   /**
    * The CustomerQuery model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerQuery
-   * @version 2.0.0
+   * @version 2.0.2
    */
 
   /**
@@ -312,7 +312,7 @@
    */
   exports.prototype['signup_dts_end'] = undefined;
   /**
-   * Signup date star
+   * Signup date start
    * @member {String} signup_dts_start
    */
   exports.prototype['signup_dts_start'] = undefined;

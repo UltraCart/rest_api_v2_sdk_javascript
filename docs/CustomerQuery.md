@@ -29,6 +29,6 @@ Name | Type | Description | Notes
 **shippingPostalCode** | **String** | Billing postal code | [optional] 
 **shippingState** | **String** | Billing state | [optional] 
 **signupDtsEnd** | **String** | Signup date end | [optional] 
-**signupDtsStart** | **String** | Signup date star | [optional] 
+**signupDtsStart** | **String** | Signup date start | [optional] 
 
 

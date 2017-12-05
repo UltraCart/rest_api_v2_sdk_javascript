@@ -42,7 +42,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/OrderApi
-   * @version 2.0.0
+   * @version 2.0.2
    */
 
   /**
@@ -236,6 +236,7 @@
      * @param {String} opts.currentStage Current Stage
      * @param {String} opts.channelPartnerCode Channel Partner Code
      * @param {String} opts.channelPartnerOrderId Channel Partner Order ID
+     * @param {Integer} opts.customerProfileOid null
      * @param {Integer} opts.limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
      * @param {Integer} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts.sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -278,6 +279,7 @@
         'current_stage': opts['currentStage'],
         'channel_partner_code': opts['channelPartnerCode'],
         'channel_partner_order_id': opts['channelPartnerOrderId'],
+        'customer_profile_oid': opts['customerProfileOid'],
         '_limit': opts['limit'],
         '_offset': opts['offset'],
         '_sort': opts['sort'],

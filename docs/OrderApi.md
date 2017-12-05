@@ -243,6 +243,7 @@ var opts = {
   'currentStage': "currentStage_example", // String | Current Stage
   'channelPartnerCode': "channelPartnerCode_example", // String | Channel Partner Code
   'channelPartnerOrderId': "channelPartnerOrderId_example", // String | Channel Partner Order ID
+  'customerProfileOid': 56, // Integer | null
   'limit': 100, // Integer | The maximum number of records to return on this one API call. (Maximum 200)
   'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
   'sort': "sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -290,6 +291,7 @@ Name | Type | Description  | Notes
  **currentStage** | **String**| Current Stage | [optional] 
  **channelPartnerCode** | **String**| Channel Partner Code | [optional] 
  **channelPartnerOrderId** | **String**| Channel Partner Order ID | [optional] 
+ **customerProfileOid** | **Integer**| null | [optional] 
  **limit** | **Integer**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
  **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
