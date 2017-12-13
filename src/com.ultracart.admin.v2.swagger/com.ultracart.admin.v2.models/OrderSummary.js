@@ -45,7 +45,7 @@
   /**
    * The OrderSummary model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderSummary
-   * @version 2.0.2
+   * @version 2.0.3
    */
 
   /**

@@ -62,7 +62,7 @@
    * </pre>
    * </p>
    * @module com.ultracart.admin.v2.swagger/index
-   * @version 2.0.2
+   * @version 2.0.3
    */
   var exports = {
     /**
