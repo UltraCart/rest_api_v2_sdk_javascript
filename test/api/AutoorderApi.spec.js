@@ -69,6 +69,26 @@
         done();
       });
     });
+    describe('getAutoOrderByCode', function() {
+      it('should call getAutoOrderByCode successfully', function(done) {
+        //uncomment below and update the code to test getAutoOrderByCode
+        //instance.getAutoOrderByCode(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getAutoOrderByReferenceOrderId', function() {
+      it('should call getAutoOrderByReferenceOrderId successfully', function(done) {
+        //uncomment below and update the code to test getAutoOrderByReferenceOrderId
+        //instance.getAutoOrderByReferenceOrderId(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getAutoOrders', function() {
       it('should call getAutoOrders successfully', function(done) {
         //uncomment below and update the code to test getAutoOrders

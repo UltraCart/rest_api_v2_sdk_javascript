@@ -89,6 +89,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property buyerCatalogNumber (base name: "buyer_catalog_number")', function() {
+      // uncomment below and update the code to test the property buyerCatalogNumber
+      //var instane = new UltraCartRestApiV2.ItemChannelPartnerMapping();
+      //expect(instance).to.be();
+    });
+
     it('should have the property buyerDpci (base name: "buyer_dpci")', function() {
       // uncomment below and update the code to test the property buyerDpci
       //var instane = new UltraCartRestApiV2.ItemChannelPartnerMapping();

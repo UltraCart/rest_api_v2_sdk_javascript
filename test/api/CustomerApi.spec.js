@@ -89,6 +89,26 @@
         done();
       });
     });
+    describe('getCustomersByQuery', function() {
+      it('should call getCustomersByQuery successfully', function(done) {
+        //uncomment below and update the code to test getCustomersByQuery
+        //instance.getCustomersByQuery(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEditorValues', function() {
+      it('should call getEditorValues successfully', function(done) {
+        //uncomment below and update the code to test getEditorValues
+        //instance.getEditorValues(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('insertCustomer', function() {
       it('should call insertCustomer successfully', function(done) {
         //uncomment below and update the code to test insertCustomer

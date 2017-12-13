@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **cardExpMonths** | **[String]** | card_exp_months | [optional] 
 **cardExpYears** | **[String]** | card_exp_years | [optional] 
 **cardTypes** | **[String]** | card_types | [optional] 
-**countries** | **[String]** | countries | [optional] 
+**countries** | [**[Country]**](Country.md) | countries | [optional] 
 **qbClasses** | **[String]** | qb_classes | [optional] 
 **salesRepCodes** | **[String]** | sales_rep_codes | [optional] 
 **terms** | **[String]** | terms | [optional] 

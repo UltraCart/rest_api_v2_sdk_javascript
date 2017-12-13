@@ -107,6 +107,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lastUsedDts (base name: "last_used_dts")', function() {
+      // uncomment below and update the code to test the property lastUsedDts
+      //var instane = new UltraCartRestApiV2.CustomerCard();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

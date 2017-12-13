@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new UltraCartRestApiV2.CartPayment();
+    instance = new UltraCartRestApiV2.Country();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,46 +58,22 @@
       object[property] = value;
   }
 
-  describe('CartPayment', function() {
-    it('should create an instance of CartPayment', function() {
-      // uncomment below and update the code to test CartPayment
-      //var instane = new UltraCartRestApiV2.CartPayment();
-      //expect(instance).to.be.a(UltraCartRestApiV2.CartPayment);
+  describe('Country', function() {
+    it('should create an instance of Country', function() {
+      // uncomment below and update the code to test Country
+      //var instane = new UltraCartRestApiV2.Country();
+      //expect(instance).to.be.a(UltraCartRestApiV2.Country);
     });
 
-    it('should have the property amazon (base name: "amazon")', function() {
-      // uncomment below and update the code to test the property amazon
-      //var instane = new UltraCartRestApiV2.CartPayment();
+    it('should have the property iso2Code (base name: "iso_2_code")', function() {
+      // uncomment below and update the code to test the property iso2Code
+      //var instane = new UltraCartRestApiV2.Country();
       //expect(instance).to.be();
     });
 
-    it('should have the property check (base name: "check")', function() {
-      // uncomment below and update the code to test the property check
-      //var instane = new UltraCartRestApiV2.CartPayment();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property creditCard (base name: "credit_card")', function() {
-      // uncomment below and update the code to test the property creditCard
-      //var instane = new UltraCartRestApiV2.CartPayment();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property paymentMethod (base name: "payment_method")', function() {
-      // uncomment below and update the code to test the property paymentMethod
-      //var instane = new UltraCartRestApiV2.CartPayment();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property purchaseOrder (base name: "purchase_order")', function() {
-      // uncomment below and update the code to test the property purchaseOrder
-      //var instane = new UltraCartRestApiV2.CartPayment();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property rtgCode (base name: "rtg_code")', function() {
-      // uncomment below and update the code to test the property rtgCode
-      //var instane = new UltraCartRestApiV2.CartPayment();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new UltraCartRestApiV2.Country();
       //expect(instance).to.be();
     });
 

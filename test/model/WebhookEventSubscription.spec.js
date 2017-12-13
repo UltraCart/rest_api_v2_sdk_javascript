@@ -107,6 +107,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property supportsReflow (base name: "supports_reflow")', function() {
+      // uncomment below and update the code to test the property supportsReflow
+      //var instane = new UltraCartRestApiV2.WebhookEventSubscription();
+      //expect(instance).to.be();
+    });
+
     it('should have the property webhookEventOid (base name: "webhook_event_oid")', function() {
       // uncomment below and update the code to test the property webhookEventOid
       //var instane = new UltraCartRestApiV2.WebhookEventSubscription();

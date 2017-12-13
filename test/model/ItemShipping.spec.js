@@ -95,6 +95,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property collectSerialNumbers (base name: "collect_serial_numbers")', function() {
+      // uncomment below and update the code to test the property collectSerialNumbers
+      //var instane = new UltraCartRestApiV2.ItemShipping();
+      //expect(instance).to.be();
+    });
+
     it('should have the property countryCodeOfOrigin (base name: "country_code_of_origin")', function() {
       // uncomment below and update the code to test the property countryCodeOfOrigin
       //var instane = new UltraCartRestApiV2.ItemShipping();

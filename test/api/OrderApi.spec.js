@@ -99,6 +99,26 @@
         done();
       });
     });
+    describe('getOrdersByQuery', function() {
+      it('should call getOrdersByQuery successfully', function(done) {
+        //uncomment below and update the code to test getOrdersByQuery
+        //instance.getOrdersByQuery(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('refundOrder', function() {
+      it('should call refundOrder successfully', function(done) {
+        //uncomment below and update the code to test refundOrder
+        //instance.refundOrder(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('resendReceipt', function() {
       it('should call resendReceipt successfully', function(done) {
         //uncomment below and update the code to test resendReceipt

@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerAffiliate'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Country', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerAffiliate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomerAffiliate'));
+    module.exports = factory(require('../ApiClient'), require('./Country'), require('./CustomerAffiliate'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerEditorValues = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerAffiliate);
+    root.UltraCartRestApiV2.CustomerEditorValues = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Country, root.UltraCartRestApiV2.CustomerAffiliate);
   }
-}(this, function(ApiClient, CustomerAffiliate) {
+}(this, function(ApiClient, Country, CustomerAffiliate) {
   'use strict';
 
 
@@ -90,7 +90,7 @@
         obj['card_types'] = ApiClient.convertToType(data['card_types'], ['String']);
       }
       if (data.hasOwnProperty('countries')) {
-        obj['countries'] = ApiClient.convertToType(data['countries'], ['String']);
+        obj['countries'] = ApiClient.convertToType(data['countries'], [Country]);
       }
       if (data.hasOwnProperty('qb_classes')) {
         obj['qb_classes'] = ApiClient.convertToType(data['qb_classes'], ['String']);
@@ -127,7 +127,7 @@
   exports.prototype['card_types'] = undefined;
   /**
    * countries
-   * @member {Array.<String>} countries
+   * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Country>} countries
    */
   exports.prototype['countries'] = undefined;
   /**

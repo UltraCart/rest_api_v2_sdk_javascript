@@ -71,6 +71,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoOrderOid (base name: "auto_order_oid")', function() {
+      // uncomment below and update the code to test the property autoOrderOid
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
     it('should have the property originalOrderId (base name: "original_order_id")', function() {
       // uncomment below and update the code to test the property originalOrderId
       //var instane = new UltraCartRestApiV2.OrderAutoOrder();

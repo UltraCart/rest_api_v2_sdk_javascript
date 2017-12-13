@@ -71,6 +71,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property customerProfileOid (base name: "customer_profile_oid")', function() {
+      // uncomment below and update the code to test the property customerProfileOid
+      //var instane = new UltraCartRestApiV2.CartProfileLoginRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property password (base name: "password")', function() {
       // uncomment below and update the code to test the property password
       //var instane = new UltraCartRestApiV2.CartProfileLoginRequest();

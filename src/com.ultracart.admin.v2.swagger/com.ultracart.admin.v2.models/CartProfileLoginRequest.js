@@ -58,6 +58,7 @@
 
 
 
+
   };
 
   /**
@@ -74,6 +75,9 @@
       if (data.hasOwnProperty('cart')) {
         obj['cart'] = Cart.constructFromObject(data['cart']);
       }
+      if (data.hasOwnProperty('customer_profile_oid')) {
+        obj['customer_profile_oid'] = ApiClient.convertToType(data['customer_profile_oid'], 'Integer');
+      }
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
@@ -85,6 +89,11 @@
    * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Cart} cart
    */
   exports.prototype['cart'] = undefined;
+  /**
+   * Unique identifier for customer profile.  Can not be used with browser key authentication type.
+   * @member {Integer} customer_profile_oid
+   */
+  exports.prototype['customer_profile_oid'] = undefined;
   /**
    * Password for the profile
    * @member {String} password

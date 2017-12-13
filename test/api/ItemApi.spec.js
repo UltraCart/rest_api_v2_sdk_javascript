@@ -79,6 +79,16 @@
         done();
       });
     });
+    describe('getItemByMerchantItemId', function() {
+      it('should call getItemByMerchantItemId successfully', function(done) {
+        //uncomment below and update the code to test getItemByMerchantItemId
+        //instance.getItemByMerchantItemId(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getItems', function() {
       it('should call getItems successfully', function(done) {
         //uncomment below and update the code to test getItems
@@ -103,6 +113,16 @@
       it('should call updateItem successfully', function(done) {
         //uncomment below and update the code to test updateItem
         //instance.updateItem(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateItems', function() {
+      it('should call updateItems successfully', function(done) {
+        //uncomment below and update the code to test updateItems
+        //instance.updateItems(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

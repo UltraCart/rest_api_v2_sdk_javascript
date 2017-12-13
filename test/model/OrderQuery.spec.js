@@ -119,6 +119,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property customerProfileOid (base name: "customer_profile_oid")', function() {
+      // uncomment below and update the code to test the property customerProfileOid
+      //var instane = new UltraCartRestApiV2.OrderQuery();
+      //expect(instance).to.be();
+    });
+
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
       //var instane = new UltraCartRestApiV2.OrderQuery();
