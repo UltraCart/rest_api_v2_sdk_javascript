@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **billing** | [**[CustomerBilling]**](CustomerBilling.md) | Billing addresses for this customer | [optional] 
 **businessNotes** | **String** | Business notes (internally visible only) | [optional] 
 **cards** | [**[CustomerCard]**](CustomerCard.md) | Credit Cards for this customer | [optional] 
+**ccEmails** | [**[CustomerEmail]**](CustomerEmail.md) | Additional emails to CC notification | [optional] 
 **customerProfileOid** | **Integer** | Customer profile object identifier | [optional] 
 **dhlAccountNumber** | **String** | DHL account number | [optional] 
 **email** | **String** | Email address of this customer profile | [optional] 

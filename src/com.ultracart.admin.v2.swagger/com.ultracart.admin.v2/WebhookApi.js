@@ -42,7 +42,7 @@
   /**
    * Webhook service.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/WebhookApi
-   * @version 2.0.3
+   * @version 2.0.4
    */
 
   /**

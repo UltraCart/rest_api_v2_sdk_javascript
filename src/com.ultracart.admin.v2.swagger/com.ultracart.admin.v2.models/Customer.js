@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerShipping'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerShipping'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerPricingTier'), require('./CustomerShipping'));
+    module.exports = factory(require('../ApiClient'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEmail'), require('./CustomerPricingTier'), require('./CustomerShipping'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerShipping);
+    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerShipping);
   }
-}(this, function(ApiClient, CustomerBilling, CustomerCard, CustomerPricingTier, CustomerShipping) {
+}(this, function(ApiClient, CustomerBilling, CustomerCard, CustomerEmail, CustomerPricingTier, CustomerShipping) {
   'use strict';
 
 
@@ -45,7 +45,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer
-   * @version 2.0.3
+   * @version 2.0.4
    */
 
   /**
@@ -55,6 +55,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -148,6 +149,9 @@
       }
       if (data.hasOwnProperty('cards')) {
         obj['cards'] = ApiClient.convertToType(data['cards'], [CustomerCard]);
+      }
+      if (data.hasOwnProperty('cc_emails')) {
+        obj['cc_emails'] = ApiClient.convertToType(data['cc_emails'], [CustomerEmail]);
       }
       if (data.hasOwnProperty('customer_profile_oid')) {
         obj['customer_profile_oid'] = ApiClient.convertToType(data['customer_profile_oid'], 'Integer');
@@ -309,6 +313,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerCard>} cards
    */
   exports.prototype['cards'] = undefined;
+  /**
+   * Additional emails to CC notification
+   * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerEmail>} cc_emails
+   */
+  exports.prototype['cc_emails'] = undefined;
   /**
    * Customer profile object identifier
    * @member {Integer} customer_profile_oid

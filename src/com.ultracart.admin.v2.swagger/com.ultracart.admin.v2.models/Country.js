@@ -45,7 +45,7 @@
   /**
    * The Country model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Country
-   * @version 2.0.3
+   * @version 2.0.4
    */
 
   /**
