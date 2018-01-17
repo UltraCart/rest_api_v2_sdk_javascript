@@ -45,7 +45,7 @@
   /**
    * The WebhookResponse model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/WebhookResponse
-   * @version 2.0.4
+   * @version 2.0.5
    */
 
   /**

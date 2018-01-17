@@ -45,7 +45,7 @@
   /**
    * The CustomerResponse model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse
-   * @version 2.0.4
+   * @version 2.0.5
    */
 
   /**

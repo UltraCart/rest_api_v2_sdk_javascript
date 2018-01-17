@@ -45,7 +45,7 @@
   /**
    * The ItemReporting model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemReporting
-   * @version 2.0.4
+   * @version 2.0.5
    */
 
   /**
