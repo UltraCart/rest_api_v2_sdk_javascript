@@ -34,7 +34,7 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemEnrollment123 = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.OrderFormatResponse = factory(root.UltraCartRestApiV2.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -43,45 +43,54 @@
 
 
   /**
-   * The ItemEnrollment123 model module.
-   * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEnrollment123
+   * The OrderFormatResponse model module.
+   * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderFormatResponse
    * @version 2.0.6
    */
 
   /**
-   * Constructs a new <code>ItemEnrollment123</code>.
-   * @alias module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEnrollment123
+   * Constructs a new <code>OrderFormatResponse</code>.
+   * @alias module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderFormatResponse
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>ItemEnrollment123</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>OrderFormatResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEnrollment123} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ItemEnrollment123} The populated <code>ItemEnrollment123</code> instance.
+   * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderFormatResponse} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/OrderFormatResponse} The populated <code>OrderFormatResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('enrollment123_product_code')) {
-        obj['enrollment123_product_code'] = ApiClient.convertToType(data['enrollment123_product_code'], 'String');
+      if (data.hasOwnProperty('css_links')) {
+        obj['css_links'] = ApiClient.convertToType(data['css_links'], ['String']);
+      }
+      if (data.hasOwnProperty('formatted_result')) {
+        obj['formatted_result'] = ApiClient.convertToType(data['formatted_result'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Enrolment 123 product code
-   * @member {String} enrollment123_product_code
+   * The URLs to any stylesheets that need to be included to properly view the markup.
+   * @member {Array.<String>} css_links
    */
-  exports.prototype['enrollment123_product_code'] = undefined;
+  exports.prototype['css_links'] = undefined;
+  /**
+   * The formatted result of the order.  This will be HTML or text depending upon the requested format.
+   * @member {String} formatted_result
+   */
+  exports.prototype['formatted_result'] = undefined;
 
 
 

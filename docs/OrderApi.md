@@ -132,7 +132,7 @@ null (empty response body)
 
 <a name="format"></a>
 # **format**
-> BaseResponse format(orderId, formatOptions)
+> OrderFormatResponse format(orderId, formatOptions)
 
 Format order
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BaseResponse**](BaseResponse.md)
+[**OrderFormatResponse**](OrderFormatResponse.md)
 
 ### Authorization
 

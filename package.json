@@ -1,6 +1,6 @@
 {
   "name": "ultra_cart_rest_api_v2",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "UltraCart REST SDK",
   "license": "Apache-2.0",
   "main": "src/com.ultracart.admin.v2.swagger/index.js",
