@@ -1,6 +1,6 @@
 /**
  * UltraCart Rest API V2
- * This is the next generation UltraCart REST API...
+ * UltraCart REST API Version 2
  *
  * OpenAPI spec version: 2.0.0
  * Contact: support@ultracart.com
@@ -73,6 +73,16 @@
       it('should call deleteOrder successfully', function(done) {
         //uncomment below and update the code to test deleteOrder
         //instance.deleteOrder(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('format', function() {
+      it('should call format successfully', function(done) {
+        //uncomment below and update the code to test format
+        //instance.format(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

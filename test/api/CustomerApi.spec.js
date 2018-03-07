@@ -1,6 +1,6 @@
 /**
  * UltraCart Rest API V2
- * This is the next generation UltraCart REST API...
+ * UltraCart REST API Version 2
  *
  * OpenAPI spec version: 2.0.0
  * Contact: support@ultracart.com
@@ -93,6 +93,16 @@
       it('should call getCustomersByQuery successfully', function(done) {
         //uncomment below and update the code to test getCustomersByQuery
         //instance.getCustomersByQuery(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getCustomersForDataTables', function() {
+      it('should call getCustomersForDataTables successfully', function(done) {
+        //uncomment below and update the code to test getCustomersForDataTables
+        //instance.getCustomersForDataTables(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

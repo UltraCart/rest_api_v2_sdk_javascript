@@ -1,6 +1,6 @@
 /**
  * UltraCart Rest API V2
- * This is the next generation UltraCart REST API...
+ * UltraCart REST API Version 2
  *
  * OpenAPI spec version: 2.0.0
  * Contact: support@ultracart.com
@@ -137,6 +137,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property ccEmails (base name: "cc_emails")', function() {
+      // uncomment below and update the code to test the property ccEmails
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property customerProfileOid (base name: "customer_profile_oid")', function() {
       // uncomment below and update the code to test the property customerProfileOid
       //var instane = new UltraCartRestApiV2.Customer();
@@ -227,6 +233,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property orders (base name: "orders")', function() {
+      // uncomment below and update the code to test the property orders
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ordersSummary (base name: "orders_summary")', function() {
+      // uncomment below and update the code to test the property ordersSummary
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property password (base name: "password")', function() {
       // uncomment below and update the code to test the property password
       //var instane = new UltraCartRestApiV2.Customer();
@@ -247,6 +265,18 @@
 
     it('should have the property qbCode (base name: "qb_code")', function() {
       // uncomment below and update the code to test the property qbCode
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property quotes (base name: "quotes")', function() {
+      // uncomment below and update the code to test the property quotes
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property quotesSummary (base name: "quotes_summary")', function() {
+      // uncomment below and update the code to test the property quotesSummary
       //var instane = new UltraCartRestApiV2.Customer();
       //expect(instance).to.be();
     });

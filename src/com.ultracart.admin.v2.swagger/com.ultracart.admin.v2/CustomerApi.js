@@ -1,6 +1,6 @@
 /**
  * UltraCart Rest API V2
- * This is the next generation UltraCart REST API...
+ * UltraCart REST API Version 2
  *
  * OpenAPI spec version: 2.0.0
  * Contact: support@ultracart.com
@@ -25,24 +25,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/Customer'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/Customer'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.Customer);
+    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.Customer);
   }
-}(this, function(ApiClient, CustomerResponse, ErrorResponse, CustomersResponse, CustomerQuery, CustomerEditorValues, Customer) {
+}(this, function(ApiClient, CustomerResponse, ErrorResponse, CustomersResponse, CustomerQuery, DataTablesServerSideResponse, CustomerEditorValues, Customer) {
   'use strict';
 
   /**
    * Customer service.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**
@@ -309,6 +309,49 @@
 
       return this.apiClient.callApi(
         '/customer/customers/query', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomersForDataTables operation.
+     * @callback module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomersForDataTablesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/DataTablesServerSideResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve customers for DataTables plugin
+     * Retrieves customers from the account.  If no searches are specified, all customers will be returned. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/CustomerApi~getCustomersForDataTablesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/DataTablesServerSideResponse}
+     */
+    this.getCustomersForDataTables = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_expand': opts['expand']
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = DataTablesServerSideResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/dataTables', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

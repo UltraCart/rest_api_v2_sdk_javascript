@@ -82,6 +82,8 @@ Name | Type | Description | Notes
 
 * `eCheck` (value: `"eCheck"`)
 
+* `LoanHero` (value: `"LoanHero"`)
+
 * `Money Order` (value: `"Money Order"`)
 
 * `PayPal` (value: `"PayPal"`)

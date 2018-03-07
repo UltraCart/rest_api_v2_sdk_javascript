@@ -1,6 +1,6 @@
 /**
  * UltraCart Rest API V2
- * This is the next generation UltraCart REST API...
+ * UltraCart REST API Version 2
  *
  * OpenAPI spec version: 2.0.0
  * Contact: support@ultracart.com
@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerShipping'], factory);
+    define(['com.ultracart.admin.v2.swagger/ApiClient', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerOrdersSummary', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerQuotesSummary', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEmail'), require('./CustomerPricingTier'), require('./CustomerShipping'));
+    module.exports = factory(require('../ApiClient'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEmail'), require('./CustomerOrdersSummary'), require('./CustomerPricingTier'), require('./CustomerQuotesSummary'), require('./CustomerShipping'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerShipping);
+    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerOrdersSummary, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerQuotesSummary, root.UltraCartRestApiV2.CustomerShipping, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, CustomerBilling, CustomerCard, CustomerEmail, CustomerPricingTier, CustomerShipping) {
+}(this, function(ApiClient, CustomerBilling, CustomerCard, CustomerEmail, CustomerOrdersSummary, CustomerPricingTier, CustomerQuotesSummary, CustomerShipping, Order) {
   'use strict';
 
 
@@ -45,7 +45,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Customer
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**
@@ -55,6 +55,10 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
 
 
 
@@ -198,6 +202,12 @@
       if (data.hasOwnProperty('no_realtime_charge')) {
         obj['no_realtime_charge'] = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
       }
+      if (data.hasOwnProperty('orders')) {
+        obj['orders'] = ApiClient.convertToType(data['orders'], [Order]);
+      }
+      if (data.hasOwnProperty('orders_summary')) {
+        obj['orders_summary'] = CustomerOrdersSummary.constructFromObject(data['orders_summary']);
+      }
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
@@ -209,6 +219,12 @@
       }
       if (data.hasOwnProperty('qb_code')) {
         obj['qb_code'] = ApiClient.convertToType(data['qb_code'], 'String');
+      }
+      if (data.hasOwnProperty('quotes')) {
+        obj['quotes'] = ApiClient.convertToType(data['quotes'], [Order]);
+      }
+      if (data.hasOwnProperty('quotes_summary')) {
+        obj['quotes_summary'] = CustomerQuotesSummary.constructFromObject(data['quotes_summary']);
       }
       if (data.hasOwnProperty('referral_source')) {
         obj['referral_source'] = ApiClient.convertToType(data['referral_source'], 'String');
@@ -394,6 +410,15 @@
    */
   exports.prototype['no_realtime_charge'] = undefined;
   /**
+   * Orders associated with this customer profile
+   * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order>} orders
+   */
+  exports.prototype['orders'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerOrdersSummary} orders_summary
+   */
+  exports.prototype['orders_summary'] = undefined;
+  /**
    * Password (may only be set, never read)
    * @member {String} password
    */
@@ -413,6 +438,15 @@
    * @member {String} qb_code
    */
   exports.prototype['qb_code'] = undefined;
+  /**
+   * Quotes associated with this customer profile
+   * @member {Array.<module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/Order>} quotes
+   */
+  exports.prototype['quotes'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerQuotesSummary} quotes_summary
+   */
+  exports.prototype['quotes_summary'] = undefined;
   /**
    * Referral Source
    * @member {String} referral_source

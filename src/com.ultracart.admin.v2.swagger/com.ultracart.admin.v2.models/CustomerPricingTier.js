@@ -1,6 +1,6 @@
 /**
  * UltraCart Rest API V2
- * This is the next generation UltraCart REST API...
+ * UltraCart REST API Version 2
  *
  * OpenAPI spec version: 2.0.0
  * Contact: support@ultracart.com
@@ -45,7 +45,7 @@
   /**
    * The CustomerPricingTier model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CustomerPricingTier
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**
