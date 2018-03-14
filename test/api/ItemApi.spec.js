@@ -99,6 +99,16 @@
         done();
       });
     });
+    describe('getPricingTiers', function() {
+      it('should call getPricingTiers successfully', function(done) {
+        //uncomment below and update the code to test getPricingTiers
+        //instance.getPricingTiers(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('insertItem', function() {
       it('should call insertItem successfully', function(done) {
         //uncomment below and update the code to test insertItem

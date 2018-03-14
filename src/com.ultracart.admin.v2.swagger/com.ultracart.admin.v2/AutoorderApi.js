@@ -42,7 +42,7 @@
   /**
    * Autoorder service.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2/AutoorderApi
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**

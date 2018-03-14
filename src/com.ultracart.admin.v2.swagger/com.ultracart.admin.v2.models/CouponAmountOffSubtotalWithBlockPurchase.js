@@ -45,7 +45,7 @@
   /**
    * The CouponAmountOffSubtotalWithBlockPurchase model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/CouponAmountOffSubtotalWithBlockPurchase
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**
