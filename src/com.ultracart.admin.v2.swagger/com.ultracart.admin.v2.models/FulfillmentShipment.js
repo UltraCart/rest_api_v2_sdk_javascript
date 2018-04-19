@@ -45,7 +45,7 @@
   /**
    * The FulfillmentShipment model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/FulfillmentShipment
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**
@@ -55,6 +55,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -71,8 +74,17 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('fulfillment_fee')) {
+        obj['fulfillment_fee'] = ApiClient.convertToType(data['fulfillment_fee'], 'Number');
+      }
       if (data.hasOwnProperty('order_id')) {
         obj['order_id'] = ApiClient.convertToType(data['order_id'], 'String');
+      }
+      if (data.hasOwnProperty('package_cost')) {
+        obj['package_cost'] = ApiClient.convertToType(data['package_cost'], 'Number');
+      }
+      if (data.hasOwnProperty('shipping_cost')) {
+        obj['shipping_cost'] = ApiClient.convertToType(data['shipping_cost'], 'Number');
       }
       if (data.hasOwnProperty('tracking_numbers')) {
         obj['tracking_numbers'] = ApiClient.convertToType(data['tracking_numbers'], ['String']);
@@ -82,10 +94,25 @@
   }
 
   /**
+   * Fees charged by the fulfillment company other than the shipping cost to process the order.
+   * @member {Number} fulfillment_fee
+   */
+  exports.prototype['fulfillment_fee'] = undefined;
+  /**
    * Order ID that was shipped
    * @member {String} order_id
    */
   exports.prototype['order_id'] = undefined;
+  /**
+   * The cost of the packaging used to sent this shipment
+   * @member {Number} package_cost
+   */
+  exports.prototype['package_cost'] = undefined;
+  /**
+   * The actual total cost of shipping this order
+   * @member {Number} shipping_cost
+   */
+  exports.prototype['shipping_cost'] = undefined;
   /**
    * Tracking numbers associated with the shipment
    * @member {Array.<String>} tracking_numbers

@@ -65,8 +65,26 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.FulfillmentShipment);
     });
 
+    it('should have the property fulfillmentFee (base name: "fulfillment_fee")', function() {
+      // uncomment below and update the code to test the property fulfillmentFee
+      //var instane = new UltraCartRestApiV2.FulfillmentShipment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property orderId (base name: "order_id")', function() {
       // uncomment below and update the code to test the property orderId
+      //var instane = new UltraCartRestApiV2.FulfillmentShipment();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property packageCost (base name: "package_cost")', function() {
+      // uncomment below and update the code to test the property packageCost
+      //var instane = new UltraCartRestApiV2.FulfillmentShipment();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property shippingCost (base name: "shipping_cost")', function() {
+      // uncomment below and update the code to test the property shippingCost
       //var instane = new UltraCartRestApiV2.FulfillmentShipment();
       //expect(instance).to.be();
     });

@@ -45,7 +45,7 @@
   /**
    * The PricingTierNotification model module.
    * @module com.ultracart.admin.v2.swagger/com.ultracart.admin.v2.models/PricingTierNotification
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**
