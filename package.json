@@ -1,9 +1,9 @@
 {
   "name": "ultra_cart_rest_api_v2",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "UltraCart REST SDK",
   "license": "Unlicense",
-  "main": "src/com.ultracart.admin.v2.swagger/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },
