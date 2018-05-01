@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reportAsUpsell** | **Boolean** | Report as an upsell | [optional] 
-**reportPickableQuantities** | **[Integer]** | Report pickable quantities | [optional] 
+**report_as_upsell** | **Boolean** | Report as an upsell | [optional] 
+**report_pickable_quantities** | **[Number]** | Report pickable quantities | [optional] 
 
 

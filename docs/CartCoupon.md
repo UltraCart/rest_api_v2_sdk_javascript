@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**couponCode** | **String** | Coupon code | [optional] 
+**coupon_code** | **String** | Coupon code | [optional] 
 
 

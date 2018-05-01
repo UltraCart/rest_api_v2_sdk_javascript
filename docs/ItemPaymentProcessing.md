@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**blockPrepaid** | **Boolean** | True if prepaid cards should be blocked from buying this item | [optional] 
-**creditCardTransactionType** | **String** | Credit card transaction type | [optional] 
-**noRealtimeCharge** | **Boolean** | True if no real-time charge should be performed on this item. | [optional] 
-**paymentMethodValidity** | **[String]** | Payment method validity | [optional] 
-**rotatingTransactionGatewayCodes** | **[String]** | Rotating transaction gateway codes | [optional] 
+**block_prepaid** | **Boolean** | True if prepaid cards should be blocked from buying this item | [optional] 
+**credit_card_transaction_type** | **String** | Credit card transaction type | [optional] 
+**no_realtime_charge** | **Boolean** | True if no real-time charge should be performed on this item. | [optional] 
+**payment_method_validity** | **[String]** | Payment method validity | [optional] 
+**rotating_transaction_gateway_codes** | **[String]** | Rotating transaction gateway codes | [optional] 
 
 

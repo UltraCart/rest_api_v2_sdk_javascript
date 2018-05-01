@@ -25,7 +25,7 @@ Delete a customer on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -39,7 +39,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
-var customerProfileOid = 56; // Integer | The customer_profile_oid to delete.
+var customerProfileOid = 56; // Number | The customer_profile_oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -56,7 +56,7 @@ apiInstance.deleteCustomer(customerProfileOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerProfileOid** | **Integer**| The customer_profile_oid to delete. | 
+ **customerProfileOid** | **Number**| The customer_profile_oid to delete. | 
 
 ### Return type
 
@@ -82,7 +82,7 @@ Retrieves a single customer using the specified customer profile oid.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -96,7 +96,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
-var customerProfileOid = 56; // Integer | The customer oid to retrieve.
+var customerProfileOid = 56; // Number | The customer oid to retrieve.
 
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -116,7 +116,7 @@ apiInstance.getCustomer(customerProfileOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerProfileOid** | **Integer**| The customer oid to retrieve. | 
+ **customerProfileOid** | **Number**| The customer oid to retrieve. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
@@ -143,7 +143,7 @@ Retrieves customers from the account.  If no parameters are specified, all custo
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -183,10 +183,10 @@ var opts = {
   'shippingCountryCode': "shippingCountryCode_example", // String | Shipping country code
   'shippingDayPhone': "shippingDayPhone_example", // String | Shipping day phone
   'shippingEveningPhone': "shippingEveningPhone_example", // String | Shipping evening phone
-  'pricingTierOid': 56, // Integer | Pricing tier oid
+  'pricingTierOid': 56, // Number | Pricing tier oid
   'pricingTierName': "pricingTierName_example", // String | Pricing tier name
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'since': "since_example", // String | Fetch customers that have been created/modified since this date/time.
   'sort': "sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -231,10 +231,10 @@ Name | Type | Description  | Notes
  **shippingCountryCode** | **String**| Shipping country code | [optional] 
  **shippingDayPhone** | **String**| Shipping day phone | [optional] 
  **shippingEveningPhone** | **String**| Shipping evening phone | [optional] 
- **pricingTierOid** | **Integer**| Pricing tier oid | [optional] 
+ **pricingTierOid** | **Number**| Pricing tier oid | [optional] 
  **pricingTierName** | **String**| Pricing tier name | [optional] 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 
  **sort** | **String**| The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
@@ -263,7 +263,7 @@ Retrieves customers from the account.  If no parameters are specified, all custo
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -280,8 +280,8 @@ var apiInstance = new UltraCartRestApiV2.CustomerApi();
 var customerQuery = new UltraCartRestApiV2.CustomerQuery(); // CustomerQuery | Customer query
 
 var opts = { 
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'since': "since_example", // String | Fetch customers that have been created/modified since this date/time.
   'sort': "sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -302,8 +302,8 @@ apiInstance.getCustomersByQuery(customerQuery, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customerQuery** | [**CustomerQuery**](CustomerQuery.md)| Customer query | 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 
  **sort** | **String**| The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
@@ -332,7 +332,7 @@ Retrieves customers from the account.  If no searches are specified, all custome
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -390,7 +390,7 @@ Retrieve values needed for a customer profile editor.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -441,7 +441,7 @@ Insert a customer on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -502,7 +502,7 @@ Update a customer on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -518,7 +518,7 @@ var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
 var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to update
 
-var customerProfileOid = 56; // Integer | The customer_profile_oid to update.
+var customerProfileOid = 56; // Number | The customer_profile_oid to update.
 
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -539,7 +539,7 @@ apiInstance.updateCustomer(customer, customerProfileOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer** | [**Customer**](Customer.md)| Customer to update | 
- **customerProfileOid** | **Integer**| The customer_profile_oid to update. | 
+ **customerProfileOid** | **Number**| The customer_profile_oid to update. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

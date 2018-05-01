@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enrollment123ProductCode** | **String** | Enrolment 123 product code | [optional] 
+**enrollment123_product_code** | **String** | Enrolment 123 product code | [optional] 
 
 

@@ -19,7 +19,7 @@ The final leg in the OAuth process which exchanges the specified access token fo
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -93,7 +93,7 @@ Revokes the OAuth application associated with the specified client_id and token.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];

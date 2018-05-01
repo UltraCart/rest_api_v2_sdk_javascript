@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deliverOnDate** | [**CartSettingsShippingCalendar**](CartSettingsShippingCalendar.md) |  | [optional] 
+**deliver_on_date** | [**CartSettingsShippingCalendar**](CartSettingsShippingCalendar.md) |  | [optional] 
 **estimates** | [**[CartSettingsShippingEstimate]**](CartSettingsShippingEstimate.md) | Estimates for this cart | [optional] 
-**needShipping** | **Boolean** | True if this order needs shipping | [optional] 
+**need_shipping** | **Boolean** | True if this order needs shipping | [optional] 
 **provinces** | [**[CartSettingsProvince]**](CartSettingsProvince.md) | Provinces | [optional] 
-**shipOnDate** | [**CartSettingsShippingCalendar**](CartSettingsShippingCalendar.md) |  | [optional] 
+**ship_on_date** | [**CartSettingsShippingCalendar**](CartSettingsShippingCalendar.md) |  | [optional] 
 
 

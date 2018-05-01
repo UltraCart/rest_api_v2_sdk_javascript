@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**giftCertificateAmount** | [**Currency**](Currency.md) |  | [optional] 
-**giftCertificateCode** | **String** | Gift certificate code | [optional] 
-**giftCertificateRemainingBalanceAfterOrder** | [**Currency**](Currency.md) |  | [optional] 
+**gift_certificate_amount** | [**Currency**](Currency.md) |  | [optional] 
+**gift_certificate_code** | **String** | Gift certificate code | [optional] 
+**gift_certificate_remaining_balance_after_order** | [**Currency**](Currency.md) |  | [optional] 
 
 

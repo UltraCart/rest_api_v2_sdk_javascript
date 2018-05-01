@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lotExpiration** | **String** | Log expiration | [optional] 
-**lotNumber** | **String** | Lot number | [optional] 
-**lotQuantity** | **Integer** | Lot quantity | [optional] 
+**lot_expiration** | **String** | Log expiration | [optional] 
+**lot_number** | **String** | Lot number | [optional] 
+**lot_quantity** | **Number** | Lot quantity | [optional] 
 
 

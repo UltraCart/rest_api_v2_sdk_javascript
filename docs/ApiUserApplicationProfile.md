@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apiApplicationLogoUrl** | **String** | Application logo URL | [optional] 
-**applicationDescription** | **String** | Application description | [optional] 
-**applicationName** | **String** | Application name | [optional] 
-**developerName** | **String** | Developer name | [optional] 
-**developerWebsite** | **String** | Developer website | [optional] 
+**api_application_logo_url** | **String** | Application logo URL | [optional] 
+**application_description** | **String** | Application description | [optional] 
+**application_name** | **String** | Application name | [optional] 
+**developer_name** | **String** | Developer name | [optional] 
+**developer_website** | **String** | Developer website | [optional] 
 
 

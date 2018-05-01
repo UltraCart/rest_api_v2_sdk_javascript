@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**couponTypes** | **[String]** | coupon_types | [optional] 
+**coupon_types** | **[String]** | coupon_types | [optional] 
 
 

@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **error** | [**Error**](Error.md) |  | [optional] 
-**expirationDts** | **String** | Expiration Date | [optional] 
-**expirationSeconds** | **Integer** | Expiration seconds | [optional] 
+**expiration_dts** | **String** | Expiration Date | [optional] 
+**expiration_seconds** | **Number** | Expiration seconds | [optional] 
 **metadata** | [**ResponseMetadata**](ResponseMetadata.md) |  | [optional] 
-**quantity** | **Integer** | Quantity | [optional] 
+**quantity** | **Number** | Quantity | [optional] 
 **success** | **Boolean** | Indicates if API call was successful | [optional] 
 
 

@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cardAuthTicket** | **String** | Card authorization ticket | [optional] 
-**cardAuthorizationAmount** | **Number** | Card authorization amount | [optional] 
-**cardAuthorizationDts** | **String** | Card authorization date/time | [optional] 
-**cardAuthorizationReferenceNumber** | **String** | Card authorization reference number | [optional] 
-**cardExpirationMonth** | **Integer** | Card expiration month (1-12) | [optional] 
-**cardExpirationYear** | **Integer** | Card expiration year (Four digit year) | [optional] 
-**cardNumber** | **String** | Card number (masked to last 4) | [optional] 
-**cardNumberToken** | **String** | Card number token from hosted fields used to update the cart number | [optional] 
-**cardNumberTruncated** | **Boolean** | True if the card has been truncated | [optional] 
-**cardType** | **String** | Card type | [optional] 
+**card_auth_ticket** | **String** | Card authorization ticket | [optional] 
+**card_authorization_amount** | **Number** | Card authorization amount | [optional] 
+**card_authorization_dts** | **String** | Card authorization date/time | [optional] 
+**card_authorization_reference_number** | **String** | Card authorization reference number | [optional] 
+**card_expiration_month** | **Number** | Card expiration month (1-12) | [optional] 
+**card_expiration_year** | **Number** | Card expiration year (Four digit year) | [optional] 
+**card_number** | **String** | Card number (masked to last 4) | [optional] 
+**card_number_token** | **String** | Card number token from hosted fields used to update the cart number | [optional] 
+**card_number_truncated** | **Boolean** | True if the card has been truncated | [optional] 
+**card_type** | **String** | Card type | [optional] 
 
 
 <a name="CardTypeEnum"></a>

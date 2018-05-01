@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**advertisingSource** | **String** | The advertising source the customer indicated | [optional] 
-**mailingListOptIn** | **Boolean** | True if the customer agrees to receiving marketing emails | [optional] 
+**advertising_source** | **String** | The advertising source the customer indicated | [optional] 
+**mailing_list_opt_in** | **Boolean** | True if the customer agrees to receiving marketing emails | [optional] 
 
 

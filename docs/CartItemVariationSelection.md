@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**variationName** | **String** | Variation name | [optional] 
-**variationValue** | **String** | Variation value | [optional] 
+**variation_name** | **String** | Variation name | [optional] 
+**variation_value** | **String** | Variation value | [optional] 
 
 

@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**purchaseOrderNumber** | **String** | Purchase order number | [optional] 
+**purchase_order_number** | **String** | Purchase order number | [optional] 
 
 

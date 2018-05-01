@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addTags** | **[String]** | Add tags | [optional] 
-**providerName** | **String** | Provider name | [optional] 
-**removeTags** | **[String]** | Remove tags | [optional] 
-**subscribeLists** | **[String]** | Subscribe to lists | [optional] 
-**unsubscribeLists** | **[String]** | Unsubscribe from lists | [optional] 
+**add_tags** | **[String]** | Add tags | [optional] 
+**provider_name** | **String** | Provider name | [optional] 
+**remove_tags** | **[String]** | Remove tags | [optional] 
+**subscribe_lists** | **[String]** | Subscribe to lists | [optional] 
+**unsubscribe_lists** | **[String]** | Unsubscribe from lists | [optional] 
 
 
 <a name="ProviderNameEnum"></a>

@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cardExpirationMonth** | **Integer** | Card expiration month (1-12) | [optional] 
-**cardExpirationYear** | **Integer** | Card expiration year (four digit year) | [optional] 
-**cardNumber** | **String** | Card number (masked to the last 4) | [optional] 
-**cardNumberToken** | **String** | Hosted field token for the card number | [optional] 
-**cardType** | **String** | Card type | [optional] 
-**customerProfileCreditCardId** | **Integer** | ID of the stored credit card to use | [optional] 
-**customerProfileOid** | **Integer** | Customer profile object identifier | [optional] 
-**lastUsedDts** | **String** | Last used date | [optional] 
+**card_expiration_month** | **Number** | Card expiration month (1-12) | [optional] 
+**card_expiration_year** | **Number** | Card expiration year (four digit year) | [optional] 
+**card_number** | **String** | Card number (masked to the last 4) | [optional] 
+**card_number_token** | **String** | Hosted field token for the card number | [optional] 
+**card_type** | **String** | Card type | [optional] 
+**customer_profile_credit_card_id** | **Number** | ID of the stored credit card to use | [optional] 
+**customer_profile_oid** | **Number** | Customer profile object identifier | [optional] 
+**last_used_dts** | **String** | Last used date | [optional] 
 
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**suppressBuysafe** | **Boolean** | True to suppress buySAFE | [optional] 
+**suppress_buysafe** | **Boolean** | True to suppress buySAFE | [optional] 
 **terms** | **String** | Terms for purchasing this item | [optional] 
-**termsTranslatedTextInstanceOid** | **Integer** | Terms translated text instance identifier | [optional] 
+**terms_translated_text_instance_oid** | **Number** | Terms translated text instance identifier | [optional] 
 
 

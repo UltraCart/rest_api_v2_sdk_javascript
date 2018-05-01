@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allowedReferrers** | **[String]** | Allowed referrers.  If URLs are specified, automatic translation will convert them to proper allowed referrer maskes. | [optional] 
+**allowed_referrers** | **[String]** | Allowed referrers.  If URLs are specified, automatic translation will convert them to proper allowed referrer maskes. | [optional] 
 
 

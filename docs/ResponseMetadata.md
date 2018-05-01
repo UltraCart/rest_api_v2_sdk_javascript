@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payloadName** | **String** | Payload name | [optional] 
-**resultSet** | [**ResultSet**](ResultSet.md) |  | [optional] 
+**payload_name** | **String** | Payload name | [optional] 
+**result_set** | [**ResultSet**](ResultSet.md) |  | [optional] 
 
 

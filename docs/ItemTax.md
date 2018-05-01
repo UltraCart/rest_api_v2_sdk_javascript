@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **exemptions** | [**[ItemTaxExemption]**](ItemTaxExemption.md) | Exemptions | [optional] 
-**taxFree** | **Boolean** | True if tax free | [optional] 
-**taxableCost** | **Number** | Taxable cost if different than regular cost | [optional] 
+**tax_free** | **Boolean** | True if tax free | [optional] 
+**taxable_cost** | **Number** | Taxable cost if different than regular cost | [optional] 
 
 

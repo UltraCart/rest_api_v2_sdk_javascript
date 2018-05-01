@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**packageName** | **String** | Package name | [optional] 
-**packageOid** | **Integer** | Package object identifier | [optional] 
+**package_name** | **String** | Package name | [optional] 
+**package_oid** | **Number** | Package object identifier | [optional] 
 
 

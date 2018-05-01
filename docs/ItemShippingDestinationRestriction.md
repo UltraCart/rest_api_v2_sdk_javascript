@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countryCode** | **String** | Country code (ISO-3166 two letter) | [optional] 
+**country_code** | **String** | Country code (ISO-3166 two letter) | [optional] 
 **state** | **String** | State | [optional] 
 **validity** | **String** | Validity | [optional] 
 

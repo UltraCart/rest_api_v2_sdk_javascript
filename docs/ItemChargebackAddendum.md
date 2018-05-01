@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chargebackAddendumOid** | **Integer** | Chargeback addendum object identifier | [optional] 
+**chargeback_addendum_oid** | **Number** | Chargeback addendum object identifier | [optional] 
 **description** | **String** | Description | [optional] 
-**fileSize** | **Integer** | Size of the file | [optional] 
-**pages** | **Integer** | Number of pages | [optional] 
+**file_size** | **Number** | Size of the file | [optional] 
+**pages** | **Number** | Number of pages | [optional] 
 
 

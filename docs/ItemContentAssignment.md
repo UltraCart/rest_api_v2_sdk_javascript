@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**groupOid** | **Integer** | Page (group) object identifier | [optional] 
-**groupPath** | **String** | Page (group) path | [optional] 
+**group_oid** | **Number** | Page (group) object identifier | [optional] 
+**group_path** | **String** | Page (group) path | [optional] 
 **host** | **String** | StoreFront host name | [optional] 
-**sortOrder** | **Integer** | Sort order (optional) | [optional] 
-**urlPart** | **String** | URL part if the item id is not used | [optional] 
+**sort_order** | **Number** | Sort order (optional) | [optional] 
+**url_part** | **String** | URL part if the item id is not used | [optional] 
 
 

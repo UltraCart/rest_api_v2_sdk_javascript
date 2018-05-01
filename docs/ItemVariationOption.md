@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**defaultOption** | **Boolean** | True if default option | [optional] 
-**merchantItemMultimediaOid** | **Integer** | Multimedia object identifier | [optional] 
-**translatedTextInstanceOid** | **Integer** | Translated text instance id | [optional] 
+**default_option** | **Boolean** | True if default option | [optional] 
+**merchant_item_multimedia_oid** | **Number** | Multimedia object identifier | [optional] 
+**translated_text_instance_oid** | **Number** | Translated text instance id | [optional] 
 **value** | **String** | Value | [optional] 
 
 

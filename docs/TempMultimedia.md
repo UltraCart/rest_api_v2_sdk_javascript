@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filename** | **String** | Filename | [optional] 
-**height** | **Integer** | Height | [optional] 
-**multimediaType** | **String** | Multimedia type | [optional] 
-**size** | **Integer** | Size | [optional] 
-**tempMultimediaOid** | **Integer** | Temporary multimedia object identifier | [optional] 
+**height** | **Number** | Height | [optional] 
+**multimedia_type** | **String** | Multimedia type | [optional] 
+**size** | **Number** | Size | [optional] 
+**temp_multimedia_oid** | **Number** | Temporary multimedia object identifier | [optional] 
 **url** | **String** | URL | [optional] 
-**width** | **Integer** | Width | [optional] 
+**width** | **Number** | Width | [optional] 
 
 
 <a name="MultimediaTypeEnum"></a>

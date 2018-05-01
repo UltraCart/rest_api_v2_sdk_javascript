@@ -26,7 +26,7 @@ Delete an item on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -40,7 +40,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var merchantItemOid = 56; // Integer | The item oid to delete.
+var merchantItemOid = 56; // Number | The item oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -57,7 +57,7 @@ apiInstance.deleteItem(merchantItemOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantItemOid** | **Integer**| The item oid to delete. | 
+ **merchantItemOid** | **Number**| The item oid to delete. | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Retrieves a single item using the specified item oid.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -97,7 +97,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var merchantItemOid = 56; // Integer | The item oid to retrieve.
+var merchantItemOid = 56; // Number | The item oid to retrieve.
 
 var opts = { 
   'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
@@ -118,7 +118,7 @@ apiInstance.getItem(merchantItemOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantItemOid** | **Integer**| The item oid to retrieve. | 
+ **merchantItemOid** | **Number**| The item oid to retrieve. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
  **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
@@ -146,7 +146,7 @@ Retrieves a single item using the specified item id.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -209,7 +209,7 @@ Retrieves a group of items from the account.  If no parameters are specified, al
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -224,10 +224,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var opts = { 
-  'parentCategoryId': 56, // Integer | The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
+  'parentCategoryId': 56, // Number | The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
   'parentCategoryPath': "parentCategoryPath_example", // String | The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Default 100, Max 2000)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'since': "since_example", // String | Fetch items that have been created/modified since this date/time.
   'sort': "sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
@@ -248,10 +248,10 @@ apiInstance.getItems(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parentCategoryId** | **Integer**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root | [optional] 
+ **parentCategoryId** | **Number**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root | [optional] 
  **parentCategoryPath** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / &#x3D; root | [optional] 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 
  **sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
@@ -281,7 +281,7 @@ Retrieves the pricing tiers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -339,7 +339,7 @@ Create a new item on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -402,7 +402,7 @@ Update a new item on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -418,7 +418,7 @@ var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var item = new UltraCartRestApiV2.Item(); // Item | Item to update
 
-var merchantItemOid = 56; // Integer | The item oid to update.
+var merchantItemOid = 56; // Number | The item oid to update.
 
 var opts = { 
   'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
@@ -440,7 +440,7 @@ apiInstance.updateItem(item, merchantItemOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **item** | [**Item**](Item.md)| Item to update | 
- **merchantItemOid** | **Integer**| The item oid to update. | 
+ **merchantItemOid** | **Number**| The item oid to update. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
  **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
@@ -468,7 +468,7 @@ Update multiple item on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -533,7 +533,7 @@ Uploads an image and returns back meta information about the image as well as th
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];

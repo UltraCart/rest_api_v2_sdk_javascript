@@ -27,7 +27,7 @@ Delete a coupon on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -41,7 +41,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var couponOid = 56; // Integer | The coupon_oid to delete.
+var couponOid = 56; // Number | The coupon_oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -58,7 +58,7 @@ apiInstance.deleteCoupon(couponOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **couponOid** | **Integer**| The coupon_oid to delete. | 
+ **couponOid** | **Number**| The coupon_oid to delete. | 
 
 ### Return type
 
@@ -84,7 +84,7 @@ Generate one time codes for a coupon
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -98,7 +98,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var couponOid = 56; // Integer | The coupon oid to generate codes.
+var couponOid = 56; // Number | The coupon oid to generate codes.
 
 var couponCodesRequest = new UltraCartRestApiV2.CouponCodesRequest(); // CouponCodesRequest | Coupon code generation parameters
 
@@ -117,7 +117,7 @@ apiInstance.generateCouponCodes(couponOid, couponCodesRequest, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **couponOid** | **Integer**| The coupon oid to generate codes. | 
+ **couponOid** | **Number**| The coupon oid to generate codes. | 
  **couponCodesRequest** | [**CouponCodesRequest**](CouponCodesRequest.md)| Coupon code generation parameters | 
 
 ### Return type
@@ -144,7 +144,7 @@ Generate one time codes by merchant code
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -204,7 +204,7 @@ Retrieves a single coupon using the specified coupon profile oid.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -218,7 +218,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var couponOid = 56; // Integer | The coupon oid to retrieve.
+var couponOid = 56; // Number | The coupon oid to retrieve.
 
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -238,7 +238,7 @@ apiInstance.getCoupon(couponOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **couponOid** | **Integer**| The coupon oid to retrieve. | 
+ **couponOid** | **Number**| The coupon oid to retrieve. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
@@ -265,7 +265,7 @@ Retrieves a single coupon using the specified merchant code.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -326,7 +326,7 @@ Retrieves coupons for this account.  If no parameters are specified, all coupons
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -348,10 +348,10 @@ var opts = {
   'startDateEnd': "startDateEnd_example", // String | Start date end
   'expirationDateBegin': "expirationDateBegin_example", // String | Expiration date begin
   'expirationDateEnd': "expirationDateEnd_example", // String | Expiration date end
-  'affiliateOid': 56, // Integer | Affiliate oid
+  'affiliateOid': 56, // Number | Affiliate oid
   'excludeExpired': true, // Boolean | Exclude expired
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'sort': "sort_example", // String | The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
@@ -377,10 +377,10 @@ Name | Type | Description  | Notes
  **startDateEnd** | **String**| Start date end | [optional] 
  **expirationDateBegin** | **String**| Expiration date begin | [optional] 
  **expirationDateEnd** | **String**| Expiration date end | [optional] 
- **affiliateOid** | **Integer**| Affiliate oid | [optional] 
+ **affiliateOid** | **Number**| Affiliate oid | [optional] 
  **excludeExpired** | **Boolean**| Exclude expired | [optional] 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
@@ -408,7 +408,7 @@ Retrieves coupons from the account.  If no parameters are specified, all coupons
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -425,8 +425,8 @@ var apiInstance = new UltraCartRestApiV2.CouponApi();
 var couponQuery = new UltraCartRestApiV2.CouponQuery(); // CouponQuery | Coupon query
 
 var opts = { 
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'sort': "sort_example", // String | The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
@@ -446,8 +446,8 @@ apiInstance.getCouponsByQuery(couponQuery, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **couponQuery** | [**CouponQuery**](CouponQuery.md)| Coupon query | 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
@@ -475,7 +475,7 @@ Retrieve values needed for a coupon editor
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -526,7 +526,7 @@ Insert a coupon on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -587,7 +587,7 @@ Update a coupon on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -603,7 +603,7 @@ var apiInstance = new UltraCartRestApiV2.CouponApi();
 
 var coupon = new UltraCartRestApiV2.Coupon(); // Coupon | Coupon to update
 
-var couponOid = 56; // Integer | The coupon_oid to update.
+var couponOid = 56; // Number | The coupon_oid to update.
 
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -624,7 +624,7 @@ apiInstance.updateCoupon(coupon, couponOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **coupon** | [**Coupon**](Coupon.md)| Coupon to update | 
- **couponOid** | **Integer**| The coupon_oid to update. | 
+ **couponOid** | **Number**| The coupon_oid to update. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

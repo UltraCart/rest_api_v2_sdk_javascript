@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**affiliateOid** | **Integer** | Affiliate object identifier | [optional] 
+**affiliate_oid** | **Number** | Affiliate object identifier | [optional] 
 **email** | **String** | email | [optional] 
 
 

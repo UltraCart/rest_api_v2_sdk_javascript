@@ -1,14 +1,17 @@
 {
   "name": "ultra_cart_rest_api_v2",
-  "version": "2.0.9",
+  "version": "2.1.0",
   "description": "UltraCart REST SDK",
-  "license": "Apache-2.0",
+  "license": "Unlicense",
   "main": "src/com.ultracart.admin.v2.swagger/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },
+  "browser": {
+    "fs": false
+  },
   "dependencies": {
-    "superagent": "1.7.1"
+    "superagent": "3.5.2"
   },
   "devDependencies": {
     "mocha": "~2.3.4",

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sfdcPricebookId** | **String** | Salesforce.com pricebook id | [optional] 
-**sfdcProductId** | **String** | Salesforce.com product id | [optional] 
+**sfdc_pricebook_id** | **String** | Salesforce.com pricebook id | [optional] 
+**sfdc_product_id** | **String** | Salesforce.com product id | [optional] 
 
 

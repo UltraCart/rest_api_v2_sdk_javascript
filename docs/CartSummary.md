@@ -3,21 +3,21 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**arbitraryShippingHandlingTotal** | [**Currency**](Currency.md) |  | [optional] 
-**arbitraryTax** | [**Currency**](Currency.md) |  | [optional] 
-**arbitraryTaxRate** | [**Currency**](Currency.md) |  | [optional] 
-**arbitraryTaxableSubtotal** | [**Currency**](Currency.md) |  | [optional] 
-**shippingHandling** | [**Currency**](Currency.md) |  | [optional] 
-**shippingHandlingDiscount** | [**Currency**](Currency.md) |  | [optional] 
-**shippingHandlingWithDiscount** | [**Currency**](Currency.md) |  | [optional] 
+**arbitrary_shipping_handling_total** | [**Currency**](Currency.md) |  | [optional] 
+**arbitrary_tax** | [**Currency**](Currency.md) |  | [optional] 
+**arbitrary_tax_rate** | [**Currency**](Currency.md) |  | [optional] 
+**arbitrary_taxable_subtotal** | [**Currency**](Currency.md) |  | [optional] 
+**shipping_handling** | [**Currency**](Currency.md) |  | [optional] 
+**shipping_handling_discount** | [**Currency**](Currency.md) |  | [optional] 
+**shipping_handling_with_discount** | [**Currency**](Currency.md) |  | [optional] 
 **subtotal** | [**Currency**](Currency.md) |  | [optional] 
-**subtotalDiscount** | [**Currency**](Currency.md) |  | [optional] 
-**subtotalWithDiscount** | [**Currency**](Currency.md) |  | [optional] 
+**subtotal_discount** | [**Currency**](Currency.md) |  | [optional] 
+**subtotal_with_discount** | [**Currency**](Currency.md) |  | [optional] 
 **surcharge** | [**Currency**](Currency.md) |  | [optional] 
 **tax** | [**Currency**](Currency.md) |  | [optional] 
-**taxableSubtotal** | [**Currency**](Currency.md) |  | [optional] 
-**taxableSubtotalDiscount** | [**Currency**](Currency.md) |  | [optional] 
-**taxableSubtotalWithDiscount** | [**Currency**](Currency.md) |  | [optional] 
+**taxable_subtotal** | [**Currency**](Currency.md) |  | [optional] 
+**taxable_subtotal_discount** | [**Currency**](Currency.md) |  | [optional] 
+**taxable_subtotal_with_discount** | [**Currency**](Currency.md) |  | [optional] 
 **total** | [**Currency**](Currency.md) |  | [optional] 
 
 

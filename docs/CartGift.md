@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gift** | **Boolean** | True if this order is a gift | [optional] 
-**giftCharge** | [**Currency**](Currency.md) |  | [optional] 
-**giftEmail** | **String** | Email address of the gift recipient | [optional] 
-**giftMessage** | **String** | Message to the gift recipient | [optional] 
-**giftWrapCost** | [**Currency**](Currency.md) |  | [optional] 
-**giftWrapTitle** | **String** | Title of the selected gift wrap | [optional] 
+**gift_charge** | [**Currency**](Currency.md) |  | [optional] 
+**gift_email** | **String** | Email address of the gift recipient | [optional] 
+**gift_message** | **String** | Message to the gift recipient | [optional] 
+**gift_wrap_cost** | [**Currency**](Currency.md) |  | [optional] 
+**gift_wrap_title** | **String** | Title of the selected gift wrap | [optional] 
 
 

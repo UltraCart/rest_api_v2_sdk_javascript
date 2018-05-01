@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Name | [optional] 
-**pricingTierOid** | **Integer** | Pricing Tier Oid | [optional] 
+**pricing_tier_oid** | **Number** | Pricing Tier Oid | [optional] 
 
 

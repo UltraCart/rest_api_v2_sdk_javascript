@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**checkNumber** | **Integer** | Check number they are paying with | [optional] 
+**check_number** | **Number** | Check number they are paying with | [optional] 
 
 

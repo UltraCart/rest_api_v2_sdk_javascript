@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**firstQuoteDts** | **String** | First quote date | [optional] 
-**lastQuoteDts** | **String** | Last quote date | [optional] 
-**quoteCount** | **Integer** | Total number of quote | [optional] 
+**first_quote_dts** | **String** | First quote date | [optional] 
+**last_quote_dts** | **String** | Last quote date | [optional] 
+**quote_count** | **Number** | Total number of quote | [optional] 
 **total** | **Number** | Total amount associated with the quotes | [optional] 
 
 

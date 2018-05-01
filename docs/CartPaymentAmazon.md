@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amazonOrderReferenceId** | **String** | Amazon order reference id | [optional] 
+**amazon_order_reference_id** | **String** | Amazon order reference id | [optional] 
 
 

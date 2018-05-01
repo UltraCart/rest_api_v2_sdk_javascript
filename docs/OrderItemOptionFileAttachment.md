@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**expirationDts** | **String** | Expiration date/time | [optional] 
-**fileName** | **String** | File name | [optional] 
-**mimeType** | **String** | Mime type | [optional] 
-**size** | **Integer** | Size | [optional] 
+**expiration_dts** | **String** | Expiration date/time | [optional] 
+**file_name** | **String** | File name | [optional] 
+**mime_type** | **String** | Mime type | [optional] 
+**size** | **Number** | Size | [optional] 
 
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**discountAmount** | **Number** | The amount of discount per item. | [optional] 
-**itemQuantity** | **Integer** | The quantity of item purchased (in units) | [optional] 
+**discount_amount** | **Number** | The amount of discount per item. | [optional] 
+**item_quantity** | **Number** | The quantity of item purchased (in units) | [optional] 
 
 

@@ -27,7 +27,7 @@ Cancel an order on the UltraCart account.  If the success flag is false, then co
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -84,7 +84,7 @@ Delete an order on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -141,7 +141,7 @@ Format the order for display at text or html
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -201,7 +201,7 @@ Retrieves a single order using the specified order id.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -262,7 +262,7 @@ Retrieves a group of orders from the account.  If no parameters are specified, t
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -304,9 +304,9 @@ var opts = {
   'currentStage': "currentStage_example", // String | Current Stage
   'channelPartnerCode': "channelPartnerCode_example", // String | Channel Partner Code
   'channelPartnerOrderId': "channelPartnerOrderId_example", // String | Channel Partner Order ID
-  'customerProfileOid': 56, // Integer | null
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Maximum 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'customerProfileOid': 56, // Number | null
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'sort': "sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.
 };
@@ -352,9 +352,9 @@ Name | Type | Description  | Notes
  **currentStage** | **String**| Current Stage | [optional] 
  **channelPartnerCode** | **String**| Channel Partner Code | [optional] 
  **channelPartnerOrderId** | **String**| Channel Partner Order ID | [optional] 
- **customerProfileOid** | **Integer**| null | [optional] 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **customerProfileOid** | **Number**| null | [optional] 
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result. | [optional] 
 
@@ -382,7 +382,7 @@ Retrieves a group of orders from the account based on a query object.  If no par
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -399,8 +399,8 @@ var apiInstance = new UltraCartRestApiV2.OrderApi();
 var orderQuery = new UltraCartRestApiV2.OrderQuery(); // OrderQuery | Order query
 
 var opts = { 
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Maximum 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'sort': "sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.
 };
@@ -420,8 +420,8 @@ apiInstance.getOrdersByQuery(orderQuery, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderQuery** | [**OrderQuery**](OrderQuery.md)| Order query | 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result. | [optional] 
 
@@ -449,7 +449,7 @@ Perform a refund operation on an order and then update the order if successful
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -523,7 +523,7 @@ Resend the receipt for an order on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -580,7 +580,7 @@ Resend shipment confirmation for an order on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -637,7 +637,7 @@ Update a new order on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];

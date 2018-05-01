@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**adjustedPrice** | **Number** | Adjusted price | [optional] 
-**adjustedShipping** | **Number** | Adjusted shipping | [optional] 
-**adjustedTotal** | **Number** | Adjusted total | [optional] 
+**adjusted_price** | **Number** | Adjusted price | [optional] 
+**adjusted_shipping** | **Number** | Adjusted shipping | [optional] 
+**adjusted_total** | **Number** | Adjusted total | [optional] 
 **cogs** | **Number** | Cost of goods sold | [optional] 
-**finalValueFee** | **Number** | Final value fee | [optional] 
-**minimumAdvertisedPrice** | **Number** | Minimum advertised price | [optional] 
-**otherListings** | [**[ItemEbayMarketListing]**](ItemEbayMarketListing.md) | Other listings | [optional] 
-**ourListing** | [**ItemEbayMarketListing**](ItemEbayMarketListing.md) |  | [optional] 
+**final_value_fee** | **Number** | Final value fee | [optional] 
+**minimum_advertised_price** | **Number** | Minimum advertised price | [optional] 
+**other_listings** | [**[ItemEbayMarketListing]**](ItemEbayMarketListing.md) | Other listings | [optional] 
+**our_listing** | [**ItemEbayMarketListing**](ItemEbayMarketListing.md) |  | [optional] 
 **overhead** | **Number** | Overhead | [optional] 
-**profitPotential** | **Number** | Profit potential | [optional] 
+**profit_potential** | **Number** | Profit potential | [optional] 
 
 

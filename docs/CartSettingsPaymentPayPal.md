@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paypalButtonAltText** | **String** | PayPal button alt text | [optional] 
-**paypalButtonUrl** | **String** | PayPal button URL | [optional] 
-**paypalCreditButtonUrl** | **String** | PayPal Credit button URL | [optional] 
-**paypalCreditLegalImageUrl** | **String** | PayPal Credit legal image URL | [optional] 
-**paypalCreditLegalUrl** | **String** | PayPal Credit legal URL | [optional] 
+**paypal_button_alt_text** | **String** | PayPal button alt text | [optional] 
+**paypal_button_url** | **String** | PayPal button URL | [optional] 
+**paypal_credit_button_url** | **String** | PayPal Credit button URL | [optional] 
+**paypal_credit_legal_image_url** | **String** | PayPal Credit legal image URL | [optional] 
+**paypal_credit_legal_url** | **String** | PayPal Credit legal URL | [optional] 
 
 

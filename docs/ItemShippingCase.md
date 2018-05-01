@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**caseLabel** | **String** | Case label | [optional] 
-**caseMerchantItemId** | **String** | Case item id | [optional] 
-**caseMerchantItemOid** | **Integer** | Case item object identifier | [optional] 
-**quantity** | **Integer** | Case quantity | [optional] 
+**case_label** | **String** | Case label | [optional] 
+**case_merchant_item_id** | **String** | Case item id | [optional] 
+**case_merchant_item_oid** | **Number** | Case item object identifier | [optional] 
+**quantity** | **Number** | Case quantity | [optional] 
 
 

@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **city** | **String** | City | [optional] 
-**countryCode** | **String** | Country code (ISO-3166 two letter) | [optional] 
+**country_code** | **String** | Country code (ISO-3166 two letter) | [optional] 
 **county** | **String** | County | [optional] 
-**postalCode** | **String** | Postal code | [optional] 
-**stateCode** | **String** | State code | [optional] 
+**postal_code** | **String** | Postal code | [optional] 
+**state_code** | **String** | State code | [optional] 
 
 

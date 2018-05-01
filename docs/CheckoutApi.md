@@ -31,7 +31,7 @@ Look up the city and state for the shipping zip code.  Useful for building an au
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -94,7 +94,7 @@ Finalize the cart into an order.  This method can not be called with browser key
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -151,7 +151,7 @@ If the cookie is set on the browser making the request then it will return their
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -215,7 +215,7 @@ Get a cart specified by the cart_id parameter.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -282,7 +282,7 @@ Get a cart specified by the return code parameter.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -349,7 +349,7 @@ Handoff the browser to UltraCart for view cart on StoreFront, transfer to PayPal
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -416,7 +416,7 @@ Login in to the customer profile specified by cart.billing.email and password
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -483,7 +483,7 @@ Log the cart out of the current profile.  No error will occur if they are not lo
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -550,7 +550,7 @@ Register a new customer profile.  Requires the cart.billing object to be populat
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -617,7 +617,7 @@ Retrieve all the related items for the cart contents.  Expansion is limited to c
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -684,7 +684,7 @@ Retrieve all the related items for the cart contents.  Expansion is limited to c
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -754,7 +754,7 @@ Setup a browser key authenticated application with checkout permissions.  This R
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -811,7 +811,7 @@ Update the cart.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
@@ -878,7 +878,7 @@ Validate the cart for errors.  Specific checks can be passed and multiple valida
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure API key authorization: ultraCartBrowserApiKey
 var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];

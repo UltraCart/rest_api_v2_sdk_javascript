@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**affiliateId** | **Integer** | Affiliate id associated with the cart | [optional] 
-**affiliateSubId** | **String** | Affiliate sub id associated with the cart | [optional] 
+**affiliate_id** | **Number** | Affiliate id associated with the cart | [optional] 
+**affiliate_sub_id** | **String** | Affiliate sub id associated with the cart | [optional] 
 
 

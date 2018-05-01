@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**autoOrderCode** | **String** | Unique code assigned to the auto order | [optional] 
-**autoOrderOid** | **Integer** | Unique identifier assigned to the auto order | [optional] 
-**originalOrderId** | **String** | Orignal order id that started this auto order sequence | [optional] 
+**auto_order_code** | **String** | Unique code assigned to the auto order | [optional] 
+**auto_order_oid** | **Number** | Unique identifier assigned to the auto order | [optional] 
+**original_order_id** | **String** | Orignal order id that started this auto order sequence | [optional] 
 **status** | **String** | The status of the auto order | [optional] 
 
 

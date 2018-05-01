@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amazonButtonUrl** | **String** | Amazon button URL | [optional] 
-**amazonMerchantId** | **String** | Amazon merchant ID | [optional] 
-**amazonWidgetUrl** | **String** | Amazon widget URL | [optional] 
+**amazon_button_url** | **String** | Amazon button URL | [optional] 
+**amazon_merchant_id** | **String** | Amazon merchant ID | [optional] 
+**amazon_widget_url** | **String** | Amazon widget URL | [optional] 
 
 

@@ -24,7 +24,7 @@ Delete a webhook on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -38,7 +38,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
-var webhookOid = 56; // Integer | The webhook oid to delete.
+var webhookOid = 56; // Number | The webhook oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -55,7 +55,7 @@ apiInstance.deleteWebhook(webhookOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookOid** | **Integer**| The webhook oid to delete. | 
+ **webhookOid** | **Number**| The webhook oid to delete. | 
 
 ### Return type
 
@@ -81,7 +81,7 @@ Retrieves an individual log for a webhook given the webhook oid the request id.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -95,7 +95,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
-var webhookOid = 56; // Integer | The webhook oid that owns the log.
+var webhookOid = 56; // Number | The webhook oid that owns the log.
 
 var requestId = "requestId_example"; // String | The request id associated with the log to view.
 
@@ -114,7 +114,7 @@ apiInstance.getWebhookLog(webhookOid, requestId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookOid** | **Integer**| The webhook oid that owns the log. | 
+ **webhookOid** | **Number**| The webhook oid that owns the log. | 
  **requestId** | **String**| The request id associated with the log to view. | 
 
 ### Return type
@@ -141,7 +141,7 @@ Retrieves the log summary information for a given webhook.  This is useful for d
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -155,11 +155,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
-var webhookOid = 56; // Integer | The webhook oid to retrieve log summaries for.
+var webhookOid = 56; // Number | The webhook oid to retrieve log summaries for.
 
 var opts = { 
-  'limit': 100, // Integer | The maximum number of records to return on this one API call.
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call.
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'since': "since_example" // String | Fetch log summaries that have been delivered since this date/time.
 };
 
@@ -177,9 +177,9 @@ apiInstance.getWebhookLogSummaries(webhookOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookOid** | **Integer**| The webhook oid to retrieve log summaries for. | 
- **limit** | **Integer**| The maximum number of records to return on this one API call. | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **webhookOid** | **Number**| The webhook oid to retrieve log summaries for. | 
+ **limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch log summaries that have been delivered since this date/time. | [optional] 
 
 ### Return type
@@ -206,7 +206,7 @@ Retrieves the webhooks associated with this application.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -221,8 +221,8 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
 var opts = { 
-  'limit': 100, // Integer | The maximum number of records to return on this one API call.
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call.
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'sort': "sort_example", // String | The sort order of the webhooks.  See documentation for examples
   'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
@@ -241,8 +241,8 @@ apiInstance.getWebhooks(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Integer**| The maximum number of records to return on this one API call. | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the webhooks.  See documentation for examples | [optional] 
  **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
@@ -270,7 +270,7 @@ Adds a new webhook on the account.  If you add a new webhook with the authentica
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -331,7 +331,7 @@ This method will resend events to the webhook endpoint.  This method can be used
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -345,7 +345,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
-var webhookOid = 56; // Integer | The webhook oid that is receiving the reflowed events.
+var webhookOid = 56; // Number | The webhook oid that is receiving the reflowed events.
 
 var eventName = "eventName_example"; // String | The event to reflow.
 
@@ -364,7 +364,7 @@ apiInstance.resendEvent(webhookOid, eventName, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhookOid** | **Integer**| The webhook oid that is receiving the reflowed events. | 
+ **webhookOid** | **Number**| The webhook oid that is receiving the reflowed events. | 
  **eventName** | **String**| The event to reflow. | 
 
 ### Return type
@@ -391,7 +391,7 @@ Update a webhook on the account
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -407,7 +407,7 @@ var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
 var webhook = new UltraCartRestApiV2.Webhook(); // Webhook | Webhook to update
 
-var webhookOid = 56; // Integer | The webhook oid to update.
+var webhookOid = 56; // Number | The webhook oid to update.
 
 var opts = { 
   'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
@@ -428,7 +428,7 @@ apiInstance.updateWebhook(webhook, webhookOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook** | [**Webhook**](Webhook.md)| Webhook to update | 
- **webhookOid** | **Integer**| The webhook oid to update. | 
+ **webhookOid** | **Number**| The webhook oid to update. | 
  **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type

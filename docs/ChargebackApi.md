@@ -22,7 +22,7 @@ Delete a chargeback on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -36,7 +36,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
-var chargebackDisputeOid = 56; // Integer | The chargeback_dispute_oid to delete.
+var chargebackDisputeOid = 56; // Number | The chargeback_dispute_oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -53,7 +53,7 @@ apiInstance.deleteChargeback(chargebackDisputeOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chargebackDisputeOid** | **Integer**| The chargeback_dispute_oid to delete. | 
+ **chargebackDisputeOid** | **Number**| The chargeback_dispute_oid to delete. | 
 
 ### Return type
 
@@ -79,7 +79,7 @@ Retrieves a single chargeback using the specified chargeback dispute oid.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -93,7 +93,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
-var chargebackDisputeOid = 56; // Integer | The chargeback dispute oid to retrieve.
+var chargebackDisputeOid = 56; // Number | The chargeback dispute oid to retrieve.
 
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -113,7 +113,7 @@ apiInstance.getChargebackDispute(chargebackDisputeOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chargebackDisputeOid** | **Integer**| The chargeback dispute oid to retrieve. | 
+ **chargebackDisputeOid** | **Number**| The chargeback dispute oid to retrieve. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
@@ -140,7 +140,7 @@ Retrieves chargebacks from the account.  If no parameters are specified, all cha
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -162,8 +162,8 @@ var opts = {
   'expirationDtsEnd': "expirationDtsEnd_example", // String | Expiration dts end
   'chargebackDtsStart': "chargebackDtsStart_example", // String | Chargeback dts start
   'chargebackDtsEnd': "chargebackDtsEnd_example", // String | Chargeback dts end
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'since': "since_example", // String | Fetch chargebacks that have been created/modified since this date/time.
   'sort': "sort_example", // String | The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -190,8 +190,8 @@ Name | Type | Description  | Notes
  **expirationDtsEnd** | **String**| Expiration dts end | [optional] 
  **chargebackDtsStart** | **String**| Chargeback dts start | [optional] 
  **chargebackDtsEnd** | **String**| Chargeback dts end | [optional] 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch chargebacks that have been created/modified since this date/time. | [optional] 
  **sort** | **String**| The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
@@ -220,7 +220,7 @@ Insert a chargeback on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -281,7 +281,7 @@ Update a chargeback on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -297,7 +297,7 @@ var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
 var chargeback = new UltraCartRestApiV2.ChargebackDispute(); // ChargebackDispute | Chargeback to update
 
-var chargebackDisputeOid = 56; // Integer | The chargeback_dispute_oid to update.
+var chargebackDisputeOid = 56; // Number | The chargeback_dispute_oid to update.
 
 var opts = { 
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -318,7 +318,7 @@ apiInstance.updateChargeback(chargeback, chargebackDisputeOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to update | 
- **chargebackDisputeOid** | **Integer**| The chargeback_dispute_oid to update. | 
+ **chargebackDisputeOid** | **Number**| The chargeback_dispute_oid to update. | 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

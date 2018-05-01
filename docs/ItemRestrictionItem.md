@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**restrictMerchantItemId** | **String** | Restrict item id | [optional] 
-**restrictMerchantItemOid** | **Integer** | Restrict item object identifier | [optional] 
+**restrict_merchant_item_id** | **String** | Restrict item id | [optional] 
+**restrict_merchant_item_oid** | **Number** | Restrict item object identifier | [optional] 
 **type** | **String** | Restriction type | [optional] 
 
 

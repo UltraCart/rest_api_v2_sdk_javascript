@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amazon** | [**CartPaymentAmazon**](CartPaymentAmazon.md) |  | [optional] 
 **check** | [**CartPaymentCheck**](CartPaymentCheck.md) |  | [optional] 
-**creditCard** | [**CartPaymentCreditCard**](CartPaymentCreditCard.md) |  | [optional] 
-**paymentMethod** | **String** | Payment method | [optional] 
-**purchaseOrder** | [**CartPaymentPurchaseOrder**](CartPaymentPurchaseOrder.md) |  | [optional] 
-**rtgCode** | **String** | Rotating transaction gateway code | [optional] 
+**credit_card** | [**CartPaymentCreditCard**](CartPaymentCreditCard.md) |  | [optional] 
+**payment_method** | **String** | Payment method | [optional] 
+**purchase_order** | [**CartPaymentPurchaseOrder**](CartPaymentPurchaseOrder.md) |  | [optional] 
+**rtg_code** | **String** | Rotating transaction gateway code | [optional] 
 
 

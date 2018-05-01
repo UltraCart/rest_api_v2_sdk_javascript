@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost** | **Number** | Cost | [optional] 
-**quantity** | **Integer** | Quantity | [optional] 
+**quantity** | **Number** | Quantity | [optional] 
 
 

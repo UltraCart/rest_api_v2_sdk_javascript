@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**digitalItemOid** | **Integer** | Digital item object identifier | [optional] 
-**originalFilename** | **String** | Original filename | [optional] 
+**digital_item_oid** | **Number** | Digital item object identifier | [optional] 
+**original_filename** | **String** | Original filename | [optional] 
 
 

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**channelPartnerCode** | **String** | The code of the channel partner | [optional] 
-**channelPartnerData** | **String** | Additional data provided by the channel partner | [optional] 
-**channelPartnerOid** | **Integer** | Channel partner object identifier | [optional] 
-**channelPartnerOrderId** | **String** | The order ID assigned by the channel partner for this order | [optional] 
+**channel_partner_code** | **String** | The code of the channel partner | [optional] 
+**channel_partner_data** | **String** | Additional data provided by the channel partner | [optional] 
+**channel_partner_oid** | **Number** | Channel partner object identifier | [optional] 
+**channel_partner_order_id** | **String** | The order ID assigned by the channel partner for this order | [optional] 
 
 

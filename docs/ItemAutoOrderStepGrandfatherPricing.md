@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**onOrBeforeDate** | **String** | On or before date | [optional] 
-**unitCost** | **Number** | Unit cost | [optional] 
+**on_or_before_date** | **String** | On or before date | [optional] 
+**unit_cost** | **Number** | Unit cost | [optional] 
 
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cumulativeOrderLimit** | **Integer** | Cumulative order limit | [optional] 
-**individualOrderLimit** | **Integer** | Individual order limit | [optional] 
-**multipleQuantity** | **Integer** | Multiple quantity | [optional] 
+**cumulative_order_limit** | **Number** | Cumulative order limit | [optional] 
+**individual_order_limit** | **Number** | Individual order limit | [optional] 
+**multiple_quantity** | **Number** | Multiple quantity | [optional] 
 
 

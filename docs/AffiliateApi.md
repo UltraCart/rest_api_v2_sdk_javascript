@@ -19,7 +19,7 @@ Retrieves a group of clicks from the account based on a query object.  If no par
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -36,8 +36,8 @@ var apiInstance = new UltraCartRestApiV2.AffiliateApi();
 var clickQuery = new UltraCartRestApiV2.AffiliateClickQuery(); // AffiliateClickQuery | Click query
 
 var opts = { 
-  'limit': 10000, // Integer | The maximum number of records to return on this one API call. (Maximum 10000)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'expand': "expand_example" // String | The object expansion to perform on the result.  Only option is link.
 };
 
@@ -56,8 +56,8 @@ apiInstance.getClicksByQuery(clickQuery, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **clickQuery** | [**AffiliateClickQuery**](AffiliateClickQuery.md)| Click query | 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **expand** | **String**| The object expansion to perform on the result.  Only option is link. | [optional] 
 
 ### Return type
@@ -84,7 +84,7 @@ Retrieves a group of ledger entries from the account based on a query object.  I
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.default;
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
 // Configure OAuth2 access token for authorization: ultraCartOauth
 var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
@@ -101,8 +101,8 @@ var apiInstance = new UltraCartRestApiV2.AffiliateApi();
 var ledgerQuery = new UltraCartRestApiV2.AffiliateLedgerQuery(); // AffiliateLedgerQuery | Ledger query
 
 var opts = { 
-  'limit': 100, // Integer | The maximum number of records to return on this one API call. (Maximum 200)
-  'offset': 0, // Integer | Pagination of the record set.  Offset is a zero based index.
+  'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
+  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'expand': "expand_example" // String | The object expansion to perform on the result.  Only option is link.
 };
 
@@ -121,8 +121,8 @@ apiInstance.getLedgersByQuery(ledgerQuery, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ledgerQuery** | [**AffiliateLedgerQuery**](AffiliateLedgerQuery.md)| Ledger query | 
- **limit** | **Integer**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
- **offset** | **Integer**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
+ **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **expand** | **String**| The object expansion to perform on the result.  Only option is link. | [optional] 
 
 ### Return type

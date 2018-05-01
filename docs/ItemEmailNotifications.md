@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**skipReceipt** | **Boolean** | Skip receipt email to customer | [optional] 
-**skipShipmentNotification** | **Boolean** | Skip shipment notification to customer | [optional] 
+**skip_receipt** | **Boolean** | Skip receipt email to customer | [optional] 
+**skip_shipment_notification** | **Boolean** | Skip shipment notification to customer | [optional] 
 
 
