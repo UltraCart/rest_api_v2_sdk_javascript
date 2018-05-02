@@ -37,7 +37,7 @@
   /**
    * The CartSettingsShippingCalendar model module.
    * @module com.ultracart.admin.v2.models/CartSettingsShippingCalendar
-   * @version 2.2.0
+   * @version 2.2.1
    */
 
   /**
@@ -67,7 +67,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('blackouts')) {
-        obj['blackouts'] = ApiClient.convertToType(data['blackouts'], 'String');
+        obj['blackouts'] = ApiClient.convertToType(data['blackouts'], ['String']);
       }
       if (data.hasOwnProperty('days_of_week')) {
         obj['days_of_week'] = ApiClient.convertToType(data['days_of_week'], ['Boolean']);
@@ -86,8 +86,8 @@
   }
 
   /**
-   * Specified dates that are blacked out on the calendar
-   * @member {String} blackouts
+   * Specified dates that are blacked out on the calendar in ISO8601 format
+   * @member {Array.<String>} blackouts
    */
   exports.prototype['blackouts'] = undefined;
   /**

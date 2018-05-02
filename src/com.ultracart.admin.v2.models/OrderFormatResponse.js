@@ -37,7 +37,7 @@
   /**
    * The OrderFormatResponse model module.
    * @module com.ultracart.admin.v2.models/OrderFormatResponse
-   * @version 2.2.0
+   * @version 2.2.1
    */
 
   /**

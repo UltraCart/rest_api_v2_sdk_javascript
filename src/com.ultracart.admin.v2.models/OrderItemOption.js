@@ -37,7 +37,7 @@
   /**
    * The OrderItemOption model module.
    * @module com.ultracart.admin.v2.models/OrderItemOption
-   * @version 2.2.0
+   * @version 2.2.1
    */
 
   /**

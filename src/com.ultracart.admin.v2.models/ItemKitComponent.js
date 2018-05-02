@@ -37,7 +37,7 @@
   /**
    * The ItemKitComponent model module.
    * @module com.ultracart.admin.v2.models/ItemKitComponent
-   * @version 2.2.0
+   * @version 2.2.1
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The CheckoutSetupBrowserKeyResponse model module.
    * @module com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse
-   * @version 2.2.0
+   * @version 2.2.1
    */
 
   /**
