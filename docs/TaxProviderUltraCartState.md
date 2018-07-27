@@ -1,4 +1,4 @@
-# UltraCartRestApiV2.State
+# UltraCartRestApiV2.TaxProviderUltraCartState
 
 ## Properties
 Name | Type | Description | Notes

@@ -26,7 +26,7 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.State = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.TaxProviderUltraCartState = factory(root.UltraCartRestApiV2.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,14 +35,14 @@
 
 
   /**
-   * The State model module.
-   * @module com.ultracart.admin.v2.models/State
+   * The TaxProviderUltraCartState model module.
+   * @module com.ultracart.admin.v2.models/TaxProviderUltraCartState
    * @version 2.3.0
    */
 
   /**
-   * Constructs a new <code>State</code>.
-   * @alias module:com.ultracart.admin.v2.models/State
+   * Constructs a new <code>TaxProviderUltraCartState</code>.
+   * @alias module:com.ultracart.admin.v2.models/TaxProviderUltraCartState
    * @class
    */
   var exports = function() {
@@ -51,11 +51,11 @@
   };
 
   /**
-   * Constructs a <code>State</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>TaxProviderUltraCartState</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/State} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/State} The populated <code>State</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/TaxProviderUltraCartState} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/TaxProviderUltraCartState} The populated <code>TaxProviderUltraCartState</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

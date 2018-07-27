@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new UltraCartRestApiV2.State();
+    instance = new UltraCartRestApiV2.TaxProviderUltraCartState();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,11 +50,11 @@
       object[property] = value;
   }
 
-  describe('State', function() {
-    it('should create an instance of State', function() {
-      // uncomment below and update the code to test State
-      //var instane = new UltraCartRestApiV2.State();
-      //expect(instance).to.be.a(UltraCartRestApiV2.State);
+  describe('TaxProviderUltraCartState', function() {
+    it('should create an instance of TaxProviderUltraCartState', function() {
+      // uncomment below and update the code to test TaxProviderUltraCartState
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be.a(UltraCartRestApiV2.TaxProviderUltraCartState);
     });
 
   });

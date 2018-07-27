@@ -228,7 +228,7 @@ This endpoint does not need any parameter.
 
 <a name="getTaxProviderUltraCartStates"></a>
 # **getTaxProviderUltraCartStates**
-> State getTaxProviderUltraCartStates()
+> TaxProviderUltraCartState getTaxProviderUltraCartStates()
 
 Retrieve the UltraCart tax provider state rates
 
@@ -266,7 +266,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**State**](State.md)
+[**TaxProviderUltraCartState**](TaxProviderUltraCartState.md)
 
 ### Authorization
 
@@ -869,7 +869,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderUltraCartStates"></a>
 # **updateTaxProviderUltraCartStates**
-> State updateTaxProviderUltraCartStates(states)
+> TaxProviderUltraCartState updateTaxProviderUltraCartStates(states)
 
 Updates the UltraCart tax provider state rates
 
@@ -892,7 +892,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var states = new UltraCartRestApiV2.State(); // State | States with updated values
+var states = new UltraCartRestApiV2.TaxProviderUltraCartState(); // TaxProviderUltraCartState | States with updated values
 
 
 var callback = function(error, data, response) {
@@ -909,11 +909,11 @@ apiInstance.updateTaxProviderUltraCartStates(states, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **states** | [**State**](State.md)| States with updated values | 
+ **states** | [**TaxProviderUltraCartState**](TaxProviderUltraCartState.md)| States with updated values | 
 
 ### Return type
 
-[**State**](State.md)
+[**TaxProviderUltraCartState**](TaxProviderUltraCartState.md)
 
 ### Authorization
 
