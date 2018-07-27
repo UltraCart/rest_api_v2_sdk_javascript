@@ -37,7 +37,7 @@
   /**
    * The DistributionCenter model module.
    * @module com.ultracart.admin.v2.models/DistributionCenter
-   * @version 2.2.1
+   * @version 2.3.0
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -132,6 +133,9 @@
       }
       if (data.hasOwnProperty('hold_before_transmission')) {
         obj['hold_before_transmission'] = ApiClient.convertToType(data['hold_before_transmission'], 'Boolean');
+      }
+      if (data.hasOwnProperty('holdAutoOrderBeforeShipmentMinutes')) {
+        obj['holdAutoOrderBeforeShipmentMinutes'] = ApiClient.convertToType(data['holdAutoOrderBeforeShipmentMinutes'], 'Number');
       }
       if (data.hasOwnProperty('latitude')) {
         obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
@@ -262,6 +266,10 @@
    * @member {Boolean} hold_before_transmission
    */
   exports.prototype['hold_before_transmission'] = undefined;
+  /**
+   * @member {Number} holdAutoOrderBeforeShipmentMinutes
+   */
+  exports.prototype['holdAutoOrderBeforeShipmentMinutes'] = undefined;
   /**
    * Latitude where the distribution center is located
    * @member {Number} latitude

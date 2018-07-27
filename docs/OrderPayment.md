@@ -38,8 +38,6 @@ Name | Type | Description | Notes
 
 * `COD` (value: `"COD"`)
 
-* `Coinbase` (value: `"Coinbase"`)
-
 * `Credit Card` (value: `"Credit Card"`)
 
 * `eBay` (value: `"eBay"`)

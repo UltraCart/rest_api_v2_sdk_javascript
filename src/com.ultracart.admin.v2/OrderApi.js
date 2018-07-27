@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 2.2.1
+   * @version 2.3.0
    */
 
   /**
@@ -587,7 +587,7 @@
 
     /**
      * Update an order
-     * Update a new order on the UltraCart account. 
+     * Update a new order on the UltraCart account.  This is probably NOT the method you want.  It is rare to update a completed order.  This will not trigger charges, emails, or any other automation. 
      * @param {module:com.ultracart.admin.v2.models/Order} order Order to update
      * @param {String} orderId The order id to update.
      * @param {Object} opts Optional parameters

@@ -37,7 +37,7 @@
   /**
    * The OrderItemEdiIdentification model module.
    * @module com.ultracart.admin.v2.models/OrderItemEdiIdentification
-   * @version 2.2.1
+   * @version 2.3.0
    */
 
   /**

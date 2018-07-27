@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/Distance', 'com.ultracart.admin.v2.models/OrderItemEdi', 'com.ultracart.admin.v2.models/OrderItemOption', 'com.ultracart.admin.v2.models/Weight'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/Distance', 'com.ultracart.admin.v2.models/OrderItemEdi', 'com.ultracart.admin.v2.models/OrderItemOption', 'com.ultracart.admin.v2.models/OrderItemProperty', 'com.ultracart.admin.v2.models/Weight'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./Distance'), require('./OrderItemEdi'), require('./OrderItemOption'), require('./Weight'));
+    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./Distance'), require('./OrderItemEdi'), require('./OrderItemOption'), require('./OrderItemProperty'), require('./Weight'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.Distance, root.UltraCartRestApiV2.OrderItemEdi, root.UltraCartRestApiV2.OrderItemOption, root.UltraCartRestApiV2.Weight);
+    root.UltraCartRestApiV2.OrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.Distance, root.UltraCartRestApiV2.OrderItemEdi, root.UltraCartRestApiV2.OrderItemOption, root.UltraCartRestApiV2.OrderItemProperty, root.UltraCartRestApiV2.Weight);
   }
-}(this, function(ApiClient, Currency, Distance, OrderItemEdi, OrderItemOption, Weight) {
+}(this, function(ApiClient, Currency, Distance, OrderItemEdi, OrderItemOption, OrderItemProperty, Weight) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 2.2.1
+   * @version 2.3.0
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -208,6 +209,9 @@
       }
       if (data.hasOwnProperty('pricing_tier_name')) {
         obj['pricing_tier_name'] = ApiClient.convertToType(data['pricing_tier_name'], 'String');
+      }
+      if (data.hasOwnProperty('properties')) {
+        obj['properties'] = ApiClient.convertToType(data['properties'], [OrderItemProperty]);
       }
       if (data.hasOwnProperty('quantity')) {
         obj['quantity'] = ApiClient.convertToType(data['quantity'], 'Number');
@@ -420,6 +424,11 @@
    * @member {String} pricing_tier_name
    */
   exports.prototype['pricing_tier_name'] = undefined;
+  /**
+   * Properties
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderItemProperty>} properties
+   */
+  exports.prototype['properties'] = undefined;
   /**
    * Quantity
    * @member {Number} quantity

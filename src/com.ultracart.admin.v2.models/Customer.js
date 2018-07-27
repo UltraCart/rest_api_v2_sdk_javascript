@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.models/CustomerOrdersSummary', 'com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.models/CustomerQuotesSummary', 'com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.models/Order'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.models/CustomerOrdersSummary', 'com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.models/CustomerPrivacy', 'com.ultracart.admin.v2.models/CustomerQuotesSummary', 'com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEmail'), require('./CustomerOrdersSummary'), require('./CustomerPricingTier'), require('./CustomerQuotesSummary'), require('./CustomerShipping'), require('./Order'));
+    module.exports = factory(require('../ApiClient'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEmail'), require('./CustomerOrdersSummary'), require('./CustomerPricingTier'), require('./CustomerPrivacy'), require('./CustomerQuotesSummary'), require('./CustomerShipping'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerOrdersSummary, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerQuotesSummary, root.UltraCartRestApiV2.CustomerShipping, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerOrdersSummary, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerPrivacy, root.UltraCartRestApiV2.CustomerQuotesSummary, root.UltraCartRestApiV2.CustomerShipping, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, CustomerBilling, CustomerCard, CustomerEmail, CustomerOrdersSummary, CustomerPricingTier, CustomerQuotesSummary, CustomerShipping, Order) {
+}(this, function(ApiClient, CustomerBilling, CustomerCard, CustomerEmail, CustomerOrdersSummary, CustomerPricingTier, CustomerPrivacy, CustomerQuotesSummary, CustomerShipping, Order) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 2.2.1
+   * @version 2.3.0
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -205,6 +206,9 @@
       }
       if (data.hasOwnProperty('pricing_tiers')) {
         obj['pricing_tiers'] = ApiClient.convertToType(data['pricing_tiers'], [CustomerPricingTier]);
+      }
+      if (data.hasOwnProperty('privacy')) {
+        obj['privacy'] = CustomerPrivacy.constructFromObject(data['privacy']);
       }
       if (data.hasOwnProperty('qb_class')) {
         obj['qb_class'] = ApiClient.convertToType(data['qb_class'], 'String');
@@ -420,6 +424,10 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/CustomerPricingTier>} pricing_tiers
    */
   exports.prototype['pricing_tiers'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.models/CustomerPrivacy} privacy
+   */
+  exports.prototype['privacy'] = undefined;
   /**
    * QuickBooks class to import this customer as
    * @member {String} qb_class

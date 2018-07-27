@@ -37,7 +37,7 @@
   /**
    * The PricingTiersResponse model module.
    * @module com.ultracart.admin.v2.models/PricingTiersResponse
-   * @version 2.2.1
+   * @version 2.3.0
    */
 
   /**

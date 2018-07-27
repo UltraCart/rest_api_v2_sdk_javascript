@@ -249,6 +249,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property privacy (base name: "privacy")', function() {
+      // uncomment below and update the code to test the property privacy
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property qbClass (base name: "qb_class")', function() {
       // uncomment below and update the code to test the property qbClass
       //var instane = new UltraCartRestApiV2.Customer();

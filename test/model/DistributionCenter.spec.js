@@ -135,6 +135,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property holdAutoOrderBeforeShipmentMinutes (base name: "holdAutoOrderBeforeShipmentMinutes")', function() {
+      // uncomment below and update the code to test the property holdAutoOrderBeforeShipmentMinutes
+      //var instane = new UltraCartRestApiV2.DistributionCenter();
+      //expect(instance).to.be();
+    });
+
     it('should have the property latitude (base name: "latitude")', function() {
       // uncomment below and update the code to test the property latitude
       //var instane = new UltraCartRestApiV2.DistributionCenter();
