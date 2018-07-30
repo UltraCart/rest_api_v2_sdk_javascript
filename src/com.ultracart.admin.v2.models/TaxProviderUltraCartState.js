@@ -48,6 +48,9 @@
   var exports = function() {
     var _this = this;
 
+
+
+
   };
 
   /**
@@ -61,10 +64,34 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('enabled')) {
+        obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
+      }
+      if (data.hasOwnProperty('state_code')) {
+        obj['state_code'] = ApiClient.convertToType(data['state_code'], 'String');
+      }
+      if (data.hasOwnProperty('state_name')) {
+        obj['state_name'] = ApiClient.convertToType(data['state_name'], 'String');
+      }
     }
     return obj;
   }
 
+  /**
+   * True if this state taxes are managed by UltraCart
+   * @member {Boolean} enabled
+   */
+  exports.prototype['enabled'] = undefined;
+  /**
+   * State Code (2 digits)
+   * @member {String} state_code
+   */
+  exports.prototype['state_code'] = undefined;
+  /**
+   * Fully spelled out state name
+   * @member {String} state_name
+   */
+  exports.prototype['state_name'] = undefined;
 
 
 

@@ -57,6 +57,24 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.TaxProviderUltraCartState);
     });
 
+    it('should have the property enabled (base name: "enabled")', function() {
+      // uncomment below and update the code to test the property enabled
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property stateCode (base name: "state_code")', function() {
+      // uncomment below and update the code to test the property stateCode
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property stateName (base name: "state_name")', function() {
+      // uncomment below and update the code to test the property stateName
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

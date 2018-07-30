@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**getTaxProviderSelf**](TaxApi.md#getTaxProviderSelf) | **GET** /tax/providers/self | Retrieve the Self tax provider
 [**getTaxProviderTaxJar**](TaxApi.md#getTaxProviderTaxJar) | **GET** /tax/providers/taxjar | Retrieve the TaxJar tax provider
 [**getTaxProviderUltraCart**](TaxApi.md#getTaxProviderUltraCart) | **GET** /tax/providers/ultracart | Retrieve the UltraCart tax provider
-[**getTaxProviderUltraCartStates**](TaxApi.md#getTaxProviderUltraCartStates) | **GET** /tax/providers/ultracart/states | Retrieve the UltraCart tax provider state rates
 [**getTaxProviders**](TaxApi.md#getTaxProviders) | **GET** /tax/providers | Retrieve tax methods
 [**updateTaxProviderAvalara**](TaxApi.md#updateTaxProviderAvalara) | **POST** /tax/providers/avalara | Update the Avalara tax provider
 [**updateTaxProviderSelf**](TaxApi.md#updateTaxProviderSelf) | **POST** /tax/providers/self | Update the Self tax provider
@@ -19,7 +18,6 @@ Method | HTTP request | Description
 [**updateTaxProviderSelfState**](TaxApi.md#updateTaxProviderSelfState) | **POST** /tax/providers/self/state/{stateCode} | Updates a Self tax provider state
 [**updateTaxProviderTaxJar**](TaxApi.md#updateTaxProviderTaxJar) | **POST** /tax/providers/taxjar | Update the TaxJar tax provider
 [**updateTaxProviderUltraCart**](TaxApi.md#updateTaxProviderUltraCart) | **POST** /tax/providers/ultracart | Update the UltraCart tax provider
-[**updateTaxProviderUltraCartStates**](TaxApi.md#updateTaxProviderUltraCartStates) | **POST** /tax/providers/ultracart/states | Updates the UltraCart tax provider state rates
 
 
 <a name="getTaxProviderAvalara"></a>
@@ -216,57 +214,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**TaxProviderUltraCart**](TaxProviderUltraCart.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getTaxProviderUltraCartStates"></a>
-# **getTaxProviderUltraCartStates**
-> TaxProviderUltraCartState getTaxProviderUltraCartStates()
-
-Retrieve the UltraCart tax provider state rates
-
-Retrieves the UltraCart tax provider state rates. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getTaxProviderUltraCartStates(callback);
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**TaxProviderUltraCartState**](TaxProviderUltraCartState.md)
 
 ### Authorization
 
@@ -857,63 +804,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TaxProviderUltraCart**](TaxProviderUltraCart.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="updateTaxProviderUltraCartStates"></a>
-# **updateTaxProviderUltraCartStates**
-> TaxProviderUltraCartState updateTaxProviderUltraCartStates(states)
-
-Updates the UltraCart tax provider state rates
-
-Updates the UltraCart tax provider state rates. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-var states = new UltraCartRestApiV2.TaxProviderUltraCartState(); // TaxProviderUltraCartState | States with updated values
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.updateTaxProviderUltraCartStates(states, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **states** | [**TaxProviderUltraCartState**](TaxProviderUltraCartState.md)| States with updated values | 
-
-### Return type
-
-[**TaxProviderUltraCartState**](TaxProviderUltraCartState.md)
 
 ### Authorization
 

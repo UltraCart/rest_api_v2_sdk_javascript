@@ -206,7 +206,6 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderSelf**](docs/TaxApi.md#getTaxProviderSelf) | **GET** /tax/providers/self | Retrieve the Self tax provider
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderTaxJar**](docs/TaxApi.md#getTaxProviderTaxJar) | **GET** /tax/providers/taxjar | Retrieve the TaxJar tax provider
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderUltraCart**](docs/TaxApi.md#getTaxProviderUltraCart) | **GET** /tax/providers/ultracart | Retrieve the UltraCart tax provider
-*UltraCartRestApiV2.TaxApi* | [**getTaxProviderUltraCartStates**](docs/TaxApi.md#getTaxProviderUltraCartStates) | **GET** /tax/providers/ultracart/states | Retrieve the UltraCart tax provider state rates
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviders**](docs/TaxApi.md#getTaxProviders) | **GET** /tax/providers | Retrieve tax methods
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderAvalara**](docs/TaxApi.md#updateTaxProviderAvalara) | **POST** /tax/providers/avalara | Update the Avalara tax provider
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderSelf**](docs/TaxApi.md#updateTaxProviderSelf) | **POST** /tax/providers/self | Update the Self tax provider
@@ -217,7 +216,6 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderSelfState**](docs/TaxApi.md#updateTaxProviderSelfState) | **POST** /tax/providers/self/state/{stateCode} | Updates a Self tax provider state
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderTaxJar**](docs/TaxApi.md#updateTaxProviderTaxJar) | **POST** /tax/providers/taxjar | Update the TaxJar tax provider
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderUltraCart**](docs/TaxApi.md#updateTaxProviderUltraCart) | **POST** /tax/providers/ultracart | Update the UltraCart tax provider
-*UltraCartRestApiV2.TaxApi* | [**updateTaxProviderUltraCartStates**](docs/TaxApi.md#updateTaxProviderUltraCartStates) | **POST** /tax/providers/ultracart/states | Updates the UltraCart tax provider state rates
 *UltraCartRestApiV2.WebhookApi* | [**deleteWebhook**](docs/WebhookApi.md#deleteWebhook) | **DELETE** /webhook/webhooks/{webhookOid} | Delete a webhook
 *UltraCartRestApiV2.WebhookApi* | [**getWebhookLog**](docs/WebhookApi.md#getWebhookLog) | **GET** /webhook/webhooks/{webhookOid}/logs/{requestId} | Retrieve an individual log
 *UltraCartRestApiV2.WebhookApi* | [**getWebhookLogSummaries**](docs/WebhookApi.md#getWebhookLogSummaries) | **GET** /webhook/webhooks/{webhookOid}/logs | Retrieve the log summaries

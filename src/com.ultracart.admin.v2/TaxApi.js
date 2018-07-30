@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/TaxCity', 'com.ultracart.admin.v2.models/TaxCountry', 'com.ultracart.admin.v2.models/TaxCounty', 'com.ultracart.admin.v2.models/TaxPostalCode', 'com.ultracart.admin.v2.models/TaxProviderAvalara', 'com.ultracart.admin.v2.models/TaxProviderSelf', 'com.ultracart.admin.v2.models/TaxProviderTaxJar', 'com.ultracart.admin.v2.models/TaxProviderUltraCart', 'com.ultracart.admin.v2.models/TaxProviderUltraCartState', 'com.ultracart.admin.v2.models/TaxProvidersResponse', 'com.ultracart.admin.v2.models/TaxState'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/TaxCity', 'com.ultracart.admin.v2.models/TaxCountry', 'com.ultracart.admin.v2.models/TaxCounty', 'com.ultracart.admin.v2.models/TaxPostalCode', 'com.ultracart.admin.v2.models/TaxProviderAvalara', 'com.ultracart.admin.v2.models/TaxProviderSelf', 'com.ultracart.admin.v2.models/TaxProviderTaxJar', 'com.ultracart.admin.v2.models/TaxProviderUltraCart', 'com.ultracart.admin.v2.models/TaxProvidersResponse', 'com.ultracart.admin.v2.models/TaxState'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/TaxCity'), require('../com.ultracart.admin.v2.models/TaxCountry'), require('../com.ultracart.admin.v2.models/TaxCounty'), require('../com.ultracart.admin.v2.models/TaxPostalCode'), require('../com.ultracart.admin.v2.models/TaxProviderAvalara'), require('../com.ultracart.admin.v2.models/TaxProviderSelf'), require('../com.ultracart.admin.v2.models/TaxProviderTaxJar'), require('../com.ultracart.admin.v2.models/TaxProviderUltraCart'), require('../com.ultracart.admin.v2.models/TaxProviderUltraCartState'), require('../com.ultracart.admin.v2.models/TaxProvidersResponse'), require('../com.ultracart.admin.v2.models/TaxState'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/TaxCity'), require('../com.ultracart.admin.v2.models/TaxCountry'), require('../com.ultracart.admin.v2.models/TaxCounty'), require('../com.ultracart.admin.v2.models/TaxPostalCode'), require('../com.ultracart.admin.v2.models/TaxProviderAvalara'), require('../com.ultracart.admin.v2.models/TaxProviderSelf'), require('../com.ultracart.admin.v2.models/TaxProviderTaxJar'), require('../com.ultracart.admin.v2.models/TaxProviderUltraCart'), require('../com.ultracart.admin.v2.models/TaxProvidersResponse'), require('../com.ultracart.admin.v2.models/TaxState'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.TaxApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.TaxCity, root.UltraCartRestApiV2.TaxCountry, root.UltraCartRestApiV2.TaxCounty, root.UltraCartRestApiV2.TaxPostalCode, root.UltraCartRestApiV2.TaxProviderAvalara, root.UltraCartRestApiV2.TaxProviderSelf, root.UltraCartRestApiV2.TaxProviderTaxJar, root.UltraCartRestApiV2.TaxProviderUltraCart, root.UltraCartRestApiV2.TaxProviderUltraCartState, root.UltraCartRestApiV2.TaxProvidersResponse, root.UltraCartRestApiV2.TaxState);
+    root.UltraCartRestApiV2.TaxApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.TaxCity, root.UltraCartRestApiV2.TaxCountry, root.UltraCartRestApiV2.TaxCounty, root.UltraCartRestApiV2.TaxPostalCode, root.UltraCartRestApiV2.TaxProviderAvalara, root.UltraCartRestApiV2.TaxProviderSelf, root.UltraCartRestApiV2.TaxProviderTaxJar, root.UltraCartRestApiV2.TaxProviderUltraCart, root.UltraCartRestApiV2.TaxProvidersResponse, root.UltraCartRestApiV2.TaxState);
   }
-}(this, function(ApiClient, ErrorResponse, TaxCity, TaxCountry, TaxCounty, TaxPostalCode, TaxProviderAvalara, TaxProviderSelf, TaxProviderTaxJar, TaxProviderUltraCart, TaxProviderUltraCartState, TaxProvidersResponse, TaxState) {
+}(this, function(ApiClient, ErrorResponse, TaxCity, TaxCountry, TaxCounty, TaxPostalCode, TaxProviderAvalara, TaxProviderSelf, TaxProviderTaxJar, TaxProviderUltraCart, TaxProvidersResponse, TaxState) {
   'use strict';
 
   /**
@@ -207,47 +207,6 @@
 
       return this.apiClient.callApi(
         '/tax/providers/ultracart', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getTaxProviderUltraCartStates operation.
-     * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderUltraCartStatesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderUltraCartState} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve the UltraCart tax provider state rates
-     * Retrieves the UltraCart tax provider state rates. 
-     * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderUltraCartStatesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderUltraCartState}
-     */
-    this.getTaxProviderUltraCartStates = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = TaxProviderUltraCartState;
-
-      return this.apiClient.callApi(
-        '/tax/providers/ultracart/states', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -755,53 +714,6 @@
 
       return this.apiClient.callApi(
         '/tax/providers/ultracart', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the updateTaxProviderUltraCartStates operation.
-     * @callback module:com.ultracart.admin.v2/TaxApi~updateTaxProviderUltraCartStatesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderUltraCartState} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Updates the UltraCart tax provider state rates
-     * Updates the UltraCart tax provider state rates. 
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderUltraCartState} states States with updated values
-     * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderUltraCartStatesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderUltraCartState}
-     */
-    this.updateTaxProviderUltraCartStates = function(states, callback) {
-      var postBody = states;
-
-      // verify the required parameter 'states' is set
-      if (states === undefined || states === null) {
-        throw new Error("Missing the required parameter 'states' when calling updateTaxProviderUltraCartStates");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = TaxProviderUltraCartState;
-
-      return this.apiClient.callApi(
-        '/tax/providers/ultracart/states', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -91,16 +91,6 @@
         done();
       });
     });
-    describe('getTaxProviderUltraCartStates', function() {
-      it('should call getTaxProviderUltraCartStates successfully', function(done) {
-        //uncomment below and update the code to test getTaxProviderUltraCartStates
-        //instance.getTaxProviderUltraCartStates(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getTaxProviders', function() {
       it('should call getTaxProviders successfully', function(done) {
         //uncomment below and update the code to test getTaxProviders
@@ -195,16 +185,6 @@
       it('should call updateTaxProviderUltraCart successfully', function(done) {
         //uncomment below and update the code to test updateTaxProviderUltraCart
         //instance.updateTaxProviderUltraCart(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateTaxProviderUltraCartStates', function() {
-      it('should call updateTaxProviderUltraCartStates successfully', function(done) {
-        //uncomment below and update the code to test updateTaxProviderUltraCartStates
-        //instance.updateTaxProviderUltraCartStates(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
