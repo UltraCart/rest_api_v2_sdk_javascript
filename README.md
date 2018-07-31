@@ -204,6 +204,7 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.OrderApi* | [**updateOrder**](docs/OrderApi.md#updateOrder) | **PUT** /order/orders/{order_id} | Update an order
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderAvalara**](docs/TaxApi.md#getTaxProviderAvalara) | **GET** /tax/providers/avalara | Retrieve the Avalara tax provider
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderSelf**](docs/TaxApi.md#getTaxProviderSelf) | **GET** /tax/providers/self | Retrieve the Self tax provider
+*UltraCartRestApiV2.TaxApi* | [**getTaxProviderSelfRegionsByCountryCode**](docs/TaxApi.md#getTaxProviderSelfRegionsByCountryCode) | **GET** /tax/providers/self/regions/{countryCode} | Retrieve the Self tax provider regions for a given country code
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderTaxJar**](docs/TaxApi.md#getTaxProviderTaxJar) | **GET** /tax/providers/taxjar | Retrieve the TaxJar tax provider
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderUltraCart**](docs/TaxApi.md#getTaxProviderUltraCart) | **GET** /tax/providers/ultracart | Retrieve the UltraCart tax provider
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviders**](docs/TaxApi.md#getTaxProviders) | **GET** /tax/providers | Retrieve tax methods
@@ -448,6 +449,7 @@ Class | Method | HTTP request | Description
  - [UltraCartRestApiV2.ItemWishlistMember](docs/ItemWishlistMember.md)
  - [UltraCartRestApiV2.ItemsRequest](docs/ItemsRequest.md)
  - [UltraCartRestApiV2.ItemsResponse](docs/ItemsResponse.md)
+ - [UltraCartRestApiV2.ModelString](docs/ModelString.md)
  - [UltraCartRestApiV2.OauthRevokeSuccessResponse](docs/OauthRevokeSuccessResponse.md)
  - [UltraCartRestApiV2.OauthTokenResponse](docs/OauthTokenResponse.md)
  - [UltraCartRestApiV2.Order](docs/Order.md)

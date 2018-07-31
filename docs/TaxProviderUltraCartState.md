@@ -6,5 +6,6 @@ Name | Type | Description | Notes
 **enabled** | **Boolean** | True if this state taxes are managed by UltraCart | [optional] 
 **state_code** | **String** | State Code (2 digits) | [optional] 
 **state_name** | **String** | Fully spelled out state name | [optional] 
+**tax_rate_formatted** | **String** | State tax rate formatted for display | [optional] 
 
 

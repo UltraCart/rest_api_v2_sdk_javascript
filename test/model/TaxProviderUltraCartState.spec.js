@@ -75,6 +75,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property taxRateFormatted (base name: "tax_rate_formatted")', function() {
+      // uncomment below and update the code to test the property taxRateFormatted
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

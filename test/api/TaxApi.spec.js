@@ -71,6 +71,16 @@
         done();
       });
     });
+    describe('getTaxProviderSelfRegionsByCountryCode', function() {
+      it('should call getTaxProviderSelfRegionsByCountryCode successfully', function(done) {
+        //uncomment below and update the code to test getTaxProviderSelfRegionsByCountryCode
+        //instance.getTaxProviderSelfRegionsByCountryCode(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTaxProviderTaxJar', function() {
       it('should call getTaxProviderTaxJar successfully', function(done) {
         //uncomment below and update the code to test getTaxProviderTaxJar

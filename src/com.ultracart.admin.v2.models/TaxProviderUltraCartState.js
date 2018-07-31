@@ -51,6 +51,7 @@
 
 
 
+
   };
 
   /**
@@ -73,6 +74,9 @@
       if (data.hasOwnProperty('state_name')) {
         obj['state_name'] = ApiClient.convertToType(data['state_name'], 'String');
       }
+      if (data.hasOwnProperty('tax_rate_formatted')) {
+        obj['tax_rate_formatted'] = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
+      }
     }
     return obj;
   }
@@ -92,6 +96,11 @@
    * @member {String} state_name
    */
   exports.prototype['state_name'] = undefined;
+  /**
+   * State tax rate formatted for display
+   * @member {String} tax_rate_formatted
+   */
+  exports.prototype['tax_rate_formatted'] = undefined;
 
 
 
