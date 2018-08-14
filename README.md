@@ -518,6 +518,7 @@ Class | Method | HTTP request | Description
  - [UltraCartRestApiV2.TaxProviderUltraCartState](docs/TaxProviderUltraCartState.md)
  - [UltraCartRestApiV2.TaxProvidersResponse](docs/TaxProvidersResponse.md)
  - [UltraCartRestApiV2.TaxState](docs/TaxState.md)
+ - [UltraCartRestApiV2.TaxStateCode](docs/TaxStateCode.md)
  - [UltraCartRestApiV2.TempMultimedia](docs/TempMultimedia.md)
  - [UltraCartRestApiV2.TempMultimediaResponse](docs/TempMultimediaResponse.md)
  - [UltraCartRestApiV2.Webhook](docs/Webhook.md)
