@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new UltraCartRestApiV2.ModelString();
+    instance = new UltraCartRestApiV2.TaxProviderTestResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,11 +50,23 @@
       object[property] = value;
   }
 
-  describe('ModelString', function() {
-    it('should create an instance of ModelString', function() {
-      // uncomment below and update the code to test ModelString
-      //var instane = new UltraCartRestApiV2.ModelString();
-      //expect(instance).to.be.a(UltraCartRestApiV2.ModelString);
+  describe('TaxProviderTestResult', function() {
+    it('should create an instance of TaxProviderTestResult', function() {
+      // uncomment below and update the code to test TaxProviderTestResult
+      //var instane = new UltraCartRestApiV2.TaxProviderTestResult();
+      //expect(instance).to.be.a(UltraCartRestApiV2.TaxProviderTestResult);
+    });
+
+    it('should have the property details (base name: "details")', function() {
+      // uncomment below and update the code to test the property details
+      //var instane = new UltraCartRestApiV2.TaxProviderTestResult();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property success (base name: "success")', function() {
+      // uncomment below and update the code to test the property success
+      //var instane = new UltraCartRestApiV2.TaxProviderTestResult();
+      //expect(instance).to.be();
     });
 
   });

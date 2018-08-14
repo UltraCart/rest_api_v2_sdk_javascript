@@ -26,7 +26,7 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ModelString = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.TaxProviderTestResult = factory(root.UltraCartRestApiV2.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,36 +35,53 @@
 
 
   /**
-   * The ModelString model module.
-   * @module com.ultracart.admin.v2.models/ModelString
+   * The TaxProviderTestResult model module.
+   * @module com.ultracart.admin.v2.models/TaxProviderTestResult
    * @version 2.3.0
    */
 
   /**
-   * Constructs a new <code>ModelString</code>.
-   * @alias module:com.ultracart.admin.v2.models/ModelString
+   * Constructs a new <code>TaxProviderTestResult</code>.
+   * @alias module:com.ultracart.admin.v2.models/TaxProviderTestResult
    * @class
    */
   var exports = function() {
     var _this = this;
 
+
+
   };
 
   /**
-   * Constructs a <code>ModelString</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>TaxProviderTestResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/ModelString} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/ModelString} The populated <code>ModelString</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/TaxProviderTestResult} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/TaxProviderTestResult} The populated <code>TaxProviderTestResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('details')) {
+        obj['details'] = ApiClient.convertToType(data['details'], 'String');
+      }
+      if (data.hasOwnProperty('success')) {
+        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
+      }
     }
     return obj;
   }
 
+  /**
+   * @member {String} details
+   */
+  exports.prototype['details'] = undefined;
+  /**
+   * True if the connection was successful
+   * @member {Boolean} success
+   */
+  exports.prototype['success'] = undefined;
 
 
 

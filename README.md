@@ -203,11 +203,15 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.OrderApi* | [**resendShipmentConfirmation**](docs/OrderApi.md#resendShipmentConfirmation) | **POST** /order/orders/{order_id}/resend_shipment_confirmation | Resend shipment confirmation
 *UltraCartRestApiV2.OrderApi* | [**updateOrder**](docs/OrderApi.md#updateOrder) | **PUT** /order/orders/{order_id} | Update an order
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderAvalara**](docs/TaxApi.md#getTaxProviderAvalara) | **GET** /tax/providers/avalara | Retrieve the Avalara tax provider
+*UltraCartRestApiV2.TaxApi* | [**getTaxProviderAvalaraTest**](docs/TaxApi.md#getTaxProviderAvalaraTest) | **GET** /tax/providers/avalara/test | Attempts to connect to Avalara and returns back the response
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderSelf**](docs/TaxApi.md#getTaxProviderSelf) | **GET** /tax/providers/self | Retrieve the Self tax provider
+*UltraCartRestApiV2.TaxApi* | [**getTaxProviderSelfCountries**](docs/TaxApi.md#getTaxProviderSelfCountries) | **GET** /tax/providers/self/countries | Retrieve the Self tax provider countries
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderSelfRegionsByCountryCode**](docs/TaxApi.md#getTaxProviderSelfRegionsByCountryCode) | **GET** /tax/providers/self/regions/{countryCode} | Retrieve the Self tax provider regions for a given country code
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderTaxJar**](docs/TaxApi.md#getTaxProviderTaxJar) | **GET** /tax/providers/taxjar | Retrieve the TaxJar tax provider
+*UltraCartRestApiV2.TaxApi* | [**getTaxProviderTaxJarTest**](docs/TaxApi.md#getTaxProviderTaxJarTest) | **GET** /tax/providers/taxjar/test | Attempts to connect to TaxJar and returns back the response
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviderUltraCart**](docs/TaxApi.md#getTaxProviderUltraCart) | **GET** /tax/providers/ultracart | Retrieve the UltraCart tax provider
 *UltraCartRestApiV2.TaxApi* | [**getTaxProviders**](docs/TaxApi.md#getTaxProviders) | **GET** /tax/providers | Retrieve tax methods
+*UltraCartRestApiV2.TaxApi* | [**setActiveTaxProvider**](docs/TaxApi.md#setActiveTaxProvider) | **POST** /tax/providers/setActive/{providerName} | Toggle a tax provider to active
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderAvalara**](docs/TaxApi.md#updateTaxProviderAvalara) | **POST** /tax/providers/avalara | Update the Avalara tax provider
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderSelf**](docs/TaxApi.md#updateTaxProviderSelf) | **POST** /tax/providers/self | Update the Self tax provider
 *UltraCartRestApiV2.TaxApi* | [**updateTaxProviderSelfCity**](docs/TaxApi.md#updateTaxProviderSelfCity) | **POST** /tax/providers/self/city/{city} | Updates a Self tax provider city
@@ -449,7 +453,6 @@ Class | Method | HTTP request | Description
  - [UltraCartRestApiV2.ItemWishlistMember](docs/ItemWishlistMember.md)
  - [UltraCartRestApiV2.ItemsRequest](docs/ItemsRequest.md)
  - [UltraCartRestApiV2.ItemsResponse](docs/ItemsResponse.md)
- - [UltraCartRestApiV2.ModelString](docs/ModelString.md)
  - [UltraCartRestApiV2.OauthRevokeSuccessResponse](docs/OauthRevokeSuccessResponse.md)
  - [UltraCartRestApiV2.OauthTokenResponse](docs/OauthTokenResponse.md)
  - [UltraCartRestApiV2.Order](docs/Order.md)
@@ -506,7 +509,9 @@ Class | Method | HTTP request | Description
  - [UltraCartRestApiV2.TaxPostalCode](docs/TaxPostalCode.md)
  - [UltraCartRestApiV2.TaxProviderAvalara](docs/TaxProviderAvalara.md)
  - [UltraCartRestApiV2.TaxProviderSelf](docs/TaxProviderSelf.md)
+ - [UltraCartRestApiV2.TaxProviderSelfRegionsResponse](docs/TaxProviderSelfRegionsResponse.md)
  - [UltraCartRestApiV2.TaxProviderTaxJar](docs/TaxProviderTaxJar.md)
+ - [UltraCartRestApiV2.TaxProviderTestResult](docs/TaxProviderTestResult.md)
  - [UltraCartRestApiV2.TaxProviderUltraCart](docs/TaxProviderUltraCart.md)
  - [UltraCartRestApiV2.TaxProviderUltraCartState](docs/TaxProviderUltraCartState.md)
  - [UltraCartRestApiV2.TaxProvidersResponse](docs/TaxProvidersResponse.md)

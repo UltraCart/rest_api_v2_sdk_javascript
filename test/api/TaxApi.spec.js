@@ -61,10 +61,30 @@
         done();
       });
     });
+    describe('getTaxProviderAvalaraTest', function() {
+      it('should call getTaxProviderAvalaraTest successfully', function(done) {
+        //uncomment below and update the code to test getTaxProviderAvalaraTest
+        //instance.getTaxProviderAvalaraTest(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTaxProviderSelf', function() {
       it('should call getTaxProviderSelf successfully', function(done) {
         //uncomment below and update the code to test getTaxProviderSelf
         //instance.getTaxProviderSelf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getTaxProviderSelfCountries', function() {
+      it('should call getTaxProviderSelfCountries successfully', function(done) {
+        //uncomment below and update the code to test getTaxProviderSelfCountries
+        //instance.getTaxProviderSelfCountries(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -91,6 +111,16 @@
         done();
       });
     });
+    describe('getTaxProviderTaxJarTest', function() {
+      it('should call getTaxProviderTaxJarTest successfully', function(done) {
+        //uncomment below and update the code to test getTaxProviderTaxJarTest
+        //instance.getTaxProviderTaxJarTest(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTaxProviderUltraCart', function() {
       it('should call getTaxProviderUltraCart successfully', function(done) {
         //uncomment below and update the code to test getTaxProviderUltraCart
@@ -105,6 +135,16 @@
       it('should call getTaxProviders successfully', function(done) {
         //uncomment below and update the code to test getTaxProviders
         //instance.getTaxProviders(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('setActiveTaxProvider', function() {
+      it('should call setActiveTaxProvider successfully', function(done) {
+        //uncomment below and update the code to test setActiveTaxProvider
+        //instance.setActiveTaxProvider(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
