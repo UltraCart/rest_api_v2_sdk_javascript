@@ -180,7 +180,7 @@ This endpoint does not need any parameter.
 
 <a name="getTaxProviderSelfCountries"></a>
 # **getTaxProviderSelfCountries**
-> TaxProviderSelfRegionsResponse getTaxProviderSelfCountries()
+> TaxProviderSelfCountriesResponse getTaxProviderSelfCountries()
 
 Retrieve the Self tax provider countries
 
@@ -218,7 +218,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TaxProviderSelfRegionsResponse**](TaxProviderSelfRegionsResponse.md)
+[**TaxProviderSelfCountriesResponse**](TaxProviderSelfCountriesResponse.md)
 
 ### Authorization
 
