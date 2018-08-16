@@ -51,6 +51,56 @@
   }
 
   describe('TaxApi', function() {
+    describe('deleteTaxProviderSelfCity', function() {
+      it('should call deleteTaxProviderSelfCity successfully', function(done) {
+        //uncomment below and update the code to test deleteTaxProviderSelfCity
+        //instance.deleteTaxProviderSelfCity(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteTaxProviderSelfCountry', function() {
+      it('should call deleteTaxProviderSelfCountry successfully', function(done) {
+        //uncomment below and update the code to test deleteTaxProviderSelfCountry
+        //instance.deleteTaxProviderSelfCountry(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteTaxProviderSelfCounty', function() {
+      it('should call deleteTaxProviderSelfCounty successfully', function(done) {
+        //uncomment below and update the code to test deleteTaxProviderSelfCounty
+        //instance.deleteTaxProviderSelfCounty(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteTaxProviderSelfPostalCode', function() {
+      it('should call deleteTaxProviderSelfPostalCode successfully', function(done) {
+        //uncomment below and update the code to test deleteTaxProviderSelfPostalCode
+        //instance.deleteTaxProviderSelfPostalCode(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteTaxProviderSelfState', function() {
+      it('should call deleteTaxProviderSelfState successfully', function(done) {
+        //uncomment below and update the code to test deleteTaxProviderSelfState
+        //instance.deleteTaxProviderSelfState(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTaxProviderAvalara', function() {
       it('should call getTaxProviderAvalara successfully', function(done) {
         //uncomment below and update the code to test getTaxProviderAvalara

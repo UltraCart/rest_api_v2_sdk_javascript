@@ -49,6 +49,271 @@
 
 
     /**
+     * Callback function to receive the result of the deleteTaxProviderSelfCity operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCityCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deletes a Self tax provider city
+     * Deletes a Self tax provider city. 
+     * @param {String} city The city being deleted.
+     * @param {module:com.ultracart.admin.v2.models/TaxCity} taxCity tax city to be deleted
+     * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCityCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteTaxProviderSelfCity = function(city, taxCity, callback) {
+      var postBody = taxCity;
+
+      // verify the required parameter 'city' is set
+      if (city === undefined || city === null) {
+        throw new Error("Missing the required parameter 'city' when calling deleteTaxProviderSelfCity");
+      }
+
+      // verify the required parameter 'taxCity' is set
+      if (taxCity === undefined || taxCity === null) {
+        throw new Error("Missing the required parameter 'taxCity' when calling deleteTaxProviderSelfCity");
+      }
+
+
+      var pathParams = {
+        'city': city
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/tax/providers/self/city/{city}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteTaxProviderSelfCountry operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCountryCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deletes a Self tax provider country
+     * Deletes a Self tax provider country. 
+     * @param {String} countryCode The country code being deleted.
+     * @param {module:com.ultracart.admin.v2.models/TaxCountry} taxCountry tax country to be deleted
+     * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCountryCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteTaxProviderSelfCountry = function(countryCode, taxCountry, callback) {
+      var postBody = taxCountry;
+
+      // verify the required parameter 'countryCode' is set
+      if (countryCode === undefined || countryCode === null) {
+        throw new Error("Missing the required parameter 'countryCode' when calling deleteTaxProviderSelfCountry");
+      }
+
+      // verify the required parameter 'taxCountry' is set
+      if (taxCountry === undefined || taxCountry === null) {
+        throw new Error("Missing the required parameter 'taxCountry' when calling deleteTaxProviderSelfCountry");
+      }
+
+
+      var pathParams = {
+        'countryCode': countryCode
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/tax/providers/self/country/{countryCode}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteTaxProviderSelfCounty operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCountyCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deletes a Self tax provider county
+     * Deletes a Self tax provider county. 
+     * @param {String} county The county being deleted.
+     * @param {module:com.ultracart.admin.v2.models/TaxCounty} taxCounty tax county to be deleted
+     * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCountyCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteTaxProviderSelfCounty = function(county, taxCounty, callback) {
+      var postBody = taxCounty;
+
+      // verify the required parameter 'county' is set
+      if (county === undefined || county === null) {
+        throw new Error("Missing the required parameter 'county' when calling deleteTaxProviderSelfCounty");
+      }
+
+      // verify the required parameter 'taxCounty' is set
+      if (taxCounty === undefined || taxCounty === null) {
+        throw new Error("Missing the required parameter 'taxCounty' when calling deleteTaxProviderSelfCounty");
+      }
+
+
+      var pathParams = {
+        'county': county
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/tax/providers/self/county/{county}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteTaxProviderSelfPostalCode operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfPostalCodeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deletes a Self tax provider postalCode
+     * Deletes a Self tax provider postalCode. 
+     * @param {String} postalCode The postal code being deleted.
+     * @param {module:com.ultracart.admin.v2.models/TaxPostalCode} taxPostalCode tax postal code to be deleted
+     * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfPostalCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteTaxProviderSelfPostalCode = function(postalCode, taxPostalCode, callback) {
+      var postBody = taxPostalCode;
+
+      // verify the required parameter 'postalCode' is set
+      if (postalCode === undefined || postalCode === null) {
+        throw new Error("Missing the required parameter 'postalCode' when calling deleteTaxProviderSelfPostalCode");
+      }
+
+      // verify the required parameter 'taxPostalCode' is set
+      if (taxPostalCode === undefined || taxPostalCode === null) {
+        throw new Error("Missing the required parameter 'taxPostalCode' when calling deleteTaxProviderSelfPostalCode");
+      }
+
+
+      var pathParams = {
+        'postal_code': postalCode
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/tax/providers/self/postalCode/{postal_code}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteTaxProviderSelfState operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfStateCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deletes a Self tax provider state
+     * Deletes a Self tax provider state. 
+     * @param {String} stateCode The state code being deleted.
+     * @param {module:com.ultracart.admin.v2.models/TaxState} taxState tax state to be deleted
+     * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfStateCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteTaxProviderSelfState = function(stateCode, taxState, callback) {
+      var postBody = taxState;
+
+      // verify the required parameter 'stateCode' is set
+      if (stateCode === undefined || stateCode === null) {
+        throw new Error("Missing the required parameter 'stateCode' when calling deleteTaxProviderSelfState");
+      }
+
+      // verify the required parameter 'taxState' is set
+      if (taxState === undefined || taxState === null) {
+        throw new Error("Missing the required parameter 'taxState' when calling deleteTaxProviderSelfState");
+      }
+
+
+      var pathParams = {
+        'stateCode': stateCode
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/tax/providers/self/state/{stateCode}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getTaxProviderAvalara operation.
      * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderAvalaraCallback
      * @param {String} error Error message, if any.
