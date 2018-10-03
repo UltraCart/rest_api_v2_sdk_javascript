@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Cart', 'com.ultracart.admin.v2.models/CartFinalizeOrderRequest', 'com.ultracart.admin.v2.models/CartFinalizeOrderResponse', 'com.ultracart.admin.v2.models/CartProfileLoginRequest', 'com.ultracart.admin.v2.models/CartProfileLoginResponse', 'com.ultracart.admin.v2.models/CartProfileRegisterRequest', 'com.ultracart.admin.v2.models/CartProfileRegisterResponse', 'com.ultracart.admin.v2.models/CartResponse', 'com.ultracart.admin.v2.models/CartValidationRequest', 'com.ultracart.admin.v2.models/CartValidationResponse', 'com.ultracart.admin.v2.models/CheckoutHandoffRequest', 'com.ultracart.admin.v2.models/CheckoutHandoffResponse', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse', 'com.ultracart.admin.v2.models/CityStateZip', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/ItemsResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Cart', 'com.ultracart.admin.v2.models/CartAffirmCheckoutResponse', 'com.ultracart.admin.v2.models/CartFinalizeOrderRequest', 'com.ultracart.admin.v2.models/CartFinalizeOrderResponse', 'com.ultracart.admin.v2.models/CartProfileLoginRequest', 'com.ultracart.admin.v2.models/CartProfileLoginResponse', 'com.ultracart.admin.v2.models/CartProfileRegisterRequest', 'com.ultracart.admin.v2.models/CartProfileRegisterResponse', 'com.ultracart.admin.v2.models/CartResponse', 'com.ultracart.admin.v2.models/CartValidationRequest', 'com.ultracart.admin.v2.models/CartValidationResponse', 'com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse', 'com.ultracart.admin.v2.models/CheckoutHandoffRequest', 'com.ultracart.admin.v2.models/CheckoutHandoffResponse', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse', 'com.ultracart.admin.v2.models/CheckoutStateProvinceResponse', 'com.ultracart.admin.v2.models/CityStateZip', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/ItemsResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Cart'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderRequest'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderResponse'), require('../com.ultracart.admin.v2.models/CartProfileLoginRequest'), require('../com.ultracart.admin.v2.models/CartProfileLoginResponse'), require('../com.ultracart.admin.v2.models/CartProfileRegisterRequest'), require('../com.ultracart.admin.v2.models/CartProfileRegisterResponse'), require('../com.ultracart.admin.v2.models/CartResponse'), require('../com.ultracart.admin.v2.models/CartValidationRequest'), require('../com.ultracart.admin.v2.models/CartValidationResponse'), require('../com.ultracart.admin.v2.models/CheckoutHandoffRequest'), require('../com.ultracart.admin.v2.models/CheckoutHandoffResponse'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse'), require('../com.ultracart.admin.v2.models/CityStateZip'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ItemsResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Cart'), require('../com.ultracart.admin.v2.models/CartAffirmCheckoutResponse'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderRequest'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderResponse'), require('../com.ultracart.admin.v2.models/CartProfileLoginRequest'), require('../com.ultracart.admin.v2.models/CartProfileLoginResponse'), require('../com.ultracart.admin.v2.models/CartProfileRegisterRequest'), require('../com.ultracart.admin.v2.models/CartProfileRegisterResponse'), require('../com.ultracart.admin.v2.models/CartResponse'), require('../com.ultracart.admin.v2.models/CartValidationRequest'), require('../com.ultracart.admin.v2.models/CartValidationResponse'), require('../com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse'), require('../com.ultracart.admin.v2.models/CheckoutHandoffRequest'), require('../com.ultracart.admin.v2.models/CheckoutHandoffResponse'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse'), require('../com.ultracart.admin.v2.models/CheckoutStateProvinceResponse'), require('../com.ultracart.admin.v2.models/CityStateZip'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ItemsResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CheckoutApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Cart, root.UltraCartRestApiV2.CartFinalizeOrderRequest, root.UltraCartRestApiV2.CartFinalizeOrderResponse, root.UltraCartRestApiV2.CartProfileLoginRequest, root.UltraCartRestApiV2.CartProfileLoginResponse, root.UltraCartRestApiV2.CartProfileRegisterRequest, root.UltraCartRestApiV2.CartProfileRegisterResponse, root.UltraCartRestApiV2.CartResponse, root.UltraCartRestApiV2.CartValidationRequest, root.UltraCartRestApiV2.CartValidationResponse, root.UltraCartRestApiV2.CheckoutHandoffRequest, root.UltraCartRestApiV2.CheckoutHandoffResponse, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyResponse, root.UltraCartRestApiV2.CityStateZip, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ItemsResponse);
+    root.UltraCartRestApiV2.CheckoutApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Cart, root.UltraCartRestApiV2.CartAffirmCheckoutResponse, root.UltraCartRestApiV2.CartFinalizeOrderRequest, root.UltraCartRestApiV2.CartFinalizeOrderResponse, root.UltraCartRestApiV2.CartProfileLoginRequest, root.UltraCartRestApiV2.CartProfileLoginResponse, root.UltraCartRestApiV2.CartProfileRegisterRequest, root.UltraCartRestApiV2.CartProfileRegisterResponse, root.UltraCartRestApiV2.CartResponse, root.UltraCartRestApiV2.CartValidationRequest, root.UltraCartRestApiV2.CartValidationResponse, root.UltraCartRestApiV2.CheckoutAllowedCountriesResponse, root.UltraCartRestApiV2.CheckoutHandoffRequest, root.UltraCartRestApiV2.CheckoutHandoffResponse, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyResponse, root.UltraCartRestApiV2.CheckoutStateProvinceResponse, root.UltraCartRestApiV2.CityStateZip, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ItemsResponse);
   }
-}(this, function(ApiClient, Cart, CartFinalizeOrderRequest, CartFinalizeOrderResponse, CartProfileLoginRequest, CartProfileLoginResponse, CartProfileRegisterRequest, CartProfileRegisterResponse, CartResponse, CartValidationRequest, CartValidationResponse, CheckoutHandoffRequest, CheckoutHandoffResponse, CheckoutSetupBrowserKeyRequest, CheckoutSetupBrowserKeyResponse, CityStateZip, ErrorResponse, ItemsResponse) {
+}(this, function(ApiClient, Cart, CartAffirmCheckoutResponse, CartFinalizeOrderRequest, CartFinalizeOrderResponse, CartProfileLoginRequest, CartProfileLoginResponse, CartProfileRegisterRequest, CartProfileRegisterResponse, CartResponse, CartValidationRequest, CartValidationResponse, CheckoutAllowedCountriesResponse, CheckoutHandoffRequest, CheckoutHandoffResponse, CheckoutSetupBrowserKeyRequest, CheckoutSetupBrowserKeyResponse, CheckoutStateProvinceResponse, CityStateZip, ErrorResponse, ItemsResponse) {
   'use strict';
 
   /**
    * Checkout service.
    * @module com.ultracart.admin.v2/CheckoutApi
-   * @version 2.3.0
+   * @version 2.3.1
    */
 
   /**
@@ -137,6 +137,95 @@
 
       return this.apiClient.callApi(
         '/checkout/cart/finalizeOrder', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAffirmCheckout operation.
+     * @callback module:com.ultracart.admin.v2/CheckoutApi~getAffirmCheckoutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CartAffirmCheckoutResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get affirm checkout (by cart id)
+     * Get a Affirm checkout object for the specified cart_id parameter. 
+     * @param {String} cartId Cart ID to retrieve
+     * @param {module:com.ultracart.admin.v2/CheckoutApi~getAffirmCheckoutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CartAffirmCheckoutResponse}
+     */
+    this.getAffirmCheckout = function(cartId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'cartId' is set
+      if (cartId === undefined || cartId === null) {
+        throw new Error("Missing the required parameter 'cartId' when calling getAffirmCheckout");
+      }
+
+
+      var pathParams = {
+        'cart_id': cartId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CartAffirmCheckoutResponse;
+
+      return this.apiClient.callApi(
+        '/checkout/cart/{cart_id}/affirmCheckout', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAllowCountries operation.
+     * @callback module:com.ultracart.admin.v2/CheckoutApi~getAllowCountriesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Allowed countries
+     * Lookup the allowed countries for this merchant id 
+     * @param {module:com.ultracart.admin.v2/CheckoutApi~getAllowCountriesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse}
+     */
+    this.getAllowCountries = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CheckoutAllowedCountriesResponse;
+
+      return this.apiClient.callApi(
+        '/checkout/allowedCountries', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -286,6 +375,54 @@
 
       return this.apiClient.callApi(
         '/checkout/return/{return_code}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getStateProvincesForCountry operation.
+     * @callback module:com.ultracart.admin.v2/CheckoutApi~getStateProvincesForCountryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CheckoutStateProvinceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get state/province list for a country code
+     * Lookup a state/province list for a given country code 
+     * @param {String} countryCode Two letter ISO country code
+     * @param {module:com.ultracart.admin.v2/CheckoutApi~getStateProvincesForCountryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CheckoutStateProvinceResponse}
+     */
+    this.getStateProvincesForCountry = function(countryCode, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'countryCode' is set
+      if (countryCode === undefined || countryCode === null) {
+        throw new Error("Missing the required parameter 'countryCode' when calling getStateProvincesForCountry");
+      }
+
+
+      var pathParams = {
+        'country_code': countryCode
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CheckoutStateProvinceResponse;
+
+      return this.apiClient.callApi(
+        '/checkout/stateProvincesForCountry/{country_code}', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

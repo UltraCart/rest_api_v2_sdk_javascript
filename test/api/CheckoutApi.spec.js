@@ -71,6 +71,26 @@
         done();
       });
     });
+    describe('getAffirmCheckout', function() {
+      it('should call getAffirmCheckout successfully', function(done) {
+        //uncomment below and update the code to test getAffirmCheckout
+        //instance.getAffirmCheckout(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getAllowCountries', function() {
+      it('should call getAllowCountries successfully', function(done) {
+        //uncomment below and update the code to test getAllowCountries
+        //instance.getAllowCountries(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getCart', function() {
       it('should call getCart successfully', function(done) {
         //uncomment below and update the code to test getCart
@@ -95,6 +115,16 @@
       it('should call getCartByReturnCode successfully', function(done) {
         //uncomment below and update the code to test getCartByReturnCode
         //instance.getCartByReturnCode(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getStateProvincesForCountry', function() {
+      it('should call getStateProvincesForCountry successfully', function(done) {
+        //uncomment below and update the code to test getStateProvincesForCountry
+        //instance.getStateProvincesForCountry(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

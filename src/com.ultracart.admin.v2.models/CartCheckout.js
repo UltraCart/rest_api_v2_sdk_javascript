@@ -37,7 +37,7 @@
   /**
    * The CartCheckout model module.
    * @module com.ultracart.admin.v2.models/CartCheckout
-   * @version 2.3.0
+   * @version 2.3.1
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -97,6 +98,9 @@
       }
       if (data.hasOwnProperty('ip_address')) {
         obj['ip_address'] = ApiClient.convertToType(data['ip_address'], 'String');
+      }
+      if (data.hasOwnProperty('return_code')) {
+        obj['return_code'] = ApiClient.convertToType(data['return_code'], 'String');
       }
       if (data.hasOwnProperty('screen_branding_theme_code')) {
         obj['screen_branding_theme_code'] = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
@@ -150,6 +154,11 @@
    * @member {String} ip_address
    */
   exports.prototype['ip_address'] = undefined;
+  /**
+   * Return code assigned for send return email operation
+   * @member {String} return_code
+   */
+  exports.prototype['return_code'] = undefined;
   /**
    * Screen branding theme code
    * @member {String} screen_branding_theme_code

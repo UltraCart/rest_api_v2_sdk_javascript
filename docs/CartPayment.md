@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**affirm** | [**CartPaymentAffirm**](CartPaymentAffirm.md) |  | [optional] 
 **amazon** | [**CartPaymentAmazon**](CartPaymentAmazon.md) |  | [optional] 
 **check** | [**CartPaymentCheck**](CartPaymentCheck.md) |  | [optional] 
 **credit_card** | [**CartPaymentCreditCard**](CartPaymentCreditCard.md) |  | [optional] 

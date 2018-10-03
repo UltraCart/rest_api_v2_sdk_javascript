@@ -37,7 +37,7 @@
   /**
    * The CartSettingsPaymentCreditCard model module.
    * @module com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard
-   * @version 2.3.0
+   * @version 2.3.1
    */
 
   /**

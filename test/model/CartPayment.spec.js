@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.CartPayment);
     });
 
+    it('should have the property affirm (base name: "affirm")', function() {
+      // uncomment below and update the code to test the property affirm
+      //var instane = new UltraCartRestApiV2.CartPayment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property amazon (base name: "amazon")', function() {
       // uncomment below and update the code to test the property amazon
       //var instane = new UltraCartRestApiV2.CartPayment();

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CartPaymentAmazon', 'com.ultracart.admin.v2.models/CartPaymentCheck', 'com.ultracart.admin.v2.models/CartPaymentCreditCard', 'com.ultracart.admin.v2.models/CartPaymentPurchaseOrder'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CartPaymentAffirm', 'com.ultracart.admin.v2.models/CartPaymentAmazon', 'com.ultracart.admin.v2.models/CartPaymentCheck', 'com.ultracart.admin.v2.models/CartPaymentCreditCard', 'com.ultracart.admin.v2.models/CartPaymentPurchaseOrder'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CartPaymentAmazon'), require('./CartPaymentCheck'), require('./CartPaymentCreditCard'), require('./CartPaymentPurchaseOrder'));
+    module.exports = factory(require('../ApiClient'), require('./CartPaymentAffirm'), require('./CartPaymentAmazon'), require('./CartPaymentCheck'), require('./CartPaymentCreditCard'), require('./CartPaymentPurchaseOrder'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CartPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartPaymentAmazon, root.UltraCartRestApiV2.CartPaymentCheck, root.UltraCartRestApiV2.CartPaymentCreditCard, root.UltraCartRestApiV2.CartPaymentPurchaseOrder);
+    root.UltraCartRestApiV2.CartPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartPaymentAffirm, root.UltraCartRestApiV2.CartPaymentAmazon, root.UltraCartRestApiV2.CartPaymentCheck, root.UltraCartRestApiV2.CartPaymentCreditCard, root.UltraCartRestApiV2.CartPaymentPurchaseOrder);
   }
-}(this, function(ApiClient, CartPaymentAmazon, CartPaymentCheck, CartPaymentCreditCard, CartPaymentPurchaseOrder) {
+}(this, function(ApiClient, CartPaymentAffirm, CartPaymentAmazon, CartPaymentCheck, CartPaymentCreditCard, CartPaymentPurchaseOrder) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The CartPayment model module.
    * @module com.ultracart.admin.v2.models/CartPayment
-   * @version 2.3.0
+   * @version 2.3.1
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -67,6 +68,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('affirm')) {
+        obj['affirm'] = CartPaymentAffirm.constructFromObject(data['affirm']);
+      }
       if (data.hasOwnProperty('amazon')) {
         obj['amazon'] = CartPaymentAmazon.constructFromObject(data['amazon']);
       }
@@ -89,6 +93,10 @@
     return obj;
   }
 
+  /**
+   * @member {module:com.ultracart.admin.v2.models/CartPaymentAffirm} affirm
+   */
+  exports.prototype['affirm'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/CartPaymentAmazon} amazon
    */

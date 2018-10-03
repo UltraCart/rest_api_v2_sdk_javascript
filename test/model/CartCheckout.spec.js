@@ -111,6 +111,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property returnCode (base name: "return_code")', function() {
+      // uncomment below and update the code to test the property returnCode
+      //var instane = new UltraCartRestApiV2.CartCheckout();
+      //expect(instance).to.be();
+    });
+
     it('should have the property screenBrandingThemeCode (base name: "screen_branding_theme_code")', function() {
       // uncomment below and update the code to test the property screenBrandingThemeCode
       //var instane = new UltraCartRestApiV2.CartCheckout();
