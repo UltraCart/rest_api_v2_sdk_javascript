@@ -231,6 +231,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property parentCategoryPath (base name: "parent_category_path")', function() {
+      // uncomment below and update the code to test the property parentCategoryPath
+      //var instane = new UltraCartRestApiV2.Item();
+      //expect(instance).to.be();
+    });
+
     it('should have the property paymentProcessing (base name: "payment_processing")', function() {
       // uncomment below and update the code to test the property paymentProcessing
       //var instane = new UltraCartRestApiV2.Item();

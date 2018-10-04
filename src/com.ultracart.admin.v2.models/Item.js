@@ -37,7 +37,7 @@
   /**
    * The Item model module.
    * @module com.ultracart.admin.v2.models/Item
-   * @version 2.3.1
+   * @version 2.3.2
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -192,6 +193,9 @@
       }
       if (data.hasOwnProperty('parent_category_id')) {
         obj['parent_category_id'] = ApiClient.convertToType(data['parent_category_id'], 'Number');
+      }
+      if (data.hasOwnProperty('parent_category_path')) {
+        obj['parent_category_path'] = ApiClient.convertToType(data['parent_category_path'], 'String');
       }
       if (data.hasOwnProperty('payment_processing')) {
         obj['payment_processing'] = ItemPaymentProcessing.constructFromObject(data['payment_processing']);
@@ -373,6 +377,11 @@
    * @member {Number} parent_category_id
    */
   exports.prototype['parent_category_id'] = undefined;
+  /**
+   * Parent category path.  / indicates the root folder.
+   * @member {String} parent_category_path
+   */
+  exports.prototype['parent_category_path'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemPaymentProcessing} payment_processing
    */

@@ -81,10 +81,10 @@
         done();
       });
     });
-    describe('getAllowCountries', function() {
-      it('should call getAllowCountries successfully', function(done) {
-        //uncomment below and update the code to test getAllowCountries
-        //instance.getAllowCountries(function(error) {
+    describe('getAllowedCountries', function() {
+      it('should call getAllowedCountries successfully', function(done) {
+        //uncomment below and update the code to test getAllowedCountries
+        //instance.getAllowedCountries(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

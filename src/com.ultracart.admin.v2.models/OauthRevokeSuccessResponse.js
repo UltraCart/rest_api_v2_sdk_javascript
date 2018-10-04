@@ -37,7 +37,7 @@
   /**
    * The OauthRevokeSuccessResponse model module.
    * @module com.ultracart.admin.v2.models/OauthRevokeSuccessResponse
-   * @version 2.3.1
+   * @version 2.3.2
    */
 
   /**

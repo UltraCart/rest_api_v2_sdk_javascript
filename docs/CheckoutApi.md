@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**cityState**](CheckoutApi.md#cityState) | **POST** /checkout/city_state | City/State for Zip
 [**finalizeOrder**](CheckoutApi.md#finalizeOrder) | **POST** /checkout/cart/finalizeOrder | Finalize Order
 [**getAffirmCheckout**](CheckoutApi.md#getAffirmCheckout) | **GET** /checkout/cart/{cart_id}/affirmCheckout | Get affirm checkout (by cart id)
-[**getAllowCountries**](CheckoutApi.md#getAllowCountries) | **POST** /checkout/allowedCountries | Allowed countries
+[**getAllowedCountries**](CheckoutApi.md#getAllowedCountries) | **POST** /checkout/allowedCountries | Allowed countries
 [**getCart**](CheckoutApi.md#getCart) | **GET** /checkout/cart | Get cart
 [**getCartByCartId**](CheckoutApi.md#getCartByCartId) | **GET** /checkout/cart/{cart_id} | Get cart (by cart id)
 [**getCartByReturnCode**](CheckoutApi.md#getCartByReturnCode) | **GET** /checkout/return/{return_code} | Get cart (by return code)
@@ -206,9 +206,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getAllowCountries"></a>
-# **getAllowCountries**
-> CheckoutAllowedCountriesResponse getAllowCountries()
+<a name="getAllowedCountries"></a>
+# **getAllowedCountries**
+> CheckoutAllowedCountriesResponse getAllowedCountries()
 
 Allowed countries
 
@@ -244,7 +244,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAllowCountries(callback);
+apiInstance.getAllowedCountries(callback);
 ```
 
 ### Parameters

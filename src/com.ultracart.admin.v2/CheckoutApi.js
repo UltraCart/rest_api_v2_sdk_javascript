@@ -34,7 +34,7 @@
   /**
    * Checkout service.
    * @module com.ultracart.admin.v2/CheckoutApi
-   * @version 2.3.1
+   * @version 2.3.2
    */
 
   /**
@@ -191,8 +191,8 @@
     }
 
     /**
-     * Callback function to receive the result of the getAllowCountries operation.
-     * @callback module:com.ultracart.admin.v2/CheckoutApi~getAllowCountriesCallback
+     * Callback function to receive the result of the getAllowedCountries operation.
+     * @callback module:com.ultracart.admin.v2/CheckoutApi~getAllowedCountriesCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -201,10 +201,10 @@
     /**
      * Allowed countries
      * Lookup the allowed countries for this merchant id 
-     * @param {module:com.ultracart.admin.v2/CheckoutApi~getAllowCountriesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2/CheckoutApi~getAllowedCountriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse}
      */
-    this.getAllowCountries = function(callback) {
+    this.getAllowedCountries = function(callback) {
       var postBody = null;
 
 
