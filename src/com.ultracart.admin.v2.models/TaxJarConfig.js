@@ -37,7 +37,7 @@
   /**
    * The TaxJarConfig model module.
    * @module com.ultracart.admin.v2.models/TaxJarConfig
-   * @version 2.3.3
+   * @version 2.3.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -69,6 +70,9 @@
       if (data.hasOwnProperty('api_key')) {
         obj['api_key'] = ApiClient.convertToType(data['api_key'], 'String');
       }
+      if (data.hasOwnProperty('use_distribution_center_from')) {
+        obj['use_distribution_center_from'] = ApiClient.convertToType(data['use_distribution_center_from'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -83,6 +87,11 @@
    * @member {String} api_key
    */
   exports.prototype['api_key'] = undefined;
+  /**
+   * Use distribution center from address
+   * @member {Boolean} use_distribution_center_from
+   */
+  exports.prototype['use_distribution_center_from'] = undefined;
 
 
 

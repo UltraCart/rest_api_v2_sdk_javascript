@@ -37,7 +37,7 @@
   /**
    * The AvalaraConfig model module.
    * @module com.ultracart.admin.v2.models/AvalaraConfig
-   * @version 2.3.3
+   * @version 2.3.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -85,6 +86,9 @@
       }
       if (data.hasOwnProperty('enable_upc')) {
         obj['enable_upc'] = ApiClient.convertToType(data['enable_upc'], 'Boolean');
+      }
+      if (data.hasOwnProperty('guest_customer_code')) {
+        obj['guest_customer_code'] = ApiClient.convertToType(data['guest_customer_code'], 'String');
       }
       if (data.hasOwnProperty('last_test_dts')) {
         obj['last_test_dts'] = ApiClient.convertToType(data['last_test_dts'], 'String');
@@ -130,6 +134,11 @@
    * @member {Boolean} enable_upc
    */
   exports.prototype['enable_upc'] = undefined;
+  /**
+   * Optional customer code for customers without profiles, defaults to GuestCustomer
+   * @member {String} guest_customer_code
+   */
+  exports.prototype['guest_customer_code'] = undefined;
   /**
    * Date/time of the connection test to Avalara
    * @member {String} last_test_dts

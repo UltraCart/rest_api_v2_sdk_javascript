@@ -37,7 +37,7 @@
   /**
    * The OrderPaymentECheck model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentECheck
-   * @version 2.3.3
+   * @version 2.3.4
    */
 
   /**
