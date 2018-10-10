@@ -111,6 +111,16 @@
         done();
       });
     });
+    describe('getTaxProviderAvalaraCompanies', function() {
+      it('should call getTaxProviderAvalaraCompanies successfully', function(done) {
+        //uncomment below and update the code to test getTaxProviderAvalaraCompanies
+        //instance.getTaxProviderAvalaraCompanies(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTaxProviderAvalaraTest', function() {
       it('should call getTaxProviderAvalaraTest successfully', function(done) {
         //uncomment below and update the code to test getTaxProviderAvalaraTest

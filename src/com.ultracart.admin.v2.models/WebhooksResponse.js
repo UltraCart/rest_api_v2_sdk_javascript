@@ -37,7 +37,7 @@
   /**
    * The WebhooksResponse model module.
    * @module com.ultracart.admin.v2.models/WebhooksResponse
-   * @version 2.3.2
+   * @version 2.3.3
    */
 
   /**
