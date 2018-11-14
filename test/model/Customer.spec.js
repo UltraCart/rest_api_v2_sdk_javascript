@@ -315,6 +315,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property taxCodes (base name: "tax_codes")', function() {
+      // uncomment below and update the code to test the property taxCodes
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property taxExempt (base name: "tax_exempt")', function() {
       // uncomment below and update the code to test the property taxExempt
       //var instane = new UltraCartRestApiV2.Customer();

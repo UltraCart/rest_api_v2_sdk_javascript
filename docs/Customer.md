@@ -46,6 +46,7 @@ Name | Type | Description | Notes
 **shipping** | [**[CustomerShipping]**](CustomerShipping.md) | Shipping addresses for this customer | [optional] 
 **signup_dts** | **String** | Signup date | [optional] 
 **suppress_buysafe** | **Boolean** | Suppress buySAFE | [optional] 
+**tax_codes** | [**CustomerTaxCodes**](CustomerTaxCodes.md) |  | [optional] 
 **tax_exempt** | **Boolean** | True if the customer is tax exempt | [optional] 
 **tax_id** | **String** | Tax ID | [optional] 
 **terms** | **String** | Terms for this customer | [optional] 

@@ -105,6 +105,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property futureSchedules (base name: "future_schedules")', function() {
+      // uncomment below and update the code to test the property futureSchedules
+      //var instane = new UltraCartRestApiV2.AutoOrderItem();
+      //expect(instance).to.be();
+    });
+
     it('should have the property lastOrderDts (base name: "last_order_dts")', function() {
       // uncomment below and update the code to test the property lastOrderDts
       //var instane = new UltraCartRestApiV2.AutoOrderItem();

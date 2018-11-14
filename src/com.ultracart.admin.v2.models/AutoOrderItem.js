@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItemOption'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule', 'com.ultracart.admin.v2.models/AutoOrderItemOption'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AutoOrderItemOption'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrderItemFutureSchedule'), require('./AutoOrderItemOption'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItemOption);
+    root.UltraCartRestApiV2.AutoOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItemFutureSchedule, root.UltraCartRestApiV2.AutoOrderItemOption);
   }
-}(this, function(ApiClient, AutoOrderItemOption) {
+}(this, function(ApiClient, AutoOrderItemFutureSchedule, AutoOrderItemOption) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 2.3.4
+   * @version 2.3.5
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -106,6 +107,9 @@
       }
       if (data.hasOwnProperty('frequency')) {
         obj['frequency'] = ApiClient.convertToType(data['frequency'], 'String');
+      }
+      if (data.hasOwnProperty('future_schedules')) {
+        obj['future_schedules'] = ApiClient.convertToType(data['future_schedules'], [AutoOrderItemFutureSchedule]);
       }
       if (data.hasOwnProperty('last_order_dts')) {
         obj['last_order_dts'] = ApiClient.convertToType(data['last_order_dts'], 'String');
@@ -193,6 +197,11 @@
    * @member {module:com.ultracart.admin.v2.models/AutoOrderItem.FrequencyEnum} frequency
    */
   exports.prototype['frequency'] = undefined;
+  /**
+   * The future rebill schedule for this item up to the next ten rebills
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule>} future_schedules
+   */
+  exports.prototype['future_schedules'] = undefined;
   /**
    * Date/time of the last order of this item
    * @member {String} last_order_dts

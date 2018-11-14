@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.models/ResponseMetadata'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Item'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./Item'), require('./ResponseMetadata'));
+    module.exports = factory(require('../ApiClient'), require('./Item'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemsRequest = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ResponseMetadata);
+    root.UltraCartRestApiV2.ItemsRequest = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Item);
   }
-}(this, function(ApiClient, Error, Item, ResponseMetadata) {
+}(this, function(ApiClient, Item) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The ItemsRequest model module.
    * @module com.ultracart.admin.v2.models/ItemsRequest
-   * @version 2.3.4
+   * @version 2.3.5
    */
 
   /**
@@ -47,9 +47,6 @@
    */
   var exports = function() {
     var _this = this;
-
-
-
 
 
   };
@@ -65,40 +62,18 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('error')) {
-        obj['error'] = Error.constructFromObject(data['error']);
-      }
       if (data.hasOwnProperty('items')) {
         obj['items'] = ApiClient.convertToType(data['items'], [Item]);
-      }
-      if (data.hasOwnProperty('metadata')) {
-        obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
-      }
-      if (data.hasOwnProperty('success')) {
-        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Error} error
-   */
-  exports.prototype['error'] = undefined;
-  /**
    * items
    * @member {Array.<module:com.ultracart.admin.v2.models/Item>} items
    */
   exports.prototype['items'] = undefined;
-  /**
-   * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
-   */
-  exports.prototype['metadata'] = undefined;
-  /**
-   * Indicates if API call was successful
-   * @member {Boolean} success
-   */
-  exports.prototype['success'] = undefined;
 
 
 
