@@ -207,6 +207,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property properties (base name: "properties")', function() {
+      // uncomment below and update the code to test the property properties
+      //var instane = new UltraCartRestApiV2.Order();
+      //expect(instance).to.be();
+    });
+
     it('should have the property quote (base name: "quote")', function() {
       // uncomment below and update the code to test the property quote
       //var instane = new UltraCartRestApiV2.Order();

@@ -37,7 +37,7 @@
   /**
    * The ItemContentAssignment model module.
    * @module com.ultracart.admin.v2.models/ItemContentAssignment
-   * @version 2.3.5
+   * @version 2.3.6
    */
 
   /**
