@@ -37,7 +37,7 @@
   /**
    * The CouponFreeShippingSpecificItems model module.
    * @module com.ultracart.admin.v2.models/CouponFreeShippingSpecificItems
-   * @version 2.3.6
+   * @version 2.3.7
    */
 
   /**

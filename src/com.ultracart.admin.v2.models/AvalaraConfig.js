@@ -37,7 +37,7 @@
   /**
    * The AvalaraConfig model module.
    * @module com.ultracart.admin.v2.models/AvalaraConfig
-   * @version 2.3.6
+   * @version 2.3.7
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -86,6 +87,9 @@
       }
       if (data.hasOwnProperty('enable_upc')) {
         obj['enable_upc'] = ApiClient.convertToType(data['enable_upc'], 'Boolean');
+      }
+      if (data.hasOwnProperty('estimate_only')) {
+        obj['estimate_only'] = ApiClient.convertToType(data['estimate_only'], 'Boolean');
       }
       if (data.hasOwnProperty('guest_customer_code')) {
         obj['guest_customer_code'] = ApiClient.convertToType(data['guest_customer_code'], 'String');
@@ -134,6 +138,11 @@
    * @member {Boolean} enable_upc
    */
   exports.prototype['enable_upc'] = undefined;
+  /**
+   * True if this Avalara configuration is to estimate taxes only and not report placed orders to Avalara
+   * @member {Boolean} estimate_only
+   */
+  exports.prototype['estimate_only'] = undefined;
   /**
    * Optional customer code for customers without profiles, defaults to GuestCustomer
    * @member {String} guest_customer_code

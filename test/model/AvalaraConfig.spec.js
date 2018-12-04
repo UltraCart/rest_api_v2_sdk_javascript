@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property estimateOnly (base name: "estimate_only")', function() {
+      // uncomment below and update the code to test the property estimateOnly
+      //var instane = new UltraCartRestApiV2.AvalaraConfig();
+      //expect(instance).to.be();
+    });
+
     it('should have the property guestCustomerCode (base name: "guest_customer_code")', function() {
       // uncomment below and update the code to test the property guestCustomerCode
       //var instane = new UltraCartRestApiV2.AvalaraConfig();

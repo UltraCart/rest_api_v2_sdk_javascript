@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **avalara_oid** | **Number** | Unique identifier for this avalara config object | [optional] 
 **company_id** | **String** | Avalara company ID | [optional] 
 **enable_upc** | **Boolean** | True if this Avalara configuration is set to enable tax valuation by UPC | [optional] 
+**estimate_only** | **Boolean** | True if this Avalara configuration is to estimate taxes only and not report placed orders to Avalara | [optional] 
 **guest_customer_code** | **String** | Optional customer code for customers without profiles, defaults to GuestCustomer | [optional] 
 **last_test_dts** | **String** | Date/time of the connection test to Avalara | [optional] 
 **license_key** | **String** | Avalara license key | [optional] 
