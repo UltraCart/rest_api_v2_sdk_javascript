@@ -81,6 +81,16 @@
         done();
       });
     });
+    describe('getAccountsReceivableRetryConfig', function() {
+      it('should call getAccountsReceivableRetryConfig successfully', function(done) {
+        //uncomment below and update the code to test getAccountsReceivableRetryConfig
+        //instance.getAccountsReceivableRetryConfig(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrder', function() {
       it('should call getOrder successfully', function(done) {
         //uncomment below and update the code to test getOrder
@@ -135,6 +145,16 @@
       it('should call resendShipmentConfirmation successfully', function(done) {
         //uncomment below and update the code to test resendShipmentConfirmation
         //instance.resendShipmentConfirmation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateAccountsReceivableRetryConfig', function() {
+      it('should call updateAccountsReceivableRetryConfig successfully', function(done) {
+        //uncomment below and update the code to test updateAccountsReceivableRetryConfig
+        //instance.updateAccountsReceivableRetryConfig(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -7,12 +7,14 @@ Method | HTTP request | Description
 [**cancelOrder**](OrderApi.md#cancelOrder) | **POST** /order/orders/{order_id}/cancel | Cancel an order
 [**deleteOrder**](OrderApi.md#deleteOrder) | **DELETE** /order/orders/{order_id} | Delete an order
 [**format**](OrderApi.md#format) | **POST** /order/orders/{order_id}/format | Format order
+[**getAccountsReceivableRetryConfig**](OrderApi.md#getAccountsReceivableRetryConfig) | **GET** /order/accountsReceivableRetryConfig | Retrieve A/R Retry Configuration
 [**getOrder**](OrderApi.md#getOrder) | **GET** /order/orders/{order_id} | Retrieve an order
 [**getOrders**](OrderApi.md#getOrders) | **GET** /order/orders | Retrieve orders
 [**getOrdersByQuery**](OrderApi.md#getOrdersByQuery) | **POST** /order/orders/query | Retrieve orders
 [**refundOrder**](OrderApi.md#refundOrder) | **PUT** /order/orders/{order_id}/refund | Refund an order
 [**resendReceipt**](OrderApi.md#resendReceipt) | **POST** /order/orders/{order_id}/resend_receipt | Resend receipt
 [**resendShipmentConfirmation**](OrderApi.md#resendShipmentConfirmation) | **POST** /order/orders/{order_id}/resend_shipment_confirmation | Resend shipment confirmation
+[**updateAccountsReceivableRetryConfig**](OrderApi.md#updateAccountsReceivableRetryConfig) | **POST** /order/accountsReceivableRetryConfig | Update A/R Retry Configuration
 [**updateOrder**](OrderApi.md#updateOrder) | **PUT** /order/orders/{order_id} | Update an order
 
 
@@ -180,6 +182,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrderFormatResponse**](OrderFormatResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getAccountsReceivableRetryConfig"></a>
+# **getAccountsReceivableRetryConfig**
+> AccountsReceivableRetryConfigResponse getAccountsReceivableRetryConfig()
+
+Retrieve A/R Retry Configuration
+
+Retrieve A/R Retry Configuration. This is primarily an internal API call.  It is doubtful you would ever need to use it. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getAccountsReceivableRetryConfig(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AccountsReceivableRetryConfigResponse**](AccountsReceivableRetryConfigResponse.md)
 
 ### Authorization
 
@@ -612,6 +665,63 @@ apiInstance.resendShipmentConfirmation(orderId, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **String**| The order id to resend the shipment notification for. | 
+
+### Return type
+
+[**BaseResponse**](BaseResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateAccountsReceivableRetryConfig"></a>
+# **updateAccountsReceivableRetryConfig**
+> BaseResponse updateAccountsReceivableRetryConfig(retryConfig)
+
+Update A/R Retry Configuration
+
+Update A/R Retry Configuration.  This is primarily an internal API call.  It is doubtful you would ever need to use it. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+var retryConfig = new UltraCartRestApiV2.AccountsReceivableRetryConfig(); // AccountsReceivableRetryConfig | AccountsReceivableRetryConfig object
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateAccountsReceivableRetryConfig(retryConfig, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **retryConfig** | [**AccountsReceivableRetryConfig**](AccountsReceivableRetryConfig.md)| AccountsReceivableRetryConfig object | 
 
 ### Return type
 
