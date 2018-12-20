@@ -37,7 +37,7 @@
   /**
    * The AffiliateClicksResponse model module.
    * @module com.ultracart.admin.v2.models/AffiliateClicksResponse
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The TaxJarConfig model module.
    * @module com.ultracart.admin.v2.models/TaxJarConfig
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -70,6 +71,9 @@
       if (data.hasOwnProperty('api_key')) {
         obj['api_key'] = ApiClient.convertToType(data['api_key'], 'String');
       }
+      if (data.hasOwnProperty('estimate_only')) {
+        obj['estimate_only'] = ApiClient.convertToType(data['estimate_only'], 'Boolean');
+      }
       if (data.hasOwnProperty('use_distribution_center_from')) {
         obj['use_distribution_center_from'] = ApiClient.convertToType(data['use_distribution_center_from'], 'Boolean');
       }
@@ -87,6 +91,11 @@
    * @member {String} api_key
    */
   exports.prototype['api_key'] = undefined;
+  /**
+   * True if this TaxJar configuration is to estimate taxes only and not report placed orders to TaxJar
+   * @member {Boolean} estimate_only
+   */
+  exports.prototype['estimate_only'] = undefined;
   /**
    * Use distribution center from address
    * @member {Boolean} use_distribution_center_from
