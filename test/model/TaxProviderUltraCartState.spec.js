@@ -75,8 +75,26 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property taxGiftCharge (base name: "tax_gift_charge")', function() {
+      // uncomment below and update the code to test the property taxGiftCharge
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property taxGiftWrap (base name: "tax_gift_wrap")', function() {
+      // uncomment below and update the code to test the property taxGiftWrap
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be();
+    });
+
     it('should have the property taxRateFormatted (base name: "tax_rate_formatted")', function() {
       // uncomment below and update the code to test the property taxRateFormatted
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property taxShipping (base name: "tax_shipping")', function() {
+      // uncomment below and update the code to test the property taxShipping
       //var instane = new UltraCartRestApiV2.TaxProviderUltraCartState();
       //expect(instance).to.be();
     });

@@ -37,7 +37,7 @@
   /**
    * The TaxProviderUltraCartState model module.
    * @module com.ultracart.admin.v2.models/TaxProviderUltraCartState
-   * @version 2.3.9
+   * @version 2.3.10
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -74,8 +77,17 @@
       if (data.hasOwnProperty('state_name')) {
         obj['state_name'] = ApiClient.convertToType(data['state_name'], 'String');
       }
+      if (data.hasOwnProperty('tax_gift_charge')) {
+        obj['tax_gift_charge'] = ApiClient.convertToType(data['tax_gift_charge'], 'Boolean');
+      }
+      if (data.hasOwnProperty('tax_gift_wrap')) {
+        obj['tax_gift_wrap'] = ApiClient.convertToType(data['tax_gift_wrap'], 'Boolean');
+      }
       if (data.hasOwnProperty('tax_rate_formatted')) {
         obj['tax_rate_formatted'] = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('tax_shipping')) {
+        obj['tax_shipping'] = ApiClient.convertToType(data['tax_shipping'], 'Boolean');
       }
     }
     return obj;
@@ -97,10 +109,25 @@
    */
   exports.prototype['state_name'] = undefined;
   /**
+   * True if gift charges should be taxed in this state.
+   * @member {Boolean} tax_gift_charge
+   */
+  exports.prototype['tax_gift_charge'] = undefined;
+  /**
+   * True if gift wrap should be taxed in this state.
+   * @member {Boolean} tax_gift_wrap
+   */
+  exports.prototype['tax_gift_wrap'] = undefined;
+  /**
    * State tax rate formatted for display
    * @member {String} tax_rate_formatted
    */
   exports.prototype['tax_rate_formatted'] = undefined;
+  /**
+   * True if shipping should be taxed in this state.
+   * @member {Boolean} tax_shipping
+   */
+  exports.prototype['tax_shipping'] = undefined;
 
 
 
