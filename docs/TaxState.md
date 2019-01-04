@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **tax_rate** | **Number** | Tax Rate | [optional] 
 **tax_rate_formatted** | **String** | Tax rate formatted | [optional] 
 **tax_shipping** | **Boolean** | True if taxation within this jurisdiction should charge tax on shipping | [optional] 
+**use_ultracart_managed_rates** | **Boolean** | If true, use UltraCart managed rates for this state | [optional] 
 
 

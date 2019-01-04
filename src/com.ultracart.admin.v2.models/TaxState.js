@@ -37,7 +37,7 @@
   /**
    * The TaxState model module.
    * @module com.ultracart.admin.v2.models/TaxState
-   * @version 2.3.10
+   * @version 2.3.11
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -116,6 +117,9 @@
       }
       if (data.hasOwnProperty('tax_shipping')) {
         obj['tax_shipping'] = ApiClient.convertToType(data['tax_shipping'], 'Boolean');
+      }
+      if (data.hasOwnProperty('use_ultracart_managed_rates')) {
+        obj['use_ultracart_managed_rates'] = ApiClient.convertToType(data['use_ultracart_managed_rates'], 'Boolean');
       }
     }
     return obj;
@@ -191,6 +195,11 @@
    * @member {Boolean} tax_shipping
    */
   exports.prototype['tax_shipping'] = undefined;
+  /**
+   * If true, use UltraCart managed rates for this state
+   * @member {Boolean} use_ultracart_managed_rates
+   */
+  exports.prototype['use_ultracart_managed_rates'] = undefined;
 
 
 

@@ -141,6 +141,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property useUltracartManagedRates (base name: "use_ultracart_managed_rates")', function() {
+      // uncomment below and update the code to test the property useUltracartManagedRates
+      //var instane = new UltraCartRestApiV2.TaxState();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
