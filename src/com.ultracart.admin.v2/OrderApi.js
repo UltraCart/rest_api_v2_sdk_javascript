@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfig', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.models/OrderFormat', 'com.ultracart.admin.v2.models/OrderFormatResponse', 'com.ultracart.admin.v2.models/OrderQuery', 'com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.models/OrdersResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfig', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse', 'com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.models/OrderFormat', 'com.ultracart.admin.v2.models/OrderFormatResponse', 'com.ultracart.admin.v2.models/OrderQuery', 'com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.models/OrdersResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfig'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Order'), require('../com.ultracart.admin.v2.models/OrderFormat'), require('../com.ultracart.admin.v2.models/OrderFormatResponse'), require('../com.ultracart.admin.v2.models/OrderQuery'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfig'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Order'), require('../com.ultracart.admin.v2.models/OrderFormat'), require('../com.ultracart.admin.v2.models/OrderFormatResponse'), require('../com.ultracart.admin.v2.models/OrderQuery'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AccountsReceivableRetryConfig, root.UltraCartRestApiV2.AccountsReceivableRetryConfigResponse, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Order, root.UltraCartRestApiV2.OrderFormat, root.UltraCartRestApiV2.OrderFormatResponse, root.UltraCartRestApiV2.OrderQuery, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.OrdersResponse);
+    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AccountsReceivableRetryConfig, root.UltraCartRestApiV2.AccountsReceivableRetryConfigResponse, root.UltraCartRestApiV2.AccountsReceivableRetryStatsResponse, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Order, root.UltraCartRestApiV2.OrderFormat, root.UltraCartRestApiV2.OrderFormatResponse, root.UltraCartRestApiV2.OrderQuery, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.OrdersResponse);
   }
-}(this, function(ApiClient, AccountsReceivableRetryConfig, AccountsReceivableRetryConfigResponse, BaseResponse, ErrorResponse, Order, OrderFormat, OrderFormatResponse, OrderQuery, OrderResponse, OrdersResponse) {
+}(this, function(ApiClient, AccountsReceivableRetryConfig, AccountsReceivableRetryConfigResponse, AccountsReceivableRetryStatsResponse, BaseResponse, ErrorResponse, Order, OrderFormat, OrderFormatResponse, OrderQuery, OrderResponse, OrdersResponse) {
   'use strict';
 
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 2.3.12
+   * @version 2.3.13
    */
 
   /**
@@ -233,6 +233,53 @@
 
       return this.apiClient.callApi(
         '/order/accountsReceivableRetryConfig', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAccountsReceivableRetryStats operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getAccountsReceivableRetryStatsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve A/R Retry Statistics
+     * Retrieve A/R Retry Statistics. This is primarily an internal API call.  It is doubtful you would ever need to use it. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.from null
+     * @param {String} opts.to null
+     * @param {module:com.ultracart.admin.v2/OrderApi~getAccountsReceivableRetryStatsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse}
+     */
+    this.getAccountsReceivableRetryStats = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'from': opts['from'],
+        'to': opts['to'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AccountsReceivableRetryStatsResponse;
+
+      return this.apiClient.callApi(
+        '/order/accountsReceivableRetryConfig/stats', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -91,6 +91,16 @@
         done();
       });
     });
+    describe('getAccountsReceivableRetryStats', function() {
+      it('should call getAccountsReceivableRetryStats successfully', function(done) {
+        //uncomment below and update the code to test getAccountsReceivableRetryStats
+        //instance.getAccountsReceivableRetryStats(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrder', function() {
       it('should call getOrder successfully', function(done) {
         //uncomment below and update the code to test getOrder
