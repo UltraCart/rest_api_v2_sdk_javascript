@@ -37,7 +37,7 @@
   /**
    * The ItemRevguard model module.
    * @module com.ultracart.admin.v2.models/ItemRevguard
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The ItemKitDefinition model module.
    * @module com.ultracart.admin.v2.models/ItemKitDefinition
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**

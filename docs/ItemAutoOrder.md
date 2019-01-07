@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **auto_orderable** | **Boolean** | True if this item can be automatically ordered by the customer | [optional] 
 **cancel_other_auto_orders** | **Boolean** | True if other auto orders for this customer should be canceled when this item is ordered | [optional] 
 **free_shipping_auto_order** | **Boolean** | True if the customer should be given free shipping | [optional] 
+**refund_other_auto_orders** | **Boolean** | True if other auto orders for this customer should refunded if this item is refunded. | [optional] 
 **steps** | [**[ItemAutoOrderStep]**](ItemAutoOrderStep.md) | The rebill steps if this auto order is an upsell | [optional] 
 
 

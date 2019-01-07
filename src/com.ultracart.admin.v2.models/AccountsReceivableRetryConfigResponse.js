@@ -37,7 +37,7 @@
   /**
    * The AccountsReceivableRetryConfigResponse model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -69,6 +71,12 @@
       if (data.hasOwnProperty('config')) {
         obj['config'] = AccountsReceivableRetryConfig.constructFromObject(data['config']);
       }
+      if (data.hasOwnProperty('coupon_codes')) {
+        obj['coupon_codes'] = ApiClient.convertToType(data['coupon_codes'], ['String']);
+      }
+      if (data.hasOwnProperty('emails')) {
+        obj['emails'] = ApiClient.convertToType(data['emails'], ['String']);
+      }
       if (data.hasOwnProperty('error')) {
         obj['error'] = Error.constructFromObject(data['error']);
       }
@@ -89,6 +97,14 @@
    * @member {module:com.ultracart.admin.v2.models/AccountsReceivableRetryConfig} config
    */
   exports.prototype['config'] = undefined;
+  /**
+   * @member {Array.<String>} coupon_codes
+   */
+  exports.prototype['coupon_codes'] = undefined;
+  /**
+   * @member {Array.<String>} emails
+   */
+  exports.prototype['emails'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
    */

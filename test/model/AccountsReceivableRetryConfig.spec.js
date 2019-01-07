@@ -63,8 +63,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dailyActivityList (base name: "daily_activity_list")', function() {
+      // uncomment below and update the code to test the property dailyActivityList
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
     it('should have the property merchantId (base name: "merchant_id")', function() {
       // uncomment below and update the code to test the property merchantId
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property notifyEmails (base name: "notify_emails")', function() {
+      // uncomment below and update the code to test the property notifyEmails
       //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
       //expect(instance).to.be();
     });

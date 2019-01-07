@@ -37,7 +37,7 @@
   /**
    * The TaxProviderTaxJar model module.
    * @module com.ultracart.admin.v2.models/TaxProviderTaxJar
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**

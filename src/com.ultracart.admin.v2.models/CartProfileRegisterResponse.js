@@ -37,7 +37,7 @@
   /**
    * The CartProfileRegisterResponse model module.
    * @module com.ultracart.admin.v2.models/CartProfileRegisterResponse
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**

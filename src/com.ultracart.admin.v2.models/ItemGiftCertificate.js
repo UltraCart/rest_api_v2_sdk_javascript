@@ -37,7 +37,7 @@
   /**
    * The ItemGiftCertificate model module.
    * @module com.ultracart.admin.v2.models/ItemGiftCertificate
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**

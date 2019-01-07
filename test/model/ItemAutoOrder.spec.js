@@ -141,6 +141,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property refundOtherAutoOrders (base name: "refund_other_auto_orders")', function() {
+      // uncomment below and update the code to test the property refundOtherAutoOrders
+      //var instane = new UltraCartRestApiV2.ItemAutoOrder();
+      //expect(instance).to.be();
+    });
+
     it('should have the property steps (base name: "steps")', function() {
       // uncomment below and update the code to test the property steps
       //var instane = new UltraCartRestApiV2.ItemAutoOrder();

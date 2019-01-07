@@ -63,6 +63,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property couponCodes (base name: "coupon_codes")', function() {
+      // uncomment below and update the code to test the property couponCodes
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfigResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property emails (base name: "emails")', function() {
+      // uncomment below and update the code to test the property emails
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfigResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
       //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfigResponse();

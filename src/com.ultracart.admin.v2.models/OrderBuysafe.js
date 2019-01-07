@@ -37,7 +37,7 @@
   /**
    * The OrderBuysafe model module.
    * @module com.ultracart.admin.v2.models/OrderBuysafe
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**

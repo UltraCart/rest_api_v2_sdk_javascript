@@ -37,7 +37,7 @@
   /**
    * The ItemAutoOrder model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrder
-   * @version 2.3.11
+   * @version 2.3.12
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -117,6 +118,9 @@
       }
       if (data.hasOwnProperty('free_shipping_auto_order')) {
         obj['free_shipping_auto_order'] = ApiClient.convertToType(data['free_shipping_auto_order'], 'Boolean');
+      }
+      if (data.hasOwnProperty('refund_other_auto_orders')) {
+        obj['refund_other_auto_orders'] = ApiClient.convertToType(data['refund_other_auto_orders'], 'Boolean');
       }
       if (data.hasOwnProperty('steps')) {
         obj['steps'] = ApiClient.convertToType(data['steps'], [ItemAutoOrderStep]);
@@ -195,6 +199,11 @@
    * @member {Boolean} free_shipping_auto_order
    */
   exports.prototype['free_shipping_auto_order'] = undefined;
+  /**
+   * True if other auto orders for this customer should refunded if this item is refunded.
+   * @member {Boolean} refund_other_auto_orders
+   */
+  exports.prototype['refund_other_auto_orders'] = undefined;
   /**
    * The rebill steps if this auto order is an upsell
    * @member {Array.<module:com.ultracart.admin.v2.models/ItemAutoOrderStep>} steps
