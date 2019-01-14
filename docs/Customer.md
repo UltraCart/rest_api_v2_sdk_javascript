@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **quotes** | [**[Order]**](Order.md) | Quotes associated with this customer profile | [optional] 
 **quotes_summary** | [**CustomerQuotesSummary**](CustomerQuotesSummary.md) |  | [optional] 
 **referral_source** | **String** | Referral Source | [optional] 
+**reviewer** | [**CustomerReviewer**](CustomerReviewer.md) |  | [optional] 
 **sales_rep_code** | **String** | Sales rep code | [optional] 
 **send_signup_notification** | **Boolean** | Send signup notification, if true during customer creation, will send a notification. | [optional] 
 **shipping** | [**[CustomerShipping]**](CustomerShipping.md) | Shipping addresses for this customer | [optional] 

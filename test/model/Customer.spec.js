@@ -285,6 +285,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property reviewer (base name: "reviewer")', function() {
+      // uncomment below and update the code to test the property reviewer
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property salesRepCode (base name: "sales_rep_code")', function() {
       // uncomment below and update the code to test the property salesRepCode
       //var instane = new UltraCartRestApiV2.Customer();
