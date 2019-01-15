@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **allow_purchase_order** | **Boolean** | Allow purchase orders by this customer | [optional] 
 **allow_quote_request** | **Boolean** | Allow quote request | [optional] 
 **allow_selection_of_address_type** | **Boolean** | Allow selection of residential or business address type | [optional] 
+**attachments** | [**[CustomerAttachment]**](CustomerAttachment.md) | Attachments | [optional] 
 **auto_approve_cod** | **Boolean** | Auto approve COD | [optional] 
 **auto_approve_purchase_order** | **Boolean** | Auto approve purchase orders by this customer | [optional] 
 **automatic_merchant_notes** | **String** | Automatic merchant notes are added to every order placed | [optional] 

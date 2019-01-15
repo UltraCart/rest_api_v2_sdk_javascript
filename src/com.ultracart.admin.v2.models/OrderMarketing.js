@@ -37,7 +37,7 @@
   /**
    * The OrderMarketing model module.
    * @module com.ultracart.admin.v2.models/OrderMarketing
-   * @version 2.3.15
+   * @version 2.3.16
    */
 
   /**

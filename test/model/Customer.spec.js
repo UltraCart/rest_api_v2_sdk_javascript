@@ -93,6 +93,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property attachments (base name: "attachments")', function() {
+      // uncomment below and update the code to test the property attachments
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property autoApproveCod (base name: "auto_approve_cod")', function() {
       // uncomment below and update the code to test the property autoApproveCod
       //var instane = new UltraCartRestApiV2.Customer();
