@@ -37,7 +37,7 @@
   /**
    * The AutoOrderQuery model module.
    * @module com.ultracart.admin.v2.models/AutoOrderQuery
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -93,6 +94,9 @@
       }
       if (data.hasOwnProperty('country_code')) {
         obj['country_code'] = ApiClient.convertToType(data['country_code'], 'String');
+      }
+      if (data.hasOwnProperty('customer_profile_oid')) {
+        obj['customer_profile_oid'] = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -162,6 +166,11 @@
    * @member {String} country_code
    */
   exports.prototype['country_code'] = undefined;
+  /**
+   * Customer profile object identifier
+   * @member {Number} customer_profile_oid
+   */
+  exports.prototype['customer_profile_oid'] = undefined;
   /**
    * Email
    * @member {String} email

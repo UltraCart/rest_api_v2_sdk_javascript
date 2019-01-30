@@ -37,7 +37,7 @@
   /**
    * The TaxPostalCode model module.
    * @module com.ultracart.admin.v2.models/TaxPostalCode
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**

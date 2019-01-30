@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **city** | **String** | City | [optional] 
 **company** | **String** | Company | [optional] 
 **country_code** | **String** | ISO-3166 two letter country code | [optional] 
+**customer_profile_oid** | **Number** | Customer profile object identifier | [optional] 
 **email** | **String** | Email | [optional] 
 **first_name** | **String** | First name | [optional] 
 **item_id** | **String** | Item ID | [optional] 

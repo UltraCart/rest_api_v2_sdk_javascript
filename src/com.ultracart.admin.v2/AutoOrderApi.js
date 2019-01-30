@@ -34,7 +34,7 @@
   /**
    * AutoOrder service.
    * @module com.ultracart.admin.v2/AutoOrderApi
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**

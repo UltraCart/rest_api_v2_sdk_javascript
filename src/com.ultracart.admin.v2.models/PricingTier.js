@@ -37,7 +37,7 @@
   /**
    * The PricingTier model module.
    * @module com.ultracart.admin.v2.models/PricingTier
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -174,6 +175,9 @@
       }
       if (data.hasOwnProperty('suppress_buysafe')) {
         obj['suppress_buysafe'] = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
+      }
+      if (data.hasOwnProperty('suppress_mailing_list')) {
+        obj['suppress_mailing_list'] = ApiClient.convertToType(data['suppress_mailing_list'], 'Boolean');
       }
       if (data.hasOwnProperty('tax_exempt')) {
         obj['tax_exempt'] = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
@@ -323,6 +327,11 @@
    * @member {Boolean} suppress_buysafe
    */
   exports.prototype['suppress_buysafe'] = undefined;
+  /**
+   * Suppress mailing list
+   * @member {Boolean} suppress_mailing_list
+   */
+  exports.prototype['suppress_mailing_list'] = undefined;
   /**
    * Tax Exempt
    * @member {Boolean} tax_exempt

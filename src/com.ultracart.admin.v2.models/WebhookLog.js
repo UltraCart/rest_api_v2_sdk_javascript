@@ -37,7 +37,7 @@
   /**
    * The WebhookLog model module.
    * @module com.ultracart.admin.v2.models/WebhookLog
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**

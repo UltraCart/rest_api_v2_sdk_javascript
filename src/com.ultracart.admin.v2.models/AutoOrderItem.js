@@ -37,7 +37,7 @@
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**
@@ -238,7 +238,7 @@
    */
   exports.prototype['options'] = undefined;
   /**
-   * The original item id purchased
+   * The original item id purchased.  This item controls scheduling.  If you wish to modify a schedule, for example, from monthly to yearly, change this item from your monthly item to your yearly item, and then change the next_shipment_dts to your desired date.
    * @member {String} original_item_id
    */
   exports.prototype['original_item_id'] = undefined;

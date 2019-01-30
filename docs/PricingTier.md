@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **realtime_percentage_discount** | **Number** | Realtime percentage discount | [optional] 
 **signup_notification** | [**PricingTierNotification**](PricingTierNotification.md) |  | [optional] 
 **suppress_buysafe** | **Boolean** | Suppress buySAFE | [optional] 
+**suppress_mailing_list** | **Boolean** | Suppress mailing list | [optional] 
 **tax_exempt** | **Boolean** | Tax Exempt | [optional] 
 **track_separately** | **Boolean** | Track separately | [optional] 
 

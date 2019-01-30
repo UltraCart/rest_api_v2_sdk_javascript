@@ -37,7 +37,7 @@
   /**
    * The CouponAmountOffShippingWithItemsPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponAmountOffShippingWithItemsPurchase
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**

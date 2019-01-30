@@ -225,6 +225,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property suppressMailingList (base name: "suppress_mailing_list")', function() {
+      // uncomment below and update the code to test the property suppressMailingList
+      //var instane = new UltraCartRestApiV2.PricingTier();
+      //expect(instance).to.be();
+    });
+
     it('should have the property taxExempt (base name: "tax_exempt")', function() {
       // uncomment below and update the code to test the property taxExempt
       //var instane = new UltraCartRestApiV2.PricingTier();

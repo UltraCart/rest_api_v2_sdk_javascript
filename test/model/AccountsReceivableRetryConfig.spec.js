@@ -63,8 +63,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property allowProcessLinkedAccounts (base name: "allow_process_linked_accounts")', function() {
+      // uncomment below and update the code to test the property allowProcessLinkedAccounts
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
     it('should have the property dailyActivityList (base name: "daily_activity_list")', function() {
       // uncomment below and update the code to test the property dailyActivityList
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property managedByLinkedAccountMerchantId (base name: "managed_by_linked_account_merchant_id")', function() {
+      // uncomment below and update the code to test the property managedByLinkedAccountMerchantId
       //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
       //expect(instance).to.be();
     });
@@ -101,6 +113,12 @@
 
     it('should have the property rejectAtEnd (base name: "reject_at_end")', function() {
       // uncomment below and update the code to test the property rejectAtEnd
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property trialMode (base name: "trialMode")', function() {
+      // uncomment below and update the code to test the property trialMode
       //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
       //expect(instance).to.be();
     });

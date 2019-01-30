@@ -37,7 +37,7 @@
   /**
    * The ItemIdentifiers model module.
    * @module com.ultracart.admin.v2.models/ItemIdentifiers
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**

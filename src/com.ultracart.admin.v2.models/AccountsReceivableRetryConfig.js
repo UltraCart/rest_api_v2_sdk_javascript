@@ -37,7 +37,7 @@
   /**
    * The AccountsReceivableRetryConfig model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -70,10 +73,16 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('active')) {
-        obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
+        obj['active'] = ApiClient.convertToType(data['active'], 'String');
+      }
+      if (data.hasOwnProperty('allow_process_linked_accounts')) {
+        obj['allow_process_linked_accounts'] = ApiClient.convertToType(data['allow_process_linked_accounts'], 'Boolean');
       }
       if (data.hasOwnProperty('daily_activity_list')) {
         obj['daily_activity_list'] = ApiClient.convertToType(data['daily_activity_list'], [AccountsReceivableRetryDayActivity]);
+      }
+      if (data.hasOwnProperty('managed_by_linked_account_merchant_id')) {
+        obj['managed_by_linked_account_merchant_id'] = ApiClient.convertToType(data['managed_by_linked_account_merchant_id'], 'Boolean');
       }
       if (data.hasOwnProperty('merchant_id')) {
         obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
@@ -93,20 +102,33 @@
       if (data.hasOwnProperty('reject_at_end')) {
         obj['reject_at_end'] = ApiClient.convertToType(data['reject_at_end'], 'Boolean');
       }
+      if (data.hasOwnProperty('trialMode')) {
+        obj['trialMode'] = ApiClient.convertToType(data['trialMode'], 'Boolean');
+      }
     }
     return obj;
   }
 
   /**
-   * True if the retry should run daily.  False puts the retry service into an inactive state for this merchant.
-   * @member {Boolean} active
+   * The date when trial mode expires.  If this date is reached without exiting trial mode, the service will de-activate.
+   * @member {String} active
    */
   exports.prototype['active'] = undefined;
+  /**
+   * True if this account has linked accounts that it can process.
+   * @member {Boolean} allow_process_linked_accounts
+   */
+  exports.prototype['allow_process_linked_accounts'] = undefined;
   /**
    * A list of days and what actions should take place on those days after an order reaches accounts receivable
    * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity>} daily_activity_list
    */
   exports.prototype['daily_activity_list'] = undefined;
+  /**
+   * If not null, this account is managed by the specified parent merchant id.
+   * @member {Boolean} managed_by_linked_account_merchant_id
+   */
+  exports.prototype['managed_by_linked_account_merchant_id'] = undefined;
   /**
    * UltraCart merchant ID
    * @member {String} merchant_id
@@ -137,6 +159,11 @@
    * @member {Boolean} reject_at_end
    */
   exports.prototype['reject_at_end'] = undefined;
+  /**
+   * True if the account is currently in trial mode.  Set to false to exit trial mode.
+   * @member {Boolean} trialMode
+   */
+  exports.prototype['trialMode'] = undefined;
 
 
 

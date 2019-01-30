@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **no_order_after_dts** | **String** | Date/time after which no additional rebills of this item should occur | [optional] 
 **number_of_rebills** | **Number** | The number of times this item has rebilled | [optional] 
 **options** | [**[AutoOrderItemOption]**](AutoOrderItemOption.md) | Options associated with this item | [optional] 
-**original_item_id** | **String** | The original item id purchased | [optional] 
+**original_item_id** | **String** | The original item id purchased.  This item controls scheduling.  If you wish to modify a schedule, for example, from monthly to yearly, change this item from your monthly item to your yearly item, and then change the next_shipment_dts to your desired date. | [optional] 
 **original_quantity** | **Number** | The original quantity purchased | [optional] 
 **paypal_payer_id** | **String** | The PayPal Payer ID tied to this item | [optional] 
 **paypal_recurring_payment_profile_id** | **String** | The PayPal Profile ID tied to this item | [optional] 

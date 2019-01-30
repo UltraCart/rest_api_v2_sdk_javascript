@@ -37,7 +37,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 2.3.16
+   * @version 2.3.17
    */
 
   /**
