@@ -37,7 +37,7 @@
   /**
    * The CartFinalizeOrderRequest model module.
    * @module com.ultracart.admin.v2.models/CartFinalizeOrderRequest
-   * @version 2.3.17
+   * @version 2.3.18
    */
 
   /**

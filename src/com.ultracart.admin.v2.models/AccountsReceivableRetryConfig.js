@@ -37,7 +37,7 @@
   /**
    * The AccountsReceivableRetryConfig model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
-   * @version 2.3.17
+   * @version 2.3.18
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -73,7 +74,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('active')) {
-        obj['active'] = ApiClient.convertToType(data['active'], 'String');
+        obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
       }
       if (data.hasOwnProperty('allow_process_linked_accounts')) {
         obj['allow_process_linked_accounts'] = ApiClient.convertToType(data['allow_process_linked_accounts'], 'Boolean');
@@ -102,16 +103,19 @@
       if (data.hasOwnProperty('reject_at_end')) {
         obj['reject_at_end'] = ApiClient.convertToType(data['reject_at_end'], 'Boolean');
       }
-      if (data.hasOwnProperty('trialMode')) {
-        obj['trialMode'] = ApiClient.convertToType(data['trialMode'], 'Boolean');
+      if (data.hasOwnProperty('trial_mode')) {
+        obj['trial_mode'] = ApiClient.convertToType(data['trial_mode'], 'Boolean');
+      }
+      if (data.hasOwnProperty('trial_mode_expiration_dts')) {
+        obj['trial_mode_expiration_dts'] = ApiClient.convertToType(data['trial_mode_expiration_dts'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * The date when trial mode expires.  If this date is reached without exiting trial mode, the service will de-activate.
-   * @member {String} active
+   * True if the retry should run daily.  False puts the retry service into an inactive state for this merchant.
+   * @member {Boolean} active
    */
   exports.prototype['active'] = undefined;
   /**
@@ -161,9 +165,14 @@
   exports.prototype['reject_at_end'] = undefined;
   /**
    * True if the account is currently in trial mode.  Set to false to exit trial mode.
-   * @member {Boolean} trialMode
+   * @member {Boolean} trial_mode
    */
-  exports.prototype['trialMode'] = undefined;
+  exports.prototype['trial_mode'] = undefined;
+  /**
+   * The date when trial mode expires.  If this date is reached without exiting trial mode, the service will de-activate.
+   * @member {String} trial_mode_expiration_dts
+   */
+  exports.prototype['trial_mode_expiration_dts'] = undefined;
 
 
 

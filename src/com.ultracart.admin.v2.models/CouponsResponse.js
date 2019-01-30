@@ -37,7 +37,7 @@
   /**
    * The CouponsResponse model module.
    * @module com.ultracart.admin.v2.models/CouponsResponse
-   * @version 2.3.17
+   * @version 2.3.18
    */
 
   /**

@@ -117,8 +117,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property trialMode (base name: "trialMode")', function() {
+    it('should have the property trialMode (base name: "trial_mode")', function() {
       // uncomment below and update the code to test the property trialMode
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property trialModeExpirationDts (base name: "trial_mode_expiration_dts")', function() {
+      // uncomment below and update the code to test the property trialModeExpirationDts
       //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
       //expect(instance).to.be();
     });

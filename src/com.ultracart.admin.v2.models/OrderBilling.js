@@ -37,7 +37,7 @@
   /**
    * The OrderBilling model module.
    * @module com.ultracart.admin.v2.models/OrderBilling
-   * @version 2.3.17
+   * @version 2.3.18
    */
 
   /**
