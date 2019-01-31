@@ -37,7 +37,7 @@
   /**
    * The AccountsReceivableRetryConfig model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
-   * @version 2.3.18
+   * @version 2.3.19
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -79,6 +81,9 @@
       if (data.hasOwnProperty('allow_process_linked_accounts')) {
         obj['allow_process_linked_accounts'] = ApiClient.convertToType(data['allow_process_linked_accounts'], 'Boolean');
       }
+      if (data.hasOwnProperty('current_service_plan')) {
+        obj['current_service_plan'] = ApiClient.convertToType(data['current_service_plan'], 'String');
+      }
       if (data.hasOwnProperty('daily_activity_list')) {
         obj['daily_activity_list'] = ApiClient.convertToType(data['daily_activity_list'], [AccountsReceivableRetryDayActivity]);
       }
@@ -99,6 +104,9 @@
       }
       if (data.hasOwnProperty('process_linked_accounts')) {
         obj['process_linked_accounts'] = ApiClient.convertToType(data['process_linked_accounts'], 'Boolean');
+      }
+      if (data.hasOwnProperty('processing_percentage')) {
+        obj['processing_percentage'] = ApiClient.convertToType(data['processing_percentage'], 'String');
       }
       if (data.hasOwnProperty('reject_at_end')) {
         obj['reject_at_end'] = ApiClient.convertToType(data['reject_at_end'], 'Boolean');
@@ -123,6 +131,11 @@
    * @member {Boolean} allow_process_linked_accounts
    */
   exports.prototype['allow_process_linked_accounts'] = undefined;
+  /**
+   * The current service plan that the account is on.
+   * @member {String} current_service_plan
+   */
+  exports.prototype['current_service_plan'] = undefined;
   /**
    * A list of days and what actions should take place on those days after an order reaches accounts receivable
    * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity>} daily_activity_list
@@ -158,6 +171,11 @@
    * @member {Boolean} process_linked_accounts
    */
   exports.prototype['process_linked_accounts'] = undefined;
+  /**
+   * The percentage rate charged for the service.
+   * @member {String} processing_percentage
+   */
+  exports.prototype['processing_percentage'] = undefined;
   /**
    * If true, the order is rejected the day after the last configured activity day
    * @member {Boolean} reject_at_end

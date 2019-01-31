@@ -37,7 +37,7 @@
   /**
    * The CartCheckout model module.
    * @module com.ultracart.admin.v2.models/CartCheckout
-   * @version 2.3.18
+   * @version 2.3.19
    */
 
   /**

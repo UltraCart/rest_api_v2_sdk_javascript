@@ -69,6 +69,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property currentServicePlan (base name: "current_service_plan")', function() {
+      // uncomment below and update the code to test the property currentServicePlan
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
     it('should have the property dailyActivityList (base name: "daily_activity_list")', function() {
       // uncomment below and update the code to test the property dailyActivityList
       //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
@@ -107,6 +113,12 @@
 
     it('should have the property processLinkedAccounts (base name: "process_linked_accounts")', function() {
       // uncomment below and update the code to test the property processLinkedAccounts
+      //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property processingPercentage (base name: "processing_percentage")', function() {
+      // uncomment below and update the code to test the property processingPercentage
       //var instane = new UltraCartRestApiV2.AccountsReceivableRetryConfig();
       //expect(instance).to.be();
     });
