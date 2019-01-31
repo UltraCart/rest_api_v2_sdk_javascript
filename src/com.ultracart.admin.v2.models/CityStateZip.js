@@ -37,7 +37,7 @@
   /**
    * The CityStateZip model module.
    * @module com.ultracart.admin.v2.models/CityStateZip
-   * @version 2.3.19
+   * @version 2.3.20
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * Webhook service.
    * @module com.ultracart.admin.v2/WebhookApi
-   * @version 2.3.19
+   * @version 2.3.20
    */
 
   /**

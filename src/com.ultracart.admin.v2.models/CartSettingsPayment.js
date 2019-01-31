@@ -37,7 +37,7 @@
   /**
    * The CartSettingsPayment model module.
    * @module com.ultracart.admin.v2.models/CartSettingsPayment
-   * @version 2.3.19
+   * @version 2.3.20
    */
 
   /**
