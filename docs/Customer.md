@@ -47,6 +47,7 @@ Name | Type | Description | Notes
 **send_signup_notification** | **Boolean** | Send signup notification, if true during customer creation, will send a notification. | [optional] 
 **shipping** | [**[CustomerShipping]**](CustomerShipping.md) | Shipping addresses for this customer | [optional] 
 **signup_dts** | **String** | Signup date | [optional] 
+**software_entitlements** | [**[CustomerSoftwareEntitlement]**](CustomerSoftwareEntitlement.md) | Software entitlements owned by this customer | [optional] 
 **suppress_buysafe** | **Boolean** | Suppress buySAFE | [optional] 
 **tax_codes** | [**CustomerTaxCodes**](CustomerTaxCodes.md) |  | [optional] 
 **tax_exempt** | **Boolean** | True if the customer is tax exempt | [optional] 

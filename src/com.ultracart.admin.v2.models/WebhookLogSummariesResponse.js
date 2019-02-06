@@ -37,7 +37,7 @@
   /**
    * The WebhookLogSummariesResponse model module.
    * @module com.ultracart.admin.v2.models/WebhookLogSummariesResponse
-   * @version 2.3.20
+   * @version 2.3.21
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The CustomerPricingTier model module.
    * @module com.ultracart.admin.v2.models/CustomerPricingTier
-   * @version 2.3.20
+   * @version 2.3.21
    */
 
   /**

@@ -321,6 +321,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property softwareEntitlements (base name: "software_entitlements")', function() {
+      // uncomment below and update the code to test the property softwareEntitlements
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property suppressBuysafe (base name: "suppress_buysafe")', function() {
       // uncomment below and update the code to test the property suppressBuysafe
       //var instane = new UltraCartRestApiV2.Customer();

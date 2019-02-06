@@ -37,7 +37,7 @@
   /**
    * The ItemsRequest model module.
    * @module com.ultracart.admin.v2.models/ItemsRequest
-   * @version 2.3.20
+   * @version 2.3.21
    */
 
   /**
