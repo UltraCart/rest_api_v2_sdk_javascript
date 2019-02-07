@@ -37,7 +37,7 @@
   /**
    * The CartItemOption model module.
    * @module com.ultracart.admin.v2.models/CartItemOption
-   * @version 2.3.21
+   * @version 2.3.22
    */
 
   /**

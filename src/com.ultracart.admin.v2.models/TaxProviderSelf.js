@@ -37,7 +37,7 @@
   /**
    * The TaxProviderSelf model module.
    * @module com.ultracart.admin.v2.models/TaxProviderSelf
-   * @version 2.3.21
+   * @version 2.3.22
    */
 
   /**

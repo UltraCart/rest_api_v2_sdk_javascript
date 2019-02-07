@@ -37,7 +37,7 @@
   /**
    * The OrderSalesforce model module.
    * @module com.ultracart.admin.v2.models/OrderSalesforce
-   * @version 2.3.21
+   * @version 2.3.22
    */
 
   /**
