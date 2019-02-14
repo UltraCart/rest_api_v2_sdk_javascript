@@ -75,6 +75,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property taxBilling (base name: "tax_billing")', function() {
+      // uncomment below and update the code to test the property taxBilling
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCart();
+      //expect(instance).to.be();
+    });
+
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
       //var instane = new UltraCartRestApiV2.TaxProviderUltraCart();

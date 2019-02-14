@@ -37,7 +37,7 @@
   /**
    * The ItemThirdPartyEmailMarketing model module.
    * @module com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing
-   * @version 2.3.22
+   * @version 2.3.23
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The TaxCity model module.
    * @module com.ultracart.admin.v2.models/TaxCity
-   * @version 2.3.22
+   * @version 2.3.23
    */
 
   /**

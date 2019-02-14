@@ -37,7 +37,7 @@
   /**
    * The TaxProviderUltraCart model module.
    * @module com.ultracart.admin.v2.models/TaxProviderUltraCart
-   * @version 2.3.22
+   * @version 2.3.23
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -74,6 +75,9 @@
       if (data.hasOwnProperty('states')) {
         obj['states'] = ApiClient.convertToType(data['states'], [TaxProviderUltraCartState]);
       }
+      if (data.hasOwnProperty('tax_billing')) {
+        obj['tax_billing'] = ApiClient.convertToType(data['tax_billing'], 'Boolean');
+      }
       if (data.hasOwnProperty('title')) {
         obj['title'] = ApiClient.convertToType(data['title'], 'String');
       }
@@ -96,6 +100,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/TaxProviderUltraCartState>} states
    */
   exports.prototype['states'] = undefined;
+  /**
+   * True if sales tax should be collected based on billing address instead of shipping address
+   * @member {Boolean} tax_billing
+   */
+  exports.prototype['tax_billing'] = undefined;
   /**
    * Title
    * @member {String} title

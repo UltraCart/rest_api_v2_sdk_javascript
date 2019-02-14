@@ -37,7 +37,7 @@
   /**
    * The OrderFraudScore model module.
    * @module com.ultracart.admin.v2.models/OrderFraudScore
-   * @version 2.3.22
+   * @version 2.3.23
    */
 
   /**
