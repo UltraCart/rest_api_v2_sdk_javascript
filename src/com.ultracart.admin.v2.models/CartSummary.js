@@ -37,7 +37,7 @@
   /**
    * The CartSummary model module.
    * @module com.ultracart.admin.v2.models/CartSummary
-   * @version 2.3.23
+   * @version 2.3.24
    */
 
   /**
