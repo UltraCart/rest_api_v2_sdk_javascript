@@ -37,7 +37,7 @@
   /**
    * The OrderPaymentCreditCard model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentCreditCard
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -100,6 +101,9 @@
       }
       if (data.hasOwnProperty('card_type')) {
         obj['card_type'] = ApiClient.convertToType(data['card_type'], 'String');
+      }
+      if (data.hasOwnProperty('card_verification_number_token')) {
+        obj['card_verification_number_token'] = ApiClient.convertToType(data['card_verification_number_token'], 'String');
       }
     }
     return obj;
@@ -155,6 +159,11 @@
    * @member {module:com.ultracart.admin.v2.models/OrderPaymentCreditCard.CardTypeEnum} card_type
    */
   exports.prototype['card_type'] = undefined;
+  /**
+   * Card verification number token from hosted fields, only for import/insert of new orders, completely ignored for updates, and always null/empty for queries
+   * @member {String} card_verification_number_token
+   */
+  exports.prototype['card_verification_number_token'] = undefined;
 
 
   /**

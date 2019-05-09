@@ -117,6 +117,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property leastCostRoute (base name: "least_cost_route")', function() {
+      // uncomment below and update the code to test the property leastCostRoute
+      //var instane = new UltraCartRestApiV2.OrderShipping();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property leastCostRouteShippingMethods (base name: "least_cost_route_shipping_methods")', function() {
+      // uncomment below and update the code to test the property leastCostRouteShippingMethods
+      //var instane = new UltraCartRestApiV2.OrderShipping();
+      //expect(instance).to.be();
+    });
+
     it('should have the property liftGate (base name: "lift_gate")', function() {
       // uncomment below and update the code to test the property liftGate
       //var instane = new UltraCartRestApiV2.OrderShipping();

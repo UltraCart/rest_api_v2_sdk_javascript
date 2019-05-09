@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property automaticallyApplied (base name: "automatically_applied")', function() {
+      // uncomment below and update the code to test the property automaticallyApplied
+      //var instane = new UltraCartRestApiV2.OrderCoupon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property baseCouponCode (base name: "base_coupon_code")', function() {
       // uncomment below and update the code to test the property baseCouponCode
       //var instane = new UltraCartRestApiV2.OrderCoupon();

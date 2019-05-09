@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**arbitrary_shipping_handling_total** | [**Currency**](Currency.md) |  | [optional] 
 **other_refunded** | [**Currency**](Currency.md) |  | [optional] 
 **shipping_handling_refunded** | [**Currency**](Currency.md) |  | [optional] 
 **shipping_handling_total** | [**Currency**](Currency.md) |  | [optional] 

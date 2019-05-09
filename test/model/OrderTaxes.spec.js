@@ -57,6 +57,24 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.OrderTaxes);
     });
 
+    it('should have the property arbitraryTax (base name: "arbitrary_tax")', function() {
+      // uncomment below and update the code to test the property arbitraryTax
+      //var instane = new UltraCartRestApiV2.OrderTaxes();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property arbitraryTaxRate (base name: "arbitrary_tax_rate")', function() {
+      // uncomment below and update the code to test the property arbitraryTaxRate
+      //var instane = new UltraCartRestApiV2.OrderTaxes();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property arbitraryTaxableSubtotal (base name: "arbitrary_taxable_subtotal")', function() {
+      // uncomment below and update the code to test the property arbitraryTaxableSubtotal
+      //var instane = new UltraCartRestApiV2.OrderTaxes();
+      //expect(instance).to.be();
+    });
+
     it('should have the property taxCityAccountingCode (base name: "tax_city_accounting_code")', function() {
       // uncomment below and update the code to test the property taxCityAccountingCode
       //var instane = new UltraCartRestApiV2.OrderTaxes();
@@ -77,6 +95,12 @@
 
     it('should have the property taxCountyAccountingCode (base name: "tax_county_accounting_code")', function() {
       // uncomment below and update the code to test the property taxCountyAccountingCode
+      //var instane = new UltraCartRestApiV2.OrderTaxes();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property taxGiftCharge (base name: "tax_gift_charge")', function() {
+      // uncomment below and update the code to test the property taxGiftCharge
       //var instane = new UltraCartRestApiV2.OrderTaxes();
       //expect(instance).to.be();
     });
@@ -119,6 +143,12 @@
 
     it('should have the property taxRateState (base name: "tax_rate_state")', function() {
       // uncomment below and update the code to test the property taxRateState
+      //var instane = new UltraCartRestApiV2.OrderTaxes();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property taxShipping (base name: "tax_shipping")', function() {
+      // uncomment below and update the code to test the property taxShipping
       //var instane = new UltraCartRestApiV2.OrderTaxes();
       //expect(instance).to.be();
     });

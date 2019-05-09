@@ -57,6 +57,18 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.Currency);
     });
 
+    it('should have the property currencyCode (base name: "currency_code")', function() {
+      // uncomment below and update the code to test the property currencyCode
+      //var instane = new UltraCartRestApiV2.Currency();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property exchangeRate (base name: "exchange_rate")', function() {
+      // uncomment below and update the code to test the property exchangeRate
+      //var instane = new UltraCartRestApiV2.Currency();
+      //expect(instance).to.be();
+    });
+
     it('should have the property localized (base name: "localized")', function() {
       // uncomment below and update the code to test the property localized
       //var instane = new UltraCartRestApiV2.Currency();

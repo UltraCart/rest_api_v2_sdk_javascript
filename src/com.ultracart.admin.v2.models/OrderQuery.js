@@ -37,7 +37,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -151,6 +153,12 @@
       }
       if (data.hasOwnProperty('purchase_order_number')) {
         obj['purchase_order_number'] = ApiClient.convertToType(data['purchase_order_number'], 'String');
+      }
+      if (data.hasOwnProperty('refund_date_begin')) {
+        obj['refund_date_begin'] = ApiClient.convertToType(data['refund_date_begin'], 'String');
+      }
+      if (data.hasOwnProperty('refund_date_end')) {
+        obj['refund_date_end'] = ApiClient.convertToType(data['refund_date_end'], 'String');
       }
       if (data.hasOwnProperty('rma')) {
         obj['rma'] = ApiClient.convertToType(data['rma'], 'String');
@@ -282,6 +290,16 @@
    * @member {String} purchase_order_number
    */
   exports.prototype['purchase_order_number'] = undefined;
+  /**
+   * Date/time that the order was refunded
+   * @member {String} refund_date_begin
+   */
+  exports.prototype['refund_date_begin'] = undefined;
+  /**
+   * Date/time that the order was refunded
+   * @member {String} refund_date_end
+   */
+  exports.prototype['refund_date_end'] = undefined;
   /**
    * RMA number
    * @member {String} rma

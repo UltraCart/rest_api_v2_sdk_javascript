@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **card_number_token** | **String** | Card number token from hosted fields used to update the cart number | [optional] 
 **card_number_truncated** | **Boolean** | True if the card has been truncated | [optional] 
 **card_type** | **String** | Card type | [optional] 
+**card_verification_number_token** | **String** | Card verification number token from hosted fields, only for import/insert of new orders, completely ignored for updates, and always null/empty for queries | [optional] 
 
 
 <a name="CardTypeEnum"></a>

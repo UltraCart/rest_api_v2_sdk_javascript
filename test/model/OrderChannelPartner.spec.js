@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.OrderChannelPartner);
     });
 
+    it('should have the property autoApprovePurchaseOrder (base name: "auto_approve_purchase_order")', function() {
+      // uncomment below and update the code to test the property autoApprovePurchaseOrder
+      //var instane = new UltraCartRestApiV2.OrderChannelPartner();
+      //expect(instance).to.be();
+    });
+
     it('should have the property channelPartnerCode (base name: "channel_partner_code")', function() {
       // uncomment below and update the code to test the property channelPartnerCode
       //var instane = new UltraCartRestApiV2.OrderChannelPartner();
@@ -77,6 +83,36 @@
 
     it('should have the property channelPartnerOrderId (base name: "channel_partner_order_id")', function() {
       // uncomment below and update the code to test the property channelPartnerOrderId
+      //var instane = new UltraCartRestApiV2.OrderChannelPartner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property noRealtimePaymentProcessing (base name: "no_realtime_payment_processing")', function() {
+      // uncomment below and update the code to test the property noRealtimePaymentProcessing
+      //var instane = new UltraCartRestApiV2.OrderChannelPartner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property skipPaymentProcessing (base name: "skip_payment_processing")', function() {
+      // uncomment below and update the code to test the property skipPaymentProcessing
+      //var instane = new UltraCartRestApiV2.OrderChannelPartner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property storeCompleted (base name: "store_completed")', function() {
+      // uncomment below and update the code to test the property storeCompleted
+      //var instane = new UltraCartRestApiV2.OrderChannelPartner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property storeIfPaymentDeclines (base name: "store_if_payment_declines")', function() {
+      // uncomment below and update the code to test the property storeIfPaymentDeclines
+      //var instane = new UltraCartRestApiV2.OrderChannelPartner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property treatWarningsAsErrors (base name: "treat_warnings_as_errors")', function() {
+      // uncomment below and update the code to test the property treatWarningsAsErrors
       //var instane = new UltraCartRestApiV2.OrderChannelPartner();
       //expect(instance).to.be();
     });

@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.OrderSummary);
     });
 
+    it('should have the property arbitraryShippingHandlingTotal (base name: "arbitrary_shipping_handling_total")', function() {
+      // uncomment below and update the code to test the property arbitraryShippingHandlingTotal
+      //var instane = new UltraCartRestApiV2.OrderSummary();
+      //expect(instance).to.be();
+    });
+
     it('should have the property otherRefunded (base name: "other_refunded")', function() {
       // uncomment below and update the code to test the property otherRefunded
       //var instane = new UltraCartRestApiV2.OrderSummary();

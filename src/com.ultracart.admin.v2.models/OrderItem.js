@@ -37,7 +37,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -116,6 +119,15 @@
       }
       if (data.hasOwnProperty('activation_codes')) {
         obj['activation_codes'] = ApiClient.convertToType(data['activation_codes'], ['String']);
+      }
+      if (data.hasOwnProperty('arbitrary_unit_cost')) {
+        obj['arbitrary_unit_cost'] = Currency.constructFromObject(data['arbitrary_unit_cost']);
+      }
+      if (data.hasOwnProperty('auto_order_last_rebill_dts')) {
+        obj['auto_order_last_rebill_dts'] = ApiClient.convertToType(data['auto_order_last_rebill_dts'], 'String');
+      }
+      if (data.hasOwnProperty('auto_order_schedule')) {
+        obj['auto_order_schedule'] = ApiClient.convertToType(data['auto_order_schedule'], 'String');
       }
       if (data.hasOwnProperty('barcode')) {
         obj['barcode'] = ApiClient.convertToType(data['barcode'], 'String');
@@ -275,6 +287,20 @@
    * @member {Array.<String>} activation_codes
    */
   exports.prototype['activation_codes'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_unit_cost
+   */
+  exports.prototype['arbitrary_unit_cost'] = undefined;
+  /**
+   * Date/time of the last rebill, used only during order insert to help project future rebills
+   * @member {String} auto_order_last_rebill_dts
+   */
+  exports.prototype['auto_order_last_rebill_dts'] = undefined;
+  /**
+   * Auto order schedule, used only during inserts supplying the recurring schedule
+   * @member {String} auto_order_schedule
+   */
+  exports.prototype['auto_order_schedule'] = undefined;
   /**
    * Barcode
    * @member {String} barcode

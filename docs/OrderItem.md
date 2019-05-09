@@ -5,6 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounting_code** | **String** | QuickBooks code | [optional] 
 **activation_codes** | **[String]** | Activation codes assigned to this item | [optional] 
+**arbitrary_unit_cost** | [**Currency**](Currency.md) |  | [optional] 
+**auto_order_last_rebill_dts** | **String** | Date/time of the last rebill, used only during order insert to help project future rebills | [optional] 
+**auto_order_schedule** | **String** | Auto order schedule, used only during inserts supplying the recurring schedule | [optional] 
 **barcode** | **String** | Barcode | [optional] 
 **channel_partner_item_id** | **String** | Channel partner item id if this order came through a channel partner and the channel partner item id was mapped to an internal item id | [optional] 
 **cogs** | **Number** | Cost of goods sold | [optional] 

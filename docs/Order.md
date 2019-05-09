@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **merchant_id** | **String** | UltraCart merchant ID owning this order | [optional] 
 **order_id** | **String** | Order ID | [optional] 
 **payment** | [**OrderPayment**](OrderPayment.md) |  | [optional] 
-**properties** | [**[OrderProperty]**](OrderProperty.md) | Properties | [optional] 
+**properties** | [**[OrderProperty]**](OrderProperty.md) | Properties, available only through update, not through insert due to the nature of how properties are handled internally | [optional] 
 **quote** | [**OrderQuote**](OrderQuote.md) |  | [optional] 
 **refund_dts** | **String** | If the order was refunded, the date/time that the last refund occurred | [optional] 
 **reject_dts** | **String** | If the order was rejected, the date/time that the rejection occurred | [optional] 

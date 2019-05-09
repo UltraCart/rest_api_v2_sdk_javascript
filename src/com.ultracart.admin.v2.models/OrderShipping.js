@@ -37,7 +37,7 @@
   /**
    * The OrderShipping model module.
    * @module com.ultracart.admin.v2.models/OrderShipping
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -115,6 +117,12 @@
       }
       if (data.hasOwnProperty('last_name')) {
         obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
+      }
+      if (data.hasOwnProperty('least_cost_route')) {
+        obj['least_cost_route'] = ApiClient.convertToType(data['least_cost_route'], 'Boolean');
+      }
+      if (data.hasOwnProperty('least_cost_route_shipping_methods')) {
+        obj['least_cost_route_shipping_methods'] = ApiClient.convertToType(data['least_cost_route_shipping_methods'], ['String']);
       }
       if (data.hasOwnProperty('lift_gate')) {
         obj['lift_gate'] = ApiClient.convertToType(data['lift_gate'], 'Boolean');
@@ -215,6 +223,16 @@
    * @member {String} last_name
    */
   exports.prototype['last_name'] = undefined;
+  /**
+   * If true, instructs UltraCart to apply the cheapest shipping method to this order.  Used only for channel partner order inserts.
+   * @member {Boolean} least_cost_route
+   */
+  exports.prototype['least_cost_route'] = undefined;
+  /**
+   * List of shipping methods to consider if least_code_route is true. Used only for channel parter order inserts.
+   * @member {Array.<String>} least_cost_route_shipping_methods
+   */
+  exports.prototype['least_cost_route_shipping_methods'] = undefined;
   /**
    * Lift gate requested (LTL shipping methods only)
    * @member {Boolean} lift_gate

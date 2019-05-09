@@ -183,6 +183,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property refundDateBegin (base name: "refund_date_begin")', function() {
+      // uncomment below and update the code to test the property refundDateBegin
+      //var instane = new UltraCartRestApiV2.OrderQuery();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property refundDateEnd (base name: "refund_date_end")', function() {
+      // uncomment below and update the code to test the property refundDateEnd
+      //var instane = new UltraCartRestApiV2.OrderQuery();
+      //expect(instance).to.be();
+    });
+
     it('should have the property rma (base name: "rma")', function() {
       // uncomment below and update the code to test the property rma
       //var instane = new UltraCartRestApiV2.OrderQuery();

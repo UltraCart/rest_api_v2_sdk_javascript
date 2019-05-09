@@ -37,7 +37,7 @@
   /**
    * The OrderTaxes model module.
    * @module com.ultracart.admin.v2.models/OrderTaxes
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,11 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
 
 
 
@@ -73,6 +78,15 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('arbitrary_tax')) {
+        obj['arbitrary_tax'] = ApiClient.convertToType(data['arbitrary_tax'], 'Number');
+      }
+      if (data.hasOwnProperty('arbitrary_tax_rate')) {
+        obj['arbitrary_tax_rate'] = ApiClient.convertToType(data['arbitrary_tax_rate'], 'Number');
+      }
+      if (data.hasOwnProperty('arbitrary_taxable_subtotal')) {
+        obj['arbitrary_taxable_subtotal'] = ApiClient.convertToType(data['arbitrary_taxable_subtotal'], 'Number');
+      }
       if (data.hasOwnProperty('tax_city_accounting_code')) {
         obj['tax_city_accounting_code'] = ApiClient.convertToType(data['tax_city_accounting_code'], 'String');
       }
@@ -84,6 +98,9 @@
       }
       if (data.hasOwnProperty('tax_county_accounting_code')) {
         obj['tax_county_accounting_code'] = ApiClient.convertToType(data['tax_county_accounting_code'], 'String');
+      }
+      if (data.hasOwnProperty('tax_gift_charge')) {
+        obj['tax_gift_charge'] = ApiClient.convertToType(data['tax_gift_charge'], 'Boolean');
       }
       if (data.hasOwnProperty('tax_postal_code_accounting_code')) {
         obj['tax_postal_code_accounting_code'] = ApiClient.convertToType(data['tax_postal_code_accounting_code'], 'String');
@@ -106,6 +123,9 @@
       if (data.hasOwnProperty('tax_rate_state')) {
         obj['tax_rate_state'] = ApiClient.convertToType(data['tax_rate_state'], 'Number');
       }
+      if (data.hasOwnProperty('tax_shipping')) {
+        obj['tax_shipping'] = ApiClient.convertToType(data['tax_shipping'], 'Boolean');
+      }
       if (data.hasOwnProperty('tax_state_accounting_code')) {
         obj['tax_state_accounting_code'] = ApiClient.convertToType(data['tax_state_accounting_code'], 'String');
       }
@@ -113,6 +133,21 @@
     return obj;
   }
 
+  /**
+   * Arbitrary Tax, this is meaningless for updating an order.  For inserting a new order, this will override any internal tax calculations and should only be used for orders completed outside the system.
+   * @member {Number} arbitrary_tax
+   */
+  exports.prototype['arbitrary_tax'] = undefined;
+  /**
+   * Arbitrary tax rate, this is meaningless for updating an order.  For inserting a new order, this will override any internal tax calculations and should only be used for orders completed outside the system.
+   * @member {Number} arbitrary_tax_rate
+   */
+  exports.prototype['arbitrary_tax_rate'] = undefined;
+  /**
+   * Arbitrary taxable subtotal, this is meaningless for updating an order.  For inserting a new order, this will override any internal tax calculations and should only be used for orders completed outside the system.
+   * @member {Number} arbitrary_taxable_subtotal
+   */
+  exports.prototype['arbitrary_taxable_subtotal'] = undefined;
   /**
    * QuickBooks tax city code
    * @member {String} tax_city_accounting_code
@@ -134,12 +169,17 @@
    */
   exports.prototype['tax_county_accounting_code'] = undefined;
   /**
+   * True if gift charge is taxed
+   * @member {Boolean} tax_gift_charge
+   */
+  exports.prototype['tax_gift_charge'] = undefined;
+  /**
    * QuickBooks tax postal code code
    * @member {String} tax_postal_code_accounting_code
    */
   exports.prototype['tax_postal_code_accounting_code'] = undefined;
   /**
-   * Tax rate
+   * Tax rate, this is meaningless for updating an order.  For inserting a new order, if you need to override internal tax calculations, use the arbitrary fields.
    * @member {Number} tax_rate
    */
   exports.prototype['tax_rate'] = undefined;
@@ -169,7 +209,12 @@
    */
   exports.prototype['tax_rate_state'] = undefined;
   /**
-   * QuickBOoks tax state code
+   * True if shipping is taxed
+   * @member {Boolean} tax_shipping
+   */
+  exports.prototype['tax_shipping'] = undefined;
+  /**
+   * QuickBooks tax state code
    * @member {String} tax_state_accounting_code
    */
   exports.prototype['tax_state_accounting_code'] = undefined;

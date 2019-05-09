@@ -37,7 +37,7 @@
   /**
    * The Currency model module.
    * @module com.ultracart.admin.v2.models/Currency
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -64,6 +66,12 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('currency_code')) {
+        obj['currency_code'] = ApiClient.convertToType(data['currency_code'], 'String');
+      }
+      if (data.hasOwnProperty('exchange_rate')) {
+        obj['exchange_rate'] = ApiClient.convertToType(data['exchange_rate'], 'Number');
+      }
       if (data.hasOwnProperty('localized')) {
         obj['localized'] = ApiClient.convertToType(data['localized'], 'Number');
       }
@@ -77,6 +85,16 @@
     return obj;
   }
 
+  /**
+   * Currency code of the localized value
+   * @member {String} currency_code
+   */
+  exports.prototype['currency_code'] = undefined;
+  /**
+   * Exchange rate used to localize
+   * @member {Number} exchange_rate
+   */
+  exports.prototype['exchange_rate'] = undefined;
   /**
    * Value localized to the customer
    * @member {Number} localized

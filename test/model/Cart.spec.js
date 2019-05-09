@@ -105,6 +105,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property currencyConversion (base name: "currency_conversion")', function() {
+      // uncomment below and update the code to test the property currencyConversion
+      //var instane = new UltraCartRestApiV2.Cart();
+      //expect(instance).to.be();
+    });
+
     it('should have the property customerProfile (base name: "customer_profile")', function() {
       // uncomment below and update the code to test the property customerProfile
       //var instane = new UltraCartRestApiV2.Cart();

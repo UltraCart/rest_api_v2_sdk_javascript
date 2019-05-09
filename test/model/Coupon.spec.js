@@ -111,6 +111,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property calculatedDescription (base name: "calculated_)description")', function() {
+      // uncomment below and update the code to test the property calculatedDescription
+      //var instane = new UltraCartRestApiV2.Coupon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property canBeUsedWithOtherCoupons (base name: "can_be_used_with_other_coupons")', function() {
       // uncomment below and update the code to test the property canBeUsedWithOtherCoupons
       //var instane = new UltraCartRestApiV2.Coupon();

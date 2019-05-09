@@ -37,7 +37,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -151,7 +151,7 @@
    */
   exports.prototype['hold_for_fraud_review'] = undefined;
   /**
-   * Date/time that the payment was successfully processed
+   * Date/time that the payment was successfully processed, for new orders, this field is only considered if channel_partner.skip_payment_processing is true
    * @member {String} payment_dts
    */
   exports.prototype['payment_dts'] = undefined;

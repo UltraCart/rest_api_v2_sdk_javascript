@@ -131,6 +131,16 @@
         done();
       });
     });
+    describe('insertOrder', function() {
+      it('should call insertOrder successfully', function(done) {
+        //uncomment below and update the code to test insertOrder
+        //instance.insertOrder(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('refundOrder', function() {
       it('should call refundOrder successfully', function(done) {
         //uncomment below and update the code to test refundOrder

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **checkout** | [**CartCheckout**](CartCheckout.md) |  | [optional] 
 **coupons** | [**[CartCoupon]**](CartCoupon.md) | Coupons | [optional] 
 **currency_code** | **String** | The ISO-4217 three letter currency code the customer is viewing prices in | [optional] 
+**currency_conversion** | [**CartCurrencyConversion**](CartCurrencyConversion.md) |  | [optional] 
 **customer_profile** | [**CartCustomerProfile**](CartCustomerProfile.md) |  | [optional] 
 **exchange_rate** | **Number** | The exchange rate if the customer is viewing a different currency than the base | [optional] 
 **gift** | [**CartGift**](CartGift.md) |  | [optional] 

@@ -69,6 +69,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property arbitraryUnitCost (base name: "arbitrary_unit_cost")', function() {
+      // uncomment below and update the code to test the property arbitraryUnitCost
+      //var instane = new UltraCartRestApiV2.OrderItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property autoOrderLastRebillDts (base name: "auto_order_last_rebill_dts")', function() {
+      // uncomment below and update the code to test the property autoOrderLastRebillDts
+      //var instane = new UltraCartRestApiV2.OrderItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property autoOrderSchedule (base name: "auto_order_schedule")', function() {
+      // uncomment below and update the code to test the property autoOrderSchedule
+      //var instane = new UltraCartRestApiV2.OrderItem();
+      //expect(instance).to.be();
+    });
+
     it('should have the property barcode (base name: "barcode")', function() {
       // uncomment below and update the code to test the property barcode
       //var instane = new UltraCartRestApiV2.OrderItem();

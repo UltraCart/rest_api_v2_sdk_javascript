@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -377,6 +377,8 @@
      * @param {String} opts.channelPartnerCode Channel Partner Code
      * @param {String} opts.channelPartnerOrderId Channel Partner Order ID
      * @param {Number} opts.customerProfileOid null
+     * @param {String} opts.refundDateBegin null
+     * @param {String} opts.refundDateEnd null
      * @param {Number} opts.limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
      * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts.sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -420,6 +422,8 @@
         'channel_partner_code': opts['channelPartnerCode'],
         'channel_partner_order_id': opts['channelPartnerOrderId'],
         'customer_profile_oid': opts['customerProfileOid'],
+        'Refund Date Begin': opts['refundDateBegin'],
+        'Refund Date End': opts['refundDateEnd'],
         '_limit': opts['limit'],
         '_offset': opts['offset'],
         '_sort': opts['sort'],
@@ -496,6 +500,57 @@
 
       return this.apiClient.callApi(
         '/order/orders/query', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertOrder operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~insertOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert an order
+     * Inserts a new order on the UltraCart account.  This is probably NOT the method you want.  This is for channel orders.  For regular orders the customer is entering, use the CheckoutApi.  It has many, many more features, checks, and validations. 
+     * @param {module:com.ultracart.admin.v2.models/Order} order Order to insert
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~insertOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.insertOrder = function(order, opts, callback) {
+      opts = opts || {};
+      var postBody = order;
+
+      // verify the required parameter 'order' is set
+      if (order === undefined || order === null) {
+        throw new Error("Missing the required parameter 'order' when calling insertOrder");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_expand': opts['expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

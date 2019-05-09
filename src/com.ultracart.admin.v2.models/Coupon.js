@@ -37,7 +37,7 @@
   /**
    * The Coupon model module.
    * @module com.ultracart.admin.v2.models/Coupon
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -134,6 +135,9 @@
       }
       if (data.hasOwnProperty('amount_off_subtotal_with_items_purchase')) {
         obj['amount_off_subtotal_with_items_purchase'] = CouponAmountOffSubtotalWithItemsPurchase.constructFromObject(data['amount_off_subtotal_with_items_purchase']);
+      }
+      if (data.hasOwnProperty('calculated_)description')) {
+        obj['calculated_)description'] = ApiClient.convertToType(data['calculated_)description'], 'String');
       }
       if (data.hasOwnProperty('can_be_used_with_other_coupons')) {
         obj['can_be_used_with_other_coupons'] = ApiClient.convertToType(data['can_be_used_with_other_coupons'], 'Boolean');
@@ -290,6 +294,11 @@
    * @member {module:com.ultracart.admin.v2.models/CouponAmountOffSubtotalWithItemsPurchase} amount_off_subtotal_with_items_purchase
    */
   exports.prototype['amount_off_subtotal_with_items_purchase'] = undefined;
+  /**
+   * Calculated description displayed to the customer if no description is specified.
+   * @member {String} calculated_)description
+   */
+  exports.prototype['calculated_)description'] = undefined;
   /**
    * True if this coupon can be used with other coupons in a single order.
    * @member {Boolean} can_be_used_with_other_coupons

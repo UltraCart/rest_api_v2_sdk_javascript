@@ -117,6 +117,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property cardVerificationNumberToken (base name: "card_verification_number_token")', function() {
+      // uncomment below and update the code to test the property cardVerificationNumberToken
+      //var instane = new UltraCartRestApiV2.OrderPaymentCreditCard();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

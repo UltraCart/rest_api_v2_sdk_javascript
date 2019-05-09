@@ -37,7 +37,7 @@
   /**
    * The OrderCoupon model module.
    * @module com.ultracart.admin.v2.models/OrderCoupon
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -67,6 +68,9 @@
       if (data.hasOwnProperty('accounting_code')) {
         obj['accounting_code'] = ApiClient.convertToType(data['accounting_code'], 'String');
       }
+      if (data.hasOwnProperty('automatically_applied')) {
+        obj['automatically_applied'] = ApiClient.convertToType(data['automatically_applied'], 'Boolean');
+      }
       if (data.hasOwnProperty('base_coupon_code')) {
         obj['base_coupon_code'] = ApiClient.convertToType(data['base_coupon_code'], 'String');
       }
@@ -82,6 +86,11 @@
    * @member {String} accounting_code
    */
   exports.prototype['accounting_code'] = undefined;
+  /**
+   * Whether or not the coupon was automatically applied to the order
+   * @member {Boolean} automatically_applied
+   */
+  exports.prototype['automatically_applied'] = undefined;
   /**
    * Coupon code configured by the merchant.  Will differ if the customer used a one time coupon code generated off this base coupon
    * @member {String} base_coupon_code

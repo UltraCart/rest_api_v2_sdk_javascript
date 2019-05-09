@@ -37,7 +37,7 @@
   /**
    * The Order model module.
    * @module com.ultracart.admin.v2.models/Order
-   * @version 2.3.24
+   * @version 2.4.0
    */
 
   /**
@@ -308,7 +308,7 @@
    */
   exports.prototype['payment'] = undefined;
   /**
-   * Properties
+   * Properties, available only through update, not through insert due to the nature of how properties are handled internally
    * @member {Array.<module:com.ultracart.admin.v2.models/OrderProperty>} properties
    */
   exports.prototype['properties'] = undefined;
