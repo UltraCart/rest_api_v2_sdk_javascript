@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailCommseqStep'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./EmailCommseqStep'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailCommseq = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.EmailCommseq = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailCommseqStep);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, EmailCommseqStep) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The EmailCommseq model module.
    * @module com.ultracart.admin.v2.models/EmailCommseq
-   * @version 2.4.0
+   * @version 2.4.1
    */
 
   /**
@@ -65,14 +65,14 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('email_communication_sequence_steps')) {
+        obj['email_communication_sequence_steps'] = ApiClient.convertToType(data['email_communication_sequence_steps'], [EmailCommseqStep]);
+      }
       if (data.hasOwnProperty('email_communication_sequence_uuid')) {
         obj['email_communication_sequence_uuid'] = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       }
       if (data.hasOwnProperty('merchant_id')) {
         obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
-      }
-      if (data.hasOwnProperty('step_uuids')) {
-        obj['step_uuids'] = ApiClient.convertToType(data['step_uuids'], ['String']);
       }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
@@ -81,6 +81,11 @@
     return obj;
   }
 
+  /**
+   * Array of steps
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} email_communication_sequence_steps
+   */
+  exports.prototype['email_communication_sequence_steps'] = undefined;
   /**
    * Email commseq UUID
    * @member {String} email_communication_sequence_uuid
@@ -91,11 +96,6 @@
    * @member {String} merchant_id
    */
   exports.prototype['merchant_id'] = undefined;
-  /**
-   * Array of step UUIDs for the steps that make up this communication
-   * @member {Array.<String>} step_uuids
-   */
-  exports.prototype['step_uuids'] = undefined;
   /**
    * Storefront oid
    * @member {Number} storefront_oid

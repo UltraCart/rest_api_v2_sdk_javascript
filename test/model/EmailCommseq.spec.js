@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailCommseq);
     });
 
+    it('should have the property emailCommunicationSequenceSteps (base name: "email_communication_sequence_steps")', function() {
+      // uncomment below and update the code to test the property emailCommunicationSequenceSteps
+      //var instane = new UltraCartRestApiV2.EmailCommseq();
+      //expect(instance).to.be();
+    });
+
     it('should have the property emailCommunicationSequenceUuid (base name: "email_communication_sequence_uuid")', function() {
       // uncomment below and update the code to test the property emailCommunicationSequenceUuid
       //var instane = new UltraCartRestApiV2.EmailCommseq();
@@ -65,12 +71,6 @@
 
     it('should have the property merchantId (base name: "merchant_id")', function() {
       // uncomment below and update the code to test the property merchantId
-      //var instane = new UltraCartRestApiV2.EmailCommseq();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property stepUuids (base name: "step_uuids")', function() {
-      // uncomment below and update the code to test the property stepUuids
       //var instane = new UltraCartRestApiV2.EmailCommseq();
       //expect(instance).to.be();
     });
