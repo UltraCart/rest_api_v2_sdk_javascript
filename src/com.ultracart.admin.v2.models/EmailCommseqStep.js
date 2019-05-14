@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqStep model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqStep
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -66,6 +67,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('alt_child_email_communication_sequence_steps')) {
+        obj['alt_child_email_communication_sequence_steps'] = ApiClient.convertToType(data['alt_child_email_communication_sequence_steps'], [EmailCommseqStep]);
+      }
       if (data.hasOwnProperty('child_email_communication_sequence_steps')) {
         obj['child_email_communication_sequence_steps'] = ApiClient.convertToType(data['child_email_communication_sequence_steps'], [EmailCommseqStep]);
       }
@@ -85,6 +89,11 @@
     return obj;
   }
 
+  /**
+   * Array of child steps for the alternate path
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} alt_child_email_communication_sequence_steps
+   */
+  exports.prototype['alt_child_email_communication_sequence_steps'] = undefined;
   /**
    * Array of child steps
    * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} child_email_communication_sequence_steps
@@ -133,6 +142,11 @@
      * @const
      */
     "email": "email",
+    /**
+     * value: "condition"
+     * @const
+     */
+    "condition": "condition",
     /**
      * value: "end"
      * @const

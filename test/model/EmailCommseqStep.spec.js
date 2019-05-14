@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailCommseqStep);
     });
 
+    it('should have the property altChildEmailCommunicationSequenceSteps (base name: "alt_child_email_communication_sequence_steps")', function() {
+      // uncomment below and update the code to test the property altChildEmailCommunicationSequenceSteps
+      //var instane = new UltraCartRestApiV2.EmailCommseqStep();
+      //expect(instance).to.be();
+    });
+
     it('should have the property childEmailCommunicationSequenceSteps (base name: "child_email_communication_sequence_steps")', function() {
       // uncomment below and update the code to test the property childEmailCommunicationSequenceSteps
       //var instane = new UltraCartRestApiV2.EmailCommseqStep();
