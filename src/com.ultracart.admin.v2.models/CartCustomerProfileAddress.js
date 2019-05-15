@@ -37,7 +37,7 @@
   /**
    * The CartCustomerProfileAddress model module.
    * @module com.ultracart.admin.v2.models/CartCustomerProfileAddress
-   * @version 2.4.2
+   * @version 2.4.3
    */
 
   /**

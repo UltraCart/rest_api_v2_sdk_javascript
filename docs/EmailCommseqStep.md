@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 
 * `email` (value: `"email"`)
 
+* `merge` (value: `"merge"`)
+
 * `condition` (value: `"condition"`)
 
 * `end` (value: `"end"`)

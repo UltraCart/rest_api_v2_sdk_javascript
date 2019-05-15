@@ -37,7 +37,7 @@
   /**
    * The CouponNoDiscount model module.
    * @module com.ultracart.admin.v2.models/CouponNoDiscount
-   * @version 2.4.2
+   * @version 2.4.3
    */
 
   /**
