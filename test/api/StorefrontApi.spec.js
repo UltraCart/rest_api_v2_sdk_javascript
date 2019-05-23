@@ -241,6 +241,16 @@
         done();
       });
     });
+    describe('subscribeToEmailList', function() {
+      it('should call subscribeToEmailList successfully', function(done) {
+        //uncomment below and update the code to test subscribeToEmailList
+        //instance.subscribeToEmailList(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('updateEmailCampaign', function() {
       it('should call updateEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test updateEmailCampaign

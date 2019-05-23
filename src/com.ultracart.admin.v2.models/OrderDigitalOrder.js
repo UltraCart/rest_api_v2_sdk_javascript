@@ -37,7 +37,7 @@
   /**
    * The OrderDigitalOrder model module.
    * @module com.ultracart.admin.v2.models/OrderDigitalOrder
-   * @version 2.4.3
+   * @version 2.4.4
    */
 
   /**

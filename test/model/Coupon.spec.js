@@ -111,6 +111,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property automaticallyApplyCouponCodes (base name: "automatically_apply_coupon_codes")', function() {
+      // uncomment below and update the code to test the property automaticallyApplyCouponCodes
+      //var instane = new UltraCartRestApiV2.Coupon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property calculatedDescription (base name: "calculated_)description")', function() {
       // uncomment below and update the code to test the property calculatedDescription
       //var instane = new UltraCartRestApiV2.Coupon();

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/EmailCampaign', 'com.ultracart.admin.v2.models/EmailCampaignResponse', 'com.ultracart.admin.v2.models/EmailCampaignsResponse', 'com.ultracart.admin.v2.models/EmailCommseq', 'com.ultracart.admin.v2.models/EmailCommseqResponse', 'com.ultracart.admin.v2.models/EmailCommseqsResponse', 'com.ultracart.admin.v2.models/EmailFlow', 'com.ultracart.admin.v2.models/EmailFlowResponse', 'com.ultracart.admin.v2.models/EmailFlowsResponse', 'com.ultracart.admin.v2.models/EmailList', 'com.ultracart.admin.v2.models/EmailListResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/EmailSegment', 'com.ultracart.admin.v2.models/EmailSegmentResponse', 'com.ultracart.admin.v2.models/EmailSegmentsResponse', 'com.ultracart.admin.v2.models/EmailStatSummaryResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/EmailCampaign', 'com.ultracart.admin.v2.models/EmailCampaignResponse', 'com.ultracart.admin.v2.models/EmailCampaignsResponse', 'com.ultracart.admin.v2.models/EmailCommseq', 'com.ultracart.admin.v2.models/EmailCommseqResponse', 'com.ultracart.admin.v2.models/EmailCommseqsResponse', 'com.ultracart.admin.v2.models/EmailCustomer', 'com.ultracart.admin.v2.models/EmailFlow', 'com.ultracart.admin.v2.models/EmailFlowResponse', 'com.ultracart.admin.v2.models/EmailFlowsResponse', 'com.ultracart.admin.v2.models/EmailList', 'com.ultracart.admin.v2.models/EmailListResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/EmailSegment', 'com.ultracart.admin.v2.models/EmailSegmentResponse', 'com.ultracart.admin.v2.models/EmailSegmentsResponse', 'com.ultracart.admin.v2.models/EmailStatSummaryResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/EmailCampaign'), require('../com.ultracart.admin.v2.models/EmailCampaignResponse'), require('../com.ultracart.admin.v2.models/EmailCampaignsResponse'), require('../com.ultracart.admin.v2.models/EmailCommseq'), require('../com.ultracart.admin.v2.models/EmailCommseqResponse'), require('../com.ultracart.admin.v2.models/EmailCommseqsResponse'), require('../com.ultracart.admin.v2.models/EmailFlow'), require('../com.ultracart.admin.v2.models/EmailFlowResponse'), require('../com.ultracart.admin.v2.models/EmailFlowsResponse'), require('../com.ultracart.admin.v2.models/EmailList'), require('../com.ultracart.admin.v2.models/EmailListResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/EmailSegment'), require('../com.ultracart.admin.v2.models/EmailSegmentResponse'), require('../com.ultracart.admin.v2.models/EmailSegmentsResponse'), require('../com.ultracart.admin.v2.models/EmailStatSummaryResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/EmailCampaign'), require('../com.ultracart.admin.v2.models/EmailCampaignResponse'), require('../com.ultracart.admin.v2.models/EmailCampaignsResponse'), require('../com.ultracart.admin.v2.models/EmailCommseq'), require('../com.ultracart.admin.v2.models/EmailCommseqResponse'), require('../com.ultracart.admin.v2.models/EmailCommseqsResponse'), require('../com.ultracart.admin.v2.models/EmailCustomer'), require('../com.ultracart.admin.v2.models/EmailFlow'), require('../com.ultracart.admin.v2.models/EmailFlowResponse'), require('../com.ultracart.admin.v2.models/EmailFlowsResponse'), require('../com.ultracart.admin.v2.models/EmailList'), require('../com.ultracart.admin.v2.models/EmailListResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/EmailSegment'), require('../com.ultracart.admin.v2.models/EmailSegmentResponse'), require('../com.ultracart.admin.v2.models/EmailSegmentsResponse'), require('../com.ultracart.admin.v2.models/EmailStatSummaryResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.StorefrontApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.EmailCampaign, root.UltraCartRestApiV2.EmailCampaignResponse, root.UltraCartRestApiV2.EmailCampaignsResponse, root.UltraCartRestApiV2.EmailCommseq, root.UltraCartRestApiV2.EmailCommseqResponse, root.UltraCartRestApiV2.EmailCommseqsResponse, root.UltraCartRestApiV2.EmailFlow, root.UltraCartRestApiV2.EmailFlowResponse, root.UltraCartRestApiV2.EmailFlowsResponse, root.UltraCartRestApiV2.EmailList, root.UltraCartRestApiV2.EmailListResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.EmailSegment, root.UltraCartRestApiV2.EmailSegmentResponse, root.UltraCartRestApiV2.EmailSegmentsResponse, root.UltraCartRestApiV2.EmailStatSummaryResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.StorefrontApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.EmailCampaign, root.UltraCartRestApiV2.EmailCampaignResponse, root.UltraCartRestApiV2.EmailCampaignsResponse, root.UltraCartRestApiV2.EmailCommseq, root.UltraCartRestApiV2.EmailCommseqResponse, root.UltraCartRestApiV2.EmailCommseqsResponse, root.UltraCartRestApiV2.EmailCustomer, root.UltraCartRestApiV2.EmailFlow, root.UltraCartRestApiV2.EmailFlowResponse, root.UltraCartRestApiV2.EmailFlowsResponse, root.UltraCartRestApiV2.EmailList, root.UltraCartRestApiV2.EmailListResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.EmailSegment, root.UltraCartRestApiV2.EmailSegmentResponse, root.UltraCartRestApiV2.EmailSegmentsResponse, root.UltraCartRestApiV2.EmailStatSummaryResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, BaseResponse, EmailCampaign, EmailCampaignResponse, EmailCampaignsResponse, EmailCommseq, EmailCommseqResponse, EmailCommseqsResponse, EmailFlow, EmailFlowResponse, EmailFlowsResponse, EmailList, EmailListResponse, EmailListsResponse, EmailSegment, EmailSegmentResponse, EmailSegmentsResponse, EmailStatSummaryResponse, ErrorResponse) {
+}(this, function(ApiClient, BaseResponse, EmailCampaign, EmailCampaignResponse, EmailCampaignsResponse, EmailCommseq, EmailCommseqResponse, EmailCommseqsResponse, EmailCustomer, EmailFlow, EmailFlowResponse, EmailFlowsResponse, EmailList, EmailListResponse, EmailListsResponse, EmailSegment, EmailSegmentResponse, EmailSegmentsResponse, EmailStatSummaryResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.3
+   * @version 2.4.4
    */
 
   /**
@@ -1044,6 +1044,66 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid}/start', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the subscribeToEmailList operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~subscribeToEmailListCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailListResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Subscribe customers to email list
+     * @param {String} storefrontOid null
+     * @param {String} emailListUuid null
+     * @param {Array.<module:com.ultracart.admin.v2.models/EmailCustomer>} customers Customers
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~subscribeToEmailListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListResponse}
+     */
+    this.subscribeToEmailList = function(storefrontOid, emailListUuid, customers, callback) {
+      var postBody = customers;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling subscribeToEmailList");
+      }
+
+      // verify the required parameter 'emailListUuid' is set
+      if (emailListUuid === undefined || emailListUuid === null) {
+        throw new Error("Missing the required parameter 'emailListUuid' when calling subscribeToEmailList");
+      }
+
+      // verify the required parameter 'customers' is set
+      if (customers === undefined || customers === null) {
+        throw new Error("Missing the required parameter 'customers' when calling subscribeToEmailList");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'email_list_uuid': emailListUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailListResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/lists/{email_list_uuid}/subscribe', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
