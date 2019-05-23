@@ -1245,7 +1245,7 @@ Name | Type | Description  | Notes
 
 <a name="subscribeToEmailList"></a>
 # **subscribeToEmailList**
-> EmailListResponse subscribeToEmailList(storefrontOid, emailListUuid, customers)
+> EmailListSubscribeResponse subscribeToEmailList(storefrontOid, emailListUuid, customers)
 
 Subscribe customers to email list
 
@@ -1299,7 +1299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EmailListResponse**](EmailListResponse.md)
+[**EmailListSubscribeResponse**](EmailListSubscribeResponse.md)
 
 ### Authorization
 
