@@ -117,6 +117,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sendTestOrders (base name: "send_test_orders")', function() {
+      // uncomment below and update the code to test the property sendTestOrders
+      //var instane = new UltraCartRestApiV2.AvalaraConfig();
+      //expect(instance).to.be();
+    });
+
     it('should have the property serviceUrl (base name: "service_url")', function() {
       // uncomment below and update the code to test the property serviceUrl
       //var instane = new UltraCartRestApiV2.AvalaraConfig();

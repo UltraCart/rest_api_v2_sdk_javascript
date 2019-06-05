@@ -151,6 +151,16 @@
         done();
       });
     });
+    describe('replacement', function() {
+      it('should call replacement successfully', function(done) {
+        //uncomment below and update the code to test replacement
+        //instance.replacement(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('resendReceipt', function() {
       it('should call resendReceipt successfully', function(done) {
         //uncomment below and update the code to test resendReceipt

@@ -37,7 +37,7 @@
   /**
    * The TaxJarConfig model module.
    * @module com.ultracart.admin.v2.models/TaxJarConfig
-   * @version 2.4.5
+   * @version 2.4.6
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -74,6 +75,9 @@
       if (data.hasOwnProperty('estimate_only')) {
         obj['estimate_only'] = ApiClient.convertToType(data['estimate_only'], 'Boolean');
       }
+      if (data.hasOwnProperty('send_test_orders')) {
+        obj['send_test_orders'] = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
+      }
       if (data.hasOwnProperty('use_distribution_center_from')) {
         obj['use_distribution_center_from'] = ApiClient.convertToType(data['use_distribution_center_from'], 'Boolean');
       }
@@ -96,6 +100,11 @@
    * @member {Boolean} estimate_only
    */
   exports.prototype['estimate_only'] = undefined;
+  /**
+   * Send test orders through to TaxJar.  The default is to not transmit test orders to TaxJar.
+   * @member {Boolean} send_test_orders
+   */
+  exports.prototype['send_test_orders'] = undefined;
   /**
    * Use distribution center from address
    * @member {Boolean} use_distribution_center_from

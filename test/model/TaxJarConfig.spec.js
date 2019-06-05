@@ -75,6 +75,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sendTestOrders (base name: "send_test_orders")', function() {
+      // uncomment below and update the code to test the property sendTestOrders
+      //var instane = new UltraCartRestApiV2.TaxJarConfig();
+      //expect(instance).to.be();
+    });
+
     it('should have the property useDistributionCenterFrom (base name: "use_distribution_center_from")', function() {
       // uncomment below and update the code to test the property useDistributionCenterFrom
       //var instane = new UltraCartRestApiV2.TaxJarConfig();

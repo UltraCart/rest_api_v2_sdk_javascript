@@ -37,7 +37,7 @@
   /**
    * The AvalaraConfig model module.
    * @module com.ultracart.admin.v2.models/AvalaraConfig
-   * @version 2.4.5
+   * @version 2.4.6
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -102,6 +103,9 @@
       }
       if (data.hasOwnProperty('sandbox')) {
         obj['sandbox'] = ApiClient.convertToType(data['sandbox'], 'Boolean');
+      }
+      if (data.hasOwnProperty('send_test_orders')) {
+        obj['send_test_orders'] = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
       }
       if (data.hasOwnProperty('service_url')) {
         obj['service_url'] = ApiClient.convertToType(data['service_url'], 'String');
@@ -163,6 +167,11 @@
    * @member {Boolean} sandbox
    */
   exports.prototype['sandbox'] = undefined;
+  /**
+   * Send test orders through to Avalara.  The default is to not transmit test orders to Avalara.
+   * @member {Boolean} send_test_orders
+   */
+  exports.prototype['send_test_orders'] = undefined;
   /**
    * Avalara service URL
    * @member {String} service_url
