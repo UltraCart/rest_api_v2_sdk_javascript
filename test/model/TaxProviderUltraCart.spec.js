@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.TaxProviderUltraCart);
     });
 
+    it('should have the property configuration (base name: "configuration")', function() {
+      // uncomment below and update the code to test the property configuration
+      //var instane = new UltraCartRestApiV2.TaxProviderUltraCart();
+      //expect(instance).to.be();
+    });
+
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
       //var instane = new UltraCartRestApiV2.TaxProviderUltraCart();
@@ -71,12 +77,6 @@
 
     it('should have the property states (base name: "states")', function() {
       // uncomment below and update the code to test the property states
-      //var instane = new UltraCartRestApiV2.TaxProviderUltraCart();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property taxBilling (base name: "tax_billing")', function() {
-      // uncomment below and update the code to test the property taxBilling
       //var instane = new UltraCartRestApiV2.TaxProviderUltraCart();
       //expect(instance).to.be();
     });

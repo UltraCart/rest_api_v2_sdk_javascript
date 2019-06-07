@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/TaxProviderUltraCartState'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/TaxProviderUltraCartState', 'com.ultracart.admin.v2.models/UltraCartConfig'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./TaxProviderUltraCartState'));
+    module.exports = factory(require('../ApiClient'), require('./TaxProviderUltraCartState'), require('./UltraCartConfig'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.TaxProviderUltraCart = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.TaxProviderUltraCartState);
+    root.UltraCartRestApiV2.TaxProviderUltraCart = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.TaxProviderUltraCartState, root.UltraCartRestApiV2.UltraCartConfig);
   }
-}(this, function(ApiClient, TaxProviderUltraCartState) {
+}(this, function(ApiClient, TaxProviderUltraCartState, UltraCartConfig) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The TaxProviderUltraCart model module.
    * @module com.ultracart.admin.v2.models/TaxProviderUltraCart
-   * @version 2.4.6
+   * @version 2.4.7
    */
 
   /**
@@ -66,6 +66,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('configuration')) {
+        obj['configuration'] = UltraCartConfig.constructFromObject(data['configuration']);
+      }
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
       }
@@ -75,9 +78,6 @@
       if (data.hasOwnProperty('states')) {
         obj['states'] = ApiClient.convertToType(data['states'], [TaxProviderUltraCartState]);
       }
-      if (data.hasOwnProperty('tax_billing')) {
-        obj['tax_billing'] = ApiClient.convertToType(data['tax_billing'], 'Boolean');
-      }
       if (data.hasOwnProperty('title')) {
         obj['title'] = ApiClient.convertToType(data['title'], 'String');
       }
@@ -85,6 +85,10 @@
     return obj;
   }
 
+  /**
+   * @member {module:com.ultracart.admin.v2.models/UltraCartConfig} configuration
+   */
+  exports.prototype['configuration'] = undefined;
   /**
    * Description
    * @member {String} description
@@ -100,11 +104,6 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/TaxProviderUltraCartState>} states
    */
   exports.prototype['states'] = undefined;
-  /**
-   * True if sales tax should be collected based on billing address instead of shipping address
-   * @member {Boolean} tax_billing
-   */
-  exports.prototype['tax_billing'] = undefined;
   /**
    * Title
    * @member {String} title
