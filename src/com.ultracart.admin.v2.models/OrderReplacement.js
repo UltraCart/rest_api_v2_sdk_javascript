@@ -37,7 +37,7 @@
   /**
    * The OrderReplacement model module.
    * @module com.ultracart.admin.v2.models/OrderReplacement
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -73,6 +76,12 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('additional_merchant_notes_new_order')) {
+        obj['additional_merchant_notes_new_order'] = ApiClient.convertToType(data['additional_merchant_notes_new_order'], 'String');
+      }
+      if (data.hasOwnProperty('additional_merchant_notes_original_order')) {
+        obj['additional_merchant_notes_original_order'] = ApiClient.convertToType(data['additional_merchant_notes_original_order'], 'String');
+      }
       if (data.hasOwnProperty('custom_field1')) {
         obj['custom_field1'] = ApiClient.convertToType(data['custom_field1'], 'String');
       }
@@ -109,10 +118,23 @@
       if (data.hasOwnProperty('shipping_method')) {
         obj['shipping_method'] = ApiClient.convertToType(data['shipping_method'], 'String');
       }
+      if (data.hasOwnProperty('skip_payment')) {
+        obj['skip_payment'] = ApiClient.convertToType(data['skip_payment'], 'Boolean');
+      }
     }
     return obj;
   }
 
+  /**
+   * Additional merchant notes to append to the new order
+   * @member {String} additional_merchant_notes_new_order
+   */
+  exports.prototype['additional_merchant_notes_new_order'] = undefined;
+  /**
+   * Additional merchant notes to append to the original order
+   * @member {String} additional_merchant_notes_original_order
+   */
+  exports.prototype['additional_merchant_notes_original_order'] = undefined;
   /**
    * Custom field 1
    * @member {String} custom_field1
@@ -173,6 +195,11 @@
    * @member {String} shipping_method
    */
   exports.prototype['shipping_method'] = undefined;
+  /**
+   * Set to true if you want to skip the payment as if it was successful.
+   * @member {Boolean} skip_payment
+   */
+  exports.prototype['skip_payment'] = undefined;
 
 
 

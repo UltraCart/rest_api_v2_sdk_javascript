@@ -57,6 +57,18 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.OrderReplacement);
     });
 
+    it('should have the property additionalMerchantNotesNewOrder (base name: "additional_merchant_notes_new_order")', function() {
+      // uncomment below and update the code to test the property additionalMerchantNotesNewOrder
+      //var instane = new UltraCartRestApiV2.OrderReplacement();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property additionalMerchantNotesOriginalOrder (base name: "additional_merchant_notes_original_order")', function() {
+      // uncomment below and update the code to test the property additionalMerchantNotesOriginalOrder
+      //var instane = new UltraCartRestApiV2.OrderReplacement();
+      //expect(instance).to.be();
+    });
+
     it('should have the property customField1 (base name: "custom_field1")', function() {
       // uncomment below and update the code to test the property customField1
       //var instane = new UltraCartRestApiV2.OrderReplacement();
@@ -125,6 +137,12 @@
 
     it('should have the property shippingMethod (base name: "shipping_method")', function() {
       // uncomment below and update the code to test the property shippingMethod
+      //var instane = new UltraCartRestApiV2.OrderReplacement();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property skipPayment (base name: "skip_payment")', function() {
+      // uncomment below and update the code to test the property skipPayment
       //var instane = new UltraCartRestApiV2.OrderReplacement();
       //expect(instance).to.be();
     });

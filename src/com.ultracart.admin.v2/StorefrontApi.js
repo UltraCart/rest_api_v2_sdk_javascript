@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**
@@ -47,6 +47,114 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the cloneEmailCampaign operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~cloneEmailCampaignCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCampaignResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone email campaign
+     * @param {String} storefrontOid null
+     * @param {String} emailCampaignUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignResponse}
+     */
+    this.cloneEmailCampaign = function(storefrontOid, emailCampaignUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling cloneEmailCampaign");
+      }
+
+      // verify the required parameter 'emailCampaignUuid' is set
+      if (emailCampaignUuid === undefined || emailCampaignUuid === null) {
+        throw new Error("Missing the required parameter 'emailCampaignUuid' when calling cloneEmailCampaign");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'email_campaign_uuid': emailCampaignUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailCampaignResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid}/clone', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cloneEmailFlow operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~cloneEmailFlowCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailFlowResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone email flow
+     * @param {String} storefrontOid null
+     * @param {String} emailFlowUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneEmailFlowCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowResponse}
+     */
+    this.cloneEmailFlow = function(storefrontOid, emailFlowUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling cloneEmailFlow");
+      }
+
+      // verify the required parameter 'emailFlowUuid' is set
+      if (emailFlowUuid === undefined || emailFlowUuid === null) {
+        throw new Error("Missing the required parameter 'emailFlowUuid' when calling cloneEmailFlow");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'email_flow_uuid': emailFlowUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailFlowResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/flows/{email_flow_uuid}/clone', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the getEmailCampaign operation.

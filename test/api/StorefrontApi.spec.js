@@ -51,6 +51,26 @@
   }
 
   describe('StorefrontApi', function() {
+    describe('cloneEmailCampaign', function() {
+      it('should call cloneEmailCampaign successfully', function(done) {
+        //uncomment below and update the code to test cloneEmailCampaign
+        //instance.cloneEmailCampaign(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cloneEmailFlow', function() {
+      it('should call cloneEmailFlow successfully', function(done) {
+        //uncomment below and update the code to test cloneEmailFlow
+        //instance.cloneEmailFlow(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailCampaign', function() {
       it('should call getEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test getEmailCampaign
