@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.8
+   * @version 2.4.9
    */
 
   /**
@@ -47,6 +47,114 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the archiveEmailList operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~archiveEmailListCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Archive email list
+     * @param {String} storefrontOid null
+     * @param {String} emailListUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~archiveEmailListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    this.archiveEmailList = function(storefrontOid, emailListUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling archiveEmailList");
+      }
+
+      // verify the required parameter 'emailListUuid' is set
+      if (emailListUuid === undefined || emailListUuid === null) {
+        throw new Error("Missing the required parameter 'emailListUuid' when calling archiveEmailList");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'email_list_uuid': emailListUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = BaseResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/lists/{email_list_uuid}/archive', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the archiveEmailSegment operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~archiveEmailSegmentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Archive email segment
+     * @param {String} storefrontOid null
+     * @param {String} emailSegmentUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~archiveEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    this.archiveEmailSegment = function(storefrontOid, emailSegmentUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling archiveEmailSegment");
+      }
+
+      // verify the required parameter 'emailSegmentUuid' is set
+      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
+        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling archiveEmailSegment");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'email_segment_uuid': emailSegmentUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = BaseResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/segments/{email_segment_uuid}/archive', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the cloneEmailCampaign operation.
@@ -1211,7 +1319,7 @@
       var returnType = EmailListSubscribeResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{storefront_oid}/email/lists/{email_list_uuid}/subscribe', 'PUT',
+        '/storefront/{storefront_oid}/email/lists/{email_list_uuid}/subscribe', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

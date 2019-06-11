@@ -51,6 +51,26 @@
   }
 
   describe('StorefrontApi', function() {
+    describe('archiveEmailList', function() {
+      it('should call archiveEmailList successfully', function(done) {
+        //uncomment below and update the code to test archiveEmailList
+        //instance.archiveEmailList(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('archiveEmailSegment', function() {
+      it('should call archiveEmailSegment successfully', function(done) {
+        //uncomment below and update the code to test archiveEmailSegment
+        //instance.archiveEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('cloneEmailCampaign', function() {
       it('should call cloneEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test cloneEmailCampaign
