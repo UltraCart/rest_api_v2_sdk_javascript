@@ -221,6 +221,26 @@
         done();
       });
     });
+    describe('getEmailTemplate', function() {
+      it('should call getEmailTemplate successfully', function(done) {
+        //uncomment below and update the code to test getEmailTemplate
+        //instance.getEmailTemplate(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailTemplates', function() {
+      it('should call getEmailTemplates successfully', function(done) {
+        //uncomment below and update the code to test getEmailTemplates
+        //instance.getEmailTemplates(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('insertEmailCampaign', function() {
       it('should call insertEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test insertEmailCampaign
