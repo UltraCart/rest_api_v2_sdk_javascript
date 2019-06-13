@@ -37,7 +37,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 2.4.10
+   * @version 2.4.11
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -109,6 +110,9 @@
       }
       if (data.hasOwnProperty('trigger_parameter')) {
         obj['trigger_parameter'] = ApiClient.convertToType(data['trigger_parameter'], 'String');
+      }
+      if (data.hasOwnProperty('trigger_parameter_name')) {
+        obj['trigger_parameter_name'] = ApiClient.convertToType(data['trigger_parameter_name'], 'String');
       }
       if (data.hasOwnProperty('trigger_type')) {
         obj['trigger_type'] = ApiClient.convertToType(data['trigger_type'], 'String');
@@ -177,6 +181,11 @@
    * @member {String} trigger_parameter
    */
   exports.prototype['trigger_parameter'] = undefined;
+  /**
+   * Trigger parameter name
+   * @member {String} trigger_parameter_name
+   */
+  exports.prototype['trigger_parameter_name'] = undefined;
   /**
    * Trigger type
    * @member {String} trigger_type

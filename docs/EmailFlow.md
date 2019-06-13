@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **status_dts** | **String** | Timestamp when the last status change happened | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
 **trigger_parameter** | **String** | Trigger parameter | [optional] 
+**trigger_parameter_name** | **String** | Trigger parameter name | [optional] 
 **trigger_type** | **String** | Trigger type | [optional] 
 
 

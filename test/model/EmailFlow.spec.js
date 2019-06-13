@@ -129,6 +129,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property triggerParameterName (base name: "trigger_parameter_name")', function() {
+      // uncomment below and update the code to test the property triggerParameterName
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
     it('should have the property triggerType (base name: "trigger_type")', function() {
       // uncomment below and update the code to test the property triggerType
       //var instane = new UltraCartRestApiV2.EmailFlow();
