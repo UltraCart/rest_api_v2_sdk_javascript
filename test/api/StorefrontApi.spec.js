@@ -91,6 +91,26 @@
         done();
       });
     });
+    describe('deleteEmailEmail', function() {
+      it('should call deleteEmailEmail successfully', function(done) {
+        //uncomment below and update the code to test deleteEmailEmail
+        //instance.deleteEmailEmail(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailBaseTemplates', function() {
+      it('should call getEmailBaseTemplates successfully', function(done) {
+        //uncomment below and update the code to test getEmailBaseTemplates
+        //instance.getEmailBaseTemplates(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailCampaign', function() {
       it('should call getEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test getEmailCampaign
@@ -161,6 +181,26 @@
         done();
       });
     });
+    describe('getEmailEmail', function() {
+      it('should call getEmailEmail successfully', function(done) {
+        //uncomment below and update the code to test getEmailEmail
+        //instance.getEmailEmail(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailEmails', function() {
+      it('should call getEmailEmails successfully', function(done) {
+        //uncomment below and update the code to test getEmailEmails
+        //instance.getEmailEmails(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailFlow', function() {
       it('should call getEmailFlow successfully', function(done) {
         //uncomment below and update the code to test getEmailFlow
@@ -221,6 +261,16 @@
         done();
       });
     });
+    describe('getEmailStats', function() {
+      it('should call getEmailStats successfully', function(done) {
+        //uncomment below and update the code to test getEmailStats
+        //instance.getEmailStats(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailTemplate', function() {
       it('should call getEmailTemplate successfully', function(done) {
         //uncomment below and update the code to test getEmailTemplate
@@ -255,6 +305,16 @@
       it('should call insertEmailCommseq successfully', function(done) {
         //uncomment below and update the code to test insertEmailCommseq
         //instance.insertEmailCommseq(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('insertEmailEmail', function() {
+      it('should call insertEmailEmail successfully', function(done) {
+        //uncomment below and update the code to test insertEmailEmail
+        //instance.insertEmailEmail(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -325,6 +385,16 @@
       it('should call updateEmailCommseq successfully', function(done) {
         //uncomment below and update the code to test updateEmailCommseq
         //instance.updateEmailCommseq(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateEmailEmail', function() {
+      it('should call updateEmailEmail successfully', function(done) {
+        //uncomment below and update the code to test updateEmailEmail
+        //instance.updateEmailEmail(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

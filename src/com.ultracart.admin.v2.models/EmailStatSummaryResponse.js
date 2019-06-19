@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailStatSummary', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailStat', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EmailStatSummary'), require('./Error'), require('./ResponseMetadata'));
+    module.exports = factory(require('../ApiClient'), require('./EmailStat'), require('./Error'), require('./ResponseMetadata'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailStatSummaryResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailStatSummary, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata);
+    root.UltraCartRestApiV2.EmailStatSummaryResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailStat, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata);
   }
-}(this, function(ApiClient, EmailStatSummary, Error, ResponseMetadata) {
+}(this, function(ApiClient, EmailStat, Error, ResponseMetadata) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The EmailStatSummaryResponse model module.
    * @module com.ultracart.admin.v2.models/EmailStatSummaryResponse
-   * @version 2.4.11
+   * @version 2.4.12
    */
 
   /**
@@ -72,7 +72,7 @@
         obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
       }
       if (data.hasOwnProperty('stats')) {
-        obj['stats'] = EmailStatSummary.constructFromObject(data['stats']);
+        obj['stats'] = EmailStat.constructFromObject(data['stats']);
       }
       if (data.hasOwnProperty('success')) {
         obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
@@ -90,7 +90,7 @@
    */
   exports.prototype['metadata'] = undefined;
   /**
-   * @member {module:com.ultracart.admin.v2.models/EmailStatSummary} stats
+   * @member {module:com.ultracart.admin.v2.models/EmailStat} stats
    */
   exports.prototype['stats'] = undefined;
   /**
