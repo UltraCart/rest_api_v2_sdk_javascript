@@ -880,7 +880,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmail"></a>
 # **getEmailEmail**
-> EmailCommseqResponse getEmailEmail(storefrontOid, commseqEmailUuid)
+> EmailCommseqEmailResponse getEmailEmail(storefrontOid, commseqEmailUuid)
 
 Get email email
 
@@ -931,7 +931,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EmailCommseqResponse**](EmailCommseqResponse.md)
+[**EmailCommseqEmailResponse**](EmailCommseqEmailResponse.md)
 
 ### Authorization
 

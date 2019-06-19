@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.12
+   * @version 2.4.13
    */
 
   /**
@@ -748,7 +748,7 @@
      * Callback function to receive the result of the getEmailEmail operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -757,7 +757,7 @@
      * @param {String} storefrontOid null
      * @param {String} commseqEmailUuid null
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailResponse}
      */
     this.getEmailEmail = function(storefrontOid, commseqEmailUuid, callback) {
       var postBody = null;
@@ -789,7 +789,7 @@
       var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = EmailCommseqResponse;
+      var returnType = EmailCommseqEmailResponse;
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/emails/{commseq_email_uuid}', 'GET',
