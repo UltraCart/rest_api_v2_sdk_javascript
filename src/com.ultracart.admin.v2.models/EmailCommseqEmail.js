@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 2.4.13
+   * @version 2.4.14
    */
 
   /**
@@ -81,8 +81,8 @@
       if (data.hasOwnProperty('edited_by_user')) {
         obj['edited_by_user'] = ApiClient.convertToType(data['edited_by_user'], 'String');
       }
-      if (data.hasOwnProperty('email_communication_sequence_uuid')) {
-        obj['email_communication_sequence_uuid'] = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+      if (data.hasOwnProperty('email_communication_sequence_email_uuid')) {
+        obj['email_communication_sequence_email_uuid'] = ApiClient.convertToType(data['email_communication_sequence_email_uuid'], 'String');
       }
       if (data.hasOwnProperty('email_container_cjson')) {
         obj['email_container_cjson'] = ApiClient.convertToType(data['email_container_cjson'], 'String');
@@ -132,10 +132,10 @@
    */
   exports.prototype['edited_by_user'] = undefined;
   /**
-   * Email communication sequence uuid
-   * @member {String} email_communication_sequence_uuid
+   * Email communication sequence email uuid
+   * @member {String} email_communication_sequence_email_uuid
    */
-  exports.prototype['email_communication_sequence_uuid'] = undefined;
+  exports.prototype['email_communication_sequence_email_uuid'] = undefined;
   /**
    * Email container cjson
    * @member {String} email_container_cjson

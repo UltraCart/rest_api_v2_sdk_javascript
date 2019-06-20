@@ -69,8 +69,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property emailCommunicationSequenceUuid (base name: "email_communication_sequence_uuid")', function() {
-      // uncomment below and update the code to test the property emailCommunicationSequenceUuid
+    it('should have the property emailCommunicationSequenceEmailUuid (base name: "email_communication_sequence_email_uuid")', function() {
+      // uncomment below and update the code to test the property emailCommunicationSequenceEmailUuid
       //var instane = new UltraCartRestApiV2.EmailCommseqEmail();
       //expect(instance).to.be();
     });

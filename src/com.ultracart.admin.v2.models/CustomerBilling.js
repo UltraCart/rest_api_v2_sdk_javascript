@@ -37,7 +37,7 @@
   /**
    * The CustomerBilling model module.
    * @module com.ultracart.admin.v2.models/CustomerBilling
-   * @version 2.4.13
+   * @version 2.4.14
    */
 
   /**
