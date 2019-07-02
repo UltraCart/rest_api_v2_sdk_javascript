@@ -37,7 +37,7 @@
   /**
    * The EmailTemplate model module.
    * @module com.ultracart.admin.v2.models/EmailTemplate
-   * @version 2.4.14
+   * @version 2.4.15
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -79,6 +80,9 @@
       }
       if (data.hasOwnProperty('email_template_oid')) {
         obj['email_template_oid'] = ApiClient.convertToType(data['email_template_oid'], 'Number');
+      }
+      if (data.hasOwnProperty('email_template_vm_path')) {
+        obj['email_template_vm_path'] = ApiClient.convertToType(data['email_template_vm_path'], 'String');
       }
       if (data.hasOwnProperty('merchant_id')) {
         obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
@@ -120,6 +124,11 @@
    * @member {Number} email_template_oid
    */
   exports.prototype['email_template_oid'] = undefined;
+  /**
+   * Email Template VM Path
+   * @member {String} email_template_vm_path
+   */
+  exports.prototype['email_template_vm_path'] = undefined;
   /**
    * Merchant ID
    * @member {String} merchant_id

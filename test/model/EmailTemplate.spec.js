@@ -75,6 +75,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property emailTemplateVmPath (base name: "email_template_vm_path")', function() {
+      // uncomment below and update the code to test the property emailTemplateVmPath
+      //var instane = new UltraCartRestApiV2.EmailTemplate();
+      //expect(instance).to.be();
+    });
+
     it('should have the property merchantId (base name: "merchant_id")', function() {
       // uncomment below and update the code to test the property merchantId
       //var instane = new UltraCartRestApiV2.EmailTemplate();
