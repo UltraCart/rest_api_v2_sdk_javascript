@@ -1380,7 +1380,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailStats"></a>
 # **getEmailStats**
-> EmailStatSummaryResponse getEmailStats(storefrontOid, opts)
+> EmailDashboardStatsResponse getEmailStats(storefrontOid, opts)
 
 Get email stats
 
@@ -1432,7 +1432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EmailStatSummaryResponse**](EmailStatSummaryResponse.md)
+[**EmailDashboardStatsResponse**](EmailDashboardStatsResponse.md)
 
 ### Authorization
 

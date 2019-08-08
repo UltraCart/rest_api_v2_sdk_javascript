@@ -183,6 +183,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property uuid (base name: "uuid")', function() {
+      // uncomment below and update the code to test the property uuid
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property viewCount (base name: "view_count")', function() {
       // uncomment below and update the code to test the property viewCount
       //var instane = new UltraCartRestApiV2.EmailStat();

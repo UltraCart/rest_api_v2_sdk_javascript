@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.15
+   * @version 2.4.16
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -146,6 +147,9 @@
       }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
+      }
+      if (data.hasOwnProperty('uuid')) {
+        obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
       }
       if (data.hasOwnProperty('view_count')) {
         obj['view_count'] = ApiClient.convertToType(data['view_count'], 'Number');
@@ -262,6 +266,11 @@
    * @member {Number} storefront_oid
    */
   exports.prototype['storefront_oid'] = undefined;
+  /**
+   * List or segment uuid
+   * @member {String} uuid
+   */
+  exports.prototype['uuid'] = undefined;
   /**
    * Count of views
    * @member {Number} view_count
