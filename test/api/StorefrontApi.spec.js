@@ -181,6 +181,26 @@
         done();
       });
     });
+    describe('getEmailDashboardActivity', function() {
+      it('should call getEmailDashboardActivity successfully', function(done) {
+        //uncomment below and update the code to test getEmailDashboardActivity
+        //instance.getEmailDashboardActivity(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailDashboardStats', function() {
+      it('should call getEmailDashboardStats successfully', function(done) {
+        //uncomment below and update the code to test getEmailDashboardStats
+        //instance.getEmailDashboardStats(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailEmail', function() {
       it('should call getEmailEmail successfully', function(done) {
         //uncomment below and update the code to test getEmailEmail
@@ -255,16 +275,6 @@
       it('should call getEmailSegments successfully', function(done) {
         //uncomment below and update the code to test getEmailSegments
         //instance.getEmailSegments(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getEmailStats', function() {
-      it('should call getEmailStats successfully', function(done) {
-        //uncomment below and update the code to test getEmailStats
-        //instance.getEmailStats(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
