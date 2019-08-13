@@ -261,6 +261,16 @@
         done();
       });
     });
+    describe('getEmailListCustomerEditorUrl', function() {
+      it('should call getEmailListCustomerEditorUrl successfully', function(done) {
+        //uncomment below and update the code to test getEmailListCustomerEditorUrl
+        //instance.getEmailListCustomerEditorUrl(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailListCustomers', function() {
       it('should call getEmailListCustomers successfully', function(done) {
         //uncomment below and update the code to test getEmailListCustomers
