@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.19
+   * @version 2.4.20
    */
 
   /**
@@ -313,6 +313,67 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/emails/{commseq_email_uuid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteEmailListCustomer operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteEmailListCustomerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete email list customer
+     * @param {String} storefrontOid null
+     * @param {String} emailListUuid null
+     * @param {String} emailCustomerUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteEmailListCustomerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    this.deleteEmailListCustomer = function(storefrontOid, emailListUuid, emailCustomerUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling deleteEmailListCustomer");
+      }
+
+      // verify the required parameter 'emailListUuid' is set
+      if (emailListUuid === undefined || emailListUuid === null) {
+        throw new Error("Missing the required parameter 'emailListUuid' when calling deleteEmailListCustomer");
+      }
+
+      // verify the required parameter 'emailCustomerUuid' is set
+      if (emailCustomerUuid === undefined || emailCustomerUuid === null) {
+        throw new Error("Missing the required parameter 'emailCustomerUuid' when calling deleteEmailListCustomer");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'email_list_uuid': emailListUuid,
+        'email_customer_uuid': emailCustomerUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = BaseResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/lists/{email_list_uuid}/customers/{email_customer_uuid}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

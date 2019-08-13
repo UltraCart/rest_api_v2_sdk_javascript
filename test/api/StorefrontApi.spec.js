@@ -101,6 +101,16 @@
         done();
       });
     });
+    describe('deleteEmailListCustomer', function() {
+      it('should call deleteEmailListCustomer successfully', function(done) {
+        //uncomment below and update the code to test deleteEmailListCustomer
+        //instance.deleteEmailListCustomer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailBaseTemplates', function() {
       it('should call getEmailBaseTemplates successfully', function(done) {
         //uncomment below and update the code to test getEmailBaseTemplates
