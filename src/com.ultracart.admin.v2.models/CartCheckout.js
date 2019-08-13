@@ -37,7 +37,7 @@
   /**
    * The CartCheckout model module.
    * @module com.ultracart.admin.v2.models/CartCheckout
-   * @version 2.4.17
+   * @version 2.4.18
    */
 
   /**
@@ -150,7 +150,7 @@
    */
   exports.prototype['custom_field7'] = undefined;
   /**
-   * IP Address
+   * IP Address (read only unless non-browser key authenticated)
    * @member {String} ip_address
    */
   exports.prototype['ip_address'] = undefined;

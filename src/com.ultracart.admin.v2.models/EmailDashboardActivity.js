@@ -37,7 +37,7 @@
   /**
    * The EmailDashboardActivity model module.
    * @module com.ultracart.admin.v2.models/EmailDashboardActivity
-   * @version 2.4.17
+   * @version 2.4.18
    */
 
   /**
@@ -47,7 +47,6 @@
    */
   var exports = function() {
     var _this = this;
-
 
 
 
@@ -74,9 +73,6 @@
       }
       if (data.hasOwnProperty('activity_dts')) {
         obj['activity_dts'] = ApiClient.convertToType(data['activity_dts'], 'String');
-      }
-      if (data.hasOwnProperty('activity_dts_formatted')) {
-        obj['activity_dts_formatted'] = ApiClient.convertToType(data['activity_dts_formatted'], 'String');
       }
       if (data.hasOwnProperty('destination_name')) {
         obj['destination_name'] = ApiClient.convertToType(data['destination_name'], 'String');
@@ -107,11 +103,6 @@
    * @member {String} activity_dts
    */
   exports.prototype['activity_dts'] = undefined;
-  /**
-   * Date/time of the activity formatted in XXX ago
-   * @member {String} activity_dts_formatted
-   */
-  exports.prototype['activity_dts_formatted'] = undefined;
   /**
    * List or segment name
    * @member {String} destination_name

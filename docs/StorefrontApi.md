@@ -911,7 +911,7 @@ var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 var storefrontOid = "storefrontOid_example"; // String | null
 
 var opts = { 
-  'days': 56 // Number | null
+  'lastRecords': 56 // Number | null
 };
 
 var callback = function(error, data, response) {
@@ -929,7 +929,7 @@ apiInstance.getEmailDashboardActivity(storefrontOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefrontOid** | **String**| null | 
- **days** | **Number**| null | [optional] 
+ **lastRecords** | **Number**| null | [optional] 
 
 ### Return type
 

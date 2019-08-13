@@ -69,12 +69,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property activityDtsFormatted (base name: "activity_dts_formatted")', function() {
-      // uncomment below and update the code to test the property activityDtsFormatted
-      //var instane = new UltraCartRestApiV2.EmailDashboardActivity();
-      //expect(instance).to.be();
-    });
-
     it('should have the property destinationName (base name: "destination_name")', function() {
       // uncomment below and update the code to test the property destinationName
       //var instane = new UltraCartRestApiV2.EmailDashboardActivity();

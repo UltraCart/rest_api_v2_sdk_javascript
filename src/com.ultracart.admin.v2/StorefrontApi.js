@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.17
+   * @version 2.4.18
    */
 
   /**
@@ -756,7 +756,7 @@
      * Get email dashboard activity
      * @param {String} storefrontOid null
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.days null
+     * @param {Number} opts.lastRecords null
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailDashboardActivityCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDashboardActivityResponse}
      */
@@ -774,7 +774,7 @@
         'storefront_oid': storefrontOid
       };
       var queryParams = {
-        'days': opts['days'],
+        'last_records': opts['lastRecords'],
       };
       var collectionQueryParams = {
       };
