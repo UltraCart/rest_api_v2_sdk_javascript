@@ -251,6 +251,16 @@
         done();
       });
     });
+    describe('getEmailListCustomers', function() {
+      it('should call getEmailListCustomers successfully', function(done) {
+        //uncomment below and update the code to test getEmailListCustomers
+        //instance.getEmailListCustomers(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailLists', function() {
       it('should call getEmailLists successfully', function(done) {
         //uncomment below and update the code to test getEmailLists
@@ -265,6 +275,16 @@
       it('should call getEmailSegment successfully', function(done) {
         //uncomment below and update the code to test getEmailSegment
         //instance.getEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailSegmentCustomers', function() {
+      it('should call getEmailSegmentCustomers successfully', function(done) {
+        //uncomment below and update the code to test getEmailSegmentCustomers
+        //instance.getEmailSegmentCustomers(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -355,6 +375,26 @@
       it('should call insertEmailSegment successfully', function(done) {
         //uncomment below and update the code to test insertEmailSegment
         //instance.insertEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('searchEmailListCustomers', function() {
+      it('should call searchEmailListCustomers successfully', function(done) {
+        //uncomment below and update the code to test searchEmailListCustomers
+        //instance.searchEmailListCustomers(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('searchEmailSegmentCustomers', function() {
+      it('should call searchEmailSegmentCustomers successfully', function(done) {
+        //uncomment below and update the code to test searchEmailSegmentCustomers
+        //instance.searchEmailSegmentCustomers(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
