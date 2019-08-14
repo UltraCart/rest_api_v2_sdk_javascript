@@ -153,6 +153,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sendCount (base name: "send_count")', function() {
+      // uncomment below and update the code to test the property sendCount
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sendCountFormatted (base name: "send_count_formatted")', function() {
+      // uncomment below and update the code to test the property sendCountFormatted
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property skippedCount (base name: "skipped_count")', function() {
       // uncomment below and update the code to test the property skippedCount
       //var instane = new UltraCartRestApiV2.EmailStat();
@@ -173,6 +185,24 @@
 
     it('should have the property spamCountFormatted (base name: "spam_count_formatted")', function() {
       // uncomment below and update the code to test the property spamCountFormatted
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property statType (base name: "stat_type")', function() {
+      // uncomment below and update the code to test the property statType
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property statusDts (base name: "status_dts")', function() {
+      // uncomment below and update the code to test the property statusDts
       //var instane = new UltraCartRestApiV2.EmailStat();
       //expect(instance).to.be();
     });

@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.21
+   * @version 2.4.22
    */
 
   /**
@@ -47,6 +47,11 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
 
 
 
@@ -133,6 +138,12 @@
       if (data.hasOwnProperty('revenue_formatted')) {
         obj['revenue_formatted'] = ApiClient.convertToType(data['revenue_formatted'], 'String');
       }
+      if (data.hasOwnProperty('send_count')) {
+        obj['send_count'] = ApiClient.convertToType(data['send_count'], 'Number');
+      }
+      if (data.hasOwnProperty('send_count_formatted')) {
+        obj['send_count_formatted'] = ApiClient.convertToType(data['send_count_formatted'], 'String');
+      }
       if (data.hasOwnProperty('skipped_count')) {
         obj['skipped_count'] = ApiClient.convertToType(data['skipped_count'], 'Number');
       }
@@ -144,6 +155,15 @@
       }
       if (data.hasOwnProperty('spam_count_formatted')) {
         obj['spam_count_formatted'] = ApiClient.convertToType(data['spam_count_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('stat_type')) {
+        obj['stat_type'] = ApiClient.convertToType(data['stat_type'], 'String');
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      }
+      if (data.hasOwnProperty('status_dts')) {
+        obj['status_dts'] = ApiClient.convertToType(data['status_dts'], 'String');
       }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
@@ -242,6 +262,16 @@
    */
   exports.prototype['revenue_formatted'] = undefined;
   /**
+   * Count of emails sent
+   * @member {Number} send_count
+   */
+  exports.prototype['send_count'] = undefined;
+  /**
+   * Count of emails sent, formatted
+   * @member {String} send_count_formatted
+   */
+  exports.prototype['send_count_formatted'] = undefined;
+  /**
    * Count of skipped emails
    * @member {Number} skipped_count
    */
@@ -261,6 +291,21 @@
    * @member {String} spam_count_formatted
    */
   exports.prototype['spam_count_formatted'] = undefined;
+  /**
+   * Campaign, Flow or None (for anything else)
+   * @member {String} stat_type
+   */
+  exports.prototype['stat_type'] = undefined;
+  /**
+   * Status of campaign or flow
+   * @member {String} status
+   */
+  exports.prototype['status'] = undefined;
+  /**
+   * Status dts of campaign or flow
+   * @member {String} status_dts
+   */
+  exports.prototype['status_dts'] = undefined;
   /**
    * Storefront oid
    * @member {Number} storefront_oid

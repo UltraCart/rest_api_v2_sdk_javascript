@@ -37,7 +37,7 @@
   /**
    * The OrderLinkedShipment model module.
    * @module com.ultracart.admin.v2.models/OrderLinkedShipment
-   * @version 2.4.21
+   * @version 2.4.22
    */
 
   /**
