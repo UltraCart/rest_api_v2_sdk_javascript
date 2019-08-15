@@ -37,7 +37,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 2.4.22
+   * @version 2.4.23
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -91,6 +92,9 @@
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      }
+      if (data.hasOwnProperty('scheduled_dts')) {
+        obj['scheduled_dts'] = ApiClient.convertToType(data['scheduled_dts'], 'String');
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -140,6 +144,11 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * Scheduled date
+   * @member {String} scheduled_dts
+   */
+  exports.prototype['scheduled_dts'] = undefined;
   /**
    * Status of the campaign of draft, archived, and sent
    * @member {String} status

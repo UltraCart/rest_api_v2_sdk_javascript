@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **memberships** | [**[EmailListSegmentMembership]**](EmailListSegmentMembership.md) | List and segment memberships | [optional] 
 **merchant_id** | **String** | Merchant ID | [optional] 
 **name** | **String** | Name of email campaign | [optional] 
+**scheduled_dts** | **String** | Scheduled date | [optional] 
 **status** | **String** | Status of the campaign of draft, archived, and sent | [optional] 
 **status_dts** | **String** | Timestamp when the last status change happened | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 

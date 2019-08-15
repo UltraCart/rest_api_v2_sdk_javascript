@@ -37,7 +37,7 @@
   /**
    * The DistributionCentersResponse model module.
    * @module com.ultracart.admin.v2.models/DistributionCentersResponse
-   * @version 2.4.22
+   * @version 2.4.23
    */
 
   /**
