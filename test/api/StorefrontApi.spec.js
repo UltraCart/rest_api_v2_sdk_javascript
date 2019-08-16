@@ -91,6 +91,16 @@
         done();
       });
     });
+    describe('createEmailSendingDomain', function() {
+      it('should call createEmailSendingDomain successfully', function(done) {
+        //uncomment below and update the code to test createEmailSendingDomain
+        //instance.createEmailSendingDomain(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteEmailEmail', function() {
       it('should call deleteEmailEmail successfully', function(done) {
         //uncomment below and update the code to test deleteEmailEmail
@@ -105,6 +115,16 @@
       it('should call deleteEmailListCustomer successfully', function(done) {
         //uncomment below and update the code to test deleteEmailListCustomer
         //instance.deleteEmailListCustomer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteEmailSendingDomain', function() {
+      it('should call deleteEmailSendingDomain successfully', function(done) {
+        //uncomment below and update the code to test deleteEmailSendingDomain
+        //instance.deleteEmailSendingDomain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -321,6 +341,26 @@
         done();
       });
     });
+    describe('getEmailSendingDomain', function() {
+      it('should call getEmailSendingDomain successfully', function(done) {
+        //uncomment below and update the code to test getEmailSendingDomain
+        //instance.getEmailSendingDomain(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailSendingDomains', function() {
+      it('should call getEmailSendingDomains successfully', function(done) {
+        //uncomment below and update the code to test getEmailSendingDomains
+        //instance.getEmailSendingDomains(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailTemplate', function() {
       it('should call getEmailTemplate successfully', function(done) {
         //uncomment below and update the code to test getEmailTemplate
@@ -495,6 +535,16 @@
       it('should call updateEmailSegment successfully', function(done) {
         //uncomment below and update the code to test updateEmailSegment
         //instance.updateEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('verifyEmailSendingDomain', function() {
+      it('should call verifyEmailSendingDomain successfully', function(done) {
+        //uncomment below and update the code to test verifyEmailSendingDomain
+        //instance.verifyEmailSendingDomain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
