@@ -34,7 +34,7 @@
   /**
    * Webhook service.
    * @module com.ultracart.admin.v2/WebhookApi
-   * @version 2.4.24
+   * @version 2.4.27
    */
 
   /**
@@ -90,6 +90,53 @@
 
       return this.apiClient.callApi(
         '/webhook/webhooks/{webhookOid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteWebhookByUrl operation.
+     * @callback module:com.ultracart.admin.v2/WebhookApi~deleteWebhookByUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/WebhookResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a webhook by URL
+     * Delete a webhook based upon the URL on the webhook_url matching an existing webhook. 
+     * @param {module:com.ultracart.admin.v2.models/Webhook} webhook Webhook to delete
+     * @param {module:com.ultracart.admin.v2/WebhookApi~deleteWebhookByUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookResponse}
+     */
+    this.deleteWebhookByUrl = function(webhook, callback) {
+      var postBody = webhook;
+
+      // verify the required parameter 'webhook' is set
+      if (webhook === undefined || webhook === null) {
+        throw new Error("Missing the required parameter 'webhook' when calling deleteWebhookByUrl");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = WebhookResponse;
+
+      return this.apiClient.callApi(
+        '/webhook/webhooks', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

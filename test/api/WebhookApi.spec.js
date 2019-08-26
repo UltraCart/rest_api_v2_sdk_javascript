@@ -61,6 +61,16 @@
         done();
       });
     });
+    describe('deleteWebhookByUrl', function() {
+      it('should call deleteWebhookByUrl successfully', function(done) {
+        //uncomment below and update the code to test deleteWebhookByUrl
+        //instance.deleteWebhookByUrl(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getWebhookLog', function() {
       it('should call getWebhookLog successfully', function(done) {
         //uncomment below and update the code to test getWebhookLog

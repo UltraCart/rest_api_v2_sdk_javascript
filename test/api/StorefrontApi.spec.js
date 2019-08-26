@@ -131,6 +131,16 @@
         done();
       });
     });
+    describe('deleteExperiment', function() {
+      it('should call deleteExperiment successfully', function(done) {
+        //uncomment below and update the code to test deleteExperiment
+        //instance.deleteExperiment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailBaseTemplates', function() {
       it('should call getEmailBaseTemplates successfully', function(done) {
         //uncomment below and update the code to test getEmailBaseTemplates
@@ -321,6 +331,16 @@
         done();
       });
     });
+    describe('getEmailSegmentCustomerEditorUrl', function() {
+      it('should call getEmailSegmentCustomerEditorUrl successfully', function(done) {
+        //uncomment below and update the code to test getEmailSegmentCustomerEditorUrl
+        //instance.getEmailSegmentCustomerEditorUrl(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailSegmentCustomers', function() {
       it('should call getEmailSegmentCustomers successfully', function(done) {
         //uncomment below and update the code to test getEmailSegmentCustomers
@@ -375,6 +395,16 @@
       it('should call getEmailTemplates successfully', function(done) {
         //uncomment below and update the code to test getEmailTemplates
         //instance.getEmailTemplates(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getExperiments', function() {
+      it('should call getExperiments successfully', function(done) {
+        //uncomment below and update the code to test getExperiments
+        //instance.getExperiments(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -535,6 +565,16 @@
       it('should call updateEmailSegment successfully', function(done) {
         //uncomment below and update the code to test updateEmailSegment
         //instance.updateEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateExperiment', function() {
+      it('should call updateExperiment successfully', function(done) {
+        //uncomment below and update the code to test updateExperiment
+        //instance.updateExperiment(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
