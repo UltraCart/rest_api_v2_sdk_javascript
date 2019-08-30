@@ -261,6 +261,16 @@
         done();
       });
     });
+    describe('getEmailEmailsMultiple', function() {
+      it('should call getEmailEmailsMultiple successfully', function(done) {
+        //uncomment below and update the code to test getEmailEmailsMultiple
+        //instance.getEmailEmailsMultiple(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailFlow', function() {
       it('should call getEmailFlow successfully', function(done) {
         //uncomment below and update the code to test getEmailFlow
