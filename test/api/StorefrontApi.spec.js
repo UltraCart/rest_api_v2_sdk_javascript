@@ -411,10 +411,30 @@
         done();
       });
     });
+    describe('getEmailThirdPartyProviders', function() {
+      it('should call getEmailThirdPartyProviders successfully', function(done) {
+        //uncomment below and update the code to test getEmailThirdPartyProviders
+        //instance.getEmailThirdPartyProviders(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getExperiments', function() {
       it('should call getExperiments successfully', function(done) {
         //uncomment below and update the code to test getExperiments
         //instance.getExperiments(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('importEmailThirdPartyProviderList', function() {
+      it('should call importEmailThirdPartyProviderList successfully', function(done) {
+        //uncomment below and update the code to test importEmailThirdPartyProviderList
+        //instance.importEmailThirdPartyProviderList(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

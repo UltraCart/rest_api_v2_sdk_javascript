@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.Customer);
     });
 
+    it('should have the property activity (base name: "activity")', function() {
+      // uncomment below and update the code to test the property activity
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property affiliateOid (base name: "affiliate_oid")', function() {
       // uncomment below and update the code to test the property affiliateOid
       //var instane = new UltraCartRestApiV2.Customer();

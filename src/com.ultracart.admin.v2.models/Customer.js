@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerAttachment', 'com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.models/CustomerOrdersSummary', 'com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.models/CustomerPrivacy', 'com.ultracart.admin.v2.models/CustomerQuotesSummary', 'com.ultracart.admin.v2.models/CustomerReviewer', 'com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.models/CustomerSoftwareEntitlement', 'com.ultracart.admin.v2.models/CustomerTaxCodes', 'com.ultracart.admin.v2.models/Order'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerActivity', 'com.ultracart.admin.v2.models/CustomerAttachment', 'com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.models/CustomerOrdersSummary', 'com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.models/CustomerPrivacy', 'com.ultracart.admin.v2.models/CustomerQuotesSummary', 'com.ultracart.admin.v2.models/CustomerReviewer', 'com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.models/CustomerSoftwareEntitlement', 'com.ultracart.admin.v2.models/CustomerTaxCodes', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomerAttachment'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEmail'), require('./CustomerOrdersSummary'), require('./CustomerPricingTier'), require('./CustomerPrivacy'), require('./CustomerQuotesSummary'), require('./CustomerReviewer'), require('./CustomerShipping'), require('./CustomerSoftwareEntitlement'), require('./CustomerTaxCodes'), require('./Order'));
+    module.exports = factory(require('../ApiClient'), require('./CustomerActivity'), require('./CustomerAttachment'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEmail'), require('./CustomerOrdersSummary'), require('./CustomerPricingTier'), require('./CustomerPrivacy'), require('./CustomerQuotesSummary'), require('./CustomerReviewer'), require('./CustomerShipping'), require('./CustomerSoftwareEntitlement'), require('./CustomerTaxCodes'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerAttachment, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerOrdersSummary, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerPrivacy, root.UltraCartRestApiV2.CustomerQuotesSummary, root.UltraCartRestApiV2.CustomerReviewer, root.UltraCartRestApiV2.CustomerShipping, root.UltraCartRestApiV2.CustomerSoftwareEntitlement, root.UltraCartRestApiV2.CustomerTaxCodes, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerActivity, root.UltraCartRestApiV2.CustomerAttachment, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerOrdersSummary, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerPrivacy, root.UltraCartRestApiV2.CustomerQuotesSummary, root.UltraCartRestApiV2.CustomerReviewer, root.UltraCartRestApiV2.CustomerShipping, root.UltraCartRestApiV2.CustomerSoftwareEntitlement, root.UltraCartRestApiV2.CustomerTaxCodes, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, CustomerAttachment, CustomerBilling, CustomerCard, CustomerEmail, CustomerOrdersSummary, CustomerPricingTier, CustomerPrivacy, CustomerQuotesSummary, CustomerReviewer, CustomerShipping, CustomerSoftwareEntitlement, CustomerTaxCodes, Order) {
+}(this, function(ApiClient, CustomerActivity, CustomerAttachment, CustomerBilling, CustomerCard, CustomerEmail, CustomerOrdersSummary, CustomerPricingTier, CustomerPrivacy, CustomerQuotesSummary, CustomerReviewer, CustomerShipping, CustomerSoftwareEntitlement, CustomerTaxCodes, Order) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 2.4.28
+   * @version 2.4.29
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -115,6 +116,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('activity')) {
+        obj['activity'] = CustomerActivity.constructFromObject(data['activity']);
+      }
       if (data.hasOwnProperty('affiliate_oid')) {
         obj['affiliate_oid'] = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       }
@@ -281,6 +285,10 @@
     return obj;
   }
 
+  /**
+   * @member {module:com.ultracart.admin.v2.models/CustomerActivity} activity
+   */
+  exports.prototype['activity'] = undefined;
   /**
    * Affiliate oid
    * @member {Number} affiliate_oid

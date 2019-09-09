@@ -34,7 +34,7 @@
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 2.4.28
+   * @version 2.4.29
    */
 
   /**
@@ -139,7 +139,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
       var returnType = CouponCodesResponse;
 
@@ -193,7 +193,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
       var returnType = CouponCodesResponse;
 

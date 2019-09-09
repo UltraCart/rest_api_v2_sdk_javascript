@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**activity** | [**CustomerActivity**](CustomerActivity.md) |  | [optional] 
 **affiliate_oid** | **Number** | Affiliate oid | [optional] 
 **allow_3rd_party_billing** | **Boolean** | Allow 3rd party billing | [optional] 
 **allow_cod** | **Boolean** | Allow COD | [optional] 
