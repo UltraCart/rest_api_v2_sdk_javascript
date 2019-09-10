@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailCampaign);
     });
 
+    it('should have the property clickRateFormatted (base name: "click_rate_formatted")', function() {
+      // uncomment below and update the code to test the property clickRateFormatted
+      //var instane = new UltraCartRestApiV2.EmailCampaign();
+      //expect(instance).to.be();
+    });
+
     it('should have the property createdDts (base name: "created_dts")', function() {
       // uncomment below and update the code to test the property createdDts
       //var instane = new UltraCartRestApiV2.EmailCampaign();
@@ -95,6 +101,18 @@
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
+      //var instane = new UltraCartRestApiV2.EmailCampaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property openRateFormatted (base name: "open_rate_formatted")', function() {
+      // uncomment below and update the code to test the property openRateFormatted
+      //var instane = new UltraCartRestApiV2.EmailCampaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property revenueFormatted (base name: "revenue_formatted")', function() {
+      // uncomment below and update the code to test the property revenueFormatted
       //var instane = new UltraCartRestApiV2.EmailCampaign();
       //expect(instance).to.be();
     });

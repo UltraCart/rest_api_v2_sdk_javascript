@@ -37,7 +37,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 2.4.29
+   * @version 2.4.30
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -72,6 +75,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('click_rate_formatted')) {
+        obj['click_rate_formatted'] = ApiClient.convertToType(data['click_rate_formatted'], 'String');
+      }
       if (data.hasOwnProperty('created_dts')) {
         obj['created_dts'] = ApiClient.convertToType(data['created_dts'], 'String');
       }
@@ -93,6 +99,12 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
+      if (data.hasOwnProperty('open_rate_formatted')) {
+        obj['open_rate_formatted'] = ApiClient.convertToType(data['open_rate_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('revenue_formatted')) {
+        obj['revenue_formatted'] = ApiClient.convertToType(data['revenue_formatted'], 'String');
+      }
       if (data.hasOwnProperty('scheduled_dts')) {
         obj['scheduled_dts'] = ApiClient.convertToType(data['scheduled_dts'], 'String');
       }
@@ -109,6 +121,11 @@
     return obj;
   }
 
+  /**
+   * Click rate of emails
+   * @member {String} click_rate_formatted
+   */
+  exports.prototype['click_rate_formatted'] = undefined;
   /**
    * Created date
    * @member {String} created_dts
@@ -144,6 +161,16 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * Open rate of emails
+   * @member {String} open_rate_formatted
+   */
+  exports.prototype['open_rate_formatted'] = undefined;
+  /**
+   * Revenue associated with campaign
+   * @member {String} revenue_formatted
+   */
+  exports.prototype['revenue_formatted'] = undefined;
   /**
    * Scheduled date
    * @member {String} scheduled_dts

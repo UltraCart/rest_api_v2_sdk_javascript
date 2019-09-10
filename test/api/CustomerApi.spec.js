@@ -111,6 +111,16 @@
         done();
       });
     });
+    describe('getEmailLists', function() {
+      it('should call getEmailLists successfully', function(done) {
+        //uncomment below and update the code to test getEmailLists
+        //instance.getEmailLists(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('insertCustomer', function() {
       it('should call insertCustomer successfully', function(done) {
         //uncomment below and update the code to test insertCustomer
