@@ -37,7 +37,7 @@
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 2.4.30
+   * @version 2.4.31
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -99,6 +100,9 @@
       }
       if (data.hasOwnProperty('canceled_dts')) {
         obj['canceled_dts'] = ApiClient.convertToType(data['canceled_dts'], 'String');
+      }
+      if (data.hasOwnProperty('completed')) {
+        obj['completed'] = ApiClient.convertToType(data['completed'], 'Boolean');
       }
       if (data.hasOwnProperty('credit_card_attempt')) {
         obj['credit_card_attempt'] = ApiClient.convertToType(data['credit_card_attempt'], 'Number');
@@ -172,6 +176,11 @@
    * @member {String} canceled_dts
    */
   exports.prototype['canceled_dts'] = undefined;
+  /**
+   * True if the auto order ran successfully to completion
+   * @member {Boolean} completed
+   */
+  exports.prototype['completed'] = undefined;
   /**
    * The number of credit card attempts that have taken place
    * @member {Number} credit_card_attempt

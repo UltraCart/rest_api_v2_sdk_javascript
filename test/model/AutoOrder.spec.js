@@ -99,6 +99,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property completed (base name: "completed")', function() {
+      // uncomment below and update the code to test the property completed
+      //var instane = new UltraCartRestApiV2.AutoOrder();
+      //expect(instance).to.be();
+    });
+
     it('should have the property creditCardAttempt (base name: "credit_card_attempt")', function() {
       // uncomment below and update the code to test the property creditCardAttempt
       //var instane = new UltraCartRestApiV2.AutoOrder();

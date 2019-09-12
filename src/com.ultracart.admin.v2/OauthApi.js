@@ -34,7 +34,7 @@
   /**
    * Oauth service.
    * @module com.ultracart.admin.v2/OauthApi
-   * @version 2.4.30
+   * @version 2.4.31
    */
 
   /**

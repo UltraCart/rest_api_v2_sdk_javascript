@@ -37,7 +37,7 @@
   /**
    * The ListSegmentMembership model module.
    * @module com.ultracart.admin.v2.models/ListSegmentMembership
-   * @version 2.4.30
+   * @version 2.4.31
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -63,6 +64,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      }
       if (data.hasOwnProperty('type')) {
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
@@ -73,6 +77,10 @@
     return obj;
   }
 
+  /**
+   * @member {String} name
+   */
+  exports.prototype['name'] = undefined;
   /**
    * @member {String} type
    */

@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 2.4.30
+   * @version 2.4.31
    */
 
   /**

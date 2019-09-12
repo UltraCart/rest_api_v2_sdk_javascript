@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.30
+   * @version 2.4.31
    */
 
   /**
@@ -305,7 +305,7 @@
       var returnType = EmailSendingDomainResponse;
 
       return this.apiClient.callApi(
-        '/storefront//email/sending_domains/{domain}/create', 'POST',
+        '/storefront/email/sending_domains/{domain}/create', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -467,7 +467,7 @@
       var returnType = BaseResponse;
 
       return this.apiClient.callApi(
-        '/storefront//email/sending_domains/{domain}', 'DELETE',
+        '/storefront/email/sending_domains/{domain}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3100,7 +3100,7 @@
       var returnType = EmailSendingDomainResponse;
 
       return this.apiClient.callApi(
-        '/storefront//email/sending_domains/{domain}/verify', 'POST',
+        '/storefront/email/sending_domains/{domain}/verify', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

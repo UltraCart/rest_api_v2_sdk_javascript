@@ -69,6 +69,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property subject (base name: "subject")', function() {
+      // uncomment below and update the code to test the property subject
+      //var instane = new UltraCartRestApiV2.Activity();
+      //expect(instance).to.be();
+    });
+
     it('should have the property ts (base name: "ts")', function() {
       // uncomment below and update the code to test the property ts
       //var instane = new UltraCartRestApiV2.Activity();

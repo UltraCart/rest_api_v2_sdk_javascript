@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.ListSegmentMembership);
     });
 
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new UltraCartRestApiV2.ListSegmentMembership();
+      //expect(instance).to.be();
+    });
+
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
       //var instane = new UltraCartRestApiV2.ListSegmentMembership();
