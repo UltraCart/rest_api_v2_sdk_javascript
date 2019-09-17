@@ -381,6 +381,16 @@
         done();
       });
     });
+    describe('getEmailSendingDomainStatus', function() {
+      it('should call getEmailSendingDomainStatus successfully', function(done) {
+        //uncomment below and update the code to test getEmailSendingDomainStatus
+        //instance.getEmailSendingDomainStatus(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailSendingDomains', function() {
       it('should call getEmailSendingDomains successfully', function(done) {
         //uncomment below and update the code to test getEmailSendingDomains
@@ -605,16 +615,6 @@
       it('should call updateExperiment successfully', function(done) {
         //uncomment below and update the code to test updateExperiment
         //instance.updateExperiment(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('verifyEmailSendingDomain', function() {
-      it('should call verifyEmailSendingDomain successfully', function(done) {
-        //uncomment below and update the code to test verifyEmailSendingDomain
-        //instance.verifyEmailSendingDomain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

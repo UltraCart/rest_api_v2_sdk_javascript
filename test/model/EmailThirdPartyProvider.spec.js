@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailThirdPartyProvider);
     });
 
+    it('should have the property connectUrl (base name: "connect_url")', function() {
+      // uncomment below and update the code to test the property connectUrl
+      //var instane = new UltraCartRestApiV2.EmailThirdPartyProvider();
+      //expect(instance).to.be();
+    });
+
     it('should have the property listCount (base name: "list_count")', function() {
       // uncomment below and update the code to test the property listCount
       //var instane = new UltraCartRestApiV2.EmailThirdPartyProvider();

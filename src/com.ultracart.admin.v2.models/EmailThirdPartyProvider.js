@@ -37,7 +37,7 @@
   /**
    * The EmailThirdPartyProvider model module.
    * @module com.ultracart.admin.v2.models/EmailThirdPartyProvider
-   * @version 2.4.31
+   * @version 2.4.32
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -65,6 +66,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('connect_url')) {
+        obj['connect_url'] = ApiClient.convertToType(data['connect_url'], 'String');
+      }
       if (data.hasOwnProperty('list_count')) {
         obj['list_count'] = ApiClient.convertToType(data['list_count'], 'Number');
       }
@@ -81,6 +85,11 @@
     return obj;
   }
 
+  /**
+   * URL to the settings screen to connect.  Null if the provider is already connected.
+   * @member {String} connect_url
+   */
+  exports.prototype['connect_url'] = undefined;
   /**
    * list_count
    * @member {Number} list_count

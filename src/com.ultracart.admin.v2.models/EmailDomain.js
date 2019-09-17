@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/VerificationRecord'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./VerificationRecord'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailDomain = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.EmailDomain = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.VerificationRecord);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, VerificationRecord) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The EmailDomain model module.
    * @module com.ultracart.admin.v2.models/EmailDomain
-   * @version 2.4.31
+   * @version 2.4.32
    */
 
   /**
@@ -47,7 +47,6 @@
    */
   var exports = function() {
     var _this = this;
-
 
 
 
@@ -73,17 +72,11 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('dkim_headers')) {
-        obj['dkim_headers'] = ApiClient.convertToType(data['dkim_headers'], 'String');
+      if (data.hasOwnProperty('comment')) {
+        obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
       }
-      if (data.hasOwnProperty('dkim_public')) {
-        obj['dkim_public'] = ApiClient.convertToType(data['dkim_public'], 'String');
-      }
-      if (data.hasOwnProperty('dkim_selector')) {
-        obj['dkim_selector'] = ApiClient.convertToType(data['dkim_selector'], 'String');
-      }
-      if (data.hasOwnProperty('dkim_signing_domain')) {
-        obj['dkim_signing_domain'] = ApiClient.convertToType(data['dkim_signing_domain'], 'String');
+      if (data.hasOwnProperty('dkim')) {
+        obj['dkim'] = ApiClient.convertToType(data['dkim'], [VerificationRecord]);
       }
       if (data.hasOwnProperty('dkim_status')) {
         obj['dkim_status'] = ApiClient.convertToType(data['dkim_status'], 'String');
@@ -94,41 +87,36 @@
       if (data.hasOwnProperty('esp_domain_uuid')) {
         obj['esp_domain_uuid'] = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       }
-      if (data.hasOwnProperty('hostname')) {
-        obj['hostname'] = ApiClient.convertToType(data['hostname'], 'String');
+      if (data.hasOwnProperty('identity_status')) {
+        obj['identity_status'] = ApiClient.convertToType(data['identity_status'], 'String');
       }
       if (data.hasOwnProperty('merchant_id')) {
         obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
       }
-      if (data.hasOwnProperty('tracking_domain')) {
-        obj['tracking_domain'] = ApiClient.convertToType(data['tracking_domain'], 'String');
+      if (data.hasOwnProperty('provider')) {
+        obj['provider'] = ApiClient.convertToType(data['provider'], 'String');
       }
-      if (data.hasOwnProperty('type')) {
-        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('start_dkim_dts')) {
+        obj['start_dkim_dts'] = ApiClient.convertToType(data['start_dkim_dts'], 'String');
       }
-      if (data.hasOwnProperty('value')) {
-        obj['value'] = ApiClient.convertToType(data['value'], 'String');
+      if (data.hasOwnProperty('start_identity_dts')) {
+        obj['start_identity_dts'] = ApiClient.convertToType(data['start_identity_dts'], 'String');
+      }
+      if (data.hasOwnProperty('verification')) {
+        obj['verification'] = VerificationRecord.constructFromObject(data['verification']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} dkim_headers
+   * @member {String} comment
    */
-  exports.prototype['dkim_headers'] = undefined;
+  exports.prototype['comment'] = undefined;
   /**
-   * @member {String} dkim_public
+   * @member {Array.<module:com.ultracart.admin.v2.models/VerificationRecord>} dkim
    */
-  exports.prototype['dkim_public'] = undefined;
-  /**
-   * @member {String} dkim_selector
-   */
-  exports.prototype['dkim_selector'] = undefined;
-  /**
-   * @member {String} dkim_signing_domain
-   */
-  exports.prototype['dkim_signing_domain'] = undefined;
+  exports.prototype['dkim'] = undefined;
   /**
    * @member {String} dkim_status
    */
@@ -142,25 +130,29 @@
    */
   exports.prototype['esp_domain_uuid'] = undefined;
   /**
-   * @member {String} hostname
+   * @member {String} identity_status
    */
-  exports.prototype['hostname'] = undefined;
+  exports.prototype['identity_status'] = undefined;
   /**
    * @member {String} merchant_id
    */
   exports.prototype['merchant_id'] = undefined;
   /**
-   * @member {String} tracking_domain
+   * @member {String} provider
    */
-  exports.prototype['tracking_domain'] = undefined;
+  exports.prototype['provider'] = undefined;
   /**
-   * @member {String} type
+   * @member {String} start_dkim_dts
    */
-  exports.prototype['type'] = undefined;
+  exports.prototype['start_dkim_dts'] = undefined;
   /**
-   * @member {String} value
+   * @member {String} start_identity_dts
    */
-  exports.prototype['value'] = undefined;
+  exports.prototype['start_identity_dts'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.models/VerificationRecord} verification
+   */
+  exports.prototype['verification'] = undefined;
 
 
 

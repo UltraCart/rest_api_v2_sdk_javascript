@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.31
+   * @version 2.4.32
    */
 
   /**
@@ -1801,6 +1801,53 @@
     }
 
     /**
+     * Callback function to receive the result of the getEmailSendingDomainStatus operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailSendingDomainStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailSendingDomainResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get email sending domain status
+     * @param {String} domain null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailSendingDomainStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSendingDomainResponse}
+     */
+    this.getEmailSendingDomainStatus = function(domain, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'domain' is set
+      if (domain === undefined || domain === null) {
+        throw new Error("Missing the required parameter 'domain' when calling getEmailSendingDomainStatus");
+      }
+
+
+      var pathParams = {
+        'domain': domain
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailSendingDomainResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/email/sending_domains/{domain}/status', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getEmailSendingDomains operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailSendingDomainsCallback
      * @param {String} error Error message, if any.
@@ -3054,53 +3101,6 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/experiments/{storefront_experiment_oid}', 'PUT',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the verifyEmailSendingDomain operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~verifyEmailSendingDomainCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/EmailSendingDomainResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Verify email campaign
-     * @param {String} domain null
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~verifyEmailSendingDomainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSendingDomainResponse}
-     */
-    this.verifyEmailSendingDomain = function(domain, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'domain' is set
-      if (domain === undefined || domain === null) {
-        throw new Error("Missing the required parameter 'domain' when calling verifyEmailSendingDomain");
-      }
-
-
-      var pathParams = {
-        'domain': domain
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = EmailSendingDomainResponse;
-
-      return this.apiClient.callApi(
-        '/storefront/email/sending_domains/{domain}/verify', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

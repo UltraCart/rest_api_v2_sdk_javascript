@@ -57,26 +57,14 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailDomain);
     });
 
-    it('should have the property dkimHeaders (base name: "dkim_headers")', function() {
-      // uncomment below and update the code to test the property dkimHeaders
+    it('should have the property comment (base name: "comment")', function() {
+      // uncomment below and update the code to test the property comment
       //var instane = new UltraCartRestApiV2.EmailDomain();
       //expect(instance).to.be();
     });
 
-    it('should have the property dkimPublic (base name: "dkim_public")', function() {
-      // uncomment below and update the code to test the property dkimPublic
-      //var instane = new UltraCartRestApiV2.EmailDomain();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dkimSelector (base name: "dkim_selector")', function() {
-      // uncomment below and update the code to test the property dkimSelector
-      //var instane = new UltraCartRestApiV2.EmailDomain();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dkimSigningDomain (base name: "dkim_signing_domain")', function() {
-      // uncomment below and update the code to test the property dkimSigningDomain
+    it('should have the property dkim (base name: "dkim")', function() {
+      // uncomment below and update the code to test the property dkim
       //var instane = new UltraCartRestApiV2.EmailDomain();
       //expect(instance).to.be();
     });
@@ -99,8 +87,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property hostname (base name: "hostname")', function() {
-      // uncomment below and update the code to test the property hostname
+    it('should have the property identityStatus (base name: "identity_status")', function() {
+      // uncomment below and update the code to test the property identityStatus
       //var instane = new UltraCartRestApiV2.EmailDomain();
       //expect(instance).to.be();
     });
@@ -111,20 +99,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property trackingDomain (base name: "tracking_domain")', function() {
-      // uncomment below and update the code to test the property trackingDomain
+    it('should have the property provider (base name: "provider")', function() {
+      // uncomment below and update the code to test the property provider
       //var instane = new UltraCartRestApiV2.EmailDomain();
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property startDkimDts (base name: "start_dkim_dts")', function() {
+      // uncomment below and update the code to test the property startDkimDts
       //var instane = new UltraCartRestApiV2.EmailDomain();
       //expect(instance).to.be();
     });
 
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
+    it('should have the property startIdentityDts (base name: "start_identity_dts")', function() {
+      // uncomment below and update the code to test the property startIdentityDts
+      //var instane = new UltraCartRestApiV2.EmailDomain();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property verification (base name: "verification")', function() {
+      // uncomment below and update the code to test the property verification
       //var instane = new UltraCartRestApiV2.EmailDomain();
       //expect(instance).to.be();
     });
