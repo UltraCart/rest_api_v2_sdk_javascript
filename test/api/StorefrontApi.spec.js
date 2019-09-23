@@ -201,6 +201,16 @@
         done();
       });
     });
+    describe('getEmailCommseqStatOverall', function() {
+      it('should call getEmailCommseqStatOverall successfully', function(done) {
+        //uncomment below and update the code to test getEmailCommseqStatOverall
+        //instance.getEmailCommseqStatOverall(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailCommseqStats', function() {
       it('should call getEmailCommseqStats successfully', function(done) {
         //uncomment below and update the code to test getEmailCommseqStats
