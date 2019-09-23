@@ -37,7 +37,7 @@
   /**
    * The EmailStatSummaryResponse model module.
    * @module com.ultracart.admin.v2.models/EmailStatSummaryResponse
-   * @version 2.4.33
+   * @version 2.4.34
    */
 
   /**
@@ -72,7 +72,7 @@
         obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
       }
       if (data.hasOwnProperty('stats')) {
-        obj['stats'] = EmailStat.constructFromObject(data['stats']);
+        obj['stats'] = ApiClient.convertToType(data['stats'], [EmailStat]);
       }
       if (data.hasOwnProperty('success')) {
         obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
@@ -90,7 +90,7 @@
    */
   exports.prototype['metadata'] = undefined;
   /**
-   * @member {module:com.ultracart.admin.v2.models/EmailStat} stats
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailStat>} stats
    */
   exports.prototype['stats'] = undefined;
   /**

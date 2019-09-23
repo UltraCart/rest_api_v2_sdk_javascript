@@ -18,9 +18,8 @@ Method | HTTP request | Description
 [**getEmailCampaigns**](StorefrontApi.md#getEmailCampaigns) | **GET** /storefront/{storefront_oid}/email/campaigns | Get email campaigns
 [**getEmailCampaignsWithStats**](StorefrontApi.md#getEmailCampaignsWithStats) | **GET** /storefront/{storefront_oid}/email/campaignsWithStats/{stat_days} | Get email campaigns with stats
 [**getEmailCommseq**](StorefrontApi.md#getEmailCommseq) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid} | Get email commseq
-[**getEmailCommseqEmailStats**](StorefrontApi.md#getEmailCommseqEmailStats) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/emailStats/{commseq_email_uuid} | Get email communication sequence emails stats
+[**getEmailCommseqEmailStats**](StorefrontApi.md#getEmailCommseqEmailStats) | **POST** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/emailStats | Get email communication sequence emails stats
 [**getEmailCommseqStatOverall**](StorefrontApi.md#getEmailCommseqStatOverall) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/stat | Get communication sequence stats overall
-[**getEmailCommseqStats**](StorefrontApi.md#getEmailCommseqStats) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/stats | Get email communication sequence stats
 [**getEmailCommseqs**](StorefrontApi.md#getEmailCommseqs) | **GET** /storefront/{storefront_oid}/email/commseqs | Get email commseqs
 [**getEmailDashboardActivity**](StorefrontApi.md#getEmailDashboardActivity) | **GET** /storefront/{storefront_oid}/email/dashboard_activity | Get email dashboard activity
 [**getEmailDashboardStats**](StorefrontApi.md#getEmailDashboardStats) | **GET** /storefront/{storefront_oid}/email/dashboard_stats | Get dashboard stats
@@ -953,7 +952,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqEmailStats"></a>
 # **getEmailCommseqEmailStats**
-> EmailStatSummaryResponse getEmailCommseqEmailStats(storefrontOid, commseqUuid, commseqEmailUuid, opts)
+> EmailStatSummaryResponse getEmailCommseqEmailStats(storefrontOid, commseqUuid, statsRequest)
 
 Get email communication sequence emails stats
 
@@ -984,11 +983,8 @@ var storefrontOid = "storefrontOid_example"; // String | null
 
 var commseqUuid = "commseqUuid_example"; // String | null
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var statsRequest = new UltraCartRestApiV2.EmailStatSummaryRequest(); // EmailStatSummaryRequest | StatsRequest
 
-var opts = { 
-  'days': 56 // Number | null
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -997,7 +993,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqEmailStats(storefrontOid, commseqUuid, commseqEmailUuid, opts, callback);
+apiInstance.getEmailCommseqEmailStats(storefrontOid, commseqUuid, statsRequest, callback);
 ```
 
 ### Parameters
@@ -1006,8 +1002,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefrontOid** | **String**| null | 
  **commseqUuid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
- **days** | **Number**| null | [optional] 
+ **statsRequest** | [**EmailStatSummaryRequest**](EmailStatSummaryRequest.md)| StatsRequest | 
 
 ### Return type
 
@@ -1024,7 +1019,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqStatOverall"></a>
 # **getEmailCommseqStatOverall**
-> EmailCommseqStatResponse getEmailCommseqStatOverall(storefrontOid, commseqUuid, opts)
+> EmailCommseqStatResponse getEmailCommseqStatOverall(storefrontOid, commseqUuid)
 
 Get communication sequence stats overall
 
@@ -1055,9 +1050,6 @@ var storefrontOid = "storefrontOid_example"; // String | null
 
 var commseqUuid = "commseqUuid_example"; // String | null
 
-var opts = { 
-  'days': 56 // Number | null
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1066,7 +1058,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqStatOverall(storefrontOid, commseqUuid, opts, callback);
+apiInstance.getEmailCommseqStatOverall(storefrontOid, commseqUuid, callback);
 ```
 
 ### Parameters
@@ -1075,79 +1067,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefrontOid** | **String**| null | 
  **commseqUuid** | **String**| null | 
- **days** | **Number**| null | [optional] 
 
 ### Return type
 
 [**EmailCommseqStatResponse**](EmailCommseqStatResponse.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getEmailCommseqStats"></a>
-# **getEmailCommseqStats**
-> EmailStatSummaryResponse getEmailCommseqStats(storefrontOid, commseqUuid, opts)
-
-Get email communication sequence stats
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
-
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.StorefrontApi();
-
-var storefrontOid = "storefrontOid_example"; // String | null
-
-var commseqUuid = "commseqUuid_example"; // String | null
-
-var opts = { 
-  'days': 56 // Number | null
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getEmailCommseqStats(storefrontOid, commseqUuid, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
- **days** | **Number**| null | [optional] 
-
-### Return type
-
-[**EmailStatSummaryResponse**](EmailStatSummaryResponse.md)
 
 ### Authorization
 
