@@ -211,6 +211,16 @@
         done();
       });
     });
+    describe('getEmailCommseqStepWaiting', function() {
+      it('should call getEmailCommseqStepWaiting successfully', function(done) {
+        //uncomment below and update the code to test getEmailCommseqStepWaiting
+        //instance.getEmailCommseqStepWaiting(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailCommseqs', function() {
       it('should call getEmailCommseqs successfully', function(done) {
         //uncomment below and update the code to test getEmailCommseqs
