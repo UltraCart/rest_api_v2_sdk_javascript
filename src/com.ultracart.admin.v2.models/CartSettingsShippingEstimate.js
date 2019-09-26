@@ -37,7 +37,7 @@
   /**
    * The CartSettingsShippingEstimate model module.
    * @module com.ultracart.admin.v2.models/CartSettingsShippingEstimate
-   * @version 2.4.36
+   * @version 2.4.37
    */
 
   /**

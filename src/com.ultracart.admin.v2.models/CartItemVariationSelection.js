@@ -37,7 +37,7 @@
   /**
    * The CartItemVariationSelection model module.
    * @module com.ultracart.admin.v2.models/CartItemVariationSelection
-   * @version 2.4.36
+   * @version 2.4.37
    */
 
   /**
