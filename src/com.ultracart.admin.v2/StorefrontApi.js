@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.35
+   * @version 2.4.36
    */
 
   /**
@@ -950,7 +950,7 @@
       var returnType = EmailStepWaitingResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/waiting', 'GET',
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/waiting', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

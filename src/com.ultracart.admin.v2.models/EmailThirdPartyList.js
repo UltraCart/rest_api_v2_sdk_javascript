@@ -37,7 +37,7 @@
   /**
    * The EmailThirdPartyList model module.
    * @module com.ultracart.admin.v2.models/EmailThirdPartyList
-   * @version 2.4.35
+   * @version 2.4.36
    */
 
   /**
