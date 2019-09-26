@@ -37,7 +37,7 @@
   /**
    * The ItemShipping model module.
    * @module com.ultracart.admin.v2.models/ItemShipping
-   * @version 2.4.37
+   * @version 2.4.38
    */
 
   /**

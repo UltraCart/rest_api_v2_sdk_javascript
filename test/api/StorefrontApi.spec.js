@@ -541,6 +541,16 @@
         done();
       });
     });
+    describe('searchItems', function() {
+      it('should call searchItems successfully', function(done) {
+        //uncomment below and update the code to test searchItems
+        //instance.searchItems(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('startEmailCampaign', function() {
       it('should call startEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test startEmailCampaign
