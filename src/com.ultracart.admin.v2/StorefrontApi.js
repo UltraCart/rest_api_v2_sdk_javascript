@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.38
+   * @version 2.4.39
    */
 
   /**
@@ -2508,6 +2508,54 @@
     }
 
     /**
+     * Callback function to receive the result of the search operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~searchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/LookupResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Searches for all matching values
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.category null
+     * @param {String} opts.matches null
+     * @param {Number} opts.maxHits null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~searchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/LookupResponse}
+     */
+    this.search = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'category': opts['category'],
+        'matches': opts['matches'],
+        'max_hits': opts['maxHits'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LookupResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/search', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the searchEmailListCustomers operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~searchEmailListCustomersCallback
      * @param {String} error Error message, if any.
@@ -2618,52 +2666,6 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/segments/{email_segment_uuid}/search', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the searchItems operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~searchItemsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/LookupResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Searches for items
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.search null
-     * @param {Number} opts.maxHits null
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~searchItemsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/LookupResponse}
-     */
-    this.searchItems = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'search': opts['search'],
-        'max_hits': opts['maxHits'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = LookupResponse;
-
-      return this.apiClient.callApi(
-        '/storefront/search_items', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

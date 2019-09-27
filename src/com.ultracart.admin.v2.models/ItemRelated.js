@@ -37,7 +37,7 @@
   /**
    * The ItemRelated model module.
    * @module com.ultracart.admin.v2.models/ItemRelated
-   * @version 2.4.38
+   * @version 2.4.39
    */
 
   /**

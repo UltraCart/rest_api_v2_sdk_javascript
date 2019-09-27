@@ -521,6 +521,16 @@
         done();
       });
     });
+    describe('search', function() {
+      it('should call search successfully', function(done) {
+        //uncomment below and update the code to test search
+        //instance.search(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('searchEmailListCustomers', function() {
       it('should call searchEmailListCustomers successfully', function(done) {
         //uncomment below and update the code to test searchEmailListCustomers
@@ -535,16 +545,6 @@
       it('should call searchEmailSegmentCustomers successfully', function(done) {
         //uncomment below and update the code to test searchEmailSegmentCustomers
         //instance.searchEmailSegmentCustomers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('searchItems', function() {
-      it('should call searchItems successfully', function(done) {
-        //uncomment below and update the code to test searchItems
-        //instance.searchItems(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
