@@ -58,6 +58,8 @@ Name | Type | Description | Notes
 
 * `Wire Transfer` (value: `"Wire Transfer"`)
 
+* `Walmart` (value: `"Walmart"`)
+
 
 
 

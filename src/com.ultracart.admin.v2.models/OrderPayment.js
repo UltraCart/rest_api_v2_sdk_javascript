@@ -37,7 +37,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 2.4.40
+   * @version 2.4.41
    */
 
   /**
@@ -300,7 +300,12 @@
      * value: "Wire Transfer"
      * @const
      */
-    "Wire Transfer": "Wire Transfer"  };
+    "Wire Transfer": "Wire Transfer",
+    /**
+     * value: "Walmart"
+     * @const
+     */
+    "Walmart": "Walmart"  };
 
   /**
    * Allowed values for the <code>payment_status</code> property.
