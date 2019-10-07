@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ListSegmentMembership', 'com.ultracart.admin.v2.models/Metric', 'com.ultracart.admin.v2.models/Property'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Activity', 'com.ultracart.admin.v2.models/ListSegmentMembership', 'com.ultracart.admin.v2.models/Metric', 'com.ultracart.admin.v2.models/Property'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ListSegmentMembership'), require('./Metric'), require('./Property'));
+    module.exports = factory(require('../ApiClient'), require('./Activity'), require('./ListSegmentMembership'), require('./Metric'), require('./Property'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerActivity = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ListSegmentMembership, root.UltraCartRestApiV2.Metric, root.UltraCartRestApiV2.Property);
+    root.UltraCartRestApiV2.CustomerActivity = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Activity, root.UltraCartRestApiV2.ListSegmentMembership, root.UltraCartRestApiV2.Metric, root.UltraCartRestApiV2.Property);
   }
-}(this, function(ApiClient, ListSegmentMembership, Metric, Property) {
+}(this, function(ApiClient, Activity, ListSegmentMembership, Metric, Property) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The CustomerActivity model module.
    * @module com.ultracart.admin.v2.models/CustomerActivity
-   * @version 2.4.42
+   * @version 2.4.43
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -64,6 +65,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('activities')) {
+        obj['activities'] = ApiClient.convertToType(data['activities'], [Activity]);
+      }
       if (data.hasOwnProperty('memberships')) {
         obj['memberships'] = ApiClient.convertToType(data['memberships'], [ListSegmentMembership]);
       }
@@ -77,6 +81,10 @@
     return obj;
   }
 
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/Activity>} activities
+   */
+  exports.prototype['activities'] = undefined;
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ListSegmentMembership>} memberships
    */
