@@ -26,7 +26,7 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderItemEdiLot = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.Property = factory(root.UltraCartRestApiV2.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,14 +35,14 @@
 
 
   /**
-   * The OrderItemEdiLot model module.
-   * @module com.ultracart.admin.v2.models/OrderItemEdiLot
+   * The Property model module.
+   * @module com.ultracart.admin.v2.models/Property
    * @version 2.4.42
    */
 
   /**
-   * Constructs a new <code>OrderItemEdiLot</code>.
-   * @alias module:com.ultracart.admin.v2.models/OrderItemEdiLot
+   * Constructs a new <code>Property</code>.
+   * @alias module:com.ultracart.admin.v2.models/Property
    * @class
    */
   var exports = function() {
@@ -50,48 +50,37 @@
 
 
 
-
   };
 
   /**
-   * Constructs a <code>OrderItemEdiLot</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Property</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/OrderItemEdiLot} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/OrderItemEdiLot} The populated <code>OrderItemEdiLot</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/Property} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/Property} The populated <code>Property</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('lot_expiration')) {
-        obj['lot_expiration'] = ApiClient.convertToType(data['lot_expiration'], 'String');
+      if (data.hasOwnProperty('name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
-      if (data.hasOwnProperty('lot_number')) {
-        obj['lot_number'] = ApiClient.convertToType(data['lot_number'], 'String');
-      }
-      if (data.hasOwnProperty('lot_quantity')) {
-        obj['lot_quantity'] = ApiClient.convertToType(data['lot_quantity'], 'Number');
+      if (data.hasOwnProperty('value')) {
+        obj['value'] = ApiClient.convertToType(data['value'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Log expiration
-   * @member {String} lot_expiration
+   * @member {String} name
    */
-  exports.prototype['lot_expiration'] = undefined;
+  exports.prototype['name'] = undefined;
   /**
-   * Lot number
-   * @member {String} lot_number
+   * @member {String} value
    */
-  exports.prototype['lot_number'] = undefined;
-  /**
-   * Lot quantity
-   * @member {Number} lot_quantity
-   */
-  exports.prototype['lot_quantity'] = undefined;
+  exports.prototype['value'] = undefined;
 
 
 

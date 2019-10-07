@@ -57,12 +57,6 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.CustomerActivity);
     });
 
-    it('should have the property activities (base name: "activities")', function() {
-      // uncomment below and update the code to test the property activities
-      //var instane = new UltraCartRestApiV2.CustomerActivity();
-      //expect(instance).to.be();
-    });
-
     it('should have the property memberships (base name: "memberships")', function() {
       // uncomment below and update the code to test the property memberships
       //var instane = new UltraCartRestApiV2.CustomerActivity();
@@ -71,6 +65,12 @@
 
     it('should have the property metrics (base name: "metrics")', function() {
       // uncomment below and update the code to test the property metrics
+      //var instane = new UltraCartRestApiV2.CustomerActivity();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property propertiesList (base name: "properties_list")', function() {
+      // uncomment below and update the code to test the property propertiesList
       //var instane = new UltraCartRestApiV2.CustomerActivity();
       //expect(instance).to.be();
     });

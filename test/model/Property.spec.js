@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new UltraCartRestApiV2.Activity();
+    instance = new UltraCartRestApiV2.Property();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,40 +50,22 @@
       object[property] = value;
   }
 
-  describe('Activity', function() {
-    it('should create an instance of Activity', function() {
-      // uncomment below and update the code to test Activity
-      //var instane = new UltraCartRestApiV2.Activity();
-      //expect(instance).to.be.a(UltraCartRestApiV2.Activity);
+  describe('Property', function() {
+    it('should create an instance of Property', function() {
+      // uncomment below and update the code to test Property
+      //var instane = new UltraCartRestApiV2.Property();
+      //expect(instance).to.be.a(UltraCartRestApiV2.Property);
     });
 
-    it('should have the property action (base name: "action")', function() {
-      // uncomment below and update the code to test the property action
-      //var instane = new UltraCartRestApiV2.Activity();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new UltraCartRestApiV2.Property();
       //expect(instance).to.be();
     });
 
-    it('should have the property metric (base name: "metric")', function() {
-      // uncomment below and update the code to test the property metric
-      //var instane = new UltraCartRestApiV2.Activity();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property subject (base name: "subject")', function() {
-      // uncomment below and update the code to test the property subject
-      //var instane = new UltraCartRestApiV2.Activity();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ts (base name: "ts")', function() {
-      // uncomment below and update the code to test the property ts
-      //var instane = new UltraCartRestApiV2.Activity();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property uuid (base name: "uuid")', function() {
-      // uncomment below and update the code to test the property uuid
-      //var instane = new UltraCartRestApiV2.Activity();
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instane = new UltraCartRestApiV2.Property();
       //expect(instance).to.be();
     });
 
