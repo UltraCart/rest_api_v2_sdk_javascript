@@ -37,7 +37,7 @@
   /**
    * The Activity model module.
    * @module com.ultracart.admin.v2.models/Activity
-   * @version 2.4.43
+   * @version 2.4.44
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -78,6 +79,9 @@
       if (data.hasOwnProperty('ts')) {
         obj['ts'] = ApiClient.convertToType(data['ts'], 'Number');
       }
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      }
       if (data.hasOwnProperty('uuid')) {
         obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
       }
@@ -101,6 +105,10 @@
    * @member {Number} ts
    */
   exports.prototype['ts'] = undefined;
+  /**
+   * @member {String} type
+   */
+  exports.prototype['type'] = undefined;
   /**
    * @member {String} uuid
    */

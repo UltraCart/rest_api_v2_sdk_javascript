@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **metric** | **String** |  | [optional] 
 **subject** | **String** |  | [optional] 
 **ts** | **Number** |  | [optional] 
+**type** | **String** |  | [optional] 
 **uuid** | **String** |  | [optional] 
 
 
