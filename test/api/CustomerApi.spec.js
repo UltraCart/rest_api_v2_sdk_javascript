@@ -141,6 +141,16 @@
         done();
       });
     });
+    describe('updateCustomerEmailLists', function() {
+      it('should call updateCustomerEmailLists successfully', function(done) {
+        //uncomment below and update the code to test updateCustomerEmailLists
+        //instance.updateCustomerEmailLists(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

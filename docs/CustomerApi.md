@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getEmailLists**](CustomerApi.md#getEmailLists) | **GET** /customer/email_lists | Retrieve all email lists across all storefronts
 [**insertCustomer**](CustomerApi.md#insertCustomer) | **POST** /customer/customers | Insert a customer
 [**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /customer/customers/{customer_profile_oid} | Update a customer
+[**updateCustomerEmailLists**](CustomerApi.md#updateCustomerEmailLists) | **POST** /customer/customers/{customer_profile_oid}/email_lists | Update email list subscriptions for a customer
 
 
 <a name="deleteCustomer"></a>
@@ -605,5 +606,65 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateCustomerEmailLists"></a>
+# **updateCustomerEmailLists**
+> CustomerEmailListChanges updateCustomerEmailLists(customerProfileOid, listChanges)
+
+Update email list subscriptions for a customer
+
+Update email list subscriptions for a customer 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CustomerApi();
+
+var customerProfileOid = 56; // Number | The customer profile oid
+
+var listChanges = new UltraCartRestApiV2.CustomerEmailListChanges(); // CustomerEmailListChanges | List changes
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateCustomerEmailLists(customerProfileOid, listChanges, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customerProfileOid** | **Number**| The customer profile oid | 
+ **listChanges** | [**CustomerEmailListChanges**](CustomerEmailListChanges.md)| List changes | 
+
+### Return type
+
+[**CustomerEmailListChanges**](CustomerEmailListChanges.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 

@@ -37,7 +37,7 @@
   /**
    * The CouponAmountOffSubtotalFreeShippingWithPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponAmountOffSubtotalFreeShippingWithPurchase
-   * @version 2.4.44
+   * @version 2.4.45
    */
 
   /**

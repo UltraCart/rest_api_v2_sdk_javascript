@@ -37,7 +37,7 @@
   /**
    * The OrderReplacementItem model module.
    * @module com.ultracart.admin.v2.models/OrderReplacementItem
-   * @version 2.4.44
+   * @version 2.4.45
    */
 
   /**

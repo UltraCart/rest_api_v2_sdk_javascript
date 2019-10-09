@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerEmailListChanges', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerEmailListChanges'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerEmailListChanges, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, Customer, CustomerEditorValues, CustomerQuery, CustomerResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, ErrorResponse) {
+}(this, function(ApiClient, Customer, CustomerEditorValues, CustomerEmailListChanges, CustomerQuery, CustomerResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 2.4.44
+   * @version 2.4.45
    */
 
   /**
@@ -545,6 +545,60 @@
 
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomerEmailLists operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~updateCustomerEmailListsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerEmailListChanges} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update email list subscriptions for a customer
+     * Update email list subscriptions for a customer 
+     * @param {Number} customerProfileOid The customer profile oid
+     * @param {module:com.ultracart.admin.v2.models/CustomerEmailListChanges} listChanges List changes
+     * @param {module:com.ultracart.admin.v2/CustomerApi~updateCustomerEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerEmailListChanges}
+     */
+    this.updateCustomerEmailLists = function(customerProfileOid, listChanges, callback) {
+      var postBody = listChanges;
+
+      // verify the required parameter 'customerProfileOid' is set
+      if (customerProfileOid === undefined || customerProfileOid === null) {
+        throw new Error("Missing the required parameter 'customerProfileOid' when calling updateCustomerEmailLists");
+      }
+
+      // verify the required parameter 'listChanges' is set
+      if (listChanges === undefined || listChanges === null) {
+        throw new Error("Missing the required parameter 'listChanges' when calling updateCustomerEmailLists");
+      }
+
+
+      var pathParams = {
+        'customer_profile_oid': customerProfileOid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = CustomerEmailListChanges;
+
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}/email_lists', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
