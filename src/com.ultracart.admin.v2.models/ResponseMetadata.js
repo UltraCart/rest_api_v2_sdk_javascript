@@ -37,7 +37,7 @@
   /**
    * The ResponseMetadata model module.
    * @module com.ultracart.admin.v2.models/ResponseMetadata
-   * @version 2.4.45
+   * @version 2.4.46
    */
 
   /**

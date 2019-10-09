@@ -37,7 +37,7 @@
   /**
    * The EmailSendingDomainsResponse model module.
    * @module com.ultracart.admin.v2.models/EmailSendingDomainsResponse
-   * @version 2.4.45
+   * @version 2.4.46
    */
 
   /**

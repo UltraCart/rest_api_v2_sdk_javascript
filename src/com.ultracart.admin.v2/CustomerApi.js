@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 2.4.45
+   * @version 2.4.46
    */
 
   /**
@@ -593,7 +593,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['multipart/form-data'];
+      var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
       var returnType = CustomerEmailListChanges;
 

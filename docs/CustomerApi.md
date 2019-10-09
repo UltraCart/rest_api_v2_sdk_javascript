@@ -665,6 +665,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
