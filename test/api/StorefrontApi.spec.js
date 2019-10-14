@@ -141,6 +141,26 @@
         done();
       });
     });
+    describe('geocodeAddress', function() {
+      it('should call geocodeAddress successfully', function(done) {
+        //uncomment below and update the code to test geocodeAddress
+        //instance.geocodeAddress(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getCountries', function() {
+      it('should call getCountries successfully', function(done) {
+        //uncomment below and update the code to test getCountries
+        //instance.getCountries(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailBaseTemplates', function() {
       it('should call getEmailBaseTemplates successfully', function(done) {
         //uncomment below and update the code to test getEmailBaseTemplates
