@@ -642,7 +642,7 @@ null (empty response body)
 
 <a name="geocodeAddress"></a>
 # **geocodeAddress**
-> geocodeAddress(storefrontOid, geocodeRequest)
+> GeocodeResponse geocodeAddress(storefrontOid, geocodeRequest)
 
 Obtain lat/long for an address
 
@@ -678,7 +678,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.geocodeAddress(storefrontOid, geocodeRequest, callback);
@@ -693,7 +693,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GeocodeResponse**](GeocodeResponse.md)
 
 ### Authorization
 

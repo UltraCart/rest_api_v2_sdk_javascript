@@ -37,7 +37,7 @@
   /**
    * The ItemShippingDestinationMarkup model module.
    * @module com.ultracart.admin.v2.models/ItemShippingDestinationMarkup
-   * @version 2.4.47
+   * @version 2.4.48
    */
 
   /**
