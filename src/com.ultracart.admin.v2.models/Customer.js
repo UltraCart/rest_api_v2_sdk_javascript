@@ -37,7 +37,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 2.4.48
+   * @version 2.4.49
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -166,6 +167,9 @@
       }
       if (data.hasOwnProperty('dhl_account_number')) {
         obj['dhl_account_number'] = ApiClient.convertToType(data['dhl_account_number'], 'String');
+      }
+      if (data.hasOwnProperty('dhl_duty_account_number')) {
+        obj['dhl_duty_account_number'] = ApiClient.convertToType(data['dhl_duty_account_number'], 'String');
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -369,6 +373,11 @@
    * @member {String} dhl_account_number
    */
   exports.prototype['dhl_account_number'] = undefined;
+  /**
+   * DHL duty account number
+   * @member {String} dhl_duty_account_number
+   */
+  exports.prototype['dhl_duty_account_number'] = undefined;
   /**
    * Email address of this customer profile
    * @member {String} email

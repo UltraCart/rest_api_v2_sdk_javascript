@@ -46,6 +46,8 @@ Method | HTTP request | Description
 [**getEmailTemplates**](StorefrontApi.md#getEmailTemplates) | **GET** /storefront/{storefront_oid}/email/templates | Get email templates
 [**getEmailThirdPartyProviders**](StorefrontApi.md#getEmailThirdPartyProviders) | **GET** /storefront/{storefront_oid}/email/third_party_providers | Get a list of third party email providers
 [**getExperiments**](StorefrontApi.md#getExperiments) | **GET** /storefront/{storefront_oid}/experiments | Get experiments
+[**getHistogramPropertyNames**](StorefrontApi.md#getHistogramPropertyNames) | **GET** /storefront/{storefront_oid}/email/histogram/property_names | Get histogram property names
+[**getHistogramPropertyNames_0**](StorefrontApi.md#getHistogramPropertyNames_0) | **GET** /storefront/{storefront_oid}/email/histogram/property_values | Get histogram property names
 [**importEmailThirdPartyProviderList**](StorefrontApi.md#importEmailThirdPartyProviderList) | **POST** /storefront/{storefront_oid}/email/third_party_providers/import | Import a third party provider list
 [**insertEmailCampaign**](StorefrontApi.md#insertEmailCampaign) | **POST** /storefront/{storefront_oid}/email/campaigns | Insert email campaign
 [**insertEmailCommseq**](StorefrontApi.md#insertEmailCommseq) | **POST** /storefront/{storefront_oid}/email/commseqs | Insert email commseq
@@ -2726,6 +2728,144 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ExperimentsResponse**](ExperimentsResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getHistogramPropertyNames"></a>
+# **getHistogramPropertyNames**
+> EmailHistogramPropertyNamesResponse getHistogramPropertyNames(storefrontOid, opts)
+
+Get histogram property names
+
+Obtain a list of property names for a given property type 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+var storefrontOid = "storefrontOid_example"; // String | null
+
+var opts = { 
+  'propertyType': "propertyType_example" // String | null
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getHistogramPropertyNames(storefrontOid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefrontOid** | **String**| null | 
+ **propertyType** | **String**| null | [optional] 
+
+### Return type
+
+[**EmailHistogramPropertyNamesResponse**](EmailHistogramPropertyNamesResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getHistogramPropertyNames_0"></a>
+# **getHistogramPropertyNames_0**
+> EmailHistogramPropertyValuesResponse getHistogramPropertyNames_0(storefrontOid, opts)
+
+Get histogram property names
+
+Obtain a list of property names for a given property type 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+var storefrontOid = "storefrontOid_example"; // String | null
+
+var opts = { 
+  'propertyName': "propertyName_example", // String | null
+  'propertyType': "propertyType_example", // String | null
+  'limit': 56 // Number | null
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getHistogramPropertyNames_0(storefrontOid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefrontOid** | **String**| null | 
+ **propertyName** | **String**| null | [optional] 
+ **propertyType** | **String**| null | [optional] 
+ **limit** | **Number**| null | [optional] 
+
+### Return type
+
+[**EmailHistogramPropertyValuesResponse**](EmailHistogramPropertyValuesResponse.md)
 
 ### Authorization
 

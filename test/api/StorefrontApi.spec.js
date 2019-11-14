@@ -471,6 +471,26 @@
         done();
       });
     });
+    describe('getHistogramPropertyNames', function() {
+      it('should call getHistogramPropertyNames successfully', function(done) {
+        //uncomment below and update the code to test getHistogramPropertyNames
+        //instance.getHistogramPropertyNames(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getHistogramPropertyNames_0', function() {
+      it('should call getHistogramPropertyNames_0 successfully', function(done) {
+        //uncomment below and update the code to test getHistogramPropertyNames_0
+        //instance.getHistogramPropertyNames_0(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('importEmailThirdPartyProviderList', function() {
       it('should call importEmailThirdPartyProviderList successfully', function(done) {
         //uncomment below and update the code to test importEmailThirdPartyProviderList

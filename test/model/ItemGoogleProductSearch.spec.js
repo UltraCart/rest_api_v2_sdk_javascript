@@ -303,6 +303,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property shippingLabel (base name: "shippingLabel")', function() {
+      // uncomment below and update the code to test the property shippingLabel
+      //var instane = new UltraCartRestApiV2.ItemGoogleProductSearch();
+      //expect(instance).to.be();
+    });
+
     it('should have the property size (base name: "size")', function() {
       // uncomment below and update the code to test the property size
       //var instane = new UltraCartRestApiV2.ItemGoogleProductSearch();

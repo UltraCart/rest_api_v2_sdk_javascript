@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **search_lowest_price** | **Number** | Search lowest price | [optional] 
 **search_lowest_url** | **String** | Search lowest URL | [optional] 
 **search_position** | **Number** | Search position | [optional] 
+**shippingLabel** | **String** |  | [optional] 
 **size** | **String** | Size | [optional] 
 **video_director** | **String** | Video - director | [optional] 
 **video_format** | **String** | Video - format | [optional] 

@@ -37,7 +37,7 @@
   /**
    * The ItemGoogleProductSearch model module.
    * @module com.ultracart.admin.v2.models/ItemGoogleProductSearch
-   * @version 2.4.48
+   * @version 2.4.49
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -230,6 +231,9 @@
       }
       if (data.hasOwnProperty('search_position')) {
         obj['search_position'] = ApiClient.convertToType(data['search_position'], 'Number');
+      }
+      if (data.hasOwnProperty('shippingLabel')) {
+        obj['shippingLabel'] = ApiClient.convertToType(data['shippingLabel'], 'String');
       }
       if (data.hasOwnProperty('size')) {
         obj['size'] = ApiClient.convertToType(data['size'], 'String');
@@ -458,6 +462,10 @@
    * @member {Number} search_position
    */
   exports.prototype['search_position'] = undefined;
+  /**
+   * @member {String} shippingLabel
+   */
+  exports.prototype['shippingLabel'] = undefined;
   /**
    * Size
    * @member {String} size

@@ -99,6 +99,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dhlDutyAccountNumber (base name: "dhl_duty_account_number")', function() {
+      // uncomment below and update the code to test the property dhlDutyAccountNumber
+      //var instane = new UltraCartRestApiV2.CartCustomerProfile();
+      //expect(instance).to.be();
+    });
+
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
       //var instane = new UltraCartRestApiV2.CartCustomerProfile();
