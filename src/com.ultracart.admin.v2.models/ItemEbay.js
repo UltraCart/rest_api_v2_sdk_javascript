@@ -37,7 +37,7 @@
   /**
    * The ItemEbay model module.
    * @module com.ultracart.admin.v2.models/ItemEbay
-   * @version 2.4.49
+   * @version 2.4.50
    */
 
   /**
