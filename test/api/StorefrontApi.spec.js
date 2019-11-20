@@ -481,10 +481,10 @@
         done();
       });
     });
-    describe('getHistogramPropertyNames_0', function() {
-      it('should call getHistogramPropertyNames_0 successfully', function(done) {
-        //uncomment below and update the code to test getHistogramPropertyNames_0
-        //instance.getHistogramPropertyNames_0(function(error) {
+    describe('getHistogramPropertyValues', function() {
+      it('should call getHistogramPropertyValues successfully', function(done) {
+        //uncomment below and update the code to test getHistogramPropertyValues
+        //instance.getHistogramPropertyValues(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

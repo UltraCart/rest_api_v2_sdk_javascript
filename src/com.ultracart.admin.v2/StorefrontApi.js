@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.50
+   * @version 2.4.51
    */
 
   /**
@@ -2291,31 +2291,31 @@
     }
 
     /**
-     * Callback function to receive the result of the getHistogramPropertyNames_0 operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~getHistogramPropertyNames_0Callback
+     * Callback function to receive the result of the getHistogramPropertyValues operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getHistogramPropertyValuesCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.models/EmailHistogramPropertyValuesResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get histogram property names
-     * Obtain a list of property names for a given property type 
+     * Get histogram property values
+     * Obtain a list of property values for a given property name and type 
      * @param {String} storefrontOid null
      * @param {Object} opts Optional parameters
      * @param {String} opts.propertyName null
      * @param {String} opts.propertyType null
      * @param {Number} opts.limit null
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~getHistogramPropertyNames_0Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getHistogramPropertyValuesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailHistogramPropertyValuesResponse}
      */
-    this.getHistogramPropertyNames_0 = function(storefrontOid, opts, callback) {
+    this.getHistogramPropertyValues = function(storefrontOid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'storefrontOid' is set
       if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getHistogramPropertyNames_0");
+        throw new Error("Missing the required parameter 'storefrontOid' when calling getHistogramPropertyValues");
       }
 
 

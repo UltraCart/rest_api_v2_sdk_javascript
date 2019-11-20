@@ -47,7 +47,7 @@ Method | HTTP request | Description
 [**getEmailThirdPartyProviders**](StorefrontApi.md#getEmailThirdPartyProviders) | **GET** /storefront/{storefront_oid}/email/third_party_providers | Get a list of third party email providers
 [**getExperiments**](StorefrontApi.md#getExperiments) | **GET** /storefront/{storefront_oid}/experiments | Get experiments
 [**getHistogramPropertyNames**](StorefrontApi.md#getHistogramPropertyNames) | **GET** /storefront/{storefront_oid}/email/histogram/property_names | Get histogram property names
-[**getHistogramPropertyNames_0**](StorefrontApi.md#getHistogramPropertyNames_0) | **GET** /storefront/{storefront_oid}/email/histogram/property_values | Get histogram property names
+[**getHistogramPropertyValues**](StorefrontApi.md#getHistogramPropertyValues) | **GET** /storefront/{storefront_oid}/email/histogram/property_values | Get histogram property values
 [**importEmailThirdPartyProviderList**](StorefrontApi.md#importEmailThirdPartyProviderList) | **POST** /storefront/{storefront_oid}/email/third_party_providers/import | Import a third party provider list
 [**insertEmailCampaign**](StorefrontApi.md#insertEmailCampaign) | **POST** /storefront/{storefront_oid}/email/campaigns | Insert email campaign
 [**insertEmailCommseq**](StorefrontApi.md#insertEmailCommseq) | **POST** /storefront/{storefront_oid}/email/commseqs | Insert email commseq
@@ -2805,13 +2805,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getHistogramPropertyNames_0"></a>
-# **getHistogramPropertyNames_0**
-> EmailHistogramPropertyValuesResponse getHistogramPropertyNames_0(storefrontOid, opts)
+<a name="getHistogramPropertyValues"></a>
+# **getHistogramPropertyValues**
+> EmailHistogramPropertyValuesResponse getHistogramPropertyValues(storefrontOid, opts)
 
-Get histogram property names
+Get histogram property values
 
-Obtain a list of property names for a given property type 
+Obtain a list of property values for a given property name and type 
 
 ### Example
 ```javascript
@@ -2851,7 +2851,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getHistogramPropertyNames_0(storefrontOid, opts, callback);
+apiInstance.getHistogramPropertyValues(storefrontOid, opts, callback);
 ```
 
 ### Parameters
