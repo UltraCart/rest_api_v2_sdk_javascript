@@ -75,6 +75,7 @@
 
 
 
+
   };
 
   /**
@@ -105,6 +106,9 @@
       }
       if (data.hasOwnProperty('day_phone')) {
         obj['day_phone'] = ApiClient.convertToType(data['day_phone'], 'String');
+      }
+      if (data.hasOwnProperty('day_phone_e164')) {
+        obj['day_phone_e164'] = ApiClient.convertToType(data['day_phone_e164'], 'String');
       }
       if (data.hasOwnProperty('delivery_date')) {
         obj['delivery_date'] = ApiClient.convertToType(data['delivery_date'], 'String');
@@ -203,6 +207,11 @@
    * @member {String} day_phone
    */
   exports.prototype['day_phone'] = undefined;
+  /**
+   * Day time phone (E164 format)
+   * @member {String} day_phone_e164
+   */
+  exports.prototype['day_phone_e164'] = undefined;
   /**
    * Date the customer is requesting delivery on.  Typically used for perishable product delivery.
    * @member {String} delivery_date

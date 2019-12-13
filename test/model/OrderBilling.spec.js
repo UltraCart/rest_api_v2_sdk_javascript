@@ -99,6 +99,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dayPhoneE164 (base name: "day_phone_e164")', function() {
+      // uncomment below and update the code to test the property dayPhoneE164
+      //var instane = new UltraCartRestApiV2.OrderBilling();
+      //expect(instance).to.be();
+    });
+
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
       //var instane = new UltraCartRestApiV2.OrderBilling();

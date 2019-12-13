@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.OrderApi* | [**getAccountsReceivableRetryStats**](docs/OrderApi.md#getAccountsReceivableRetryStats) | **GET** /order/accountsReceivableRetryConfig/stats | Retrieve A/R Retry Statistics
 *UltraCartRestApiV2.OrderApi* | [**getOrder**](docs/OrderApi.md#getOrder) | **GET** /order/orders/{order_id} | Retrieve an order
 *UltraCartRestApiV2.OrderApi* | [**getOrders**](docs/OrderApi.md#getOrders) | **GET** /order/orders | Retrieve orders
+*UltraCartRestApiV2.OrderApi* | [**getOrdersBatch**](docs/OrderApi.md#getOrdersBatch) | **POST** /order/orders/batch | Retrieve order batch
 *UltraCartRestApiV2.OrderApi* | [**getOrdersByQuery**](docs/OrderApi.md#getOrdersByQuery) | **POST** /order/orders/query | Retrieve orders
 *UltraCartRestApiV2.OrderApi* | [**insertOrder**](docs/OrderApi.md#insertOrder) | **POST** /order/orders | Insert an order
 *UltraCartRestApiV2.OrderApi* | [**refundOrder**](docs/OrderApi.md#refundOrder) | **PUT** /order/orders/{order_id}/refund | Refund an order
@@ -657,6 +658,7 @@ Class | Method | HTTP request | Description
  - [UltraCartRestApiV2.OrderPaymentTransactionDetail](docs/OrderPaymentTransactionDetail.md)
  - [UltraCartRestApiV2.OrderProperty](docs/OrderProperty.md)
  - [UltraCartRestApiV2.OrderQuery](docs/OrderQuery.md)
+ - [UltraCartRestApiV2.OrderQueryBatch](docs/OrderQueryBatch.md)
  - [UltraCartRestApiV2.OrderQuote](docs/OrderQuote.md)
  - [UltraCartRestApiV2.OrderReplacement](docs/OrderReplacement.md)
  - [UltraCartRestApiV2.OrderReplacementItem](docs/OrderReplacementItem.md)

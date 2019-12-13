@@ -4,6 +4,7 @@
   "description": "UltraCart REST SDK",
   "license": "Unlicense",
   "main": "src/index.js",
+  "types": "ultra_cart_rest_api_v2.d.ts",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },

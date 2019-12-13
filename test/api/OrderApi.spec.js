@@ -121,6 +121,16 @@
         done();
       });
     });
+    describe('getOrdersBatch', function() {
+      it('should call getOrdersBatch successfully', function(done) {
+        //uncomment below and update the code to test getOrdersBatch
+        //instance.getOrdersBatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrdersByQuery', function() {
       it('should call getOrdersByQuery successfully', function(done) {
         //uncomment below and update the code to test getOrdersByQuery

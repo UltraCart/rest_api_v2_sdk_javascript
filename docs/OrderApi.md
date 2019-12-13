@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getAccountsReceivableRetryStats**](OrderApi.md#getAccountsReceivableRetryStats) | **GET** /order/accountsReceivableRetryConfig/stats | Retrieve A/R Retry Statistics
 [**getOrder**](OrderApi.md#getOrder) | **GET** /order/orders/{order_id} | Retrieve an order
 [**getOrders**](OrderApi.md#getOrders) | **GET** /order/orders | Retrieve orders
+[**getOrdersBatch**](OrderApi.md#getOrdersBatch) | **POST** /order/orders/batch | Retrieve order batch
 [**getOrdersByQuery**](OrderApi.md#getOrdersByQuery) | **POST** /order/orders/query | Retrieve orders
 [**insertOrder**](OrderApi.md#insertOrder) | **POST** /order/orders | Insert an order
 [**refundOrder**](OrderApi.md#refundOrder) | **PUT** /order/orders/{order_id}/refund | Refund an order
@@ -476,6 +477,67 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
  **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **expand** | **String**| The object expansion to perform on the result. | [optional] 
+
+### Return type
+
+[**OrdersResponse**](OrdersResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getOrdersBatch"></a>
+# **getOrdersBatch**
+> OrdersResponse getOrdersBatch(orderBatch, opts)
+
+Retrieve order batch
+
+Retrieves a group of orders from the account based on an array of order ids.  If more than 500 order ids are specified, the API call will fail with a bad request error. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+var orderBatch = new UltraCartRestApiV2.OrderQueryBatch(); // OrderQueryBatch | Order batch
+
+var opts = { 
+  'expand': "expand_example" // String | The object expansion to perform on the result.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getOrdersBatch(orderBatch, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderBatch** | [**OrderQueryBatch**](OrderQueryBatch.md)| Order batch | 
  **expand** | **String**| The object expansion to perform on the result. | [optional] 
 
 ### Return type

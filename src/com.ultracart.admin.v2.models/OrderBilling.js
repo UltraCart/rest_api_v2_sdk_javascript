@@ -62,6 +62,7 @@
 
 
 
+
   };
 
   /**
@@ -95,6 +96,9 @@
       }
       if (data.hasOwnProperty('day_phone')) {
         obj['day_phone'] = ApiClient.convertToType(data['day_phone'], 'String');
+      }
+      if (data.hasOwnProperty('day_phone_e164')) {
+        obj['day_phone_e164'] = ApiClient.convertToType(data['day_phone_e164'], 'String');
       }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -156,6 +160,11 @@
    * @member {String} day_phone
    */
   exports.prototype['day_phone'] = undefined;
+  /**
+   * Day time phone (E164 format)
+   * @member {String} day_phone_e164
+   */
+  exports.prototype['day_phone_e164'] = undefined;
   /**
    * Email
    * @member {String} email
