@@ -37,7 +37,7 @@
   /**
    * The FulfillmentInventory model module.
    * @module com.ultracart.admin.v2.models/FulfillmentInventory
-   * @version 2.4.51
+   * @version 2.4.60
    */
 
   /**
