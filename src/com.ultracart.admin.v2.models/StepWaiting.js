@@ -37,7 +37,7 @@
   /**
    * The StepWaiting model module.
    * @module com.ultracart.admin.v2.models/StepWaiting
-   * @version 2.4.61
+   * @version 2.4.62
    */
 
   /**

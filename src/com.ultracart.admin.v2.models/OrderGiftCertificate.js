@@ -37,7 +37,7 @@
   /**
    * The OrderGiftCertificate model module.
    * @module com.ultracart.admin.v2.models/OrderGiftCertificate
-   * @version 2.4.61
+   * @version 2.4.62
    */
 
   /**
