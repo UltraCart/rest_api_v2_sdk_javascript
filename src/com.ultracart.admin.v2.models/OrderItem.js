@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/Distance', 'com.ultracart.admin.v2.models/OrderItemEdi', 'com.ultracart.admin.v2.models/OrderItemOption', 'com.ultracart.admin.v2.models/OrderItemProperty', 'com.ultracart.admin.v2.models/Weight'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/Distance', 'com.ultracart.admin.v2.models/OrderItemEdi', 'com.ultracart.admin.v2.models/OrderItemOption', 'com.ultracart.admin.v2.models/OrderItemProperty', 'com.ultracart.admin.v2.models/OrderItemTag', 'com.ultracart.admin.v2.models/Weight'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./Distance'), require('./OrderItemEdi'), require('./OrderItemOption'), require('./OrderItemProperty'), require('./Weight'));
+    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./Distance'), require('./OrderItemEdi'), require('./OrderItemOption'), require('./OrderItemProperty'), require('./OrderItemTag'), require('./Weight'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.Distance, root.UltraCartRestApiV2.OrderItemEdi, root.UltraCartRestApiV2.OrderItemOption, root.UltraCartRestApiV2.OrderItemProperty, root.UltraCartRestApiV2.Weight);
+    root.UltraCartRestApiV2.OrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.Distance, root.UltraCartRestApiV2.OrderItemEdi, root.UltraCartRestApiV2.OrderItemOption, root.UltraCartRestApiV2.OrderItemProperty, root.UltraCartRestApiV2.OrderItemTag, root.UltraCartRestApiV2.Weight);
   }
-}(this, function(ApiClient, Currency, Distance, OrderItemEdi, OrderItemOption, OrderItemProperty, Weight) {
+}(this, function(ApiClient, Currency, Distance, OrderItemEdi, OrderItemOption, OrderItemProperty, OrderItemTag, Weight) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 2.4.60
+   * @version 2.4.61
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -245,6 +246,9 @@
       }
       if (data.hasOwnProperty('special_product_type')) {
         obj['special_product_type'] = ApiClient.convertToType(data['special_product_type'], 'String');
+      }
+      if (data.hasOwnProperty('tags')) {
+        obj['tags'] = ApiClient.convertToType(data['tags'], [OrderItemTag]);
       }
       if (data.hasOwnProperty('tax_free')) {
         obj['tax_free'] = ApiClient.convertToType(data['tax_free'], 'Boolean');
@@ -490,6 +494,11 @@
    * @member {String} special_product_type
    */
   exports.prototype['special_product_type'] = undefined;
+  /**
+   * Tags
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderItemTag>} tags
+   */
+  exports.prototype['tags'] = undefined;
   /**
    * True if the item is tax free
    * @member {Boolean} tax_free

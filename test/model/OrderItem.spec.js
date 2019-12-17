@@ -321,6 +321,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
+      //var instane = new UltraCartRestApiV2.OrderItem();
+      //expect(instance).to.be();
+    });
+
     it('should have the property taxFree (base name: "tax_free")', function() {
       // uncomment below and update the code to test the property taxFree
       //var instane = new UltraCartRestApiV2.OrderItem();

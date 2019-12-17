@@ -207,6 +207,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property loyalty (base name: "loyalty")', function() {
+      // uncomment below and update the code to test the property loyalty
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property maximumItemCount (base name: "maximum_item_count")', function() {
       // uncomment below and update the code to test the property maximumItemCount
       //var instane = new UltraCartRestApiV2.Customer();
@@ -341,6 +347,12 @@
 
     it('should have the property suppressBuysafe (base name: "suppress_buysafe")', function() {
       // uncomment below and update the code to test the property suppressBuysafe
+      //var instane = new UltraCartRestApiV2.Customer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
       //var instane = new UltraCartRestApiV2.Customer();
       //expect(instance).to.be();
     });

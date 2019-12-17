@@ -303,6 +303,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
+      //var instane = new UltraCartRestApiV2.Item();
+      //expect(instance).to.be();
+    });
+
     it('should have the property tax (base name: "tax")', function() {
       // uncomment below and update the code to test the property tax
       //var instane = new UltraCartRestApiV2.Item();

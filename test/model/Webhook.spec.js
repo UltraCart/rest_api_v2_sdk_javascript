@@ -111,6 +111,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property iamAccessKey (base name: "iam_access_key")', function() {
+      // uncomment below and update the code to test the property iamAccessKey
+      //var instane = new UltraCartRestApiV2.Webhook();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property iamSecretKey (base name: "iam_secret_key")', function() {
+      // uncomment below and update the code to test the property iamSecretKey
+      //var instane = new UltraCartRestApiV2.Webhook();
+      //expect(instance).to.be();
+    });
+
     it('should have the property maximumEvents (base name: "maximum_events")', function() {
       // uncomment below and update the code to test the property maximumEvents
       //var instane = new UltraCartRestApiV2.Webhook();

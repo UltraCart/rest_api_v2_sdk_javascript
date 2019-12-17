@@ -249,6 +249,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tags (base name: "Tags")', function() {
+      // uncomment below and update the code to test the property tags
+      //var instane = new UltraCartRestApiV2.Order();
+      //expect(instance).to.be();
+    });
+
     it('should have the property taxes (base name: "taxes")', function() {
       // uncomment below and update the code to test the property taxes
       //var instane = new UltraCartRestApiV2.Order();

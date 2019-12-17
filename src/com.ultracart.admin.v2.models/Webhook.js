@@ -37,7 +37,7 @@
   /**
    * The Webhook model module.
    * @module com.ultracart.admin.v2.models/Webhook
-   * @version 2.4.60
+   * @version 2.4.61
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -103,6 +105,12 @@
       }
       if (data.hasOwnProperty('event_categories')) {
         obj['event_categories'] = ApiClient.convertToType(data['event_categories'], [WebhookEventCategory]);
+      }
+      if (data.hasOwnProperty('iam_access_key')) {
+        obj['iam_access_key'] = ApiClient.convertToType(data['iam_access_key'], 'String');
+      }
+      if (data.hasOwnProperty('iam_secret_key')) {
+        obj['iam_secret_key'] = ApiClient.convertToType(data['iam_secret_key'], 'String');
       }
       if (data.hasOwnProperty('maximum_events')) {
         obj['maximum_events'] = ApiClient.convertToType(data['maximum_events'], 'Number');
@@ -173,6 +181,16 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/WebhookEventCategory>} event_categories
    */
   exports.prototype['event_categories'] = undefined;
+  /**
+   * IAM Access Key for AWS SQS Delivery
+   * @member {String} iam_access_key
+   */
+  exports.prototype['iam_access_key'] = undefined;
+  /**
+   * IAM Secret Key for AWS SQS Delivery
+   * @member {String} iam_secret_key
+   */
+  exports.prototype['iam_secret_key'] = undefined;
   /**
    * The maximum number of events in the payload that UltraCart will deliver
    * @member {Number} maximum_events
