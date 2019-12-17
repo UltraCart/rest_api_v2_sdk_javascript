@@ -71,6 +71,16 @@
         done();
       });
     });
+    describe('checkDownloadEmailSegment', function() {
+      it('should call checkDownloadEmailSegment successfully', function(done) {
+        //uncomment below and update the code to test checkDownloadEmailSegment
+        //instance.checkDownloadEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('cloneEmailCampaign', function() {
       it('should call cloneEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test cloneEmailCampaign
@@ -555,6 +565,16 @@
       it('should call insertEmailSegment successfully', function(done) {
         //uncomment below and update the code to test insertEmailSegment
         //instance.insertEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('prepareDownloadEmailSegment', function() {
+      it('should call prepareDownloadEmailSegment successfully', function(done) {
+        //uncomment below and update the code to test prepareDownloadEmailSegment
+        //instance.prepareDownloadEmailSegment(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
