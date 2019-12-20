@@ -37,7 +37,7 @@
   /**
    * The EmailSegment model module.
    * @module com.ultracart.admin.v2.models/EmailSegment
-   * @version 2.4.63
+   * @version 2.4.64
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -78,6 +79,9 @@
       }
       if (data.hasOwnProperty('email_segment_uuid')) {
         obj['email_segment_uuid'] = ApiClient.convertToType(data['email_segment_uuid'], 'String');
+      }
+      if (data.hasOwnProperty('facebook_custom_audience')) {
+        obj['facebook_custom_audience'] = ApiClient.convertToType(data['facebook_custom_audience'], 'Boolean');
       }
       if (data.hasOwnProperty('filter_profile_equation_json')) {
         obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
@@ -116,6 +120,11 @@
    * @member {String} email_segment_uuid
    */
   exports.prototype['email_segment_uuid'] = undefined;
+  /**
+   * True if you want to sync to a facebook custom audience
+   * @member {Boolean} facebook_custom_audience
+   */
+  exports.prototype['facebook_custom_audience'] = undefined;
   /**
    * File profile equation json
    * @member {String} filter_profile_equation_json

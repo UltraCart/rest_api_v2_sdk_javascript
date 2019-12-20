@@ -75,6 +75,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property facebookCustomAudience (base name: "facebook_custom_audience")', function() {
+      // uncomment below and update the code to test the property facebookCustomAudience
+      //var instane = new UltraCartRestApiV2.EmailSegment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property filterProfileEquationJson (base name: "filter_profile_equation_json")', function() {
       // uncomment below and update the code to test the property filterProfileEquationJson
       //var instane = new UltraCartRestApiV2.EmailSegment();
