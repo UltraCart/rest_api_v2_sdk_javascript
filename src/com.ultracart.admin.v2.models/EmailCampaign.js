@@ -37,7 +37,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 2.4.64
+   * @version 2.4.65
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -89,6 +91,12 @@
       }
       if (data.hasOwnProperty('email_communication_sequence_uuid')) {
         obj['email_communication_sequence_uuid'] = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+      }
+      if (data.hasOwnProperty('esp_domain_user')) {
+        obj['esp_domain_user'] = ApiClient.convertToType(data['esp_domain_user'], 'String');
+      }
+      if (data.hasOwnProperty('esp_domain_uuid')) {
+        obj['esp_domain_uuid'] = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       }
       if (data.hasOwnProperty('memberships')) {
         obj['memberships'] = ApiClient.convertToType(data['memberships'], [EmailListSegmentMembership]);
@@ -146,6 +154,16 @@
    * @member {String} email_communication_sequence_uuid
    */
   exports.prototype['email_communication_sequence_uuid'] = undefined;
+  /**
+   * User of the sending address
+   * @member {String} esp_domain_user
+   */
+  exports.prototype['esp_domain_user'] = undefined;
+  /**
+   * UUID of the sending domain
+   * @member {String} esp_domain_uuid
+   */
+  exports.prototype['esp_domain_uuid'] = undefined;
   /**
    * List and segment memberships
    * @member {Array.<module:com.ultracart.admin.v2.models/EmailListSegmentMembership>} memberships

@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.64
+   * @version 2.4.65
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -119,6 +121,12 @@
       }
       if (data.hasOwnProperty('open_count_formatted')) {
         obj['open_count_formatted'] = ApiClient.convertToType(data['open_count_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('order_count')) {
+        obj['order_count'] = ApiClient.convertToType(data['order_count'], 'Number');
+      }
+      if (data.hasOwnProperty('order_count_formatted')) {
+        obj['order_count_formatted'] = ApiClient.convertToType(data['order_count_formatted'], 'String');
       }
       if (data.hasOwnProperty('permanent_bounce_count')) {
         obj['permanent_bounce_count'] = ApiClient.convertToType(data['permanent_bounce_count'], 'Number');
@@ -231,6 +239,16 @@
    * @member {String} open_count_formatted
    */
   exports.prototype['open_count_formatted'] = undefined;
+  /**
+   * Count of orders
+   * @member {Number} order_count
+   */
+  exports.prototype['order_count'] = undefined;
+  /**
+   * Count of orders, formatted
+   * @member {String} order_count_formatted
+   */
+  exports.prototype['order_count_formatted'] = undefined;
   /**
    * Count of emails permanently bounced
    * @member {Number} permanent_bounce_count

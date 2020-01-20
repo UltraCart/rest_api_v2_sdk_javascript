@@ -87,6 +87,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property espDomainUser (base name: "esp_domain_user")', function() {
+      // uncomment below and update the code to test the property espDomainUser
+      //var instane = new UltraCartRestApiV2.EmailCampaign();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property espDomainUuid (base name: "esp_domain_uuid")', function() {
+      // uncomment below and update the code to test the property espDomainUuid
+      //var instane = new UltraCartRestApiV2.EmailCampaign();
+      //expect(instance).to.be();
+    });
+
     it('should have the property memberships (base name: "memberships")', function() {
       // uncomment below and update the code to test the property memberships
       //var instane = new UltraCartRestApiV2.EmailCampaign();

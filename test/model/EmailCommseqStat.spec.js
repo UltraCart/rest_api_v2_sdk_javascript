@@ -141,6 +141,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property orderCount (base name: "order_count")', function() {
+      // uncomment below and update the code to test the property orderCount
+      //var instane = new UltraCartRestApiV2.EmailCommseqStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property orderCountFormatted (base name: "order_count_formatted")', function() {
+      // uncomment below and update the code to test the property orderCountFormatted
+      //var instane = new UltraCartRestApiV2.EmailCommseqStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property permanentBounceCount (base name: "permanent_bounce_count")', function() {
       // uncomment below and update the code to test the property permanentBounceCount
       //var instane = new UltraCartRestApiV2.EmailCommseqStat();

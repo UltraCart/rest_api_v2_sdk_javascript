@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property clickRateFormatted (base name: "click_rate_formatted")', function() {
+      // uncomment below and update the code to test the property clickRateFormatted
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
     it('should have the property createdDts (base name: "created_dts")', function() {
       // uncomment below and update the code to test the property createdDts
       //var instane = new UltraCartRestApiV2.EmailFlow();
@@ -87,6 +93,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property espDomainUser (base name: "esp_domain_user")', function() {
+      // uncomment below and update the code to test the property espDomainUser
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property espDomainUuid (base name: "esp_domain_uuid")', function() {
+      // uncomment below and update the code to test the property espDomainUuid
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
     it('should have the property filterProfileEquationJson (base name: "filter_profile_equation_json")', function() {
       // uncomment below and update the code to test the property filterProfileEquationJson
       //var instane = new UltraCartRestApiV2.EmailFlow();
@@ -101,6 +119,18 @@
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property openRateFormatted (base name: "open_rate_formatted")', function() {
+      // uncomment below and update the code to test the property openRateFormatted
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property revenueFormatted (base name: "revenue_formatted")', function() {
+      // uncomment below and update the code to test the property revenueFormatted
       //var instane = new UltraCartRestApiV2.EmailFlow();
       //expect(instance).to.be();
     });

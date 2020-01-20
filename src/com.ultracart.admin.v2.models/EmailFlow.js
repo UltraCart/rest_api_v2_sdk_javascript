@@ -37,7 +37,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 2.4.64
+   * @version 2.4.65
    */
 
   /**
@@ -47,6 +47,11 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
 
 
 
@@ -78,6 +83,9 @@
       if (data.hasOwnProperty('allow_multiple_concurrent_enrollments')) {
         obj['allow_multiple_concurrent_enrollments'] = ApiClient.convertToType(data['allow_multiple_concurrent_enrollments'], 'Boolean');
       }
+      if (data.hasOwnProperty('click_rate_formatted')) {
+        obj['click_rate_formatted'] = ApiClient.convertToType(data['click_rate_formatted'], 'String');
+      }
       if (data.hasOwnProperty('created_dts')) {
         obj['created_dts'] = ApiClient.convertToType(data['created_dts'], 'String');
       }
@@ -90,6 +98,12 @@
       if (data.hasOwnProperty('email_flow_uuid')) {
         obj['email_flow_uuid'] = ApiClient.convertToType(data['email_flow_uuid'], 'String');
       }
+      if (data.hasOwnProperty('esp_domain_user')) {
+        obj['esp_domain_user'] = ApiClient.convertToType(data['esp_domain_user'], 'String');
+      }
+      if (data.hasOwnProperty('esp_domain_uuid')) {
+        obj['esp_domain_uuid'] = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+      }
       if (data.hasOwnProperty('filter_profile_equation_json')) {
         obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       }
@@ -98,6 +112,12 @@
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      }
+      if (data.hasOwnProperty('open_rate_formatted')) {
+        obj['open_rate_formatted'] = ApiClient.convertToType(data['open_rate_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('revenue_formatted')) {
+        obj['revenue_formatted'] = ApiClient.convertToType(data['revenue_formatted'], 'String');
       }
       if (data.hasOwnProperty('status')) {
         obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -127,6 +147,11 @@
    */
   exports.prototype['allow_multiple_concurrent_enrollments'] = undefined;
   /**
+   * Click rate of emails, formatted
+   * @member {String} click_rate_formatted
+   */
+  exports.prototype['click_rate_formatted'] = undefined;
+  /**
    * Created date
    * @member {String} created_dts
    */
@@ -147,6 +172,16 @@
    */
   exports.prototype['email_flow_uuid'] = undefined;
   /**
+   * Username of sending email
+   * @member {String} esp_domain_user
+   */
+  exports.prototype['esp_domain_user'] = undefined;
+  /**
+   * UUID of sending domain
+   * @member {String} esp_domain_uuid
+   */
+  exports.prototype['esp_domain_uuid'] = undefined;
+  /**
    * File profile equation json
    * @member {String} filter_profile_equation_json
    */
@@ -161,6 +196,16 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * Open rate of emails, formatted
+   * @member {String} open_rate_formatted
+   */
+  exports.prototype['open_rate_formatted'] = undefined;
+  /**
+   * Revenue, formatted
+   * @member {String} revenue_formatted
+   */
+  exports.prototype['revenue_formatted'] = undefined;
   /**
    * Status of the campaign of draft, archived, active, and inactive
    * @member {String} status

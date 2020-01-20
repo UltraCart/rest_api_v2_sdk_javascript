@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **merchant_id** | **String** | Merchant ID | [optional] 
 **open_count** | **Number** | Count of opened emails | [optional] 
 **open_count_formatted** | **String** | Count of opened emails, formatted | [optional] 
+**order_count** | **Number** | Count of orders | [optional] 
+**order_count_formatted** | **String** | Count of orders, formatted | [optional] 
 **permanent_bounce_count** | **Number** | Count of emails permanently bounced | [optional] 
 **permanent_bounce_count_formatted** | **String** | Count of emails permanently bounced, formatted | [optional] 
 **profit** | **Number** | Profit | [optional] 

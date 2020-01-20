@@ -34,7 +34,7 @@
   /**
    * Tax service.
    * @module com.ultracart.admin.v2/TaxApi
-   * @version 2.4.64
+   * @version 2.4.65
    */
 
   /**
