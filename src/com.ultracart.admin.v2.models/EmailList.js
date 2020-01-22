@@ -37,7 +37,7 @@
   /**
    * The EmailList model module.
    * @module com.ultracart.admin.v2.models/EmailList
-   * @version 2.4.65
+   * @version 2.4.66
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -86,6 +88,12 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
+      if (data.hasOwnProperty('public_description')) {
+        obj['public_description'] = ApiClient.convertToType(data['public_description'], 'String');
+      }
+      if (data.hasOwnProperty('public_list')) {
+        obj['public_list'] = ApiClient.convertToType(data['public_list'], 'Boolean');
+      }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
       }
@@ -123,6 +131,16 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * Description of list shown to customer.
+   * @member {String} public_description
+   */
+  exports.prototype['public_description'] = undefined;
+  /**
+   * True if this list is public
+   * @member {Boolean} public_list
+   */
+  exports.prototype['public_list'] = undefined;
   /**
    * Storefront oid
    * @member {Number} storefront_oid

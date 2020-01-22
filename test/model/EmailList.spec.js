@@ -93,6 +93,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property publicDescription (base name: "public_description")', function() {
+      // uncomment below and update the code to test the property publicDescription
+      //var instane = new UltraCartRestApiV2.EmailList();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property publicList (base name: "public_list")', function() {
+      // uncomment below and update the code to test the property publicList
+      //var instane = new UltraCartRestApiV2.EmailList();
+      //expect(instance).to.be();
+    });
+
     it('should have the property storefrontOid (base name: "storefront_oid")', function() {
       // uncomment below and update the code to test the property storefrontOid
       //var instane = new UltraCartRestApiV2.EmailList();

@@ -255,6 +255,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property properties (base name: "properties")', function() {
+      // uncomment below and update the code to test the property properties
+      //var instane = new UltraCartRestApiV2.Item();
+      //expect(instance).to.be();
+    });
+
     it('should have the property realtimePricing (base name: "realtime_pricing")', function() {
       // uncomment below and update the code to test the property realtimePricing
       //var instane = new UltraCartRestApiV2.Item();

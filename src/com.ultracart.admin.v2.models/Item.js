@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ItemAccounting', 'com.ultracart.admin.v2.models/ItemAmember', 'com.ultracart.admin.v2.models/ItemAutoOrder', 'com.ultracart.admin.v2.models/ItemCCBill', 'com.ultracart.admin.v2.models/ItemChannelPartnerMapping', 'com.ultracart.admin.v2.models/ItemChargeback', 'com.ultracart.admin.v2.models/ItemCheckout', 'com.ultracart.admin.v2.models/ItemContent', 'com.ultracart.admin.v2.models/ItemDigitalDelivery', 'com.ultracart.admin.v2.models/ItemEbay', 'com.ultracart.admin.v2.models/ItemEmailNotifications', 'com.ultracart.admin.v2.models/ItemEnrollment123', 'com.ultracart.admin.v2.models/ItemGiftCertificate', 'com.ultracart.admin.v2.models/ItemGoogleProductSearch', 'com.ultracart.admin.v2.models/ItemIdentifiers', 'com.ultracart.admin.v2.models/ItemInstantPaymentNotifications', 'com.ultracart.admin.v2.models/ItemInternal', 'com.ultracart.admin.v2.models/ItemKitDefinition', 'com.ultracart.admin.v2.models/ItemOption', 'com.ultracart.admin.v2.models/ItemPaymentProcessing', 'com.ultracart.admin.v2.models/ItemPhysical', 'com.ultracart.admin.v2.models/ItemPricing', 'com.ultracart.admin.v2.models/ItemRealtimePricing', 'com.ultracart.admin.v2.models/ItemRelated', 'com.ultracart.admin.v2.models/ItemReporting', 'com.ultracart.admin.v2.models/ItemRestriction', 'com.ultracart.admin.v2.models/ItemRevguard', 'com.ultracart.admin.v2.models/ItemReviews', 'com.ultracart.admin.v2.models/ItemSalesforce', 'com.ultracart.admin.v2.models/ItemShipping', 'com.ultracart.admin.v2.models/ItemTags', 'com.ultracart.admin.v2.models/ItemTax', 'com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing', 'com.ultracart.admin.v2.models/ItemVariantItem', 'com.ultracart.admin.v2.models/ItemVariation', 'com.ultracart.admin.v2.models/ItemWishlistMember'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ItemAccounting', 'com.ultracart.admin.v2.models/ItemAmember', 'com.ultracart.admin.v2.models/ItemAutoOrder', 'com.ultracart.admin.v2.models/ItemCCBill', 'com.ultracart.admin.v2.models/ItemChannelPartnerMapping', 'com.ultracart.admin.v2.models/ItemChargeback', 'com.ultracart.admin.v2.models/ItemCheckout', 'com.ultracart.admin.v2.models/ItemContent', 'com.ultracart.admin.v2.models/ItemDigitalDelivery', 'com.ultracart.admin.v2.models/ItemEbay', 'com.ultracart.admin.v2.models/ItemEmailNotifications', 'com.ultracart.admin.v2.models/ItemEnrollment123', 'com.ultracart.admin.v2.models/ItemGiftCertificate', 'com.ultracart.admin.v2.models/ItemGoogleProductSearch', 'com.ultracart.admin.v2.models/ItemIdentifiers', 'com.ultracart.admin.v2.models/ItemInstantPaymentNotifications', 'com.ultracart.admin.v2.models/ItemInternal', 'com.ultracart.admin.v2.models/ItemKitDefinition', 'com.ultracart.admin.v2.models/ItemOption', 'com.ultracart.admin.v2.models/ItemPaymentProcessing', 'com.ultracart.admin.v2.models/ItemPhysical', 'com.ultracart.admin.v2.models/ItemPricing', 'com.ultracart.admin.v2.models/ItemProperty', 'com.ultracart.admin.v2.models/ItemRealtimePricing', 'com.ultracart.admin.v2.models/ItemRelated', 'com.ultracart.admin.v2.models/ItemReporting', 'com.ultracart.admin.v2.models/ItemRestriction', 'com.ultracart.admin.v2.models/ItemRevguard', 'com.ultracart.admin.v2.models/ItemReviews', 'com.ultracart.admin.v2.models/ItemSalesforce', 'com.ultracart.admin.v2.models/ItemShipping', 'com.ultracart.admin.v2.models/ItemTags', 'com.ultracart.admin.v2.models/ItemTax', 'com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing', 'com.ultracart.admin.v2.models/ItemVariantItem', 'com.ultracart.admin.v2.models/ItemVariation', 'com.ultracart.admin.v2.models/ItemWishlistMember'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ItemAccounting'), require('./ItemAmember'), require('./ItemAutoOrder'), require('./ItemCCBill'), require('./ItemChannelPartnerMapping'), require('./ItemChargeback'), require('./ItemCheckout'), require('./ItemContent'), require('./ItemDigitalDelivery'), require('./ItemEbay'), require('./ItemEmailNotifications'), require('./ItemEnrollment123'), require('./ItemGiftCertificate'), require('./ItemGoogleProductSearch'), require('./ItemIdentifiers'), require('./ItemInstantPaymentNotifications'), require('./ItemInternal'), require('./ItemKitDefinition'), require('./ItemOption'), require('./ItemPaymentProcessing'), require('./ItemPhysical'), require('./ItemPricing'), require('./ItemRealtimePricing'), require('./ItemRelated'), require('./ItemReporting'), require('./ItemRestriction'), require('./ItemRevguard'), require('./ItemReviews'), require('./ItemSalesforce'), require('./ItemShipping'), require('./ItemTags'), require('./ItemTax'), require('./ItemThirdPartyEmailMarketing'), require('./ItemVariantItem'), require('./ItemVariation'), require('./ItemWishlistMember'));
+    module.exports = factory(require('../ApiClient'), require('./ItemAccounting'), require('./ItemAmember'), require('./ItemAutoOrder'), require('./ItemCCBill'), require('./ItemChannelPartnerMapping'), require('./ItemChargeback'), require('./ItemCheckout'), require('./ItemContent'), require('./ItemDigitalDelivery'), require('./ItemEbay'), require('./ItemEmailNotifications'), require('./ItemEnrollment123'), require('./ItemGiftCertificate'), require('./ItemGoogleProductSearch'), require('./ItemIdentifiers'), require('./ItemInstantPaymentNotifications'), require('./ItemInternal'), require('./ItemKitDefinition'), require('./ItemOption'), require('./ItemPaymentProcessing'), require('./ItemPhysical'), require('./ItemPricing'), require('./ItemProperty'), require('./ItemRealtimePricing'), require('./ItemRelated'), require('./ItemReporting'), require('./ItemRestriction'), require('./ItemRevguard'), require('./ItemReviews'), require('./ItemSalesforce'), require('./ItemShipping'), require('./ItemTags'), require('./ItemTax'), require('./ItemThirdPartyEmailMarketing'), require('./ItemVariantItem'), require('./ItemVariation'), require('./ItemWishlistMember'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Item = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ItemAccounting, root.UltraCartRestApiV2.ItemAmember, root.UltraCartRestApiV2.ItemAutoOrder, root.UltraCartRestApiV2.ItemCCBill, root.UltraCartRestApiV2.ItemChannelPartnerMapping, root.UltraCartRestApiV2.ItemChargeback, root.UltraCartRestApiV2.ItemCheckout, root.UltraCartRestApiV2.ItemContent, root.UltraCartRestApiV2.ItemDigitalDelivery, root.UltraCartRestApiV2.ItemEbay, root.UltraCartRestApiV2.ItemEmailNotifications, root.UltraCartRestApiV2.ItemEnrollment123, root.UltraCartRestApiV2.ItemGiftCertificate, root.UltraCartRestApiV2.ItemGoogleProductSearch, root.UltraCartRestApiV2.ItemIdentifiers, root.UltraCartRestApiV2.ItemInstantPaymentNotifications, root.UltraCartRestApiV2.ItemInternal, root.UltraCartRestApiV2.ItemKitDefinition, root.UltraCartRestApiV2.ItemOption, root.UltraCartRestApiV2.ItemPaymentProcessing, root.UltraCartRestApiV2.ItemPhysical, root.UltraCartRestApiV2.ItemPricing, root.UltraCartRestApiV2.ItemRealtimePricing, root.UltraCartRestApiV2.ItemRelated, root.UltraCartRestApiV2.ItemReporting, root.UltraCartRestApiV2.ItemRestriction, root.UltraCartRestApiV2.ItemRevguard, root.UltraCartRestApiV2.ItemReviews, root.UltraCartRestApiV2.ItemSalesforce, root.UltraCartRestApiV2.ItemShipping, root.UltraCartRestApiV2.ItemTags, root.UltraCartRestApiV2.ItemTax, root.UltraCartRestApiV2.ItemThirdPartyEmailMarketing, root.UltraCartRestApiV2.ItemVariantItem, root.UltraCartRestApiV2.ItemVariation, root.UltraCartRestApiV2.ItemWishlistMember);
+    root.UltraCartRestApiV2.Item = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ItemAccounting, root.UltraCartRestApiV2.ItemAmember, root.UltraCartRestApiV2.ItemAutoOrder, root.UltraCartRestApiV2.ItemCCBill, root.UltraCartRestApiV2.ItemChannelPartnerMapping, root.UltraCartRestApiV2.ItemChargeback, root.UltraCartRestApiV2.ItemCheckout, root.UltraCartRestApiV2.ItemContent, root.UltraCartRestApiV2.ItemDigitalDelivery, root.UltraCartRestApiV2.ItemEbay, root.UltraCartRestApiV2.ItemEmailNotifications, root.UltraCartRestApiV2.ItemEnrollment123, root.UltraCartRestApiV2.ItemGiftCertificate, root.UltraCartRestApiV2.ItemGoogleProductSearch, root.UltraCartRestApiV2.ItemIdentifiers, root.UltraCartRestApiV2.ItemInstantPaymentNotifications, root.UltraCartRestApiV2.ItemInternal, root.UltraCartRestApiV2.ItemKitDefinition, root.UltraCartRestApiV2.ItemOption, root.UltraCartRestApiV2.ItemPaymentProcessing, root.UltraCartRestApiV2.ItemPhysical, root.UltraCartRestApiV2.ItemPricing, root.UltraCartRestApiV2.ItemProperty, root.UltraCartRestApiV2.ItemRealtimePricing, root.UltraCartRestApiV2.ItemRelated, root.UltraCartRestApiV2.ItemReporting, root.UltraCartRestApiV2.ItemRestriction, root.UltraCartRestApiV2.ItemRevguard, root.UltraCartRestApiV2.ItemReviews, root.UltraCartRestApiV2.ItemSalesforce, root.UltraCartRestApiV2.ItemShipping, root.UltraCartRestApiV2.ItemTags, root.UltraCartRestApiV2.ItemTax, root.UltraCartRestApiV2.ItemThirdPartyEmailMarketing, root.UltraCartRestApiV2.ItemVariantItem, root.UltraCartRestApiV2.ItemVariation, root.UltraCartRestApiV2.ItemWishlistMember);
   }
-}(this, function(ApiClient, ItemAccounting, ItemAmember, ItemAutoOrder, ItemCCBill, ItemChannelPartnerMapping, ItemChargeback, ItemCheckout, ItemContent, ItemDigitalDelivery, ItemEbay, ItemEmailNotifications, ItemEnrollment123, ItemGiftCertificate, ItemGoogleProductSearch, ItemIdentifiers, ItemInstantPaymentNotifications, ItemInternal, ItemKitDefinition, ItemOption, ItemPaymentProcessing, ItemPhysical, ItemPricing, ItemRealtimePricing, ItemRelated, ItemReporting, ItemRestriction, ItemRevguard, ItemReviews, ItemSalesforce, ItemShipping, ItemTags, ItemTax, ItemThirdPartyEmailMarketing, ItemVariantItem, ItemVariation, ItemWishlistMember) {
+}(this, function(ApiClient, ItemAccounting, ItemAmember, ItemAutoOrder, ItemCCBill, ItemChannelPartnerMapping, ItemChargeback, ItemCheckout, ItemContent, ItemDigitalDelivery, ItemEbay, ItemEmailNotifications, ItemEnrollment123, ItemGiftCertificate, ItemGoogleProductSearch, ItemIdentifiers, ItemInstantPaymentNotifications, ItemInternal, ItemKitDefinition, ItemOption, ItemPaymentProcessing, ItemPhysical, ItemPricing, ItemProperty, ItemRealtimePricing, ItemRelated, ItemReporting, ItemRestriction, ItemRevguard, ItemReviews, ItemSalesforce, ItemShipping, ItemTags, ItemTax, ItemThirdPartyEmailMarketing, ItemVariantItem, ItemVariation, ItemWishlistMember) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The Item model module.
    * @module com.ultracart.admin.v2.models/Item
-   * @version 2.4.65
+   * @version 2.4.66
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -206,6 +207,9 @@
       }
       if (data.hasOwnProperty('pricing')) {
         obj['pricing'] = ItemPricing.constructFromObject(data['pricing']);
+      }
+      if (data.hasOwnProperty('properties')) {
+        obj['properties'] = ApiClient.convertToType(data['properties'], [ItemProperty]);
       }
       if (data.hasOwnProperty('realtime_pricing')) {
         obj['realtime_pricing'] = ItemRealtimePricing.constructFromObject(data['realtime_pricing']);
@@ -398,6 +402,11 @@
    * @member {module:com.ultracart.admin.v2.models/ItemPricing} pricing
    */
   exports.prototype['pricing'] = undefined;
+  /**
+   * Properties
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemProperty>} properties
+   */
+  exports.prototype['properties'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemRealtimePricing} realtime_pricing
    */

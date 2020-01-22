@@ -37,7 +37,7 @@
   /**
    * The ItemGoogleProductSearch model module.
    * @module com.ultracart.admin.v2.models/ItemGoogleProductSearch
-   * @version 2.4.65
+   * @version 2.4.66
    */
 
   /**
