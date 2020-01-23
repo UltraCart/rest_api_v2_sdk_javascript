@@ -37,7 +37,7 @@
   /**
    * The CartItemAttribute model module.
    * @module com.ultracart.admin.v2.models/CartItemAttribute
-   * @version 2.4.66
+   * @version 2.4.67
    */
 
   /**

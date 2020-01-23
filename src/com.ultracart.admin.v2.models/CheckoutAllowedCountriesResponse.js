@@ -37,7 +37,7 @@
   /**
    * The CheckoutAllowedCountriesResponse model module.
    * @module com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse
-   * @version 2.4.66
+   * @version 2.4.67
    */
 
   /**
