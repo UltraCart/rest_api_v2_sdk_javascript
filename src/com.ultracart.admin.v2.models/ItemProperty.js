@@ -37,7 +37,7 @@
   /**
    * The ItemProperty model module.
    * @module com.ultracart.admin.v2.models/ItemProperty
-   * @version 2.4.69
+   * @version 2.4.70
    */
 
   /**

@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 2.4.69
+   * @version 2.4.70
    */
 
   /**
@@ -88,11 +88,11 @@
       if (data.hasOwnProperty('email_container_cjson')) {
         obj['email_container_cjson'] = ApiClient.convertToType(data['email_container_cjson'], 'String');
       }
+      if (data.hasOwnProperty('email_container_cjson_last_modified_dts')) {
+        obj['email_container_cjson_last_modified_dts'] = ApiClient.convertToType(data['email_container_cjson_last_modified_dts'], 'String');
+      }
       if (data.hasOwnProperty('email_template_vm_path')) {
         obj['email_template_vm_path'] = ApiClient.convertToType(data['email_template_vm_path'], 'String');
-      }
-      if (data.hasOwnProperty('emailContainerCjsonLastModifiedDts')) {
-        obj['emailContainerCjsonLastModifiedDts'] = ApiClient.convertToType(data['emailContainerCjsonLastModifiedDts'], 'String');
       }
       if (data.hasOwnProperty('filter_profile_equation_json')) {
         obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
@@ -146,15 +146,15 @@
    */
   exports.prototype['email_container_cjson'] = undefined;
   /**
+   * Timestamp the last time the container was modified.
+   * @member {String} email_container_cjson_last_modified_dts
+   */
+  exports.prototype['email_container_cjson_last_modified_dts'] = undefined;
+  /**
    * Email template virtual path
    * @member {String} email_template_vm_path
    */
   exports.prototype['email_template_vm_path'] = undefined;
-  /**
-   * Timestamp the last time the container was modified.
-   * @member {String} emailContainerCjsonLastModifiedDts
-   */
-  exports.prototype['emailContainerCjsonLastModifiedDts'] = undefined;
   /**
    * Filter profile equation json
    * @member {String} filter_profile_equation_json

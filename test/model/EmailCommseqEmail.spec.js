@@ -81,14 +81,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property emailTemplateVmPath (base name: "email_template_vm_path")', function() {
-      // uncomment below and update the code to test the property emailTemplateVmPath
+    it('should have the property emailContainerCjsonLastModifiedDts (base name: "email_container_cjson_last_modified_dts")', function() {
+      // uncomment below and update the code to test the property emailContainerCjsonLastModifiedDts
       //var instane = new UltraCartRestApiV2.EmailCommseqEmail();
       //expect(instance).to.be();
     });
 
-    it('should have the property emailContainerCjsonLastModifiedDts (base name: "emailContainerCjsonLastModifiedDts")', function() {
-      // uncomment below and update the code to test the property emailContainerCjsonLastModifiedDts
+    it('should have the property emailTemplateVmPath (base name: "email_template_vm_path")', function() {
+      // uncomment below and update the code to test the property emailTemplateVmPath
       //var instane = new UltraCartRestApiV2.EmailCommseqEmail();
       //expect(instance).to.be();
     });
