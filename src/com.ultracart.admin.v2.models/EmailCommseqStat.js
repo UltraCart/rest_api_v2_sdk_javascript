@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqStat model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqStat
-   * @version 2.4.68
+   * @version 2.4.69
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -186,6 +188,12 @@
       }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
+      }
+      if (data.hasOwnProperty('unsubscribe_count')) {
+        obj['unsubscribe_count'] = ApiClient.convertToType(data['unsubscribe_count'], 'Number');
+      }
+      if (data.hasOwnProperty('unsubscribe_count_formatted')) {
+        obj['unsubscribe_count_formatted'] = ApiClient.convertToType(data['unsubscribe_count_formatted'], 'String');
       }
       if (data.hasOwnProperty('view_count')) {
         obj['view_count'] = ApiClient.convertToType(data['view_count'], 'Number');
@@ -352,6 +360,16 @@
    * @member {Number} storefront_oid
    */
   exports.prototype['storefront_oid'] = undefined;
+  /**
+   * Count of unsubscribes caused
+   * @member {Number} unsubscribe_count
+   */
+  exports.prototype['unsubscribe_count'] = undefined;
+  /**
+   * Count of unsubscribes caused, formatted
+   * @member {String} unsubscribe_count_formatted
+   */
+  exports.prototype['unsubscribe_count_formatted'] = undefined;
   /**
    * Count of views
    * @member {Number} view_count

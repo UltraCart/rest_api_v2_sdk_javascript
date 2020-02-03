@@ -243,6 +243,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property unsubscribeCount (base name: "unsubscribe_count")', function() {
+      // uncomment below and update the code to test the property unsubscribeCount
+      //var instane = new UltraCartRestApiV2.EmailCommseqStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property unsubscribeCountFormatted (base name: "unsubscribe_count_formatted")', function() {
+      // uncomment below and update the code to test the property unsubscribeCountFormatted
+      //var instane = new UltraCartRestApiV2.EmailCommseqStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property viewCount (base name: "view_count")', function() {
       // uncomment below and update the code to test the property viewCount
       //var instane = new UltraCartRestApiV2.EmailCommseqStat();

@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.68
+   * @version 2.4.69
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -175,6 +177,12 @@
       }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
+      }
+      if (data.hasOwnProperty('unsubscribe_count')) {
+        obj['unsubscribe_count'] = ApiClient.convertToType(data['unsubscribe_count'], 'Number');
+      }
+      if (data.hasOwnProperty('unsubscribe_count_formatted')) {
+        obj['unsubscribe_count_formatted'] = ApiClient.convertToType(data['unsubscribe_count_formatted'], 'String');
       }
       if (data.hasOwnProperty('uuid')) {
         obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
@@ -329,6 +337,16 @@
    * @member {Number} storefront_oid
    */
   exports.prototype['storefront_oid'] = undefined;
+  /**
+   * Count of emails classified as unsubscribe
+   * @member {Number} unsubscribe_count
+   */
+  exports.prototype['unsubscribe_count'] = undefined;
+  /**
+   * Count of emails classified as unsubscribe, formatted
+   * @member {String} unsubscribe_count_formatted
+   */
+  exports.prototype['unsubscribe_count_formatted'] = undefined;
   /**
    * List or segment uuid
    * @member {String} uuid

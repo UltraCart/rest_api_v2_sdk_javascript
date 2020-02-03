@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **started_count** | **Number** | Count of customers that started the sequence | [optional] 
 **started_count_formatted** | **String** | Count of customers that started the sequence, formatted | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
+**unsubscribe_count** | **Number** | Count of unsubscribes caused | [optional] 
+**unsubscribe_count_formatted** | **String** | Count of unsubscribes caused, formatted | [optional] 
 **view_count** | **Number** | Count of views | [optional] 
 **view_count_formatted** | **String** | Count of views, formatted | [optional] 
 

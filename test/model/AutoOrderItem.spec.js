@@ -195,6 +195,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property simpleSchedule (base name: "simple_schedule")', function() {
+      // uncomment below and update the code to test the property simpleSchedule
+      //var instane = new UltraCartRestApiV2.AutoOrderItem();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

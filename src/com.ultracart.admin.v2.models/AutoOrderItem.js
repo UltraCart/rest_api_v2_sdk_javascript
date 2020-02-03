@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule', 'com.ultracart.admin.v2.models/AutoOrderItemOption'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule', 'com.ultracart.admin.v2.models/AutoOrderItemOption', 'com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AutoOrderItemFutureSchedule'), require('./AutoOrderItemOption'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrderItemFutureSchedule'), require('./AutoOrderItemOption'), require('./AutoOrderItemSimpleSchedule'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItemFutureSchedule, root.UltraCartRestApiV2.AutoOrderItemOption);
+    root.UltraCartRestApiV2.AutoOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItemFutureSchedule, root.UltraCartRestApiV2.AutoOrderItemOption, root.UltraCartRestApiV2.AutoOrderItemSimpleSchedule);
   }
-}(this, function(ApiClient, AutoOrderItemFutureSchedule, AutoOrderItemOption) {
+}(this, function(ApiClient, AutoOrderItemFutureSchedule, AutoOrderItemOption, AutoOrderItemSimpleSchedule) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 2.4.68
+   * @version 2.4.69
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -152,6 +153,9 @@
       }
       if (data.hasOwnProperty('remaining_repeat_count')) {
         obj['remaining_repeat_count'] = ApiClient.convertToType(data['remaining_repeat_count'], 'Number');
+      }
+      if (data.hasOwnProperty('simple_schedule')) {
+        obj['simple_schedule'] = AutoOrderItemSimpleSchedule.constructFromObject(data['simple_schedule']);
       }
     }
     return obj;
@@ -272,6 +276,10 @@
    * @member {Number} remaining_repeat_count
    */
   exports.prototype['remaining_repeat_count'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule} simple_schedule
+   */
+  exports.prototype['simple_schedule'] = undefined;
 
 
   /**

@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 **status** | **String** | Status of campaign or flow | [optional] 
 **status_dts** | **String** | Status dts of campaign or flow | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
+**unsubscribe_count** | **Number** | Count of emails classified as unsubscribe | [optional] 
+**unsubscribe_count_formatted** | **String** | Count of emails classified as unsubscribe, formatted | [optional] 
 **uuid** | **String** | List or segment uuid | [optional] 
 **view_count** | **Number** | Count of views | [optional] 
 **view_count_formatted** | **String** | Count of views, formatted | [optional] 

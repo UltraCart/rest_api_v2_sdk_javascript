@@ -225,6 +225,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property unsubscribeCount (base name: "unsubscribe_count")', function() {
+      // uncomment below and update the code to test the property unsubscribeCount
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property unsubscribeCountFormatted (base name: "unsubscribe_count_formatted")', function() {
+      // uncomment below and update the code to test the property unsubscribeCountFormatted
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property uuid (base name: "uuid")', function() {
       // uncomment below and update the code to test the property uuid
       //var instane = new UltraCartRestApiV2.EmailStat();

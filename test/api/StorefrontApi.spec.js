@@ -501,6 +501,16 @@
         done();
       });
     });
+    describe('getTransactionEmailList', function() {
+      it('should call getTransactionEmailList successfully', function(done) {
+        //uncomment below and update the code to test getTransactionEmailList
+        //instance.getTransactionEmailList(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('importEmailThirdPartyProviderList', function() {
       it('should call importEmailThirdPartyProviderList successfully', function(done) {
         //uncomment below and update the code to test importEmailThirdPartyProviderList

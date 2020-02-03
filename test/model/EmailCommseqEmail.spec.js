@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property emailContainerCjsonLastModifiedDts (base name: "emailContainerCjsonLastModifiedDts")', function() {
+      // uncomment below and update the code to test the property emailContainerCjsonLastModifiedDts
+      //var instane = new UltraCartRestApiV2.EmailCommseqEmail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property filterProfileEquationJson (base name: "filter_profile_equation_json")', function() {
       // uncomment below and update the code to test the property filterProfileEquationJson
       //var instane = new UltraCartRestApiV2.EmailCommseqEmail();

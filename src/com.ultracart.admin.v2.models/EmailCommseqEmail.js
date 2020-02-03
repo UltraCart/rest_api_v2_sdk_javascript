@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 2.4.68
+   * @version 2.4.69
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -89,6 +90,9 @@
       }
       if (data.hasOwnProperty('email_template_vm_path')) {
         obj['email_template_vm_path'] = ApiClient.convertToType(data['email_template_vm_path'], 'String');
+      }
+      if (data.hasOwnProperty('emailContainerCjsonLastModifiedDts')) {
+        obj['emailContainerCjsonLastModifiedDts'] = ApiClient.convertToType(data['emailContainerCjsonLastModifiedDts'], 'String');
       }
       if (data.hasOwnProperty('filter_profile_equation_json')) {
         obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
@@ -146,6 +150,11 @@
    * @member {String} email_template_vm_path
    */
   exports.prototype['email_template_vm_path'] = undefined;
+  /**
+   * Timestamp the last time the container was modified.
+   * @member {String} emailContainerCjsonLastModifiedDts
+   */
+  exports.prototype['emailContainerCjsonLastModifiedDts'] = undefined;
   /**
    * Filter profile equation json
    * @member {String} filter_profile_equation_json
