@@ -37,7 +37,7 @@
   /**
    * The EmailListsResponse model module.
    * @module com.ultracart.admin.v2.models/EmailListsResponse
-   * @version 2.4.70
+   * @version 2.4.71
    */
 
   /**

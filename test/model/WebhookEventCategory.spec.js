@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.WebhookEventCategory);
     });
 
+    it('should have the property availableExpansions (base name: "available_expansions")', function() {
+      // uncomment below and update the code to test the property availableExpansions
+      //var instane = new UltraCartRestApiV2.WebhookEventCategory();
+      //expect(instance).to.be();
+    });
+
     it('should have the property eventCategory (base name: "event_category")', function() {
       // uncomment below and update the code to test the property eventCategory
       //var instane = new UltraCartRestApiV2.WebhookEventCategory();
