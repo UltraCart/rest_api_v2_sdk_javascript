@@ -69,12 +69,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property error (base name: "error")', function() {
-      // uncomment below and update the code to test the property error
-      //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property espCommseqEmailUuid (base name: "esp_commseq_email_uuid")', function() {
       // uncomment below and update the code to test the property espCommseqEmailUuid
       //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
@@ -93,12 +87,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property metadata (base name: "metadata")', function() {
-      // uncomment below and update the code to test the property metadata
-      //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property orderId (base name: "order_id")', function() {
       // uncomment below and update the code to test the property orderId
       //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
@@ -113,12 +101,6 @@
 
     it('should have the property sendToLoggedInUser (base name: "send_to_logged_in_user")', function() {
       // uncomment below and update the code to test the property sendToLoggedInUser
-      //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property success (base name: "success")', function() {
-      // uncomment below and update the code to test the property success
       //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
       //expect(instance).to.be();
     });

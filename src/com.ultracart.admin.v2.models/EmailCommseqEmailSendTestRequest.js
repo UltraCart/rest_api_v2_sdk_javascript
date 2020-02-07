@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailCommseqEmailSendTestRequest = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata);
+    root.UltraCartRestApiV2.EmailCommseqEmailSendTestRequest = factory(root.UltraCartRestApiV2.ApiClient);
   }
-}(this, function(ApiClient, Error, ResponseMetadata) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqEmailSendTestRequest model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest
-   * @version 2.4.72
+   * @version 2.4.73
    */
 
   /**
@@ -47,9 +47,6 @@
    */
   var exports = function() {
     var _this = this;
-
-
-
 
 
 
@@ -78,9 +75,6 @@
       if (data.hasOwnProperty('cart_item_ids')) {
         obj['cart_item_ids'] = ApiClient.convertToType(data['cart_item_ids'], ['String']);
       }
-      if (data.hasOwnProperty('error')) {
-        obj['error'] = Error.constructFromObject(data['error']);
-      }
       if (data.hasOwnProperty('esp_commseq_email_uuid')) {
         obj['esp_commseq_email_uuid'] = ApiClient.convertToType(data['esp_commseq_email_uuid'], 'String');
       }
@@ -90,9 +84,6 @@
       if (data.hasOwnProperty('esp_commseq_uuid')) {
         obj['esp_commseq_uuid'] = ApiClient.convertToType(data['esp_commseq_uuid'], 'String');
       }
-      if (data.hasOwnProperty('metadata')) {
-        obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
-      }
       if (data.hasOwnProperty('order_id')) {
         obj['order_id'] = ApiClient.convertToType(data['order_id'], 'String');
       }
@@ -101,9 +92,6 @@
       }
       if (data.hasOwnProperty('send_to_logged_in_user')) {
         obj['send_to_logged_in_user'] = ApiClient.convertToType(data['send_to_logged_in_user'], 'Boolean');
-      }
-      if (data.hasOwnProperty('success')) {
-        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
       }
     }
     return obj;
@@ -118,10 +106,6 @@
    */
   exports.prototype['cart_item_ids'] = undefined;
   /**
-   * @member {module:com.ultracart.admin.v2.models/Error} error
-   */
-  exports.prototype['error'] = undefined;
-  /**
    * @member {String} esp_commseq_email_uuid
    */
   exports.prototype['esp_commseq_email_uuid'] = undefined;
@@ -134,10 +118,6 @@
    */
   exports.prototype['esp_commseq_uuid'] = undefined;
   /**
-   * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
-   */
-  exports.prototype['metadata'] = undefined;
-  /**
    * @member {String} order_id
    */
   exports.prototype['order_id'] = undefined;
@@ -149,11 +129,6 @@
    * @member {Boolean} send_to_logged_in_user
    */
   exports.prototype['send_to_logged_in_user'] = undefined;
-  /**
-   * Indicates if API call was successful
-   * @member {Boolean} success
-   */
-  exports.prototype['success'] = undefined;
 
 
 
