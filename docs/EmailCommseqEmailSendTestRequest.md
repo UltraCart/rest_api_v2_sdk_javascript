@@ -1,0 +1,18 @@
+# UltraCartRestApiV2.EmailCommseqEmailSendTestRequest
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**cart_id** | **String** |  | [optional] 
+**cart_item_ids** | **[String]** |  | [optional] 
+**error** | [**Error**](Error.md) |  | [optional] 
+**esp_commseq_email_uuid** | **String** |  | [optional] 
+**esp_commseq_step_uuid** | **String** |  | [optional] 
+**esp_commseq_uuid** | **String** |  | [optional] 
+**metadata** | [**ResponseMetadata**](ResponseMetadata.md) |  | [optional] 
+**order_id** | **String** |  | [optional] 
+**send_to_additional_emails** | **[String]** |  | [optional] 
+**send_to_logged_in_user** | **Boolean** |  | [optional] 
+**success** | **Boolean** | Indicates if API call was successful | [optional] 
+
+

@@ -501,6 +501,16 @@
         done();
       });
     });
+    describe('getTransactionEmail', function() {
+      it('should call getTransactionEmail successfully', function(done) {
+        //uncomment below and update the code to test getTransactionEmail
+        //instance.getTransactionEmail(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTransactionEmailList', function() {
       it('should call getTransactionEmailList successfully', function(done) {
         //uncomment below and update the code to test getTransactionEmailList
@@ -621,6 +631,16 @@
         done();
       });
     });
+    describe('sendEmailTest', function() {
+      it('should call sendEmailTest successfully', function(done) {
+        //uncomment below and update the code to test sendEmailTest
+        //instance.sendEmailTest(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('startEmailCampaign', function() {
       it('should call startEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test startEmailCampaign
@@ -705,6 +725,16 @@
       it('should call updateExperiment successfully', function(done) {
         //uncomment below and update the code to test updateExperiment
         //instance.updateExperiment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateTransactionEmail', function() {
+      it('should call updateTransactionEmail successfully', function(done) {
+        //uncomment below and update the code to test updateTransactionEmail
+        //instance.updateTransactionEmail(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

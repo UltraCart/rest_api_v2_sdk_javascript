@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.TransactionEmailListResponse = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.TransactionEmailListResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Error, ResponseMetadata) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The TransactionEmailListResponse model module.
    * @module com.ultracart.admin.v2.models/TransactionEmailListResponse
-   * @version 2.4.71
+   * @version 2.4.72
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
   };
@@ -65,6 +68,15 @@
       if (data.hasOwnProperty('email_names')) {
         obj['email_names'] = ApiClient.convertToType(data['email_names'], ['String']);
       }
+      if (data.hasOwnProperty('error')) {
+        obj['error'] = Error.constructFromObject(data['error']);
+      }
+      if (data.hasOwnProperty('metadata')) {
+        obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
+      }
+      if (data.hasOwnProperty('success')) {
+        obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -73,6 +85,19 @@
    * @member {Array.<String>} email_names
    */
   exports.prototype['email_names'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Error} error
+   */
+  exports.prototype['error'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
+   */
+  exports.prototype['metadata'] = undefined;
+  /**
+   * Indicates if API call was successful
+   * @member {Boolean} success
+   */
+  exports.prototype['success'] = undefined;
 
 
 
