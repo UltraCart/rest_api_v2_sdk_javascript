@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property orderId (base name: "order_id")', function() {
       // uncomment below and update the code to test the property orderId
       //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();

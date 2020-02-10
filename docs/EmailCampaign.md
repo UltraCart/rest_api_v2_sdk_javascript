@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **email_communication_sequence_uuid** | **String** | Email communication sequence UUID | [optional] 
 **esp_domain_user** | **String** | User of the sending address | [optional] 
 **esp_domain_uuid** | **String** | UUID of the sending domain | [optional] 
+**esp_friendly_name** | **String** | Friendly name of the sending email | [optional] 
 **memberships** | [**[EmailListSegmentMembership]**](EmailListSegmentMembership.md) | List and segment memberships | [optional] 
 **merchant_id** | **String** | Merchant ID | [optional] 
 **name** | **String** | Name of email campaign | [optional] 

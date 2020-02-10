@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **email_flow_uuid** | **String** | Email flow UUID | [optional] 
 **esp_domain_user** | **String** | Username of sending email | [optional] 
 **esp_domain_uuid** | **String** | UUID of sending domain | [optional] 
+**esp_friendly_name** | **String** | Friendly name of the sending email | [optional] 
 **filter_profile_equation_json** | **String** | File profile equation json | [optional] 
 **merchant_id** | **String** | Merchant ID | [optional] 
 **name** | **String** | Name of email flow | [optional] 

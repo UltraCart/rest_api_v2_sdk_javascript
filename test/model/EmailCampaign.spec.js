@@ -99,6 +99,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property espFriendlyName (base name: "esp_friendly_name")', function() {
+      // uncomment below and update the code to test the property espFriendlyName
+      //var instane = new UltraCartRestApiV2.EmailCampaign();
+      //expect(instance).to.be();
+    });
+
     it('should have the property memberships (base name: "memberships")', function() {
       // uncomment below and update the code to test the property memberships
       //var instane = new UltraCartRestApiV2.EmailCampaign();

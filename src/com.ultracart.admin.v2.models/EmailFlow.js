@@ -37,7 +37,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 2.4.73
+   * @version 2.4.74
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -103,6 +104,9 @@
       }
       if (data.hasOwnProperty('esp_domain_uuid')) {
         obj['esp_domain_uuid'] = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+      }
+      if (data.hasOwnProperty('esp_friendly_name')) {
+        obj['esp_friendly_name'] = ApiClient.convertToType(data['esp_friendly_name'], 'String');
       }
       if (data.hasOwnProperty('filter_profile_equation_json')) {
         obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
@@ -181,6 +185,11 @@
    * @member {String} esp_domain_uuid
    */
   exports.prototype['esp_domain_uuid'] = undefined;
+  /**
+   * Friendly name of the sending email
+   * @member {String} esp_friendly_name
+   */
+  exports.prototype['esp_friendly_name'] = undefined;
   /**
    * File profile equation json
    * @member {String} filter_profile_equation_json
