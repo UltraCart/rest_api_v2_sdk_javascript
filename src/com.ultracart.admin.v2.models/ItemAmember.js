@@ -37,7 +37,7 @@
   /**
    * The ItemAmember model module.
    * @module com.ultracart.admin.v2.models/ItemAmember
-   * @version 2.4.74
+   * @version 2.4.75
    */
 
   /**

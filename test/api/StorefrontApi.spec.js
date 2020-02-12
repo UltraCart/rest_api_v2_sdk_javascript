@@ -111,6 +111,16 @@
         done();
       });
     });
+    describe('deleteEmailCommseqStat', function() {
+      it('should call deleteEmailCommseqStat successfully', function(done) {
+        //uncomment below and update the code to test deleteEmailCommseqStat
+        //instance.deleteEmailCommseqStat(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteEmailEmail', function() {
       it('should call deleteEmailEmail successfully', function(done) {
         //uncomment below and update the code to test deleteEmailEmail

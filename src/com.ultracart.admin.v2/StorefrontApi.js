@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.74
+   * @version 2.4.75
    */
 
   /**
@@ -367,6 +367,59 @@
 
       return this.apiClient.callApi(
         '/storefront/email/sending_domains/{domain}/create', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteEmailCommseqStat operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteEmailCommseqStatCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete communication sequence stats
+     * @param {String} storefrontOid null
+     * @param {String} commseqUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteEmailCommseqStatCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteEmailCommseqStat = function(storefrontOid, commseqUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling deleteEmailCommseqStat");
+      }
+
+      // verify the required parameter 'commseqUuid' is set
+      if (commseqUuid === undefined || commseqUuid === null) {
+        throw new Error("Missing the required parameter 'commseqUuid' when calling deleteEmailCommseqStat");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'commseq_uuid': commseqUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/stat', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
