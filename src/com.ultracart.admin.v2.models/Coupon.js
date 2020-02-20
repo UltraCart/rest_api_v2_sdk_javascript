@@ -37,7 +37,7 @@
   /**
    * The Coupon model module.
    * @module com.ultracart.admin.v2.models/Coupon
-   * @version 2.4.75
+   * @version 2.4.76
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -112,6 +113,9 @@
 
       if (data.hasOwnProperty('affiliate_oid')) {
         obj['affiliate_oid'] = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+      }
+      if (data.hasOwnProperty('allow_multiple_one_time_codes')) {
+        obj['allow_multiple_one_time_codes'] = ApiClient.convertToType(data['allow_multiple_one_time_codes'], 'Boolean');
       }
       if (data.hasOwnProperty('amount_off_items')) {
         obj['amount_off_items'] = CouponAmountOffItems.constructFromObject(data['amount_off_items']);
@@ -266,6 +270,11 @@
    * @member {Number} affiliate_oid
    */
   exports.prototype['affiliate_oid'] = undefined;
+  /**
+   * True if multiple one time codes for this coupon can be used on a cart at the same time.
+   * @member {Boolean} allow_multiple_one_time_codes
+   */
+  exports.prototype['allow_multiple_one_time_codes'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/CouponAmountOffItems} amount_off_items
    */

@@ -69,6 +69,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property conversionCount (base name: "conversion_count")', function() {
+      // uncomment below and update the code to test the property conversionCount
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property conversionCountFormatted (base name: "conversion_count_formatted")', function() {
+      // uncomment below and update the code to test the property conversionCountFormatted
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property deliveredCount (base name: "delivered_count")', function() {
       // uncomment below and update the code to test the property deliveredCount
       //var instane = new UltraCartRestApiV2.EmailStat();

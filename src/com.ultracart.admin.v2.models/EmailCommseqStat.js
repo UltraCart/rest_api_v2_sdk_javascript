@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqStat model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqStat
-   * @version 2.4.75
+   * @version 2.4.76
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -101,6 +103,12 @@
       }
       if (data.hasOwnProperty('click_count_formatted')) {
         obj['click_count_formatted'] = ApiClient.convertToType(data['click_count_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('conversion_count')) {
+        obj['conversion_count'] = ApiClient.convertToType(data['conversion_count'], 'Number');
+      }
+      if (data.hasOwnProperty('conversion_count_formatted')) {
+        obj['conversion_count_formatted'] = ApiClient.convertToType(data['conversion_count_formatted'], 'String');
       }
       if (data.hasOwnProperty('delivered_count')) {
         obj['delivered_count'] = ApiClient.convertToType(data['delivered_count'], 'Number');
@@ -215,6 +223,16 @@
    * @member {String} click_count_formatted
    */
   exports.prototype['click_count_formatted'] = undefined;
+  /**
+   * Count of conversion
+   * @member {Number} conversion_count
+   */
+  exports.prototype['conversion_count'] = undefined;
+  /**
+   * Count of conversions, formatted
+   * @member {String} conversion_count_formatted
+   */
+  exports.prototype['conversion_count_formatted'] = undefined;
   /**
    * Count of delivered emails
    * @member {Number} delivered_count

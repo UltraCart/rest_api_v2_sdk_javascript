@@ -171,6 +171,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property properties (base name: "properties")', function() {
+      // uncomment below and update the code to test the property properties
+      //var instane = new UltraCartRestApiV2.Cart();
+      //expect(instance).to.be();
+    });
+
     it('should have the property settings (base name: "settings")', function() {
       // uncomment below and update the code to test the property settings
       //var instane = new UltraCartRestApiV2.Cart();

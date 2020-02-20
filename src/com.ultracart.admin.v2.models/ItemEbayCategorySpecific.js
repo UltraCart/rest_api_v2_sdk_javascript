@@ -37,7 +37,7 @@
   /**
    * The ItemEbayCategorySpecific model module.
    * @module com.ultracart.admin.v2.models/ItemEbayCategorySpecific
-   * @version 2.4.75
+   * @version 2.4.76
    */
 
   /**

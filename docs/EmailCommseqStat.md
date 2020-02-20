@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **click_count** | **Number** | Count of clicked emails | [optional] 
 **click_count_formatted** | **String** | Count of clicked emails, formatted | [optional] 
+**conversion_count** | **Number** | Count of conversion | [optional] 
+**conversion_count_formatted** | **String** | Count of conversions, formatted | [optional] 
 **delivered_count** | **Number** | Count of delivered emails | [optional] 
 **delivered_count_formatted** | **String** | Count of delivered emails, formatted | [optional] 
 **email_communication_sequence_uuid** | **String** | UUID associated with the communication sequence | [optional] 

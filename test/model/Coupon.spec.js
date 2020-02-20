@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property allowMultipleOneTimeCodes (base name: "allow_multiple_one_time_codes")', function() {
+      // uncomment below and update the code to test the property allowMultipleOneTimeCodes
+      //var instane = new UltraCartRestApiV2.Coupon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property amountOffItems (base name: "amount_off_items")', function() {
       // uncomment below and update the code to test the property amountOffItems
       //var instane = new UltraCartRestApiV2.Coupon();
