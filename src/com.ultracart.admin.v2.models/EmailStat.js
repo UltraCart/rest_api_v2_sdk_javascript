@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.76
+   * @version 2.4.77
    */
 
   /**
@@ -366,7 +366,7 @@
    */
   exports.prototype['unsubscribe_count_formatted'] = undefined;
   /**
-   * List or segment uuid
+   * List/Segment uuid, or Flow/Campaign uuid depending on level of stat aggregation.
    * @member {String} uuid
    */
   exports.prototype['uuid'] = undefined;

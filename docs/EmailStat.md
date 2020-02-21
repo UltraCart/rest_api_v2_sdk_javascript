@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 **storefront_oid** | **Number** | Storefront oid | [optional] 
 **unsubscribe_count** | **Number** | Count of emails classified as unsubscribe | [optional] 
 **unsubscribe_count_formatted** | **String** | Count of emails classified as unsubscribe, formatted | [optional] 
-**uuid** | **String** | List or segment uuid | [optional] 
+**uuid** | **String** | List/Segment uuid, or Flow/Campaign uuid depending on level of stat aggregation. | [optional] 
 **view_count** | **Number** | Count of views | [optional] 
 **view_count_formatted** | **String** | Count of views, formatted | [optional] 
 

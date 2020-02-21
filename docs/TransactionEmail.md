@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **size** | **String** | Size of file in friendly description | [optional] 
 **store_front_fs_directory_oid** | **Number** | Internal identifier used to store and retrieve template from filesystem | [optional] 
 **store_front_fs_file_oid** | **Number** | Internal identifier used to store and retrieve template from filesystem | [optional] 
+**subject** | **String** | Subject | [optional] 
 **syntax_errors** | **String** | Any syntax errors contained within the tempalate | [optional] 
 **template_path_relative_path** | **String** | Internal value used to locate the template in the filesystem | [optional] 
 **theme_relative_path** | **String** | Theme relative path in the filesystem. | [optional] 

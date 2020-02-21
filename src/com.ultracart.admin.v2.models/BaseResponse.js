@@ -37,7 +37,7 @@
   /**
    * The BaseResponse model module.
    * @module com.ultracart.admin.v2.models/BaseResponse
-   * @version 2.4.76
+   * @version 2.4.77
    */
 
   /**

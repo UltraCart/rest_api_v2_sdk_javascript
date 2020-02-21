@@ -123,6 +123,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property subject (base name: "subject")', function() {
+      // uncomment below and update the code to test the property subject
+      //var instane = new UltraCartRestApiV2.TransactionEmail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property syntaxErrors (base name: "syntax_errors")', function() {
       // uncomment below and update the code to test the property syntaxErrors
       //var instane = new UltraCartRestApiV2.TransactionEmail();

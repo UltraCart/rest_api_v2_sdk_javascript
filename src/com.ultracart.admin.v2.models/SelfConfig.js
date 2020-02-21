@@ -37,7 +37,7 @@
   /**
    * The SelfConfig model module.
    * @module com.ultracart.admin.v2.models/SelfConfig
-   * @version 2.4.76
+   * @version 2.4.77
    */
 
   /**

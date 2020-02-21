@@ -37,7 +37,7 @@
   /**
    * The TransactionEmail model module.
    * @module com.ultracart.admin.v2.models/TransactionEmail
-   * @version 2.4.76
+   * @version 2.4.77
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -107,6 +108,9 @@
       }
       if (data.hasOwnProperty('store_front_fs_file_oid')) {
         obj['store_front_fs_file_oid'] = ApiClient.convertToType(data['store_front_fs_file_oid'], 'Number');
+      }
+      if (data.hasOwnProperty('subject')) {
+        obj['subject'] = ApiClient.convertToType(data['subject'], 'String');
       }
       if (data.hasOwnProperty('syntax_errors')) {
         obj['syntax_errors'] = ApiClient.convertToType(data['syntax_errors'], 'String');
@@ -176,6 +180,11 @@
    * @member {Number} store_front_fs_file_oid
    */
   exports.prototype['store_front_fs_file_oid'] = undefined;
+  /**
+   * Subject
+   * @member {String} subject
+   */
+  exports.prototype['subject'] = undefined;
   /**
    * Any syntax errors contained within the tempalate
    * @member {String} syntax_errors
