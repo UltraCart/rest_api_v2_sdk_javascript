@@ -37,7 +37,7 @@
   /**
    * The CustomerActivity model module.
    * @module com.ultracart.admin.v2.models/CustomerActivity
-   * @version 2.4.77
+   * @version 2.4.78
    */
 
   /**

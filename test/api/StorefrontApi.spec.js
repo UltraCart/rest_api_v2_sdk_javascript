@@ -301,6 +301,26 @@
         done();
       });
     });
+    describe('getEmailEmailClicks', function() {
+      it('should call getEmailEmailClicks successfully', function(done) {
+        //uncomment below and update the code to test getEmailEmailClicks
+        //instance.getEmailEmailClicks(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailEmailOrders', function() {
+      it('should call getEmailEmailOrders successfully', function(done) {
+        //uncomment below and update the code to test getEmailEmailOrders
+        //instance.getEmailEmailOrders(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailEmails', function() {
       it('should call getEmailEmails successfully', function(done) {
         //uncomment below and update the code to test getEmailEmails
@@ -335,6 +355,16 @@
       it('should call getEmailFlows successfully', function(done) {
         //uncomment below and update the code to test getEmailFlows
         //instance.getEmailFlows(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailGlobalSettings', function() {
+      it('should call getEmailGlobalSettings successfully', function(done) {
+        //uncomment below and update the code to test getEmailGlobalSettings
+        //instance.getEmailGlobalSettings(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -445,6 +475,16 @@
       it('should call getEmailSendingDomains successfully', function(done) {
         //uncomment below and update the code to test getEmailSendingDomains
         //instance.getEmailSendingDomains(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailSettings', function() {
+      it('should call getEmailSettings successfully', function(done) {
+        //uncomment below and update the code to test getEmailSettings
+        //instance.getEmailSettings(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -711,6 +751,16 @@
         done();
       });
     });
+    describe('updateEmailGlobalSettings', function() {
+      it('should call updateEmailGlobalSettings successfully', function(done) {
+        //uncomment below and update the code to test updateEmailGlobalSettings
+        //instance.updateEmailGlobalSettings(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('updateEmailList', function() {
       it('should call updateEmailList successfully', function(done) {
         //uncomment below and update the code to test updateEmailList
@@ -725,6 +775,16 @@
       it('should call updateEmailSegment successfully', function(done) {
         //uncomment below and update the code to test updateEmailSegment
         //instance.updateEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateEmailSettings', function() {
+      it('should call updateEmailSettings successfully', function(done) {
+        //uncomment below and update the code to test updateEmailSettings
+        //instance.updateEmailSettings(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
