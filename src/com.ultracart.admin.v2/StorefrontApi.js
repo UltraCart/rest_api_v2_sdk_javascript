@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.78
+   * @version 2.4.79
    */
 
   /**
@@ -229,10 +229,13 @@
      * Clone email campaign
      * @param {String} storefrontOid null
      * @param {String} emailCampaignUuid null
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.targetStorefrontOid null
      * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignResponse}
      */
-    this.cloneEmailCampaign = function(storefrontOid, emailCampaignUuid, callback) {
+    this.cloneEmailCampaign = function(storefrontOid, emailCampaignUuid, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'storefrontOid' is set
@@ -251,6 +254,7 @@
         'email_campaign_uuid': emailCampaignUuid
       };
       var queryParams = {
+        'target_storefront_oid': opts['targetStorefrontOid'],
       };
       var collectionQueryParams = {
       };
@@ -283,10 +287,13 @@
      * Clone email flow
      * @param {String} storefrontOid null
      * @param {String} emailFlowUuid null
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.targetStorefrontOid null
      * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneEmailFlowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowResponse}
      */
-    this.cloneEmailFlow = function(storefrontOid, emailFlowUuid, callback) {
+    this.cloneEmailFlow = function(storefrontOid, emailFlowUuid, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'storefrontOid' is set
@@ -305,6 +312,7 @@
         'email_flow_uuid': emailFlowUuid
       };
       var queryParams = {
+        'target_storefront_oid': opts['targetStorefrontOid'],
       };
       var collectionQueryParams = {
       };

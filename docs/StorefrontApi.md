@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 <a name="cloneEmailCampaign"></a>
 # **cloneEmailCampaign**
-> EmailCampaignResponse cloneEmailCampaign(storefrontOid, emailCampaignUuid)
+> EmailCampaignResponse cloneEmailCampaign(storefrontOid, emailCampaignUuid, opts)
 
 Clone email campaign
 
@@ -310,6 +310,9 @@ var storefrontOid = "storefrontOid_example"; // String | null
 
 var emailCampaignUuid = "emailCampaignUuid_example"; // String | null
 
+var opts = { 
+  'targetStorefrontOid': "targetStorefrontOid_example" // String | null
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -318,7 +321,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cloneEmailCampaign(storefrontOid, emailCampaignUuid, callback);
+apiInstance.cloneEmailCampaign(storefrontOid, emailCampaignUuid, opts, callback);
 ```
 
 ### Parameters
@@ -327,6 +330,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefrontOid** | **String**| null | 
  **emailCampaignUuid** | **String**| null | 
+ **targetStorefrontOid** | **String**| null | [optional] 
 
 ### Return type
 
@@ -343,7 +347,7 @@ Name | Type | Description  | Notes
 
 <a name="cloneEmailFlow"></a>
 # **cloneEmailFlow**
-> EmailFlowResponse cloneEmailFlow(storefrontOid, emailFlowUuid)
+> EmailFlowResponse cloneEmailFlow(storefrontOid, emailFlowUuid, opts)
 
 Clone email flow
 
@@ -374,6 +378,9 @@ var storefrontOid = "storefrontOid_example"; // String | null
 
 var emailFlowUuid = "emailFlowUuid_example"; // String | null
 
+var opts = { 
+  'targetStorefrontOid': "targetStorefrontOid_example" // String | null
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -382,7 +389,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cloneEmailFlow(storefrontOid, emailFlowUuid, callback);
+apiInstance.cloneEmailFlow(storefrontOid, emailFlowUuid, opts, callback);
 ```
 
 ### Parameters
@@ -391,6 +398,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefrontOid** | **String**| null | 
  **emailFlowUuid** | **String**| null | 
+ **targetStorefrontOid** | **String**| null | [optional] 
 
 ### Return type
 

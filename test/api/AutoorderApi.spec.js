@@ -91,6 +91,16 @@
         done();
       });
     });
+    describe('getAutoOrdersBatch', function() {
+      it('should call getAutoOrdersBatch successfully', function(done) {
+        //uncomment below and update the code to test getAutoOrdersBatch
+        //instance.getAutoOrdersBatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getAutoOrdersByQuery', function() {
       it('should call getAutoOrdersByQuery successfully', function(done) {
         //uncomment below and update the code to test getAutoOrdersByQuery
