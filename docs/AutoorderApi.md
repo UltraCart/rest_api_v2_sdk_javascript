@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getAutoOrdersBatch**](AutoOrderApi.md#getAutoOrdersBatch) | **POST** /auto_order/auto_orders/batch | Retrieve auto order batch
 [**getAutoOrdersByQuery**](AutoOrderApi.md#getAutoOrdersByQuery) | **POST** /auto_order/auto_orders/query | Retrieve auto orders
 [**updateAutoOrder**](AutoOrderApi.md#updateAutoOrder) | **PUT** /auto_order/auto_orders/{auto_order_oid} | Update an auto order
+[**updateAutoOrdersBatch**](AutoOrderApi.md#updateAutoOrdersBatch) | **PUT** /auto_order/auto_orders/batch | Update multiple auto orders
 
 
 <a name="getAutoOrder"></a>
@@ -243,7 +244,7 @@ var opts = {
   'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
   'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'since': "since_example", // String | Fetch auto orders that have been created/modified since this date/time.
-  'sort': "sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  'sort': "sort_example", // String | The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
@@ -282,7 +283,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
  **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch auto orders that have been created/modified since this date/time. | [optional] 
- **sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **sort** | **String**| The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
@@ -480,6 +481,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateAutoOrdersBatch"></a>
+# **updateAutoOrdersBatch**
+> AutoOrdersResponse updateAutoOrdersBatch(autoOrdersRequest, opts)
+
+Update multiple auto orders
+
+Update multiple auto orders on the UltraCart account. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
+var autoOrdersRequest = new UltraCartRestApiV2.AutoOrdersRequest(); // AutoOrdersRequest | Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
+
+var opts = { 
+  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  'placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  'async': true // Boolean | True if the operation should be run async.  No result returned
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateAutoOrdersBatch(autoOrdersRequest, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autoOrdersRequest** | [**AutoOrdersRequest**](AutoOrdersRequest.md)| Auto orders to update (synchronous maximum 20 / asynchronous maximum 100) | 
+ **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **async** | **Boolean**| True if the operation should be run async.  No result returned | [optional] 
+
+### Return type
+
+[**AutoOrdersResponse**](AutoOrdersResponse.md)
 
 ### Authorization
 

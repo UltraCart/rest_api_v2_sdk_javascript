@@ -141,6 +141,16 @@
         done();
       });
     });
+    describe('deleteEmailPostcard', function() {
+      it('should call deleteEmailPostcard successfully', function(done) {
+        //uncomment below and update the code to test deleteEmailPostcard
+        //instance.deleteEmailPostcard(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteEmailSendingDomain', function() {
       it('should call deleteEmailSendingDomain successfully', function(done) {
         //uncomment below and update the code to test deleteEmailSendingDomain
@@ -411,6 +421,36 @@
         done();
       });
     });
+    describe('getEmailPostcard', function() {
+      it('should call getEmailPostcard successfully', function(done) {
+        //uncomment below and update the code to test getEmailPostcard
+        //instance.getEmailPostcard(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailPostcards', function() {
+      it('should call getEmailPostcards successfully', function(done) {
+        //uncomment below and update the code to test getEmailPostcards
+        //instance.getEmailPostcards(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEmailPostcardsMultiple', function() {
+      it('should call getEmailPostcardsMultiple successfully', function(done) {
+        //uncomment below and update the code to test getEmailPostcardsMultiple
+        //instance.getEmailPostcardsMultiple(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailSegment', function() {
       it('should call getEmailSegment successfully', function(done) {
         //uncomment below and update the code to test getEmailSegment
@@ -631,6 +671,16 @@
         done();
       });
     });
+    describe('insertEmailPostcard', function() {
+      it('should call insertEmailPostcard successfully', function(done) {
+        //uncomment below and update the code to test insertEmailPostcard
+        //instance.insertEmailPostcard(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('insertEmailSegment', function() {
       it('should call insertEmailSegment successfully', function(done) {
         //uncomment below and update the code to test insertEmailSegment
@@ -765,6 +815,16 @@
       it('should call updateEmailList successfully', function(done) {
         //uncomment below and update the code to test updateEmailList
         //instance.updateEmailList(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateEmailPostcard', function() {
+      it('should call updateEmailPostcard successfully', function(done) {
+        //uncomment below and update the code to test updateEmailPostcard
+        //instance.updateEmailPostcard(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -121,6 +121,16 @@
         done();
       });
     });
+    describe('updateAutoOrdersBatch', function() {
+      it('should call updateAutoOrdersBatch successfully', function(done) {
+        //uncomment below and update the code to test updateAutoOrdersBatch
+        //instance.updateAutoOrdersBatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

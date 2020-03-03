@@ -37,7 +37,7 @@
   /**
    * The ExperimentVariation model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariation
-   * @version 2.4.79
+   * @version 2.4.80
    */
 
   /**

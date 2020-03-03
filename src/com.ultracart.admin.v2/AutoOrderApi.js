@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrder', 'com.ultracart.admin.v2.models/AutoOrderQuery', 'com.ultracart.admin.v2.models/AutoOrderQueryBatch', 'com.ultracart.admin.v2.models/AutoOrderResponse', 'com.ultracart.admin.v2.models/AutoOrdersResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrder', 'com.ultracart.admin.v2.models/AutoOrderQuery', 'com.ultracart.admin.v2.models/AutoOrderQueryBatch', 'com.ultracart.admin.v2.models/AutoOrderResponse', 'com.ultracart.admin.v2.models/AutoOrdersRequest', 'com.ultracart.admin.v2.models/AutoOrdersResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AutoOrder'), require('../com.ultracart.admin.v2.models/AutoOrderQuery'), require('../com.ultracart.admin.v2.models/AutoOrderQueryBatch'), require('../com.ultracart.admin.v2.models/AutoOrderResponse'), require('../com.ultracart.admin.v2.models/AutoOrdersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AutoOrder'), require('../com.ultracart.admin.v2.models/AutoOrderQuery'), require('../com.ultracart.admin.v2.models/AutoOrderQueryBatch'), require('../com.ultracart.admin.v2.models/AutoOrderResponse'), require('../com.ultracart.admin.v2.models/AutoOrdersRequest'), require('../com.ultracart.admin.v2.models/AutoOrdersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrder, root.UltraCartRestApiV2.AutoOrderQuery, root.UltraCartRestApiV2.AutoOrderQueryBatch, root.UltraCartRestApiV2.AutoOrderResponse, root.UltraCartRestApiV2.AutoOrdersResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.AutoOrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrder, root.UltraCartRestApiV2.AutoOrderQuery, root.UltraCartRestApiV2.AutoOrderQueryBatch, root.UltraCartRestApiV2.AutoOrderResponse, root.UltraCartRestApiV2.AutoOrdersRequest, root.UltraCartRestApiV2.AutoOrdersResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, AutoOrder, AutoOrderQuery, AutoOrderQueryBatch, AutoOrderResponse, AutoOrdersResponse, ErrorResponse) {
+}(this, function(ApiClient, AutoOrder, AutoOrderQuery, AutoOrderQueryBatch, AutoOrderResponse, AutoOrdersRequest, AutoOrdersResponse, ErrorResponse) {
   'use strict';
 
   /**
    * AutoOrder service.
    * @module com.ultracart.admin.v2/AutoOrderApi
-   * @version 2.4.79
+   * @version 2.4.80
    */
 
   /**
@@ -237,7 +237,7 @@
      * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
      * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts.since Fetch auto orders that have been created/modified since this date/time.
-     * @param {String} opts.sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts.sort The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
      * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrdersResponse}
@@ -454,6 +454,61 @@
 
       return this.apiClient.callApi(
         '/auto_order/auto_orders/{auto_order_oid}', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateAutoOrdersBatch operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrdersBatchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrdersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update multiple auto orders
+     * Update multiple auto orders on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/AutoOrdersRequest} autoOrdersRequest Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Boolean} opts.async True if the operation should be run async.  No result returned
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrdersBatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrdersResponse}
+     */
+    this.updateAutoOrdersBatch = function(autoOrdersRequest, opts, callback) {
+      opts = opts || {};
+      var postBody = autoOrdersRequest;
+
+      // verify the required parameter 'autoOrdersRequest' is set
+      if (autoOrdersRequest === undefined || autoOrdersRequest === null) {
+        throw new Error("Missing the required parameter 'autoOrdersRequest' when calling updateAutoOrdersBatch");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_expand': opts['expand'],
+        '_placeholders': opts['placeholders'],
+        '_async': opts['async'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = AutoOrdersResponse;
+
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/batch', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

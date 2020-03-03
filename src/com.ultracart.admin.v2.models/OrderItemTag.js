@@ -37,7 +37,7 @@
   /**
    * The OrderItemTag model module.
    * @module com.ultracart.admin.v2.models/OrderItemTag
-   * @version 2.4.79
+   * @version 2.4.80
    */
 
   /**
