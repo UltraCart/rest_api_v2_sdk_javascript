@@ -741,6 +741,16 @@
         done();
       });
     });
+    describe('sendPostcardTest', function() {
+      it('should call sendPostcardTest successfully', function(done) {
+        //uncomment below and update the code to test sendPostcardTest
+        //instance.sendPostcardTest(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('startEmailCampaign', function() {
       it('should call startEmailCampaign successfully', function(done) {
         //uncomment below and update the code to test startEmailCampaign

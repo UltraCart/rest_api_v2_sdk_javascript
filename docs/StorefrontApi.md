@@ -73,6 +73,7 @@ Method | HTTP request | Description
 [**searchEmailListCustomers**](StorefrontApi.md#searchEmailListCustomers) | **GET** /storefront/{storefront_oid}/email/lists/{email_list_uuid}/search | Search email list customers
 [**searchEmailSegmentCustomers**](StorefrontApi.md#searchEmailSegmentCustomers) | **GET** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/search | Search email segment customers
 [**sendEmailTest**](StorefrontApi.md#sendEmailTest) | **POST** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/test | Send email test
+[**sendPostcardTest**](StorefrontApi.md#sendPostcardTest) | **POST** /storefront/{storefront_oid}/email/postcards/{commseq_postcard_uuid}/test | Send postcard test
 [**startEmailCampaign**](StorefrontApi.md#startEmailCampaign) | **PUT** /storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid}/start | Start email campaign
 [**subscribeToEmailList**](StorefrontApi.md#subscribeToEmailList) | **POST** /storefront/{storefront_oid}/email/lists/{email_list_uuid}/subscribe | Subscribe customers to email list
 [**updateEmailCampaign**](StorefrontApi.md#updateEmailCampaign) | **PUT** /storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid} | Update email campaign
@@ -4503,6 +4504,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailCommseqEmailSendTestResponse**](EmailCommseqEmailSendTestResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="sendPostcardTest"></a>
+# **sendPostcardTest**
+> EmailCommseqPostcardSendTestResponse sendPostcardTest(storefrontOid, commseqPostcardUuid, emailCommseqPostcardTestRequest)
+
+Send postcard test
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+var storefrontOid = "storefrontOid_example"; // String | null
+
+var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | null
+
+var emailCommseqPostcardTestRequest = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest(); // EmailCommseqPostcardSendTestRequest | Email commseq email test request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.sendPostcardTest(storefrontOid, commseqPostcardUuid, emailCommseqPostcardTestRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefrontOid** | **String**| null | 
+ **commseqPostcardUuid** | **String**| null | 
+ **emailCommseqPostcardTestRequest** | [**EmailCommseqPostcardSendTestRequest**](EmailCommseqPostcardSendTestRequest.md)| Email commseq email test request | 
+
+### Return type
+
+[**EmailCommseqPostcardSendTestResponse**](EmailCommseqPostcardSendTestResponse.md)
 
 ### Authorization
 
