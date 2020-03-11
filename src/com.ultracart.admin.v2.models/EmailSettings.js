@@ -37,7 +37,7 @@
   /**
    * The EmailSettings model module.
    * @module com.ultracart.admin.v2.models/EmailSettings
-   * @version 2.4.82
+   * @version 2.4.83
    */
 
   /**
@@ -47,6 +47,12 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
+
+
 
 
 
@@ -76,6 +82,24 @@
       if (data.hasOwnProperty('marketing_esp_friendly_name')) {
         obj['marketing_esp_friendly_name'] = ApiClient.convertToType(data['marketing_esp_friendly_name'], 'String');
       }
+      if (data.hasOwnProperty('postcard_from_address1')) {
+        obj['postcard_from_address1'] = ApiClient.convertToType(data['postcard_from_address1'], 'String');
+      }
+      if (data.hasOwnProperty('postcard_from_address2')) {
+        obj['postcard_from_address2'] = ApiClient.convertToType(data['postcard_from_address2'], 'String');
+      }
+      if (data.hasOwnProperty('postcard_from_city')) {
+        obj['postcard_from_city'] = ApiClient.convertToType(data['postcard_from_city'], 'String');
+      }
+      if (data.hasOwnProperty('postcard_from_name')) {
+        obj['postcard_from_name'] = ApiClient.convertToType(data['postcard_from_name'], 'String');
+      }
+      if (data.hasOwnProperty('postcard_from_postal_code')) {
+        obj['postcard_from_postal_code'] = ApiClient.convertToType(data['postcard_from_postal_code'], 'String');
+      }
+      if (data.hasOwnProperty('postcard_from_state')) {
+        obj['postcard_from_state'] = ApiClient.convertToType(data['postcard_from_state'], 'String');
+      }
       if (data.hasOwnProperty('transactional_esp_domain_user')) {
         obj['transactional_esp_domain_user'] = ApiClient.convertToType(data['transactional_esp_domain_user'], 'String');
       }
@@ -101,6 +125,30 @@
    * @member {String} marketing_esp_friendly_name
    */
   exports.prototype['marketing_esp_friendly_name'] = undefined;
+  /**
+   * @member {String} postcard_from_address1
+   */
+  exports.prototype['postcard_from_address1'] = undefined;
+  /**
+   * @member {String} postcard_from_address2
+   */
+  exports.prototype['postcard_from_address2'] = undefined;
+  /**
+   * @member {String} postcard_from_city
+   */
+  exports.prototype['postcard_from_city'] = undefined;
+  /**
+   * @member {String} postcard_from_name
+   */
+  exports.prototype['postcard_from_name'] = undefined;
+  /**
+   * @member {String} postcard_from_postal_code
+   */
+  exports.prototype['postcard_from_postal_code'] = undefined;
+  /**
+   * @member {String} postcard_from_state
+   */
+  exports.prototype['postcard_from_state'] = undefined;
   /**
    * @member {String} transactional_esp_domain_user
    */

@@ -75,6 +75,42 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property postcardFromAddress1 (base name: "postcard_from_address1")', function() {
+      // uncomment below and update the code to test the property postcardFromAddress1
+      //var instane = new UltraCartRestApiV2.EmailSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postcardFromAddress2 (base name: "postcard_from_address2")', function() {
+      // uncomment below and update the code to test the property postcardFromAddress2
+      //var instane = new UltraCartRestApiV2.EmailSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postcardFromCity (base name: "postcard_from_city")', function() {
+      // uncomment below and update the code to test the property postcardFromCity
+      //var instane = new UltraCartRestApiV2.EmailSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postcardFromName (base name: "postcard_from_name")', function() {
+      // uncomment below and update the code to test the property postcardFromName
+      //var instane = new UltraCartRestApiV2.EmailSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postcardFromPostalCode (base name: "postcard_from_postal_code")', function() {
+      // uncomment below and update the code to test the property postcardFromPostalCode
+      //var instane = new UltraCartRestApiV2.EmailSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postcardFromState (base name: "postcard_from_state")', function() {
+      // uncomment below and update the code to test the property postcardFromState
+      //var instane = new UltraCartRestApiV2.EmailSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property transactionalEspDomainUser (base name: "transactional_esp_domain_user")', function() {
       // uncomment below and update the code to test the property transactionalEspDomainUser
       //var instane = new UltraCartRestApiV2.EmailSettings();

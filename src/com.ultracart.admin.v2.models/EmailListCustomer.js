@@ -37,7 +37,7 @@
   /**
    * The EmailListCustomer model module.
    * @module com.ultracart.admin.v2.models/EmailListCustomer
-   * @version 2.4.82
+   * @version 2.4.83
    */
 
   /**

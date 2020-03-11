@@ -37,7 +37,7 @@
   /**
    * The CouponAmountOffSubtotalAndShipping model module.
    * @module com.ultracart.admin.v2.models/CouponAmountOffSubtotalAndShipping
-   * @version 2.4.82
+   * @version 2.4.83
    */
 
   /**
