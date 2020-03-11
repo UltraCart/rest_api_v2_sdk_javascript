@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqPostcardSendTestRequest model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest
-   * @version 2.4.81
+   * @version 2.4.82
    */
 
   /**
@@ -47,8 +47,6 @@
    */
   var exports = function() {
     var _this = this;
-
-
 
 
 
@@ -108,12 +106,6 @@
       if (data.hasOwnProperty('postal_code')) {
         obj['postal_code'] = ApiClient.convertToType(data['postal_code'], 'String');
       }
-      if (data.hasOwnProperty('send_to_additional_emails')) {
-        obj['send_to_additional_emails'] = ApiClient.convertToType(data['send_to_additional_emails'], ['String']);
-      }
-      if (data.hasOwnProperty('send_to_logged_in_user')) {
-        obj['send_to_logged_in_user'] = ApiClient.convertToType(data['send_to_logged_in_user'], 'Boolean');
-      }
       if (data.hasOwnProperty('state')) {
         obj['state'] = ApiClient.convertToType(data['state'], 'String');
       }
@@ -165,14 +157,6 @@
    * @member {String} postal_code
    */
   exports.prototype['postal_code'] = undefined;
-  /**
-   * @member {Array.<String>} send_to_additional_emails
-   */
-  exports.prototype['send_to_additional_emails'] = undefined;
-  /**
-   * @member {Boolean} send_to_logged_in_user
-   */
-  exports.prototype['send_to_logged_in_user'] = undefined;
   /**
    * @member {String} state
    */

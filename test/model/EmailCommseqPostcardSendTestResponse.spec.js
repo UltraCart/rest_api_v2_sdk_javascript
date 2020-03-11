@@ -57,14 +57,32 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse);
     });
 
+    it('should have the property backThumbnail (base name: "backThumbnail")', function() {
+      // uncomment below and update the code to test the property backThumbnail
+      //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
       //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse();
       //expect(instance).to.be();
     });
 
+    it('should have the property frontThumbnail (base name: "frontThumbnail")', function() {
+      // uncomment below and update the code to test the property frontThumbnail
+      //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
+      //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property renderedPdf (base name: "renderedPdf")', function() {
+      // uncomment below and update the code to test the property renderedPdf
       //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse();
       //expect(instance).to.be();
     });

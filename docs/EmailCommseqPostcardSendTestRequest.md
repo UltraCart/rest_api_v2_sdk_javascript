@@ -14,8 +14,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **order_id** | **String** |  | [optional] 
 **postal_code** | **String** |  | [optional] 
-**send_to_additional_emails** | **[String]** |  | [optional] 
-**send_to_logged_in_user** | **Boolean** |  | [optional] 
 **state** | **String** |  | [optional] 
 
 

@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqPostcardSendTestResponse model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestResponse
-   * @version 2.4.81
+   * @version 2.4.82
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -64,11 +67,20 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('backThumbnail')) {
+        obj['backThumbnail'] = ApiClient.convertToType(data['backThumbnail'], 'String');
+      }
       if (data.hasOwnProperty('error')) {
         obj['error'] = Error.constructFromObject(data['error']);
       }
+      if (data.hasOwnProperty('frontThumbnail')) {
+        obj['frontThumbnail'] = ApiClient.convertToType(data['frontThumbnail'], 'String');
+      }
       if (data.hasOwnProperty('metadata')) {
         obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
+      }
+      if (data.hasOwnProperty('renderedPdf')) {
+        obj['renderedPdf'] = ApiClient.convertToType(data['renderedPdf'], 'String');
       }
       if (data.hasOwnProperty('success')) {
         obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
@@ -78,13 +90,25 @@
   }
 
   /**
+   * @member {String} backThumbnail
+   */
+  exports.prototype['backThumbnail'] = undefined;
+  /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
    */
   exports.prototype['error'] = undefined;
   /**
+   * @member {String} frontThumbnail
+   */
+  exports.prototype['frontThumbnail'] = undefined;
+  /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype['metadata'] = undefined;
+  /**
+   * @member {String} renderedPdf
+   */
+  exports.prototype['renderedPdf'] = undefined;
   /**
    * Indicates if API call was successful
    * @member {Boolean} success

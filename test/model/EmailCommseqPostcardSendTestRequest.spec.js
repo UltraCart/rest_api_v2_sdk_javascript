@@ -123,18 +123,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property sendToAdditionalEmails (base name: "send_to_additional_emails")', function() {
-      // uncomment below and update the code to test the property sendToAdditionalEmails
-      //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property sendToLoggedInUser (base name: "send_to_logged_in_user")', function() {
-      // uncomment below and update the code to test the property sendToLoggedInUser
-      //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
       //var instane = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest();

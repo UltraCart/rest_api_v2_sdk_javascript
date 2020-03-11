@@ -37,7 +37,7 @@
   /**
    * The CartSettingsShippingCalendar model module.
    * @module com.ultracart.admin.v2.models/CartSettingsShippingCalendar
-   * @version 2.4.81
+   * @version 2.4.82
    */
 
   /**
