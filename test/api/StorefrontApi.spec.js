@@ -251,6 +251,16 @@
         done();
       });
     });
+    describe('getEmailCommseqPostcardStats', function() {
+      it('should call getEmailCommseqPostcardStats successfully', function(done) {
+        //uncomment below and update the code to test getEmailCommseqPostcardStats
+        //instance.getEmailCommseqPostcardStats(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailCommseqStatOverall', function() {
       it('should call getEmailCommseqStatOverall successfully', function(done) {
         //uncomment below and update the code to test getEmailCommseqStatOverall

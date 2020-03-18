@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqResponse model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqResponse
-   * @version 2.4.83
+   * @version 2.4.84
    */
 
   /**
