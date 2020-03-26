@@ -81,6 +81,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property experimentType (base name: "experiment_type")', function() {
+      // uncomment below and update the code to test the property experimentType
+      //var instane = new UltraCartRestApiV2.Experiment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instane = new UltraCartRestApiV2.Experiment();

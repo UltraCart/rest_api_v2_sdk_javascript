@@ -37,7 +37,7 @@
   /**
    * The WebhookEventCategory model module.
    * @module com.ultracart.admin.v2.models/WebhookEventCategory
-   * @version 2.4.84
+   * @version 2.4.85
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -65,6 +66,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('any_subscribed')) {
+        obj['any_subscribed'] = ApiClient.convertToType(data['any_subscribed'], 'Boolean');
+      }
       if (data.hasOwnProperty('available_expansions')) {
         obj['available_expansions'] = ApiClient.convertToType(data['available_expansions'], ['String']);
       }
@@ -81,6 +85,11 @@
     return obj;
   }
 
+  /**
+   * True if any events are subscribed to.
+   * @member {Boolean} any_subscribed
+   */
+  exports.prototype['any_subscribed'] = undefined;
   /**
    * Array of available expansion constants
    * @member {Array.<String>} available_expansions

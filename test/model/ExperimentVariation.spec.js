@@ -75,6 +75,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property averageOrderValue (base name: "average_order_value")', function() {
+      // uncomment below and update the code to test the property averageOrderValue
+      //var instane = new UltraCartRestApiV2.ExperimentVariation();
+      //expect(instance).to.be();
+    });
+
     it('should have the property bounceCount (base name: "bounce_count")', function() {
       // uncomment below and update the code to test the property bounceCount
       //var instane = new UltraCartRestApiV2.ExperimentVariation();
@@ -131,6 +137,12 @@
 
     it('should have the property trafficPercentage (base name: "traffic_percentage")', function() {
       // uncomment below and update the code to test the property trafficPercentage
+      //var instane = new UltraCartRestApiV2.ExperimentVariation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
       //var instane = new UltraCartRestApiV2.ExperimentVariation();
       //expect(instance).to.be();
     });

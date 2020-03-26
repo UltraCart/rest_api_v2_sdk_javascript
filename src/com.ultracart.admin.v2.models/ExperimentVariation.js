@@ -37,7 +37,7 @@
   /**
    * The ExperimentVariation model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariation
-   * @version 2.4.84
+   * @version 2.4.85
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -86,6 +88,9 @@
       if (data.hasOwnProperty('average_objective_per_session')) {
         obj['average_objective_per_session'] = ApiClient.convertToType(data['average_objective_per_session'], 'Number');
       }
+      if (data.hasOwnProperty('average_order_value')) {
+        obj['average_order_value'] = ApiClient.convertToType(data['average_order_value'], 'Number');
+      }
       if (data.hasOwnProperty('bounce_count')) {
         obj['bounce_count'] = ApiClient.convertToType(data['bounce_count'], 'Number');
       }
@@ -116,6 +121,9 @@
       if (data.hasOwnProperty('traffic_percentage')) {
         obj['traffic_percentage'] = ApiClient.convertToType(data['traffic_percentage'], 'Number');
       }
+      if (data.hasOwnProperty('url')) {
+        obj['url'] = ApiClient.convertToType(data['url'], 'String');
+      }
       if (data.hasOwnProperty('variation_name')) {
         obj['variation_name'] = ApiClient.convertToType(data['variation_name'], 'String');
       }
@@ -144,6 +152,11 @@
    * @member {Number} average_objective_per_session
    */
   exports.prototype['average_objective_per_session'] = undefined;
+  /**
+   * Average order value for this variation
+   * @member {Number} average_order_value
+   */
+  exports.prototype['average_order_value'] = undefined;
   /**
    * Total bounce count for this variation
    * @member {Number} bounce_count
@@ -194,6 +207,11 @@
    * @member {Number} traffic_percentage
    */
   exports.prototype['traffic_percentage'] = undefined;
+  /**
+   * Url of the variation if this experiment is a url experiment.
+   * @member {String} url
+   */
+  exports.prototype['url'] = undefined;
   /**
    * Name of the variation
    * @member {String} variation_name

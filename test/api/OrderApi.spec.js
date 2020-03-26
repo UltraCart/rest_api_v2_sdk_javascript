@@ -111,6 +111,16 @@
         done();
       });
     });
+    describe('getOrderByToken', function() {
+      it('should call getOrderByToken successfully', function(done) {
+        //uncomment below and update the code to test getOrderByToken
+        //instance.getOrderByToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrders', function() {
       it('should call getOrders successfully', function(done) {
         //uncomment below and update the code to test getOrders

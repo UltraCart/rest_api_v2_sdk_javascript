@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **duration_days** | **Number** | Duration in days | [optional] 
 **end_dts** | **String** | End date/time | [optional] 
 **equal_weighting** | **Boolean** | Whether or not traffic is equally weighted or shifts over time during the experiment | [optional] 
+**experiment_type** | **String** | The type of experiment | [optional] 
 **id** | **String** | Experiment id | [optional] 
 **name** | **String** | Experiment name | [optional] 
 **notes** | **String** | Notes about the experiment | [optional] 

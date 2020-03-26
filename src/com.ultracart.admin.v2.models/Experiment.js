@@ -37,7 +37,7 @@
   /**
    * The Experiment model module.
    * @module com.ultracart.admin.v2.models/Experiment
-   * @version 2.4.84
+   * @version 2.4.85
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -88,6 +89,9 @@
       }
       if (data.hasOwnProperty('equal_weighting')) {
         obj['equal_weighting'] = ApiClient.convertToType(data['equal_weighting'], 'Boolean');
+      }
+      if (data.hasOwnProperty('experiment_type')) {
+        obj['experiment_type'] = ApiClient.convertToType(data['experiment_type'], 'String');
       }
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -149,6 +153,11 @@
    * @member {Boolean} equal_weighting
    */
   exports.prototype['equal_weighting'] = undefined;
+  /**
+   * The type of experiment
+   * @member {String} experiment_type
+   */
+  exports.prototype['experiment_type'] = undefined;
   /**
    * Experiment id
    * @member {String} id
