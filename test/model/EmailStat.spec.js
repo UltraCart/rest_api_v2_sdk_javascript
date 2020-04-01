@@ -231,6 +231,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property steps (base name: "steps")', function() {
+      // uncomment below and update the code to test the property steps
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property storefrontOid (base name: "storefront_oid")', function() {
       // uncomment below and update the code to test the property storefrontOid
       //var instane = new UltraCartRestApiV2.EmailStat();

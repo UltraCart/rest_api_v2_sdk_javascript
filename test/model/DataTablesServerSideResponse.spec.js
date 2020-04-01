@@ -57,6 +57,12 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.DataTablesServerSideResponse);
     });
 
+    it('should have the property data (base name: "data")', function() {
+      // uncomment below and update the code to test the property data
+      //var instane = new UltraCartRestApiV2.DataTablesServerSideResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property draw (base name: "draw")', function() {
       // uncomment below and update the code to test the property draw
       //var instane = new UltraCartRestApiV2.DataTablesServerSideResponse();

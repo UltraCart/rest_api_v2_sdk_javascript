@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./EmailStat'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailStat = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.EmailStat = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailStat);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, EmailStat) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.85
+   * @version 2.4.86
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -182,6 +183,9 @@
       }
       if (data.hasOwnProperty('status_dts')) {
         obj['status_dts'] = ApiClient.convertToType(data['status_dts'], 'String');
+      }
+      if (data.hasOwnProperty('steps')) {
+        obj['steps'] = ApiClient.convertToType(data['steps'], [EmailStat]);
       }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
@@ -350,6 +354,10 @@
    * @member {String} status_dts
    */
   exports.prototype['status_dts'] = undefined;
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailStat>} steps
+   */
+  exports.prototype['steps'] = undefined;
   /**
    * Storefront oid
    * @member {Number} storefront_oid

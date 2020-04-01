@@ -123,7 +123,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property calculatedDescription (base name: "calculated_)description")', function() {
+    it('should have the property calculatedDescription (base name: "calculated_description")', function() {
       // uncomment below and update the code to test the property calculatedDescription
       //var instane = new UltraCartRestApiV2.Coupon();
       //expect(instance).to.be();
@@ -231,6 +231,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property merchantNotes (base name: "merchant_notes")', function() {
+      // uncomment below and update the code to test the property merchantNotes
+      //var instane = new UltraCartRestApiV2.Coupon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property multipleAmountsOffItems (base name: "multiple_amounts_off_items")', function() {
       // uncomment below and update the code to test the property multipleAmountsOffItems
       //var instane = new UltraCartRestApiV2.Coupon();
@@ -297,7 +303,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property percentOffSubtotalWithItemsPurchase (base name: "percent_off_subtotal_with_items purchase")', function() {
+    it('should have the property percentOffSubtotalWithItemsPurchase (base name: "percent_off_subtotal_with_items_purchase")', function() {
       // uncomment below and update the code to test the property percentOffSubtotalWithItemsPurchase
       //var instane = new UltraCartRestApiV2.Coupon();
       //expect(instance).to.be();
@@ -311,6 +317,24 @@
 
     it('should have the property quickbooksCode (base name: "quickbooks_code")', function() {
       // uncomment below and update the code to test the property quickbooksCode
+      //var instane = new UltraCartRestApiV2.Coupon();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property restrictByPostalCodes (base name: "restrict_by_postal_codes")', function() {
+      // uncomment below and update the code to test the property restrictByPostalCodes
+      //var instane = new UltraCartRestApiV2.Coupon();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property restrictByScreenBrandingThemeCodes (base name: "restrict_by_screen_branding_theme_codes")', function() {
+      // uncomment below and update the code to test the property restrictByScreenBrandingThemeCodes
+      //var instane = new UltraCartRestApiV2.Coupon();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property restrictByStorefronts (base name: "restrict_by_storefronts")', function() {
+      // uncomment below and update the code to test the property restrictByStorefronts
       //var instane = new UltraCartRestApiV2.Coupon();
       //expect(instance).to.be();
     });

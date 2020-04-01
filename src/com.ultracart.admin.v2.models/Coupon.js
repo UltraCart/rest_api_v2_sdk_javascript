@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CouponAmountOffItems', 'com.ultracart.admin.v2.models/CouponAmountOffShipping', 'com.ultracart.admin.v2.models/CouponAmountOffShippingWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotal', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalAndShipping', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalFreeShippingWithPurchase', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalWithBlockPurchase', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponAutomaticallyApplyCouponCodes', 'com.ultracart.admin.v2.models/CouponDiscountItemWithItemPurchase', 'com.ultracart.admin.v2.models/CouponDiscountItems', 'com.ultracart.admin.v2.models/CouponFreeItemAndShippingWithSubtotal', 'com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchase', 'com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal', 'com.ultracart.admin.v2.models/CouponFreeItemsWithItemPurchase', 'com.ultracart.admin.v2.models/CouponFreeItemsWithMixMatchPurchase', 'com.ultracart.admin.v2.models/CouponFreeShipping', 'com.ultracart.admin.v2.models/CouponFreeShippingSpecificItems', 'com.ultracart.admin.v2.models/CouponFreeShippingWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponFreeShippingWithSubtotal', 'com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems', 'com.ultracart.admin.v2.models/CouponNoDiscount', 'com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase', 'com.ultracart.admin.v2.models/CouponPercentOffItems', 'com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping', 'com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponPercentOffRetailPriceItems', 'com.ultracart.admin.v2.models/CouponPercentOffShipping', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotal', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalAndFreeShipping', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalLimit', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithSubtotal', 'com.ultracart.admin.v2.models/CouponTieredAmountOffItem', 'com.ultracart.admin.v2.models/CouponTieredAmountOffSubtotal', 'com.ultracart.admin.v2.models/CouponTieredPercentOffItems', 'com.ultracart.admin.v2.models/CouponTieredPercentOffShipping', 'com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotal'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CouponAmountOffItems', 'com.ultracart.admin.v2.models/CouponAmountOffShipping', 'com.ultracart.admin.v2.models/CouponAmountOffShippingWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotal', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalAndShipping', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalFreeShippingWithPurchase', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalWithBlockPurchase', 'com.ultracart.admin.v2.models/CouponAmountOffSubtotalWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponAutomaticallyApplyCouponCodes', 'com.ultracart.admin.v2.models/CouponDiscountItemWithItemPurchase', 'com.ultracart.admin.v2.models/CouponDiscountItems', 'com.ultracart.admin.v2.models/CouponFreeItemAndShippingWithSubtotal', 'com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchase', 'com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal', 'com.ultracart.admin.v2.models/CouponFreeItemsWithItemPurchase', 'com.ultracart.admin.v2.models/CouponFreeItemsWithMixMatchPurchase', 'com.ultracart.admin.v2.models/CouponFreeShipping', 'com.ultracart.admin.v2.models/CouponFreeShippingSpecificItems', 'com.ultracart.admin.v2.models/CouponFreeShippingWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponFreeShippingWithSubtotal', 'com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems', 'com.ultracart.admin.v2.models/CouponNoDiscount', 'com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase', 'com.ultracart.admin.v2.models/CouponPercentOffItems', 'com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping', 'com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponPercentOffRetailPriceItems', 'com.ultracart.admin.v2.models/CouponPercentOffShipping', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotal', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalAndFreeShipping', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalLimit', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithItemsPurchase', 'com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithSubtotal', 'com.ultracart.admin.v2.models/CouponRestriction', 'com.ultracart.admin.v2.models/CouponTieredAmountOffItem', 'com.ultracart.admin.v2.models/CouponTieredAmountOffSubtotal', 'com.ultracart.admin.v2.models/CouponTieredPercentOffItems', 'com.ultracart.admin.v2.models/CouponTieredPercentOffShipping', 'com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotal'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CouponAmountOffItems'), require('./CouponAmountOffShipping'), require('./CouponAmountOffShippingWithItemsPurchase'), require('./CouponAmountOffSubtotal'), require('./CouponAmountOffSubtotalAndShipping'), require('./CouponAmountOffSubtotalFreeShippingWithPurchase'), require('./CouponAmountOffSubtotalWithBlockPurchase'), require('./CouponAmountOffSubtotalWithItemsPurchase'), require('./CouponAutomaticallyApplyCouponCodes'), require('./CouponDiscountItemWithItemPurchase'), require('./CouponDiscountItems'), require('./CouponFreeItemAndShippingWithSubtotal'), require('./CouponFreeItemWithItemPurchase'), require('./CouponFreeItemWithSubtotal'), require('./CouponFreeItemsWithItemPurchase'), require('./CouponFreeItemsWithMixMatchPurchase'), require('./CouponFreeShipping'), require('./CouponFreeShippingSpecificItems'), require('./CouponFreeShippingWithItemsPurchase'), require('./CouponFreeShippingWithSubtotal'), require('./CouponMultipleAmountsOffItems'), require('./CouponNoDiscount'), require('./CouponPercentOffItemWithItemsQuantityPurchase'), require('./CouponPercentOffItems'), require('./CouponPercentOffItemsAndFreeShipping'), require('./CouponPercentOffItemsWithItemsPurchase'), require('./CouponPercentOffRetailPriceItems'), require('./CouponPercentOffShipping'), require('./CouponPercentOffSubtotal'), require('./CouponPercentOffSubtotalAndFreeShipping'), require('./CouponPercentOffSubtotalLimit'), require('./CouponPercentOffSubtotalWithItemsPurchase'), require('./CouponPercentOffSubtotalWithSubtotal'), require('./CouponTieredAmountOffItem'), require('./CouponTieredAmountOffSubtotal'), require('./CouponTieredPercentOffItems'), require('./CouponTieredPercentOffShipping'), require('./CouponTieredPercentOffSubtotal'));
+    module.exports = factory(require('../ApiClient'), require('./CouponAmountOffItems'), require('./CouponAmountOffShipping'), require('./CouponAmountOffShippingWithItemsPurchase'), require('./CouponAmountOffSubtotal'), require('./CouponAmountOffSubtotalAndShipping'), require('./CouponAmountOffSubtotalFreeShippingWithPurchase'), require('./CouponAmountOffSubtotalWithBlockPurchase'), require('./CouponAmountOffSubtotalWithItemsPurchase'), require('./CouponAutomaticallyApplyCouponCodes'), require('./CouponDiscountItemWithItemPurchase'), require('./CouponDiscountItems'), require('./CouponFreeItemAndShippingWithSubtotal'), require('./CouponFreeItemWithItemPurchase'), require('./CouponFreeItemWithSubtotal'), require('./CouponFreeItemsWithItemPurchase'), require('./CouponFreeItemsWithMixMatchPurchase'), require('./CouponFreeShipping'), require('./CouponFreeShippingSpecificItems'), require('./CouponFreeShippingWithItemsPurchase'), require('./CouponFreeShippingWithSubtotal'), require('./CouponMultipleAmountsOffItems'), require('./CouponNoDiscount'), require('./CouponPercentOffItemWithItemsQuantityPurchase'), require('./CouponPercentOffItems'), require('./CouponPercentOffItemsAndFreeShipping'), require('./CouponPercentOffItemsWithItemsPurchase'), require('./CouponPercentOffRetailPriceItems'), require('./CouponPercentOffShipping'), require('./CouponPercentOffSubtotal'), require('./CouponPercentOffSubtotalAndFreeShipping'), require('./CouponPercentOffSubtotalLimit'), require('./CouponPercentOffSubtotalWithItemsPurchase'), require('./CouponPercentOffSubtotalWithSubtotal'), require('./CouponRestriction'), require('./CouponTieredAmountOffItem'), require('./CouponTieredAmountOffSubtotal'), require('./CouponTieredPercentOffItems'), require('./CouponTieredPercentOffShipping'), require('./CouponTieredPercentOffSubtotal'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Coupon = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CouponAmountOffItems, root.UltraCartRestApiV2.CouponAmountOffShipping, root.UltraCartRestApiV2.CouponAmountOffShippingWithItemsPurchase, root.UltraCartRestApiV2.CouponAmountOffSubtotal, root.UltraCartRestApiV2.CouponAmountOffSubtotalAndShipping, root.UltraCartRestApiV2.CouponAmountOffSubtotalFreeShippingWithPurchase, root.UltraCartRestApiV2.CouponAmountOffSubtotalWithBlockPurchase, root.UltraCartRestApiV2.CouponAmountOffSubtotalWithItemsPurchase, root.UltraCartRestApiV2.CouponAutomaticallyApplyCouponCodes, root.UltraCartRestApiV2.CouponDiscountItemWithItemPurchase, root.UltraCartRestApiV2.CouponDiscountItems, root.UltraCartRestApiV2.CouponFreeItemAndShippingWithSubtotal, root.UltraCartRestApiV2.CouponFreeItemWithItemPurchase, root.UltraCartRestApiV2.CouponFreeItemWithSubtotal, root.UltraCartRestApiV2.CouponFreeItemsWithItemPurchase, root.UltraCartRestApiV2.CouponFreeItemsWithMixMatchPurchase, root.UltraCartRestApiV2.CouponFreeShipping, root.UltraCartRestApiV2.CouponFreeShippingSpecificItems, root.UltraCartRestApiV2.CouponFreeShippingWithItemsPurchase, root.UltraCartRestApiV2.CouponFreeShippingWithSubtotal, root.UltraCartRestApiV2.CouponMultipleAmountsOffItems, root.UltraCartRestApiV2.CouponNoDiscount, root.UltraCartRestApiV2.CouponPercentOffItemWithItemsQuantityPurchase, root.UltraCartRestApiV2.CouponPercentOffItems, root.UltraCartRestApiV2.CouponPercentOffItemsAndFreeShipping, root.UltraCartRestApiV2.CouponPercentOffItemsWithItemsPurchase, root.UltraCartRestApiV2.CouponPercentOffRetailPriceItems, root.UltraCartRestApiV2.CouponPercentOffShipping, root.UltraCartRestApiV2.CouponPercentOffSubtotal, root.UltraCartRestApiV2.CouponPercentOffSubtotalAndFreeShipping, root.UltraCartRestApiV2.CouponPercentOffSubtotalLimit, root.UltraCartRestApiV2.CouponPercentOffSubtotalWithItemsPurchase, root.UltraCartRestApiV2.CouponPercentOffSubtotalWithSubtotal, root.UltraCartRestApiV2.CouponTieredAmountOffItem, root.UltraCartRestApiV2.CouponTieredAmountOffSubtotal, root.UltraCartRestApiV2.CouponTieredPercentOffItems, root.UltraCartRestApiV2.CouponTieredPercentOffShipping, root.UltraCartRestApiV2.CouponTieredPercentOffSubtotal);
+    root.UltraCartRestApiV2.Coupon = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CouponAmountOffItems, root.UltraCartRestApiV2.CouponAmountOffShipping, root.UltraCartRestApiV2.CouponAmountOffShippingWithItemsPurchase, root.UltraCartRestApiV2.CouponAmountOffSubtotal, root.UltraCartRestApiV2.CouponAmountOffSubtotalAndShipping, root.UltraCartRestApiV2.CouponAmountOffSubtotalFreeShippingWithPurchase, root.UltraCartRestApiV2.CouponAmountOffSubtotalWithBlockPurchase, root.UltraCartRestApiV2.CouponAmountOffSubtotalWithItemsPurchase, root.UltraCartRestApiV2.CouponAutomaticallyApplyCouponCodes, root.UltraCartRestApiV2.CouponDiscountItemWithItemPurchase, root.UltraCartRestApiV2.CouponDiscountItems, root.UltraCartRestApiV2.CouponFreeItemAndShippingWithSubtotal, root.UltraCartRestApiV2.CouponFreeItemWithItemPurchase, root.UltraCartRestApiV2.CouponFreeItemWithSubtotal, root.UltraCartRestApiV2.CouponFreeItemsWithItemPurchase, root.UltraCartRestApiV2.CouponFreeItemsWithMixMatchPurchase, root.UltraCartRestApiV2.CouponFreeShipping, root.UltraCartRestApiV2.CouponFreeShippingSpecificItems, root.UltraCartRestApiV2.CouponFreeShippingWithItemsPurchase, root.UltraCartRestApiV2.CouponFreeShippingWithSubtotal, root.UltraCartRestApiV2.CouponMultipleAmountsOffItems, root.UltraCartRestApiV2.CouponNoDiscount, root.UltraCartRestApiV2.CouponPercentOffItemWithItemsQuantityPurchase, root.UltraCartRestApiV2.CouponPercentOffItems, root.UltraCartRestApiV2.CouponPercentOffItemsAndFreeShipping, root.UltraCartRestApiV2.CouponPercentOffItemsWithItemsPurchase, root.UltraCartRestApiV2.CouponPercentOffRetailPriceItems, root.UltraCartRestApiV2.CouponPercentOffShipping, root.UltraCartRestApiV2.CouponPercentOffSubtotal, root.UltraCartRestApiV2.CouponPercentOffSubtotalAndFreeShipping, root.UltraCartRestApiV2.CouponPercentOffSubtotalLimit, root.UltraCartRestApiV2.CouponPercentOffSubtotalWithItemsPurchase, root.UltraCartRestApiV2.CouponPercentOffSubtotalWithSubtotal, root.UltraCartRestApiV2.CouponRestriction, root.UltraCartRestApiV2.CouponTieredAmountOffItem, root.UltraCartRestApiV2.CouponTieredAmountOffSubtotal, root.UltraCartRestApiV2.CouponTieredPercentOffItems, root.UltraCartRestApiV2.CouponTieredPercentOffShipping, root.UltraCartRestApiV2.CouponTieredPercentOffSubtotal);
   }
-}(this, function(ApiClient, CouponAmountOffItems, CouponAmountOffShipping, CouponAmountOffShippingWithItemsPurchase, CouponAmountOffSubtotal, CouponAmountOffSubtotalAndShipping, CouponAmountOffSubtotalFreeShippingWithPurchase, CouponAmountOffSubtotalWithBlockPurchase, CouponAmountOffSubtotalWithItemsPurchase, CouponAutomaticallyApplyCouponCodes, CouponDiscountItemWithItemPurchase, CouponDiscountItems, CouponFreeItemAndShippingWithSubtotal, CouponFreeItemWithItemPurchase, CouponFreeItemWithSubtotal, CouponFreeItemsWithItemPurchase, CouponFreeItemsWithMixMatchPurchase, CouponFreeShipping, CouponFreeShippingSpecificItems, CouponFreeShippingWithItemsPurchase, CouponFreeShippingWithSubtotal, CouponMultipleAmountsOffItems, CouponNoDiscount, CouponPercentOffItemWithItemsQuantityPurchase, CouponPercentOffItems, CouponPercentOffItemsAndFreeShipping, CouponPercentOffItemsWithItemsPurchase, CouponPercentOffRetailPriceItems, CouponPercentOffShipping, CouponPercentOffSubtotal, CouponPercentOffSubtotalAndFreeShipping, CouponPercentOffSubtotalLimit, CouponPercentOffSubtotalWithItemsPurchase, CouponPercentOffSubtotalWithSubtotal, CouponTieredAmountOffItem, CouponTieredAmountOffSubtotal, CouponTieredPercentOffItems, CouponTieredPercentOffShipping, CouponTieredPercentOffSubtotal) {
+}(this, function(ApiClient, CouponAmountOffItems, CouponAmountOffShipping, CouponAmountOffShippingWithItemsPurchase, CouponAmountOffSubtotal, CouponAmountOffSubtotalAndShipping, CouponAmountOffSubtotalFreeShippingWithPurchase, CouponAmountOffSubtotalWithBlockPurchase, CouponAmountOffSubtotalWithItemsPurchase, CouponAutomaticallyApplyCouponCodes, CouponDiscountItemWithItemPurchase, CouponDiscountItems, CouponFreeItemAndShippingWithSubtotal, CouponFreeItemWithItemPurchase, CouponFreeItemWithSubtotal, CouponFreeItemsWithItemPurchase, CouponFreeItemsWithMixMatchPurchase, CouponFreeShipping, CouponFreeShippingSpecificItems, CouponFreeShippingWithItemsPurchase, CouponFreeShippingWithSubtotal, CouponMultipleAmountsOffItems, CouponNoDiscount, CouponPercentOffItemWithItemsQuantityPurchase, CouponPercentOffItems, CouponPercentOffItemsAndFreeShipping, CouponPercentOffItemsWithItemsPurchase, CouponPercentOffRetailPriceItems, CouponPercentOffShipping, CouponPercentOffSubtotal, CouponPercentOffSubtotalAndFreeShipping, CouponPercentOffSubtotalLimit, CouponPercentOffSubtotalWithItemsPurchase, CouponPercentOffSubtotalWithSubtotal, CouponRestriction, CouponTieredAmountOffItem, CouponTieredAmountOffSubtotal, CouponTieredPercentOffItems, CouponTieredPercentOffShipping, CouponTieredPercentOffSubtotal) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The Coupon model module.
    * @module com.ultracart.admin.v2.models/Coupon
-   * @version 2.4.85
+   * @version 2.4.86
    */
 
   /**
@@ -47,6 +47,10 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
+
 
 
 
@@ -144,8 +148,8 @@
       if (data.hasOwnProperty('automatically_apply_coupon_codes')) {
         obj['automatically_apply_coupon_codes'] = CouponAutomaticallyApplyCouponCodes.constructFromObject(data['automatically_apply_coupon_codes']);
       }
-      if (data.hasOwnProperty('calculated_)description')) {
-        obj['calculated_)description'] = ApiClient.convertToType(data['calculated_)description'], 'String');
+      if (data.hasOwnProperty('calculated_description')) {
+        obj['calculated_description'] = ApiClient.convertToType(data['calculated_description'], 'String');
       }
       if (data.hasOwnProperty('can_be_used_with_other_coupons')) {
         obj['can_be_used_with_other_coupons'] = ApiClient.convertToType(data['can_be_used_with_other_coupons'], 'Boolean');
@@ -198,6 +202,9 @@
       if (data.hasOwnProperty('merchant_code')) {
         obj['merchant_code'] = ApiClient.convertToType(data['merchant_code'], 'String');
       }
+      if (data.hasOwnProperty('merchant_notes')) {
+        obj['merchant_notes'] = ApiClient.convertToType(data['merchant_notes'], 'String');
+      }
       if (data.hasOwnProperty('multiple_amounts_off_items')) {
         obj['multiple_amounts_off_items'] = CouponMultipleAmountsOffItems.constructFromObject(data['multiple_amounts_off_items']);
       }
@@ -231,14 +238,23 @@
       if (data.hasOwnProperty('percent_off_subtotal_limit')) {
         obj['percent_off_subtotal_limit'] = CouponPercentOffSubtotalLimit.constructFromObject(data['percent_off_subtotal_limit']);
       }
-      if (data.hasOwnProperty('percent_off_subtotal_with_items purchase')) {
-        obj['percent_off_subtotal_with_items purchase'] = CouponPercentOffSubtotalWithItemsPurchase.constructFromObject(data['percent_off_subtotal_with_items purchase']);
+      if (data.hasOwnProperty('percent_off_subtotal_with_items_purchase')) {
+        obj['percent_off_subtotal_with_items_purchase'] = CouponPercentOffSubtotalWithItemsPurchase.constructFromObject(data['percent_off_subtotal_with_items_purchase']);
       }
       if (data.hasOwnProperty('percent_off_subtotal_with_subtotal')) {
         obj['percent_off_subtotal_with_subtotal'] = CouponPercentOffSubtotalWithSubtotal.constructFromObject(data['percent_off_subtotal_with_subtotal']);
       }
       if (data.hasOwnProperty('quickbooks_code')) {
         obj['quickbooks_code'] = ApiClient.convertToType(data['quickbooks_code'], 'String');
+      }
+      if (data.hasOwnProperty('restrict_by_postal_codes')) {
+        obj['restrict_by_postal_codes'] = ApiClient.convertToType(data['restrict_by_postal_codes'], ['String']);
+      }
+      if (data.hasOwnProperty('restrict_by_screen_branding_theme_codes')) {
+        obj['restrict_by_screen_branding_theme_codes'] = ApiClient.convertToType(data['restrict_by_screen_branding_theme_codes'], [CouponRestriction]);
+      }
+      if (data.hasOwnProperty('restrict_by_storefronts')) {
+        obj['restrict_by_storefronts'] = ApiClient.convertToType(data['restrict_by_storefronts'], [CouponRestriction]);
       }
       if (data.hasOwnProperty('start_dts')) {
         obj['start_dts'] = ApiClient.convertToType(data['start_dts'], 'String');
@@ -313,9 +329,9 @@
   exports.prototype['automatically_apply_coupon_codes'] = undefined;
   /**
    * Calculated description displayed to the customer if no description is specified.
-   * @member {String} calculated_)description
+   * @member {String} calculated_description
    */
-  exports.prototype['calculated_)description'] = undefined;
+  exports.prototype['calculated_description'] = undefined;
   /**
    * True if this coupon can be used with other coupons in a single order.
    * @member {Boolean} can_be_used_with_other_coupons
@@ -391,6 +407,11 @@
    */
   exports.prototype['merchant_code'] = undefined;
   /**
+   * Internal notes about this coupon.  These are not visible to customer.
+   * @member {String} merchant_notes
+   */
+  exports.prototype['merchant_notes'] = undefined;
+  /**
    * @member {module:com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems} multiple_amounts_off_items
    */
   exports.prototype['multiple_amounts_off_items'] = undefined;
@@ -435,9 +456,9 @@
    */
   exports.prototype['percent_off_subtotal_limit'] = undefined;
   /**
-   * @member {module:com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithItemsPurchase} percent_off_subtotal_with_items purchase
+   * @member {module:com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithItemsPurchase} percent_off_subtotal_with_items_purchase
    */
-  exports.prototype['percent_off_subtotal_with_items purchase'] = undefined;
+  exports.prototype['percent_off_subtotal_with_items_purchase'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithSubtotal} percent_off_subtotal_with_subtotal
    */
@@ -447,6 +468,21 @@
    * @member {String} quickbooks_code
    */
   exports.prototype['quickbooks_code'] = undefined;
+  /**
+   * Optional list of postal codes which restrict a coupon to within these postal codes.
+   * @member {Array.<String>} restrict_by_postal_codes
+   */
+  exports.prototype['restrict_by_postal_codes'] = undefined;
+  /**
+   * Optional list of legacy screen branding theme codes to limit coupon use to only those themes.
+   * @member {Array.<module:com.ultracart.admin.v2.models/CouponRestriction>} restrict_by_screen_branding_theme_codes
+   */
+  exports.prototype['restrict_by_screen_branding_theme_codes'] = undefined;
+  /**
+   * Optional list of storefronts to limit coupon use to only those storefronts.
+   * @member {Array.<module:com.ultracart.admin.v2.models/CouponRestriction>} restrict_by_storefronts
+   */
+  exports.prototype['restrict_by_storefronts'] = undefined;
   /**
    * Date/time when coupon is valid
    * @member {String} start_dts

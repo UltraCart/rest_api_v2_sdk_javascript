@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 2.4.85
+   * @version 2.4.86
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -85,6 +87,9 @@
       if (data.hasOwnProperty('email_communication_sequence_email_uuid')) {
         obj['email_communication_sequence_email_uuid'] = ApiClient.convertToType(data['email_communication_sequence_email_uuid'], 'String');
       }
+      if (data.hasOwnProperty('email_communication_sequence_uuid')) {
+        obj['email_communication_sequence_uuid'] = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+      }
       if (data.hasOwnProperty('email_container_cjson')) {
         obj['email_container_cjson'] = ApiClient.convertToType(data['email_container_cjson'], 'String');
       }
@@ -102,6 +107,9 @@
       }
       if (data.hasOwnProperty('merchant_id')) {
         obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+      }
+      if (data.hasOwnProperty('pending_review')) {
+        obj['pending_review'] = ApiClient.convertToType(data['pending_review'], 'Boolean');
       }
       if (data.hasOwnProperty('preview_text')) {
         obj['preview_text'] = ApiClient.convertToType(data['preview_text'], 'String');
@@ -141,6 +149,11 @@
    */
   exports.prototype['email_communication_sequence_email_uuid'] = undefined;
   /**
+   * Email commseq UUID
+   * @member {String} email_communication_sequence_uuid
+   */
+  exports.prototype['email_communication_sequence_uuid'] = undefined;
+  /**
    * Email container cjson
    * @member {String} email_container_cjson
    */
@@ -170,6 +183,11 @@
    * @member {String} merchant_id
    */
   exports.prototype['merchant_id'] = undefined;
+  /**
+   * True if the content of this email is pending review by UltraCart
+   * @member {Boolean} pending_review
+   */
+  exports.prototype['pending_review'] = undefined;
   /**
    * Preview text
    * @member {String} preview_text

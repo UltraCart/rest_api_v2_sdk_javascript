@@ -37,7 +37,7 @@
   /**
    * The ItemEbayMarketPlaceAnalysis model module.
    * @module com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis
-   * @version 2.4.85
+   * @version 2.4.86
    */
 
   /**
