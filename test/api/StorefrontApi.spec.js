@@ -431,6 +431,16 @@
         done();
       });
     });
+    describe('getEmailPerformance', function() {
+      it('should call getEmailPerformance successfully', function(done) {
+        //uncomment below and update the code to test getEmailPerformance
+        //instance.getEmailPerformance(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailPostcard', function() {
       it('should call getEmailPostcard successfully', function(done) {
         //uncomment below and update the code to test getEmailPostcard

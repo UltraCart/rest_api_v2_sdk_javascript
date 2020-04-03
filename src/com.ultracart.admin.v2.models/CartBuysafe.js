@@ -37,7 +37,7 @@
   /**
    * The CartBuysafe model module.
    * @module com.ultracart.admin.v2.models/CartBuysafe
-   * @version 2.4.86
+   * @version 2.4.87
    */
 
   /**

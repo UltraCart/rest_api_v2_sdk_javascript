@@ -37,7 +37,7 @@
   /**
    * The PricingTier model module.
    * @module com.ultracart.admin.v2.models/PricingTier
-   * @version 2.4.86
+   * @version 2.4.87
    */
 
   /**
