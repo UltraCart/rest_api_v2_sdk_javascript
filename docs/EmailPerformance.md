@@ -3,9 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**active_customers** | **Number** | Active customers.  The value will be -1 if calculation is pending. | [optional] 
+**actual_customers** | **Number** | Actual customers that they have regardless of active state.  The value will be -1 if calculation is pending. | [optional] 
 **bounce_count** | **Number** | Bounce count | [optional] 
 **daily_stats** | [**[EmailPerformanceDaily]**](EmailPerformanceDaily.md) | Daily statistics used for charting | [optional] 
 **delivered_count** | **Number** | Delivered count | [optional] 
+**max_active_customers** | **Number** | Maximum active customers allowed under their billing plan | [optional] 
 **max_emails_per_day** | **Number** | Max emails per day | [optional] 
 **max_emails_per_hour** | **Number** | Max emails per hour | [optional] 
 **max_emails_per_month** | **Number** | Max emails per month | [optional] 

@@ -37,7 +37,7 @@
   /**
    * The EmailPerformance model module.
    * @module com.ultracart.admin.v2.models/EmailPerformance
-   * @version 2.4.87
+   * @version 2.4.88
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -75,6 +78,12 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('active_customers')) {
+        obj['active_customers'] = ApiClient.convertToType(data['active_customers'], 'Number');
+      }
+      if (data.hasOwnProperty('actual_customers')) {
+        obj['actual_customers'] = ApiClient.convertToType(data['actual_customers'], 'Number');
+      }
       if (data.hasOwnProperty('bounce_count')) {
         obj['bounce_count'] = ApiClient.convertToType(data['bounce_count'], 'Number');
       }
@@ -83,6 +92,9 @@
       }
       if (data.hasOwnProperty('delivered_count')) {
         obj['delivered_count'] = ApiClient.convertToType(data['delivered_count'], 'Number');
+      }
+      if (data.hasOwnProperty('max_active_customers')) {
+        obj['max_active_customers'] = ApiClient.convertToType(data['max_active_customers'], 'Number');
       }
       if (data.hasOwnProperty('max_emails_per_day')) {
         obj['max_emails_per_day'] = ApiClient.convertToType(data['max_emails_per_day'], 'Number');
@@ -122,6 +134,16 @@
   }
 
   /**
+   * Active customers.  The value will be -1 if calculation is pending.
+   * @member {Number} active_customers
+   */
+  exports.prototype['active_customers'] = undefined;
+  /**
+   * Actual customers that they have regardless of active state.  The value will be -1 if calculation is pending.
+   * @member {Number} actual_customers
+   */
+  exports.prototype['actual_customers'] = undefined;
+  /**
    * Bounce count
    * @member {Number} bounce_count
    */
@@ -136,6 +158,11 @@
    * @member {Number} delivered_count
    */
   exports.prototype['delivered_count'] = undefined;
+  /**
+   * Maximum active customers allowed under their billing plan
+   * @member {Number} max_active_customers
+   */
+  exports.prototype['max_active_customers'] = undefined;
   /**
    * Max emails per day
    * @member {Number} max_emails_per_day

@@ -57,6 +57,18 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailPerformance);
     });
 
+    it('should have the property activeCustomers (base name: "active_customers")', function() {
+      // uncomment below and update the code to test the property activeCustomers
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property actualCustomers (base name: "actual_customers")', function() {
+      // uncomment below and update the code to test the property actualCustomers
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
     it('should have the property bounceCount (base name: "bounce_count")', function() {
       // uncomment below and update the code to test the property bounceCount
       //var instane = new UltraCartRestApiV2.EmailPerformance();
@@ -71,6 +83,12 @@
 
     it('should have the property deliveredCount (base name: "delivered_count")', function() {
       // uncomment below and update the code to test the property deliveredCount
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property maxActiveCustomers (base name: "max_active_customers")', function() {
+      // uncomment below and update the code to test the property maxActiveCustomers
       //var instane = new UltraCartRestApiV2.EmailPerformance();
       //expect(instance).to.be();
     });
