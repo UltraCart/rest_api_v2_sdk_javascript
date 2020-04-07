@@ -153,6 +153,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property spamPercentage (base name: "spam_percentage")', function() {
+      // uncomment below and update the code to test the property spamPercentage
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property spamPercentageFormatted (base name: "spam_percentage_formatted")', function() {
+      // uncomment below and update the code to test the property spamPercentageFormatted
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
     it('should have the property transactionalSendCount (base name: "transactional_send_count")', function() {
       // uncomment below and update the code to test the property transactionalSendCount
       //var instane = new UltraCartRestApiV2.EmailPerformance();

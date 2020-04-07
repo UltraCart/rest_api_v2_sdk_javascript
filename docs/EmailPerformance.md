@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **sent_emails_per_month** | **Number** | Sent emails last 31 days | [optional] 
 **sequence_send_count** | **Number** | Total sequence (campaign/flow) emails sent | [optional] 
 **spam_count** | **Number** | Spam complaints | [optional] 
+**spam_percentage** | **Number** | Spam percentage rate based upon our look back window.  This should be under one half a percent or the account will be paused for sending. | [optional] 
+**spam_percentage_formatted** | **String** | Spam percentage rate (formatted) based upon our look back window.  This should be under one half a percent or the account will be paused for sending. | [optional] 
 **transactional_send_count** | **Number** | Total transactions emails sent | [optional] 
 
 

@@ -37,7 +37,7 @@
   /**
    * The EmailPerformance model module.
    * @module com.ultracart.admin.v2.models/EmailPerformance
-   * @version 2.4.88
+   * @version 2.4.89
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -125,6 +127,12 @@
       }
       if (data.hasOwnProperty('spam_count')) {
         obj['spam_count'] = ApiClient.convertToType(data['spam_count'], 'Number');
+      }
+      if (data.hasOwnProperty('spam_percentage')) {
+        obj['spam_percentage'] = ApiClient.convertToType(data['spam_percentage'], 'Number');
+      }
+      if (data.hasOwnProperty('spam_percentage_formatted')) {
+        obj['spam_percentage_formatted'] = ApiClient.convertToType(data['spam_percentage_formatted'], 'String');
       }
       if (data.hasOwnProperty('transactional_send_count')) {
         obj['transactional_send_count'] = ApiClient.convertToType(data['transactional_send_count'], 'Number');
@@ -213,6 +221,16 @@
    * @member {Number} spam_count
    */
   exports.prototype['spam_count'] = undefined;
+  /**
+   * Spam percentage rate based upon our look back window.  This should be under one half a percent or the account will be paused for sending.
+   * @member {Number} spam_percentage
+   */
+  exports.prototype['spam_percentage'] = undefined;
+  /**
+   * Spam percentage rate (formatted) based upon our look back window.  This should be under one half a percent or the account will be paused for sending.
+   * @member {String} spam_percentage_formatted
+   */
+  exports.prototype['spam_percentage_formatted'] = undefined;
   /**
    * Total transactions emails sent
    * @member {Number} transactional_send_count
