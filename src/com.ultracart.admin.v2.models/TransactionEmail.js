@@ -37,7 +37,7 @@
   /**
    * The TransactionEmail model module.
    * @module com.ultracart.admin.v2.models/TransactionEmail
-   * @version 2.4.89
+   * @version 2.4.90
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -78,6 +81,15 @@
 
       if (data.hasOwnProperty('content')) {
         obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      }
+      if (data.hasOwnProperty('esp_domain_uuid')) {
+        obj['esp_domain_uuid'] = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+      }
+      if (data.hasOwnProperty('esp_friendly_name')) {
+        obj['esp_friendly_name'] = ApiClient.convertToType(data['esp_friendly_name'], 'String');
+      }
+      if (data.hasOwnProperty('esp_user')) {
+        obj['esp_user'] = ApiClient.convertToType(data['esp_user'], 'String');
       }
       if (data.hasOwnProperty('file_exists')) {
         obj['file_exists'] = ApiClient.convertToType(data['file_exists'], 'Boolean');
@@ -130,6 +142,21 @@
    * @member {String} content
    */
   exports.prototype['content'] = undefined;
+  /**
+   * The uuid of the sending domain
+   * @member {String} esp_domain_uuid
+   */
+  exports.prototype['esp_domain_uuid'] = undefined;
+  /**
+   * Friendly from that will appear in customer email clients.
+   * @member {String} esp_friendly_name
+   */
+  exports.prototype['esp_friendly_name'] = undefined;
+  /**
+   * The username of the sending email.  This is not the full email.  Only the username which is everything before the @ sign.
+   * @member {String} esp_user
+   */
+  exports.prototype['esp_user'] = undefined;
   /**
    * An internal identifier used to aid in retrieving templates from the filesystem.
    * @member {Boolean} file_exists

@@ -37,7 +37,7 @@
   /**
    * The OrderAffiliate model module.
    * @module com.ultracart.admin.v2.models/OrderAffiliate
-   * @version 2.4.89
+   * @version 2.4.90
    */
 
   /**

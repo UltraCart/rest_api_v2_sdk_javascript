@@ -63,6 +63,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property espDomainUuid (base name: "esp_domain_uuid")', function() {
+      // uncomment below and update the code to test the property espDomainUuid
+      //var instane = new UltraCartRestApiV2.TransactionEmail();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property espFriendlyName (base name: "esp_friendly_name")', function() {
+      // uncomment below and update the code to test the property espFriendlyName
+      //var instane = new UltraCartRestApiV2.TransactionEmail();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property espUser (base name: "esp_user")', function() {
+      // uncomment below and update the code to test the property espUser
+      //var instane = new UltraCartRestApiV2.TransactionEmail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property fileExists (base name: "file_exists")', function() {
       // uncomment below and update the code to test the property fileExists
       //var instane = new UltraCartRestApiV2.TransactionEmail();

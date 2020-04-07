@@ -37,7 +37,7 @@
   /**
    * The AutoOrdersResponse model module.
    * @module com.ultracart.admin.v2.models/AutoOrdersResponse
-   * @version 2.4.89
+   * @version 2.4.90
    */
 
   /**

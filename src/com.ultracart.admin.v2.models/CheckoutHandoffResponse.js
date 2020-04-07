@@ -37,7 +37,7 @@
   /**
    * The CheckoutHandoffResponse model module.
    * @module com.ultracart.admin.v2.models/CheckoutHandoffResponse
-   * @version 2.4.89
+   * @version 2.4.90
    */
 
   /**
