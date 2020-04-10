@@ -99,6 +99,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property ucacid (base name: "ucacid")', function() {
+      // uncomment below and update the code to test the property ucacid
+      //var instane = new UltraCartRestApiV2.CheckoutHandoffRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

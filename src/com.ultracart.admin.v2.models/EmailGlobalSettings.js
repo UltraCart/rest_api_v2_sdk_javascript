@@ -37,7 +37,7 @@
   /**
    * The EmailGlobalSettings model module.
    * @module com.ultracart.admin.v2.models/EmailGlobalSettings
-   * @version 2.4.90
+   * @version 2.4.91
    */
 
   /**

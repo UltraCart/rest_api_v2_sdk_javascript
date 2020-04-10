@@ -37,7 +37,7 @@
   /**
    * The CheckoutHandoffRequest model module.
    * @module com.ultracart.admin.v2.models/CheckoutHandoffRequest
-   * @version 2.4.90
+   * @version 2.4.91
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -89,6 +90,9 @@
       if (data.hasOwnProperty('secure_host_name')) {
         obj['secure_host_name'] = ApiClient.convertToType(data['secure_host_name'], 'String');
       }
+      if (data.hasOwnProperty('ucacid')) {
+        obj['ucacid'] = ApiClient.convertToType(data['ucacid'], 'String');
+      }
     }
     return obj;
   }
@@ -127,6 +131,11 @@
    * @member {String} secure_host_name
    */
   exports.prototype['secure_host_name'] = undefined;
+  /**
+   * The UltraCart Analytics cookie value.  Populate this if you're handing off from a different domain than the checkout.
+   * @member {String} ucacid
+   */
+  exports.prototype['ucacid'] = undefined;
 
 
   /**

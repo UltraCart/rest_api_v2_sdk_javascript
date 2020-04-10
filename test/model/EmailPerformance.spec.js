@@ -75,6 +75,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property bouncePercentage (base name: "bounce_percentage")', function() {
+      // uncomment below and update the code to test the property bouncePercentage
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property bouncePercentageFormatted (base name: "bounce_percentage_formatted")', function() {
+      // uncomment below and update the code to test the property bouncePercentageFormatted
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
     it('should have the property dailyStats (base name: "daily_stats")', function() {
       // uncomment below and update the code to test the property dailyStats
       //var instane = new UltraCartRestApiV2.EmailPerformance();

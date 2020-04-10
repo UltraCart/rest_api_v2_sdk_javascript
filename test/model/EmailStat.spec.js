@@ -81,6 +81,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deleted (base name: "deleted")', function() {
+      // uncomment below and update the code to test the property deleted
+      //var instane = new UltraCartRestApiV2.EmailStat();
+      //expect(instance).to.be();
+    });
+
     it('should have the property deliveredCount (base name: "delivered_count")', function() {
       // uncomment below and update the code to test the property deliveredCount
       //var instane = new UltraCartRestApiV2.EmailStat();

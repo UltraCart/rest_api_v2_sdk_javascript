@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.90
+   * @version 2.4.91
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -108,6 +109,9 @@
       }
       if (data.hasOwnProperty('conversion_count_formatted')) {
         obj['conversion_count_formatted'] = ApiClient.convertToType(data['conversion_count_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('deleted')) {
+        obj['deleted'] = ApiClient.convertToType(data['deleted'], 'Boolean');
       }
       if (data.hasOwnProperty('delivered_count')) {
         obj['delivered_count'] = ApiClient.convertToType(data['delivered_count'], 'Number');
@@ -229,6 +233,11 @@
    * @member {String} conversion_count_formatted
    */
   exports.prototype['conversion_count_formatted'] = undefined;
+  /**
+   * True if campaign/flow has been archived
+   * @member {Boolean} deleted
+   */
+  exports.prototype['deleted'] = undefined;
   /**
    * Count of delivered emails
    * @member {Number} delivered_count
