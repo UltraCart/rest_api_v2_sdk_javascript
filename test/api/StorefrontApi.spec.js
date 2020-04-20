@@ -271,6 +271,16 @@
         done();
       });
     });
+    describe('getEmailCommseqStepStats', function() {
+      it('should call getEmailCommseqStepStats successfully', function(done) {
+        //uncomment below and update the code to test getEmailCommseqStepStats
+        //instance.getEmailCommseqStepStats(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailCommseqStepWaiting', function() {
       it('should call getEmailCommseqStepWaiting successfully', function(done) {
         //uncomment below and update the code to test getEmailCommseqStepWaiting
@@ -631,6 +641,16 @@
         done();
       });
     });
+    describe('globalUnsubscribe', function() {
+      it('should call globalUnsubscribe successfully', function(done) {
+        //uncomment below and update the code to test globalUnsubscribe
+        //instance.globalUnsubscribe(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('importEmailThirdPartyProviderList', function() {
       it('should call importEmailThirdPartyProviderList successfully', function(done) {
         //uncomment below and update the code to test importEmailThirdPartyProviderList
@@ -715,6 +735,16 @@
       it('should call prepareDownloadEmailSegment successfully', function(done) {
         //uncomment below and update the code to test prepareDownloadEmailSegment
         //instance.prepareDownloadEmailSegment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('review', function() {
+      it('should call review successfully', function(done) {
+        //uncomment below and update the code to test review
+        //instance.review(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

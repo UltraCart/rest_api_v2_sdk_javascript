@@ -37,7 +37,7 @@
   /**
    * The TaxProviderActivateResult model module.
    * @module com.ultracart.admin.v2.models/TaxProviderActivateResult
-   * @version 2.4.92
+   * @version 2.4.93
    */
 
   /**
