@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqEmailSendTestRequest model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest
-   * @version 2.4.93
+   * @version 2.4.94
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -91,6 +92,9 @@
       if (data.hasOwnProperty('order_id')) {
         obj['order_id'] = ApiClient.convertToType(data['order_id'], 'String');
       }
+      if (data.hasOwnProperty('please_review')) {
+        obj['please_review'] = ApiClient.convertToType(data['please_review'], 'Boolean');
+      }
       if (data.hasOwnProperty('send_to_additional_emails')) {
         obj['send_to_additional_emails'] = ApiClient.convertToType(data['send_to_additional_emails'], ['String']);
       }
@@ -129,6 +133,10 @@
    * @member {String} order_id
    */
   exports.prototype['order_id'] = undefined;
+  /**
+   * @member {Boolean} please_review
+   */
+  exports.prototype['please_review'] = undefined;
   /**
    * @member {Array.<String>} send_to_additional_emails
    */

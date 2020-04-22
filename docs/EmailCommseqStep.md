@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **child_email_communication_sequence_steps** | [**[EmailCommseqStep]**](EmailCommseqStep.md) | Array of child steps | [optional] 
 **email_communication_sequence_step_uuid** | **String** | Email commseq step UUID | [optional] 
 **filter_profile_equation_json** | **String** | Filter profile equation JSON | [optional] 
+**merchant_notes** | **String** | Internal merchant notes | [optional] 
 **step_config_json** | **String** | Arbitrary Configuration for a step | [optional] 
 **type** | **String** | Type of step | [optional] 
 

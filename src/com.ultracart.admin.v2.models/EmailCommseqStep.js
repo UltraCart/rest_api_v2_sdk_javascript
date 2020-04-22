@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqStep model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqStep
-   * @version 2.4.93
+   * @version 2.4.94
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -79,6 +80,9 @@
       if (data.hasOwnProperty('filter_profile_equation_json')) {
         obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       }
+      if (data.hasOwnProperty('merchant_notes')) {
+        obj['merchant_notes'] = ApiClient.convertToType(data['merchant_notes'], 'String');
+      }
       if (data.hasOwnProperty('step_config_json')) {
         obj['step_config_json'] = ApiClient.convertToType(data['step_config_json'], 'String');
       }
@@ -109,6 +113,11 @@
    * @member {String} filter_profile_equation_json
    */
   exports.prototype['filter_profile_equation_json'] = undefined;
+  /**
+   * Internal merchant notes
+   * @member {String} merchant_notes
+   */
+  exports.prototype['merchant_notes'] = undefined;
   /**
    * Arbitrary Configuration for a step
    * @member {String} step_config_json

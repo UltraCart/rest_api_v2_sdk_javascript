@@ -4511,7 +4511,7 @@ Name | Type | Description  | Notes
 
 <a name="review"></a>
 # **review**
-> EmailCommseqEmailReviewResponse review(storefrontOid, commseqEmailUuid, emailCommseqEmailReviewRequest)
+> EmailCommseqEmailSendTestResponse review(storefrontOid, commseqEmailUuid, emailCommseqEmailReviewRequest)
 
 Request a review of an email
 
@@ -4565,7 +4565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EmailCommseqEmailReviewResponse**](EmailCommseqEmailReviewResponse.md)
+[**EmailCommseqEmailSendTestResponse**](EmailCommseqEmailSendTestResponse.md)
 
 ### Authorization
 

@@ -99,6 +99,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property pleaseReview (base name: "please_review")', function() {
+      // uncomment below and update the code to test the property pleaseReview
+      //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property sendToAdditionalEmails (base name: "send_to_additional_emails")', function() {
       // uncomment below and update the code to test the property sendToAdditionalEmails
       //var instane = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest();

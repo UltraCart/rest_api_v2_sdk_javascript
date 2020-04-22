@@ -81,6 +81,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property merchantNotes (base name: "merchant_notes")', function() {
+      // uncomment below and update the code to test the property merchantNotes
+      //var instane = new UltraCartRestApiV2.EmailCommseqStep();
+      //expect(instance).to.be();
+    });
+
     it('should have the property stepConfigJson (base name: "step_config_json")', function() {
       // uncomment below and update the code to test the property stepConfigJson
       //var instane = new UltraCartRestApiV2.EmailCommseqStep();
