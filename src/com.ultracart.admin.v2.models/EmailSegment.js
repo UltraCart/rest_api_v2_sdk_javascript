@@ -37,7 +37,7 @@
   /**
    * The EmailSegment model module.
    * @module com.ultracart.admin.v2.models/EmailSegment
-   * @version 2.4.94
+   * @version 2.4.95
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -94,6 +95,9 @@
       }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      }
+      if (data.hasOwnProperty('rank_json')) {
+        obj['rank_json'] = ApiClient.convertToType(data['rank_json'], 'String');
       }
       if (data.hasOwnProperty('rebuild_required')) {
         obj['rebuild_required'] = ApiClient.convertToType(data['rebuild_required'], 'Boolean');
@@ -145,6 +149,11 @@
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
+  /**
+   * Rank settings json
+   * @member {String} rank_json
+   */
+  exports.prototype['rank_json'] = undefined;
   /**
    * True if a rebuild is required because some part of the segment has changed
    * @member {Boolean} rebuild_required

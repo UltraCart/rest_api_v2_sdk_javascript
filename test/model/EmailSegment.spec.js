@@ -105,6 +105,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property rankJson (base name: "rank_json")', function() {
+      // uncomment below and update the code to test the property rankJson
+      //var instane = new UltraCartRestApiV2.EmailSegment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property rebuildRequired (base name: "rebuild_required")', function() {
       // uncomment below and update the code to test the property rebuildRequired
       //var instane = new UltraCartRestApiV2.EmailSegment();
