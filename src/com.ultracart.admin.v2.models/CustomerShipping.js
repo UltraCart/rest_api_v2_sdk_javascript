@@ -37,7 +37,7 @@
   /**
    * The CustomerShipping model module.
    * @module com.ultracart.admin.v2.models/CustomerShipping
-   * @version 2.4.97
+   * @version 2.4.98
    */
 
   /**
