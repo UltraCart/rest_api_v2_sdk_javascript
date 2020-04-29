@@ -37,7 +37,7 @@
   /**
    * The CouponTieredPercentOffSubtotal model module.
    * @module com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotal
-   * @version 2.4.95
+   * @version 2.4.96
    */
 
   /**
