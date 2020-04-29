@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.96
+   * @version 2.4.97
    */
 
   /**
@@ -3752,6 +3752,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.category null
      * @param {String} opts.matches null
+     * @param {String} opts.storefrontOid null
      * @param {Number} opts.maxHits null
      * @param {module:com.ultracart.admin.v2/StorefrontApi~searchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LookupResponse}
@@ -3766,6 +3767,7 @@
       var queryParams = {
         'category': opts['category'],
         'matches': opts['matches'],
+        'storefront_oid': opts['storefrontOid'],
         'max_hits': opts['maxHits'],
       };
       var collectionQueryParams = {

@@ -4608,6 +4608,7 @@ var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 var opts = { 
   'category': "category_example", // String | null
   'matches': "matches_example", // String | null
+  'storefrontOid': "storefrontOid_example", // String | null
   'maxHits': 56 // Number | null
 };
 
@@ -4627,6 +4628,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category** | **String**| null | [optional] 
  **matches** | **String**| null | [optional] 
+ **storefrontOid** | **String**| null | [optional] 
  **maxHits** | **Number**| null | [optional] 
 
 ### Return type
