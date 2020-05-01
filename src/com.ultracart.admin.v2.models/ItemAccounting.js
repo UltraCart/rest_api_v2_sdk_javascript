@@ -37,7 +37,7 @@
   /**
    * The ItemAccounting model module.
    * @module com.ultracart.admin.v2.models/ItemAccounting
-   * @version 2.4.98
+   * @version 2.4.99
    */
 
   /**

@@ -189,6 +189,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property kitComponentOnly (base name: "kit_component_only")', function() {
+      // uncomment below and update the code to test the property kitComponentOnly
+      //var instane = new UltraCartRestApiV2.Item();
+      //expect(instance).to.be();
+    });
+
     it('should have the property kitDefinition (base name: "kit_definition")', function() {
       // uncomment below and update the code to test the property kitDefinition
       //var instane = new UltraCartRestApiV2.Item();

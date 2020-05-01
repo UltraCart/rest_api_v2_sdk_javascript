@@ -37,7 +37,7 @@
   /**
    * The Item model module.
    * @module com.ultracart.admin.v2.models/Item
-   * @version 2.4.98
+   * @version 2.4.99
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -174,6 +175,9 @@
       }
       if (data.hasOwnProperty('kit')) {
         obj['kit'] = ApiClient.convertToType(data['kit'], 'Boolean');
+      }
+      if (data.hasOwnProperty('kit_component_only')) {
+        obj['kit_component_only'] = ApiClient.convertToType(data['kit_component_only'], 'Boolean');
       }
       if (data.hasOwnProperty('kit_definition')) {
         obj['kit_definition'] = ItemKitDefinition.constructFromObject(data['kit_definition']);
@@ -351,6 +355,11 @@
    * @member {Boolean} kit
    */
   exports.prototype['kit'] = undefined;
+  /**
+   * True if this item can only be usd as a kit component
+   * @member {Boolean} kit_component_only
+   */
+  exports.prototype['kit_component_only'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemKitDefinition} kit_definition
    */

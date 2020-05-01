@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **instant_payment_notifications** | [**ItemInstantPaymentNotifications**](ItemInstantPaymentNotifications.md) |  | [optional] 
 **internal** | [**ItemInternal**](ItemInternal.md) |  | [optional] 
 **kit** | **Boolean** | True if this item is a kit | [optional] 
+**kit_component_only** | **Boolean** | True if this item can only be usd as a kit component | [optional] 
 **kit_definition** | [**ItemKitDefinition**](ItemKitDefinition.md) |  | [optional] 
 **last_modified_dts** | **String** | Date/time of last modification | [optional] 
 **merchant_id** | **String** | UltraCart merchant ID owning item | [optional] 

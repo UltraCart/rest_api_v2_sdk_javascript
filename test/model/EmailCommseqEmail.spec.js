@@ -129,6 +129,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property rejected (base name: "rejected")', function() {
+      // uncomment below and update the code to test the property rejected
+      //var instane = new UltraCartRestApiV2.EmailCommseqEmail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property smartSending (base name: "smart_sending")', function() {
       // uncomment below and update the code to test the property smartSending
       //var instane = new UltraCartRestApiV2.EmailCommseqEmail();
