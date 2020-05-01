@@ -37,7 +37,7 @@
   /**
    * The WebhookLogResponse model module.
    * @module com.ultracart.admin.v2.models/WebhookLogResponse
-   * @version 2.4.99
+   * @version 2.4.100
    */
 
   /**

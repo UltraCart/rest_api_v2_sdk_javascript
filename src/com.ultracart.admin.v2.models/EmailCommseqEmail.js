@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 2.4.99
+   * @version 2.4.100
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -117,6 +118,9 @@
       }
       if (data.hasOwnProperty('rejected')) {
         obj['rejected'] = ApiClient.convertToType(data['rejected'], 'Boolean');
+      }
+      if (data.hasOwnProperty('requires_review')) {
+        obj['requires_review'] = ApiClient.convertToType(data['requires_review'], 'Boolean');
       }
       if (data.hasOwnProperty('smart_sending')) {
         obj['smart_sending'] = ApiClient.convertToType(data['smart_sending'], 'Boolean');
@@ -202,6 +206,11 @@
    * @member {Boolean} rejected
    */
   exports.prototype['rejected'] = undefined;
+  /**
+   * True if the content of this email is requires review by UltraCart
+   * @member {Boolean} requires_review
+   */
+  exports.prototype['requires_review'] = undefined;
   /**
    * Smart sending
    * @member {Boolean} smart_sending

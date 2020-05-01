@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **pending_review** | **Boolean** | True if the content of this email is pending review by UltraCart | [optional] 
 **preview_text** | **String** | Preview text | [optional] 
 **rejected** | **Boolean** | True if the content of this email was rejected during review by UltraCart | [optional] 
+**requires_review** | **Boolean** | True if the content of this email is requires review by UltraCart | [optional] 
 **smart_sending** | **Boolean** | Smart sending | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
 **subject** | **String** | Subject | [optional] 
