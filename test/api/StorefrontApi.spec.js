@@ -451,6 +451,16 @@
         done();
       });
     });
+    describe('getEmailPlan', function() {
+      it('should call getEmailPlan successfully', function(done) {
+        //uncomment below and update the code to test getEmailPlan
+        //instance.getEmailPlan(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailPostcard', function() {
       it('should call getEmailPostcard successfully', function(done) {
         //uncomment below and update the code to test getEmailPostcard
@@ -875,6 +885,16 @@
       it('should call updateEmailList successfully', function(done) {
         //uncomment below and update the code to test updateEmailList
         //instance.updateEmailList(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateEmailPlan', function() {
+      it('should call updateEmailPlan successfully', function(done) {
+        //uncomment below and update the code to test updateEmailPlan
+        //instance.updateEmailPlan(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

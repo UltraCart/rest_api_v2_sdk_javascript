@@ -37,7 +37,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 2.4.100
+   * @version 2.4.101
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -113,6 +114,9 @@
       }
       if (data.hasOwnProperty('open_rate_formatted')) {
         obj['open_rate_formatted'] = ApiClient.convertToType(data['open_rate_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('prevent_sending_due_to_spam')) {
+        obj['prevent_sending_due_to_spam'] = ApiClient.convertToType(data['prevent_sending_due_to_spam'], 'Boolean');
       }
       if (data.hasOwnProperty('revenue_formatted')) {
         obj['revenue_formatted'] = ApiClient.convertToType(data['revenue_formatted'], 'String');
@@ -193,6 +197,11 @@
    * @member {String} open_rate_formatted
    */
   exports.prototype['open_rate_formatted'] = undefined;
+  /**
+   * True if this campaign is prevented from sending at this time due to spam complaints.
+   * @member {Boolean} prevent_sending_due_to_spam
+   */
+  exports.prototype['prevent_sending_due_to_spam'] = undefined;
   /**
    * Revenue associated with campaign
    * @member {String} revenue_formatted

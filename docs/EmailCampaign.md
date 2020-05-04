@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **merchant_id** | **String** | Merchant ID | [optional] 
 **name** | **String** | Name of email campaign | [optional] 
 **open_rate_formatted** | **String** | Open rate of emails | [optional] 
+**prevent_sending_due_to_spam** | **Boolean** | True if this campaign is prevented from sending at this time due to spam complaints. | [optional] 
 **revenue_formatted** | **String** | Revenue associated with campaign | [optional] 
 **scheduled_dts** | **String** | Scheduled date | [optional] 
 **status** | **String** | Status of the campaign of draft, archived, and sent | [optional] 

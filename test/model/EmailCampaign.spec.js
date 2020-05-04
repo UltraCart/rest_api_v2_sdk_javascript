@@ -129,6 +129,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property preventSendingDueToSpam (base name: "prevent_sending_due_to_spam")', function() {
+      // uncomment below and update the code to test the property preventSendingDueToSpam
+      //var instane = new UltraCartRestApiV2.EmailCampaign();
+      //expect(instance).to.be();
+    });
+
     it('should have the property revenueFormatted (base name: "revenue_formatted")', function() {
       // uncomment below and update the code to test the property revenueFormatted
       //var instane = new UltraCartRestApiV2.EmailCampaign();
