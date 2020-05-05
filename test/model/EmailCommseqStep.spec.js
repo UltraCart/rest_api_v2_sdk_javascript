@@ -75,6 +75,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property emailPendingReview (base name: "email_pending_review")', function() {
+      // uncomment below and update the code to test the property emailPendingReview
+      //var instane = new UltraCartRestApiV2.EmailCommseqStep();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property emailRejected (base name: "email_rejected")', function() {
+      // uncomment below and update the code to test the property emailRejected
+      //var instane = new UltraCartRestApiV2.EmailCommseqStep();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property emailRequiresReview (base name: "email_requires_review")', function() {
+      // uncomment below and update the code to test the property emailRequiresReview
+      //var instane = new UltraCartRestApiV2.EmailCommseqStep();
+      //expect(instance).to.be();
+    });
+
     it('should have the property filterProfileEquationJson (base name: "filter_profile_equation_json")', function() {
       // uncomment below and update the code to test the property filterProfileEquationJson
       //var instane = new UltraCartRestApiV2.EmailCommseqStep();

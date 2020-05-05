@@ -37,7 +37,7 @@
   /**
    * The EmailCommseqStep model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqStep
-   * @version 2.4.101
+   * @version 2.4.102
    */
 
   /**
@@ -47,6 +47,9 @@
    */
   var exports = function() {
     var _this = this;
+
+
+
 
 
 
@@ -76,6 +79,15 @@
       }
       if (data.hasOwnProperty('email_communication_sequence_step_uuid')) {
         obj['email_communication_sequence_step_uuid'] = ApiClient.convertToType(data['email_communication_sequence_step_uuid'], 'String');
+      }
+      if (data.hasOwnProperty('email_pending_review')) {
+        obj['email_pending_review'] = ApiClient.convertToType(data['email_pending_review'], 'Boolean');
+      }
+      if (data.hasOwnProperty('email_rejected')) {
+        obj['email_rejected'] = ApiClient.convertToType(data['email_rejected'], 'Boolean');
+      }
+      if (data.hasOwnProperty('email_requires_review')) {
+        obj['email_requires_review'] = ApiClient.convertToType(data['email_requires_review'], 'Boolean');
       }
       if (data.hasOwnProperty('filter_profile_equation_json')) {
         obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
@@ -108,6 +120,21 @@
    * @member {String} email_communication_sequence_step_uuid
    */
   exports.prototype['email_communication_sequence_step_uuid'] = undefined;
+  /**
+   * True if the content of the email associated with this step is pending review by UltraCart
+   * @member {Boolean} email_pending_review
+   */
+  exports.prototype['email_pending_review'] = undefined;
+  /**
+   * True if the content of the email associated with this step was rejected during review by UltraCart
+   * @member {Boolean} email_rejected
+   */
+  exports.prototype['email_rejected'] = undefined;
+  /**
+   * True if the content of the email associated with this step requires review by UltraCart
+   * @member {Boolean} email_requires_review
+   */
+  exports.prototype['email_requires_review'] = undefined;
   /**
    * Filter profile equation JSON
    * @member {String} filter_profile_equation_json
