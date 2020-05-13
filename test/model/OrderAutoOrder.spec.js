@@ -69,8 +69,98 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property cancelAfterNextXOrders (base name: "cancel_after_next_x_orders")', function() {
+      // uncomment below and update the code to test the property cancelAfterNextXOrders
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cancelDowngrade (base name: "cancel_downgrade")', function() {
+      // uncomment below and update the code to test the property cancelDowngrade
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cancelUpgrade (base name: "cancel_upgrade")', function() {
+      // uncomment below and update the code to test the property cancelUpgrade
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property canceledByUser (base name: "canceled_by_user")', function() {
+      // uncomment below and update the code to test the property canceledByUser
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property canceledDts (base name: "canceled_dts")', function() {
+      // uncomment below and update the code to test the property canceledDts
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property completed (base name: "completed")', function() {
+      // uncomment below and update the code to test the property completed
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property creditCardAttempt (base name: "credit_card_attempt")', function() {
+      // uncomment below and update the code to test the property creditCardAttempt
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property disabledDts (base name: "disabled_dts")', function() {
+      // uncomment below and update the code to test the property disabledDts
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property enabled (base name: "enabled")', function() {
+      // uncomment below and update the code to test the property enabled
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property failureReason (base name: "failure_reason")', function() {
+      // uncomment below and update the code to test the property failureReason
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property items (base name: "items")', function() {
+      // uncomment below and update the code to test the property items
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nextAttempt (base name: "next_attempt")', function() {
+      // uncomment below and update the code to test the property nextAttempt
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
     it('should have the property originalOrderId (base name: "original_order_id")', function() {
       // uncomment below and update the code to test the property originalOrderId
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property overrideAffiliateId (base name: "override_affiliate_id")', function() {
+      // uncomment below and update the code to test the property overrideAffiliateId
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property rebillOrders (base name: "rebill_orders")', function() {
+      // uncomment below and update the code to test the property rebillOrders
+      //var instane = new UltraCartRestApiV2.OrderAutoOrder();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property rotatingTransactionGatewayCode (base name: "rotating_transaction_gateway_code")', function() {
+      // uncomment below and update the code to test the property rotatingTransactionGatewayCode
       //var instane = new UltraCartRestApiV2.OrderAutoOrder();
       //expect(instance).to.be();
     });

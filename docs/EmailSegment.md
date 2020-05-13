@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allow_csv_download** | **Boolean** | True if the current user has the rights to download this segment. | [optional] 
+**allow_facebook_audiences** | **Boolean** | True if this StoreFront has the Facebook Analytics app connected and supports them | [optional] 
 **created_dts** | **String** | Created date | [optional] 
 **deleted** | **Boolean** | True if this campaign was deleted | [optional] 
 **email_segment_uuid** | **String** | Email segment UUID | [optional] 

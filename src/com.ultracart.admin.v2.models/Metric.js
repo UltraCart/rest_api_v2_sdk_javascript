@@ -37,7 +37,7 @@
   /**
    * The Metric model module.
    * @module com.ultracart.admin.v2.models/Metric
-   * @version 2.4.102
+   * @version 2.4.103
    */
 
   /**

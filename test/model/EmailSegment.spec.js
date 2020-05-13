@@ -57,6 +57,18 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailSegment);
     });
 
+    it('should have the property allowCsvDownload (base name: "allow_csv_download")', function() {
+      // uncomment below and update the code to test the property allowCsvDownload
+      //var instane = new UltraCartRestApiV2.EmailSegment();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property allowFacebookAudiences (base name: "allow_facebook_audiences")', function() {
+      // uncomment below and update the code to test the property allowFacebookAudiences
+      //var instane = new UltraCartRestApiV2.EmailSegment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property createdDts (base name: "created_dts")', function() {
       // uncomment below and update the code to test the property createdDts
       //var instane = new UltraCartRestApiV2.EmailSegment();

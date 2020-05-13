@@ -37,7 +37,7 @@
   /**
    * The OrderProperty model module.
    * @module com.ultracart.admin.v2.models/OrderProperty
-   * @version 2.4.102
+   * @version 2.4.103
    */
 
   /**

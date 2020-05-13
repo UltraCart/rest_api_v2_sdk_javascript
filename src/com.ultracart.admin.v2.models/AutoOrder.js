@@ -37,7 +37,7 @@
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 2.4.102
+   * @version 2.4.103
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -136,6 +137,9 @@
       }
       if (data.hasOwnProperty('rotating_transaction_gateway_code')) {
         obj['rotating_transaction_gateway_code'] = ApiClient.convertToType(data['rotating_transaction_gateway_code'], 'String');
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
       }
     }
     return obj;
@@ -235,7 +239,34 @@
    * @member {String} rotating_transaction_gateway_code
    */
   exports.prototype['rotating_transaction_gateway_code'] = undefined;
+  /**
+   * The status of the auto order
+   * @member {module:com.ultracart.admin.v2.models/AutoOrder.StatusEnum} status
+   */
+  exports.prototype['status'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>status</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.StatusEnum = {
+    /**
+     * value: "active"
+     * @const
+     */
+    "active": "active",
+    /**
+     * value: "canceled"
+     * @const
+     */
+    "canceled": "canceled",
+    /**
+     * value: "disabled"
+     * @const
+     */
+    "disabled": "disabled"  };
 
 
   return exports;

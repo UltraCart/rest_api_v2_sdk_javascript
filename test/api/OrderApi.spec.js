@@ -81,6 +81,16 @@
         done();
       });
     });
+    describe('generateOrderToken', function() {
+      it('should call generateOrderToken successfully', function(done) {
+        //uncomment below and update the code to test generateOrderToken
+        //instance.generateOrderToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getAccountsReceivableRetryConfig', function() {
       it('should call getAccountsReceivableRetryConfig successfully', function(done) {
         //uncomment below and update the code to test getAccountsReceivableRetryConfig

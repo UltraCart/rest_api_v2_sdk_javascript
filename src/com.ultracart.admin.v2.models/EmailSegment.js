@@ -37,7 +37,7 @@
   /**
    * The EmailSegment model module.
    * @module com.ultracart.admin.v2.models/EmailSegment
-   * @version 2.4.102
+   * @version 2.4.103
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -72,6 +74,12 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('allow_csv_download')) {
+        obj['allow_csv_download'] = ApiClient.convertToType(data['allow_csv_download'], 'Boolean');
+      }
+      if (data.hasOwnProperty('allow_facebook_audiences')) {
+        obj['allow_facebook_audiences'] = ApiClient.convertToType(data['allow_facebook_audiences'], 'Boolean');
+      }
       if (data.hasOwnProperty('created_dts')) {
         obj['created_dts'] = ApiClient.convertToType(data['created_dts'], 'String');
       }
@@ -109,6 +117,16 @@
     return obj;
   }
 
+  /**
+   * True if the current user has the rights to download this segment.
+   * @member {Boolean} allow_csv_download
+   */
+  exports.prototype['allow_csv_download'] = undefined;
+  /**
+   * True if this StoreFront has the Facebook Analytics app connected and supports them
+   * @member {Boolean} allow_facebook_audiences
+   */
+  exports.prototype['allow_facebook_audiences'] = undefined;
   /**
    * Created date
    * @member {String} created_dts

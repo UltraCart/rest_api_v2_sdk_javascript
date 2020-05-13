@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.102
+   * @version 2.4.103
    */
 
   /**
@@ -1976,7 +1976,7 @@
      */
 
     /**
-     * Get email list customers
+     * Get email list customer editor url
      * @param {String} storefrontOid null
      * @param {String} emailListUuid null
      * @param {String} emailCustomerUuid null
