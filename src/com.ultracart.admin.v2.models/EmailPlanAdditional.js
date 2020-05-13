@@ -37,7 +37,7 @@
   /**
    * The EmailPlanAdditional model module.
    * @module com.ultracart.admin.v2.models/EmailPlanAdditional
-   * @version 2.4.104
+   * @version 2.4.105
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -65,6 +67,12 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('can_downgrade')) {
+        obj['can_downgrade'] = ApiClient.convertToType(data['can_downgrade'], 'Boolean');
+      }
+      if (data.hasOwnProperty('can_upgrade')) {
+        obj['can_upgrade'] = ApiClient.convertToType(data['can_upgrade'], 'Boolean');
+      }
       if (data.hasOwnProperty('cost')) {
         obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
       }
@@ -81,6 +89,14 @@
     return obj;
   }
 
+  /**
+   * @member {Boolean} can_downgrade
+   */
+  exports.prototype['can_downgrade'] = undefined;
+  /**
+   * @member {Boolean} can_upgrade
+   */
+  exports.prototype['can_upgrade'] = undefined;
   /**
    * @member {Number} cost
    */

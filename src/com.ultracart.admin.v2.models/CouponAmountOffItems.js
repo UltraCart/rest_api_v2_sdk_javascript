@@ -37,7 +37,7 @@
   /**
    * The CouponAmountOffItems model module.
    * @module com.ultracart.admin.v2.models/CouponAmountOffItems
-   * @version 2.4.104
+   * @version 2.4.105
    */
 
   /**

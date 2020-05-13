@@ -57,6 +57,18 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailPlanAdditional);
     });
 
+    it('should have the property canDowngrade (base name: "can_downgrade")', function() {
+      // uncomment below and update the code to test the property canDowngrade
+      //var instane = new UltraCartRestApiV2.EmailPlanAdditional();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property canUpgrade (base name: "can_upgrade")', function() {
+      // uncomment below and update the code to test the property canUpgrade
+      //var instane = new UltraCartRestApiV2.EmailPlanAdditional();
+      //expect(instance).to.be();
+    });
+
     it('should have the property cost (base name: "cost")', function() {
       // uncomment below and update the code to test the property cost
       //var instane = new UltraCartRestApiV2.EmailPlanAdditional();

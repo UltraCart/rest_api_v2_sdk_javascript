@@ -37,7 +37,7 @@
   /**
    * The ItemEnrollment123 model module.
    * @module com.ultracart.admin.v2.models/ItemEnrollment123
-   * @version 2.4.104
+   * @version 2.4.105
    */
 
   /**
