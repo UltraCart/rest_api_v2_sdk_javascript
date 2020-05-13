@@ -135,6 +135,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property usedBy (base name: "used_by")', function() {
+      // uncomment below and update the code to test the property usedBy
+      //var instane = new UltraCartRestApiV2.EmailSegment();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

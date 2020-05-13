@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **rank_json** | **String** | Rank settings json | [optional] 
 **rebuild_required** | **Boolean** | True if a rebuild is required because some part of the segment has changed | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
+**used_by** | [**[EmailListSegmentUsedBy]**](EmailListSegmentUsedBy.md) | Details on the flows or campaigns that use this list. | [optional] 
 
 

@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **public_description** | **String** | Description of list shown to customer. | [optional] 
 **public_list** | **Boolean** | True if this list is public | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
+**used_by** | [**[EmailListSegmentUsedBy]**](EmailListSegmentUsedBy.md) | Details on the flows or campaigns that use this list. | [optional] 
 
 

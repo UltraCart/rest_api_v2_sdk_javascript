@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailListSegmentUsedBy'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./EmailListSegmentUsedBy'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailList = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.EmailList = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailListSegmentUsedBy);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, EmailListSegmentUsedBy) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The EmailList model module.
    * @module com.ultracart.admin.v2.models/EmailList
-   * @version 2.4.103
+   * @version 2.4.104
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -100,6 +101,9 @@
       }
       if (data.hasOwnProperty('storefront_oid')) {
         obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
+      }
+      if (data.hasOwnProperty('used_by')) {
+        obj['used_by'] = ApiClient.convertToType(data['used_by'], [EmailListSegmentUsedBy]);
       }
     }
     return obj;
@@ -155,6 +159,11 @@
    * @member {Number} storefront_oid
    */
   exports.prototype['storefront_oid'] = undefined;
+  /**
+   * Details on the flows or campaigns that use this list.
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailListSegmentUsedBy>} used_by
+   */
+  exports.prototype['used_by'] = undefined;
 
 
 

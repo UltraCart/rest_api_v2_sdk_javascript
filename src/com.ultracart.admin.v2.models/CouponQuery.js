@@ -37,7 +37,7 @@
   /**
    * The CouponQuery model module.
    * @module com.ultracart.admin.v2.models/CouponQuery
-   * @version 2.4.103
+   * @version 2.4.104
    */
 
   /**
