@@ -37,7 +37,7 @@
   /**
    * The EmailPlan model module.
    * @module com.ultracart.admin.v2.models/EmailPlan
-   * @version 2.4.105
+   * @version 2.4.106
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -79,6 +80,9 @@
       }
       if (data.hasOwnProperty('additional_emails')) {
         obj['additional_emails'] = ApiClient.convertToType(data['additional_emails'], 'Number');
+      }
+      if (data.hasOwnProperty('allow_list_import')) {
+        obj['allow_list_import'] = ApiClient.convertToType(data['allow_list_import'], 'Boolean');
       }
       if (data.hasOwnProperty('customer_tiers')) {
         obj['customer_tiers'] = ApiClient.convertToType(data['customer_tiers'], [EmailPlanAdditional]);
@@ -125,6 +129,10 @@
    * @member {Number} additional_emails
    */
   exports.prototype['additional_emails'] = undefined;
+  /**
+   * @member {Boolean} allow_list_import
+   */
+  exports.prototype['allow_list_import'] = undefined;
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/EmailPlanAdditional>} customer_tiers
    */

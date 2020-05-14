@@ -69,6 +69,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property allowListImport (base name: "allow_list_import")', function() {
+      // uncomment below and update the code to test the property allowListImport
+      //var instane = new UltraCartRestApiV2.EmailPlan();
+      //expect(instance).to.be();
+    });
+
     it('should have the property customerTiers (base name: "customer_tiers")', function() {
       // uncomment below and update the code to test the property customerTiers
       //var instane = new UltraCartRestApiV2.EmailPlan();
