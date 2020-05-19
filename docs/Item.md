@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **pricing** | [**ItemPricing**](ItemPricing.md) |  | [optional] 
 **properties** | [**[ItemProperty]**](ItemProperty.md) | Properties | [optional] 
 **realtime_pricing** | [**ItemRealtimePricing**](ItemRealtimePricing.md) |  | [optional] 
+**recommend_replenishment_days** | **Number** | Number of days to recommend replenishment after.  Null is not configured.  Set to zero to disable. | [optional] 
 **related** | [**ItemRelated**](ItemRelated.md) |  | [optional] 
 **reporting** | [**ItemReporting**](ItemReporting.md) |  | [optional] 
 **restriction** | [**ItemRestriction**](ItemRestriction.md) |  | [optional] 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_multiple_concurrent_enrollments** | **Boolean** | True if a customer may be enrolled in this flow multiple times | [optional] 
+**back_populating** | **Boolean** | True if the flow is currently performing a back population. | [optional] 
 **click_rate_formatted** | **String** | Click rate of emails, formatted | [optional] 
 **created_dts** | **String** | Created date | [optional] 
 **deleted** | **Boolean** | True if this campaign was deleted | [optional] 

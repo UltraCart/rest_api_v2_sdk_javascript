@@ -273,6 +273,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property recommendReplenishmentDays (base name: "recommend_replenishment_days")', function() {
+      // uncomment below and update the code to test the property recommendReplenishmentDays
+      //var instane = new UltraCartRestApiV2.Item();
+      //expect(instance).to.be();
+    });
+
     it('should have the property related (base name: "related")', function() {
       // uncomment below and update the code to test the property related
       //var instane = new UltraCartRestApiV2.Item();

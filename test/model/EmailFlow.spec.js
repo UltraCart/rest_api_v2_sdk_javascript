@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property backPopulating (base name: "back_populating")', function() {
+      // uncomment below and update the code to test the property backPopulating
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
     it('should have the property clickRateFormatted (base name: "click_rate_formatted")', function() {
       // uncomment below and update the code to test the property clickRateFormatted
       //var instane = new UltraCartRestApiV2.EmailFlow();

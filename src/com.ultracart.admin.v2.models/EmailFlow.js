@@ -37,7 +37,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 2.4.106
+   * @version 2.4.107
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -83,6 +84,9 @@
 
       if (data.hasOwnProperty('allow_multiple_concurrent_enrollments')) {
         obj['allow_multiple_concurrent_enrollments'] = ApiClient.convertToType(data['allow_multiple_concurrent_enrollments'], 'Boolean');
+      }
+      if (data.hasOwnProperty('back_populating')) {
+        obj['back_populating'] = ApiClient.convertToType(data['back_populating'], 'Boolean');
       }
       if (data.hasOwnProperty('click_rate_formatted')) {
         obj['click_rate_formatted'] = ApiClient.convertToType(data['click_rate_formatted'], 'String');
@@ -150,6 +154,11 @@
    * @member {Boolean} allow_multiple_concurrent_enrollments
    */
   exports.prototype['allow_multiple_concurrent_enrollments'] = undefined;
+  /**
+   * True if the flow is currently performing a back population.
+   * @member {Boolean} back_populating
+   */
+  exports.prototype['back_populating'] = undefined;
   /**
    * Click rate of emails, formatted
    * @member {String} click_rate_formatted

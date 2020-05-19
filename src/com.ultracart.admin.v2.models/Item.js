@@ -37,7 +37,7 @@
   /**
    * The Item model module.
    * @module com.ultracart.admin.v2.models/Item
-   * @version 2.4.106
+   * @version 2.4.107
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -217,6 +218,9 @@
       }
       if (data.hasOwnProperty('realtime_pricing')) {
         obj['realtime_pricing'] = ItemRealtimePricing.constructFromObject(data['realtime_pricing']);
+      }
+      if (data.hasOwnProperty('recommend_replenishment_days')) {
+        obj['recommend_replenishment_days'] = ApiClient.convertToType(data['recommend_replenishment_days'], 'Number');
       }
       if (data.hasOwnProperty('related')) {
         obj['related'] = ItemRelated.constructFromObject(data['related']);
@@ -420,6 +424,11 @@
    * @member {module:com.ultracart.admin.v2.models/ItemRealtimePricing} realtime_pricing
    */
   exports.prototype['realtime_pricing'] = undefined;
+  /**
+   * Number of days to recommend replenishment after.  Null is not configured.  Set to zero to disable.
+   * @member {Number} recommend_replenishment_days
+   */
+  exports.prototype['recommend_replenishment_days'] = undefined;
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemRelated} related
    */

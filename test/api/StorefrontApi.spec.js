@@ -71,6 +71,16 @@
         done();
       });
     });
+    describe('backPopulateEmailFlow', function() {
+      it('should call backPopulateEmailFlow successfully', function(done) {
+        //uncomment below and update the code to test backPopulateEmailFlow
+        //instance.backPopulateEmailFlow(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('checkDownloadEmailSegment', function() {
       it('should call checkDownloadEmailSegment successfully', function(done) {
         //uncomment below and update the code to test checkDownloadEmailSegment

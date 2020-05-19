@@ -37,7 +37,7 @@
   /**
    * The DistributionCenter model module.
    * @module com.ultracart.admin.v2.models/DistributionCenter
-   * @version 2.4.106
+   * @version 2.4.107
    */
 
   /**

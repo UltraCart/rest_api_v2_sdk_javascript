@@ -34,7 +34,7 @@
   /**
    * Chargeback service.
    * @module com.ultracart.admin.v2/ChargebackApi
-   * @version 2.4.106
+   * @version 2.4.107
    */
 
   /**
