@@ -351,6 +351,16 @@
         done();
       });
     });
+    describe('getEmailEmailCustomerEditorUrl', function() {
+      it('should call getEmailEmailCustomerEditorUrl successfully', function(done) {
+        //uncomment below and update the code to test getEmailEmailCustomerEditorUrl
+        //instance.getEmailEmailCustomerEditorUrl(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailEmailOrders', function() {
       it('should call getEmailEmailOrders successfully', function(done) {
         //uncomment below and update the code to test getEmailEmailOrders

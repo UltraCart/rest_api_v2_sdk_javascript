@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.107
+   * @version 2.4.108
    */
 
   /**
@@ -1669,6 +1669,67 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/clicks', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailEmailCustomerEditorUrl operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailCustomerEditorUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get email order customer editor url
+     * @param {String} storefrontOid null
+     * @param {String} commseqEmailUuid null
+     * @param {String} orderId null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailCustomerEditorUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse}
+     */
+    this.getEmailEmailCustomerEditorUrl = function(storefrontOid, commseqEmailUuid, orderId, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmailCustomerEditorUrl");
+      }
+
+      // verify the required parameter 'commseqEmailUuid' is set
+      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
+        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling getEmailEmailCustomerEditorUrl");
+      }
+
+      // verify the required parameter 'orderId' is set
+      if (orderId === undefined || orderId === null) {
+        throw new Error("Missing the required parameter 'orderId' when calling getEmailEmailCustomerEditorUrl");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'commseq_email_uuid': commseqEmailUuid,
+        'order_id': orderId
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailCustomerEditorUrlResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/orders/{order_id}/editor_url', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
