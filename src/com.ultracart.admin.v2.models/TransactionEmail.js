@@ -37,7 +37,7 @@
   /**
    * The TransactionEmail model module.
    * @module com.ultracart.admin.v2.models/TransactionEmail
-   * @version 2.4.108
+   * @version 2.4.109
    */
 
   /**

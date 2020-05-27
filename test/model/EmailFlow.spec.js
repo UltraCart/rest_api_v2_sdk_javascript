@@ -99,6 +99,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property enrolledCustomers (base name: "enrolled_customers")', function() {
+      // uncomment below and update the code to test the property enrolledCustomers
+      //var instane = new UltraCartRestApiV2.EmailFlow();
+      //expect(instance).to.be();
+    });
+
     it('should have the property espDomainUser (base name: "esp_domain_user")', function() {
       // uncomment below and update the code to test the property espDomainUser
       //var instane = new UltraCartRestApiV2.EmailFlow();

@@ -37,7 +37,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 2.4.108
+   * @version 2.4.109
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -102,6 +103,9 @@
       }
       if (data.hasOwnProperty('email_flow_uuid')) {
         obj['email_flow_uuid'] = ApiClient.convertToType(data['email_flow_uuid'], 'String');
+      }
+      if (data.hasOwnProperty('enrolled_customers')) {
+        obj['enrolled_customers'] = ApiClient.convertToType(data['enrolled_customers'], 'Number');
       }
       if (data.hasOwnProperty('esp_domain_user')) {
         obj['esp_domain_user'] = ApiClient.convertToType(data['esp_domain_user'], 'String');
@@ -184,6 +188,11 @@
    * @member {String} email_flow_uuid
    */
   exports.prototype['email_flow_uuid'] = undefined;
+  /**
+   * Number of enrolled customers.
+   * @member {Number} enrolled_customers
+   */
+  exports.prototype['enrolled_customers'] = undefined;
   /**
    * Username of sending email
    * @member {String} esp_domain_user
