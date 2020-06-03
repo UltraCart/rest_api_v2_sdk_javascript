@@ -37,7 +37,7 @@
   /**
    * The OauthTokenResponse model module.
    * @module com.ultracart.admin.v2.models/OauthTokenResponse
-   * @version 2.4.110
+   * @version 2.4.111
    */
 
   /**

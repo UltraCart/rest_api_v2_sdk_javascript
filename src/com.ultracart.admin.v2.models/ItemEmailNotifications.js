@@ -37,7 +37,7 @@
   /**
    * The ItemEmailNotifications model module.
    * @module com.ultracart.admin.v2.models/ItemEmailNotifications
-   * @version 2.4.110
+   * @version 2.4.111
    */
 
   /**

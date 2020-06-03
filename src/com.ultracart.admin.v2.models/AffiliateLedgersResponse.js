@@ -37,7 +37,7 @@
   /**
    * The AffiliateLedgersResponse model module.
    * @module com.ultracart.admin.v2.models/AffiliateLedgersResponse
-   * @version 2.4.110
+   * @version 2.4.111
    */
 
   /**

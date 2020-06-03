@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 2.4.110
+   * @version 2.4.111
    */
 
   /**
@@ -308,7 +308,7 @@
       var returnType = CustomersResponse;
 
       return this.apiClient.callApi(
-        '/customer/customers/query', 'GET',
+        '/customer/customers/query', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
