@@ -37,7 +37,7 @@
   /**
    * The CartAffirmCheckoutResponse model module.
    * @module com.ultracart.admin.v2.models/CartAffirmCheckoutResponse
-   * @version 2.4.109
+   * @version 2.4.110
    */
 
   /**
