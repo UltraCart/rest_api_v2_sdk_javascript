@@ -37,7 +37,7 @@
   /**
    * The EmailStepStatRequest model module.
    * @module com.ultracart.admin.v2.models/EmailStepStatRequest
-   * @version 2.4.111
+   * @version 2.4.112
    */
 
   /**

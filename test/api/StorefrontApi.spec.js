@@ -201,6 +201,16 @@
         done();
       });
     });
+    describe('getEditorToken', function() {
+      it('should call getEditorToken successfully', function(done) {
+        //uncomment below and update the code to test getEditorToken
+        //instance.getEditorToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailBaseTemplates', function() {
       it('should call getEmailBaseTemplates successfully', function(done) {
         //uncomment below and update the code to test getEmailBaseTemplates
