@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailPerformanceDaily'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogram', 'com.ultracart.admin.v2.models/EmailPerformanceDaily'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EmailPerformanceDaily'));
+    module.exports = factory(require('../ApiClient'), require('./EmailPerformanceCustomerHistogram'), require('./EmailPerformanceDaily'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailPerformance = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailPerformanceDaily);
+    root.UltraCartRestApiV2.EmailPerformance = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailPerformanceCustomerHistogram, root.UltraCartRestApiV2.EmailPerformanceDaily);
   }
-}(this, function(ApiClient, EmailPerformanceDaily) {
+}(this, function(ApiClient, EmailPerformanceCustomerHistogram, EmailPerformanceDaily) {
   'use strict';
 
 
@@ -37,7 +37,7 @@
   /**
    * The EmailPerformance model module.
    * @module com.ultracart.admin.v2.models/EmailPerformance
-   * @version 2.4.112
+   * @version 2.4.113
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -96,6 +97,9 @@
       }
       if (data.hasOwnProperty('bounce_percentage_formatted')) {
         obj['bounce_percentage_formatted'] = ApiClient.convertToType(data['bounce_percentage_formatted'], 'String');
+      }
+      if (data.hasOwnProperty('customer_histogram')) {
+        obj['customer_histogram'] = EmailPerformanceCustomerHistogram.constructFromObject(data['customer_histogram']);
       }
       if (data.hasOwnProperty('daily_stats')) {
         obj['daily_stats'] = ApiClient.convertToType(data['daily_stats'], [EmailPerformanceDaily]);
@@ -174,6 +178,10 @@
    * @member {String} bounce_percentage_formatted
    */
   exports.prototype['bounce_percentage_formatted'] = undefined;
+  /**
+   * @member {module:com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogram} customer_histogram
+   */
+  exports.prototype['customer_histogram'] = undefined;
   /**
    * Daily statistics used for charting
    * @member {Array.<module:com.ultracart.admin.v2.models/EmailPerformanceDaily>} daily_stats

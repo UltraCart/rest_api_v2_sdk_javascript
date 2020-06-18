@@ -87,6 +87,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property customerHistogram (base name: "customer_histogram")', function() {
+      // uncomment below and update the code to test the property customerHistogram
+      //var instane = new UltraCartRestApiV2.EmailPerformance();
+      //expect(instance).to.be();
+    });
+
     it('should have the property dailyStats (base name: "daily_stats")', function() {
       // uncomment below and update the code to test the property dailyStats
       //var instane = new UltraCartRestApiV2.EmailPerformance();
