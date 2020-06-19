@@ -37,7 +37,7 @@
   /**
    * The EmailCustomer model module.
    * @module com.ultracart.admin.v2.models/EmailCustomer
-   * @version 2.4.113
+   * @version 2.4.114
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -65,38 +67,58 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('active')) {
+        obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
+      }
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
-      if (data.hasOwnProperty('espCustomerUuid')) {
-        obj['espCustomerUuid'] = ApiClient.convertToType(data['espCustomerUuid'], 'String');
+      if (data.hasOwnProperty('email_customer_uuid')) {
+        obj['email_customer_uuid'] = ApiClient.convertToType(data['email_customer_uuid'], 'String');
       }
-      if (data.hasOwnProperty('firstName')) {
-        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
+      if (data.hasOwnProperty('first_name')) {
+        obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
       }
-      if (data.hasOwnProperty('lastName')) {
-        obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
+      if (data.hasOwnProperty('last_interaction_dts')) {
+        obj['last_interaction_dts'] = ApiClient.convertToType(data['last_interaction_dts'], 'String');
+      }
+      if (data.hasOwnProperty('last_name')) {
+        obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
       }
     }
     return obj;
   }
 
   /**
+   * True if the customer is flagged as active within StoreFront Communications
+   * @member {Boolean} active
+   */
+  exports.prototype['active'] = undefined;
+  /**
+   * Email
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
   /**
-   * @member {String} espCustomerUuid
+   * Email customer UUID
+   * @member {String} email_customer_uuid
    */
-  exports.prototype['espCustomerUuid'] = undefined;
+  exports.prototype['email_customer_uuid'] = undefined;
   /**
-   * @member {String} firstName
+   * First name
+   * @member {String} first_name
    */
-  exports.prototype['firstName'] = undefined;
+  exports.prototype['first_name'] = undefined;
   /**
-   * @member {String} lastName
+   * Last interaction
+   * @member {String} last_interaction_dts
    */
-  exports.prototype['lastName'] = undefined;
+  exports.prototype['last_interaction_dts'] = undefined;
+  /**
+   * Last name
+   * @member {String} last_name
+   */
+  exports.prototype['last_name'] = undefined;
 
 
 

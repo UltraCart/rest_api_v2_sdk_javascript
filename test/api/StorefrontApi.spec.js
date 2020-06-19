@@ -321,6 +321,16 @@
         done();
       });
     });
+    describe('getEmailCustomers', function() {
+      it('should call getEmailCustomers successfully', function(done) {
+        //uncomment below and update the code to test getEmailCustomers
+        //instance.getEmailCustomers(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEmailDashboardActivity', function() {
       it('should call getEmailDashboardActivity successfully', function(done) {
         //uncomment below and update the code to test getEmailDashboardActivity

@@ -57,25 +57,37 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.EmailCustomer);
     });
 
+    it('should have the property active (base name: "active")', function() {
+      // uncomment below and update the code to test the property active
+      //var instane = new UltraCartRestApiV2.EmailCustomer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
       //var instane = new UltraCartRestApiV2.EmailCustomer();
       //expect(instance).to.be();
     });
 
-    it('should have the property espCustomerUuid (base name: "espCustomerUuid")', function() {
-      // uncomment below and update the code to test the property espCustomerUuid
+    it('should have the property emailCustomerUuid (base name: "email_customer_uuid")', function() {
+      // uncomment below and update the code to test the property emailCustomerUuid
       //var instane = new UltraCartRestApiV2.EmailCustomer();
       //expect(instance).to.be();
     });
 
-    it('should have the property firstName (base name: "firstName")', function() {
+    it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
       //var instane = new UltraCartRestApiV2.EmailCustomer();
       //expect(instance).to.be();
     });
 
-    it('should have the property lastName (base name: "lastName")', function() {
+    it('should have the property lastInteractionDts (base name: "last_interaction_dts")', function() {
+      // uncomment below and update the code to test the property lastInteractionDts
+      //var instane = new UltraCartRestApiV2.EmailCustomer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
       //var instane = new UltraCartRestApiV2.EmailCustomer();
       //expect(instance).to.be();
