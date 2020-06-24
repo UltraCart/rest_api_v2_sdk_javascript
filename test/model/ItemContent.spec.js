@@ -69,6 +69,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property customThankYouUrl (base name: "custom_thank_you_url")', function() {
+      // uncomment below and update the code to test the property customThankYouUrl
+      //var instane = new UltraCartRestApiV2.ItemContent();
+      //expect(instance).to.be();
+    });
+
     it('should have the property excludeFromSearch (base name: "exclude_from_search")', function() {
       // uncomment below and update the code to test the property excludeFromSearch
       //var instane = new UltraCartRestApiV2.ItemContent();

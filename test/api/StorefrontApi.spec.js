@@ -111,6 +111,16 @@
         done();
       });
     });
+    describe('cloneLibraryItem', function() {
+      it('should call cloneLibraryItem successfully', function(done) {
+        //uncomment below and update the code to test cloneLibraryItem
+        //instance.cloneLibraryItem(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createEmailSendingDomain', function() {
       it('should call createEmailSendingDomain successfully', function(done) {
         //uncomment below and update the code to test createEmailSendingDomain
@@ -175,6 +185,26 @@
       it('should call deleteExperiment successfully', function(done) {
         //uncomment below and update the code to test deleteExperiment
         //instance.deleteExperiment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteLibraryItem', function() {
+      it('should call deleteLibraryItem successfully', function(done) {
+        //uncomment below and update the code to test deleteLibraryItem
+        //instance.deleteLibraryItem(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('duplicateLibraryItem', function() {
+      it('should call duplicateLibraryItem successfully', function(done) {
+        //uncomment below and update the code to test duplicateLibraryItem
+        //instance.duplicateLibraryItem(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -671,6 +701,16 @@
         done();
       });
     });
+    describe('getLibraryItemsByQuery', function() {
+      it('should call getLibraryItemsByQuery successfully', function(done) {
+        //uncomment below and update the code to test getLibraryItemsByQuery
+        //instance.getLibraryItemsByQuery(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTransactionEmail', function() {
       it('should call getTransactionEmail successfully', function(done) {
         //uncomment below and update the code to test getTransactionEmail
@@ -891,6 +931,16 @@
         done();
       });
     });
+    describe('updateEmailCustomer', function() {
+      it('should call updateEmailCustomer successfully', function(done) {
+        //uncomment below and update the code to test updateEmailCustomer
+        //instance.updateEmailCustomer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('updateEmailEmail', function() {
       it('should call updateEmailEmail successfully', function(done) {
         //uncomment below and update the code to test updateEmailEmail
@@ -975,6 +1025,16 @@
       it('should call updateExperiment successfully', function(done) {
         //uncomment below and update the code to test updateExperiment
         //instance.updateExperiment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateLibraryItem', function() {
+      it('should call updateLibraryItem successfully', function(done) {
+        //uncomment below and update the code to test updateLibraryItem
+        //instance.updateLibraryItem(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

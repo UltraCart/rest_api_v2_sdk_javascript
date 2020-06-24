@@ -69,6 +69,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoOrderCost (base name: "auto_order_cost")', function() {
+      // uncomment below and update the code to test the property autoOrderCost
+      //var instane = new UltraCartRestApiV2.ItemPricing();
+      //expect(instance).to.be();
+    });
+
     it('should have the property automaticPricingTierName (base name: "automatic_pricing_tier_name")', function() {
       // uncomment below and update the code to test the property automaticPricingTierName
       //var instane = new UltraCartRestApiV2.ItemPricing();

@@ -37,7 +37,7 @@
   /**
    * The ItemContent model module.
    * @module com.ultracart.admin.v2.models/ItemContent
-   * @version 2.4.114
+   * @version 2.4.115
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -77,6 +78,9 @@
       }
       if (data.hasOwnProperty('attributes')) {
         obj['attributes'] = ApiClient.convertToType(data['attributes'], [ItemContentAttribute]);
+      }
+      if (data.hasOwnProperty('custom_thank_you_url')) {
+        obj['custom_thank_you_url'] = ApiClient.convertToType(data['custom_thank_you_url'], 'String');
       }
       if (data.hasOwnProperty('exclude_from_search')) {
         obj['exclude_from_search'] = ApiClient.convertToType(data['exclude_from_search'], 'Boolean');
@@ -119,6 +123,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ItemContentAttribute>} attributes
    */
   exports.prototype['attributes'] = undefined;
+  /**
+   * Custom Thank You URL
+   * @member {String} custom_thank_you_url
+   */
+  exports.prototype['custom_thank_you_url'] = undefined;
   /**
    * Exclude from search
    * @member {Boolean} exclude_from_search

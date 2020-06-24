@@ -34,7 +34,7 @@
   /**
    * Checkout service.
    * @module com.ultracart.admin.v2/CheckoutApi
-   * @version 2.4.114
+   * @version 2.4.115
    */
 
   /**

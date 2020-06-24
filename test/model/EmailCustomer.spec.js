@@ -81,6 +81,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property globalUnsubscribe (base name: "global_unsubscribe")', function() {
+      // uncomment below and update the code to test the property globalUnsubscribe
+      //var instane = new UltraCartRestApiV2.EmailCustomer();
+      //expect(instance).to.be();
+    });
+
     it('should have the property lastInteractionDts (base name: "last_interaction_dts")', function() {
       // uncomment below and update the code to test the property lastInteractionDts
       //var instane = new UltraCartRestApiV2.EmailCustomer();
@@ -89,6 +95,12 @@
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
+      //var instane = new UltraCartRestApiV2.EmailCustomer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property listUuids (base name: "list_uuids")', function() {
+      // uncomment below and update the code to test the property listUuids
       //var instane = new UltraCartRestApiV2.EmailCustomer();
       //expect(instance).to.be();
     });

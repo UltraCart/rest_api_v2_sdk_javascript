@@ -37,7 +37,7 @@
   /**
    * The EmailCustomer model module.
    * @module com.ultracart.admin.v2.models/EmailCustomer
-   * @version 2.4.114
+   * @version 2.4.115
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -79,11 +81,17 @@
       if (data.hasOwnProperty('first_name')) {
         obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
       }
+      if (data.hasOwnProperty('global_unsubscribe')) {
+        obj['global_unsubscribe'] = ApiClient.convertToType(data['global_unsubscribe'], 'Boolean');
+      }
       if (data.hasOwnProperty('last_interaction_dts')) {
         obj['last_interaction_dts'] = ApiClient.convertToType(data['last_interaction_dts'], 'String');
       }
       if (data.hasOwnProperty('last_name')) {
         obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
+      }
+      if (data.hasOwnProperty('list_uuids')) {
+        obj['list_uuids'] = ApiClient.convertToType(data['list_uuids'], ['String']);
       }
     }
     return obj;
@@ -110,6 +118,11 @@
    */
   exports.prototype['first_name'] = undefined;
   /**
+   * True if the customer has globally unsubscribed from all communication.
+   * @member {Boolean} global_unsubscribe
+   */
+  exports.prototype['global_unsubscribe'] = undefined;
+  /**
    * Last interaction
    * @member {String} last_interaction_dts
    */
@@ -119,6 +132,11 @@
    * @member {String} last_name
    */
   exports.prototype['last_name'] = undefined;
+  /**
+   * UUIDs of the lists they are subscribed to
+   * @member {Array.<String>} list_uuids
+   */
+  exports.prototype['list_uuids'] = undefined;
 
 
 

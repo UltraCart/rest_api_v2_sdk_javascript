@@ -37,7 +37,7 @@
   /**
    * The ItemPricing model module.
    * @module com.ultracart.admin.v2.models/ItemPricing
-   * @version 2.4.114
+   * @version 2.4.115
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -83,6 +84,9 @@
       }
       if (data.hasOwnProperty('arbitrary_cost_velocity_code')) {
         obj['arbitrary_cost_velocity_code'] = ApiClient.convertToType(data['arbitrary_cost_velocity_code'], 'String');
+      }
+      if (data.hasOwnProperty('auto_order_cost')) {
+        obj['auto_order_cost'] = ApiClient.convertToType(data['auto_order_cost'], 'Number');
       }
       if (data.hasOwnProperty('automatic_pricing_tier_name')) {
         obj['automatic_pricing_tier_name'] = ApiClient.convertToType(data['automatic_pricing_tier_name'], 'String');
@@ -143,6 +147,11 @@
    * @member {String} arbitrary_cost_velocity_code
    */
   exports.prototype['arbitrary_cost_velocity_code'] = undefined;
+  /**
+   * Cost if customer selects to receive item on auto order.  Set to zero to delete.
+   * @member {Number} auto_order_cost
+   */
+  exports.prototype['auto_order_cost'] = undefined;
   /**
    * Automatic pricing tier name
    * @member {String} automatic_pricing_tier_name
