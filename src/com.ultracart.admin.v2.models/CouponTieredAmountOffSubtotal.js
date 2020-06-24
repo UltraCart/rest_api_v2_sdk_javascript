@@ -37,7 +37,7 @@
   /**
    * The CouponTieredAmountOffSubtotal model module.
    * @module com.ultracart.admin.v2.models/CouponTieredAmountOffSubtotal
-   * @version 2.4.115
+   * @version 2.4.116
    */
 
   /**

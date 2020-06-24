@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.115
+   * @version 2.4.116
    */
 
   /**
@@ -1647,6 +1647,60 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/commseqs', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailCustomerEditorUrl operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomerEditorUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get customers editor URL
+     * @param {String} storefrontOid null
+     * @param {String} emailCustomerUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomerEditorUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse}
+     */
+    this.getEmailCustomerEditorUrl = function(storefrontOid, emailCustomerUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCustomerEditorUrl");
+      }
+
+      // verify the required parameter 'emailCustomerUuid' is set
+      if (emailCustomerUuid === undefined || emailCustomerUuid === null) {
+        throw new Error("Missing the required parameter 'emailCustomerUuid' when calling getEmailCustomerEditorUrl");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'email_customer_uuid': emailCustomerUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailCustomerEditorUrlResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/customers/{email_customer_uuid}/editor_url', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
