@@ -841,6 +841,16 @@
         done();
       });
     });
+    describe('releaseEmailCommseqStepWaiting', function() {
+      it('should call releaseEmailCommseqStepWaiting successfully', function(done) {
+        //uncomment below and update the code to test releaseEmailCommseqStepWaiting
+        //instance.releaseEmailCommseqStepWaiting(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('review', function() {
       it('should call review successfully', function(done) {
         //uncomment below and update the code to test review

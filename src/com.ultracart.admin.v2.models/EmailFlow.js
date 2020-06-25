@@ -37,7 +37,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 2.4.116
+   * @version 2.4.117
    */
 
   /**

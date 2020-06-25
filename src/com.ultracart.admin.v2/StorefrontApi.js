@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.116
+   * @version 2.4.117
    */
 
   /**
@@ -4198,6 +4198,66 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/segments/{email_segment_uuid}/downloadPrepare', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the releaseEmailCommseqStepWaiting operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~releaseEmailCommseqStepWaitingCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Release email communication sequence customers waiting at the specified step
+     * @param {String} storefrontOid null
+     * @param {String} commseqUuid null
+     * @param {String} commseqStepUuid null
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~releaseEmailCommseqStepWaitingCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.releaseEmailCommseqStepWaiting = function(storefrontOid, commseqUuid, commseqStepUuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefrontOid' is set
+      if (storefrontOid === undefined || storefrontOid === null) {
+        throw new Error("Missing the required parameter 'storefrontOid' when calling releaseEmailCommseqStepWaiting");
+      }
+
+      // verify the required parameter 'commseqUuid' is set
+      if (commseqUuid === undefined || commseqUuid === null) {
+        throw new Error("Missing the required parameter 'commseqUuid' when calling releaseEmailCommseqStepWaiting");
+      }
+
+      // verify the required parameter 'commseqStepUuid' is set
+      if (commseqStepUuid === undefined || commseqStepUuid === null) {
+        throw new Error("Missing the required parameter 'commseqStepUuid' when calling releaseEmailCommseqStepWaiting");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefrontOid,
+        'commseq_uuid': commseqUuid,
+        'commseq_step_uuid': commseqStepUuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/waiting/{commseq_step_uuid}', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
