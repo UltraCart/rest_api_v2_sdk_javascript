@@ -51,6 +51,26 @@
   }
 
   describe('StorefrontApi', function() {
+    describe('addToLibrary', function() {
+      it('should call addToLibrary successfully', function(done) {
+        //uncomment below and update the code to test addToLibrary
+        //instance.addToLibrary(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('applyToStoreFront', function() {
+      it('should call applyToStoreFront successfully', function(done) {
+        //uncomment below and update the code to test applyToStoreFront
+        //instance.applyToStoreFront(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('archiveEmailList', function() {
       it('should call archiveEmailList successfully', function(done) {
         //uncomment below and update the code to test archiveEmailList

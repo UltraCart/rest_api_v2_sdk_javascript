@@ -63,6 +63,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property commseqStepUuids (base name: "commseq_step_uuids")', function() {
+      // uncomment below and update the code to test the property commseqStepUuids
+      //var instane = new UltraCartRestApiV2.EmailStatSummaryRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property days (base name: "days")', function() {
       // uncomment below and update the code to test the property days
       //var instane = new UltraCartRestApiV2.EmailStatSummaryRequest();

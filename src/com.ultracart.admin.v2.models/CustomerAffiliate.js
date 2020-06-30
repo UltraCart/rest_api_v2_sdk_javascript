@@ -37,7 +37,7 @@
   /**
    * The CustomerAffiliate model module.
    * @module com.ultracart.admin.v2.models/CustomerAffiliate
-   * @version 2.4.117
+   * @version 2.4.118
    */
 
   /**

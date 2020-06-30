@@ -37,7 +37,7 @@
   /**
    * The EmailStatSummaryRequest model module.
    * @module com.ultracart.admin.v2.models/EmailStatSummaryRequest
-   * @version 2.4.117
+   * @version 2.4.118
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -66,6 +67,9 @@
       if (data.hasOwnProperty('commseq_email_uuids')) {
         obj['commseq_email_uuids'] = ApiClient.convertToType(data['commseq_email_uuids'], ['String']);
       }
+      if (data.hasOwnProperty('commseq_step_uuids')) {
+        obj['commseq_step_uuids'] = ApiClient.convertToType(data['commseq_step_uuids'], ['String']);
+      }
       if (data.hasOwnProperty('days')) {
         obj['days'] = ApiClient.convertToType(data['days'], 'Number');
       }
@@ -77,6 +81,10 @@
    * @member {Array.<String>} commseq_email_uuids
    */
   exports.prototype['commseq_email_uuids'] = undefined;
+  /**
+   * @member {Array.<String>} commseq_step_uuids
+   */
+  exports.prototype['commseq_step_uuids'] = undefined;
   /**
    * @member {Number} days
    */
