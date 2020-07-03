@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **stat_type** | **String** | Campaign, Flow or None (for anything else) | [optional] 
 **status** | **String** | Status of campaign or flow | [optional] 
 **status_dts** | **String** | Status dts of campaign or flow | [optional] 
+**step_uuid** | **String** | Step UUID if the statistics are at the step/email level | [optional] 
 **steps** | [**[EmailStat]**](EmailStat.md) |  | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
 **unsubscribe_count** | **Number** | Count of emails classified as unsubscribe | [optional] 

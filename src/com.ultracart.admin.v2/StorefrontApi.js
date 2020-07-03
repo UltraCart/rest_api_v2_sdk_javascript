@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 2.4.118
+   * @version 2.4.119
    */
 
   /**
@@ -2028,19 +2028,31 @@
     /**
      * Get email email clicks
      * @param {String} storefrontOid null
+     * @param {String} commseqUuid null
+     * @param {String} commseqStepUuid null
      * @param {String} commseqEmailUuid null
      * @param {Object} opts Optional parameters
      * @param {Number} opts.days null
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailClicksCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailClicksResponse}
      */
-    this.getEmailEmailClicks = function(storefrontOid, commseqEmailUuid, opts, callback) {
+    this.getEmailEmailClicks = function(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'storefrontOid' is set
       if (storefrontOid === undefined || storefrontOid === null) {
         throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmailClicks");
+      }
+
+      // verify the required parameter 'commseqUuid' is set
+      if (commseqUuid === undefined || commseqUuid === null) {
+        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailEmailClicks");
+      }
+
+      // verify the required parameter 'commseqStepUuid' is set
+      if (commseqStepUuid === undefined || commseqStepUuid === null) {
+        throw new Error("Missing the required parameter 'commseqStepUuid' when calling getEmailEmailClicks");
       }
 
       // verify the required parameter 'commseqEmailUuid' is set
@@ -2051,6 +2063,8 @@
 
       var pathParams = {
         'storefront_oid': storefrontOid,
+        'commseq_uuid': commseqUuid,
+        'commseq_step_uuid': commseqStepUuid,
         'commseq_email_uuid': commseqEmailUuid
       };
       var queryParams = {
@@ -2069,7 +2083,7 @@
       var returnType = EmailClicksResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/clicks', 'GET',
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/emails/{commseq_email_uuid}/clicks', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2147,19 +2161,31 @@
     /**
      * Get email email orders
      * @param {String} storefrontOid null
+     * @param {String} commseqUuid null
+     * @param {String} commseqStepUuid null
      * @param {String} commseqEmailUuid null
      * @param {Object} opts Optional parameters
      * @param {Number} opts.days null
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailOrdersResponse}
      */
-    this.getEmailEmailOrders = function(storefrontOid, commseqEmailUuid, opts, callback) {
+    this.getEmailEmailOrders = function(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'storefrontOid' is set
       if (storefrontOid === undefined || storefrontOid === null) {
         throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmailOrders");
+      }
+
+      // verify the required parameter 'commseqUuid' is set
+      if (commseqUuid === undefined || commseqUuid === null) {
+        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailEmailOrders");
+      }
+
+      // verify the required parameter 'commseqStepUuid' is set
+      if (commseqStepUuid === undefined || commseqStepUuid === null) {
+        throw new Error("Missing the required parameter 'commseqStepUuid' when calling getEmailEmailOrders");
       }
 
       // verify the required parameter 'commseqEmailUuid' is set
@@ -2170,6 +2196,8 @@
 
       var pathParams = {
         'storefront_oid': storefrontOid,
+        'commseq_uuid': commseqUuid,
+        'commseq_step_uuid': commseqStepUuid,
         'commseq_email_uuid': commseqEmailUuid
       };
       var queryParams = {
@@ -2188,7 +2216,7 @@
       var returnType = EmailOrdersResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/orders', 'GET',
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/emails/{commseq_email_uuid}/orders', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

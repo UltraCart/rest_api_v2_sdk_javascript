@@ -41,9 +41,9 @@ Method | HTTP request | Description
 [**getEmailDashboardActivity**](StorefrontApi.md#getEmailDashboardActivity) | **GET** /storefront/{storefront_oid}/email/dashboard_activity | Get email dashboard activity
 [**getEmailDashboardStats**](StorefrontApi.md#getEmailDashboardStats) | **GET** /storefront/{storefront_oid}/email/dashboard_stats | Get dashboard stats
 [**getEmailEmail**](StorefrontApi.md#getEmailEmail) | **GET** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid} | Get email email
-[**getEmailEmailClicks**](StorefrontApi.md#getEmailEmailClicks) | **GET** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/clicks | Get email email clicks
+[**getEmailEmailClicks**](StorefrontApi.md#getEmailEmailClicks) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/emails/{commseq_email_uuid}/clicks | Get email email clicks
 [**getEmailEmailCustomerEditorUrl**](StorefrontApi.md#getEmailEmailCustomerEditorUrl) | **GET** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/orders/{order_id}/editor_url | Get email order customer editor url
-[**getEmailEmailOrders**](StorefrontApi.md#getEmailEmailOrders) | **GET** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/orders | Get email email orders
+[**getEmailEmailOrders**](StorefrontApi.md#getEmailEmailOrders) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/emails/{commseq_email_uuid}/orders | Get email email orders
 [**getEmailEmails**](StorefrontApi.md#getEmailEmails) | **GET** /storefront/{storefront_oid}/email/emails | Get email emails
 [**getEmailEmailsMultiple**](StorefrontApi.md#getEmailEmailsMultiple) | **POST** /storefront/{storefront_oid}/email/emails/multiple | Get email emails multiple
 [**getEmailFlow**](StorefrontApi.md#getEmailFlow) | **GET** /storefront/{storefront_oid}/email/flows/{email_flow_uuid} | Get email flow
@@ -2491,7 +2491,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmailClicks"></a>
 # **getEmailEmailClicks**
-> EmailClicksResponse getEmailEmailClicks(storefrontOid, commseqEmailUuid, opts)
+> EmailClicksResponse getEmailEmailClicks(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts)
 
 Get email email clicks
 
@@ -2520,6 +2520,10 @@ var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
 var storefrontOid = "storefrontOid_example"; // String | null
 
+var commseqUuid = "commseqUuid_example"; // String | null
+
+var commseqStepUuid = "commseqStepUuid_example"; // String | null
+
 var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
 
 var opts = { 
@@ -2533,7 +2537,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmailClicks(storefrontOid, commseqEmailUuid, opts, callback);
+apiInstance.getEmailEmailClicks(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback);
 ```
 
 ### Parameters
@@ -2541,6 +2545,8 @@ apiInstance.getEmailEmailClicks(storefrontOid, commseqEmailUuid, opts, callback)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefrontOid** | **String**| null | 
+ **commseqUuid** | **String**| null | 
+ **commseqStepUuid** | **String**| null | 
  **commseqEmailUuid** | **String**| null | 
  **days** | **Number**| null | [optional] 
 
@@ -2626,7 +2632,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmailOrders"></a>
 # **getEmailEmailOrders**
-> EmailOrdersResponse getEmailEmailOrders(storefrontOid, commseqEmailUuid, opts)
+> EmailOrdersResponse getEmailEmailOrders(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts)
 
 Get email email orders
 
@@ -2655,6 +2661,10 @@ var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
 var storefrontOid = "storefrontOid_example"; // String | null
 
+var commseqUuid = "commseqUuid_example"; // String | null
+
+var commseqStepUuid = "commseqStepUuid_example"; // String | null
+
 var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
 
 var opts = { 
@@ -2668,7 +2678,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmailOrders(storefrontOid, commseqEmailUuid, opts, callback);
+apiInstance.getEmailEmailOrders(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback);
 ```
 
 ### Parameters
@@ -2676,6 +2686,8 @@ apiInstance.getEmailEmailOrders(storefrontOid, commseqEmailUuid, opts, callback)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefrontOid** | **String**| null | 
+ **commseqUuid** | **String**| null | 
+ **commseqStepUuid** | **String**| null | 
  **commseqEmailUuid** | **String**| null | 
  **days** | **Number**| null | [optional] 
 

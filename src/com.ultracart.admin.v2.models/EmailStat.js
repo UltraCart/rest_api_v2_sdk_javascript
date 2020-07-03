@@ -37,7 +37,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 2.4.118
+   * @version 2.4.119
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -187,6 +188,9 @@
       }
       if (data.hasOwnProperty('status_dts')) {
         obj['status_dts'] = ApiClient.convertToType(data['status_dts'], 'String');
+      }
+      if (data.hasOwnProperty('step_uuid')) {
+        obj['step_uuid'] = ApiClient.convertToType(data['step_uuid'], 'String');
       }
       if (data.hasOwnProperty('steps')) {
         obj['steps'] = ApiClient.convertToType(data['steps'], [EmailStat]);
@@ -363,6 +367,11 @@
    * @member {String} status_dts
    */
   exports.prototype['status_dts'] = undefined;
+  /**
+   * Step UUID if the statistics are at the step/email level
+   * @member {String} step_uuid
+   */
+  exports.prototype['step_uuid'] = undefined;
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/EmailStat>} steps
    */
