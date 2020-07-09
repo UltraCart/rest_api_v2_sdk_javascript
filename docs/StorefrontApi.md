@@ -5472,7 +5472,8 @@ var opts = {
   'category': "category_example", // String | null
   'matches': "matches_example", // String | null
   'storefrontOid': "storefrontOid_example", // String | null
-  'maxHits': 56 // Number | null
+  'maxHits': 56, // Number | null
+  'subcategory': "subcategory_example" // String | null
 };
 
 var callback = function(error, data, response) {
@@ -5493,6 +5494,7 @@ Name | Type | Description  | Notes
  **matches** | **String**| null | [optional] 
  **storefrontOid** | **String**| null | [optional] 
  **maxHits** | **Number**| null | [optional] 
+ **subcategory** | **String**| null | [optional] 
 
 ### Return type
 
