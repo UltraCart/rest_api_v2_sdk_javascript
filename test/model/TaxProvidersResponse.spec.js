@@ -81,6 +81,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sovos (base name: "sovos")', function() {
+      // uncomment below and update the code to test the property sovos
+      //var instane = new UltraCartRestApiV2.TaxProvidersResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property success (base name: "success")', function() {
       // uncomment below and update the code to test the property success
       //var instane = new UltraCartRestApiV2.TaxProvidersResponse();

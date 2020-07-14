@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/TaxCity', 'com.ultracart.admin.v2.models/TaxCountry', 'com.ultracart.admin.v2.models/TaxCounty', 'com.ultracart.admin.v2.models/TaxPostalCode', 'com.ultracart.admin.v2.models/TaxProviderActivateResult', 'com.ultracart.admin.v2.models/TaxProviderAvalara', 'com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult', 'com.ultracart.admin.v2.models/TaxProviderSelf', 'com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse', 'com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse', 'com.ultracart.admin.v2.models/TaxProviderTaxJar', 'com.ultracart.admin.v2.models/TaxProviderTestResult', 'com.ultracart.admin.v2.models/TaxProviderUltraCart', 'com.ultracart.admin.v2.models/TaxProvidersResponse', 'com.ultracart.admin.v2.models/TaxState'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/TaxCity', 'com.ultracart.admin.v2.models/TaxCountry', 'com.ultracart.admin.v2.models/TaxCounty', 'com.ultracart.admin.v2.models/TaxPostalCode', 'com.ultracart.admin.v2.models/TaxProviderActivateResult', 'com.ultracart.admin.v2.models/TaxProviderAvalara', 'com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult', 'com.ultracart.admin.v2.models/TaxProviderSelf', 'com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse', 'com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse', 'com.ultracart.admin.v2.models/TaxProviderSovos', 'com.ultracart.admin.v2.models/TaxProviderTaxJar', 'com.ultracart.admin.v2.models/TaxProviderTestResult', 'com.ultracart.admin.v2.models/TaxProviderUltraCart', 'com.ultracart.admin.v2.models/TaxProvidersResponse', 'com.ultracart.admin.v2.models/TaxState'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/TaxCity'), require('../com.ultracart.admin.v2.models/TaxCountry'), require('../com.ultracart.admin.v2.models/TaxCounty'), require('../com.ultracart.admin.v2.models/TaxPostalCode'), require('../com.ultracart.admin.v2.models/TaxProviderActivateResult'), require('../com.ultracart.admin.v2.models/TaxProviderAvalara'), require('../com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult'), require('../com.ultracart.admin.v2.models/TaxProviderSelf'), require('../com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse'), require('../com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse'), require('../com.ultracart.admin.v2.models/TaxProviderTaxJar'), require('../com.ultracart.admin.v2.models/TaxProviderTestResult'), require('../com.ultracart.admin.v2.models/TaxProviderUltraCart'), require('../com.ultracart.admin.v2.models/TaxProvidersResponse'), require('../com.ultracart.admin.v2.models/TaxState'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/TaxCity'), require('../com.ultracart.admin.v2.models/TaxCountry'), require('../com.ultracart.admin.v2.models/TaxCounty'), require('../com.ultracart.admin.v2.models/TaxPostalCode'), require('../com.ultracart.admin.v2.models/TaxProviderActivateResult'), require('../com.ultracart.admin.v2.models/TaxProviderAvalara'), require('../com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult'), require('../com.ultracart.admin.v2.models/TaxProviderSelf'), require('../com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse'), require('../com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse'), require('../com.ultracart.admin.v2.models/TaxProviderSovos'), require('../com.ultracart.admin.v2.models/TaxProviderTaxJar'), require('../com.ultracart.admin.v2.models/TaxProviderTestResult'), require('../com.ultracart.admin.v2.models/TaxProviderUltraCart'), require('../com.ultracart.admin.v2.models/TaxProvidersResponse'), require('../com.ultracart.admin.v2.models/TaxState'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.TaxApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.TaxCity, root.UltraCartRestApiV2.TaxCountry, root.UltraCartRestApiV2.TaxCounty, root.UltraCartRestApiV2.TaxPostalCode, root.UltraCartRestApiV2.TaxProviderActivateResult, root.UltraCartRestApiV2.TaxProviderAvalara, root.UltraCartRestApiV2.TaxProviderAvalaraCompaniesResult, root.UltraCartRestApiV2.TaxProviderSelf, root.UltraCartRestApiV2.TaxProviderSelfCountriesResponse, root.UltraCartRestApiV2.TaxProviderSelfRegionsResponse, root.UltraCartRestApiV2.TaxProviderTaxJar, root.UltraCartRestApiV2.TaxProviderTestResult, root.UltraCartRestApiV2.TaxProviderUltraCart, root.UltraCartRestApiV2.TaxProvidersResponse, root.UltraCartRestApiV2.TaxState);
+    root.UltraCartRestApiV2.TaxApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.TaxCity, root.UltraCartRestApiV2.TaxCountry, root.UltraCartRestApiV2.TaxCounty, root.UltraCartRestApiV2.TaxPostalCode, root.UltraCartRestApiV2.TaxProviderActivateResult, root.UltraCartRestApiV2.TaxProviderAvalara, root.UltraCartRestApiV2.TaxProviderAvalaraCompaniesResult, root.UltraCartRestApiV2.TaxProviderSelf, root.UltraCartRestApiV2.TaxProviderSelfCountriesResponse, root.UltraCartRestApiV2.TaxProviderSelfRegionsResponse, root.UltraCartRestApiV2.TaxProviderSovos, root.UltraCartRestApiV2.TaxProviderTaxJar, root.UltraCartRestApiV2.TaxProviderTestResult, root.UltraCartRestApiV2.TaxProviderUltraCart, root.UltraCartRestApiV2.TaxProvidersResponse, root.UltraCartRestApiV2.TaxState);
   }
-}(this, function(ApiClient, ErrorResponse, TaxCity, TaxCountry, TaxCounty, TaxPostalCode, TaxProviderActivateResult, TaxProviderAvalara, TaxProviderAvalaraCompaniesResult, TaxProviderSelf, TaxProviderSelfCountriesResponse, TaxProviderSelfRegionsResponse, TaxProviderTaxJar, TaxProviderTestResult, TaxProviderUltraCart, TaxProvidersResponse, TaxState) {
+}(this, function(ApiClient, ErrorResponse, TaxCity, TaxCountry, TaxCounty, TaxPostalCode, TaxProviderActivateResult, TaxProviderAvalara, TaxProviderAvalaraCompaniesResult, TaxProviderSelf, TaxProviderSelfCountriesResponse, TaxProviderSelfRegionsResponse, TaxProviderSovos, TaxProviderTaxJar, TaxProviderTestResult, TaxProviderUltraCart, TaxProvidersResponse, TaxState) {
   'use strict';
 
   /**
    * Tax service.
    * @module com.ultracart.admin.v2/TaxApi
-   * @version 2.4.120
+   * @version 2.4.121
    */
 
   /**
@@ -567,6 +567,88 @@
 
       return this.apiClient.callApi(
         '/tax/providers/self/regions/{countryCode}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTaxProviderSovos operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderSovosCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderSovos} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the Sovos tax provider
+     * Retrieves the Sovos tax provider. 
+     * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderSovosCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderSovos}
+     */
+    this.getTaxProviderSovos = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TaxProviderSovos;
+
+      return this.apiClient.callApi(
+        '/tax/providers/sovos', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTaxProviderSovosTest operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderSovosTestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderTestResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Attempts to connect to Sovos and returns back the response
+     * Attempts to connect to Sovos and returns back the response. 
+     * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderSovosTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderTestResult}
+     */
+    this.getTaxProviderSovosTest = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TaxProviderTestResult;
+
+      return this.apiClient.callApi(
+        '/tax/providers/sovos/test', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

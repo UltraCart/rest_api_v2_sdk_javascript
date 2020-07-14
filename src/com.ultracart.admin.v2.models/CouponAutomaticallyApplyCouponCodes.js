@@ -37,7 +37,7 @@
   /**
    * The CouponAutomaticallyApplyCouponCodes model module.
    * @module com.ultracart.admin.v2.models/CouponAutomaticallyApplyCouponCodes
-   * @version 2.4.120
+   * @version 2.4.121
    */
 
   /**

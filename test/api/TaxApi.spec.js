@@ -161,6 +161,26 @@
         done();
       });
     });
+    describe('getTaxProviderSovos', function() {
+      it('should call getTaxProviderSovos successfully', function(done) {
+        //uncomment below and update the code to test getTaxProviderSovos
+        //instance.getTaxProviderSovos(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getTaxProviderSovosTest', function() {
+      it('should call getTaxProviderSovosTest successfully', function(done) {
+        //uncomment below and update the code to test getTaxProviderSovosTest
+        //instance.getTaxProviderSovosTest(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTaxProviderTaxJar', function() {
       it('should call getTaxProviderTaxJar successfully', function(done) {
         //uncomment below and update the code to test getTaxProviderTaxJar

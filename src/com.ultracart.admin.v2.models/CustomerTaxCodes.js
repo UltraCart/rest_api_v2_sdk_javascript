@@ -37,7 +37,7 @@
   /**
    * The CustomerTaxCodes model module.
    * @module com.ultracart.admin.v2.models/CustomerTaxCodes
-   * @version 2.4.120
+   * @version 2.4.121
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -70,6 +71,9 @@
       if (data.hasOwnProperty('avalara_entity_use_code')) {
         obj['avalara_entity_use_code'] = ApiClient.convertToType(data['avalara_entity_use_code'], 'String');
       }
+      if (data.hasOwnProperty('sovos_customer_code')) {
+        obj['sovos_customer_code'] = ApiClient.convertToType(data['sovos_customer_code'], 'String');
+      }
       if (data.hasOwnProperty('taxjar_customer_id')) {
         obj['taxjar_customer_id'] = ApiClient.convertToType(data['taxjar_customer_id'], 'String');
       }
@@ -87,6 +91,11 @@
    * @member {String} avalara_entity_use_code
    */
   exports.prototype['avalara_entity_use_code'] = undefined;
+  /**
+   * Sovos customer code
+   * @member {String} sovos_customer_code
+   */
+  exports.prototype['sovos_customer_code'] = undefined;
   /**
    * TaxJar customer id
    * @member {String} taxjar_customer_id

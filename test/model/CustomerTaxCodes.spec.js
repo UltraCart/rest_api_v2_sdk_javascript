@@ -69,6 +69,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sovosCustomerCode (base name: "sovos_customer_code")', function() {
+      // uncomment below and update the code to test the property sovosCustomerCode
+      //var instane = new UltraCartRestApiV2.CustomerTaxCodes();
+      //expect(instance).to.be();
+    });
+
     it('should have the property taxjarCustomerId (base name: "taxjar_customer_id")', function() {
       // uncomment below and update the code to test the property taxjarCustomerId
       //var instane = new UltraCartRestApiV2.CustomerTaxCodes();
