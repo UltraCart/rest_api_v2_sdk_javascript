@@ -301,6 +301,16 @@
         done();
       });
     });
+    describe('updateTaxProviderSovos', function() {
+      it('should call updateTaxProviderSovos successfully', function(done) {
+        //uncomment below and update the code to test updateTaxProviderSovos
+        //instance.updateTaxProviderSovos(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('updateTaxProviderTaxJar', function() {
       it('should call updateTaxProviderTaxJar successfully', function(done) {
         //uncomment below and update the code to test updateTaxProviderTaxJar

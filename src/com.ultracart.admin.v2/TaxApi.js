@@ -34,7 +34,7 @@
   /**
    * Tax service.
    * @module com.ultracart.admin.v2/TaxApi
-   * @version 2.4.121
+   * @version 2.4.122
    */
 
   /**
@@ -1233,6 +1233,53 @@
 
       return this.apiClient.callApi(
         '/tax/providers/self/state/{stateCode}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateTaxProviderSovos operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSovosCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderSovos} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update the Sovos tax provider
+     * Update the Sovos tax provider. 
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderSovos} taxProviderSovos TaxProviderSovos object
+     * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSovosCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderSovos}
+     */
+    this.updateTaxProviderSovos = function(taxProviderSovos, callback) {
+      var postBody = taxProviderSovos;
+
+      // verify the required parameter 'taxProviderSovos' is set
+      if (taxProviderSovos === undefined || taxProviderSovos === null) {
+        throw new Error("Missing the required parameter 'taxProviderSovos' when calling updateTaxProviderSovos");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = TaxProviderSovos;
+
+      return this.apiClient.callApi(
+        '/tax/providers/sovos', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
