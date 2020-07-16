@@ -37,7 +37,7 @@
   /**
    * The CustomerQuery model module.
    * @module com.ultracart.admin.v2.models/CustomerQuery
-   * @version 2.4.122
+   * @version 2.4.123
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -88,6 +90,12 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('all_tags')) {
+        obj['all_tags'] = ApiClient.convertToType(data['all_tags'], ['String']);
+      }
+      if (data.hasOwnProperty('any_tags')) {
+        obj['any_tags'] = ApiClient.convertToType(data['any_tags'], ['String']);
+      }
       if (data.hasOwnProperty('billing_city')) {
         obj['billing_city'] = ApiClient.convertToType(data['billing_city'], 'String');
       }
@@ -173,6 +181,16 @@
     return obj;
   }
 
+  /**
+   * All tags the customer must have
+   * @member {Array.<String>} all_tags
+   */
+  exports.prototype['all_tags'] = undefined;
+  /**
+   * Any of these tags the customer must have
+   * @member {Array.<String>} any_tags
+   */
+  exports.prototype['any_tags'] = undefined;
   /**
    * Billing city
    * @member {String} billing_city

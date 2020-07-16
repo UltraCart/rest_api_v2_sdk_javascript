@@ -57,6 +57,18 @@
       //expect(instance).to.be.a(UltraCartRestApiV2.CustomerQuery);
     });
 
+    it('should have the property allTags (base name: "all_tags")', function() {
+      // uncomment below and update the code to test the property allTags
+      //var instane = new UltraCartRestApiV2.CustomerQuery();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property anyTags (base name: "any_tags")', function() {
+      // uncomment below and update the code to test the property anyTags
+      //var instane = new UltraCartRestApiV2.CustomerQuery();
+      //expect(instance).to.be();
+    });
+
     it('should have the property billingCity (base name: "billing_city")', function() {
       // uncomment below and update the code to test the property billingCity
       //var instane = new UltraCartRestApiV2.CustomerQuery();
