@@ -56,19 +56,19 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('all_time'))
-        obj.allTime = ApiClient.convertToType(data['all_time'], 'Number');
+        obj.all_time = ApiClient.convertToType(data['all_time'], 'Number');
       if (data.hasOwnProperty('all_time_formatted'))
-        obj.allTimeFormatted = ApiClient.convertToType(data['all_time_formatted'], 'String');
+        obj.all_time_formatted = ApiClient.convertToType(data['all_time_formatted'], 'String');
       if (data.hasOwnProperty('last_30'))
-        obj.last30 = ApiClient.convertToType(data['last_30'], 'Number');
+        obj.last_30 = ApiClient.convertToType(data['last_30'], 'Number');
       if (data.hasOwnProperty('last_30_formatted'))
-        obj.last30Formatted = ApiClient.convertToType(data['last_30_formatted'], 'String');
+        obj.last_30_formatted = ApiClient.convertToType(data['last_30_formatted'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('prior_30'))
-        obj.prior30 = ApiClient.convertToType(data['prior_30'], 'Number');
+        obj.prior_30 = ApiClient.convertToType(data['prior_30'], 'Number');
       if (data.hasOwnProperty('prior_30_formatted'))
-        obj.prior30Formatted = ApiClient.convertToType(data['prior_30_formatted'], 'String');
+        obj.prior_30_formatted = ApiClient.convertToType(data['prior_30_formatted'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
     }
@@ -76,24 +76,24 @@
   }
 
   /**
-   * @member {Number} allTime
+   * @member {Number} all_time
    */
-  exports.prototype.allTime = undefined;
+  exports.prototype.all_time = undefined;
 
   /**
-   * @member {String} allTimeFormatted
+   * @member {String} all_time_formatted
    */
-  exports.prototype.allTimeFormatted = undefined;
+  exports.prototype.all_time_formatted = undefined;
 
   /**
-   * @member {Number} last30
+   * @member {Number} last_30
    */
-  exports.prototype.last30 = undefined;
+  exports.prototype.last_30 = undefined;
 
   /**
-   * @member {String} last30Formatted
+   * @member {String} last_30_formatted
    */
-  exports.prototype.last30Formatted = undefined;
+  exports.prototype.last_30_formatted = undefined;
 
   /**
    * @member {String} name
@@ -101,14 +101,14 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {Number} prior30
+   * @member {Number} prior_30
    */
-  exports.prototype.prior30 = undefined;
+  exports.prototype.prior_30 = undefined;
 
   /**
-   * @member {String} prior30Formatted
+   * @member {String} prior_30_formatted
    */
-  exports.prototype.prior30Formatted = undefined;
+  exports.prototype.prior_30_formatted = undefined;
 
   /**
    * @member {String} type

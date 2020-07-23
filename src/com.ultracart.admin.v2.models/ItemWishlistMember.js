@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('wishlist_member_instance_description'))
-        obj.wishlistMemberInstanceDescription = ApiClient.convertToType(data['wishlist_member_instance_description'], 'String');
+        obj.wishlist_member_instance_description = ApiClient.convertToType(data['wishlist_member_instance_description'], 'String');
       if (data.hasOwnProperty('wishlist_member_instance_oid'))
-        obj.wishlistMemberInstanceOid = ApiClient.convertToType(data['wishlist_member_instance_oid'], 'Number');
+        obj.wishlist_member_instance_oid = ApiClient.convertToType(data['wishlist_member_instance_oid'], 'Number');
       if (data.hasOwnProperty('wishlist_member_sku'))
-        obj.wishlistMemberSku = ApiClient.convertToType(data['wishlist_member_sku'], 'String');
+        obj.wishlist_member_sku = ApiClient.convertToType(data['wishlist_member_sku'], 'String');
     }
     return obj;
   }
 
   /**
    * WishList Member instance description
-   * @member {String} wishlistMemberInstanceDescription
+   * @member {String} wishlist_member_instance_description
    */
-  exports.prototype.wishlistMemberInstanceDescription = undefined;
+  exports.prototype.wishlist_member_instance_description = undefined;
 
   /**
    * WishList Member instance object identifier
-   * @member {Number} wishlistMemberInstanceOid
+   * @member {Number} wishlist_member_instance_oid
    */
-  exports.prototype.wishlistMemberInstanceOid = undefined;
+  exports.prototype.wishlist_member_instance_oid = undefined;
 
   /**
    * WishList Member SKU
-   * @member {String} wishlistMemberSku
+   * @member {String} wishlist_member_sku
    */
-  exports.prototype.wishlistMemberSku = undefined;
+  exports.prototype.wishlist_member_sku = undefined;
 
   return exports;
 

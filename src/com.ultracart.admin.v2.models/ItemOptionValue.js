@@ -56,33 +56,33 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('additional_dimension_application'))
-        obj.additionalDimensionApplication = ApiClient.convertToType(data['additional_dimension_application'], 'String');
+        obj.additional_dimension_application = ApiClient.convertToType(data['additional_dimension_application'], 'String');
       if (data.hasOwnProperty('additional_items'))
-        obj.additionalItems = ApiClient.convertToType(data['additional_items'], [ItemOptionValueAdditionalItem]);
+        obj.additional_items = ApiClient.convertToType(data['additional_items'], [ItemOptionValueAdditionalItem]);
       if (data.hasOwnProperty('cost_change'))
-        obj.costChange = ApiClient.convertToType(data['cost_change'], 'Number');
+        obj.cost_change = ApiClient.convertToType(data['cost_change'], 'Number');
       if (data.hasOwnProperty('default_value'))
-        obj.defaultValue = ApiClient.convertToType(data['default_value'], 'Boolean');
+        obj.default_value = ApiClient.convertToType(data['default_value'], 'Boolean');
       if (data.hasOwnProperty('digital_items'))
-        obj.digitalItems = ApiClient.convertToType(data['digital_items'], [ItemOptionValueDigitalItem]);
+        obj.digital_items = ApiClient.convertToType(data['digital_items'], [ItemOptionValueDigitalItem]);
       if (data.hasOwnProperty('height'))
         obj.height = Distance.constructFromObject(data['height']);
       if (data.hasOwnProperty('length'))
         obj.length = Distance.constructFromObject(data['length']);
       if (data.hasOwnProperty('merchant_item_multimedia_oid'))
-        obj.merchantItemMultimediaOid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
+        obj.merchant_item_multimedia_oid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
       if (data.hasOwnProperty('option_value_oid'))
-        obj.optionValueOid = ApiClient.convertToType(data['option_value_oid'], 'Number');
+        obj.option_value_oid = ApiClient.convertToType(data['option_value_oid'], 'Number');
       if (data.hasOwnProperty('percent_cost_change'))
-        obj.percentCostChange = ApiClient.convertToType(data['percent_cost_change'], 'Number');
+        obj.percent_cost_change = ApiClient.convertToType(data['percent_cost_change'], 'Number');
       if (data.hasOwnProperty('translated_text_instance_oid'))
-        obj.translatedTextInstanceOid = ApiClient.convertToType(data['translated_text_instance_oid'], 'Number');
+        obj.translated_text_instance_oid = ApiClient.convertToType(data['translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'String');
       if (data.hasOwnProperty('weight_change'))
-        obj.weightChange = Weight.constructFromObject(data['weight_change']);
+        obj.weight_change = Weight.constructFromObject(data['weight_change']);
       if (data.hasOwnProperty('weight_change_percent'))
-        obj.weightChangePercent = ApiClient.convertToType(data['weight_change_percent'], 'Number');
+        obj.weight_change_percent = ApiClient.convertToType(data['weight_change_percent'], 'Number');
       if (data.hasOwnProperty('width'))
         obj.width = Distance.constructFromObject(data['width']);
     }
@@ -91,33 +91,33 @@
 
   /**
    * Additional dimensions application
-   * @member {module:com.ultracart.admin.v2.models/ItemOptionValue.AdditionalDimensionApplicationEnum} additionalDimensionApplication
+   * @member {module:com.ultracart.admin.v2.models/ItemOptionValue.AdditionalDimensionApplicationEnum} additional_dimension_application
    */
-  exports.prototype.additionalDimensionApplication = undefined;
+  exports.prototype.additional_dimension_application = undefined;
 
   /**
    * Additional items to add to the order if this value is selected
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemOptionValueAdditionalItem>} additionalItems
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemOptionValueAdditionalItem>} additional_items
    */
-  exports.prototype.additionalItems = undefined;
+  exports.prototype.additional_items = undefined;
 
   /**
    * Cost change
-   * @member {Number} costChange
+   * @member {Number} cost_change
    */
-  exports.prototype.costChange = undefined;
+  exports.prototype.cost_change = undefined;
 
   /**
    * True if default value
-   * @member {Boolean} defaultValue
+   * @member {Boolean} default_value
    */
-  exports.prototype.defaultValue = undefined;
+  exports.prototype.default_value = undefined;
 
   /**
    * Digital items to allow the customer to download if this option value is selected
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemOptionValueDigitalItem>} digitalItems
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemOptionValueDigitalItem>} digital_items
    */
-  exports.prototype.digitalItems = undefined;
+  exports.prototype.digital_items = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Distance} height
@@ -131,27 +131,27 @@
 
   /**
    * Multimedia object identifier associated with this option value
-   * @member {Number} merchantItemMultimediaOid
+   * @member {Number} merchant_item_multimedia_oid
    */
-  exports.prototype.merchantItemMultimediaOid = undefined;
+  exports.prototype.merchant_item_multimedia_oid = undefined;
 
   /**
    * Option value object identifier
-   * @member {Number} optionValueOid
+   * @member {Number} option_value_oid
    */
-  exports.prototype.optionValueOid = undefined;
+  exports.prototype.option_value_oid = undefined;
 
   /**
    * Percentage cost change
-   * @member {Number} percentCostChange
+   * @member {Number} percent_cost_change
    */
-  exports.prototype.percentCostChange = undefined;
+  exports.prototype.percent_cost_change = undefined;
 
   /**
    * Translated text instance id
-   * @member {Number} translatedTextInstanceOid
+   * @member {Number} translated_text_instance_oid
    */
-  exports.prototype.translatedTextInstanceOid = undefined;
+  exports.prototype.translated_text_instance_oid = undefined;
 
   /**
    * Value
@@ -160,15 +160,15 @@
   exports.prototype.value = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Weight} weightChange
+   * @member {module:com.ultracart.admin.v2.models/Weight} weight_change
    */
-  exports.prototype.weightChange = undefined;
+  exports.prototype.weight_change = undefined;
 
   /**
    * Percentage weight change
-   * @member {Number} weightChangePercent
+   * @member {Number} weight_change_percent
    */
-  exports.prototype.weightChangePercent = undefined;
+  exports.prototype.weight_change_percent = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Distance} width
@@ -177,7 +177,7 @@
 
 
   /**
-   * Allowed values for the <code>additionalDimensionApplication</code> property.
+   * Allowed values for the <code>additional_dimension_application</code> property.
    * @enum {String}
    * @readonly
    */
@@ -192,13 +192,13 @@
      * value: "set item to"
      * @const
      */
-    setItemTo: "set item to",
+    set_item_to: "set item to",
 
     /**
      * value: "add item"
      * @const
      */
-    addItem: "add item"
+    add_item: "add item"
   };
 
   return exports;

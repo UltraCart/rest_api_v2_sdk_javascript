@@ -56,63 +56,63 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('cc_email'))
-        obj.ccEmail = ApiClient.convertToType(data['cc_email'], 'String');
+        obj.cc_email = ApiClient.convertToType(data['cc_email'], 'String');
       if (data.hasOwnProperty('channel_partner_code'))
-        obj.channelPartnerCode = ApiClient.convertToType(data['channel_partner_code'], 'String');
+        obj.channel_partner_code = ApiClient.convertToType(data['channel_partner_code'], 'String');
       if (data.hasOwnProperty('channel_partner_order_id'))
-        obj.channelPartnerOrderId = ApiClient.convertToType(data['channel_partner_order_id'], 'String');
+        obj.channel_partner_order_id = ApiClient.convertToType(data['channel_partner_order_id'], 'String');
       if (data.hasOwnProperty('city'))
         obj.city = ApiClient.convertToType(data['city'], 'String');
       if (data.hasOwnProperty('company'))
         obj.company = ApiClient.convertToType(data['company'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('creation_date_begin'))
-        obj.creationDateBegin = ApiClient.convertToType(data['creation_date_begin'], 'String');
+        obj.creation_date_begin = ApiClient.convertToType(data['creation_date_begin'], 'String');
       if (data.hasOwnProperty('creation_date_end'))
-        obj.creationDateEnd = ApiClient.convertToType(data['creation_date_end'], 'String');
+        obj.creation_date_end = ApiClient.convertToType(data['creation_date_end'], 'String');
       if (data.hasOwnProperty('current_stage'))
-        obj.currentStage = ApiClient.convertToType(data['current_stage'], 'String');
+        obj.current_stage = ApiClient.convertToType(data['current_stage'], 'String');
       if (data.hasOwnProperty('customer_profile_oid'))
-        obj.customerProfileOid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('first_name'))
-        obj.firstName = ApiClient.convertToType(data['first_name'], 'String');
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('last_name'))
-        obj.lastName = ApiClient.convertToType(data['last_name'], 'String');
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('payment_date_begin'))
-        obj.paymentDateBegin = ApiClient.convertToType(data['payment_date_begin'], 'String');
+        obj.payment_date_begin = ApiClient.convertToType(data['payment_date_begin'], 'String');
       if (data.hasOwnProperty('payment_date_end'))
-        obj.paymentDateEnd = ApiClient.convertToType(data['payment_date_end'], 'String');
+        obj.payment_date_end = ApiClient.convertToType(data['payment_date_end'], 'String');
       if (data.hasOwnProperty('payment_method'))
-        obj.paymentMethod = ApiClient.convertToType(data['payment_method'], 'String');
+        obj.payment_method = ApiClient.convertToType(data['payment_method'], 'String');
       if (data.hasOwnProperty('phone'))
         obj.phone = ApiClient.convertToType(data['phone'], 'String');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('purchase_order_number'))
-        obj.purchaseOrderNumber = ApiClient.convertToType(data['purchase_order_number'], 'String');
+        obj.purchase_order_number = ApiClient.convertToType(data['purchase_order_number'], 'String');
       if (data.hasOwnProperty('refund_date_begin'))
-        obj.refundDateBegin = ApiClient.convertToType(data['refund_date_begin'], 'String');
+        obj.refund_date_begin = ApiClient.convertToType(data['refund_date_begin'], 'String');
       if (data.hasOwnProperty('refund_date_end'))
-        obj.refundDateEnd = ApiClient.convertToType(data['refund_date_end'], 'String');
+        obj.refund_date_end = ApiClient.convertToType(data['refund_date_end'], 'String');
       if (data.hasOwnProperty('rma'))
         obj.rma = ApiClient.convertToType(data['rma'], 'String');
       if (data.hasOwnProperty('screen_branding_theme_code'))
-        obj.screenBrandingThemeCode = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
+        obj.screen_branding_theme_code = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
       if (data.hasOwnProperty('shipment_date_begin'))
-        obj.shipmentDateBegin = ApiClient.convertToType(data['shipment_date_begin'], 'String');
+        obj.shipment_date_begin = ApiClient.convertToType(data['shipment_date_begin'], 'String');
       if (data.hasOwnProperty('shipment_date_end'))
-        obj.shipmentDateEnd = ApiClient.convertToType(data['shipment_date_end'], 'String');
+        obj.shipment_date_end = ApiClient.convertToType(data['shipment_date_end'], 'String');
       if (data.hasOwnProperty('state_region'))
-        obj.stateRegion = ApiClient.convertToType(data['state_region'], 'String');
+        obj.state_region = ApiClient.convertToType(data['state_region'], 'String');
       if (data.hasOwnProperty('storefront_host_name'))
-        obj.storefrontHostName = ApiClient.convertToType(data['storefront_host_name'], 'String');
+        obj.storefront_host_name = ApiClient.convertToType(data['storefront_host_name'], 'String');
       if (data.hasOwnProperty('total'))
         obj.total = ApiClient.convertToType(data['total'], 'Number');
     }
@@ -121,21 +121,21 @@
 
   /**
    * CC Email
-   * @member {String} ccEmail
+   * @member {String} cc_email
    */
-  exports.prototype.ccEmail = undefined;
+  exports.prototype.cc_email = undefined;
 
   /**
    * The code of the channel partner
-   * @member {String} channelPartnerCode
+   * @member {String} channel_partner_code
    */
-  exports.prototype.channelPartnerCode = undefined;
+  exports.prototype.channel_partner_code = undefined;
 
   /**
    * The order ID assigned by the channel partner for this order
-   * @member {String} channelPartnerOrderId
+   * @member {String} channel_partner_order_id
    */
-  exports.prototype.channelPartnerOrderId = undefined;
+  exports.prototype.channel_partner_order_id = undefined;
 
   /**
    * City
@@ -151,33 +151,33 @@
 
   /**
    * ISO-3166 two letter country code
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Date/time that the order was created
-   * @member {String} creationDateBegin
+   * @member {String} creation_date_begin
    */
-  exports.prototype.creationDateBegin = undefined;
+  exports.prototype.creation_date_begin = undefined;
 
   /**
    * Date/time that the order was created
-   * @member {String} creationDateEnd
+   * @member {String} creation_date_end
    */
-  exports.prototype.creationDateEnd = undefined;
+  exports.prototype.creation_date_end = undefined;
 
   /**
    * Current stage that the order is in.
-   * @member {module:com.ultracart.admin.v2.models/OrderQuery.CurrentStageEnum} currentStage
+   * @member {module:com.ultracart.admin.v2.models/OrderQuery.CurrentStageEnum} current_stage
    */
-  exports.prototype.currentStage = undefined;
+  exports.prototype.current_stage = undefined;
 
   /**
    * The customer profile to find associated orders for
-   * @member {Number} customerProfileOid
+   * @member {Number} customer_profile_oid
    */
-  exports.prototype.customerProfileOid = undefined;
+  exports.prototype.customer_profile_oid = undefined;
 
   /**
    * Email
@@ -187,45 +187,45 @@
 
   /**
    * First name
-   * @member {String} firstName
+   * @member {String} first_name
    */
-  exports.prototype.firstName = undefined;
+  exports.prototype.first_name = undefined;
 
   /**
    * Item ID
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * Last name
-   * @member {String} lastName
+   * @member {String} last_name
    */
-  exports.prototype.lastName = undefined;
+  exports.prototype.last_name = undefined;
 
   /**
    * Order ID
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * Date/time that the order was successfully processed
-   * @member {String} paymentDateBegin
+   * @member {String} payment_date_begin
    */
-  exports.prototype.paymentDateBegin = undefined;
+  exports.prototype.payment_date_begin = undefined;
 
   /**
    * Date/time that the order was successfully processed
-   * @member {String} paymentDateEnd
+   * @member {String} payment_date_end
    */
-  exports.prototype.paymentDateEnd = undefined;
+  exports.prototype.payment_date_end = undefined;
 
   /**
    * Payment method
-   * @member {module:com.ultracart.admin.v2.models/OrderQuery.PaymentMethodEnum} paymentMethod
+   * @member {module:com.ultracart.admin.v2.models/OrderQuery.PaymentMethodEnum} payment_method
    */
-  exports.prototype.paymentMethod = undefined;
+  exports.prototype.payment_method = undefined;
 
   /**
    * Phone
@@ -235,27 +235,27 @@
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * Purchase order number
-   * @member {String} purchaseOrderNumber
+   * @member {String} purchase_order_number
    */
-  exports.prototype.purchaseOrderNumber = undefined;
+  exports.prototype.purchase_order_number = undefined;
 
   /**
    * Date/time that the order was refunded
-   * @member {String} refundDateBegin
+   * @member {String} refund_date_begin
    */
-  exports.prototype.refundDateBegin = undefined;
+  exports.prototype.refund_date_begin = undefined;
 
   /**
    * Date/time that the order was refunded
-   * @member {String} refundDateEnd
+   * @member {String} refund_date_end
    */
-  exports.prototype.refundDateEnd = undefined;
+  exports.prototype.refund_date_end = undefined;
 
   /**
    * RMA number
@@ -265,33 +265,33 @@
 
   /**
    * Screen branding theme code associated with the order (legacy checkout)
-   * @member {String} screenBrandingThemeCode
+   * @member {String} screen_branding_theme_code
    */
-  exports.prototype.screenBrandingThemeCode = undefined;
+  exports.prototype.screen_branding_theme_code = undefined;
 
   /**
    * Date/time that the order was shipping
-   * @member {String} shipmentDateBegin
+   * @member {String} shipment_date_begin
    */
-  exports.prototype.shipmentDateBegin = undefined;
+  exports.prototype.shipment_date_begin = undefined;
 
   /**
    * Date/time that the order was shipped
-   * @member {String} shipmentDateEnd
+   * @member {String} shipment_date_end
    */
-  exports.prototype.shipmentDateEnd = undefined;
+  exports.prototype.shipment_date_end = undefined;
 
   /**
    * State for United States otherwise region or province for other countries
-   * @member {String} stateRegion
+   * @member {String} state_region
    */
-  exports.prototype.stateRegion = undefined;
+  exports.prototype.state_region = undefined;
 
   /**
    * StoreFront host name associated with the order
-   * @member {String} storefrontHostName
+   * @member {String} storefront_host_name
    */
-  exports.prototype.storefrontHostName = undefined;
+  exports.prototype.storefront_host_name = undefined;
 
   /**
    * Total
@@ -301,7 +301,7 @@
 
 
   /**
-   * Allowed values for the <code>currentStage</code> property.
+   * Allowed values for the <code>current_stage</code> property.
    * @enum {String}
    * @readonly
    */
@@ -310,66 +310,66 @@
      * value: "Accounts Receivable"
      * @const
      */
-    accountsReceivable: "Accounts Receivable",
+    Accounts_Receivable: "Accounts Receivable",
 
     /**
      * value: "Pending Clearance"
      * @const
      */
-    pendingClearance: "Pending Clearance",
+    Pending_Clearance: "Pending Clearance",
 
     /**
      * value: "Fraud Review"
      * @const
      */
-    fraudReview: "Fraud Review",
+    Fraud_Review: "Fraud Review",
 
     /**
      * value: "Rejected"
      * @const
      */
-    rejected: "Rejected",
+    Rejected: "Rejected",
 
     /**
      * value: "Shipping Department"
      * @const
      */
-    shippingDepartment: "Shipping Department",
+    Shipping_Department: "Shipping Department",
 
     /**
      * value: "Completed Order"
      * @const
      */
-    completedOrder: "Completed Order",
+    Completed_Order: "Completed Order",
 
     /**
      * value: "Quote Request"
      * @const
      */
-    quoteRequest: "Quote Request",
+    Quote_Request: "Quote Request",
 
     /**
      * value: "Quote Sent"
      * @const
      */
-    quoteSent: "Quote Sent",
+    Quote_Sent: "Quote Sent",
 
     /**
      * value: "Least Cost Routing"
      * @const
      */
-    leastCostRouting: "Least Cost Routing",
+    Least_Cost_Routing: "Least Cost Routing",
 
     /**
      * value: "Unknown"
      * @const
      */
-    unknown: "Unknown"
+    Unknown: "Unknown"
   };
 
 
   /**
-   * Allowed values for the <code>paymentMethod</code> property.
+   * Allowed values for the <code>payment_method</code> property.
    * @enum {String}
    * @readonly
    */
@@ -378,31 +378,31 @@
      * value: "Affirm"
      * @const
      */
-    affirm: "Affirm",
+    Affirm: "Affirm",
 
     /**
      * value: "Amazon"
      * @const
      */
-    amazon: "Amazon",
+    Amazon: "Amazon",
 
     /**
      * value: "Amazon SC"
      * @const
      */
-    amazonSC: "Amazon SC",
+    Amazon_SC: "Amazon SC",
 
     /**
      * value: "Cash"
      * @const
      */
-    cash: "Cash",
+    Cash: "Cash",
 
     /**
      * value: "Check"
      * @const
      */
-    check: "Check",
+    Check: "Check",
 
     /**
      * value: "COD"
@@ -414,7 +414,7 @@
      * value: "Credit Card"
      * @const
      */
-    creditCard: "Credit Card",
+    Credit_Card: "Credit Card",
 
     /**
      * value: "eCheck"
@@ -426,43 +426,43 @@
      * value: "LoanHero"
      * @const
      */
-    loanHero: "LoanHero",
+    LoanHero: "LoanHero",
 
     /**
      * value: "Money Order"
      * @const
      */
-    moneyOrder: "Money Order",
+    Money_Order: "Money Order",
 
     /**
      * value: "PayPal"
      * @const
      */
-    payPal: "PayPal",
+    PayPal: "PayPal",
 
     /**
      * value: "Purchase Order"
      * @const
      */
-    purchaseOrder: "Purchase Order",
+    Purchase_Order: "Purchase Order",
 
     /**
      * value: "Quote Request"
      * @const
      */
-    quoteRequest: "Quote Request",
+    Quote_Request: "Quote Request",
 
     /**
      * value: "Unknown"
      * @const
      */
-    unknown: "Unknown",
+    Unknown: "Unknown",
 
     /**
      * value: "Wire Transfer"
      * @const
      */
-    wireTransfer: "Wire Transfer"
+    Wire_Transfer: "Wire Transfer"
   };
 
   return exports;

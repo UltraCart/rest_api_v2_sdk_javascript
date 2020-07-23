@@ -58,25 +58,25 @@
       if (data.hasOwnProperty('comments'))
         obj.comments = ApiClient.convertToType(data['comments'], 'String');
       if (data.hasOwnProperty('custom_field1'))
-        obj.customField1 = ApiClient.convertToType(data['custom_field1'], 'String');
+        obj.custom_field1 = ApiClient.convertToType(data['custom_field1'], 'String');
       if (data.hasOwnProperty('custom_field2'))
-        obj.customField2 = ApiClient.convertToType(data['custom_field2'], 'String');
+        obj.custom_field2 = ApiClient.convertToType(data['custom_field2'], 'String');
       if (data.hasOwnProperty('custom_field3'))
-        obj.customField3 = ApiClient.convertToType(data['custom_field3'], 'String');
+        obj.custom_field3 = ApiClient.convertToType(data['custom_field3'], 'String');
       if (data.hasOwnProperty('custom_field4'))
-        obj.customField4 = ApiClient.convertToType(data['custom_field4'], 'String');
+        obj.custom_field4 = ApiClient.convertToType(data['custom_field4'], 'String');
       if (data.hasOwnProperty('custom_field5'))
-        obj.customField5 = ApiClient.convertToType(data['custom_field5'], 'String');
+        obj.custom_field5 = ApiClient.convertToType(data['custom_field5'], 'String');
       if (data.hasOwnProperty('custom_field6'))
-        obj.customField6 = ApiClient.convertToType(data['custom_field6'], 'String');
+        obj.custom_field6 = ApiClient.convertToType(data['custom_field6'], 'String');
       if (data.hasOwnProperty('custom_field7'))
-        obj.customField7 = ApiClient.convertToType(data['custom_field7'], 'String');
+        obj.custom_field7 = ApiClient.convertToType(data['custom_field7'], 'String');
       if (data.hasOwnProperty('ip_address'))
-        obj.ipAddress = ApiClient.convertToType(data['ip_address'], 'String');
+        obj.ip_address = ApiClient.convertToType(data['ip_address'], 'String');
       if (data.hasOwnProperty('return_code'))
-        obj.returnCode = ApiClient.convertToType(data['return_code'], 'String');
+        obj.return_code = ApiClient.convertToType(data['return_code'], 'String');
       if (data.hasOwnProperty('screen_branding_theme_code'))
-        obj.screenBrandingThemeCode = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
+        obj.screen_branding_theme_code = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
     }
     return obj;
   }
@@ -89,63 +89,63 @@
 
   /**
    * Custom field 1
-   * @member {String} customField1
+   * @member {String} custom_field1
    */
-  exports.prototype.customField1 = undefined;
+  exports.prototype.custom_field1 = undefined;
 
   /**
    * Custom field 2
-   * @member {String} customField2
+   * @member {String} custom_field2
    */
-  exports.prototype.customField2 = undefined;
+  exports.prototype.custom_field2 = undefined;
 
   /**
    * Custom field 3
-   * @member {String} customField3
+   * @member {String} custom_field3
    */
-  exports.prototype.customField3 = undefined;
+  exports.prototype.custom_field3 = undefined;
 
   /**
    * Custom field 4
-   * @member {String} customField4
+   * @member {String} custom_field4
    */
-  exports.prototype.customField4 = undefined;
+  exports.prototype.custom_field4 = undefined;
 
   /**
    * Custom field 5
-   * @member {String} customField5
+   * @member {String} custom_field5
    */
-  exports.prototype.customField5 = undefined;
+  exports.prototype.custom_field5 = undefined;
 
   /**
    * Custom field 6
-   * @member {String} customField6
+   * @member {String} custom_field6
    */
-  exports.prototype.customField6 = undefined;
+  exports.prototype.custom_field6 = undefined;
 
   /**
    * Custom field 7
-   * @member {String} customField7
+   * @member {String} custom_field7
    */
-  exports.prototype.customField7 = undefined;
+  exports.prototype.custom_field7 = undefined;
 
   /**
    * IP Address (read only unless non-browser key authenticated)
-   * @member {String} ipAddress
+   * @member {String} ip_address
    */
-  exports.prototype.ipAddress = undefined;
+  exports.prototype.ip_address = undefined;
 
   /**
    * Return code assigned for send return email operation
-   * @member {String} returnCode
+   * @member {String} return_code
    */
-  exports.prototype.returnCode = undefined;
+  exports.prototype.return_code = undefined;
 
   /**
    * Screen branding theme code
-   * @member {String} screenBrandingThemeCode
+   * @member {String} screen_branding_theme_code
    */
-  exports.prototype.screenBrandingThemeCode = undefined;
+  exports.prototype.screen_branding_theme_code = undefined;
 
   return exports;
 

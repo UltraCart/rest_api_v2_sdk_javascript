@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
-        obj.discountPercent = ApiClient.convertToType(data['discount_percent'], 'Number');
+        obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
       if (data.hasOwnProperty('excluded_items'))
-        obj.excludedItems = ApiClient.convertToType(data['excluded_items'], ['String']);
+        obj.excluded_items = ApiClient.convertToType(data['excluded_items'], ['String']);
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
     }
@@ -67,15 +67,15 @@
 
   /**
    * The percentage of subtotal discount
-   * @member {Number} discountPercent
+   * @member {Number} discount_percent
    */
-  exports.prototype.discountPercent = undefined;
+  exports.prototype.discount_percent = undefined;
 
   /**
    * A list of items which cannot be discounted.
-   * @member {Array.<String>} excludedItems
+   * @member {Array.<String>} excluded_items
    */
-  exports.prototype.excludedItems = undefined;
+  exports.prototype.excluded_items = undefined;
 
   /**
    * An optional list of items which will receive a discount.  If blank, discount applies to all items except excluded items.

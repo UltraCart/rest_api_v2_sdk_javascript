@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('email_names'))
-        obj.emailNames = ApiClient.convertToType(data['email_names'], ['String']);
+        obj.email_names = ApiClient.convertToType(data['email_names'], ['String']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,9 +68,9 @@
   }
 
   /**
-   * @member {Array.<String>} emailNames
+   * @member {Array.<String>} email_names
    */
-  exports.prototype.emailNames = undefined;
+  exports.prototype.email_names = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

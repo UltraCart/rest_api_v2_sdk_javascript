@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('developer_message'))
-        obj.developerMessage = ApiClient.convertToType(data['developer_message'], 'String');
+        obj.developer_message = ApiClient.convertToType(data['developer_message'], 'String');
       if (data.hasOwnProperty('error_code'))
-        obj.errorCode = ApiClient.convertToType(data['error_code'], 'String');
+        obj.error_code = ApiClient.convertToType(data['error_code'], 'String');
       if (data.hasOwnProperty('more_info'))
-        obj.moreInfo = ApiClient.convertToType(data['more_info'], 'String');
+        obj.more_info = ApiClient.convertToType(data['more_info'], 'String');
       if (data.hasOwnProperty('user_message'))
-        obj.userMessage = ApiClient.convertToType(data['user_message'], 'String');
+        obj.user_message = ApiClient.convertToType(data['user_message'], 'String');
     }
     return obj;
   }
 
   /**
    * A technical message meant to be read by a developer
-   * @member {String} developerMessage
+   * @member {String} developer_message
    */
-  exports.prototype.developerMessage = undefined;
+  exports.prototype.developer_message = undefined;
 
   /**
    * HTTP status code
-   * @member {String} errorCode
+   * @member {String} error_code
    */
-  exports.prototype.errorCode = undefined;
+  exports.prototype.error_code = undefined;
 
   /**
    * Additional information often a link to additional documentation
-   * @member {String} moreInfo
+   * @member {String} more_info
    */
-  exports.prototype.moreInfo = undefined;
+  exports.prototype.more_info = undefined;
 
   /**
    * An end-user friendly message suitable for display to the customer
-   * @member {String} userMessage
+   * @member {String} user_message
    */
-  exports.prototype.userMessage = undefined;
+  exports.prototype.user_message = undefined;
 
   return exports;
 

@@ -56,55 +56,55 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('bond_available'))
-        obj.bondAvailable = ApiClient.convertToType(data['bond_available'], 'Boolean');
+        obj.bond_available = ApiClient.convertToType(data['bond_available'], 'Boolean');
       if (data.hasOwnProperty('bond_cost'))
-        obj.bondCost = Currency.constructFromObject(data['bond_cost']);
+        obj.bond_cost = Currency.constructFromObject(data['bond_cost']);
       if (data.hasOwnProperty('bond_free'))
-        obj.bondFree = ApiClient.convertToType(data['bond_free'], 'Boolean');
+        obj.bond_free = ApiClient.convertToType(data['bond_free'], 'Boolean');
       if (data.hasOwnProperty('bond_wanted'))
-        obj.bondWanted = ApiClient.convertToType(data['bond_wanted'], 'Boolean');
+        obj.bond_wanted = ApiClient.convertToType(data['bond_wanted'], 'Boolean');
       if (data.hasOwnProperty('cart_display_text'))
-        obj.cartDisplayText = ApiClient.convertToType(data['cart_display_text'], 'String');
+        obj.cart_display_text = ApiClient.convertToType(data['cart_display_text'], 'String');
       if (data.hasOwnProperty('cart_display_url'))
-        obj.cartDisplayUrl = ApiClient.convertToType(data['cart_display_url'], 'String');
+        obj.cart_display_url = ApiClient.convertToType(data['cart_display_url'], 'String');
     }
     return obj;
   }
 
   /**
    * True if buySAFE is willing to bond the order
-   * @member {Boolean} bondAvailable
+   * @member {Boolean} bond_available
    */
-  exports.prototype.bondAvailable = undefined;
+  exports.prototype.bond_available = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} bondCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} bond_cost
    */
-  exports.prototype.bondCost = undefined;
+  exports.prototype.bond_cost = undefined;
 
   /**
    * True if the bond is free (merchant paying for it)
-   * @member {Boolean} bondFree
+   * @member {Boolean} bond_free
    */
-  exports.prototype.bondFree = undefined;
+  exports.prototype.bond_free = undefined;
 
   /**
    * True if the customer wants the bond
-   * @member {Boolean} bondWanted
+   * @member {Boolean} bond_wanted
    */
-  exports.prototype.bondWanted = undefined;
+  exports.prototype.bond_wanted = undefined;
 
   /**
    * Recommend text to display to the customer
-   * @member {String} cartDisplayText
+   * @member {String} cart_display_text
    */
-  exports.prototype.cartDisplayText = undefined;
+  exports.prototype.cart_display_text = undefined;
 
   /**
    * URL associated with the recommended text
-   * @member {String} cartDisplayUrl
+   * @member {String} cart_display_url
    */
-  exports.prototype.cartDisplayUrl = undefined;
+  exports.prototype.cart_display_url = undefined;
 
   return exports;
 

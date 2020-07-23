@@ -56,48 +56,48 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('fulfillment_fee'))
-        obj.fulfillmentFee = ApiClient.convertToType(data['fulfillment_fee'], 'Number');
+        obj.fulfillment_fee = ApiClient.convertToType(data['fulfillment_fee'], 'Number');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('package_cost'))
-        obj.packageCost = ApiClient.convertToType(data['package_cost'], 'Number');
+        obj.package_cost = ApiClient.convertToType(data['package_cost'], 'Number');
       if (data.hasOwnProperty('shipping_cost'))
-        obj.shippingCost = ApiClient.convertToType(data['shipping_cost'], 'Number');
+        obj.shipping_cost = ApiClient.convertToType(data['shipping_cost'], 'Number');
       if (data.hasOwnProperty('tracking_numbers'))
-        obj.trackingNumbers = ApiClient.convertToType(data['tracking_numbers'], ['String']);
+        obj.tracking_numbers = ApiClient.convertToType(data['tracking_numbers'], ['String']);
     }
     return obj;
   }
 
   /**
    * Fees charged by the fulfillment company other than the shipping cost to process the order.
-   * @member {Number} fulfillmentFee
+   * @member {Number} fulfillment_fee
    */
-  exports.prototype.fulfillmentFee = undefined;
+  exports.prototype.fulfillment_fee = undefined;
 
   /**
    * Order ID that was shipped
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * The cost of the packaging used to sent this shipment
-   * @member {Number} packageCost
+   * @member {Number} package_cost
    */
-  exports.prototype.packageCost = undefined;
+  exports.prototype.package_cost = undefined;
 
   /**
    * The actual total cost of shipping this order
-   * @member {Number} shippingCost
+   * @member {Number} shipping_cost
    */
-  exports.prototype.shippingCost = undefined;
+  exports.prototype.shipping_cost = undefined;
 
   /**
    * Tracking numbers associated with the shipment
-   * @member {Array.<String>} trackingNumbers
+   * @member {Array.<String>} tracking_numbers
    */
-  exports.prototype.trackingNumbers = undefined;
+  exports.prototype.tracking_numbers = undefined;
 
   return exports;
 

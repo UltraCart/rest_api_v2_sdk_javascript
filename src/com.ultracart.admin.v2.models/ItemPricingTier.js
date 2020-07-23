@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('default_tier'))
-        obj.defaultTier = ApiClient.convertToType(data['default_tier'], 'Boolean');
+        obj.default_tier = ApiClient.convertToType(data['default_tier'], 'Boolean');
       if (data.hasOwnProperty('discounts'))
         obj.discounts = ApiClient.convertToType(data['discounts'], [ItemPricingTierDiscount]);
       if (data.hasOwnProperty('limit'))
@@ -64,16 +64,16 @@
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('pricing_tier_oid'))
-        obj.pricingTierOid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
+        obj.pricing_tier_oid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
     }
     return obj;
   }
 
   /**
    * True if this is the default tier
-   * @member {Boolean} defaultTier
+   * @member {Boolean} default_tier
    */
-  exports.prototype.defaultTier = undefined;
+  exports.prototype.default_tier = undefined;
 
   /**
    * Discounts
@@ -94,9 +94,9 @@
 
   /**
    * Pricing tier object identifier
-   * @member {Number} pricingTierOid
+   * @member {Number} pricing_tier_oid
    */
-  exports.prototype.pricingTierOid = undefined;
+  exports.prototype.pricing_tier_oid = undefined;
 
   return exports;
 

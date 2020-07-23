@@ -56,29 +56,29 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_link_oid'))
-        obj.affiliateLinkOid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
+        obj.affiliate_link_oid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_managed_link_oid'))
-        obj.affiliateManagedLinkOid = ApiClient.convertToType(data['affiliate_managed_link_oid'], 'Number');
+        obj.affiliate_managed_link_oid = ApiClient.convertToType(data['affiliate_managed_link_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_program_item_oid'))
-        obj.affiliateProgramItemOid = ApiClient.convertToType(data['affiliate_program_item_oid'], 'Number');
+        obj.affiliate_program_item_oid = ApiClient.convertToType(data['affiliate_program_item_oid'], 'Number');
       if (data.hasOwnProperty('code'))
         obj.code = ApiClient.convertToType(data['code'], 'String');
       if (data.hasOwnProperty('creative_oid'))
-        obj.creativeOid = ApiClient.convertToType(data['creative_oid'], 'Number');
+        obj.creative_oid = ApiClient.convertToType(data['creative_oid'], 'Number');
       if (data.hasOwnProperty('custom_html'))
-        obj.customHtml = ApiClient.convertToType(data['custom_html'], 'String');
+        obj.custom_html = ApiClient.convertToType(data['custom_html'], 'String');
       if (data.hasOwnProperty('custom_html_approval_status'))
-        obj.customHtmlApprovalStatus = ApiClient.convertToType(data['custom_html_approval_status'], 'String');
+        obj.custom_html_approval_status = ApiClient.convertToType(data['custom_html_approval_status'], 'String');
       if (data.hasOwnProperty('custom_landing_url'))
-        obj.customLandingUrl = ApiClient.convertToType(data['custom_landing_url'], 'String');
+        obj.custom_landing_url = ApiClient.convertToType(data['custom_landing_url'], 'String');
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('invisible_link_approval_status'))
-        obj.invisibleLinkApprovalStatus = ApiClient.convertToType(data['invisible_link_approval_status'], 'String');
+        obj.invisible_link_approval_status = ApiClient.convertToType(data['invisible_link_approval_status'], 'String');
       if (data.hasOwnProperty('invisible_link_url_prefix'))
-        obj.invisibleLinkUrlPrefix = ApiClient.convertToType(data['invisible_link_url_prefix'], 'String');
+        obj.invisible_link_url_prefix = ApiClient.convertToType(data['invisible_link_url_prefix'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('type'))
@@ -89,27 +89,27 @@
 
   /**
    * Unique object identifier associated with this link
-   * @member {Number} affiliateLinkOid
+   * @member {Number} affiliate_link_oid
    */
-  exports.prototype.affiliateLinkOid = undefined;
+  exports.prototype.affiliate_link_oid = undefined;
 
   /**
    * Managed link OID that this link object was generated from
-   * @member {Number} affiliateManagedLinkOid
+   * @member {Number} affiliate_managed_link_oid
    */
-  exports.prototype.affiliateManagedLinkOid = undefined;
+  exports.prototype.affiliate_managed_link_oid = undefined;
 
   /**
    * Affiliate object ID associated with this link
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * The affiliate program item this managed link is associated with
-   * @member {Number} affiliateProgramItemOid
+   * @member {Number} affiliate_program_item_oid
    */
-  exports.prototype.affiliateProgramItemOid = undefined;
+  exports.prototype.affiliate_program_item_oid = undefined;
 
   /**
    * Code associated with the link
@@ -119,27 +119,27 @@
 
   /**
    * Creative (image or text) associated with this link
-   * @member {Number} creativeOid
+   * @member {Number} creative_oid
    */
-  exports.prototype.creativeOid = undefined;
+  exports.prototype.creative_oid = undefined;
 
   /**
    * Custom HTML associated with this link
-   * @member {String} customHtml
+   * @member {String} custom_html
    */
-  exports.prototype.customHtml = undefined;
+  exports.prototype.custom_html = undefined;
 
   /**
    * Approved status of the custom html
-   * @member {module:com.ultracart.admin.v2.models/AffiliateLink.CustomHtmlApprovalStatusEnum} customHtmlApprovalStatus
+   * @member {module:com.ultracart.admin.v2.models/AffiliateLink.CustomHtmlApprovalStatusEnum} custom_html_approval_status
    */
-  exports.prototype.customHtmlApprovalStatus = undefined;
+  exports.prototype.custom_html_approval_status = undefined;
 
   /**
    * Custom landing page URL if configured
-   * @member {String} customLandingUrl
+   * @member {String} custom_landing_url
    */
-  exports.prototype.customLandingUrl = undefined;
+  exports.prototype.custom_landing_url = undefined;
 
   /**
    * True if the link has been deleted
@@ -149,15 +149,15 @@
 
   /**
    * Invisible link approval status
-   * @member {module:com.ultracart.admin.v2.models/AffiliateLink.InvisibleLinkApprovalStatusEnum} invisibleLinkApprovalStatus
+   * @member {module:com.ultracart.admin.v2.models/AffiliateLink.InvisibleLinkApprovalStatusEnum} invisible_link_approval_status
    */
-  exports.prototype.invisibleLinkApprovalStatus = undefined;
+  exports.prototype.invisible_link_approval_status = undefined;
 
   /**
    * Invisible link URL prefix
-   * @member {String} invisibleLinkUrlPrefix
+   * @member {String} invisible_link_url_prefix
    */
-  exports.prototype.invisibleLinkUrlPrefix = undefined;
+  exports.prototype.invisible_link_url_prefix = undefined;
 
   /**
    * Name of the link
@@ -173,7 +173,7 @@
 
 
   /**
-   * Allowed values for the <code>customHtmlApprovalStatus</code> property.
+   * Allowed values for the <code>custom_html_approval_status</code> property.
    * @enum {String}
    * @readonly
    */
@@ -182,24 +182,24 @@
      * value: "Pending"
      * @const
      */
-    pending: "Pending",
+    Pending: "Pending",
 
     /**
      * value: "Approved"
      * @const
      */
-    approved: "Approved",
+    Approved: "Approved",
 
     /**
      * value: "Rejected"
      * @const
      */
-    rejected: "Rejected"
+    Rejected: "Rejected"
   };
 
 
   /**
-   * Allowed values for the <code>invisibleLinkApprovalStatus</code> property.
+   * Allowed values for the <code>invisible_link_approval_status</code> property.
    * @enum {String}
    * @readonly
    */
@@ -208,19 +208,19 @@
      * value: "Pending"
      * @const
      */
-    pending: "Pending",
+    Pending: "Pending",
 
     /**
      * value: "Approved"
      * @const
      */
-    approved: "Approved",
+    Approved: "Approved",
 
     /**
      * value: "Rejected"
      * @const
      */
-    rejected: "Rejected"
+    Rejected: "Rejected"
   };
 
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="oauthAccessToken"></a>
 # **oauthAccessToken**
-> OauthTokenResponse oauthAccessToken(clientId, grantType, opts)
+> OauthTokenResponse oauthAccessToken(client_id, grant_type, opts)
 
 Exchange authorization code for access token.
 
@@ -39,14 +39,14 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OauthApi();
 
-var clientId = "clientId_example"; // String | The OAuth application client_id.
+var client_id = "client_id_example"; // String | The OAuth application client_id.
 
-var grantType = "grantType_example"; // String | Type of grant
+var grant_type = "grant_type_example"; // String | Type of grant
 
 var opts = { 
   'code': "code_example", // String | Authorization code received back from the browser redirect
-  'redirectUri': "redirectUri_example", // String | The URI that you redirect the browser to to start the authorization process
-  'refreshToken': "refreshToken_example" // String | The refresh token received during the original grant_type=authorization_code that can be used to return a new access token
+  'redirect_uri': "redirect_uri_example", // String | The URI that you redirect the browser to to start the authorization process
+  'refresh_token': "refresh_token_example" // String | The refresh token received during the original grant_type=authorization_code that can be used to return a new access token
 };
 
 var callback = function(error, data, response) {
@@ -56,18 +56,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.oauthAccessToken(clientId, grantType, opts, callback);
+apiInstance.oauthAccessToken(client_id, grant_type, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| The OAuth application client_id. | 
- **grantType** | **String**| Type of grant | 
+ **client_id** | **String**| The OAuth application client_id. | 
+ **grant_type** | **String**| Type of grant | 
  **code** | **String**| Authorization code received back from the browser redirect | [optional] 
- **redirectUri** | **String**| The URI that you redirect the browser to to start the authorization process | [optional] 
- **refreshToken** | **String**| The refresh token received during the original grant_type=authorization_code that can be used to return a new access token | [optional] 
+ **redirect_uri** | **String**| The URI that you redirect the browser to to start the authorization process | [optional] 
+ **refresh_token** | **String**| The refresh token received during the original grant_type=authorization_code that can be used to return a new access token | [optional] 
 
 ### Return type
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 <a name="oauthRevoke"></a>
 # **oauthRevoke**
-> OauthRevokeSuccessResponse oauthRevoke(clientId, token)
+> OauthRevokeSuccessResponse oauthRevoke(client_id, token)
 
 Revoke this OAuth application.
 
@@ -113,7 +113,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OauthApi();
 
-var clientId = "clientId_example"; // String | The OAuth application client_id.
+var client_id = "client_id_example"; // String | The OAuth application client_id.
 
 var token = "token_example"; // String | The OAuth access token that is to be revoked..
 
@@ -125,14 +125,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.oauthRevoke(clientId, token, callback);
+apiInstance.oauthRevoke(client_id, token, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| The OAuth application client_id. | 
+ **client_id** | **String**| The OAuth application client_id. | 
  **token** | **String**| The OAuth access token that is to be revoked.. | 
 
 ### Return type

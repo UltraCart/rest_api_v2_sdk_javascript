@@ -56,21 +56,21 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('delivery_dts'))
-        obj.deliveryDts = ApiClient.convertToType(data['delivery_dts'], 'String');
+        obj.delivery_dts = ApiClient.convertToType(data['delivery_dts'], 'String');
       if (data.hasOwnProperty('duration'))
         obj.duration = ApiClient.convertToType(data['duration'], 'Number');
       if (data.hasOwnProperty('request'))
         obj.request = ApiClient.convertToType(data['request'], 'String');
       if (data.hasOwnProperty('request_headers'))
-        obj.requestHeaders = ApiClient.convertToType(data['request_headers'], [HTTPHeader]);
+        obj.request_headers = ApiClient.convertToType(data['request_headers'], [HTTPHeader]);
       if (data.hasOwnProperty('request_id'))
-        obj.requestId = ApiClient.convertToType(data['request_id'], 'String');
+        obj.request_id = ApiClient.convertToType(data['request_id'], 'String');
       if (data.hasOwnProperty('response'))
         obj.response = ApiClient.convertToType(data['response'], 'String');
       if (data.hasOwnProperty('response_headers'))
-        obj.responseHeaders = ApiClient.convertToType(data['response_headers'], [HTTPHeader]);
+        obj.response_headers = ApiClient.convertToType(data['response_headers'], [HTTPHeader]);
       if (data.hasOwnProperty('status_code'))
-        obj.statusCode = ApiClient.convertToType(data['status_code'], 'Number');
+        obj.status_code = ApiClient.convertToType(data['status_code'], 'Number');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('uri'))
@@ -81,9 +81,9 @@
 
   /**
    * Date/time of delivery
-   * @member {String} deliveryDts
+   * @member {String} delivery_dts
    */
-  exports.prototype.deliveryDts = undefined;
+  exports.prototype.delivery_dts = undefined;
 
   /**
    * Number of milliseconds to process the notification
@@ -99,15 +99,15 @@
 
   /**
    * Request headers sent to the server
-   * @member {Array.<module:com.ultracart.admin.v2.models/HTTPHeader>} requestHeaders
+   * @member {Array.<module:com.ultracart.admin.v2.models/HTTPHeader>} request_headers
    */
-  exports.prototype.requestHeaders = undefined;
+  exports.prototype.request_headers = undefined;
 
   /**
    * Request id is a unique string that you can look up in the logs
-   * @member {String} requestId
+   * @member {String} request_id
    */
-  exports.prototype.requestId = undefined;
+  exports.prototype.request_id = undefined;
 
   /**
    * Response payload (first 100,000 characters)
@@ -117,15 +117,15 @@
 
   /**
    * Response headers received from the server
-   * @member {Array.<module:com.ultracart.admin.v2.models/HTTPHeader>} responseHeaders
+   * @member {Array.<module:com.ultracart.admin.v2.models/HTTPHeader>} response_headers
    */
-  exports.prototype.responseHeaders = undefined;
+  exports.prototype.response_headers = undefined;
 
   /**
    * HTTP status code received from the server
-   * @member {Number} statusCode
+   * @member {Number} status_code
    */
-  exports.prototype.statusCode = undefined;
+  exports.prototype.status_code = undefined;
 
   /**
    * True if the delivery was successful

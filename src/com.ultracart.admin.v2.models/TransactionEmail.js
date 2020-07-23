@@ -58,21 +58,21 @@
       if (data.hasOwnProperty('content'))
         obj.content = ApiClient.convertToType(data['content'], 'String');
       if (data.hasOwnProperty('esp_domain_uuid'))
-        obj.espDomainUuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+        obj.esp_domain_uuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('esp_friendly_name'))
-        obj.espFriendlyName = ApiClient.convertToType(data['esp_friendly_name'], 'String');
+        obj.esp_friendly_name = ApiClient.convertToType(data['esp_friendly_name'], 'String');
       if (data.hasOwnProperty('esp_user'))
-        obj.espUser = ApiClient.convertToType(data['esp_user'], 'String');
+        obj.esp_user = ApiClient.convertToType(data['esp_user'], 'String');
       if (data.hasOwnProperty('file_exists'))
-        obj.fileExists = ApiClient.convertToType(data['file_exists'], 'Boolean');
+        obj.file_exists = ApiClient.convertToType(data['file_exists'], 'Boolean');
       if (data.hasOwnProperty('file_name'))
-        obj.fileName = ApiClient.convertToType(data['file_name'], 'String');
+        obj.file_name = ApiClient.convertToType(data['file_name'], 'String');
       if (data.hasOwnProperty('group'))
         obj.group = ApiClient.convertToType(data['group'], 'String');
       if (data.hasOwnProperty('invalid'))
         obj.invalid = ApiClient.convertToType(data['invalid'], 'Boolean');
       if (data.hasOwnProperty('last_modified'))
-        obj.lastModified = ApiClient.convertToType(data['last_modified'], 'String');
+        obj.last_modified = ApiClient.convertToType(data['last_modified'], 'String');
       if (data.hasOwnProperty('options'))
         obj.options = ApiClient.convertToType(data['options'], [TransactionEmailOption]);
       if (data.hasOwnProperty('path'))
@@ -80,17 +80,17 @@
       if (data.hasOwnProperty('size'))
         obj.size = ApiClient.convertToType(data['size'], 'String');
       if (data.hasOwnProperty('store_front_fs_directory_oid'))
-        obj.storeFrontFsDirectoryOid = ApiClient.convertToType(data['store_front_fs_directory_oid'], 'Number');
+        obj.store_front_fs_directory_oid = ApiClient.convertToType(data['store_front_fs_directory_oid'], 'Number');
       if (data.hasOwnProperty('store_front_fs_file_oid'))
-        obj.storeFrontFsFileOid = ApiClient.convertToType(data['store_front_fs_file_oid'], 'Number');
+        obj.store_front_fs_file_oid = ApiClient.convertToType(data['store_front_fs_file_oid'], 'Number');
       if (data.hasOwnProperty('subject'))
         obj.subject = ApiClient.convertToType(data['subject'], 'String');
       if (data.hasOwnProperty('syntax_errors'))
-        obj.syntaxErrors = ApiClient.convertToType(data['syntax_errors'], 'String');
+        obj.syntax_errors = ApiClient.convertToType(data['syntax_errors'], 'String');
       if (data.hasOwnProperty('template_path_relative_path'))
-        obj.templatePathRelativePath = ApiClient.convertToType(data['template_path_relative_path'], 'String');
+        obj.template_path_relative_path = ApiClient.convertToType(data['template_path_relative_path'], 'String');
       if (data.hasOwnProperty('theme_relative_path'))
-        obj.themeRelativePath = ApiClient.convertToType(data['theme_relative_path'], 'String');
+        obj.theme_relative_path = ApiClient.convertToType(data['theme_relative_path'], 'String');
     }
     return obj;
   }
@@ -103,33 +103,33 @@
 
   /**
    * The uuid of the sending domain
-   * @member {String} espDomainUuid
+   * @member {String} esp_domain_uuid
    */
-  exports.prototype.espDomainUuid = undefined;
+  exports.prototype.esp_domain_uuid = undefined;
 
   /**
    * Friendly from that will appear in customer email clients.
-   * @member {String} espFriendlyName
+   * @member {String} esp_friendly_name
    */
-  exports.prototype.espFriendlyName = undefined;
+  exports.prototype.esp_friendly_name = undefined;
 
   /**
    * The username of the sending email.  This is not the full email.  Only the username which is everything before the @ sign.
-   * @member {String} espUser
+   * @member {String} esp_user
    */
-  exports.prototype.espUser = undefined;
+  exports.prototype.esp_user = undefined;
 
   /**
    * An internal identifier used to aid in retrieving templates from the filesystem.
-   * @member {Boolean} fileExists
+   * @member {Boolean} file_exists
    */
-  exports.prototype.fileExists = undefined;
+  exports.prototype.file_exists = undefined;
 
   /**
    * File name
-   * @member {String} fileName
+   * @member {String} file_name
    */
-  exports.prototype.fileName = undefined;
+  exports.prototype.file_name = undefined;
 
   /**
    * Group
@@ -145,9 +145,9 @@
 
   /**
    * Last modified timestamp
-   * @member {String} lastModified
+   * @member {String} last_modified
    */
-  exports.prototype.lastModified = undefined;
+  exports.prototype.last_modified = undefined;
 
   /**
    * Options that help govern how and when this template is used
@@ -169,15 +169,15 @@
 
   /**
    * Internal identifier used to store and retrieve template from filesystem
-   * @member {Number} storeFrontFsDirectoryOid
+   * @member {Number} store_front_fs_directory_oid
    */
-  exports.prototype.storeFrontFsDirectoryOid = undefined;
+  exports.prototype.store_front_fs_directory_oid = undefined;
 
   /**
    * Internal identifier used to store and retrieve template from filesystem
-   * @member {Number} storeFrontFsFileOid
+   * @member {Number} store_front_fs_file_oid
    */
-  exports.prototype.storeFrontFsFileOid = undefined;
+  exports.prototype.store_front_fs_file_oid = undefined;
 
   /**
    * Subject
@@ -187,21 +187,21 @@
 
   /**
    * Any syntax errors contained within the tempalate
-   * @member {String} syntaxErrors
+   * @member {String} syntax_errors
    */
-  exports.prototype.syntaxErrors = undefined;
+  exports.prototype.syntax_errors = undefined;
 
   /**
    * Internal value used to locate the template in the filesystem
-   * @member {String} templatePathRelativePath
+   * @member {String} template_path_relative_path
    */
-  exports.prototype.templatePathRelativePath = undefined;
+  exports.prototype.template_path_relative_path = undefined;
 
   /**
    * Theme relative path in the filesystem.
-   * @member {String} themeRelativePath
+   * @member {String} theme_relative_path
    */
-  exports.prototype.themeRelativePath = undefined;
+  exports.prototype.theme_relative_path = undefined;
 
   return exports;
 

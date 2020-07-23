@@ -56,56 +56,56 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_link_oid'))
-        obj.affiliateLinkOid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
+        obj.affiliate_link_oid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('click_dts_begin'))
-        obj.clickDtsBegin = ApiClient.convertToType(data['click_dts_begin'], 'String');
+        obj.click_dts_begin = ApiClient.convertToType(data['click_dts_begin'], 'String');
       if (data.hasOwnProperty('click_dts_end'))
-        obj.clickDtsEnd = ApiClient.convertToType(data['click_dts_end'], 'String');
+        obj.click_dts_end = ApiClient.convertToType(data['click_dts_end'], 'String');
       if (data.hasOwnProperty('ip_address'))
-        obj.ipAddress = ApiClient.convertToType(data['ip_address'], 'String');
+        obj.ip_address = ApiClient.convertToType(data['ip_address'], 'String');
       if (data.hasOwnProperty('sub_id'))
-        obj.subId = ApiClient.convertToType(data['sub_id'], 'String');
+        obj.sub_id = ApiClient.convertToType(data['sub_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Unique object identifier for for the link that this click is associated with
-   * @member {Number} affiliateLinkOid
+   * @member {Number} affiliate_link_oid
    */
-  exports.prototype.affiliateLinkOid = undefined;
+  exports.prototype.affiliate_link_oid = undefined;
 
   /**
    * Affiliate ID associated with the click
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * Minimum click date/time to return
-   * @member {String} clickDtsBegin
+   * @member {String} click_dts_begin
    */
-  exports.prototype.clickDtsBegin = undefined;
+  exports.prototype.click_dts_begin = undefined;
 
   /**
    * Maximum click date/time to return
-   * @member {String} clickDtsEnd
+   * @member {String} click_dts_end
    */
-  exports.prototype.clickDtsEnd = undefined;
+  exports.prototype.click_dts_end = undefined;
 
   /**
    * IP address that generated the click
-   * @member {String} ipAddress
+   * @member {String} ip_address
    */
-  exports.prototype.ipAddress = undefined;
+  exports.prototype.ip_address = undefined;
 
   /**
    * Sub ID value passed on the click
-   * @member {String} subId
+   * @member {String} sub_id
    */
-  exports.prototype.subId = undefined;
+  exports.prototype.sub_id = undefined;
 
   return exports;
 

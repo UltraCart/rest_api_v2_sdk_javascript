@@ -56,35 +56,35 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('arbitrary_shipping_handling_total'))
-        obj.arbitraryShippingHandlingTotal = Currency.constructFromObject(data['arbitrary_shipping_handling_total']);
+        obj.arbitrary_shipping_handling_total = Currency.constructFromObject(data['arbitrary_shipping_handling_total']);
       if (data.hasOwnProperty('arbitrary_tax'))
-        obj.arbitraryTax = Currency.constructFromObject(data['arbitrary_tax']);
+        obj.arbitrary_tax = Currency.constructFromObject(data['arbitrary_tax']);
       if (data.hasOwnProperty('arbitrary_tax_rate'))
-        obj.arbitraryTaxRate = Currency.constructFromObject(data['arbitrary_tax_rate']);
+        obj.arbitrary_tax_rate = Currency.constructFromObject(data['arbitrary_tax_rate']);
       if (data.hasOwnProperty('arbitrary_taxable_subtotal'))
-        obj.arbitraryTaxableSubtotal = Currency.constructFromObject(data['arbitrary_taxable_subtotal']);
+        obj.arbitrary_taxable_subtotal = Currency.constructFromObject(data['arbitrary_taxable_subtotal']);
       if (data.hasOwnProperty('shipping_handling'))
-        obj.shippingHandling = Currency.constructFromObject(data['shipping_handling']);
+        obj.shipping_handling = Currency.constructFromObject(data['shipping_handling']);
       if (data.hasOwnProperty('shipping_handling_discount'))
-        obj.shippingHandlingDiscount = Currency.constructFromObject(data['shipping_handling_discount']);
+        obj.shipping_handling_discount = Currency.constructFromObject(data['shipping_handling_discount']);
       if (data.hasOwnProperty('shipping_handling_with_discount'))
-        obj.shippingHandlingWithDiscount = Currency.constructFromObject(data['shipping_handling_with_discount']);
+        obj.shipping_handling_with_discount = Currency.constructFromObject(data['shipping_handling_with_discount']);
       if (data.hasOwnProperty('subtotal'))
         obj.subtotal = Currency.constructFromObject(data['subtotal']);
       if (data.hasOwnProperty('subtotal_discount'))
-        obj.subtotalDiscount = Currency.constructFromObject(data['subtotal_discount']);
+        obj.subtotal_discount = Currency.constructFromObject(data['subtotal_discount']);
       if (data.hasOwnProperty('subtotal_with_discount'))
-        obj.subtotalWithDiscount = Currency.constructFromObject(data['subtotal_with_discount']);
+        obj.subtotal_with_discount = Currency.constructFromObject(data['subtotal_with_discount']);
       if (data.hasOwnProperty('surcharge'))
         obj.surcharge = Currency.constructFromObject(data['surcharge']);
       if (data.hasOwnProperty('tax'))
         obj.tax = Currency.constructFromObject(data['tax']);
       if (data.hasOwnProperty('taxable_subtotal'))
-        obj.taxableSubtotal = Currency.constructFromObject(data['taxable_subtotal']);
+        obj.taxable_subtotal = Currency.constructFromObject(data['taxable_subtotal']);
       if (data.hasOwnProperty('taxable_subtotal_discount'))
-        obj.taxableSubtotalDiscount = Currency.constructFromObject(data['taxable_subtotal_discount']);
+        obj.taxable_subtotal_discount = Currency.constructFromObject(data['taxable_subtotal_discount']);
       if (data.hasOwnProperty('taxable_subtotal_with_discount'))
-        obj.taxableSubtotalWithDiscount = Currency.constructFromObject(data['taxable_subtotal_with_discount']);
+        obj.taxable_subtotal_with_discount = Currency.constructFromObject(data['taxable_subtotal_with_discount']);
       if (data.hasOwnProperty('total'))
         obj.total = Currency.constructFromObject(data['total']);
     }
@@ -92,39 +92,39 @@
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} arbitraryShippingHandlingTotal
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_shipping_handling_total
    */
-  exports.prototype.arbitraryShippingHandlingTotal = undefined;
+  exports.prototype.arbitrary_shipping_handling_total = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} arbitraryTax
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_tax
    */
-  exports.prototype.arbitraryTax = undefined;
+  exports.prototype.arbitrary_tax = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} arbitraryTaxRate
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_tax_rate
    */
-  exports.prototype.arbitraryTaxRate = undefined;
+  exports.prototype.arbitrary_tax_rate = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} arbitraryTaxableSubtotal
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_taxable_subtotal
    */
-  exports.prototype.arbitraryTaxableSubtotal = undefined;
+  exports.prototype.arbitrary_taxable_subtotal = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} shippingHandling
+   * @member {module:com.ultracart.admin.v2.models/Currency} shipping_handling
    */
-  exports.prototype.shippingHandling = undefined;
+  exports.prototype.shipping_handling = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} shippingHandlingDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} shipping_handling_discount
    */
-  exports.prototype.shippingHandlingDiscount = undefined;
+  exports.prototype.shipping_handling_discount = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} shippingHandlingWithDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} shipping_handling_with_discount
    */
-  exports.prototype.shippingHandlingWithDiscount = undefined;
+  exports.prototype.shipping_handling_with_discount = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} subtotal
@@ -132,14 +132,14 @@
   exports.prototype.subtotal = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} subtotalDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} subtotal_discount
    */
-  exports.prototype.subtotalDiscount = undefined;
+  exports.prototype.subtotal_discount = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} subtotalWithDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} subtotal_with_discount
    */
-  exports.prototype.subtotalWithDiscount = undefined;
+  exports.prototype.subtotal_with_discount = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} surcharge
@@ -152,19 +152,19 @@
   exports.prototype.tax = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} taxableSubtotal
+   * @member {module:com.ultracart.admin.v2.models/Currency} taxable_subtotal
    */
-  exports.prototype.taxableSubtotal = undefined;
+  exports.prototype.taxable_subtotal = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} taxableSubtotalDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} taxable_subtotal_discount
    */
-  exports.prototype.taxableSubtotalDiscount = undefined;
+  exports.prototype.taxable_subtotal_discount = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} taxableSubtotalWithDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} taxable_subtotal_with_discount
    */
-  exports.prototype.taxableSubtotalWithDiscount = undefined;
+  exports.prototype.taxable_subtotal_with_discount = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} total

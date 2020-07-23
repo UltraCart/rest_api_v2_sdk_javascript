@@ -56,183 +56,183 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_3rd_party_billing'))
-        obj.allow3rdPartyBilling = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
+        obj.allow_3rd_party_billing = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
       if (data.hasOwnProperty('allow_cod'))
-        obj.allowCod = ApiClient.convertToType(data['allow_cod'], 'Boolean');
+        obj.allow_cod = ApiClient.convertToType(data['allow_cod'], 'Boolean');
       if (data.hasOwnProperty('allow_purchase_order'))
-        obj.allowPurchaseOrder = ApiClient.convertToType(data['allow_purchase_order'], 'Boolean');
+        obj.allow_purchase_order = ApiClient.convertToType(data['allow_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('allow_quote_request'))
-        obj.allowQuoteRequest = ApiClient.convertToType(data['allow_quote_request'], 'Boolean');
+        obj.allow_quote_request = ApiClient.convertToType(data['allow_quote_request'], 'Boolean');
       if (data.hasOwnProperty('approval_notification'))
-        obj.approvalNotification = PricingTierNotification.constructFromObject(data['approval_notification']);
+        obj.approval_notification = PricingTierNotification.constructFromObject(data['approval_notification']);
       if (data.hasOwnProperty('auto_approve_cod'))
-        obj.autoApproveCod = ApiClient.convertToType(data['auto_approve_cod'], 'Boolean');
+        obj.auto_approve_cod = ApiClient.convertToType(data['auto_approve_cod'], 'Boolean');
       if (data.hasOwnProperty('auto_approve_purchase_order'))
-        obj.autoApprovePurchaseOrder = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
+        obj.auto_approve_purchase_order = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('default_on_wholesale_signup'))
-        obj.defaultOnWholesaleSignup = ApiClient.convertToType(data['default_on_wholesale_signup'], 'Boolean');
+        obj.default_on_wholesale_signup = ApiClient.convertToType(data['default_on_wholesale_signup'], 'Boolean');
       if (data.hasOwnProperty('default_percentage_discount'))
-        obj.defaultPercentageDiscount = ApiClient.convertToType(data['default_percentage_discount'], 'Number');
+        obj.default_percentage_discount = ApiClient.convertToType(data['default_percentage_discount'], 'Number');
       if (data.hasOwnProperty('default_shipping_method_oid'))
-        obj.defaultShippingMethodOid = ApiClient.convertToType(data['default_shipping_method_oid'], 'Number');
+        obj.default_shipping_method_oid = ApiClient.convertToType(data['default_shipping_method_oid'], 'Number');
       if (data.hasOwnProperty('default_tier'))
-        obj.defaultTier = ApiClient.convertToType(data['default_tier'], 'Boolean');
+        obj.default_tier = ApiClient.convertToType(data['default_tier'], 'Boolean');
       if (data.hasOwnProperty('display_on_wholesale_signup'))
-        obj.displayOnWholesaleSignup = ApiClient.convertToType(data['display_on_wholesale_signup'], 'Boolean');
+        obj.display_on_wholesale_signup = ApiClient.convertToType(data['display_on_wholesale_signup'], 'Boolean');
       if (data.hasOwnProperty('exclude_from_free_promotion'))
-        obj.excludeFromFreePromotion = ApiClient.convertToType(data['exclude_from_free_promotion'], 'Boolean');
+        obj.exclude_from_free_promotion = ApiClient.convertToType(data['exclude_from_free_promotion'], 'Boolean');
       if (data.hasOwnProperty('exempt_shipping_handling_charge'))
-        obj.exemptShippingHandlingCharge = ApiClient.convertToType(data['exempt_shipping_handling_charge'], 'Boolean');
+        obj.exempt_shipping_handling_charge = ApiClient.convertToType(data['exempt_shipping_handling_charge'], 'Boolean');
       if (data.hasOwnProperty('free_shipping'))
-        obj.freeShipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
+        obj.free_shipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
       if (data.hasOwnProperty('free_shipping_minimum'))
-        obj.freeShippingMinimum = ApiClient.convertToType(data['free_shipping_minimum'], 'Number');
+        obj.free_shipping_minimum = ApiClient.convertToType(data['free_shipping_minimum'], 'Number');
       if (data.hasOwnProperty('maximum_item_count'))
-        obj.maximumItemCount = ApiClient.convertToType(data['maximum_item_count'], 'Number');
+        obj.maximum_item_count = ApiClient.convertToType(data['maximum_item_count'], 'Number');
       if (data.hasOwnProperty('minimum_item_count'))
-        obj.minimumItemCount = ApiClient.convertToType(data['minimum_item_count'], 'Number');
+        obj.minimum_item_count = ApiClient.convertToType(data['minimum_item_count'], 'Number');
       if (data.hasOwnProperty('minimum_subtotal'))
-        obj.minimumSubtotal = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
+        obj.minimum_subtotal = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('no_coupons'))
-        obj.noCoupons = ApiClient.convertToType(data['no_coupons'], 'Boolean');
+        obj.no_coupons = ApiClient.convertToType(data['no_coupons'], 'Boolean');
       if (data.hasOwnProperty('no_free_shipping'))
-        obj.noFreeShipping = ApiClient.convertToType(data['no_free_shipping'], 'Boolean');
+        obj.no_free_shipping = ApiClient.convertToType(data['no_free_shipping'], 'Boolean');
       if (data.hasOwnProperty('no_realtime_charge'))
-        obj.noRealtimeCharge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
+        obj.no_realtime_charge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
       if (data.hasOwnProperty('not_valid_when_coupon_present'))
-        obj.notValidWhenCouponPresent = ApiClient.convertToType(data['not_valid_when_coupon_present'], 'Boolean');
+        obj.not_valid_when_coupon_present = ApiClient.convertToType(data['not_valid_when_coupon_present'], 'Boolean');
       if (data.hasOwnProperty('pricing_tier_oid'))
-        obj.pricingTierOid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
+        obj.pricing_tier_oid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
       if (data.hasOwnProperty('realtime_percentage_discount'))
-        obj.realtimePercentageDiscount = ApiClient.convertToType(data['realtime_percentage_discount'], 'Number');
+        obj.realtime_percentage_discount = ApiClient.convertToType(data['realtime_percentage_discount'], 'Number');
       if (data.hasOwnProperty('signup_notification'))
-        obj.signupNotification = PricingTierNotification.constructFromObject(data['signup_notification']);
+        obj.signup_notification = PricingTierNotification.constructFromObject(data['signup_notification']);
       if (data.hasOwnProperty('suppress_buysafe'))
-        obj.suppressBuysafe = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
+        obj.suppress_buysafe = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
       if (data.hasOwnProperty('suppress_mailing_list'))
-        obj.suppressMailingList = ApiClient.convertToType(data['suppress_mailing_list'], 'Boolean');
+        obj.suppress_mailing_list = ApiClient.convertToType(data['suppress_mailing_list'], 'Boolean');
       if (data.hasOwnProperty('tax_exempt'))
-        obj.taxExempt = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
+        obj.tax_exempt = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
       if (data.hasOwnProperty('track_separately'))
-        obj.trackSeparately = ApiClient.convertToType(data['track_separately'], 'Boolean');
+        obj.track_separately = ApiClient.convertToType(data['track_separately'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Allow 3rd party billing
-   * @member {Boolean} allow3rdPartyBilling
+   * @member {Boolean} allow_3rd_party_billing
    */
-  exports.prototype.allow3rdPartyBilling = undefined;
+  exports.prototype.allow_3rd_party_billing = undefined;
 
   /**
    * Allow COD
-   * @member {Boolean} allowCod
+   * @member {Boolean} allow_cod
    */
-  exports.prototype.allowCod = undefined;
+  exports.prototype.allow_cod = undefined;
 
   /**
    * Allow purchase order
-   * @member {Boolean} allowPurchaseOrder
+   * @member {Boolean} allow_purchase_order
    */
-  exports.prototype.allowPurchaseOrder = undefined;
+  exports.prototype.allow_purchase_order = undefined;
 
   /**
    * Allow quote request
-   * @member {Boolean} allowQuoteRequest
+   * @member {Boolean} allow_quote_request
    */
-  exports.prototype.allowQuoteRequest = undefined;
+  exports.prototype.allow_quote_request = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PricingTierNotification} approvalNotification
+   * @member {module:com.ultracart.admin.v2.models/PricingTierNotification} approval_notification
    */
-  exports.prototype.approvalNotification = undefined;
+  exports.prototype.approval_notification = undefined;
 
   /**
    * Auto approve COD
-   * @member {Boolean} autoApproveCod
+   * @member {Boolean} auto_approve_cod
    */
-  exports.prototype.autoApproveCod = undefined;
+  exports.prototype.auto_approve_cod = undefined;
 
   /**
    * Auto approve purchase order
-   * @member {Boolean} autoApprovePurchaseOrder
+   * @member {Boolean} auto_approve_purchase_order
    */
-  exports.prototype.autoApprovePurchaseOrder = undefined;
+  exports.prototype.auto_approve_purchase_order = undefined;
 
   /**
    * Default on wholesale signup
-   * @member {Boolean} defaultOnWholesaleSignup
+   * @member {Boolean} default_on_wholesale_signup
    */
-  exports.prototype.defaultOnWholesaleSignup = undefined;
+  exports.prototype.default_on_wholesale_signup = undefined;
 
   /**
    * Default percentage discount
-   * @member {Number} defaultPercentageDiscount
+   * @member {Number} default_percentage_discount
    */
-  exports.prototype.defaultPercentageDiscount = undefined;
+  exports.prototype.default_percentage_discount = undefined;
 
   /**
    * Default shipping method oid
-   * @member {Number} defaultShippingMethodOid
+   * @member {Number} default_shipping_method_oid
    */
-  exports.prototype.defaultShippingMethodOid = undefined;
+  exports.prototype.default_shipping_method_oid = undefined;
 
   /**
    * Default tier
-   * @member {Boolean} defaultTier
+   * @member {Boolean} default_tier
    */
-  exports.prototype.defaultTier = undefined;
+  exports.prototype.default_tier = undefined;
 
   /**
    * Display on wholesale signup
-   * @member {Boolean} displayOnWholesaleSignup
+   * @member {Boolean} display_on_wholesale_signup
    */
-  exports.prototype.displayOnWholesaleSignup = undefined;
+  exports.prototype.display_on_wholesale_signup = undefined;
 
   /**
    * Exclude from free promotion
-   * @member {Boolean} excludeFromFreePromotion
+   * @member {Boolean} exclude_from_free_promotion
    */
-  exports.prototype.excludeFromFreePromotion = undefined;
+  exports.prototype.exclude_from_free_promotion = undefined;
 
   /**
    * Exempt shipping handling charge
-   * @member {Boolean} exemptShippingHandlingCharge
+   * @member {Boolean} exempt_shipping_handling_charge
    */
-  exports.prototype.exemptShippingHandlingCharge = undefined;
+  exports.prototype.exempt_shipping_handling_charge = undefined;
 
   /**
    * Free shipping
-   * @member {Boolean} freeShipping
+   * @member {Boolean} free_shipping
    */
-  exports.prototype.freeShipping = undefined;
+  exports.prototype.free_shipping = undefined;
 
   /**
    * Free shipping minimum
-   * @member {Number} freeShippingMinimum
+   * @member {Number} free_shipping_minimum
    */
-  exports.prototype.freeShippingMinimum = undefined;
+  exports.prototype.free_shipping_minimum = undefined;
 
   /**
    * Maximum item count
-   * @member {Number} maximumItemCount
+   * @member {Number} maximum_item_count
    */
-  exports.prototype.maximumItemCount = undefined;
+  exports.prototype.maximum_item_count = undefined;
 
   /**
    * Minimum item count
-   * @member {Number} minimumItemCount
+   * @member {Number} minimum_item_count
    */
-  exports.prototype.minimumItemCount = undefined;
+  exports.prototype.minimum_item_count = undefined;
 
   /**
    * Minimum subtotal
-   * @member {Number} minimumSubtotal
+   * @member {Number} minimum_subtotal
    */
-  exports.prototype.minimumSubtotal = undefined;
+  exports.prototype.minimum_subtotal = undefined;
 
   /**
    * Name
@@ -242,68 +242,68 @@
 
   /**
    * No coupons
-   * @member {Boolean} noCoupons
+   * @member {Boolean} no_coupons
    */
-  exports.prototype.noCoupons = undefined;
+  exports.prototype.no_coupons = undefined;
 
   /**
    * No free shipping
-   * @member {Boolean} noFreeShipping
+   * @member {Boolean} no_free_shipping
    */
-  exports.prototype.noFreeShipping = undefined;
+  exports.prototype.no_free_shipping = undefined;
 
   /**
    * No realtime charge
-   * @member {Boolean} noRealtimeCharge
+   * @member {Boolean} no_realtime_charge
    */
-  exports.prototype.noRealtimeCharge = undefined;
+  exports.prototype.no_realtime_charge = undefined;
 
   /**
    * Not valid when coupon present
-   * @member {Boolean} notValidWhenCouponPresent
+   * @member {Boolean} not_valid_when_coupon_present
    */
-  exports.prototype.notValidWhenCouponPresent = undefined;
+  exports.prototype.not_valid_when_coupon_present = undefined;
 
   /**
    * Pricing Tier Oid
-   * @member {Number} pricingTierOid
+   * @member {Number} pricing_tier_oid
    */
-  exports.prototype.pricingTierOid = undefined;
+  exports.prototype.pricing_tier_oid = undefined;
 
   /**
    * Realtime percentage discount
-   * @member {Number} realtimePercentageDiscount
+   * @member {Number} realtime_percentage_discount
    */
-  exports.prototype.realtimePercentageDiscount = undefined;
+  exports.prototype.realtime_percentage_discount = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PricingTierNotification} signupNotification
+   * @member {module:com.ultracart.admin.v2.models/PricingTierNotification} signup_notification
    */
-  exports.prototype.signupNotification = undefined;
+  exports.prototype.signup_notification = undefined;
 
   /**
    * Suppress buySAFE
-   * @member {Boolean} suppressBuysafe
+   * @member {Boolean} suppress_buysafe
    */
-  exports.prototype.suppressBuysafe = undefined;
+  exports.prototype.suppress_buysafe = undefined;
 
   /**
    * Suppress mailing list
-   * @member {Boolean} suppressMailingList
+   * @member {Boolean} suppress_mailing_list
    */
-  exports.prototype.suppressMailingList = undefined;
+  exports.prototype.suppress_mailing_list = undefined;
 
   /**
    * Tax Exempt
-   * @member {Boolean} taxExempt
+   * @member {Boolean} tax_exempt
    */
-  exports.prototype.taxExempt = undefined;
+  exports.prototype.tax_exempt = undefined;
 
   /**
    * Track separately
-   * @member {Boolean} trackSeparately
+   * @member {Boolean} track_separately
    */
-  exports.prototype.trackSeparately = undefined;
+  exports.prototype.track_separately = undefined;
 
   return exports;
 

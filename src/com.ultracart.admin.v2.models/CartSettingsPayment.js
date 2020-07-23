@@ -58,29 +58,29 @@
       if (data.hasOwnProperty('amazon'))
         obj.amazon = CartSettingsPaymentAmazon.constructFromObject(data['amazon']);
       if (data.hasOwnProperty('credit_card'))
-        obj.creditCard = CartSettingsPaymentCreditCard.constructFromObject(data['credit_card']);
+        obj.credit_card = CartSettingsPaymentCreditCard.constructFromObject(data['credit_card']);
       if (data.hasOwnProperty('need_payment'))
-        obj.needPayment = ApiClient.convertToType(data['need_payment'], 'Boolean');
+        obj.need_payment = ApiClient.convertToType(data['need_payment'], 'Boolean');
       if (data.hasOwnProperty('paypal'))
         obj.paypal = CartSettingsPaymentPayPal.constructFromObject(data['paypal']);
       if (data.hasOwnProperty('supports_amazon'))
-        obj.supportsAmazon = ApiClient.convertToType(data['supports_amazon'], 'Boolean');
+        obj.supports_amazon = ApiClient.convertToType(data['supports_amazon'], 'Boolean');
       if (data.hasOwnProperty('supports_check'))
-        obj.supportsCheck = ApiClient.convertToType(data['supports_check'], 'Boolean');
+        obj.supports_check = ApiClient.convertToType(data['supports_check'], 'Boolean');
       if (data.hasOwnProperty('supports_cod'))
-        obj.supportsCod = ApiClient.convertToType(data['supports_cod'], 'Boolean');
+        obj.supports_cod = ApiClient.convertToType(data['supports_cod'], 'Boolean');
       if (data.hasOwnProperty('supports_credit_card'))
-        obj.supportsCreditCard = ApiClient.convertToType(data['supports_credit_card'], 'Boolean');
+        obj.supports_credit_card = ApiClient.convertToType(data['supports_credit_card'], 'Boolean');
       if (data.hasOwnProperty('supports_money_order'))
-        obj.supportsMoneyOrder = ApiClient.convertToType(data['supports_money_order'], 'Boolean');
+        obj.supports_money_order = ApiClient.convertToType(data['supports_money_order'], 'Boolean');
       if (data.hasOwnProperty('supports_paypal'))
-        obj.supportsPaypal = ApiClient.convertToType(data['supports_paypal'], 'Boolean');
+        obj.supports_paypal = ApiClient.convertToType(data['supports_paypal'], 'Boolean');
       if (data.hasOwnProperty('supports_purchase_order'))
-        obj.supportsPurchaseOrder = ApiClient.convertToType(data['supports_purchase_order'], 'Boolean');
+        obj.supports_purchase_order = ApiClient.convertToType(data['supports_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('supports_quote_request'))
-        obj.supportsQuoteRequest = ApiClient.convertToType(data['supports_quote_request'], 'Boolean');
+        obj.supports_quote_request = ApiClient.convertToType(data['supports_quote_request'], 'Boolean');
       if (data.hasOwnProperty('supports_wire_transfer'))
-        obj.supportsWireTransfer = ApiClient.convertToType(data['supports_wire_transfer'], 'Boolean');
+        obj.supports_wire_transfer = ApiClient.convertToType(data['supports_wire_transfer'], 'Boolean');
     }
     return obj;
   }
@@ -91,15 +91,15 @@
   exports.prototype.amazon = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard} creditCard
+   * @member {module:com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard} credit_card
    */
-  exports.prototype.creditCard = undefined;
+  exports.prototype.credit_card = undefined;
 
   /**
    * True if this card requires a payment from the customer
-   * @member {Boolean} needPayment
+   * @member {Boolean} need_payment
    */
-  exports.prototype.needPayment = undefined;
+  exports.prototype.need_payment = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CartSettingsPaymentPayPal} paypal
@@ -108,57 +108,57 @@
 
   /**
    * True if Amazon payments are available on this order
-   * @member {Boolean} supportsAmazon
+   * @member {Boolean} supports_amazon
    */
-  exports.prototype.supportsAmazon = undefined;
+  exports.prototype.supports_amazon = undefined;
 
   /**
    * True if check payments are available on this order
-   * @member {Boolean} supportsCheck
+   * @member {Boolean} supports_check
    */
-  exports.prototype.supportsCheck = undefined;
+  exports.prototype.supports_check = undefined;
 
   /**
    * True if COD payments are available on this order
-   * @member {Boolean} supportsCod
+   * @member {Boolean} supports_cod
    */
-  exports.prototype.supportsCod = undefined;
+  exports.prototype.supports_cod = undefined;
 
   /**
    * True if credit card payments are available on this order
-   * @member {Boolean} supportsCreditCard
+   * @member {Boolean} supports_credit_card
    */
-  exports.prototype.supportsCreditCard = undefined;
+  exports.prototype.supports_credit_card = undefined;
 
   /**
    * True if money order payments are available on this order
-   * @member {Boolean} supportsMoneyOrder
+   * @member {Boolean} supports_money_order
    */
-  exports.prototype.supportsMoneyOrder = undefined;
+  exports.prototype.supports_money_order = undefined;
 
   /**
    * True if PayPal payments are available on this order
-   * @member {Boolean} supportsPaypal
+   * @member {Boolean} supports_paypal
    */
-  exports.prototype.supportsPaypal = undefined;
+  exports.prototype.supports_paypal = undefined;
 
   /**
    * True if purchase order payments are available on this order
-   * @member {Boolean} supportsPurchaseOrder
+   * @member {Boolean} supports_purchase_order
    */
-  exports.prototype.supportsPurchaseOrder = undefined;
+  exports.prototype.supports_purchase_order = undefined;
 
   /**
    * True if quote requests payments are available on this order
-   * @member {Boolean} supportsQuoteRequest
+   * @member {Boolean} supports_quote_request
    */
-  exports.prototype.supportsQuoteRequest = undefined;
+  exports.prototype.supports_quote_request = undefined;
 
   /**
    * True if wire transfer payments are available on this order
-   * @member {Boolean} supportsWireTransfer
+   * @member {Boolean} supports_wire_transfer
    */
-  exports.prototype.supportsWireTransfer = undefined;
+  exports.prototype.supports_wire_transfer = undefined;
 
   return exports;
 

@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('container_id'))
-        obj.containerId = ApiClient.convertToType(data['container_id'], 'String');
+        obj.container_id = ApiClient.convertToType(data['container_id'], 'String');
       if (data.hasOwnProperty('duration_days'))
-        obj.durationDays = ApiClient.convertToType(data['duration_days'], 'Number');
+        obj.duration_days = ApiClient.convertToType(data['duration_days'], 'Number');
       if (data.hasOwnProperty('end_dts'))
-        obj.endDts = ApiClient.convertToType(data['end_dts'], 'String');
+        obj.end_dts = ApiClient.convertToType(data['end_dts'], 'String');
       if (data.hasOwnProperty('equal_weighting'))
-        obj.equalWeighting = ApiClient.convertToType(data['equal_weighting'], 'Boolean');
+        obj.equal_weighting = ApiClient.convertToType(data['equal_weighting'], 'Boolean');
       if (data.hasOwnProperty('experiment_type'))
-        obj.experimentType = ApiClient.convertToType(data['experiment_type'], 'String');
+        obj.experiment_type = ApiClient.convertToType(data['experiment_type'], 'String');
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'String');
       if (data.hasOwnProperty('name'))
@@ -74,17 +74,17 @@
       if (data.hasOwnProperty('objective'))
         obj.objective = ApiClient.convertToType(data['objective'], 'String');
       if (data.hasOwnProperty('optimization_type'))
-        obj.optimizationType = ApiClient.convertToType(data['optimization_type'], 'String');
+        obj.optimization_type = ApiClient.convertToType(data['optimization_type'], 'String');
       if (data.hasOwnProperty('session_count'))
-        obj.sessionCount = ApiClient.convertToType(data['session_count'], 'Number');
+        obj.session_count = ApiClient.convertToType(data['session_count'], 'Number');
       if (data.hasOwnProperty('start_dts'))
-        obj.startDts = ApiClient.convertToType(data['start_dts'], 'String');
+        obj.start_dts = ApiClient.convertToType(data['start_dts'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('storefront_experiment_oid'))
-        obj.storefrontExperimentOid = ApiClient.convertToType(data['storefront_experiment_oid'], 'Number');
+        obj.storefront_experiment_oid = ApiClient.convertToType(data['storefront_experiment_oid'], 'Number');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('uri'))
         obj.uri = ApiClient.convertToType(data['uri'], 'String');
       if (data.hasOwnProperty('variations'))
@@ -95,33 +95,33 @@
 
   /**
    * Contained ID where the experiment element was located
-   * @member {String} containerId
+   * @member {String} container_id
    */
-  exports.prototype.containerId = undefined;
+  exports.prototype.container_id = undefined;
 
   /**
    * Duration in days
-   * @member {Number} durationDays
+   * @member {Number} duration_days
    */
-  exports.prototype.durationDays = undefined;
+  exports.prototype.duration_days = undefined;
 
   /**
    * End date/time
-   * @member {String} endDts
+   * @member {String} end_dts
    */
-  exports.prototype.endDts = undefined;
+  exports.prototype.end_dts = undefined;
 
   /**
    * Whether or not traffic is equally weighted or shifts over time during the experiment
-   * @member {Boolean} equalWeighting
+   * @member {Boolean} equal_weighting
    */
-  exports.prototype.equalWeighting = undefined;
+  exports.prototype.equal_weighting = undefined;
 
   /**
    * The type of experiment
-   * @member {String} experimentType
+   * @member {String} experiment_type
    */
-  exports.prototype.experimentType = undefined;
+  exports.prototype.experiment_type = undefined;
 
   /**
    * Experiment id
@@ -149,21 +149,21 @@
 
   /**
    * Type of optimization
-   * @member {String} optimizationType
+   * @member {String} optimization_type
    */
-  exports.prototype.optimizationType = undefined;
+  exports.prototype.optimization_type = undefined;
 
   /**
    * Total number of sessions in the experiment
-   * @member {Number} sessionCount
+   * @member {Number} session_count
    */
-  exports.prototype.sessionCount = undefined;
+  exports.prototype.session_count = undefined;
 
   /**
    * Start date/time
-   * @member {String} startDts
+   * @member {String} start_dts
    */
-  exports.prototype.startDts = undefined;
+  exports.prototype.start_dts = undefined;
 
   /**
    * Status of the experiment
@@ -173,15 +173,15 @@
 
   /**
    * Storefront Experiment Oid
-   * @member {Number} storefrontExperimentOid
+   * @member {Number} storefront_experiment_oid
    */
-  exports.prototype.storefrontExperimentOid = undefined;
+  exports.prototype.storefront_experiment_oid = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * URI the experiment was started on
@@ -206,19 +206,19 @@
      * value: "Running"
      * @const
      */
-    running: "Running",
+    Running: "Running",
 
     /**
      * value: "Ended"
      * @const
      */
-    ended: "Ended",
+    Ended: "Ended",
 
     /**
      * value: "Deleted"
      * @const
      */
-    deleted: "Deleted"
+    Deleted: "Deleted"
   };
 
   return exports;

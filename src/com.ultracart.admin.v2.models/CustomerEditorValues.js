@@ -58,17 +58,17 @@
       if (data.hasOwnProperty('affiliates'))
         obj.affiliates = ApiClient.convertToType(data['affiliates'], [CustomerAffiliate]);
       if (data.hasOwnProperty('card_exp_months'))
-        obj.cardExpMonths = ApiClient.convertToType(data['card_exp_months'], ['String']);
+        obj.card_exp_months = ApiClient.convertToType(data['card_exp_months'], ['String']);
       if (data.hasOwnProperty('card_exp_years'))
-        obj.cardExpYears = ApiClient.convertToType(data['card_exp_years'], ['String']);
+        obj.card_exp_years = ApiClient.convertToType(data['card_exp_years'], ['String']);
       if (data.hasOwnProperty('card_types'))
-        obj.cardTypes = ApiClient.convertToType(data['card_types'], ['String']);
+        obj.card_types = ApiClient.convertToType(data['card_types'], ['String']);
       if (data.hasOwnProperty('countries'))
         obj.countries = ApiClient.convertToType(data['countries'], [Country]);
       if (data.hasOwnProperty('qb_classes'))
-        obj.qbClasses = ApiClient.convertToType(data['qb_classes'], ['String']);
+        obj.qb_classes = ApiClient.convertToType(data['qb_classes'], ['String']);
       if (data.hasOwnProperty('sales_rep_codes'))
-        obj.salesRepCodes = ApiClient.convertToType(data['sales_rep_codes'], ['String']);
+        obj.sales_rep_codes = ApiClient.convertToType(data['sales_rep_codes'], ['String']);
       if (data.hasOwnProperty('terms'))
         obj.terms = ApiClient.convertToType(data['terms'], ['String']);
     }
@@ -83,21 +83,21 @@
 
   /**
    * card_exp_months
-   * @member {Array.<String>} cardExpMonths
+   * @member {Array.<String>} card_exp_months
    */
-  exports.prototype.cardExpMonths = undefined;
+  exports.prototype.card_exp_months = undefined;
 
   /**
    * card_exp_years
-   * @member {Array.<String>} cardExpYears
+   * @member {Array.<String>} card_exp_years
    */
-  exports.prototype.cardExpYears = undefined;
+  exports.prototype.card_exp_years = undefined;
 
   /**
    * card_types
-   * @member {Array.<String>} cardTypes
+   * @member {Array.<String>} card_types
    */
-  exports.prototype.cardTypes = undefined;
+  exports.prototype.card_types = undefined;
 
   /**
    * countries
@@ -107,15 +107,15 @@
 
   /**
    * qb_classes
-   * @member {Array.<String>} qbClasses
+   * @member {Array.<String>} qb_classes
    */
-  exports.prototype.qbClasses = undefined;
+  exports.prototype.qb_classes = undefined;
 
   /**
    * sales_rep_codes
-   * @member {Array.<String>} salesRepCodes
+   * @member {Array.<String>} sales_rep_codes
    */
-  exports.prototype.salesRepCodes = undefined;
+  exports.prototype.sales_rep_codes = undefined;
 
   /**
    * terms

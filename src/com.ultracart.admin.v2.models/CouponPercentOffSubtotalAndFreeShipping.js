@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
-        obj.discountPercent = ApiClient.convertToType(data['discount_percent'], 'Number');
+        obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
       if (data.hasOwnProperty('shipping_methods'))
-        obj.shippingMethods = ApiClient.convertToType(data['shipping_methods'], ['String']);
+        obj.shipping_methods = ApiClient.convertToType(data['shipping_methods'], ['String']);
     }
     return obj;
   }
 
   /**
    * The percentage of subtotal discount
-   * @member {Number} discountPercent
+   * @member {Number} discount_percent
    */
-  exports.prototype.discountPercent = undefined;
+  exports.prototype.discount_percent = undefined;
 
   /**
    * One or more shipping methods that may be free
-   * @member {Array.<String>} shippingMethods
+   * @member {Array.<String>} shipping_methods
    */
-  exports.prototype.shippingMethods = undefined;
+  exports.prototype.shipping_methods = undefined;
 
   return exports;
 

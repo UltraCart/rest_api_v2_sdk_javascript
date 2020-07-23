@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('dedicated_ip'))
-        obj.dedicatedIp = ApiClient.convertToType(data['dedicated_ip'], 'Boolean');
+        obj.dedicated_ip = ApiClient.convertToType(data['dedicated_ip'], 'Boolean');
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} dedicatedIp
+   * @member {Boolean} dedicated_ip
    */
-  exports.prototype.dedicatedIp = undefined;
+  exports.prototype.dedicated_ip = undefined;
 
   return exports;
 

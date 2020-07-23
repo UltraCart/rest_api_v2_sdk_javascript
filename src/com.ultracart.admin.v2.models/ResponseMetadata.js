@@ -56,23 +56,23 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('payload_name'))
-        obj.payloadName = ApiClient.convertToType(data['payload_name'], 'String');
+        obj.payload_name = ApiClient.convertToType(data['payload_name'], 'String');
       if (data.hasOwnProperty('result_set'))
-        obj.resultSet = ResultSet.constructFromObject(data['result_set']);
+        obj.result_set = ResultSet.constructFromObject(data['result_set']);
     }
     return obj;
   }
 
   /**
    * Payload name
-   * @member {String} payloadName
+   * @member {String} payload_name
    */
-  exports.prototype.payloadName = undefined;
+  exports.prototype.payload_name = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ResultSet} resultSet
+   * @member {module:com.ultracart.admin.v2.models/ResultSet} result_set
    */
-  exports.prototype.resultSet = undefined;
+  exports.prototype.result_set = undefined;
 
   return exports;
 

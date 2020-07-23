@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('expiration_seconds'))
-        obj.expirationSeconds = ApiClient.convertToType(data['expiration_seconds'], 'Number');
+        obj.expiration_seconds = ApiClient.convertToType(data['expiration_seconds'], 'Number');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('quantity'))
@@ -78,15 +78,15 @@
 
   /**
    * Expiration Date
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * Expiration seconds
-   * @member {Number} expirationSeconds
+   * @member {Number} expiration_seconds
    */
-  exports.prototype.expirationSeconds = undefined;
+  exports.prototype.expiration_seconds = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

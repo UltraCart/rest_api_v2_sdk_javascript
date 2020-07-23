@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('flat_fee'))
-        obj.flatFee = ApiClient.convertToType(data['flat_fee'], 'Number');
+        obj.flat_fee = ApiClient.convertToType(data['flat_fee'], 'Number');
       if (data.hasOwnProperty('per_item'))
-        obj.perItem = ApiClient.convertToType(data['per_item'], 'Number');
+        obj.per_item = ApiClient.convertToType(data['per_item'], 'Number');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('shipping_method'))
-        obj.shippingMethod = ApiClient.convertToType(data['shipping_method'], 'String');
+        obj.shipping_method = ApiClient.convertToType(data['shipping_method'], 'String');
       if (data.hasOwnProperty('state'))
         obj.state = ApiClient.convertToType(data['state'], 'String');
     }
@@ -73,33 +73,33 @@
 
   /**
    * Country code (ISO-3166 two letter)
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Flat fee
-   * @member {Number} flatFee
+   * @member {Number} flat_fee
    */
-  exports.prototype.flatFee = undefined;
+  exports.prototype.flat_fee = undefined;
 
   /**
    * Per item
-   * @member {Number} perItem
+   * @member {Number} per_item
    */
-  exports.prototype.perItem = undefined;
+  exports.prototype.per_item = undefined;
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * Shipping method
-   * @member {String} shippingMethod
+   * @member {String} shipping_method
    */
-  exports.prototype.shippingMethod = undefined;
+  exports.prototype.shipping_method = undefined;
 
   /**
    * State

@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
       if (data.hasOwnProperty('shipping_methods'))
-        obj.shippingMethods = ApiClient.convertToType(data['shipping_methods'], ['String']);
+        obj.shipping_methods = ApiClient.convertToType(data['shipping_methods'], ['String']);
     }
     return obj;
   }
@@ -71,9 +71,9 @@
 
   /**
    * One or more shipping methods that may receive this discount
-   * @member {Array.<String>} shippingMethods
+   * @member {Array.<String>} shipping_methods
    */
-  exports.prototype.shippingMethods = undefined;
+  exports.prototype.shipping_methods = undefined;
 
   return exports;
 

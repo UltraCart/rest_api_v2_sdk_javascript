@@ -56,19 +56,19 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('file_size'))
-        obj.fileSize = ApiClient.convertToType(data['file_size'], 'Number');
+        obj.file_size = ApiClient.convertToType(data['file_size'], 'Number');
       if (data.hasOwnProperty('last_download'))
-        obj.lastDownload = ApiClient.convertToType(data['last_download'], 'String');
+        obj.last_download = ApiClient.convertToType(data['last_download'], 'String');
       if (data.hasOwnProperty('last_download_ip_address'))
-        obj.lastDownloadIpAddress = ApiClient.convertToType(data['last_download_ip_address'], 'String');
+        obj.last_download_ip_address = ApiClient.convertToType(data['last_download_ip_address'], 'String');
       if (data.hasOwnProperty('original_filename'))
-        obj.originalFilename = ApiClient.convertToType(data['original_filename'], 'String');
+        obj.original_filename = ApiClient.convertToType(data['original_filename'], 'String');
       if (data.hasOwnProperty('product_code'))
-        obj.productCode = ApiClient.convertToType(data['product_code'], 'String');
+        obj.product_code = ApiClient.convertToType(data['product_code'], 'String');
       if (data.hasOwnProperty('product_description'))
-        obj.productDescription = ApiClient.convertToType(data['product_description'], 'String');
+        obj.product_description = ApiClient.convertToType(data['product_description'], 'String');
       if (data.hasOwnProperty('remaining_downloads'))
-        obj.remainingDownloads = ApiClient.convertToType(data['remaining_downloads'], 'Number');
+        obj.remaining_downloads = ApiClient.convertToType(data['remaining_downloads'], 'Number');
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
     }
@@ -77,45 +77,45 @@
 
   /**
    * File size
-   * @member {Number} fileSize
+   * @member {Number} file_size
    */
-  exports.prototype.fileSize = undefined;
+  exports.prototype.file_size = undefined;
 
   /**
    * Last download
-   * @member {String} lastDownload
+   * @member {String} last_download
    */
-  exports.prototype.lastDownload = undefined;
+  exports.prototype.last_download = undefined;
 
   /**
    * IP address that performed the last download
-   * @member {String} lastDownloadIpAddress
+   * @member {String} last_download_ip_address
    */
-  exports.prototype.lastDownloadIpAddress = undefined;
+  exports.prototype.last_download_ip_address = undefined;
 
   /**
    * Original file name
-   * @member {String} originalFilename
+   * @member {String} original_filename
    */
-  exports.prototype.originalFilename = undefined;
+  exports.prototype.original_filename = undefined;
 
   /**
    * Item id associated with this item
-   * @member {String} productCode
+   * @member {String} product_code
    */
-  exports.prototype.productCode = undefined;
+  exports.prototype.product_code = undefined;
 
   /**
    * Item description associated with this item
-   * @member {String} productDescription
+   * @member {String} product_description
    */
-  exports.prototype.productDescription = undefined;
+  exports.prototype.product_description = undefined;
 
   /**
    * Remaining number of downloads
-   * @member {Number} remainingDownloads
+   * @member {Number} remaining_downloads
    */
-  exports.prototype.remainingDownloads = undefined;
+  exports.prototype.remaining_downloads = undefined;
 
   /**
    * URL that the customer can click to download the specific digital item

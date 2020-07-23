@@ -216,9 +216,9 @@ var apiInstance = new UltraCartRestApiV2.WebhookApi();
 var webhookOid = 56; // Number | The webhook oid to retrieve log summaries for.
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call.
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'since': "since_example" // String | Fetch log summaries that have been delivered since this date/time.
+  '_limit': 100, // Number | The maximum number of records to return on this one API call.
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_since': "_since_example" // String | Fetch log summaries that have been delivered since this date/time.
 };
 
 var callback = function(error, data, response) {
@@ -236,9 +236,9 @@ apiInstance.getWebhookLogSummaries(webhookOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhookOid** | **Number**| The webhook oid to retrieve log summaries for. | 
- **limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **since** | **String**| Fetch log summaries that have been delivered since this date/time. | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_since** | **String**| Fetch log summaries that have been delivered since this date/time. | [optional] 
 
 ### Return type
 
@@ -279,10 +279,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.WebhookApi();
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call.
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'sort': "sort_example", // String | The sort order of the webhooks.  See documentation for examples
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_limit': 100, // Number | The maximum number of records to return on this one API call.
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example", // String | The sort order of the webhooks.  See documentation for examples
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -299,10 +299,10 @@ apiInstance.getWebhooks(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **sort** | **String**| The sort order of the webhooks.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the webhooks.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -345,7 +345,7 @@ var apiInstance = new UltraCartRestApiV2.WebhookApi();
 var webhook = new UltraCartRestApiV2.Webhook(); // Webhook | Webhook to create
 
 var opts = { 
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -363,7 +363,7 @@ apiInstance.insertWebhook(webhook, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook** | [**Webhook**](Webhook.md)| Webhook to create | 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -468,7 +468,7 @@ var webhook = new UltraCartRestApiV2.Webhook(); // Webhook | Webhook to update
 var webhookOid = 56; // Number | The webhook oid to update.
 
 var opts = { 
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook** | [**Webhook**](Webhook.md)| Webhook to update | 
  **webhookOid** | **Number**| The webhook oid to update. | 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 

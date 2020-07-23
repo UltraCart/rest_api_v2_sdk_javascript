@@ -56,36 +56,36 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('container_cjson'))
-        obj.containerCjson = ApiClient.convertToType(data['container_cjson'], 'String');
+        obj.container_cjson = ApiClient.convertToType(data['container_cjson'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('email_template_oid'))
-        obj.emailTemplateOid = ApiClient.convertToType(data['email_template_oid'], 'Number');
+        obj.email_template_oid = ApiClient.convertToType(data['email_template_oid'], 'Number');
       if (data.hasOwnProperty('email_template_vm_path'))
-        obj.emailTemplateVmPath = ApiClient.convertToType(data['email_template_vm_path'], 'String');
+        obj.email_template_vm_path = ApiClient.convertToType(data['email_template_vm_path'], 'String');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('preview_amazon_listing_key'))
-        obj.previewAmazonListingKey = ApiClient.convertToType(data['preview_amazon_listing_key'], 'String');
+        obj.preview_amazon_listing_key = ApiClient.convertToType(data['preview_amazon_listing_key'], 'String');
       if (data.hasOwnProperty('sort_order'))
-        obj.sortOrder = ApiClient.convertToType(data['sort_order'], 'Number');
+        obj.sort_order = ApiClient.convertToType(data['sort_order'], 'Number');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('system'))
         obj.system = ApiClient.convertToType(data['system'], 'Boolean');
       if (data.hasOwnProperty('trigger_type'))
-        obj.triggerType = ApiClient.convertToType(data['trigger_type'], 'String');
+        obj.trigger_type = ApiClient.convertToType(data['trigger_type'], 'String');
     }
     return obj;
   }
 
   /**
    * Container cjson
-   * @member {String} containerCjson
+   * @member {String} container_cjson
    */
-  exports.prototype.containerCjson = undefined;
+  exports.prototype.container_cjson = undefined;
 
   /**
    * Description of email template
@@ -95,21 +95,21 @@
 
   /**
    * Email template oid
-   * @member {Number} emailTemplateOid
+   * @member {Number} email_template_oid
    */
-  exports.prototype.emailTemplateOid = undefined;
+  exports.prototype.email_template_oid = undefined;
 
   /**
    * Email Template VM Path
-   * @member {String} emailTemplateVmPath
+   * @member {String} email_template_vm_path
    */
-  exports.prototype.emailTemplateVmPath = undefined;
+  exports.prototype.email_template_vm_path = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Name of email template
@@ -119,21 +119,21 @@
 
   /**
    * Amazon key for preview png image
-   * @member {String} previewAmazonListingKey
+   * @member {String} preview_amazon_listing_key
    */
-  exports.prototype.previewAmazonListingKey = undefined;
+  exports.prototype.preview_amazon_listing_key = undefined;
 
   /**
    * Sort order (optional)
-   * @member {Number} sortOrder
+   * @member {Number} sort_order
    */
-  exports.prototype.sortOrder = undefined;
+  exports.prototype.sort_order = undefined;
 
   /**
    * StoreFront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * True if this email template is system-wide,false if merchant specific
@@ -143,9 +143,9 @@
 
   /**
    * Trigger type
-   * @member {String} triggerType
+   * @member {String} trigger_type
    */
-  exports.prototype.triggerType = undefined;
+  exports.prototype.trigger_type = undefined;
 
   return exports;
 

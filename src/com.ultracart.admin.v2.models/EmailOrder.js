@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('order_dts'))
-        obj.orderDts = ApiClient.convertToType(data['order_dts'], 'String');
+        obj.order_dts = ApiClient.convertToType(data['order_dts'], 'String');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('total'))
         obj.total = Currency.constructFromObject(data['total']);
     }
@@ -75,15 +75,15 @@
 
   /**
    * order_dts
-   * @member {String} orderDts
+   * @member {String} order_dts
    */
-  exports.prototype.orderDts = undefined;
+  exports.prototype.order_dts = undefined;
 
   /**
    * order_id
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} total

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="deleteItem"></a>
 # **deleteItem**
-> deleteItem(merchantItemOid)
+> deleteItem(merchant_item_oid)
 
 Delete an item
 
@@ -40,7 +40,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var merchantItemOid = 56; // Number | The item oid to delete.
+var merchant_item_oid = 56; // Number | The item oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -50,14 +50,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteItem(merchantItemOid, callback);
+apiInstance.deleteItem(merchant_item_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantItemOid** | **Number**| The item oid to delete. | 
+ **merchant_item_oid** | **Number**| The item oid to delete. | 
 
 ### Return type
 
@@ -74,7 +74,7 @@ null (empty response body)
 
 <a name="getItem"></a>
 # **getItem**
-> ItemResponse getItem(merchantItemOid, opts)
+> ItemResponse getItem(merchant_item_oid, opts)
 
 Retrieve an item
 
@@ -97,11 +97,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var merchantItemOid = 56; // Number | The item oid to retrieve.
+var merchant_item_oid = 56; // Number | The item oid to retrieve.
 
 var opts = { 
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -111,16 +111,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getItem(merchantItemOid, opts, callback);
+apiInstance.getItem(merchant_item_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantItemOid** | **Number**| The item oid to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **merchant_item_oid** | **Number**| The item oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 <a name="getItemByMerchantItemId"></a>
 # **getItemByMerchantItemId**
-> ItemResponse getItemByMerchantItemId(merchantItemId, opts)
+> ItemResponse getItemByMerchantItemId(merchant_item_id, opts)
 
 Retrieve an item by item id
 
@@ -160,11 +160,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var merchantItemId = "merchantItemId_example"; // String | The item id to retrieve.
+var merchant_item_id = "merchant_item_id_example"; // String | The item id to retrieve.
 
 var opts = { 
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -174,16 +174,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getItemByMerchantItemId(merchantItemId, opts, callback);
+apiInstance.getItemByMerchantItemId(merchant_item_id, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantItemId** | **String**| The item id to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **merchant_item_id** | **String**| The item id to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -224,14 +224,14 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var opts = { 
-  'parentCategoryId': 56, // Number | The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
-  'parentCategoryPath': "parentCategoryPath_example", // String | The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'since': "since_example", // String | Fetch items that have been created/modified since this date/time.
-  'sort': "sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  'parent_category_id': 56, // Number | The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
+  'parent_category_path': "parent_category_path_example", // String | The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_since': "_since_example", // String | Fetch items that have been created/modified since this date/time.
+  '_sort': "_sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -248,14 +248,14 @@ apiInstance.getItems(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parentCategoryId** | **Number**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root | [optional] 
- **parentCategoryPath** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root | [optional] 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 
- **sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **parent_category_id** | **Number**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root | [optional] 
+ **parent_category_path** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 
+ **_sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -296,7 +296,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -313,7 +313,7 @@ apiInstance.getPricingTiers(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -356,8 +356,8 @@ var apiInstance = new UltraCartRestApiV2.ItemApi();
 var item = new UltraCartRestApiV2.Item(); // Item | Item to create
 
 var opts = { 
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -375,8 +375,8 @@ apiInstance.insertItem(item, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **item** | [**Item**](Item.md)| Item to create | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 <a name="updateItem"></a>
 # **updateItem**
-> ItemResponse updateItem(item, merchantItemOid, opts)
+> ItemResponse updateItem(item, merchant_item_oid, opts)
 
 Update an item
 
@@ -418,11 +418,11 @@ var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var item = new UltraCartRestApiV2.Item(); // Item | Item to update
 
-var merchantItemOid = 56; // Number | The item oid to update.
+var merchant_item_oid = 56; // Number | The item oid to update.
 
 var opts = { 
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
 
 var callback = function(error, data, response) {
@@ -432,7 +432,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateItem(item, merchantItemOid, opts, callback);
+apiInstance.updateItem(item, merchant_item_oid, opts, callback);
 ```
 
 ### Parameters
@@ -440,9 +440,9 @@ apiInstance.updateItem(item, merchantItemOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **item** | [**Item**](Item.md)| Item to update | 
- **merchantItemOid** | **Number**| The item oid to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **merchant_item_oid** | **Number**| The item oid to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 <a name="updateItems"></a>
 # **updateItems**
-> ItemsResponse updateItems(itemsRequest, opts)
+> ItemsResponse updateItems(items_request, opts)
 
 Update multiple items
 
@@ -482,12 +482,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ItemApi();
 
-var itemsRequest = new UltraCartRestApiV2.ItemsRequest(); // ItemsRequest | Items to update (synchronous maximum 20 / asynchronous maximum 100)
+var items_request = new UltraCartRestApiV2.ItemsRequest(); // ItemsRequest | Items to update (synchronous maximum 20 / asynchronous maximum 100)
 
 var opts = { 
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-  'async': true // Boolean | True if the operation should be run async.  No result returned
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_async': true // Boolean | True if the operation should be run async.  No result returned
 };
 
 var callback = function(error, data, response) {
@@ -497,17 +497,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateItems(itemsRequest, opts, callback);
+apiInstance.updateItems(items_request, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **itemsRequest** | [**ItemsRequest**](ItemsRequest.md)| Items to update (synchronous maximum 20 / asynchronous maximum 100) | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
- **async** | **Boolean**| True if the operation should be run async.  No result returned | [optional] 
+ **items_request** | [**ItemsRequest**](ItemsRequest.md)| Items to update (synchronous maximum 20 / asynchronous maximum 100) | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **_async** | **Boolean**| True if the operation should be run async.  No result returned | [optional] 
 
 ### Return type
 

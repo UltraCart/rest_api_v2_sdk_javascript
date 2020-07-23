@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('company_code'))
-        obj.companyCode = ApiClient.convertToType(data['company_code'], 'String');
+        obj.company_code = ApiClient.convertToType(data['company_code'], 'String');
       if (data.hasOwnProperty('company_name'))
-        obj.companyName = ApiClient.convertToType(data['company_name'], 'String');
+        obj.company_name = ApiClient.convertToType(data['company_name'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('selected'))
@@ -71,15 +71,15 @@
 
   /**
    * Company code
-   * @member {String} companyCode
+   * @member {String} company_code
    */
-  exports.prototype.companyCode = undefined;
+  exports.prototype.company_code = undefined;
 
   /**
    * Company name
-   * @member {String} companyName
+   * @member {String} company_name
    */
-  exports.prototype.companyName = undefined;
+  exports.prototype.company_name = undefined;
 
   /**
    * Description

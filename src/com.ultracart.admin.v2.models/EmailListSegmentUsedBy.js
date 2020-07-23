@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('email_campaign_uuid'))
-        obj.emailCampaignUuid = ApiClient.convertToType(data['email_campaign_uuid'], 'String');
+        obj.email_campaign_uuid = ApiClient.convertToType(data['email_campaign_uuid'], 'String');
       if (data.hasOwnProperty('email_flow_uuid'))
-        obj.emailFlowUuid = ApiClient.convertToType(data['email_flow_uuid'], 'String');
+        obj.email_flow_uuid = ApiClient.convertToType(data['email_flow_uuid'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
     }
@@ -67,15 +67,15 @@
 
   /**
    * Email campaign UUID
-   * @member {String} emailCampaignUuid
+   * @member {String} email_campaign_uuid
    */
-  exports.prototype.emailCampaignUuid = undefined;
+  exports.prototype.email_campaign_uuid = undefined;
 
   /**
    * Email flow UUID
-   * @member {String} emailFlowUuid
+   * @member {String} email_flow_uuid
    */
-  exports.prototype.emailFlowUuid = undefined;
+  exports.prototype.email_flow_uuid = undefined;
 
   /**
    * Name of the list or segment.

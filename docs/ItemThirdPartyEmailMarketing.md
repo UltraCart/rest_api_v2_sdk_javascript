@@ -14,29 +14,29 @@ Name | Type | Description | Notes
 ## Enum: ProviderNameEnum
 
 
-* `activeCampaign` (value: `"ActiveCampaign"`)
+* `ActiveCampaign` (value: `"ActiveCampaign"`)
 
-* `aWeber` (value: `"AWeber"`)
+* `AWeber` (value: `"AWeber"`)
 
-* `campaignMonitor` (value: `"Campaign Monitor"`)
+* `Campaign_Monitor` (value: `"Campaign Monitor"`)
 
-* `constantContact` (value: `"ConstantContact"`)
+* `ConstantContact` (value: `"ConstantContact"`)
 
-* `emma` (value: `"Emma"`)
+* `Emma` (value: `"Emma"`)
 
-* `getResponse` (value: `"GetResponse"`)
+* `GetResponse` (value: `"GetResponse"`)
 
 * `iContact` (value: `"iContact"`)
 
-* `klaviyo` (value: `"Klaviyo"`)
+* `Klaviyo` (value: `"Klaviyo"`)
 
-* `lyris` (value: `"Lyris"`)
+* `Lyris` (value: `"Lyris"`)
 
-* `lyrisHQ` (value: `"LyrisHQ"`)
+* `LyrisHQ` (value: `"LyrisHQ"`)
 
-* `mailChimp` (value: `"MailChimp"`)
+* `MailChimp` (value: `"MailChimp"`)
 
-* `silverPop` (value: `"SilverPop"`)
+* `SilverPop` (value: `"SilverPop"`)
 
 
 

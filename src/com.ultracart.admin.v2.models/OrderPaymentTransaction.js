@@ -60,9 +60,9 @@
       if (data.hasOwnProperty('successful'))
         obj.successful = ApiClient.convertToType(data['successful'], 'Boolean');
       if (data.hasOwnProperty('transaction_gateway'))
-        obj.transactionGateway = ApiClient.convertToType(data['transaction_gateway'], 'String');
+        obj.transaction_gateway = ApiClient.convertToType(data['transaction_gateway'], 'String');
       if (data.hasOwnProperty('transaction_timestamp'))
-        obj.transactionTimestamp = ApiClient.convertToType(data['transaction_timestamp'], 'String');
+        obj.transaction_timestamp = ApiClient.convertToType(data['transaction_timestamp'], 'String');
     }
     return obj;
   }
@@ -81,15 +81,15 @@
 
   /**
    * Transaction gateway
-   * @member {String} transactionGateway
+   * @member {String} transaction_gateway
    */
-  exports.prototype.transactionGateway = undefined;
+  exports.prototype.transaction_gateway = undefined;
 
   /**
    * Transaction date/time
-   * @member {String} transactionTimestamp
+   * @member {String} transaction_timestamp
    */
-  exports.prototype.transactionTimestamp = undefined;
+  exports.prototype.transaction_timestamp = undefined;
 
   return exports;
 

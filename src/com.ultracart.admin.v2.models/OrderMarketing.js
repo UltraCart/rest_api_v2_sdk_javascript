@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('advertising_source'))
-        obj.advertisingSource = ApiClient.convertToType(data['advertising_source'], 'String');
+        obj.advertising_source = ApiClient.convertToType(data['advertising_source'], 'String');
       if (data.hasOwnProperty('mailing_list'))
-        obj.mailingList = ApiClient.convertToType(data['mailing_list'], 'Boolean');
+        obj.mailing_list = ApiClient.convertToType(data['mailing_list'], 'Boolean');
       if (data.hasOwnProperty('referral_code'))
-        obj.referralCode = ApiClient.convertToType(data['referral_code'], 'String');
+        obj.referral_code = ApiClient.convertToType(data['referral_code'], 'String');
     }
     return obj;
   }
 
   /**
    * Advertising source
-   * @member {String} advertisingSource
+   * @member {String} advertising_source
    */
-  exports.prototype.advertisingSource = undefined;
+  exports.prototype.advertising_source = undefined;
 
   /**
    * True if the customer has opted into mailing list subscription
-   * @member {Boolean} mailingList
+   * @member {Boolean} mailing_list
    */
-  exports.prototype.mailingList = undefined;
+  exports.prototype.mailing_list = undefined;
 
   /**
    * Referral code
-   * @member {String} referralCode
+   * @member {String} referral_code
    */
-  exports.prototype.referralCode = undefined;
+  exports.prototype.referral_code = undefined;
 
   return exports;
 

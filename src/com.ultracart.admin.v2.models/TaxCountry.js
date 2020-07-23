@@ -56,44 +56,44 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('accounting_code'))
-        obj.accountingCode = ApiClient.convertToType(data['accounting_code'], 'String');
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('country_oid'))
-        obj.countryOid = ApiClient.convertToType(data['country_oid'], 'Number');
+        obj.country_oid = ApiClient.convertToType(data['country_oid'], 'Number');
       if (data.hasOwnProperty('states'))
         obj.states = ApiClient.convertToType(data['states'], [TaxState]);
       if (data.hasOwnProperty('tax_gift_charge'))
-        obj.taxGiftCharge = ApiClient.convertToType(data['tax_gift_charge'], 'Boolean');
+        obj.tax_gift_charge = ApiClient.convertToType(data['tax_gift_charge'], 'Boolean');
       if (data.hasOwnProperty('tax_gift_wrap'))
-        obj.taxGiftWrap = ApiClient.convertToType(data['tax_gift_wrap'], 'Boolean');
+        obj.tax_gift_wrap = ApiClient.convertToType(data['tax_gift_wrap'], 'Boolean');
       if (data.hasOwnProperty('tax_rate'))
-        obj.taxRate = ApiClient.convertToType(data['tax_rate'], 'Number');
+        obj.tax_rate = ApiClient.convertToType(data['tax_rate'], 'Number');
       if (data.hasOwnProperty('tax_rate_formatted'))
-        obj.taxRateFormatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
+        obj.tax_rate_formatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
       if (data.hasOwnProperty('tax_shipping'))
-        obj.taxShipping = ApiClient.convertToType(data['tax_shipping'], 'Boolean');
+        obj.tax_shipping = ApiClient.convertToType(data['tax_shipping'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Accounting code for programs such as QuickBooks
-   * @member {String} accountingCode
+   * @member {String} accounting_code
    */
-  exports.prototype.accountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
    * Country code (2 characters
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Tax record object identifier used internally by database
-   * @member {Number} countryOid
+   * @member {Number} country_oid
    */
-  exports.prototype.countryOid = undefined;
+  exports.prototype.country_oid = undefined;
 
   /**
    * States (or regions or territories) within this country
@@ -103,33 +103,33 @@
 
   /**
    * True if taxation within this jurisdiction should charge tax on gift charge
-   * @member {Boolean} taxGiftCharge
+   * @member {Boolean} tax_gift_charge
    */
-  exports.prototype.taxGiftCharge = undefined;
+  exports.prototype.tax_gift_charge = undefined;
 
   /**
    * True if taxation within this jurisdiction should charge tax on gift wrap
-   * @member {Boolean} taxGiftWrap
+   * @member {Boolean} tax_gift_wrap
    */
-  exports.prototype.taxGiftWrap = undefined;
+  exports.prototype.tax_gift_wrap = undefined;
 
   /**
    * Tax Rate
-   * @member {Number} taxRate
+   * @member {Number} tax_rate
    */
-  exports.prototype.taxRate = undefined;
+  exports.prototype.tax_rate = undefined;
 
   /**
    * Tax rate formatted
-   * @member {String} taxRateFormatted
+   * @member {String} tax_rate_formatted
    */
-  exports.prototype.taxRateFormatted = undefined;
+  exports.prototype.tax_rate_formatted = undefined;
 
   /**
    * True if taxation within this jurisdiction should charge tax on shipping
-   * @member {Boolean} taxShipping
+   * @member {Boolean} tax_shipping
    */
-  exports.prototype.taxShipping = undefined;
+  exports.prototype.tax_shipping = undefined;
 
   return exports;
 

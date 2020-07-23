@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('tag_value'))
-        obj.tagValue = ApiClient.convertToType(data['tag_value'], 'String');
+        obj.tag_value = ApiClient.convertToType(data['tag_value'], 'String');
     }
     return obj;
   }
 
   /**
    * Tag Value
-   * @member {String} tagValue
+   * @member {String} tag_value
    */
-  exports.prototype.tagValue = undefined;
+  exports.prototype.tag_value = undefined;
 
   return exports;
 

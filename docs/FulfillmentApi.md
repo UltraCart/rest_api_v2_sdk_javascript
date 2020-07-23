@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="acknowledgeOrders"></a>
 # **acknowledgeOrders**
-> acknowledgeOrders(distributionCenterCode, orderIds)
+> acknowledgeOrders(distribution_center_code, orderIds)
 
 Acknowledge receipt of orders.
 
@@ -36,7 +36,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.FulfillmentApi();
 
-var distributionCenterCode = "distributionCenterCode_example"; // String | Distribution center code
+var distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 
 var orderIds = [new UltraCartRestApiV2.[String]()]; // [String] | Orders to acknowledge receipt of (limit 100)
 
@@ -48,14 +48,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.acknowledgeOrders(distributionCenterCode, orderIds, callback);
+apiInstance.acknowledgeOrders(distribution_center_code, orderIds, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **distributionCenterCode** | **String**| Distribution center code | 
+ **distribution_center_code** | **String**| Distribution center code | 
  **orderIds** | **[String]**| Orders to acknowledge receipt of (limit 100) | 
 
 ### Return type
@@ -73,7 +73,7 @@ null (empty response body)
 
 <a name="getDistributionCenterOrders"></a>
 # **getDistributionCenterOrders**
-> OrdersResponse getDistributionCenterOrders(distributionCenterCode)
+> OrdersResponse getDistributionCenterOrders(distribution_center_code)
 
 Retrieve orders queued up for this distribution center.
 
@@ -96,7 +96,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.FulfillmentApi();
 
-var distributionCenterCode = "distributionCenterCode_example"; // String | Distribution center code
+var distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 
 
 var callback = function(error, data, response) {
@@ -106,14 +106,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getDistributionCenterOrders(distributionCenterCode, callback);
+apiInstance.getDistributionCenterOrders(distribution_center_code, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **distributionCenterCode** | **String**| Distribution center code | 
+ **distribution_center_code** | **String**| Distribution center code | 
 
 ### Return type
 
@@ -181,7 +181,7 @@ This endpoint does not need any parameter.
 
 <a name="shipOrders"></a>
 # **shipOrders**
-> shipOrders(distributionCenterCode, shipments)
+> shipOrders(distribution_center_code, shipments)
 
 Mark orders as shipped
 
@@ -204,7 +204,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.FulfillmentApi();
 
-var distributionCenterCode = "distributionCenterCode_example"; // String | Distribution center code
+var distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 
 var shipments = [new UltraCartRestApiV2.FulfillmentShipment()]; // [FulfillmentShipment] | Orders to mark shipped
 
@@ -216,14 +216,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.shipOrders(distributionCenterCode, shipments, callback);
+apiInstance.shipOrders(distribution_center_code, shipments, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **distributionCenterCode** | **String**| Distribution center code | 
+ **distribution_center_code** | **String**| Distribution center code | 
  **shipments** | [**[FulfillmentShipment]**](FulfillmentShipment.md)| Orders to mark shipped | 
 
 ### Return type
@@ -241,7 +241,7 @@ null (empty response body)
 
 <a name="updateInventory"></a>
 # **updateInventory**
-> updateInventory(distributionCenterCode, inventories)
+> updateInventory(distribution_center_code, inventories)
 
 Update inventory
 
@@ -264,7 +264,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.FulfillmentApi();
 
-var distributionCenterCode = "distributionCenterCode_example"; // String | Distribution center code
+var distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 
 var inventories = [new UltraCartRestApiV2.FulfillmentInventory()]; // [FulfillmentInventory] | Inventory updates (limit 500)
 
@@ -276,14 +276,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.updateInventory(distributionCenterCode, inventories, callback);
+apiInstance.updateInventory(distribution_center_code, inventories, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **distributionCenterCode** | **String**| Distribution center code | 
+ **distribution_center_code** | **String**| Distribution center code | 
  **inventories** | [**[FulfillmentInventory]**](FulfillmentInventory.md)| Inventory updates (limit 500) | 
 
 ### Return type

@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('default_option'))
-        obj.defaultOption = ApiClient.convertToType(data['default_option'], 'Boolean');
+        obj.default_option = ApiClient.convertToType(data['default_option'], 'Boolean');
       if (data.hasOwnProperty('merchant_item_multimedia_oid'))
-        obj.merchantItemMultimediaOid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
+        obj.merchant_item_multimedia_oid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
       if (data.hasOwnProperty('translated_text_instance_oid'))
-        obj.translatedTextInstanceOid = ApiClient.convertToType(data['translated_text_instance_oid'], 'Number');
+        obj.translated_text_instance_oid = ApiClient.convertToType(data['translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'String');
     }
@@ -69,21 +69,21 @@
 
   /**
    * True if default option
-   * @member {Boolean} defaultOption
+   * @member {Boolean} default_option
    */
-  exports.prototype.defaultOption = undefined;
+  exports.prototype.default_option = undefined;
 
   /**
    * Multimedia object identifier
-   * @member {Number} merchantItemMultimediaOid
+   * @member {Number} merchant_item_multimedia_oid
    */
-  exports.prototype.merchantItemMultimediaOid = undefined;
+  exports.prototype.merchant_item_multimedia_oid = undefined;
 
   /**
    * Translated text instance id
-   * @member {Number} translatedTextInstanceOid
+   * @member {Number} translated_text_instance_oid
    */
-  exports.prototype.translatedTextInstanceOid = undefined;
+  exports.prototype.translated_text_instance_oid = undefined;
 
   /**
    * Value

@@ -56,42 +56,42 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_csv_download'))
-        obj.allowCsvDownload = ApiClient.convertToType(data['allow_csv_download'], 'Boolean');
+        obj.allow_csv_download = ApiClient.convertToType(data['allow_csv_download'], 'Boolean');
       if (data.hasOwnProperty('created_dts'))
-        obj.createdDts = ApiClient.convertToType(data['created_dts'], 'String');
+        obj.created_dts = ApiClient.convertToType(data['created_dts'], 'String');
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('email_list_uuid'))
-        obj.emailListUuid = ApiClient.convertToType(data['email_list_uuid'], 'String');
+        obj.email_list_uuid = ApiClient.convertToType(data['email_list_uuid'], 'String');
       if (data.hasOwnProperty('member_count'))
-        obj.memberCount = ApiClient.convertToType(data['member_count'], 'Number');
+        obj.member_count = ApiClient.convertToType(data['member_count'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('public_description'))
-        obj.publicDescription = ApiClient.convertToType(data['public_description'], 'String');
+        obj.public_description = ApiClient.convertToType(data['public_description'], 'String');
       if (data.hasOwnProperty('public_list'))
-        obj.publicList = ApiClient.convertToType(data['public_list'], 'Boolean');
+        obj.public_list = ApiClient.convertToType(data['public_list'], 'Boolean');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('used_by'))
-        obj.usedBy = ApiClient.convertToType(data['used_by'], [EmailListSegmentUsedBy]);
+        obj.used_by = ApiClient.convertToType(data['used_by'], [EmailListSegmentUsedBy]);
     }
     return obj;
   }
 
   /**
    * True if the current user has the rights to download this list.
-   * @member {Boolean} allowCsvDownload
+   * @member {Boolean} allow_csv_download
    */
-  exports.prototype.allowCsvDownload = undefined;
+  exports.prototype.allow_csv_download = undefined;
 
   /**
    * Created date
-   * @member {String} createdDts
+   * @member {String} created_dts
    */
-  exports.prototype.createdDts = undefined;
+  exports.prototype.created_dts = undefined;
 
   /**
    * True if this campaign was deleted
@@ -101,21 +101,21 @@
 
   /**
    * Email list UUID
-   * @member {String} emailListUuid
+   * @member {String} email_list_uuid
    */
-  exports.prototype.emailListUuid = undefined;
+  exports.prototype.email_list_uuid = undefined;
 
   /**
    * Count of members in this list
-   * @member {Number} memberCount
+   * @member {Number} member_count
    */
-  exports.prototype.memberCount = undefined;
+  exports.prototype.member_count = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Name of email list
@@ -125,27 +125,27 @@
 
   /**
    * Description of list shown to customer.
-   * @member {String} publicDescription
+   * @member {String} public_description
    */
-  exports.prototype.publicDescription = undefined;
+  exports.prototype.public_description = undefined;
 
   /**
    * True if this list is public
-   * @member {Boolean} publicList
+   * @member {Boolean} public_list
    */
-  exports.prototype.publicList = undefined;
+  exports.prototype.public_list = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * Details on the flows or campaigns that use this list.
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailListSegmentUsedBy>} usedBy
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailListSegmentUsedBy>} used_by
    */
-  exports.prototype.usedBy = undefined;
+  exports.prototype.used_by = undefined;
 
   return exports;
 

@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('amazon_order_reference_id'))
-        obj.amazonOrderReferenceId = ApiClient.convertToType(data['amazon_order_reference_id'], 'String');
+        obj.amazon_order_reference_id = ApiClient.convertToType(data['amazon_order_reference_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Amazon order reference id
-   * @member {String} amazonOrderReferenceId
+   * @member {String} amazon_order_reference_id
    */
-  exports.prototype.amazonOrderReferenceId = undefined;
+  exports.prototype.amazon_order_reference_id = undefined;
 
   return exports;
 

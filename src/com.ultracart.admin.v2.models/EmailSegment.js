@@ -56,54 +56,54 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_csv_download'))
-        obj.allowCsvDownload = ApiClient.convertToType(data['allow_csv_download'], 'Boolean');
+        obj.allow_csv_download = ApiClient.convertToType(data['allow_csv_download'], 'Boolean');
       if (data.hasOwnProperty('allow_facebook_audiences'))
-        obj.allowFacebookAudiences = ApiClient.convertToType(data['allow_facebook_audiences'], 'Boolean');
+        obj.allow_facebook_audiences = ApiClient.convertToType(data['allow_facebook_audiences'], 'Boolean');
       if (data.hasOwnProperty('created_dts'))
-        obj.createdDts = ApiClient.convertToType(data['created_dts'], 'String');
+        obj.created_dts = ApiClient.convertToType(data['created_dts'], 'String');
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('email_segment_uuid'))
-        obj.emailSegmentUuid = ApiClient.convertToType(data['email_segment_uuid'], 'String');
+        obj.email_segment_uuid = ApiClient.convertToType(data['email_segment_uuid'], 'String');
       if (data.hasOwnProperty('facebook_custom_audience'))
-        obj.facebookCustomAudience = ApiClient.convertToType(data['facebook_custom_audience'], 'Boolean');
+        obj.facebook_custom_audience = ApiClient.convertToType(data['facebook_custom_audience'], 'Boolean');
       if (data.hasOwnProperty('filter_profile_equation_json'))
-        obj.filterProfileEquationJson = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
+        obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('member_count'))
-        obj.memberCount = ApiClient.convertToType(data['member_count'], 'Number');
+        obj.member_count = ApiClient.convertToType(data['member_count'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('rank_json'))
-        obj.rankJson = ApiClient.convertToType(data['rank_json'], 'String');
+        obj.rank_json = ApiClient.convertToType(data['rank_json'], 'String');
       if (data.hasOwnProperty('rebuild_required'))
-        obj.rebuildRequired = ApiClient.convertToType(data['rebuild_required'], 'Boolean');
+        obj.rebuild_required = ApiClient.convertToType(data['rebuild_required'], 'Boolean');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('used_by'))
-        obj.usedBy = ApiClient.convertToType(data['used_by'], [EmailListSegmentUsedBy]);
+        obj.used_by = ApiClient.convertToType(data['used_by'], [EmailListSegmentUsedBy]);
     }
     return obj;
   }
 
   /**
    * True if the current user has the rights to download this segment.
-   * @member {Boolean} allowCsvDownload
+   * @member {Boolean} allow_csv_download
    */
-  exports.prototype.allowCsvDownload = undefined;
+  exports.prototype.allow_csv_download = undefined;
 
   /**
    * True if this StoreFront has the Facebook Analytics app connected and supports them
-   * @member {Boolean} allowFacebookAudiences
+   * @member {Boolean} allow_facebook_audiences
    */
-  exports.prototype.allowFacebookAudiences = undefined;
+  exports.prototype.allow_facebook_audiences = undefined;
 
   /**
    * Created date
-   * @member {String} createdDts
+   * @member {String} created_dts
    */
-  exports.prototype.createdDts = undefined;
+  exports.prototype.created_dts = undefined;
 
   /**
    * True if this campaign was deleted
@@ -113,33 +113,33 @@
 
   /**
    * Email segment UUID
-   * @member {String} emailSegmentUuid
+   * @member {String} email_segment_uuid
    */
-  exports.prototype.emailSegmentUuid = undefined;
+  exports.prototype.email_segment_uuid = undefined;
 
   /**
    * True if you want to sync to a facebook custom audience
-   * @member {Boolean} facebookCustomAudience
+   * @member {Boolean} facebook_custom_audience
    */
-  exports.prototype.facebookCustomAudience = undefined;
+  exports.prototype.facebook_custom_audience = undefined;
 
   /**
    * File profile equation json
-   * @member {String} filterProfileEquationJson
+   * @member {String} filter_profile_equation_json
    */
-  exports.prototype.filterProfileEquationJson = undefined;
+  exports.prototype.filter_profile_equation_json = undefined;
 
   /**
    * Count of members in this segment
-   * @member {Number} memberCount
+   * @member {Number} member_count
    */
-  exports.prototype.memberCount = undefined;
+  exports.prototype.member_count = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Name of email segment
@@ -149,27 +149,27 @@
 
   /**
    * Rank settings json
-   * @member {String} rankJson
+   * @member {String} rank_json
    */
-  exports.prototype.rankJson = undefined;
+  exports.prototype.rank_json = undefined;
 
   /**
    * True if a rebuild is required because some part of the segment has changed
-   * @member {Boolean} rebuildRequired
+   * @member {Boolean} rebuild_required
    */
-  exports.prototype.rebuildRequired = undefined;
+  exports.prototype.rebuild_required = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * Details on the flows or campaigns that use this list.
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailListSegmentUsedBy>} usedBy
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailListSegmentUsedBy>} used_by
    */
-  exports.prototype.usedBy = undefined;
+  exports.prototype.used_by = undefined;
 
   return exports;
 

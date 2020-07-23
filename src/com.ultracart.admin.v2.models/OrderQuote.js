@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('quote_expiration_dts'))
-        obj.quoteExpirationDts = ApiClient.convertToType(data['quote_expiration_dts'], 'String');
+        obj.quote_expiration_dts = ApiClient.convertToType(data['quote_expiration_dts'], 'String');
       if (data.hasOwnProperty('quoted_by'))
-        obj.quotedBy = ApiClient.convertToType(data['quoted_by'], 'String');
+        obj.quoted_by = ApiClient.convertToType(data['quoted_by'], 'String');
       if (data.hasOwnProperty('quoted_dts'))
-        obj.quotedDts = ApiClient.convertToType(data['quoted_dts'], 'String');
+        obj.quoted_dts = ApiClient.convertToType(data['quoted_dts'], 'String');
     }
     return obj;
   }
 
   /**
    * Expiration of quote at date/time
-   * @member {String} quoteExpirationDts
+   * @member {String} quote_expiration_dts
    */
-  exports.prototype.quoteExpirationDts = undefined;
+  exports.prototype.quote_expiration_dts = undefined;
 
   /**
    * Quoted by user
-   * @member {String} quotedBy
+   * @member {String} quoted_by
    */
-  exports.prototype.quotedBy = undefined;
+  exports.prototype.quoted_by = undefined;
 
   /**
    * Quoted on date/time
-   * @member {String} quotedDts
+   * @member {String} quoted_dts
    */
-  exports.prototype.quotedDts = undefined;
+  exports.prototype.quoted_dts = undefined;
 
   return exports;
 

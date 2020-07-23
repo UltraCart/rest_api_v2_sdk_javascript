@@ -60,17 +60,17 @@
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('email_customer_uuid'))
-        obj.emailCustomerUuid = ApiClient.convertToType(data['email_customer_uuid'], 'String');
+        obj.email_customer_uuid = ApiClient.convertToType(data['email_customer_uuid'], 'String');
       if (data.hasOwnProperty('first_name'))
-        obj.firstName = ApiClient.convertToType(data['first_name'], 'String');
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('global_unsubscribe'))
-        obj.globalUnsubscribe = ApiClient.convertToType(data['global_unsubscribe'], 'Boolean');
+        obj.global_unsubscribe = ApiClient.convertToType(data['global_unsubscribe'], 'Boolean');
       if (data.hasOwnProperty('last_interaction_dts'))
-        obj.lastInteractionDts = ApiClient.convertToType(data['last_interaction_dts'], 'String');
+        obj.last_interaction_dts = ApiClient.convertToType(data['last_interaction_dts'], 'String');
       if (data.hasOwnProperty('last_name'))
-        obj.lastName = ApiClient.convertToType(data['last_name'], 'String');
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
       if (data.hasOwnProperty('list_uuids'))
-        obj.listUuids = ApiClient.convertToType(data['list_uuids'], ['String']);
+        obj.list_uuids = ApiClient.convertToType(data['list_uuids'], ['String']);
     }
     return obj;
   }
@@ -89,39 +89,39 @@
 
   /**
    * Email customer UUID
-   * @member {String} emailCustomerUuid
+   * @member {String} email_customer_uuid
    */
-  exports.prototype.emailCustomerUuid = undefined;
+  exports.prototype.email_customer_uuid = undefined;
 
   /**
    * First name
-   * @member {String} firstName
+   * @member {String} first_name
    */
-  exports.prototype.firstName = undefined;
+  exports.prototype.first_name = undefined;
 
   /**
    * True if the customer has globally unsubscribed from all communication.
-   * @member {Boolean} globalUnsubscribe
+   * @member {Boolean} global_unsubscribe
    */
-  exports.prototype.globalUnsubscribe = undefined;
+  exports.prototype.global_unsubscribe = undefined;
 
   /**
    * Last interaction
-   * @member {String} lastInteractionDts
+   * @member {String} last_interaction_dts
    */
-  exports.prototype.lastInteractionDts = undefined;
+  exports.prototype.last_interaction_dts = undefined;
 
   /**
    * Last name
-   * @member {String} lastName
+   * @member {String} last_name
    */
-  exports.prototype.lastName = undefined;
+  exports.prototype.last_name = undefined;
 
   /**
    * UUIDs of the lists they are subscribed to
-   * @member {Array.<String>} listUuids
+   * @member {Array.<String>} list_uuids
    */
-  exports.prototype.listUuids = undefined;
+  exports.prototype.list_uuids = undefined;
 
   return exports;
 

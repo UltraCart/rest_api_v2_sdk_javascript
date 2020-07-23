@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('order_ids'))
-        obj.orderIds = ApiClient.convertToType(data['order_ids'], ['String']);
+        obj.order_ids = ApiClient.convertToType(data['order_ids'], ['String']);
     }
     return obj;
   }
 
   /**
    * Order IDs
-   * @member {Array.<String>} orderIds
+   * @member {Array.<String>} order_ids
    */
-  exports.prototype.orderIds = undefined;
+  exports.prototype.order_ids = undefined;
 
   return exports;
 

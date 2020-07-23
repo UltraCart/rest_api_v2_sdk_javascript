@@ -56,35 +56,35 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('arbitrary_unit_cost'))
-        obj.arbitraryUnitCost = Currency.constructFromObject(data['arbitrary_unit_cost']);
+        obj.arbitrary_unit_cost = Currency.constructFromObject(data['arbitrary_unit_cost']);
       if (data.hasOwnProperty('attributes'))
         obj.attributes = ApiClient.convertToType(data['attributes'], [CartItemAttribute]);
       if (data.hasOwnProperty('auto_order_schedule'))
-        obj.autoOrderSchedule = ApiClient.convertToType(data['auto_order_schedule'], 'String');
+        obj.auto_order_schedule = ApiClient.convertToType(data['auto_order_schedule'], 'String');
       if (data.hasOwnProperty('default_image_url'))
-        obj.defaultImageUrl = ApiClient.convertToType(data['default_image_url'], 'String');
+        obj.default_image_url = ApiClient.convertToType(data['default_image_url'], 'String');
       if (data.hasOwnProperty('default_thumbnail_url'))
-        obj.defaultThumbnailUrl = ApiClient.convertToType(data['default_thumbnail_url'], 'String');
+        obj.default_thumbnail_url = ApiClient.convertToType(data['default_thumbnail_url'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('discount'))
         obj.discount = Currency.constructFromObject(data['discount']);
       if (data.hasOwnProperty('extended_description'))
-        obj.extendedDescription = ApiClient.convertToType(data['extended_description'], 'String');
+        obj.extended_description = ApiClient.convertToType(data['extended_description'], 'String');
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('item_oid'))
-        obj.itemOid = ApiClient.convertToType(data['item_oid'], 'Number');
+        obj.item_oid = ApiClient.convertToType(data['item_oid'], 'Number');
       if (data.hasOwnProperty('kit'))
         obj.kit = ApiClient.convertToType(data['kit'], 'Boolean');
       if (data.hasOwnProperty('kit_component_options'))
-        obj.kitComponentOptions = ApiClient.convertToType(data['kit_component_options'], [CartKitComponentOption]);
+        obj.kit_component_options = ApiClient.convertToType(data['kit_component_options'], [CartKitComponentOption]);
       if (data.hasOwnProperty('manufacturer_suggested_retail_price'))
-        obj.manufacturerSuggestedRetailPrice = Currency.constructFromObject(data['manufacturer_suggested_retail_price']);
+        obj.manufacturer_suggested_retail_price = Currency.constructFromObject(data['manufacturer_suggested_retail_price']);
       if (data.hasOwnProperty('maximum_quantity'))
-        obj.maximumQuantity = ApiClient.convertToType(data['maximum_quantity'], 'Number');
+        obj.maximum_quantity = ApiClient.convertToType(data['maximum_quantity'], 'Number');
       if (data.hasOwnProperty('minimum_quantity'))
-        obj.minimumQuantity = ApiClient.convertToType(data['minimum_quantity'], 'Number');
+        obj.minimum_quantity = ApiClient.convertToType(data['minimum_quantity'], 'Number');
       if (data.hasOwnProperty('multimedia'))
         obj.multimedia = ApiClient.convertToType(data['multimedia'], [CartItemMultimedia]);
       if (data.hasOwnProperty('options'))
@@ -100,27 +100,27 @@
       if (data.hasOwnProperty('schedules'))
         obj.schedules = ApiClient.convertToType(data['schedules'], ['String']);
       if (data.hasOwnProperty('total_cost'))
-        obj.totalCost = Currency.constructFromObject(data['total_cost']);
+        obj.total_cost = Currency.constructFromObject(data['total_cost']);
       if (data.hasOwnProperty('total_cost_with_discount'))
-        obj.totalCostWithDiscount = Currency.constructFromObject(data['total_cost_with_discount']);
+        obj.total_cost_with_discount = Currency.constructFromObject(data['total_cost_with_discount']);
       if (data.hasOwnProperty('unit_cost'))
-        obj.unitCost = Currency.constructFromObject(data['unit_cost']);
+        obj.unit_cost = Currency.constructFromObject(data['unit_cost']);
       if (data.hasOwnProperty('unit_cost_with_discount'))
-        obj.unitCostWithDiscount = Currency.constructFromObject(data['unit_cost_with_discount']);
+        obj.unit_cost_with_discount = Currency.constructFromObject(data['unit_cost_with_discount']);
       if (data.hasOwnProperty('upsell'))
         obj.upsell = ApiClient.convertToType(data['upsell'], 'Boolean');
       if (data.hasOwnProperty('variations'))
         obj.variations = ApiClient.convertToType(data['variations'], [CartItemVariationSelection]);
       if (data.hasOwnProperty('view_url'))
-        obj.viewUrl = ApiClient.convertToType(data['view_url'], 'String');
+        obj.view_url = ApiClient.convertToType(data['view_url'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} arbitraryUnitCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_unit_cost
    */
-  exports.prototype.arbitraryUnitCost = undefined;
+  exports.prototype.arbitrary_unit_cost = undefined;
 
   /**
    * Attributes
@@ -130,21 +130,21 @@
 
   /**
    * Auto order schedule the customer selected
-   * @member {String} autoOrderSchedule
+   * @member {String} auto_order_schedule
    */
-  exports.prototype.autoOrderSchedule = undefined;
+  exports.prototype.auto_order_schedule = undefined;
 
   /**
    * URL to the default multimedia image
-   * @member {String} defaultImageUrl
+   * @member {String} default_image_url
    */
-  exports.prototype.defaultImageUrl = undefined;
+  exports.prototype.default_image_url = undefined;
 
   /**
    * URL to the default multimedia thumbnail
-   * @member {String} defaultThumbnailUrl
+   * @member {String} default_thumbnail_url
    */
-  exports.prototype.defaultThumbnailUrl = undefined;
+  exports.prototype.default_thumbnail_url = undefined;
 
   /**
    * Description of the item
@@ -159,21 +159,21 @@
 
   /**
    * Extended description of the item
-   * @member {String} extendedDescription
+   * @member {String} extended_description
    */
-  exports.prototype.extendedDescription = undefined;
+  exports.prototype.extended_description = undefined;
 
   /**
    * Item ID
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * Item object identifier
-   * @member {Number} itemOid
+   * @member {Number} item_oid
    */
-  exports.prototype.itemOid = undefined;
+  exports.prototype.item_oid = undefined;
 
   /**
    * True if this item is a kit
@@ -183,26 +183,26 @@
 
   /**
    * Options associated with the kit components
-   * @member {Array.<module:com.ultracart.admin.v2.models/CartKitComponentOption>} kitComponentOptions
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartKitComponentOption>} kit_component_options
    */
-  exports.prototype.kitComponentOptions = undefined;
+  exports.prototype.kit_component_options = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} manufacturerSuggestedRetailPrice
+   * @member {module:com.ultracart.admin.v2.models/Currency} manufacturer_suggested_retail_price
    */
-  exports.prototype.manufacturerSuggestedRetailPrice = undefined;
+  exports.prototype.manufacturer_suggested_retail_price = undefined;
 
   /**
    * Maximum quantity the customer can purchase
-   * @member {Number} maximumQuantity
+   * @member {Number} maximum_quantity
    */
-  exports.prototype.maximumQuantity = undefined;
+  exports.prototype.maximum_quantity = undefined;
 
   /**
    * Minimum quantity the customer can purchase
-   * @member {Number} minimumQuantity
+   * @member {Number} minimum_quantity
    */
-  exports.prototype.minimumQuantity = undefined;
+  exports.prototype.minimum_quantity = undefined;
 
   /**
    * Multimedia
@@ -246,24 +246,24 @@
   exports.prototype.schedules = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} totalCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} total_cost
    */
-  exports.prototype.totalCost = undefined;
+  exports.prototype.total_cost = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} totalCostWithDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} total_cost_with_discount
    */
-  exports.prototype.totalCostWithDiscount = undefined;
+  exports.prototype.total_cost_with_discount = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} unitCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} unit_cost
    */
-  exports.prototype.unitCost = undefined;
+  exports.prototype.unit_cost = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} unitCostWithDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} unit_cost_with_discount
    */
-  exports.prototype.unitCostWithDiscount = undefined;
+  exports.prototype.unit_cost_with_discount = undefined;
 
   /**
    * True if this item was added to the cart as part of an upsell
@@ -279,9 +279,9 @@
 
   /**
    * URL to view the product on the site
-   * @member {String} viewUrl
+   * @member {String} view_url
    */
-  exports.prototype.viewUrl = undefined;
+  exports.prototype.view_url = undefined;
 
   return exports;
 

@@ -56,92 +56,92 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('bank_aba_code'))
-        obj.bankAbaCode = ApiClient.convertToType(data['bank_aba_code'], 'String');
+        obj.bank_aba_code = ApiClient.convertToType(data['bank_aba_code'], 'String');
       if (data.hasOwnProperty('bank_account_name'))
-        obj.bankAccountName = ApiClient.convertToType(data['bank_account_name'], 'String');
+        obj.bank_account_name = ApiClient.convertToType(data['bank_account_name'], 'String');
       if (data.hasOwnProperty('bank_account_number'))
-        obj.bankAccountNumber = ApiClient.convertToType(data['bank_account_number'], 'String');
+        obj.bank_account_number = ApiClient.convertToType(data['bank_account_number'], 'String');
       if (data.hasOwnProperty('bank_account_type'))
-        obj.bankAccountType = ApiClient.convertToType(data['bank_account_type'], 'String');
+        obj.bank_account_type = ApiClient.convertToType(data['bank_account_type'], 'String');
       if (data.hasOwnProperty('bank_name'))
-        obj.bankName = ApiClient.convertToType(data['bank_name'], 'String');
+        obj.bank_name = ApiClient.convertToType(data['bank_name'], 'String');
       if (data.hasOwnProperty('bank_owner_type'))
-        obj.bankOwnerType = ApiClient.convertToType(data['bank_owner_type'], 'String');
+        obj.bank_owner_type = ApiClient.convertToType(data['bank_owner_type'], 'String');
       if (data.hasOwnProperty('customer_tax_id'))
-        obj.customerTaxId = ApiClient.convertToType(data['customer_tax_id'], 'String');
+        obj.customer_tax_id = ApiClient.convertToType(data['customer_tax_id'], 'String');
       if (data.hasOwnProperty('drivers_license_dob'))
-        obj.driversLicenseDob = ApiClient.convertToType(data['drivers_license_dob'], 'String');
+        obj.drivers_license_dob = ApiClient.convertToType(data['drivers_license_dob'], 'String');
       if (data.hasOwnProperty('drivers_license_number'))
-        obj.driversLicenseNumber = ApiClient.convertToType(data['drivers_license_number'], 'String');
+        obj.drivers_license_number = ApiClient.convertToType(data['drivers_license_number'], 'String');
       if (data.hasOwnProperty('drivers_license_state'))
-        obj.driversLicenseState = ApiClient.convertToType(data['drivers_license_state'], 'String');
+        obj.drivers_license_state = ApiClient.convertToType(data['drivers_license_state'], 'String');
     }
     return obj;
   }
 
   /**
    * Bank routing code
-   * @member {String} bankAbaCode
+   * @member {String} bank_aba_code
    */
-  exports.prototype.bankAbaCode = undefined;
+  exports.prototype.bank_aba_code = undefined;
 
   /**
    * Bank account name
-   * @member {String} bankAccountName
+   * @member {String} bank_account_name
    */
-  exports.prototype.bankAccountName = undefined;
+  exports.prototype.bank_account_name = undefined;
 
   /**
    * Bank account number (masked to last 4)
-   * @member {String} bankAccountNumber
+   * @member {String} bank_account_number
    */
-  exports.prototype.bankAccountNumber = undefined;
+  exports.prototype.bank_account_number = undefined;
 
   /**
    * Bank account type
-   * @member {module:com.ultracart.admin.v2.models/OrderPaymentECheck.BankAccountTypeEnum} bankAccountType
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentECheck.BankAccountTypeEnum} bank_account_type
    */
-  exports.prototype.bankAccountType = undefined;
+  exports.prototype.bank_account_type = undefined;
 
   /**
    * Bank name
-   * @member {String} bankName
+   * @member {String} bank_name
    */
-  exports.prototype.bankName = undefined;
+  exports.prototype.bank_name = undefined;
 
   /**
    * Bank owner type
-   * @member {module:com.ultracart.admin.v2.models/OrderPaymentECheck.BankOwnerTypeEnum} bankOwnerType
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentECheck.BankOwnerTypeEnum} bank_owner_type
    */
-  exports.prototype.bankOwnerType = undefined;
+  exports.prototype.bank_owner_type = undefined;
 
   /**
    * Customer tax id (masked to last 4)
-   * @member {String} customerTaxId
+   * @member {String} customer_tax_id
    */
-  exports.prototype.customerTaxId = undefined;
+  exports.prototype.customer_tax_id = undefined;
 
   /**
    * Driver license date of birth
-   * @member {String} driversLicenseDob
+   * @member {String} drivers_license_dob
    */
-  exports.prototype.driversLicenseDob = undefined;
+  exports.prototype.drivers_license_dob = undefined;
 
   /**
    * Driver license number (masked to last 4)
-   * @member {String} driversLicenseNumber
+   * @member {String} drivers_license_number
    */
-  exports.prototype.driversLicenseNumber = undefined;
+  exports.prototype.drivers_license_number = undefined;
 
   /**
    * Driver license state
-   * @member {String} driversLicenseState
+   * @member {String} drivers_license_state
    */
-  exports.prototype.driversLicenseState = undefined;
+  exports.prototype.drivers_license_state = undefined;
 
 
   /**
-   * Allowed values for the <code>bankAccountType</code> property.
+   * Allowed values for the <code>bank_account_type</code> property.
    * @enum {String}
    * @readonly
    */
@@ -150,18 +150,18 @@
      * value: "Checking"
      * @const
      */
-    checking: "Checking",
+    Checking: "Checking",
 
     /**
      * value: "Savings"
      * @const
      */
-    savings: "Savings"
+    Savings: "Savings"
   };
 
 
   /**
-   * Allowed values for the <code>bankOwnerType</code> property.
+   * Allowed values for the <code>bank_owner_type</code> property.
    * @enum {String}
    * @readonly
    */
@@ -170,13 +170,13 @@
      * value: "Personal"
      * @const
      */
-    personal: "Personal",
+    Personal: "Personal",
 
     /**
      * value: "Business"
      * @const
      */
-    business: "Business"
+    Business: "Business"
   };
 
   return exports;

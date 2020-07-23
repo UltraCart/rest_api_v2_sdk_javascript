@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('sfdc_pricebook_id'))
-        obj.sfdcPricebookId = ApiClient.convertToType(data['sfdc_pricebook_id'], 'String');
+        obj.sfdc_pricebook_id = ApiClient.convertToType(data['sfdc_pricebook_id'], 'String');
       if (data.hasOwnProperty('sfdc_product_id'))
-        obj.sfdcProductId = ApiClient.convertToType(data['sfdc_product_id'], 'String');
+        obj.sfdc_product_id = ApiClient.convertToType(data['sfdc_product_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Salesforce.com pricebook id
-   * @member {String} sfdcPricebookId
+   * @member {String} sfdc_pricebook_id
    */
-  exports.prototype.sfdcPricebookId = undefined;
+  exports.prototype.sfdc_pricebook_id = undefined;
 
   /**
    * Salesforce.com product id
-   * @member {String} sfdcProductId
+   * @member {String} sfdc_product_id
    */
-  exports.prototype.sfdcProductId = undefined;
+  exports.prototype.sfdc_product_id = undefined;
 
   return exports;
 

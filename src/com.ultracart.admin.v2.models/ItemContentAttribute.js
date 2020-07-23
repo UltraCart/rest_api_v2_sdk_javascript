@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('translated_text_instance_oid'))
-        obj.translatedTextInstanceOid = ApiClient.convertToType(data['translated_text_instance_oid'], 'Number');
+        obj.translated_text_instance_oid = ApiClient.convertToType(data['translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('value'))
@@ -75,9 +75,9 @@
 
   /**
    * Attribute translated text instance identifier
-   * @member {Number} translatedTextInstanceOid
+   * @member {Number} translated_text_instance_oid
    */
-  exports.prototype.translatedTextInstanceOid = undefined;
+  exports.prototype.translated_text_instance_oid = undefined;
 
   /**
    * Attribute type

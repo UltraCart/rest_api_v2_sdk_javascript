@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_amount'))
-        obj.discountAmount = ApiClient.convertToType(data['discount_amount'], 'Number');
+        obj.discount_amount = ApiClient.convertToType(data['discount_amount'], 'Number');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
     }
@@ -65,9 +65,9 @@
 
   /**
    * The amount of subtotal discount
-   * @member {Number} discountAmount
+   * @member {Number} discount_amount
    */
-  exports.prototype.discountAmount = undefined;
+  exports.prototype.discount_amount = undefined;
 
   /**
    * A list of items which will receive this discount.

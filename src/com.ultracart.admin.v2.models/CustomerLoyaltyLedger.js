@@ -56,50 +56,50 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('created_by'))
-        obj.createdBy = ApiClient.convertToType(data['created_by'], 'String');
+        obj.created_by = ApiClient.convertToType(data['created_by'], 'String');
       if (data.hasOwnProperty('created_dts'))
-        obj.createdDts = ApiClient.convertToType(data['created_dts'], 'String');
+        obj.created_dts = ApiClient.convertToType(data['created_dts'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('item_index'))
-        obj.itemIndex = ApiClient.convertToType(data['item_index'], 'Number');
+        obj.item_index = ApiClient.convertToType(data['item_index'], 'Number');
       if (data.hasOwnProperty('ledger_dts'))
-        obj.ledgerDts = ApiClient.convertToType(data['ledger_dts'], 'String');
+        obj.ledger_dts = ApiClient.convertToType(data['ledger_dts'], 'String');
       if (data.hasOwnProperty('loyalty_campaign_oid'))
-        obj.loyaltyCampaignOid = ApiClient.convertToType(data['loyalty_campaign_oid'], 'Number');
+        obj.loyalty_campaign_oid = ApiClient.convertToType(data['loyalty_campaign_oid'], 'Number');
       if (data.hasOwnProperty('loyalty_ledger_oid'))
-        obj.loyaltyLedgerOid = ApiClient.convertToType(data['loyalty_ledger_oid'], 'Number');
+        obj.loyalty_ledger_oid = ApiClient.convertToType(data['loyalty_ledger_oid'], 'Number');
       if (data.hasOwnProperty('loyalty_points'))
-        obj.loyaltyPoints = ApiClient.convertToType(data['loyalty_points'], 'Number');
+        obj.loyalty_points = ApiClient.convertToType(data['loyalty_points'], 'Number');
       if (data.hasOwnProperty('modified_by'))
-        obj.modifiedBy = ApiClient.convertToType(data['modified_by'], 'String');
+        obj.modified_by = ApiClient.convertToType(data['modified_by'], 'String');
       if (data.hasOwnProperty('modified_dts'))
-        obj.modifiedDts = ApiClient.convertToType(data['modified_dts'], 'String');
+        obj.modified_dts = ApiClient.convertToType(data['modified_dts'], 'String');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
       if (data.hasOwnProperty('vesting_dts'))
-        obj.vestingDts = ApiClient.convertToType(data['vesting_dts'], 'String');
+        obj.vesting_dts = ApiClient.convertToType(data['vesting_dts'], 'String');
     }
     return obj;
   }
 
   /**
    * Created By
-   * @member {String} createdBy
+   * @member {String} created_by
    */
-  exports.prototype.createdBy = undefined;
+  exports.prototype.created_by = undefined;
 
   /**
    * Created date
-   * @member {String} createdDts
+   * @member {String} created_dts
    */
-  exports.prototype.createdDts = undefined;
+  exports.prototype.created_dts = undefined;
 
   /**
    * Description
@@ -115,57 +115,57 @@
 
   /**
    * Item Id
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * Item Index
-   * @member {Number} itemIndex
+   * @member {Number} item_index
    */
-  exports.prototype.itemIndex = undefined;
+  exports.prototype.item_index = undefined;
 
   /**
    * Ledger date
-   * @member {String} ledgerDts
+   * @member {String} ledger_dts
    */
-  exports.prototype.ledgerDts = undefined;
+  exports.prototype.ledger_dts = undefined;
 
   /**
    * Loyalty campaign oid
-   * @member {Number} loyaltyCampaignOid
+   * @member {Number} loyalty_campaign_oid
    */
-  exports.prototype.loyaltyCampaignOid = undefined;
+  exports.prototype.loyalty_campaign_oid = undefined;
 
   /**
    * Loyalty ledger oid
-   * @member {Number} loyaltyLedgerOid
+   * @member {Number} loyalty_ledger_oid
    */
-  exports.prototype.loyaltyLedgerOid = undefined;
+  exports.prototype.loyalty_ledger_oid = undefined;
 
   /**
    * Loyalty points
-   * @member {Number} loyaltyPoints
+   * @member {Number} loyalty_points
    */
-  exports.prototype.loyaltyPoints = undefined;
+  exports.prototype.loyalty_points = undefined;
 
   /**
    * Modified By
-   * @member {String} modifiedBy
+   * @member {String} modified_by
    */
-  exports.prototype.modifiedBy = undefined;
+  exports.prototype.modified_by = undefined;
 
   /**
    * Modified date
-   * @member {String} modifiedDts
+   * @member {String} modified_dts
    */
-  exports.prototype.modifiedDts = undefined;
+  exports.prototype.modified_dts = undefined;
 
   /**
    * Order Id
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * Quantity
@@ -175,9 +175,9 @@
 
   /**
    * Vesting date
-   * @member {String} vestingDts
+   * @member {String} vesting_dts
    */
-  exports.prototype.vestingDts = undefined;
+  exports.prototype.vesting_dts = undefined;
 
   return exports;
 

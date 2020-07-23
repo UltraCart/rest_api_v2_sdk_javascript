@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('enrollment123_product_code'))
-        obj.enrollment123ProductCode = ApiClient.convertToType(data['enrollment123_product_code'], 'String');
+        obj.enrollment123_product_code = ApiClient.convertToType(data['enrollment123_product_code'], 'String');
     }
     return obj;
   }
 
   /**
    * Enrolment 123 product code
-   * @member {String} enrollment123ProductCode
+   * @member {String} enrollment123_product_code
    */
-  exports.prototype.enrollment123ProductCode = undefined;
+  exports.prototype.enrollment123_product_code = undefined;
 
   return exports;
 

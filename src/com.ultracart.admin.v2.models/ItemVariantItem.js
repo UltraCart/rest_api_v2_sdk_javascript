@@ -58,13 +58,13 @@
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('merchant_item_multimedia_oid'))
-        obj.merchantItemMultimediaOid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
+        obj.merchant_item_multimedia_oid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
       if (data.hasOwnProperty('variant_merchant_item_id'))
-        obj.variantMerchantItemId = ApiClient.convertToType(data['variant_merchant_item_id'], 'String');
+        obj.variant_merchant_item_id = ApiClient.convertToType(data['variant_merchant_item_id'], 'String');
       if (data.hasOwnProperty('variant_merchant_item_oid'))
-        obj.variantMerchantItemOid = ApiClient.convertToType(data['variant_merchant_item_oid'], 'Number');
+        obj.variant_merchant_item_oid = ApiClient.convertToType(data['variant_merchant_item_oid'], 'Number');
       if (data.hasOwnProperty('variation_options'))
-        obj.variationOptions = ApiClient.convertToType(data['variation_options'], ['String']);
+        obj.variation_options = ApiClient.convertToType(data['variation_options'], ['String']);
       if (data.hasOwnProperty('variations'))
         obj.variations = ApiClient.convertToType(data['variations'], ['String']);
     }
@@ -79,27 +79,27 @@
 
   /**
    * Multimedia object identifier
-   * @member {Number} merchantItemMultimediaOid
+   * @member {Number} merchant_item_multimedia_oid
    */
-  exports.prototype.merchantItemMultimediaOid = undefined;
+  exports.prototype.merchant_item_multimedia_oid = undefined;
 
   /**
    * Variant item id
-   * @member {String} variantMerchantItemId
+   * @member {String} variant_merchant_item_id
    */
-  exports.prototype.variantMerchantItemId = undefined;
+  exports.prototype.variant_merchant_item_id = undefined;
 
   /**
    * Variant item object identifier
-   * @member {Number} variantMerchantItemOid
+   * @member {Number} variant_merchant_item_oid
    */
-  exports.prototype.variantMerchantItemOid = undefined;
+  exports.prototype.variant_merchant_item_oid = undefined;
 
   /**
    * Variation options
-   * @member {Array.<String>} variationOptions
+   * @member {Array.<String>} variation_options
    */
-  exports.prototype.variationOptions = undefined;
+  exports.prototype.variation_options = undefined;
 
   /**
    * Variations

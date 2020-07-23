@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 <a name="cancelOrder"></a>
 # **cancelOrder**
-> BaseResponse cancelOrder(orderId)
+> BaseResponse cancelOrder(order_id)
 
 Cancel an order
 
@@ -49,7 +49,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to cancel.
+var order_id = "order_id_example"; // String | The order id to cancel.
 
 
 var callback = function(error, data, response) {
@@ -59,14 +59,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cancelOrder(orderId, callback);
+apiInstance.cancelOrder(order_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to cancel. | 
+ **order_id** | **String**| The order id to cancel. | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteOrder"></a>
 # **deleteOrder**
-> deleteOrder(orderId)
+> deleteOrder(order_id)
 
 Delete an order
 
@@ -106,7 +106,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to delete.
+var order_id = "order_id_example"; // String | The order id to delete.
 
 
 var callback = function(error, data, response) {
@@ -116,14 +116,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteOrder(orderId, callback);
+apiInstance.deleteOrder(order_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to delete. | 
+ **order_id** | **String**| The order id to delete. | 
 
 ### Return type
 
@@ -140,7 +140,7 @@ null (empty response body)
 
 <a name="format"></a>
 # **format**
-> OrderFormatResponse format(orderId, formatOptions)
+> OrderFormatResponse format(order_id, format_options)
 
 Format order
 
@@ -163,9 +163,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to format
+var order_id = "order_id_example"; // String | The order id to format
 
-var formatOptions = new UltraCartRestApiV2.OrderFormat(); // OrderFormat | Format options
+var format_options = new UltraCartRestApiV2.OrderFormat(); // OrderFormat | Format options
 
 
 var callback = function(error, data, response) {
@@ -175,15 +175,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.format(orderId, formatOptions, callback);
+apiInstance.format(order_id, format_options, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to format | 
- **formatOptions** | [**OrderFormat**](OrderFormat.md)| Format options | 
+ **order_id** | **String**| The order id to format | 
+ **format_options** | [**OrderFormat**](OrderFormat.md)| Format options | 
 
 ### Return type
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 <a name="generateOrderToken"></a>
 # **generateOrderToken**
-> OrderTokenResponse generateOrderToken(orderId)
+> OrderTokenResponse generateOrderToken(order_id)
 
 Generate an order token for a given order id
 
@@ -223,7 +223,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to generate a token for.
+var order_id = "order_id_example"; // String | The order id to generate a token for.
 
 
 var callback = function(error, data, response) {
@@ -233,14 +233,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.generateOrderToken(orderId, callback);
+apiInstance.generateOrderToken(order_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to generate a token for. | 
+ **order_id** | **String**| The order id to generate a token for. | 
 
 ### Return type
 
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrder"></a>
 # **getOrder**
-> OrderResponse getOrder(orderId, opts)
+> OrderResponse getOrder(order_id, opts)
 
 Retrieve an order
 
@@ -391,10 +391,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to retrieve.
+var order_id = "order_id_example"; // String | The order id to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -404,15 +404,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getOrder(orderId, opts, callback);
+apiInstance.getOrder(order_id, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **order_id** | **String**| The order id to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrderByToken"></a>
 # **getOrderByToken**
-> OrderResponse getOrderByToken(orderByTokenQuery, opts)
+> OrderResponse getOrderByToken(order_by_token_query, opts)
 
 Retrieve an order using a token
 
@@ -452,10 +452,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderByTokenQuery = new UltraCartRestApiV2.OrderByTokenQuery(); // OrderByTokenQuery | Order by token query
+var order_by_token_query = new UltraCartRestApiV2.OrderByTokenQuery(); // OrderByTokenQuery | Order by token query
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -465,15 +465,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getOrderByToken(orderByTokenQuery, opts, callback);
+apiInstance.getOrderByToken(order_by_token_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderByTokenQuery** | [**OrderByTokenQuery**](OrderByTokenQuery.md)| Order by token query | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **order_by_token_query** | [**OrderByTokenQuery**](OrderByTokenQuery.md)| Order by token query | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -514,40 +514,40 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
 var opts = { 
-  'orderId': "orderId_example", // String | Order Id
-  'paymentMethod': "paymentMethod_example", // String | Payment Method
+  'order_id': "order_id_example", // String | Order Id
+  'payment_method': "payment_method_example", // String | Payment Method
   'company': "company_example", // String | Company
-  'firstName': "firstName_example", // String | First Name
-  'lastName': "lastName_example", // String | Last Name
+  'first_name': "first_name_example", // String | First Name
+  'last_name': "last_name_example", // String | Last Name
   'city': "city_example", // String | City
-  'stateRegion': "stateRegion_example", // String | State/Region
-  'postalCode': "postalCode_example", // String | Postal Code
-  'countryCode': "countryCode_example", // String | Country Code (ISO-3166 two letter)
+  'state_region': "state_region_example", // String | State/Region
+  'postal_code': "postal_code_example", // String | Postal Code
+  'country_code': "country_code_example", // String | Country Code (ISO-3166 two letter)
   'phone': "phone_example", // String | Phone
   'email': "email_example", // String | Email
-  'ccEmail': "ccEmail_example", // String | CC Email
+  'cc_email': "cc_email_example", // String | CC Email
   'total': 8.14, // Number | Total
-  'screenBrandingThemeCode': "screenBrandingThemeCode_example", // String | Screen Branding Theme Code
-  'storefrontHostName': "storefrontHostName_example", // String | StoreFront Host Name
-  'creationDateBegin': "creationDateBegin_example", // String | Creation Date Begin
-  'creationDateEnd': "creationDateEnd_example", // String | Creation Date End
-  'paymentDateBegin': "paymentDateBegin_example", // String | Payment Date Begin
-  'paymentDateEnd': "paymentDateEnd_example", // String | Payment Date End
-  'shipmentDateBegin': "shipmentDateBegin_example", // String | Shipment Date Begin
-  'shipmentDateEnd': "shipmentDateEnd_example", // String | Shipment Date End
+  'screen_branding_theme_code': "screen_branding_theme_code_example", // String | Screen Branding Theme Code
+  'storefront_host_name': "storefront_host_name_example", // String | StoreFront Host Name
+  'creation_date_begin': "creation_date_begin_example", // String | Creation Date Begin
+  'creation_date_end': "creation_date_end_example", // String | Creation Date End
+  'payment_date_begin': "payment_date_begin_example", // String | Payment Date Begin
+  'payment_date_end': "payment_date_end_example", // String | Payment Date End
+  'shipment_date_begin': "shipment_date_begin_example", // String | Shipment Date Begin
+  'shipment_date_end': "shipment_date_end_example", // String | Shipment Date End
   'rma': "rma_example", // String | RMA
-  'purchaseOrderNumber': "purchaseOrderNumber_example", // String | Purchase Order Number
-  'itemId': "itemId_example", // String | Item Id
-  'currentStage': "currentStage_example", // String | Current Stage
-  'channelPartnerCode': "channelPartnerCode_example", // String | Channel Partner Code
-  'channelPartnerOrderId': "channelPartnerOrderId_example", // String | Channel Partner Order ID
-  'customerProfileOid': 56, // Number | 
-  'refundDateBegin': "refundDateBegin_example", // String | 
-  'refundDateEnd': "refundDateEnd_example", // String | 
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'sort': "sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.
+  'purchase_order_number': "purchase_order_number_example", // String | Purchase Order Number
+  'item_id': "item_id_example", // String | Item Id
+  'current_stage': "current_stage_example", // String | Current Stage
+  'channel_partner_code': "channel_partner_code_example", // String | Channel Partner Code
+  'channel_partner_order_id': "channel_partner_order_id_example", // String | Channel Partner Order ID
+  'customer_profile_oid': 56, // Number | 
+  'Refund_Date_Begin': "Refund_Date_Begin_example", // String | 
+  'Refund_Date_End': "Refund_Date_End_example", // String | 
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.
 };
 
 var callback = function(error, data, response) {
@@ -564,40 +564,40 @@ apiInstance.getOrders(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| Order Id | [optional] 
- **paymentMethod** | **String**| Payment Method | [optional] 
+ **order_id** | **String**| Order Id | [optional] 
+ **payment_method** | **String**| Payment Method | [optional] 
  **company** | **String**| Company | [optional] 
- **firstName** | **String**| First Name | [optional] 
- **lastName** | **String**| Last Name | [optional] 
+ **first_name** | **String**| First Name | [optional] 
+ **last_name** | **String**| Last Name | [optional] 
  **city** | **String**| City | [optional] 
- **stateRegion** | **String**| State/Region | [optional] 
- **postalCode** | **String**| Postal Code | [optional] 
- **countryCode** | **String**| Country Code (ISO-3166 two letter) | [optional] 
+ **state_region** | **String**| State/Region | [optional] 
+ **postal_code** | **String**| Postal Code | [optional] 
+ **country_code** | **String**| Country Code (ISO-3166 two letter) | [optional] 
  **phone** | **String**| Phone | [optional] 
  **email** | **String**| Email | [optional] 
- **ccEmail** | **String**| CC Email | [optional] 
+ **cc_email** | **String**| CC Email | [optional] 
  **total** | **Number**| Total | [optional] 
- **screenBrandingThemeCode** | **String**| Screen Branding Theme Code | [optional] 
- **storefrontHostName** | **String**| StoreFront Host Name | [optional] 
- **creationDateBegin** | **String**| Creation Date Begin | [optional] 
- **creationDateEnd** | **String**| Creation Date End | [optional] 
- **paymentDateBegin** | **String**| Payment Date Begin | [optional] 
- **paymentDateEnd** | **String**| Payment Date End | [optional] 
- **shipmentDateBegin** | **String**| Shipment Date Begin | [optional] 
- **shipmentDateEnd** | **String**| Shipment Date End | [optional] 
+ **screen_branding_theme_code** | **String**| Screen Branding Theme Code | [optional] 
+ **storefront_host_name** | **String**| StoreFront Host Name | [optional] 
+ **creation_date_begin** | **String**| Creation Date Begin | [optional] 
+ **creation_date_end** | **String**| Creation Date End | [optional] 
+ **payment_date_begin** | **String**| Payment Date Begin | [optional] 
+ **payment_date_end** | **String**| Payment Date End | [optional] 
+ **shipment_date_begin** | **String**| Shipment Date Begin | [optional] 
+ **shipment_date_end** | **String**| Shipment Date End | [optional] 
  **rma** | **String**| RMA | [optional] 
- **purchaseOrderNumber** | **String**| Purchase Order Number | [optional] 
- **itemId** | **String**| Item Id | [optional] 
- **currentStage** | **String**| Current Stage | [optional] 
- **channelPartnerCode** | **String**| Channel Partner Code | [optional] 
- **channelPartnerOrderId** | **String**| Channel Partner Order ID | [optional] 
- **customerProfileOid** | **Number**|  | [optional] 
- **refundDateBegin** | **String**|  | [optional] 
- **refundDateEnd** | **String**|  | [optional] 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result. | [optional] 
+ **purchase_order_number** | **String**| Purchase Order Number | [optional] 
+ **item_id** | **String**| Item Id | [optional] 
+ **current_stage** | **String**| Current Stage | [optional] 
+ **channel_partner_code** | **String**| Channel Partner Code | [optional] 
+ **channel_partner_order_id** | **String**| Channel Partner Order ID | [optional] 
+ **customer_profile_oid** | **Number**|  | [optional] 
+ **Refund_Date_Begin** | **String**|  | [optional] 
+ **Refund_Date_End** | **String**|  | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result. | [optional] 
 
 ### Return type
 
@@ -614,7 +614,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrdersBatch"></a>
 # **getOrdersBatch**
-> OrdersResponse getOrdersBatch(orderBatch, opts)
+> OrdersResponse getOrdersBatch(order_batch, opts)
 
 Retrieve order batch
 
@@ -637,10 +637,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderBatch = new UltraCartRestApiV2.OrderQueryBatch(); // OrderQueryBatch | Order batch
+var order_batch = new UltraCartRestApiV2.OrderQueryBatch(); // OrderQueryBatch | Order batch
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.
 };
 
 var callback = function(error, data, response) {
@@ -650,15 +650,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getOrdersBatch(orderBatch, opts, callback);
+apiInstance.getOrdersBatch(order_batch, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderBatch** | [**OrderQueryBatch**](OrderQueryBatch.md)| Order batch | 
- **expand** | **String**| The object expansion to perform on the result. | [optional] 
+ **order_batch** | [**OrderQueryBatch**](OrderQueryBatch.md)| Order batch | 
+ **_expand** | **String**| The object expansion to perform on the result. | [optional] 
 
 ### Return type
 
@@ -675,7 +675,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrdersByQuery"></a>
 # **getOrdersByQuery**
-> OrdersResponse getOrdersByQuery(orderQuery, opts)
+> OrdersResponse getOrdersByQuery(order_query, opts)
 
 Retrieve orders
 
@@ -698,13 +698,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderQuery = new UltraCartRestApiV2.OrderQuery(); // OrderQuery | Order query
+var order_query = new UltraCartRestApiV2.OrderQuery(); // OrderQuery | Order query
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'sort': "sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.
 };
 
 var callback = function(error, data, response) {
@@ -714,18 +714,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getOrdersByQuery(orderQuery, opts, callback);
+apiInstance.getOrdersByQuery(order_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderQuery** | [**OrderQuery**](OrderQuery.md)| Order query | 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result. | [optional] 
+ **order_query** | [**OrderQuery**](OrderQuery.md)| Order query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result. | [optional] 
 
 ### Return type
 
@@ -768,7 +768,7 @@ var apiInstance = new UltraCartRestApiV2.OrderApi();
 var order = new UltraCartRestApiV2.Order(); // Order | Order to insert
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -786,7 +786,7 @@ apiInstance.insertOrder(order, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order** | [**Order**](Order.md)| Order to insert | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -803,7 +803,7 @@ Name | Type | Description  | Notes
 
 <a name="refundOrder"></a>
 # **refundOrder**
-> OrderResponse refundOrder(order, orderId, opts)
+> OrderResponse refundOrder(order, order_id, opts)
 
 Refund an order
 
@@ -828,15 +828,15 @@ var apiInstance = new UltraCartRestApiV2.OrderApi();
 
 var order = new UltraCartRestApiV2.Order(); // Order | Order to refund
 
-var orderId = "orderId_example"; // String | The order id to refund.
+var order_id = "order_id_example"; // String | The order id to refund.
 
 var opts = { 
-  'rejectAfterRefund': false, // Boolean | Reject order after refund
-  'skipCustomerNotification': false, // Boolean | Skip customer email notification
-  'autoOrderCancel': false, // Boolean | Cancel associated auto orders
-  'manualRefund': false, // Boolean | Consider a manual refund done externally
-  'reverseAffiliateTransactions': true, // Boolean | Reverse affiliate transactions
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  'reject_after_refund': false, // Boolean | Reject order after refund
+  'skip_customer_notification': false, // Boolean | Skip customer email notification
+  'auto_order_cancel': false, // Boolean | Cancel associated auto orders
+  'manual_refund': false, // Boolean | Consider a manual refund done externally
+  'reverse_affiliate_transactions': true, // Boolean | Reverse affiliate transactions
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -846,7 +846,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.refundOrder(order, orderId, opts, callback);
+apiInstance.refundOrder(order, order_id, opts, callback);
 ```
 
 ### Parameters
@@ -854,13 +854,13 @@ apiInstance.refundOrder(order, orderId, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order** | [**Order**](Order.md)| Order to refund | 
- **orderId** | **String**| The order id to refund. | 
- **rejectAfterRefund** | **Boolean**| Reject order after refund | [optional] [default to false]
- **skipCustomerNotification** | **Boolean**| Skip customer email notification | [optional] [default to false]
- **autoOrderCancel** | **Boolean**| Cancel associated auto orders | [optional] [default to false]
- **manualRefund** | **Boolean**| Consider a manual refund done externally | [optional] [default to false]
- **reverseAffiliateTransactions** | **Boolean**| Reverse affiliate transactions | [optional] [default to true]
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **order_id** | **String**| The order id to refund. | 
+ **reject_after_refund** | **Boolean**| Reject order after refund | [optional] [default to false]
+ **skip_customer_notification** | **Boolean**| Skip customer email notification | [optional] [default to false]
+ **auto_order_cancel** | **Boolean**| Cancel associated auto orders | [optional] [default to false]
+ **manual_refund** | **Boolean**| Consider a manual refund done externally | [optional] [default to false]
+ **reverse_affiliate_transactions** | **Boolean**| Reverse affiliate transactions | [optional] [default to true]
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -877,7 +877,7 @@ Name | Type | Description  | Notes
 
 <a name="replacement"></a>
 # **replacement**
-> OrderReplacementResponse replacement(orderId, replacement)
+> OrderReplacementResponse replacement(order_id, replacement)
 
 Replacement order
 
@@ -900,7 +900,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to generate a replacement for.
+var order_id = "order_id_example"; // String | The order id to generate a replacement for.
 
 var replacement = new UltraCartRestApiV2.OrderReplacement(); // OrderReplacement | Replacement order details
 
@@ -912,14 +912,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.replacement(orderId, replacement, callback);
+apiInstance.replacement(order_id, replacement, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to generate a replacement for. | 
+ **order_id** | **String**| The order id to generate a replacement for. | 
  **replacement** | [**OrderReplacement**](OrderReplacement.md)| Replacement order details | 
 
 ### Return type
@@ -937,7 +937,7 @@ Name | Type | Description  | Notes
 
 <a name="resendReceipt"></a>
 # **resendReceipt**
-> BaseResponse resendReceipt(orderId)
+> BaseResponse resendReceipt(order_id)
 
 Resend receipt
 
@@ -960,7 +960,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to resend the receipt for.
+var order_id = "order_id_example"; // String | The order id to resend the receipt for.
 
 
 var callback = function(error, data, response) {
@@ -970,14 +970,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.resendReceipt(orderId, callback);
+apiInstance.resendReceipt(order_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to resend the receipt for. | 
+ **order_id** | **String**| The order id to resend the receipt for. | 
 
 ### Return type
 
@@ -994,7 +994,7 @@ Name | Type | Description  | Notes
 
 <a name="resendShipmentConfirmation"></a>
 # **resendShipmentConfirmation**
-> BaseResponse resendShipmentConfirmation(orderId)
+> BaseResponse resendShipmentConfirmation(order_id)
 
 Resend shipment confirmation
 
@@ -1017,7 +1017,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var orderId = "orderId_example"; // String | The order id to resend the shipment notification for.
+var order_id = "order_id_example"; // String | The order id to resend the shipment notification for.
 
 
 var callback = function(error, data, response) {
@@ -1027,14 +1027,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.resendShipmentConfirmation(orderId, callback);
+apiInstance.resendShipmentConfirmation(order_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| The order id to resend the shipment notification for. | 
+ **order_id** | **String**| The order id to resend the shipment notification for. | 
 
 ### Return type
 
@@ -1051,7 +1051,7 @@ Name | Type | Description  | Notes
 
 <a name="updateAccountsReceivableRetryConfig"></a>
 # **updateAccountsReceivableRetryConfig**
-> BaseResponse updateAccountsReceivableRetryConfig(retryConfig)
+> BaseResponse updateAccountsReceivableRetryConfig(retry_config)
 
 Update A/R Retry Configuration
 
@@ -1074,7 +1074,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
-var retryConfig = new UltraCartRestApiV2.AccountsReceivableRetryConfig(); // AccountsReceivableRetryConfig | AccountsReceivableRetryConfig object
+var retry_config = new UltraCartRestApiV2.AccountsReceivableRetryConfig(); // AccountsReceivableRetryConfig | AccountsReceivableRetryConfig object
 
 
 var callback = function(error, data, response) {
@@ -1084,14 +1084,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateAccountsReceivableRetryConfig(retryConfig, callback);
+apiInstance.updateAccountsReceivableRetryConfig(retry_config, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **retryConfig** | [**AccountsReceivableRetryConfig**](AccountsReceivableRetryConfig.md)| AccountsReceivableRetryConfig object | 
+ **retry_config** | [**AccountsReceivableRetryConfig**](AccountsReceivableRetryConfig.md)| AccountsReceivableRetryConfig object | 
 
 ### Return type
 
@@ -1108,7 +1108,7 @@ Name | Type | Description  | Notes
 
 <a name="updateOrder"></a>
 # **updateOrder**
-> OrderResponse updateOrder(order, orderId, opts)
+> OrderResponse updateOrder(order, order_id, opts)
 
 Update an order
 
@@ -1133,10 +1133,10 @@ var apiInstance = new UltraCartRestApiV2.OrderApi();
 
 var order = new UltraCartRestApiV2.Order(); // Order | Order to update
 
-var orderId = "orderId_example"; // String | The order id to update.
+var order_id = "order_id_example"; // String | The order id to update.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -1146,7 +1146,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateOrder(order, orderId, opts, callback);
+apiInstance.updateOrder(order, order_id, opts, callback);
 ```
 
 ### Parameters
@@ -1154,8 +1154,8 @@ apiInstance.updateOrder(order, orderId, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order** | [**Order**](Order.md)| Order to update | 
- **orderId** | **String**| The order id to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **order_id** | **String**| The order id to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 

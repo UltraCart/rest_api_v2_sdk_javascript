@@ -59,21 +59,21 @@
     /**
      * Delete a customer
      * Delete a customer on the UltraCart account. 
-     * @param {Number} customerProfileOid The customer_profile_oid to delete.
+     * @param {Number} customer_profile_oid The customer_profile_oid to delete.
      * @param {module:com.ultracart.admin.v2/CustomerApi~deleteCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.deleteCustomer = function(customerProfileOid, callback) {
+    this.deleteCustomer = function(customer_profile_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'customerProfileOid' is set
-      if (customerProfileOid === undefined || customerProfileOid === null) {
-        throw new Error("Missing the required parameter 'customerProfileOid' when calling deleteCustomer");
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling deleteCustomer");
       }
 
 
       var pathParams = {
-        'customer_profile_oid': customerProfileOid
+        'customer_profile_oid': customer_profile_oid
       };
       var queryParams = {
       };
@@ -107,27 +107,27 @@
     /**
      * Retrieve a customer
      * Retrieves a single customer using the specified customer profile oid. 
-     * @param {Number} customerProfileOid The customer oid to retrieve.
+     * @param {Number} customer_profile_oid The customer oid to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.getCustomer = function(customerProfileOid, opts, callback) {
+    this.getCustomer = function(customer_profile_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'customerProfileOid' is set
-      if (customerProfileOid === undefined || customerProfileOid === null) {
-        throw new Error("Missing the required parameter 'customerProfileOid' when calling getCustomer");
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling getCustomer");
       }
 
 
       var pathParams = {
-        'customer_profile_oid': customerProfileOid
+        'customer_profile_oid': customer_profile_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -161,37 +161,37 @@
      * Retrieves customers from the account.  If no parameters are specified, all customers will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.email Email
-     * @param {String} opts.qbClass Quickbooks class
-     * @param {String} opts.quickbooksCode Quickbooks code
-     * @param {String} opts.lastModifiedDtsStart Last modified date start
-     * @param {String} opts.lastModifiedDtsEnd Last modified date end
-     * @param {String} opts.signupDtsStart Signup date start
-     * @param {String} opts.signupDtsEnd Signup date end
-     * @param {String} opts.billingFirstName Billing first name
-     * @param {String} opts.billingLastName Billing last name
-     * @param {String} opts.billingCompany Billing company
-     * @param {String} opts.billingCity Billing city
-     * @param {String} opts.billingState Billing state
-     * @param {String} opts.billingPostalCode Billing postal code
-     * @param {String} opts.billingCountryCode Billing country code
-     * @param {String} opts.billingDayPhone Billing day phone
-     * @param {String} opts.billingEveningPhone Billing evening phone
-     * @param {String} opts.shippingFirstName Shipping first name
-     * @param {String} opts.shippingLastName Shipping last name
-     * @param {String} opts.shippingCompany Shipping company
-     * @param {String} opts.shippingCity Shipping city
-     * @param {String} opts.shippingState Shipping state
-     * @param {String} opts.shippingPostalCode Shipping postal code
-     * @param {String} opts.shippingCountryCode Shipping country code
-     * @param {String} opts.shippingDayPhone Shipping day phone
-     * @param {String} opts.shippingEveningPhone Shipping evening phone
-     * @param {Number} opts.pricingTierOid Pricing tier oid
-     * @param {String} opts.pricingTierName Pricing tier name
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.since Fetch customers that have been created/modified since this date/time.
-     * @param {String} opts.sort The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts.qb_class Quickbooks class
+     * @param {String} opts.quickbooks_code Quickbooks code
+     * @param {String} opts.last_modified_dts_start Last modified date start
+     * @param {String} opts.last_modified_dts_end Last modified date end
+     * @param {String} opts.signup_dts_start Signup date start
+     * @param {String} opts.signup_dts_end Signup date end
+     * @param {String} opts.billing_first_name Billing first name
+     * @param {String} opts.billing_last_name Billing last name
+     * @param {String} opts.billing_company Billing company
+     * @param {String} opts.billing_city Billing city
+     * @param {String} opts.billing_state Billing state
+     * @param {String} opts.billing_postal_code Billing postal code
+     * @param {String} opts.billing_country_code Billing country code
+     * @param {String} opts.billing_day_phone Billing day phone
+     * @param {String} opts.billing_evening_phone Billing evening phone
+     * @param {String} opts.shipping_first_name Shipping first name
+     * @param {String} opts.shipping_last_name Shipping last name
+     * @param {String} opts.shipping_company Shipping company
+     * @param {String} opts.shipping_city Shipping city
+     * @param {String} opts.shipping_state Shipping state
+     * @param {String} opts.shipping_postal_code Shipping postal code
+     * @param {String} opts.shipping_country_code Shipping country code
+     * @param {String} opts.shipping_day_phone Shipping day phone
+     * @param {String} opts.shipping_evening_phone Shipping evening phone
+     * @param {Number} opts.pricing_tier_oid Pricing tier oid
+     * @param {String} opts.pricing_tier_name Pricing tier name
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch customers that have been created/modified since this date/time.
+     * @param {String} opts._sort The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CustomersResponse}
      */
@@ -204,37 +204,37 @@
       };
       var queryParams = {
         'email': opts['email'],
-        'qb_class': opts['qbClass'],
-        'quickbooks_code': opts['quickbooksCode'],
-        'last_modified_dts_start': opts['lastModifiedDtsStart'],
-        'last_modified_dts_end': opts['lastModifiedDtsEnd'],
-        'signup_dts_start': opts['signupDtsStart'],
-        'signup_dts_end': opts['signupDtsEnd'],
-        'billing_first_name': opts['billingFirstName'],
-        'billing_last_name': opts['billingLastName'],
-        'billing_company': opts['billingCompany'],
-        'billing_city': opts['billingCity'],
-        'billing_state': opts['billingState'],
-        'billing_postal_code': opts['billingPostalCode'],
-        'billing_country_code': opts['billingCountryCode'],
-        'billing_day_phone': opts['billingDayPhone'],
-        'billing_evening_phone': opts['billingEveningPhone'],
-        'shipping_first_name': opts['shippingFirstName'],
-        'shipping_last_name': opts['shippingLastName'],
-        'shipping_company': opts['shippingCompany'],
-        'shipping_city': opts['shippingCity'],
-        'shipping_state': opts['shippingState'],
-        'shipping_postal_code': opts['shippingPostalCode'],
-        'shipping_country_code': opts['shippingCountryCode'],
-        'shipping_day_phone': opts['shippingDayPhone'],
-        'shipping_evening_phone': opts['shippingEveningPhone'],
-        'pricing_tier_oid': opts['pricingTierOid'],
-        'pricing_tier_name': opts['pricingTierName'],
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_since': opts['since'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        'qb_class': opts['qb_class'],
+        'quickbooks_code': opts['quickbooks_code'],
+        'last_modified_dts_start': opts['last_modified_dts_start'],
+        'last_modified_dts_end': opts['last_modified_dts_end'],
+        'signup_dts_start': opts['signup_dts_start'],
+        'signup_dts_end': opts['signup_dts_end'],
+        'billing_first_name': opts['billing_first_name'],
+        'billing_last_name': opts['billing_last_name'],
+        'billing_company': opts['billing_company'],
+        'billing_city': opts['billing_city'],
+        'billing_state': opts['billing_state'],
+        'billing_postal_code': opts['billing_postal_code'],
+        'billing_country_code': opts['billing_country_code'],
+        'billing_day_phone': opts['billing_day_phone'],
+        'billing_evening_phone': opts['billing_evening_phone'],
+        'shipping_first_name': opts['shipping_first_name'],
+        'shipping_last_name': opts['shipping_last_name'],
+        'shipping_company': opts['shipping_company'],
+        'shipping_city': opts['shipping_city'],
+        'shipping_state': opts['shipping_state'],
+        'shipping_postal_code': opts['shipping_postal_code'],
+        'shipping_country_code': opts['shipping_country_code'],
+        'shipping_day_phone': opts['shipping_day_phone'],
+        'shipping_evening_phone': opts['shipping_evening_phone'],
+        'pricing_tier_oid': opts['pricing_tier_oid'],
+        'pricing_tier_name': opts['pricing_tier_name'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -266,34 +266,34 @@
     /**
      * Retrieve customers by query
      * Retrieves customers from the account.  If no parameters are specified, all customers will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/CustomerQuery} customerQuery Customer query
+     * @param {module:com.ultracart.admin.v2.models/CustomerQuery} customer_query Customer query
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.since Fetch customers that have been created/modified since this date/time.
-     * @param {String} opts.sort The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch customers that have been created/modified since this date/time.
+     * @param {String} opts._sort The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomersByQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CustomersResponse}
      */
-    this.getCustomersByQuery = function(customerQuery, opts, callback) {
+    this.getCustomersByQuery = function(customer_query, opts, callback) {
       opts = opts || {};
-      var postBody = customerQuery;
+      var postBody = customer_query;
 
-      // verify the required parameter 'customerQuery' is set
-      if (customerQuery === undefined || customerQuery === null) {
-        throw new Error("Missing the required parameter 'customerQuery' when calling getCustomersByQuery");
+      // verify the required parameter 'customer_query' is set
+      if (customer_query === undefined || customer_query === null) {
+        throw new Error("Missing the required parameter 'customer_query' when calling getCustomersByQuery");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_since': opts['since'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -326,7 +326,7 @@
      * Retrieve customers for DataTables plugin
      * Retrieves customers from the account.  If no searches are specified, all customers will be returned. 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomersForDataTablesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/DataTablesServerSideResponse}
      */
@@ -338,7 +338,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -454,7 +454,7 @@
      * Insert a customer on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/Customer} customer Customer to insert
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CustomerApi~insertCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerResponse}
      */
@@ -471,7 +471,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -504,13 +504,13 @@
      * Update a customer
      * Update a customer on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/Customer} customer Customer to update
-     * @param {Number} customerProfileOid The customer_profile_oid to update.
+     * @param {Number} customer_profile_oid The customer_profile_oid to update.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CustomerApi~updateCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerResponse}
      */
-    this.updateCustomer = function(customer, customerProfileOid, opts, callback) {
+    this.updateCustomer = function(customer, customer_profile_oid, opts, callback) {
       opts = opts || {};
       var postBody = customer;
 
@@ -519,17 +519,17 @@
         throw new Error("Missing the required parameter 'customer' when calling updateCustomer");
       }
 
-      // verify the required parameter 'customerProfileOid' is set
-      if (customerProfileOid === undefined || customerProfileOid === null) {
-        throw new Error("Missing the required parameter 'customerProfileOid' when calling updateCustomer");
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling updateCustomer");
       }
 
 
       var pathParams = {
-        'customer_profile_oid': customerProfileOid
+        'customer_profile_oid': customer_profile_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -561,27 +561,27 @@
     /**
      * Update email list subscriptions for a customer
      * Update email list subscriptions for a customer 
-     * @param {Number} customerProfileOid The customer profile oid
-     * @param {module:com.ultracart.admin.v2.models/CustomerEmailListChanges} listChanges List changes
+     * @param {Number} customer_profile_oid The customer profile oid
+     * @param {module:com.ultracart.admin.v2.models/CustomerEmailListChanges} list_changes List changes
      * @param {module:com.ultracart.admin.v2/CustomerApi~updateCustomerEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerEmailListChanges}
      */
-    this.updateCustomerEmailLists = function(customerProfileOid, listChanges, callback) {
-      var postBody = listChanges;
+    this.updateCustomerEmailLists = function(customer_profile_oid, list_changes, callback) {
+      var postBody = list_changes;
 
-      // verify the required parameter 'customerProfileOid' is set
-      if (customerProfileOid === undefined || customerProfileOid === null) {
-        throw new Error("Missing the required parameter 'customerProfileOid' when calling updateCustomerEmailLists");
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling updateCustomerEmailLists");
       }
 
-      // verify the required parameter 'listChanges' is set
-      if (listChanges === undefined || listChanges === null) {
-        throw new Error("Missing the required parameter 'listChanges' when calling updateCustomerEmailLists");
+      // verify the required parameter 'list_changes' is set
+      if (list_changes === undefined || list_changes === null) {
+        throw new Error("Missing the required parameter 'list_changes' when calling updateCustomerEmailLists");
       }
 
 
       var pathParams = {
-        'customer_profile_oid': customerProfileOid
+        'customer_profile_oid': customer_profile_oid
       };
       var queryParams = {
       };

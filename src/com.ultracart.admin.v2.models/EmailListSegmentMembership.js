@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('email_list_uuid'))
-        obj.emailListUuid = ApiClient.convertToType(data['email_list_uuid'], 'String');
+        obj.email_list_uuid = ApiClient.convertToType(data['email_list_uuid'], 'String');
       if (data.hasOwnProperty('email_segment_uuid'))
-        obj.emailSegmentUuid = ApiClient.convertToType(data['email_segment_uuid'], 'String');
+        obj.email_segment_uuid = ApiClient.convertToType(data['email_segment_uuid'], 'String');
       if (data.hasOwnProperty('exclude'))
         obj.exclude = ApiClient.convertToType(data['exclude'], 'Boolean');
       if (data.hasOwnProperty('name'))
@@ -69,15 +69,15 @@
 
   /**
    * UUID identifying this email list or null if this is a segment
-   * @member {String} emailListUuid
+   * @member {String} email_list_uuid
    */
-  exports.prototype.emailListUuid = undefined;
+  exports.prototype.email_list_uuid = undefined;
 
   /**
    * UUID identifying this email segment or null if this is a list
-   * @member {String} emailSegmentUuid
+   * @member {String} email_segment_uuid
    */
-  exports.prototype.emailSegmentUuid = undefined;
+  exports.prototype.email_segment_uuid = undefined;
 
   /**
    * true if customers from this list/segment is excluded from membership

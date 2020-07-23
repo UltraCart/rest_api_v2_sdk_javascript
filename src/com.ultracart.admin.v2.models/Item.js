@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('amember'))
         obj.amember = ItemAmember.constructFromObject(data['amember']);
       if (data.hasOwnProperty('auto_order'))
-        obj.autoOrder = ItemAutoOrder.constructFromObject(data['auto_order']);
+        obj.auto_order = ItemAutoOrder.constructFromObject(data['auto_order']);
       if (data.hasOwnProperty('ccbill'))
         obj.ccbill = ItemCCBill.constructFromObject(data['ccbill']);
       if (data.hasOwnProperty('channelPartnerMappings'))
@@ -72,53 +72,53 @@
       if (data.hasOwnProperty('content'))
         obj.content = ItemContent.constructFromObject(data['content']);
       if (data.hasOwnProperty('creation_dts'))
-        obj.creationDts = ApiClient.convertToType(data['creation_dts'], 'String');
+        obj.creation_dts = ApiClient.convertToType(data['creation_dts'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('description_translated_text_instance_oid'))
-        obj.descriptionTranslatedTextInstanceOid = ApiClient.convertToType(data['description_translated_text_instance_oid'], 'Number');
+        obj.description_translated_text_instance_oid = ApiClient.convertToType(data['description_translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('digital_delivery'))
-        obj.digitalDelivery = ItemDigitalDelivery.constructFromObject(data['digital_delivery']);
+        obj.digital_delivery = ItemDigitalDelivery.constructFromObject(data['digital_delivery']);
       if (data.hasOwnProperty('ebay'))
         obj.ebay = ItemEbay.constructFromObject(data['ebay']);
       if (data.hasOwnProperty('email_notifications'))
-        obj.emailNotifications = ItemEmailNotifications.constructFromObject(data['email_notifications']);
+        obj.email_notifications = ItemEmailNotifications.constructFromObject(data['email_notifications']);
       if (data.hasOwnProperty('enrollment123'))
         obj.enrollment123 = ItemEnrollment123.constructFromObject(data['enrollment123']);
       if (data.hasOwnProperty('gift_certificate'))
-        obj.giftCertificate = ItemGiftCertificate.constructFromObject(data['gift_certificate']);
+        obj.gift_certificate = ItemGiftCertificate.constructFromObject(data['gift_certificate']);
       if (data.hasOwnProperty('google_product_search'))
-        obj.googleProductSearch = ItemGoogleProductSearch.constructFromObject(data['google_product_search']);
+        obj.google_product_search = ItemGoogleProductSearch.constructFromObject(data['google_product_search']);
       if (data.hasOwnProperty('identifiers'))
         obj.identifiers = ItemIdentifiers.constructFromObject(data['identifiers']);
       if (data.hasOwnProperty('inactive'))
         obj.inactive = ApiClient.convertToType(data['inactive'], 'Boolean');
       if (data.hasOwnProperty('instant_payment_notifications'))
-        obj.instantPaymentNotifications = ItemInstantPaymentNotifications.constructFromObject(data['instant_payment_notifications']);
+        obj.instant_payment_notifications = ItemInstantPaymentNotifications.constructFromObject(data['instant_payment_notifications']);
       if (data.hasOwnProperty('internal'))
         obj.internal = ItemInternal.constructFromObject(data['internal']);
       if (data.hasOwnProperty('kit'))
         obj.kit = ApiClient.convertToType(data['kit'], 'Boolean');
       if (data.hasOwnProperty('kit_component_only'))
-        obj.kitComponentOnly = ApiClient.convertToType(data['kit_component_only'], 'Boolean');
+        obj.kit_component_only = ApiClient.convertToType(data['kit_component_only'], 'Boolean');
       if (data.hasOwnProperty('kit_definition'))
-        obj.kitDefinition = ItemKitDefinition.constructFromObject(data['kit_definition']);
+        obj.kit_definition = ItemKitDefinition.constructFromObject(data['kit_definition']);
       if (data.hasOwnProperty('last_modified_dts'))
-        obj.lastModifiedDts = ApiClient.convertToType(data['last_modified_dts'], 'String');
+        obj.last_modified_dts = ApiClient.convertToType(data['last_modified_dts'], 'String');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('merchant_item_id'))
-        obj.merchantItemId = ApiClient.convertToType(data['merchant_item_id'], 'String');
+        obj.merchant_item_id = ApiClient.convertToType(data['merchant_item_id'], 'String');
       if (data.hasOwnProperty('merchant_item_oid'))
-        obj.merchantItemOid = ApiClient.convertToType(data['merchant_item_oid'], 'Number');
+        obj.merchant_item_oid = ApiClient.convertToType(data['merchant_item_oid'], 'Number');
       if (data.hasOwnProperty('options'))
         obj.options = ApiClient.convertToType(data['options'], [ItemOption]);
       if (data.hasOwnProperty('parent_category_id'))
-        obj.parentCategoryId = ApiClient.convertToType(data['parent_category_id'], 'Number');
+        obj.parent_category_id = ApiClient.convertToType(data['parent_category_id'], 'Number');
       if (data.hasOwnProperty('parent_category_path'))
-        obj.parentCategoryPath = ApiClient.convertToType(data['parent_category_path'], 'String');
+        obj.parent_category_path = ApiClient.convertToType(data['parent_category_path'], 'String');
       if (data.hasOwnProperty('payment_processing'))
-        obj.paymentProcessing = ItemPaymentProcessing.constructFromObject(data['payment_processing']);
+        obj.payment_processing = ItemPaymentProcessing.constructFromObject(data['payment_processing']);
       if (data.hasOwnProperty('physical'))
         obj.physical = ItemPhysical.constructFromObject(data['physical']);
       if (data.hasOwnProperty('pricing'))
@@ -126,9 +126,9 @@
       if (data.hasOwnProperty('properties'))
         obj.properties = ApiClient.convertToType(data['properties'], [ItemProperty]);
       if (data.hasOwnProperty('realtime_pricing'))
-        obj.realtimePricing = ItemRealtimePricing.constructFromObject(data['realtime_pricing']);
+        obj.realtime_pricing = ItemRealtimePricing.constructFromObject(data['realtime_pricing']);
       if (data.hasOwnProperty('recommend_replenishment_days'))
-        obj.recommendReplenishmentDays = ApiClient.convertToType(data['recommend_replenishment_days'], 'Number');
+        obj.recommend_replenishment_days = ApiClient.convertToType(data['recommend_replenishment_days'], 'Number');
       if (data.hasOwnProperty('related'))
         obj.related = ItemRelated.constructFromObject(data['related']);
       if (data.hasOwnProperty('reporting'))
@@ -148,13 +148,13 @@
       if (data.hasOwnProperty('tax'))
         obj.tax = ItemTax.constructFromObject(data['tax']);
       if (data.hasOwnProperty('third_party_email_marketing'))
-        obj.thirdPartyEmailMarketing = ApiClient.convertToType(data['third_party_email_marketing'], [ItemThirdPartyEmailMarketing]);
+        obj.third_party_email_marketing = ApiClient.convertToType(data['third_party_email_marketing'], [ItemThirdPartyEmailMarketing]);
       if (data.hasOwnProperty('variant_items'))
-        obj.variantItems = ApiClient.convertToType(data['variant_items'], [ItemVariantItem]);
+        obj.variant_items = ApiClient.convertToType(data['variant_items'], [ItemVariantItem]);
       if (data.hasOwnProperty('variations'))
         obj.variations = ApiClient.convertToType(data['variations'], [ItemVariation]);
       if (data.hasOwnProperty('wishlist_member'))
-        obj.wishlistMember = ItemWishlistMember.constructFromObject(data['wishlist_member']);
+        obj.wishlist_member = ItemWishlistMember.constructFromObject(data['wishlist_member']);
     }
     return obj;
   }
@@ -170,9 +170,9 @@
   exports.prototype.amember = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemAutoOrder} autoOrder
+   * @member {module:com.ultracart.admin.v2.models/ItemAutoOrder} auto_order
    */
-  exports.prototype.autoOrder = undefined;
+  exports.prototype.auto_order = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemCCBill} ccbill
@@ -202,9 +202,9 @@
 
   /**
    * Date/time of creation
-   * @member {String} creationDts
+   * @member {String} creation_dts
    */
-  exports.prototype.creationDts = undefined;
+  exports.prototype.creation_dts = undefined;
 
   /**
    * Description of the item up to 500 characters.
@@ -214,14 +214,14 @@
 
   /**
    * Description translated text instance id
-   * @member {Number} descriptionTranslatedTextInstanceOid
+   * @member {Number} description_translated_text_instance_oid
    */
-  exports.prototype.descriptionTranslatedTextInstanceOid = undefined;
+  exports.prototype.description_translated_text_instance_oid = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemDigitalDelivery} digitalDelivery
+   * @member {module:com.ultracart.admin.v2.models/ItemDigitalDelivery} digital_delivery
    */
-  exports.prototype.digitalDelivery = undefined;
+  exports.prototype.digital_delivery = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemEbay} ebay
@@ -229,9 +229,9 @@
   exports.prototype.ebay = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemEmailNotifications} emailNotifications
+   * @member {module:com.ultracart.admin.v2.models/ItemEmailNotifications} email_notifications
    */
-  exports.prototype.emailNotifications = undefined;
+  exports.prototype.email_notifications = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemEnrollment123} enrollment123
@@ -239,14 +239,14 @@
   exports.prototype.enrollment123 = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemGiftCertificate} giftCertificate
+   * @member {module:com.ultracart.admin.v2.models/ItemGiftCertificate} gift_certificate
    */
-  exports.prototype.giftCertificate = undefined;
+  exports.prototype.gift_certificate = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemGoogleProductSearch} googleProductSearch
+   * @member {module:com.ultracart.admin.v2.models/ItemGoogleProductSearch} google_product_search
    */
-  exports.prototype.googleProductSearch = undefined;
+  exports.prototype.google_product_search = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemIdentifiers} identifiers
@@ -260,9 +260,9 @@
   exports.prototype.inactive = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemInstantPaymentNotifications} instantPaymentNotifications
+   * @member {module:com.ultracart.admin.v2.models/ItemInstantPaymentNotifications} instant_payment_notifications
    */
-  exports.prototype.instantPaymentNotifications = undefined;
+  exports.prototype.instant_payment_notifications = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemInternal} internal
@@ -277,38 +277,38 @@
 
   /**
    * True if this item can only be usd as a kit component
-   * @member {Boolean} kitComponentOnly
+   * @member {Boolean} kit_component_only
    */
-  exports.prototype.kitComponentOnly = undefined;
+  exports.prototype.kit_component_only = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemKitDefinition} kitDefinition
+   * @member {module:com.ultracart.admin.v2.models/ItemKitDefinition} kit_definition
    */
-  exports.prototype.kitDefinition = undefined;
+  exports.prototype.kit_definition = undefined;
 
   /**
    * Date/time of last modification
-   * @member {String} lastModifiedDts
+   * @member {String} last_modified_dts
    */
-  exports.prototype.lastModifiedDts = undefined;
+  exports.prototype.last_modified_dts = undefined;
 
   /**
    * UltraCart merchant ID owning item
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Unique item id assigned to this item
-   * @member {String} merchantItemId
+   * @member {String} merchant_item_id
    */
-  exports.prototype.merchantItemId = undefined;
+  exports.prototype.merchant_item_id = undefined;
 
   /**
    * Unique object identifier for this item
-   * @member {Number} merchantItemOid
+   * @member {Number} merchant_item_oid
    */
-  exports.prototype.merchantItemOid = undefined;
+  exports.prototype.merchant_item_oid = undefined;
 
   /**
    * Options
@@ -318,20 +318,20 @@
 
   /**
    * Parent category of the item.  Zero indicates the root folder.
-   * @member {Number} parentCategoryId
+   * @member {Number} parent_category_id
    */
-  exports.prototype.parentCategoryId = undefined;
+  exports.prototype.parent_category_id = undefined;
 
   /**
    * Parent category path.  / indicates the root folder.
-   * @member {String} parentCategoryPath
+   * @member {String} parent_category_path
    */
-  exports.prototype.parentCategoryPath = undefined;
+  exports.prototype.parent_category_path = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemPaymentProcessing} paymentProcessing
+   * @member {module:com.ultracart.admin.v2.models/ItemPaymentProcessing} payment_processing
    */
-  exports.prototype.paymentProcessing = undefined;
+  exports.prototype.payment_processing = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemPhysical} physical
@@ -350,15 +350,15 @@
   exports.prototype.properties = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemRealtimePricing} realtimePricing
+   * @member {module:com.ultracart.admin.v2.models/ItemRealtimePricing} realtime_pricing
    */
-  exports.prototype.realtimePricing = undefined;
+  exports.prototype.realtime_pricing = undefined;
 
   /**
    * Number of days to recommend replenishment after.  Null is not configured.  Set to zero to disable.
-   * @member {Number} recommendReplenishmentDays
+   * @member {Number} recommend_replenishment_days
    */
-  exports.prototype.recommendReplenishmentDays = undefined;
+  exports.prototype.recommend_replenishment_days = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemRelated} related
@@ -407,15 +407,15 @@
 
   /**
    * 3rd Party Email Marketing
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing>} thirdPartyEmailMarketing
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing>} third_party_email_marketing
    */
-  exports.prototype.thirdPartyEmailMarketing = undefined;
+  exports.prototype.third_party_email_marketing = undefined;
 
   /**
    * Variant Items
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemVariantItem>} variantItems
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemVariantItem>} variant_items
    */
-  exports.prototype.variantItems = undefined;
+  exports.prototype.variant_items = undefined;
 
   /**
    * Variations
@@ -424,9 +424,9 @@
   exports.prototype.variations = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemWishlistMember} wishlistMember
+   * @member {module:com.ultracart.admin.v2.models/ItemWishlistMember} wishlist_member
    */
-  exports.prototype.wishlistMember = undefined;
+  exports.prototype.wishlist_member = undefined;
 
   return exports;
 

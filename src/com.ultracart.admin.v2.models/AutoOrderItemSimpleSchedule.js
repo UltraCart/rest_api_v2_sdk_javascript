@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('frequency'))
         obj.frequency = ApiClient.convertToType(data['frequency'], 'String');
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('repeat_count'))
-        obj.repeatCount = ApiClient.convertToType(data['repeat_count'], 'Number');
+        obj.repeat_count = ApiClient.convertToType(data['repeat_count'], 'Number');
     }
     return obj;
   }
@@ -73,15 +73,15 @@
 
   /**
    * Item ID that should rebill
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * The number of times this simple schedule is configured for
-   * @member {Number} repeatCount
+   * @member {Number} repeat_count
    */
-  exports.prototype.repeatCount = undefined;
+  exports.prototype.repeat_count = undefined;
 
 
   /**
@@ -94,79 +94,79 @@
      * value: "Weekly"
      * @const
      */
-    weekly: "Weekly",
+    Weekly: "Weekly",
 
     /**
      * value: "Biweekly"
      * @const
      */
-    biweekly: "Biweekly",
+    Biweekly: "Biweekly",
 
     /**
      * value: "Every..."
      * @const
      */
-    every_: "Every...",
+    Every___: "Every...",
 
     /**
      * value: "Every 10 Days"
      * @const
      */
-    every10Days: "Every 10 Days",
+    Every_10_Days: "Every 10 Days",
 
     /**
      * value: "Every 24 Days"
      * @const
      */
-    every24Days: "Every 24 Days",
+    Every_24_Days: "Every 24 Days",
 
     /**
      * value: "Every 28 Days"
      * @const
      */
-    every28Days: "Every 28 Days",
+    Every_28_Days: "Every 28 Days",
 
     /**
      * value: "Monthly"
      * @const
      */
-    monthly: "Monthly",
+    Monthly: "Monthly",
 
     /**
      * value: "Every 45 Days"
      * @const
      */
-    every45Days: "Every 45 Days",
+    Every_45_Days: "Every 45 Days",
 
     /**
      * value: "Every 2 Months"
      * @const
      */
-    every2Months: "Every 2 Months",
+    Every_2_Months: "Every 2 Months",
 
     /**
      * value: "Every 3 Months"
      * @const
      */
-    every3Months: "Every 3 Months",
+    Every_3_Months: "Every 3 Months",
 
     /**
      * value: "Every 4 Months"
      * @const
      */
-    every4Months: "Every 4 Months",
+    Every_4_Months: "Every 4 Months",
 
     /**
      * value: "Every 6 Months"
      * @const
      */
-    every6Months: "Every 6 Months",
+    Every_6_Months: "Every 6 Months",
 
     /**
      * value: "Yearly"
      * @const
      */
-    yearly: "Yearly"
+    Yearly: "Yearly"
   };
 
   return exports;

@@ -56,60 +56,60 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('card_expiration_month'))
-        obj.cardExpirationMonth = ApiClient.convertToType(data['card_expiration_month'], 'Number');
+        obj.card_expiration_month = ApiClient.convertToType(data['card_expiration_month'], 'Number');
       if (data.hasOwnProperty('card_expiration_year'))
-        obj.cardExpirationYear = ApiClient.convertToType(data['card_expiration_year'], 'Number');
+        obj.card_expiration_year = ApiClient.convertToType(data['card_expiration_year'], 'Number');
       if (data.hasOwnProperty('card_number'))
-        obj.cardNumber = ApiClient.convertToType(data['card_number'], 'String');
+        obj.card_number = ApiClient.convertToType(data['card_number'], 'String');
       if (data.hasOwnProperty('card_type'))
-        obj.cardType = ApiClient.convertToType(data['card_type'], 'String');
+        obj.card_type = ApiClient.convertToType(data['card_type'], 'String');
       if (data.hasOwnProperty('customer_profile_credit_card_id'))
-        obj.customerProfileCreditCardId = ApiClient.convertToType(data['customer_profile_credit_card_id'], 'Number');
+        obj.customer_profile_credit_card_id = ApiClient.convertToType(data['customer_profile_credit_card_id'], 'Number');
       if (data.hasOwnProperty('last_used_date'))
-        obj.lastUsedDate = ApiClient.convertToType(data['last_used_date'], 'String');
+        obj.last_used_date = ApiClient.convertToType(data['last_used_date'], 'String');
     }
     return obj;
   }
 
   /**
    * Card expiration month (1-12)
-   * @member {Number} cardExpirationMonth
+   * @member {Number} card_expiration_month
    */
-  exports.prototype.cardExpirationMonth = undefined;
+  exports.prototype.card_expiration_month = undefined;
 
   /**
    * Card expiration year (four digit)
-   * @member {Number} cardExpirationYear
+   * @member {Number} card_expiration_year
    */
-  exports.prototype.cardExpirationYear = undefined;
+  exports.prototype.card_expiration_year = undefined;
 
   /**
    * Card number (masked last 4 digits)
-   * @member {String} cardNumber
+   * @member {String} card_number
    */
-  exports.prototype.cardNumber = undefined;
+  exports.prototype.card_number = undefined;
 
   /**
    * Card type
-   * @member {module:com.ultracart.admin.v2.models/CartCustomerProfileCreditCard.CardTypeEnum} cardType
+   * @member {module:com.ultracart.admin.v2.models/CartCustomerProfileCreditCard.CardTypeEnum} card_type
    */
-  exports.prototype.cardType = undefined;
+  exports.prototype.card_type = undefined;
 
   /**
    * Unique identifier for this stored card
-   * @member {Number} customerProfileCreditCardId
+   * @member {Number} customer_profile_credit_card_id
    */
-  exports.prototype.customerProfileCreditCardId = undefined;
+  exports.prototype.customer_profile_credit_card_id = undefined;
 
   /**
    * Last used
-   * @member {String} lastUsedDate
+   * @member {String} last_used_date
    */
-  exports.prototype.lastUsedDate = undefined;
+  exports.prototype.last_used_date = undefined;
 
 
   /**
-   * Allowed values for the <code>cardType</code> property.
+   * Allowed values for the <code>card_type</code> property.
    * @enum {String}
    * @readonly
    */
@@ -124,19 +124,19 @@
      * value: "Diners Club"
      * @const
      */
-    dinersClub: "Diners Club",
+    Diners_Club: "Diners Club",
 
     /**
      * value: "Discover"
      * @const
      */
-    discover: "Discover",
+    Discover: "Discover",
 
     /**
      * value: "MasterCard"
      * @const
      */
-    masterCard: "MasterCard",
+    MasterCard: "MasterCard",
 
     /**
      * value: "JCB"

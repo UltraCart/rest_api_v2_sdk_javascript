@@ -58,21 +58,21 @@
       if (data.hasOwnProperty('comments'))
         obj.comments = ApiClient.convertToType(data['comments'], 'String');
       if (data.hasOwnProperty('deprecated_flag'))
-        obj.deprecatedFlag = ApiClient.convertToType(data['deprecated_flag'], 'Boolean');
+        obj.deprecated_flag = ApiClient.convertToType(data['deprecated_flag'], 'Boolean');
       if (data.hasOwnProperty('discontinued_flag'))
-        obj.discontinuedFlag = ApiClient.convertToType(data['discontinued_flag'], 'Boolean');
+        obj.discontinued_flag = ApiClient.convertToType(data['discontinued_flag'], 'Boolean');
       if (data.hasOwnProperty('event_description'))
-        obj.eventDescription = ApiClient.convertToType(data['event_description'], 'String');
+        obj.event_description = ApiClient.convertToType(data['event_description'], 'String');
       if (data.hasOwnProperty('event_name'))
-        obj.eventName = ApiClient.convertToType(data['event_name'], 'String');
+        obj.event_name = ApiClient.convertToType(data['event_name'], 'String');
       if (data.hasOwnProperty('expansion'))
         obj.expansion = ApiClient.convertToType(data['expansion'], 'String');
       if (data.hasOwnProperty('subscribed'))
         obj.subscribed = ApiClient.convertToType(data['subscribed'], 'Boolean');
       if (data.hasOwnProperty('supports_reflow'))
-        obj.supportsReflow = ApiClient.convertToType(data['supports_reflow'], 'Boolean');
+        obj.supports_reflow = ApiClient.convertToType(data['supports_reflow'], 'Boolean');
       if (data.hasOwnProperty('webhook_event_oid'))
-        obj.webhookEventOid = ApiClient.convertToType(data['webhook_event_oid'], 'Number');
+        obj.webhook_event_oid = ApiClient.convertToType(data['webhook_event_oid'], 'Number');
     }
     return obj;
   }
@@ -85,27 +85,27 @@
 
   /**
    * True if the event is deprecated.  See the API change log for details on when it will be discontinued.
-   * @member {Boolean} deprecatedFlag
+   * @member {Boolean} deprecated_flag
    */
-  exports.prototype.deprecatedFlag = undefined;
+  exports.prototype.deprecated_flag = undefined;
 
   /**
    * True if the event is discontinued.  See the API change log for details on migration details.
-   * @member {Boolean} discontinuedFlag
+   * @member {Boolean} discontinued_flag
    */
-  exports.prototype.discontinuedFlag = undefined;
+  exports.prototype.discontinued_flag = undefined;
 
   /**
    * Description of the event
-   * @member {String} eventDescription
+   * @member {String} event_description
    */
-  exports.prototype.eventDescription = undefined;
+  exports.prototype.event_description = undefined;
 
   /**
    * Event name
-   * @member {String} eventName
+   * @member {String} event_name
    */
-  exports.prototype.eventName = undefined;
+  exports.prototype.event_name = undefined;
 
   /**
    * The expand string for the notification object.  See the individual resource _expand documentation for valid values.
@@ -121,15 +121,15 @@
 
   /**
    * True if the event can be triggered to reflow existing records
-   * @member {Boolean} supportsReflow
+   * @member {Boolean} supports_reflow
    */
-  exports.prototype.supportsReflow = undefined;
+  exports.prototype.supports_reflow = undefined;
 
   /**
    * The webhook event object identifier
-   * @member {Number} webhookEventOid
+   * @member {Number} webhook_event_oid
    */
-  exports.prototype.webhookEventOid = undefined;
+  exports.prototype.webhook_event_oid = undefined;
 
   return exports;
 

@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('additional_dimension_application'))
-        obj.additionalDimensionApplication = ApiClient.convertToType(data['additional_dimension_application'], 'String');
+        obj.additional_dimension_application = ApiClient.convertToType(data['additional_dimension_application'], 'String');
       if (data.hasOwnProperty('cost_change'))
-        obj.costChange = Currency.constructFromObject(data['cost_change']);
+        obj.cost_change = Currency.constructFromObject(data['cost_change']);
       if (data.hasOwnProperty('file_attachment'))
-        obj.fileAttachment = OrderItemOptionFileAttachment.constructFromObject(data['file_attachment']);
+        obj.file_attachment = OrderItemOptionFileAttachment.constructFromObject(data['file_attachment']);
       if (data.hasOwnProperty('height'))
         obj.height = Distance.constructFromObject(data['height']);
       if (data.hasOwnProperty('hidden'))
@@ -70,11 +70,11 @@
       if (data.hasOwnProperty('length'))
         obj.length = Distance.constructFromObject(data['length']);
       if (data.hasOwnProperty('one_time_fee'))
-        obj.oneTimeFee = ApiClient.convertToType(data['one_time_fee'], 'Boolean');
+        obj.one_time_fee = ApiClient.convertToType(data['one_time_fee'], 'Boolean');
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'String');
       if (data.hasOwnProperty('weight_change'))
-        obj.weightChange = Weight.constructFromObject(data['weight_change']);
+        obj.weight_change = Weight.constructFromObject(data['weight_change']);
       if (data.hasOwnProperty('width'))
         obj.width = Distance.constructFromObject(data['width']);
     }
@@ -83,19 +83,19 @@
 
   /**
    * How the additional dimensions are applied to the item.
-   * @member {module:com.ultracart.admin.v2.models/OrderItemOption.AdditionalDimensionApplicationEnum} additionalDimensionApplication
+   * @member {module:com.ultracart.admin.v2.models/OrderItemOption.AdditionalDimensionApplicationEnum} additional_dimension_application
    */
-  exports.prototype.additionalDimensionApplication = undefined;
+  exports.prototype.additional_dimension_application = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} costChange
+   * @member {module:com.ultracart.admin.v2.models/Currency} cost_change
    */
-  exports.prototype.costChange = undefined;
+  exports.prototype.cost_change = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderItemOptionFileAttachment} fileAttachment
+   * @member {module:com.ultracart.admin.v2.models/OrderItemOptionFileAttachment} file_attachment
    */
-  exports.prototype.fileAttachment = undefined;
+  exports.prototype.file_attachment = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Distance} height
@@ -121,9 +121,9 @@
 
   /**
    * True if the cost associated with this option is a one time fee or multiplied by the quantity of the item
-   * @member {Boolean} oneTimeFee
+   * @member {Boolean} one_time_fee
    */
-  exports.prototype.oneTimeFee = undefined;
+  exports.prototype.one_time_fee = undefined;
 
   /**
    * Value
@@ -132,9 +132,9 @@
   exports.prototype.value = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Weight} weightChange
+   * @member {module:com.ultracart.admin.v2.models/Weight} weight_change
    */
-  exports.prototype.weightChange = undefined;
+  exports.prototype.weight_change = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Distance} width
@@ -143,7 +143,7 @@
 
 
   /**
-   * Allowed values for the <code>additionalDimensionApplication</code> property.
+   * Allowed values for the <code>additional_dimension_application</code> property.
    * @enum {String}
    * @readonly
    */
@@ -158,13 +158,13 @@
      * value: "set item to"
      * @const
      */
-    setItemTo: "set item to",
+    set_item_to: "set item to",
 
     /**
      * value: "add item"
      * @const
      */
-    addItem: "add item"
+    add_item: "add item"
   };
 
   return exports;

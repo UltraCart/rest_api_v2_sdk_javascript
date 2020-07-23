@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('request'))
         obj.request = ApiClient.convertToType(data['request'], 'String');
       if (data.hasOwnProperty('request_headers'))
-        obj.requestHeaders = ApiClient.convertToType(data['request_headers'], [HTTPHeader]);
+        obj.request_headers = ApiClient.convertToType(data['request_headers'], [HTTPHeader]);
       if (data.hasOwnProperty('request_id'))
-        obj.requestId = ApiClient.convertToType(data['request_id'], 'String');
+        obj.request_id = ApiClient.convertToType(data['request_id'], 'String');
       if (data.hasOwnProperty('uri'))
         obj.uri = ApiClient.convertToType(data['uri'], 'String');
     }
@@ -75,15 +75,15 @@
 
   /**
    * Request headers
-   * @member {Array.<module:com.ultracart.admin.v2.models/HTTPHeader>} requestHeaders
+   * @member {Array.<module:com.ultracart.admin.v2.models/HTTPHeader>} request_headers
    */
-  exports.prototype.requestHeaders = undefined;
+  exports.prototype.request_headers = undefined;
 
   /**
    * Request id
-   * @member {String} requestId
+   * @member {String} request_id
    */
-  exports.prototype.requestId = undefined;
+  exports.prototype.request_id = undefined;
 
   /**
    * URI to send request to

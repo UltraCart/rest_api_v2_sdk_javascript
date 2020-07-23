@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="deleteCustomer"></a>
 # **deleteCustomer**
-> CustomerResponse deleteCustomer(customerProfileOid)
+> CustomerResponse deleteCustomer(customer_profile_oid)
 
 Delete a customer
 
@@ -41,7 +41,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
-var customerProfileOid = 56; // Number | The customer_profile_oid to delete.
+var customer_profile_oid = 56; // Number | The customer_profile_oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -51,14 +51,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.deleteCustomer(customerProfileOid, callback);
+apiInstance.deleteCustomer(customer_profile_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerProfileOid** | **Number**| The customer_profile_oid to delete. | 
+ **customer_profile_oid** | **Number**| The customer_profile_oid to delete. | 
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="getCustomer"></a>
 # **getCustomer**
-> CustomerResponse getCustomer(customerProfileOid, opts)
+> CustomerResponse getCustomer(customer_profile_oid, opts)
 
 Retrieve a customer
 
@@ -98,10 +98,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
-var customerProfileOid = 56; // Number | The customer oid to retrieve.
+var customer_profile_oid = 56; // Number | The customer oid to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -111,15 +111,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCustomer(customerProfileOid, opts, callback);
+apiInstance.getCustomer(customer_profile_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerProfileOid** | **Number**| The customer oid to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **customer_profile_oid** | **Number**| The customer oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -161,37 +161,37 @@ var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
 var opts = { 
   'email': "email_example", // String | Email
-  'qbClass': "qbClass_example", // String | Quickbooks class
-  'quickbooksCode': "quickbooksCode_example", // String | Quickbooks code
-  'lastModifiedDtsStart': "lastModifiedDtsStart_example", // String | Last modified date start
-  'lastModifiedDtsEnd': "lastModifiedDtsEnd_example", // String | Last modified date end
-  'signupDtsStart': "signupDtsStart_example", // String | Signup date start
-  'signupDtsEnd': "signupDtsEnd_example", // String | Signup date end
-  'billingFirstName': "billingFirstName_example", // String | Billing first name
-  'billingLastName': "billingLastName_example", // String | Billing last name
-  'billingCompany': "billingCompany_example", // String | Billing company
-  'billingCity': "billingCity_example", // String | Billing city
-  'billingState': "billingState_example", // String | Billing state
-  'billingPostalCode': "billingPostalCode_example", // String | Billing postal code
-  'billingCountryCode': "billingCountryCode_example", // String | Billing country code
-  'billingDayPhone': "billingDayPhone_example", // String | Billing day phone
-  'billingEveningPhone': "billingEveningPhone_example", // String | Billing evening phone
-  'shippingFirstName': "shippingFirstName_example", // String | Shipping first name
-  'shippingLastName': "shippingLastName_example", // String | Shipping last name
-  'shippingCompany': "shippingCompany_example", // String | Shipping company
-  'shippingCity': "shippingCity_example", // String | Shipping city
-  'shippingState': "shippingState_example", // String | Shipping state
-  'shippingPostalCode': "shippingPostalCode_example", // String | Shipping postal code
-  'shippingCountryCode': "shippingCountryCode_example", // String | Shipping country code
-  'shippingDayPhone': "shippingDayPhone_example", // String | Shipping day phone
-  'shippingEveningPhone': "shippingEveningPhone_example", // String | Shipping evening phone
-  'pricingTierOid': 56, // Number | Pricing tier oid
-  'pricingTierName': "pricingTierName_example", // String | Pricing tier name
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'since': "since_example", // String | Fetch customers that have been created/modified since this date/time.
-  'sort': "sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  'qb_class': "qb_class_example", // String | Quickbooks class
+  'quickbooks_code': "quickbooks_code_example", // String | Quickbooks code
+  'last_modified_dts_start': "last_modified_dts_start_example", // String | Last modified date start
+  'last_modified_dts_end': "last_modified_dts_end_example", // String | Last modified date end
+  'signup_dts_start': "signup_dts_start_example", // String | Signup date start
+  'signup_dts_end': "signup_dts_end_example", // String | Signup date end
+  'billing_first_name': "billing_first_name_example", // String | Billing first name
+  'billing_last_name': "billing_last_name_example", // String | Billing last name
+  'billing_company': "billing_company_example", // String | Billing company
+  'billing_city': "billing_city_example", // String | Billing city
+  'billing_state': "billing_state_example", // String | Billing state
+  'billing_postal_code': "billing_postal_code_example", // String | Billing postal code
+  'billing_country_code': "billing_country_code_example", // String | Billing country code
+  'billing_day_phone': "billing_day_phone_example", // String | Billing day phone
+  'billing_evening_phone': "billing_evening_phone_example", // String | Billing evening phone
+  'shipping_first_name': "shipping_first_name_example", // String | Shipping first name
+  'shipping_last_name': "shipping_last_name_example", // String | Shipping last name
+  'shipping_company': "shipping_company_example", // String | Shipping company
+  'shipping_city': "shipping_city_example", // String | Shipping city
+  'shipping_state': "shipping_state_example", // String | Shipping state
+  'shipping_postal_code': "shipping_postal_code_example", // String | Shipping postal code
+  'shipping_country_code': "shipping_country_code_example", // String | Shipping country code
+  'shipping_day_phone': "shipping_day_phone_example", // String | Shipping day phone
+  'shipping_evening_phone': "shipping_evening_phone_example", // String | Shipping evening phone
+  'pricing_tier_oid': 56, // Number | Pricing tier oid
+  'pricing_tier_name': "pricing_tier_name_example", // String | Pricing tier name
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
+  '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -209,37 +209,37 @@ apiInstance.getCustomers(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **String**| Email | [optional] 
- **qbClass** | **String**| Quickbooks class | [optional] 
- **quickbooksCode** | **String**| Quickbooks code | [optional] 
- **lastModifiedDtsStart** | **String**| Last modified date start | [optional] 
- **lastModifiedDtsEnd** | **String**| Last modified date end | [optional] 
- **signupDtsStart** | **String**| Signup date start | [optional] 
- **signupDtsEnd** | **String**| Signup date end | [optional] 
- **billingFirstName** | **String**| Billing first name | [optional] 
- **billingLastName** | **String**| Billing last name | [optional] 
- **billingCompany** | **String**| Billing company | [optional] 
- **billingCity** | **String**| Billing city | [optional] 
- **billingState** | **String**| Billing state | [optional] 
- **billingPostalCode** | **String**| Billing postal code | [optional] 
- **billingCountryCode** | **String**| Billing country code | [optional] 
- **billingDayPhone** | **String**| Billing day phone | [optional] 
- **billingEveningPhone** | **String**| Billing evening phone | [optional] 
- **shippingFirstName** | **String**| Shipping first name | [optional] 
- **shippingLastName** | **String**| Shipping last name | [optional] 
- **shippingCompany** | **String**| Shipping company | [optional] 
- **shippingCity** | **String**| Shipping city | [optional] 
- **shippingState** | **String**| Shipping state | [optional] 
- **shippingPostalCode** | **String**| Shipping postal code | [optional] 
- **shippingCountryCode** | **String**| Shipping country code | [optional] 
- **shippingDayPhone** | **String**| Shipping day phone | [optional] 
- **shippingEveningPhone** | **String**| Shipping evening phone | [optional] 
- **pricingTierOid** | **Number**| Pricing tier oid | [optional] 
- **pricingTierName** | **String**| Pricing tier name | [optional] 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 
- **sort** | **String**| The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **qb_class** | **String**| Quickbooks class | [optional] 
+ **quickbooks_code** | **String**| Quickbooks code | [optional] 
+ **last_modified_dts_start** | **String**| Last modified date start | [optional] 
+ **last_modified_dts_end** | **String**| Last modified date end | [optional] 
+ **signup_dts_start** | **String**| Signup date start | [optional] 
+ **signup_dts_end** | **String**| Signup date end | [optional] 
+ **billing_first_name** | **String**| Billing first name | [optional] 
+ **billing_last_name** | **String**| Billing last name | [optional] 
+ **billing_company** | **String**| Billing company | [optional] 
+ **billing_city** | **String**| Billing city | [optional] 
+ **billing_state** | **String**| Billing state | [optional] 
+ **billing_postal_code** | **String**| Billing postal code | [optional] 
+ **billing_country_code** | **String**| Billing country code | [optional] 
+ **billing_day_phone** | **String**| Billing day phone | [optional] 
+ **billing_evening_phone** | **String**| Billing evening phone | [optional] 
+ **shipping_first_name** | **String**| Shipping first name | [optional] 
+ **shipping_last_name** | **String**| Shipping last name | [optional] 
+ **shipping_company** | **String**| Shipping company | [optional] 
+ **shipping_city** | **String**| Shipping city | [optional] 
+ **shipping_state** | **String**| Shipping state | [optional] 
+ **shipping_postal_code** | **String**| Shipping postal code | [optional] 
+ **shipping_country_code** | **String**| Shipping country code | [optional] 
+ **shipping_day_phone** | **String**| Shipping day phone | [optional] 
+ **shipping_evening_phone** | **String**| Shipping evening phone | [optional] 
+ **pricing_tier_oid** | **Number**| Pricing tier oid | [optional] 
+ **pricing_tier_name** | **String**| Pricing tier name | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 
+ **_sort** | **String**| The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 <a name="getCustomersByQuery"></a>
 # **getCustomersByQuery**
-> CustomersResponse getCustomersByQuery(customerQuery, opts)
+> CustomersResponse getCustomersByQuery(customer_query, opts)
 
 Retrieve customers by query
 
@@ -279,14 +279,14 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
-var customerQuery = new UltraCartRestApiV2.CustomerQuery(); // CustomerQuery | Customer query
+var customer_query = new UltraCartRestApiV2.CustomerQuery(); // CustomerQuery | Customer query
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'since': "since_example", // String | Fetch customers that have been created/modified since this date/time.
-  'sort': "sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
+  '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -296,19 +296,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCustomersByQuery(customerQuery, opts, callback);
+apiInstance.getCustomersByQuery(customer_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerQuery** | [**CustomerQuery**](CustomerQuery.md)| Customer query | 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 
- **sort** | **String**| The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **customer_query** | [**CustomerQuery**](CustomerQuery.md)| Customer query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 
+ **_sort** | **String**| The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -349,7 +349,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -366,7 +366,7 @@ apiInstance.getCustomersForDataTables(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -511,7 +511,7 @@ var apiInstance = new UltraCartRestApiV2.CustomerApi();
 var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to insert
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -529,7 +529,7 @@ apiInstance.insertCustomer(customer, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer** | [**Customer**](Customer.md)| Customer to insert | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 <a name="updateCustomer"></a>
 # **updateCustomer**
-> CustomerResponse updateCustomer(customer, customerProfileOid, opts)
+> CustomerResponse updateCustomer(customer, customer_profile_oid, opts)
 
 Update a customer
 
@@ -571,10 +571,10 @@ var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
 var customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to update
 
-var customerProfileOid = 56; // Number | The customer_profile_oid to update.
+var customer_profile_oid = 56; // Number | The customer_profile_oid to update.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -584,7 +584,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateCustomer(customer, customerProfileOid, opts, callback);
+apiInstance.updateCustomer(customer, customer_profile_oid, opts, callback);
 ```
 
 ### Parameters
@@ -592,8 +592,8 @@ apiInstance.updateCustomer(customer, customerProfileOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer** | [**Customer**](Customer.md)| Customer to update | 
- **customerProfileOid** | **Number**| The customer_profile_oid to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **customer_profile_oid** | **Number**| The customer_profile_oid to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -610,7 +610,7 @@ Name | Type | Description  | Notes
 
 <a name="updateCustomerEmailLists"></a>
 # **updateCustomerEmailLists**
-> CustomerEmailListChanges updateCustomerEmailLists(customerProfileOid, listChanges)
+> CustomerEmailListChanges updateCustomerEmailLists(customer_profile_oid, list_changes)
 
 Update email list subscriptions for a customer
 
@@ -633,9 +633,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CustomerApi();
 
-var customerProfileOid = 56; // Number | The customer profile oid
+var customer_profile_oid = 56; // Number | The customer profile oid
 
-var listChanges = new UltraCartRestApiV2.CustomerEmailListChanges(); // CustomerEmailListChanges | List changes
+var list_changes = new UltraCartRestApiV2.CustomerEmailListChanges(); // CustomerEmailListChanges | List changes
 
 
 var callback = function(error, data, response) {
@@ -645,15 +645,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateCustomerEmailLists(customerProfileOid, listChanges, callback);
+apiInstance.updateCustomerEmailLists(customer_profile_oid, list_changes, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerProfileOid** | **Number**| The customer profile oid | 
- **listChanges** | [**CustomerEmailListChanges**](CustomerEmailListChanges.md)| List changes | 
+ **customer_profile_oid** | **Number**| The customer profile oid | 
+ **list_changes** | [**CustomerEmailListChanges**](CustomerEmailListChanges.md)| List changes | 
 
 ### Return type
 

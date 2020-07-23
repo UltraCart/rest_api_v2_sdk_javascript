@@ -58,51 +58,51 @@
       if (data.hasOwnProperty('affiliates'))
         obj.affiliates = ApiClient.convertToType(data['affiliates'], [OrderAffiliate]);
       if (data.hasOwnProperty('auto_order'))
-        obj.autoOrder = OrderAutoOrder.constructFromObject(data['auto_order']);
+        obj.auto_order = OrderAutoOrder.constructFromObject(data['auto_order']);
       if (data.hasOwnProperty('billing'))
         obj.billing = OrderBilling.constructFromObject(data['billing']);
       if (data.hasOwnProperty('buysafe'))
         obj.buysafe = OrderBuysafe.constructFromObject(data['buysafe']);
       if (data.hasOwnProperty('channel_partner'))
-        obj.channelPartner = OrderChannelPartner.constructFromObject(data['channel_partner']);
+        obj.channel_partner = OrderChannelPartner.constructFromObject(data['channel_partner']);
       if (data.hasOwnProperty('checkout'))
         obj.checkout = OrderCheckout.constructFromObject(data['checkout']);
       if (data.hasOwnProperty('coupons'))
         obj.coupons = ApiClient.convertToType(data['coupons'], [OrderCoupon]);
       if (data.hasOwnProperty('creation_dts'))
-        obj.creationDts = ApiClient.convertToType(data['creation_dts'], 'String');
+        obj.creation_dts = ApiClient.convertToType(data['creation_dts'], 'String');
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('current_stage'))
-        obj.currentStage = ApiClient.convertToType(data['current_stage'], 'String');
+        obj.current_stage = ApiClient.convertToType(data['current_stage'], 'String');
       if (data.hasOwnProperty('customer_profile'))
-        obj.customerProfile = Customer.constructFromObject(data['customer_profile']);
+        obj.customer_profile = Customer.constructFromObject(data['customer_profile']);
       if (data.hasOwnProperty('digital_order'))
-        obj.digitalOrder = OrderDigitalOrder.constructFromObject(data['digital_order']);
+        obj.digital_order = OrderDigitalOrder.constructFromObject(data['digital_order']);
       if (data.hasOwnProperty('edi'))
         obj.edi = OrderEdi.constructFromObject(data['edi']);
       if (data.hasOwnProperty('exchange_rate'))
-        obj.exchangeRate = ApiClient.convertToType(data['exchange_rate'], 'Number');
+        obj.exchange_rate = ApiClient.convertToType(data['exchange_rate'], 'Number');
       if (data.hasOwnProperty('fraud_score'))
-        obj.fraudScore = OrderFraudScore.constructFromObject(data['fraud_score']);
+        obj.fraud_score = OrderFraudScore.constructFromObject(data['fraud_score']);
       if (data.hasOwnProperty('gift'))
         obj.gift = OrderGift.constructFromObject(data['gift']);
       if (data.hasOwnProperty('gift_certificate'))
-        obj.giftCertificate = OrderGiftCertificate.constructFromObject(data['gift_certificate']);
+        obj.gift_certificate = OrderGiftCertificate.constructFromObject(data['gift_certificate']);
       if (data.hasOwnProperty('internal'))
         obj.internal = OrderInternal.constructFromObject(data['internal']);
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], [OrderItem]);
       if (data.hasOwnProperty('language_iso_code'))
-        obj.languageIsoCode = ApiClient.convertToType(data['language_iso_code'], 'String');
+        obj.language_iso_code = ApiClient.convertToType(data['language_iso_code'], 'String');
       if (data.hasOwnProperty('linked_shipment'))
-        obj.linkedShipment = OrderLinkedShipment.constructFromObject(data['linked_shipment']);
+        obj.linked_shipment = OrderLinkedShipment.constructFromObject(data['linked_shipment']);
       if (data.hasOwnProperty('marketing'))
         obj.marketing = OrderMarketing.constructFromObject(data['marketing']);
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('payment'))
         obj.payment = OrderPayment.constructFromObject(data['payment']);
       if (data.hasOwnProperty('properties'))
@@ -110,9 +110,9 @@
       if (data.hasOwnProperty('quote'))
         obj.quote = OrderQuote.constructFromObject(data['quote']);
       if (data.hasOwnProperty('refund_dts'))
-        obj.refundDts = ApiClient.convertToType(data['refund_dts'], 'String');
+        obj.refund_dts = ApiClient.convertToType(data['refund_dts'], 'String');
       if (data.hasOwnProperty('reject_dts'))
-        obj.rejectDts = ApiClient.convertToType(data['reject_dts'], 'String');
+        obj.reject_dts = ApiClient.convertToType(data['reject_dts'], 'String');
       if (data.hasOwnProperty('salesforce'))
         obj.salesforce = OrderSalesforce.constructFromObject(data['salesforce']);
       if (data.hasOwnProperty('shipping'))
@@ -120,7 +120,7 @@
       if (data.hasOwnProperty('summary'))
         obj.summary = OrderSummary.constructFromObject(data['summary']);
       if (data.hasOwnProperty('Tags'))
-        obj.tags = ApiClient.convertToType(data['Tags'], [OrderTag]);
+        obj.Tags = ApiClient.convertToType(data['Tags'], [OrderTag]);
       if (data.hasOwnProperty('taxes'))
         obj.taxes = OrderTaxes.constructFromObject(data['taxes']);
     }
@@ -134,9 +134,9 @@
   exports.prototype.affiliates = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderAutoOrder} autoOrder
+   * @member {module:com.ultracart.admin.v2.models/OrderAutoOrder} auto_order
    */
-  exports.prototype.autoOrder = undefined;
+  exports.prototype.auto_order = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderBilling} billing
@@ -149,9 +149,9 @@
   exports.prototype.buysafe = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderChannelPartner} channelPartner
+   * @member {module:com.ultracart.admin.v2.models/OrderChannelPartner} channel_partner
    */
-  exports.prototype.channelPartner = undefined;
+  exports.prototype.channel_partner = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderCheckout} checkout
@@ -166,31 +166,31 @@
 
   /**
    * Date/time that the order was created
-   * @member {String} creationDts
+   * @member {String} creation_dts
    */
-  exports.prototype.creationDts = undefined;
+  exports.prototype.creation_dts = undefined;
 
   /**
    * Currency code that the customer used if different than the merchant's base currency code
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * Current stage that the order is in.
-   * @member {module:com.ultracart.admin.v2.models/Order.CurrentStageEnum} currentStage
+   * @member {module:com.ultracart.admin.v2.models/Order.CurrentStageEnum} current_stage
    */
-  exports.prototype.currentStage = undefined;
+  exports.prototype.current_stage = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Customer} customerProfile
+   * @member {module:com.ultracart.admin.v2.models/Customer} customer_profile
    */
-  exports.prototype.customerProfile = undefined;
+  exports.prototype.customer_profile = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderDigitalOrder} digitalOrder
+   * @member {module:com.ultracart.admin.v2.models/OrderDigitalOrder} digital_order
    */
-  exports.prototype.digitalOrder = undefined;
+  exports.prototype.digital_order = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderEdi} edi
@@ -199,14 +199,14 @@
 
   /**
    * Exchange rate at the time the order was placed if currency code is different than the base currency
-   * @member {Number} exchangeRate
+   * @member {Number} exchange_rate
    */
-  exports.prototype.exchangeRate = undefined;
+  exports.prototype.exchange_rate = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderFraudScore} fraudScore
+   * @member {module:com.ultracart.admin.v2.models/OrderFraudScore} fraud_score
    */
-  exports.prototype.fraudScore = undefined;
+  exports.prototype.fraud_score = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderGift} gift
@@ -214,9 +214,9 @@
   exports.prototype.gift = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderGiftCertificate} giftCertificate
+   * @member {module:com.ultracart.admin.v2.models/OrderGiftCertificate} gift_certificate
    */
-  exports.prototype.giftCertificate = undefined;
+  exports.prototype.gift_certificate = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderInternal} internal
@@ -231,14 +231,14 @@
 
   /**
    * Three letter ISO-639 language code used by the customer during the checkout if different than the default language
-   * @member {String} languageIsoCode
+   * @member {String} language_iso_code
    */
-  exports.prototype.languageIsoCode = undefined;
+  exports.prototype.language_iso_code = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderLinkedShipment} linkedShipment
+   * @member {module:com.ultracart.admin.v2.models/OrderLinkedShipment} linked_shipment
    */
-  exports.prototype.linkedShipment = undefined;
+  exports.prototype.linked_shipment = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderMarketing} marketing
@@ -247,15 +247,15 @@
 
   /**
    * UltraCart merchant ID owning this order
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Order ID
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderPayment} payment
@@ -275,15 +275,15 @@
 
   /**
    * If the order was refunded, the date/time that the last refund occurred
-   * @member {String} refundDts
+   * @member {String} refund_dts
    */
-  exports.prototype.refundDts = undefined;
+  exports.prototype.refund_dts = undefined;
 
   /**
    * If the order was rejected, the date/time that the rejection occurred
-   * @member {String} rejectDts
+   * @member {String} reject_dts
    */
-  exports.prototype.rejectDts = undefined;
+  exports.prototype.reject_dts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderSalesforce} salesforce
@@ -302,9 +302,9 @@
 
   /**
    * tags, available only through update, not through insert due to the nature of how tags are handled internally
-   * @member {Array.<module:com.ultracart.admin.v2.models/OrderTag>} tags
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderTag>} Tags
    */
-  exports.prototype.tags = undefined;
+  exports.prototype.Tags = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderTaxes} taxes
@@ -313,7 +313,7 @@
 
 
   /**
-   * Allowed values for the <code>currentStage</code> property.
+   * Allowed values for the <code>current_stage</code> property.
    * @enum {String}
    * @readonly
    */
@@ -322,61 +322,61 @@
      * value: "Accounts Receivable"
      * @const
      */
-    accountsReceivable: "Accounts Receivable",
+    Accounts_Receivable: "Accounts Receivable",
 
     /**
      * value: "Pending Clearance"
      * @const
      */
-    pendingClearance: "Pending Clearance",
+    Pending_Clearance: "Pending Clearance",
 
     /**
      * value: "Fraud Review"
      * @const
      */
-    fraudReview: "Fraud Review",
+    Fraud_Review: "Fraud Review",
 
     /**
      * value: "Rejected"
      * @const
      */
-    rejected: "Rejected",
+    Rejected: "Rejected",
 
     /**
      * value: "Shipping Department"
      * @const
      */
-    shippingDepartment: "Shipping Department",
+    Shipping_Department: "Shipping Department",
 
     /**
      * value: "Completed Order"
      * @const
      */
-    completedOrder: "Completed Order",
+    Completed_Order: "Completed Order",
 
     /**
      * value: "Quote Request"
      * @const
      */
-    quoteRequest: "Quote Request",
+    Quote_Request: "Quote Request",
 
     /**
      * value: "Quote Sent"
      * @const
      */
-    quoteSent: "Quote Sent",
+    Quote_Sent: "Quote Sent",
 
     /**
      * value: "Least Cost Routing"
      * @const
      */
-    leastCostRouting: "Least Cost Routing",
+    Least_Cost_Routing: "Least Cost Routing",
 
     /**
      * value: "Unknown"
      * @const
      */
-    unknown: "Unknown"
+    Unknown: "Unknown"
   };
 
   return exports;

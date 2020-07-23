@@ -56,64 +56,64 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('accounting_code'))
-        obj.accountingCode = ApiClient.convertToType(data['accounting_code'], 'String');
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('city_oid'))
-        obj.cityOid = ApiClient.convertToType(data['city_oid'], 'Number');
+        obj.city_oid = ApiClient.convertToType(data['city_oid'], 'Number');
       if (data.hasOwnProperty('dont_collect_postal_code'))
-        obj.dontCollectPostalCode = ApiClient.convertToType(data['dont_collect_postal_code'], 'Boolean');
+        obj.dont_collect_postal_code = ApiClient.convertToType(data['dont_collect_postal_code'], 'Boolean');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('postal_code_oid'))
-        obj.postalCodeOid = ApiClient.convertToType(data['postal_code_oid'], 'Number');
+        obj.postal_code_oid = ApiClient.convertToType(data['postal_code_oid'], 'Number');
       if (data.hasOwnProperty('tax_rate'))
-        obj.taxRate = ApiClient.convertToType(data['tax_rate'], 'Number');
+        obj.tax_rate = ApiClient.convertToType(data['tax_rate'], 'Number');
       if (data.hasOwnProperty('tax_rate_formatted'))
-        obj.taxRateFormatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
+        obj.tax_rate_formatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
     }
     return obj;
   }
 
   /**
    * Accounting code for programs such as QuickBooks
-   * @member {String} accountingCode
+   * @member {String} accounting_code
    */
-  exports.prototype.accountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
    * Tax record object identifier used internally by database
-   * @member {Number} cityOid
+   * @member {Number} city_oid
    */
-  exports.prototype.cityOid = undefined;
+  exports.prototype.city_oid = undefined;
 
   /**
    * Flag instructing engine to not collect postal code tax for this postal code
-   * @member {Boolean} dontCollectPostalCode
+   * @member {Boolean} dont_collect_postal_code
    */
-  exports.prototype.dontCollectPostalCode = undefined;
+  exports.prototype.dont_collect_postal_code = undefined;
 
   /**
    * Postal Code (5 digits)
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * Tax record object identifier used internally by database
-   * @member {Number} postalCodeOid
+   * @member {Number} postal_code_oid
    */
-  exports.prototype.postalCodeOid = undefined;
+  exports.prototype.postal_code_oid = undefined;
 
   /**
    * Tax Rate
-   * @member {Number} taxRate
+   * @member {Number} tax_rate
    */
-  exports.prototype.taxRate = undefined;
+  exports.prototype.tax_rate = undefined;
 
   /**
    * Tax rate formatted
-   * @member {String} taxRateFormatted
+   * @member {String} tax_rate_formatted
    */
-  exports.prototype.taxRateFormatted = undefined;
+  exports.prototype.tax_rate_formatted = undefined;
 
   return exports;
 

@@ -107,12 +107,12 @@ ultraCartSimpleApiKey.apiKey = "YOUR API KEY"
 
 var api = new UltraCartRestApiV2.AffiliateApi()
 
-var clickQuery = new UltraCartRestApiV2.AffiliateClickQuery(); // {AffiliateClickQuery} Click query
+var click_query = new UltraCartRestApiV2.AffiliateClickQuery(); // {AffiliateClickQuery} Click query
 
 var opts = { 
-  'limit': 10000, // {Number} The maximum number of records to return on this one API call. (Maximum 10000)
-  'offset': 0, // {Number} Pagination of the record set.  Offset is a zero based index.
-  'expand': "expand_example" // {String} The object expansion to perform on the result.  Only option is link.
+  '_limit': 10000, // {Number} The maximum number of records to return on this one API call. (Maximum 10000)
+  '_offset': 0, // {Number} Pagination of the record set.  Offset is a zero based index.
+  '_expand': "_expand_example" // {String} The object expansion to perform on the result.  Only option is link.
 };
 
 var callback = function(error, data, response) {
@@ -122,7 +122,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getClicksByQuery(clickQuery, opts, callback);
+api.getClicksByQuery(click_query, opts, callback);
 
 ```
 
@@ -238,7 +238,7 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.StorefrontApi* | [**duplicateLibraryItem**](docs/StorefrontApi.md#duplicateLibraryItem) | **POST** /storefront/code_library/{library_item_oid}/duplicate | Duplicate library item.
 *UltraCartRestApiV2.StorefrontApi* | [**geocodeAddress**](docs/StorefrontApi.md#geocodeAddress) | **POST** /storefront/{storefront_oid}/email/geocode | Obtain lat/long for an address
 *UltraCartRestApiV2.StorefrontApi* | [**getCountries**](docs/StorefrontApi.md#getCountries) | **GET** /storefront/{storefront_oid}/email/countries | Get countries
-*UltraCartRestApiV2.StorefrontApi* | [**getEditorToken**](docs/StorefrontApi.md#getEditorToken) | **GET** /storefront/{id}/editor_token | Gets editor token
+*UltraCartRestApiV2.StorefrontApi* | [**getEditorToken**](docs/StorefrontApi.md#getEditorToken) | **GET** /storefront/{storefront_oid}/editor_token | Gets editor token
 *UltraCartRestApiV2.StorefrontApi* | [**getEmailBaseTemplates**](docs/StorefrontApi.md#getEmailBaseTemplates) | **GET** /storefront/{storefront_oid}/email/baseTemplates | Get email communication base templates
 *UltraCartRestApiV2.StorefrontApi* | [**getEmailCampaign**](docs/StorefrontApi.md#getEmailCampaign) | **GET** /storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid} | Get email campaign
 *UltraCartRestApiV2.StorefrontApi* | [**getEmailCampaigns**](docs/StorefrontApi.md#getEmailCampaigns) | **GET** /storefront/{storefront_oid}/email/campaigns | Get email campaigns
@@ -288,8 +288,8 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.StorefrontApi* | [**getHistogramPropertyValues**](docs/StorefrontApi.md#getHistogramPropertyValues) | **GET** /storefront/{storefront_oid}/email/histogram/property_values | Get histogram property values
 *UltraCartRestApiV2.StorefrontApi* | [**getLibraryItem**](docs/StorefrontApi.md#getLibraryItem) | **GET** /storefront/code_library/{library_item_oid} | Get library item.
 *UltraCartRestApiV2.StorefrontApi* | [**getLibraryItemsByQuery**](docs/StorefrontApi.md#getLibraryItemsByQuery) | **POST** /storefront/code_library/query | Retrieve library items
-*UltraCartRestApiV2.StorefrontApi* | [**getTransactionEmail**](docs/StorefrontApi.md#getTransactionEmail) | **GET** /storefront/{id}/transaction_email/list/{email_id} | Gets a transaction email object
-*UltraCartRestApiV2.StorefrontApi* | [**getTransactionEmailList**](docs/StorefrontApi.md#getTransactionEmailList) | **GET** /storefront/{id}/transaction_email/list | Gets a list of transaction email names
+*UltraCartRestApiV2.StorefrontApi* | [**getTransactionEmail**](docs/StorefrontApi.md#getTransactionEmail) | **GET** /storefront/{storefront_oid}/transaction_email/list/{email_id} | Gets a transaction email object
+*UltraCartRestApiV2.StorefrontApi* | [**getTransactionEmailList**](docs/StorefrontApi.md#getTransactionEmailList) | **GET** /storefront/{storefront_oid}/transaction_email/list | Gets a list of transaction email names
 *UltraCartRestApiV2.StorefrontApi* | [**globalUnsubscribe**](docs/StorefrontApi.md#globalUnsubscribe) | **POST** /storefront/{storefront_oid}/email/globalUnsubscribe | Globally unsubscribe a customer
 *UltraCartRestApiV2.StorefrontApi* | [**importEmailThirdPartyProviderList**](docs/StorefrontApi.md#importEmailThirdPartyProviderList) | **POST** /storefront/{storefront_oid}/email/third_party_providers/import | Import a third party provider list
 *UltraCartRestApiV2.StorefrontApi* | [**insertEmailCampaign**](docs/StorefrontApi.md#insertEmailCampaign) | **POST** /storefront/{storefront_oid}/email/campaigns | Insert email campaign
@@ -322,7 +322,7 @@ Class | Method | HTTP request | Description
 *UltraCartRestApiV2.StorefrontApi* | [**updateEmailSettings**](docs/StorefrontApi.md#updateEmailSettings) | **POST** /storefront/{storefront_oid}/email/settings | Update email settings
 *UltraCartRestApiV2.StorefrontApi* | [**updateExperiment**](docs/StorefrontApi.md#updateExperiment) | **PUT** /storefront/{storefront_oid}/experiments/{storefront_experiment_oid} | Update experiment
 *UltraCartRestApiV2.StorefrontApi* | [**updateLibraryItem**](docs/StorefrontApi.md#updateLibraryItem) | **PUT** /storefront/code_library/{library_item_oid} | Update library item. Note that only certain fields may be updated via this method.
-*UltraCartRestApiV2.StorefrontApi* | [**updateTransactionEmail**](docs/StorefrontApi.md#updateTransactionEmail) | **PUT** /storefront/{id}/transaction_email/list/{email_id} | Updates a transaction email object
+*UltraCartRestApiV2.StorefrontApi* | [**updateTransactionEmail**](docs/StorefrontApi.md#updateTransactionEmail) | **PUT** /storefront/{storefront_oid}/transaction_email/list/{email_id} | Updates a transaction email object
 *UltraCartRestApiV2.TaxApi* | [**deleteTaxProviderSelfCity**](docs/TaxApi.md#deleteTaxProviderSelfCity) | **DELETE** /tax/providers/self/city/{city} | Deletes a Self tax provider city
 *UltraCartRestApiV2.TaxApi* | [**deleteTaxProviderSelfCountry**](docs/TaxApi.md#deleteTaxProviderSelfCountry) | **DELETE** /tax/providers/self/country/{countryCode} | Deletes a Self tax provider country
 *UltraCartRestApiV2.TaxApi* | [**deleteTaxProviderSelfCounty**](docs/TaxApi.md#deleteTaxProviderSelfCounty) | **DELETE** /tax/providers/self/county/{county} | Deletes a Self tax provider county

@@ -24,11 +24,11 @@ Name | Type | Description | Notes
 ## Enum: ShippingMethodValidityEnum
 
 
-* `invalidFor` (value: `"invalid for"`)
+* `invalid_for` (value: `"invalid for"`)
 
-* `validFor` (value: `"valid for"`)
+* `valid_for` (value: `"valid for"`)
 
-* `validOnlyFor` (value: `"valid only for"`)
+* `valid_only_for` (value: `"valid only for"`)
 
 
 

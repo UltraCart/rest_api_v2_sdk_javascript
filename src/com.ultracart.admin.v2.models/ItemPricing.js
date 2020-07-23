@@ -56,39 +56,39 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_arbitrary_cost'))
-        obj.allowArbitraryCost = ApiClient.convertToType(data['allow_arbitrary_cost'], 'Boolean');
+        obj.allow_arbitrary_cost = ApiClient.convertToType(data['allow_arbitrary_cost'], 'Boolean');
       if (data.hasOwnProperty('arbitrary_cost_velocity_code'))
-        obj.arbitraryCostVelocityCode = ApiClient.convertToType(data['arbitrary_cost_velocity_code'], 'String');
+        obj.arbitrary_cost_velocity_code = ApiClient.convertToType(data['arbitrary_cost_velocity_code'], 'String');
       if (data.hasOwnProperty('auto_order_cost'))
-        obj.autoOrderCost = ApiClient.convertToType(data['auto_order_cost'], 'Number');
+        obj.auto_order_cost = ApiClient.convertToType(data['auto_order_cost'], 'Number');
       if (data.hasOwnProperty('automatic_pricing_tier_name'))
-        obj.automaticPricingTierName = ApiClient.convertToType(data['automatic_pricing_tier_name'], 'String');
+        obj.automatic_pricing_tier_name = ApiClient.convertToType(data['automatic_pricing_tier_name'], 'String');
       if (data.hasOwnProperty('automatic_pricing_tier_oid'))
-        obj.automaticPricingTierOid = ApiClient.convertToType(data['automatic_pricing_tier_oid'], 'Number');
+        obj.automatic_pricing_tier_oid = ApiClient.convertToType(data['automatic_pricing_tier_oid'], 'Number');
       if (data.hasOwnProperty('cogs'))
         obj.cogs = ApiClient.convertToType(data['cogs'], 'Number');
       if (data.hasOwnProperty('cost'))
         obj.cost = ApiClient.convertToType(data['cost'], 'Number');
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('manufacturer_suggested_retail_price'))
-        obj.manufacturerSuggestedRetailPrice = ApiClient.convertToType(data['manufacturer_suggested_retail_price'], 'Number');
+        obj.manufacturer_suggested_retail_price = ApiClient.convertToType(data['manufacturer_suggested_retail_price'], 'Number');
       if (data.hasOwnProperty('maximum_arbitrary_cost'))
-        obj.maximumArbitraryCost = ApiClient.convertToType(data['maximum_arbitrary_cost'], 'Number');
+        obj.maximum_arbitrary_cost = ApiClient.convertToType(data['maximum_arbitrary_cost'], 'Number');
       if (data.hasOwnProperty('minimum_advertised_price'))
-        obj.minimumAdvertisedPrice = ApiClient.convertToType(data['minimum_advertised_price'], 'Number');
+        obj.minimum_advertised_price = ApiClient.convertToType(data['minimum_advertised_price'], 'Number');
       if (data.hasOwnProperty('minimum_arbitrary_cost'))
-        obj.minimumArbitraryCost = ApiClient.convertToType(data['minimum_arbitrary_cost'], 'Number');
+        obj.minimum_arbitrary_cost = ApiClient.convertToType(data['minimum_arbitrary_cost'], 'Number');
       if (data.hasOwnProperty('mix_and_match_group'))
-        obj.mixAndMatchGroup = ApiClient.convertToType(data['mix_and_match_group'], 'String');
+        obj.mix_and_match_group = ApiClient.convertToType(data['mix_and_match_group'], 'String');
       if (data.hasOwnProperty('mix_and_match_group_oid'))
-        obj.mixAndMatchGroupOid = ApiClient.convertToType(data['mix_and_match_group_oid'], 'Number');
+        obj.mix_and_match_group_oid = ApiClient.convertToType(data['mix_and_match_group_oid'], 'Number');
       if (data.hasOwnProperty('sale_cost'))
-        obj.saleCost = ApiClient.convertToType(data['sale_cost'], 'Number');
+        obj.sale_cost = ApiClient.convertToType(data['sale_cost'], 'Number');
       if (data.hasOwnProperty('sale_end'))
-        obj.saleEnd = ApiClient.convertToType(data['sale_end'], 'String');
+        obj.sale_end = ApiClient.convertToType(data['sale_end'], 'String');
       if (data.hasOwnProperty('sale_start'))
-        obj.saleStart = ApiClient.convertToType(data['sale_start'], 'String');
+        obj.sale_start = ApiClient.convertToType(data['sale_start'], 'String');
       if (data.hasOwnProperty('tiers'))
         obj.tiers = ApiClient.convertToType(data['tiers'], [ItemPricingTier]);
     }
@@ -97,33 +97,33 @@
 
   /**
    * Allow arbitrary cost
-   * @member {Boolean} allowArbitraryCost
+   * @member {Boolean} allow_arbitrary_cost
    */
-  exports.prototype.allowArbitraryCost = undefined;
+  exports.prototype.allow_arbitrary_cost = undefined;
 
   /**
    * Arbitrary cost velocity code
-   * @member {String} arbitraryCostVelocityCode
+   * @member {String} arbitrary_cost_velocity_code
    */
-  exports.prototype.arbitraryCostVelocityCode = undefined;
+  exports.prototype.arbitrary_cost_velocity_code = undefined;
 
   /**
    * Cost if customer selects to receive item on auto order.  Set to zero to delete.
-   * @member {Number} autoOrderCost
+   * @member {Number} auto_order_cost
    */
-  exports.prototype.autoOrderCost = undefined;
+  exports.prototype.auto_order_cost = undefined;
 
   /**
    * Automatic pricing tier name
-   * @member {String} automaticPricingTierName
+   * @member {String} automatic_pricing_tier_name
    */
-  exports.prototype.automaticPricingTierName = undefined;
+  exports.prototype.automatic_pricing_tier_name = undefined;
 
   /**
    * Automatic pricing tier object identifier
-   * @member {Number} automaticPricingTierOid
+   * @member {Number} automatic_pricing_tier_oid
    */
-  exports.prototype.automaticPricingTierOid = undefined;
+  exports.prototype.automatic_pricing_tier_oid = undefined;
 
   /**
    * Cost of goods sold
@@ -139,63 +139,63 @@
 
   /**
    * Currency code
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * Manufacturer suggested retail price
-   * @member {Number} manufacturerSuggestedRetailPrice
+   * @member {Number} manufacturer_suggested_retail_price
    */
-  exports.prototype.manufacturerSuggestedRetailPrice = undefined;
+  exports.prototype.manufacturer_suggested_retail_price = undefined;
 
   /**
    * Maximum arbitrary cost
-   * @member {Number} maximumArbitraryCost
+   * @member {Number} maximum_arbitrary_cost
    */
-  exports.prototype.maximumArbitraryCost = undefined;
+  exports.prototype.maximum_arbitrary_cost = undefined;
 
   /**
    * Minimum advertised price
-   * @member {Number} minimumAdvertisedPrice
+   * @member {Number} minimum_advertised_price
    */
-  exports.prototype.minimumAdvertisedPrice = undefined;
+  exports.prototype.minimum_advertised_price = undefined;
 
   /**
    * Minimum arbitrary cost
-   * @member {Number} minimumArbitraryCost
+   * @member {Number} minimum_arbitrary_cost
    */
-  exports.prototype.minimumArbitraryCost = undefined;
+  exports.prototype.minimum_arbitrary_cost = undefined;
 
   /**
    * Mix and match group
-   * @member {String} mixAndMatchGroup
+   * @member {String} mix_and_match_group
    */
-  exports.prototype.mixAndMatchGroup = undefined;
+  exports.prototype.mix_and_match_group = undefined;
 
   /**
    * Mix and match group object identifier
-   * @member {Number} mixAndMatchGroupOid
+   * @member {Number} mix_and_match_group_oid
    */
-  exports.prototype.mixAndMatchGroupOid = undefined;
+  exports.prototype.mix_and_match_group_oid = undefined;
 
   /**
    * Sale cost
-   * @member {Number} saleCost
+   * @member {Number} sale_cost
    */
-  exports.prototype.saleCost = undefined;
+  exports.prototype.sale_cost = undefined;
 
   /**
    * Sale end
-   * @member {String} saleEnd
+   * @member {String} sale_end
    */
-  exports.prototype.saleEnd = undefined;
+  exports.prototype.sale_end = undefined;
 
   /**
    * Sale start
-   * @member {String} saleStart
+   * @member {String} sale_start
    */
-  exports.prototype.saleStart = undefined;
+  exports.prototype.sale_start = undefined;
 
   /**
    * Tiers

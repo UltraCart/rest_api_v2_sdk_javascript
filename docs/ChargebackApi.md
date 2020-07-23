@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="deleteChargeback"></a>
 # **deleteChargeback**
-> ChargebackDisputeResponse deleteChargeback(chargebackDisputeOid)
+> ChargebackDisputeResponse deleteChargeback(chargeback_dispute_oid)
 
 Delete a chargeback
 
@@ -36,7 +36,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
-var chargebackDisputeOid = 56; // Number | The chargeback_dispute_oid to delete.
+var chargeback_dispute_oid = 56; // Number | The chargeback_dispute_oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -46,14 +46,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.deleteChargeback(chargebackDisputeOid, callback);
+apiInstance.deleteChargeback(chargeback_dispute_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chargebackDisputeOid** | **Number**| The chargeback_dispute_oid to delete. | 
+ **chargeback_dispute_oid** | **Number**| The chargeback_dispute_oid to delete. | 
 
 ### Return type
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 <a name="getChargebackDispute"></a>
 # **getChargebackDispute**
-> ChargebackDisputeResponse getChargebackDispute(chargebackDisputeOid, opts)
+> ChargebackDisputeResponse getChargebackDispute(chargeback_dispute_oid, opts)
 
 Retrieve a chargeback
 
@@ -93,10 +93,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
-var chargebackDisputeOid = 56; // Number | The chargeback dispute oid to retrieve.
+var chargeback_dispute_oid = 56; // Number | The chargeback dispute oid to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -106,15 +106,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getChargebackDispute(chargebackDisputeOid, opts, callback);
+apiInstance.getChargebackDispute(chargeback_dispute_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **chargebackDisputeOid** | **Number**| The chargeback dispute oid to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **chargeback_dispute_oid** | **Number**| The chargeback dispute oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -155,18 +155,18 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
 var opts = { 
-  'orderId': "orderId_example", // String | Order Id
-  'caseNumber': "caseNumber_example", // String | Case number
+  'order_id': "order_id_example", // String | Order Id
+  'case_number': "case_number_example", // String | Case number
   'status': "status_example", // String | Status
-  'expirationDtsStart': "expirationDtsStart_example", // String | Expiration dts start
-  'expirationDtsEnd': "expirationDtsEnd_example", // String | Expiration dts end
-  'chargebackDtsStart': "chargebackDtsStart_example", // String | Chargeback dts start
-  'chargebackDtsEnd': "chargebackDtsEnd_example", // String | Chargeback dts end
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'since': "since_example", // String | Fetch chargebacks that have been created/modified since this date/time.
-  'sort': "sort_example", // String | The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  'expiration_dts_start': "expiration_dts_start_example", // String | Expiration dts start
+  'expiration_dts_end': "expiration_dts_end_example", // String | Expiration dts end
+  'chargeback_dts_start': "chargeback_dts_start_example", // String | Chargeback dts start
+  'chargeback_dts_end': "chargeback_dts_end_example", // String | Chargeback dts end
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_since': "_since_example", // String | Fetch chargebacks that have been created/modified since this date/time.
+  '_sort': "_sort_example", // String | The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -183,18 +183,18 @@ apiInstance.getChargebackDisputes(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **String**| Order Id | [optional] 
- **caseNumber** | **String**| Case number | [optional] 
+ **order_id** | **String**| Order Id | [optional] 
+ **case_number** | **String**| Case number | [optional] 
  **status** | **String**| Status | [optional] 
- **expirationDtsStart** | **String**| Expiration dts start | [optional] 
- **expirationDtsEnd** | **String**| Expiration dts end | [optional] 
- **chargebackDtsStart** | **String**| Chargeback dts start | [optional] 
- **chargebackDtsEnd** | **String**| Chargeback dts end | [optional] 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **since** | **String**| Fetch chargebacks that have been created/modified since this date/time. | [optional] 
- **sort** | **String**| The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **expiration_dts_start** | **String**| Expiration dts start | [optional] 
+ **expiration_dts_end** | **String**| Expiration dts end | [optional] 
+ **chargeback_dts_start** | **String**| Chargeback dts start | [optional] 
+ **chargeback_dts_end** | **String**| Chargeback dts end | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_since** | **String**| Fetch chargebacks that have been created/modified since this date/time. | [optional] 
+ **_sort** | **String**| The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -237,7 +237,7 @@ var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 var chargeback = new UltraCartRestApiV2.ChargebackDispute(); // ChargebackDispute | Chargeback to insert
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -255,7 +255,7 @@ apiInstance.insertChargeback(chargeback, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to insert | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 <a name="updateChargeback"></a>
 # **updateChargeback**
-> ChargebackDisputeResponse updateChargeback(chargeback, chargebackDisputeOid, opts)
+> ChargebackDisputeResponse updateChargeback(chargeback, chargeback_dispute_oid, opts)
 
 Update a chargeback
 
@@ -297,10 +297,10 @@ var apiInstance = new UltraCartRestApiV2.ChargebackApi();
 
 var chargeback = new UltraCartRestApiV2.ChargebackDispute(); // ChargebackDispute | Chargeback to update
 
-var chargebackDisputeOid = 56; // Number | The chargeback_dispute_oid to update.
+var chargeback_dispute_oid = 56; // Number | The chargeback_dispute_oid to update.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -310,7 +310,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateChargeback(chargeback, chargebackDisputeOid, opts, callback);
+apiInstance.updateChargeback(chargeback, chargeback_dispute_oid, opts, callback);
 ```
 
 ### Parameters
@@ -318,8 +318,8 @@ apiInstance.updateChargeback(chargeback, chargebackDisputeOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeback** | [**ChargebackDispute**](ChargebackDispute.md)| Chargeback to update | 
- **chargebackDisputeOid** | **Number**| The chargeback_dispute_oid to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **chargeback_dispute_oid** | **Number**| The chargeback_dispute_oid to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 

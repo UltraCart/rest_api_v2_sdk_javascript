@@ -58,33 +58,33 @@
       if (data.hasOwnProperty('cost'))
         obj.cost = ApiClient.convertToType(data['cost'], 'Number');
       if (data.hasOwnProperty('each_additional_item_markup'))
-        obj.eachAdditionalItemMarkup = ApiClient.convertToType(data['each_additional_item_markup'], 'Number');
+        obj.each_additional_item_markup = ApiClient.convertToType(data['each_additional_item_markup'], 'Number');
       if (data.hasOwnProperty('filter_to_if_available'))
-        obj.filterToIfAvailable = ApiClient.convertToType(data['filter_to_if_available'], 'Boolean');
+        obj.filter_to_if_available = ApiClient.convertToType(data['filter_to_if_available'], 'Boolean');
       if (data.hasOwnProperty('first_item_markup'))
-        obj.firstItemMarkup = ApiClient.convertToType(data['first_item_markup'], 'Number');
+        obj.first_item_markup = ApiClient.convertToType(data['first_item_markup'], 'Number');
       if (data.hasOwnProperty('fixed_shipping_cost'))
-        obj.fixedShippingCost = ApiClient.convertToType(data['fixed_shipping_cost'], 'Number');
+        obj.fixed_shipping_cost = ApiClient.convertToType(data['fixed_shipping_cost'], 'Number');
       if (data.hasOwnProperty('flat_fee_markup'))
-        obj.flatFeeMarkup = ApiClient.convertToType(data['flat_fee_markup'], 'Number');
+        obj.flat_fee_markup = ApiClient.convertToType(data['flat_fee_markup'], 'Number');
       if (data.hasOwnProperty('free_shipping'))
-        obj.freeShipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
+        obj.free_shipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
       if (data.hasOwnProperty('per_item_fee_markup'))
-        obj.perItemFeeMarkup = ApiClient.convertToType(data['per_item_fee_markup'], 'Number');
+        obj.per_item_fee_markup = ApiClient.convertToType(data['per_item_fee_markup'], 'Number');
       if (data.hasOwnProperty('percentage_markup'))
-        obj.percentageMarkup = ApiClient.convertToType(data['percentage_markup'], 'Number');
+        obj.percentage_markup = ApiClient.convertToType(data['percentage_markup'], 'Number');
       if (data.hasOwnProperty('percentage_of_item_markup'))
-        obj.percentageOfItemMarkup = ApiClient.convertToType(data['percentage_of_item_markup'], 'Number');
+        obj.percentage_of_item_markup = ApiClient.convertToType(data['percentage_of_item_markup'], 'Number');
       if (data.hasOwnProperty('relax_restrictions_on_upsell'))
-        obj.relaxRestrictionsOnUpsell = ApiClient.convertToType(data['relax_restrictions_on_upsell'], 'Boolean');
+        obj.relax_restrictions_on_upsell = ApiClient.convertToType(data['relax_restrictions_on_upsell'], 'Boolean');
       if (data.hasOwnProperty('shipping_method'))
-        obj.shippingMethod = ApiClient.convertToType(data['shipping_method'], 'String');
+        obj.shipping_method = ApiClient.convertToType(data['shipping_method'], 'String');
       if (data.hasOwnProperty('shipping_method_oid'))
-        obj.shippingMethodOid = ApiClient.convertToType(data['shipping_method_oid'], 'Number');
+        obj.shipping_method_oid = ApiClient.convertToType(data['shipping_method_oid'], 'Number');
       if (data.hasOwnProperty('shipping_method_validity'))
-        obj.shippingMethodValidity = ApiClient.convertToType(data['shipping_method_validity'], 'String');
+        obj.shipping_method_validity = ApiClient.convertToType(data['shipping_method_validity'], 'String');
       if (data.hasOwnProperty('signature_required'))
-        obj.signatureRequired = ApiClient.convertToType(data['signature_required'], 'Boolean');
+        obj.signature_required = ApiClient.convertToType(data['signature_required'], 'Boolean');
     }
     return obj;
   }
@@ -97,91 +97,91 @@
 
   /**
    * Each additional item markup
-   * @member {Number} eachAdditionalItemMarkup
+   * @member {Number} each_additional_item_markup
    */
-  exports.prototype.eachAdditionalItemMarkup = undefined;
+  exports.prototype.each_additional_item_markup = undefined;
 
   /**
    * Filter to this method if available
-   * @member {Boolean} filterToIfAvailable
+   * @member {Boolean} filter_to_if_available
    */
-  exports.prototype.filterToIfAvailable = undefined;
+  exports.prototype.filter_to_if_available = undefined;
 
   /**
    * First item markup
-   * @member {Number} firstItemMarkup
+   * @member {Number} first_item_markup
    */
-  exports.prototype.firstItemMarkup = undefined;
+  exports.prototype.first_item_markup = undefined;
 
   /**
    * Fixed shipping cost
-   * @member {Number} fixedShippingCost
+   * @member {Number} fixed_shipping_cost
    */
-  exports.prototype.fixedShippingCost = undefined;
+  exports.prototype.fixed_shipping_cost = undefined;
 
   /**
    * Flat fee markup
-   * @member {Number} flatFeeMarkup
+   * @member {Number} flat_fee_markup
    */
-  exports.prototype.flatFeeMarkup = undefined;
+  exports.prototype.flat_fee_markup = undefined;
 
   /**
    * Free shipping
-   * @member {Boolean} freeShipping
+   * @member {Boolean} free_shipping
    */
-  exports.prototype.freeShipping = undefined;
+  exports.prototype.free_shipping = undefined;
 
   /**
    * Per item fee markup
-   * @member {Number} perItemFeeMarkup
+   * @member {Number} per_item_fee_markup
    */
-  exports.prototype.perItemFeeMarkup = undefined;
+  exports.prototype.per_item_fee_markup = undefined;
 
   /**
    * Percentage markup
-   * @member {Number} percentageMarkup
+   * @member {Number} percentage_markup
    */
-  exports.prototype.percentageMarkup = undefined;
+  exports.prototype.percentage_markup = undefined;
 
   /**
    * Percentage of item markup
-   * @member {Number} percentageOfItemMarkup
+   * @member {Number} percentage_of_item_markup
    */
-  exports.prototype.percentageOfItemMarkup = undefined;
+  exports.prototype.percentage_of_item_markup = undefined;
 
   /**
    * Relax restrictions on upsell
-   * @member {Boolean} relaxRestrictionsOnUpsell
+   * @member {Boolean} relax_restrictions_on_upsell
    */
-  exports.prototype.relaxRestrictionsOnUpsell = undefined;
+  exports.prototype.relax_restrictions_on_upsell = undefined;
 
   /**
    * Shipping method name
-   * @member {String} shippingMethod
+   * @member {String} shipping_method
    */
-  exports.prototype.shippingMethod = undefined;
+  exports.prototype.shipping_method = undefined;
 
   /**
    * Shipping method object identifier
-   * @member {Number} shippingMethodOid
+   * @member {Number} shipping_method_oid
    */
-  exports.prototype.shippingMethodOid = undefined;
+  exports.prototype.shipping_method_oid = undefined;
 
   /**
    * Shipping method validity
-   * @member {module:com.ultracart.admin.v2.models/ItemShippingMethod.ShippingMethodValidityEnum} shippingMethodValidity
+   * @member {module:com.ultracart.admin.v2.models/ItemShippingMethod.ShippingMethodValidityEnum} shipping_method_validity
    */
-  exports.prototype.shippingMethodValidity = undefined;
+  exports.prototype.shipping_method_validity = undefined;
 
   /**
    * Signature required
-   * @member {Boolean} signatureRequired
+   * @member {Boolean} signature_required
    */
-  exports.prototype.signatureRequired = undefined;
+  exports.prototype.signature_required = undefined;
 
 
   /**
-   * Allowed values for the <code>shippingMethodValidity</code> property.
+   * Allowed values for the <code>shipping_method_validity</code> property.
    * @enum {String}
    * @readonly
    */
@@ -190,19 +190,19 @@
      * value: "invalid for"
      * @const
      */
-    invalidFor: "invalid for",
+    invalid_for: "invalid for",
 
     /**
      * value: "valid for"
      * @const
      */
-    validFor: "valid for",
+    valid_for: "valid for",
 
     /**
      * value: "valid only for"
      * @const
      */
-    validOnlyFor: "valid only for"
+    valid_only_for: "valid only for"
   };
 
   return exports;

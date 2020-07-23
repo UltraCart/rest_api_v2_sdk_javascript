@@ -18,15 +18,15 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `image` (value: `"Image"`)
+* `Image` (value: `"Image"`)
 
 * `PDF` (value: `"PDF"`)
 
-* `text` (value: `"Text"`)
+* `Text` (value: `"Text"`)
 
-* `unknown` (value: `"Unknown"`)
+* `Unknown` (value: `"Unknown"`)
 
-* `video` (value: `"Video"`)
+* `Video` (value: `"Video"`)
 
 
 

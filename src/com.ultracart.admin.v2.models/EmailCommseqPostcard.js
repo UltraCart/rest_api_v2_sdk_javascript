@@ -58,25 +58,25 @@
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('edited_by_user'))
-        obj.editedByUser = ApiClient.convertToType(data['edited_by_user'], 'String');
+        obj.edited_by_user = ApiClient.convertToType(data['edited_by_user'], 'String');
       if (data.hasOwnProperty('email_communication_sequence_postcard_uuid'))
-        obj.emailCommunicationSequencePostcardUuid = ApiClient.convertToType(data['email_communication_sequence_postcard_uuid'], 'String');
+        obj.email_communication_sequence_postcard_uuid = ApiClient.convertToType(data['email_communication_sequence_postcard_uuid'], 'String');
       if (data.hasOwnProperty('filter_profile_equation_json'))
-        obj.filterProfileEquationJson = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
+        obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('postcard_back_container_cjson'))
-        obj.postcardBackContainerCjson = ApiClient.convertToType(data['postcard_back_container_cjson'], 'String');
+        obj.postcard_back_container_cjson = ApiClient.convertToType(data['postcard_back_container_cjson'], 'String');
       if (data.hasOwnProperty('postcard_back_container_uuid'))
-        obj.postcardBackContainerUuid = ApiClient.convertToType(data['postcard_back_container_uuid'], 'String');
+        obj.postcard_back_container_uuid = ApiClient.convertToType(data['postcard_back_container_uuid'], 'String');
       if (data.hasOwnProperty('postcard_container_cjson_last_modified_dts'))
-        obj.postcardContainerCjsonLastModifiedDts = ApiClient.convertToType(data['postcard_container_cjson_last_modified_dts'], 'String');
+        obj.postcard_container_cjson_last_modified_dts = ApiClient.convertToType(data['postcard_container_cjson_last_modified_dts'], 'String');
       if (data.hasOwnProperty('postcard_front_container_cjson'))
-        obj.postcardFrontContainerCjson = ApiClient.convertToType(data['postcard_front_container_cjson'], 'String');
+        obj.postcard_front_container_cjson = ApiClient.convertToType(data['postcard_front_container_cjson'], 'String');
       if (data.hasOwnProperty('postcard_front_container_uuid'))
-        obj.postcardFrontContainerUuid = ApiClient.convertToType(data['postcard_front_container_uuid'], 'String');
+        obj.postcard_front_container_uuid = ApiClient.convertToType(data['postcard_front_container_uuid'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
     }
     return obj;
   }
@@ -89,63 +89,63 @@
 
   /**
    * Edited by user
-   * @member {String} editedByUser
+   * @member {String} edited_by_user
    */
-  exports.prototype.editedByUser = undefined;
+  exports.prototype.edited_by_user = undefined;
 
   /**
    * communication sequence postcard uuid
-   * @member {String} emailCommunicationSequencePostcardUuid
+   * @member {String} email_communication_sequence_postcard_uuid
    */
-  exports.prototype.emailCommunicationSequencePostcardUuid = undefined;
+  exports.prototype.email_communication_sequence_postcard_uuid = undefined;
 
   /**
    * Filter profile equation json
-   * @member {String} filterProfileEquationJson
+   * @member {String} filter_profile_equation_json
    */
-  exports.prototype.filterProfileEquationJson = undefined;
+  exports.prototype.filter_profile_equation_json = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Postcard back container cjson
-   * @member {String} postcardBackContainerCjson
+   * @member {String} postcard_back_container_cjson
    */
-  exports.prototype.postcardBackContainerCjson = undefined;
+  exports.prototype.postcard_back_container_cjson = undefined;
 
   /**
    * Postcard back container uuid
-   * @member {String} postcardBackContainerUuid
+   * @member {String} postcard_back_container_uuid
    */
-  exports.prototype.postcardBackContainerUuid = undefined;
+  exports.prototype.postcard_back_container_uuid = undefined;
 
   /**
    * Timestamp the last time the container was modified.
-   * @member {String} postcardContainerCjsonLastModifiedDts
+   * @member {String} postcard_container_cjson_last_modified_dts
    */
-  exports.prototype.postcardContainerCjsonLastModifiedDts = undefined;
+  exports.prototype.postcard_container_cjson_last_modified_dts = undefined;
 
   /**
    * Postcard front container cjson
-   * @member {String} postcardFrontContainerCjson
+   * @member {String} postcard_front_container_cjson
    */
-  exports.prototype.postcardFrontContainerCjson = undefined;
+  exports.prototype.postcard_front_container_cjson = undefined;
 
   /**
    * Postcard front container uuid
-   * @member {String} postcardFrontContainerUuid
+   * @member {String} postcard_front_container_uuid
    */
-  exports.prototype.postcardFrontContainerUuid = undefined;
+  exports.prototype.postcard_front_container_uuid = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   return exports;
 

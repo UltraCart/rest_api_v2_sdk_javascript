@@ -58,33 +58,33 @@
       if (data.hasOwnProperty('context'))
         obj.context = ApiClient.convertToType(data['context'], 'String');
       if (data.hasOwnProperty('dont_link_email_to_search'))
-        obj.dontLinkEmailToSearch = ApiClient.convertToType(data['dont_link_email_to_search'], 'Boolean');
+        obj.dont_link_email_to_search = ApiClient.convertToType(data['dont_link_email_to_search'], 'Boolean');
       if (data.hasOwnProperty('email_as_link'))
-        obj.emailAsLink = ApiClient.convertToType(data['email_as_link'], 'Boolean');
+        obj.email_as_link = ApiClient.convertToType(data['email_as_link'], 'Boolean');
       if (data.hasOwnProperty('filter_distribution_center_oid'))
-        obj.filterDistributionCenterOid = ApiClient.convertToType(data['filter_distribution_center_oid'], 'Number');
+        obj.filter_distribution_center_oid = ApiClient.convertToType(data['filter_distribution_center_oid'], 'Number');
       if (data.hasOwnProperty('filter_to_items_in_contact_oid'))
-        obj.filterToItemsInContactOid = ApiClient.convertToType(data['filter_to_items_in_contact_oid'], 'Number');
+        obj.filter_to_items_in_contact_oid = ApiClient.convertToType(data['filter_to_items_in_contact_oid'], 'Number');
       if (data.hasOwnProperty('format'))
         obj.format = ApiClient.convertToType(data['format'], 'String');
       if (data.hasOwnProperty('hide_bill_to_address'))
-        obj.hideBillToAddress = ApiClient.convertToType(data['hide_bill_to_address'], 'Boolean');
+        obj.hide_bill_to_address = ApiClient.convertToType(data['hide_bill_to_address'], 'Boolean');
       if (data.hasOwnProperty('hide_price_information'))
-        obj.hidePriceInformation = ApiClient.convertToType(data['hide_price_information'], 'Boolean');
+        obj.hide_price_information = ApiClient.convertToType(data['hide_price_information'], 'Boolean');
       if (data.hasOwnProperty('link_file_attachments'))
-        obj.linkFileAttachments = ApiClient.convertToType(data['link_file_attachments'], 'Boolean');
+        obj.link_file_attachments = ApiClient.convertToType(data['link_file_attachments'], 'Boolean');
       if (data.hasOwnProperty('show_contact_info'))
-        obj.showContactInfo = ApiClient.convertToType(data['show_contact_info'], 'Boolean');
+        obj.show_contact_info = ApiClient.convertToType(data['show_contact_info'], 'Boolean');
       if (data.hasOwnProperty('show_in_merchant_currency'))
-        obj.showInMerchantCurrency = ApiClient.convertToType(data['show_in_merchant_currency'], 'Boolean');
+        obj.show_in_merchant_currency = ApiClient.convertToType(data['show_in_merchant_currency'], 'Boolean');
       if (data.hasOwnProperty('show_internal_information'))
-        obj.showInternalInformation = ApiClient.convertToType(data['show_internal_information'], 'Boolean');
+        obj.show_internal_information = ApiClient.convertToType(data['show_internal_information'], 'Boolean');
       if (data.hasOwnProperty('show_merchant_notes'))
-        obj.showMerchantNotes = ApiClient.convertToType(data['show_merchant_notes'], 'Boolean');
+        obj.show_merchant_notes = ApiClient.convertToType(data['show_merchant_notes'], 'Boolean');
       if (data.hasOwnProperty('show_non_sensitive_payment_info'))
-        obj.showNonSensitivePaymentInfo = ApiClient.convertToType(data['show_non_sensitive_payment_info'], 'Boolean');
+        obj.show_non_sensitive_payment_info = ApiClient.convertToType(data['show_non_sensitive_payment_info'], 'Boolean');
       if (data.hasOwnProperty('show_payment_info'))
-        obj.showPaymentInfo = ApiClient.convertToType(data['show_payment_info'], 'Boolean');
+        obj.show_payment_info = ApiClient.convertToType(data['show_payment_info'], 'Boolean');
       if (data.hasOwnProperty('translate'))
         obj.translate = ApiClient.convertToType(data['translate'], 'Boolean');
     }
@@ -99,27 +99,27 @@
 
   /**
    * True to not link the email address to the order search
-   * @member {Boolean} dontLinkEmailToSearch
+   * @member {Boolean} dont_link_email_to_search
    */
-  exports.prototype.dontLinkEmailToSearch = undefined;
+  exports.prototype.dont_link_email_to_search = undefined;
 
   /**
    * True to make the email address a clickable mailto link
-   * @member {Boolean} emailAsLink
+   * @member {Boolean} email_as_link
    */
-  exports.prototype.emailAsLink = undefined;
+  exports.prototype.email_as_link = undefined;
 
   /**
    * Specify a distribution center oid to filter the items displayed to that particular distribution center.
-   * @member {Number} filterDistributionCenterOid
+   * @member {Number} filter_distribution_center_oid
    */
-  exports.prototype.filterDistributionCenterOid = undefined;
+  exports.prototype.filter_distribution_center_oid = undefined;
 
   /**
    * The container oid to filter items to.
-   * @member {Number} filterToItemsInContactOid
+   * @member {Number} filter_to_items_in_contact_oid
    */
-  exports.prototype.filterToItemsInContactOid = undefined;
+  exports.prototype.filter_to_items_in_contact_oid = undefined;
 
   /**
    * The desired format.
@@ -129,57 +129,57 @@
 
   /**
    * True to ide the bill to address
-   * @member {Boolean} hideBillToAddress
+   * @member {Boolean} hide_bill_to_address
    */
-  exports.prototype.hideBillToAddress = undefined;
+  exports.prototype.hide_bill_to_address = undefined;
 
   /**
    * True to hide price information
-   * @member {Boolean} hidePriceInformation
+   * @member {Boolean} hide_price_information
    */
-  exports.prototype.hidePriceInformation = undefined;
+  exports.prototype.hide_price_information = undefined;
 
   /**
    * True to link file attachments for download
-   * @member {Boolean} linkFileAttachments
+   * @member {Boolean} link_file_attachments
    */
-  exports.prototype.linkFileAttachments = undefined;
+  exports.prototype.link_file_attachments = undefined;
 
   /**
    * True to show contact information
-   * @member {Boolean} showContactInfo
+   * @member {Boolean} show_contact_info
    */
-  exports.prototype.showContactInfo = undefined;
+  exports.prototype.show_contact_info = undefined;
 
   /**
    * True to show the order in the merchant currency
-   * @member {Boolean} showInMerchantCurrency
+   * @member {Boolean} show_in_merchant_currency
    */
-  exports.prototype.showInMerchantCurrency = undefined;
+  exports.prototype.show_in_merchant_currency = undefined;
 
   /**
    * True to show internal information about the order
-   * @member {Boolean} showInternalInformation
+   * @member {Boolean} show_internal_information
    */
-  exports.prototype.showInternalInformation = undefined;
+  exports.prototype.show_internal_information = undefined;
 
   /**
    * True to show merchant notes
-   * @member {Boolean} showMerchantNotes
+   * @member {Boolean} show_merchant_notes
    */
-  exports.prototype.showMerchantNotes = undefined;
+  exports.prototype.show_merchant_notes = undefined;
 
   /**
    * True to show non-sensitive payment information
-   * @member {Boolean} showNonSensitivePaymentInfo
+   * @member {Boolean} show_non_sensitive_payment_info
    */
-  exports.prototype.showNonSensitivePaymentInfo = undefined;
+  exports.prototype.show_non_sensitive_payment_info = undefined;
 
   /**
    * True to show payment information
-   * @member {Boolean} showPaymentInfo
+   * @member {Boolean} show_payment_info
    */
-  exports.prototype.showPaymentInfo = undefined;
+  exports.prototype.show_payment_info = undefined;
 
   /**
    * True to translate the order into the native language of the customer

@@ -60,13 +60,13 @@
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('exclude_from_gallery'))
-        obj.excludeFromGallery = ApiClient.convertToType(data['exclude_from_gallery'], 'Boolean');
+        obj.exclude_from_gallery = ApiClient.convertToType(data['exclude_from_gallery'], 'Boolean');
       if (data.hasOwnProperty('image_height'))
-        obj.imageHeight = ApiClient.convertToType(data['image_height'], 'Number');
+        obj.image_height = ApiClient.convertToType(data['image_height'], 'Number');
       if (data.hasOwnProperty('image_width'))
-        obj.imageWidth = ApiClient.convertToType(data['image_width'], 'Number');
+        obj.image_width = ApiClient.convertToType(data['image_width'], 'Number');
       if (data.hasOwnProperty('is_default'))
-        obj.isDefault = ApiClient.convertToType(data['is_default'], 'Boolean');
+        obj.is_default = ApiClient.convertToType(data['is_default'], 'Boolean');
       if (data.hasOwnProperty('thumbnails'))
         obj.thumbnails = ApiClient.convertToType(data['thumbnails'], [CartItemMultimediaThumbnail]);
       if (data.hasOwnProperty('type'))
@@ -91,27 +91,27 @@
 
   /**
    * True if the image should be excluded from galleries
-   * @member {Boolean} excludeFromGallery
+   * @member {Boolean} exclude_from_gallery
    */
-  exports.prototype.excludeFromGallery = undefined;
+  exports.prototype.exclude_from_gallery = undefined;
 
   /**
    * Image height
-   * @member {Number} imageHeight
+   * @member {Number} image_height
    */
-  exports.prototype.imageHeight = undefined;
+  exports.prototype.image_height = undefined;
 
   /**
    * Image width
-   * @member {Number} imageWidth
+   * @member {Number} image_width
    */
-  exports.prototype.imageWidth = undefined;
+  exports.prototype.image_width = undefined;
 
   /**
    * True if the multimedia is the default for this type
-   * @member {Boolean} isDefault
+   * @member {Boolean} is_default
    */
-  exports.prototype.isDefault = undefined;
+  exports.prototype.is_default = undefined;
 
   /**
    * Thumbnails of the images
@@ -142,7 +142,7 @@
      * value: "Image"
      * @const
      */
-    image: "Image",
+    Image: "Image",
 
     /**
      * value: "PDF"
@@ -154,19 +154,19 @@
      * value: "Text"
      * @const
      */
-    text: "Text",
+    Text: "Text",
 
     /**
      * value: "Unknown"
      * @const
      */
-    unknown: "Unknown",
+    Unknown: "Unknown",
 
     /**
      * value: "Video"
      * @const
      */
-    video: "Video"
+    Video: "Video"
   };
 
   return exports;

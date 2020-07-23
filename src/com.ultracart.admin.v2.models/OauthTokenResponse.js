@@ -56,30 +56,30 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('access_token'))
-        obj.accessToken = ApiClient.convertToType(data['access_token'], 'String');
+        obj.access_token = ApiClient.convertToType(data['access_token'], 'String');
       if (data.hasOwnProperty('error'))
         obj.error = ApiClient.convertToType(data['error'], 'String');
       if (data.hasOwnProperty('error_description'))
-        obj.errorDescription = ApiClient.convertToType(data['error_description'], 'String');
+        obj.error_description = ApiClient.convertToType(data['error_description'], 'String');
       if (data.hasOwnProperty('error_uri'))
-        obj.errorUri = ApiClient.convertToType(data['error_uri'], 'String');
+        obj.error_uri = ApiClient.convertToType(data['error_uri'], 'String');
       if (data.hasOwnProperty('expires_in'))
-        obj.expiresIn = ApiClient.convertToType(data['expires_in'], 'String');
+        obj.expires_in = ApiClient.convertToType(data['expires_in'], 'String');
       if (data.hasOwnProperty('refresh_token'))
-        obj.refreshToken = ApiClient.convertToType(data['refresh_token'], 'String');
+        obj.refresh_token = ApiClient.convertToType(data['refresh_token'], 'String');
       if (data.hasOwnProperty('scope'))
         obj.scope = ApiClient.convertToType(data['scope'], 'String');
       if (data.hasOwnProperty('token_type'))
-        obj.tokenType = ApiClient.convertToType(data['token_type'], 'String');
+        obj.token_type = ApiClient.convertToType(data['token_type'], 'String');
     }
     return obj;
   }
 
   /**
    * Access token to use in OAuth authenticated API call
-   * @member {String} accessToken
+   * @member {String} access_token
    */
-  exports.prototype.accessToken = undefined;
+  exports.prototype.access_token = undefined;
 
   /**
    * @member {String} error
@@ -87,26 +87,26 @@
   exports.prototype.error = undefined;
 
   /**
-   * @member {String} errorDescription
+   * @member {String} error_description
    */
-  exports.prototype.errorDescription = undefined;
+  exports.prototype.error_description = undefined;
 
   /**
-   * @member {String} errorUri
+   * @member {String} error_uri
    */
-  exports.prototype.errorUri = undefined;
+  exports.prototype.error_uri = undefined;
 
   /**
    * The number of seconds since issuance when the access token will expire and need to be refreshed using the refresh token
-   * @member {String} expiresIn
+   * @member {String} expires_in
    */
-  exports.prototype.expiresIn = undefined;
+  exports.prototype.expires_in = undefined;
 
   /**
    * The refresh token that should be used to fetch a new access token when the expiration occurs
-   * @member {String} refreshToken
+   * @member {String} refresh_token
    */
-  exports.prototype.refreshToken = undefined;
+  exports.prototype.refresh_token = undefined;
 
   /**
    * The scope of permissions associated with teh access token
@@ -116,13 +116,13 @@
 
   /**
    * Type of token
-   * @member {module:com.ultracart.admin.v2.models/OauthTokenResponse.TokenTypeEnum} tokenType
+   * @member {module:com.ultracart.admin.v2.models/OauthTokenResponse.TokenTypeEnum} token_type
    */
-  exports.prototype.tokenType = undefined;
+  exports.prototype.token_type = undefined;
 
 
   /**
-   * Allowed values for the <code>tokenType</code> property.
+   * Allowed values for the <code>token_type</code> property.
    * @enum {String}
    * @readonly
    */

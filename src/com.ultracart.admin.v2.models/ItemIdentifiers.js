@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('barcode'))
         obj.barcode = ApiClient.convertToType(data['barcode'], 'String');
       if (data.hasOwnProperty('manufacturer_name'))
-        obj.manufacturerName = ApiClient.convertToType(data['manufacturer_name'], 'String');
+        obj.manufacturer_name = ApiClient.convertToType(data['manufacturer_name'], 'String');
       if (data.hasOwnProperty('manufacturer_sku'))
-        obj.manufacturerSku = ApiClient.convertToType(data['manufacturer_sku'], 'String');
+        obj.manufacturer_sku = ApiClient.convertToType(data['manufacturer_sku'], 'String');
       if (data.hasOwnProperty('unspsc'))
         obj.unspsc = ApiClient.convertToType(data['unspsc'], 'String');
     }
@@ -75,15 +75,15 @@
 
   /**
    * Manufacturer Name
-   * @member {String} manufacturerName
+   * @member {String} manufacturer_name
    */
-  exports.prototype.manufacturerName = undefined;
+  exports.prototype.manufacturer_name = undefined;
 
   /**
    * Manufacturer SKU
-   * @member {String} manufacturerSku
+   * @member {String} manufacturer_sku
    */
-  exports.prototype.manufacturerSku = undefined;
+  exports.prototype.manufacturer_sku = undefined;
 
   /**
    * UNSPSC

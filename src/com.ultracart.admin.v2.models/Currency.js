@@ -56,13 +56,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('exchange_rate'))
-        obj.exchangeRate = ApiClient.convertToType(data['exchange_rate'], 'Number');
+        obj.exchange_rate = ApiClient.convertToType(data['exchange_rate'], 'Number');
       if (data.hasOwnProperty('localized'))
         obj.localized = ApiClient.convertToType(data['localized'], 'Number');
       if (data.hasOwnProperty('localized_formatted'))
-        obj.localizedFormatted = ApiClient.convertToType(data['localized_formatted'], 'String');
+        obj.localized_formatted = ApiClient.convertToType(data['localized_formatted'], 'String');
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'Number');
     }
@@ -71,15 +71,15 @@
 
   /**
    * Currency code of the localized value
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * Exchange rate used to localize
-   * @member {Number} exchangeRate
+   * @member {Number} exchange_rate
    */
-  exports.prototype.exchangeRate = undefined;
+  exports.prototype.exchange_rate = undefined;
 
   /**
    * Value localized to the customer
@@ -89,9 +89,9 @@
 
   /**
    * Value localized and formatted for the customer
-   * @member {String} localizedFormatted
+   * @member {String} localized_formatted
    */
-  exports.prototype.localizedFormatted = undefined;
+  exports.prototype.localized_formatted = undefined;
 
   /**
    * Value in base currency

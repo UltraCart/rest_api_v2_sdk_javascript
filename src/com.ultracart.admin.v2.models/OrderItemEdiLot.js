@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('lot_expiration'))
-        obj.lotExpiration = ApiClient.convertToType(data['lot_expiration'], 'String');
+        obj.lot_expiration = ApiClient.convertToType(data['lot_expiration'], 'String');
       if (data.hasOwnProperty('lot_number'))
-        obj.lotNumber = ApiClient.convertToType(data['lot_number'], 'String');
+        obj.lot_number = ApiClient.convertToType(data['lot_number'], 'String');
       if (data.hasOwnProperty('lot_quantity'))
-        obj.lotQuantity = ApiClient.convertToType(data['lot_quantity'], 'Number');
+        obj.lot_quantity = ApiClient.convertToType(data['lot_quantity'], 'Number');
     }
     return obj;
   }
 
   /**
    * Log expiration
-   * @member {String} lotExpiration
+   * @member {String} lot_expiration
    */
-  exports.prototype.lotExpiration = undefined;
+  exports.prototype.lot_expiration = undefined;
 
   /**
    * Lot number
-   * @member {String} lotNumber
+   * @member {String} lot_number
    */
-  exports.prototype.lotNumber = undefined;
+  exports.prototype.lot_number = undefined;
 
   /**
    * Lot quantity
-   * @member {Number} lotQuantity
+   * @member {Number} lot_quantity
    */
-  exports.prototype.lotQuantity = undefined;
+  exports.prototype.lot_quantity = undefined;
 
   return exports;
 

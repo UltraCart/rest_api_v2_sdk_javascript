@@ -56,72 +56,72 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('activation_code'))
-        obj.activationCode = ApiClient.convertToType(data['activation_code'], 'String');
+        obj.activation_code = ApiClient.convertToType(data['activation_code'], 'String');
       if (data.hasOwnProperty('activation_dts'))
-        obj.activationDts = ApiClient.convertToType(data['activation_dts'], 'String');
+        obj.activation_dts = ApiClient.convertToType(data['activation_dts'], 'String');
       if (data.hasOwnProperty('customer_software_entitlement_oid'))
-        obj.customerSoftwareEntitlementOid = ApiClient.convertToType(data['customer_software_entitlement_oid'], 'Number');
+        obj.customer_software_entitlement_oid = ApiClient.convertToType(data['customer_software_entitlement_oid'], 'Number');
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('purchased_via_item_description'))
-        obj.purchasedViaItemDescription = ApiClient.convertToType(data['purchased_via_item_description'], 'String');
+        obj.purchased_via_item_description = ApiClient.convertToType(data['purchased_via_item_description'], 'String');
       if (data.hasOwnProperty('purchased_via_item_id'))
-        obj.purchasedViaItemId = ApiClient.convertToType(data['purchased_via_item_id'], 'String');
+        obj.purchased_via_item_id = ApiClient.convertToType(data['purchased_via_item_id'], 'String');
       if (data.hasOwnProperty('purchased_via_order_id'))
-        obj.purchasedViaOrderId = ApiClient.convertToType(data['purchased_via_order_id'], 'String');
+        obj.purchased_via_order_id = ApiClient.convertToType(data['purchased_via_order_id'], 'String');
       if (data.hasOwnProperty('software_sku'))
-        obj.softwareSku = ApiClient.convertToType(data['software_sku'], 'String');
+        obj.software_sku = ApiClient.convertToType(data['software_sku'], 'String');
     }
     return obj;
   }
 
   /**
    * Activation Code Associated with the software
-   * @member {String} activationCode
+   * @member {String} activation_code
    */
-  exports.prototype.activationCode = undefined;
+  exports.prototype.activation_code = undefined;
 
   /**
    * Date/time when the activation code was created
-   * @member {String} activationDts
+   * @member {String} activation_dts
    */
-  exports.prototype.activationDts = undefined;
+  exports.prototype.activation_dts = undefined;
 
   /**
    * Customer profile software entitlement object identifier
-   * @member {Number} customerSoftwareEntitlementOid
+   * @member {Number} customer_software_entitlement_oid
    */
-  exports.prototype.customerSoftwareEntitlementOid = undefined;
+  exports.prototype.customer_software_entitlement_oid = undefined;
 
   /**
    * Date/time when the activation code will expire
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * Item description used to purchase this software.
-   * @member {String} purchasedViaItemDescription
+   * @member {String} purchased_via_item_description
    */
-  exports.prototype.purchasedViaItemDescription = undefined;
+  exports.prototype.purchased_via_item_description = undefined;
 
   /**
    * Item ID used to purchase this software.
-   * @member {String} purchasedViaItemId
+   * @member {String} purchased_via_item_id
    */
-  exports.prototype.purchasedViaItemId = undefined;
+  exports.prototype.purchased_via_item_id = undefined;
 
   /**
    * Order ID used to purchase this software.
-   * @member {String} purchasedViaOrderId
+   * @member {String} purchased_via_order_id
    */
-  exports.prototype.purchasedViaOrderId = undefined;
+  exports.prototype.purchased_via_order_id = undefined;
 
   /**
    * SKU of the software
-   * @member {String} softwareSku
+   * @member {String} software_sku
    */
-  exports.prototype.softwareSku = undefined;
+  exports.prototype.software_sku = undefined;
 
   return exports;
 

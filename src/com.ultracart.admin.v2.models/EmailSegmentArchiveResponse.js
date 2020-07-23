@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('segment_in_use'))
-        obj.segmentInUse = ApiClient.convertToType(data['segment_in_use'], 'Boolean');
+        obj.segment_in_use = ApiClient.convertToType(data['segment_in_use'], 'Boolean');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
     }
@@ -78,9 +78,9 @@
   exports.prototype.metadata = undefined;
 
   /**
-   * @member {Boolean} segmentInUse
+   * @member {Boolean} segment_in_use
    */
-  exports.prototype.segmentInUse = undefined;
+  exports.prototype.segment_in_use = undefined;
 
   /**
    * Indicates if API call was successful

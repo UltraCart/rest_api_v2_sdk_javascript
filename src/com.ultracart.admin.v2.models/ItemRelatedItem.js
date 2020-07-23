@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('related_merchant_item_id'))
-        obj.relatedMerchantItemId = ApiClient.convertToType(data['related_merchant_item_id'], 'String');
+        obj.related_merchant_item_id = ApiClient.convertToType(data['related_merchant_item_id'], 'String');
       if (data.hasOwnProperty('related_merchant_item_oid'))
-        obj.relatedMerchantItemOid = ApiClient.convertToType(data['related_merchant_item_oid'], 'Number');
+        obj.related_merchant_item_oid = ApiClient.convertToType(data['related_merchant_item_oid'], 'Number');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
     }
@@ -67,15 +67,15 @@
 
   /**
    * Related item id
-   * @member {String} relatedMerchantItemId
+   * @member {String} related_merchant_item_id
    */
-  exports.prototype.relatedMerchantItemId = undefined;
+  exports.prototype.related_merchant_item_id = undefined;
 
   /**
    * Related item object identifier
-   * @member {Number} relatedMerchantItemOid
+   * @member {Number} related_merchant_item_oid
    */
-  exports.prototype.relatedMerchantItemOid = undefined;
+  exports.prototype.related_merchant_item_oid = undefined;
 
   /**
    * Relationship type
@@ -94,13 +94,13 @@
      * value: "System"
      * @const
      */
-    system: "System",
+    System: "System",
 
     /**
      * value: "UserDefined"
      * @const
      */
-    userDefined: "UserDefined"
+    UserDefined: "UserDefined"
   };
 
   return exports;

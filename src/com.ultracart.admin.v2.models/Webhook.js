@@ -56,85 +56,85 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('api_user_oid'))
-        obj.apiUserOid = ApiClient.convertToType(data['api_user_oid'], 'Number');
+        obj.api_user_oid = ApiClient.convertToType(data['api_user_oid'], 'Number');
       if (data.hasOwnProperty('api_version'))
-        obj.apiVersion = ApiClient.convertToType(data['api_version'], 'String');
+        obj.api_version = ApiClient.convertToType(data['api_version'], 'String');
       if (data.hasOwnProperty('application_profile'))
-        obj.applicationProfile = ApiUserApplicationProfile.constructFromObject(data['application_profile']);
+        obj.application_profile = ApiUserApplicationProfile.constructFromObject(data['application_profile']);
       if (data.hasOwnProperty('authentication_type'))
-        obj.authenticationType = ApiClient.convertToType(data['authentication_type'], 'String');
+        obj.authentication_type = ApiClient.convertToType(data['authentication_type'], 'String');
       if (data.hasOwnProperty('basic_password'))
-        obj.basicPassword = ApiClient.convertToType(data['basic_password'], 'String');
+        obj.basic_password = ApiClient.convertToType(data['basic_password'], 'String');
       if (data.hasOwnProperty('basic_username'))
-        obj.basicUsername = ApiClient.convertToType(data['basic_username'], 'String');
+        obj.basic_username = ApiClient.convertToType(data['basic_username'], 'String');
       if (data.hasOwnProperty('consecutive_failures'))
-        obj.consecutiveFailures = ApiClient.convertToType(data['consecutive_failures'], 'Number');
+        obj.consecutive_failures = ApiClient.convertToType(data['consecutive_failures'], 'Number');
       if (data.hasOwnProperty('disabled'))
         obj.disabled = ApiClient.convertToType(data['disabled'], 'Boolean');
       if (data.hasOwnProperty('event_categories'))
-        obj.eventCategories = ApiClient.convertToType(data['event_categories'], [WebhookEventCategory]);
+        obj.event_categories = ApiClient.convertToType(data['event_categories'], [WebhookEventCategory]);
       if (data.hasOwnProperty('iam_access_key'))
-        obj.iamAccessKey = ApiClient.convertToType(data['iam_access_key'], 'String');
+        obj.iam_access_key = ApiClient.convertToType(data['iam_access_key'], 'String');
       if (data.hasOwnProperty('iam_secret_key'))
-        obj.iamSecretKey = ApiClient.convertToType(data['iam_secret_key'], 'String');
+        obj.iam_secret_key = ApiClient.convertToType(data['iam_secret_key'], 'String');
       if (data.hasOwnProperty('maximum_events'))
-        obj.maximumEvents = ApiClient.convertToType(data['maximum_events'], 'Number');
+        obj.maximum_events = ApiClient.convertToType(data['maximum_events'], 'Number');
       if (data.hasOwnProperty('maximum_size'))
-        obj.maximumSize = ApiClient.convertToType(data['maximum_size'], 'Number');
+        obj.maximum_size = ApiClient.convertToType(data['maximum_size'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('next_retry_after'))
-        obj.nextRetryAfter = ApiClient.convertToType(data['next_retry_after'], 'String');
+        obj.next_retry_after = ApiClient.convertToType(data['next_retry_after'], 'String');
       if (data.hasOwnProperty('pending'))
         obj.pending = ApiClient.convertToType(data['pending'], 'Number');
       if (data.hasOwnProperty('webhook_oid'))
-        obj.webhookOid = ApiClient.convertToType(data['webhook_oid'], 'Number');
+        obj.webhook_oid = ApiClient.convertToType(data['webhook_oid'], 'Number');
       if (data.hasOwnProperty('webhook_url'))
-        obj.webhookUrl = ApiClient.convertToType(data['webhook_url'], 'String');
+        obj.webhook_url = ApiClient.convertToType(data['webhook_url'], 'String');
     }
     return obj;
   }
 
   /**
    * Populated if webhook associated with an API user
-   * @member {Number} apiUserOid
+   * @member {Number} api_user_oid
    */
-  exports.prototype.apiUserOid = undefined;
+  exports.prototype.api_user_oid = undefined;
 
   /**
    * Version of the API objects that are sent in notifications
-   * @member {module:com.ultracart.admin.v2.models/Webhook.ApiVersionEnum} apiVersion
+   * @member {module:com.ultracart.admin.v2.models/Webhook.ApiVersionEnum} api_version
    */
-  exports.prototype.apiVersion = undefined;
+  exports.prototype.api_version = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ApiUserApplicationProfile} applicationProfile
+   * @member {module:com.ultracart.admin.v2.models/ApiUserApplicationProfile} application_profile
    */
-  exports.prototype.applicationProfile = undefined;
+  exports.prototype.application_profile = undefined;
 
   /**
    * The type of authentication this webhook will use when communicating with your server
-   * @member {module:com.ultracart.admin.v2.models/Webhook.AuthenticationTypeEnum} authenticationType
+   * @member {module:com.ultracart.admin.v2.models/Webhook.AuthenticationTypeEnum} authentication_type
    */
-  exports.prototype.authenticationType = undefined;
+  exports.prototype.authentication_type = undefined;
 
   /**
    * Basic authentication password
-   * @member {String} basicPassword
+   * @member {String} basic_password
    */
-  exports.prototype.basicPassword = undefined;
+  exports.prototype.basic_password = undefined;
 
   /**
    * Basic authentication user name
-   * @member {String} basicUsername
+   * @member {String} basic_username
    */
-  exports.prototype.basicUsername = undefined;
+  exports.prototype.basic_username = undefined;
 
   /**
    * The number of consecutive failures that have occurred trying to deliver notifications to the target server
-   * @member {Number} consecutiveFailures
+   * @member {Number} consecutive_failures
    */
-  exports.prototype.consecutiveFailures = undefined;
+  exports.prototype.consecutive_failures = undefined;
 
   /**
    * True if the webhook has been disabled
@@ -144,45 +144,45 @@
 
   /**
    * The categories of events.  Individual events and subscriptions are handled in the child objects.  _placeholders parameter effects the population of this on a retrieval.
-   * @member {Array.<module:com.ultracart.admin.v2.models/WebhookEventCategory>} eventCategories
+   * @member {Array.<module:com.ultracart.admin.v2.models/WebhookEventCategory>} event_categories
    */
-  exports.prototype.eventCategories = undefined;
+  exports.prototype.event_categories = undefined;
 
   /**
    * IAM Access Key for AWS SQS Delivery
-   * @member {String} iamAccessKey
+   * @member {String} iam_access_key
    */
-  exports.prototype.iamAccessKey = undefined;
+  exports.prototype.iam_access_key = undefined;
 
   /**
    * IAM Secret Key for AWS SQS Delivery
-   * @member {String} iamSecretKey
+   * @member {String} iam_secret_key
    */
-  exports.prototype.iamSecretKey = undefined;
+  exports.prototype.iam_secret_key = undefined;
 
   /**
    * The maximum number of events in the payload that UltraCart will deliver
-   * @member {Number} maximumEvents
+   * @member {Number} maximum_events
    */
-  exports.prototype.maximumEvents = undefined;
+  exports.prototype.maximum_events = undefined;
 
   /**
    * The maximum size of the payload that UltraCart will deliver
-   * @member {Number} maximumSize
+   * @member {Number} maximum_size
    */
-  exports.prototype.maximumSize = undefined;
+  exports.prototype.maximum_size = undefined;
 
   /**
    * The UltraCart merchant ID that owns this webhook
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * The next time UltraCart will attempt delivery if failures have been occurring
-   * @member {String} nextRetryAfter
+   * @member {String} next_retry_after
    */
-  exports.prototype.nextRetryAfter = undefined;
+  exports.prototype.next_retry_after = undefined;
 
   /**
    * The number of pending events for this webhook
@@ -192,19 +192,19 @@
 
   /**
    * The object identifier for this webhook
-   * @member {Number} webhookOid
+   * @member {Number} webhook_oid
    */
-  exports.prototype.webhookOid = undefined;
+  exports.prototype.webhook_oid = undefined;
 
   /**
    * The URL to deliver events to.  Must be HTTPS for customer related information.
-   * @member {String} webhookUrl
+   * @member {String} webhook_url
    */
-  exports.prototype.webhookUrl = undefined;
+  exports.prototype.webhook_url = undefined;
 
 
   /**
-   * Allowed values for the <code>apiVersion</code> property.
+   * Allowed values for the <code>api_version</code> property.
    * @enum {String}
    * @readonly
    */
@@ -213,12 +213,12 @@
      * value: "2017-03-01"
      * @const
      */
-    _20170301: "2017-03-01"
+    _2017_03_01: "2017-03-01"
   };
 
 
   /**
-   * Allowed values for the <code>authenticationType</code> property.
+   * Allowed values for the <code>authentication_type</code> property.
    * @enum {String}
    * @readonly
    */

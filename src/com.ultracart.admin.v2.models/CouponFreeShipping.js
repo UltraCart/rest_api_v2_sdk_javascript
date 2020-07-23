@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('shipping_methods'))
-        obj.shippingMethods = ApiClient.convertToType(data['shipping_methods'], ['String']);
+        obj.shipping_methods = ApiClient.convertToType(data['shipping_methods'], ['String']);
     }
     return obj;
   }
 
   /**
    * One or more shipping methods that may be used with this coupon
-   * @member {Array.<String>} shippingMethods
+   * @member {Array.<String>} shipping_methods
    */
-  exports.prototype.shippingMethods = undefined;
+  exports.prototype.shipping_methods = undefined;
 
   return exports;
 

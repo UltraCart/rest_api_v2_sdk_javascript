@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('errors'))
         obj.errors = ApiClient.convertToType(data['errors'], ['String']);
       if (data.hasOwnProperty('redirect_to_url'))
-        obj.redirectToUrl = ApiClient.convertToType(data['redirect_to_url'], 'String');
+        obj.redirect_to_url = ApiClient.convertToType(data['redirect_to_url'], 'String');
     }
     return obj;
   }
@@ -78,9 +78,9 @@
 
   /**
    * The URL that you should redirect the customers browser to
-   * @member {String} redirectToUrl
+   * @member {String} redirect_to_url
    */
-  exports.prototype.redirectToUrl = undefined;
+  exports.prototype.redirect_to_url = undefined;
 
   return exports;
 

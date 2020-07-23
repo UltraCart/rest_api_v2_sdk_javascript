@@ -56,34 +56,34 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('accounting_code'))
-        obj.accountingCode = ApiClient.convertToType(data['accounting_code'], 'String');
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('cities'))
         obj.cities = ApiClient.convertToType(data['cities'], [TaxCity]);
       if (data.hasOwnProperty('county'))
         obj.county = ApiClient.convertToType(data['county'], 'String');
       if (data.hasOwnProperty('county_oid'))
-        obj.countyOid = ApiClient.convertToType(data['county_oid'], 'Number');
+        obj.county_oid = ApiClient.convertToType(data['county_oid'], 'Number');
       if (data.hasOwnProperty('dont_collect_city'))
-        obj.dontCollectCity = ApiClient.convertToType(data['dont_collect_city'], 'Boolean');
+        obj.dont_collect_city = ApiClient.convertToType(data['dont_collect_city'], 'Boolean');
       if (data.hasOwnProperty('dont_collect_county'))
-        obj.dontCollectCounty = ApiClient.convertToType(data['dont_collect_county'], 'Boolean');
+        obj.dont_collect_county = ApiClient.convertToType(data['dont_collect_county'], 'Boolean');
       if (data.hasOwnProperty('dont_collect_postal_code'))
-        obj.dontCollectPostalCode = ApiClient.convertToType(data['dont_collect_postal_code'], 'Boolean');
+        obj.dont_collect_postal_code = ApiClient.convertToType(data['dont_collect_postal_code'], 'Boolean');
       if (data.hasOwnProperty('state_oid'))
-        obj.stateOid = ApiClient.convertToType(data['state_oid'], 'Number');
+        obj.state_oid = ApiClient.convertToType(data['state_oid'], 'Number');
       if (data.hasOwnProperty('tax_rate'))
-        obj.taxRate = ApiClient.convertToType(data['tax_rate'], 'Number');
+        obj.tax_rate = ApiClient.convertToType(data['tax_rate'], 'Number');
       if (data.hasOwnProperty('tax_rate_formatted'))
-        obj.taxRateFormatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
+        obj.tax_rate_formatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
     }
     return obj;
   }
 
   /**
    * Accounting code for programs such as QuickBooks
-   * @member {String} accountingCode
+   * @member {String} accounting_code
    */
-  exports.prototype.accountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
    * Cities within this city
@@ -99,45 +99,45 @@
 
   /**
    * Tax record object identifier used internally by database
-   * @member {Number} countyOid
+   * @member {Number} county_oid
    */
-  exports.prototype.countyOid = undefined;
+  exports.prototype.county_oid = undefined;
 
   /**
    * Flag instructing engine to not collect city tax for this county
-   * @member {Boolean} dontCollectCity
+   * @member {Boolean} dont_collect_city
    */
-  exports.prototype.dontCollectCity = undefined;
+  exports.prototype.dont_collect_city = undefined;
 
   /**
    * Flag instructing engine to not collect county tax for this county
-   * @member {Boolean} dontCollectCounty
+   * @member {Boolean} dont_collect_county
    */
-  exports.prototype.dontCollectCounty = undefined;
+  exports.prototype.dont_collect_county = undefined;
 
   /**
    * Flag instructing engine to not collect postal code tax for this county
-   * @member {Boolean} dontCollectPostalCode
+   * @member {Boolean} dont_collect_postal_code
    */
-  exports.prototype.dontCollectPostalCode = undefined;
+  exports.prototype.dont_collect_postal_code = undefined;
 
   /**
    * Tax record object identifier used internally by database
-   * @member {Number} stateOid
+   * @member {Number} state_oid
    */
-  exports.prototype.stateOid = undefined;
+  exports.prototype.state_oid = undefined;
 
   /**
    * Tax Rate
-   * @member {Number} taxRate
+   * @member {Number} tax_rate
    */
-  exports.prototype.taxRate = undefined;
+  exports.prototype.tax_rate = undefined;
 
   /**
    * Tax rate formatted
-   * @member {String} taxRateFormatted
+   * @member {String} tax_rate_formatted
    */
-  exports.prototype.taxRateFormatted = undefined;
+  exports.prototype.tax_rate_formatted = undefined;
 
   return exports;
 

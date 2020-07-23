@@ -56,48 +56,48 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('block_prepaid'))
-        obj.blockPrepaid = ApiClient.convertToType(data['block_prepaid'], 'Boolean');
+        obj.block_prepaid = ApiClient.convertToType(data['block_prepaid'], 'Boolean');
       if (data.hasOwnProperty('credit_card_transaction_type'))
-        obj.creditCardTransactionType = ApiClient.convertToType(data['credit_card_transaction_type'], 'String');
+        obj.credit_card_transaction_type = ApiClient.convertToType(data['credit_card_transaction_type'], 'String');
       if (data.hasOwnProperty('no_realtime_charge'))
-        obj.noRealtimeCharge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
+        obj.no_realtime_charge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
       if (data.hasOwnProperty('payment_method_validity'))
-        obj.paymentMethodValidity = ApiClient.convertToType(data['payment_method_validity'], ['String']);
+        obj.payment_method_validity = ApiClient.convertToType(data['payment_method_validity'], ['String']);
       if (data.hasOwnProperty('rotating_transaction_gateway_codes'))
-        obj.rotatingTransactionGatewayCodes = ApiClient.convertToType(data['rotating_transaction_gateway_codes'], ['String']);
+        obj.rotating_transaction_gateway_codes = ApiClient.convertToType(data['rotating_transaction_gateway_codes'], ['String']);
     }
     return obj;
   }
 
   /**
    * True if prepaid cards should be blocked from buying this item
-   * @member {Boolean} blockPrepaid
+   * @member {Boolean} block_prepaid
    */
-  exports.prototype.blockPrepaid = undefined;
+  exports.prototype.block_prepaid = undefined;
 
   /**
    * Credit card transaction type
-   * @member {String} creditCardTransactionType
+   * @member {String} credit_card_transaction_type
    */
-  exports.prototype.creditCardTransactionType = undefined;
+  exports.prototype.credit_card_transaction_type = undefined;
 
   /**
    * True if no real-time charge should be performed on this item.
-   * @member {Boolean} noRealtimeCharge
+   * @member {Boolean} no_realtime_charge
    */
-  exports.prototype.noRealtimeCharge = undefined;
+  exports.prototype.no_realtime_charge = undefined;
 
   /**
    * Payment method validity
-   * @member {Array.<String>} paymentMethodValidity
+   * @member {Array.<String>} payment_method_validity
    */
-  exports.prototype.paymentMethodValidity = undefined;
+  exports.prototype.payment_method_validity = undefined;
 
   /**
    * Rotating transaction gateway codes
-   * @member {Array.<String>} rotatingTransactionGatewayCodes
+   * @member {Array.<String>} rotating_transaction_gateway_codes
    */
-  exports.prototype.rotatingTransactionGatewayCodes = undefined;
+  exports.prototype.rotating_transaction_gateway_codes = undefined;
 
   return exports;
 

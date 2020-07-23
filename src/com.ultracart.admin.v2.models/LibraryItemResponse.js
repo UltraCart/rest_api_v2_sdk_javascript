@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('library_item'))
-        obj.libraryItem = LibraryItem.constructFromObject(data['library_item']);
+        obj.library_item = LibraryItem.constructFromObject(data['library_item']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -73,9 +73,9 @@
   exports.prototype.error = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/LibraryItem} libraryItem
+   * @member {module:com.ultracart.admin.v2.models/LibraryItem} library_item
    */
-  exports.prototype.libraryItem = undefined;
+  exports.prototype.library_item = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

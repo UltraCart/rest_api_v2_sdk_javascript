@@ -56,70 +56,70 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allocated_to_placed_orders'))
-        obj.allocatedToPlacedOrders = ApiClient.convertToType(data['allocated_to_placed_orders'], 'Number');
+        obj.allocated_to_placed_orders = ApiClient.convertToType(data['allocated_to_placed_orders'], 'Number');
       if (data.hasOwnProperty('allocated_to_shopping_carts'))
-        obj.allocatedToShoppingCarts = ApiClient.convertToType(data['allocated_to_shopping_carts'], 'Number');
+        obj.allocated_to_shopping_carts = ApiClient.convertToType(data['allocated_to_shopping_carts'], 'Number');
       if (data.hasOwnProperty('available_to_allocate'))
-        obj.availableToAllocate = ApiClient.convertToType(data['available_to_allocate'], 'Number');
+        obj.available_to_allocate = ApiClient.convertToType(data['available_to_allocate'], 'Number');
       if (data.hasOwnProperty('desired_inventory_level'))
-        obj.desiredInventoryLevel = ApiClient.convertToType(data['desired_inventory_level'], 'Number');
+        obj.desired_inventory_level = ApiClient.convertToType(data['desired_inventory_level'], 'Number');
       if (data.hasOwnProperty('distribution_center_code'))
-        obj.distributionCenterCode = ApiClient.convertToType(data['distribution_center_code'], 'String');
+        obj.distribution_center_code = ApiClient.convertToType(data['distribution_center_code'], 'String');
       if (data.hasOwnProperty('distribution_center_oid'))
-        obj.distributionCenterOid = ApiClient.convertToType(data['distribution_center_oid'], 'Number');
+        obj.distribution_center_oid = ApiClient.convertToType(data['distribution_center_oid'], 'Number');
       if (data.hasOwnProperty('eta'))
         obj.eta = ApiClient.convertToType(data['eta'], 'String');
       if (data.hasOwnProperty('handles'))
         obj.handles = ApiClient.convertToType(data['handles'], 'Boolean');
       if (data.hasOwnProperty('inventory_level'))
-        obj.inventoryLevel = ApiClient.convertToType(data['inventory_level'], 'Number');
+        obj.inventory_level = ApiClient.convertToType(data['inventory_level'], 'Number');
       if (data.hasOwnProperty('maximum_backorder'))
-        obj.maximumBackorder = ApiClient.convertToType(data['maximum_backorder'], 'Number');
+        obj.maximum_backorder = ApiClient.convertToType(data['maximum_backorder'], 'Number');
       if (data.hasOwnProperty('reorder_inventory_level'))
-        obj.reorderInventoryLevel = ApiClient.convertToType(data['reorder_inventory_level'], 'Number');
+        obj.reorder_inventory_level = ApiClient.convertToType(data['reorder_inventory_level'], 'Number');
       if (data.hasOwnProperty('sku'))
         obj.sku = ApiClient.convertToType(data['sku'], 'String');
       if (data.hasOwnProperty('stock_picking_location'))
-        obj.stockPickingLocation = ApiClient.convertToType(data['stock_picking_location'], 'String');
+        obj.stock_picking_location = ApiClient.convertToType(data['stock_picking_location'], 'String');
     }
     return obj;
   }
 
   /**
    * Allocated to placed orders
-   * @member {Number} allocatedToPlacedOrders
+   * @member {Number} allocated_to_placed_orders
    */
-  exports.prototype.allocatedToPlacedOrders = undefined;
+  exports.prototype.allocated_to_placed_orders = undefined;
 
   /**
    * Allocated to shopping carts
-   * @member {Number} allocatedToShoppingCarts
+   * @member {Number} allocated_to_shopping_carts
    */
-  exports.prototype.allocatedToShoppingCarts = undefined;
+  exports.prototype.allocated_to_shopping_carts = undefined;
 
   /**
    * Available to allocate
-   * @member {Number} availableToAllocate
+   * @member {Number} available_to_allocate
    */
-  exports.prototype.availableToAllocate = undefined;
+  exports.prototype.available_to_allocate = undefined;
 
   /**
    * Desired inventory level
-   * @member {Number} desiredInventoryLevel
+   * @member {Number} desired_inventory_level
    */
-  exports.prototype.desiredInventoryLevel = undefined;
+  exports.prototype.desired_inventory_level = undefined;
 
   /**
    * Distribution center code
-   * @member {String} distributionCenterCode
+   * @member {String} distribution_center_code
    */
-  exports.prototype.distributionCenterCode = undefined;
+  exports.prototype.distribution_center_code = undefined;
 
   /**
    * Distribution center object identifier
-   * @member {Number} distributionCenterOid
+   * @member {Number} distribution_center_oid
    */
-  exports.prototype.distributionCenterOid = undefined;
+  exports.prototype.distribution_center_oid = undefined;
 
   /**
    * Estimated time of arrival
@@ -135,21 +135,21 @@
 
   /**
    * Inventory level
-   * @member {Number} inventoryLevel
+   * @member {Number} inventory_level
    */
-  exports.prototype.inventoryLevel = undefined;
+  exports.prototype.inventory_level = undefined;
 
   /**
    * Maximum back-order
-   * @member {Number} maximumBackorder
+   * @member {Number} maximum_backorder
    */
-  exports.prototype.maximumBackorder = undefined;
+  exports.prototype.maximum_backorder = undefined;
 
   /**
    * Reorder inventory level (triggers notification)
-   * @member {Number} reorderInventoryLevel
+   * @member {Number} reorder_inventory_level
    */
-  exports.prototype.reorderInventoryLevel = undefined;
+  exports.prototype.reorder_inventory_level = undefined;
 
   /**
    * SKU
@@ -159,9 +159,9 @@
 
   /**
    * Stock picking location
-   * @member {String} stockPickingLocation
+   * @member {String} stock_picking_location
    */
-  exports.prototype.stockPickingLocation = undefined;
+  exports.prototype.stock_picking_location = undefined;
 
   return exports;
 

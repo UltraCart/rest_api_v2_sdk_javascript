@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('additional_merchant_item_id'))
-        obj.additionalMerchantItemId = ApiClient.convertToType(data['additional_merchant_item_id'], 'String');
+        obj.additional_merchant_item_id = ApiClient.convertToType(data['additional_merchant_item_id'], 'String');
       if (data.hasOwnProperty('additional_merchant_item_oid'))
-        obj.additionalMerchantItemOid = ApiClient.convertToType(data['additional_merchant_item_oid'], 'Number');
+        obj.additional_merchant_item_oid = ApiClient.convertToType(data['additional_merchant_item_oid'], 'Number');
     }
     return obj;
   }
 
   /**
    * Additional item id
-   * @member {String} additionalMerchantItemId
+   * @member {String} additional_merchant_item_id
    */
-  exports.prototype.additionalMerchantItemId = undefined;
+  exports.prototype.additional_merchant_item_id = undefined;
 
   /**
    * Additional item object identifier
-   * @member {Number} additionalMerchantItemOid
+   * @member {Number} additional_merchant_item_oid
    */
-  exports.prototype.additionalMerchantItemOid = undefined;
+  exports.prototype.additional_merchant_item_oid = undefined;
 
   return exports;
 

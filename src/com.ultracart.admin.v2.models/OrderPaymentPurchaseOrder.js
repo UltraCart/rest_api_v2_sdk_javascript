@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('purchase_order_number'))
-        obj.purchaseOrderNumber = ApiClient.convertToType(data['purchase_order_number'], 'String');
+        obj.purchase_order_number = ApiClient.convertToType(data['purchase_order_number'], 'String');
     }
     return obj;
   }
 
   /**
    * Purchase order number
-   * @member {String} purchaseOrderNumber
+   * @member {String} purchase_order_number
    */
-  exports.prototype.purchaseOrderNumber = undefined;
+  exports.prototype.purchase_order_number = undefined;
 
   return exports;
 

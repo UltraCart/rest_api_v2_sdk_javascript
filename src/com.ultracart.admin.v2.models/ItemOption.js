@@ -56,29 +56,29 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('cost_if_specified'))
-        obj.costIfSpecified = ApiClient.convertToType(data['cost_if_specified'], 'Number');
+        obj.cost_if_specified = ApiClient.convertToType(data['cost_if_specified'], 'Number');
       if (data.hasOwnProperty('cost_per_letter'))
-        obj.costPerLetter = ApiClient.convertToType(data['cost_per_letter'], 'Number');
+        obj.cost_per_letter = ApiClient.convertToType(data['cost_per_letter'], 'Number');
       if (data.hasOwnProperty('cost_per_line'))
-        obj.costPerLine = ApiClient.convertToType(data['cost_per_line'], 'Number');
+        obj.cost_per_line = ApiClient.convertToType(data['cost_per_line'], 'Number');
       if (data.hasOwnProperty('ignore_if_default'))
-        obj.ignoreIfDefault = ApiClient.convertToType(data['ignore_if_default'], 'Boolean');
+        obj.ignore_if_default = ApiClient.convertToType(data['ignore_if_default'], 'Boolean');
       if (data.hasOwnProperty('label'))
         obj.label = ApiClient.convertToType(data['label'], 'String');
       if (data.hasOwnProperty('label_translated_text_instance_oid'))
-        obj.labelTranslatedTextInstanceOid = ApiClient.convertToType(data['label_translated_text_instance_oid'], 'Number');
+        obj.label_translated_text_instance_oid = ApiClient.convertToType(data['label_translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('name_translated_text_instance_oid'))
-        obj.nameTranslatedTextInstanceOid = ApiClient.convertToType(data['name_translated_text_instance_oid'], 'Number');
+        obj.name_translated_text_instance_oid = ApiClient.convertToType(data['name_translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('one_time_fee'))
-        obj.oneTimeFee = ApiClient.convertToType(data['one_time_fee'], 'Boolean');
+        obj.one_time_fee = ApiClient.convertToType(data['one_time_fee'], 'Boolean');
       if (data.hasOwnProperty('option_oid'))
-        obj.optionOid = ApiClient.convertToType(data['option_oid'], 'Number');
+        obj.option_oid = ApiClient.convertToType(data['option_oid'], 'Number');
       if (data.hasOwnProperty('required'))
         obj.required = ApiClient.convertToType(data['required'], 'Boolean');
       if (data.hasOwnProperty('system_option'))
-        obj.systemOption = ApiClient.convertToType(data['system_option'], 'Boolean');
+        obj.system_option = ApiClient.convertToType(data['system_option'], 'Boolean');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('values'))
@@ -89,27 +89,27 @@
 
   /**
    * Cost if specified
-   * @member {Number} costIfSpecified
+   * @member {Number} cost_if_specified
    */
-  exports.prototype.costIfSpecified = undefined;
+  exports.prototype.cost_if_specified = undefined;
 
   /**
    * Cost per letter
-   * @member {Number} costPerLetter
+   * @member {Number} cost_per_letter
    */
-  exports.prototype.costPerLetter = undefined;
+  exports.prototype.cost_per_letter = undefined;
 
   /**
    * Cost per line
-   * @member {Number} costPerLine
+   * @member {Number} cost_per_line
    */
-  exports.prototype.costPerLine = undefined;
+  exports.prototype.cost_per_line = undefined;
 
   /**
    * Ignore this option on the order if the default value is selected
-   * @member {Boolean} ignoreIfDefault
+   * @member {Boolean} ignore_if_default
    */
-  exports.prototype.ignoreIfDefault = undefined;
+  exports.prototype.ignore_if_default = undefined;
 
   /**
    * Label
@@ -119,9 +119,9 @@
 
   /**
    * Label translated text instance ID
-   * @member {Number} labelTranslatedTextInstanceOid
+   * @member {Number} label_translated_text_instance_oid
    */
-  exports.prototype.labelTranslatedTextInstanceOid = undefined;
+  exports.prototype.label_translated_text_instance_oid = undefined;
 
   /**
    * Name
@@ -131,21 +131,21 @@
 
   /**
    * Name translated text instance ID
-   * @member {Number} nameTranslatedTextInstanceOid
+   * @member {Number} name_translated_text_instance_oid
    */
-  exports.prototype.nameTranslatedTextInstanceOid = undefined;
+  exports.prototype.name_translated_text_instance_oid = undefined;
 
   /**
    * One time fee
-   * @member {Boolean} oneTimeFee
+   * @member {Boolean} one_time_fee
    */
-  exports.prototype.oneTimeFee = undefined;
+  exports.prototype.one_time_fee = undefined;
 
   /**
    * Option object identifier
-   * @member {Number} optionOid
+   * @member {Number} option_oid
    */
-  exports.prototype.optionOid = undefined;
+  exports.prototype.option_oid = undefined;
 
   /**
    * True if the customer is required to specify an answer
@@ -155,9 +155,9 @@
 
   /**
    * True if this is a system option
-   * @member {Boolean} systemOption
+   * @member {Boolean} system_option
    */
-  exports.prototype.systemOption = undefined;
+  exports.prototype.system_option = undefined;
 
   /**
    * Type of option
@@ -188,7 +188,7 @@
      * value: "file attachment"
      * @const
      */
-    fileAttachment: "file attachment",
+    file_attachment: "file attachment",
 
     /**
      * value: "fixed"

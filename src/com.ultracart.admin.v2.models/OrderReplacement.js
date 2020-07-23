@@ -56,92 +56,92 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('additional_merchant_notes_new_order'))
-        obj.additionalMerchantNotesNewOrder = ApiClient.convertToType(data['additional_merchant_notes_new_order'], 'String');
+        obj.additional_merchant_notes_new_order = ApiClient.convertToType(data['additional_merchant_notes_new_order'], 'String');
       if (data.hasOwnProperty('additional_merchant_notes_original_order'))
-        obj.additionalMerchantNotesOriginalOrder = ApiClient.convertToType(data['additional_merchant_notes_original_order'], 'String');
+        obj.additional_merchant_notes_original_order = ApiClient.convertToType(data['additional_merchant_notes_original_order'], 'String');
       if (data.hasOwnProperty('custom_field1'))
-        obj.customField1 = ApiClient.convertToType(data['custom_field1'], 'String');
+        obj.custom_field1 = ApiClient.convertToType(data['custom_field1'], 'String');
       if (data.hasOwnProperty('custom_field2'))
-        obj.customField2 = ApiClient.convertToType(data['custom_field2'], 'String');
+        obj.custom_field2 = ApiClient.convertToType(data['custom_field2'], 'String');
       if (data.hasOwnProperty('custom_field3'))
-        obj.customField3 = ApiClient.convertToType(data['custom_field3'], 'String');
+        obj.custom_field3 = ApiClient.convertToType(data['custom_field3'], 'String');
       if (data.hasOwnProperty('custom_field4'))
-        obj.customField4 = ApiClient.convertToType(data['custom_field4'], 'String');
+        obj.custom_field4 = ApiClient.convertToType(data['custom_field4'], 'String');
       if (data.hasOwnProperty('custom_field5'))
-        obj.customField5 = ApiClient.convertToType(data['custom_field5'], 'String');
+        obj.custom_field5 = ApiClient.convertToType(data['custom_field5'], 'String');
       if (data.hasOwnProperty('custom_field6'))
-        obj.customField6 = ApiClient.convertToType(data['custom_field6'], 'String');
+        obj.custom_field6 = ApiClient.convertToType(data['custom_field6'], 'String');
       if (data.hasOwnProperty('custom_field7'))
-        obj.customField7 = ApiClient.convertToType(data['custom_field7'], 'String');
+        obj.custom_field7 = ApiClient.convertToType(data['custom_field7'], 'String');
       if (data.hasOwnProperty('free'))
         obj.free = ApiClient.convertToType(data['free'], 'Boolean');
       if (data.hasOwnProperty('immediate_charge'))
-        obj.immediateCharge = ApiClient.convertToType(data['immediate_charge'], 'Boolean');
+        obj.immediate_charge = ApiClient.convertToType(data['immediate_charge'], 'Boolean');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], [OrderReplacementItem]);
       if (data.hasOwnProperty('original_order_id'))
-        obj.originalOrderId = ApiClient.convertToType(data['original_order_id'], 'String');
+        obj.original_order_id = ApiClient.convertToType(data['original_order_id'], 'String');
       if (data.hasOwnProperty('shipping_method'))
-        obj.shippingMethod = ApiClient.convertToType(data['shipping_method'], 'String');
+        obj.shipping_method = ApiClient.convertToType(data['shipping_method'], 'String');
       if (data.hasOwnProperty('skip_payment'))
-        obj.skipPayment = ApiClient.convertToType(data['skip_payment'], 'Boolean');
+        obj.skip_payment = ApiClient.convertToType(data['skip_payment'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Additional merchant notes to append to the new order
-   * @member {String} additionalMerchantNotesNewOrder
+   * @member {String} additional_merchant_notes_new_order
    */
-  exports.prototype.additionalMerchantNotesNewOrder = undefined;
+  exports.prototype.additional_merchant_notes_new_order = undefined;
 
   /**
    * Additional merchant notes to append to the original order
-   * @member {String} additionalMerchantNotesOriginalOrder
+   * @member {String} additional_merchant_notes_original_order
    */
-  exports.prototype.additionalMerchantNotesOriginalOrder = undefined;
+  exports.prototype.additional_merchant_notes_original_order = undefined;
 
   /**
    * Custom field 1
-   * @member {String} customField1
+   * @member {String} custom_field1
    */
-  exports.prototype.customField1 = undefined;
+  exports.prototype.custom_field1 = undefined;
 
   /**
    * Custom field 2
-   * @member {String} customField2
+   * @member {String} custom_field2
    */
-  exports.prototype.customField2 = undefined;
+  exports.prototype.custom_field2 = undefined;
 
   /**
    * Custom field 3
-   * @member {String} customField3
+   * @member {String} custom_field3
    */
-  exports.prototype.customField3 = undefined;
+  exports.prototype.custom_field3 = undefined;
 
   /**
    * Custom field 4
-   * @member {String} customField4
+   * @member {String} custom_field4
    */
-  exports.prototype.customField4 = undefined;
+  exports.prototype.custom_field4 = undefined;
 
   /**
    * Custom field 5
-   * @member {String} customField5
+   * @member {String} custom_field5
    */
-  exports.prototype.customField5 = undefined;
+  exports.prototype.custom_field5 = undefined;
 
   /**
    * Custom field 6
-   * @member {String} customField6
+   * @member {String} custom_field6
    */
-  exports.prototype.customField6 = undefined;
+  exports.prototype.custom_field6 = undefined;
 
   /**
    * Custom field 7
-   * @member {String} customField7
+   * @member {String} custom_field7
    */
-  exports.prototype.customField7 = undefined;
+  exports.prototype.custom_field7 = undefined;
 
   /**
    * Set to true if this replacement shipment should be free for the customer.
@@ -151,9 +151,9 @@
 
   /**
    * Set to true if you want to immediately charge the payment on this order, otherwise it will go to Accounts Receivable.
-   * @member {Boolean} immediateCharge
+   * @member {Boolean} immediate_charge
    */
-  exports.prototype.immediateCharge = undefined;
+  exports.prototype.immediate_charge = undefined;
 
   /**
    * Items to include in the replacement order
@@ -163,21 +163,21 @@
 
   /**
    * Original order id
-   * @member {String} originalOrderId
+   * @member {String} original_order_id
    */
-  exports.prototype.originalOrderId = undefined;
+  exports.prototype.original_order_id = undefined;
 
   /**
    * Shipping method to use.  If not specified or invalid then least cost shipping will take place.
-   * @member {String} shippingMethod
+   * @member {String} shipping_method
    */
-  exports.prototype.shippingMethod = undefined;
+  exports.prototype.shipping_method = undefined;
 
   /**
    * Set to true if you want to skip the payment as if it was successful.
-   * @member {Boolean} skipPayment
+   * @member {Boolean} skip_payment
    */
-  exports.prototype.skipPayment = undefined;
+  exports.prototype.skip_payment = undefined;
 
   return exports;
 

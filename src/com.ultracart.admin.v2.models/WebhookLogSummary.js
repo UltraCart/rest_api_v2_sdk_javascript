@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('delivery_dts'))
-        obj.deliveryDts = ApiClient.convertToType(data['delivery_dts'], 'String');
+        obj.delivery_dts = ApiClient.convertToType(data['delivery_dts'], 'String');
       if (data.hasOwnProperty('request_id'))
-        obj.requestId = ApiClient.convertToType(data['request_id'], 'String');
+        obj.request_id = ApiClient.convertToType(data['request_id'], 'String');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
     }
@@ -67,15 +67,15 @@
 
   /**
    * Date/time of the delivery
-   * @member {String} deliveryDts
+   * @member {String} delivery_dts
    */
-  exports.prototype.deliveryDts = undefined;
+  exports.prototype.delivery_dts = undefined;
 
   /**
    * Request id
-   * @member {String} requestId
+   * @member {String} request_id
    */
-  exports.prototype.requestId = undefined;
+  exports.prototype.request_id = undefined;
 
   /**
    * True if the notification was successful

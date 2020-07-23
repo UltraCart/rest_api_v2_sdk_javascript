@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('accounting_code'))
-        obj.accountingCode = ApiClient.convertToType(data['accounting_code'], 'String');
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('automatically_applied'))
-        obj.automaticallyApplied = ApiClient.convertToType(data['automatically_applied'], 'Boolean');
+        obj.automatically_applied = ApiClient.convertToType(data['automatically_applied'], 'Boolean');
       if (data.hasOwnProperty('base_coupon_code'))
-        obj.baseCouponCode = ApiClient.convertToType(data['base_coupon_code'], 'String');
+        obj.base_coupon_code = ApiClient.convertToType(data['base_coupon_code'], 'String');
       if (data.hasOwnProperty('coupon_code'))
-        obj.couponCode = ApiClient.convertToType(data['coupon_code'], 'String');
+        obj.coupon_code = ApiClient.convertToType(data['coupon_code'], 'String');
     }
     return obj;
   }
 
   /**
    * QuickBooks accounting code for this coupon
-   * @member {String} accountingCode
+   * @member {String} accounting_code
    */
-  exports.prototype.accountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
    * Whether or not the coupon was automatically applied to the order
-   * @member {Boolean} automaticallyApplied
+   * @member {Boolean} automatically_applied
    */
-  exports.prototype.automaticallyApplied = undefined;
+  exports.prototype.automatically_applied = undefined;
 
   /**
    * Coupon code configured by the merchant.  Will differ if the customer used a one time coupon code generated off this base coupon
-   * @member {String} baseCouponCode
+   * @member {String} base_coupon_code
    */
-  exports.prototype.baseCouponCode = undefined;
+  exports.prototype.base_coupon_code = undefined;
 
   /**
    * Coupon code entered by the customer
-   * @member {String} couponCode
+   * @member {String} coupon_code
    */
-  exports.prototype.couponCode = undefined;
+  exports.prototype.coupon_code = undefined;
 
   return exports;
 

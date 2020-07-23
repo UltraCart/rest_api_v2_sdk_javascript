@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('discount_percent'))
-        obj.discountPercent = ApiClient.convertToType(data['discount_percent'], 'Number');
+        obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
       if (data.hasOwnProperty('subtotal_amount'))
-        obj.subtotalAmount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
+        obj.subtotal_amount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
     }
     return obj;
   }
 
   /**
    * The ISO-4217 three letter currency code the customer is viewing prices in
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * The percentage of subtotal discount
-   * @member {Number} discountPercent
+   * @member {Number} discount_percent
    */
-  exports.prototype.discountPercent = undefined;
+  exports.prototype.discount_percent = undefined;
 
   /**
    * The amount of subtotal required to receive the discount percent
-   * @member {Number} subtotalAmount
+   * @member {Number} subtotal_amount
    */
-  exports.prototype.subtotalAmount = undefined;
+  exports.prototype.subtotal_amount = undefined;
 
   return exports;
 

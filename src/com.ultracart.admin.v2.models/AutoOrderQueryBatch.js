@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_order_oids'))
-        obj.autoOrderOids = ApiClient.convertToType(data['auto_order_oids'], ['Number']);
+        obj.auto_order_oids = ApiClient.convertToType(data['auto_order_oids'], ['Number']);
     }
     return obj;
   }
 
   /**
    * Auto order oids
-   * @member {Array.<Number>} autoOrderOids
+   * @member {Array.<Number>} auto_order_oids
    */
-  exports.prototype.autoOrderOids = undefined;
+  exports.prototype.auto_order_oids = undefined;
 
   return exports;
 

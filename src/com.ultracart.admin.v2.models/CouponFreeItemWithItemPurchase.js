@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
       if (data.hasOwnProperty('required_purchase_items'))
-        obj.requiredPurchaseItems = ApiClient.convertToType(data['required_purchase_items'], ['String']);
+        obj.required_purchase_items = ApiClient.convertToType(data['required_purchase_items'], ['String']);
     }
     return obj;
   }
@@ -79,9 +79,9 @@
 
   /**
    * Required items (at least one from the list) that must be purchased for coupon to be valid
-   * @member {Array.<String>} requiredPurchaseItems
+   * @member {Array.<String>} required_purchase_items
    */
-  exports.prototype.requiredPurchaseItems = undefined;
+  exports.prototype.required_purchase_items = undefined;
 
   return exports;
 

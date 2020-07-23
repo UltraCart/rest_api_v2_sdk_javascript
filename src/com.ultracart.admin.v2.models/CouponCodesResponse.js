@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('coupon_codes'))
-        obj.couponCodes = ApiClient.convertToType(data['coupon_codes'], ['String']);
+        obj.coupon_codes = ApiClient.convertToType(data['coupon_codes'], ['String']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -71,9 +71,9 @@
 
   /**
    * Coupon codes
-   * @member {Array.<String>} couponCodes
+   * @member {Array.<String>} coupon_codes
    */
-  exports.prototype.couponCodes = undefined;
+  exports.prototype.coupon_codes = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
@@ -82,9 +82,9 @@
 
   /**
    * Expiration date
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

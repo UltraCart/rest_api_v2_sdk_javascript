@@ -56,54 +56,54 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('buysafe_bond_available'))
-        obj.buysafeBondAvailable = ApiClient.convertToType(data['buysafe_bond_available'], 'Boolean');
+        obj.buysafe_bond_available = ApiClient.convertToType(data['buysafe_bond_available'], 'Boolean');
       if (data.hasOwnProperty('buysafe_bond_cost'))
-        obj.buysafeBondCost = Currency.constructFromObject(data['buysafe_bond_cost']);
+        obj.buysafe_bond_cost = Currency.constructFromObject(data['buysafe_bond_cost']);
       if (data.hasOwnProperty('buysafe_bond_free'))
-        obj.buysafeBondFree = ApiClient.convertToType(data['buysafe_bond_free'], 'Boolean');
+        obj.buysafe_bond_free = ApiClient.convertToType(data['buysafe_bond_free'], 'Boolean');
       if (data.hasOwnProperty('buysafe_bond_refunded'))
-        obj.buysafeBondRefunded = Currency.constructFromObject(data['buysafe_bond_refunded']);
+        obj.buysafe_bond_refunded = Currency.constructFromObject(data['buysafe_bond_refunded']);
       if (data.hasOwnProperty('buysafe_bond_wanted'))
-        obj.buysafeBondWanted = ApiClient.convertToType(data['buysafe_bond_wanted'], 'Boolean');
+        obj.buysafe_bond_wanted = ApiClient.convertToType(data['buysafe_bond_wanted'], 'Boolean');
       if (data.hasOwnProperty('buysafe_shopping_cart_id'))
-        obj.buysafeShoppingCartId = ApiClient.convertToType(data['buysafe_shopping_cart_id'], 'String');
+        obj.buysafe_shopping_cart_id = ApiClient.convertToType(data['buysafe_shopping_cart_id'], 'String');
     }
     return obj;
   }
 
   /**
    * True if a buySAFE bond was available for purchase on this order
-   * @member {Boolean} buysafeBondAvailable
+   * @member {Boolean} buysafe_bond_available
    */
-  exports.prototype.buysafeBondAvailable = undefined;
+  exports.prototype.buysafe_bond_available = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} buysafeBondCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} buysafe_bond_cost
    */
-  exports.prototype.buysafeBondCost = undefined;
+  exports.prototype.buysafe_bond_cost = undefined;
 
   /**
    * True if the buySAFE bond was free for this order
-   * @member {Boolean} buysafeBondFree
+   * @member {Boolean} buysafe_bond_free
    */
-  exports.prototype.buysafeBondFree = undefined;
+  exports.prototype.buysafe_bond_free = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} buysafeBondRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} buysafe_bond_refunded
    */
-  exports.prototype.buysafeBondRefunded = undefined;
+  exports.prototype.buysafe_bond_refunded = undefined;
 
   /**
    * True if the buySAFE bond was wanted by the customer
-   * @member {Boolean} buysafeBondWanted
+   * @member {Boolean} buysafe_bond_wanted
    */
-  exports.prototype.buysafeBondWanted = undefined;
+  exports.prototype.buysafe_bond_wanted = undefined;
 
   /**
    * Shopping cart ID associated with the buySAFE bond
-   * @member {String} buysafeShoppingCartId
+   * @member {String} buysafe_shopping_cart_id
    */
-  exports.prototype.buysafeShoppingCartId = undefined;
+  exports.prototype.buysafe_shopping_cart_id = undefined;
 
   return exports;
 

@@ -56,112 +56,112 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('coupon_code'))
-        obj.couponCode = ApiClient.convertToType(data['coupon_code'], 'String');
+        obj.coupon_code = ApiClient.convertToType(data['coupon_code'], 'String');
       if (data.hasOwnProperty('coupon_code_oid'))
-        obj.couponCodeOid = ApiClient.convertToType(data['coupon_code_oid'], 'Number');
+        obj.coupon_code_oid = ApiClient.convertToType(data['coupon_code_oid'], 'Number');
       if (data.hasOwnProperty('coupon_used'))
-        obj.couponUsed = ApiClient.convertToType(data['coupon_used'], 'Boolean');
+        obj.coupon_used = ApiClient.convertToType(data['coupon_used'], 'Boolean');
       if (data.hasOwnProperty('description_for_customer'))
-        obj.descriptionForCustomer = ApiClient.convertToType(data['description_for_customer'], 'String');
+        obj.description_for_customer = ApiClient.convertToType(data['description_for_customer'], 'String');
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('gift_certificate_code'))
-        obj.giftCertificateCode = ApiClient.convertToType(data['gift_certificate_code'], 'String');
+        obj.gift_certificate_code = ApiClient.convertToType(data['gift_certificate_code'], 'String');
       if (data.hasOwnProperty('gift_certificate_oid'))
-        obj.giftCertificateOid = ApiClient.convertToType(data['gift_certificate_oid'], 'Number');
+        obj.gift_certificate_oid = ApiClient.convertToType(data['gift_certificate_oid'], 'Number');
       if (data.hasOwnProperty('loyalty_ledger_oid'))
-        obj.loyaltyLedgerOid = ApiClient.convertToType(data['loyalty_ledger_oid'], 'Number');
+        obj.loyalty_ledger_oid = ApiClient.convertToType(data['loyalty_ledger_oid'], 'Number');
       if (data.hasOwnProperty('loyalty_points'))
-        obj.loyaltyPoints = ApiClient.convertToType(data['loyalty_points'], 'Number');
+        obj.loyalty_points = ApiClient.convertToType(data['loyalty_points'], 'Number');
       if (data.hasOwnProperty('loyalty_redemption_oid'))
-        obj.loyaltyRedemptionOid = ApiClient.convertToType(data['loyalty_redemption_oid'], 'Number');
+        obj.loyalty_redemption_oid = ApiClient.convertToType(data['loyalty_redemption_oid'], 'Number');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('redemption_dts'))
-        obj.redemptionDts = ApiClient.convertToType(data['redemption_dts'], 'String');
+        obj.redemption_dts = ApiClient.convertToType(data['redemption_dts'], 'String');
       if (data.hasOwnProperty('remaining_balance'))
-        obj.remainingBalance = ApiClient.convertToType(data['remaining_balance'], 'Number');
+        obj.remaining_balance = ApiClient.convertToType(data['remaining_balance'], 'Number');
     }
     return obj;
   }
 
   /**
    * Coupon code
-   * @member {String} couponCode
+   * @member {String} coupon_code
    */
-  exports.prototype.couponCode = undefined;
+  exports.prototype.coupon_code = undefined;
 
   /**
    * Coupon code OID
-   * @member {Number} couponCodeOid
+   * @member {Number} coupon_code_oid
    */
-  exports.prototype.couponCodeOid = undefined;
+  exports.prototype.coupon_code_oid = undefined;
 
   /**
    * Coupon used
-   * @member {Boolean} couponUsed
+   * @member {Boolean} coupon_used
    */
-  exports.prototype.couponUsed = undefined;
+  exports.prototype.coupon_used = undefined;
 
   /**
    * Description for customer
-   * @member {String} descriptionForCustomer
+   * @member {String} description_for_customer
    */
-  exports.prototype.descriptionForCustomer = undefined;
+  exports.prototype.description_for_customer = undefined;
 
   /**
    * Expiration date
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * Gift certificate code
-   * @member {String} giftCertificateCode
+   * @member {String} gift_certificate_code
    */
-  exports.prototype.giftCertificateCode = undefined;
+  exports.prototype.gift_certificate_code = undefined;
 
   /**
    * Gift certificate oid
-   * @member {Number} giftCertificateOid
+   * @member {Number} gift_certificate_oid
    */
-  exports.prototype.giftCertificateOid = undefined;
+  exports.prototype.gift_certificate_oid = undefined;
 
   /**
    * Loyalty ledger OID
-   * @member {Number} loyaltyLedgerOid
+   * @member {Number} loyalty_ledger_oid
    */
-  exports.prototype.loyaltyLedgerOid = undefined;
+  exports.prototype.loyalty_ledger_oid = undefined;
 
   /**
    * Loyalty points
-   * @member {Number} loyaltyPoints
+   * @member {Number} loyalty_points
    */
-  exports.prototype.loyaltyPoints = undefined;
+  exports.prototype.loyalty_points = undefined;
 
   /**
    * Loyalty redemption OID
-   * @member {Number} loyaltyRedemptionOid
+   * @member {Number} loyalty_redemption_oid
    */
-  exports.prototype.loyaltyRedemptionOid = undefined;
+  exports.prototype.loyalty_redemption_oid = undefined;
 
   /**
    * Order id
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * Redemption date
-   * @member {String} redemptionDts
+   * @member {String} redemption_dts
    */
-  exports.prototype.redemptionDts = undefined;
+  exports.prototype.redemption_dts = undefined;
 
   /**
    * Remaining balance
-   * @member {Number} remainingBalance
+   * @member {Number} remaining_balance
    */
-  exports.prototype.remainingBalance = undefined;
+  exports.prototype.remaining_balance = undefined;
 
   return exports;
 

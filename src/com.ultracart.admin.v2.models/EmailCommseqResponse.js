@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('communication_sequence'))
-        obj.communicationSequence = EmailCommseq.constructFromObject(data['communication_sequence']);
+        obj.communication_sequence = EmailCommseq.constructFromObject(data['communication_sequence']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,9 +68,9 @@
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/EmailCommseq} communicationSequence
+   * @member {module:com.ultracart.admin.v2.models/EmailCommseq} communication_sequence
    */
-  exports.prototype.communicationSequence = undefined;
+  exports.prototype.communication_sequence = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_3rd_party_billing'))
-        obj.allow3rdPartyBilling = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
+        obj.allow_3rd_party_billing = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
       if (data.hasOwnProperty('comment'))
         obj.comment = ApiClient.convertToType(data['comment'], 'String');
       if (data.hasOwnProperty('cost'))
         obj.cost = Currency.constructFromObject(data['cost']);
       if (data.hasOwnProperty('cost_before_discount'))
-        obj.costBeforeDiscount = Currency.constructFromObject(data['cost_before_discount']);
+        obj.cost_before_discount = Currency.constructFromObject(data['cost_before_discount']);
       if (data.hasOwnProperty('default_method'))
-        obj.defaultMethod = ApiClient.convertToType(data['default_method'], 'Boolean');
+        obj.default_method = ApiClient.convertToType(data['default_method'], 'Boolean');
       if (data.hasOwnProperty('discount'))
         obj.discount = Currency.constructFromObject(data['discount']);
       if (data.hasOwnProperty('discounted'))
         obj.discounted = ApiClient.convertToType(data['discounted'], 'Boolean');
       if (data.hasOwnProperty('display_name'))
-        obj.displayName = ApiClient.convertToType(data['display_name'], 'String');
+        obj.display_name = ApiClient.convertToType(data['display_name'], 'String');
       if (data.hasOwnProperty('estimated_delivery'))
-        obj.estimatedDelivery = ApiClient.convertToType(data['estimated_delivery'], 'String');
+        obj.estimated_delivery = ApiClient.convertToType(data['estimated_delivery'], 'String');
       if (data.hasOwnProperty('lift_gate_option'))
-        obj.liftGateOption = ApiClient.convertToType(data['lift_gate_option'], 'Boolean');
+        obj.lift_gate_option = ApiClient.convertToType(data['lift_gate_option'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('tax'))
         obj.tax = Currency.constructFromObject(data['tax']);
       if (data.hasOwnProperty('total_tax'))
-        obj.totalTax = Currency.constructFromObject(data['total_tax']);
+        obj.total_tax = Currency.constructFromObject(data['total_tax']);
     }
     return obj;
   }
 
   /**
    * True if this method allows the customer to use their own shipper account number
-   * @member {Boolean} allow3rdPartyBilling
+   * @member {Boolean} allow_3rd_party_billing
    */
-  exports.prototype.allow3rdPartyBilling = undefined;
+  exports.prototype.allow_3rd_party_billing = undefined;
 
   /**
    * Comment to display to the customer about this method
@@ -103,15 +103,15 @@
   exports.prototype.cost = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} costBeforeDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} cost_before_discount
    */
-  exports.prototype.costBeforeDiscount = undefined;
+  exports.prototype.cost_before_discount = undefined;
 
   /**
    * True if this is the default method
-   * @member {Boolean} defaultMethod
+   * @member {Boolean} default_method
    */
-  exports.prototype.defaultMethod = undefined;
+  exports.prototype.default_method = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} discount
@@ -126,21 +126,21 @@
 
   /**
    * The name to display to the customer
-   * @member {String} displayName
+   * @member {String} display_name
    */
-  exports.prototype.displayName = undefined;
+  exports.prototype.display_name = undefined;
 
   /**
    * Date of the estimated delivery (or range)
-   * @member {String} estimatedDelivery
+   * @member {String} estimated_delivery
    */
-  exports.prototype.estimatedDelivery = undefined;
+  exports.prototype.estimated_delivery = undefined;
 
   /**
    * True if a lift gate option for this method should be offered to the customer
-   * @member {Boolean} liftGateOption
+   * @member {Boolean} lift_gate_option
    */
-  exports.prototype.liftGateOption = undefined;
+  exports.prototype.lift_gate_option = undefined;
 
   /**
    * Shipping method name
@@ -154,9 +154,9 @@
   exports.prototype.tax = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} totalTax
+   * @member {module:com.ultracart.admin.v2.models/Currency} total_tax
    */
-  exports.prototype.totalTax = undefined;
+  exports.prototype.total_tax = undefined;
 
   return exports;
 

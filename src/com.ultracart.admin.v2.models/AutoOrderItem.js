@@ -56,98 +56,98 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('arbitrary_item_id'))
-        obj.arbitraryItemId = ApiClient.convertToType(data['arbitrary_item_id'], 'String');
+        obj.arbitrary_item_id = ApiClient.convertToType(data['arbitrary_item_id'], 'String');
       if (data.hasOwnProperty('arbitrary_percentage_discount'))
-        obj.arbitraryPercentageDiscount = ApiClient.convertToType(data['arbitrary_percentage_discount'], 'Number');
+        obj.arbitrary_percentage_discount = ApiClient.convertToType(data['arbitrary_percentage_discount'], 'Number');
       if (data.hasOwnProperty('arbitrary_quantity'))
-        obj.arbitraryQuantity = ApiClient.convertToType(data['arbitrary_quantity'], 'Number');
+        obj.arbitrary_quantity = ApiClient.convertToType(data['arbitrary_quantity'], 'Number');
       if (data.hasOwnProperty('arbitrary_schedule_days'))
-        obj.arbitraryScheduleDays = ApiClient.convertToType(data['arbitrary_schedule_days'], 'Number');
+        obj.arbitrary_schedule_days = ApiClient.convertToType(data['arbitrary_schedule_days'], 'Number');
       if (data.hasOwnProperty('arbitrary_unit_cost'))
-        obj.arbitraryUnitCost = ApiClient.convertToType(data['arbitrary_unit_cost'], 'Number');
+        obj.arbitrary_unit_cost = ApiClient.convertToType(data['arbitrary_unit_cost'], 'Number');
       if (data.hasOwnProperty('arbitrary_unit_cost_remaining_orders'))
-        obj.arbitraryUnitCostRemainingOrders = ApiClient.convertToType(data['arbitrary_unit_cost_remaining_orders'], 'Number');
+        obj.arbitrary_unit_cost_remaining_orders = ApiClient.convertToType(data['arbitrary_unit_cost_remaining_orders'], 'Number');
       if (data.hasOwnProperty('auto_order_item_oid'))
-        obj.autoOrderItemOid = ApiClient.convertToType(data['auto_order_item_oid'], 'Number');
+        obj.auto_order_item_oid = ApiClient.convertToType(data['auto_order_item_oid'], 'Number');
       if (data.hasOwnProperty('frequency'))
         obj.frequency = ApiClient.convertToType(data['frequency'], 'String');
       if (data.hasOwnProperty('future_schedules'))
-        obj.futureSchedules = ApiClient.convertToType(data['future_schedules'], [AutoOrderItemFutureSchedule]);
+        obj.future_schedules = ApiClient.convertToType(data['future_schedules'], [AutoOrderItemFutureSchedule]);
       if (data.hasOwnProperty('last_order_dts'))
-        obj.lastOrderDts = ApiClient.convertToType(data['last_order_dts'], 'String');
+        obj.last_order_dts = ApiClient.convertToType(data['last_order_dts'], 'String');
       if (data.hasOwnProperty('life_time_value'))
-        obj.lifeTimeValue = ApiClient.convertToType(data['life_time_value'], 'Number');
+        obj.life_time_value = ApiClient.convertToType(data['life_time_value'], 'Number');
       if (data.hasOwnProperty('next_preshipment_notice_dts'))
-        obj.nextPreshipmentNoticeDts = ApiClient.convertToType(data['next_preshipment_notice_dts'], 'String');
+        obj.next_preshipment_notice_dts = ApiClient.convertToType(data['next_preshipment_notice_dts'], 'String');
       if (data.hasOwnProperty('next_shipment_dts'))
-        obj.nextShipmentDts = ApiClient.convertToType(data['next_shipment_dts'], 'String');
+        obj.next_shipment_dts = ApiClient.convertToType(data['next_shipment_dts'], 'String');
       if (data.hasOwnProperty('no_order_after_dts'))
-        obj.noOrderAfterDts = ApiClient.convertToType(data['no_order_after_dts'], 'String');
+        obj.no_order_after_dts = ApiClient.convertToType(data['no_order_after_dts'], 'String');
       if (data.hasOwnProperty('number_of_rebills'))
-        obj.numberOfRebills = ApiClient.convertToType(data['number_of_rebills'], 'Number');
+        obj.number_of_rebills = ApiClient.convertToType(data['number_of_rebills'], 'Number');
       if (data.hasOwnProperty('options'))
         obj.options = ApiClient.convertToType(data['options'], [AutoOrderItemOption]);
       if (data.hasOwnProperty('original_item_id'))
-        obj.originalItemId = ApiClient.convertToType(data['original_item_id'], 'String');
+        obj.original_item_id = ApiClient.convertToType(data['original_item_id'], 'String');
       if (data.hasOwnProperty('original_quantity'))
-        obj.originalQuantity = ApiClient.convertToType(data['original_quantity'], 'Number');
+        obj.original_quantity = ApiClient.convertToType(data['original_quantity'], 'Number');
       if (data.hasOwnProperty('paypal_payer_id'))
-        obj.paypalPayerId = ApiClient.convertToType(data['paypal_payer_id'], 'String');
+        obj.paypal_payer_id = ApiClient.convertToType(data['paypal_payer_id'], 'String');
       if (data.hasOwnProperty('paypal_recurring_payment_profile_id'))
-        obj.paypalRecurringPaymentProfileId = ApiClient.convertToType(data['paypal_recurring_payment_profile_id'], 'String');
+        obj.paypal_recurring_payment_profile_id = ApiClient.convertToType(data['paypal_recurring_payment_profile_id'], 'String');
       if (data.hasOwnProperty('preshipment_notice_sent'))
-        obj.preshipmentNoticeSent = ApiClient.convertToType(data['preshipment_notice_sent'], 'Boolean');
+        obj.preshipment_notice_sent = ApiClient.convertToType(data['preshipment_notice_sent'], 'Boolean');
       if (data.hasOwnProperty('rebill_value'))
-        obj.rebillValue = ApiClient.convertToType(data['rebill_value'], 'Number');
+        obj.rebill_value = ApiClient.convertToType(data['rebill_value'], 'Number');
       if (data.hasOwnProperty('remaining_repeat_count'))
-        obj.remainingRepeatCount = ApiClient.convertToType(data['remaining_repeat_count'], 'Number');
+        obj.remaining_repeat_count = ApiClient.convertToType(data['remaining_repeat_count'], 'Number');
       if (data.hasOwnProperty('simple_schedule'))
-        obj.simpleSchedule = AutoOrderItemSimpleSchedule.constructFromObject(data['simple_schedule']);
+        obj.simple_schedule = AutoOrderItemSimpleSchedule.constructFromObject(data['simple_schedule']);
     }
     return obj;
   }
 
   /**
    * Arbitrary item id that should be rebilled instead of the normal schedule
-   * @member {String} arbitraryItemId
+   * @member {String} arbitrary_item_id
    */
-  exports.prototype.arbitraryItemId = undefined;
+  exports.prototype.arbitrary_item_id = undefined;
 
   /**
    * An arbitrary percentage discount to provide on future rebills
-   * @member {Number} arbitraryPercentageDiscount
+   * @member {Number} arbitrary_percentage_discount
    */
-  exports.prototype.arbitraryPercentageDiscount = undefined;
+  exports.prototype.arbitrary_percentage_discount = undefined;
 
   /**
    * Arbitrary quantity to rebill
-   * @member {Number} arbitraryQuantity
+   * @member {Number} arbitrary_quantity
    */
-  exports.prototype.arbitraryQuantity = undefined;
+  exports.prototype.arbitrary_quantity = undefined;
 
   /**
    * The number of days to rebill if the frequency is set to an arbitrary number of days
-   * @member {Number} arbitraryScheduleDays
+   * @member {Number} arbitrary_schedule_days
    */
-  exports.prototype.arbitraryScheduleDays = undefined;
+  exports.prototype.arbitrary_schedule_days = undefined;
 
   /**
    * Arbitrary unit cost that rebills of this item should occur at
-   * @member {Number} arbitraryUnitCost
+   * @member {Number} arbitrary_unit_cost
    */
-  exports.prototype.arbitraryUnitCost = undefined;
+  exports.prototype.arbitrary_unit_cost = undefined;
 
   /**
    * The number of rebills to give the arbitrary unit cost on before reverting to normal pricing.
-   * @member {Number} arbitraryUnitCostRemainingOrders
+   * @member {Number} arbitrary_unit_cost_remaining_orders
    */
-  exports.prototype.arbitraryUnitCostRemainingOrders = undefined;
+  exports.prototype.arbitrary_unit_cost_remaining_orders = undefined;
 
   /**
    * Primary key of AutoOrderItem
-   * @member {Number} autoOrderItemOid
+   * @member {Number} auto_order_item_oid
    */
-  exports.prototype.autoOrderItemOid = undefined;
+  exports.prototype.auto_order_item_oid = undefined;
 
   /**
    * Frequency of the rebill if not a fixed schedule
@@ -157,45 +157,45 @@
 
   /**
    * The future rebill schedule for this item up to the next ten rebills
-   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule>} futureSchedules
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule>} future_schedules
    */
-  exports.prototype.futureSchedules = undefined;
+  exports.prototype.future_schedules = undefined;
 
   /**
    * Date/time of the last order of this item
-   * @member {String} lastOrderDts
+   * @member {String} last_order_dts
    */
-  exports.prototype.lastOrderDts = undefined;
+  exports.prototype.last_order_dts = undefined;
 
   /**
    * The life time value of this item including the original purchase
-   * @member {Number} lifeTimeValue
+   * @member {Number} life_time_value
    */
-  exports.prototype.lifeTimeValue = undefined;
+  exports.prototype.life_time_value = undefined;
 
   /**
    * The date/time of when the next pre-shipment notice should be sent
-   * @member {String} nextPreshipmentNoticeDts
+   * @member {String} next_preshipment_notice_dts
    */
-  exports.prototype.nextPreshipmentNoticeDts = undefined;
+  exports.prototype.next_preshipment_notice_dts = undefined;
 
   /**
    * Date/time that this item is scheduled to rebill
-   * @member {String} nextShipmentDts
+   * @member {String} next_shipment_dts
    */
-  exports.prototype.nextShipmentDts = undefined;
+  exports.prototype.next_shipment_dts = undefined;
 
   /**
    * Date/time after which no additional rebills of this item should occur
-   * @member {String} noOrderAfterDts
+   * @member {String} no_order_after_dts
    */
-  exports.prototype.noOrderAfterDts = undefined;
+  exports.prototype.no_order_after_dts = undefined;
 
   /**
    * The number of times this item has rebilled
-   * @member {Number} numberOfRebills
+   * @member {Number} number_of_rebills
    */
-  exports.prototype.numberOfRebills = undefined;
+  exports.prototype.number_of_rebills = undefined;
 
   /**
    * Options associated with this item
@@ -205,50 +205,50 @@
 
   /**
    * The original item id purchased.  This item controls scheduling.  If you wish to modify a schedule, for example, from monthly to yearly, change this item from your monthly item to your yearly item, and then change the next_shipment_dts to your desired date.
-   * @member {String} originalItemId
+   * @member {String} original_item_id
    */
-  exports.prototype.originalItemId = undefined;
+  exports.prototype.original_item_id = undefined;
 
   /**
    * The original quantity purchased
-   * @member {Number} originalQuantity
+   * @member {Number} original_quantity
    */
-  exports.prototype.originalQuantity = undefined;
+  exports.prototype.original_quantity = undefined;
 
   /**
    * The PayPal Payer ID tied to this item
-   * @member {String} paypalPayerId
+   * @member {String} paypal_payer_id
    */
-  exports.prototype.paypalPayerId = undefined;
+  exports.prototype.paypal_payer_id = undefined;
 
   /**
    * The PayPal Profile ID tied to this item
-   * @member {String} paypalRecurringPaymentProfileId
+   * @member {String} paypal_recurring_payment_profile_id
    */
-  exports.prototype.paypalRecurringPaymentProfileId = undefined;
+  exports.prototype.paypal_recurring_payment_profile_id = undefined;
 
   /**
    * True if the preshipment notice associated with the next rebill has been sent
-   * @member {Boolean} preshipmentNoticeSent
+   * @member {Boolean} preshipment_notice_sent
    */
-  exports.prototype.preshipmentNoticeSent = undefined;
+  exports.prototype.preshipment_notice_sent = undefined;
 
   /**
    * The value of the rebills of this item
-   * @member {Number} rebillValue
+   * @member {Number} rebill_value
    */
-  exports.prototype.rebillValue = undefined;
+  exports.prototype.rebill_value = undefined;
 
   /**
    * The number of rebills remaining before this item is complete
-   * @member {Number} remainingRepeatCount
+   * @member {Number} remaining_repeat_count
    */
-  exports.prototype.remainingRepeatCount = undefined;
+  exports.prototype.remaining_repeat_count = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule} simpleSchedule
+   * @member {module:com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule} simple_schedule
    */
-  exports.prototype.simpleSchedule = undefined;
+  exports.prototype.simple_schedule = undefined;
 
 
   /**
@@ -261,79 +261,79 @@
      * value: "Weekly"
      * @const
      */
-    weekly: "Weekly",
+    Weekly: "Weekly",
 
     /**
      * value: "Biweekly"
      * @const
      */
-    biweekly: "Biweekly",
+    Biweekly: "Biweekly",
 
     /**
      * value: "Every..."
      * @const
      */
-    every_: "Every...",
+    Every___: "Every...",
 
     /**
      * value: "Every 10 Days"
      * @const
      */
-    every10Days: "Every 10 Days",
+    Every_10_Days: "Every 10 Days",
 
     /**
      * value: "Every 24 Days"
      * @const
      */
-    every24Days: "Every 24 Days",
+    Every_24_Days: "Every 24 Days",
 
     /**
      * value: "Every 28 Days"
      * @const
      */
-    every28Days: "Every 28 Days",
+    Every_28_Days: "Every 28 Days",
 
     /**
      * value: "Monthly"
      * @const
      */
-    monthly: "Monthly",
+    Monthly: "Monthly",
 
     /**
      * value: "Every 45 Days"
      * @const
      */
-    every45Days: "Every 45 Days",
+    Every_45_Days: "Every 45 Days",
 
     /**
      * value: "Every 2 Months"
      * @const
      */
-    every2Months: "Every 2 Months",
+    Every_2_Months: "Every 2 Months",
 
     /**
      * value: "Every 3 Months"
      * @const
      */
-    every3Months: "Every 3 Months",
+    Every_3_Months: "Every 3 Months",
 
     /**
      * value: "Every 4 Months"
      * @const
      */
-    every4Months: "Every 4 Months",
+    Every_4_Months: "Every 4 Months",
 
     /**
      * value: "Every 6 Months"
      * @const
      */
-    every6Months: "Every 6 Months",
+    Every_6_Months: "Every 6 Months",
 
     /**
      * value: "Yearly"
      * @const
      */
-    yearly: "Yearly"
+    Yearly: "Yearly"
   };
 
   return exports;

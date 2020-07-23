@@ -60,25 +60,25 @@
       if (data.hasOwnProperty('attributes'))
         obj.attributes = ApiClient.convertToType(data['attributes'], [ItemContentAttribute]);
       if (data.hasOwnProperty('custom_thank_you_url'))
-        obj.customThankYouUrl = ApiClient.convertToType(data['custom_thank_you_url'], 'String');
+        obj.custom_thank_you_url = ApiClient.convertToType(data['custom_thank_you_url'], 'String');
       if (data.hasOwnProperty('exclude_from_search'))
-        obj.excludeFromSearch = ApiClient.convertToType(data['exclude_from_search'], 'Boolean');
+        obj.exclude_from_search = ApiClient.convertToType(data['exclude_from_search'], 'Boolean');
       if (data.hasOwnProperty('exclude_from_top_sellers'))
-        obj.excludeFromTopSellers = ApiClient.convertToType(data['exclude_from_top_sellers'], 'Boolean');
+        obj.exclude_from_top_sellers = ApiClient.convertToType(data['exclude_from_top_sellers'], 'Boolean');
       if (data.hasOwnProperty('extended_description'))
-        obj.extendedDescription = ApiClient.convertToType(data['extended_description'], 'String');
+        obj.extended_description = ApiClient.convertToType(data['extended_description'], 'String');
       if (data.hasOwnProperty('extended_description_translated_text_instance_oid'))
-        obj.extendedDescriptionTranslatedTextInstanceOid = ApiClient.convertToType(data['extended_description_translated_text_instance_oid'], 'Number');
+        obj.extended_description_translated_text_instance_oid = ApiClient.convertToType(data['extended_description_translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('multimedia'))
         obj.multimedia = ApiClient.convertToType(data['multimedia'], [ItemContentMultimedia]);
       if (data.hasOwnProperty('new_item'))
-        obj.newItem = ApiClient.convertToType(data['new_item'], 'Boolean');
+        obj.new_item = ApiClient.convertToType(data['new_item'], 'Boolean');
       if (data.hasOwnProperty('new_item_end'))
-        obj.newItemEnd = ApiClient.convertToType(data['new_item_end'], 'String');
+        obj.new_item_end = ApiClient.convertToType(data['new_item_end'], 'String');
       if (data.hasOwnProperty('new_item_start'))
-        obj.newItemStart = ApiClient.convertToType(data['new_item_start'], 'String');
+        obj.new_item_start = ApiClient.convertToType(data['new_item_start'], 'String');
       if (data.hasOwnProperty('view_url'))
-        obj.viewUrl = ApiClient.convertToType(data['view_url'], 'String');
+        obj.view_url = ApiClient.convertToType(data['view_url'], 'String');
     }
     return obj;
   }
@@ -97,33 +97,33 @@
 
   /**
    * Custom Thank You URL
-   * @member {String} customThankYouUrl
+   * @member {String} custom_thank_you_url
    */
-  exports.prototype.customThankYouUrl = undefined;
+  exports.prototype.custom_thank_you_url = undefined;
 
   /**
    * Exclude from search
-   * @member {Boolean} excludeFromSearch
+   * @member {Boolean} exclude_from_search
    */
-  exports.prototype.excludeFromSearch = undefined;
+  exports.prototype.exclude_from_search = undefined;
 
   /**
    * Exclude from the top sellers list in the StoreFront
-   * @member {Boolean} excludeFromTopSellers
+   * @member {Boolean} exclude_from_top_sellers
    */
-  exports.prototype.excludeFromTopSellers = undefined;
+  exports.prototype.exclude_from_top_sellers = undefined;
 
   /**
    * Extended description (max 2000 characters)
-   * @member {String} extendedDescription
+   * @member {String} extended_description
    */
-  exports.prototype.extendedDescription = undefined;
+  exports.prototype.extended_description = undefined;
 
   /**
    * Extneded description text translation instance identifier
-   * @member {Number} extendedDescriptionTranslatedTextInstanceOid
+   * @member {Number} extended_description_translated_text_instance_oid
    */
-  exports.prototype.extendedDescriptionTranslatedTextInstanceOid = undefined;
+  exports.prototype.extended_description_translated_text_instance_oid = undefined;
 
   /**
    * Multimedia
@@ -133,27 +133,27 @@
 
   /**
    * True if the item is new
-   * @member {Boolean} newItem
+   * @member {Boolean} new_item
    */
-  exports.prototype.newItem = undefined;
+  exports.prototype.new_item = undefined;
 
   /**
    * The date the item should no longer be considered new
-   * @member {String} newItemEnd
+   * @member {String} new_item_end
    */
-  exports.prototype.newItemEnd = undefined;
+  exports.prototype.new_item_end = undefined;
 
   /**
    * The date the item should start being considered new
-   * @member {String} newItemStart
+   * @member {String} new_item_start
    */
-  exports.prototype.newItemStart = undefined;
+  exports.prototype.new_item_start = undefined;
 
   /**
    * Legacy view URL (not used by StoreFronts)
-   * @member {String} viewUrl
+   * @member {String} view_url
    */
-  exports.prototype.viewUrl = undefined;
+  exports.prototype.view_url = undefined;
 
   return exports;
 

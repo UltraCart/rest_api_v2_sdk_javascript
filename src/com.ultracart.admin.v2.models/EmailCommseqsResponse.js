@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('communication_sequences'))
-        obj.communicationSequences = ApiClient.convertToType(data['communication_sequences'], [EmailCommseq]);
+        obj.communication_sequences = ApiClient.convertToType(data['communication_sequences'], [EmailCommseq]);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,9 +68,9 @@
   }
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseq>} communicationSequences
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseq>} communication_sequences
    */
-  exports.prototype.communicationSequences = undefined;
+  exports.prototype.communication_sequences = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

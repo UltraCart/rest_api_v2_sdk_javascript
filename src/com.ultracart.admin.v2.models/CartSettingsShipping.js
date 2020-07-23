@@ -56,23 +56,23 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('deliver_on_date'))
-        obj.deliverOnDate = CartSettingsShippingCalendar.constructFromObject(data['deliver_on_date']);
+        obj.deliver_on_date = CartSettingsShippingCalendar.constructFromObject(data['deliver_on_date']);
       if (data.hasOwnProperty('estimates'))
         obj.estimates = ApiClient.convertToType(data['estimates'], [CartSettingsShippingEstimate]);
       if (data.hasOwnProperty('need_shipping'))
-        obj.needShipping = ApiClient.convertToType(data['need_shipping'], 'Boolean');
+        obj.need_shipping = ApiClient.convertToType(data['need_shipping'], 'Boolean');
       if (data.hasOwnProperty('provinces'))
         obj.provinces = ApiClient.convertToType(data['provinces'], [CartSettingsProvince]);
       if (data.hasOwnProperty('ship_on_date'))
-        obj.shipOnDate = CartSettingsShippingCalendar.constructFromObject(data['ship_on_date']);
+        obj.ship_on_date = CartSettingsShippingCalendar.constructFromObject(data['ship_on_date']);
     }
     return obj;
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartSettingsShippingCalendar} deliverOnDate
+   * @member {module:com.ultracart.admin.v2.models/CartSettingsShippingCalendar} deliver_on_date
    */
-  exports.prototype.deliverOnDate = undefined;
+  exports.prototype.deliver_on_date = undefined;
 
   /**
    * Estimates for this cart
@@ -82,9 +82,9 @@
 
   /**
    * True if this order needs shipping
-   * @member {Boolean} needShipping
+   * @member {Boolean} need_shipping
    */
-  exports.prototype.needShipping = undefined;
+  exports.prototype.need_shipping = undefined;
 
   /**
    * Provinces
@@ -93,9 +93,9 @@
   exports.prototype.provinces = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartSettingsShippingCalendar} shipOnDate
+   * @member {module:com.ultracart.admin.v2.models/CartSettingsShippingCalendar} ship_on_date
    */
-  exports.prototype.shipOnDate = undefined;
+  exports.prototype.ship_on_date = undefined;
 
   return exports;
 

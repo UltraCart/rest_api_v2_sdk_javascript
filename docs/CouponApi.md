@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="deleteCoupon"></a>
 # **deleteCoupon**
-> CouponResponse deleteCoupon(couponOid)
+> CouponResponse deleteCoupon(coupon_oid)
 
 Delete a coupon
 
@@ -41,7 +41,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var couponOid = 56; // Number | The coupon_oid to delete.
+var coupon_oid = 56; // Number | The coupon_oid to delete.
 
 
 var callback = function(error, data, response) {
@@ -51,14 +51,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.deleteCoupon(couponOid, callback);
+apiInstance.deleteCoupon(coupon_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **couponOid** | **Number**| The coupon_oid to delete. | 
+ **coupon_oid** | **Number**| The coupon_oid to delete. | 
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="generateCouponCodes"></a>
 # **generateCouponCodes**
-> CouponCodesResponse generateCouponCodes(couponOid, couponCodesRequest)
+> CouponCodesResponse generateCouponCodes(coupon_oid, coupon_codes_request)
 
 Generates one time codes for a coupon
 
@@ -98,9 +98,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var couponOid = 56; // Number | The coupon oid to generate codes.
+var coupon_oid = 56; // Number | The coupon oid to generate codes.
 
-var couponCodesRequest = new UltraCartRestApiV2.CouponCodesRequest(); // CouponCodesRequest | Coupon code generation parameters
+var coupon_codes_request = new UltraCartRestApiV2.CouponCodesRequest(); // CouponCodesRequest | Coupon code generation parameters
 
 
 var callback = function(error, data, response) {
@@ -110,15 +110,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.generateCouponCodes(couponOid, couponCodesRequest, callback);
+apiInstance.generateCouponCodes(coupon_oid, coupon_codes_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **couponOid** | **Number**| The coupon oid to generate codes. | 
- **couponCodesRequest** | [**CouponCodesRequest**](CouponCodesRequest.md)| Coupon code generation parameters | 
+ **coupon_oid** | **Number**| The coupon oid to generate codes. | 
+ **coupon_codes_request** | [**CouponCodesRequest**](CouponCodesRequest.md)| Coupon code generation parameters | 
 
 ### Return type
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 <a name="generateOneTimeCodesByMerchantCode"></a>
 # **generateOneTimeCodesByMerchantCode**
-> CouponCodesResponse generateOneTimeCodesByMerchantCode(merchantCode, couponCodesRequest)
+> CouponCodesResponse generateOneTimeCodesByMerchantCode(merchant_code, coupon_codes_request)
 
 Generates one time codes by merchant code
 
@@ -158,9 +158,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var merchantCode = "merchantCode_example"; // String | The merchant code to generate one time codes.
+var merchant_code = "merchant_code_example"; // String | The merchant code to generate one time codes.
 
-var couponCodesRequest = new UltraCartRestApiV2.CouponCodesRequest(); // CouponCodesRequest | Coupon code generation parameters
+var coupon_codes_request = new UltraCartRestApiV2.CouponCodesRequest(); // CouponCodesRequest | Coupon code generation parameters
 
 
 var callback = function(error, data, response) {
@@ -170,15 +170,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.generateOneTimeCodesByMerchantCode(merchantCode, couponCodesRequest, callback);
+apiInstance.generateOneTimeCodesByMerchantCode(merchant_code, coupon_codes_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantCode** | **String**| The merchant code to generate one time codes. | 
- **couponCodesRequest** | [**CouponCodesRequest**](CouponCodesRequest.md)| Coupon code generation parameters | 
+ **merchant_code** | **String**| The merchant code to generate one time codes. | 
+ **coupon_codes_request** | [**CouponCodesRequest**](CouponCodesRequest.md)| Coupon code generation parameters | 
 
 ### Return type
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 <a name="getCoupon"></a>
 # **getCoupon**
-> CouponResponse getCoupon(couponOid, opts)
+> CouponResponse getCoupon(coupon_oid, opts)
 
 Retrieve a coupon
 
@@ -218,10 +218,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var couponOid = 56; // Number | The coupon oid to retrieve.
+var coupon_oid = 56; // Number | The coupon oid to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -231,15 +231,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCoupon(couponOid, opts, callback);
+apiInstance.getCoupon(coupon_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **couponOid** | **Number**| The coupon oid to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **coupon_oid** | **Number**| The coupon oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 <a name="getCouponByMerchantCode"></a>
 # **getCouponByMerchantCode**
-> CouponResponse getCouponByMerchantCode(merchantCode, opts)
+> CouponResponse getCouponByMerchantCode(merchant_code, opts)
 
 Retrieve a coupon by merchant code
 
@@ -279,10 +279,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var merchantCode = "merchantCode_example"; // String | The coupon merchant code to retrieve.
+var merchant_code = "merchant_code_example"; // String | The coupon merchant code to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -292,15 +292,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCouponByMerchantCode(merchantCode, opts, callback);
+apiInstance.getCouponByMerchantCode(merchant_code, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantCode** | **String**| The coupon merchant code to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **merchant_code** | **String**| The coupon merchant code to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -341,19 +341,19 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
 var opts = { 
-  'merchantCode': "merchantCode_example", // String | Merchant code
+  'merchant_code': "merchant_code_example", // String | Merchant code
   'description': "description_example", // String | Description
-  'couponType': "couponType_example", // String | Coupon type
-  'startDateBegin': "startDateBegin_example", // String | Start date begin
-  'startDateEnd': "startDateEnd_example", // String | Start date end
-  'expirationDateBegin': "expirationDateBegin_example", // String | Expiration date begin
-  'expirationDateEnd': "expirationDateEnd_example", // String | Expiration date end
-  'affiliateOid': 56, // Number | Affiliate oid
-  'excludeExpired': true, // Boolean | Exclude expired
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'sort': "sort_example", // String | The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  'coupon_type': "coupon_type_example", // String | Coupon type
+  'start_date_begin': "start_date_begin_example", // String | Start date begin
+  'start_date_end': "start_date_end_example", // String | Start date end
+  'expiration_date_begin': "expiration_date_begin_example", // String | Expiration date begin
+  'expiration_date_end': "expiration_date_end_example", // String | Expiration date end
+  'affiliate_oid': 56, // Number | Affiliate oid
+  'exclude_expired': true, // Boolean | Exclude expired
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example", // String | The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -370,19 +370,19 @@ apiInstance.getCoupons(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **merchantCode** | **String**| Merchant code | [optional] 
+ **merchant_code** | **String**| Merchant code | [optional] 
  **description** | **String**| Description | [optional] 
- **couponType** | **String**| Coupon type | [optional] 
- **startDateBegin** | **String**| Start date begin | [optional] 
- **startDateEnd** | **String**| Start date end | [optional] 
- **expirationDateBegin** | **String**| Expiration date begin | [optional] 
- **expirationDateEnd** | **String**| Expiration date end | [optional] 
- **affiliateOid** | **Number**| Affiliate oid | [optional] 
- **excludeExpired** | **Boolean**| Exclude expired | [optional] 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **sort** | **String**| The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **coupon_type** | **String**| Coupon type | [optional] 
+ **start_date_begin** | **String**| Start date begin | [optional] 
+ **start_date_end** | **String**| Start date end | [optional] 
+ **expiration_date_begin** | **String**| Expiration date begin | [optional] 
+ **expiration_date_end** | **String**| Expiration date end | [optional] 
+ **affiliate_oid** | **Number**| Affiliate oid | [optional] 
+ **exclude_expired** | **Boolean**| Exclude expired | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 
 <a name="getCouponsByQuery"></a>
 # **getCouponsByQuery**
-> CouponsResponse getCouponsByQuery(couponQuery, opts)
+> CouponsResponse getCouponsByQuery(coupon_query, opts)
 
 Retrieve coupons by query
 
@@ -422,13 +422,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
-var couponQuery = new UltraCartRestApiV2.CouponQuery(); // CouponQuery | Coupon query
+var coupon_query = new UltraCartRestApiV2.CouponQuery(); // CouponQuery | Coupon query
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'sort': "sort_example", // String | The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example", // String | The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -438,18 +438,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCouponsByQuery(couponQuery, opts, callback);
+apiInstance.getCouponsByQuery(coupon_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **couponQuery** | [**CouponQuery**](CouponQuery.md)| Coupon query | 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **sort** | **String**| The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **coupon_query** | [**CouponQuery**](CouponQuery.md)| Coupon query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -543,7 +543,7 @@ var apiInstance = new UltraCartRestApiV2.CouponApi();
 var coupon = new UltraCartRestApiV2.Coupon(); // Coupon | Coupon to insert
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -561,7 +561,7 @@ apiInstance.insertCoupon(coupon, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **coupon** | [**Coupon**](Coupon.md)| Coupon to insert | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 
 <a name="updateCoupon"></a>
 # **updateCoupon**
-> CouponResponse updateCoupon(coupon, couponOid, opts)
+> CouponResponse updateCoupon(coupon, coupon_oid, opts)
 
 Update a coupon
 
@@ -603,10 +603,10 @@ var apiInstance = new UltraCartRestApiV2.CouponApi();
 
 var coupon = new UltraCartRestApiV2.Coupon(); // Coupon | Coupon to update
 
-var couponOid = 56; // Number | The coupon_oid to update.
+var coupon_oid = 56; // Number | The coupon_oid to update.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -616,7 +616,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateCoupon(coupon, couponOid, opts, callback);
+apiInstance.updateCoupon(coupon, coupon_oid, opts, callback);
 ```
 
 ### Parameters
@@ -624,8 +624,8 @@ apiInstance.updateCoupon(coupon, couponOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **coupon** | [**Coupon**](Coupon.md)| Coupon to update | 
- **couponOid** | **Number**| The coupon_oid to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **coupon_oid** | **Number**| The coupon_oid to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 

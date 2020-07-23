@@ -58,13 +58,13 @@
       if (data.hasOwnProperty('customers'))
         obj.customers = ApiClient.convertToType(data['customers'], [EmailListCustomer]);
       if (data.hasOwnProperty('page_number'))
-        obj.pageNumber = ApiClient.convertToType(data['page_number'], 'Number');
+        obj.page_number = ApiClient.convertToType(data['page_number'], 'Number');
       if (data.hasOwnProperty('page_size'))
-        obj.pageSize = ApiClient.convertToType(data['page_size'], 'Number');
+        obj.page_size = ApiClient.convertToType(data['page_size'], 'Number');
       if (data.hasOwnProperty('total_customers'))
-        obj.totalCustomers = ApiClient.convertToType(data['total_customers'], 'Number');
+        obj.total_customers = ApiClient.convertToType(data['total_customers'], 'Number');
       if (data.hasOwnProperty('total_pages'))
-        obj.totalPages = ApiClient.convertToType(data['total_pages'], 'Number');
+        obj.total_pages = ApiClient.convertToType(data['total_pages'], 'Number');
     }
     return obj;
   }
@@ -77,27 +77,27 @@
 
   /**
    * Page number (one based offset)
-   * @member {Number} pageNumber
+   * @member {Number} page_number
    */
-  exports.prototype.pageNumber = undefined;
+  exports.prototype.page_number = undefined;
 
   /**
    * Number of records per page
-   * @member {Number} pageSize
+   * @member {Number} page_size
    */
-  exports.prototype.pageSize = undefined;
+  exports.prototype.page_size = undefined;
 
   /**
    * Total customers
-   * @member {Number} totalCustomers
+   * @member {Number} total_customers
    */
-  exports.prototype.totalCustomers = undefined;
+  exports.prototype.total_customers = undefined;
 
   /**
    * Total number of pages
-   * @member {Number} totalPages
+   * @member {Number} total_pages
    */
-  exports.prototype.totalPages = undefined;
+  exports.prototype.total_pages = undefined;
 
   return exports;
 

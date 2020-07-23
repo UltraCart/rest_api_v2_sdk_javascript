@@ -56,56 +56,56 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('activation_code_description'))
-        obj.activationCodeDescription = ApiClient.convertToType(data['activation_code_description'], 'String');
+        obj.activation_code_description = ApiClient.convertToType(data['activation_code_description'], 'String');
       if (data.hasOwnProperty('activation_code_low_warning'))
-        obj.activationCodeLowWarning = ApiClient.convertToType(data['activation_code_low_warning'], 'Number');
+        obj.activation_code_low_warning = ApiClient.convertToType(data['activation_code_low_warning'], 'Number');
       if (data.hasOwnProperty('activation_code_realtime_url'))
-        obj.activationCodeRealtimeUrl = ApiClient.convertToType(data['activation_code_realtime_url'], 'String');
+        obj.activation_code_realtime_url = ApiClient.convertToType(data['activation_code_realtime_url'], 'String');
       if (data.hasOwnProperty('activation_code_shared_secret'))
-        obj.activationCodeSharedSecret = ApiClient.convertToType(data['activation_code_shared_secret'], 'String');
+        obj.activation_code_shared_secret = ApiClient.convertToType(data['activation_code_shared_secret'], 'String');
       if (data.hasOwnProperty('activation_code_type'))
-        obj.activationCodeType = ApiClient.convertToType(data['activation_code_type'], 'String');
+        obj.activation_code_type = ApiClient.convertToType(data['activation_code_type'], 'String');
       if (data.hasOwnProperty('digital_items'))
-        obj.digitalItems = ApiClient.convertToType(data['digital_items'], [ItemDigitalItem]);
+        obj.digital_items = ApiClient.convertToType(data['digital_items'], [ItemDigitalItem]);
     }
     return obj;
   }
 
   /**
    * Description of the activation code
-   * @member {String} activationCodeDescription
+   * @member {String} activation_code_description
    */
-  exports.prototype.activationCodeDescription = undefined;
+  exports.prototype.activation_code_description = undefined;
 
   /**
    * The number of activation codes whcih should generate a warning email
-   * @member {Number} activationCodeLowWarning
+   * @member {Number} activation_code_low_warning
    */
-  exports.prototype.activationCodeLowWarning = undefined;
+  exports.prototype.activation_code_low_warning = undefined;
 
   /**
    * The URL to retrieve activation codes from in real-time
-   * @member {String} activationCodeRealtimeUrl
+   * @member {String} activation_code_realtime_url
    */
-  exports.prototype.activationCodeRealtimeUrl = undefined;
+  exports.prototype.activation_code_realtime_url = undefined;
 
   /**
    * Shared secret used when communicating with the real-time URL
-   * @member {String} activationCodeSharedSecret
+   * @member {String} activation_code_shared_secret
    */
-  exports.prototype.activationCodeSharedSecret = undefined;
+  exports.prototype.activation_code_shared_secret = undefined;
 
   /**
    * Type of activation code
-   * @member {String} activationCodeType
+   * @member {String} activation_code_type
    */
-  exports.prototype.activationCodeType = undefined;
+  exports.prototype.activation_code_type = undefined;
 
   /**
    * Digital items that customer can download when this item is purchased
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemDigitalItem>} digitalItems
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemDigitalItem>} digital_items
    */
-  exports.prototype.digitalItems = undefined;
+  exports.prototype.digital_items = undefined;
 
   return exports;
 

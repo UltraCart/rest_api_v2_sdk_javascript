@@ -58,13 +58,13 @@
       if (data.hasOwnProperty('city'))
         obj.city = ApiClient.convertToType(data['city'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('county'))
         obj.county = ApiClient.convertToType(data['county'], 'String');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('state_code'))
-        obj.stateCode = ApiClient.convertToType(data['state_code'], 'String');
+        obj.state_code = ApiClient.convertToType(data['state_code'], 'String');
     }
     return obj;
   }
@@ -77,9 +77,9 @@
 
   /**
    * Country code (ISO-3166 two letter)
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * County
@@ -89,15 +89,15 @@
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * State code
-   * @member {String} stateCode
+   * @member {String} state_code
    */
-  exports.prototype.stateCode = undefined;
+  exports.prototype.state_code = undefined;
 
   return exports;
 

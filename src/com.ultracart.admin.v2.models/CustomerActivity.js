@@ -62,7 +62,7 @@
       if (data.hasOwnProperty('metrics'))
         obj.metrics = ApiClient.convertToType(data['metrics'], [Metric]);
       if (data.hasOwnProperty('properties_list'))
-        obj.propertiesList = ApiClient.convertToType(data['properties_list'], [Property]);
+        obj.properties_list = ApiClient.convertToType(data['properties_list'], [Property]);
     }
     return obj;
   }
@@ -83,9 +83,9 @@
   exports.prototype.metrics = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/Property>} propertiesList
+   * @member {Array.<module:com.ultracart.admin.v2.models/Property>} properties_list
    */
-  exports.prototype.propertiesList = undefined;
+  exports.prototype.properties_list = undefined;
 
   return exports;
 

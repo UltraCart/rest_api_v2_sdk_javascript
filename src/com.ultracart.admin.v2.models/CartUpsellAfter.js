@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('finalize_after_dts'))
-        obj.finalizeAfterDts = ApiClient.convertToType(data['finalize_after_dts'], 'String');
+        obj.finalize_after_dts = ApiClient.convertToType(data['finalize_after_dts'], 'String');
       if (data.hasOwnProperty('finalize_after_minutes'))
-        obj.finalizeAfterMinutes = ApiClient.convertToType(data['finalize_after_minutes'], 'Number');
+        obj.finalize_after_minutes = ApiClient.convertToType(data['finalize_after_minutes'], 'Number');
       if (data.hasOwnProperty('upsell_path_code'))
-        obj.upsellPathCode = ApiClient.convertToType(data['upsell_path_code'], 'String');
+        obj.upsell_path_code = ApiClient.convertToType(data['upsell_path_code'], 'String');
     }
     return obj;
   }
 
   /**
    * The date/time after which the cart will finalize into an order.
-   * @member {String} finalizeAfterDts
+   * @member {String} finalize_after_dts
    */
-  exports.prototype.finalizeAfterDts = undefined;
+  exports.prototype.finalize_after_dts = undefined;
 
   /**
    * The amount of inactivity in minutes after which the cart should be finalized into an order.  This will calculate the finalize_after_dts field.
-   * @member {Number} finalizeAfterMinutes
+   * @member {Number} finalize_after_minutes
    */
-  exports.prototype.finalizeAfterMinutes = undefined;
+  exports.prototype.finalize_after_minutes = undefined;
 
   /**
    * Upsell path code
-   * @member {String} upsellPathCode
+   * @member {String} upsell_path_code
    */
-  exports.prototype.upsellPathCode = undefined;
+  exports.prototype.upsell_path_code = undefined;
 
   return exports;
 

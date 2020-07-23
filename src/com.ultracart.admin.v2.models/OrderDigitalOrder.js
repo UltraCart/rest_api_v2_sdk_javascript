@@ -56,30 +56,30 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('creation_dts'))
-        obj.creationDts = ApiClient.convertToType(data['creation_dts'], 'String');
+        obj.creation_dts = ApiClient.convertToType(data['creation_dts'], 'String');
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], [OrderDigitalItem]);
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
       if (data.hasOwnProperty('url_id'))
-        obj.urlId = ApiClient.convertToType(data['url_id'], 'String');
+        obj.url_id = ApiClient.convertToType(data['url_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Date/time that the digital order was created
-   * @member {String} creationDts
+   * @member {String} creation_dts
    */
-  exports.prototype.creationDts = undefined;
+  exports.prototype.creation_dts = undefined;
 
   /**
    * Expiration date/time of the digital order
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * Digital items associated with the digital order
@@ -95,9 +95,9 @@
 
   /**
    * URL ID is a unique code that is part of the URLs
-   * @member {String} urlId
+   * @member {String} url_id
    */
-  exports.prototype.urlId = undefined;
+  exports.prototype.url_id = undefined;
 
   return exports;
 

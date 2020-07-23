@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('global_settings'))
-        obj.globalSettings = EmailGlobalSettings.constructFromObject(data['global_settings']);
+        obj.global_settings = EmailGlobalSettings.constructFromObject(data['global_settings']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -73,9 +73,9 @@
   exports.prototype.error = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/EmailGlobalSettings} globalSettings
+   * @member {module:com.ultracart.admin.v2.models/EmailGlobalSettings} global_settings
    */
-  exports.prototype.globalSettings = undefined;
+  exports.prototype.global_settings = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

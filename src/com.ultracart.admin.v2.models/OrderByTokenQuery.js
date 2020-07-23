@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('order_token'))
-        obj.orderToken = ApiClient.convertToType(data['order_token'], 'String');
+        obj.order_token = ApiClient.convertToType(data['order_token'], 'String');
     }
     return obj;
   }
 
   /**
    * Order Token
-   * @member {String} orderToken
+   * @member {String} order_token
    */
-  exports.prototype.orderToken = undefined;
+  exports.prototype.order_token = undefined;
 
   return exports;
 

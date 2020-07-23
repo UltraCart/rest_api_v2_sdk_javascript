@@ -56,22 +56,22 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('add_dts'))
-        obj.addDts = ApiClient.convertToType(data['add_dts'], 'String');
+        obj.add_dts = ApiClient.convertToType(data['add_dts'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('email_customer_uuid'))
-        obj.emailCustomerUuid = ApiClient.convertToType(data['email_customer_uuid'], 'String');
+        obj.email_customer_uuid = ApiClient.convertToType(data['email_customer_uuid'], 'String');
       if (data.hasOwnProperty('email_list_member_uuid'))
-        obj.emailListMemberUuid = ApiClient.convertToType(data['email_list_member_uuid'], 'String');
+        obj.email_list_member_uuid = ApiClient.convertToType(data['email_list_member_uuid'], 'String');
     }
     return obj;
   }
 
   /**
    * Added timestamp
-   * @member {String} addDts
+   * @member {String} add_dts
    */
-  exports.prototype.addDts = undefined;
+  exports.prototype.add_dts = undefined;
 
   /**
    * Email
@@ -81,15 +81,15 @@
 
   /**
    * Email customer UUID
-   * @member {String} emailCustomerUuid
+   * @member {String} email_customer_uuid
    */
-  exports.prototype.emailCustomerUuid = undefined;
+  exports.prototype.email_customer_uuid = undefined;
 
   /**
    * Email list member UUID
-   * @member {String} emailListMemberUuid
+   * @member {String} email_list_member_uuid
    */
-  exports.prototype.emailListMemberUuid = undefined;
+  exports.prototype.email_list_member_uuid = undefined;
 
   return exports;
 

@@ -56,52 +56,52 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('add_tags'))
-        obj.addTags = ApiClient.convertToType(data['add_tags'], ['String']);
+        obj.add_tags = ApiClient.convertToType(data['add_tags'], ['String']);
       if (data.hasOwnProperty('provider_name'))
-        obj.providerName = ApiClient.convertToType(data['provider_name'], 'String');
+        obj.provider_name = ApiClient.convertToType(data['provider_name'], 'String');
       if (data.hasOwnProperty('remove_tags'))
-        obj.removeTags = ApiClient.convertToType(data['remove_tags'], ['String']);
+        obj.remove_tags = ApiClient.convertToType(data['remove_tags'], ['String']);
       if (data.hasOwnProperty('subscribe_lists'))
-        obj.subscribeLists = ApiClient.convertToType(data['subscribe_lists'], ['String']);
+        obj.subscribe_lists = ApiClient.convertToType(data['subscribe_lists'], ['String']);
       if (data.hasOwnProperty('unsubscribe_lists'))
-        obj.unsubscribeLists = ApiClient.convertToType(data['unsubscribe_lists'], ['String']);
+        obj.unsubscribe_lists = ApiClient.convertToType(data['unsubscribe_lists'], ['String']);
     }
     return obj;
   }
 
   /**
    * Add tags
-   * @member {Array.<String>} addTags
+   * @member {Array.<String>} add_tags
    */
-  exports.prototype.addTags = undefined;
+  exports.prototype.add_tags = undefined;
 
   /**
    * Provider name
-   * @member {module:com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing.ProviderNameEnum} providerName
+   * @member {module:com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing.ProviderNameEnum} provider_name
    */
-  exports.prototype.providerName = undefined;
+  exports.prototype.provider_name = undefined;
 
   /**
    * Remove tags
-   * @member {Array.<String>} removeTags
+   * @member {Array.<String>} remove_tags
    */
-  exports.prototype.removeTags = undefined;
+  exports.prototype.remove_tags = undefined;
 
   /**
    * Subscribe to lists
-   * @member {Array.<String>} subscribeLists
+   * @member {Array.<String>} subscribe_lists
    */
-  exports.prototype.subscribeLists = undefined;
+  exports.prototype.subscribe_lists = undefined;
 
   /**
    * Unsubscribe from lists
-   * @member {Array.<String>} unsubscribeLists
+   * @member {Array.<String>} unsubscribe_lists
    */
-  exports.prototype.unsubscribeLists = undefined;
+  exports.prototype.unsubscribe_lists = undefined;
 
 
   /**
-   * Allowed values for the <code>providerName</code> property.
+   * Allowed values for the <code>provider_name</code> property.
    * @enum {String}
    * @readonly
    */
@@ -110,37 +110,37 @@
      * value: "ActiveCampaign"
      * @const
      */
-    activeCampaign: "ActiveCampaign",
+    ActiveCampaign: "ActiveCampaign",
 
     /**
      * value: "AWeber"
      * @const
      */
-    aWeber: "AWeber",
+    AWeber: "AWeber",
 
     /**
      * value: "Campaign Monitor"
      * @const
      */
-    campaignMonitor: "Campaign Monitor",
+    Campaign_Monitor: "Campaign Monitor",
 
     /**
      * value: "ConstantContact"
      * @const
      */
-    constantContact: "ConstantContact",
+    ConstantContact: "ConstantContact",
 
     /**
      * value: "Emma"
      * @const
      */
-    emma: "Emma",
+    Emma: "Emma",
 
     /**
      * value: "GetResponse"
      * @const
      */
-    getResponse: "GetResponse",
+    GetResponse: "GetResponse",
 
     /**
      * value: "iContact"
@@ -152,31 +152,31 @@
      * value: "Klaviyo"
      * @const
      */
-    klaviyo: "Klaviyo",
+    Klaviyo: "Klaviyo",
 
     /**
      * value: "Lyris"
      * @const
      */
-    lyris: "Lyris",
+    Lyris: "Lyris",
 
     /**
      * value: "LyrisHQ"
      * @const
      */
-    lyrisHQ: "LyrisHQ",
+    LyrisHQ: "LyrisHQ",
 
     /**
      * value: "MailChimp"
      * @const
      */
-    mailChimp: "MailChimp",
+    MailChimp: "MailChimp",
 
     /**
      * value: "SilverPop"
      * @const
      */
-    silverPop: "SilverPop"
+    SilverPop: "SilverPop"
   };
 
   return exports;

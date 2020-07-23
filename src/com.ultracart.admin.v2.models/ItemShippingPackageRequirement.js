@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('package_name'))
-        obj.packageName = ApiClient.convertToType(data['package_name'], 'String');
+        obj.package_name = ApiClient.convertToType(data['package_name'], 'String');
       if (data.hasOwnProperty('package_oid'))
-        obj.packageOid = ApiClient.convertToType(data['package_oid'], 'Number');
+        obj.package_oid = ApiClient.convertToType(data['package_oid'], 'Number');
     }
     return obj;
   }
 
   /**
    * Package name
-   * @member {String} packageName
+   * @member {String} package_name
    */
-  exports.prototype.packageName = undefined;
+  exports.prototype.package_name = undefined;
 
   /**
    * Package object identifier
-   * @member {Number} packageOid
+   * @member {Number} package_oid
    */
-  exports.prototype.packageOid = undefined;
+  exports.prototype.package_oid = undefined;
 
   return exports;
 

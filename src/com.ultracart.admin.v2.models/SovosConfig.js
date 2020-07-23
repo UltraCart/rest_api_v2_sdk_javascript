@@ -56,17 +56,17 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('access_key'))
-        obj.accessKey = ApiClient.convertToType(data['access_key'], 'String');
+        obj.access_key = ApiClient.convertToType(data['access_key'], 'String');
       if (data.hasOwnProperty('estimate_only'))
-        obj.estimateOnly = ApiClient.convertToType(data['estimate_only'], 'Boolean');
+        obj.estimate_only = ApiClient.convertToType(data['estimate_only'], 'Boolean');
       if (data.hasOwnProperty('last_test_dts'))
-        obj.lastTestDts = ApiClient.convertToType(data['last_test_dts'], 'String');
+        obj.last_test_dts = ApiClient.convertToType(data['last_test_dts'], 'String');
       if (data.hasOwnProperty('secret_key'))
-        obj.secretKey = ApiClient.convertToType(data['secret_key'], 'String');
+        obj.secret_key = ApiClient.convertToType(data['secret_key'], 'String');
       if (data.hasOwnProperty('send_test_orders'))
-        obj.sendTestOrders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
+        obj.send_test_orders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
       if (data.hasOwnProperty('test_results'))
-        obj.testResults = ApiClient.convertToType(data['test_results'], 'String');
+        obj.test_results = ApiClient.convertToType(data['test_results'], 'String');
       if (data.hasOwnProperty('uat'))
         obj.uat = ApiClient.convertToType(data['uat'], 'Boolean');
     }
@@ -75,39 +75,39 @@
 
   /**
    * Sovos access key
-   * @member {String} accessKey
+   * @member {String} access_key
    */
-  exports.prototype.accessKey = undefined;
+  exports.prototype.access_key = undefined;
 
   /**
    * True if this Sovos configuration is to estimate taxes only and not report placed orders to Sovos
-   * @member {Boolean} estimateOnly
+   * @member {Boolean} estimate_only
    */
-  exports.prototype.estimateOnly = undefined;
+  exports.prototype.estimate_only = undefined;
 
   /**
    * Date/time of the connection test to Sovos
-   * @member {String} lastTestDts
+   * @member {String} last_test_dts
    */
-  exports.prototype.lastTestDts = undefined;
+  exports.prototype.last_test_dts = undefined;
 
   /**
    * Sovos secret key
-   * @member {String} secretKey
+   * @member {String} secret_key
    */
-  exports.prototype.secretKey = undefined;
+  exports.prototype.secret_key = undefined;
 
   /**
    * Send test orders through to Sovos.  The default is to not transmit test orders to Sovos.
-   * @member {Boolean} sendTestOrders
+   * @member {Boolean} send_test_orders
    */
-  exports.prototype.sendTestOrders = undefined;
+  exports.prototype.send_test_orders = undefined;
 
   /**
    * Test results of the last connection test to Sovos
-   * @member {String} testResults
+   * @member {String} test_results
    */
-  exports.prototype.testResults = undefined;
+  exports.prototype.test_results = undefined;
 
   /**
    * True if this Sovos configuration is currently undergoing user acceptance testing

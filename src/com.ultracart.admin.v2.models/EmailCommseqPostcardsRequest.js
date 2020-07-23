@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('esp_commseq_postcard_uuids'))
-        obj.espCommseqPostcardUuids = ApiClient.convertToType(data['esp_commseq_postcard_uuids'], ['String']);
+        obj.esp_commseq_postcard_uuids = ApiClient.convertToType(data['esp_commseq_postcard_uuids'], ['String']);
     }
     return obj;
   }
 
   /**
-   * @member {Array.<String>} espCommseqPostcardUuids
+   * @member {Array.<String>} esp_commseq_postcard_uuids
    */
-  exports.prototype.espCommseqPostcardUuids = undefined;
+  exports.prototype.esp_commseq_postcard_uuids = undefined;
 
   return exports;
 

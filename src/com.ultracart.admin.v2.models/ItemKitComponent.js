@@ -56,13 +56,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('component_cost'))
-        obj.componentCost = ApiClient.convertToType(data['component_cost'], 'Number');
+        obj.component_cost = ApiClient.convertToType(data['component_cost'], 'Number');
       if (data.hasOwnProperty('component_description'))
-        obj.componentDescription = ApiClient.convertToType(data['component_description'], 'String');
+        obj.component_description = ApiClient.convertToType(data['component_description'], 'String');
       if (data.hasOwnProperty('component_merchant_item_id'))
-        obj.componentMerchantItemId = ApiClient.convertToType(data['component_merchant_item_id'], 'String');
+        obj.component_merchant_item_id = ApiClient.convertToType(data['component_merchant_item_id'], 'String');
       if (data.hasOwnProperty('component_merchant_item_oid'))
-        obj.componentMerchantItemOid = ApiClient.convertToType(data['component_merchant_item_oid'], 'Number');
+        obj.component_merchant_item_oid = ApiClient.convertToType(data['component_merchant_item_oid'], 'Number');
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
     }
@@ -71,27 +71,27 @@
 
   /**
    * Component item cost
-   * @member {Number} componentCost
+   * @member {Number} component_cost
    */
-  exports.prototype.componentCost = undefined;
+  exports.prototype.component_cost = undefined;
 
   /**
    * Component item description
-   * @member {String} componentDescription
+   * @member {String} component_description
    */
-  exports.prototype.componentDescription = undefined;
+  exports.prototype.component_description = undefined;
 
   /**
    * Component item ID
-   * @member {String} componentMerchantItemId
+   * @member {String} component_merchant_item_id
    */
-  exports.prototype.componentMerchantItemId = undefined;
+  exports.prototype.component_merchant_item_id = undefined;
 
   /**
    * Component item object identifier
-   * @member {Number} componentMerchantItemOid
+   * @member {Number} component_merchant_item_oid
    */
-  exports.prototype.componentMerchantItemOid = undefined;
+  exports.prototype.component_merchant_item_oid = undefined;
 
   /**
    * Quantity

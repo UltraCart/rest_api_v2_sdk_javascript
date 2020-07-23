@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('ledger_entries'))
-        obj.ledgerEntries = ApiClient.convertToType(data['ledger_entries'], [OrderAffiliateLedger]);
+        obj.ledger_entries = ApiClient.convertToType(data['ledger_entries'], [OrderAffiliateLedger]);
       if (data.hasOwnProperty('sub_id'))
-        obj.subId = ApiClient.convertToType(data['sub_id'], 'String');
+        obj.sub_id = ApiClient.convertToType(data['sub_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Affiliate ID
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * Ledger entries associated with all the commissions earned on this order
-   * @member {Array.<module:com.ultracart.admin.v2.models/OrderAffiliateLedger>} ledgerEntries
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderAffiliateLedger>} ledger_entries
    */
-  exports.prototype.ledgerEntries = undefined;
+  exports.prototype.ledger_entries = undefined;
 
   /**
    * Sub identifier provided by the affiliate on the click that generated this order
-   * @member {String} subId
+   * @member {String} sub_id
    */
-  exports.prototype.subId = undefined;
+  exports.prototype.sub_id = undefined;
 
   return exports;
 

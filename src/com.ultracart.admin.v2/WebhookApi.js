@@ -210,9 +210,9 @@
      * Retrieves the log summary information for a given webhook.  This is useful for displaying all the various logs that can be viewed. 
      * @param {Number} webhookOid The webhook oid to retrieve log summaries for.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.since Fetch log summaries that have been delivered since this date/time.
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch log summaries that have been delivered since this date/time.
      * @param {module:com.ultracart.admin.v2/WebhookApi~getWebhookLogSummariesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookLogSummariesResponse}
      */
@@ -230,9 +230,9 @@
         'webhookOid': webhookOid
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_since': opts['since'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
       };
       var collectionQueryParams = {
       };
@@ -265,10 +265,10 @@
      * Retrieve webhooks
      * Retrieves the webhooks associated with this application. 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.sort The sort order of the webhooks.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the webhooks.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/WebhookApi~getWebhooksCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/WebhooksResponse}
      */
@@ -280,10 +280,10 @@
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_sort': opts['sort'],
-        '_placeholders': opts['placeholders'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };
@@ -317,7 +317,7 @@
      * Adds a new webhook on the account.  If you add a new webhook with the authentication_type set to basic, but do not specify the basic_username and basic_password, UltraCart will automatically generate random ones and return them.  This allows your application to have simpler logic on the setup of a secure webhook. 
      * @param {module:com.ultracart.admin.v2.models/Webhook} webhook Webhook to create
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/WebhookApi~insertWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookResponse}
      */
@@ -334,7 +334,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_placeholders': opts['placeholders'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };
@@ -424,7 +424,7 @@
      * @param {module:com.ultracart.admin.v2.models/Webhook} webhook Webhook to update
      * @param {Number} webhookOid The webhook oid to update.
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/WebhookApi~updateWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookResponse}
      */
@@ -447,7 +447,7 @@
         'webhookOid': webhookOid
       };
       var queryParams = {
-        '_placeholders': opts['placeholders'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };

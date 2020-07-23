@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('amazon_button_url'))
-        obj.amazonButtonUrl = ApiClient.convertToType(data['amazon_button_url'], 'String');
+        obj.amazon_button_url = ApiClient.convertToType(data['amazon_button_url'], 'String');
       if (data.hasOwnProperty('amazon_merchant_id'))
-        obj.amazonMerchantId = ApiClient.convertToType(data['amazon_merchant_id'], 'String');
+        obj.amazon_merchant_id = ApiClient.convertToType(data['amazon_merchant_id'], 'String');
       if (data.hasOwnProperty('amazon_widget_url'))
-        obj.amazonWidgetUrl = ApiClient.convertToType(data['amazon_widget_url'], 'String');
+        obj.amazon_widget_url = ApiClient.convertToType(data['amazon_widget_url'], 'String');
     }
     return obj;
   }
 
   /**
    * Amazon button URL
-   * @member {String} amazonButtonUrl
+   * @member {String} amazon_button_url
    */
-  exports.prototype.amazonButtonUrl = undefined;
+  exports.prototype.amazon_button_url = undefined;
 
   /**
    * Amazon merchant ID
-   * @member {String} amazonMerchantId
+   * @member {String} amazon_merchant_id
    */
-  exports.prototype.amazonMerchantId = undefined;
+  exports.prototype.amazon_merchant_id = undefined;
 
   /**
    * Amazon widget URL
-   * @member {String} amazonWidgetUrl
+   * @member {String} amazon_widget_url
    */
-  exports.prototype.amazonWidgetUrl = undefined;
+  exports.prototype.amazon_widget_url = undefined;
 
   return exports;
 

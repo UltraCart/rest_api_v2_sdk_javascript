@@ -56,38 +56,38 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('coupon_type'))
-        obj.couponType = ApiClient.convertToType(data['coupon_type'], 'String');
+        obj.coupon_type = ApiClient.convertToType(data['coupon_type'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('exclude_expired'))
-        obj.excludeExpired = ApiClient.convertToType(data['exclude_expired'], 'Boolean');
+        obj.exclude_expired = ApiClient.convertToType(data['exclude_expired'], 'Boolean');
       if (data.hasOwnProperty('expiration_dts_begin'))
-        obj.expirationDtsBegin = ApiClient.convertToType(data['expiration_dts_begin'], 'String');
+        obj.expiration_dts_begin = ApiClient.convertToType(data['expiration_dts_begin'], 'String');
       if (data.hasOwnProperty('expiration_dts_end'))
-        obj.expirationDtsEnd = ApiClient.convertToType(data['expiration_dts_end'], 'String');
+        obj.expiration_dts_end = ApiClient.convertToType(data['expiration_dts_end'], 'String');
       if (data.hasOwnProperty('merchant_code'))
-        obj.merchantCode = ApiClient.convertToType(data['merchant_code'], 'String');
+        obj.merchant_code = ApiClient.convertToType(data['merchant_code'], 'String');
       if (data.hasOwnProperty('start_dts_begin'))
-        obj.startDtsBegin = ApiClient.convertToType(data['start_dts_begin'], 'String');
+        obj.start_dts_begin = ApiClient.convertToType(data['start_dts_begin'], 'String');
       if (data.hasOwnProperty('start_dts_end'))
-        obj.startDtsEnd = ApiClient.convertToType(data['start_dts_end'], 'String');
+        obj.start_dts_end = ApiClient.convertToType(data['start_dts_end'], 'String');
     }
     return obj;
   }
 
   /**
    * Affiliate oid
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * The type of coupon.
-   * @member {String} couponType
+   * @member {String} coupon_type
    */
-  exports.prototype.couponType = undefined;
+  exports.prototype.coupon_type = undefined;
 
   /**
    * Description of this coupon
@@ -97,39 +97,39 @@
 
   /**
    * Exclude expired coupons if true
-   * @member {Boolean} excludeExpired
+   * @member {Boolean} exclude_expired
    */
-  exports.prototype.excludeExpired = undefined;
+  exports.prototype.exclude_expired = undefined;
 
   /**
    * Expiration date begin
-   * @member {String} expirationDtsBegin
+   * @member {String} expiration_dts_begin
    */
-  exports.prototype.expirationDtsBegin = undefined;
+  exports.prototype.expiration_dts_begin = undefined;
 
   /**
    * Expiration date begin
-   * @member {String} expirationDtsEnd
+   * @member {String} expiration_dts_end
    */
-  exports.prototype.expirationDtsEnd = undefined;
+  exports.prototype.expiration_dts_end = undefined;
 
   /**
    * Merchant code is a unique character string for this coupon.
-   * @member {String} merchantCode
+   * @member {String} merchant_code
    */
-  exports.prototype.merchantCode = undefined;
+  exports.prototype.merchant_code = undefined;
 
   /**
    * Start date begin
-   * @member {String} startDtsBegin
+   * @member {String} start_dts_begin
    */
-  exports.prototype.startDtsBegin = undefined;
+  exports.prototype.start_dts_begin = undefined;
 
   /**
    * Start date end
-   * @member {String} startDtsEnd
+   * @member {String} start_dts_end
    */
-  exports.prototype.startDtsEnd = undefined;
+  exports.prototype.start_dts_end = undefined;
 
   return exports;
 

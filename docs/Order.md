@@ -43,25 +43,25 @@ Name | Type | Description | Notes
 ## Enum: CurrentStageEnum
 
 
-* `accountsReceivable` (value: `"Accounts Receivable"`)
+* `Accounts_Receivable` (value: `"Accounts Receivable"`)
 
-* `pendingClearance` (value: `"Pending Clearance"`)
+* `Pending_Clearance` (value: `"Pending Clearance"`)
 
-* `fraudReview` (value: `"Fraud Review"`)
+* `Fraud_Review` (value: `"Fraud Review"`)
 
-* `rejected` (value: `"Rejected"`)
+* `Rejected` (value: `"Rejected"`)
 
-* `shippingDepartment` (value: `"Shipping Department"`)
+* `Shipping_Department` (value: `"Shipping Department"`)
 
-* `completedOrder` (value: `"Completed Order"`)
+* `Completed_Order` (value: `"Completed Order"`)
 
-* `quoteRequest` (value: `"Quote Request"`)
+* `Quote_Request` (value: `"Quote Request"`)
 
-* `quoteSent` (value: `"Quote Sent"`)
+* `Quote_Sent` (value: `"Quote Sent"`)
 
-* `leastCostRouting` (value: `"Least Cost Routing"`)
+* `Least_Cost_Routing` (value: `"Least Cost Routing"`)
 
-* `unknown` (value: `"Unknown"`)
+* `Unknown` (value: `"Unknown"`)
 
 
 

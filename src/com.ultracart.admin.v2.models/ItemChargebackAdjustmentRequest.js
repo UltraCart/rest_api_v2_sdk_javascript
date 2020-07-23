@@ -56,20 +56,20 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('chargeback_adjustment_request_oid'))
-        obj.chargebackAdjustmentRequestOid = ApiClient.convertToType(data['chargeback_adjustment_request_oid'], 'Number');
+        obj.chargeback_adjustment_request_oid = ApiClient.convertToType(data['chargeback_adjustment_request_oid'], 'Number');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('reason_code'))
-        obj.reasonCode = ApiClient.convertToType(data['reason_code'], 'String');
+        obj.reason_code = ApiClient.convertToType(data['reason_code'], 'String');
     }
     return obj;
   }
 
   /**
    * Chargeback adjustment request object identifier
-   * @member {Number} chargebackAdjustmentRequestOid
+   * @member {Number} chargeback_adjustment_request_oid
    */
-  exports.prototype.chargebackAdjustmentRequestOid = undefined;
+  exports.prototype.chargeback_adjustment_request_oid = undefined;
 
   /**
    * Description
@@ -79,9 +79,9 @@
 
   /**
    * Reason code
-   * @member {String} reasonCode
+   * @member {String} reason_code
    */
-  exports.prototype.reasonCode = undefined;
+  exports.prototype.reason_code = undefined;
 
   return exports;
 

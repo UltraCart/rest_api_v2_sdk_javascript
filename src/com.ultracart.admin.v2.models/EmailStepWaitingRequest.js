@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('commseq_step_uuids'))
-        obj.commseqStepUuids = ApiClient.convertToType(data['commseq_step_uuids'], ['String']);
+        obj.commseq_step_uuids = ApiClient.convertToType(data['commseq_step_uuids'], ['String']);
     }
     return obj;
   }
 
   /**
-   * @member {Array.<String>} commseqStepUuids
+   * @member {Array.<String>} commseq_step_uuids
    */
-  exports.prototype.commseqStepUuids = undefined;
+  exports.prototype.commseq_step_uuids = undefined;
 
   return exports;
 

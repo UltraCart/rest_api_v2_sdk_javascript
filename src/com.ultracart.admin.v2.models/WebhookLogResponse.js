@@ -62,7 +62,7 @@
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('webhook_log'))
-        obj.webhookLog = WebhookLog.constructFromObject(data['webhook_log']);
+        obj.webhook_log = WebhookLog.constructFromObject(data['webhook_log']);
     }
     return obj;
   }
@@ -84,9 +84,9 @@
   exports.prototype.success = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/WebhookLog} webhookLog
+   * @member {module:com.ultracart.admin.v2.models/WebhookLog} webhook_log
    */
-  exports.prototype.webhookLog = undefined;
+  exports.prototype.webhook_log = undefined;
 
   return exports;
 

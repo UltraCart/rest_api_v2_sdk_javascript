@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_order'))
-        obj.autoOrder = AutoOrder.constructFromObject(data['auto_order']);
+        obj.auto_order = AutoOrder.constructFromObject(data['auto_order']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,9 +68,9 @@
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/AutoOrder} autoOrder
+   * @member {module:com.ultracart.admin.v2.models/AutoOrder} auto_order
    */
-  exports.prototype.autoOrder = undefined;
+  exports.prototype.auto_order = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

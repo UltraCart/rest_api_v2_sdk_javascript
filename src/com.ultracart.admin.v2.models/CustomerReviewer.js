@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_approve'))
-        obj.autoApprove = ApiClient.convertToType(data['auto_approve'], 'Boolean');
+        obj.auto_approve = ApiClient.convertToType(data['auto_approve'], 'Boolean');
       if (data.hasOwnProperty('average_overall_rating'))
-        obj.averageOverallRating = ApiClient.convertToType(data['average_overall_rating'], 'Number');
+        obj.average_overall_rating = ApiClient.convertToType(data['average_overall_rating'], 'Number');
       if (data.hasOwnProperty('expert'))
         obj.expert = ApiClient.convertToType(data['expert'], 'Boolean');
       if (data.hasOwnProperty('first_review'))
-        obj.firstReview = ApiClient.convertToType(data['first_review'], 'String');
+        obj.first_review = ApiClient.convertToType(data['first_review'], 'String');
       if (data.hasOwnProperty('last_review'))
-        obj.lastReview = ApiClient.convertToType(data['last_review'], 'String');
+        obj.last_review = ApiClient.convertToType(data['last_review'], 'String');
       if (data.hasOwnProperty('location'))
         obj.location = ApiClient.convertToType(data['location'], 'String');
       if (data.hasOwnProperty('nickname'))
         obj.nickname = ApiClient.convertToType(data['nickname'], 'String');
       if (data.hasOwnProperty('number_helpful_review_votes'))
-        obj.numberHelpfulReviewVotes = ApiClient.convertToType(data['number_helpful_review_votes'], 'Number');
+        obj.number_helpful_review_votes = ApiClient.convertToType(data['number_helpful_review_votes'], 'Number');
       if (data.hasOwnProperty('rank'))
         obj.rank = ApiClient.convertToType(data['rank'], 'Number');
       if (data.hasOwnProperty('reviews_contributed'))
-        obj.reviewsContributed = ApiClient.convertToType(data['reviews_contributed'], 'Number');
+        obj.reviews_contributed = ApiClient.convertToType(data['reviews_contributed'], 'Number');
     }
     return obj;
   }
 
   /**
    * True if reviewes from this customer profile should automatically be approved
-   * @member {Boolean} autoApprove
+   * @member {Boolean} auto_approve
    */
-  exports.prototype.autoApprove = undefined;
+  exports.prototype.auto_approve = undefined;
 
   /**
    * Average overall rating of items reviewed
-   * @member {Number} averageOverallRating
+   * @member {Number} average_overall_rating
    */
-  exports.prototype.averageOverallRating = undefined;
+  exports.prototype.average_overall_rating = undefined;
 
   /**
    * True if the customer is an expert
@@ -99,15 +99,15 @@
 
   /**
    * First review
-   * @member {String} firstReview
+   * @member {String} first_review
    */
-  exports.prototype.firstReview = undefined;
+  exports.prototype.first_review = undefined;
 
   /**
    * Last review
-   * @member {String} lastReview
+   * @member {String} last_review
    */
-  exports.prototype.lastReview = undefined;
+  exports.prototype.last_review = undefined;
 
   /**
    * Location of the reviewer
@@ -123,9 +123,9 @@
 
   /**
    * Number of helpful review votes
-   * @member {Number} numberHelpfulReviewVotes
+   * @member {Number} number_helpful_review_votes
    */
-  exports.prototype.numberHelpfulReviewVotes = undefined;
+  exports.prototype.number_helpful_review_votes = undefined;
 
   /**
    * Rank of this reviewer
@@ -135,9 +135,9 @@
 
   /**
    * Number of reviews contributed
-   * @member {Number} reviewsContributed
+   * @member {Number} reviews_contributed
    */
-  exports.prototype.reviewsContributed = undefined;
+  exports.prototype.reviews_contributed = undefined;
 
   return exports;
 

@@ -56,39 +56,39 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_order_code'))
-        obj.autoOrderCode = ApiClient.convertToType(data['auto_order_code'], 'String');
+        obj.auto_order_code = ApiClient.convertToType(data['auto_order_code'], 'String');
       if (data.hasOwnProperty('card_type'))
-        obj.cardType = ApiClient.convertToType(data['card_type'], 'String');
+        obj.card_type = ApiClient.convertToType(data['card_type'], 'String');
       if (data.hasOwnProperty('city'))
         obj.city = ApiClient.convertToType(data['city'], 'String');
       if (data.hasOwnProperty('company'))
         obj.company = ApiClient.convertToType(data['company'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('customer_profile_oid'))
-        obj.customerProfileOid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('first_name'))
-        obj.firstName = ApiClient.convertToType(data['first_name'], 'String');
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('last_name'))
-        obj.lastName = ApiClient.convertToType(data['last_name'], 'String');
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
       if (data.hasOwnProperty('next_shipment_date_begin'))
-        obj.nextShipmentDateBegin = ApiClient.convertToType(data['next_shipment_date_begin'], 'String');
+        obj.next_shipment_date_begin = ApiClient.convertToType(data['next_shipment_date_begin'], 'String');
       if (data.hasOwnProperty('next_shipment_date_end'))
-        obj.nextShipmentDateEnd = ApiClient.convertToType(data['next_shipment_date_end'], 'String');
+        obj.next_shipment_date_end = ApiClient.convertToType(data['next_shipment_date_end'], 'String');
       if (data.hasOwnProperty('original_order_date_begin'))
-        obj.originalOrderDateBegin = ApiClient.convertToType(data['original_order_date_begin'], 'String');
+        obj.original_order_date_begin = ApiClient.convertToType(data['original_order_date_begin'], 'String');
       if (data.hasOwnProperty('original_order_date_end'))
-        obj.originalOrderDateEnd = ApiClient.convertToType(data['original_order_date_end'], 'String');
+        obj.original_order_date_end = ApiClient.convertToType(data['original_order_date_end'], 'String');
       if (data.hasOwnProperty('original_order_id'))
-        obj.originalOrderId = ApiClient.convertToType(data['original_order_id'], 'String');
+        obj.original_order_id = ApiClient.convertToType(data['original_order_id'], 'String');
       if (data.hasOwnProperty('phone'))
         obj.phone = ApiClient.convertToType(data['phone'], 'String');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('state'))
         obj.state = ApiClient.convertToType(data['state'], 'String');
       if (data.hasOwnProperty('status'))
@@ -99,15 +99,15 @@
 
   /**
    * Auto order code
-   * @member {String} autoOrderCode
+   * @member {String} auto_order_code
    */
-  exports.prototype.autoOrderCode = undefined;
+  exports.prototype.auto_order_code = undefined;
 
   /**
    * Card type
-   * @member {String} cardType
+   * @member {String} card_type
    */
-  exports.prototype.cardType = undefined;
+  exports.prototype.card_type = undefined;
 
   /**
    * City
@@ -123,15 +123,15 @@
 
   /**
    * ISO-3166 two letter country code
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Customer profile object identifier
-   * @member {Number} customerProfileOid
+   * @member {Number} customer_profile_oid
    */
-  exports.prototype.customerProfileOid = undefined;
+  exports.prototype.customer_profile_oid = undefined;
 
   /**
    * Email
@@ -141,51 +141,51 @@
 
   /**
    * First name
-   * @member {String} firstName
+   * @member {String} first_name
    */
-  exports.prototype.firstName = undefined;
+  exports.prototype.first_name = undefined;
 
   /**
    * Item ID
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * Last name
-   * @member {String} lastName
+   * @member {String} last_name
    */
-  exports.prototype.lastName = undefined;
+  exports.prototype.last_name = undefined;
 
   /**
    * Next shipment date begin
-   * @member {String} nextShipmentDateBegin
+   * @member {String} next_shipment_date_begin
    */
-  exports.prototype.nextShipmentDateBegin = undefined;
+  exports.prototype.next_shipment_date_begin = undefined;
 
   /**
    * Next shipment date end
-   * @member {String} nextShipmentDateEnd
+   * @member {String} next_shipment_date_end
    */
-  exports.prototype.nextShipmentDateEnd = undefined;
+  exports.prototype.next_shipment_date_end = undefined;
 
   /**
    * Original order date begin
-   * @member {String} originalOrderDateBegin
+   * @member {String} original_order_date_begin
    */
-  exports.prototype.originalOrderDateBegin = undefined;
+  exports.prototype.original_order_date_begin = undefined;
 
   /**
    * Original order date end
-   * @member {String} originalOrderDateEnd
+   * @member {String} original_order_date_end
    */
-  exports.prototype.originalOrderDateEnd = undefined;
+  exports.prototype.original_order_date_end = undefined;
 
   /**
    * Original order ID
-   * @member {String} originalOrderId
+   * @member {String} original_order_id
    */
-  exports.prototype.originalOrderId = undefined;
+  exports.prototype.original_order_id = undefined;
 
   /**
    * Phone
@@ -195,9 +195,9 @@
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * State

@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_amount'))
-        obj.discountAmount = ApiClient.convertToType(data['discount_amount'], 'Number');
+        obj.discount_amount = ApiClient.convertToType(data['discount_amount'], 'Number');
       if (data.hasOwnProperty('subtotal_amount'))
-        obj.subtotalAmount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
+        obj.subtotal_amount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
     }
     return obj;
   }
 
   /**
    * The amount of subtotal discount
-   * @member {Number} discountAmount
+   * @member {Number} discount_amount
    */
-  exports.prototype.discountAmount = undefined;
+  exports.prototype.discount_amount = undefined;
 
   /**
    * The amount of subtotal required to receive the discount amount
-   * @member {Number} subtotalAmount
+   * @member {Number} subtotal_amount
    */
-  exports.prototype.subtotalAmount = undefined;
+  exports.prototype.subtotal_amount = undefined;
 
   return exports;
 

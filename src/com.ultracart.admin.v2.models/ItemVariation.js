@@ -56,13 +56,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('default_text'))
-        obj.defaultText = ApiClient.convertToType(data['default_text'], 'String');
+        obj.default_text = ApiClient.convertToType(data['default_text'], 'String');
       if (data.hasOwnProperty('default_text_translated_text_instance_oid'))
-        obj.defaultTextTranslatedTextInstanceOid = ApiClient.convertToType(data['default_text_translated_text_instance_oid'], 'Number');
+        obj.default_text_translated_text_instance_oid = ApiClient.convertToType(data['default_text_translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('name_translated_text_instance_oid'))
-        obj.nameTranslatedTextInstanceOid = ApiClient.convertToType(data['name_translated_text_instance_oid'], 'Number');
+        obj.name_translated_text_instance_oid = ApiClient.convertToType(data['name_translated_text_instance_oid'], 'Number');
       if (data.hasOwnProperty('options'))
         obj.options = ApiClient.convertToType(data['options'], [ItemVariationOption]);
     }
@@ -71,15 +71,15 @@
 
   /**
    * Default text
-   * @member {String} defaultText
+   * @member {String} default_text
    */
-  exports.prototype.defaultText = undefined;
+  exports.prototype.default_text = undefined;
 
   /**
    * Default text translated text instance id
-   * @member {Number} defaultTextTranslatedTextInstanceOid
+   * @member {Number} default_text_translated_text_instance_oid
    */
-  exports.prototype.defaultTextTranslatedTextInstanceOid = undefined;
+  exports.prototype.default_text_translated_text_instance_oid = undefined;
 
   /**
    * Name
@@ -89,9 +89,9 @@
 
   /**
    * Name translated text instance id
-   * @member {Number} nameTranslatedTextInstanceOid
+   * @member {Number} name_translated_text_instance_oid
    */
-  exports.prototype.nameTranslatedTextInstanceOid = undefined;
+  exports.prototype.name_translated_text_instance_oid = undefined;
 
   /**
    * Options

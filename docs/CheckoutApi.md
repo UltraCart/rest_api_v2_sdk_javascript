@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 <a name="finalizeOrder"></a>
 # **finalizeOrder**
-> CartFinalizeOrderResponse finalizeOrder(finalizeRequest)
+> CartFinalizeOrderResponse finalizeOrder(finalize_request)
 
 Finalize Order
 
@@ -111,7 +111,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var finalizeRequest = new UltraCartRestApiV2.CartFinalizeOrderRequest(); // CartFinalizeOrderRequest | Finalize request
+var finalize_request = new UltraCartRestApiV2.CartFinalizeOrderRequest(); // CartFinalizeOrderRequest | Finalize request
 
 
 var callback = function(error, data, response) {
@@ -121,14 +121,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.finalizeOrder(finalizeRequest, callback);
+apiInstance.finalizeOrder(finalize_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **finalizeRequest** | [**CartFinalizeOrderRequest**](CartFinalizeOrderRequest.md)| Finalize request | 
+ **finalize_request** | [**CartFinalizeOrderRequest**](CartFinalizeOrderRequest.md)| Finalize request | 
 
 ### Return type
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 <a name="getAffirmCheckout"></a>
 # **getAffirmCheckout**
-> CartAffirmCheckoutResponse getAffirmCheckout(cartId)
+> CartAffirmCheckoutResponse getAffirmCheckout(cart_id)
 
 Get affirm checkout (by cart id)
 
@@ -174,7 +174,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var cartId = "cartId_example"; // String | Cart ID to retrieve
+var cart_id = "cart_id_example"; // String | Cart ID to retrieve
 
 
 var callback = function(error, data, response) {
@@ -184,14 +184,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAffirmCheckout(cartId, callback);
+apiInstance.getAffirmCheckout(cart_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cartId** | **String**| Cart ID to retrieve | 
+ **cart_id** | **String**| Cart ID to retrieve | 
 
 ### Return type
 
@@ -295,7 +295,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -312,7 +312,7 @@ apiInstance.getCart(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartByCartId"></a>
 # **getCartByCartId**
-> CartResponse getCartByCartId(cartId, opts)
+> CartResponse getCartByCartId(cart_id, opts)
 
 Get cart (by cart id)
 
@@ -358,10 +358,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var cartId = "cartId_example"; // String | Cart ID to retrieve
+var cart_id = "cart_id_example"; // String | Cart ID to retrieve
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -371,15 +371,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCartByCartId(cartId, opts, callback);
+apiInstance.getCartByCartId(cart_id, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cartId** | **String**| Cart ID to retrieve | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **cart_id** | **String**| Cart ID to retrieve | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartByReturnCode"></a>
 # **getCartByReturnCode**
-> CartResponse getCartByReturnCode(returnCode, opts)
+> CartResponse getCartByReturnCode(return_code, opts)
 
 Get cart (by return code)
 
@@ -425,10 +425,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var returnCode = "returnCode_example"; // String | Return code to lookup cart ID by
+var return_code = "return_code_example"; // String | Return code to lookup cart ID by
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -438,15 +438,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCartByReturnCode(returnCode, opts, callback);
+apiInstance.getCartByReturnCode(return_code, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **returnCode** | **String**| Return code to lookup cart ID by | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **return_code** | **String**| Return code to lookup cart ID by | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 
 <a name="getStateProvincesForCountry"></a>
 # **getStateProvincesForCountry**
-> CheckoutStateProvinceResponse getStateProvincesForCountry(countryCode)
+> CheckoutStateProvinceResponse getStateProvincesForCountry(country_code)
 
 Get state/province list for a country code
 
@@ -492,7 +492,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var countryCode = "countryCode_example"; // String | Two letter ISO country code
+var country_code = "country_code_example"; // String | Two letter ISO country code
 
 
 var callback = function(error, data, response) {
@@ -502,14 +502,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getStateProvincesForCountry(countryCode, callback);
+apiInstance.getStateProvincesForCountry(country_code, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countryCode** | **String**| Two letter ISO country code | 
+ **country_code** | **String**| Two letter ISO country code | 
 
 ### Return type
 
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 
 <a name="handoffCart"></a>
 # **handoffCart**
-> CheckoutHandoffResponse handoffCart(handoffRequest, opts)
+> CheckoutHandoffResponse handoffCart(handoff_request, opts)
 
 Handoff cart
 
@@ -555,10 +555,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var handoffRequest = new UltraCartRestApiV2.CheckoutHandoffRequest(); // CheckoutHandoffRequest | Handoff request
+var handoff_request = new UltraCartRestApiV2.CheckoutHandoffRequest(); // CheckoutHandoffRequest | Handoff request
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -568,15 +568,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.handoffCart(handoffRequest, opts, callback);
+apiInstance.handoffCart(handoff_request, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **handoffRequest** | [**CheckoutHandoffRequest**](CheckoutHandoffRequest.md)| Handoff request | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **handoff_request** | [**CheckoutHandoffRequest**](CheckoutHandoffRequest.md)| Handoff request | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 <a name="login"></a>
 # **login**
-> CartProfileLoginResponse login(loginRequest, opts)
+> CartProfileLoginResponse login(login_request, opts)
 
 Profile login
 
@@ -622,10 +622,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var loginRequest = new UltraCartRestApiV2.CartProfileLoginRequest(); // CartProfileLoginRequest | Login request
+var login_request = new UltraCartRestApiV2.CartProfileLoginRequest(); // CartProfileLoginRequest | Login request
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -635,15 +635,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.login(loginRequest, opts, callback);
+apiInstance.login(login_request, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginRequest** | [**CartProfileLoginRequest**](CartProfileLoginRequest.md)| Login request | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **login_request** | [**CartProfileLoginRequest**](CartProfileLoginRequest.md)| Login request | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -692,7 +692,7 @@ var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -710,7 +710,7 @@ apiInstance.logout(cart, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart** | [**Cart**](Cart.md)| Cart | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -727,7 +727,7 @@ Name | Type | Description  | Notes
 
 <a name="register"></a>
 # **register**
-> CartProfileRegisterResponse register(registerRequest, opts)
+> CartProfileRegisterResponse register(register_request, opts)
 
 Profile registration
 
@@ -756,10 +756,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var registerRequest = new UltraCartRestApiV2.CartProfileRegisterRequest(); // CartProfileRegisterRequest | Register request
+var register_request = new UltraCartRestApiV2.CartProfileRegisterRequest(); // CartProfileRegisterRequest | Register request
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -769,15 +769,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.register(registerRequest, opts, callback);
+apiInstance.register(register_request, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registerRequest** | [**CartProfileRegisterRequest**](CartProfileRegisterRequest.md)| Register request | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **register_request** | [**CartProfileRegisterRequest**](CartProfileRegisterRequest.md)| Register request | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -826,7 +826,7 @@ var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -844,7 +844,7 @@ apiInstance.relatedItemsForCart(cart, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart** | [**Cart**](Cart.md)| Cart | 
- **expand** | **String**| The object expansion to perform on the result.  See item resource documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See item resource documentation for examples | [optional] 
 
 ### Return type
 
@@ -861,7 +861,7 @@ Name | Type | Description  | Notes
 
 <a name="relatedItemsForItem"></a>
 # **relatedItemsForItem**
-> ItemsResponse relatedItemsForItem(itemId, cart, opts)
+> ItemsResponse relatedItemsForItem(item_id, cart, opts)
 
 Related items (specific item)
 
@@ -890,12 +890,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var itemId = "itemId_example"; // String | Item ID to retrieve related items for
+var item_id = "item_id_example"; // String | Item ID to retrieve related items for
 
 var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -905,16 +905,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.relatedItemsForItem(itemId, cart, opts, callback);
+apiInstance.relatedItemsForItem(item_id, cart, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **itemId** | **String**| Item ID to retrieve related items for | 
+ **item_id** | **String**| Item ID to retrieve related items for | 
  **cart** | [**Cart**](Cart.md)| Cart | 
- **expand** | **String**| The object expansion to perform on the result.  See item resource documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See item resource documentation for examples | [optional] 
 
 ### Return type
 
@@ -931,7 +931,7 @@ Name | Type | Description  | Notes
 
 <a name="setupBrowserKey"></a>
 # **setupBrowserKey**
-> CheckoutSetupBrowserKeyResponse setupBrowserKey(browserKeyRequest)
+> CheckoutSetupBrowserKeyResponse setupBrowserKey(browser_key_request)
 
 Setup Browser Application
 
@@ -954,7 +954,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var browserKeyRequest = new UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest(); // CheckoutSetupBrowserKeyRequest | Setup browser key request
+var browser_key_request = new UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest(); // CheckoutSetupBrowserKeyRequest | Setup browser key request
 
 
 var callback = function(error, data, response) {
@@ -964,14 +964,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.setupBrowserKey(browserKeyRequest, callback);
+apiInstance.setupBrowserKey(browser_key_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **browserKeyRequest** | [**CheckoutSetupBrowserKeyRequest**](CheckoutSetupBrowserKeyRequest.md)| Setup browser key request | 
+ **browser_key_request** | [**CheckoutSetupBrowserKeyRequest**](CheckoutSetupBrowserKeyRequest.md)| Setup browser key request | 
 
 ### Return type
 
@@ -1020,7 +1020,7 @@ var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 var cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -1038,7 +1038,7 @@ apiInstance.updateCart(cart, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart** | [**Cart**](Cart.md)| Cart | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -1055,7 +1055,7 @@ Name | Type | Description  | Notes
 
 <a name="validateCart"></a>
 # **validateCart**
-> CartValidationResponse validateCart(validationRequest, opts)
+> CartValidationResponse validateCart(validation_request, opts)
 
 Validate
 
@@ -1084,10 +1084,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.CheckoutApi();
 
-var validationRequest = new UltraCartRestApiV2.CartValidationRequest(); // CartValidationRequest | Validation request
+var validation_request = new UltraCartRestApiV2.CartValidationRequest(); // CartValidationRequest | Validation request
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -1097,15 +1097,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.validateCart(validationRequest, opts, callback);
+apiInstance.validateCart(validation_request, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **validationRequest** | [**CartValidationRequest**](CartValidationRequest.md)| Validation request | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **validation_request** | [**CartValidationRequest**](CartValidationRequest.md)| Validation request | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 

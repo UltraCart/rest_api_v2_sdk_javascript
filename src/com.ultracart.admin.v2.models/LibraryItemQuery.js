@@ -62,15 +62,15 @@
       if (data.hasOwnProperty('industry'))
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
       if (data.hasOwnProperty('price_high'))
-        obj.priceHigh = ApiClient.convertToType(data['price_high'], 'Number');
+        obj.price_high = ApiClient.convertToType(data['price_high'], 'Number');
       if (data.hasOwnProperty('price_low'))
-        obj.priceLow = ApiClient.convertToType(data['price_low'], 'Number');
+        obj.price_low = ApiClient.convertToType(data['price_low'], 'Number');
       if (data.hasOwnProperty('public_items'))
-        obj.publicItems = ApiClient.convertToType(data['public_items'], 'Boolean');
+        obj.public_items = ApiClient.convertToType(data['public_items'], 'Boolean');
       if (data.hasOwnProperty('published_dts_begin'))
-        obj.publishedDtsBegin = ApiClient.convertToType(data['published_dts_begin'], 'String');
+        obj.published_dts_begin = ApiClient.convertToType(data['published_dts_begin'], 'String');
       if (data.hasOwnProperty('published_dts_end'))
-        obj.publishedDtsEnd = ApiClient.convertToType(data['published_dts_end'], 'String');
+        obj.published_dts_end = ApiClient.convertToType(data['published_dts_end'], 'String');
       if (data.hasOwnProperty('style'))
         obj.style = ApiClient.convertToType(data['style'], 'String');
       if (data.hasOwnProperty('title'))
@@ -101,33 +101,33 @@
 
   /**
    * Maximum price
-   * @member {Number} priceHigh
+   * @member {Number} price_high
    */
-  exports.prototype.priceHigh = undefined;
+  exports.prototype.price_high = undefined;
 
   /**
    * Minimum price
-   * @member {Number} priceLow
+   * @member {Number} price_low
    */
-  exports.prototype.priceLow = undefined;
+  exports.prototype.price_low = undefined;
 
   /**
    * Boolean, true returns back public items as well as merchant owned items
-   * @member {Boolean} publicItems
+   * @member {Boolean} public_items
    */
-  exports.prototype.publicItems = undefined;
+  exports.prototype.public_items = undefined;
 
   /**
    * Minimum published date/time
-   * @member {String} publishedDtsBegin
+   * @member {String} published_dts_begin
    */
-  exports.prototype.publishedDtsBegin = undefined;
+  exports.prototype.published_dts_begin = undefined;
 
   /**
    * Maximum published date/time
-   * @member {String} publishedDtsEnd
+   * @member {String} published_dts_end
    */
-  exports.prototype.publishedDtsEnd = undefined;
+  exports.prototype.published_dts_end = undefined;
 
   /**
    * Library item style

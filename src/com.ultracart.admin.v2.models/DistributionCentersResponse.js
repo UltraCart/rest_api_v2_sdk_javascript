@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('distribution_centers'))
-        obj.distributionCenters = ApiClient.convertToType(data['distribution_centers'], [DistributionCenter]);
+        obj.distribution_centers = ApiClient.convertToType(data['distribution_centers'], [DistributionCenter]);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,9 +68,9 @@
   }
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/DistributionCenter>} distributionCenters
+   * @member {Array.<module:com.ultracart.admin.v2.models/DistributionCenter>} distribution_centers
    */
-  exports.prototype.distributionCenters = undefined;
+  exports.prototype.distribution_centers = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

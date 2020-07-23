@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('coupon_types'))
-        obj.couponTypes = ApiClient.convertToType(data['coupon_types'], ['String']);
+        obj.coupon_types = ApiClient.convertToType(data['coupon_types'], ['String']);
     }
     return obj;
   }
 
   /**
    * coupon_types
-   * @member {Array.<String>} couponTypes
+   * @member {Array.<String>} coupon_types
    */
-  exports.prototype.couponTypes = undefined;
+  exports.prototype.coupon_types = undefined;
 
   return exports;
 

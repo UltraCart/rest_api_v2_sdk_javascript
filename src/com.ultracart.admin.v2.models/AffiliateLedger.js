@@ -56,68 +56,68 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_click_oid'))
-        obj.affiliateClickOid = ApiClient.convertToType(data['affiliate_click_oid'], 'Number');
+        obj.affiliate_click_oid = ApiClient.convertToType(data['affiliate_click_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_link_oid'))
-        obj.affiliateLinkOid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
+        obj.affiliate_link_oid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('assigned_by_user'))
-        obj.assignedByUser = ApiClient.convertToType(data['assigned_by_user'], 'String');
+        obj.assigned_by_user = ApiClient.convertToType(data['assigned_by_user'], 'String');
       if (data.hasOwnProperty('click'))
         obj.click = AffiliateClick.constructFromObject(data['click']);
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('link'))
         obj.link = AffiliateLink.constructFromObject(data['link']);
       if (data.hasOwnProperty('order'))
         obj.order = Order.constructFromObject(data['order']);
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('original_transaction_dts'))
-        obj.originalTransactionDts = ApiClient.convertToType(data['original_transaction_dts'], 'String');
+        obj.original_transaction_dts = ApiClient.convertToType(data['original_transaction_dts'], 'String');
       if (data.hasOwnProperty('sub_id'))
-        obj.subId = ApiClient.convertToType(data['sub_id'], 'String');
+        obj.sub_id = ApiClient.convertToType(data['sub_id'], 'String');
       if (data.hasOwnProperty('tier_number'))
-        obj.tierNumber = ApiClient.convertToType(data['tier_number'], 'String');
+        obj.tier_number = ApiClient.convertToType(data['tier_number'], 'String');
       if (data.hasOwnProperty('transaction_amount'))
-        obj.transactionAmount = ApiClient.convertToType(data['transaction_amount'], 'Number');
+        obj.transaction_amount = ApiClient.convertToType(data['transaction_amount'], 'Number');
       if (data.hasOwnProperty('transaction_amount_paid'))
-        obj.transactionAmountPaid = ApiClient.convertToType(data['transaction_amount_paid'], 'Number');
+        obj.transaction_amount_paid = ApiClient.convertToType(data['transaction_amount_paid'], 'Number');
       if (data.hasOwnProperty('transaction_dts'))
-        obj.transactionDts = ApiClient.convertToType(data['transaction_dts'], 'String');
+        obj.transaction_dts = ApiClient.convertToType(data['transaction_dts'], 'String');
       if (data.hasOwnProperty('transaction_memo'))
-        obj.transactionMemo = ApiClient.convertToType(data['transaction_memo'], 'String');
+        obj.transaction_memo = ApiClient.convertToType(data['transaction_memo'], 'String');
       if (data.hasOwnProperty('transaction_percentage'))
-        obj.transactionPercentage = ApiClient.convertToType(data['transaction_percentage'], 'String');
+        obj.transaction_percentage = ApiClient.convertToType(data['transaction_percentage'], 'String');
       if (data.hasOwnProperty('transaction_state'))
-        obj.transactionState = ApiClient.convertToType(data['transaction_state'], 'String');
+        obj.transaction_state = ApiClient.convertToType(data['transaction_state'], 'String');
     }
     return obj;
   }
 
   /**
    * Unique object identifier for the click associated with this ledger entry
-   * @member {Number} affiliateClickOid
+   * @member {Number} affiliate_click_oid
    */
-  exports.prototype.affiliateClickOid = undefined;
+  exports.prototype.affiliate_click_oid = undefined;
 
   /**
    * Unique object identifier for the link that this click is associated with
-   * @member {Number} affiliateLinkOid
+   * @member {Number} affiliate_link_oid
    */
-  exports.prototype.affiliateLinkOid = undefined;
+  exports.prototype.affiliate_link_oid = undefined;
 
   /**
    * Affiliate object ID associated with this transaction
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * User that assigned the transaction if it was done manually
-   * @member {String} assignedByUser
+   * @member {String} assigned_by_user
    */
-  exports.prototype.assignedByUser = undefined;
+  exports.prototype.assigned_by_user = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/AffiliateClick} click
@@ -126,9 +126,9 @@
 
   /**
    * Item ID associated with this transaction
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/AffiliateLink} link
@@ -142,67 +142,67 @@
 
   /**
    * Order ID associated with this transaction
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * Date/time of the original transaction for reversals
-   * @member {String} originalTransactionDts
+   * @member {String} original_transaction_dts
    */
-  exports.prototype.originalTransactionDts = undefined;
+  exports.prototype.original_transaction_dts = undefined;
 
   /**
    * Sub ID associated with transaction (from the click)
-   * @member {String} subId
+   * @member {String} sub_id
    */
-  exports.prototype.subId = undefined;
+  exports.prototype.sub_id = undefined;
 
   /**
    * Tier number that this transaction earned
-   * @member {String} tierNumber
+   * @member {String} tier_number
    */
-  exports.prototype.tierNumber = undefined;
+  exports.prototype.tier_number = undefined;
 
   /**
    * Transaction amount
-   * @member {Number} transactionAmount
+   * @member {Number} transaction_amount
    */
-  exports.prototype.transactionAmount = undefined;
+  exports.prototype.transaction_amount = undefined;
 
   /**
    * Amount of the transaction that has been paid out.
-   * @member {Number} transactionAmountPaid
+   * @member {Number} transaction_amount_paid
    */
-  exports.prototype.transactionAmountPaid = undefined;
+  exports.prototype.transaction_amount_paid = undefined;
 
   /**
    * Date/time that the transaction was made
-   * @member {String} transactionDts
+   * @member {String} transaction_dts
    */
-  exports.prototype.transactionDts = undefined;
+  exports.prototype.transaction_dts = undefined;
 
   /**
    * Memo explaining the transaction
-   * @member {String} transactionMemo
+   * @member {String} transaction_memo
    */
-  exports.prototype.transactionMemo = undefined;
+  exports.prototype.transaction_memo = undefined;
 
   /**
    * Percentage associated with this transaction
-   * @member {String} transactionPercentage
+   * @member {String} transaction_percentage
    */
-  exports.prototype.transactionPercentage = undefined;
+  exports.prototype.transaction_percentage = undefined;
 
   /**
    * Transaction state
-   * @member {module:com.ultracart.admin.v2.models/AffiliateLedger.TransactionStateEnum} transactionState
+   * @member {module:com.ultracart.admin.v2.models/AffiliateLedger.TransactionStateEnum} transaction_state
    */
-  exports.prototype.transactionState = undefined;
+  exports.prototype.transaction_state = undefined;
 
 
   /**
-   * Allowed values for the <code>transactionState</code> property.
+   * Allowed values for the <code>transaction_state</code> property.
    * @enum {String}
    * @readonly
    */
@@ -211,37 +211,37 @@
      * value: "Pending"
      * @const
      */
-    pending: "Pending",
+    Pending: "Pending",
 
     /**
      * value: "Posted"
      * @const
      */
-    posted: "Posted",
+    Posted: "Posted",
 
     /**
      * value: "Approved"
      * @const
      */
-    approved: "Approved",
+    Approved: "Approved",
 
     /**
      * value: "Paid"
      * @const
      */
-    paid: "Paid",
+    Paid: "Paid",
 
     /**
      * value: "Rejected"
      * @const
      */
-    rejected: "Rejected",
+    Rejected: "Rejected",
 
     /**
      * value: "Partially Paid"
      * @const
      */
-    partiallyPaid: "Partially Paid"
+    Partially_Paid: "Partially Paid"
   };
 
   return exports;

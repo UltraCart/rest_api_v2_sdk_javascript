@@ -56,92 +56,92 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('marketing_esp_domain_user'))
-        obj.marketingEspDomainUser = ApiClient.convertToType(data['marketing_esp_domain_user'], 'String');
+        obj.marketing_esp_domain_user = ApiClient.convertToType(data['marketing_esp_domain_user'], 'String');
       if (data.hasOwnProperty('marketing_esp_domain_uuid'))
-        obj.marketingEspDomainUuid = ApiClient.convertToType(data['marketing_esp_domain_uuid'], 'String');
+        obj.marketing_esp_domain_uuid = ApiClient.convertToType(data['marketing_esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('marketing_esp_friendly_name'))
-        obj.marketingEspFriendlyName = ApiClient.convertToType(data['marketing_esp_friendly_name'], 'String');
+        obj.marketing_esp_friendly_name = ApiClient.convertToType(data['marketing_esp_friendly_name'], 'String');
       if (data.hasOwnProperty('postcard_from_address1'))
-        obj.postcardFromAddress1 = ApiClient.convertToType(data['postcard_from_address1'], 'String');
+        obj.postcard_from_address1 = ApiClient.convertToType(data['postcard_from_address1'], 'String');
       if (data.hasOwnProperty('postcard_from_address2'))
-        obj.postcardFromAddress2 = ApiClient.convertToType(data['postcard_from_address2'], 'String');
+        obj.postcard_from_address2 = ApiClient.convertToType(data['postcard_from_address2'], 'String');
       if (data.hasOwnProperty('postcard_from_city'))
-        obj.postcardFromCity = ApiClient.convertToType(data['postcard_from_city'], 'String');
+        obj.postcard_from_city = ApiClient.convertToType(data['postcard_from_city'], 'String');
       if (data.hasOwnProperty('postcard_from_name'))
-        obj.postcardFromName = ApiClient.convertToType(data['postcard_from_name'], 'String');
+        obj.postcard_from_name = ApiClient.convertToType(data['postcard_from_name'], 'String');
       if (data.hasOwnProperty('postcard_from_postal_code'))
-        obj.postcardFromPostalCode = ApiClient.convertToType(data['postcard_from_postal_code'], 'String');
+        obj.postcard_from_postal_code = ApiClient.convertToType(data['postcard_from_postal_code'], 'String');
       if (data.hasOwnProperty('postcard_from_state'))
-        obj.postcardFromState = ApiClient.convertToType(data['postcard_from_state'], 'String');
+        obj.postcard_from_state = ApiClient.convertToType(data['postcard_from_state'], 'String');
       if (data.hasOwnProperty('transactional_esp_domain_user'))
-        obj.transactionalEspDomainUser = ApiClient.convertToType(data['transactional_esp_domain_user'], 'String');
+        obj.transactional_esp_domain_user = ApiClient.convertToType(data['transactional_esp_domain_user'], 'String');
       if (data.hasOwnProperty('transactional_esp_domain_uuid'))
-        obj.transactionalEspDomainUuid = ApiClient.convertToType(data['transactional_esp_domain_uuid'], 'String');
+        obj.transactional_esp_domain_uuid = ApiClient.convertToType(data['transactional_esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('transactional_esp_friendly_name'))
-        obj.transactionalEspFriendlyName = ApiClient.convertToType(data['transactional_esp_friendly_name'], 'String');
+        obj.transactional_esp_friendly_name = ApiClient.convertToType(data['transactional_esp_friendly_name'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} marketingEspDomainUser
+   * @member {String} marketing_esp_domain_user
    */
-  exports.prototype.marketingEspDomainUser = undefined;
+  exports.prototype.marketing_esp_domain_user = undefined;
 
   /**
-   * @member {String} marketingEspDomainUuid
+   * @member {String} marketing_esp_domain_uuid
    */
-  exports.prototype.marketingEspDomainUuid = undefined;
+  exports.prototype.marketing_esp_domain_uuid = undefined;
 
   /**
-   * @member {String} marketingEspFriendlyName
+   * @member {String} marketing_esp_friendly_name
    */
-  exports.prototype.marketingEspFriendlyName = undefined;
+  exports.prototype.marketing_esp_friendly_name = undefined;
 
   /**
-   * @member {String} postcardFromAddress1
+   * @member {String} postcard_from_address1
    */
-  exports.prototype.postcardFromAddress1 = undefined;
+  exports.prototype.postcard_from_address1 = undefined;
 
   /**
-   * @member {String} postcardFromAddress2
+   * @member {String} postcard_from_address2
    */
-  exports.prototype.postcardFromAddress2 = undefined;
+  exports.prototype.postcard_from_address2 = undefined;
 
   /**
-   * @member {String} postcardFromCity
+   * @member {String} postcard_from_city
    */
-  exports.prototype.postcardFromCity = undefined;
+  exports.prototype.postcard_from_city = undefined;
 
   /**
-   * @member {String} postcardFromName
+   * @member {String} postcard_from_name
    */
-  exports.prototype.postcardFromName = undefined;
+  exports.prototype.postcard_from_name = undefined;
 
   /**
-   * @member {String} postcardFromPostalCode
+   * @member {String} postcard_from_postal_code
    */
-  exports.prototype.postcardFromPostalCode = undefined;
+  exports.prototype.postcard_from_postal_code = undefined;
 
   /**
-   * @member {String} postcardFromState
+   * @member {String} postcard_from_state
    */
-  exports.prototype.postcardFromState = undefined;
+  exports.prototype.postcard_from_state = undefined;
 
   /**
-   * @member {String} transactionalEspDomainUser
+   * @member {String} transactional_esp_domain_user
    */
-  exports.prototype.transactionalEspDomainUser = undefined;
+  exports.prototype.transactional_esp_domain_user = undefined;
 
   /**
-   * @member {String} transactionalEspDomainUuid
+   * @member {String} transactional_esp_domain_uuid
    */
-  exports.prototype.transactionalEspDomainUuid = undefined;
+  exports.prototype.transactional_esp_domain_uuid = undefined;
 
   /**
-   * @member {String} transactionalEspFriendlyName
+   * @member {String} transactional_esp_friendly_name
    */
-  exports.prototype.transactionalEspFriendlyName = undefined;
+  exports.prototype.transactional_esp_friendly_name = undefined;
 
   return exports;
 

@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('file_name'))
-        obj.fileName = ApiClient.convertToType(data['file_name'], 'String');
+        obj.file_name = ApiClient.convertToType(data['file_name'], 'String');
       if (data.hasOwnProperty('mime_type'))
-        obj.mimeType = ApiClient.convertToType(data['mime_type'], 'String');
+        obj.mime_type = ApiClient.convertToType(data['mime_type'], 'String');
       if (data.hasOwnProperty('size'))
         obj.size = ApiClient.convertToType(data['size'], 'Number');
     }
@@ -69,21 +69,21 @@
 
   /**
    * Expiration date/time
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * File name
-   * @member {String} fileName
+   * @member {String} file_name
    */
-  exports.prototype.fileName = undefined;
+  exports.prototype.file_name = undefined;
 
   /**
    * Mime type
-   * @member {String} mimeType
+   * @member {String} mime_type
    */
-  exports.prototype.mimeType = undefined;
+  exports.prototype.mime_type = undefined;
 
   /**
    * Size

@@ -62,7 +62,7 @@
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('temp_multimedia'))
-        obj.tempMultimedia = TempMultimedia.constructFromObject(data['temp_multimedia']);
+        obj.temp_multimedia = TempMultimedia.constructFromObject(data['temp_multimedia']);
     }
     return obj;
   }
@@ -84,9 +84,9 @@
   exports.prototype.success = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/TempMultimedia} tempMultimedia
+   * @member {module:com.ultracart.admin.v2.models/TempMultimedia} temp_multimedia
    */
-  exports.prototype.tempMultimedia = undefined;
+  exports.prototype.temp_multimedia = undefined;
 
   return exports;
 

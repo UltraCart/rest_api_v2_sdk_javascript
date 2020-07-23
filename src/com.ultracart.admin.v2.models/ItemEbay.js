@@ -58,141 +58,141 @@
       if (data.hasOwnProperty('active'))
         obj.active = ApiClient.convertToType(data['active'], 'Boolean');
       if (data.hasOwnProperty('category_id'))
-        obj.categoryId = ApiClient.convertToType(data['category_id'], 'Number');
+        obj.category_id = ApiClient.convertToType(data['category_id'], 'Number');
       if (data.hasOwnProperty('category_specifics'))
-        obj.categorySpecifics = ApiClient.convertToType(data['category_specifics'], [ItemEbayCategorySpecific]);
+        obj.category_specifics = ApiClient.convertToType(data['category_specifics'], [ItemEbayCategorySpecific]);
       if (data.hasOwnProperty('condition_description'))
-        obj.conditionDescription = ApiClient.convertToType(data['condition_description'], 'String');
+        obj.condition_description = ApiClient.convertToType(data['condition_description'], 'String');
       if (data.hasOwnProperty('condition_id'))
-        obj.conditionId = ApiClient.convertToType(data['condition_id'], 'Number');
+        obj.condition_id = ApiClient.convertToType(data['condition_id'], 'Number');
       if (data.hasOwnProperty('consecutive_failures'))
-        obj.consecutiveFailures = ApiClient.convertToType(data['consecutive_failures'], 'Number');
+        obj.consecutive_failures = ApiClient.convertToType(data['consecutive_failures'], 'Number');
       if (data.hasOwnProperty('custom_category1'))
-        obj.customCategory1 = ApiClient.convertToType(data['custom_category1'], 'Number');
+        obj.custom_category1 = ApiClient.convertToType(data['custom_category1'], 'Number');
       if (data.hasOwnProperty('custom_category2'))
-        obj.customCategory2 = ApiClient.convertToType(data['custom_category2'], 'Number');
+        obj.custom_category2 = ApiClient.convertToType(data['custom_category2'], 'Number');
       if (data.hasOwnProperty('dispatch_time_max'))
-        obj.dispatchTimeMax = ApiClient.convertToType(data['dispatch_time_max'], 'Number');
+        obj.dispatch_time_max = ApiClient.convertToType(data['dispatch_time_max'], 'Number');
       if (data.hasOwnProperty('domestic_1_additional_cost'))
-        obj.domestic1AdditionalCost = ApiClient.convertToType(data['domestic_1_additional_cost'], 'Number');
+        obj.domestic_1_additional_cost = ApiClient.convertToType(data['domestic_1_additional_cost'], 'Number');
       if (data.hasOwnProperty('domestic_1_first_cost'))
-        obj.domestic1FirstCost = ApiClient.convertToType(data['domestic_1_first_cost'], 'Number');
+        obj.domestic_1_first_cost = ApiClient.convertToType(data['domestic_1_first_cost'], 'Number');
       if (data.hasOwnProperty('domestic_2_additional_cost'))
-        obj.domestic2AdditionalCost = ApiClient.convertToType(data['domestic_2_additional_cost'], 'Number');
+        obj.domestic_2_additional_cost = ApiClient.convertToType(data['domestic_2_additional_cost'], 'Number');
       if (data.hasOwnProperty('domestic_2_first_cost'))
-        obj.domestic2FirstCost = ApiClient.convertToType(data['domestic_2_first_cost'], 'Number');
+        obj.domestic_2_first_cost = ApiClient.convertToType(data['domestic_2_first_cost'], 'Number');
       if (data.hasOwnProperty('domestic_3_additional_cost'))
-        obj.domestic3AdditionalCost = ApiClient.convertToType(data['domestic_3_additional_cost'], 'Number');
+        obj.domestic_3_additional_cost = ApiClient.convertToType(data['domestic_3_additional_cost'], 'Number');
       if (data.hasOwnProperty('domestic_3_first_cost'))
-        obj.domestic3FirstCost = ApiClient.convertToType(data['domestic_3_first_cost'], 'Number');
+        obj.domestic_3_first_cost = ApiClient.convertToType(data['domestic_3_first_cost'], 'Number');
       if (data.hasOwnProperty('domestic_4_additional_cost'))
-        obj.domestic4AdditionalCost = ApiClient.convertToType(data['domestic_4_additional_cost'], 'Number');
+        obj.domestic_4_additional_cost = ApiClient.convertToType(data['domestic_4_additional_cost'], 'Number');
       if (data.hasOwnProperty('domestic_4_first_cost'))
-        obj.domestic4FirstCost = ApiClient.convertToType(data['domestic_4_first_cost'], 'Number');
+        obj.domestic_4_first_cost = ApiClient.convertToType(data['domestic_4_first_cost'], 'Number');
       if (data.hasOwnProperty('ebay_auction_id'))
-        obj.ebayAuctionId = ApiClient.convertToType(data['ebay_auction_id'], 'String');
+        obj.ebay_auction_id = ApiClient.convertToType(data['ebay_auction_id'], 'String');
       if (data.hasOwnProperty('ebay_specific_inventory'))
-        obj.ebaySpecificInventory = ApiClient.convertToType(data['ebay_specific_inventory'], 'Number');
+        obj.ebay_specific_inventory = ApiClient.convertToType(data['ebay_specific_inventory'], 'Number');
       if (data.hasOwnProperty('ebay_template_name'))
-        obj.ebayTemplateName = ApiClient.convertToType(data['ebay_template_name'], 'String');
+        obj.ebay_template_name = ApiClient.convertToType(data['ebay_template_name'], 'String');
       if (data.hasOwnProperty('ebay_template_oid'))
-        obj.ebayTemplateOid = ApiClient.convertToType(data['ebay_template_oid'], 'Number');
+        obj.ebay_template_oid = ApiClient.convertToType(data['ebay_template_oid'], 'Number');
       if (data.hasOwnProperty('end_time'))
-        obj.endTime = ApiClient.convertToType(data['end_time'], 'String');
+        obj.end_time = ApiClient.convertToType(data['end_time'], 'String');
       if (data.hasOwnProperty('free_shipping'))
-        obj.freeShipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
+        obj.free_shipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
       if (data.hasOwnProperty('free_shipping_method'))
-        obj.freeShippingMethod = ApiClient.convertToType(data['free_shipping_method'], 'String');
+        obj.free_shipping_method = ApiClient.convertToType(data['free_shipping_method'], 'String');
       if (data.hasOwnProperty('international_1_additional_cost'))
-        obj.international1AdditionalCost = ApiClient.convertToType(data['international_1_additional_cost'], 'Number');
+        obj.international_1_additional_cost = ApiClient.convertToType(data['international_1_additional_cost'], 'Number');
       if (data.hasOwnProperty('international_1_first_cost'))
-        obj.international1FirstCost = ApiClient.convertToType(data['international_1_first_cost'], 'Number');
+        obj.international_1_first_cost = ApiClient.convertToType(data['international_1_first_cost'], 'Number');
       if (data.hasOwnProperty('international_2_additional_cost'))
-        obj.international2AdditionalCost = ApiClient.convertToType(data['international_2_additional_cost'], 'Number');
+        obj.international_2_additional_cost = ApiClient.convertToType(data['international_2_additional_cost'], 'Number');
       if (data.hasOwnProperty('international_2_first_cost'))
-        obj.international2FirstCost = ApiClient.convertToType(data['international_2_first_cost'], 'Number');
+        obj.international_2_first_cost = ApiClient.convertToType(data['international_2_first_cost'], 'Number');
       if (data.hasOwnProperty('international_3_additional_cost'))
-        obj.international3AdditionalCost = ApiClient.convertToType(data['international_3_additional_cost'], 'Number');
+        obj.international_3_additional_cost = ApiClient.convertToType(data['international_3_additional_cost'], 'Number');
       if (data.hasOwnProperty('international_3_first_cost'))
-        obj.international3FirstCost = ApiClient.convertToType(data['international_3_first_cost'], 'Number');
+        obj.international_3_first_cost = ApiClient.convertToType(data['international_3_first_cost'], 'Number');
       if (data.hasOwnProperty('international_4_additional_cost'))
-        obj.international4AdditionalCost = ApiClient.convertToType(data['international_4_additional_cost'], 'Number');
+        obj.international_4_additional_cost = ApiClient.convertToType(data['international_4_additional_cost'], 'Number');
       if (data.hasOwnProperty('international_4_first_cost'))
-        obj.international4FirstCost = ApiClient.convertToType(data['international_4_first_cost'], 'Number');
+        obj.international_4_first_cost = ApiClient.convertToType(data['international_4_first_cost'], 'Number');
       if (data.hasOwnProperty('last_status_dts'))
-        obj.lastStatusDts = ApiClient.convertToType(data['last_status_dts'], 'String');
+        obj.last_status_dts = ApiClient.convertToType(data['last_status_dts'], 'String');
       if (data.hasOwnProperty('listed_dispatch_time_max'))
-        obj.listedDispatchTimeMax = ApiClient.convertToType(data['listed_dispatch_time_max'], 'Number');
+        obj.listed_dispatch_time_max = ApiClient.convertToType(data['listed_dispatch_time_max'], 'Number');
       if (data.hasOwnProperty('listed_ebay_template_oid'))
-        obj.listedEbayTemplateOid = ApiClient.convertToType(data['listed_ebay_template_oid'], 'Number');
+        obj.listed_ebay_template_oid = ApiClient.convertToType(data['listed_ebay_template_oid'], 'Number');
       if (data.hasOwnProperty('listing_dts'))
-        obj.listingDts = ApiClient.convertToType(data['listing_dts'], 'String');
+        obj.listing_dts = ApiClient.convertToType(data['listing_dts'], 'String');
       if (data.hasOwnProperty('listing_duration'))
-        obj.listingDuration = ApiClient.convertToType(data['listing_duration'], 'String');
+        obj.listing_duration = ApiClient.convertToType(data['listing_duration'], 'String');
       if (data.hasOwnProperty('listing_price'))
-        obj.listingPrice = ApiClient.convertToType(data['listing_price'], 'Number');
+        obj.listing_price = ApiClient.convertToType(data['listing_price'], 'Number');
       if (data.hasOwnProperty('listing_price_override'))
-        obj.listingPriceOverride = ApiClient.convertToType(data['listing_price_override'], 'Number');
+        obj.listing_price_override = ApiClient.convertToType(data['listing_price_override'], 'Number');
       if (data.hasOwnProperty('listing_type'))
-        obj.listingType = ApiClient.convertToType(data['listing_type'], 'String');
+        obj.listing_type = ApiClient.convertToType(data['listing_type'], 'String');
       if (data.hasOwnProperty('marketplace_analysis'))
-        obj.marketplaceAnalysis = ItemEbayMarketPlaceAnalysis.constructFromObject(data['marketplace_analysis']);
+        obj.marketplace_analysis = ItemEbayMarketPlaceAnalysis.constructFromObject(data['marketplace_analysis']);
       if (data.hasOwnProperty('marketplace_analysis_perform'))
-        obj.marketplaceAnalysisPerform = ApiClient.convertToType(data['marketplace_analysis_perform'], 'Boolean');
+        obj.marketplace_analysis_perform = ApiClient.convertToType(data['marketplace_analysis_perform'], 'Boolean');
       if (data.hasOwnProperty('marketplace_final_value_fee_percentage'))
-        obj.marketplaceFinalValueFeePercentage = ApiClient.convertToType(data['marketplace_final_value_fee_percentage'], 'Number');
+        obj.marketplace_final_value_fee_percentage = ApiClient.convertToType(data['marketplace_final_value_fee_percentage'], 'Number');
       if (data.hasOwnProperty('marketplace_last_check_dts'))
-        obj.marketplaceLastCheckDts = ApiClient.convertToType(data['marketplace_last_check_dts'], 'String');
+        obj.marketplace_last_check_dts = ApiClient.convertToType(data['marketplace_last_check_dts'], 'String');
       if (data.hasOwnProperty('marketplace_lowest'))
-        obj.marketplaceLowest = ApiClient.convertToType(data['marketplace_lowest'], 'Boolean');
+        obj.marketplace_lowest = ApiClient.convertToType(data['marketplace_lowest'], 'Boolean');
       if (data.hasOwnProperty('marketplace_map_violation'))
-        obj.marketplaceMapViolation = ApiClient.convertToType(data['marketplace_map_violation'], 'Boolean');
+        obj.marketplace_map_violation = ApiClient.convertToType(data['marketplace_map_violation'], 'Boolean');
       if (data.hasOwnProperty('marketplace_multiplier'))
-        obj.marketplaceMultiplier = ApiClient.convertToType(data['marketplace_multiplier'], 'Number');
+        obj.marketplace_multiplier = ApiClient.convertToType(data['marketplace_multiplier'], 'Number');
       if (data.hasOwnProperty('marketplace_other_price'))
-        obj.marketplaceOtherPrice = ApiClient.convertToType(data['marketplace_other_price'], 'Number');
+        obj.marketplace_other_price = ApiClient.convertToType(data['marketplace_other_price'], 'Number');
       if (data.hasOwnProperty('marketplace_other_seller'))
-        obj.marketplaceOtherSeller = ApiClient.convertToType(data['marketplace_other_seller'], 'String');
+        obj.marketplace_other_seller = ApiClient.convertToType(data['marketplace_other_seller'], 'String');
       if (data.hasOwnProperty('marketplace_other_shipping'))
-        obj.marketplaceOtherShipping = ApiClient.convertToType(data['marketplace_other_shipping'], 'Number');
+        obj.marketplace_other_shipping = ApiClient.convertToType(data['marketplace_other_shipping'], 'Number');
       if (data.hasOwnProperty('marketplace_other_total'))
-        obj.marketplaceOtherTotal = ApiClient.convertToType(data['marketplace_other_total'], 'Number');
+        obj.marketplace_other_total = ApiClient.convertToType(data['marketplace_other_total'], 'Number');
       if (data.hasOwnProperty('marketplace_our_additional_profit_potential'))
-        obj.marketplaceOurAdditionalProfitPotential = ApiClient.convertToType(data['marketplace_our_additional_profit_potential'], 'Number');
+        obj.marketplace_our_additional_profit_potential = ApiClient.convertToType(data['marketplace_our_additional_profit_potential'], 'Number');
       if (data.hasOwnProperty('marketplace_our_price'))
-        obj.marketplaceOurPrice = ApiClient.convertToType(data['marketplace_our_price'], 'Number');
+        obj.marketplace_our_price = ApiClient.convertToType(data['marketplace_our_price'], 'Number');
       if (data.hasOwnProperty('marketplace_our_profit'))
-        obj.marketplaceOurProfit = ApiClient.convertToType(data['marketplace_our_profit'], 'Number');
+        obj.marketplace_our_profit = ApiClient.convertToType(data['marketplace_our_profit'], 'Number');
       if (data.hasOwnProperty('marketplace_our_shipping'))
-        obj.marketplaceOurShipping = ApiClient.convertToType(data['marketplace_our_shipping'], 'Number');
+        obj.marketplace_our_shipping = ApiClient.convertToType(data['marketplace_our_shipping'], 'Number');
       if (data.hasOwnProperty('marketplace_our_total'))
-        obj.marketplaceOurTotal = ApiClient.convertToType(data['marketplace_our_total'], 'Number');
+        obj.marketplace_our_total = ApiClient.convertToType(data['marketplace_our_total'], 'Number');
       if (data.hasOwnProperty('marketplace_overhead'))
-        obj.marketplaceOverhead = ApiClient.convertToType(data['marketplace_overhead'], 'Number');
+        obj.marketplace_overhead = ApiClient.convertToType(data['marketplace_overhead'], 'Number');
       if (data.hasOwnProperty('marketplace_profitable'))
-        obj.marketplaceProfitable = ApiClient.convertToType(data['marketplace_profitable'], 'Boolean');
+        obj.marketplace_profitable = ApiClient.convertToType(data['marketplace_profitable'], 'Boolean');
       if (data.hasOwnProperty('next_attempt_dts'))
-        obj.nextAttemptDts = ApiClient.convertToType(data['next_attempt_dts'], 'String');
+        obj.next_attempt_dts = ApiClient.convertToType(data['next_attempt_dts'], 'String');
       if (data.hasOwnProperty('next_listing_duration'))
-        obj.nextListingDuration = ApiClient.convertToType(data['next_listing_duration'], 'String');
+        obj.next_listing_duration = ApiClient.convertToType(data['next_listing_duration'], 'String');
       if (data.hasOwnProperty('no_promotional_shipping'))
-        obj.noPromotionalShipping = ApiClient.convertToType(data['no_promotional_shipping'], 'Boolean');
+        obj.no_promotional_shipping = ApiClient.convertToType(data['no_promotional_shipping'], 'Boolean');
       if (data.hasOwnProperty('packaging_handling_costs'))
-        obj.packagingHandlingCosts = ApiClient.convertToType(data['packaging_handling_costs'], 'Number');
+        obj.packaging_handling_costs = ApiClient.convertToType(data['packaging_handling_costs'], 'Number');
       if (data.hasOwnProperty('previous_ebay_auction_id'))
-        obj.previousEbayAuctionId = ApiClient.convertToType(data['previous_ebay_auction_id'], 'String');
+        obj.previous_ebay_auction_id = ApiClient.convertToType(data['previous_ebay_auction_id'], 'String');
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
       if (data.hasOwnProperty('reserve_price'))
-        obj.reservePrice = ApiClient.convertToType(data['reserve_price'], 'Number');
+        obj.reserve_price = ApiClient.convertToType(data['reserve_price'], 'Number');
       if (data.hasOwnProperty('send_dimensions_and_weight'))
-        obj.sendDimensionsAndWeight = ApiClient.convertToType(data['send_dimensions_and_weight'], 'String');
+        obj.send_dimensions_and_weight = ApiClient.convertToType(data['send_dimensions_and_weight'], 'String');
       if (data.hasOwnProperty('start_time'))
-        obj.startTime = ApiClient.convertToType(data['start_time'], 'String');
+        obj.start_time = ApiClient.convertToType(data['start_time'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('target_dispatch_time_max'))
-        obj.targetDispatchTimeMax = ApiClient.convertToType(data['target_dispatch_time_max'], 'Number');
+        obj.target_dispatch_time_max = ApiClient.convertToType(data['target_dispatch_time_max'], 'Number');
     }
     return obj;
   }
@@ -205,374 +205,374 @@
 
   /**
    * e-Bay category ID
-   * @member {Number} categoryId
+   * @member {Number} category_id
    */
-  exports.prototype.categoryId = undefined;
+  exports.prototype.category_id = undefined;
 
   /**
    * Answers to category specific questions
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemEbayCategorySpecific>} categorySpecifics
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemEbayCategorySpecific>} category_specifics
    */
-  exports.prototype.categorySpecifics = undefined;
+  exports.prototype.category_specifics = undefined;
 
   /**
    * Description of the condition (e-Bay constant)
-   * @member {String} conditionDescription
+   * @member {String} condition_description
    */
-  exports.prototype.conditionDescription = undefined;
+  exports.prototype.condition_description = undefined;
 
   /**
    * Numerical ID of the condition (e-Bay constant)
-   * @member {Number} conditionId
+   * @member {Number} condition_id
    */
-  exports.prototype.conditionId = undefined;
+  exports.prototype.condition_id = undefined;
 
   /**
    * Number of consecutive failures trying to list this item
-   * @member {Number} consecutiveFailures
+   * @member {Number} consecutive_failures
    */
-  exports.prototype.consecutiveFailures = undefined;
+  exports.prototype.consecutive_failures = undefined;
 
   /**
    * e-Bay Store category 1
-   * @member {Number} customCategory1
+   * @member {Number} custom_category1
    */
-  exports.prototype.customCategory1 = undefined;
+  exports.prototype.custom_category1 = undefined;
 
   /**
    * e-Bay Store category 2
-   * @member {Number} customCategory2
+   * @member {Number} custom_category2
    */
-  exports.prototype.customCategory2 = undefined;
+  exports.prototype.custom_category2 = undefined;
 
   /**
    * Maximum number of days it will take to ship the item
-   * @member {Number} dispatchTimeMax
+   * @member {Number} dispatch_time_max
    */
-  exports.prototype.dispatchTimeMax = undefined;
+  exports.prototype.dispatch_time_max = undefined;
 
   /**
    * Domestic 1 method additional item cost
-   * @member {Number} domestic1AdditionalCost
+   * @member {Number} domestic_1_additional_cost
    */
-  exports.prototype.domestic1AdditionalCost = undefined;
+  exports.prototype.domestic_1_additional_cost = undefined;
 
   /**
    * Domestic 1 method first item cost
-   * @member {Number} domestic1FirstCost
+   * @member {Number} domestic_1_first_cost
    */
-  exports.prototype.domestic1FirstCost = undefined;
+  exports.prototype.domestic_1_first_cost = undefined;
 
   /**
    * Domestic 2 method additional item cost
-   * @member {Number} domestic2AdditionalCost
+   * @member {Number} domestic_2_additional_cost
    */
-  exports.prototype.domestic2AdditionalCost = undefined;
+  exports.prototype.domestic_2_additional_cost = undefined;
 
   /**
    * Domestic 2 method first item cost
-   * @member {Number} domestic2FirstCost
+   * @member {Number} domestic_2_first_cost
    */
-  exports.prototype.domestic2FirstCost = undefined;
+  exports.prototype.domestic_2_first_cost = undefined;
 
   /**
    * Domestic 3 method additional item cost
-   * @member {Number} domestic3AdditionalCost
+   * @member {Number} domestic_3_additional_cost
    */
-  exports.prototype.domestic3AdditionalCost = undefined;
+  exports.prototype.domestic_3_additional_cost = undefined;
 
   /**
    * Domestic 3 method first item cost
-   * @member {Number} domestic3FirstCost
+   * @member {Number} domestic_3_first_cost
    */
-  exports.prototype.domestic3FirstCost = undefined;
+  exports.prototype.domestic_3_first_cost = undefined;
 
   /**
    * Domestic 4 method additional item cost
-   * @member {Number} domestic4AdditionalCost
+   * @member {Number} domestic_4_additional_cost
    */
-  exports.prototype.domestic4AdditionalCost = undefined;
+  exports.prototype.domestic_4_additional_cost = undefined;
 
   /**
    * Domestic 4 method first item cost
-   * @member {Number} domestic4FirstCost
+   * @member {Number} domestic_4_first_cost
    */
-  exports.prototype.domestic4FirstCost = undefined;
+  exports.prototype.domestic_4_first_cost = undefined;
 
   /**
    * If listed, this is the e-Bay auction id
-   * @member {String} ebayAuctionId
+   * @member {String} ebay_auction_id
    */
-  exports.prototype.ebayAuctionId = undefined;
+  exports.prototype.ebay_auction_id = undefined;
 
   /**
    * e-Bay specific inventory
-   * @member {Number} ebaySpecificInventory
+   * @member {Number} ebay_specific_inventory
    */
-  exports.prototype.ebaySpecificInventory = undefined;
+  exports.prototype.ebay_specific_inventory = undefined;
 
   /**
    * The template name to use hwen rendering the e-Bay listing
-   * @member {String} ebayTemplateName
+   * @member {String} ebay_template_name
    */
-  exports.prototype.ebayTemplateName = undefined;
+  exports.prototype.ebay_template_name = undefined;
 
   /**
    * The template object identifier to use when rendering the e-Bay listing
-   * @member {Number} ebayTemplateOid
+   * @member {Number} ebay_template_oid
    */
-  exports.prototype.ebayTemplateOid = undefined;
+  exports.prototype.ebay_template_oid = undefined;
 
   /**
    * Date/time of the auction end
-   * @member {String} endTime
+   * @member {String} end_time
    */
-  exports.prototype.endTime = undefined;
+  exports.prototype.end_time = undefined;
 
   /**
    * True if item receives free shipping
-   * @member {Boolean} freeShipping
+   * @member {Boolean} free_shipping
    */
-  exports.prototype.freeShipping = undefined;
+  exports.prototype.free_shipping = undefined;
 
   /**
    * The method that is free for free shipping
-   * @member {String} freeShippingMethod
+   * @member {String} free_shipping_method
    */
-  exports.prototype.freeShippingMethod = undefined;
+  exports.prototype.free_shipping_method = undefined;
 
   /**
    * International 1 method additional item cost
-   * @member {Number} international1AdditionalCost
+   * @member {Number} international_1_additional_cost
    */
-  exports.prototype.international1AdditionalCost = undefined;
+  exports.prototype.international_1_additional_cost = undefined;
 
   /**
    * International 1 method first item cost
-   * @member {Number} international1FirstCost
+   * @member {Number} international_1_first_cost
    */
-  exports.prototype.international1FirstCost = undefined;
+  exports.prototype.international_1_first_cost = undefined;
 
   /**
    * International 2 method additional item cost
-   * @member {Number} international2AdditionalCost
+   * @member {Number} international_2_additional_cost
    */
-  exports.prototype.international2AdditionalCost = undefined;
+  exports.prototype.international_2_additional_cost = undefined;
 
   /**
    * International 2 method first item cost
-   * @member {Number} international2FirstCost
+   * @member {Number} international_2_first_cost
    */
-  exports.prototype.international2FirstCost = undefined;
+  exports.prototype.international_2_first_cost = undefined;
 
   /**
    * International 3 method additional item cost
-   * @member {Number} international3AdditionalCost
+   * @member {Number} international_3_additional_cost
    */
-  exports.prototype.international3AdditionalCost = undefined;
+  exports.prototype.international_3_additional_cost = undefined;
 
   /**
    * International 3 method first item cost
-   * @member {Number} international3FirstCost
+   * @member {Number} international_3_first_cost
    */
-  exports.prototype.international3FirstCost = undefined;
+  exports.prototype.international_3_first_cost = undefined;
 
   /**
    * International 4 method additional item cost
-   * @member {Number} international4AdditionalCost
+   * @member {Number} international_4_additional_cost
    */
-  exports.prototype.international4AdditionalCost = undefined;
+  exports.prototype.international_4_additional_cost = undefined;
 
   /**
    * International 4 method first item cost
-   * @member {Number} international4FirstCost
+   * @member {Number} international_4_first_cost
    */
-  exports.prototype.international4FirstCost = undefined;
+  exports.prototype.international_4_first_cost = undefined;
 
   /**
    * Date/time of the last status check
-   * @member {String} lastStatusDts
+   * @member {String} last_status_dts
    */
-  exports.prototype.lastStatusDts = undefined;
+  exports.prototype.last_status_dts = undefined;
 
   /**
    * Current listing dispatch time maximum
-   * @member {Number} listedDispatchTimeMax
+   * @member {Number} listed_dispatch_time_max
    */
-  exports.prototype.listedDispatchTimeMax = undefined;
+  exports.prototype.listed_dispatch_time_max = undefined;
 
   /**
    * The template object identifier used for the listing
-   * @member {Number} listedEbayTemplateOid
+   * @member {Number} listed_ebay_template_oid
    */
-  exports.prototype.listedEbayTemplateOid = undefined;
+  exports.prototype.listed_ebay_template_oid = undefined;
 
   /**
    * Date/time of the listing
-   * @member {String} listingDts
+   * @member {String} listing_dts
    */
-  exports.prototype.listingDts = undefined;
+  exports.prototype.listing_dts = undefined;
 
   /**
    * The duration of the listing
-   * @member {String} listingDuration
+   * @member {String} listing_duration
    */
-  exports.prototype.listingDuration = undefined;
+  exports.prototype.listing_duration = undefined;
 
   /**
    * Price to list the item at
-   * @member {Number} listingPrice
+   * @member {Number} listing_price
    */
-  exports.prototype.listingPrice = undefined;
+  exports.prototype.listing_price = undefined;
 
   /**
    * The price to list the item at if different than the regular UltraCart item price
-   * @member {Number} listingPriceOverride
+   * @member {Number} listing_price_override
    */
-  exports.prototype.listingPriceOverride = undefined;
+  exports.prototype.listing_price_override = undefined;
 
   /**
    * The type of e-Bay listing
-   * @member {String} listingType
+   * @member {String} listing_type
    */
-  exports.prototype.listingType = undefined;
+  exports.prototype.listing_type = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis} marketplaceAnalysis
+   * @member {module:com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis} marketplace_analysis
    */
-  exports.prototype.marketplaceAnalysis = undefined;
+  exports.prototype.marketplace_analysis = undefined;
 
   /**
    * True if marketplace analysis should be performed
-   * @member {Boolean} marketplaceAnalysisPerform
+   * @member {Boolean} marketplace_analysis_perform
    */
-  exports.prototype.marketplaceAnalysisPerform = undefined;
+  exports.prototype.marketplace_analysis_perform = undefined;
 
   /**
    * Marketplace FVF percentage
-   * @member {Number} marketplaceFinalValueFeePercentage
+   * @member {Number} marketplace_final_value_fee_percentage
    */
-  exports.prototype.marketplaceFinalValueFeePercentage = undefined;
+  exports.prototype.marketplace_final_value_fee_percentage = undefined;
 
   /**
    * Date/time of the marketplace analysis last check
-   * @member {String} marketplaceLastCheckDts
+   * @member {String} marketplace_last_check_dts
    */
-  exports.prototype.marketplaceLastCheckDts = undefined;
+  exports.prototype.marketplace_last_check_dts = undefined;
 
   /**
    * True if we are the lowest offer in the marketplace
-   * @member {Boolean} marketplaceLowest
+   * @member {Boolean} marketplace_lowest
    */
-  exports.prototype.marketplaceLowest = undefined;
+  exports.prototype.marketplace_lowest = undefined;
 
   /**
    * True if another seller is violating MAP
-   * @member {Boolean} marketplaceMapViolation
+   * @member {Boolean} marketplace_map_violation
    */
-  exports.prototype.marketplaceMapViolation = undefined;
+  exports.prototype.marketplace_map_violation = undefined;
 
   /**
    * Marketplace multiplier
-   * @member {Number} marketplaceMultiplier
+   * @member {Number} marketplace_multiplier
    */
-  exports.prototype.marketplaceMultiplier = undefined;
+  exports.prototype.marketplace_multiplier = undefined;
 
   /**
    * Marketplace other price
-   * @member {Number} marketplaceOtherPrice
+   * @member {Number} marketplace_other_price
    */
-  exports.prototype.marketplaceOtherPrice = undefined;
+  exports.prototype.marketplace_other_price = undefined;
 
   /**
    * Marketplace other seller
-   * @member {String} marketplaceOtherSeller
+   * @member {String} marketplace_other_seller
    */
-  exports.prototype.marketplaceOtherSeller = undefined;
+  exports.prototype.marketplace_other_seller = undefined;
 
   /**
    * Marketplace other shipping
-   * @member {Number} marketplaceOtherShipping
+   * @member {Number} marketplace_other_shipping
    */
-  exports.prototype.marketplaceOtherShipping = undefined;
+  exports.prototype.marketplace_other_shipping = undefined;
 
   /**
    * Marketplace other total
-   * @member {Number} marketplaceOtherTotal
+   * @member {Number} marketplace_other_total
    */
-  exports.prototype.marketplaceOtherTotal = undefined;
+  exports.prototype.marketplace_other_total = undefined;
 
   /**
    * Marketplace our additional profit potential
-   * @member {Number} marketplaceOurAdditionalProfitPotential
+   * @member {Number} marketplace_our_additional_profit_potential
    */
-  exports.prototype.marketplaceOurAdditionalProfitPotential = undefined;
+  exports.prototype.marketplace_our_additional_profit_potential = undefined;
 
   /**
    * Marketplace our price
-   * @member {Number} marketplaceOurPrice
+   * @member {Number} marketplace_our_price
    */
-  exports.prototype.marketplaceOurPrice = undefined;
+  exports.prototype.marketplace_our_price = undefined;
 
   /**
    * Marketplace our profit
-   * @member {Number} marketplaceOurProfit
+   * @member {Number} marketplace_our_profit
    */
-  exports.prototype.marketplaceOurProfit = undefined;
+  exports.prototype.marketplace_our_profit = undefined;
 
   /**
    * Marketplace our shipping
-   * @member {Number} marketplaceOurShipping
+   * @member {Number} marketplace_our_shipping
    */
-  exports.prototype.marketplaceOurShipping = undefined;
+  exports.prototype.marketplace_our_shipping = undefined;
 
   /**
    * Marketplace our total
-   * @member {Number} marketplaceOurTotal
+   * @member {Number} marketplace_our_total
    */
-  exports.prototype.marketplaceOurTotal = undefined;
+  exports.prototype.marketplace_our_total = undefined;
 
   /**
    * Marketplace overhead
-   * @member {Number} marketplaceOverhead
+   * @member {Number} marketplace_overhead
    */
-  exports.prototype.marketplaceOverhead = undefined;
+  exports.prototype.marketplace_overhead = undefined;
 
   /**
    * True if our listing is profitable to sell
-   * @member {Boolean} marketplaceProfitable
+   * @member {Boolean} marketplace_profitable
    */
-  exports.prototype.marketplaceProfitable = undefined;
+  exports.prototype.marketplace_profitable = undefined;
 
   /**
    * Date/time for the next attempt to list
-   * @member {String} nextAttemptDts
+   * @member {String} next_attempt_dts
    */
-  exports.prototype.nextAttemptDts = undefined;
+  exports.prototype.next_attempt_dts = undefined;
 
   /**
    * The next listing duration to use when the current listing ends.
-   * @member {String} nextListingDuration
+   * @member {String} next_listing_duration
    */
-  exports.prototype.nextListingDuration = undefined;
+  exports.prototype.next_listing_duration = undefined;
 
   /**
    * True if the item should not qualify for promotional shipping
-   * @member {Boolean} noPromotionalShipping
+   * @member {Boolean} no_promotional_shipping
    */
-  exports.prototype.noPromotionalShipping = undefined;
+  exports.prototype.no_promotional_shipping = undefined;
 
   /**
    * Packaging and handling costs
-   * @member {Number} packagingHandlingCosts
+   * @member {Number} packaging_handling_costs
    */
-  exports.prototype.packagingHandlingCosts = undefined;
+  exports.prototype.packaging_handling_costs = undefined;
 
   /**
    * Previous e-Bay auction id
-   * @member {String} previousEbayAuctionId
+   * @member {String} previous_ebay_auction_id
    */
-  exports.prototype.previousEbayAuctionId = undefined;
+  exports.prototype.previous_ebay_auction_id = undefined;
 
   /**
    * Quantity available of the item
@@ -582,21 +582,21 @@
 
   /**
    * Reserve price
-   * @member {Number} reservePrice
+   * @member {Number} reserve_price
    */
-  exports.prototype.reservePrice = undefined;
+  exports.prototype.reserve_price = undefined;
 
   /**
    * How to send the item dimensions and weights to e-Bay
-   * @member {String} sendDimensionsAndWeight
+   * @member {String} send_dimensions_and_weight
    */
-  exports.prototype.sendDimensionsAndWeight = undefined;
+  exports.prototype.send_dimensions_and_weight = undefined;
 
   /**
    * Date/time of the auction start
-   * @member {String} startTime
+   * @member {String} start_time
    */
-  exports.prototype.startTime = undefined;
+  exports.prototype.start_time = undefined;
 
   /**
    * Status of the item's listing
@@ -606,9 +606,9 @@
 
   /**
    * Typical number of days it will take to ship the item
-   * @member {Number} targetDispatchTimeMax
+   * @member {Number} target_dispatch_time_max
    */
-  exports.prototype.targetDispatchTimeMax = undefined;
+  exports.prototype.target_dispatch_time_max = undefined;
 
   return exports;
 

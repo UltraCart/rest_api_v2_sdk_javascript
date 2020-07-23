@@ -56,48 +56,48 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('has_linked_shipment'))
-        obj.hasLinkedShipment = ApiClient.convertToType(data['has_linked_shipment'], 'Boolean');
+        obj.has_linked_shipment = ApiClient.convertToType(data['has_linked_shipment'], 'Boolean');
       if (data.hasOwnProperty('linked_shipment'))
-        obj.linkedShipment = ApiClient.convertToType(data['linked_shipment'], 'Boolean');
+        obj.linked_shipment = ApiClient.convertToType(data['linked_shipment'], 'Boolean');
       if (data.hasOwnProperty('linked_shipment_channel_partner_order_ids'))
-        obj.linkedShipmentChannelPartnerOrderIds = ApiClient.convertToType(data['linked_shipment_channel_partner_order_ids'], ['String']);
+        obj.linked_shipment_channel_partner_order_ids = ApiClient.convertToType(data['linked_shipment_channel_partner_order_ids'], ['String']);
       if (data.hasOwnProperty('linked_shipment_order_ids'))
-        obj.linkedShipmentOrderIds = ApiClient.convertToType(data['linked_shipment_order_ids'], ['String']);
+        obj.linked_shipment_order_ids = ApiClient.convertToType(data['linked_shipment_order_ids'], ['String']);
       if (data.hasOwnProperty('linked_shipment_to_order_id'))
-        obj.linkedShipmentToOrderId = ApiClient.convertToType(data['linked_shipment_to_order_id'], 'String');
+        obj.linked_shipment_to_order_id = ApiClient.convertToType(data['linked_shipment_to_order_id'], 'String');
     }
     return obj;
   }
 
   /**
    * True if this order has child linked shipments
-   * @member {Boolean} hasLinkedShipment
+   * @member {Boolean} has_linked_shipment
    */
-  exports.prototype.hasLinkedShipment = undefined;
+  exports.prototype.has_linked_shipment = undefined;
 
   /**
    * True if this order is linked to another parent order
-   * @member {Boolean} linkedShipment
+   * @member {Boolean} linked_shipment
    */
-  exports.prototype.linkedShipment = undefined;
+  exports.prototype.linked_shipment = undefined;
 
   /**
    * The child linked shipment channel partner order ids
-   * @member {Array.<String>} linkedShipmentChannelPartnerOrderIds
+   * @member {Array.<String>} linked_shipment_channel_partner_order_ids
    */
-  exports.prototype.linkedShipmentChannelPartnerOrderIds = undefined;
+  exports.prototype.linked_shipment_channel_partner_order_ids = undefined;
 
   /**
    * The child linked shipment order ids
-   * @member {Array.<String>} linkedShipmentOrderIds
+   * @member {Array.<String>} linked_shipment_order_ids
    */
-  exports.prototype.linkedShipmentOrderIds = undefined;
+  exports.prototype.linked_shipment_order_ids = undefined;
 
   /**
    * The parent order id that this one is linked to
-   * @member {String} linkedShipmentToOrderId
+   * @member {String} linked_shipment_to_order_id
    */
-  exports.prototype.linkedShipmentToOrderId = undefined;
+  exports.prototype.linked_shipment_to_order_id = undefined;
 
   return exports;
 

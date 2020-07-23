@@ -56,13 +56,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('additional_cost'))
-        obj.additionalCost = Currency.constructFromObject(data['additional_cost']);
+        obj.additional_cost = Currency.constructFromObject(data['additional_cost']);
       if (data.hasOwnProperty('additional_weight'))
-        obj.additionalWeight = Weight.constructFromObject(data['additional_weight']);
+        obj.additional_weight = Weight.constructFromObject(data['additional_weight']);
       if (data.hasOwnProperty('default_value'))
-        obj.defaultValue = ApiClient.convertToType(data['default_value'], 'Boolean');
+        obj.default_value = ApiClient.convertToType(data['default_value'], 'Boolean');
       if (data.hasOwnProperty('display_order'))
-        obj.displayOrder = ApiClient.convertToType(data['display_order'], 'Number');
+        obj.display_order = ApiClient.convertToType(data['display_order'], 'Number');
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'String');
     }
@@ -70,26 +70,26 @@
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} additionalCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} additional_cost
    */
-  exports.prototype.additionalCost = undefined;
+  exports.prototype.additional_cost = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Weight} additionalWeight
+   * @member {module:com.ultracart.admin.v2.models/Weight} additional_weight
    */
-  exports.prototype.additionalWeight = undefined;
+  exports.prototype.additional_weight = undefined;
 
   /**
    * True if this is the default value
-   * @member {Boolean} defaultValue
+   * @member {Boolean} default_value
    */
-  exports.prototype.defaultValue = undefined;
+  exports.prototype.default_value = undefined;
 
   /**
    * Display order of the option value
-   * @member {Number} displayOrder
+   * @member {Number} display_order
    */
-  exports.prototype.displayOrder = undefined;
+  exports.prototype.display_order = undefined;
 
   /**
    * Value of the option the customer can select

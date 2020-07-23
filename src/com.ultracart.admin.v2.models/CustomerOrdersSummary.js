@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('first_order_dts'))
-        obj.firstOrderDts = ApiClient.convertToType(data['first_order_dts'], 'String');
+        obj.first_order_dts = ApiClient.convertToType(data['first_order_dts'], 'String');
       if (data.hasOwnProperty('last_order_dts'))
-        obj.lastOrderDts = ApiClient.convertToType(data['last_order_dts'], 'String');
+        obj.last_order_dts = ApiClient.convertToType(data['last_order_dts'], 'String');
       if (data.hasOwnProperty('order_count'))
-        obj.orderCount = ApiClient.convertToType(data['order_count'], 'Number');
+        obj.order_count = ApiClient.convertToType(data['order_count'], 'Number');
       if (data.hasOwnProperty('total'))
         obj.total = ApiClient.convertToType(data['total'], 'Number');
     }
@@ -69,21 +69,21 @@
 
   /**
    * First order date
-   * @member {String} firstOrderDts
+   * @member {String} first_order_dts
    */
-  exports.prototype.firstOrderDts = undefined;
+  exports.prototype.first_order_dts = undefined;
 
   /**
    * Last order date
-   * @member {String} lastOrderDts
+   * @member {String} last_order_dts
    */
-  exports.prototype.lastOrderDts = undefined;
+  exports.prototype.last_order_dts = undefined;
 
   /**
    * Total number of orders
-   * @member {Number} orderCount
+   * @member {Number} order_count
    */
-  exports.prototype.orderCount = undefined;
+  exports.prototype.order_count = undefined;
 
   /**
    * Total amount associated with the orders

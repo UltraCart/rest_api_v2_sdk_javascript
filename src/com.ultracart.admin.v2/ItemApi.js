@@ -59,20 +59,20 @@
     /**
      * Delete an item
      * Delete an item on the UltraCart account. 
-     * @param {Number} merchantItemOid The item oid to delete.
+     * @param {Number} merchant_item_oid The item oid to delete.
      * @param {module:com.ultracart.admin.v2/ItemApi~deleteItemCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteItem = function(merchantItemOid, callback) {
+    this.deleteItem = function(merchant_item_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'merchantItemOid' is set
-      if (merchantItemOid === undefined || merchantItemOid === null) {
-        throw new Error("Missing the required parameter 'merchantItemOid' when calling deleteItem");
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling deleteItem");
       }
 
 
       var pathParams = {
-        'merchant_item_oid': merchantItemOid
+        'merchant_item_oid': merchant_item_oid
       };
       var queryParams = {
       };
@@ -106,29 +106,29 @@
     /**
      * Retrieve an item
      * Retrieves a single item using the specified item oid. 
-     * @param {Number} merchantItemOid The item oid to retrieve.
+     * @param {Number} merchant_item_oid The item oid to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/ItemApi~getItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemResponse}
      */
-    this.getItem = function(merchantItemOid, opts, callback) {
+    this.getItem = function(merchant_item_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'merchantItemOid' is set
-      if (merchantItemOid === undefined || merchantItemOid === null) {
-        throw new Error("Missing the required parameter 'merchantItemOid' when calling getItem");
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling getItem");
       }
 
 
       var pathParams = {
-        'merchant_item_oid': merchantItemOid
+        'merchant_item_oid': merchant_item_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
-        '_placeholders': opts['placeholders'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };
@@ -160,29 +160,29 @@
     /**
      * Retrieve an item by item id
      * Retrieves a single item using the specified item id. 
-     * @param {String} merchantItemId The item id to retrieve.
+     * @param {String} merchant_item_id The item id to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/ItemApi~getItemByMerchantItemIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemResponse}
      */
-    this.getItemByMerchantItemId = function(merchantItemId, opts, callback) {
+    this.getItemByMerchantItemId = function(merchant_item_id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'merchantItemId' is set
-      if (merchantItemId === undefined || merchantItemId === null) {
-        throw new Error("Missing the required parameter 'merchantItemId' when calling getItemByMerchantItemId");
+      // verify the required parameter 'merchant_item_id' is set
+      if (merchant_item_id === undefined || merchant_item_id === null) {
+        throw new Error("Missing the required parameter 'merchant_item_id' when calling getItemByMerchantItemId");
       }
 
 
       var pathParams = {
-        'merchant_item_id': merchantItemId
+        'merchant_item_id': merchant_item_id
       };
       var queryParams = {
-        '_expand': opts['expand'],
-        '_placeholders': opts['placeholders'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };
@@ -215,14 +215,14 @@
      * Retrieve items
      * Retrieves a group of items from the account.  If no parameters are specified, all items will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.parentCategoryId The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
-     * @param {String} opts.parentCategoryPath The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Default 100, Max 2000) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.since Fetch items that have been created/modified since this date/time.
-     * @param {String} opts.sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Number} opts.parent_category_id The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
+     * @param {String} opts.parent_category_path The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Default 100, Max 2000) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch items that have been created/modified since this date/time.
+     * @param {String} opts._sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/ItemApi~getItemsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemsResponse}
      */
@@ -234,14 +234,14 @@
       var pathParams = {
       };
       var queryParams = {
-        'parent_category_id': opts['parentCategoryId'],
-        'parent_category_path': opts['parentCategoryPath'],
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_since': opts['since'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
-        '_placeholders': opts['placeholders'],
+        'parent_category_id': opts['parent_category_id'],
+        'parent_category_path': opts['parent_category_path'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };
@@ -274,7 +274,7 @@
      * Retrieve pricing tiers
      * Retrieves the pricing tiers 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/ItemApi~getPricingTiersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/PricingTiersResponse}
      */
@@ -286,7 +286,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -320,8 +320,8 @@
      * Create a new item on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/Item} item Item to create
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/ItemApi~insertItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemResponse}
      */
@@ -338,8 +338,8 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
-        '_placeholders': opts['placeholders'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };
@@ -372,14 +372,14 @@
      * Update an item
      * Update a new item on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/Item} item Item to update
-     * @param {Number} merchantItemOid The item oid to update.
+     * @param {Number} merchant_item_oid The item oid to update.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/ItemApi~updateItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemResponse}
      */
-    this.updateItem = function(item, merchantItemOid, opts, callback) {
+    this.updateItem = function(item, merchant_item_oid, opts, callback) {
       opts = opts || {};
       var postBody = item;
 
@@ -388,18 +388,18 @@
         throw new Error("Missing the required parameter 'item' when calling updateItem");
       }
 
-      // verify the required parameter 'merchantItemOid' is set
-      if (merchantItemOid === undefined || merchantItemOid === null) {
-        throw new Error("Missing the required parameter 'merchantItemOid' when calling updateItem");
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling updateItem");
       }
 
 
       var pathParams = {
-        'merchant_item_oid': merchantItemOid
+        'merchant_item_oid': merchant_item_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
-        '_placeholders': opts['placeholders'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
       };
       var collectionQueryParams = {
       };
@@ -431,30 +431,30 @@
     /**
      * Update multiple items
      * Update multiple item on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.models/ItemsRequest} itemsRequest Items to update (synchronous maximum 20 / asynchronous maximum 100)
+     * @param {module:com.ultracart.admin.v2.models/ItemsRequest} items_request Items to update (synchronous maximum 20 / asynchronous maximum 100)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-     * @param {Boolean} opts.async True if the operation should be run async.  No result returned
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Boolean} opts._async True if the operation should be run async.  No result returned
      * @param {module:com.ultracart.admin.v2/ItemApi~updateItemsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemsResponse}
      */
-    this.updateItems = function(itemsRequest, opts, callback) {
+    this.updateItems = function(items_request, opts, callback) {
       opts = opts || {};
-      var postBody = itemsRequest;
+      var postBody = items_request;
 
-      // verify the required parameter 'itemsRequest' is set
-      if (itemsRequest === undefined || itemsRequest === null) {
-        throw new Error("Missing the required parameter 'itemsRequest' when calling updateItems");
+      // verify the required parameter 'items_request' is set
+      if (items_request === undefined || items_request === null) {
+        throw new Error("Missing the required parameter 'items_request' when calling updateItems");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
-        '_placeholders': opts['placeholders'],
-        '_async': opts['async'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
+        '_async': opts['_async'],
       };
       var collectionQueryParams = {
       };

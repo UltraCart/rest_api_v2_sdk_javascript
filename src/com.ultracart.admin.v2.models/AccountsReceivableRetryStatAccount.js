@@ -58,11 +58,11 @@
       if (data.hasOwnProperty('days'))
         obj.days = ApiClient.convertToType(data['days'], [AccountsReceivableRetryStatMetrics]);
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('overall'))
         obj.overall = AccountsReceivableRetryStatMetrics.constructFromObject(data['overall']);
       if (data.hasOwnProperty('revenue_for_period'))
-        obj.revenueForPeriod = ApiClient.convertToType(data['revenue_for_period'], [AccountsReceivableRetryStatRevenue]);
+        obj.revenue_for_period = ApiClient.convertToType(data['revenue_for_period'], [AccountsReceivableRetryStatRevenue]);
     }
     return obj;
   }
@@ -73,9 +73,9 @@
   exports.prototype.days = undefined;
 
   /**
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatMetrics} overall
@@ -83,9 +83,9 @@
   exports.prototype.overall = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatRevenue>} revenueForPeriod
+   * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatRevenue>} revenue_for_period
    */
-  exports.prototype.revenueForPeriod = undefined;
+  exports.prototype.revenue_for_period = undefined;
 
   return exports;
 

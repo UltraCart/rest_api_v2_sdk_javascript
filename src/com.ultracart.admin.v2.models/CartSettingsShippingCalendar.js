@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('blackouts'))
         obj.blackouts = ApiClient.convertToType(data['blackouts'], ['String']);
       if (data.hasOwnProperty('days_of_week'))
-        obj.daysOfWeek = ApiClient.convertToType(data['days_of_week'], ['Boolean']);
+        obj.days_of_week = ApiClient.convertToType(data['days_of_week'], ['Boolean']);
       if (data.hasOwnProperty('earliest'))
         obj.earliest = ApiClient.convertToType(data['earliest'], 'String');
       if (data.hasOwnProperty('require'))
@@ -77,9 +77,9 @@
 
   /**
    * Days of week that should be enabled on the calendar (0 - Sunday through 6 - Saturday)
-   * @member {Array.<Boolean>} daysOfWeek
+   * @member {Array.<Boolean>} days_of_week
    */
-  exports.prototype.daysOfWeek = undefined;
+  exports.prototype.days_of_week = undefined;
 
   /**
    * The earliest date that can be selected on the calendar

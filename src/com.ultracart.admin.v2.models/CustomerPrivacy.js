@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('last_update_dts'))
-        obj.lastUpdateDts = ApiClient.convertToType(data['last_update_dts'], 'String');
+        obj.last_update_dts = ApiClient.convertToType(data['last_update_dts'], 'String');
       if (data.hasOwnProperty('marketing'))
         obj.marketing = ApiClient.convertToType(data['marketing'], 'Boolean');
       if (data.hasOwnProperty('preference'))
@@ -69,9 +69,9 @@
 
   /**
    * Last update date
-   * @member {String} lastUpdateDts
+   * @member {String} last_update_dts
    */
-  exports.prototype.lastUpdateDts = undefined;
+  exports.prototype.last_update_dts = undefined;
 
   /**
    * The customer has opted in to marketing

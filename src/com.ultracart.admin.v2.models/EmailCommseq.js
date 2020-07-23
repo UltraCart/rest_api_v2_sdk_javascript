@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('email_communication_sequence_steps'))
-        obj.emailCommunicationSequenceSteps = ApiClient.convertToType(data['email_communication_sequence_steps'], [EmailCommseqStep]);
+        obj.email_communication_sequence_steps = ApiClient.convertToType(data['email_communication_sequence_steps'], [EmailCommseqStep]);
       if (data.hasOwnProperty('email_communication_sequence_uuid'))
-        obj.emailCommunicationSequenceUuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+        obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
     }
     return obj;
   }
 
   /**
    * Array of steps
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} emailCommunicationSequenceSteps
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} email_communication_sequence_steps
    */
-  exports.prototype.emailCommunicationSequenceSteps = undefined;
+  exports.prototype.email_communication_sequence_steps = undefined;
 
   /**
    * Email commseq UUID
-   * @member {String} emailCommunicationSequenceUuid
+   * @member {String} email_communication_sequence_uuid
    */
-  exports.prototype.emailCommunicationSequenceUuid = undefined;
+  exports.prototype.email_communication_sequence_uuid = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   return exports;
 

@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('salesforce_opportunity_id'))
-        obj.salesforceOpportunityId = ApiClient.convertToType(data['salesforce_opportunity_id'], 'String');
+        obj.salesforce_opportunity_id = ApiClient.convertToType(data['salesforce_opportunity_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Salesforce.com opportunity id
-   * @member {String} salesforceOpportunityId
+   * @member {String} salesforce_opportunity_id
    */
-  exports.prototype.salesforceOpportunityId = undefined;
+  exports.prototype.salesforce_opportunity_id = undefined;
 
   return exports;
 

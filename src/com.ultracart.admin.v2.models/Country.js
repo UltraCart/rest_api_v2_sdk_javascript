@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('iso_2_code'))
-        obj.iso2Code = ApiClient.convertToType(data['iso_2_code'], 'String');
+        obj.iso_2_code = ApiClient.convertToType(data['iso_2_code'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
     }
@@ -65,9 +65,9 @@
 
   /**
    * iso_2_code
-   * @member {String} iso2Code
+   * @member {String} iso_2_code
    */
-  exports.prototype.iso2Code = undefined;
+  exports.prototype.iso_2_code = undefined;
 
   /**
    * name

@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('account_id'))
-        obj.accountId = ApiClient.convertToType(data['account_id'], 'String');
+        obj.account_id = ApiClient.convertToType(data['account_id'], 'String');
       if (data.hasOwnProperty('active'))
         obj.active = ApiClient.convertToType(data['active'], 'Boolean');
       if (data.hasOwnProperty('avalara_oid'))
-        obj.avalaraOid = ApiClient.convertToType(data['avalara_oid'], 'Number');
+        obj.avalara_oid = ApiClient.convertToType(data['avalara_oid'], 'Number');
       if (data.hasOwnProperty('company_id'))
-        obj.companyId = ApiClient.convertToType(data['company_id'], 'String');
+        obj.company_id = ApiClient.convertToType(data['company_id'], 'String');
       if (data.hasOwnProperty('enable_upc'))
-        obj.enableUpc = ApiClient.convertToType(data['enable_upc'], 'Boolean');
+        obj.enable_upc = ApiClient.convertToType(data['enable_upc'], 'Boolean');
       if (data.hasOwnProperty('estimate_only'))
-        obj.estimateOnly = ApiClient.convertToType(data['estimate_only'], 'Boolean');
+        obj.estimate_only = ApiClient.convertToType(data['estimate_only'], 'Boolean');
       if (data.hasOwnProperty('guest_customer_code'))
-        obj.guestCustomerCode = ApiClient.convertToType(data['guest_customer_code'], 'String');
+        obj.guest_customer_code = ApiClient.convertToType(data['guest_customer_code'], 'String');
       if (data.hasOwnProperty('last_test_dts'))
-        obj.lastTestDts = ApiClient.convertToType(data['last_test_dts'], 'String');
+        obj.last_test_dts = ApiClient.convertToType(data['last_test_dts'], 'String');
       if (data.hasOwnProperty('license_key'))
-        obj.licenseKey = ApiClient.convertToType(data['license_key'], 'String');
+        obj.license_key = ApiClient.convertToType(data['license_key'], 'String');
       if (data.hasOwnProperty('sandbox'))
         obj.sandbox = ApiClient.convertToType(data['sandbox'], 'Boolean');
       if (data.hasOwnProperty('send_test_orders'))
-        obj.sendTestOrders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
+        obj.send_test_orders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
       if (data.hasOwnProperty('service_url'))
-        obj.serviceUrl = ApiClient.convertToType(data['service_url'], 'String');
+        obj.service_url = ApiClient.convertToType(data['service_url'], 'String');
       if (data.hasOwnProperty('test_results'))
-        obj.testResults = ApiClient.convertToType(data['test_results'], 'String');
+        obj.test_results = ApiClient.convertToType(data['test_results'], 'String');
     }
     return obj;
   }
 
   /**
    * Avalara account ID
-   * @member {String} accountId
+   * @member {String} account_id
    */
-  exports.prototype.accountId = undefined;
+  exports.prototype.account_id = undefined;
 
   /**
    * True if Avalara is active for this merchant
@@ -99,45 +99,45 @@
 
   /**
    * Unique identifier for this avalara config object
-   * @member {Number} avalaraOid
+   * @member {Number} avalara_oid
    */
-  exports.prototype.avalaraOid = undefined;
+  exports.prototype.avalara_oid = undefined;
 
   /**
    * Avalara company ID
-   * @member {String} companyId
+   * @member {String} company_id
    */
-  exports.prototype.companyId = undefined;
+  exports.prototype.company_id = undefined;
 
   /**
    * True if this Avalara configuration is set to enable tax valuation by UPC
-   * @member {Boolean} enableUpc
+   * @member {Boolean} enable_upc
    */
-  exports.prototype.enableUpc = undefined;
+  exports.prototype.enable_upc = undefined;
 
   /**
    * True if this Avalara configuration is to estimate taxes only and not report placed orders to Avalara
-   * @member {Boolean} estimateOnly
+   * @member {Boolean} estimate_only
    */
-  exports.prototype.estimateOnly = undefined;
+  exports.prototype.estimate_only = undefined;
 
   /**
    * Optional customer code for customers without profiles, defaults to GuestCustomer
-   * @member {String} guestCustomerCode
+   * @member {String} guest_customer_code
    */
-  exports.prototype.guestCustomerCode = undefined;
+  exports.prototype.guest_customer_code = undefined;
 
   /**
    * Date/time of the connection test to Avalara
-   * @member {String} lastTestDts
+   * @member {String} last_test_dts
    */
-  exports.prototype.lastTestDts = undefined;
+  exports.prototype.last_test_dts = undefined;
 
   /**
    * Avalara license key
-   * @member {String} licenseKey
+   * @member {String} license_key
    */
-  exports.prototype.licenseKey = undefined;
+  exports.prototype.license_key = undefined;
 
   /**
    * True if this Avalara instance is pointed at the Avalara Sandbox
@@ -147,21 +147,21 @@
 
   /**
    * Send test orders through to Avalara.  The default is to not transmit test orders to Avalara.
-   * @member {Boolean} sendTestOrders
+   * @member {Boolean} send_test_orders
    */
-  exports.prototype.sendTestOrders = undefined;
+  exports.prototype.send_test_orders = undefined;
 
   /**
    * Avalara service URL
-   * @member {String} serviceUrl
+   * @member {String} service_url
    */
-  exports.prototype.serviceUrl = undefined;
+  exports.prototype.service_url = undefined;
 
   /**
    * Test results of the last connection test to Avalara
-   * @member {String} testResults
+   * @member {String} test_results
    */
-  exports.prototype.testResults = undefined;
+  exports.prototype.test_results = undefined;
 
   return exports;
 

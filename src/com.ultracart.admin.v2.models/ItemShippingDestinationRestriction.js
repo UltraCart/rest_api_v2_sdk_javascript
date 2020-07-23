@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('state'))
         obj.state = ApiClient.convertToType(data['state'], 'String');
       if (data.hasOwnProperty('validity'))
@@ -67,9 +67,9 @@
 
   /**
    * Country code (ISO-3166 two letter)
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * State
@@ -94,13 +94,13 @@
      * value: "valid only for"
      * @const
      */
-    validOnlyFor: "valid only for",
+    valid_only_for: "valid only for",
 
     /**
      * value: "invalid for"
      * @const
      */
-    invalidFor: "invalid for"
+    invalid_for: "invalid for"
   };
 
   return exports;

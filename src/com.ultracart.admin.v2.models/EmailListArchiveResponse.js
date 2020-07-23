@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('list_in_use'))
-        obj.listInUse = ApiClient.convertToType(data['list_in_use'], 'Boolean');
+        obj.list_in_use = ApiClient.convertToType(data['list_in_use'], 'Boolean');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -73,9 +73,9 @@
   exports.prototype.error = undefined;
 
   /**
-   * @member {Boolean} listInUse
+   * @member {Boolean} list_in_use
    */
-  exports.prototype.listInUse = undefined;
+  exports.prototype.list_in_use = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

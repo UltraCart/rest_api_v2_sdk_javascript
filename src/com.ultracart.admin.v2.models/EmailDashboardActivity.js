@@ -58,17 +58,17 @@
       if (data.hasOwnProperty('action'))
         obj.action = ApiClient.convertToType(data['action'], 'String');
       if (data.hasOwnProperty('activity_dts'))
-        obj.activityDts = ApiClient.convertToType(data['activity_dts'], 'String');
+        obj.activity_dts = ApiClient.convertToType(data['activity_dts'], 'String');
       if (data.hasOwnProperty('destination_name'))
-        obj.destinationName = ApiClient.convertToType(data['destination_name'], 'String');
+        obj.destination_name = ApiClient.convertToType(data['destination_name'], 'String');
       if (data.hasOwnProperty('destination_uuid'))
-        obj.destinationUuid = ApiClient.convertToType(data['destination_uuid'], 'String');
+        obj.destination_uuid = ApiClient.convertToType(data['destination_uuid'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('is_list'))
-        obj.isList = ApiClient.convertToType(data['is_list'], 'Boolean');
+        obj.is_list = ApiClient.convertToType(data['is_list'], 'Boolean');
       if (data.hasOwnProperty('is_segment'))
-        obj.isSegment = ApiClient.convertToType(data['is_segment'], 'Boolean');
+        obj.is_segment = ApiClient.convertToType(data['is_segment'], 'Boolean');
     }
     return obj;
   }
@@ -81,21 +81,21 @@
 
   /**
    * Date/time of the activity
-   * @member {String} activityDts
+   * @member {String} activity_dts
    */
-  exports.prototype.activityDts = undefined;
+  exports.prototype.activity_dts = undefined;
 
   /**
    * List or segment name
-   * @member {String} destinationName
+   * @member {String} destination_name
    */
-  exports.prototype.destinationName = undefined;
+  exports.prototype.destination_name = undefined;
 
   /**
    * List or segment uuid
-   * @member {String} destinationUuid
+   * @member {String} destination_uuid
    */
-  exports.prototype.destinationUuid = undefined;
+  exports.prototype.destination_uuid = undefined;
 
   /**
    * Email address
@@ -105,15 +105,15 @@
 
   /**
    * true if activity is related to list
-   * @member {Boolean} isList
+   * @member {Boolean} is_list
    */
-  exports.prototype.isList = undefined;
+  exports.prototype.is_list = undefined;
 
   /**
    * true if activity is related to segment
-   * @member {Boolean} isSegment
+   * @member {Boolean} is_segment
    */
-  exports.prototype.isSegment = undefined;
+  exports.prototype.is_segment = undefined;
 
   return exports;
 

@@ -58,11 +58,11 @@
       if (data.hasOwnProperty('height'))
         obj.height = ApiClient.convertToType(data['height'], 'Number');
       if (data.hasOwnProperty('http_url'))
-        obj.httpUrl = ApiClient.convertToType(data['http_url'], 'String');
+        obj.http_url = ApiClient.convertToType(data['http_url'], 'String');
       if (data.hasOwnProperty('https_url'))
-        obj.httpsUrl = ApiClient.convertToType(data['https_url'], 'String');
+        obj.https_url = ApiClient.convertToType(data['https_url'], 'String');
       if (data.hasOwnProperty('png_format'))
-        obj.pngFormat = ApiClient.convertToType(data['png_format'], 'Boolean');
+        obj.png_format = ApiClient.convertToType(data['png_format'], 'Boolean');
       if (data.hasOwnProperty('square'))
         obj.square = ApiClient.convertToType(data['square'], 'Boolean');
       if (data.hasOwnProperty('width'))
@@ -79,21 +79,21 @@
 
   /**
    * HTTP URL to view the thumbnail
-   * @member {String} httpUrl
+   * @member {String} http_url
    */
-  exports.prototype.httpUrl = undefined;
+  exports.prototype.http_url = undefined;
 
   /**
    * HTTPS URL to view the thumbnail
-   * @member {String} httpsUrl
+   * @member {String} https_url
    */
-  exports.prototype.httpsUrl = undefined;
+  exports.prototype.https_url = undefined;
 
   /**
    * True if PNG, false if JPEG
-   * @member {Boolean} pngFormat
+   * @member {Boolean} png_format
    */
-  exports.prototype.pngFormat = undefined;
+  exports.prototype.png_format = undefined;
 
   /**
    * True if the thumbnail is square

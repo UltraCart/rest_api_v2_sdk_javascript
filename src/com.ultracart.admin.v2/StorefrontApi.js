@@ -58,16 +58,16 @@
 
     /**
      * Add to library
-     * @param {module:com.ultracart.admin.v2.models/AddLibraryItemRequest} addLibraryRequest New library item
+     * @param {module:com.ultracart.admin.v2.models/AddLibraryItemRequest} add_library_request New library item
      * @param {module:com.ultracart.admin.v2/StorefrontApi~addToLibraryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
      */
-    this.addToLibrary = function(addLibraryRequest, callback) {
-      var postBody = addLibraryRequest;
+    this.addToLibrary = function(add_library_request, callback) {
+      var postBody = add_library_request;
 
-      // verify the required parameter 'addLibraryRequest' is set
-      if (addLibraryRequest === undefined || addLibraryRequest === null) {
-        throw new Error("Missing the required parameter 'addLibraryRequest' when calling addToLibrary");
+      // verify the required parameter 'add_library_request' is set
+      if (add_library_request === undefined || add_library_request === null) {
+        throw new Error("Missing the required parameter 'add_library_request' when calling addToLibrary");
       }
 
 
@@ -104,28 +104,28 @@
 
     /**
      * Apply library item to storefront.
-     * @param {Number} libraryItemOid 
-     * @param {Number} storefrontOid 
+     * @param {Number} library_item_oid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~applyToStoreFrontCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ApplyLibraryItemResponse}
      */
-    this.applyToStoreFront = function(libraryItemOid, storefrontOid, callback) {
+    this.applyToStoreFront = function(library_item_oid, storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'libraryItemOid' is set
-      if (libraryItemOid === undefined || libraryItemOid === null) {
-        throw new Error("Missing the required parameter 'libraryItemOid' when calling applyToStoreFront");
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling applyToStoreFront");
       }
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling applyToStoreFront");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling applyToStoreFront");
       }
 
 
       var pathParams = {
-        'library_item_oid': libraryItemOid,
-        'storefront_oid': storefrontOid
+        'library_item_oid': library_item_oid,
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -158,28 +158,28 @@
 
     /**
      * Archive email list
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~archiveEmailListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListArchiveResponse}
      */
-    this.archiveEmailList = function(storefrontOid, emailListUuid, callback) {
+    this.archiveEmailList = function(storefront_oid, email_list_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling archiveEmailList");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling archiveEmailList");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling archiveEmailList");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling archiveEmailList");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid
       };
       var queryParams = {
       };
@@ -212,28 +212,28 @@
 
     /**
      * Archive email segment
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~archiveEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentArchiveResponse}
      */
-    this.archiveEmailSegment = function(storefrontOid, emailSegmentUuid, callback) {
+    this.archiveEmailSegment = function(storefront_oid, email_segment_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling archiveEmailSegment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling archiveEmailSegment");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling archiveEmailSegment");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling archiveEmailSegment");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid
       };
       var queryParams = {
       };
@@ -266,34 +266,34 @@
 
     /**
      * Back populate email flow
-     * @param {Number} storefrontOid 
-     * @param {String} emailFlowUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest} backPopulateRequest The request to back populate
+     * @param {Number} storefront_oid 
+     * @param {String} email_flow_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest} back_populate_request The request to back populate
      * @param {module:com.ultracart.admin.v2/StorefrontApi~backPopulateEmailFlowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse}
      */
-    this.backPopulateEmailFlow = function(storefrontOid, emailFlowUuid, backPopulateRequest, callback) {
-      var postBody = backPopulateRequest;
+    this.backPopulateEmailFlow = function(storefront_oid, email_flow_uuid, back_populate_request, callback) {
+      var postBody = back_populate_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling backPopulateEmailFlow");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling backPopulateEmailFlow");
       }
 
-      // verify the required parameter 'emailFlowUuid' is set
-      if (emailFlowUuid === undefined || emailFlowUuid === null) {
-        throw new Error("Missing the required parameter 'emailFlowUuid' when calling backPopulateEmailFlow");
+      // verify the required parameter 'email_flow_uuid' is set
+      if (email_flow_uuid === undefined || email_flow_uuid === null) {
+        throw new Error("Missing the required parameter 'email_flow_uuid' when calling backPopulateEmailFlow");
       }
 
-      // verify the required parameter 'backPopulateRequest' is set
-      if (backPopulateRequest === undefined || backPopulateRequest === null) {
-        throw new Error("Missing the required parameter 'backPopulateRequest' when calling backPopulateEmailFlow");
+      // verify the required parameter 'back_populate_request' is set
+      if (back_populate_request === undefined || back_populate_request === null) {
+        throw new Error("Missing the required parameter 'back_populate_request' when calling backPopulateEmailFlow");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_flow_uuid': emailFlowUuid
+        'storefront_oid': storefront_oid,
+        'email_flow_uuid': email_flow_uuid
       };
       var queryParams = {
       };
@@ -326,35 +326,35 @@
 
     /**
      * Check download of email segment
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
-     * @param {String} emailSegmentRebuildUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
+     * @param {String} email_segment_rebuild_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~checkDownloadEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentDownloadPrepareResponse}
      */
-    this.checkDownloadEmailSegment = function(storefrontOid, emailSegmentUuid, emailSegmentRebuildUuid, callback) {
+    this.checkDownloadEmailSegment = function(storefront_oid, email_segment_uuid, email_segment_rebuild_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling checkDownloadEmailSegment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling checkDownloadEmailSegment");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling checkDownloadEmailSegment");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling checkDownloadEmailSegment");
       }
 
-      // verify the required parameter 'emailSegmentRebuildUuid' is set
-      if (emailSegmentRebuildUuid === undefined || emailSegmentRebuildUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentRebuildUuid' when calling checkDownloadEmailSegment");
+      // verify the required parameter 'email_segment_rebuild_uuid' is set
+      if (email_segment_rebuild_uuid === undefined || email_segment_rebuild_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_rebuild_uuid' when calling checkDownloadEmailSegment");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid,
-        'email_segment_rebuild_uuid': emailSegmentRebuildUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid,
+        'email_segment_rebuild_uuid': email_segment_rebuild_uuid
       };
       var queryParams = {
       };
@@ -387,34 +387,34 @@
 
     /**
      * Clone email campaign
-     * @param {Number} storefrontOid 
-     * @param {String} emailCampaignUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_campaign_uuid 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.targetStorefrontOid 
+     * @param {Number} opts.target_storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignResponse}
      */
-    this.cloneEmailCampaign = function(storefrontOid, emailCampaignUuid, opts, callback) {
+    this.cloneEmailCampaign = function(storefront_oid, email_campaign_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling cloneEmailCampaign");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling cloneEmailCampaign");
       }
 
-      // verify the required parameter 'emailCampaignUuid' is set
-      if (emailCampaignUuid === undefined || emailCampaignUuid === null) {
-        throw new Error("Missing the required parameter 'emailCampaignUuid' when calling cloneEmailCampaign");
+      // verify the required parameter 'email_campaign_uuid' is set
+      if (email_campaign_uuid === undefined || email_campaign_uuid === null) {
+        throw new Error("Missing the required parameter 'email_campaign_uuid' when calling cloneEmailCampaign");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_campaign_uuid': emailCampaignUuid
+        'storefront_oid': storefront_oid,
+        'email_campaign_uuid': email_campaign_uuid
       };
       var queryParams = {
-        'target_storefront_oid': opts['targetStorefrontOid'],
+        'target_storefront_oid': opts['target_storefront_oid'],
       };
       var collectionQueryParams = {
       };
@@ -445,34 +445,34 @@
 
     /**
      * Clone email flow
-     * @param {Number} storefrontOid 
-     * @param {String} emailFlowUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_flow_uuid 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.targetStorefrontOid 
+     * @param {Number} opts.target_storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneEmailFlowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowResponse}
      */
-    this.cloneEmailFlow = function(storefrontOid, emailFlowUuid, opts, callback) {
+    this.cloneEmailFlow = function(storefront_oid, email_flow_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling cloneEmailFlow");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling cloneEmailFlow");
       }
 
-      // verify the required parameter 'emailFlowUuid' is set
-      if (emailFlowUuid === undefined || emailFlowUuid === null) {
-        throw new Error("Missing the required parameter 'emailFlowUuid' when calling cloneEmailFlow");
+      // verify the required parameter 'email_flow_uuid' is set
+      if (email_flow_uuid === undefined || email_flow_uuid === null) {
+        throw new Error("Missing the required parameter 'email_flow_uuid' when calling cloneEmailFlow");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_flow_uuid': emailFlowUuid
+        'storefront_oid': storefront_oid,
+        'email_flow_uuid': email_flow_uuid
       };
       var queryParams = {
-        'target_storefront_oid': opts['targetStorefrontOid'],
+        'target_storefront_oid': opts['target_storefront_oid'],
       };
       var collectionQueryParams = {
       };
@@ -503,27 +503,27 @@
 
     /**
      * Clone public library item.
-     * @param {Number} libraryItemOid 
+     * @param {Number} library_item_oid 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.storefrontOid 
+     * @param {Number} opts.storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
      */
-    this.cloneLibraryItem = function(libraryItemOid, opts, callback) {
+    this.cloneLibraryItem = function(library_item_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'libraryItemOid' is set
-      if (libraryItemOid === undefined || libraryItemOid === null) {
-        throw new Error("Missing the required parameter 'libraryItemOid' when calling cloneLibraryItem");
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling cloneLibraryItem");
       }
 
 
       var pathParams = {
-        'library_item_oid': libraryItemOid
+        'library_item_oid': library_item_oid
       };
       var queryParams = {
-        'storefront_oid': opts['storefrontOid'],
+        'storefront_oid': opts['storefront_oid'],
       };
       var collectionQueryParams = {
       };
@@ -601,27 +601,27 @@
 
     /**
      * Delete communication sequence stats
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteEmailCommseqStatCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteEmailCommseqStat = function(storefrontOid, commseqUuid, callback) {
+    this.deleteEmailCommseqStat = function(storefront_oid, commseq_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling deleteEmailCommseqStat");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteEmailCommseqStat");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling deleteEmailCommseqStat");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling deleteEmailCommseqStat");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -654,28 +654,28 @@
 
     /**
      * Delete email email
-     * @param {Number} storefrontOid 
-     * @param {String} commseqEmailUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_email_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteEmailEmailCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.deleteEmailEmail = function(storefrontOid, commseqEmailUuid, callback) {
+    this.deleteEmailEmail = function(storefront_oid, commseq_email_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling deleteEmailEmail");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteEmailEmail");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling deleteEmailEmail");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling deleteEmailEmail");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_email_uuid': commseqEmailUuid
+        'storefront_oid': storefront_oid,
+        'commseq_email_uuid': commseq_email_uuid
       };
       var queryParams = {
       };
@@ -708,35 +708,35 @@
 
     /**
      * Delete email list customer
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
-     * @param {String} emailCustomerUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
+     * @param {String} email_customer_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteEmailListCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.deleteEmailListCustomer = function(storefrontOid, emailListUuid, emailCustomerUuid, callback) {
+    this.deleteEmailListCustomer = function(storefront_oid, email_list_uuid, email_customer_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling deleteEmailListCustomer");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteEmailListCustomer");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling deleteEmailListCustomer");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling deleteEmailListCustomer");
       }
 
-      // verify the required parameter 'emailCustomerUuid' is set
-      if (emailCustomerUuid === undefined || emailCustomerUuid === null) {
-        throw new Error("Missing the required parameter 'emailCustomerUuid' when calling deleteEmailListCustomer");
+      // verify the required parameter 'email_customer_uuid' is set
+      if (email_customer_uuid === undefined || email_customer_uuid === null) {
+        throw new Error("Missing the required parameter 'email_customer_uuid' when calling deleteEmailListCustomer");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid,
-        'email_customer_uuid': emailCustomerUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid,
+        'email_customer_uuid': email_customer_uuid
       };
       var queryParams = {
       };
@@ -769,28 +769,28 @@
 
     /**
      * Delete email postcard
-     * @param {Number} storefrontOid 
-     * @param {String} commseqPostcardUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_postcard_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteEmailPostcardCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.deleteEmailPostcard = function(storefrontOid, commseqPostcardUuid, callback) {
+    this.deleteEmailPostcard = function(storefront_oid, commseq_postcard_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling deleteEmailPostcard");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteEmailPostcard");
       }
 
-      // verify the required parameter 'commseqPostcardUuid' is set
-      if (commseqPostcardUuid === undefined || commseqPostcardUuid === null) {
-        throw new Error("Missing the required parameter 'commseqPostcardUuid' when calling deleteEmailPostcard");
+      // verify the required parameter 'commseq_postcard_uuid' is set
+      if (commseq_postcard_uuid === undefined || commseq_postcard_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_postcard_uuid' when calling deleteEmailPostcard");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_postcard_uuid': commseqPostcardUuid
+        'storefront_oid': storefront_oid,
+        'commseq_postcard_uuid': commseq_postcard_uuid
       };
       var queryParams = {
       };
@@ -870,27 +870,27 @@
 
     /**
      * Delete experiment
-     * @param {Number} storefrontOid 
-     * @param {Number} storefrontExperimentOid 
+     * @param {Number} storefront_oid 
+     * @param {Number} storefront_experiment_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteExperimentCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteExperiment = function(storefrontOid, storefrontExperimentOid, callback) {
+    this.deleteExperiment = function(storefront_oid, storefront_experiment_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling deleteExperiment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteExperiment");
       }
 
-      // verify the required parameter 'storefrontExperimentOid' is set
-      if (storefrontExperimentOid === undefined || storefrontExperimentOid === null) {
-        throw new Error("Missing the required parameter 'storefrontExperimentOid' when calling deleteExperiment");
+      // verify the required parameter 'storefront_experiment_oid' is set
+      if (storefront_experiment_oid === undefined || storefront_experiment_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_experiment_oid' when calling deleteExperiment");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'storefront_experiment_oid': storefrontExperimentOid
+        'storefront_oid': storefront_oid,
+        'storefront_experiment_oid': storefront_experiment_oid
       };
       var queryParams = {
       };
@@ -923,20 +923,20 @@
 
     /**
      * Delete library item
-     * @param {Number} libraryItemOid 
+     * @param {Number} library_item_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteLibraryItem = function(libraryItemOid, callback) {
+    this.deleteLibraryItem = function(library_item_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'libraryItemOid' is set
-      if (libraryItemOid === undefined || libraryItemOid === null) {
-        throw new Error("Missing the required parameter 'libraryItemOid' when calling deleteLibraryItem");
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling deleteLibraryItem");
       }
 
 
       var pathParams = {
-        'library_item_oid': libraryItemOid
+        'library_item_oid': library_item_oid
       };
       var queryParams = {
       };
@@ -969,21 +969,21 @@
 
     /**
      * Duplicate library item.
-     * @param {Number} libraryItemOid 
+     * @param {Number} library_item_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~duplicateLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
      */
-    this.duplicateLibraryItem = function(libraryItemOid, callback) {
+    this.duplicateLibraryItem = function(library_item_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'libraryItemOid' is set
-      if (libraryItemOid === undefined || libraryItemOid === null) {
-        throw new Error("Missing the required parameter 'libraryItemOid' when calling duplicateLibraryItem");
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling duplicateLibraryItem");
       }
 
 
       var pathParams = {
-        'library_item_oid': libraryItemOid
+        'library_item_oid': library_item_oid
       };
       var queryParams = {
       };
@@ -1016,27 +1016,27 @@
 
     /**
      * Obtain lat/long for an address
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/GeocodeRequest} geocodeRequest geocode request
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/GeocodeRequest} geocode_request geocode request
      * @param {module:com.ultracart.admin.v2/StorefrontApi~geocodeAddressCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/GeocodeResponse}
      */
-    this.geocodeAddress = function(storefrontOid, geocodeRequest, callback) {
-      var postBody = geocodeRequest;
+    this.geocodeAddress = function(storefront_oid, geocode_request, callback) {
+      var postBody = geocode_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling geocodeAddress");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling geocodeAddress");
       }
 
-      // verify the required parameter 'geocodeRequest' is set
-      if (geocodeRequest === undefined || geocodeRequest === null) {
-        throw new Error("Missing the required parameter 'geocodeRequest' when calling geocodeAddress");
+      // verify the required parameter 'geocode_request' is set
+      if (geocode_request === undefined || geocode_request === null) {
+        throw new Error("Missing the required parameter 'geocode_request' when calling geocodeAddress");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -1070,21 +1070,21 @@
     /**
      * Get countries
      * Obtain a list of all the countries 
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getCountriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CountriesResponse}
      */
-    this.getCountries = function(storefrontOid, callback) {
+    this.getCountries = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getCountries");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getCountries");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -1118,21 +1118,21 @@
     /**
      * Gets editor token
      * Fetches a temporary authentication token for the editor 
-     * @param {Number} id 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEditorTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailEditorTokenResponse}
      */
-    this.getEditorToken = function(id, callback) {
+    this.getEditorToken = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getEditorToken");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEditorToken");
       }
 
 
       var pathParams = {
-        'id': id
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -1149,7 +1149,7 @@
       var returnType = EmailEditorTokenResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{id}/editor_token', 'GET',
+        '/storefront/{storefront_oid}/editor_token', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1165,21 +1165,21 @@
 
     /**
      * Get email communication base templates
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailBaseTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailBaseTemplateListResponse}
      */
-    this.getEmailBaseTemplates = function(storefrontOid, callback) {
+    this.getEmailBaseTemplates = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailBaseTemplates");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailBaseTemplates");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -1212,28 +1212,28 @@
 
     /**
      * Get email campaign
-     * @param {Number} storefrontOid 
-     * @param {String} emailCampaignUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_campaign_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignResponse}
      */
-    this.getEmailCampaign = function(storefrontOid, emailCampaignUuid, callback) {
+    this.getEmailCampaign = function(storefront_oid, email_campaign_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCampaign");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCampaign");
       }
 
-      // verify the required parameter 'emailCampaignUuid' is set
-      if (emailCampaignUuid === undefined || emailCampaignUuid === null) {
-        throw new Error("Missing the required parameter 'emailCampaignUuid' when calling getEmailCampaign");
+      // verify the required parameter 'email_campaign_uuid' is set
+      if (email_campaign_uuid === undefined || email_campaign_uuid === null) {
+        throw new Error("Missing the required parameter 'email_campaign_uuid' when calling getEmailCampaign");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_campaign_uuid': emailCampaignUuid
+        'storefront_oid': storefront_oid,
+        'email_campaign_uuid': email_campaign_uuid
       };
       var queryParams = {
       };
@@ -1266,21 +1266,21 @@
 
     /**
      * Get email campaigns
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCampaignsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignsResponse}
      */
-    this.getEmailCampaigns = function(storefrontOid, callback) {
+    this.getEmailCampaigns = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCampaigns");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCampaigns");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -1313,28 +1313,28 @@
 
     /**
      * Get email campaigns with stats
-     * @param {Number} storefrontOid 
-     * @param {String} statDays 
+     * @param {Number} storefront_oid 
+     * @param {String} stat_days 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCampaignsWithStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignsResponse}
      */
-    this.getEmailCampaignsWithStats = function(storefrontOid, statDays, callback) {
+    this.getEmailCampaignsWithStats = function(storefront_oid, stat_days, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCampaignsWithStats");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCampaignsWithStats");
       }
 
-      // verify the required parameter 'statDays' is set
-      if (statDays === undefined || statDays === null) {
-        throw new Error("Missing the required parameter 'statDays' when calling getEmailCampaignsWithStats");
+      // verify the required parameter 'stat_days' is set
+      if (stat_days === undefined || stat_days === null) {
+        throw new Error("Missing the required parameter 'stat_days' when calling getEmailCampaignsWithStats");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'stat_days': statDays
+        'storefront_oid': storefront_oid,
+        'stat_days': stat_days
       };
       var queryParams = {
       };
@@ -1367,28 +1367,28 @@
 
     /**
      * Get email commseq
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqResponse}
      */
-    this.getEmailCommseq = function(storefrontOid, commseqUuid, callback) {
+    this.getEmailCommseq = function(storefront_oid, commseq_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCommseq");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseq");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailCommseq");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailCommseq");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -1421,23 +1421,23 @@
 
     /**
      * Get email communication sequence emails stats
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
      * @param {module:com.ultracart.admin.v2.models/EmailStatSummaryRequest} statsRequest StatsRequest
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqEmailStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailStatSummaryResponse}
      */
-    this.getEmailCommseqEmailStats = function(storefrontOid, commseqUuid, statsRequest, callback) {
+    this.getEmailCommseqEmailStats = function(storefront_oid, commseq_uuid, statsRequest, callback) {
       var postBody = statsRequest;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCommseqEmailStats");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqEmailStats");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailCommseqEmailStats");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailCommseqEmailStats");
       }
 
       // verify the required parameter 'statsRequest' is set
@@ -1447,8 +1447,8 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -1481,23 +1481,23 @@
 
     /**
      * Get email communication sequence postcard stats
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
      * @param {module:com.ultracart.admin.v2.models/EmailStatPostcardSummaryRequest} statsRequest StatsRequest
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqPostcardStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailStatPostcardSummaryResponse}
      */
-    this.getEmailCommseqPostcardStats = function(storefrontOid, commseqUuid, statsRequest, callback) {
+    this.getEmailCommseqPostcardStats = function(storefront_oid, commseq_uuid, statsRequest, callback) {
       var postBody = statsRequest;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCommseqPostcardStats");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqPostcardStats");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailCommseqPostcardStats");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailCommseqPostcardStats");
       }
 
       // verify the required parameter 'statsRequest' is set
@@ -1507,8 +1507,8 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -1541,28 +1541,28 @@
 
     /**
      * Get communication sequence stats overall
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqStatOverallCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqStatResponse}
      */
-    this.getEmailCommseqStatOverall = function(storefrontOid, commseqUuid, callback) {
+    this.getEmailCommseqStatOverall = function(storefront_oid, commseq_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCommseqStatOverall");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqStatOverall");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailCommseqStatOverall");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailCommseqStatOverall");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -1595,23 +1595,23 @@
 
     /**
      * Get email communication sequence step stats
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
      * @param {module:com.ultracart.admin.v2.models/EmailStepStatRequest} statsRequest StatsRequest
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqStepStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailStepStatResponse}
      */
-    this.getEmailCommseqStepStats = function(storefrontOid, commseqUuid, statsRequest, callback) {
+    this.getEmailCommseqStepStats = function(storefront_oid, commseq_uuid, statsRequest, callback) {
       var postBody = statsRequest;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCommseqStepStats");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqStepStats");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailCommseqStepStats");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailCommseqStepStats");
       }
 
       // verify the required parameter 'statsRequest' is set
@@ -1621,8 +1621,8 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -1655,23 +1655,23 @@
 
     /**
      * Get email communication sequence customers waiting at each requested step
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
      * @param {module:com.ultracart.admin.v2.models/EmailStepWaitingRequest} waitingRequest WaitingRequest
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqStepWaitingCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailStepWaitingResponse}
      */
-    this.getEmailCommseqStepWaiting = function(storefrontOid, commseqUuid, waitingRequest, callback) {
+    this.getEmailCommseqStepWaiting = function(storefront_oid, commseq_uuid, waitingRequest, callback) {
       var postBody = waitingRequest;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCommseqStepWaiting");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqStepWaiting");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailCommseqStepWaiting");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailCommseqStepWaiting");
       }
 
       // verify the required parameter 'waitingRequest' is set
@@ -1681,8 +1681,8 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -1715,21 +1715,21 @@
 
     /**
      * Get email commseqs
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqsResponse}
      */
-    this.getEmailCommseqs = function(storefrontOid, callback) {
+    this.getEmailCommseqs = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCommseqs");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqs");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -1762,28 +1762,28 @@
 
     /**
      * Get customers editor URL
-     * @param {Number} storefrontOid 
-     * @param {String} emailCustomerUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_customer_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomerEditorUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse}
      */
-    this.getEmailCustomerEditorUrl = function(storefrontOid, emailCustomerUuid, callback) {
+    this.getEmailCustomerEditorUrl = function(storefront_oid, email_customer_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCustomerEditorUrl");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCustomerEditorUrl");
       }
 
-      // verify the required parameter 'emailCustomerUuid' is set
-      if (emailCustomerUuid === undefined || emailCustomerUuid === null) {
-        throw new Error("Missing the required parameter 'emailCustomerUuid' when calling getEmailCustomerEditorUrl");
+      // verify the required parameter 'email_customer_uuid' is set
+      if (email_customer_uuid === undefined || email_customer_uuid === null) {
+        throw new Error("Missing the required parameter 'email_customer_uuid' when calling getEmailCustomerEditorUrl");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_customer_uuid': emailCustomerUuid
+        'storefront_oid': storefront_oid,
+        'email_customer_uuid': email_customer_uuid
       };
       var queryParams = {
       };
@@ -1816,7 +1816,7 @@
 
     /**
      * Get email customers
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageNumber 
      * @param {Number} opts.pageSize 
@@ -1824,18 +1824,18 @@
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomersResponse}
      */
-    this.getEmailCustomers = function(storefrontOid, opts, callback) {
+    this.getEmailCustomers = function(storefront_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailCustomers");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCustomers");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
         'pageNumber': opts['pageNumber'],
@@ -1871,27 +1871,27 @@
 
     /**
      * Get email dashboard activity
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.lastRecords 
+     * @param {Number} opts.last_records 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailDashboardActivityCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDashboardActivityResponse}
      */
-    this.getEmailDashboardActivity = function(storefrontOid, opts, callback) {
+    this.getEmailDashboardActivity = function(storefront_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailDashboardActivity");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailDashboardActivity");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
-        'last_records': opts['lastRecords'],
+        'last_records': opts['last_records'],
       };
       var collectionQueryParams = {
       };
@@ -1922,24 +1922,24 @@
 
     /**
      * Get dashboard stats
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.days 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailDashboardStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDashboardStatsResponse}
      */
-    this.getEmailDashboardStats = function(storefrontOid, opts, callback) {
+    this.getEmailDashboardStats = function(storefront_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailDashboardStats");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailDashboardStats");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
         'days': opts['days'],
@@ -1973,28 +1973,28 @@
 
     /**
      * Get email email
-     * @param {Number} storefrontOid 
-     * @param {String} commseqEmailUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_email_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailResponse}
      */
-    this.getEmailEmail = function(storefrontOid, commseqEmailUuid, callback) {
+    this.getEmailEmail = function(storefront_oid, commseq_email_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmail");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailEmail");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling getEmailEmail");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling getEmailEmail");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_email_uuid': commseqEmailUuid
+        'storefront_oid': storefront_oid,
+        'commseq_email_uuid': commseq_email_uuid
       };
       var queryParams = {
       };
@@ -2027,45 +2027,45 @@
 
     /**
      * Get email email clicks
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
-     * @param {String} commseqStepUuid 
-     * @param {String} commseqEmailUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {String} commseq_step_uuid 
+     * @param {String} commseq_email_uuid 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.days 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailClicksCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailClicksResponse}
      */
-    this.getEmailEmailClicks = function(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback) {
+    this.getEmailEmailClicks = function(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmailClicks");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailEmailClicks");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailEmailClicks");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailEmailClicks");
       }
 
-      // verify the required parameter 'commseqStepUuid' is set
-      if (commseqStepUuid === undefined || commseqStepUuid === null) {
-        throw new Error("Missing the required parameter 'commseqStepUuid' when calling getEmailEmailClicks");
+      // verify the required parameter 'commseq_step_uuid' is set
+      if (commseq_step_uuid === undefined || commseq_step_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_step_uuid' when calling getEmailEmailClicks");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling getEmailEmailClicks");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling getEmailEmailClicks");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid,
-        'commseq_step_uuid': commseqStepUuid,
-        'commseq_email_uuid': commseqEmailUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid,
+        'commseq_step_uuid': commseq_step_uuid,
+        'commseq_email_uuid': commseq_email_uuid
       };
       var queryParams = {
         'days': opts['days'],
@@ -2099,35 +2099,35 @@
 
     /**
      * Get email order customer editor url
-     * @param {Number} storefrontOid 
-     * @param {String} commseqEmailUuid 
-     * @param {String} orderId 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_email_uuid 
+     * @param {String} order_id 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailCustomerEditorUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse}
      */
-    this.getEmailEmailCustomerEditorUrl = function(storefrontOid, commseqEmailUuid, orderId, callback) {
+    this.getEmailEmailCustomerEditorUrl = function(storefront_oid, commseq_email_uuid, order_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmailCustomerEditorUrl");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailEmailCustomerEditorUrl");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling getEmailEmailCustomerEditorUrl");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling getEmailEmailCustomerEditorUrl");
       }
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling getEmailEmailCustomerEditorUrl");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getEmailEmailCustomerEditorUrl");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_email_uuid': commseqEmailUuid,
-        'order_id': orderId
+        'storefront_oid': storefront_oid,
+        'commseq_email_uuid': commseq_email_uuid,
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -2160,45 +2160,45 @@
 
     /**
      * Get email email orders
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
-     * @param {String} commseqStepUuid 
-     * @param {String} commseqEmailUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {String} commseq_step_uuid 
+     * @param {String} commseq_email_uuid 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.days 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailOrdersResponse}
      */
-    this.getEmailEmailOrders = function(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback) {
+    this.getEmailEmailOrders = function(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmailOrders");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailEmailOrders");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling getEmailEmailOrders");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailEmailOrders");
       }
 
-      // verify the required parameter 'commseqStepUuid' is set
-      if (commseqStepUuid === undefined || commseqStepUuid === null) {
-        throw new Error("Missing the required parameter 'commseqStepUuid' when calling getEmailEmailOrders");
+      // verify the required parameter 'commseq_step_uuid' is set
+      if (commseq_step_uuid === undefined || commseq_step_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_step_uuid' when calling getEmailEmailOrders");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling getEmailEmailOrders");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling getEmailEmailOrders");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid,
-        'commseq_step_uuid': commseqStepUuid,
-        'commseq_email_uuid': commseqEmailUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid,
+        'commseq_step_uuid': commseq_step_uuid,
+        'commseq_email_uuid': commseq_email_uuid
       };
       var queryParams = {
         'days': opts['days'],
@@ -2232,21 +2232,21 @@
 
     /**
      * Get email emails
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailsResponse}
      */
-    this.getEmailEmails = function(storefrontOid, callback) {
+    this.getEmailEmails = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmails");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailEmails");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2279,27 +2279,27 @@
 
     /**
      * Get email emails multiple
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailsRequest} emailCommseqEmailsRequest Request of email uuids
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailsRequest} email_commseq_emails_request Request of email uuids
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailEmailsMultipleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailsResponse}
      */
-    this.getEmailEmailsMultiple = function(storefrontOid, emailCommseqEmailsRequest, callback) {
-      var postBody = emailCommseqEmailsRequest;
+    this.getEmailEmailsMultiple = function(storefront_oid, email_commseq_emails_request, callback) {
+      var postBody = email_commseq_emails_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailEmailsMultiple");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailEmailsMultiple");
       }
 
-      // verify the required parameter 'emailCommseqEmailsRequest' is set
-      if (emailCommseqEmailsRequest === undefined || emailCommseqEmailsRequest === null) {
-        throw new Error("Missing the required parameter 'emailCommseqEmailsRequest' when calling getEmailEmailsMultiple");
+      // verify the required parameter 'email_commseq_emails_request' is set
+      if (email_commseq_emails_request === undefined || email_commseq_emails_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_emails_request' when calling getEmailEmailsMultiple");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2332,28 +2332,28 @@
 
     /**
      * Get email flow
-     * @param {Number} storefrontOid 
-     * @param {String} emailFlowUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_flow_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailFlowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowResponse}
      */
-    this.getEmailFlow = function(storefrontOid, emailFlowUuid, callback) {
+    this.getEmailFlow = function(storefront_oid, email_flow_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailFlow");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailFlow");
       }
 
-      // verify the required parameter 'emailFlowUuid' is set
-      if (emailFlowUuid === undefined || emailFlowUuid === null) {
-        throw new Error("Missing the required parameter 'emailFlowUuid' when calling getEmailFlow");
+      // verify the required parameter 'email_flow_uuid' is set
+      if (email_flow_uuid === undefined || email_flow_uuid === null) {
+        throw new Error("Missing the required parameter 'email_flow_uuid' when calling getEmailFlow");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_flow_uuid': emailFlowUuid
+        'storefront_oid': storefront_oid,
+        'email_flow_uuid': email_flow_uuid
       };
       var queryParams = {
       };
@@ -2386,21 +2386,21 @@
 
     /**
      * Get email flows
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailFlowsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowsResponse}
      */
-    this.getEmailFlows = function(storefrontOid, callback) {
+    this.getEmailFlows = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailFlows");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailFlows");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2473,28 +2473,28 @@
 
     /**
      * Get email list
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListResponse}
      */
-    this.getEmailList = function(storefrontOid, emailListUuid, callback) {
+    this.getEmailList = function(storefront_oid, email_list_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailList");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailList");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling getEmailList");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling getEmailList");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid
       };
       var queryParams = {
       };
@@ -2527,35 +2527,35 @@
 
     /**
      * Get email list customer editor url
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
-     * @param {String} emailCustomerUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
+     * @param {String} email_customer_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailListCustomerEditorUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse}
      */
-    this.getEmailListCustomerEditorUrl = function(storefrontOid, emailListUuid, emailCustomerUuid, callback) {
+    this.getEmailListCustomerEditorUrl = function(storefront_oid, email_list_uuid, email_customer_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailListCustomerEditorUrl");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailListCustomerEditorUrl");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling getEmailListCustomerEditorUrl");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling getEmailListCustomerEditorUrl");
       }
 
-      // verify the required parameter 'emailCustomerUuid' is set
-      if (emailCustomerUuid === undefined || emailCustomerUuid === null) {
-        throw new Error("Missing the required parameter 'emailCustomerUuid' when calling getEmailListCustomerEditorUrl");
+      // verify the required parameter 'email_customer_uuid' is set
+      if (email_customer_uuid === undefined || email_customer_uuid === null) {
+        throw new Error("Missing the required parameter 'email_customer_uuid' when calling getEmailListCustomerEditorUrl");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid,
-        'email_customer_uuid': emailCustomerUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid,
+        'email_customer_uuid': email_customer_uuid
       };
       var queryParams = {
       };
@@ -2588,32 +2588,32 @@
 
     /**
      * Get email list customers
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageNumber 
      * @param {Number} opts.pageSize 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailListCustomersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListCustomersResponse}
      */
-    this.getEmailListCustomers = function(storefrontOid, emailListUuid, opts, callback) {
+    this.getEmailListCustomers = function(storefront_oid, email_list_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailListCustomers");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailListCustomers");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling getEmailListCustomers");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling getEmailListCustomers");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid
       };
       var queryParams = {
         'pageNumber': opts['pageNumber'],
@@ -2648,21 +2648,21 @@
 
     /**
      * Get email lists
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListsResponse}
      */
-    this.getEmailLists = function(storefrontOid, callback) {
+    this.getEmailLists = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailLists");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailLists");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2695,21 +2695,21 @@
 
     /**
      * Get email performance
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailPerformanceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailPerformanceResponse}
      */
-    this.getEmailPerformance = function(storefrontOid, callback) {
+    this.getEmailPerformance = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailPerformance");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailPerformance");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2742,21 +2742,21 @@
 
     /**
      * Get email plan
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailPlanCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailPlanResponse}
      */
-    this.getEmailPlan = function(storefrontOid, callback) {
+    this.getEmailPlan = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailPlan");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailPlan");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2789,28 +2789,28 @@
 
     /**
      * Get email postcard
-     * @param {Number} storefrontOid 
-     * @param {String} commseqPostcardUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_postcard_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailPostcardCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqPostcardResponse}
      */
-    this.getEmailPostcard = function(storefrontOid, commseqPostcardUuid, callback) {
+    this.getEmailPostcard = function(storefront_oid, commseq_postcard_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailPostcard");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailPostcard");
       }
 
-      // verify the required parameter 'commseqPostcardUuid' is set
-      if (commseqPostcardUuid === undefined || commseqPostcardUuid === null) {
-        throw new Error("Missing the required parameter 'commseqPostcardUuid' when calling getEmailPostcard");
+      // verify the required parameter 'commseq_postcard_uuid' is set
+      if (commseq_postcard_uuid === undefined || commseq_postcard_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_postcard_uuid' when calling getEmailPostcard");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_postcard_uuid': commseqPostcardUuid
+        'storefront_oid': storefront_oid,
+        'commseq_postcard_uuid': commseq_postcard_uuid
       };
       var queryParams = {
       };
@@ -2843,21 +2843,21 @@
 
     /**
      * Get email postcards
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailPostcardsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqPostcardsResponse}
      */
-    this.getEmailPostcards = function(storefrontOid, callback) {
+    this.getEmailPostcards = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailPostcards");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailPostcards");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2890,27 +2890,27 @@
 
     /**
      * Get email postcards multiple
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcardsRequest} emailCommseqPostcardsRequest Request of postcard uuids
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcardsRequest} email_commseq_postcards_request Request of postcard uuids
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailPostcardsMultipleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqPostcardsResponse}
      */
-    this.getEmailPostcardsMultiple = function(storefrontOid, emailCommseqPostcardsRequest, callback) {
-      var postBody = emailCommseqPostcardsRequest;
+    this.getEmailPostcardsMultiple = function(storefront_oid, email_commseq_postcards_request, callback) {
+      var postBody = email_commseq_postcards_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailPostcardsMultiple");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailPostcardsMultiple");
       }
 
-      // verify the required parameter 'emailCommseqPostcardsRequest' is set
-      if (emailCommseqPostcardsRequest === undefined || emailCommseqPostcardsRequest === null) {
-        throw new Error("Missing the required parameter 'emailCommseqPostcardsRequest' when calling getEmailPostcardsMultiple");
+      // verify the required parameter 'email_commseq_postcards_request' is set
+      if (email_commseq_postcards_request === undefined || email_commseq_postcards_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_postcards_request' when calling getEmailPostcardsMultiple");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -2943,28 +2943,28 @@
 
     /**
      * Get email segment
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentResponse}
      */
-    this.getEmailSegment = function(storefrontOid, emailSegmentUuid, callback) {
+    this.getEmailSegment = function(storefront_oid, email_segment_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailSegment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailSegment");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling getEmailSegment");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling getEmailSegment");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid
       };
       var queryParams = {
       };
@@ -2997,35 +2997,35 @@
 
     /**
      * Get email segment customers editor URL
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
-     * @param {String} emailCustomerUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
+     * @param {String} email_customer_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailSegmentCustomerEditorUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse}
      */
-    this.getEmailSegmentCustomerEditorUrl = function(storefrontOid, emailSegmentUuid, emailCustomerUuid, callback) {
+    this.getEmailSegmentCustomerEditorUrl = function(storefront_oid, email_segment_uuid, email_customer_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailSegmentCustomerEditorUrl");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailSegmentCustomerEditorUrl");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling getEmailSegmentCustomerEditorUrl");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling getEmailSegmentCustomerEditorUrl");
       }
 
-      // verify the required parameter 'emailCustomerUuid' is set
-      if (emailCustomerUuid === undefined || emailCustomerUuid === null) {
-        throw new Error("Missing the required parameter 'emailCustomerUuid' when calling getEmailSegmentCustomerEditorUrl");
+      // verify the required parameter 'email_customer_uuid' is set
+      if (email_customer_uuid === undefined || email_customer_uuid === null) {
+        throw new Error("Missing the required parameter 'email_customer_uuid' when calling getEmailSegmentCustomerEditorUrl");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid,
-        'email_customer_uuid': emailCustomerUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid,
+        'email_customer_uuid': email_customer_uuid
       };
       var queryParams = {
       };
@@ -3058,32 +3058,32 @@
 
     /**
      * Get email segment customers
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageNumber 
      * @param {Number} opts.pageSize 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailSegmentCustomersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentCustomersResponse}
      */
-    this.getEmailSegmentCustomers = function(storefrontOid, emailSegmentUuid, opts, callback) {
+    this.getEmailSegmentCustomers = function(storefront_oid, email_segment_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailSegmentCustomers");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailSegmentCustomers");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling getEmailSegmentCustomers");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling getEmailSegmentCustomers");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid
       };
       var queryParams = {
         'pageNumber': opts['pageNumber'],
@@ -3118,21 +3118,21 @@
 
     /**
      * Get email segments
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailSegmentsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentsResponse}
      */
-    this.getEmailSegments = function(storefrontOid, callback) {
+    this.getEmailSegments = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailSegments");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailSegments");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -3299,21 +3299,21 @@
 
     /**
      * Get email settings
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSettingsResponse}
      */
-    this.getEmailSettings = function(storefrontOid, callback) {
+    this.getEmailSettings = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailSettings");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailSettings");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -3346,28 +3346,28 @@
 
     /**
      * Get email template
-     * @param {Number} storefrontOid 
-     * @param {Number} emailTemplateOid 
+     * @param {Number} storefront_oid 
+     * @param {Number} email_template_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailTemplateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailTemplate}
      */
-    this.getEmailTemplate = function(storefrontOid, emailTemplateOid, callback) {
+    this.getEmailTemplate = function(storefront_oid, email_template_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailTemplate");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailTemplate");
       }
 
-      // verify the required parameter 'emailTemplateOid' is set
-      if (emailTemplateOid === undefined || emailTemplateOid === null) {
-        throw new Error("Missing the required parameter 'emailTemplateOid' when calling getEmailTemplate");
+      // verify the required parameter 'email_template_oid' is set
+      if (email_template_oid === undefined || email_template_oid === null) {
+        throw new Error("Missing the required parameter 'email_template_oid' when calling getEmailTemplate");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_template_oid': emailTemplateOid
+        'storefront_oid': storefront_oid,
+        'email_template_oid': email_template_oid
       };
       var queryParams = {
       };
@@ -3400,27 +3400,27 @@
 
     /**
      * Get email templates
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.triggerType 
+     * @param {String} opts.trigger_type 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailTemplatesResponse}
      */
-    this.getEmailTemplates = function(storefrontOid, opts, callback) {
+    this.getEmailTemplates = function(storefront_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailTemplates");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailTemplates");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
-        'trigger_type': opts['triggerType'],
+        'trigger_type': opts['trigger_type'],
       };
       var collectionQueryParams = {
       };
@@ -3451,21 +3451,21 @@
 
     /**
      * Get a list of third party email providers
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailThirdPartyProvidersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailThirdPartyProvidersResponse}
      */
-    this.getEmailThirdPartyProviders = function(storefrontOid, callback) {
+    this.getEmailThirdPartyProviders = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getEmailThirdPartyProviders");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailThirdPartyProviders");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -3498,21 +3498,21 @@
 
     /**
      * Get experiments
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getExperimentsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ExperimentsResponse}
      */
-    this.getExperiments = function(storefrontOid, callback) {
+    this.getExperiments = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getExperiments");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getExperiments");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -3546,27 +3546,27 @@
     /**
      * Get histogram property names
      * Obtain a list of property names for a given property type 
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.propertyType 
+     * @param {String} opts.property_type 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getHistogramPropertyNamesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailHistogramPropertyNamesResponse}
      */
-    this.getHistogramPropertyNames = function(storefrontOid, opts, callback) {
+    this.getHistogramPropertyNames = function(storefront_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getHistogramPropertyNames");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getHistogramPropertyNames");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
-        'property_type': opts['propertyType'],
+        'property_type': opts['property_type'],
       };
       var collectionQueryParams = {
       };
@@ -3598,30 +3598,30 @@
     /**
      * Get histogram property values
      * Obtain a list of property values for a given property name and type 
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.propertyName 
-     * @param {String} opts.propertyType 
+     * @param {String} opts.property_name 
+     * @param {String} opts.property_type 
      * @param {Number} opts.limit 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getHistogramPropertyValuesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailHistogramPropertyValuesResponse}
      */
-    this.getHistogramPropertyValues = function(storefrontOid, opts, callback) {
+    this.getHistogramPropertyValues = function(storefront_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling getHistogramPropertyValues");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getHistogramPropertyValues");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
-        'property_name': opts['propertyName'],
-        'property_type': opts['propertyType'],
+        'property_name': opts['property_name'],
+        'property_type': opts['property_type'],
         'limit': opts['limit'],
       };
       var collectionQueryParams = {
@@ -3653,21 +3653,21 @@
 
     /**
      * Get library item.
-     * @param {Number} libraryItemOid 
+     * @param {Number} library_item_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
      */
-    this.getLibraryItem = function(libraryItemOid, callback) {
+    this.getLibraryItem = function(library_item_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'libraryItemOid' is set
-      if (libraryItemOid === undefined || libraryItemOid === null) {
-        throw new Error("Missing the required parameter 'libraryItemOid' when calling getLibraryItem");
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling getLibraryItem");
       }
 
 
       var pathParams = {
-        'library_item_oid': libraryItemOid
+        'library_item_oid': library_item_oid
       };
       var queryParams = {
       };
@@ -3701,30 +3701,30 @@
     /**
      * Retrieve library items
      * Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/LibraryItemQuery} itemQuery Item query
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemQuery} item_query Item query
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.sort The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getLibraryItemsByQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemsResponse}
      */
-    this.getLibraryItemsByQuery = function(itemQuery, opts, callback) {
+    this.getLibraryItemsByQuery = function(item_query, opts, callback) {
       opts = opts || {};
-      var postBody = itemQuery;
+      var postBody = item_query;
 
-      // verify the required parameter 'itemQuery' is set
-      if (itemQuery === undefined || itemQuery === null) {
-        throw new Error("Missing the required parameter 'itemQuery' when calling getLibraryItemsByQuery");
+      // verify the required parameter 'item_query' is set
+      if (item_query === undefined || item_query === null) {
+        throw new Error("Missing the required parameter 'item_query' when calling getLibraryItemsByQuery");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_sort': opts['sort'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
       };
       var collectionQueryParams = {
       };
@@ -3756,28 +3756,28 @@
     /**
      * Gets a transaction email object
      * Fetch a transactional email 
-     * @param {Number} id 
-     * @param {String} emailId 
+     * @param {Number} storefront_oid 
+     * @param {String} email_id 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getTransactionEmailCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TransactionEmailResponse}
      */
-    this.getTransactionEmail = function(id, emailId, callback) {
+    this.getTransactionEmail = function(storefront_oid, email_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getTransactionEmail");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getTransactionEmail");
       }
 
-      // verify the required parameter 'emailId' is set
-      if (emailId === undefined || emailId === null) {
-        throw new Error("Missing the required parameter 'emailId' when calling getTransactionEmail");
+      // verify the required parameter 'email_id' is set
+      if (email_id === undefined || email_id === null) {
+        throw new Error("Missing the required parameter 'email_id' when calling getTransactionEmail");
       }
 
 
       var pathParams = {
-        'id': id,
-        'email_id': emailId
+        'storefront_oid': storefront_oid,
+        'email_id': email_id
       };
       var queryParams = {
       };
@@ -3794,7 +3794,7 @@
       var returnType = TransactionEmailResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{id}/transaction_email/list/{email_id}', 'GET',
+        '/storefront/{storefront_oid}/transaction_email/list/{email_id}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3811,21 +3811,21 @@
     /**
      * Gets a list of transaction email names
      * Obtain a list of all transactional emails and return back just their names 
-     * @param {Number} id 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getTransactionEmailListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TransactionEmailListResponse}
      */
-    this.getTransactionEmailList = function(id, callback) {
+    this.getTransactionEmailList = function(storefront_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getTransactionEmailList");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getTransactionEmailList");
       }
 
 
       var pathParams = {
-        'id': id
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -3842,7 +3842,7 @@
       var returnType = TransactionEmailListResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{id}/transaction_email/list', 'GET',
+        '/storefront/{storefront_oid}/transaction_email/list', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3858,17 +3858,17 @@
 
     /**
      * Globally unsubscribe a customer
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2.models/EmailGlobalUnsubscribeRequest} unsubscribe Unsubscribe
      * @param {module:com.ultracart.admin.v2/StorefrontApi~globalUnsubscribeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailGlobalUnsubscribeResponse}
      */
-    this.globalUnsubscribe = function(storefrontOid, unsubscribe, callback) {
+    this.globalUnsubscribe = function(storefront_oid, unsubscribe, callback) {
       var postBody = unsubscribe;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling globalUnsubscribe");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling globalUnsubscribe");
       }
 
       // verify the required parameter 'unsubscribe' is set
@@ -3878,7 +3878,7 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -3911,26 +3911,26 @@
 
     /**
      * Import a third party provider list
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailThirdPartyListImportRequest} importRequest lists to import
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailThirdPartyListImportRequest} import_request lists to import
      * @param {module:com.ultracart.admin.v2/StorefrontApi~importEmailThirdPartyProviderListCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.importEmailThirdPartyProviderList = function(storefrontOid, importRequest, callback) {
-      var postBody = importRequest;
+    this.importEmailThirdPartyProviderList = function(storefront_oid, import_request, callback) {
+      var postBody = import_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling importEmailThirdPartyProviderList");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling importEmailThirdPartyProviderList");
       }
 
-      // verify the required parameter 'importRequest' is set
-      if (importRequest === undefined || importRequest === null) {
-        throw new Error("Missing the required parameter 'importRequest' when calling importEmailThirdPartyProviderList");
+      // verify the required parameter 'import_request' is set
+      if (import_request === undefined || import_request === null) {
+        throw new Error("Missing the required parameter 'import_request' when calling importEmailThirdPartyProviderList");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -3963,27 +3963,27 @@
 
     /**
      * Insert email campaign
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCampaign} emailCampaign Email campaign
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCampaign} email_campaign Email campaign
      * @param {module:com.ultracart.admin.v2/StorefrontApi~insertEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignResponse}
      */
-    this.insertEmailCampaign = function(storefrontOid, emailCampaign, callback) {
-      var postBody = emailCampaign;
+    this.insertEmailCampaign = function(storefront_oid, email_campaign, callback) {
+      var postBody = email_campaign;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling insertEmailCampaign");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertEmailCampaign");
       }
 
-      // verify the required parameter 'emailCampaign' is set
-      if (emailCampaign === undefined || emailCampaign === null) {
-        throw new Error("Missing the required parameter 'emailCampaign' when calling insertEmailCampaign");
+      // verify the required parameter 'email_campaign' is set
+      if (email_campaign === undefined || email_campaign === null) {
+        throw new Error("Missing the required parameter 'email_campaign' when calling insertEmailCampaign");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -4016,27 +4016,27 @@
 
     /**
      * Insert email commseq
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseq} emailCommseq Email commseq
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseq} email_commseq Email commseq
      * @param {module:com.ultracart.admin.v2/StorefrontApi~insertEmailCommseqCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqResponse}
      */
-    this.insertEmailCommseq = function(storefrontOid, emailCommseq, callback) {
-      var postBody = emailCommseq;
+    this.insertEmailCommseq = function(storefront_oid, email_commseq, callback) {
+      var postBody = email_commseq;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling insertEmailCommseq");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertEmailCommseq");
       }
 
-      // verify the required parameter 'emailCommseq' is set
-      if (emailCommseq === undefined || emailCommseq === null) {
-        throw new Error("Missing the required parameter 'emailCommseq' when calling insertEmailCommseq");
+      // verify the required parameter 'email_commseq' is set
+      if (email_commseq === undefined || email_commseq === null) {
+        throw new Error("Missing the required parameter 'email_commseq' when calling insertEmailCommseq");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -4069,27 +4069,27 @@
 
     /**
      * Insert email email
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmail} emailCommseqEmail Email email
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmail} email_commseq_email Email email
      * @param {module:com.ultracart.admin.v2/StorefrontApi~insertEmailEmailCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailResponse}
      */
-    this.insertEmailEmail = function(storefrontOid, emailCommseqEmail, callback) {
-      var postBody = emailCommseqEmail;
+    this.insertEmailEmail = function(storefront_oid, email_commseq_email, callback) {
+      var postBody = email_commseq_email;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling insertEmailEmail");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertEmailEmail");
       }
 
-      // verify the required parameter 'emailCommseqEmail' is set
-      if (emailCommseqEmail === undefined || emailCommseqEmail === null) {
-        throw new Error("Missing the required parameter 'emailCommseqEmail' when calling insertEmailEmail");
+      // verify the required parameter 'email_commseq_email' is set
+      if (email_commseq_email === undefined || email_commseq_email === null) {
+        throw new Error("Missing the required parameter 'email_commseq_email' when calling insertEmailEmail");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -4122,27 +4122,27 @@
 
     /**
      * Insert email flow
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailFlow} emailFlow Email flow
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailFlow} email_flow Email flow
      * @param {module:com.ultracart.admin.v2/StorefrontApi~insertEmailFlowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowResponse}
      */
-    this.insertEmailFlow = function(storefrontOid, emailFlow, callback) {
-      var postBody = emailFlow;
+    this.insertEmailFlow = function(storefront_oid, email_flow, callback) {
+      var postBody = email_flow;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling insertEmailFlow");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertEmailFlow");
       }
 
-      // verify the required parameter 'emailFlow' is set
-      if (emailFlow === undefined || emailFlow === null) {
-        throw new Error("Missing the required parameter 'emailFlow' when calling insertEmailFlow");
+      // verify the required parameter 'email_flow' is set
+      if (email_flow === undefined || email_flow === null) {
+        throw new Error("Missing the required parameter 'email_flow' when calling insertEmailFlow");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -4175,27 +4175,27 @@
 
     /**
      * Insert email list
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailList} emailList Email list
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailList} email_list Email list
      * @param {module:com.ultracart.admin.v2/StorefrontApi~insertEmailListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListResponse}
      */
-    this.insertEmailList = function(storefrontOid, emailList, callback) {
-      var postBody = emailList;
+    this.insertEmailList = function(storefront_oid, email_list, callback) {
+      var postBody = email_list;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling insertEmailList");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertEmailList");
       }
 
-      // verify the required parameter 'emailList' is set
-      if (emailList === undefined || emailList === null) {
-        throw new Error("Missing the required parameter 'emailList' when calling insertEmailList");
+      // verify the required parameter 'email_list' is set
+      if (email_list === undefined || email_list === null) {
+        throw new Error("Missing the required parameter 'email_list' when calling insertEmailList");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -4228,27 +4228,27 @@
 
     /**
      * Insert email postcard
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcard} emailCommseqPostcard Email postcard
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcard} email_commseq_postcard Email postcard
      * @param {module:com.ultracart.admin.v2/StorefrontApi~insertEmailPostcardCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqPostcardResponse}
      */
-    this.insertEmailPostcard = function(storefrontOid, emailCommseqPostcard, callback) {
-      var postBody = emailCommseqPostcard;
+    this.insertEmailPostcard = function(storefront_oid, email_commseq_postcard, callback) {
+      var postBody = email_commseq_postcard;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling insertEmailPostcard");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertEmailPostcard");
       }
 
-      // verify the required parameter 'emailCommseqPostcard' is set
-      if (emailCommseqPostcard === undefined || emailCommseqPostcard === null) {
-        throw new Error("Missing the required parameter 'emailCommseqPostcard' when calling insertEmailPostcard");
+      // verify the required parameter 'email_commseq_postcard' is set
+      if (email_commseq_postcard === undefined || email_commseq_postcard === null) {
+        throw new Error("Missing the required parameter 'email_commseq_postcard' when calling insertEmailPostcard");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -4281,27 +4281,27 @@
 
     /**
      * Insert email segment
-     * @param {Number} storefrontOid 
-     * @param {module:com.ultracart.admin.v2.models/EmailSegment} emailSegment Email segment
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailSegment} email_segment Email segment
      * @param {module:com.ultracart.admin.v2/StorefrontApi~insertEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentResponse}
      */
-    this.insertEmailSegment = function(storefrontOid, emailSegment, callback) {
-      var postBody = emailSegment;
+    this.insertEmailSegment = function(storefront_oid, email_segment, callback) {
+      var postBody = email_segment;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling insertEmailSegment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertEmailSegment");
       }
 
-      // verify the required parameter 'emailSegment' is set
-      if (emailSegment === undefined || emailSegment === null) {
-        throw new Error("Missing the required parameter 'emailSegment' when calling insertEmailSegment");
+      // verify the required parameter 'email_segment' is set
+      if (email_segment === undefined || email_segment === null) {
+        throw new Error("Missing the required parameter 'email_segment' when calling insertEmailSegment");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -4334,28 +4334,28 @@
 
     /**
      * Prepare download of email segment
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~prepareDownloadEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentDownloadPrepareResponse}
      */
-    this.prepareDownloadEmailSegment = function(storefrontOid, emailSegmentUuid, callback) {
+    this.prepareDownloadEmailSegment = function(storefront_oid, email_segment_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling prepareDownloadEmailSegment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling prepareDownloadEmailSegment");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling prepareDownloadEmailSegment");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling prepareDownloadEmailSegment");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid
       };
       var queryParams = {
       };
@@ -4388,34 +4388,34 @@
 
     /**
      * Release email communication sequence customers waiting at the specified step
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
-     * @param {String} commseqStepUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {String} commseq_step_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~releaseEmailCommseqStepWaitingCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.releaseEmailCommseqStepWaiting = function(storefrontOid, commseqUuid, commseqStepUuid, callback) {
+    this.releaseEmailCommseqStepWaiting = function(storefront_oid, commseq_uuid, commseq_step_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling releaseEmailCommseqStepWaiting");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling releaseEmailCommseqStepWaiting");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling releaseEmailCommseqStepWaiting");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling releaseEmailCommseqStepWaiting");
       }
 
-      // verify the required parameter 'commseqStepUuid' is set
-      if (commseqStepUuid === undefined || commseqStepUuid === null) {
-        throw new Error("Missing the required parameter 'commseqStepUuid' when calling releaseEmailCommseqStepWaiting");
+      // verify the required parameter 'commseq_step_uuid' is set
+      if (commseq_step_uuid === undefined || commseq_step_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_step_uuid' when calling releaseEmailCommseqStepWaiting");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid,
-        'commseq_step_uuid': commseqStepUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid,
+        'commseq_step_uuid': commseq_step_uuid
       };
       var queryParams = {
       };
@@ -4448,34 +4448,34 @@
 
     /**
      * Request a review of an email
-     * @param {Number} storefrontOid 
-     * @param {String} commseqEmailUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest} emailCommseqEmailReviewRequest Email commseq email review request
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_email_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest} email_commseq_email_review_request Email commseq email review request
      * @param {module:com.ultracart.admin.v2/StorefrontApi~reviewCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse}
      */
-    this.review = function(storefrontOid, commseqEmailUuid, emailCommseqEmailReviewRequest, callback) {
-      var postBody = emailCommseqEmailReviewRequest;
+    this.review = function(storefront_oid, commseq_email_uuid, email_commseq_email_review_request, callback) {
+      var postBody = email_commseq_email_review_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling review");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling review");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling review");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling review");
       }
 
-      // verify the required parameter 'emailCommseqEmailReviewRequest' is set
-      if (emailCommseqEmailReviewRequest === undefined || emailCommseqEmailReviewRequest === null) {
-        throw new Error("Missing the required parameter 'emailCommseqEmailReviewRequest' when calling review");
+      // verify the required parameter 'email_commseq_email_review_request' is set
+      if (email_commseq_email_review_request === undefined || email_commseq_email_review_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_email_review_request' when calling review");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_email_uuid': commseqEmailUuid
+        'storefront_oid': storefront_oid,
+        'commseq_email_uuid': commseq_email_uuid
       };
       var queryParams = {
       };
@@ -4511,8 +4511,8 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.category 
      * @param {String} opts.matches 
-     * @param {String} opts.storefrontOid 
-     * @param {Number} opts.maxHits 
+     * @param {String} opts.storefront_oid 
+     * @param {Number} opts.max_hits 
      * @param {String} opts.subcategory 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~searchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LookupResponse}
@@ -4527,8 +4527,8 @@
       var queryParams = {
         'category': opts['category'],
         'matches': opts['matches'],
-        'storefront_oid': opts['storefrontOid'],
-        'max_hits': opts['maxHits'],
+        'storefront_oid': opts['storefront_oid'],
+        'max_hits': opts['max_hits'],
         'subcategory': opts['subcategory'],
       };
       var collectionQueryParams = {
@@ -4560,31 +4560,31 @@
 
     /**
      * Search email list customers
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.startsWith 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~searchEmailListCustomersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListCustomersResponse}
      */
-    this.searchEmailListCustomers = function(storefrontOid, emailListUuid, opts, callback) {
+    this.searchEmailListCustomers = function(storefront_oid, email_list_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling searchEmailListCustomers");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling searchEmailListCustomers");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling searchEmailListCustomers");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling searchEmailListCustomers");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid
       };
       var queryParams = {
         'startsWith': opts['startsWith'],
@@ -4618,31 +4618,31 @@
 
     /**
      * Search email segment customers
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.startsWith 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~searchEmailSegmentCustomersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentCustomersResponse}
      */
-    this.searchEmailSegmentCustomers = function(storefrontOid, emailSegmentUuid, opts, callback) {
+    this.searchEmailSegmentCustomers = function(storefront_oid, email_segment_uuid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling searchEmailSegmentCustomers");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling searchEmailSegmentCustomers");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling searchEmailSegmentCustomers");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling searchEmailSegmentCustomers");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid
       };
       var queryParams = {
         'startsWith': opts['startsWith'],
@@ -4676,34 +4676,34 @@
 
     /**
      * Send email test
-     * @param {Number} storefrontOid 
-     * @param {String} commseqEmailUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest} emailCommseqEmailTestRequest Email commseq email test request
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_email_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest} email_commseq_email_test_request Email commseq email test request
      * @param {module:com.ultracart.admin.v2/StorefrontApi~sendEmailTestCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse}
      */
-    this.sendEmailTest = function(storefrontOid, commseqEmailUuid, emailCommseqEmailTestRequest, callback) {
-      var postBody = emailCommseqEmailTestRequest;
+    this.sendEmailTest = function(storefront_oid, commseq_email_uuid, email_commseq_email_test_request, callback) {
+      var postBody = email_commseq_email_test_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling sendEmailTest");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling sendEmailTest");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling sendEmailTest");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling sendEmailTest");
       }
 
-      // verify the required parameter 'emailCommseqEmailTestRequest' is set
-      if (emailCommseqEmailTestRequest === undefined || emailCommseqEmailTestRequest === null) {
-        throw new Error("Missing the required parameter 'emailCommseqEmailTestRequest' when calling sendEmailTest");
+      // verify the required parameter 'email_commseq_email_test_request' is set
+      if (email_commseq_email_test_request === undefined || email_commseq_email_test_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_email_test_request' when calling sendEmailTest");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_email_uuid': commseqEmailUuid
+        'storefront_oid': storefront_oid,
+        'commseq_email_uuid': commseq_email_uuid
       };
       var queryParams = {
       };
@@ -4736,34 +4736,34 @@
 
     /**
      * Send postcard test
-     * @param {Number} storefrontOid 
-     * @param {String} commseqPostcardUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest} emailCommseqPostcardTestRequest Email commseq email test request
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_postcard_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest} email_commseq_postcard_test_request Email commseq email test request
      * @param {module:com.ultracart.admin.v2/StorefrontApi~sendPostcardTestCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestResponse}
      */
-    this.sendPostcardTest = function(storefrontOid, commseqPostcardUuid, emailCommseqPostcardTestRequest, callback) {
-      var postBody = emailCommseqPostcardTestRequest;
+    this.sendPostcardTest = function(storefront_oid, commseq_postcard_uuid, email_commseq_postcard_test_request, callback) {
+      var postBody = email_commseq_postcard_test_request;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling sendPostcardTest");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling sendPostcardTest");
       }
 
-      // verify the required parameter 'commseqPostcardUuid' is set
-      if (commseqPostcardUuid === undefined || commseqPostcardUuid === null) {
-        throw new Error("Missing the required parameter 'commseqPostcardUuid' when calling sendPostcardTest");
+      // verify the required parameter 'commseq_postcard_uuid' is set
+      if (commseq_postcard_uuid === undefined || commseq_postcard_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_postcard_uuid' when calling sendPostcardTest");
       }
 
-      // verify the required parameter 'emailCommseqPostcardTestRequest' is set
-      if (emailCommseqPostcardTestRequest === undefined || emailCommseqPostcardTestRequest === null) {
-        throw new Error("Missing the required parameter 'emailCommseqPostcardTestRequest' when calling sendPostcardTest");
+      // verify the required parameter 'email_commseq_postcard_test_request' is set
+      if (email_commseq_postcard_test_request === undefined || email_commseq_postcard_test_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_postcard_test_request' when calling sendPostcardTest");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_postcard_uuid': commseqPostcardUuid
+        'storefront_oid': storefront_oid,
+        'commseq_postcard_uuid': commseq_postcard_uuid
       };
       var queryParams = {
       };
@@ -4796,28 +4796,28 @@
 
     /**
      * Start email campaign
-     * @param {Number} storefrontOid 
-     * @param {String} emailCampaignUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_campaign_uuid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~startEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.startEmailCampaign = function(storefrontOid, emailCampaignUuid, callback) {
+    this.startEmailCampaign = function(storefront_oid, email_campaign_uuid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling startEmailCampaign");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling startEmailCampaign");
       }
 
-      // verify the required parameter 'emailCampaignUuid' is set
-      if (emailCampaignUuid === undefined || emailCampaignUuid === null) {
-        throw new Error("Missing the required parameter 'emailCampaignUuid' when calling startEmailCampaign");
+      // verify the required parameter 'email_campaign_uuid' is set
+      if (email_campaign_uuid === undefined || email_campaign_uuid === null) {
+        throw new Error("Missing the required parameter 'email_campaign_uuid' when calling startEmailCampaign");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_campaign_uuid': emailCampaignUuid
+        'storefront_oid': storefront_oid,
+        'email_campaign_uuid': email_campaign_uuid
       };
       var queryParams = {
       };
@@ -4850,23 +4850,23 @@
 
     /**
      * Subscribe customers to email list
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
      * @param {Array.<module:com.ultracart.admin.v2.models/EmailCustomer>} customers Customers
      * @param {module:com.ultracart.admin.v2/StorefrontApi~subscribeToEmailListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListSubscribeResponse}
      */
-    this.subscribeToEmailList = function(storefrontOid, emailListUuid, customers, callback) {
+    this.subscribeToEmailList = function(storefront_oid, email_list_uuid, customers, callback) {
       var postBody = customers;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling subscribeToEmailList");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling subscribeToEmailList");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling subscribeToEmailList");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling subscribeToEmailList");
       }
 
       // verify the required parameter 'customers' is set
@@ -4876,8 +4876,8 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid
       };
       var queryParams = {
       };
@@ -4910,34 +4910,34 @@
 
     /**
      * Update email campaign
-     * @param {Number} storefrontOid 
-     * @param {String} emailCampaignUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCampaign} emailCampaign Email campaign
+     * @param {Number} storefront_oid 
+     * @param {String} email_campaign_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCampaign} email_campaign Email campaign
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailCampaignCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCampaignResponse}
      */
-    this.updateEmailCampaign = function(storefrontOid, emailCampaignUuid, emailCampaign, callback) {
-      var postBody = emailCampaign;
+    this.updateEmailCampaign = function(storefront_oid, email_campaign_uuid, email_campaign, callback) {
+      var postBody = email_campaign;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailCampaign");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailCampaign");
       }
 
-      // verify the required parameter 'emailCampaignUuid' is set
-      if (emailCampaignUuid === undefined || emailCampaignUuid === null) {
-        throw new Error("Missing the required parameter 'emailCampaignUuid' when calling updateEmailCampaign");
+      // verify the required parameter 'email_campaign_uuid' is set
+      if (email_campaign_uuid === undefined || email_campaign_uuid === null) {
+        throw new Error("Missing the required parameter 'email_campaign_uuid' when calling updateEmailCampaign");
       }
 
-      // verify the required parameter 'emailCampaign' is set
-      if (emailCampaign === undefined || emailCampaign === null) {
-        throw new Error("Missing the required parameter 'emailCampaign' when calling updateEmailCampaign");
+      // verify the required parameter 'email_campaign' is set
+      if (email_campaign === undefined || email_campaign === null) {
+        throw new Error("Missing the required parameter 'email_campaign' when calling updateEmailCampaign");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_campaign_uuid': emailCampaignUuid
+        'storefront_oid': storefront_oid,
+        'email_campaign_uuid': email_campaign_uuid
       };
       var queryParams = {
       };
@@ -4970,34 +4970,34 @@
 
     /**
      * Update email commseq
-     * @param {Number} storefrontOid 
-     * @param {String} commseqUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseq} emailCommseq Email commseq
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseq} email_commseq Email commseq
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailCommseqCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqResponse}
      */
-    this.updateEmailCommseq = function(storefrontOid, commseqUuid, emailCommseq, callback) {
-      var postBody = emailCommseq;
+    this.updateEmailCommseq = function(storefront_oid, commseq_uuid, email_commseq, callback) {
+      var postBody = email_commseq;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailCommseq");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailCommseq");
       }
 
-      // verify the required parameter 'commseqUuid' is set
-      if (commseqUuid === undefined || commseqUuid === null) {
-        throw new Error("Missing the required parameter 'commseqUuid' when calling updateEmailCommseq");
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling updateEmailCommseq");
       }
 
-      // verify the required parameter 'emailCommseq' is set
-      if (emailCommseq === undefined || emailCommseq === null) {
-        throw new Error("Missing the required parameter 'emailCommseq' when calling updateEmailCommseq");
+      // verify the required parameter 'email_commseq' is set
+      if (email_commseq === undefined || email_commseq === null) {
+        throw new Error("Missing the required parameter 'email_commseq' when calling updateEmailCommseq");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_uuid': commseqUuid
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
       };
       var queryParams = {
       };
@@ -5030,33 +5030,33 @@
 
     /**
      * Update email customer
-     * @param {Number} storefrontOid 
-     * @param {String} emailCustomerUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCustomer} emailCustomer Email customer
+     * @param {Number} storefront_oid 
+     * @param {String} email_customer_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCustomer} email_customer Email customer
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailCustomerCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.updateEmailCustomer = function(storefrontOid, emailCustomerUuid, emailCustomer, callback) {
-      var postBody = emailCustomer;
+    this.updateEmailCustomer = function(storefront_oid, email_customer_uuid, email_customer, callback) {
+      var postBody = email_customer;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailCustomer");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailCustomer");
       }
 
-      // verify the required parameter 'emailCustomerUuid' is set
-      if (emailCustomerUuid === undefined || emailCustomerUuid === null) {
-        throw new Error("Missing the required parameter 'emailCustomerUuid' when calling updateEmailCustomer");
+      // verify the required parameter 'email_customer_uuid' is set
+      if (email_customer_uuid === undefined || email_customer_uuid === null) {
+        throw new Error("Missing the required parameter 'email_customer_uuid' when calling updateEmailCustomer");
       }
 
-      // verify the required parameter 'emailCustomer' is set
-      if (emailCustomer === undefined || emailCustomer === null) {
-        throw new Error("Missing the required parameter 'emailCustomer' when calling updateEmailCustomer");
+      // verify the required parameter 'email_customer' is set
+      if (email_customer === undefined || email_customer === null) {
+        throw new Error("Missing the required parameter 'email_customer' when calling updateEmailCustomer");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_customer_uuid': emailCustomerUuid
+        'storefront_oid': storefront_oid,
+        'email_customer_uuid': email_customer_uuid
       };
       var queryParams = {
       };
@@ -5089,34 +5089,34 @@
 
     /**
      * Update email email
-     * @param {Number} storefrontOid 
-     * @param {String} commseqEmailUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmail} emailCommseqEmail Email commseq email
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_email_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmail} email_commseq_email Email commseq email
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailEmailCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailResponse}
      */
-    this.updateEmailEmail = function(storefrontOid, commseqEmailUuid, emailCommseqEmail, callback) {
-      var postBody = emailCommseqEmail;
+    this.updateEmailEmail = function(storefront_oid, commseq_email_uuid, email_commseq_email, callback) {
+      var postBody = email_commseq_email;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailEmail");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailEmail");
       }
 
-      // verify the required parameter 'commseqEmailUuid' is set
-      if (commseqEmailUuid === undefined || commseqEmailUuid === null) {
-        throw new Error("Missing the required parameter 'commseqEmailUuid' when calling updateEmailEmail");
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling updateEmailEmail");
       }
 
-      // verify the required parameter 'emailCommseqEmail' is set
-      if (emailCommseqEmail === undefined || emailCommseqEmail === null) {
-        throw new Error("Missing the required parameter 'emailCommseqEmail' when calling updateEmailEmail");
+      // verify the required parameter 'email_commseq_email' is set
+      if (email_commseq_email === undefined || email_commseq_email === null) {
+        throw new Error("Missing the required parameter 'email_commseq_email' when calling updateEmailEmail");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_email_uuid': commseqEmailUuid
+        'storefront_oid': storefront_oid,
+        'commseq_email_uuid': commseq_email_uuid
       };
       var queryParams = {
       };
@@ -5149,34 +5149,34 @@
 
     /**
      * Update email flow
-     * @param {Number} storefrontOid 
-     * @param {String} emailFlowUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailFlow} emailFlow Email flow
+     * @param {Number} storefront_oid 
+     * @param {String} email_flow_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailFlow} email_flow Email flow
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailFlowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailFlowResponse}
      */
-    this.updateEmailFlow = function(storefrontOid, emailFlowUuid, emailFlow, callback) {
-      var postBody = emailFlow;
+    this.updateEmailFlow = function(storefront_oid, email_flow_uuid, email_flow, callback) {
+      var postBody = email_flow;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailFlow");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailFlow");
       }
 
-      // verify the required parameter 'emailFlowUuid' is set
-      if (emailFlowUuid === undefined || emailFlowUuid === null) {
-        throw new Error("Missing the required parameter 'emailFlowUuid' when calling updateEmailFlow");
+      // verify the required parameter 'email_flow_uuid' is set
+      if (email_flow_uuid === undefined || email_flow_uuid === null) {
+        throw new Error("Missing the required parameter 'email_flow_uuid' when calling updateEmailFlow");
       }
 
-      // verify the required parameter 'emailFlow' is set
-      if (emailFlow === undefined || emailFlow === null) {
-        throw new Error("Missing the required parameter 'emailFlow' when calling updateEmailFlow");
+      // verify the required parameter 'email_flow' is set
+      if (email_flow === undefined || email_flow === null) {
+        throw new Error("Missing the required parameter 'email_flow' when calling updateEmailFlow");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_flow_uuid': emailFlowUuid
+        'storefront_oid': storefront_oid,
+        'email_flow_uuid': email_flow_uuid
       };
       var queryParams = {
       };
@@ -5209,16 +5209,16 @@
 
     /**
      * Update email global settings
-     * @param {module:com.ultracart.admin.v2.models/EmailGlobalSettings} globalSettings global settings request
+     * @param {module:com.ultracart.admin.v2.models/EmailGlobalSettings} global_settings global settings request
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailGlobalSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailGlobalSettingsResponse}
      */
-    this.updateEmailGlobalSettings = function(globalSettings, callback) {
-      var postBody = globalSettings;
+    this.updateEmailGlobalSettings = function(global_settings, callback) {
+      var postBody = global_settings;
 
-      // verify the required parameter 'globalSettings' is set
-      if (globalSettings === undefined || globalSettings === null) {
-        throw new Error("Missing the required parameter 'globalSettings' when calling updateEmailGlobalSettings");
+      // verify the required parameter 'global_settings' is set
+      if (global_settings === undefined || global_settings === null) {
+        throw new Error("Missing the required parameter 'global_settings' when calling updateEmailGlobalSettings");
       }
 
 
@@ -5255,34 +5255,34 @@
 
     /**
      * Update email list
-     * @param {Number} storefrontOid 
-     * @param {String} emailListUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailList} emailList Email list
+     * @param {Number} storefront_oid 
+     * @param {String} email_list_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailList} email_list Email list
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListResponse}
      */
-    this.updateEmailList = function(storefrontOid, emailListUuid, emailList, callback) {
-      var postBody = emailList;
+    this.updateEmailList = function(storefront_oid, email_list_uuid, email_list, callback) {
+      var postBody = email_list;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailList");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailList");
       }
 
-      // verify the required parameter 'emailListUuid' is set
-      if (emailListUuid === undefined || emailListUuid === null) {
-        throw new Error("Missing the required parameter 'emailListUuid' when calling updateEmailList");
+      // verify the required parameter 'email_list_uuid' is set
+      if (email_list_uuid === undefined || email_list_uuid === null) {
+        throw new Error("Missing the required parameter 'email_list_uuid' when calling updateEmailList");
       }
 
-      // verify the required parameter 'emailList' is set
-      if (emailList === undefined || emailList === null) {
-        throw new Error("Missing the required parameter 'emailList' when calling updateEmailList");
+      // verify the required parameter 'email_list' is set
+      if (email_list === undefined || email_list === null) {
+        throw new Error("Missing the required parameter 'email_list' when calling updateEmailList");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_list_uuid': emailListUuid
+        'storefront_oid': storefront_oid,
+        'email_list_uuid': email_list_uuid
       };
       var queryParams = {
       };
@@ -5315,17 +5315,17 @@
 
     /**
      * Update email plan
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2.models/EmailPlan} settings plan request
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailPlanCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailPlanResponse}
      */
-    this.updateEmailPlan = function(storefrontOid, settings, callback) {
+    this.updateEmailPlan = function(storefront_oid, settings, callback) {
       var postBody = settings;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailPlan");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailPlan");
       }
 
       // verify the required parameter 'settings' is set
@@ -5335,7 +5335,7 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -5368,34 +5368,34 @@
 
     /**
      * Update email postcard
-     * @param {Number} storefrontOid 
-     * @param {String} commseqPostcardUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcard} emailCommseqPostcard Email commseq postcard
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_postcard_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqPostcard} email_commseq_postcard Email commseq postcard
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailPostcardCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqPostcardResponse}
      */
-    this.updateEmailPostcard = function(storefrontOid, commseqPostcardUuid, emailCommseqPostcard, callback) {
-      var postBody = emailCommseqPostcard;
+    this.updateEmailPostcard = function(storefront_oid, commseq_postcard_uuid, email_commseq_postcard, callback) {
+      var postBody = email_commseq_postcard;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailPostcard");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailPostcard");
       }
 
-      // verify the required parameter 'commseqPostcardUuid' is set
-      if (commseqPostcardUuid === undefined || commseqPostcardUuid === null) {
-        throw new Error("Missing the required parameter 'commseqPostcardUuid' when calling updateEmailPostcard");
+      // verify the required parameter 'commseq_postcard_uuid' is set
+      if (commseq_postcard_uuid === undefined || commseq_postcard_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_postcard_uuid' when calling updateEmailPostcard");
       }
 
-      // verify the required parameter 'emailCommseqPostcard' is set
-      if (emailCommseqPostcard === undefined || emailCommseqPostcard === null) {
-        throw new Error("Missing the required parameter 'emailCommseqPostcard' when calling updateEmailPostcard");
+      // verify the required parameter 'email_commseq_postcard' is set
+      if (email_commseq_postcard === undefined || email_commseq_postcard === null) {
+        throw new Error("Missing the required parameter 'email_commseq_postcard' when calling updateEmailPostcard");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'commseq_postcard_uuid': commseqPostcardUuid
+        'storefront_oid': storefront_oid,
+        'commseq_postcard_uuid': commseq_postcard_uuid
       };
       var queryParams = {
       };
@@ -5428,34 +5428,34 @@
 
     /**
      * Update email segment
-     * @param {Number} storefrontOid 
-     * @param {String} emailSegmentUuid 
-     * @param {module:com.ultracart.admin.v2.models/EmailSegment} emailSegment Email segment
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailSegment} email_segment Email segment
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSegmentResponse}
      */
-    this.updateEmailSegment = function(storefrontOid, emailSegmentUuid, emailSegment, callback) {
-      var postBody = emailSegment;
+    this.updateEmailSegment = function(storefront_oid, email_segment_uuid, email_segment, callback) {
+      var postBody = email_segment;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailSegment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailSegment");
       }
 
-      // verify the required parameter 'emailSegmentUuid' is set
-      if (emailSegmentUuid === undefined || emailSegmentUuid === null) {
-        throw new Error("Missing the required parameter 'emailSegmentUuid' when calling updateEmailSegment");
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling updateEmailSegment");
       }
 
-      // verify the required parameter 'emailSegment' is set
-      if (emailSegment === undefined || emailSegment === null) {
-        throw new Error("Missing the required parameter 'emailSegment' when calling updateEmailSegment");
+      // verify the required parameter 'email_segment' is set
+      if (email_segment === undefined || email_segment === null) {
+        throw new Error("Missing the required parameter 'email_segment' when calling updateEmailSegment");
       }
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'email_segment_uuid': emailSegmentUuid
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid
       };
       var queryParams = {
       };
@@ -5488,17 +5488,17 @@
 
     /**
      * Update email settings
-     * @param {Number} storefrontOid 
+     * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2.models/EmailSettings} settings settings request
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateEmailSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailSettingsResponse}
      */
-    this.updateEmailSettings = function(storefrontOid, settings, callback) {
+    this.updateEmailSettings = function(storefront_oid, settings, callback) {
       var postBody = settings;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateEmailSettings");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateEmailSettings");
       }
 
       // verify the required parameter 'settings' is set
@@ -5508,7 +5508,7 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid
+        'storefront_oid': storefront_oid
       };
       var queryParams = {
       };
@@ -5541,23 +5541,23 @@
 
     /**
      * Update experiment
-     * @param {Number} storefrontOid 
-     * @param {Number} storefrontExperimentOid 
+     * @param {Number} storefront_oid 
+     * @param {Number} storefront_experiment_oid 
      * @param {module:com.ultracart.admin.v2.models/Experiment} experiment Experiment
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateExperimentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ExperimentResponse}
      */
-    this.updateExperiment = function(storefrontOid, storefrontExperimentOid, experiment, callback) {
+    this.updateExperiment = function(storefront_oid, storefront_experiment_oid, experiment, callback) {
       var postBody = experiment;
 
-      // verify the required parameter 'storefrontOid' is set
-      if (storefrontOid === undefined || storefrontOid === null) {
-        throw new Error("Missing the required parameter 'storefrontOid' when calling updateExperiment");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateExperiment");
       }
 
-      // verify the required parameter 'storefrontExperimentOid' is set
-      if (storefrontExperimentOid === undefined || storefrontExperimentOid === null) {
-        throw new Error("Missing the required parameter 'storefrontExperimentOid' when calling updateExperiment");
+      // verify the required parameter 'storefront_experiment_oid' is set
+      if (storefront_experiment_oid === undefined || storefront_experiment_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_experiment_oid' when calling updateExperiment");
       }
 
       // verify the required parameter 'experiment' is set
@@ -5567,8 +5567,8 @@
 
 
       var pathParams = {
-        'storefront_oid': storefrontOid,
-        'storefront_experiment_oid': storefrontExperimentOid
+        'storefront_oid': storefront_oid,
+        'storefront_experiment_oid': storefront_experiment_oid
       };
       var queryParams = {
       };
@@ -5601,27 +5601,27 @@
 
     /**
      * Update library item. Note that only certain fields may be updated via this method.
-     * @param {Number} libraryItemOid 
-     * @param {module:com.ultracart.admin.v2.models/LibraryItem} libraryItem Library item
+     * @param {Number} library_item_oid 
+     * @param {module:com.ultracart.admin.v2.models/LibraryItem} library_item Library item
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
      */
-    this.updateLibraryItem = function(libraryItemOid, libraryItem, callback) {
-      var postBody = libraryItem;
+    this.updateLibraryItem = function(library_item_oid, library_item, callback) {
+      var postBody = library_item;
 
-      // verify the required parameter 'libraryItemOid' is set
-      if (libraryItemOid === undefined || libraryItemOid === null) {
-        throw new Error("Missing the required parameter 'libraryItemOid' when calling updateLibraryItem");
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling updateLibraryItem");
       }
 
-      // verify the required parameter 'libraryItem' is set
-      if (libraryItem === undefined || libraryItem === null) {
-        throw new Error("Missing the required parameter 'libraryItem' when calling updateLibraryItem");
+      // verify the required parameter 'library_item' is set
+      if (library_item === undefined || library_item === null) {
+        throw new Error("Missing the required parameter 'library_item' when calling updateLibraryItem");
       }
 
 
       var pathParams = {
-        'library_item_oid': libraryItemOid
+        'library_item_oid': library_item_oid
       };
       var queryParams = {
       };
@@ -5655,34 +5655,34 @@
     /**
      * Updates a transaction email object
      * Updates a transactional email 
-     * @param {Number} id 
-     * @param {String} emailId 
-     * @param {module:com.ultracart.admin.v2.models/TransactionEmail} transactionEmail TransactionEmail
+     * @param {Number} storefront_oid 
+     * @param {String} email_id 
+     * @param {module:com.ultracart.admin.v2.models/TransactionEmail} transaction_email TransactionEmail
      * @param {module:com.ultracart.admin.v2/StorefrontApi~updateTransactionEmailCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TransactionEmailResponse}
      */
-    this.updateTransactionEmail = function(id, emailId, transactionEmail, callback) {
-      var postBody = transactionEmail;
+    this.updateTransactionEmail = function(storefront_oid, email_id, transaction_email, callback) {
+      var postBody = transaction_email;
 
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling updateTransactionEmail");
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateTransactionEmail");
       }
 
-      // verify the required parameter 'emailId' is set
-      if (emailId === undefined || emailId === null) {
-        throw new Error("Missing the required parameter 'emailId' when calling updateTransactionEmail");
+      // verify the required parameter 'email_id' is set
+      if (email_id === undefined || email_id === null) {
+        throw new Error("Missing the required parameter 'email_id' when calling updateTransactionEmail");
       }
 
-      // verify the required parameter 'transactionEmail' is set
-      if (transactionEmail === undefined || transactionEmail === null) {
-        throw new Error("Missing the required parameter 'transactionEmail' when calling updateTransactionEmail");
+      // verify the required parameter 'transaction_email' is set
+      if (transaction_email === undefined || transaction_email === null) {
+        throw new Error("Missing the required parameter 'transaction_email' when calling updateTransactionEmail");
       }
 
 
       var pathParams = {
-        'id': id,
-        'email_id': emailId
+        'storefront_oid': storefront_oid,
+        'email_id': email_id
       };
       var queryParams = {
       };
@@ -5699,7 +5699,7 @@
       var returnType = TransactionEmailResponse;
 
       return this.apiClient.callApi(
-        '/storefront/{id}/transaction_email/list/{email_id}', 'PUT',
+        '/storefront/{storefront_oid}/transaction_email/list/{email_id}', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

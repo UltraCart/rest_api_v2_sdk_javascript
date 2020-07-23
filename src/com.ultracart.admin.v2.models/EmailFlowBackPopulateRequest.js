@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('order_days_old'))
-        obj.orderDaysOld = ApiClient.convertToType(data['order_days_old'], 'Number');
+        obj.order_days_old = ApiClient.convertToType(data['order_days_old'], 'Number');
       if (data.hasOwnProperty('relative_to_event'))
-        obj.relativeToEvent = ApiClient.convertToType(data['relative_to_event'], 'Boolean');
+        obj.relative_to_event = ApiClient.convertToType(data['relative_to_event'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * The age of the orders that should be considered for order triggers.
-   * @member {Number} orderDaysOld
+   * @member {Number} order_days_old
    */
-  exports.prototype.orderDaysOld = undefined;
+  exports.prototype.order_days_old = undefined;
 
   /**
    * True if the age of the event should be considered when reducing the initial flow wait step
-   * @member {Boolean} relativeToEvent
+   * @member {Boolean} relative_to_event
    */
-  exports.prototype.relativeToEvent = undefined;
+  exports.prototype.relative_to_event = undefined;
 
   return exports;
 

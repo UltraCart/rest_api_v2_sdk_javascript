@@ -64,29 +64,29 @@
       if (data.hasOwnProperty('company'))
         obj.company = ApiClient.convertToType(data['company'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('customer_profile_oid'))
-        obj.customerProfileOid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('customer_shipping_oid'))
-        obj.customerShippingOid = ApiClient.convertToType(data['customer_shipping_oid'], 'Number');
+        obj.customer_shipping_oid = ApiClient.convertToType(data['customer_shipping_oid'], 'Number');
       if (data.hasOwnProperty('day_phone'))
-        obj.dayPhone = ApiClient.convertToType(data['day_phone'], 'String');
+        obj.day_phone = ApiClient.convertToType(data['day_phone'], 'String');
       if (data.hasOwnProperty('default_shipping'))
-        obj.defaultShipping = ApiClient.convertToType(data['default_shipping'], 'Boolean');
+        obj.default_shipping = ApiClient.convertToType(data['default_shipping'], 'Boolean');
       if (data.hasOwnProperty('evening_phone'))
-        obj.eveningPhone = ApiClient.convertToType(data['evening_phone'], 'String');
+        obj.evening_phone = ApiClient.convertToType(data['evening_phone'], 'String');
       if (data.hasOwnProperty('first_name'))
-        obj.firstName = ApiClient.convertToType(data['first_name'], 'String');
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('last_name'))
-        obj.lastName = ApiClient.convertToType(data['last_name'], 'String');
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
       if (data.hasOwnProperty('last_used_dts'))
-        obj.lastUsedDts = ApiClient.convertToType(data['last_used_dts'], 'String');
+        obj.last_used_dts = ApiClient.convertToType(data['last_used_dts'], 'String');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('state_region'))
-        obj.stateRegion = ApiClient.convertToType(data['state_region'], 'String');
+        obj.state_region = ApiClient.convertToType(data['state_region'], 'String');
       if (data.hasOwnProperty('tax_county'))
-        obj.taxCounty = ApiClient.convertToType(data['tax_county'], 'String');
+        obj.tax_county = ApiClient.convertToType(data['tax_county'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
     }
@@ -119,75 +119,75 @@
 
   /**
    * ISO-3166 two letter country code
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Customer profile object identifier
-   * @member {Number} customerProfileOid
+   * @member {Number} customer_profile_oid
    */
-  exports.prototype.customerProfileOid = undefined;
+  exports.prototype.customer_profile_oid = undefined;
 
   /**
    * Customer profile shipping object identifier
-   * @member {Number} customerShippingOid
+   * @member {Number} customer_shipping_oid
    */
-  exports.prototype.customerShippingOid = undefined;
+  exports.prototype.customer_shipping_oid = undefined;
 
   /**
    * Day phone
-   * @member {String} dayPhone
+   * @member {String} day_phone
    */
-  exports.prototype.dayPhone = undefined;
+  exports.prototype.day_phone = undefined;
 
   /**
    * Default shipping
-   * @member {Boolean} defaultShipping
+   * @member {Boolean} default_shipping
    */
-  exports.prototype.defaultShipping = undefined;
+  exports.prototype.default_shipping = undefined;
 
   /**
    * Evening phone
-   * @member {String} eveningPhone
+   * @member {String} evening_phone
    */
-  exports.prototype.eveningPhone = undefined;
+  exports.prototype.evening_phone = undefined;
 
   /**
    * First name
-   * @member {String} firstName
+   * @member {String} first_name
    */
-  exports.prototype.firstName = undefined;
+  exports.prototype.first_name = undefined;
 
   /**
    * Last name
-   * @member {String} lastName
+   * @member {String} last_name
    */
-  exports.prototype.lastName = undefined;
+  exports.prototype.last_name = undefined;
 
   /**
    * Last used date
-   * @member {String} lastUsedDts
+   * @member {String} last_used_dts
    */
-  exports.prototype.lastUsedDts = undefined;
+  exports.prototype.last_used_dts = undefined;
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * State for United States otherwise region or province for other countries
-   * @member {String} stateRegion
+   * @member {String} state_region
    */
-  exports.prototype.stateRegion = undefined;
+  exports.prototype.state_region = undefined;
 
   /**
    * Tax County
-   * @member {String} taxCounty
+   * @member {String} tax_county
    */
-  exports.prototype.taxCounty = undefined;
+  exports.prototype.tax_county = undefined;
 
   /**
    * Title

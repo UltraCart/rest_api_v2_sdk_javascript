@@ -26,11 +26,11 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
-* `running` (value: `"Running"`)
+* `Running` (value: `"Running"`)
 
-* `ended` (value: `"Ended"`)
+* `Ended` (value: `"Ended"`)
 
-* `deleted` (value: `"Deleted"`)
+* `Deleted` (value: `"Deleted"`)
 
 
 

@@ -56,20 +56,20 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('suppress_buysafe'))
-        obj.suppressBuysafe = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
+        obj.suppress_buysafe = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
       if (data.hasOwnProperty('terms'))
         obj.terms = ApiClient.convertToType(data['terms'], 'String');
       if (data.hasOwnProperty('terms_translated_text_instance_oid'))
-        obj.termsTranslatedTextInstanceOid = ApiClient.convertToType(data['terms_translated_text_instance_oid'], 'Number');
+        obj.terms_translated_text_instance_oid = ApiClient.convertToType(data['terms_translated_text_instance_oid'], 'Number');
     }
     return obj;
   }
 
   /**
    * True to suppress buySAFE
-   * @member {Boolean} suppressBuysafe
+   * @member {Boolean} suppress_buysafe
    */
-  exports.prototype.suppressBuysafe = undefined;
+  exports.prototype.suppress_buysafe = undefined;
 
   /**
    * Terms for purchasing this item
@@ -79,9 +79,9 @@
 
   /**
    * Terms translated text instance identifier
-   * @member {Number} termsTranslatedTextInstanceOid
+   * @member {Number} terms_translated_text_instance_oid
    */
-  exports.prototype.termsTranslatedTextInstanceOid = undefined;
+  exports.prototype.terms_translated_text_instance_oid = undefined;
 
   return exports;
 

@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('restrict_merchant_item_id'))
-        obj.restrictMerchantItemId = ApiClient.convertToType(data['restrict_merchant_item_id'], 'String');
+        obj.restrict_merchant_item_id = ApiClient.convertToType(data['restrict_merchant_item_id'], 'String');
       if (data.hasOwnProperty('restrict_merchant_item_oid'))
-        obj.restrictMerchantItemOid = ApiClient.convertToType(data['restrict_merchant_item_oid'], 'Number');
+        obj.restrict_merchant_item_oid = ApiClient.convertToType(data['restrict_merchant_item_oid'], 'Number');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
     }
@@ -67,15 +67,15 @@
 
   /**
    * Restrict item id
-   * @member {String} restrictMerchantItemId
+   * @member {String} restrict_merchant_item_id
    */
-  exports.prototype.restrictMerchantItemId = undefined;
+  exports.prototype.restrict_merchant_item_id = undefined;
 
   /**
    * Restrict item object identifier
-   * @member {Number} restrictMerchantItemOid
+   * @member {Number} restrict_merchant_item_oid
    */
-  exports.prototype.restrictMerchantItemOid = undefined;
+  exports.prototype.restrict_merchant_item_oid = undefined;
 
   /**
    * Restriction type
@@ -94,19 +94,19 @@
      * value: "can not be purchased with"
      * @const
      */
-    canNotBePurchasedWith: "can not be purchased with",
+    can_not_be_purchased_with: "can not be purchased with",
 
     /**
      * value: "can only be purchased with"
      * @const
      */
-    canOnlyBePurchasedWith: "can only be purchased with",
+    can_only_be_purchased_with: "can only be purchased with",
 
     /**
      * value: "must be purchased with"
      * @const
      */
-    mustBePurchasedWith: "must be purchased with"
+    must_be_purchased_with: "must be purchased with"
   };
 
   return exports;

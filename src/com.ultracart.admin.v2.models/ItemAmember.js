@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('amember_payment_duration_days'))
-        obj.amemberPaymentDurationDays = ApiClient.convertToType(data['amember_payment_duration_days'], 'Number');
+        obj.amember_payment_duration_days = ApiClient.convertToType(data['amember_payment_duration_days'], 'Number');
       if (data.hasOwnProperty('amember_product_id'))
-        obj.amemberProductId = ApiClient.convertToType(data['amember_product_id'], 'String');
+        obj.amember_product_id = ApiClient.convertToType(data['amember_product_id'], 'String');
     }
     return obj;
   }
 
   /**
    * The number of days that the customer should be given access to the item
-   * @member {Number} amemberPaymentDurationDays
+   * @member {Number} amember_payment_duration_days
    */
-  exports.prototype.amemberPaymentDurationDays = undefined;
+  exports.prototype.amember_payment_duration_days = undefined;
 
   /**
    * A-member product id give customer access to when they purchase this item
-   * @member {String} amemberProductId
+   * @member {String} amember_product_id
    */
-  exports.prototype.amemberProductId = undefined;
+  exports.prototype.amember_product_id = undefined;
 
   return exports;
 

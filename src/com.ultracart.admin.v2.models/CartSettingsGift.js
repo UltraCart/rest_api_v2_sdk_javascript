@@ -56,39 +56,39 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_gifts'))
-        obj.allowGifts = ApiClient.convertToType(data['allow_gifts'], 'Boolean');
+        obj.allow_gifts = ApiClient.convertToType(data['allow_gifts'], 'Boolean');
       if (data.hasOwnProperty('gift_charge'))
-        obj.giftCharge = Currency.constructFromObject(data['gift_charge']);
+        obj.gift_charge = Currency.constructFromObject(data['gift_charge']);
       if (data.hasOwnProperty('gift_wraps'))
-        obj.giftWraps = ApiClient.convertToType(data['gift_wraps'], [CartSettingsGiftWrap]);
+        obj.gift_wraps = ApiClient.convertToType(data['gift_wraps'], [CartSettingsGiftWrap]);
       if (data.hasOwnProperty('max_message_length'))
-        obj.maxMessageLength = ApiClient.convertToType(data['max_message_length'], 'Number');
+        obj.max_message_length = ApiClient.convertToType(data['max_message_length'], 'Number');
     }
     return obj;
   }
 
   /**
    * True if this checkout supports gift giving
-   * @member {Boolean} allowGifts
+   * @member {Boolean} allow_gifts
    */
-  exports.prototype.allowGifts = undefined;
+  exports.prototype.allow_gifts = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} giftCharge
+   * @member {module:com.ultracart.admin.v2.models/Currency} gift_charge
    */
-  exports.prototype.giftCharge = undefined;
+  exports.prototype.gift_charge = undefined;
 
   /**
    * The gift wraps available for the customer to select from
-   * @member {Array.<module:com.ultracart.admin.v2.models/CartSettingsGiftWrap>} giftWraps
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartSettingsGiftWrap>} gift_wraps
    */
-  exports.prototype.giftWraps = undefined;
+  exports.prototype.gift_wraps = undefined;
 
   /**
    * The maximum length of the gift message the giver can enter
-   * @member {Number} maxMessageLength
+   * @member {Number} max_message_length
    */
-  exports.prototype.maxMessageLength = undefined;
+  exports.prototype.max_message_length = undefined;
 
   return exports;
 

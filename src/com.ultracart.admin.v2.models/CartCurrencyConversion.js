@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('base_currency_Code'))
-        obj.baseCurrencyCode = ApiClient.convertToType(data['base_currency_Code'], 'String');
+        obj.base_currency_Code = ApiClient.convertToType(data['base_currency_Code'], 'String');
       if (data.hasOwnProperty('currencies'))
         obj.currencies = ApiClient.convertToType(data['currencies'], [Currency]);
     }
@@ -65,9 +65,9 @@
 
   /**
    * Base currency code for this merchant
-   * @member {String} baseCurrencyCode
+   * @member {String} base_currency_Code
    */
-  exports.prototype.baseCurrencyCode = undefined;
+  exports.prototype.base_currency_Code = undefined;
 
   /**
    * Conversion information for 1 unit of base currency to target currencies

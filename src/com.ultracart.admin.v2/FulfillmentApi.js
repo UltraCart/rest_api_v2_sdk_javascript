@@ -59,16 +59,16 @@
     /**
      * Acknowledge receipt of orders.
      * Acknowledge receipt of orders so that they are removed from the fulfillment queue.  This method must be called after receiving and order (via webhook) or retrieving (via retrieve orders method). 
-     * @param {String} distributionCenterCode Distribution center code
+     * @param {String} distribution_center_code Distribution center code
      * @param {Array.<module:com.ultracart.admin.v2.models/String>} orderIds Orders to acknowledge receipt of (limit 100)
      * @param {module:com.ultracart.admin.v2/FulfillmentApi~acknowledgeOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.acknowledgeOrders = function(distributionCenterCode, orderIds, callback) {
+    this.acknowledgeOrders = function(distribution_center_code, orderIds, callback) {
       var postBody = orderIds;
 
-      // verify the required parameter 'distributionCenterCode' is set
-      if (distributionCenterCode === undefined || distributionCenterCode === null) {
-        throw new Error("Missing the required parameter 'distributionCenterCode' when calling acknowledgeOrders");
+      // verify the required parameter 'distribution_center_code' is set
+      if (distribution_center_code === undefined || distribution_center_code === null) {
+        throw new Error("Missing the required parameter 'distribution_center_code' when calling acknowledgeOrders");
       }
 
       // verify the required parameter 'orderIds' is set
@@ -78,7 +78,7 @@
 
 
       var pathParams = {
-        'distribution_center_code': distributionCenterCode
+        'distribution_center_code': distribution_center_code
       };
       var queryParams = {
       };
@@ -112,21 +112,21 @@
     /**
      * Retrieve orders queued up for this distribution center.
      * Retrieves up to 100 orders that are queued up in this distribution center.  You must acknowledge them before additional new orders will be returned.  There is NO record chunking.  You'll get the same 100 records again and again until you acknowledge orders.  The orders that are returned contain only items for this distribution center and are by default completely expanded with billing, buysafe, channel_partner, checkout, coupons, customer_profile, edi, gift, gift_certificate, internal, items, payment, shipping, summary, taxes. 
-     * @param {String} distributionCenterCode Distribution center code
+     * @param {String} distribution_center_code Distribution center code
      * @param {module:com.ultracart.admin.v2/FulfillmentApi~getDistributionCenterOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}
      */
-    this.getDistributionCenterOrders = function(distributionCenterCode, callback) {
+    this.getDistributionCenterOrders = function(distribution_center_code, callback) {
       var postBody = null;
 
-      // verify the required parameter 'distributionCenterCode' is set
-      if (distributionCenterCode === undefined || distributionCenterCode === null) {
-        throw new Error("Missing the required parameter 'distributionCenterCode' when calling getDistributionCenterOrders");
+      // verify the required parameter 'distribution_center_code' is set
+      if (distribution_center_code === undefined || distribution_center_code === null) {
+        throw new Error("Missing the required parameter 'distribution_center_code' when calling getDistributionCenterOrders");
       }
 
 
       var pathParams = {
-        'distribution_center_code': distributionCenterCode
+        'distribution_center_code': distribution_center_code
       };
       var queryParams = {
       };
@@ -201,16 +201,16 @@
     /**
      * Mark orders as shipped
      * Store the tracking information and mark the order shipped for this distribution center. 
-     * @param {String} distributionCenterCode Distribution center code
+     * @param {String} distribution_center_code Distribution center code
      * @param {Array.<module:com.ultracart.admin.v2.models/FulfillmentShipment>} shipments Orders to mark shipped
      * @param {module:com.ultracart.admin.v2/FulfillmentApi~shipOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.shipOrders = function(distributionCenterCode, shipments, callback) {
+    this.shipOrders = function(distribution_center_code, shipments, callback) {
       var postBody = shipments;
 
-      // verify the required parameter 'distributionCenterCode' is set
-      if (distributionCenterCode === undefined || distributionCenterCode === null) {
-        throw new Error("Missing the required parameter 'distributionCenterCode' when calling shipOrders");
+      // verify the required parameter 'distribution_center_code' is set
+      if (distribution_center_code === undefined || distribution_center_code === null) {
+        throw new Error("Missing the required parameter 'distribution_center_code' when calling shipOrders");
       }
 
       // verify the required parameter 'shipments' is set
@@ -220,7 +220,7 @@
 
 
       var pathParams = {
-        'distribution_center_code': distributionCenterCode
+        'distribution_center_code': distribution_center_code
       };
       var queryParams = {
       };
@@ -254,16 +254,16 @@
     /**
      * Update inventory
      * Update the inventory for items associated with this distribution center 
-     * @param {String} distributionCenterCode Distribution center code
+     * @param {String} distribution_center_code Distribution center code
      * @param {Array.<module:com.ultracart.admin.v2.models/FulfillmentInventory>} inventories Inventory updates (limit 500)
      * @param {module:com.ultracart.admin.v2/FulfillmentApi~updateInventoryCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.updateInventory = function(distributionCenterCode, inventories, callback) {
+    this.updateInventory = function(distribution_center_code, inventories, callback) {
       var postBody = inventories;
 
-      // verify the required parameter 'distributionCenterCode' is set
-      if (distributionCenterCode === undefined || distributionCenterCode === null) {
-        throw new Error("Missing the required parameter 'distributionCenterCode' when calling updateInventory");
+      // verify the required parameter 'distribution_center_code' is set
+      if (distribution_center_code === undefined || distribution_center_code === null) {
+        throw new Error("Missing the required parameter 'distribution_center_code' when calling updateInventory");
       }
 
       // verify the required parameter 'inventories' is set
@@ -273,7 +273,7 @@
 
 
       var pathParams = {
-        'distribution_center_code': distributionCenterCode
+        'distribution_center_code': distribution_center_code
       };
       var queryParams = {
       };

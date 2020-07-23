@@ -56,128 +56,128 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('barcode_ua'))
-        obj.barcodeUa = ApiClient.convertToType(data['barcode_ua'], 'String');
+        obj.barcode_ua = ApiClient.convertToType(data['barcode_ua'], 'String');
       if (data.hasOwnProperty('barcode_uc'))
-        obj.barcodeUc = ApiClient.convertToType(data['barcode_uc'], 'String');
+        obj.barcode_uc = ApiClient.convertToType(data['barcode_uc'], 'String');
       if (data.hasOwnProperty('barcode_ui'))
-        obj.barcodeUi = ApiClient.convertToType(data['barcode_ui'], 'String');
+        obj.barcode_ui = ApiClient.convertToType(data['barcode_ui'], 'String');
       if (data.hasOwnProperty('barcode_uk'))
-        obj.barcodeUk = ApiClient.convertToType(data['barcode_uk'], 'String');
+        obj.barcode_uk = ApiClient.convertToType(data['barcode_uk'], 'String');
       if (data.hasOwnProperty('buyer_catalog_number'))
-        obj.buyerCatalogNumber = ApiClient.convertToType(data['buyer_catalog_number'], 'String');
+        obj.buyer_catalog_number = ApiClient.convertToType(data['buyer_catalog_number'], 'String');
       if (data.hasOwnProperty('buyer_dpci'))
-        obj.buyerDpci = ApiClient.convertToType(data['buyer_dpci'], 'String');
+        obj.buyer_dpci = ApiClient.convertToType(data['buyer_dpci'], 'String');
       if (data.hasOwnProperty('buyer_item_number'))
-        obj.buyerItemNumber = ApiClient.convertToType(data['buyer_item_number'], 'String');
+        obj.buyer_item_number = ApiClient.convertToType(data['buyer_item_number'], 'String');
       if (data.hasOwnProperty('channel_partner_code'))
-        obj.channelPartnerCode = ApiClient.convertToType(data['channel_partner_code'], 'String');
+        obj.channel_partner_code = ApiClient.convertToType(data['channel_partner_code'], 'String');
       if (data.hasOwnProperty('channel_partner_oid'))
-        obj.channelPartnerOid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
+        obj.channel_partner_oid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
       if (data.hasOwnProperty('from_item_id'))
-        obj.fromItemId = ApiClient.convertToType(data['from_item_id'], 'String');
+        obj.from_item_id = ApiClient.convertToType(data['from_item_id'], 'String');
       if (data.hasOwnProperty('from_sku'))
-        obj.fromSku = ApiClient.convertToType(data['from_sku'], 'String');
+        obj.from_sku = ApiClient.convertToType(data['from_sku'], 'String');
       if (data.hasOwnProperty('mutually_defined_number'))
-        obj.mutuallyDefinedNumber = ApiClient.convertToType(data['mutually_defined_number'], 'String');
+        obj.mutually_defined_number = ApiClient.convertToType(data['mutually_defined_number'], 'String');
       if (data.hasOwnProperty('quantity_ratio_cp'))
-        obj.quantityRatioCp = ApiClient.convertToType(data['quantity_ratio_cp'], 'Number');
+        obj.quantity_ratio_cp = ApiClient.convertToType(data['quantity_ratio_cp'], 'Number');
       if (data.hasOwnProperty('quantity_ratio_uc'))
-        obj.quantityRatioUc = ApiClient.convertToType(data['quantity_ratio_uc'], 'Number');
+        obj.quantity_ratio_uc = ApiClient.convertToType(data['quantity_ratio_uc'], 'Number');
       if (data.hasOwnProperty('sku'))
         obj.sku = ApiClient.convertToType(data['sku'], 'String');
       if (data.hasOwnProperty('unit_of_measure'))
-        obj.unitOfMeasure = ApiClient.convertToType(data['unit_of_measure'], 'String');
+        obj.unit_of_measure = ApiClient.convertToType(data['unit_of_measure'], 'String');
       if (data.hasOwnProperty('vendor_number'))
-        obj.vendorNumber = ApiClient.convertToType(data['vendor_number'], 'String');
+        obj.vendor_number = ApiClient.convertToType(data['vendor_number'], 'String');
       if (data.hasOwnProperty('vendor_style_number'))
-        obj.vendorStyleNumber = ApiClient.convertToType(data['vendor_style_number'], 'String');
+        obj.vendor_style_number = ApiClient.convertToType(data['vendor_style_number'], 'String');
     }
     return obj;
   }
 
   /**
    * Barcode UA (EDI only)
-   * @member {String} barcodeUa
+   * @member {String} barcode_ua
    */
-  exports.prototype.barcodeUa = undefined;
+  exports.prototype.barcode_ua = undefined;
 
   /**
    * Barcode UC (EDI only)
-   * @member {String} barcodeUc
+   * @member {String} barcode_uc
    */
-  exports.prototype.barcodeUc = undefined;
+  exports.prototype.barcode_uc = undefined;
 
   /**
    * Barcode UI (EDI only)
-   * @member {String} barcodeUi
+   * @member {String} barcode_ui
    */
-  exports.prototype.barcodeUi = undefined;
+  exports.prototype.barcode_ui = undefined;
 
   /**
    * Barcode UK (EDI only)
-   * @member {String} barcodeUk
+   * @member {String} barcode_uk
    */
-  exports.prototype.barcodeUk = undefined;
+  exports.prototype.barcode_uk = undefined;
 
   /**
    * Buyer catalog number (EDI only)
-   * @member {String} buyerCatalogNumber
+   * @member {String} buyer_catalog_number
    */
-  exports.prototype.buyerCatalogNumber = undefined;
+  exports.prototype.buyer_catalog_number = undefined;
 
   /**
    * Buyer DPCI (EDI only)
-   * @member {String} buyerDpci
+   * @member {String} buyer_dpci
    */
-  exports.prototype.buyerDpci = undefined;
+  exports.prototype.buyer_dpci = undefined;
 
   /**
    * Buyer item number (EDI only)
-   * @member {String} buyerItemNumber
+   * @member {String} buyer_item_number
    */
-  exports.prototype.buyerItemNumber = undefined;
+  exports.prototype.buyer_item_number = undefined;
 
   /**
    * Channel partner code
-   * @member {String} channelPartnerCode
+   * @member {String} channel_partner_code
    */
-  exports.prototype.channelPartnerCode = undefined;
+  exports.prototype.channel_partner_code = undefined;
 
   /**
    * Channel partner object identifier
-   * @member {Number} channelPartnerOid
+   * @member {Number} channel_partner_oid
    */
-  exports.prototype.channelPartnerOid = undefined;
+  exports.prototype.channel_partner_oid = undefined;
 
   /**
    * From Item ID
-   * @member {String} fromItemId
+   * @member {String} from_item_id
    */
-  exports.prototype.fromItemId = undefined;
+  exports.prototype.from_item_id = undefined;
 
   /**
    * From SKU
-   * @member {String} fromSku
+   * @member {String} from_sku
    */
-  exports.prototype.fromSku = undefined;
+  exports.prototype.from_sku = undefined;
 
   /**
    * Mutually defined number (EDI only)
-   * @member {String} mutuallyDefinedNumber
+   * @member {String} mutually_defined_number
    */
-  exports.prototype.mutuallyDefinedNumber = undefined;
+  exports.prototype.mutually_defined_number = undefined;
 
   /**
    * Ratio (Channel Partner)
-   * @member {Number} quantityRatioCp
+   * @member {Number} quantity_ratio_cp
    */
-  exports.prototype.quantityRatioCp = undefined;
+  exports.prototype.quantity_ratio_cp = undefined;
 
   /**
    * Ratio (UltraCart)
-   * @member {Number} quantityRatioUc
+   * @member {Number} quantity_ratio_uc
    */
-  exports.prototype.quantityRatioUc = undefined;
+  exports.prototype.quantity_ratio_uc = undefined;
 
   /**
    * SKU
@@ -187,21 +187,21 @@
 
   /**
    * Unit of measure
-   * @member {String} unitOfMeasure
+   * @member {String} unit_of_measure
    */
-  exports.prototype.unitOfMeasure = undefined;
+  exports.prototype.unit_of_measure = undefined;
 
   /**
    * Vendor number (EDI only)
-   * @member {String} vendorNumber
+   * @member {String} vendor_number
    */
-  exports.prototype.vendorNumber = undefined;
+  exports.prototype.vendor_number = undefined;
 
   /**
    * Vendor style number (EDI only)
-   * @member {String} vendorStyleNumber
+   * @member {String} vendor_style_number
    */
-  exports.prototype.vendorStyleNumber = undefined;
+  exports.prototype.vendor_style_number = undefined;
 
   return exports;
 

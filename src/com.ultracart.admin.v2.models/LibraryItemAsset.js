@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('mime_type'))
-        obj.mimeType = ApiClient.convertToType(data['mime_type'], 'String');
+        obj.mime_type = ApiClient.convertToType(data['mime_type'], 'String');
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
     }
@@ -64,9 +64,9 @@
   }
 
   /**
-   * @member {String} mimeType
+   * @member {String} mime_type
    */
-  exports.prototype.mimeType = undefined;
+  exports.prototype.mime_type = undefined;
 
   /**
    * @member {String} url

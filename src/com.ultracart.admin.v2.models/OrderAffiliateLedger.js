@@ -56,84 +56,84 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('assigned_by_user'))
-        obj.assignedByUser = ApiClient.convertToType(data['assigned_by_user'], 'String');
+        obj.assigned_by_user = ApiClient.convertToType(data['assigned_by_user'], 'String');
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('tier_number'))
-        obj.tierNumber = ApiClient.convertToType(data['tier_number'], 'Number');
+        obj.tier_number = ApiClient.convertToType(data['tier_number'], 'Number');
       if (data.hasOwnProperty('transaction_amount'))
-        obj.transactionAmount = ApiClient.convertToType(data['transaction_amount'], 'Number');
+        obj.transaction_amount = ApiClient.convertToType(data['transaction_amount'], 'Number');
       if (data.hasOwnProperty('transaction_amount_paid'))
-        obj.transactionAmountPaid = ApiClient.convertToType(data['transaction_amount_paid'], 'Number');
+        obj.transaction_amount_paid = ApiClient.convertToType(data['transaction_amount_paid'], 'Number');
       if (data.hasOwnProperty('transaction_dts'))
-        obj.transactionDts = ApiClient.convertToType(data['transaction_dts'], 'String');
+        obj.transaction_dts = ApiClient.convertToType(data['transaction_dts'], 'String');
       if (data.hasOwnProperty('transaction_memo'))
-        obj.transactionMemo = ApiClient.convertToType(data['transaction_memo'], 'String');
+        obj.transaction_memo = ApiClient.convertToType(data['transaction_memo'], 'String');
       if (data.hasOwnProperty('transaction_percentage'))
-        obj.transactionPercentage = ApiClient.convertToType(data['transaction_percentage'], 'Number');
+        obj.transaction_percentage = ApiClient.convertToType(data['transaction_percentage'], 'Number');
       if (data.hasOwnProperty('transaction_state'))
-        obj.transactionState = ApiClient.convertToType(data['transaction_state'], 'String');
+        obj.transaction_state = ApiClient.convertToType(data['transaction_state'], 'String');
     }
     return obj;
   }
 
   /**
    * UltraCart user name that assigned this commission if manually assigned
-   * @member {String} assignedByUser
+   * @member {String} assigned_by_user
    */
-  exports.prototype.assignedByUser = undefined;
+  exports.prototype.assigned_by_user = undefined;
 
   /**
    * Item ID that this ledger record is associated with
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * Tier number of this affiliate in the commission calculation
-   * @member {Number} tierNumber
+   * @member {Number} tier_number
    */
-  exports.prototype.tierNumber = undefined;
+  exports.prototype.tier_number = undefined;
 
   /**
    * Amount of the transaction
-   * @member {Number} transactionAmount
+   * @member {Number} transaction_amount
    */
-  exports.prototype.transactionAmount = undefined;
+  exports.prototype.transaction_amount = undefined;
 
   /**
    * The amount that has been paid so far on the transaction
-   * @member {Number} transactionAmountPaid
+   * @member {Number} transaction_amount_paid
    */
-  exports.prototype.transactionAmountPaid = undefined;
+  exports.prototype.transaction_amount_paid = undefined;
 
   /**
    * The date/time that the affiliate ledger was generated for the transaction
-   * @member {String} transactionDts
+   * @member {String} transaction_dts
    */
-  exports.prototype.transactionDts = undefined;
+  exports.prototype.transaction_dts = undefined;
 
   /**
    * Details of the transaction suitable for display to the affiliate
-   * @member {String} transactionMemo
+   * @member {String} transaction_memo
    */
-  exports.prototype.transactionMemo = undefined;
+  exports.prototype.transaction_memo = undefined;
 
   /**
    * The percentage earned on the transaction
-   * @member {Number} transactionPercentage
+   * @member {Number} transaction_percentage
    */
-  exports.prototype.transactionPercentage = undefined;
+  exports.prototype.transaction_percentage = undefined;
 
   /**
    * The state of the transaction
-   * @member {module:com.ultracart.admin.v2.models/OrderAffiliateLedger.TransactionStateEnum} transactionState
+   * @member {module:com.ultracart.admin.v2.models/OrderAffiliateLedger.TransactionStateEnum} transaction_state
    */
-  exports.prototype.transactionState = undefined;
+  exports.prototype.transaction_state = undefined;
 
 
   /**
-   * Allowed values for the <code>transactionState</code> property.
+   * Allowed values for the <code>transaction_state</code> property.
    * @enum {String}
    * @readonly
    */
@@ -142,37 +142,37 @@
      * value: "Pending"
      * @const
      */
-    pending: "Pending",
+    Pending: "Pending",
 
     /**
      * value: "Posted"
      * @const
      */
-    posted: "Posted",
+    Posted: "Posted",
 
     /**
      * value: "Approved"
      * @const
      */
-    approved: "Approved",
+    Approved: "Approved",
 
     /**
      * value: "Paid"
      * @const
      */
-    paid: "Paid",
+    Paid: "Paid",
 
     /**
      * value: "Rejected"
      * @const
      */
-    rejected: "Rejected",
+    Rejected: "Rejected",
 
     /**
      * value: "Partially Paid"
      * @const
      */
-    partiallyPaid: "Partially Paid"
+    Partially_Paid: "Partially Paid"
   };
 
   return exports;

@@ -56,46 +56,46 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('adjusted_price'))
-        obj.adjustedPrice = ApiClient.convertToType(data['adjusted_price'], 'Number');
+        obj.adjusted_price = ApiClient.convertToType(data['adjusted_price'], 'Number');
       if (data.hasOwnProperty('adjusted_shipping'))
-        obj.adjustedShipping = ApiClient.convertToType(data['adjusted_shipping'], 'Number');
+        obj.adjusted_shipping = ApiClient.convertToType(data['adjusted_shipping'], 'Number');
       if (data.hasOwnProperty('adjusted_total'))
-        obj.adjustedTotal = ApiClient.convertToType(data['adjusted_total'], 'Number');
+        obj.adjusted_total = ApiClient.convertToType(data['adjusted_total'], 'Number');
       if (data.hasOwnProperty('cogs'))
         obj.cogs = ApiClient.convertToType(data['cogs'], 'Number');
       if (data.hasOwnProperty('final_value_fee'))
-        obj.finalValueFee = ApiClient.convertToType(data['final_value_fee'], 'Number');
+        obj.final_value_fee = ApiClient.convertToType(data['final_value_fee'], 'Number');
       if (data.hasOwnProperty('minimum_advertised_price'))
-        obj.minimumAdvertisedPrice = ApiClient.convertToType(data['minimum_advertised_price'], 'Number');
+        obj.minimum_advertised_price = ApiClient.convertToType(data['minimum_advertised_price'], 'Number');
       if (data.hasOwnProperty('other_listings'))
-        obj.otherListings = ApiClient.convertToType(data['other_listings'], [ItemEbayMarketListing]);
+        obj.other_listings = ApiClient.convertToType(data['other_listings'], [ItemEbayMarketListing]);
       if (data.hasOwnProperty('our_listing'))
-        obj.ourListing = ItemEbayMarketListing.constructFromObject(data['our_listing']);
+        obj.our_listing = ItemEbayMarketListing.constructFromObject(data['our_listing']);
       if (data.hasOwnProperty('overhead'))
         obj.overhead = ApiClient.convertToType(data['overhead'], 'Number');
       if (data.hasOwnProperty('profit_potential'))
-        obj.profitPotential = ApiClient.convertToType(data['profit_potential'], 'Number');
+        obj.profit_potential = ApiClient.convertToType(data['profit_potential'], 'Number');
     }
     return obj;
   }
 
   /**
    * Adjusted price
-   * @member {Number} adjustedPrice
+   * @member {Number} adjusted_price
    */
-  exports.prototype.adjustedPrice = undefined;
+  exports.prototype.adjusted_price = undefined;
 
   /**
    * Adjusted shipping
-   * @member {Number} adjustedShipping
+   * @member {Number} adjusted_shipping
    */
-  exports.prototype.adjustedShipping = undefined;
+  exports.prototype.adjusted_shipping = undefined;
 
   /**
    * Adjusted total
-   * @member {Number} adjustedTotal
+   * @member {Number} adjusted_total
    */
-  exports.prototype.adjustedTotal = undefined;
+  exports.prototype.adjusted_total = undefined;
 
   /**
    * Cost of goods sold
@@ -105,26 +105,26 @@
 
   /**
    * Final value fee
-   * @member {Number} finalValueFee
+   * @member {Number} final_value_fee
    */
-  exports.prototype.finalValueFee = undefined;
+  exports.prototype.final_value_fee = undefined;
 
   /**
    * Minimum advertised price
-   * @member {Number} minimumAdvertisedPrice
+   * @member {Number} minimum_advertised_price
    */
-  exports.prototype.minimumAdvertisedPrice = undefined;
+  exports.prototype.minimum_advertised_price = undefined;
 
   /**
    * Other listings
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemEbayMarketListing>} otherListings
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemEbayMarketListing>} other_listings
    */
-  exports.prototype.otherListings = undefined;
+  exports.prototype.other_listings = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ItemEbayMarketListing} ourListing
+   * @member {module:com.ultracart.admin.v2.models/ItemEbayMarketListing} our_listing
    */
-  exports.prototype.ourListing = undefined;
+  exports.prototype.our_listing = undefined;
 
   /**
    * Overhead
@@ -134,9 +134,9 @@
 
   /**
    * Profit potential
-   * @member {Number} profitPotential
+   * @member {Number} profit_potential
    */
-  exports.prototype.profitPotential = undefined;
+  exports.prototype.profit_potential = undefined;
 
   return exports;
 

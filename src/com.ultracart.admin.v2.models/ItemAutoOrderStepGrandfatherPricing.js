@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('on_or_before_date'))
-        obj.onOrBeforeDate = ApiClient.convertToType(data['on_or_before_date'], 'String');
+        obj.on_or_before_date = ApiClient.convertToType(data['on_or_before_date'], 'String');
       if (data.hasOwnProperty('unit_cost'))
-        obj.unitCost = ApiClient.convertToType(data['unit_cost'], 'Number');
+        obj.unit_cost = ApiClient.convertToType(data['unit_cost'], 'Number');
     }
     return obj;
   }
 
   /**
    * On or before date
-   * @member {String} onOrBeforeDate
+   * @member {String} on_or_before_date
    */
-  exports.prototype.onOrBeforeDate = undefined;
+  exports.prototype.on_or_before_date = undefined;
 
   /**
    * Unit cost
-   * @member {Number} unitCost
+   * @member {Number} unit_cost
    */
-  exports.prototype.unitCost = undefined;
+  exports.prototype.unit_cost = undefined;
 
   return exports;
 

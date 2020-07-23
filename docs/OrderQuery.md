@@ -39,25 +39,25 @@ Name | Type | Description | Notes
 ## Enum: CurrentStageEnum
 
 
-* `accountsReceivable` (value: `"Accounts Receivable"`)
+* `Accounts_Receivable` (value: `"Accounts Receivable"`)
 
-* `pendingClearance` (value: `"Pending Clearance"`)
+* `Pending_Clearance` (value: `"Pending Clearance"`)
 
-* `fraudReview` (value: `"Fraud Review"`)
+* `Fraud_Review` (value: `"Fraud Review"`)
 
-* `rejected` (value: `"Rejected"`)
+* `Rejected` (value: `"Rejected"`)
 
-* `shippingDepartment` (value: `"Shipping Department"`)
+* `Shipping_Department` (value: `"Shipping Department"`)
 
-* `completedOrder` (value: `"Completed Order"`)
+* `Completed_Order` (value: `"Completed Order"`)
 
-* `quoteRequest` (value: `"Quote Request"`)
+* `Quote_Request` (value: `"Quote Request"`)
 
-* `quoteSent` (value: `"Quote Sent"`)
+* `Quote_Sent` (value: `"Quote Sent"`)
 
-* `leastCostRouting` (value: `"Least Cost Routing"`)
+* `Least_Cost_Routing` (value: `"Least Cost Routing"`)
 
-* `unknown` (value: `"Unknown"`)
+* `Unknown` (value: `"Unknown"`)
 
 
 
@@ -66,35 +66,35 @@ Name | Type | Description | Notes
 ## Enum: PaymentMethodEnum
 
 
-* `affirm` (value: `"Affirm"`)
+* `Affirm` (value: `"Affirm"`)
 
-* `amazon` (value: `"Amazon"`)
+* `Amazon` (value: `"Amazon"`)
 
-* `amazonSC` (value: `"Amazon SC"`)
+* `Amazon_SC` (value: `"Amazon SC"`)
 
-* `cash` (value: `"Cash"`)
+* `Cash` (value: `"Cash"`)
 
-* `check` (value: `"Check"`)
+* `Check` (value: `"Check"`)
 
 * `COD` (value: `"COD"`)
 
-* `creditCard` (value: `"Credit Card"`)
+* `Credit_Card` (value: `"Credit Card"`)
 
 * `eCheck` (value: `"eCheck"`)
 
-* `loanHero` (value: `"LoanHero"`)
+* `LoanHero` (value: `"LoanHero"`)
 
-* `moneyOrder` (value: `"Money Order"`)
+* `Money_Order` (value: `"Money Order"`)
 
-* `payPal` (value: `"PayPal"`)
+* `PayPal` (value: `"PayPal"`)
 
-* `purchaseOrder` (value: `"Purchase Order"`)
+* `Purchase_Order` (value: `"Purchase Order"`)
 
-* `quoteRequest` (value: `"Quote Request"`)
+* `Quote_Request` (value: `"Quote Request"`)
 
-* `unknown` (value: `"Unknown"`)
+* `Unknown` (value: `"Unknown"`)
 
-* `wireTransfer` (value: `"Wire Transfer"`)
+* `Wire_Transfer` (value: `"Wire Transfer"`)
 
 
 

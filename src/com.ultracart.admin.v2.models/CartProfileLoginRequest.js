@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('cart'))
         obj.cart = Cart.constructFromObject(data['cart']);
       if (data.hasOwnProperty('customer_profile_oid'))
-        obj.customerProfileOid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('password'))
         obj.password = ApiClient.convertToType(data['password'], 'String');
     }
@@ -72,9 +72,9 @@
 
   /**
    * Unique identifier for customer profile.  Can not be used with browser key authentication type.
-   * @member {Number} customerProfileOid
+   * @member {Number} customer_profile_oid
    */
-  exports.prototype.customerProfileOid = undefined;
+  exports.prototype.customer_profile_oid = undefined;
 
   /**
    * Password for the profile

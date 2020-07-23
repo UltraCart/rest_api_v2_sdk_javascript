@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('gift_certificate'))
-        obj.giftCertificate = ApiClient.convertToType(data['gift_certificate'], 'Boolean');
+        obj.gift_certificate = ApiClient.convertToType(data['gift_certificate'], 'Boolean');
       if (data.hasOwnProperty('gift_certificate_expiration_days'))
-        obj.giftCertificateExpirationDays = ApiClient.convertToType(data['gift_certificate_expiration_days'], 'Number');
+        obj.gift_certificate_expiration_days = ApiClient.convertToType(data['gift_certificate_expiration_days'], 'Number');
     }
     return obj;
   }
 
   /**
    * True if the purchase of this item generates a gift certificate
-   * @member {Boolean} giftCertificate
+   * @member {Boolean} gift_certificate
    */
-  exports.prototype.giftCertificate = undefined;
+  exports.prototype.gift_certificate = undefined;
 
   /**
    * The number of days that the gift certificate is good for (optional)
-   * @member {Number} giftCertificateExpirationDays
+   * @member {Number} gift_certificate_expiration_days
    */
-  exports.prototype.giftCertificateExpirationDays = undefined;
+  exports.prototype.gift_certificate_expiration_days = undefined;
 
   return exports;
 

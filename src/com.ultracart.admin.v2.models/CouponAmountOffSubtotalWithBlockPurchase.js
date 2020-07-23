@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('discount_amount'))
-        obj.discountAmount = ApiClient.convertToType(data['discount_amount'], 'Number');
+        obj.discount_amount = ApiClient.convertToType(data['discount_amount'], 'Number');
       if (data.hasOwnProperty('required_purchase_item'))
-        obj.requiredPurchaseItem = ApiClient.convertToType(data['required_purchase_item'], 'String');
+        obj.required_purchase_item = ApiClient.convertToType(data['required_purchase_item'], 'String');
       if (data.hasOwnProperty('required_purchase_quantity'))
-        obj.requiredPurchaseQuantity = ApiClient.convertToType(data['required_purchase_quantity'], 'Number');
+        obj.required_purchase_quantity = ApiClient.convertToType(data['required_purchase_quantity'], 'Number');
     }
     return obj;
   }
 
   /**
    * The ISO-4217 three letter currency code the customer is viewing prices in
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * The amount of subtotal discount
-   * @member {Number} discountAmount
+   * @member {Number} discount_amount
    */
-  exports.prototype.discountAmount = undefined;
+  exports.prototype.discount_amount = undefined;
 
   /**
    * Required item that must be purchased for coupon to be valid
-   * @member {String} requiredPurchaseItem
+   * @member {String} required_purchase_item
    */
-  exports.prototype.requiredPurchaseItem = undefined;
+  exports.prototype.required_purchase_item = undefined;
 
   /**
    * Discount amount is multiplied by the number of blocks.  A block is this many quantity of the required item.
-   * @member {Number} requiredPurchaseQuantity
+   * @member {Number} required_purchase_quantity
    */
-  exports.prototype.requiredPurchaseQuantity = undefined;
+  exports.prototype.required_purchase_quantity = undefined;
 
   return exports;
 

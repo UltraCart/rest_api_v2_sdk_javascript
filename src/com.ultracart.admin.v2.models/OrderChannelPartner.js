@@ -56,88 +56,88 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_approve_purchase_order'))
-        obj.autoApprovePurchaseOrder = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
+        obj.auto_approve_purchase_order = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('channel_partner_code'))
-        obj.channelPartnerCode = ApiClient.convertToType(data['channel_partner_code'], 'String');
+        obj.channel_partner_code = ApiClient.convertToType(data['channel_partner_code'], 'String');
       if (data.hasOwnProperty('channel_partner_data'))
-        obj.channelPartnerData = ApiClient.convertToType(data['channel_partner_data'], 'String');
+        obj.channel_partner_data = ApiClient.convertToType(data['channel_partner_data'], 'String');
       if (data.hasOwnProperty('channel_partner_oid'))
-        obj.channelPartnerOid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
+        obj.channel_partner_oid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
       if (data.hasOwnProperty('channel_partner_order_id'))
-        obj.channelPartnerOrderId = ApiClient.convertToType(data['channel_partner_order_id'], 'String');
+        obj.channel_partner_order_id = ApiClient.convertToType(data['channel_partner_order_id'], 'String');
       if (data.hasOwnProperty('no_realtime_payment_processing'))
-        obj.noRealtimePaymentProcessing = ApiClient.convertToType(data['no_realtime_payment_processing'], 'Boolean');
+        obj.no_realtime_payment_processing = ApiClient.convertToType(data['no_realtime_payment_processing'], 'Boolean');
       if (data.hasOwnProperty('skip_payment_processing'))
-        obj.skipPaymentProcessing = ApiClient.convertToType(data['skip_payment_processing'], 'Boolean');
+        obj.skip_payment_processing = ApiClient.convertToType(data['skip_payment_processing'], 'Boolean');
       if (data.hasOwnProperty('store_completed'))
-        obj.storeCompleted = ApiClient.convertToType(data['store_completed'], 'Boolean');
+        obj.store_completed = ApiClient.convertToType(data['store_completed'], 'Boolean');
       if (data.hasOwnProperty('store_if_payment_declines'))
-        obj.storeIfPaymentDeclines = ApiClient.convertToType(data['store_if_payment_declines'], 'Boolean');
+        obj.store_if_payment_declines = ApiClient.convertToType(data['store_if_payment_declines'], 'Boolean');
       if (data.hasOwnProperty('treat_warnings_as_errors'))
-        obj.treatWarningsAsErrors = ApiClient.convertToType(data['treat_warnings_as_errors'], 'Boolean');
+        obj.treat_warnings_as_errors = ApiClient.convertToType(data['treat_warnings_as_errors'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * If true, any purchase order submitted is automatically approved
-   * @member {Boolean} autoApprovePurchaseOrder
+   * @member {Boolean} auto_approve_purchase_order
    */
-  exports.prototype.autoApprovePurchaseOrder = undefined;
+  exports.prototype.auto_approve_purchase_order = undefined;
 
   /**
    * The code of the channel partner
-   * @member {String} channelPartnerCode
+   * @member {String} channel_partner_code
    */
-  exports.prototype.channelPartnerCode = undefined;
+  exports.prototype.channel_partner_code = undefined;
 
   /**
    * Additional data provided by the channel partner, read-only
-   * @member {String} channelPartnerData
+   * @member {String} channel_partner_data
    */
-  exports.prototype.channelPartnerData = undefined;
+  exports.prototype.channel_partner_data = undefined;
 
   /**
    * Channel partner object identifier, read-only and available on existing channel orders only.
-   * @member {Number} channelPartnerOid
+   * @member {Number} channel_partner_oid
    */
-  exports.prototype.channelPartnerOid = undefined;
+  exports.prototype.channel_partner_oid = undefined;
 
   /**
    * The order ID assigned by the channel partner for this order
-   * @member {String} channelPartnerOrderId
+   * @member {String} channel_partner_order_id
    */
-  exports.prototype.channelPartnerOrderId = undefined;
+  exports.prototype.channel_partner_order_id = undefined;
 
   /**
    * Indicates this order should be placed in Account Receivable for later payment processing
-   * @member {Boolean} noRealtimePaymentProcessing
+   * @member {Boolean} no_realtime_payment_processing
    */
-  exports.prototype.noRealtimePaymentProcessing = undefined;
+  exports.prototype.no_realtime_payment_processing = undefined;
 
   /**
    * Indicates this order was already paid for via a channel purchase and no payment collection should be attempted
-   * @member {Boolean} skipPaymentProcessing
+   * @member {Boolean} skip_payment_processing
    */
-  exports.prototype.skipPaymentProcessing = undefined;
+  exports.prototype.skip_payment_processing = undefined;
 
   /**
    * Instructs UltraCart to skip shipping department and mark this order as fully complete.  Set this flag if you have already shipped product for this order.
-   * @member {Boolean} storeCompleted
+   * @member {Boolean} store_completed
    */
-  exports.prototype.storeCompleted = undefined;
+  exports.prototype.store_completed = undefined;
 
   /**
    * If true, any failed payment will place the order in Accounts Receivable rather than rejecting it.
-   * @member {Boolean} storeIfPaymentDeclines
+   * @member {Boolean} store_if_payment_declines
    */
-  exports.prototype.storeIfPaymentDeclines = undefined;
+  exports.prototype.store_if_payment_declines = undefined;
 
   /**
    * Any warnings are raised as errors and halt the import of the order
-   * @member {Boolean} treatWarningsAsErrors
+   * @member {Boolean} treat_warnings_as_errors
    */
-  exports.prototype.treatWarningsAsErrors = undefined;
+  exports.prototype.treat_warnings_as_errors = undefined;
 
   return exports;
 

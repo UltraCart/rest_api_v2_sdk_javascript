@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auction_id'))
-        obj.auctionId = ApiClient.convertToType(data['auction_id'], 'String');
+        obj.auction_id = ApiClient.convertToType(data['auction_id'], 'String');
       if (data.hasOwnProperty('price'))
         obj.price = ApiClient.convertToType(data['price'], 'Number');
       if (data.hasOwnProperty('seller'))
@@ -71,9 +71,9 @@
 
   /**
    * Auction ID
-   * @member {String} auctionId
+   * @member {String} auction_id
    */
-  exports.prototype.auctionId = undefined;
+  exports.prototype.auction_id = undefined;
 
   /**
    * Price

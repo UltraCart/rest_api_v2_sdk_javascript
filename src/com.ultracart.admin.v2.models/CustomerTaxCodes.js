@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('avalara_customer_code'))
-        obj.avalaraCustomerCode = ApiClient.convertToType(data['avalara_customer_code'], 'String');
+        obj.avalara_customer_code = ApiClient.convertToType(data['avalara_customer_code'], 'String');
       if (data.hasOwnProperty('avalara_entity_use_code'))
-        obj.avalaraEntityUseCode = ApiClient.convertToType(data['avalara_entity_use_code'], 'String');
+        obj.avalara_entity_use_code = ApiClient.convertToType(data['avalara_entity_use_code'], 'String');
       if (data.hasOwnProperty('sovos_customer_code'))
-        obj.sovosCustomerCode = ApiClient.convertToType(data['sovos_customer_code'], 'String');
+        obj.sovos_customer_code = ApiClient.convertToType(data['sovos_customer_code'], 'String');
       if (data.hasOwnProperty('taxjar_customer_id'))
-        obj.taxjarCustomerId = ApiClient.convertToType(data['taxjar_customer_id'], 'String');
+        obj.taxjar_customer_id = ApiClient.convertToType(data['taxjar_customer_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Avalara customer code
-   * @member {String} avalaraCustomerCode
+   * @member {String} avalara_customer_code
    */
-  exports.prototype.avalaraCustomerCode = undefined;
+  exports.prototype.avalara_customer_code = undefined;
 
   /**
    * Avalara entity use code
-   * @member {String} avalaraEntityUseCode
+   * @member {String} avalara_entity_use_code
    */
-  exports.prototype.avalaraEntityUseCode = undefined;
+  exports.prototype.avalara_entity_use_code = undefined;
 
   /**
    * Sovos customer code
-   * @member {String} sovosCustomerCode
+   * @member {String} sovos_customer_code
    */
-  exports.prototype.sovosCustomerCode = undefined;
+  exports.prototype.sovos_customer_code = undefined;
 
   /**
    * TaxJar customer id
-   * @member {String} taxjarCustomerId
+   * @member {String} taxjar_customer_id
    */
-  exports.prototype.taxjarCustomerId = undefined;
+  exports.prototype.taxjar_customer_id = undefined;
 
   return exports;
 

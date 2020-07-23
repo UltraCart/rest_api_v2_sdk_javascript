@@ -56,30 +56,30 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('gift_certificate_amount'))
-        obj.giftCertificateAmount = Currency.constructFromObject(data['gift_certificate_amount']);
+        obj.gift_certificate_amount = Currency.constructFromObject(data['gift_certificate_amount']);
       if (data.hasOwnProperty('gift_certificate_code'))
-        obj.giftCertificateCode = ApiClient.convertToType(data['gift_certificate_code'], 'String');
+        obj.gift_certificate_code = ApiClient.convertToType(data['gift_certificate_code'], 'String');
       if (data.hasOwnProperty('gift_certificate_remaining_balance_after_order'))
-        obj.giftCertificateRemainingBalanceAfterOrder = Currency.constructFromObject(data['gift_certificate_remaining_balance_after_order']);
+        obj.gift_certificate_remaining_balance_after_order = Currency.constructFromObject(data['gift_certificate_remaining_balance_after_order']);
     }
     return obj;
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} giftCertificateAmount
+   * @member {module:com.ultracart.admin.v2.models/Currency} gift_certificate_amount
    */
-  exports.prototype.giftCertificateAmount = undefined;
+  exports.prototype.gift_certificate_amount = undefined;
 
   /**
    * Gift certificate code
-   * @member {String} giftCertificateCode
+   * @member {String} gift_certificate_code
    */
-  exports.prototype.giftCertificateCode = undefined;
+  exports.prototype.gift_certificate_code = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} giftCertificateRemainingBalanceAfterOrder
+   * @member {module:com.ultracart.admin.v2.models/Currency} gift_certificate_remaining_balance_after_order
    */
-  exports.prototype.giftCertificateRemainingBalanceAfterOrder = undefined;
+  exports.prototype.gift_certificate_remaining_balance_after_order = undefined;
 
   return exports;
 

@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('editor_url'))
-        obj.editorUrl = ApiClient.convertToType(data['editor_url'], 'String');
+        obj.editor_url = ApiClient.convertToType(data['editor_url'], 'String');
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,9 +68,9 @@
   }
 
   /**
-   * @member {String} editorUrl
+   * @member {String} editor_url
    */
-  exports.prototype.editorUrl = undefined;
+  exports.prototype.editor_url = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

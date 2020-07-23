@@ -56,53 +56,53 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('cart_id'))
-        obj.cartId = ApiClient.convertToType(data['cart_id'], 'String');
+        obj.cart_id = ApiClient.convertToType(data['cart_id'], 'String');
       if (data.hasOwnProperty('cart_item_ids'))
-        obj.cartItemIds = ApiClient.convertToType(data['cart_item_ids'], ['String']);
+        obj.cart_item_ids = ApiClient.convertToType(data['cart_item_ids'], ['String']);
       if (data.hasOwnProperty('esp_commseq_email_uuid'))
-        obj.espCommseqEmailUuid = ApiClient.convertToType(data['esp_commseq_email_uuid'], 'String');
+        obj.esp_commseq_email_uuid = ApiClient.convertToType(data['esp_commseq_email_uuid'], 'String');
       if (data.hasOwnProperty('esp_commseq_step_uuid'))
-        obj.espCommseqStepUuid = ApiClient.convertToType(data['esp_commseq_step_uuid'], 'String');
+        obj.esp_commseq_step_uuid = ApiClient.convertToType(data['esp_commseq_step_uuid'], 'String');
       if (data.hasOwnProperty('esp_commseq_uuid'))
-        obj.espCommseqUuid = ApiClient.convertToType(data['esp_commseq_uuid'], 'String');
+        obj.esp_commseq_uuid = ApiClient.convertToType(data['esp_commseq_uuid'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('please_review'))
-        obj.pleaseReview = ApiClient.convertToType(data['please_review'], 'Boolean');
+        obj.please_review = ApiClient.convertToType(data['please_review'], 'Boolean');
       if (data.hasOwnProperty('send_to_additional_emails'))
-        obj.sendToAdditionalEmails = ApiClient.convertToType(data['send_to_additional_emails'], ['String']);
+        obj.send_to_additional_emails = ApiClient.convertToType(data['send_to_additional_emails'], ['String']);
       if (data.hasOwnProperty('send_to_logged_in_user'))
-        obj.sendToLoggedInUser = ApiClient.convertToType(data['send_to_logged_in_user'], 'Boolean');
+        obj.send_to_logged_in_user = ApiClient.convertToType(data['send_to_logged_in_user'], 'Boolean');
     }
     return obj;
   }
 
   /**
-   * @member {String} cartId
+   * @member {String} cart_id
    */
-  exports.prototype.cartId = undefined;
+  exports.prototype.cart_id = undefined;
 
   /**
-   * @member {Array.<String>} cartItemIds
+   * @member {Array.<String>} cart_item_ids
    */
-  exports.prototype.cartItemIds = undefined;
+  exports.prototype.cart_item_ids = undefined;
 
   /**
-   * @member {String} espCommseqEmailUuid
+   * @member {String} esp_commseq_email_uuid
    */
-  exports.prototype.espCommseqEmailUuid = undefined;
+  exports.prototype.esp_commseq_email_uuid = undefined;
 
   /**
-   * @member {String} espCommseqStepUuid
+   * @member {String} esp_commseq_step_uuid
    */
-  exports.prototype.espCommseqStepUuid = undefined;
+  exports.prototype.esp_commseq_step_uuid = undefined;
 
   /**
-   * @member {String} espCommseqUuid
+   * @member {String} esp_commseq_uuid
    */
-  exports.prototype.espCommseqUuid = undefined;
+  exports.prototype.esp_commseq_uuid = undefined;
 
   /**
    * @member {String} name
@@ -110,24 +110,24 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
-   * @member {Boolean} pleaseReview
+   * @member {Boolean} please_review
    */
-  exports.prototype.pleaseReview = undefined;
+  exports.prototype.please_review = undefined;
 
   /**
-   * @member {Array.<String>} sendToAdditionalEmails
+   * @member {Array.<String>} send_to_additional_emails
    */
-  exports.prototype.sendToAdditionalEmails = undefined;
+  exports.prototype.send_to_additional_emails = undefined;
 
   /**
-   * @member {Boolean} sendToLoggedInUser
+   * @member {Boolean} send_to_logged_in_user
    */
-  exports.prototype.sendToLoggedInUser = undefined;
+  exports.prototype.send_to_logged_in_user = undefined;
 
   return exports;
 

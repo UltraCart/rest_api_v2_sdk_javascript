@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_id'))
-        obj.affiliateId = ApiClient.convertToType(data['affiliate_id'], 'Number');
+        obj.affiliate_id = ApiClient.convertToType(data['affiliate_id'], 'Number');
       if (data.hasOwnProperty('affiliate_sub_id'))
-        obj.affiliateSubId = ApiClient.convertToType(data['affiliate_sub_id'], 'String');
+        obj.affiliate_sub_id = ApiClient.convertToType(data['affiliate_sub_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Affiliate id associated with the cart
-   * @member {Number} affiliateId
+   * @member {Number} affiliate_id
    */
-  exports.prototype.affiliateId = undefined;
+  exports.prototype.affiliate_id = undefined;
 
   /**
    * Affiliate sub id associated with the cart
-   * @member {String} affiliateSubId
+   * @member {String} affiliate_sub_id
    */
-  exports.prototype.affiliateSubId = undefined;
+  exports.prototype.affiliate_sub_id = undefined;
 
   return exports;
 

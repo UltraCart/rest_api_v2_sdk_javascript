@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_orders'))
-        obj.autoOrders = ApiClient.convertToType(data['auto_orders'], [AutoOrder]);
+        obj.auto_orders = ApiClient.convertToType(data['auto_orders'], [AutoOrder]);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,9 +68,9 @@
   }
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrder>} autoOrders
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrder>} auto_orders
    */
-  exports.prototype.autoOrders = undefined;
+  exports.prototype.auto_orders = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

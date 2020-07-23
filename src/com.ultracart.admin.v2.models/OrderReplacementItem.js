@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('arbitrary_unit_cost'))
-        obj.arbitraryUnitCost = ApiClient.convertToType(data['arbitrary_unit_cost'], 'Number');
+        obj.arbitrary_unit_cost = ApiClient.convertToType(data['arbitrary_unit_cost'], 'Number');
       if (data.hasOwnProperty('merchant_item_id'))
-        obj.merchantItemId = ApiClient.convertToType(data['merchant_item_id'], 'String');
+        obj.merchant_item_id = ApiClient.convertToType(data['merchant_item_id'], 'String');
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
     }
@@ -67,15 +67,15 @@
 
   /**
    * Cost to charge the customer if specified.  If not specified then the default item cost is used.
-   * @member {Number} arbitraryUnitCost
+   * @member {Number} arbitrary_unit_cost
    */
-  exports.prototype.arbitraryUnitCost = undefined;
+  exports.prototype.arbitrary_unit_cost = undefined;
 
   /**
    * Item ID
-   * @member {String} merchantItemId
+   * @member {String} merchant_item_id
    */
-  exports.prototype.merchantItemId = undefined;
+  exports.prototype.merchant_item_id = undefined;
 
   /**
    * Quantity

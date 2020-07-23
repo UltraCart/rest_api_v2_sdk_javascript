@@ -58,25 +58,25 @@
       if (data.hasOwnProperty('attempts'))
         obj.attempts = ApiClient.convertToType(data['attempts'], 'Number');
       if (data.hasOwnProperty('attempts_formatted'))
-        obj.attemptsFormatted = ApiClient.convertToType(data['attempts_formatted'], 'String');
+        obj.attempts_formatted = ApiClient.convertToType(data['attempts_formatted'], 'String');
       if (data.hasOwnProperty('conversion_rate'))
-        obj.conversionRate = ApiClient.convertToType(data['conversion_rate'], 'Number');
+        obj.conversion_rate = ApiClient.convertToType(data['conversion_rate'], 'Number');
       if (data.hasOwnProperty('conversion_rate_formatted'))
-        obj.conversionRateFormatted = ApiClient.convertToType(data['conversion_rate_formatted'], 'String');
+        obj.conversion_rate_formatted = ApiClient.convertToType(data['conversion_rate_formatted'], 'String');
       if (data.hasOwnProperty('day'))
         obj.day = ApiClient.convertToType(data['day'], 'Number');
       if (data.hasOwnProperty('discounts'))
         obj.discounts = ApiClient.convertToType(data['discounts'], 'Number');
       if (data.hasOwnProperty('discounts_formatted'))
-        obj.discountsFormatted = ApiClient.convertToType(data['discounts_formatted'], 'String');
+        obj.discounts_formatted = ApiClient.convertToType(data['discounts_formatted'], 'String');
       if (data.hasOwnProperty('revenue'))
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('revenue_formatted'))
-        obj.revenueFormatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
+        obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
       if (data.hasOwnProperty('successes'))
         obj.successes = ApiClient.convertToType(data['successes'], 'Number');
       if (data.hasOwnProperty('successes_formatted'))
-        obj.successesFormatted = ApiClient.convertToType(data['successes_formatted'], 'String');
+        obj.successes_formatted = ApiClient.convertToType(data['successes_formatted'], 'String');
     }
     return obj;
   }
@@ -87,19 +87,19 @@
   exports.prototype.attempts = undefined;
 
   /**
-   * @member {String} attemptsFormatted
+   * @member {String} attempts_formatted
    */
-  exports.prototype.attemptsFormatted = undefined;
+  exports.prototype.attempts_formatted = undefined;
 
   /**
-   * @member {Number} conversionRate
+   * @member {Number} conversion_rate
    */
-  exports.prototype.conversionRate = undefined;
+  exports.prototype.conversion_rate = undefined;
 
   /**
-   * @member {String} conversionRateFormatted
+   * @member {String} conversion_rate_formatted
    */
-  exports.prototype.conversionRateFormatted = undefined;
+  exports.prototype.conversion_rate_formatted = undefined;
 
   /**
    * @member {Number} day
@@ -112,9 +112,9 @@
   exports.prototype.discounts = undefined;
 
   /**
-   * @member {String} discountsFormatted
+   * @member {String} discounts_formatted
    */
-  exports.prototype.discountsFormatted = undefined;
+  exports.prototype.discounts_formatted = undefined;
 
   /**
    * @member {Number} revenue
@@ -122,9 +122,9 @@
   exports.prototype.revenue = undefined;
 
   /**
-   * @member {String} revenueFormatted
+   * @member {String} revenue_formatted
    */
-  exports.prototype.revenueFormatted = undefined;
+  exports.prototype.revenue_formatted = undefined;
 
   /**
    * @member {Number} successes
@@ -132,9 +132,9 @@
   exports.prototype.successes = undefined;
 
   /**
-   * @member {String} successesFormatted
+   * @member {String} successes_formatted
    */
-  exports.prototype.successesFormatted = undefined;
+  exports.prototype.successes_formatted = undefined;
 
   return exports;
 

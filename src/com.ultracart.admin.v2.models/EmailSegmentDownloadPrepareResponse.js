@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('email_segment_rebuild_uuid'))
-        obj.emailSegmentRebuildUuid = ApiClient.convertToType(data['email_segment_rebuild_uuid'], 'String');
+        obj.email_segment_rebuild_uuid = ApiClient.convertToType(data['email_segment_rebuild_uuid'], 'String');
       if (data.hasOwnProperty('email_segment_uuid'))
-        obj.emailSegmentUuid = ApiClient.convertToType(data['email_segment_uuid'], 'String');
+        obj.email_segment_uuid = ApiClient.convertToType(data['email_segment_uuid'], 'String');
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('percentage_complete'))
-        obj.percentageComplete = ApiClient.convertToType(data['percentage_complete'], 'Number');
+        obj.percentage_complete = ApiClient.convertToType(data['percentage_complete'], 'Number');
       if (data.hasOwnProperty('proceed'))
         obj.proceed = ApiClient.convertToType(data['proceed'], 'Boolean');
       if (data.hasOwnProperty('success'))
@@ -74,14 +74,14 @@
   }
 
   /**
-   * @member {String} emailSegmentRebuildUuid
+   * @member {String} email_segment_rebuild_uuid
    */
-  exports.prototype.emailSegmentRebuildUuid = undefined;
+  exports.prototype.email_segment_rebuild_uuid = undefined;
 
   /**
-   * @member {String} emailSegmentUuid
+   * @member {String} email_segment_uuid
    */
-  exports.prototype.emailSegmentUuid = undefined;
+  exports.prototype.email_segment_uuid = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
@@ -94,9 +94,9 @@
   exports.prototype.metadata = undefined;
 
   /**
-   * @member {Number} percentageComplete
+   * @member {Number} percentage_complete
    */
-  exports.prototype.percentageComplete = undefined;
+  exports.prototype.percentage_complete = undefined;
 
   /**
    * @member {Boolean} proceed

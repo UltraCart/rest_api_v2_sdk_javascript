@@ -56,48 +56,48 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('exported_to_accounting'))
-        obj.exportedToAccounting = ApiClient.convertToType(data['exported_to_accounting'], 'Boolean');
+        obj.exported_to_accounting = ApiClient.convertToType(data['exported_to_accounting'], 'Boolean');
       if (data.hasOwnProperty('merchant_notes'))
-        obj.merchantNotes = ApiClient.convertToType(data['merchant_notes'], 'String');
+        obj.merchant_notes = ApiClient.convertToType(data['merchant_notes'], 'String');
       if (data.hasOwnProperty('placed_by_user'))
-        obj.placedByUser = ApiClient.convertToType(data['placed_by_user'], 'String');
+        obj.placed_by_user = ApiClient.convertToType(data['placed_by_user'], 'String');
       if (data.hasOwnProperty('refund_by_user'))
-        obj.refundByUser = ApiClient.convertToType(data['refund_by_user'], 'String');
+        obj.refund_by_user = ApiClient.convertToType(data['refund_by_user'], 'String');
       if (data.hasOwnProperty('sales_rep_code'))
-        obj.salesRepCode = ApiClient.convertToType(data['sales_rep_code'], 'String');
+        obj.sales_rep_code = ApiClient.convertToType(data['sales_rep_code'], 'String');
     }
     return obj;
   }
 
   /**
    * True if the order has been exported to QuickBooks. If QuickBooks is not configured, then this will already be true
-   * @member {Boolean} exportedToAccounting
+   * @member {Boolean} exported_to_accounting
    */
-  exports.prototype.exportedToAccounting = undefined;
+  exports.prototype.exported_to_accounting = undefined;
 
   /**
    * Merchant notes
-   * @member {String} merchantNotes
+   * @member {String} merchant_notes
    */
-  exports.prototype.merchantNotes = undefined;
+  exports.prototype.merchant_notes = undefined;
 
   /**
    * If placed via the BEOE, this is the user that placed the order
-   * @member {String} placedByUser
+   * @member {String} placed_by_user
    */
-  exports.prototype.placedByUser = undefined;
+  exports.prototype.placed_by_user = undefined;
 
   /**
    * User that issued the refund
-   * @member {String} refundByUser
+   * @member {String} refund_by_user
    */
-  exports.prototype.refundByUser = undefined;
+  exports.prototype.refund_by_user = undefined;
 
   /**
    * Sales rep code associated with the order
-   * @member {String} salesRepCode
+   * @member {String} sales_rep_code
    */
-  exports.prototype.salesRepCode = undefined;
+  exports.prototype.sales_rep_code = undefined;
 
   return exports;
 

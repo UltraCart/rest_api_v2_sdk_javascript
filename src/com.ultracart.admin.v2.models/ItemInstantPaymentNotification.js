@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('post_operation'))
-        obj.postOperation = ApiClient.convertToType(data['post_operation'], 'Boolean');
+        obj.post_operation = ApiClient.convertToType(data['post_operation'], 'Boolean');
       if (data.hasOwnProperty('successful_response_text'))
-        obj.successfulResponseText = ApiClient.convertToType(data['successful_response_text'], 'String');
+        obj.successful_response_text = ApiClient.convertToType(data['successful_response_text'], 'String');
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
     }
@@ -67,15 +67,15 @@
 
   /**
    * True for HTTP POST instead of GET
-   * @member {Boolean} postOperation
+   * @member {Boolean} post_operation
    */
-  exports.prototype.postOperation = undefined;
+  exports.prototype.post_operation = undefined;
 
   /**
    * Successful response text
-   * @member {String} successfulResponseText
+   * @member {String} successful_response_text
    */
-  exports.prototype.successfulResponseText = undefined;
+  exports.prototype.successful_response_text = undefined;
 
   /**
    * URL

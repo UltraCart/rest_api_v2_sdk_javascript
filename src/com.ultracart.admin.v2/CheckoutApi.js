@@ -106,16 +106,16 @@
     /**
      * Finalize Order
      * Finalize the cart into an order.  This method can not be called with browser key authentication.  It is ONLY meant for server side code to call. 
-     * @param {module:com.ultracart.admin.v2.models/CartFinalizeOrderRequest} finalizeRequest Finalize request
+     * @param {module:com.ultracart.admin.v2.models/CartFinalizeOrderRequest} finalize_request Finalize request
      * @param {module:com.ultracart.admin.v2/CheckoutApi~finalizeOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartFinalizeOrderResponse}
      */
-    this.finalizeOrder = function(finalizeRequest, callback) {
-      var postBody = finalizeRequest;
+    this.finalizeOrder = function(finalize_request, callback) {
+      var postBody = finalize_request;
 
-      // verify the required parameter 'finalizeRequest' is set
-      if (finalizeRequest === undefined || finalizeRequest === null) {
-        throw new Error("Missing the required parameter 'finalizeRequest' when calling finalizeOrder");
+      // verify the required parameter 'finalize_request' is set
+      if (finalize_request === undefined || finalize_request === null) {
+        throw new Error("Missing the required parameter 'finalize_request' when calling finalizeOrder");
       }
 
 
@@ -153,21 +153,21 @@
     /**
      * Get affirm checkout (by cart id)
      * Get a Affirm checkout object for the specified cart_id parameter. 
-     * @param {String} cartId Cart ID to retrieve
+     * @param {String} cart_id Cart ID to retrieve
      * @param {module:com.ultracart.admin.v2/CheckoutApi~getAffirmCheckoutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartAffirmCheckoutResponse}
      */
-    this.getAffirmCheckout = function(cartId, callback) {
+    this.getAffirmCheckout = function(cart_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'cartId' is set
-      if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling getAffirmCheckout");
+      // verify the required parameter 'cart_id' is set
+      if (cart_id === undefined || cart_id === null) {
+        throw new Error("Missing the required parameter 'cart_id' when calling getAffirmCheckout");
       }
 
 
       var pathParams = {
-        'cart_id': cartId
+        'cart_id': cart_id
       };
       var queryParams = {
       };
@@ -243,7 +243,7 @@
      * Get cart
      * If the cookie is set on the browser making the request then it will return their active cart.  Otherwise it will create a new cart. 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~getCartCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartResponse}
      */
@@ -255,7 +255,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -287,27 +287,27 @@
     /**
      * Get cart (by cart id)
      * Get a cart specified by the cart_id parameter. 
-     * @param {String} cartId Cart ID to retrieve
+     * @param {String} cart_id Cart ID to retrieve
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~getCartByCartIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartResponse}
      */
-    this.getCartByCartId = function(cartId, opts, callback) {
+    this.getCartByCartId = function(cart_id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'cartId' is set
-      if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling getCartByCartId");
+      // verify the required parameter 'cart_id' is set
+      if (cart_id === undefined || cart_id === null) {
+        throw new Error("Missing the required parameter 'cart_id' when calling getCartByCartId");
       }
 
 
       var pathParams = {
-        'cart_id': cartId
+        'cart_id': cart_id
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -339,27 +339,27 @@
     /**
      * Get cart (by return code)
      * Get a cart specified by the return code parameter. 
-     * @param {String} returnCode Return code to lookup cart ID by
+     * @param {String} return_code Return code to lookup cart ID by
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~getCartByReturnCodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartResponse}
      */
-    this.getCartByReturnCode = function(returnCode, opts, callback) {
+    this.getCartByReturnCode = function(return_code, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'returnCode' is set
-      if (returnCode === undefined || returnCode === null) {
-        throw new Error("Missing the required parameter 'returnCode' when calling getCartByReturnCode");
+      // verify the required parameter 'return_code' is set
+      if (return_code === undefined || return_code === null) {
+        throw new Error("Missing the required parameter 'return_code' when calling getCartByReturnCode");
       }
 
 
       var pathParams = {
-        'return_code': returnCode
+        'return_code': return_code
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -391,21 +391,21 @@
     /**
      * Get state/province list for a country code
      * Lookup a state/province list for a given country code 
-     * @param {String} countryCode Two letter ISO country code
+     * @param {String} country_code Two letter ISO country code
      * @param {module:com.ultracart.admin.v2/CheckoutApi~getStateProvincesForCountryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CheckoutStateProvinceResponse}
      */
-    this.getStateProvincesForCountry = function(countryCode, callback) {
+    this.getStateProvincesForCountry = function(country_code, callback) {
       var postBody = null;
 
-      // verify the required parameter 'countryCode' is set
-      if (countryCode === undefined || countryCode === null) {
-        throw new Error("Missing the required parameter 'countryCode' when calling getStateProvincesForCountry");
+      // verify the required parameter 'country_code' is set
+      if (country_code === undefined || country_code === null) {
+        throw new Error("Missing the required parameter 'country_code' when calling getStateProvincesForCountry");
       }
 
 
       var pathParams = {
-        'country_code': countryCode
+        'country_code': country_code
       };
       var queryParams = {
       };
@@ -439,26 +439,26 @@
     /**
      * Handoff cart
      * Handoff the browser to UltraCart for view cart on StoreFront, transfer to PayPal, transfer to Affirm or finalization of the order (including upsell processing). 
-     * @param {module:com.ultracart.admin.v2.models/CheckoutHandoffRequest} handoffRequest Handoff request
+     * @param {module:com.ultracart.admin.v2.models/CheckoutHandoffRequest} handoff_request Handoff request
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~handoffCartCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CheckoutHandoffResponse}
      */
-    this.handoffCart = function(handoffRequest, opts, callback) {
+    this.handoffCart = function(handoff_request, opts, callback) {
       opts = opts || {};
-      var postBody = handoffRequest;
+      var postBody = handoff_request;
 
-      // verify the required parameter 'handoffRequest' is set
-      if (handoffRequest === undefined || handoffRequest === null) {
-        throw new Error("Missing the required parameter 'handoffRequest' when calling handoffCart");
+      // verify the required parameter 'handoff_request' is set
+      if (handoff_request === undefined || handoff_request === null) {
+        throw new Error("Missing the required parameter 'handoff_request' when calling handoffCart");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -490,26 +490,26 @@
     /**
      * Profile login
      * Login in to the customer profile specified by cart.billing.email and password 
-     * @param {module:com.ultracart.admin.v2.models/CartProfileLoginRequest} loginRequest Login request
+     * @param {module:com.ultracart.admin.v2.models/CartProfileLoginRequest} login_request Login request
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~loginCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartProfileLoginResponse}
      */
-    this.login = function(loginRequest, opts, callback) {
+    this.login = function(login_request, opts, callback) {
       opts = opts || {};
-      var postBody = loginRequest;
+      var postBody = login_request;
 
-      // verify the required parameter 'loginRequest' is set
-      if (loginRequest === undefined || loginRequest === null) {
-        throw new Error("Missing the required parameter 'loginRequest' when calling login");
+      // verify the required parameter 'login_request' is set
+      if (login_request === undefined || login_request === null) {
+        throw new Error("Missing the required parameter 'login_request' when calling login");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -543,7 +543,7 @@
      * Log the cart out of the current profile.  No error will occur if they are not logged in. 
      * @param {module:com.ultracart.admin.v2.models/Cart} cart Cart
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~logoutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartResponse}
      */
@@ -560,7 +560,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -592,26 +592,26 @@
     /**
      * Profile registration
      * Register a new customer profile.  Requires the cart.billing object to be populated along with the password. 
-     * @param {module:com.ultracart.admin.v2.models/CartProfileRegisterRequest} registerRequest Register request
+     * @param {module:com.ultracart.admin.v2.models/CartProfileRegisterRequest} register_request Register request
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~registerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartProfileRegisterResponse}
      */
-    this.register = function(registerRequest, opts, callback) {
+    this.register = function(register_request, opts, callback) {
       opts = opts || {};
-      var postBody = registerRequest;
+      var postBody = register_request;
 
-      // verify the required parameter 'registerRequest' is set
-      if (registerRequest === undefined || registerRequest === null) {
-        throw new Error("Missing the required parameter 'registerRequest' when calling register");
+      // verify the required parameter 'register_request' is set
+      if (register_request === undefined || register_request === null) {
+        throw new Error("Missing the required parameter 'register_request' when calling register");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -645,7 +645,7 @@
      * Retrieve all the related items for the cart contents.  Expansion is limited to content, content.assignments, content.attributes, content.multimedia, content.multimedia.thumbnails, options, pricing, and pricing.tiers. 
      * @param {module:com.ultracart.admin.v2.models/Cart} cart Cart
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See item resource documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See item resource documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~relatedItemsForCartCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemsResponse}
      */
@@ -662,7 +662,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -694,20 +694,20 @@
     /**
      * Related items (specific item)
      * Retrieve all the related items for the cart contents.  Expansion is limited to content, content.assignments, content.attributes, content.multimedia, content.multimedia.thumbnails, options, pricing, and pricing.tiers. 
-     * @param {String} itemId Item ID to retrieve related items for
+     * @param {String} item_id Item ID to retrieve related items for
      * @param {module:com.ultracart.admin.v2.models/Cart} cart Cart
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See item resource documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See item resource documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~relatedItemsForItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemsResponse}
      */
-    this.relatedItemsForItem = function(itemId, cart, opts, callback) {
+    this.relatedItemsForItem = function(item_id, cart, opts, callback) {
       opts = opts || {};
       var postBody = cart;
 
-      // verify the required parameter 'itemId' is set
-      if (itemId === undefined || itemId === null) {
-        throw new Error("Missing the required parameter 'itemId' when calling relatedItemsForItem");
+      // verify the required parameter 'item_id' is set
+      if (item_id === undefined || item_id === null) {
+        throw new Error("Missing the required parameter 'item_id' when calling relatedItemsForItem");
       }
 
       // verify the required parameter 'cart' is set
@@ -717,10 +717,10 @@
 
 
       var pathParams = {
-        'item_id': itemId
+        'item_id': item_id
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -752,16 +752,16 @@
     /**
      * Setup Browser Application
      * Setup a browser key authenticated application with checkout permissions.  This REST call must be made with an authentication scheme that is not browser key.  The new application will be linked to the application that makes this call.  If this application is disabled / deleted, then so will the application setup by this call.  The purpose of this call is to allow an OAuth applicaiton, such as the Wordpress plugin, to setup the proper browser based authentication for the REST checkout API to use. 
-     * @param {module:com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest} browserKeyRequest Setup browser key request
+     * @param {module:com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest} browser_key_request Setup browser key request
      * @param {module:com.ultracart.admin.v2/CheckoutApi~setupBrowserKeyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse}
      */
-    this.setupBrowserKey = function(browserKeyRequest, callback) {
-      var postBody = browserKeyRequest;
+    this.setupBrowserKey = function(browser_key_request, callback) {
+      var postBody = browser_key_request;
 
-      // verify the required parameter 'browserKeyRequest' is set
-      if (browserKeyRequest === undefined || browserKeyRequest === null) {
-        throw new Error("Missing the required parameter 'browserKeyRequest' when calling setupBrowserKey");
+      // verify the required parameter 'browser_key_request' is set
+      if (browser_key_request === undefined || browser_key_request === null) {
+        throw new Error("Missing the required parameter 'browser_key_request' when calling setupBrowserKey");
       }
 
 
@@ -801,7 +801,7 @@
      * Update the cart. 
      * @param {module:com.ultracart.admin.v2.models/Cart} cart Cart
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~updateCartCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartResponse}
      */
@@ -818,7 +818,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -850,26 +850,26 @@
     /**
      * Validate
      * Validate the cart for errors.  Specific checks can be passed and multiple validations can occur throughout your checkout flow. 
-     * @param {module:com.ultracart.admin.v2.models/CartValidationRequest} validationRequest Validation request
+     * @param {module:com.ultracart.admin.v2.models/CartValidationRequest} validation_request Validation request
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~validateCartCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CartValidationResponse}
      */
-    this.validateCart = function(validationRequest, opts, callback) {
+    this.validateCart = function(validation_request, opts, callback) {
       opts = opts || {};
-      var postBody = validationRequest;
+      var postBody = validation_request;
 
-      // verify the required parameter 'validationRequest' is set
-      if (validationRequest === undefined || validationRequest === null) {
-        throw new Error("Missing the required parameter 'validationRequest' when calling validateCart");
+      // verify the required parameter 'validation_request' is set
+      if (validation_request === undefined || validation_request === null) {
+        throw new Error("Missing the required parameter 'validation_request' when calling validateCart");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };

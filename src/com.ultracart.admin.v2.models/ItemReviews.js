@@ -56,17 +56,17 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('has_approved_review'))
-        obj.hasApprovedReview = ApiClient.convertToType(data['has_approved_review'], 'Boolean');
+        obj.has_approved_review = ApiClient.convertToType(data['has_approved_review'], 'Boolean');
       if (data.hasOwnProperty('has_review'))
-        obj.hasReview = ApiClient.convertToType(data['has_review'], 'Boolean');
+        obj.has_review = ApiClient.convertToType(data['has_review'], 'Boolean');
       if (data.hasOwnProperty('review_count'))
-        obj.reviewCount = ApiClient.convertToType(data['review_count'], 'Number');
+        obj.review_count = ApiClient.convertToType(data['review_count'], 'Number');
       if (data.hasOwnProperty('review_overall'))
-        obj.reviewOverall = ApiClient.convertToType(data['review_overall'], 'Number');
+        obj.review_overall = ApiClient.convertToType(data['review_overall'], 'Number');
       if (data.hasOwnProperty('review_template_name'))
-        obj.reviewTemplateName = ApiClient.convertToType(data['review_template_name'], 'String');
+        obj.review_template_name = ApiClient.convertToType(data['review_template_name'], 'String');
       if (data.hasOwnProperty('review_template_oid'))
-        obj.reviewTemplateOid = ApiClient.convertToType(data['review_template_oid'], 'Number');
+        obj.review_template_oid = ApiClient.convertToType(data['review_template_oid'], 'Number');
       if (data.hasOwnProperty('reviewable'))
         obj.reviewable = ApiClient.convertToType(data['reviewable'], 'Boolean');
     }
@@ -75,39 +75,39 @@
 
   /**
    * True if the item has an approved review
-   * @member {Boolean} hasApprovedReview
+   * @member {Boolean} has_approved_review
    */
-  exports.prototype.hasApprovedReview = undefined;
+  exports.prototype.has_approved_review = undefined;
 
   /**
    * True if the item has a review
-   * @member {Boolean} hasReview
+   * @member {Boolean} has_review
    */
-  exports.prototype.hasReview = undefined;
+  exports.prototype.has_review = undefined;
 
   /**
    * Number of approved reviews
-   * @member {Number} reviewCount
+   * @member {Number} review_count
    */
-  exports.prototype.reviewCount = undefined;
+  exports.prototype.review_count = undefined;
 
   /**
    * Overall score of reviews
-   * @member {Number} reviewOverall
+   * @member {Number} review_overall
    */
-  exports.prototype.reviewOverall = undefined;
+  exports.prototype.review_overall = undefined;
 
   /**
    * Review template name
-   * @member {String} reviewTemplateName
+   * @member {String} review_template_name
    */
-  exports.prototype.reviewTemplateName = undefined;
+  exports.prototype.review_template_name = undefined;
 
   /**
    * Review template object identifier
-   * @member {Number} reviewTemplateOid
+   * @member {Number} review_template_oid
    */
-  exports.prototype.reviewTemplateOid = undefined;
+  exports.prototype.review_template_oid = undefined;
 
   /**
    * True if the item is reviewable

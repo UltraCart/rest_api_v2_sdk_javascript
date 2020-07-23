@@ -56,64 +56,64 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('revguard_canceled_csr_prompt_group'))
-        obj.revguardCanceledCsrPromptGroup = ApiClient.convertToType(data['revguard_canceled_csr_prompt_group'], 'Number');
+        obj.revguard_canceled_csr_prompt_group = ApiClient.convertToType(data['revguard_canceled_csr_prompt_group'], 'Number');
       if (data.hasOwnProperty('revguard_canceled_ivr_prompt_group'))
-        obj.revguardCanceledIvrPromptGroup = ApiClient.convertToType(data['revguard_canceled_ivr_prompt_group'], 'Number');
+        obj.revguard_canceled_ivr_prompt_group = ApiClient.convertToType(data['revguard_canceled_ivr_prompt_group'], 'Number');
       if (data.hasOwnProperty('revguard_canceled_web_prompt_group'))
-        obj.revguardCanceledWebPromptGroup = ApiClient.convertToType(data['revguard_canceled_web_prompt_group'], 'Number');
+        obj.revguard_canceled_web_prompt_group = ApiClient.convertToType(data['revguard_canceled_web_prompt_group'], 'Number');
       if (data.hasOwnProperty('revguard_client_brand'))
-        obj.revguardClientBrand = ApiClient.convertToType(data['revguard_client_brand'], 'Number');
+        obj.revguard_client_brand = ApiClient.convertToType(data['revguard_client_brand'], 'Number');
       if (data.hasOwnProperty('revguard_csr_prompt_group'))
-        obj.revguardCsrPromptGroup = ApiClient.convertToType(data['revguard_csr_prompt_group'], 'Number');
+        obj.revguard_csr_prompt_group = ApiClient.convertToType(data['revguard_csr_prompt_group'], 'Number');
       if (data.hasOwnProperty('revguard_ivr_prompt_group'))
-        obj.revguardIvrPromptGroup = ApiClient.convertToType(data['revguard_ivr_prompt_group'], 'Number');
+        obj.revguard_ivr_prompt_group = ApiClient.convertToType(data['revguard_ivr_prompt_group'], 'Number');
       if (data.hasOwnProperty('revguard_web_prompt_group'))
-        obj.revguardWebPromptGroup = ApiClient.convertToType(data['revguard_web_prompt_group'], 'Number');
+        obj.revguard_web_prompt_group = ApiClient.convertToType(data['revguard_web_prompt_group'], 'Number');
     }
     return obj;
   }
 
   /**
    * Canceled CSR prompt group
-   * @member {Number} revguardCanceledCsrPromptGroup
+   * @member {Number} revguard_canceled_csr_prompt_group
    */
-  exports.prototype.revguardCanceledCsrPromptGroup = undefined;
+  exports.prototype.revguard_canceled_csr_prompt_group = undefined;
 
   /**
    * IVR prompt group
-   * @member {Number} revguardCanceledIvrPromptGroup
+   * @member {Number} revguard_canceled_ivr_prompt_group
    */
-  exports.prototype.revguardCanceledIvrPromptGroup = undefined;
+  exports.prototype.revguard_canceled_ivr_prompt_group = undefined;
 
   /**
    * Canceled web prompt group
-   * @member {Number} revguardCanceledWebPromptGroup
+   * @member {Number} revguard_canceled_web_prompt_group
    */
-  exports.prototype.revguardCanceledWebPromptGroup = undefined;
+  exports.prototype.revguard_canceled_web_prompt_group = undefined;
 
   /**
    * Client brand
-   * @member {Number} revguardClientBrand
+   * @member {Number} revguard_client_brand
    */
-  exports.prototype.revguardClientBrand = undefined;
+  exports.prototype.revguard_client_brand = undefined;
 
   /**
    * CSR prompt group
-   * @member {Number} revguardCsrPromptGroup
+   * @member {Number} revguard_csr_prompt_group
    */
-  exports.prototype.revguardCsrPromptGroup = undefined;
+  exports.prototype.revguard_csr_prompt_group = undefined;
 
   /**
    * IVR prompt group
-   * @member {Number} revguardIvrPromptGroup
+   * @member {Number} revguard_ivr_prompt_group
    */
-  exports.prototype.revguardIvrPromptGroup = undefined;
+  exports.prototype.revguard_ivr_prompt_group = undefined;
 
   /**
    * Web prompt group
-   * @member {Number} revguardWebPromptGroup
+   * @member {Number} revguard_web_prompt_group
    */
-  exports.prototype.revguardWebPromptGroup = undefined;
+  exports.prototype.revguard_web_prompt_group = undefined;
 
   return exports;
 

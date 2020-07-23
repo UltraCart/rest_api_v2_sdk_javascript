@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('purchase_amount'))
-        obj.purchaseAmount = ApiClient.convertToType(data['purchase_amount'], 'Number');
+        obj.purchase_amount = ApiClient.convertToType(data['purchase_amount'], 'Number');
       if (data.hasOwnProperty('shipping_methods'))
-        obj.shippingMethods = ApiClient.convertToType(data['shipping_methods'], ['String']);
+        obj.shipping_methods = ApiClient.convertToType(data['shipping_methods'], ['String']);
     }
     return obj;
   }
 
   /**
    * The ISO-4217 three letter currency code the customer is viewing prices in
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * The purchase amount to qualify for subtotal discount and free shipping
-   * @member {Number} purchaseAmount
+   * @member {Number} purchase_amount
    */
-  exports.prototype.purchaseAmount = undefined;
+  exports.prototype.purchase_amount = undefined;
 
   /**
    * One or more shipping methods that may be used with this coupon
-   * @member {Array.<String>} shippingMethods
+   * @member {Array.<String>} shipping_methods
    */
-  exports.prototype.shippingMethods = undefined;
+  exports.prototype.shipping_methods = undefined;
 
   return exports;
 

@@ -56,30 +56,30 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('group_oid'))
-        obj.groupOid = ApiClient.convertToType(data['group_oid'], 'Number');
+        obj.group_oid = ApiClient.convertToType(data['group_oid'], 'Number');
       if (data.hasOwnProperty('group_path'))
-        obj.groupPath = ApiClient.convertToType(data['group_path'], 'String');
+        obj.group_path = ApiClient.convertToType(data['group_path'], 'String');
       if (data.hasOwnProperty('host'))
         obj.host = ApiClient.convertToType(data['host'], 'String');
       if (data.hasOwnProperty('sort_order'))
-        obj.sortOrder = ApiClient.convertToType(data['sort_order'], 'Number');
+        obj.sort_order = ApiClient.convertToType(data['sort_order'], 'Number');
       if (data.hasOwnProperty('url_part'))
-        obj.urlPart = ApiClient.convertToType(data['url_part'], 'String');
+        obj.url_part = ApiClient.convertToType(data['url_part'], 'String');
     }
     return obj;
   }
 
   /**
    * Page (group) object identifier
-   * @member {Number} groupOid
+   * @member {Number} group_oid
    */
-  exports.prototype.groupOid = undefined;
+  exports.prototype.group_oid = undefined;
 
   /**
    * Page (group) path
-   * @member {String} groupPath
+   * @member {String} group_path
    */
-  exports.prototype.groupPath = undefined;
+  exports.prototype.group_path = undefined;
 
   /**
    * StoreFront host name
@@ -89,15 +89,15 @@
 
   /**
    * Sort order (optional)
-   * @member {Number} sortOrder
+   * @member {Number} sort_order
    */
-  exports.prototype.sortOrder = undefined;
+  exports.prototype.sort_order = undefined;
 
   /**
    * URL part if the item id is not used
-   * @member {String} urlPart
+   * @member {String} url_part
    */
-  exports.prototype.urlPart = undefined;
+  exports.prototype.url_part = undefined;
 
   return exports;
 

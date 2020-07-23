@@ -56,100 +56,100 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('card_auth_ticket'))
-        obj.cardAuthTicket = ApiClient.convertToType(data['card_auth_ticket'], 'String');
+        obj.card_auth_ticket = ApiClient.convertToType(data['card_auth_ticket'], 'String');
       if (data.hasOwnProperty('card_authorization_amount'))
-        obj.cardAuthorizationAmount = ApiClient.convertToType(data['card_authorization_amount'], 'Number');
+        obj.card_authorization_amount = ApiClient.convertToType(data['card_authorization_amount'], 'Number');
       if (data.hasOwnProperty('card_authorization_dts'))
-        obj.cardAuthorizationDts = ApiClient.convertToType(data['card_authorization_dts'], 'String');
+        obj.card_authorization_dts = ApiClient.convertToType(data['card_authorization_dts'], 'String');
       if (data.hasOwnProperty('card_authorization_reference_number'))
-        obj.cardAuthorizationReferenceNumber = ApiClient.convertToType(data['card_authorization_reference_number'], 'String');
+        obj.card_authorization_reference_number = ApiClient.convertToType(data['card_authorization_reference_number'], 'String');
       if (data.hasOwnProperty('card_expiration_month'))
-        obj.cardExpirationMonth = ApiClient.convertToType(data['card_expiration_month'], 'Number');
+        obj.card_expiration_month = ApiClient.convertToType(data['card_expiration_month'], 'Number');
       if (data.hasOwnProperty('card_expiration_year'))
-        obj.cardExpirationYear = ApiClient.convertToType(data['card_expiration_year'], 'Number');
+        obj.card_expiration_year = ApiClient.convertToType(data['card_expiration_year'], 'Number');
       if (data.hasOwnProperty('card_number'))
-        obj.cardNumber = ApiClient.convertToType(data['card_number'], 'String');
+        obj.card_number = ApiClient.convertToType(data['card_number'], 'String');
       if (data.hasOwnProperty('card_number_token'))
-        obj.cardNumberToken = ApiClient.convertToType(data['card_number_token'], 'String');
+        obj.card_number_token = ApiClient.convertToType(data['card_number_token'], 'String');
       if (data.hasOwnProperty('card_number_truncated'))
-        obj.cardNumberTruncated = ApiClient.convertToType(data['card_number_truncated'], 'Boolean');
+        obj.card_number_truncated = ApiClient.convertToType(data['card_number_truncated'], 'Boolean');
       if (data.hasOwnProperty('card_type'))
-        obj.cardType = ApiClient.convertToType(data['card_type'], 'String');
+        obj.card_type = ApiClient.convertToType(data['card_type'], 'String');
       if (data.hasOwnProperty('card_verification_number_token'))
-        obj.cardVerificationNumberToken = ApiClient.convertToType(data['card_verification_number_token'], 'String');
+        obj.card_verification_number_token = ApiClient.convertToType(data['card_verification_number_token'], 'String');
     }
     return obj;
   }
 
   /**
    * Card authorization ticket
-   * @member {String} cardAuthTicket
+   * @member {String} card_auth_ticket
    */
-  exports.prototype.cardAuthTicket = undefined;
+  exports.prototype.card_auth_ticket = undefined;
 
   /**
    * Card authorization amount
-   * @member {Number} cardAuthorizationAmount
+   * @member {Number} card_authorization_amount
    */
-  exports.prototype.cardAuthorizationAmount = undefined;
+  exports.prototype.card_authorization_amount = undefined;
 
   /**
    * Card authorization date/time
-   * @member {String} cardAuthorizationDts
+   * @member {String} card_authorization_dts
    */
-  exports.prototype.cardAuthorizationDts = undefined;
+  exports.prototype.card_authorization_dts = undefined;
 
   /**
    * Card authorization reference number
-   * @member {String} cardAuthorizationReferenceNumber
+   * @member {String} card_authorization_reference_number
    */
-  exports.prototype.cardAuthorizationReferenceNumber = undefined;
+  exports.prototype.card_authorization_reference_number = undefined;
 
   /**
    * Card expiration month (1-12)
-   * @member {Number} cardExpirationMonth
+   * @member {Number} card_expiration_month
    */
-  exports.prototype.cardExpirationMonth = undefined;
+  exports.prototype.card_expiration_month = undefined;
 
   /**
    * Card expiration year (Four digit year)
-   * @member {Number} cardExpirationYear
+   * @member {Number} card_expiration_year
    */
-  exports.prototype.cardExpirationYear = undefined;
+  exports.prototype.card_expiration_year = undefined;
 
   /**
    * Card number (masked to last 4)
-   * @member {String} cardNumber
+   * @member {String} card_number
    */
-  exports.prototype.cardNumber = undefined;
+  exports.prototype.card_number = undefined;
 
   /**
    * Card number token from hosted fields used to update the cart number
-   * @member {String} cardNumberToken
+   * @member {String} card_number_token
    */
-  exports.prototype.cardNumberToken = undefined;
+  exports.prototype.card_number_token = undefined;
 
   /**
    * True if the card has been truncated
-   * @member {Boolean} cardNumberTruncated
+   * @member {Boolean} card_number_truncated
    */
-  exports.prototype.cardNumberTruncated = undefined;
+  exports.prototype.card_number_truncated = undefined;
 
   /**
    * Card type
-   * @member {module:com.ultracart.admin.v2.models/OrderPaymentCreditCard.CardTypeEnum} cardType
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentCreditCard.CardTypeEnum} card_type
    */
-  exports.prototype.cardType = undefined;
+  exports.prototype.card_type = undefined;
 
   /**
    * Card verification number token from hosted fields, only for import/insert of new orders, completely ignored for updates, and always null/empty for queries
-   * @member {String} cardVerificationNumberToken
+   * @member {String} card_verification_number_token
    */
-  exports.prototype.cardVerificationNumberToken = undefined;
+  exports.prototype.card_verification_number_token = undefined;
 
 
   /**
-   * Allowed values for the <code>cardType</code> property.
+   * Allowed values for the <code>card_type</code> property.
    * @enum {String}
    * @readonly
    */
@@ -164,13 +164,13 @@
      * value: "Diners Club"
      * @const
      */
-    dinersClub: "Diners Club",
+    Diners_Club: "Diners Club",
 
     /**
      * value: "Discover"
      * @const
      */
-    discover: "Discover",
+    Discover: "Discover",
 
     /**
      * value: "JCB"
@@ -182,7 +182,7 @@
      * value: "MasterCard"
      * @const
      */
-    masterCard: "MasterCard",
+    MasterCard: "MasterCard",
 
     /**
      * value: "VISA"

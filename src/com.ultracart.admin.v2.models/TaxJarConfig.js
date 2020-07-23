@@ -58,13 +58,13 @@
       if (data.hasOwnProperty('active'))
         obj.active = ApiClient.convertToType(data['active'], 'Boolean');
       if (data.hasOwnProperty('api_key'))
-        obj.apiKey = ApiClient.convertToType(data['api_key'], 'String');
+        obj.api_key = ApiClient.convertToType(data['api_key'], 'String');
       if (data.hasOwnProperty('estimate_only'))
-        obj.estimateOnly = ApiClient.convertToType(data['estimate_only'], 'Boolean');
+        obj.estimate_only = ApiClient.convertToType(data['estimate_only'], 'Boolean');
       if (data.hasOwnProperty('send_test_orders'))
-        obj.sendTestOrders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
+        obj.send_test_orders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
       if (data.hasOwnProperty('use_distribution_center_from'))
-        obj.useDistributionCenterFrom = ApiClient.convertToType(data['use_distribution_center_from'], 'Boolean');
+        obj.use_distribution_center_from = ApiClient.convertToType(data['use_distribution_center_from'], 'Boolean');
     }
     return obj;
   }
@@ -77,27 +77,27 @@
 
   /**
    * TaxJar API key
-   * @member {String} apiKey
+   * @member {String} api_key
    */
-  exports.prototype.apiKey = undefined;
+  exports.prototype.api_key = undefined;
 
   /**
    * True if this TaxJar configuration is to estimate taxes only and not report placed orders to TaxJar
-   * @member {Boolean} estimateOnly
+   * @member {Boolean} estimate_only
    */
-  exports.prototype.estimateOnly = undefined;
+  exports.prototype.estimate_only = undefined;
 
   /**
    * Send test orders through to TaxJar.  The default is to not transmit test orders to TaxJar.
-   * @member {Boolean} sendTestOrders
+   * @member {Boolean} send_test_orders
    */
-  exports.prototype.sendTestOrders = undefined;
+  exports.prototype.send_test_orders = undefined;
 
   /**
    * Use distribution center from address
-   * @member {Boolean} useDistributionCenterFrom
+   * @member {Boolean} use_distribution_center_from
    */
-  exports.prototype.useDistributionCenterFrom = undefined;
+  exports.prototype.use_distribution_center_from = undefined;
 
   return exports;
 

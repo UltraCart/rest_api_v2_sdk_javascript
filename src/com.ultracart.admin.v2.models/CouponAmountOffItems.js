@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('discount_amount'))
-        obj.discountAmount = ApiClient.convertToType(data['discount_amount'], 'Number');
+        obj.discount_amount = ApiClient.convertToType(data['discount_amount'], 'Number');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
     }
@@ -67,15 +67,15 @@
 
   /**
    * The ISO-4217 three letter currency code the customer is viewing prices in
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * The amount of shipping discount
-   * @member {Number} discountAmount
+   * @member {Number} discount_amount
    */
-  exports.prototype.discountAmount = undefined;
+  exports.prototype.discount_amount = undefined;
 
   /**
    * A list of items which are eligible for the discount amount.

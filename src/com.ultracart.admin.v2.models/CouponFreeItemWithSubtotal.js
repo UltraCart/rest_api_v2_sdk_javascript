@@ -56,22 +56,22 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
       if (data.hasOwnProperty('subtotal_amount'))
-        obj.subtotalAmount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
+        obj.subtotal_amount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
     }
     return obj;
   }
 
   /**
    * The ISO-4217 three letter currency code the customer is viewing prices in
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * A list of items that are eligible for this discount_price.
@@ -87,9 +87,9 @@
 
   /**
    * The amount of subtotal required to receive the discount percent
-   * @member {Number} subtotalAmount
+   * @member {Number} subtotal_amount
    */
-  exports.prototype.subtotalAmount = undefined;
+  exports.prototype.subtotal_amount = undefined;
 
   return exports;
 

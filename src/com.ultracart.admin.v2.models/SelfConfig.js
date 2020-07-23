@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('tax_billing'))
-        obj.taxBilling = ApiClient.convertToType(data['tax_billing'], 'Boolean');
+        obj.tax_billing = ApiClient.convertToType(data['tax_billing'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * True if sales tax should be collected based on billing address instead of shipping address
-   * @member {Boolean} taxBilling
+   * @member {Boolean} tax_billing
    */
-  exports.prototype.taxBilling = undefined;
+  exports.prototype.tax_billing = undefined;
 
   return exports;
 

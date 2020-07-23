@@ -59,21 +59,21 @@
     /**
      * Delete a coupon
      * Delete a coupon on the UltraCart account. 
-     * @param {Number} couponOid The coupon_oid to delete.
+     * @param {Number} coupon_oid The coupon_oid to delete.
      * @param {module:com.ultracart.admin.v2/CouponApi~deleteCouponCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponResponse}
      */
-    this.deleteCoupon = function(couponOid, callback) {
+    this.deleteCoupon = function(coupon_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'couponOid' is set
-      if (couponOid === undefined || couponOid === null) {
-        throw new Error("Missing the required parameter 'couponOid' when calling deleteCoupon");
+      // verify the required parameter 'coupon_oid' is set
+      if (coupon_oid === undefined || coupon_oid === null) {
+        throw new Error("Missing the required parameter 'coupon_oid' when calling deleteCoupon");
       }
 
 
       var pathParams = {
-        'coupon_oid': couponOid
+        'coupon_oid': coupon_oid
       };
       var queryParams = {
       };
@@ -107,27 +107,27 @@
     /**
      * Generates one time codes for a coupon
      * Generate one time codes for a coupon 
-     * @param {Number} couponOid The coupon oid to generate codes.
-     * @param {module:com.ultracart.admin.v2.models/CouponCodesRequest} couponCodesRequest Coupon code generation parameters
+     * @param {Number} coupon_oid The coupon oid to generate codes.
+     * @param {module:com.ultracart.admin.v2.models/CouponCodesRequest} coupon_codes_request Coupon code generation parameters
      * @param {module:com.ultracart.admin.v2/CouponApi~generateCouponCodesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponCodesResponse}
      */
-    this.generateCouponCodes = function(couponOid, couponCodesRequest, callback) {
-      var postBody = couponCodesRequest;
+    this.generateCouponCodes = function(coupon_oid, coupon_codes_request, callback) {
+      var postBody = coupon_codes_request;
 
-      // verify the required parameter 'couponOid' is set
-      if (couponOid === undefined || couponOid === null) {
-        throw new Error("Missing the required parameter 'couponOid' when calling generateCouponCodes");
+      // verify the required parameter 'coupon_oid' is set
+      if (coupon_oid === undefined || coupon_oid === null) {
+        throw new Error("Missing the required parameter 'coupon_oid' when calling generateCouponCodes");
       }
 
-      // verify the required parameter 'couponCodesRequest' is set
-      if (couponCodesRequest === undefined || couponCodesRequest === null) {
-        throw new Error("Missing the required parameter 'couponCodesRequest' when calling generateCouponCodes");
+      // verify the required parameter 'coupon_codes_request' is set
+      if (coupon_codes_request === undefined || coupon_codes_request === null) {
+        throw new Error("Missing the required parameter 'coupon_codes_request' when calling generateCouponCodes");
       }
 
 
       var pathParams = {
-        'coupon_oid': couponOid
+        'coupon_oid': coupon_oid
       };
       var queryParams = {
       };
@@ -161,27 +161,27 @@
     /**
      * Generates one time codes by merchant code
      * Generate one time codes by merchant code 
-     * @param {String} merchantCode The merchant code to generate one time codes.
-     * @param {module:com.ultracart.admin.v2.models/CouponCodesRequest} couponCodesRequest Coupon code generation parameters
+     * @param {String} merchant_code The merchant code to generate one time codes.
+     * @param {module:com.ultracart.admin.v2.models/CouponCodesRequest} coupon_codes_request Coupon code generation parameters
      * @param {module:com.ultracart.admin.v2/CouponApi~generateOneTimeCodesByMerchantCodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponCodesResponse}
      */
-    this.generateOneTimeCodesByMerchantCode = function(merchantCode, couponCodesRequest, callback) {
-      var postBody = couponCodesRequest;
+    this.generateOneTimeCodesByMerchantCode = function(merchant_code, coupon_codes_request, callback) {
+      var postBody = coupon_codes_request;
 
-      // verify the required parameter 'merchantCode' is set
-      if (merchantCode === undefined || merchantCode === null) {
-        throw new Error("Missing the required parameter 'merchantCode' when calling generateOneTimeCodesByMerchantCode");
+      // verify the required parameter 'merchant_code' is set
+      if (merchant_code === undefined || merchant_code === null) {
+        throw new Error("Missing the required parameter 'merchant_code' when calling generateOneTimeCodesByMerchantCode");
       }
 
-      // verify the required parameter 'couponCodesRequest' is set
-      if (couponCodesRequest === undefined || couponCodesRequest === null) {
-        throw new Error("Missing the required parameter 'couponCodesRequest' when calling generateOneTimeCodesByMerchantCode");
+      // verify the required parameter 'coupon_codes_request' is set
+      if (coupon_codes_request === undefined || coupon_codes_request === null) {
+        throw new Error("Missing the required parameter 'coupon_codes_request' when calling generateOneTimeCodesByMerchantCode");
       }
 
 
       var pathParams = {
-        'merchant_code': merchantCode
+        'merchant_code': merchant_code
       };
       var queryParams = {
       };
@@ -215,27 +215,27 @@
     /**
      * Retrieve a coupon
      * Retrieves a single coupon using the specified coupon profile oid. 
-     * @param {Number} couponOid The coupon oid to retrieve.
+     * @param {Number} coupon_oid The coupon oid to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CouponApi~getCouponCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponResponse}
      */
-    this.getCoupon = function(couponOid, opts, callback) {
+    this.getCoupon = function(coupon_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'couponOid' is set
-      if (couponOid === undefined || couponOid === null) {
-        throw new Error("Missing the required parameter 'couponOid' when calling getCoupon");
+      // verify the required parameter 'coupon_oid' is set
+      if (coupon_oid === undefined || coupon_oid === null) {
+        throw new Error("Missing the required parameter 'coupon_oid' when calling getCoupon");
       }
 
 
       var pathParams = {
-        'coupon_oid': couponOid
+        'coupon_oid': coupon_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -267,27 +267,27 @@
     /**
      * Retrieve a coupon by merchant code
      * Retrieves a single coupon using the specified merchant code. 
-     * @param {String} merchantCode The coupon merchant code to retrieve.
+     * @param {String} merchant_code The coupon merchant code to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CouponApi~getCouponByMerchantCodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponResponse}
      */
-    this.getCouponByMerchantCode = function(merchantCode, opts, callback) {
+    this.getCouponByMerchantCode = function(merchant_code, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'merchantCode' is set
-      if (merchantCode === undefined || merchantCode === null) {
-        throw new Error("Missing the required parameter 'merchantCode' when calling getCouponByMerchantCode");
+      // verify the required parameter 'merchant_code' is set
+      if (merchant_code === undefined || merchant_code === null) {
+        throw new Error("Missing the required parameter 'merchant_code' when calling getCouponByMerchantCode");
       }
 
 
       var pathParams = {
-        'merchant_code': merchantCode
+        'merchant_code': merchant_code
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -320,19 +320,19 @@
      * Retrieve coupons
      * Retrieves coupons for this account.  If no parameters are specified, all coupons will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.merchantCode Merchant code
+     * @param {String} opts.merchant_code Merchant code
      * @param {String} opts.description Description
-     * @param {String} opts.couponType Coupon type
-     * @param {String} opts.startDateBegin Start date begin
-     * @param {String} opts.startDateEnd Start date end
-     * @param {String} opts.expirationDateBegin Expiration date begin
-     * @param {String} opts.expirationDateEnd Expiration date end
-     * @param {Number} opts.affiliateOid Affiliate oid
-     * @param {Boolean} opts.excludeExpired Exclude expired
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.sort The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts.coupon_type Coupon type
+     * @param {String} opts.start_date_begin Start date begin
+     * @param {String} opts.start_date_end Start date end
+     * @param {String} opts.expiration_date_begin Expiration date begin
+     * @param {String} opts.expiration_date_end Expiration date end
+     * @param {Number} opts.affiliate_oid Affiliate oid
+     * @param {Boolean} opts.exclude_expired Exclude expired
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CouponApi~getCouponsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponsResponse}
      */
@@ -344,19 +344,19 @@
       var pathParams = {
       };
       var queryParams = {
-        'merchant_code': opts['merchantCode'],
+        'merchant_code': opts['merchant_code'],
         'description': opts['description'],
-        'coupon_type': opts['couponType'],
-        'start_date_begin': opts['startDateBegin'],
-        'start_date_end': opts['startDateEnd'],
-        'expiration_date_begin': opts['expirationDateBegin'],
-        'expiration_date_end': opts['expirationDateEnd'],
-        'affiliate_oid': opts['affiliateOid'],
-        'exclude_expired': opts['excludeExpired'],
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        'coupon_type': opts['coupon_type'],
+        'start_date_begin': opts['start_date_begin'],
+        'start_date_end': opts['start_date_end'],
+        'expiration_date_begin': opts['expiration_date_begin'],
+        'expiration_date_end': opts['expiration_date_end'],
+        'affiliate_oid': opts['affiliate_oid'],
+        'exclude_expired': opts['exclude_expired'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -388,32 +388,32 @@
     /**
      * Retrieve coupons by query
      * Retrieves coupons from the account.  If no parameters are specified, all coupons will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/CouponQuery} couponQuery Coupon query
+     * @param {module:com.ultracart.admin.v2.models/CouponQuery} coupon_query Coupon query
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.sort The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CouponApi~getCouponsByQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponsResponse}
      */
-    this.getCouponsByQuery = function(couponQuery, opts, callback) {
+    this.getCouponsByQuery = function(coupon_query, opts, callback) {
       opts = opts || {};
-      var postBody = couponQuery;
+      var postBody = coupon_query;
 
-      // verify the required parameter 'couponQuery' is set
-      if (couponQuery === undefined || couponQuery === null) {
-        throw new Error("Missing the required parameter 'couponQuery' when calling getCouponsByQuery");
+      // verify the required parameter 'coupon_query' is set
+      if (coupon_query === undefined || coupon_query === null) {
+        throw new Error("Missing the required parameter 'coupon_query' when calling getCouponsByQuery");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -488,7 +488,7 @@
      * Insert a coupon on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/Coupon} coupon Coupon to insert
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CouponApi~insertCouponCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponResponse}
      */
@@ -505,7 +505,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -538,13 +538,13 @@
      * Update a coupon
      * Update a coupon on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/Coupon} coupon Coupon to update
-     * @param {Number} couponOid The coupon_oid to update.
+     * @param {Number} coupon_oid The coupon_oid to update.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CouponApi~updateCouponCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/CouponResponse}
      */
-    this.updateCoupon = function(coupon, couponOid, opts, callback) {
+    this.updateCoupon = function(coupon, coupon_oid, opts, callback) {
       opts = opts || {};
       var postBody = coupon;
 
@@ -553,17 +553,17 @@
         throw new Error("Missing the required parameter 'coupon' when calling updateCoupon");
       }
 
-      // verify the required parameter 'couponOid' is set
-      if (couponOid === undefined || couponOid === null) {
-        throw new Error("Missing the required parameter 'couponOid' when calling updateCoupon");
+      // verify the required parameter 'coupon_oid' is set
+      if (coupon_oid === undefined || coupon_oid === null) {
+        throw new Error("Missing the required parameter 'coupon_oid' when calling updateCoupon");
       }
 
 
       var pathParams = {
-        'coupon_oid': couponOid
+        'coupon_oid': coupon_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };

@@ -56,63 +56,63 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('arbitrary_shipping_handling_total'))
-        obj.arbitraryShippingHandlingTotal = Currency.constructFromObject(data['arbitrary_shipping_handling_total']);
+        obj.arbitrary_shipping_handling_total = Currency.constructFromObject(data['arbitrary_shipping_handling_total']);
       if (data.hasOwnProperty('other_refunded'))
-        obj.otherRefunded = Currency.constructFromObject(data['other_refunded']);
+        obj.other_refunded = Currency.constructFromObject(data['other_refunded']);
       if (data.hasOwnProperty('shipping_handling_refunded'))
-        obj.shippingHandlingRefunded = Currency.constructFromObject(data['shipping_handling_refunded']);
+        obj.shipping_handling_refunded = Currency.constructFromObject(data['shipping_handling_refunded']);
       if (data.hasOwnProperty('shipping_handling_total'))
-        obj.shippingHandlingTotal = Currency.constructFromObject(data['shipping_handling_total']);
+        obj.shipping_handling_total = Currency.constructFromObject(data['shipping_handling_total']);
       if (data.hasOwnProperty('shipping_handling_total_discount'))
-        obj.shippingHandlingTotalDiscount = Currency.constructFromObject(data['shipping_handling_total_discount']);
+        obj.shipping_handling_total_discount = Currency.constructFromObject(data['shipping_handling_total_discount']);
       if (data.hasOwnProperty('subtotal'))
         obj.subtotal = Currency.constructFromObject(data['subtotal']);
       if (data.hasOwnProperty('subtotal_discount'))
-        obj.subtotalDiscount = Currency.constructFromObject(data['subtotal_discount']);
+        obj.subtotal_discount = Currency.constructFromObject(data['subtotal_discount']);
       if (data.hasOwnProperty('subtotal_discount_refunded'))
-        obj.subtotalDiscountRefunded = Currency.constructFromObject(data['subtotal_discount_refunded']);
+        obj.subtotal_discount_refunded = Currency.constructFromObject(data['subtotal_discount_refunded']);
       if (data.hasOwnProperty('subtotal_refunded'))
-        obj.subtotalRefunded = Currency.constructFromObject(data['subtotal_refunded']);
+        obj.subtotal_refunded = Currency.constructFromObject(data['subtotal_refunded']);
       if (data.hasOwnProperty('tax'))
         obj.tax = Currency.constructFromObject(data['tax']);
       if (data.hasOwnProperty('tax_refunded'))
-        obj.taxRefunded = Currency.constructFromObject(data['tax_refunded']);
+        obj.tax_refunded = Currency.constructFromObject(data['tax_refunded']);
       if (data.hasOwnProperty('taxable_subtotal'))
-        obj.taxableSubtotal = Currency.constructFromObject(data['taxable_subtotal']);
+        obj.taxable_subtotal = Currency.constructFromObject(data['taxable_subtotal']);
       if (data.hasOwnProperty('taxable_subtotal_discount'))
-        obj.taxableSubtotalDiscount = Currency.constructFromObject(data['taxable_subtotal_discount']);
+        obj.taxable_subtotal_discount = Currency.constructFromObject(data['taxable_subtotal_discount']);
       if (data.hasOwnProperty('total'))
         obj.total = Currency.constructFromObject(data['total']);
       if (data.hasOwnProperty('total_refunded'))
-        obj.totalRefunded = Currency.constructFromObject(data['total_refunded']);
+        obj.total_refunded = Currency.constructFromObject(data['total_refunded']);
     }
     return obj;
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} arbitraryShippingHandlingTotal
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_shipping_handling_total
    */
-  exports.prototype.arbitraryShippingHandlingTotal = undefined;
+  exports.prototype.arbitrary_shipping_handling_total = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} otherRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} other_refunded
    */
-  exports.prototype.otherRefunded = undefined;
+  exports.prototype.other_refunded = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} shippingHandlingRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} shipping_handling_refunded
    */
-  exports.prototype.shippingHandlingRefunded = undefined;
+  exports.prototype.shipping_handling_refunded = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} shippingHandlingTotal
+   * @member {module:com.ultracart.admin.v2.models/Currency} shipping_handling_total
    */
-  exports.prototype.shippingHandlingTotal = undefined;
+  exports.prototype.shipping_handling_total = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} shippingHandlingTotalDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} shipping_handling_total_discount
    */
-  exports.prototype.shippingHandlingTotalDiscount = undefined;
+  exports.prototype.shipping_handling_total_discount = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} subtotal
@@ -120,19 +120,19 @@
   exports.prototype.subtotal = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} subtotalDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} subtotal_discount
    */
-  exports.prototype.subtotalDiscount = undefined;
+  exports.prototype.subtotal_discount = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} subtotalDiscountRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} subtotal_discount_refunded
    */
-  exports.prototype.subtotalDiscountRefunded = undefined;
+  exports.prototype.subtotal_discount_refunded = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} subtotalRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} subtotal_refunded
    */
-  exports.prototype.subtotalRefunded = undefined;
+  exports.prototype.subtotal_refunded = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} tax
@@ -140,19 +140,19 @@
   exports.prototype.tax = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} taxRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} tax_refunded
    */
-  exports.prototype.taxRefunded = undefined;
+  exports.prototype.tax_refunded = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} taxableSubtotal
+   * @member {module:com.ultracart.admin.v2.models/Currency} taxable_subtotal
    */
-  exports.prototype.taxableSubtotal = undefined;
+  exports.prototype.taxable_subtotal = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} taxableSubtotalDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} taxable_subtotal_discount
    */
-  exports.prototype.taxableSubtotalDiscount = undefined;
+  exports.prototype.taxable_subtotal_discount = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} total
@@ -160,9 +160,9 @@
   exports.prototype.total = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} totalRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} total_refunded
    */
-  exports.prototype.totalRefunded = undefined;
+  exports.prototype.total_refunded = undefined;
 
   return exports;
 

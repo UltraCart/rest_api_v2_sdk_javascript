@@ -56,76 +56,76 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_multiple_concurrent_enrollments'))
-        obj.allowMultipleConcurrentEnrollments = ApiClient.convertToType(data['allow_multiple_concurrent_enrollments'], 'Boolean');
+        obj.allow_multiple_concurrent_enrollments = ApiClient.convertToType(data['allow_multiple_concurrent_enrollments'], 'Boolean');
       if (data.hasOwnProperty('back_populating'))
-        obj.backPopulating = ApiClient.convertToType(data['back_populating'], 'Boolean');
+        obj.back_populating = ApiClient.convertToType(data['back_populating'], 'Boolean');
       if (data.hasOwnProperty('click_rate_formatted'))
-        obj.clickRateFormatted = ApiClient.convertToType(data['click_rate_formatted'], 'String');
+        obj.click_rate_formatted = ApiClient.convertToType(data['click_rate_formatted'], 'String');
       if (data.hasOwnProperty('created_dts'))
-        obj.createdDts = ApiClient.convertToType(data['created_dts'], 'String');
+        obj.created_dts = ApiClient.convertToType(data['created_dts'], 'String');
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('email_communication_sequence_uuid'))
-        obj.emailCommunicationSequenceUuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+        obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       if (data.hasOwnProperty('email_flow_uuid'))
-        obj.emailFlowUuid = ApiClient.convertToType(data['email_flow_uuid'], 'String');
+        obj.email_flow_uuid = ApiClient.convertToType(data['email_flow_uuid'], 'String');
       if (data.hasOwnProperty('enrolled_customers'))
-        obj.enrolledCustomers = ApiClient.convertToType(data['enrolled_customers'], 'Number');
+        obj.enrolled_customers = ApiClient.convertToType(data['enrolled_customers'], 'Number');
       if (data.hasOwnProperty('esp_domain_user'))
-        obj.espDomainUser = ApiClient.convertToType(data['esp_domain_user'], 'String');
+        obj.esp_domain_user = ApiClient.convertToType(data['esp_domain_user'], 'String');
       if (data.hasOwnProperty('esp_domain_uuid'))
-        obj.espDomainUuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+        obj.esp_domain_uuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('esp_friendly_name'))
-        obj.espFriendlyName = ApiClient.convertToType(data['esp_friendly_name'], 'String');
+        obj.esp_friendly_name = ApiClient.convertToType(data['esp_friendly_name'], 'String');
       if (data.hasOwnProperty('filter_profile_equation_json'))
-        obj.filterProfileEquationJson = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
+        obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('open_rate_formatted'))
-        obj.openRateFormatted = ApiClient.convertToType(data['open_rate_formatted'], 'String');
+        obj.open_rate_formatted = ApiClient.convertToType(data['open_rate_formatted'], 'String');
       if (data.hasOwnProperty('revenue_formatted'))
-        obj.revenueFormatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
+        obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('status_dts'))
-        obj.statusDts = ApiClient.convertToType(data['status_dts'], 'String');
+        obj.status_dts = ApiClient.convertToType(data['status_dts'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('trigger_parameter'))
-        obj.triggerParameter = ApiClient.convertToType(data['trigger_parameter'], 'String');
+        obj.trigger_parameter = ApiClient.convertToType(data['trigger_parameter'], 'String');
       if (data.hasOwnProperty('trigger_parameter_name'))
-        obj.triggerParameterName = ApiClient.convertToType(data['trigger_parameter_name'], 'String');
+        obj.trigger_parameter_name = ApiClient.convertToType(data['trigger_parameter_name'], 'String');
       if (data.hasOwnProperty('trigger_type'))
-        obj.triggerType = ApiClient.convertToType(data['trigger_type'], 'String');
+        obj.trigger_type = ApiClient.convertToType(data['trigger_type'], 'String');
     }
     return obj;
   }
 
   /**
    * True if a customer may be enrolled in this flow multiple times
-   * @member {Boolean} allowMultipleConcurrentEnrollments
+   * @member {Boolean} allow_multiple_concurrent_enrollments
    */
-  exports.prototype.allowMultipleConcurrentEnrollments = undefined;
+  exports.prototype.allow_multiple_concurrent_enrollments = undefined;
 
   /**
    * True if the flow is currently performing a back population.
-   * @member {Boolean} backPopulating
+   * @member {Boolean} back_populating
    */
-  exports.prototype.backPopulating = undefined;
+  exports.prototype.back_populating = undefined;
 
   /**
    * Click rate of emails, formatted
-   * @member {String} clickRateFormatted
+   * @member {String} click_rate_formatted
    */
-  exports.prototype.clickRateFormatted = undefined;
+  exports.prototype.click_rate_formatted = undefined;
 
   /**
    * Created date
-   * @member {String} createdDts
+   * @member {String} created_dts
    */
-  exports.prototype.createdDts = undefined;
+  exports.prototype.created_dts = undefined;
 
   /**
    * True if this campaign was deleted
@@ -135,51 +135,51 @@
 
   /**
    * Email communication sequence UUID
-   * @member {String} emailCommunicationSequenceUuid
+   * @member {String} email_communication_sequence_uuid
    */
-  exports.prototype.emailCommunicationSequenceUuid = undefined;
+  exports.prototype.email_communication_sequence_uuid = undefined;
 
   /**
    * Email flow UUID
-   * @member {String} emailFlowUuid
+   * @member {String} email_flow_uuid
    */
-  exports.prototype.emailFlowUuid = undefined;
+  exports.prototype.email_flow_uuid = undefined;
 
   /**
    * Number of enrolled customers.
-   * @member {Number} enrolledCustomers
+   * @member {Number} enrolled_customers
    */
-  exports.prototype.enrolledCustomers = undefined;
+  exports.prototype.enrolled_customers = undefined;
 
   /**
    * Username of sending email
-   * @member {String} espDomainUser
+   * @member {String} esp_domain_user
    */
-  exports.prototype.espDomainUser = undefined;
+  exports.prototype.esp_domain_user = undefined;
 
   /**
    * UUID of sending domain
-   * @member {String} espDomainUuid
+   * @member {String} esp_domain_uuid
    */
-  exports.prototype.espDomainUuid = undefined;
+  exports.prototype.esp_domain_uuid = undefined;
 
   /**
    * Friendly name of the sending email
-   * @member {String} espFriendlyName
+   * @member {String} esp_friendly_name
    */
-  exports.prototype.espFriendlyName = undefined;
+  exports.prototype.esp_friendly_name = undefined;
 
   /**
    * File profile equation json
-   * @member {String} filterProfileEquationJson
+   * @member {String} filter_profile_equation_json
    */
-  exports.prototype.filterProfileEquationJson = undefined;
+  exports.prototype.filter_profile_equation_json = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Name of email flow
@@ -189,15 +189,15 @@
 
   /**
    * Open rate of emails, formatted
-   * @member {String} openRateFormatted
+   * @member {String} open_rate_formatted
    */
-  exports.prototype.openRateFormatted = undefined;
+  exports.prototype.open_rate_formatted = undefined;
 
   /**
    * Revenue, formatted
-   * @member {String} revenueFormatted
+   * @member {String} revenue_formatted
    */
-  exports.prototype.revenueFormatted = undefined;
+  exports.prototype.revenue_formatted = undefined;
 
   /**
    * Status of the campaign of draft, archived, active, and inactive
@@ -207,33 +207,33 @@
 
   /**
    * Timestamp when the last status change happened
-   * @member {String} statusDts
+   * @member {String} status_dts
    */
-  exports.prototype.statusDts = undefined;
+  exports.prototype.status_dts = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * Trigger parameter
-   * @member {String} triggerParameter
+   * @member {String} trigger_parameter
    */
-  exports.prototype.triggerParameter = undefined;
+  exports.prototype.trigger_parameter = undefined;
 
   /**
    * Trigger parameter name
-   * @member {String} triggerParameterName
+   * @member {String} trigger_parameter_name
    */
-  exports.prototype.triggerParameterName = undefined;
+  exports.prototype.trigger_parameter_name = undefined;
 
   /**
    * Trigger type
-   * @member {String} triggerType
+   * @member {String} trigger_type
    */
-  exports.prototype.triggerType = undefined;
+  exports.prototype.trigger_type = undefined;
 
   return exports;
 

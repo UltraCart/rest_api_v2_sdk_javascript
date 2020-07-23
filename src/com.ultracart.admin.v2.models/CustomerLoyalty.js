@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('current_points'))
-        obj.currentPoints = ApiClient.convertToType(data['current_points'], 'Number');
+        obj.current_points = ApiClient.convertToType(data['current_points'], 'Number');
       if (data.hasOwnProperty('ledger_entries'))
-        obj.ledgerEntries = ApiClient.convertToType(data['ledger_entries'], [CustomerLoyaltyLedger]);
+        obj.ledger_entries = ApiClient.convertToType(data['ledger_entries'], [CustomerLoyaltyLedger]);
       if (data.hasOwnProperty('redemptions'))
         obj.redemptions = ApiClient.convertToType(data['redemptions'], [CustomerLoyaltyRedemption]);
     }
@@ -67,15 +67,15 @@
 
   /**
    * Current Points
-   * @member {Number} currentPoints
+   * @member {Number} current_points
    */
-  exports.prototype.currentPoints = undefined;
+  exports.prototype.current_points = undefined;
 
   /**
    * Ledger entries
-   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerLoyaltyLedger>} ledgerEntries
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerLoyaltyLedger>} ledger_entries
    */
-  exports.prototype.ledgerEntries = undefined;
+  exports.prototype.ledger_entries = undefined;
 
   /**
    * Redemptions

@@ -56,56 +56,56 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('sub_id'))
-        obj.subId = ApiClient.convertToType(data['sub_id'], 'String');
+        obj.sub_id = ApiClient.convertToType(data['sub_id'], 'String');
       if (data.hasOwnProperty('transaction_dts_begin'))
-        obj.transactionDtsBegin = ApiClient.convertToType(data['transaction_dts_begin'], 'String');
+        obj.transaction_dts_begin = ApiClient.convertToType(data['transaction_dts_begin'], 'String');
       if (data.hasOwnProperty('transaction_dts_end'))
-        obj.transactionDtsEnd = ApiClient.convertToType(data['transaction_dts_end'], 'String');
+        obj.transaction_dts_end = ApiClient.convertToType(data['transaction_dts_end'], 'String');
     }
     return obj;
   }
 
   /**
    * Affiliate ID associated with the ledger
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * Item id associated with the ledger entry
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * Order ID associated with the ledger entries
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * Sub ID value passed on the click that generated the ledger
-   * @member {String} subId
+   * @member {String} sub_id
    */
-  exports.prototype.subId = undefined;
+  exports.prototype.sub_id = undefined;
 
   /**
    * Minimum transaction date/time to return
-   * @member {String} transactionDtsBegin
+   * @member {String} transaction_dts_begin
    */
-  exports.prototype.transactionDtsBegin = undefined;
+  exports.prototype.transaction_dts_begin = undefined;
 
   /**
    * Maximum transaction date/time to return
-   * @member {String} transactionDtsEnd
+   * @member {String} transaction_dts_end
    */
-  exports.prototype.transactionDtsEnd = undefined;
+  exports.prototype.transaction_dts_end = undefined;
 
   return exports;
 

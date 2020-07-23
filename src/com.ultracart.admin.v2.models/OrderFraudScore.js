@@ -56,144 +56,144 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('anonymous_proxy'))
-        obj.anonymousProxy = ApiClient.convertToType(data['anonymous_proxy'], 'Boolean');
+        obj.anonymous_proxy = ApiClient.convertToType(data['anonymous_proxy'], 'Boolean');
       if (data.hasOwnProperty('bin_match'))
-        obj.binMatch = ApiClient.convertToType(data['bin_match'], 'String');
+        obj.bin_match = ApiClient.convertToType(data['bin_match'], 'String');
       if (data.hasOwnProperty('carder_email'))
-        obj.carderEmail = ApiClient.convertToType(data['carder_email'], 'Boolean');
+        obj.carder_email = ApiClient.convertToType(data['carder_email'], 'Boolean');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('country_match'))
-        obj.countryMatch = ApiClient.convertToType(data['country_match'], 'Boolean');
+        obj.country_match = ApiClient.convertToType(data['country_match'], 'Boolean');
       if (data.hasOwnProperty('customer_phone_in_billing_location'))
-        obj.customerPhoneInBillingLocation = ApiClient.convertToType(data['customer_phone_in_billing_location'], 'String');
+        obj.customer_phone_in_billing_location = ApiClient.convertToType(data['customer_phone_in_billing_location'], 'String');
       if (data.hasOwnProperty('distance_km'))
-        obj.distanceKm = ApiClient.convertToType(data['distance_km'], 'Number');
+        obj.distance_km = ApiClient.convertToType(data['distance_km'], 'Number');
       if (data.hasOwnProperty('free_email'))
-        obj.freeEmail = ApiClient.convertToType(data['free_email'], 'Boolean');
+        obj.free_email = ApiClient.convertToType(data['free_email'], 'Boolean');
       if (data.hasOwnProperty('high_risk_country'))
-        obj.highRiskCountry = ApiClient.convertToType(data['high_risk_country'], 'Boolean');
+        obj.high_risk_country = ApiClient.convertToType(data['high_risk_country'], 'Boolean');
       if (data.hasOwnProperty('ip_city'))
-        obj.ipCity = ApiClient.convertToType(data['ip_city'], 'String');
+        obj.ip_city = ApiClient.convertToType(data['ip_city'], 'String');
       if (data.hasOwnProperty('ip_isp'))
-        obj.ipIsp = ApiClient.convertToType(data['ip_isp'], 'String');
+        obj.ip_isp = ApiClient.convertToType(data['ip_isp'], 'String');
       if (data.hasOwnProperty('ip_latitude'))
-        obj.ipLatitude = ApiClient.convertToType(data['ip_latitude'], 'String');
+        obj.ip_latitude = ApiClient.convertToType(data['ip_latitude'], 'String');
       if (data.hasOwnProperty('ip_longitude'))
-        obj.ipLongitude = ApiClient.convertToType(data['ip_longitude'], 'String');
+        obj.ip_longitude = ApiClient.convertToType(data['ip_longitude'], 'String');
       if (data.hasOwnProperty('ip_org'))
-        obj.ipOrg = ApiClient.convertToType(data['ip_org'], 'String');
+        obj.ip_org = ApiClient.convertToType(data['ip_org'], 'String');
       if (data.hasOwnProperty('ip_region'))
-        obj.ipRegion = ApiClient.convertToType(data['ip_region'], 'String');
+        obj.ip_region = ApiClient.convertToType(data['ip_region'], 'String');
       if (data.hasOwnProperty('proxy_score'))
-        obj.proxyScore = ApiClient.convertToType(data['proxy_score'], 'Number');
+        obj.proxy_score = ApiClient.convertToType(data['proxy_score'], 'Number');
       if (data.hasOwnProperty('score'))
         obj.score = ApiClient.convertToType(data['score'], 'Number');
       if (data.hasOwnProperty('ship_forwarder'))
-        obj.shipForwarder = ApiClient.convertToType(data['ship_forwarder'], 'Boolean');
+        obj.ship_forwarder = ApiClient.convertToType(data['ship_forwarder'], 'Boolean');
       if (data.hasOwnProperty('spam_score'))
-        obj.spamScore = ApiClient.convertToType(data['spam_score'], 'Number');
+        obj.spam_score = ApiClient.convertToType(data['spam_score'], 'Number');
       if (data.hasOwnProperty('transparent_proxy'))
-        obj.transparentProxy = ApiClient.convertToType(data['transparent_proxy'], 'Boolean');
+        obj.transparent_proxy = ApiClient.convertToType(data['transparent_proxy'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * True if the IP address is a known anonymous proxy server
-   * @member {Boolean} anonymousProxy
+   * @member {Boolean} anonymous_proxy
    */
-  exports.prototype.anonymousProxy = undefined;
+  exports.prototype.anonymous_proxy = undefined;
 
   /**
    * Whether the BIN (first six digits) matched the country
-   * @member {module:com.ultracart.admin.v2.models/OrderFraudScore.BinMatchEnum} binMatch
+   * @member {module:com.ultracart.admin.v2.models/OrderFraudScore.BinMatchEnum} bin_match
    */
-  exports.prototype.binMatch = undefined;
+  exports.prototype.bin_match = undefined;
 
   /**
    * True if the email address belongs to a known credit card fraudster
-   * @member {Boolean} carderEmail
+   * @member {Boolean} carder_email
    */
-  exports.prototype.carderEmail = undefined;
+  exports.prototype.carder_email = undefined;
 
   /**
    * Country code
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Country code matches BIN country
-   * @member {Boolean} countryMatch
+   * @member {Boolean} country_match
    */
-  exports.prototype.countryMatch = undefined;
+  exports.prototype.country_match = undefined;
 
   /**
    * Whether the customer's phone number is located in the area of the billing address
-   * @member {String} customerPhoneInBillingLocation
+   * @member {String} customer_phone_in_billing_location
    */
-  exports.prototype.customerPhoneInBillingLocation = undefined;
+  exports.prototype.customer_phone_in_billing_location = undefined;
 
   /**
    * Distance in kilometers between the IP address and the BIN
-   * @member {Number} distanceKm
+   * @member {Number} distance_km
    */
-  exports.prototype.distanceKm = undefined;
+  exports.prototype.distance_km = undefined;
 
   /**
    * True if the email address is for a free service like gmail.com
-   * @member {Boolean} freeEmail
+   * @member {Boolean} free_email
    */
-  exports.prototype.freeEmail = undefined;
+  exports.prototype.free_email = undefined;
 
   /**
    * True if the customer is in a high risk country known for internet fraud
-   * @member {Boolean} highRiskCountry
+   * @member {Boolean} high_risk_country
    */
-  exports.prototype.highRiskCountry = undefined;
+  exports.prototype.high_risk_country = undefined;
 
   /**
    * City associated with the IP address
-   * @member {String} ipCity
+   * @member {String} ip_city
    */
-  exports.prototype.ipCity = undefined;
+  exports.prototype.ip_city = undefined;
 
   /**
    * ISP that owns the IP address
-   * @member {String} ipIsp
+   * @member {String} ip_isp
    */
-  exports.prototype.ipIsp = undefined;
+  exports.prototype.ip_isp = undefined;
 
   /**
    * Approximate latitude associated with the IP address
-   * @member {String} ipLatitude
+   * @member {String} ip_latitude
    */
-  exports.prototype.ipLatitude = undefined;
+  exports.prototype.ip_latitude = undefined;
 
   /**
    * Approximate longitude associated with the IP address
-   * @member {String} ipLongitude
+   * @member {String} ip_longitude
    */
-  exports.prototype.ipLongitude = undefined;
+  exports.prototype.ip_longitude = undefined;
 
   /**
    * Organization that owns the IP address
-   * @member {String} ipOrg
+   * @member {String} ip_org
    */
-  exports.prototype.ipOrg = undefined;
+  exports.prototype.ip_org = undefined;
 
   /**
    * State/region associated with the IP address
-   * @member {String} ipRegion
+   * @member {String} ip_region
    */
-  exports.prototype.ipRegion = undefined;
+  exports.prototype.ip_region = undefined;
 
   /**
    * Likelihood of the IP address being a proxy server
-   * @member {Number} proxyScore
+   * @member {Number} proxy_score
    */
-  exports.prototype.proxyScore = undefined;
+  exports.prototype.proxy_score = undefined;
 
   /**
    * Overall score.  This is the score that is compared to see if the order is rejected or held for review by the fraud filter rules.
@@ -203,25 +203,25 @@
 
   /**
    * True if the address is a known ship forwarding company
-   * @member {Boolean} shipForwarder
+   * @member {Boolean} ship_forwarder
    */
-  exports.prototype.shipForwarder = undefined;
+  exports.prototype.ship_forwarder = undefined;
 
   /**
    * Likelihood of the email address being associated with a spammer
-   * @member {Number} spamScore
+   * @member {Number} spam_score
    */
-  exports.prototype.spamScore = undefined;
+  exports.prototype.spam_score = undefined;
 
   /**
    * True if the IP address that placed the order is a transparent proxy server
-   * @member {Boolean} transparentProxy
+   * @member {Boolean} transparent_proxy
    */
-  exports.prototype.transparentProxy = undefined;
+  exports.prototype.transparent_proxy = undefined;
 
 
   /**
-   * Allowed values for the <code>binMatch</code> property.
+   * Allowed values for the <code>bin_match</code> property.
    * @enum {String}
    * @readonly
    */
@@ -236,19 +236,19 @@
      * value: "No"
      * @const
      */
-    no: "No",
+    No: "No",
 
     /**
      * value: "NotFound"
      * @const
      */
-    notFound: "NotFound",
+    NotFound: "NotFound",
 
     /**
      * value: "Yes"
      * @const
      */
-    yes: "Yes"
+    Yes: "Yes"
   };
 
   return exports;

@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('addendums'))
         obj.addendums = ApiClient.convertToType(data['addendums'], [ItemChargebackAddendum]);
       if (data.hasOwnProperty('adjustment_requests'))
-        obj.adjustmentRequests = ApiClient.convertToType(data['adjustment_requests'], [ItemChargebackAdjustmentRequest]);
+        obj.adjustment_requests = ApiClient.convertToType(data['adjustment_requests'], [ItemChargebackAdjustmentRequest]);
     }
     return obj;
   }
@@ -71,9 +71,9 @@
 
   /**
    * Adjustment requests
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest>} adjustmentRequests
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest>} adjustment_requests
    */
-  exports.prototype.adjustmentRequests = undefined;
+  exports.prototype.adjustment_requests = undefined;
 
   return exports;
 

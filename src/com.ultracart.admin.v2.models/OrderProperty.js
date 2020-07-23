@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('display'))
         obj.display = ApiClient.convertToType(data['display'], 'Boolean');
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('value'))
@@ -75,9 +75,9 @@
 
   /**
    * The date/time that the property expires and is deleted
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * Name

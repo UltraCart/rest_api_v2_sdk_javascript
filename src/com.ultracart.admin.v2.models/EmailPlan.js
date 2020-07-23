@@ -56,106 +56,106 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('additional_customers'))
-        obj.additionalCustomers = ApiClient.convertToType(data['additional_customers'], 'Number');
+        obj.additional_customers = ApiClient.convertToType(data['additional_customers'], 'Number');
       if (data.hasOwnProperty('additional_emails'))
-        obj.additionalEmails = ApiClient.convertToType(data['additional_emails'], 'Number');
+        obj.additional_emails = ApiClient.convertToType(data['additional_emails'], 'Number');
       if (data.hasOwnProperty('allow_list_import'))
-        obj.allowListImport = ApiClient.convertToType(data['allow_list_import'], 'Boolean');
+        obj.allow_list_import = ApiClient.convertToType(data['allow_list_import'], 'Boolean');
       if (data.hasOwnProperty('customer_tiers'))
-        obj.customerTiers = ApiClient.convertToType(data['customer_tiers'], [EmailPlanAdditional]);
+        obj.customer_tiers = ApiClient.convertToType(data['customer_tiers'], [EmailPlanAdditional]);
       if (data.hasOwnProperty('initial_sending_limits'))
-        obj.initialSendingLimits = ApiClient.convertToType(data['initial_sending_limits'], 'Number');
+        obj.initial_sending_limits = ApiClient.convertToType(data['initial_sending_limits'], 'Number');
       if (data.hasOwnProperty('plan_customers'))
-        obj.planCustomers = ApiClient.convertToType(data['plan_customers'], 'Number');
+        obj.plan_customers = ApiClient.convertToType(data['plan_customers'], 'Number');
       if (data.hasOwnProperty('plan_emails'))
-        obj.planEmails = ApiClient.convertToType(data['plan_emails'], 'Number');
+        obj.plan_emails = ApiClient.convertToType(data['plan_emails'], 'Number');
       if (data.hasOwnProperty('plan_name'))
-        obj.planName = ApiClient.convertToType(data['plan_name'], 'String');
+        obj.plan_name = ApiClient.convertToType(data['plan_name'], 'String');
       if (data.hasOwnProperty('plan_name_formatted'))
-        obj.planNameFormatted = ApiClient.convertToType(data['plan_name_formatted'], 'String');
+        obj.plan_name_formatted = ApiClient.convertToType(data['plan_name_formatted'], 'String');
       if (data.hasOwnProperty('revenue_percent'))
-        obj.revenuePercent = ApiClient.convertToType(data['revenue_percent'], 'Number');
+        obj.revenue_percent = ApiClient.convertToType(data['revenue_percent'], 'Number');
       if (data.hasOwnProperty('spam_percent_limit'))
-        obj.spamPercentLimit = ApiClient.convertToType(data['spam_percent_limit'], 'Number');
+        obj.spam_percent_limit = ApiClient.convertToType(data['spam_percent_limit'], 'Number');
       if (data.hasOwnProperty('total_customers'))
-        obj.totalCustomers = ApiClient.convertToType(data['total_customers'], 'Number');
+        obj.total_customers = ApiClient.convertToType(data['total_customers'], 'Number');
       if (data.hasOwnProperty('total_emails'))
-        obj.totalEmails = ApiClient.convertToType(data['total_emails'], 'Number');
+        obj.total_emails = ApiClient.convertToType(data['total_emails'], 'Number');
       if (data.hasOwnProperty('upgrade_to'))
-        obj.upgradeTo = ApiClient.convertToType(data['upgrade_to'], 'Number');
+        obj.upgrade_to = ApiClient.convertToType(data['upgrade_to'], 'Number');
     }
     return obj;
   }
 
   /**
-   * @member {Number} additionalCustomers
+   * @member {Number} additional_customers
    */
-  exports.prototype.additionalCustomers = undefined;
+  exports.prototype.additional_customers = undefined;
 
   /**
-   * @member {Number} additionalEmails
+   * @member {Number} additional_emails
    */
-  exports.prototype.additionalEmails = undefined;
+  exports.prototype.additional_emails = undefined;
 
   /**
-   * @member {Boolean} allowListImport
+   * @member {Boolean} allow_list_import
    */
-  exports.prototype.allowListImport = undefined;
+  exports.prototype.allow_list_import = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailPlanAdditional>} customerTiers
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailPlanAdditional>} customer_tiers
    */
-  exports.prototype.customerTiers = undefined;
+  exports.prototype.customer_tiers = undefined;
 
   /**
-   * @member {Number} initialSendingLimits
+   * @member {Number} initial_sending_limits
    */
-  exports.prototype.initialSendingLimits = undefined;
+  exports.prototype.initial_sending_limits = undefined;
 
   /**
-   * @member {Number} planCustomers
+   * @member {Number} plan_customers
    */
-  exports.prototype.planCustomers = undefined;
+  exports.prototype.plan_customers = undefined;
 
   /**
-   * @member {Number} planEmails
+   * @member {Number} plan_emails
    */
-  exports.prototype.planEmails = undefined;
+  exports.prototype.plan_emails = undefined;
 
   /**
-   * @member {String} planName
+   * @member {String} plan_name
    */
-  exports.prototype.planName = undefined;
+  exports.prototype.plan_name = undefined;
 
   /**
-   * @member {String} planNameFormatted
+   * @member {String} plan_name_formatted
    */
-  exports.prototype.planNameFormatted = undefined;
+  exports.prototype.plan_name_formatted = undefined;
 
   /**
-   * @member {Number} revenuePercent
+   * @member {Number} revenue_percent
    */
-  exports.prototype.revenuePercent = undefined;
+  exports.prototype.revenue_percent = undefined;
 
   /**
-   * @member {Number} spamPercentLimit
+   * @member {Number} spam_percent_limit
    */
-  exports.prototype.spamPercentLimit = undefined;
+  exports.prototype.spam_percent_limit = undefined;
 
   /**
-   * @member {Number} totalCustomers
+   * @member {Number} total_customers
    */
-  exports.prototype.totalCustomers = undefined;
+  exports.prototype.total_customers = undefined;
 
   /**
-   * @member {Number} totalEmails
+   * @member {Number} total_emails
    */
-  exports.prototype.totalEmails = undefined;
+  exports.prototype.total_emails = undefined;
 
   /**
-   * @member {Number} upgradeTo
+   * @member {Number} upgrade_to
    */
-  exports.prototype.upgradeTo = undefined;
+  exports.prototype.upgrade_to = undefined;
 
   return exports;
 

@@ -56,35 +56,35 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auth_future_amount'))
-        obj.authFutureAmount = ApiClient.convertToType(data['auth_future_amount'], 'Number');
+        obj.auth_future_amount = ApiClient.convertToType(data['auth_future_amount'], 'Number');
       if (data.hasOwnProperty('auth_test_amount'))
-        obj.authTestAmount = ApiClient.convertToType(data['auth_test_amount'], 'Number');
+        obj.auth_test_amount = ApiClient.convertToType(data['auth_test_amount'], 'Number');
       if (data.hasOwnProperty('auto_order_cancel_item_id'))
-        obj.autoOrderCancelItemId = ApiClient.convertToType(data['auto_order_cancel_item_id'], 'String');
+        obj.auto_order_cancel_item_id = ApiClient.convertToType(data['auto_order_cancel_item_id'], 'String');
       if (data.hasOwnProperty('auto_order_cancel_item_oid'))
-        obj.autoOrderCancelItemOid = ApiClient.convertToType(data['auto_order_cancel_item_oid'], 'Number');
+        obj.auto_order_cancel_item_oid = ApiClient.convertToType(data['auto_order_cancel_item_oid'], 'Number');
       if (data.hasOwnProperty('auto_order_downgrade_items'))
-        obj.autoOrderDowngradeItems = ApiClient.convertToType(data['auto_order_downgrade_items'], ['String']);
+        obj.auto_order_downgrade_items = ApiClient.convertToType(data['auto_order_downgrade_items'], ['String']);
       if (data.hasOwnProperty('auto_order_paused'))
-        obj.autoOrderPaused = ApiClient.convertToType(data['auto_order_paused'], 'Boolean');
+        obj.auto_order_paused = ApiClient.convertToType(data['auto_order_paused'], 'Boolean');
       if (data.hasOwnProperty('auto_order_schedules'))
-        obj.autoOrderSchedules = ApiClient.convertToType(data['auto_order_schedules'], ['String']);
+        obj.auto_order_schedules = ApiClient.convertToType(data['auto_order_schedules'], ['String']);
       if (data.hasOwnProperty('auto_order_upgrade_items'))
-        obj.autoOrderUpgradeItems = ApiClient.convertToType(data['auto_order_upgrade_items'], ['String']);
+        obj.auto_order_upgrade_items = ApiClient.convertToType(data['auto_order_upgrade_items'], ['String']);
       if (data.hasOwnProperty('auto_order_upsell'))
-        obj.autoOrderUpsell = ApiClient.convertToType(data['auto_order_upsell'], 'Boolean');
+        obj.auto_order_upsell = ApiClient.convertToType(data['auto_order_upsell'], 'Boolean');
       if (data.hasOwnProperty('auto_order_upsell_no_easy_cancel'))
-        obj.autoOrderUpsellNoEasyCancel = ApiClient.convertToType(data['auto_order_upsell_no_easy_cancel'], 'Boolean');
+        obj.auto_order_upsell_no_easy_cancel = ApiClient.convertToType(data['auto_order_upsell_no_easy_cancel'], 'Boolean');
       if (data.hasOwnProperty('auto_order_upsell_one_per_customer'))
-        obj.autoOrderUpsellOnePerCustomer = ApiClient.convertToType(data['auto_order_upsell_one_per_customer'], 'Boolean');
+        obj.auto_order_upsell_one_per_customer = ApiClient.convertToType(data['auto_order_upsell_one_per_customer'], 'Boolean');
       if (data.hasOwnProperty('auto_orderable'))
-        obj.autoOrderable = ApiClient.convertToType(data['auto_orderable'], 'Boolean');
+        obj.auto_orderable = ApiClient.convertToType(data['auto_orderable'], 'Boolean');
       if (data.hasOwnProperty('cancel_other_auto_orders'))
-        obj.cancelOtherAutoOrders = ApiClient.convertToType(data['cancel_other_auto_orders'], 'Boolean');
+        obj.cancel_other_auto_orders = ApiClient.convertToType(data['cancel_other_auto_orders'], 'Boolean');
       if (data.hasOwnProperty('free_shipping_auto_order'))
-        obj.freeShippingAutoOrder = ApiClient.convertToType(data['free_shipping_auto_order'], 'Boolean');
+        obj.free_shipping_auto_order = ApiClient.convertToType(data['free_shipping_auto_order'], 'Boolean');
       if (data.hasOwnProperty('refund_other_auto_orders'))
-        obj.refundOtherAutoOrders = ApiClient.convertToType(data['refund_other_auto_orders'], 'Boolean');
+        obj.refund_other_auto_orders = ApiClient.convertToType(data['refund_other_auto_orders'], 'Boolean');
       if (data.hasOwnProperty('steps'))
         obj.steps = ApiClient.convertToType(data['steps'], [ItemAutoOrderStep]);
     }
@@ -93,93 +93,93 @@
 
   /**
    * Amount to try and authorize for the future rebill
-   * @member {Number} authFutureAmount
+   * @member {Number} auth_future_amount
    */
-  exports.prototype.authFutureAmount = undefined;
+  exports.prototype.auth_future_amount = undefined;
 
   /**
    * Amount to try and test authorize
-   * @member {Number} authTestAmount
+   * @member {Number} auth_test_amount
    */
-  exports.prototype.authTestAmount = undefined;
+  exports.prototype.auth_test_amount = undefined;
 
   /**
    * Item id to attempt charging the customer for if they cancel
-   * @member {String} autoOrderCancelItemId
+   * @member {String} auto_order_cancel_item_id
    */
-  exports.prototype.autoOrderCancelItemId = undefined;
+  exports.prototype.auto_order_cancel_item_id = undefined;
 
   /**
    * Item object identifier to attempt charging the customer for if they cancel
-   * @member {Number} autoOrderCancelItemOid
+   * @member {Number} auto_order_cancel_item_oid
    */
-  exports.prototype.autoOrderCancelItemOid = undefined;
+  exports.prototype.auto_order_cancel_item_oid = undefined;
 
   /**
    * List of downgrade items presented to customer service representatives
-   * @member {Array.<String>} autoOrderDowngradeItems
+   * @member {Array.<String>} auto_order_downgrade_items
    */
-  exports.prototype.autoOrderDowngradeItems = undefined;
+  exports.prototype.auto_order_downgrade_items = undefined;
 
   /**
    * True if the rebill processing of this item is paused
-   * @member {Boolean} autoOrderPaused
+   * @member {Boolean} auto_order_paused
    */
-  exports.prototype.autoOrderPaused = undefined;
+  exports.prototype.auto_order_paused = undefined;
 
   /**
    * The user selectable schedules that are available
-   * @member {Array.<String>} autoOrderSchedules
+   * @member {Array.<String>} auto_order_schedules
    */
-  exports.prototype.autoOrderSchedules = undefined;
+  exports.prototype.auto_order_schedules = undefined;
 
   /**
    * List of upgrade items presented to customer service representatives
-   * @member {Array.<String>} autoOrderUpgradeItems
+   * @member {Array.<String>} auto_order_upgrade_items
    */
-  exports.prototype.autoOrderUpgradeItems = undefined;
+  exports.prototype.auto_order_upgrade_items = undefined;
 
   /**
    * True if this item uses a fixed upsell step schedule
-   * @member {Boolean} autoOrderUpsell
+   * @member {Boolean} auto_order_upsell
    */
-  exports.prototype.autoOrderUpsell = undefined;
+  exports.prototype.auto_order_upsell = undefined;
 
   /**
    * Do not send the easy cancel email to the customer
-   * @member {Boolean} autoOrderUpsellNoEasyCancel
+   * @member {Boolean} auto_order_upsell_no_easy_cancel
    */
-  exports.prototype.autoOrderUpsellNoEasyCancel = undefined;
+  exports.prototype.auto_order_upsell_no_easy_cancel = undefined;
 
   /**
    * Limit the purchase of this item to one per customer
-   * @member {Boolean} autoOrderUpsellOnePerCustomer
+   * @member {Boolean} auto_order_upsell_one_per_customer
    */
-  exports.prototype.autoOrderUpsellOnePerCustomer = undefined;
+  exports.prototype.auto_order_upsell_one_per_customer = undefined;
 
   /**
    * True if this item can be automatically ordered by the customer
-   * @member {Boolean} autoOrderable
+   * @member {Boolean} auto_orderable
    */
-  exports.prototype.autoOrderable = undefined;
+  exports.prototype.auto_orderable = undefined;
 
   /**
    * True if other auto orders for this customer should be canceled when this item is ordered
-   * @member {Boolean} cancelOtherAutoOrders
+   * @member {Boolean} cancel_other_auto_orders
    */
-  exports.prototype.cancelOtherAutoOrders = undefined;
+  exports.prototype.cancel_other_auto_orders = undefined;
 
   /**
    * True if the customer should be given free shipping
-   * @member {Boolean} freeShippingAutoOrder
+   * @member {Boolean} free_shipping_auto_order
    */
-  exports.prototype.freeShippingAutoOrder = undefined;
+  exports.prototype.free_shipping_auto_order = undefined;
 
   /**
    * True if other auto orders for this customer should refunded if this item is refunded.
-   * @member {Boolean} refundOtherAutoOrders
+   * @member {Boolean} refund_other_auto_orders
    */
-  exports.prototype.refundOtherAutoOrders = undefined;
+  exports.prototype.refund_other_auto_orders = undefined;
 
   /**
    * The rebill steps if this auto order is an upsell

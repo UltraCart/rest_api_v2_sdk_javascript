@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getAutoOrder"></a>
 # **getAutoOrder**
-> AutoOrderResponse getAutoOrder(autoOrderOid, opts)
+> AutoOrderResponse getAutoOrder(auto_order_oid, opts)
 
 Retrieve an auto order
 
@@ -39,10 +39,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
-var autoOrderOid = 56; // Number | The auto order oid to retrieve.
+var auto_order_oid = 56; // Number | The auto order oid to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -52,15 +52,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAutoOrder(autoOrderOid, opts, callback);
+apiInstance.getAutoOrder(auto_order_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **autoOrderOid** | **Number**| The auto order oid to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **auto_order_oid** | **Number**| The auto order oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 <a name="getAutoOrderByCode"></a>
 # **getAutoOrderByCode**
-> AutoOrderResponse getAutoOrderByCode(autoOrderCode, opts)
+> AutoOrderResponse getAutoOrderByCode(auto_order_code, opts)
 
 Retrieve an auto order
 
@@ -100,10 +100,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
-var autoOrderCode = "autoOrderCode_example"; // String | The auto order oid to retrieve.
+var auto_order_code = "auto_order_code_example"; // String | The auto order oid to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -113,15 +113,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAutoOrderByCode(autoOrderCode, opts, callback);
+apiInstance.getAutoOrderByCode(auto_order_code, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **autoOrderCode** | **String**| The auto order oid to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **auto_order_code** | **String**| The auto order oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 <a name="getAutoOrderByReferenceOrderId"></a>
 # **getAutoOrderByReferenceOrderId**
-> AutoOrderResponse getAutoOrderByReferenceOrderId(referenceOrderId, opts)
+> AutoOrderResponse getAutoOrderByReferenceOrderId(reference_order_id, opts)
 
 Retrieve an auto order
 
@@ -161,10 +161,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
-var referenceOrderId = "referenceOrderId_example"; // String | The auto order oid to retrieve.
+var reference_order_id = "reference_order_id_example"; // String | The auto order oid to retrieve.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -174,15 +174,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAutoOrderByReferenceOrderId(referenceOrderId, opts, callback);
+apiInstance.getAutoOrderByReferenceOrderId(reference_order_id, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **referenceOrderId** | **String**| The auto order oid to retrieve. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **reference_order_id** | **String**| The auto order oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -223,29 +223,29 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
 var opts = { 
-  'autoOrderCode': "autoOrderCode_example", // String | Auto order code
-  'originalOrderId': "originalOrderId_example", // String | Original order id
-  'firstName': "firstName_example", // String | First name
-  'lastName': "lastName_example", // String | Last name
+  'auto_order_code': "auto_order_code_example", // String | Auto order code
+  'original_order_id': "original_order_id_example", // String | Original order id
+  'first_name': "first_name_example", // String | First name
+  'last_name': "last_name_example", // String | Last name
   'company': "company_example", // String | Company
   'city': "city_example", // String | City
   'state': "state_example", // String | State
-  'postalCode': "postalCode_example", // String | Postal code
-  'countryCode': "countryCode_example", // String | Country code (ISO-3166 two letter)
+  'postal_code': "postal_code_example", // String | Postal code
+  'country_code': "country_code_example", // String | Country code (ISO-3166 two letter)
   'phone': "phone_example", // String | Phone
   'email': "email_example", // String | Email
-  'originalOrderDateBegin': "originalOrderDateBegin_example", // String | Original order date begin
-  'originalOrderDateEnd': "originalOrderDateEnd_example", // String | Original order date end
-  'nextShipmentDateBegin': "nextShipmentDateBegin_example", // String | Next shipment date begin
-  'nextShipmentDateEnd': "nextShipmentDateEnd_example", // String | Next shipment date end
-  'cardType': "cardType_example", // String | Card type
-  'itemId': "itemId_example", // String | Item ID
+  'original_order_date_begin': "original_order_date_begin_example", // String | Original order date begin
+  'original_order_date_end': "original_order_date_end_example", // String | Original order date end
+  'next_shipment_date_begin': "next_shipment_date_begin_example", // String | Next shipment date begin
+  'next_shipment_date_end': "next_shipment_date_end_example", // String | Next shipment date end
+  'card_type': "card_type_example", // String | Card type
+  'item_id': "item_id_example", // String | Item ID
   'status': "status_example", // String | Status
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'since': "since_example", // String | Fetch auto orders that have been created/modified since this date/time.
-  'sort': "sort_example", // String | The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_since': "_since_example", // String | Fetch auto orders that have been created/modified since this date/time.
+  '_sort': "_sort_example", // String | The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -262,29 +262,29 @@ apiInstance.getAutoOrders(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **autoOrderCode** | **String**| Auto order code | [optional] 
- **originalOrderId** | **String**| Original order id | [optional] 
- **firstName** | **String**| First name | [optional] 
- **lastName** | **String**| Last name | [optional] 
+ **auto_order_code** | **String**| Auto order code | [optional] 
+ **original_order_id** | **String**| Original order id | [optional] 
+ **first_name** | **String**| First name | [optional] 
+ **last_name** | **String**| Last name | [optional] 
  **company** | **String**| Company | [optional] 
  **city** | **String**| City | [optional] 
  **state** | **String**| State | [optional] 
- **postalCode** | **String**| Postal code | [optional] 
- **countryCode** | **String**| Country code (ISO-3166 two letter) | [optional] 
+ **postal_code** | **String**| Postal code | [optional] 
+ **country_code** | **String**| Country code (ISO-3166 two letter) | [optional] 
  **phone** | **String**| Phone | [optional] 
  **email** | **String**| Email | [optional] 
- **originalOrderDateBegin** | **String**| Original order date begin | [optional] 
- **originalOrderDateEnd** | **String**| Original order date end | [optional] 
- **nextShipmentDateBegin** | **String**| Next shipment date begin | [optional] 
- **nextShipmentDateEnd** | **String**| Next shipment date end | [optional] 
- **cardType** | **String**| Card type | [optional] 
- **itemId** | **String**| Item ID | [optional] 
+ **original_order_date_begin** | **String**| Original order date begin | [optional] 
+ **original_order_date_end** | **String**| Original order date end | [optional] 
+ **next_shipment_date_begin** | **String**| Next shipment date begin | [optional] 
+ **next_shipment_date_end** | **String**| Next shipment date end | [optional] 
+ **card_type** | **String**| Card type | [optional] 
+ **item_id** | **String**| Item ID | [optional] 
  **status** | **String**| Status | [optional] 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **since** | **String**| Fetch auto orders that have been created/modified since this date/time. | [optional] 
- **sort** | **String**| The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_since** | **String**| Fetch auto orders that have been created/modified since this date/time. | [optional] 
+ **_sort** | **String**| The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 <a name="getAutoOrdersBatch"></a>
 # **getAutoOrdersBatch**
-> AutoOrdersResponse getAutoOrdersBatch(autoOrderBatch, opts)
+> AutoOrdersResponse getAutoOrdersBatch(auto_order_batch, opts)
 
 Retrieve auto order batch
 
@@ -324,10 +324,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
-var autoOrderBatch = new UltraCartRestApiV2.AutoOrderQueryBatch(); // AutoOrderQueryBatch | Auto order batch
+var auto_order_batch = new UltraCartRestApiV2.AutoOrderQueryBatch(); // AutoOrderQueryBatch | Auto order batch
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.
 };
 
 var callback = function(error, data, response) {
@@ -337,15 +337,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAutoOrdersBatch(autoOrderBatch, opts, callback);
+apiInstance.getAutoOrdersBatch(auto_order_batch, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **autoOrderBatch** | [**AutoOrderQueryBatch**](AutoOrderQueryBatch.md)| Auto order batch | 
- **expand** | **String**| The object expansion to perform on the result. | [optional] 
+ **auto_order_batch** | [**AutoOrderQueryBatch**](AutoOrderQueryBatch.md)| Auto order batch | 
+ **_expand** | **String**| The object expansion to perform on the result. | [optional] 
 
 ### Return type
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 
 <a name="getAutoOrdersByQuery"></a>
 # **getAutoOrdersByQuery**
-> AutoOrdersResponse getAutoOrdersByQuery(autoOrderQuery, opts)
+> AutoOrdersResponse getAutoOrdersByQuery(auto_order_query, opts)
 
 Retrieve auto orders
 
@@ -385,13 +385,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
-var autoOrderQuery = new UltraCartRestApiV2.AutoOrderQuery(); // AutoOrderQuery | Auto order query
+var auto_order_query = new UltraCartRestApiV2.AutoOrderQuery(); // AutoOrderQuery | Auto order query
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'sort': "sort_example", // String | The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  'expand': "expand_example" // String | The object expansion to perform on the result.
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example", // String | The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.
 };
 
 var callback = function(error, data, response) {
@@ -401,18 +401,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAutoOrdersByQuery(autoOrderQuery, opts, callback);
+apiInstance.getAutoOrdersByQuery(auto_order_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **autoOrderQuery** | [**AutoOrderQuery**](AutoOrderQuery.md)| Auto order query | 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **sort** | **String**| The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **expand** | **String**| The object expansion to perform on the result. | [optional] 
+ **auto_order_query** | [**AutoOrderQuery**](AutoOrderQuery.md)| Auto order query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result. | [optional] 
 
 ### Return type
 
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 <a name="updateAutoOrder"></a>
 # **updateAutoOrder**
-> AutoOrderResponse updateAutoOrder(autoOrder, autoOrderOid, opts)
+> AutoOrderResponse updateAutoOrder(auto_order, auto_order_oid, opts)
 
 Update an auto order
 
@@ -452,12 +452,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
-var autoOrder = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
+var auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
 
-var autoOrderOid = 56; // Number | The auto order oid to update.
+var auto_order_oid = 56; // Number | The auto order oid to update.
 
 var opts = { 
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -467,16 +467,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateAutoOrder(autoOrder, autoOrderOid, opts, callback);
+apiInstance.updateAutoOrder(auto_order, auto_order_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **autoOrder** | [**AutoOrder**](AutoOrder.md)| Auto order to update | 
- **autoOrderOid** | **Number**| The auto order oid to update. | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **auto_order** | [**AutoOrder**](AutoOrder.md)| Auto order to update | 
+ **auto_order_oid** | **Number**| The auto order oid to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 <a name="updateAutoOrdersBatch"></a>
 # **updateAutoOrdersBatch**
-> AutoOrdersResponse updateAutoOrdersBatch(autoOrdersRequest, opts)
+> AutoOrdersResponse updateAutoOrdersBatch(auto_orders_request, opts)
 
 Update multiple auto orders
 
@@ -516,12 +516,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
-var autoOrdersRequest = new UltraCartRestApiV2.AutoOrdersRequest(); // AutoOrdersRequest | Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
+var auto_orders_request = new UltraCartRestApiV2.AutoOrdersRequest(); // AutoOrdersRequest | Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
 
 var opts = { 
-  'expand': "expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-  'async': true // Boolean | True if the operation should be run async.  No result returned
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+  '_async': true // Boolean | True if the operation should be run async.  No result returned
 };
 
 var callback = function(error, data, response) {
@@ -531,17 +531,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateAutoOrdersBatch(autoOrdersRequest, opts, callback);
+apiInstance.updateAutoOrdersBatch(auto_orders_request, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **autoOrdersRequest** | [**AutoOrdersRequest**](AutoOrdersRequest.md)| Auto orders to update (synchronous maximum 20 / asynchronous maximum 100) | 
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
- **async** | **Boolean**| True if the operation should be run async.  No result returned | [optional] 
+ **auto_orders_request** | [**AutoOrdersRequest**](AutoOrdersRequest.md)| Auto orders to update (synchronous maximum 20 / asynchronous maximum 100) | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+ **_async** | **Boolean**| True if the operation should be run async.  No result returned | [optional] 
 
 ### Return type
 

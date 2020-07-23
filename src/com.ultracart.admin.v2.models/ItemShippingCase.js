@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('case_label'))
-        obj.caseLabel = ApiClient.convertToType(data['case_label'], 'String');
+        obj.case_label = ApiClient.convertToType(data['case_label'], 'String');
       if (data.hasOwnProperty('case_merchant_item_id'))
-        obj.caseMerchantItemId = ApiClient.convertToType(data['case_merchant_item_id'], 'String');
+        obj.case_merchant_item_id = ApiClient.convertToType(data['case_merchant_item_id'], 'String');
       if (data.hasOwnProperty('case_merchant_item_oid'))
-        obj.caseMerchantItemOid = ApiClient.convertToType(data['case_merchant_item_oid'], 'Number');
+        obj.case_merchant_item_oid = ApiClient.convertToType(data['case_merchant_item_oid'], 'Number');
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
     }
@@ -69,21 +69,21 @@
 
   /**
    * Case label
-   * @member {String} caseLabel
+   * @member {String} case_label
    */
-  exports.prototype.caseLabel = undefined;
+  exports.prototype.case_label = undefined;
 
   /**
    * Case item id
-   * @member {String} caseMerchantItemId
+   * @member {String} case_merchant_item_id
    */
-  exports.prototype.caseMerchantItemId = undefined;
+  exports.prototype.case_merchant_item_id = undefined;
 
   /**
    * Case item object identifier
-   * @member {Number} caseMerchantItemOid
+   * @member {Number} case_merchant_item_oid
    */
-  exports.prototype.caseMerchantItemOid = undefined;
+  exports.prototype.case_merchant_item_oid = undefined;
 
   /**
    * Case quantity

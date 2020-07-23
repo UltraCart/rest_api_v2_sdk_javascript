@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('order_token'))
-        obj.orderToken = ApiClient.convertToType(data['order_token'], 'String');
+        obj.order_token = ApiClient.convertToType(data['order_token'], 'String');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
     }
@@ -79,9 +79,9 @@
 
   /**
    * An order token that securely represents an order id
-   * @member {String} orderToken
+   * @member {String} order_token
    */
-  exports.prototype.orderToken = undefined;
+  exports.prototype.order_token = undefined;
 
   /**
    * Indicates if API call was successful

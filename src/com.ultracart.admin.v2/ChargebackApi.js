@@ -59,21 +59,21 @@
     /**
      * Delete a chargeback
      * Delete a chargeback on the UltraCart account. 
-     * @param {Number} chargebackDisputeOid The chargeback_dispute_oid to delete.
+     * @param {Number} chargeback_dispute_oid The chargeback_dispute_oid to delete.
      * @param {module:com.ultracart.admin.v2/ChargebackApi~deleteChargebackCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.deleteChargeback = function(chargebackDisputeOid, callback) {
+    this.deleteChargeback = function(chargeback_dispute_oid, callback) {
       var postBody = null;
 
-      // verify the required parameter 'chargebackDisputeOid' is set
-      if (chargebackDisputeOid === undefined || chargebackDisputeOid === null) {
-        throw new Error("Missing the required parameter 'chargebackDisputeOid' when calling deleteChargeback");
+      // verify the required parameter 'chargeback_dispute_oid' is set
+      if (chargeback_dispute_oid === undefined || chargeback_dispute_oid === null) {
+        throw new Error("Missing the required parameter 'chargeback_dispute_oid' when calling deleteChargeback");
       }
 
 
       var pathParams = {
-        'chargeback_dispute_oid': chargebackDisputeOid
+        'chargeback_dispute_oid': chargeback_dispute_oid
       };
       var queryParams = {
       };
@@ -107,27 +107,27 @@
     /**
      * Retrieve a chargeback
      * Retrieves a single chargeback using the specified chargeback dispute oid. 
-     * @param {Number} chargebackDisputeOid The chargeback dispute oid to retrieve.
+     * @param {Number} chargeback_dispute_oid The chargeback dispute oid to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/ChargebackApi~getChargebackDisputeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.getChargebackDispute = function(chargebackDisputeOid, opts, callback) {
+    this.getChargebackDispute = function(chargeback_dispute_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'chargebackDisputeOid' is set
-      if (chargebackDisputeOid === undefined || chargebackDisputeOid === null) {
-        throw new Error("Missing the required parameter 'chargebackDisputeOid' when calling getChargebackDispute");
+      // verify the required parameter 'chargeback_dispute_oid' is set
+      if (chargeback_dispute_oid === undefined || chargeback_dispute_oid === null) {
+        throw new Error("Missing the required parameter 'chargeback_dispute_oid' when calling getChargebackDispute");
       }
 
 
       var pathParams = {
-        'chargeback_dispute_oid': chargebackDisputeOid
+        'chargeback_dispute_oid': chargeback_dispute_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -160,18 +160,18 @@
      * Retrieve chargebacks
      * Retrieves chargebacks from the account.  If no parameters are specified, all chargebacks will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.orderId Order Id
-     * @param {String} opts.caseNumber Case number
+     * @param {String} opts.order_id Order Id
+     * @param {String} opts.case_number Case number
      * @param {String} opts.status Status
-     * @param {String} opts.expirationDtsStart Expiration dts start
-     * @param {String} opts.expirationDtsEnd Expiration dts end
-     * @param {String} opts.chargebackDtsStart Chargeback dts start
-     * @param {String} opts.chargebackDtsEnd Chargeback dts end
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.since Fetch chargebacks that have been created/modified since this date/time.
-     * @param {String} opts.sort The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts.expiration_dts_start Expiration dts start
+     * @param {String} opts.expiration_dts_end Expiration dts end
+     * @param {String} opts.chargeback_dts_start Chargeback dts start
+     * @param {String} opts.chargeback_dts_end Chargeback dts end
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch chargebacks that have been created/modified since this date/time.
+     * @param {String} opts._sort The sort order of the chargebacks.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/ChargebackApi~getChargebackDisputesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ChargebackDisputesResponse}
      */
@@ -183,18 +183,18 @@
       var pathParams = {
       };
       var queryParams = {
-        'order_id': opts['orderId'],
-        'case_number': opts['caseNumber'],
+        'order_id': opts['order_id'],
+        'case_number': opts['case_number'],
         'status': opts['status'],
-        'expiration_dts_start': opts['expirationDtsStart'],
-        'expiration_dts_end': opts['expirationDtsEnd'],
-        'chargeback_dts_start': opts['chargebackDtsStart'],
-        'chargeback_dts_end': opts['chargebackDtsEnd'],
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_since': opts['since'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        'expiration_dts_start': opts['expiration_dts_start'],
+        'expiration_dts_end': opts['expiration_dts_end'],
+        'chargeback_dts_start': opts['chargeback_dts_start'],
+        'chargeback_dts_end': opts['chargeback_dts_end'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -228,7 +228,7 @@
      * Insert a chargeback on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/ChargebackDispute} chargeback Chargeback to insert
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/ChargebackApi~insertChargebackCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
@@ -245,7 +245,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -278,13 +278,13 @@
      * Update a chargeback
      * Update a chargeback on the UltraCart account. 
      * @param {module:com.ultracart.admin.v2.models/ChargebackDispute} chargeback Chargeback to update
-     * @param {Number} chargebackDisputeOid The chargeback_dispute_oid to update.
+     * @param {Number} chargeback_dispute_oid The chargeback_dispute_oid to update.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/ChargebackApi~updateChargebackCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ChargebackDisputeResponse}
      */
-    this.updateChargeback = function(chargeback, chargebackDisputeOid, opts, callback) {
+    this.updateChargeback = function(chargeback, chargeback_dispute_oid, opts, callback) {
       opts = opts || {};
       var postBody = chargeback;
 
@@ -293,17 +293,17 @@
         throw new Error("Missing the required parameter 'chargeback' when calling updateChargeback");
       }
 
-      // verify the required parameter 'chargebackDisputeOid' is set
-      if (chargebackDisputeOid === undefined || chargebackDisputeOid === null) {
-        throw new Error("Missing the required parameter 'chargebackDisputeOid' when calling updateChargeback");
+      // verify the required parameter 'chargeback_dispute_oid' is set
+      if (chargeback_dispute_oid === undefined || chargeback_dispute_oid === null) {
+        throw new Error("Missing the required parameter 'chargeback_dispute_oid' when calling updateChargeback");
       }
 
 
       var pathParams = {
-        'chargeback_dispute_oid': chargebackDisputeOid
+        'chargeback_dispute_oid': chargeback_dispute_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };

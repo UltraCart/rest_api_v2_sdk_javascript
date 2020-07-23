@@ -56,100 +56,100 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_3rd_party_billing'))
-        obj.allow3rdPartyBilling = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
+        obj.allow_3rd_party_billing = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
       if (data.hasOwnProperty('allow_cod'))
-        obj.allowCod = ApiClient.convertToType(data['allow_cod'], 'Boolean');
+        obj.allow_cod = ApiClient.convertToType(data['allow_cod'], 'Boolean');
       if (data.hasOwnProperty('allow_purchase_order'))
-        obj.allowPurchaseOrder = ApiClient.convertToType(data['allow_purchase_order'], 'Boolean');
+        obj.allow_purchase_order = ApiClient.convertToType(data['allow_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('billing_addresses'))
-        obj.billingAddresses = ApiClient.convertToType(data['billing_addresses'], [CartCustomerProfileAddress]);
+        obj.billing_addresses = ApiClient.convertToType(data['billing_addresses'], [CartCustomerProfileAddress]);
       if (data.hasOwnProperty('credit_cards'))
-        obj.creditCards = ApiClient.convertToType(data['credit_cards'], [CartCustomerProfileCreditCard]);
+        obj.credit_cards = ApiClient.convertToType(data['credit_cards'], [CartCustomerProfileCreditCard]);
       if (data.hasOwnProperty('customer_profile_oid'))
-        obj.customerProfileOid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('dhl_account_number'))
-        obj.dhlAccountNumber = ApiClient.convertToType(data['dhl_account_number'], 'String');
+        obj.dhl_account_number = ApiClient.convertToType(data['dhl_account_number'], 'String');
       if (data.hasOwnProperty('dhl_duty_account_number'))
-        obj.dhlDutyAccountNumber = ApiClient.convertToType(data['dhl_duty_account_number'], 'String');
+        obj.dhl_duty_account_number = ApiClient.convertToType(data['dhl_duty_account_number'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('fedex_account_number'))
-        obj.fedexAccountNumber = ApiClient.convertToType(data['fedex_account_number'], 'String');
+        obj.fedex_account_number = ApiClient.convertToType(data['fedex_account_number'], 'String');
       if (data.hasOwnProperty('free_shipping'))
-        obj.freeShipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
+        obj.free_shipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
       if (data.hasOwnProperty('free_shipping_minimum'))
-        obj.freeShippingMinimum = ApiClient.convertToType(data['free_shipping_minimum'], 'Number');
+        obj.free_shipping_minimum = ApiClient.convertToType(data['free_shipping_minimum'], 'Number');
       if (data.hasOwnProperty('maximum_item_count'))
-        obj.maximumItemCount = ApiClient.convertToType(data['maximum_item_count'], 'Number');
+        obj.maximum_item_count = ApiClient.convertToType(data['maximum_item_count'], 'Number');
       if (data.hasOwnProperty('minimum_item_count'))
-        obj.minimumItemCount = ApiClient.convertToType(data['minimum_item_count'], 'Number');
+        obj.minimum_item_count = ApiClient.convertToType(data['minimum_item_count'], 'Number');
       if (data.hasOwnProperty('minimum_subtotal'))
-        obj.minimumSubtotal = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
+        obj.minimum_subtotal = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
       if (data.hasOwnProperty('no_coupons'))
-        obj.noCoupons = ApiClient.convertToType(data['no_coupons'], 'Boolean');
+        obj.no_coupons = ApiClient.convertToType(data['no_coupons'], 'Boolean');
       if (data.hasOwnProperty('no_free_shipping'))
-        obj.noFreeShipping = ApiClient.convertToType(data['no_free_shipping'], 'Boolean');
+        obj.no_free_shipping = ApiClient.convertToType(data['no_free_shipping'], 'Boolean');
       if (data.hasOwnProperty('no_realtime_charge'))
-        obj.noRealtimeCharge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
+        obj.no_realtime_charge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
       if (data.hasOwnProperty('pricing_tiers'))
-        obj.pricingTiers = ApiClient.convertToType(data['pricing_tiers'], ['String']);
+        obj.pricing_tiers = ApiClient.convertToType(data['pricing_tiers'], ['String']);
       if (data.hasOwnProperty('shipping_addresses'))
-        obj.shippingAddresses = ApiClient.convertToType(data['shipping_addresses'], [CartCustomerProfileAddress]);
+        obj.shipping_addresses = ApiClient.convertToType(data['shipping_addresses'], [CartCustomerProfileAddress]);
       if (data.hasOwnProperty('tax_exempt'))
-        obj.taxExempt = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
+        obj.tax_exempt = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
       if (data.hasOwnProperty('ups_account_number'))
-        obj.upsAccountNumber = ApiClient.convertToType(data['ups_account_number'], 'String');
+        obj.ups_account_number = ApiClient.convertToType(data['ups_account_number'], 'String');
     }
     return obj;
   }
 
   /**
    * True if profile is allowed to bill to their 3rd party shipping account
-   * @member {Boolean} allow3rdPartyBilling
+   * @member {Boolean} allow_3rd_party_billing
    */
-  exports.prototype.allow3rdPartyBilling = undefined;
+  exports.prototype.allow_3rd_party_billing = undefined;
 
   /**
    * True if this profile is allowed to use a COD
-   * @member {Boolean} allowCod
+   * @member {Boolean} allow_cod
    */
-  exports.prototype.allowCod = undefined;
+  exports.prototype.allow_cod = undefined;
 
   /**
    * True if this profile is allowed to use a purchase order
-   * @member {Boolean} allowPurchaseOrder
+   * @member {Boolean} allow_purchase_order
    */
-  exports.prototype.allowPurchaseOrder = undefined;
+  exports.prototype.allow_purchase_order = undefined;
 
   /**
    * Billing addresses on file for this profile
-   * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileAddress>} billingAddresses
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileAddress>} billing_addresses
    */
-  exports.prototype.billingAddresses = undefined;
+  exports.prototype.billing_addresses = undefined;
 
   /**
    * Credit cards on file for this profile (masked)
-   * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileCreditCard>} creditCards
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileCreditCard>} credit_cards
    */
-  exports.prototype.creditCards = undefined;
+  exports.prototype.credit_cards = undefined;
 
   /**
    * Unique identifier
-   * @member {Number} customerProfileOid
+   * @member {Number} customer_profile_oid
    */
-  exports.prototype.customerProfileOid = undefined;
+  exports.prototype.customer_profile_oid = undefined;
 
   /**
    * DHL account number on file
-   * @member {String} dhlAccountNumber
+   * @member {String} dhl_account_number
    */
-  exports.prototype.dhlAccountNumber = undefined;
+  exports.prototype.dhl_account_number = undefined;
 
   /**
    * DHL duty account number on file
-   * @member {String} dhlDutyAccountNumber
+   * @member {String} dhl_duty_account_number
    */
-  exports.prototype.dhlDutyAccountNumber = undefined;
+  exports.prototype.dhl_duty_account_number = undefined;
 
   /**
    * Email
@@ -159,81 +159,81 @@
 
   /**
    * FedEx account number on file
-   * @member {String} fedexAccountNumber
+   * @member {String} fedex_account_number
    */
-  exports.prototype.fedexAccountNumber = undefined;
+  exports.prototype.fedex_account_number = undefined;
 
   /**
    * True if this profile always qualifies for free shipping
-   * @member {Boolean} freeShipping
+   * @member {Boolean} free_shipping
    */
-  exports.prototype.freeShipping = undefined;
+  exports.prototype.free_shipping = undefined;
 
   /**
    * The minimum aount that this profile has to purchase to qualify for free shipping
-   * @member {Number} freeShippingMinimum
+   * @member {Number} free_shipping_minimum
    */
-  exports.prototype.freeShippingMinimum = undefined;
+  exports.prototype.free_shipping_minimum = undefined;
 
   /**
    * Maximum item count this profile can purchase
-   * @member {Number} maximumItemCount
+   * @member {Number} maximum_item_count
    */
-  exports.prototype.maximumItemCount = undefined;
+  exports.prototype.maximum_item_count = undefined;
 
   /**
    * Minimum item count this profile must purchase
-   * @member {Number} minimumItemCount
+   * @member {Number} minimum_item_count
    */
-  exports.prototype.minimumItemCount = undefined;
+  exports.prototype.minimum_item_count = undefined;
 
   /**
    * Minimum subtotal this profile must purchase
-   * @member {Number} minimumSubtotal
+   * @member {Number} minimum_subtotal
    */
-  exports.prototype.minimumSubtotal = undefined;
+  exports.prototype.minimum_subtotal = undefined;
 
   /**
    * True if this profile is prevented from using coupons
-   * @member {Boolean} noCoupons
+   * @member {Boolean} no_coupons
    */
-  exports.prototype.noCoupons = undefined;
+  exports.prototype.no_coupons = undefined;
 
   /**
    * True if this profile is never given free shipping
-   * @member {Boolean} noFreeShipping
+   * @member {Boolean} no_free_shipping
    */
-  exports.prototype.noFreeShipping = undefined;
+  exports.prototype.no_free_shipping = undefined;
 
   /**
    * True if this customers orders are not charged in real-time
-   * @member {Boolean} noRealtimeCharge
+   * @member {Boolean} no_realtime_charge
    */
-  exports.prototype.noRealtimeCharge = undefined;
+  exports.prototype.no_realtime_charge = undefined;
 
   /**
    * Pricing tier names this profile qualifies for
-   * @member {Array.<String>} pricingTiers
+   * @member {Array.<String>} pricing_tiers
    */
-  exports.prototype.pricingTiers = undefined;
+  exports.prototype.pricing_tiers = undefined;
 
   /**
    * Shipping addresses on file for this profile
-   * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileAddress>} shippingAddresses
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileAddress>} shipping_addresses
    */
-  exports.prototype.shippingAddresses = undefined;
+  exports.prototype.shipping_addresses = undefined;
 
   /**
    * True if this profile is exempt from sales tax
-   * @member {Boolean} taxExempt
+   * @member {Boolean} tax_exempt
    */
-  exports.prototype.taxExempt = undefined;
+  exports.prototype.tax_exempt = undefined;
 
   /**
    * UPS account number on file
-   * @member {String} upsAccountNumber
+   * @member {String} ups_account_number
    */
-  exports.prototype.upsAccountNumber = undefined;
+  exports.prototype.ups_account_number = undefined;
 
   return exports;
 

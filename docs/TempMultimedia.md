@@ -16,13 +16,13 @@ Name | Type | Description | Notes
 ## Enum: MultimediaTypeEnum
 
 
-* `image` (value: `"Image"`)
+* `Image` (value: `"Image"`)
 
 * `PDF` (value: `"PDF"`)
 
-* `text` (value: `"Text"`)
+* `Text` (value: `"Text"`)
 
-* `video` (value: `"Video"`)
+* `Video` (value: `"Video"`)
 
 
 

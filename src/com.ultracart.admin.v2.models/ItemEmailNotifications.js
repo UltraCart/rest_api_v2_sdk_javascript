@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('skip_receipt'))
-        obj.skipReceipt = ApiClient.convertToType(data['skip_receipt'], 'Boolean');
+        obj.skip_receipt = ApiClient.convertToType(data['skip_receipt'], 'Boolean');
       if (data.hasOwnProperty('skip_shipment_notification'))
-        obj.skipShipmentNotification = ApiClient.convertToType(data['skip_shipment_notification'], 'Boolean');
+        obj.skip_shipment_notification = ApiClient.convertToType(data['skip_shipment_notification'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Skip receipt email to customer
-   * @member {Boolean} skipReceipt
+   * @member {Boolean} skip_receipt
    */
-  exports.prototype.skipReceipt = undefined;
+  exports.prototype.skip_receipt = undefined;
 
   /**
    * Skip shipment notification to customer
-   * @member {Boolean} skipShipmentNotification
+   * @member {Boolean} skip_shipment_notification
    */
-  exports.prototype.skipShipmentNotification = undefined;
+  exports.prototype.skip_shipment_notification = undefined;
 
   return exports;
 

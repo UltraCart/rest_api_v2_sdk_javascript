@@ -60,29 +60,29 @@
       if (data.hasOwnProperty('address2'))
         obj.address2 = ApiClient.convertToType(data['address2'], 'String');
       if (data.hasOwnProperty('cc_emails'))
-        obj.ccEmails = ApiClient.convertToType(data['cc_emails'], ['String']);
+        obj.cc_emails = ApiClient.convertToType(data['cc_emails'], ['String']);
       if (data.hasOwnProperty('city'))
         obj.city = ApiClient.convertToType(data['city'], 'String');
       if (data.hasOwnProperty('company'))
         obj.company = ApiClient.convertToType(data['company'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('day_phone'))
-        obj.dayPhone = ApiClient.convertToType(data['day_phone'], 'String');
+        obj.day_phone = ApiClient.convertToType(data['day_phone'], 'String');
       if (data.hasOwnProperty('day_phone_e164'))
-        obj.dayPhoneE164 = ApiClient.convertToType(data['day_phone_e164'], 'String');
+        obj.day_phone_e164 = ApiClient.convertToType(data['day_phone_e164'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('evening_phone'))
-        obj.eveningPhone = ApiClient.convertToType(data['evening_phone'], 'String');
+        obj.evening_phone = ApiClient.convertToType(data['evening_phone'], 'String');
       if (data.hasOwnProperty('first_name'))
-        obj.firstName = ApiClient.convertToType(data['first_name'], 'String');
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('last_name'))
-        obj.lastName = ApiClient.convertToType(data['last_name'], 'String');
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('state_region'))
-        obj.stateRegion = ApiClient.convertToType(data['state_region'], 'String');
+        obj.state_region = ApiClient.convertToType(data['state_region'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
     }
@@ -103,9 +103,9 @@
 
   /**
    * CC emails.  Multiple allowed, but total length of all emails can not exceed 100 characters.
-   * @member {Array.<String>} ccEmails
+   * @member {Array.<String>} cc_emails
    */
-  exports.prototype.ccEmails = undefined;
+  exports.prototype.cc_emails = undefined;
 
   /**
    * City
@@ -121,21 +121,21 @@
 
   /**
    * ISO-3166 two letter country code
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Day time phone
-   * @member {String} dayPhone
+   * @member {String} day_phone
    */
-  exports.prototype.dayPhone = undefined;
+  exports.prototype.day_phone = undefined;
 
   /**
    * Day time phone (E164 format)
-   * @member {String} dayPhoneE164
+   * @member {String} day_phone_e164
    */
-  exports.prototype.dayPhoneE164 = undefined;
+  exports.prototype.day_phone_e164 = undefined;
 
   /**
    * Email
@@ -145,33 +145,33 @@
 
   /**
    * Evening phone
-   * @member {String} eveningPhone
+   * @member {String} evening_phone
    */
-  exports.prototype.eveningPhone = undefined;
+  exports.prototype.evening_phone = undefined;
 
   /**
    * First name
-   * @member {String} firstName
+   * @member {String} first_name
    */
-  exports.prototype.firstName = undefined;
+  exports.prototype.first_name = undefined;
 
   /**
    * Last name
-   * @member {String} lastName
+   * @member {String} last_name
    */
-  exports.prototype.lastName = undefined;
+  exports.prototype.last_name = undefined;
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * State for United States otherwise region or province for other countries
-   * @member {String} stateRegion
+   * @member {String} state_region
    */
-  exports.prototype.stateRegion = undefined;
+  exports.prototype.state_region = undefined;
 
   /**
    * Title

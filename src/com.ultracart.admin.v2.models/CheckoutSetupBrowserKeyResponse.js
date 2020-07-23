@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('browser_key'))
-        obj.browserKey = ApiClient.convertToType(data['browser_key'], 'String');
+        obj.browser_key = ApiClient.convertToType(data['browser_key'], 'String');
     }
     return obj;
   }
 
   /**
    * Browser key that is used to authenticate against the new linked application.
-   * @member {String} browserKey
+   * @member {String} browser_key
    */
-  exports.prototype.browserKey = undefined;
+  exports.prototype.browser_key = undefined;
 
   return exports;
 

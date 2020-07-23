@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
-        obj.discountPercent = ApiClient.convertToType(data['discount_percent'], 'Number');
+        obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
     }
     return obj;
   }
 
   /**
    * The percentage of subtotal discount
-   * @member {Number} discountPercent
+   * @member {Number} discount_percent
    */
-  exports.prototype.discountPercent = undefined;
+  exports.prototype.discount_percent = undefined;
 
   return exports;
 

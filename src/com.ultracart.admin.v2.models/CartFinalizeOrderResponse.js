@@ -58,11 +58,11 @@
       if (data.hasOwnProperty('errors'))
         obj.errors = ApiClient.convertToType(data['errors'], ['String']);
       if (data.hasOwnProperty('next_cart'))
-        obj.nextCart = Cart.constructFromObject(data['next_cart']);
+        obj.next_cart = Cart.constructFromObject(data['next_cart']);
       if (data.hasOwnProperty('order'))
         obj.order = Order.constructFromObject(data['order']);
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('successful'))
         obj.successful = ApiClient.convertToType(data['successful'], 'Boolean');
     }
@@ -76,9 +76,9 @@
   exports.prototype.errors = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Cart} nextCart
+   * @member {module:com.ultracart.admin.v2.models/Cart} next_cart
    */
-  exports.prototype.nextCart = undefined;
+  exports.prototype.next_cart = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Order} order
@@ -87,9 +87,9 @@
 
   /**
    * Order ID assigned to the order
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * True if the cart was converted successfully to an order

@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('property_values'))
-        obj.propertyValues = ApiClient.convertToType(data['property_values'], ['String']);
+        obj.property_values = ApiClient.convertToType(data['property_values'], ['String']);
     }
     return obj;
   }
 
   /**
-   * @member {Array.<String>} propertyValues
+   * @member {Array.<String>} property_values
    */
-  exports.prototype.propertyValues = undefined;
+  exports.prototype.property_values = undefined;
 
   return exports;
 

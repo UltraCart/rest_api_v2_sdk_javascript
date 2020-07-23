@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('css_links'))
-        obj.cssLinks = ApiClient.convertToType(data['css_links'], ['String']);
+        obj.css_links = ApiClient.convertToType(data['css_links'], ['String']);
       if (data.hasOwnProperty('formatted_result'))
-        obj.formattedResult = ApiClient.convertToType(data['formatted_result'], 'String');
+        obj.formatted_result = ApiClient.convertToType(data['formatted_result'], 'String');
     }
     return obj;
   }
 
   /**
    * The URLs to any stylesheets that need to be included to properly view the markup.
-   * @member {Array.<String>} cssLinks
+   * @member {Array.<String>} css_links
    */
-  exports.prototype.cssLinks = undefined;
+  exports.prototype.css_links = undefined;
 
   /**
    * The formatted result of the order.  This will be HTML or text depending upon the requested format.
-   * @member {String} formattedResult
+   * @member {String} formatted_result
    */
-  exports.prototype.formattedResult = undefined;
+  exports.prototype.formatted_result = undefined;
 
   return exports;
 

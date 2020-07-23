@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('add_to_lists'))
-        obj.addToLists = ApiClient.convertToType(data['add_to_lists'], ['String']);
+        obj.add_to_lists = ApiClient.convertToType(data['add_to_lists'], ['String']);
       if (data.hasOwnProperty('remove_from_lists'))
-        obj.removeFromLists = ApiClient.convertToType(data['remove_from_lists'], ['String']);
+        obj.remove_from_lists = ApiClient.convertToType(data['remove_from_lists'], ['String']);
     }
     return obj;
   }
 
   /**
    * Add this customer to these email lists
-   * @member {Array.<String>} addToLists
+   * @member {Array.<String>} add_to_lists
    */
-  exports.prototype.addToLists = undefined;
+  exports.prototype.add_to_lists = undefined;
 
   /**
    * Remove this customer from these email lists
-   * @member {Array.<String>} removeFromLists
+   * @member {Array.<String>} remove_from_lists
    */
-  exports.prototype.removeFromLists = undefined;
+  exports.prototype.remove_from_lists = undefined;
 
   return exports;
 

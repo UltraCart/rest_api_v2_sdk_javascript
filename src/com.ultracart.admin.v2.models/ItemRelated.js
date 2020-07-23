@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('no_system_calculated_related_items'))
-        obj.noSystemCalculatedRelatedItems = ApiClient.convertToType(data['no_system_calculated_related_items'], 'Boolean');
+        obj.no_system_calculated_related_items = ApiClient.convertToType(data['no_system_calculated_related_items'], 'Boolean');
       if (data.hasOwnProperty('not_relatable'))
-        obj.notRelatable = ApiClient.convertToType(data['not_relatable'], 'Boolean');
+        obj.not_relatable = ApiClient.convertToType(data['not_relatable'], 'Boolean');
       if (data.hasOwnProperty('related_items'))
-        obj.relatedItems = ApiClient.convertToType(data['related_items'], [ItemRelatedItem]);
+        obj.related_items = ApiClient.convertToType(data['related_items'], [ItemRelatedItem]);
     }
     return obj;
   }
 
   /**
    * True to suppress system calculated relationships
-   * @member {Boolean} noSystemCalculatedRelatedItems
+   * @member {Boolean} no_system_calculated_related_items
    */
-  exports.prototype.noSystemCalculatedRelatedItems = undefined;
+  exports.prototype.no_system_calculated_related_items = undefined;
 
   /**
    * Not relatable
-   * @member {Boolean} notRelatable
+   * @member {Boolean} not_relatable
    */
-  exports.prototype.notRelatable = undefined;
+  exports.prototype.not_relatable = undefined;
 
   /**
    * Related items
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemRelatedItem>} relatedItems
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemRelatedItem>} related_items
    */
-  exports.prototype.relatedItems = undefined;
+  exports.prototype.related_items = undefined;
 
   return exports;
 

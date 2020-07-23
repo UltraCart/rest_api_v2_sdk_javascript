@@ -62,11 +62,11 @@
       if (data.hasOwnProperty('more'))
         obj.more = ApiClient.convertToType(data['more'], 'Boolean');
       if (data.hasOwnProperty('next_offset'))
-        obj.nextOffset = ApiClient.convertToType(data['next_offset'], 'Number');
+        obj.next_offset = ApiClient.convertToType(data['next_offset'], 'Number');
       if (data.hasOwnProperty('offset'))
         obj.offset = ApiClient.convertToType(data['offset'], 'Number');
       if (data.hasOwnProperty('total_records'))
-        obj.totalRecords = ApiClient.convertToType(data['total_records'], 'Number');
+        obj.total_records = ApiClient.convertToType(data['total_records'], 'Number');
     }
     return obj;
   }
@@ -91,9 +91,9 @@
 
   /**
    * The next offset that you should query to retrieve more results
-   * @member {Number} nextOffset
+   * @member {Number} next_offset
    */
-  exports.prototype.nextOffset = undefined;
+  exports.prototype.next_offset = undefined;
 
   /**
    * Offset of this result set (zero based)
@@ -103,9 +103,9 @@
 
   /**
    * The total number of records in the result set.  May be null if the number is not known and the client should continue iterating as long as more is true.
-   * @member {Number} totalRecords
+   * @member {Number} total_records
    */
-  exports.prototype.totalRecords = undefined;
+  exports.prototype.total_records = undefined;
 
   return exports;
 

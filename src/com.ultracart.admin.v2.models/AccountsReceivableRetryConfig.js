@@ -58,31 +58,31 @@
       if (data.hasOwnProperty('active'))
         obj.active = ApiClient.convertToType(data['active'], 'Boolean');
       if (data.hasOwnProperty('allow_process_linked_accounts'))
-        obj.allowProcessLinkedAccounts = ApiClient.convertToType(data['allow_process_linked_accounts'], 'Boolean');
+        obj.allow_process_linked_accounts = ApiClient.convertToType(data['allow_process_linked_accounts'], 'Boolean');
       if (data.hasOwnProperty('current_service_plan'))
-        obj.currentServicePlan = ApiClient.convertToType(data['current_service_plan'], 'String');
+        obj.current_service_plan = ApiClient.convertToType(data['current_service_plan'], 'String');
       if (data.hasOwnProperty('daily_activity_list'))
-        obj.dailyActivityList = ApiClient.convertToType(data['daily_activity_list'], [AccountsReceivableRetryDayActivity]);
+        obj.daily_activity_list = ApiClient.convertToType(data['daily_activity_list'], [AccountsReceivableRetryDayActivity]);
       if (data.hasOwnProperty('managed_by_linked_account_merchant_id'))
-        obj.managedByLinkedAccountMerchantId = ApiClient.convertToType(data['managed_by_linked_account_merchant_id'], 'Boolean');
+        obj.managed_by_linked_account_merchant_id = ApiClient.convertToType(data['managed_by_linked_account_merchant_id'], 'Boolean');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('notify_emails'))
-        obj.notifyEmails = ApiClient.convertToType(data['notify_emails'], ['String']);
+        obj.notify_emails = ApiClient.convertToType(data['notify_emails'], ['String']);
       if (data.hasOwnProperty('notify_rejections'))
-        obj.notifyRejections = ApiClient.convertToType(data['notify_rejections'], 'Boolean');
+        obj.notify_rejections = ApiClient.convertToType(data['notify_rejections'], 'Boolean');
       if (data.hasOwnProperty('notify_successes'))
-        obj.notifySuccesses = ApiClient.convertToType(data['notify_successes'], 'Boolean');
+        obj.notify_successes = ApiClient.convertToType(data['notify_successes'], 'Boolean');
       if (data.hasOwnProperty('process_linked_accounts'))
-        obj.processLinkedAccounts = ApiClient.convertToType(data['process_linked_accounts'], 'Boolean');
+        obj.process_linked_accounts = ApiClient.convertToType(data['process_linked_accounts'], 'Boolean');
       if (data.hasOwnProperty('processing_percentage'))
-        obj.processingPercentage = ApiClient.convertToType(data['processing_percentage'], 'String');
+        obj.processing_percentage = ApiClient.convertToType(data['processing_percentage'], 'String');
       if (data.hasOwnProperty('reject_at_end'))
-        obj.rejectAtEnd = ApiClient.convertToType(data['reject_at_end'], 'Boolean');
+        obj.reject_at_end = ApiClient.convertToType(data['reject_at_end'], 'Boolean');
       if (data.hasOwnProperty('trial_mode'))
-        obj.trialMode = ApiClient.convertToType(data['trial_mode'], 'Boolean');
+        obj.trial_mode = ApiClient.convertToType(data['trial_mode'], 'Boolean');
       if (data.hasOwnProperty('trial_mode_expiration_dts'))
-        obj.trialModeExpirationDts = ApiClient.convertToType(data['trial_mode_expiration_dts'], 'String');
+        obj.trial_mode_expiration_dts = ApiClient.convertToType(data['trial_mode_expiration_dts'], 'String');
     }
     return obj;
   }
@@ -95,81 +95,81 @@
 
   /**
    * True if this account has linked accounts that it can process.
-   * @member {Boolean} allowProcessLinkedAccounts
+   * @member {Boolean} allow_process_linked_accounts
    */
-  exports.prototype.allowProcessLinkedAccounts = undefined;
+  exports.prototype.allow_process_linked_accounts = undefined;
 
   /**
    * The current service plan that the account is on.
-   * @member {String} currentServicePlan
+   * @member {String} current_service_plan
    */
-  exports.prototype.currentServicePlan = undefined;
+  exports.prototype.current_service_plan = undefined;
 
   /**
    * A list of days and what actions should take place on those days after an order reaches accounts receivable
-   * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity>} dailyActivityList
+   * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity>} daily_activity_list
    */
-  exports.prototype.dailyActivityList = undefined;
+  exports.prototype.daily_activity_list = undefined;
 
   /**
    * If not null, this account is managed by the specified parent merchant id.
-   * @member {Boolean} managedByLinkedAccountMerchantId
+   * @member {Boolean} managed_by_linked_account_merchant_id
    */
-  exports.prototype.managedByLinkedAccountMerchantId = undefined;
+  exports.prototype.managed_by_linked_account_merchant_id = undefined;
 
   /**
    * UltraCart merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * A list of email addresses to receive summary notifications from the retry service.
-   * @member {Array.<String>} notifyEmails
+   * @member {Array.<String>} notify_emails
    */
-  exports.prototype.notifyEmails = undefined;
+  exports.prototype.notify_emails = undefined;
 
   /**
    * If true, email addresses are notified of rejections.
-   * @member {Boolean} notifyRejections
+   * @member {Boolean} notify_rejections
    */
-  exports.prototype.notifyRejections = undefined;
+  exports.prototype.notify_rejections = undefined;
 
   /**
    * If true, email addresses are notified of successful charges.
-   * @member {Boolean} notifySuccesses
+   * @member {Boolean} notify_successes
    */
-  exports.prototype.notifySuccesses = undefined;
+  exports.prototype.notify_successes = undefined;
 
   /**
    * If true, all linked accounts are also processed using the same rules.
-   * @member {Boolean} processLinkedAccounts
+   * @member {Boolean} process_linked_accounts
    */
-  exports.prototype.processLinkedAccounts = undefined;
+  exports.prototype.process_linked_accounts = undefined;
 
   /**
    * The percentage rate charged for the service.
-   * @member {String} processingPercentage
+   * @member {String} processing_percentage
    */
-  exports.prototype.processingPercentage = undefined;
+  exports.prototype.processing_percentage = undefined;
 
   /**
    * If true, the order is rejected the day after the last configured activity day
-   * @member {Boolean} rejectAtEnd
+   * @member {Boolean} reject_at_end
    */
-  exports.prototype.rejectAtEnd = undefined;
+  exports.prototype.reject_at_end = undefined;
 
   /**
    * True if the account is currently in trial mode.  Set to false to exit trial mode.
-   * @member {Boolean} trialMode
+   * @member {Boolean} trial_mode
    */
-  exports.prototype.trialMode = undefined;
+  exports.prototype.trial_mode = undefined;
 
   /**
    * The date when trial mode expires.  If this date is reached without exiting trial mode, the service will de-activate.
-   * @member {String} trialModeExpirationDts
+   * @member {String} trial_mode_expiration_dts
    */
-  exports.prototype.trialModeExpirationDts = undefined;
+  exports.prototype.trial_mode_expiration_dts = undefined;
 
   return exports;
 

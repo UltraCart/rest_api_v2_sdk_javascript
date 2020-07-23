@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('realtime_pricing_parameter'))
-        obj.realtimePricingParameter = ApiClient.convertToType(data['realtime_pricing_parameter'], 'String');
+        obj.realtime_pricing_parameter = ApiClient.convertToType(data['realtime_pricing_parameter'], 'String');
       if (data.hasOwnProperty('realtime_pricing_provider'))
-        obj.realtimePricingProvider = ApiClient.convertToType(data['realtime_pricing_provider'], 'String');
+        obj.realtime_pricing_provider = ApiClient.convertToType(data['realtime_pricing_provider'], 'String');
       if (data.hasOwnProperty('realtime_pricing_provider_oid'))
-        obj.realtimePricingProviderOid = ApiClient.convertToType(data['realtime_pricing_provider_oid'], 'Number');
+        obj.realtime_pricing_provider_oid = ApiClient.convertToType(data['realtime_pricing_provider_oid'], 'Number');
     }
     return obj;
   }
 
   /**
    * Real-time pricing provider parameters
-   * @member {String} realtimePricingParameter
+   * @member {String} realtime_pricing_parameter
    */
-  exports.prototype.realtimePricingParameter = undefined;
+  exports.prototype.realtime_pricing_parameter = undefined;
 
   /**
    * Real-time pricing provider name
-   * @member {String} realtimePricingProvider
+   * @member {String} realtime_pricing_provider
    */
-  exports.prototype.realtimePricingProvider = undefined;
+  exports.prototype.realtime_pricing_provider = undefined;
 
   /**
    * Real-time pricing provide object identifier
-   * @member {Number} realtimePricingProviderOid
+   * @member {Number} realtime_pricing_provider_oid
    */
-  exports.prototype.realtimePricingProviderOid = undefined;
+  exports.prototype.realtime_pricing_provider_oid = undefined;
 
   return exports;
 

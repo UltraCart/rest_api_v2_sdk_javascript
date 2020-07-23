@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affirm_checkout_token'))
-        obj.affirmCheckoutToken = ApiClient.convertToType(data['affirm_checkout_token'], 'String');
+        obj.affirm_checkout_token = ApiClient.convertToType(data['affirm_checkout_token'], 'String');
     }
     return obj;
   }
 
   /**
    * Affirm checkout token
-   * @member {String} affirmCheckoutToken
+   * @member {String} affirm_checkout_token
    */
-  exports.prototype.affirmCheckoutToken = undefined;
+  exports.prototype.affirm_checkout_token = undefined;
 
   return exports;
 

@@ -56,132 +56,132 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('all_tags'))
-        obj.allTags = ApiClient.convertToType(data['all_tags'], ['String']);
+        obj.all_tags = ApiClient.convertToType(data['all_tags'], ['String']);
       if (data.hasOwnProperty('any_tags'))
-        obj.anyTags = ApiClient.convertToType(data['any_tags'], ['String']);
+        obj.any_tags = ApiClient.convertToType(data['any_tags'], ['String']);
       if (data.hasOwnProperty('billing_city'))
-        obj.billingCity = ApiClient.convertToType(data['billing_city'], 'String');
+        obj.billing_city = ApiClient.convertToType(data['billing_city'], 'String');
       if (data.hasOwnProperty('billing_company'))
-        obj.billingCompany = ApiClient.convertToType(data['billing_company'], 'String');
+        obj.billing_company = ApiClient.convertToType(data['billing_company'], 'String');
       if (data.hasOwnProperty('billing_country_code'))
-        obj.billingCountryCode = ApiClient.convertToType(data['billing_country_code'], 'String');
+        obj.billing_country_code = ApiClient.convertToType(data['billing_country_code'], 'String');
       if (data.hasOwnProperty('billing_day_phone'))
-        obj.billingDayPhone = ApiClient.convertToType(data['billing_day_phone'], 'String');
+        obj.billing_day_phone = ApiClient.convertToType(data['billing_day_phone'], 'String');
       if (data.hasOwnProperty('billing_evening_phone'))
-        obj.billingEveningPhone = ApiClient.convertToType(data['billing_evening_phone'], 'String');
+        obj.billing_evening_phone = ApiClient.convertToType(data['billing_evening_phone'], 'String');
       if (data.hasOwnProperty('billing_first_name'))
-        obj.billingFirstName = ApiClient.convertToType(data['billing_first_name'], 'String');
+        obj.billing_first_name = ApiClient.convertToType(data['billing_first_name'], 'String');
       if (data.hasOwnProperty('billing_last_name'))
-        obj.billingLastName = ApiClient.convertToType(data['billing_last_name'], 'String');
+        obj.billing_last_name = ApiClient.convertToType(data['billing_last_name'], 'String');
       if (data.hasOwnProperty('billing_postal_code'))
-        obj.billingPostalCode = ApiClient.convertToType(data['billing_postal_code'], 'String');
+        obj.billing_postal_code = ApiClient.convertToType(data['billing_postal_code'], 'String');
       if (data.hasOwnProperty('billing_state'))
-        obj.billingState = ApiClient.convertToType(data['billing_state'], 'String');
+        obj.billing_state = ApiClient.convertToType(data['billing_state'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('last_modified_dts_end'))
-        obj.lastModifiedDtsEnd = ApiClient.convertToType(data['last_modified_dts_end'], 'String');
+        obj.last_modified_dts_end = ApiClient.convertToType(data['last_modified_dts_end'], 'String');
       if (data.hasOwnProperty('last_modified_dts_start'))
-        obj.lastModifiedDtsStart = ApiClient.convertToType(data['last_modified_dts_start'], 'String');
+        obj.last_modified_dts_start = ApiClient.convertToType(data['last_modified_dts_start'], 'String');
       if (data.hasOwnProperty('pricing_tier_name'))
-        obj.pricingTierName = ApiClient.convertToType(data['pricing_tier_name'], 'String');
+        obj.pricing_tier_name = ApiClient.convertToType(data['pricing_tier_name'], 'String');
       if (data.hasOwnProperty('pricing_tier_oid'))
-        obj.pricingTierOid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
+        obj.pricing_tier_oid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
       if (data.hasOwnProperty('qb_class'))
-        obj.qbClass = ApiClient.convertToType(data['qb_class'], 'String');
+        obj.qb_class = ApiClient.convertToType(data['qb_class'], 'String');
       if (data.hasOwnProperty('quickbooks_code'))
-        obj.quickbooksCode = ApiClient.convertToType(data['quickbooks_code'], 'String');
+        obj.quickbooks_code = ApiClient.convertToType(data['quickbooks_code'], 'String');
       if (data.hasOwnProperty('shipping_city'))
-        obj.shippingCity = ApiClient.convertToType(data['shipping_city'], 'String');
+        obj.shipping_city = ApiClient.convertToType(data['shipping_city'], 'String');
       if (data.hasOwnProperty('shipping_company'))
-        obj.shippingCompany = ApiClient.convertToType(data['shipping_company'], 'String');
+        obj.shipping_company = ApiClient.convertToType(data['shipping_company'], 'String');
       if (data.hasOwnProperty('shipping_country_code'))
-        obj.shippingCountryCode = ApiClient.convertToType(data['shipping_country_code'], 'String');
+        obj.shipping_country_code = ApiClient.convertToType(data['shipping_country_code'], 'String');
       if (data.hasOwnProperty('shipping_day_phone'))
-        obj.shippingDayPhone = ApiClient.convertToType(data['shipping_day_phone'], 'String');
+        obj.shipping_day_phone = ApiClient.convertToType(data['shipping_day_phone'], 'String');
       if (data.hasOwnProperty('shipping_evening_phone'))
-        obj.shippingEveningPhone = ApiClient.convertToType(data['shipping_evening_phone'], 'String');
+        obj.shipping_evening_phone = ApiClient.convertToType(data['shipping_evening_phone'], 'String');
       if (data.hasOwnProperty('shipping_first_name'))
-        obj.shippingFirstName = ApiClient.convertToType(data['shipping_first_name'], 'String');
+        obj.shipping_first_name = ApiClient.convertToType(data['shipping_first_name'], 'String');
       if (data.hasOwnProperty('shipping_last_name'))
-        obj.shippingLastName = ApiClient.convertToType(data['shipping_last_name'], 'String');
+        obj.shipping_last_name = ApiClient.convertToType(data['shipping_last_name'], 'String');
       if (data.hasOwnProperty('shipping_postal_code'))
-        obj.shippingPostalCode = ApiClient.convertToType(data['shipping_postal_code'], 'String');
+        obj.shipping_postal_code = ApiClient.convertToType(data['shipping_postal_code'], 'String');
       if (data.hasOwnProperty('shipping_state'))
-        obj.shippingState = ApiClient.convertToType(data['shipping_state'], 'String');
+        obj.shipping_state = ApiClient.convertToType(data['shipping_state'], 'String');
       if (data.hasOwnProperty('signup_dts_end'))
-        obj.signupDtsEnd = ApiClient.convertToType(data['signup_dts_end'], 'String');
+        obj.signup_dts_end = ApiClient.convertToType(data['signup_dts_end'], 'String');
       if (data.hasOwnProperty('signup_dts_start'))
-        obj.signupDtsStart = ApiClient.convertToType(data['signup_dts_start'], 'String');
+        obj.signup_dts_start = ApiClient.convertToType(data['signup_dts_start'], 'String');
     }
     return obj;
   }
 
   /**
    * All tags the customer must have
-   * @member {Array.<String>} allTags
+   * @member {Array.<String>} all_tags
    */
-  exports.prototype.allTags = undefined;
+  exports.prototype.all_tags = undefined;
 
   /**
    * Any of these tags the customer must have
-   * @member {Array.<String>} anyTags
+   * @member {Array.<String>} any_tags
    */
-  exports.prototype.anyTags = undefined;
+  exports.prototype.any_tags = undefined;
 
   /**
    * Billing city
-   * @member {String} billingCity
+   * @member {String} billing_city
    */
-  exports.prototype.billingCity = undefined;
+  exports.prototype.billing_city = undefined;
 
   /**
    * Billing company
-   * @member {String} billingCompany
+   * @member {String} billing_company
    */
-  exports.prototype.billingCompany = undefined;
+  exports.prototype.billing_company = undefined;
 
   /**
    * Billing country code
-   * @member {String} billingCountryCode
+   * @member {String} billing_country_code
    */
-  exports.prototype.billingCountryCode = undefined;
+  exports.prototype.billing_country_code = undefined;
 
   /**
    * Billing day phone
-   * @member {String} billingDayPhone
+   * @member {String} billing_day_phone
    */
-  exports.prototype.billingDayPhone = undefined;
+  exports.prototype.billing_day_phone = undefined;
 
   /**
    * Billing evening phone
-   * @member {String} billingEveningPhone
+   * @member {String} billing_evening_phone
    */
-  exports.prototype.billingEveningPhone = undefined;
+  exports.prototype.billing_evening_phone = undefined;
 
   /**
    * Billing first name
-   * @member {String} billingFirstName
+   * @member {String} billing_first_name
    */
-  exports.prototype.billingFirstName = undefined;
+  exports.prototype.billing_first_name = undefined;
 
   /**
    * Billing last name
-   * @member {String} billingLastName
+   * @member {String} billing_last_name
    */
-  exports.prototype.billingLastName = undefined;
+  exports.prototype.billing_last_name = undefined;
 
   /**
    * Billing postal code
-   * @member {String} billingPostalCode
+   * @member {String} billing_postal_code
    */
-  exports.prototype.billingPostalCode = undefined;
+  exports.prototype.billing_postal_code = undefined;
 
   /**
    * Billing state
-   * @member {String} billingState
+   * @member {String} billing_state
    */
-  exports.prototype.billingState = undefined;
+  exports.prototype.billing_state = undefined;
 
   /**
    * Email address of this customer profile
@@ -191,105 +191,105 @@
 
   /**
    * Last modified date end
-   * @member {String} lastModifiedDtsEnd
+   * @member {String} last_modified_dts_end
    */
-  exports.prototype.lastModifiedDtsEnd = undefined;
+  exports.prototype.last_modified_dts_end = undefined;
 
   /**
    * Last modified date start
-   * @member {String} lastModifiedDtsStart
+   * @member {String} last_modified_dts_start
    */
-  exports.prototype.lastModifiedDtsStart = undefined;
+  exports.prototype.last_modified_dts_start = undefined;
 
   /**
    * Pricing tier name
-   * @member {String} pricingTierName
+   * @member {String} pricing_tier_name
    */
-  exports.prototype.pricingTierName = undefined;
+  exports.prototype.pricing_tier_name = undefined;
 
   /**
    * Pricing tier oid
-   * @member {Number} pricingTierOid
+   * @member {Number} pricing_tier_oid
    */
-  exports.prototype.pricingTierOid = undefined;
+  exports.prototype.pricing_tier_oid = undefined;
 
   /**
    * QuickBooks class to import this customer as
-   * @member {String} qbClass
+   * @member {String} qb_class
    */
-  exports.prototype.qbClass = undefined;
+  exports.prototype.qb_class = undefined;
 
   /**
    * QuickBooks name to import this customer as
-   * @member {String} quickbooksCode
+   * @member {String} quickbooks_code
    */
-  exports.prototype.quickbooksCode = undefined;
+  exports.prototype.quickbooks_code = undefined;
 
   /**
    * Billing city
-   * @member {String} shippingCity
+   * @member {String} shipping_city
    */
-  exports.prototype.shippingCity = undefined;
+  exports.prototype.shipping_city = undefined;
 
   /**
    * Billing company
-   * @member {String} shippingCompany
+   * @member {String} shipping_company
    */
-  exports.prototype.shippingCompany = undefined;
+  exports.prototype.shipping_company = undefined;
 
   /**
    * Billing country code
-   * @member {String} shippingCountryCode
+   * @member {String} shipping_country_code
    */
-  exports.prototype.shippingCountryCode = undefined;
+  exports.prototype.shipping_country_code = undefined;
 
   /**
    * Billing day phone
-   * @member {String} shippingDayPhone
+   * @member {String} shipping_day_phone
    */
-  exports.prototype.shippingDayPhone = undefined;
+  exports.prototype.shipping_day_phone = undefined;
 
   /**
    * Billing evening phone
-   * @member {String} shippingEveningPhone
+   * @member {String} shipping_evening_phone
    */
-  exports.prototype.shippingEveningPhone = undefined;
+  exports.prototype.shipping_evening_phone = undefined;
 
   /**
    * Billing first name
-   * @member {String} shippingFirstName
+   * @member {String} shipping_first_name
    */
-  exports.prototype.shippingFirstName = undefined;
+  exports.prototype.shipping_first_name = undefined;
 
   /**
    * Billing last name
-   * @member {String} shippingLastName
+   * @member {String} shipping_last_name
    */
-  exports.prototype.shippingLastName = undefined;
+  exports.prototype.shipping_last_name = undefined;
 
   /**
    * Billing postal code
-   * @member {String} shippingPostalCode
+   * @member {String} shipping_postal_code
    */
-  exports.prototype.shippingPostalCode = undefined;
+  exports.prototype.shipping_postal_code = undefined;
 
   /**
    * Billing state
-   * @member {String} shippingState
+   * @member {String} shipping_state
    */
-  exports.prototype.shippingState = undefined;
+  exports.prototype.shipping_state = undefined;
 
   /**
    * Signup date end
-   * @member {String} signupDtsEnd
+   * @member {String} signup_dts_end
    */
-  exports.prototype.signupDtsEnd = undefined;
+  exports.prototype.signup_dts_end = undefined;
 
   /**
    * Signup date start
-   * @member {String} signupDtsStart
+   * @member {String} signup_dts_start
    */
-  exports.prototype.signupDtsStart = undefined;
+  exports.prototype.signup_dts_start = undefined;
 
   return exports;
 

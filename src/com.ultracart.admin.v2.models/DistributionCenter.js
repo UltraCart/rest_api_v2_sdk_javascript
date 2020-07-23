@@ -64,23 +64,23 @@
       if (data.hasOwnProperty('code'))
         obj.code = ApiClient.convertToType(data['code'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('default_center'))
-        obj.defaultCenter = ApiClient.convertToType(data['default_center'], 'Boolean');
+        obj.default_center = ApiClient.convertToType(data['default_center'], 'Boolean');
       if (data.hasOwnProperty('default_handles_all_items'))
-        obj.defaultHandlesAllItems = ApiClient.convertToType(data['default_handles_all_items'], 'Boolean');
+        obj.default_handles_all_items = ApiClient.convertToType(data['default_handles_all_items'], 'Boolean');
       if (data.hasOwnProperty('distribution_center_oid'))
-        obj.distributionCenterOid = ApiClient.convertToType(data['distribution_center_oid'], 'Number');
+        obj.distribution_center_oid = ApiClient.convertToType(data['distribution_center_oid'], 'Number');
       if (data.hasOwnProperty('duns'))
         obj.duns = ApiClient.convertToType(data['duns'], 'String');
       if (data.hasOwnProperty('estimate_from_distribution_center_oid'))
-        obj.estimateFromDistributionCenterOid = ApiClient.convertToType(data['estimate_from_distribution_center_oid'], 'Number');
+        obj.estimate_from_distribution_center_oid = ApiClient.convertToType(data['estimate_from_distribution_center_oid'], 'Number');
       if (data.hasOwnProperty('ftp_password'))
-        obj.ftpPassword = ApiClient.convertToType(data['ftp_password'], 'String');
+        obj.ftp_password = ApiClient.convertToType(data['ftp_password'], 'String');
       if (data.hasOwnProperty('hold_before_shipment_minutes'))
-        obj.holdBeforeShipmentMinutes = ApiClient.convertToType(data['hold_before_shipment_minutes'], 'Number');
+        obj.hold_before_shipment_minutes = ApiClient.convertToType(data['hold_before_shipment_minutes'], 'Number');
       if (data.hasOwnProperty('hold_before_transmission'))
-        obj.holdBeforeTransmission = ApiClient.convertToType(data['hold_before_transmission'], 'Boolean');
+        obj.hold_before_transmission = ApiClient.convertToType(data['hold_before_transmission'], 'Boolean');
       if (data.hasOwnProperty('holdAutoOrderBeforeShipmentMinutes'))
         obj.holdAutoOrderBeforeShipmentMinutes = ApiClient.convertToType(data['holdAutoOrderBeforeShipmentMinutes'], 'Number');
       if (data.hasOwnProperty('latitude'))
@@ -90,35 +90,35 @@
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('no_customer_direct_shipments'))
-        obj.noCustomerDirectShipments = ApiClient.convertToType(data['no_customer_direct_shipments'], 'Boolean');
+        obj.no_customer_direct_shipments = ApiClient.convertToType(data['no_customer_direct_shipments'], 'Boolean');
       if (data.hasOwnProperty('no_split_shipment'))
-        obj.noSplitShipment = ApiClient.convertToType(data['no_split_shipment'], 'Boolean');
+        obj.no_split_shipment = ApiClient.convertToType(data['no_split_shipment'], 'Boolean');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('process_days'))
-        obj.processDays = ApiClient.convertToType(data['process_days'], 'Number');
+        obj.process_days = ApiClient.convertToType(data['process_days'], 'Number');
       if (data.hasOwnProperty('process_inventory_start_time'))
-        obj.processInventoryStartTime = ApiClient.convertToType(data['process_inventory_start_time'], 'String');
+        obj.process_inventory_start_time = ApiClient.convertToType(data['process_inventory_start_time'], 'String');
       if (data.hasOwnProperty('process_inventory_stop_time'))
-        obj.processInventoryStopTime = ApiClient.convertToType(data['process_inventory_stop_time'], 'String');
+        obj.process_inventory_stop_time = ApiClient.convertToType(data['process_inventory_stop_time'], 'String');
       if (data.hasOwnProperty('require_asn'))
-        obj.requireAsn = ApiClient.convertToType(data['require_asn'], 'Boolean');
+        obj.require_asn = ApiClient.convertToType(data['require_asn'], 'Boolean');
       if (data.hasOwnProperty('send_kit_instead_of_components'))
-        obj.sendKitInsteadOfComponents = ApiClient.convertToType(data['send_kit_instead_of_components'], 'Boolean');
+        obj.send_kit_instead_of_components = ApiClient.convertToType(data['send_kit_instead_of_components'], 'Boolean');
       if (data.hasOwnProperty('shipment_cutoff_time_friday'))
-        obj.shipmentCutoffTimeFriday = ApiClient.convertToType(data['shipment_cutoff_time_friday'], 'String');
+        obj.shipment_cutoff_time_friday = ApiClient.convertToType(data['shipment_cutoff_time_friday'], 'String');
       if (data.hasOwnProperty('shipment_cutoff_time_monday'))
-        obj.shipmentCutoffTimeMonday = ApiClient.convertToType(data['shipment_cutoff_time_monday'], 'String');
+        obj.shipment_cutoff_time_monday = ApiClient.convertToType(data['shipment_cutoff_time_monday'], 'String');
       if (data.hasOwnProperty('shipment_cutoff_time_saturday'))
-        obj.shipmentCutoffTimeSaturday = ApiClient.convertToType(data['shipment_cutoff_time_saturday'], 'String');
+        obj.shipment_cutoff_time_saturday = ApiClient.convertToType(data['shipment_cutoff_time_saturday'], 'String');
       if (data.hasOwnProperty('shipment_cutoff_time_sunday'))
-        obj.shipmentCutoffTimeSunday = ApiClient.convertToType(data['shipment_cutoff_time_sunday'], 'String');
+        obj.shipment_cutoff_time_sunday = ApiClient.convertToType(data['shipment_cutoff_time_sunday'], 'String');
       if (data.hasOwnProperty('shipment_cutoff_time_thursday'))
-        obj.shipmentCutoffTimeThursday = ApiClient.convertToType(data['shipment_cutoff_time_thursday'], 'String');
+        obj.shipment_cutoff_time_thursday = ApiClient.convertToType(data['shipment_cutoff_time_thursday'], 'String');
       if (data.hasOwnProperty('shipment_cutoff_time_tuesday'))
-        obj.shipmentCutoffTimeTuesday = ApiClient.convertToType(data['shipment_cutoff_time_tuesday'], 'String');
+        obj.shipment_cutoff_time_tuesday = ApiClient.convertToType(data['shipment_cutoff_time_tuesday'], 'String');
       if (data.hasOwnProperty('shipment_cutoff_time_wednesday'))
-        obj.shipmentCutoffTimeWednesday = ApiClient.convertToType(data['shipment_cutoff_time_wednesday'], 'String');
+        obj.shipment_cutoff_time_wednesday = ApiClient.convertToType(data['shipment_cutoff_time_wednesday'], 'String');
       if (data.hasOwnProperty('state'))
         obj.state = ApiClient.convertToType(data['state'], 'String');
       if (data.hasOwnProperty('transport'))
@@ -153,27 +153,27 @@
 
   /**
    * Country code of the distribution center
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * True if this is the default distribution center on the account
-   * @member {Boolean} defaultCenter
+   * @member {Boolean} default_center
    */
-  exports.prototype.defaultCenter = undefined;
+  exports.prototype.default_center = undefined;
 
   /**
    * True if this distribution center handles all new items by default
-   * @member {Boolean} defaultHandlesAllItems
+   * @member {Boolean} default_handles_all_items
    */
-  exports.prototype.defaultHandlesAllItems = undefined;
+  exports.prototype.default_handles_all_items = undefined;
 
   /**
    * Distribution center object identifier
-   * @member {Number} distributionCenterOid
+   * @member {Number} distribution_center_oid
    */
-  exports.prototype.distributionCenterOid = undefined;
+  exports.prototype.distribution_center_oid = undefined;
 
   /**
    * DUNS number assigned to this distribution center (EDI)
@@ -183,27 +183,27 @@
 
   /**
    * Estimate shipments for this distribution center as if they came from the other distribution center
-   * @member {Number} estimateFromDistributionCenterOid
+   * @member {Number} estimate_from_distribution_center_oid
    */
-  exports.prototype.estimateFromDistributionCenterOid = undefined;
+  exports.prototype.estimate_from_distribution_center_oid = undefined;
 
   /**
    * Password associated with the virtual FTP
-   * @member {String} ftpPassword
+   * @member {String} ftp_password
    */
-  exports.prototype.ftpPassword = undefined;
+  exports.prototype.ftp_password = undefined;
 
   /**
    * The number of minutes to hold a shipment
-   * @member {Number} holdBeforeShipmentMinutes
+   * @member {Number} hold_before_shipment_minutes
    */
-  exports.prototype.holdBeforeShipmentMinutes = undefined;
+  exports.prototype.hold_before_shipment_minutes = undefined;
 
   /**
    * True if the shipment should be held before transmission and require a manual release
-   * @member {Boolean} holdBeforeTransmission
+   * @member {Boolean} hold_before_transmission
    */
-  exports.prototype.holdBeforeTransmission = undefined;
+  exports.prototype.hold_before_transmission = undefined;
 
   /**
    * @member {Number} holdAutoOrderBeforeShipmentMinutes
@@ -230,93 +230,93 @@
 
   /**
    * True if this distribution center does not handle customer direct shipments
-   * @member {Boolean} noCustomerDirectShipments
+   * @member {Boolean} no_customer_direct_shipments
    */
-  exports.prototype.noCustomerDirectShipments = undefined;
+  exports.prototype.no_customer_direct_shipments = undefined;
 
   /**
    * True if this distribution center is not allowed to participate in a split shipment.
-   * @member {Boolean} noSplitShipment
+   * @member {Boolean} no_split_shipment
    */
-  exports.prototype.noSplitShipment = undefined;
+  exports.prototype.no_split_shipment = undefined;
 
   /**
    * Postal code of the distribution center
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * The number of processing days required before an order ships
-   * @member {Number} processDays
+   * @member {Number} process_days
    */
-  exports.prototype.processDays = undefined;
+  exports.prototype.process_days = undefined;
 
   /**
    * The time (EST) after which inventory updates will be processed
-   * @member {String} processInventoryStartTime
+   * @member {String} process_inventory_start_time
    */
-  exports.prototype.processInventoryStartTime = undefined;
+  exports.prototype.process_inventory_start_time = undefined;
 
   /**
    * The time (EST) before which inventory updates will be processed
-   * @member {String} processInventoryStopTime
+   * @member {String} process_inventory_stop_time
    */
-  exports.prototype.processInventoryStopTime = undefined;
+  exports.prototype.process_inventory_stop_time = undefined;
 
   /**
    * True if ASNs are required for this distribution center (EDI)
-   * @member {Boolean} requireAsn
+   * @member {Boolean} require_asn
    */
-  exports.prototype.requireAsn = undefined;
+  exports.prototype.require_asn = undefined;
 
   /**
    * True if we should send the kit instead of the components
-   * @member {Boolean} sendKitInsteadOfComponents
+   * @member {Boolean} send_kit_instead_of_components
    */
-  exports.prototype.sendKitInsteadOfComponents = undefined;
+  exports.prototype.send_kit_instead_of_components = undefined;
 
   /**
    * The time (EST) after which shipments will not be processed on Friday
-   * @member {String} shipmentCutoffTimeFriday
+   * @member {String} shipment_cutoff_time_friday
    */
-  exports.prototype.shipmentCutoffTimeFriday = undefined;
+  exports.prototype.shipment_cutoff_time_friday = undefined;
 
   /**
    * The time (EST) after which shipments will not be processed on Monday
-   * @member {String} shipmentCutoffTimeMonday
+   * @member {String} shipment_cutoff_time_monday
    */
-  exports.prototype.shipmentCutoffTimeMonday = undefined;
+  exports.prototype.shipment_cutoff_time_monday = undefined;
 
   /**
    * The time (EST) after which shipments will not be processed on Saturday
-   * @member {String} shipmentCutoffTimeSaturday
+   * @member {String} shipment_cutoff_time_saturday
    */
-  exports.prototype.shipmentCutoffTimeSaturday = undefined;
+  exports.prototype.shipment_cutoff_time_saturday = undefined;
 
   /**
    * The time (EST) after which shipments will not be processed on Sunday
-   * @member {String} shipmentCutoffTimeSunday
+   * @member {String} shipment_cutoff_time_sunday
    */
-  exports.prototype.shipmentCutoffTimeSunday = undefined;
+  exports.prototype.shipment_cutoff_time_sunday = undefined;
 
   /**
    * The time (EST) after which shipments will not be processed on Thursday
-   * @member {String} shipmentCutoffTimeThursday
+   * @member {String} shipment_cutoff_time_thursday
    */
-  exports.prototype.shipmentCutoffTimeThursday = undefined;
+  exports.prototype.shipment_cutoff_time_thursday = undefined;
 
   /**
    * The time (EST) after which shipments will not be processed on Tuesday
-   * @member {String} shipmentCutoffTimeTuesday
+   * @member {String} shipment_cutoff_time_tuesday
    */
-  exports.prototype.shipmentCutoffTimeTuesday = undefined;
+  exports.prototype.shipment_cutoff_time_tuesday = undefined;
 
   /**
    * The time (EST) after which shipments will not be processed on Wednesday
-   * @member {String} shipmentCutoffTimeWednesday
+   * @member {String} shipment_cutoff_time_wednesday
    */
-  exports.prototype.shipmentCutoffTimeWednesday = undefined;
+  exports.prototype.shipment_cutoff_time_wednesday = undefined;
 
   /**
    * State of the distribution center

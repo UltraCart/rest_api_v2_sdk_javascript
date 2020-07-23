@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
-        obj.discountPercent = ApiClient.convertToType(data['discount_percent'], 'Number');
+        obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
     }
@@ -65,9 +65,9 @@
 
   /**
    * The percentage of subtotal discount
-   * @member {Number} discountPercent
+   * @member {Number} discount_percent
    */
-  exports.prototype.discountPercent = undefined;
+  exports.prototype.discount_percent = undefined;
 
   /**
    * A list of items of which at least one must be purchased for coupon to be valid.

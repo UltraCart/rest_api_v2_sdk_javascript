@@ -31,11 +31,11 @@ Name | Type | Description | Notes
 
 * `NA` (value: `"NA"`)
 
-* `no` (value: `"No"`)
+* `No` (value: `"No"`)
 
-* `notFound` (value: `"NotFound"`)
+* `NotFound` (value: `"NotFound"`)
 
-* `yes` (value: `"Yes"`)
+* `Yes` (value: `"Yes"`)
 
 
 

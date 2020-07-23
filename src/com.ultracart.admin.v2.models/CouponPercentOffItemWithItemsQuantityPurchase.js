@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
-        obj.discountPercent = ApiClient.convertToType(data['discount_percent'], 'Number');
+        obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
       if (data.hasOwnProperty('required_purchase_items'))
-        obj.requiredPurchaseItems = ApiClient.convertToType(data['required_purchase_items'], ['String']);
+        obj.required_purchase_items = ApiClient.convertToType(data['required_purchase_items'], ['String']);
       if (data.hasOwnProperty('required_purchase_quantity'))
-        obj.requiredPurchaseQuantity = ApiClient.convertToType(data['required_purchase_quantity'], 'Number');
+        obj.required_purchase_quantity = ApiClient.convertToType(data['required_purchase_quantity'], 'Number');
     }
     return obj;
   }
 
   /**
    * The percentage of subtotal discount
-   * @member {Number} discountPercent
+   * @member {Number} discount_percent
    */
-  exports.prototype.discountPercent = undefined;
+  exports.prototype.discount_percent = undefined;
 
   /**
    * A list of items which will receive a discount if one of the required purchase items is purchased.
@@ -89,15 +89,15 @@
 
   /**
    * Required items (at least one from the list) that must be purchased for coupon to be valid
-   * @member {Array.<String>} requiredPurchaseItems
+   * @member {Array.<String>} required_purchase_items
    */
-  exports.prototype.requiredPurchaseItems = undefined;
+  exports.prototype.required_purchase_items = undefined;
 
   /**
    * The quantity of items that must be purchased for the discount to be applied.
-   * @member {Number} requiredPurchaseQuantity
+   * @member {Number} required_purchase_quantity
    */
-  exports.prototype.requiredPurchaseQuantity = undefined;
+  exports.prototype.required_purchase_quantity = undefined;
 
   return exports;
 

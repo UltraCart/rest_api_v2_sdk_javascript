@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('collect_credit_card_verification_number'))
-        obj.collectCreditCardVerificationNumber = ApiClient.convertToType(data['collect_credit_card_verification_number'], 'Boolean');
+        obj.collect_credit_card_verification_number = ApiClient.convertToType(data['collect_credit_card_verification_number'], 'Boolean');
       if (data.hasOwnProperty('credit_card_types'))
-        obj.creditCardTypes = ApiClient.convertToType(data['credit_card_types'], ['String']);
+        obj.credit_card_types = ApiClient.convertToType(data['credit_card_types'], ['String']);
       if (data.hasOwnProperty('hosted_fields_shopping_cart_token'))
-        obj.hostedFieldsShoppingCartToken = ApiClient.convertToType(data['hosted_fields_shopping_cart_token'], 'String');
+        obj.hosted_fields_shopping_cart_token = ApiClient.convertToType(data['hosted_fields_shopping_cart_token'], 'String');
     }
     return obj;
   }
 
   /**
    * True if the credit card verification number should be collected
-   * @member {Boolean} collectCreditCardVerificationNumber
+   * @member {Boolean} collect_credit_card_verification_number
    */
-  exports.prototype.collectCreditCardVerificationNumber = undefined;
+  exports.prototype.collect_credit_card_verification_number = undefined;
 
   /**
    * Available credit card types
-   * @member {Array.<String>} creditCardTypes
+   * @member {Array.<String>} credit_card_types
    */
-  exports.prototype.creditCardTypes = undefined;
+  exports.prototype.credit_card_types = undefined;
 
   /**
    * The shoppingCartToken needed for proper initialization of hosted fields collection
-   * @member {String} hostedFieldsShoppingCartToken
+   * @member {String} hosted_fields_shopping_cart_token
    */
-  exports.prototype.hostedFieldsShoppingCartToken = undefined;
+  exports.prototype.hosted_fields_shopping_cart_token = undefined;
 
   return exports;
 

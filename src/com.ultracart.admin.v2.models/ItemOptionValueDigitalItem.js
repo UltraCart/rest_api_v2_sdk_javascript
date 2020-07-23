@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('digital_item_oid'))
-        obj.digitalItemOid = ApiClient.convertToType(data['digital_item_oid'], 'Number');
+        obj.digital_item_oid = ApiClient.convertToType(data['digital_item_oid'], 'Number');
       if (data.hasOwnProperty('original_filename'))
-        obj.originalFilename = ApiClient.convertToType(data['original_filename'], 'String');
+        obj.original_filename = ApiClient.convertToType(data['original_filename'], 'String');
     }
     return obj;
   }
 
   /**
    * Digital item object identifier
-   * @member {Number} digitalItemOid
+   * @member {Number} digital_item_oid
    */
-  exports.prototype.digitalItemOid = undefined;
+  exports.prototype.digital_item_oid = undefined;
 
   /**
    * Original filename
-   * @member {String} originalFilename
+   * @member {String} original_filename
    */
-  exports.prototype.originalFilename = undefined;
+  exports.prototype.original_filename = undefined;
 
   return exports;
 

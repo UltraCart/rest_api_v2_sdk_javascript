@@ -58,13 +58,13 @@
       if (data.hasOwnProperty('config'))
         obj.config = AccountsReceivableRetryConfig.constructFromObject(data['config']);
       if (data.hasOwnProperty('coupon_codes'))
-        obj.couponCodes = ApiClient.convertToType(data['coupon_codes'], ['String']);
+        obj.coupon_codes = ApiClient.convertToType(data['coupon_codes'], ['String']);
       if (data.hasOwnProperty('emails'))
         obj.emails = ApiClient.convertToType(data['emails'], ['String']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('has_linked_accounts'))
-        obj.hasLinkedAccounts = ApiClient.convertToType(data['has_linked_accounts'], 'Boolean');
+        obj.has_linked_accounts = ApiClient.convertToType(data['has_linked_accounts'], 'Boolean');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -79,9 +79,9 @@
   exports.prototype.config = undefined;
 
   /**
-   * @member {Array.<String>} couponCodes
+   * @member {Array.<String>} coupon_codes
    */
-  exports.prototype.couponCodes = undefined;
+  exports.prototype.coupon_codes = undefined;
 
   /**
    * @member {Array.<String>} emails
@@ -94,9 +94,9 @@
   exports.prototype.error = undefined;
 
   /**
-   * @member {Boolean} hasLinkedAccounts
+   * @member {Boolean} has_linked_accounts
    */
-  exports.prototype.hasLinkedAccounts = undefined;
+  exports.prototype.has_linked_accounts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

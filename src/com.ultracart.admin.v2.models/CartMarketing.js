@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('advertising_source'))
-        obj.advertisingSource = ApiClient.convertToType(data['advertising_source'], 'String');
+        obj.advertising_source = ApiClient.convertToType(data['advertising_source'], 'String');
       if (data.hasOwnProperty('mailing_list_opt_in'))
-        obj.mailingListOptIn = ApiClient.convertToType(data['mailing_list_opt_in'], 'Boolean');
+        obj.mailing_list_opt_in = ApiClient.convertToType(data['mailing_list_opt_in'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * The advertising source the customer indicated
-   * @member {String} advertisingSource
+   * @member {String} advertising_source
    */
-  exports.prototype.advertisingSource = undefined;
+  exports.prototype.advertising_source = undefined;
 
   /**
    * True if the customer agrees to receiving marketing emails
-   * @member {Boolean} mailingListOptIn
+   * @member {Boolean} mailing_list_opt_in
    */
-  exports.prototype.mailingListOptIn = undefined;
+  exports.prototype.mailing_list_opt_in = undefined;
 
   return exports;
 

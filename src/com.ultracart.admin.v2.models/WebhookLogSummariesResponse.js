@@ -62,7 +62,7 @@
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('webhook_log_summaries'))
-        obj.webhookLogSummaries = ApiClient.convertToType(data['webhook_log_summaries'], [WebhookLogSummary]);
+        obj.webhook_log_summaries = ApiClient.convertToType(data['webhook_log_summaries'], [WebhookLogSummary]);
     }
     return obj;
   }
@@ -85,9 +85,9 @@
 
   /**
    * Webhook log summaries
-   * @member {Array.<module:com.ultracart.admin.v2.models/WebhookLogSummary>} webhookLogSummaries
+   * @member {Array.<module:com.ultracart.admin.v2.models/WebhookLogSummary>} webhook_log_summaries
    */
-  exports.prototype.webhookLogSummaries = undefined;
+  exports.prototype.webhook_log_summaries = undefined;
 
   return exports;
 

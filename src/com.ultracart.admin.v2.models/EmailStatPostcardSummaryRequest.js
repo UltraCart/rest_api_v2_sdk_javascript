@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('commseq_postcard_uuids'))
-        obj.commseqPostcardUuids = ApiClient.convertToType(data['commseq_postcard_uuids'], ['String']);
+        obj.commseq_postcard_uuids = ApiClient.convertToType(data['commseq_postcard_uuids'], ['String']);
       if (data.hasOwnProperty('days'))
         obj.days = ApiClient.convertToType(data['days'], 'Number');
     }
@@ -64,9 +64,9 @@
   }
 
   /**
-   * @member {Array.<String>} commseqPostcardUuids
+   * @member {Array.<String>} commseq_postcard_uuids
    */
-  exports.prototype.commseqPostcardUuids = undefined;
+  exports.prototype.commseq_postcard_uuids = undefined;
 
   /**
    * @member {Number} days

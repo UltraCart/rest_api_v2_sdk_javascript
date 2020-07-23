@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('pricing_tier_oid'))
-        obj.pricingTierOid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
+        obj.pricing_tier_oid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
     }
     return obj;
   }
@@ -71,9 +71,9 @@
 
   /**
    * Pricing Tier Oid
-   * @member {Number} pricingTierOid
+   * @member {Number} pricing_tier_oid
    */
-  exports.prototype.pricingTierOid = undefined;
+  exports.prototype.pricing_tier_oid = undefined;
 
   return exports;
 

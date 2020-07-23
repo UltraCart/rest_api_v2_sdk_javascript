@@ -56,66 +56,66 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('account_number'))
-        obj.accountNumber = ApiClient.convertToType(data['account_number'], 'String');
+        obj.account_number = ApiClient.convertToType(data['account_number'], 'String');
       if (data.hasOwnProperty('adjustment_request_text'))
-        obj.adjustmentRequestText = ApiClient.convertToType(data['adjustment_request_text'], 'String');
+        obj.adjustment_request_text = ApiClient.convertToType(data['adjustment_request_text'], 'String');
       if (data.hasOwnProperty('amount'))
         obj.amount = ApiClient.convertToType(data['amount'], 'Number');
       if (data.hasOwnProperty('auth_code'))
-        obj.authCode = ApiClient.convertToType(data['auth_code'], 'String');
+        obj.auth_code = ApiClient.convertToType(data['auth_code'], 'String');
       if (data.hasOwnProperty('case_number'))
-        obj.caseNumber = ApiClient.convertToType(data['case_number'], 'String');
+        obj.case_number = ApiClient.convertToType(data['case_number'], 'String');
       if (data.hasOwnProperty('chargeback_dispute_oid'))
-        obj.chargebackDisputeOid = ApiClient.convertToType(data['chargeback_dispute_oid'], 'Number');
+        obj.chargeback_dispute_oid = ApiClient.convertToType(data['chargeback_dispute_oid'], 'Number');
       if (data.hasOwnProperty('chargeback_dts'))
-        obj.chargebackDts = ApiClient.convertToType(data['chargeback_dts'], 'String');
+        obj.chargeback_dts = ApiClient.convertToType(data['chargeback_dts'], 'String');
       if (data.hasOwnProperty('currency'))
         obj.currency = ApiClient.convertToType(data['currency'], 'String');
       if (data.hasOwnProperty('customer_care_notes'))
-        obj.customerCareNotes = ApiClient.convertToType(data['customer_care_notes'], 'String');
+        obj.customer_care_notes = ApiClient.convertToType(data['customer_care_notes'], 'String');
       if (data.hasOwnProperty('encryption_key'))
-        obj.encryptionKey = ApiClient.convertToType(data['encryption_key'], 'String');
+        obj.encryption_key = ApiClient.convertToType(data['encryption_key'], 'String');
       if (data.hasOwnProperty('expiration_dts'))
-        obj.expirationDts = ApiClient.convertToType(data['expiration_dts'], 'String');
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('fax_failure_reason'))
-        obj.faxFailureReason = ApiClient.convertToType(data['fax_failure_reason'], 'String');
+        obj.fax_failure_reason = ApiClient.convertToType(data['fax_failure_reason'], 'String');
       if (data.hasOwnProperty('fax_number'))
-        obj.faxNumber = ApiClient.convertToType(data['fax_number'], 'String');
+        obj.fax_number = ApiClient.convertToType(data['fax_number'], 'String');
       if (data.hasOwnProperty('fax_transaction_id'))
-        obj.faxTransactionId = ApiClient.convertToType(data['fax_transaction_id'], 'Number');
+        obj.fax_transaction_id = ApiClient.convertToType(data['fax_transaction_id'], 'Number');
       if (data.hasOwnProperty('icsid'))
         obj.icsid = ApiClient.convertToType(data['icsid'], 'String');
       if (data.hasOwnProperty('merchant_account_profile_oid'))
-        obj.merchantAccountProfileOid = ApiClient.convertToType(data['merchant_account_profile_oid'], 'Number');
+        obj.merchant_account_profile_oid = ApiClient.convertToType(data['merchant_account_profile_oid'], 'Number');
       if (data.hasOwnProperty('order'))
         obj.order = Order.constructFromObject(data['order']);
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('partial_card_number'))
-        obj.partialCardNumber = ApiClient.convertToType(data['partial_card_number'], 'String');
+        obj.partial_card_number = ApiClient.convertToType(data['partial_card_number'], 'String');
       if (data.hasOwnProperty('pdf_file_oid'))
-        obj.pdfFileOid = ApiClient.convertToType(data['pdf_file_oid'], 'String');
+        obj.pdf_file_oid = ApiClient.convertToType(data['pdf_file_oid'], 'String');
       if (data.hasOwnProperty('reason_code'))
-        obj.reasonCode = ApiClient.convertToType(data['reason_code'], 'String');
+        obj.reason_code = ApiClient.convertToType(data['reason_code'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('website_url'))
-        obj.websiteUrl = ApiClient.convertToType(data['website_url'], 'String');
+        obj.website_url = ApiClient.convertToType(data['website_url'], 'String');
     }
     return obj;
   }
 
   /**
    * Account number
-   * @member {String} accountNumber
+   * @member {String} account_number
    */
-  exports.prototype.accountNumber = undefined;
+  exports.prototype.account_number = undefined;
 
   /**
    * Adjustment request text
-   * @member {String} adjustmentRequestText
+   * @member {String} adjustment_request_text
    */
-  exports.prototype.adjustmentRequestText = undefined;
+  exports.prototype.adjustment_request_text = undefined;
 
   /**
    * Amount
@@ -125,27 +125,27 @@
 
   /**
    * Auth code
-   * @member {String} authCode
+   * @member {String} auth_code
    */
-  exports.prototype.authCode = undefined;
+  exports.prototype.auth_code = undefined;
 
   /**
    * Case number
-   * @member {String} caseNumber
+   * @member {String} case_number
    */
-  exports.prototype.caseNumber = undefined;
+  exports.prototype.case_number = undefined;
 
   /**
    * Chargeback Dispute Oid
-   * @member {Number} chargebackDisputeOid
+   * @member {Number} chargeback_dispute_oid
    */
-  exports.prototype.chargebackDisputeOid = undefined;
+  exports.prototype.chargeback_dispute_oid = undefined;
 
   /**
    * Chargeback dts
-   * @member {String} chargebackDts
+   * @member {String} chargeback_dts
    */
-  exports.prototype.chargebackDts = undefined;
+  exports.prototype.chargeback_dts = undefined;
 
   /**
    * Currency
@@ -155,39 +155,39 @@
 
   /**
    * Customer care notes
-   * @member {String} customerCareNotes
+   * @member {String} customer_care_notes
    */
-  exports.prototype.customerCareNotes = undefined;
+  exports.prototype.customer_care_notes = undefined;
 
   /**
    * Encryption key
-   * @member {String} encryptionKey
+   * @member {String} encryption_key
    */
-  exports.prototype.encryptionKey = undefined;
+  exports.prototype.encryption_key = undefined;
 
   /**
    * Expiration Dts
-   * @member {String} expirationDts
+   * @member {String} expiration_dts
    */
-  exports.prototype.expirationDts = undefined;
+  exports.prototype.expiration_dts = undefined;
 
   /**
    * Fax failure reason
-   * @member {String} faxFailureReason
+   * @member {String} fax_failure_reason
    */
-  exports.prototype.faxFailureReason = undefined;
+  exports.prototype.fax_failure_reason = undefined;
 
   /**
    * Fax number
-   * @member {String} faxNumber
+   * @member {String} fax_number
    */
-  exports.prototype.faxNumber = undefined;
+  exports.prototype.fax_number = undefined;
 
   /**
    * Fax transaction id
-   * @member {Number} faxTransactionId
+   * @member {Number} fax_transaction_id
    */
-  exports.prototype.faxTransactionId = undefined;
+  exports.prototype.fax_transaction_id = undefined;
 
   /**
    * icsid
@@ -197,9 +197,9 @@
 
   /**
    * Merchant account profile oid
-   * @member {Number} merchantAccountProfileOid
+   * @member {Number} merchant_account_profile_oid
    */
-  exports.prototype.merchantAccountProfileOid = undefined;
+  exports.prototype.merchant_account_profile_oid = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Order} order
@@ -208,27 +208,27 @@
 
   /**
    * Order Id
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
    * Partial card number
-   * @member {String} partialCardNumber
+   * @member {String} partial_card_number
    */
-  exports.prototype.partialCardNumber = undefined;
+  exports.prototype.partial_card_number = undefined;
 
   /**
    * PDF file oid
-   * @member {String} pdfFileOid
+   * @member {String} pdf_file_oid
    */
-  exports.prototype.pdfFileOid = undefined;
+  exports.prototype.pdf_file_oid = undefined;
 
   /**
    * Reason code
-   * @member {String} reasonCode
+   * @member {String} reason_code
    */
-  exports.prototype.reasonCode = undefined;
+  exports.prototype.reason_code = undefined;
 
   /**
    * Status
@@ -238,9 +238,9 @@
 
   /**
    * Website URL
-   * @member {String} websiteUrl
+   * @member {String} website_url
    */
-  exports.prototype.websiteUrl = undefined;
+  exports.prototype.website_url = undefined;
 
   return exports;
 

@@ -56,168 +56,168 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('left_conversion_count'))
-        obj.leftConversionCount = ApiClient.convertToType(data['left_conversion_count'], 'Number');
+        obj.left_conversion_count = ApiClient.convertToType(data['left_conversion_count'], 'Number');
       if (data.hasOwnProperty('left_conversion_count_formatted'))
-        obj.leftConversionCountFormatted = ApiClient.convertToType(data['left_conversion_count_formatted'], 'String');
+        obj.left_conversion_count_formatted = ApiClient.convertToType(data['left_conversion_count_formatted'], 'String');
       if (data.hasOwnProperty('left_customer_count'))
-        obj.leftCustomerCount = ApiClient.convertToType(data['left_customer_count'], 'Number');
+        obj.left_customer_count = ApiClient.convertToType(data['left_customer_count'], 'Number');
       if (data.hasOwnProperty('left_customer_count_formatted'))
-        obj.leftCustomerCountFormatted = ApiClient.convertToType(data['left_customer_count_formatted'], 'String');
+        obj.left_customer_count_formatted = ApiClient.convertToType(data['left_customer_count_formatted'], 'String');
       if (data.hasOwnProperty('left_order_count'))
-        obj.leftOrderCount = ApiClient.convertToType(data['left_order_count'], 'Number');
+        obj.left_order_count = ApiClient.convertToType(data['left_order_count'], 'Number');
       if (data.hasOwnProperty('left_order_count_formatted'))
-        obj.leftOrderCountFormatted = ApiClient.convertToType(data['left_order_count_formatted'], 'String');
+        obj.left_order_count_formatted = ApiClient.convertToType(data['left_order_count_formatted'], 'String');
       if (data.hasOwnProperty('left_profit'))
-        obj.leftProfit = ApiClient.convertToType(data['left_profit'], 'Number');
+        obj.left_profit = ApiClient.convertToType(data['left_profit'], 'Number');
       if (data.hasOwnProperty('left_profit_formatted'))
-        obj.leftProfitFormatted = ApiClient.convertToType(data['left_profit_formatted'], 'String');
+        obj.left_profit_formatted = ApiClient.convertToType(data['left_profit_formatted'], 'String');
       if (data.hasOwnProperty('left_revenue'))
-        obj.leftRevenue = ApiClient.convertToType(data['left_revenue'], 'Number');
+        obj.left_revenue = ApiClient.convertToType(data['left_revenue'], 'Number');
       if (data.hasOwnProperty('left_revenue_formatted'))
-        obj.leftRevenueFormatted = ApiClient.convertToType(data['left_revenue_formatted'], 'String');
+        obj.left_revenue_formatted = ApiClient.convertToType(data['left_revenue_formatted'], 'String');
       if (data.hasOwnProperty('right_conversion_count'))
-        obj.rightConversionCount = ApiClient.convertToType(data['right_conversion_count'], 'Number');
+        obj.right_conversion_count = ApiClient.convertToType(data['right_conversion_count'], 'Number');
       if (data.hasOwnProperty('right_conversion_count_formatted'))
-        obj.rightConversionCountFormatted = ApiClient.convertToType(data['right_conversion_count_formatted'], 'String');
+        obj.right_conversion_count_formatted = ApiClient.convertToType(data['right_conversion_count_formatted'], 'String');
       if (data.hasOwnProperty('right_customer_count'))
-        obj.rightCustomerCount = ApiClient.convertToType(data['right_customer_count'], 'Number');
+        obj.right_customer_count = ApiClient.convertToType(data['right_customer_count'], 'Number');
       if (data.hasOwnProperty('right_customer_count_formatted'))
-        obj.rightCustomerCountFormatted = ApiClient.convertToType(data['right_customer_count_formatted'], 'String');
+        obj.right_customer_count_formatted = ApiClient.convertToType(data['right_customer_count_formatted'], 'String');
       if (data.hasOwnProperty('right_order_count'))
-        obj.rightOrderCount = ApiClient.convertToType(data['right_order_count'], 'Number');
+        obj.right_order_count = ApiClient.convertToType(data['right_order_count'], 'Number');
       if (data.hasOwnProperty('right_order_count_formatted'))
-        obj.rightOrderCountFormatted = ApiClient.convertToType(data['right_order_count_formatted'], 'String');
+        obj.right_order_count_formatted = ApiClient.convertToType(data['right_order_count_formatted'], 'String');
       if (data.hasOwnProperty('right_profit'))
-        obj.rightProfit = ApiClient.convertToType(data['right_profit'], 'Number');
+        obj.right_profit = ApiClient.convertToType(data['right_profit'], 'Number');
       if (data.hasOwnProperty('right_profit_formatted'))
-        obj.rightProfitFormatted = ApiClient.convertToType(data['right_profit_formatted'], 'String');
+        obj.right_profit_formatted = ApiClient.convertToType(data['right_profit_formatted'], 'String');
       if (data.hasOwnProperty('right_revenue'))
-        obj.rightRevenue = ApiClient.convertToType(data['right_revenue'], 'Number');
+        obj.right_revenue = ApiClient.convertToType(data['right_revenue'], 'Number');
       if (data.hasOwnProperty('right_revenue_formatted'))
-        obj.rightRevenueFormatted = ApiClient.convertToType(data['right_revenue_formatted'], 'String');
+        obj.right_revenue_formatted = ApiClient.convertToType(data['right_revenue_formatted'], 'String');
     }
     return obj;
   }
 
   /**
    * conversion count (left/default side)
-   * @member {Number} leftConversionCount
+   * @member {Number} left_conversion_count
    */
-  exports.prototype.leftConversionCount = undefined;
+  exports.prototype.left_conversion_count = undefined;
 
   /**
    * conversion count formatted (left/default side)
-   * @member {String} leftConversionCountFormatted
+   * @member {String} left_conversion_count_formatted
    */
-  exports.prototype.leftConversionCountFormatted = undefined;
+  exports.prototype.left_conversion_count_formatted = undefined;
 
   /**
    * customer count (left/default side)
-   * @member {Number} leftCustomerCount
+   * @member {Number} left_customer_count
    */
-  exports.prototype.leftCustomerCount = undefined;
+  exports.prototype.left_customer_count = undefined;
 
   /**
    * customer count formatted (left/default side)
-   * @member {String} leftCustomerCountFormatted
+   * @member {String} left_customer_count_formatted
    */
-  exports.prototype.leftCustomerCountFormatted = undefined;
+  exports.prototype.left_customer_count_formatted = undefined;
 
   /**
    * order count (left/default side)
-   * @member {Number} leftOrderCount
+   * @member {Number} left_order_count
    */
-  exports.prototype.leftOrderCount = undefined;
+  exports.prototype.left_order_count = undefined;
 
   /**
    * order count formatted (left/default side)
-   * @member {String} leftOrderCountFormatted
+   * @member {String} left_order_count_formatted
    */
-  exports.prototype.leftOrderCountFormatted = undefined;
+  exports.prototype.left_order_count_formatted = undefined;
 
   /**
    * profit (left/default side)
-   * @member {Number} leftProfit
+   * @member {Number} left_profit
    */
-  exports.prototype.leftProfit = undefined;
+  exports.prototype.left_profit = undefined;
 
   /**
    * profit formatted (left/default side)
-   * @member {String} leftProfitFormatted
+   * @member {String} left_profit_formatted
    */
-  exports.prototype.leftProfitFormatted = undefined;
+  exports.prototype.left_profit_formatted = undefined;
 
   /**
    * revenue (left/default side)
-   * @member {Number} leftRevenue
+   * @member {Number} left_revenue
    */
-  exports.prototype.leftRevenue = undefined;
+  exports.prototype.left_revenue = undefined;
 
   /**
    * revenue formatted (left/default side)
-   * @member {String} leftRevenueFormatted
+   * @member {String} left_revenue_formatted
    */
-  exports.prototype.leftRevenueFormatted = undefined;
+  exports.prototype.left_revenue_formatted = undefined;
 
   /**
    * conversion count (right side)
-   * @member {Number} rightConversionCount
+   * @member {Number} right_conversion_count
    */
-  exports.prototype.rightConversionCount = undefined;
+  exports.prototype.right_conversion_count = undefined;
 
   /**
    * conversion count formatted (right side)
-   * @member {String} rightConversionCountFormatted
+   * @member {String} right_conversion_count_formatted
    */
-  exports.prototype.rightConversionCountFormatted = undefined;
+  exports.prototype.right_conversion_count_formatted = undefined;
 
   /**
    * customer count (right side)
-   * @member {Number} rightCustomerCount
+   * @member {Number} right_customer_count
    */
-  exports.prototype.rightCustomerCount = undefined;
+  exports.prototype.right_customer_count = undefined;
 
   /**
    * customer count formatted (right side)
-   * @member {String} rightCustomerCountFormatted
+   * @member {String} right_customer_count_formatted
    */
-  exports.prototype.rightCustomerCountFormatted = undefined;
+  exports.prototype.right_customer_count_formatted = undefined;
 
   /**
    * order count (right side)
-   * @member {Number} rightOrderCount
+   * @member {Number} right_order_count
    */
-  exports.prototype.rightOrderCount = undefined;
+  exports.prototype.right_order_count = undefined;
 
   /**
    * order count formatted (right side)
-   * @member {String} rightOrderCountFormatted
+   * @member {String} right_order_count_formatted
    */
-  exports.prototype.rightOrderCountFormatted = undefined;
+  exports.prototype.right_order_count_formatted = undefined;
 
   /**
    * profit (right side)
-   * @member {Number} rightProfit
+   * @member {Number} right_profit
    */
-  exports.prototype.rightProfit = undefined;
+  exports.prototype.right_profit = undefined;
 
   /**
    * profit formatted (right side)
-   * @member {String} rightProfitFormatted
+   * @member {String} right_profit_formatted
    */
-  exports.prototype.rightProfitFormatted = undefined;
+  exports.prototype.right_profit_formatted = undefined;
 
   /**
    * revenue (right side)
-   * @member {Number} rightRevenue
+   * @member {Number} right_revenue
    */
-  exports.prototype.rightRevenue = undefined;
+  exports.prototype.right_revenue = undefined;
 
   /**
    * revenue formatted (right side)
-   * @member {String} rightRevenueFormatted
+   * @member {String} right_revenue_formatted
    */
-  exports.prototype.rightRevenueFormatted = undefined;
+  exports.prototype.right_revenue_formatted = undefined;
 
   return exports;
 

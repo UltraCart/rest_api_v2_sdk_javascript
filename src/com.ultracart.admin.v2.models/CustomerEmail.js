@@ -56,26 +56,26 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('customer_profile_email_oid'))
-        obj.customerProfileEmailOid = ApiClient.convertToType(data['customer_profile_email_oid'], 'Number');
+        obj.customer_profile_email_oid = ApiClient.convertToType(data['customer_profile_email_oid'], 'Number');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('label'))
         obj.label = ApiClient.convertToType(data['label'], 'String');
       if (data.hasOwnProperty('receipt_notification'))
-        obj.receiptNotification = ApiClient.convertToType(data['receipt_notification'], 'Boolean');
+        obj.receipt_notification = ApiClient.convertToType(data['receipt_notification'], 'Boolean');
       if (data.hasOwnProperty('refund_notification'))
-        obj.refundNotification = ApiClient.convertToType(data['refund_notification'], 'Boolean');
+        obj.refund_notification = ApiClient.convertToType(data['refund_notification'], 'Boolean');
       if (data.hasOwnProperty('shipment_notification'))
-        obj.shipmentNotification = ApiClient.convertToType(data['shipment_notification'], 'Boolean');
+        obj.shipment_notification = ApiClient.convertToType(data['shipment_notification'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * ID of the email
-   * @member {Number} customerProfileEmailOid
+   * @member {Number} customer_profile_email_oid
    */
-  exports.prototype.customerProfileEmailOid = undefined;
+  exports.prototype.customer_profile_email_oid = undefined;
 
   /**
    * Email
@@ -91,21 +91,21 @@
 
   /**
    * CC this email on receipt notifications
-   * @member {Boolean} receiptNotification
+   * @member {Boolean} receipt_notification
    */
-  exports.prototype.receiptNotification = undefined;
+  exports.prototype.receipt_notification = undefined;
 
   /**
    * CC this email on refund notifications
-   * @member {Boolean} refundNotification
+   * @member {Boolean} refund_notification
    */
-  exports.prototype.refundNotification = undefined;
+  exports.prototype.refund_notification = undefined;
 
   /**
    * CC this email on shipment notifications
-   * @member {Boolean} shipmentNotification
+   * @member {Boolean} shipment_notification
    */
-  exports.prototype.shipmentNotification = undefined;
+  exports.prototype.shipment_notification = undefined;
 
   return exports;
 

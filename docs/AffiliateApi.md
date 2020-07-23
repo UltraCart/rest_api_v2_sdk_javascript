@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getClicksByQuery"></a>
 # **getClicksByQuery**
-> AffiliateClicksResponse getClicksByQuery(clickQuery, opts)
+> AffiliateClicksResponse getClicksByQuery(click_query, opts)
 
 Retrieve clicks
 
@@ -33,12 +33,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AffiliateApi();
 
-var clickQuery = new UltraCartRestApiV2.AffiliateClickQuery(); // AffiliateClickQuery | Click query
+var click_query = new UltraCartRestApiV2.AffiliateClickQuery(); // AffiliateClickQuery | Click query
 
 var opts = { 
-  'limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  Only option is link.
+  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  Only option is link.
 };
 
 var callback = function(error, data, response) {
@@ -48,17 +48,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getClicksByQuery(clickQuery, opts, callback);
+apiInstance.getClicksByQuery(click_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clickQuery** | [**AffiliateClickQuery**](AffiliateClickQuery.md)| Click query | 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **expand** | **String**| The object expansion to perform on the result.  Only option is link. | [optional] 
+ **click_query** | [**AffiliateClickQuery**](AffiliateClickQuery.md)| Click query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_expand** | **String**| The object expansion to perform on the result.  Only option is link. | [optional] 
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="getLedgersByQuery"></a>
 # **getLedgersByQuery**
-> AffiliateLedgersResponse getLedgersByQuery(ledgerQuery, opts)
+> AffiliateLedgersResponse getLedgersByQuery(ledger_query, opts)
 
 Retrieve ledger entries
 
@@ -98,12 +98,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.AffiliateApi();
 
-var ledgerQuery = new UltraCartRestApiV2.AffiliateLedgerQuery(); // AffiliateLedgerQuery | Ledger query
+var ledger_query = new UltraCartRestApiV2.AffiliateLedgerQuery(); // AffiliateLedgerQuery | Ledger query
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  Only option is link.
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  Only option is link.
 };
 
 var callback = function(error, data, response) {
@@ -113,17 +113,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getLedgersByQuery(ledgerQuery, opts, callback);
+apiInstance.getLedgersByQuery(ledger_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ledgerQuery** | [**AffiliateLedgerQuery**](AffiliateLedgerQuery.md)| Ledger query | 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **expand** | **String**| The object expansion to perform on the result.  Only option is link. | [optional] 
+ **ledger_query** | [**AffiliateLedgerQuery**](AffiliateLedgerQuery.md)| Ledger query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_expand** | **String**| The object expansion to perform on the result.  Only option is link. | [optional] 
 
 ### Return type
 

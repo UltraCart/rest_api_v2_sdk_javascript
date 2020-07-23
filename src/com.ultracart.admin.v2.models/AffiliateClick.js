@@ -56,72 +56,72 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_click_oid'))
-        obj.affiliateClickOid = ApiClient.convertToType(data['affiliate_click_oid'], 'Number');
+        obj.affiliate_click_oid = ApiClient.convertToType(data['affiliate_click_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_link_oid'))
-        obj.affiliateLinkOid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
+        obj.affiliate_link_oid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('click_dts'))
-        obj.clickDts = ApiClient.convertToType(data['click_dts'], 'String');
+        obj.click_dts = ApiClient.convertToType(data['click_dts'], 'String');
       if (data.hasOwnProperty('ip_address'))
-        obj.ipAddress = ApiClient.convertToType(data['ip_address'], 'String');
+        obj.ip_address = ApiClient.convertToType(data['ip_address'], 'String');
       if (data.hasOwnProperty('landing_page'))
-        obj.landingPage = ApiClient.convertToType(data['landing_page'], 'String');
+        obj.landing_page = ApiClient.convertToType(data['landing_page'], 'String');
       if (data.hasOwnProperty('landing_page_query_string'))
-        obj.landingPageQueryString = ApiClient.convertToType(data['landing_page_query_string'], 'String');
+        obj.landing_page_query_string = ApiClient.convertToType(data['landing_page_query_string'], 'String');
       if (data.hasOwnProperty('link'))
         obj.link = AffiliateLink.constructFromObject(data['link']);
       if (data.hasOwnProperty('referrer'))
         obj.referrer = ApiClient.convertToType(data['referrer'], 'String');
       if (data.hasOwnProperty('referrer_query_string'))
-        obj.referrerQueryString = ApiClient.convertToType(data['referrer_query_string'], 'String');
+        obj.referrer_query_string = ApiClient.convertToType(data['referrer_query_string'], 'String');
       if (data.hasOwnProperty('sub_id'))
-        obj.subId = ApiClient.convertToType(data['sub_id'], 'String');
+        obj.sub_id = ApiClient.convertToType(data['sub_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Unique object identifier for this click
-   * @member {Number} affiliateClickOid
+   * @member {Number} affiliate_click_oid
    */
-  exports.prototype.affiliateClickOid = undefined;
+  exports.prototype.affiliate_click_oid = undefined;
 
   /**
    * Unique object identifier for for the link that this click is associated with
-   * @member {Number} affiliateLinkOid
+   * @member {Number} affiliate_link_oid
    */
-  exports.prototype.affiliateLinkOid = undefined;
+  exports.prototype.affiliate_link_oid = undefined;
 
   /**
    * Affiliate object ID associated with this click
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * Date/time that the click was made
-   * @member {String} clickDts
+   * @member {String} click_dts
    */
-  exports.prototype.clickDts = undefined;
+  exports.prototype.click_dts = undefined;
 
   /**
    * IP address that generated the click
-   * @member {String} ipAddress
+   * @member {String} ip_address
    */
-  exports.prototype.ipAddress = undefined;
+  exports.prototype.ip_address = undefined;
 
   /**
    * URL of the landing page the customer was sent to.
-   * @member {String} landingPage
+   * @member {String} landing_page
    */
-  exports.prototype.landingPage = undefined;
+  exports.prototype.landing_page = undefined;
 
   /**
    * Query string on the landing page URL the customer was sent to.
-   * @member {String} landingPageQueryString
+   * @member {String} landing_page_query_string
    */
-  exports.prototype.landingPageQueryString = undefined;
+  exports.prototype.landing_page_query_string = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/AffiliateLink} link
@@ -136,15 +136,15 @@
 
   /**
    * Query string that was on the referrer URL.
-   * @member {String} referrerQueryString
+   * @member {String} referrer_query_string
    */
-  exports.prototype.referrerQueryString = undefined;
+  exports.prototype.referrer_query_string = undefined;
 
   /**
    * Sub ID value passed on the click
-   * @member {String} subId
+   * @member {String} sub_id
    */
-  exports.prototype.subId = undefined;
+  exports.prototype.sub_id = undefined;
 
   return exports;
 

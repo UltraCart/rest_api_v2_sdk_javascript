@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('esp_commseq_email_uuids'))
-        obj.espCommseqEmailUuids = ApiClient.convertToType(data['esp_commseq_email_uuids'], ['String']);
+        obj.esp_commseq_email_uuids = ApiClient.convertToType(data['esp_commseq_email_uuids'], ['String']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -73,9 +73,9 @@
   exports.prototype.error = undefined;
 
   /**
-   * @member {Array.<String>} espCommseqEmailUuids
+   * @member {Array.<String>} esp_commseq_email_uuids
    */
-  exports.prototype.espCommseqEmailUuids = undefined;
+  exports.prototype.esp_commseq_email_uuids = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

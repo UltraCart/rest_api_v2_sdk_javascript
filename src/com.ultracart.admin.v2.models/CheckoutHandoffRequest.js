@@ -58,17 +58,17 @@
       if (data.hasOwnProperty('cart'))
         obj.cart = Cart.constructFromObject(data['cart']);
       if (data.hasOwnProperty('error_parameter_name'))
-        obj.errorParameterName = ApiClient.convertToType(data['error_parameter_name'], 'String');
+        obj.error_parameter_name = ApiClient.convertToType(data['error_parameter_name'], 'String');
       if (data.hasOwnProperty('error_return_url'))
-        obj.errorReturnUrl = ApiClient.convertToType(data['error_return_url'], 'String');
+        obj.error_return_url = ApiClient.convertToType(data['error_return_url'], 'String');
       if (data.hasOwnProperty('operation'))
         obj.operation = ApiClient.convertToType(data['operation'], 'String');
       if (data.hasOwnProperty('paypal_maximum_upsell_revenue'))
-        obj.paypalMaximumUpsellRevenue = ApiClient.convertToType(data['paypal_maximum_upsell_revenue'], 'Number');
+        obj.paypal_maximum_upsell_revenue = ApiClient.convertToType(data['paypal_maximum_upsell_revenue'], 'Number');
       if (data.hasOwnProperty('paypal_return_url'))
-        obj.paypalReturnUrl = ApiClient.convertToType(data['paypal_return_url'], 'String');
+        obj.paypal_return_url = ApiClient.convertToType(data['paypal_return_url'], 'String');
       if (data.hasOwnProperty('secure_host_name'))
-        obj.secureHostName = ApiClient.convertToType(data['secure_host_name'], 'String');
+        obj.secure_host_name = ApiClient.convertToType(data['secure_host_name'], 'String');
       if (data.hasOwnProperty('ucacid'))
         obj.ucacid = ApiClient.convertToType(data['ucacid'], 'String');
     }
@@ -82,15 +82,15 @@
 
   /**
    * If any error happen during the processing on the UltraCart side, the browser will be redirected to your error_return_url with the error passed in this parameter name.
-   * @member {String} errorParameterName
+   * @member {String} error_parameter_name
    */
-  exports.prototype.errorParameterName = undefined;
+  exports.prototype.error_parameter_name = undefined;
 
   /**
    * The URL to return the browser to if there are processing errors on the UltraCart side.
-   * @member {String} errorReturnUrl
+   * @member {String} error_return_url
    */
-  exports.prototype.errorReturnUrl = undefined;
+  exports.prototype.error_return_url = undefined;
 
   /**
    * The type of handoff operation to perform
@@ -100,21 +100,21 @@
 
   /**
    * The maximum amount of revenue that you think the customer could add during a custom upsell after sequence on your checkout.
-   * @member {Number} paypalMaximumUpsellRevenue
+   * @member {Number} paypal_maximum_upsell_revenue
    */
-  exports.prototype.paypalMaximumUpsellRevenue = undefined;
+  exports.prototype.paypal_maximum_upsell_revenue = undefined;
 
   /**
    * The URl to return the customers browser to after they have completed the PayPal process.
-   * @member {String} paypalReturnUrl
+   * @member {String} paypal_return_url
    */
-  exports.prototype.paypalReturnUrl = undefined;
+  exports.prototype.paypal_return_url = undefined;
 
   /**
    * The desired secure host name to perform the handoff on.  This should match the desired StoreFront.
-   * @member {String} secureHostName
+   * @member {String} secure_host_name
    */
-  exports.prototype.secureHostName = undefined;
+  exports.prototype.secure_host_name = undefined;
 
   /**
    * The UltraCart Analytics cookie value.  Populate this if you're handing off from a different domain than the checkout.

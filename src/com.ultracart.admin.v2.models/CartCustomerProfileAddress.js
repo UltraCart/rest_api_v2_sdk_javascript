@@ -64,23 +64,23 @@
       if (data.hasOwnProperty('company'))
         obj.company = ApiClient.convertToType(data['company'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('day_phone'))
-        obj.dayPhone = ApiClient.convertToType(data['day_phone'], 'String');
+        obj.day_phone = ApiClient.convertToType(data['day_phone'], 'String');
       if (data.hasOwnProperty('evening_phone'))
-        obj.eveningPhone = ApiClient.convertToType(data['evening_phone'], 'String');
+        obj.evening_phone = ApiClient.convertToType(data['evening_phone'], 'String');
       if (data.hasOwnProperty('first_name'))
-        obj.firstName = ApiClient.convertToType(data['first_name'], 'String');
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('last_name'))
-        obj.lastName = ApiClient.convertToType(data['last_name'], 'String');
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
       if (data.hasOwnProperty('oid'))
         obj.oid = ApiClient.convertToType(data['oid'], 'Number');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('state_region'))
-        obj.stateRegion = ApiClient.convertToType(data['state_region'], 'String');
+        obj.state_region = ApiClient.convertToType(data['state_region'], 'String');
       if (data.hasOwnProperty('tax_county'))
-        obj.taxCounty = ApiClient.convertToType(data['tax_county'], 'String');
+        obj.tax_county = ApiClient.convertToType(data['tax_county'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
     }
@@ -113,33 +113,33 @@
 
   /**
    * ISO-3166 Country code
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Day phone
-   * @member {String} dayPhone
+   * @member {String} day_phone
    */
-  exports.prototype.dayPhone = undefined;
+  exports.prototype.day_phone = undefined;
 
   /**
    * Evening phone
-   * @member {String} eveningPhone
+   * @member {String} evening_phone
    */
-  exports.prototype.eveningPhone = undefined;
+  exports.prototype.evening_phone = undefined;
 
   /**
    * First name
-   * @member {String} firstName
+   * @member {String} first_name
    */
-  exports.prototype.firstName = undefined;
+  exports.prototype.first_name = undefined;
 
   /**
    * Last name
-   * @member {String} lastName
+   * @member {String} last_name
    */
-  exports.prototype.lastName = undefined;
+  exports.prototype.last_name = undefined;
 
   /**
    * Unique identifier for this address
@@ -149,21 +149,21 @@
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * State for United States otherwise region or province for other countries
-   * @member {String} stateRegion
+   * @member {String} state_region
    */
-  exports.prototype.stateRegion = undefined;
+  exports.prototype.state_region = undefined;
 
   /**
    * Tax county if a billing address
-   * @member {String} taxCounty
+   * @member {String} tax_county
    */
-  exports.prototype.taxCounty = undefined;
+  exports.prototype.tax_county = undefined;
 
   /**
    * Title

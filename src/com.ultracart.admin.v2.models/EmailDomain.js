@@ -60,21 +60,21 @@
       if (data.hasOwnProperty('dkim'))
         obj.dkim = ApiClient.convertToType(data['dkim'], [VerificationRecord]);
       if (data.hasOwnProperty('dkim_status'))
-        obj.dkimStatus = ApiClient.convertToType(data['dkim_status'], 'String');
+        obj.dkim_status = ApiClient.convertToType(data['dkim_status'], 'String');
       if (data.hasOwnProperty('domain'))
         obj.domain = ApiClient.convertToType(data['domain'], 'String');
       if (data.hasOwnProperty('esp_domain_uuid'))
-        obj.espDomainUuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+        obj.esp_domain_uuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('identity_status'))
-        obj.identityStatus = ApiClient.convertToType(data['identity_status'], 'String');
+        obj.identity_status = ApiClient.convertToType(data['identity_status'], 'String');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('provider'))
         obj.provider = ApiClient.convertToType(data['provider'], 'String');
       if (data.hasOwnProperty('start_dkim_dts'))
-        obj.startDkimDts = ApiClient.convertToType(data['start_dkim_dts'], 'String');
+        obj.start_dkim_dts = ApiClient.convertToType(data['start_dkim_dts'], 'String');
       if (data.hasOwnProperty('start_identity_dts'))
-        obj.startIdentityDts = ApiClient.convertToType(data['start_identity_dts'], 'String');
+        obj.start_identity_dts = ApiClient.convertToType(data['start_identity_dts'], 'String');
       if (data.hasOwnProperty('verification'))
         obj.verification = VerificationRecord.constructFromObject(data['verification']);
     }
@@ -92,9 +92,9 @@
   exports.prototype.dkim = undefined;
 
   /**
-   * @member {String} dkimStatus
+   * @member {String} dkim_status
    */
-  exports.prototype.dkimStatus = undefined;
+  exports.prototype.dkim_status = undefined;
 
   /**
    * @member {String} domain
@@ -102,19 +102,19 @@
   exports.prototype.domain = undefined;
 
   /**
-   * @member {String} espDomainUuid
+   * @member {String} esp_domain_uuid
    */
-  exports.prototype.espDomainUuid = undefined;
+  exports.prototype.esp_domain_uuid = undefined;
 
   /**
-   * @member {String} identityStatus
+   * @member {String} identity_status
    */
-  exports.prototype.identityStatus = undefined;
+  exports.prototype.identity_status = undefined;
 
   /**
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * @member {String} provider
@@ -122,14 +122,14 @@
   exports.prototype.provider = undefined;
 
   /**
-   * @member {String} startDkimDts
+   * @member {String} start_dkim_dts
    */
-  exports.prototype.startDkimDts = undefined;
+  exports.prototype.start_dkim_dts = undefined;
 
   /**
-   * @member {String} startIdentityDts
+   * @member {String} start_identity_dts
    */
-  exports.prototype.startIdentityDts = undefined;
+  exports.prototype.start_identity_dts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/VerificationRecord} verification

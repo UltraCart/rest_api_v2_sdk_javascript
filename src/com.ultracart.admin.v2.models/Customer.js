@@ -58,119 +58,119 @@
       if (data.hasOwnProperty('activity'))
         obj.activity = CustomerActivity.constructFromObject(data['activity']);
       if (data.hasOwnProperty('affiliate_oid'))
-        obj.affiliateOid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
+        obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('allow_3rd_party_billing'))
-        obj.allow3rdPartyBilling = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
+        obj.allow_3rd_party_billing = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
       if (data.hasOwnProperty('allow_cod'))
-        obj.allowCod = ApiClient.convertToType(data['allow_cod'], 'Boolean');
+        obj.allow_cod = ApiClient.convertToType(data['allow_cod'], 'Boolean');
       if (data.hasOwnProperty('allow_purchase_order'))
-        obj.allowPurchaseOrder = ApiClient.convertToType(data['allow_purchase_order'], 'Boolean');
+        obj.allow_purchase_order = ApiClient.convertToType(data['allow_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('allow_quote_request'))
-        obj.allowQuoteRequest = ApiClient.convertToType(data['allow_quote_request'], 'Boolean');
+        obj.allow_quote_request = ApiClient.convertToType(data['allow_quote_request'], 'Boolean');
       if (data.hasOwnProperty('allow_selection_of_address_type'))
-        obj.allowSelectionOfAddressType = ApiClient.convertToType(data['allow_selection_of_address_type'], 'Boolean');
+        obj.allow_selection_of_address_type = ApiClient.convertToType(data['allow_selection_of_address_type'], 'Boolean');
       if (data.hasOwnProperty('attachments'))
         obj.attachments = ApiClient.convertToType(data['attachments'], [CustomerAttachment]);
       if (data.hasOwnProperty('auto_approve_cod'))
-        obj.autoApproveCod = ApiClient.convertToType(data['auto_approve_cod'], 'Boolean');
+        obj.auto_approve_cod = ApiClient.convertToType(data['auto_approve_cod'], 'Boolean');
       if (data.hasOwnProperty('auto_approve_purchase_order'))
-        obj.autoApprovePurchaseOrder = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
+        obj.auto_approve_purchase_order = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('automatic_merchant_notes'))
-        obj.automaticMerchantNotes = ApiClient.convertToType(data['automatic_merchant_notes'], 'String');
+        obj.automatic_merchant_notes = ApiClient.convertToType(data['automatic_merchant_notes'], 'String');
       if (data.hasOwnProperty('billing'))
         obj.billing = ApiClient.convertToType(data['billing'], [CustomerBilling]);
       if (data.hasOwnProperty('business_notes'))
-        obj.businessNotes = ApiClient.convertToType(data['business_notes'], 'String');
+        obj.business_notes = ApiClient.convertToType(data['business_notes'], 'String');
       if (data.hasOwnProperty('cards'))
         obj.cards = ApiClient.convertToType(data['cards'], [CustomerCard]);
       if (data.hasOwnProperty('cc_emails'))
-        obj.ccEmails = ApiClient.convertToType(data['cc_emails'], [CustomerEmail]);
+        obj.cc_emails = ApiClient.convertToType(data['cc_emails'], [CustomerEmail]);
       if (data.hasOwnProperty('customer_profile_oid'))
-        obj.customerProfileOid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('dhl_account_number'))
-        obj.dhlAccountNumber = ApiClient.convertToType(data['dhl_account_number'], 'String');
+        obj.dhl_account_number = ApiClient.convertToType(data['dhl_account_number'], 'String');
       if (data.hasOwnProperty('dhl_duty_account_number'))
-        obj.dhlDutyAccountNumber = ApiClient.convertToType(data['dhl_duty_account_number'], 'String');
+        obj.dhl_duty_account_number = ApiClient.convertToType(data['dhl_duty_account_number'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('exempt_shipping_handling_charge'))
-        obj.exemptShippingHandlingCharge = ApiClient.convertToType(data['exempt_shipping_handling_charge'], 'Boolean');
+        obj.exempt_shipping_handling_charge = ApiClient.convertToType(data['exempt_shipping_handling_charge'], 'Boolean');
       if (data.hasOwnProperty('fedex_account_number'))
-        obj.fedexAccountNumber = ApiClient.convertToType(data['fedex_account_number'], 'String');
+        obj.fedex_account_number = ApiClient.convertToType(data['fedex_account_number'], 'String');
       if (data.hasOwnProperty('free_shipping'))
-        obj.freeShipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
+        obj.free_shipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
       if (data.hasOwnProperty('free_shipping_minimum'))
-        obj.freeShippingMinimum = ApiClient.convertToType(data['free_shipping_minimum'], 'Number');
+        obj.free_shipping_minimum = ApiClient.convertToType(data['free_shipping_minimum'], 'Number');
       if (data.hasOwnProperty('last_modified_by'))
-        obj.lastModifiedBy = ApiClient.convertToType(data['last_modified_by'], 'String');
+        obj.last_modified_by = ApiClient.convertToType(data['last_modified_by'], 'String');
       if (data.hasOwnProperty('last_modified_dts'))
-        obj.lastModifiedDts = ApiClient.convertToType(data['last_modified_dts'], 'String');
+        obj.last_modified_dts = ApiClient.convertToType(data['last_modified_dts'], 'String');
       if (data.hasOwnProperty('loyalty'))
         obj.loyalty = CustomerLoyalty.constructFromObject(data['loyalty']);
       if (data.hasOwnProperty('maximum_item_count'))
-        obj.maximumItemCount = ApiClient.convertToType(data['maximum_item_count'], 'Number');
+        obj.maximum_item_count = ApiClient.convertToType(data['maximum_item_count'], 'Number');
       if (data.hasOwnProperty('minimum_item_count'))
-        obj.minimumItemCount = ApiClient.convertToType(data['minimum_item_count'], 'Number');
+        obj.minimum_item_count = ApiClient.convertToType(data['minimum_item_count'], 'Number');
       if (data.hasOwnProperty('minimum_subtotal'))
-        obj.minimumSubtotal = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
+        obj.minimum_subtotal = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
       if (data.hasOwnProperty('no_coupons'))
-        obj.noCoupons = ApiClient.convertToType(data['no_coupons'], 'Boolean');
+        obj.no_coupons = ApiClient.convertToType(data['no_coupons'], 'Boolean');
       if (data.hasOwnProperty('no_free_shipping'))
-        obj.noFreeShipping = ApiClient.convertToType(data['no_free_shipping'], 'Boolean');
+        obj.no_free_shipping = ApiClient.convertToType(data['no_free_shipping'], 'Boolean');
       if (data.hasOwnProperty('no_realtime_charge'))
-        obj.noRealtimeCharge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
+        obj.no_realtime_charge = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
       if (data.hasOwnProperty('orders'))
         obj.orders = ApiClient.convertToType(data['orders'], [Order]);
       if (data.hasOwnProperty('orders_summary'))
-        obj.ordersSummary = CustomerOrdersSummary.constructFromObject(data['orders_summary']);
+        obj.orders_summary = CustomerOrdersSummary.constructFromObject(data['orders_summary']);
       if (data.hasOwnProperty('password'))
         obj.password = ApiClient.convertToType(data['password'], 'String');
       if (data.hasOwnProperty('pricing_tiers'))
-        obj.pricingTiers = ApiClient.convertToType(data['pricing_tiers'], [CustomerPricingTier]);
+        obj.pricing_tiers = ApiClient.convertToType(data['pricing_tiers'], [CustomerPricingTier]);
       if (data.hasOwnProperty('privacy'))
         obj.privacy = CustomerPrivacy.constructFromObject(data['privacy']);
       if (data.hasOwnProperty('qb_class'))
-        obj.qbClass = ApiClient.convertToType(data['qb_class'], 'String');
+        obj.qb_class = ApiClient.convertToType(data['qb_class'], 'String');
       if (data.hasOwnProperty('qb_code'))
-        obj.qbCode = ApiClient.convertToType(data['qb_code'], 'String');
+        obj.qb_code = ApiClient.convertToType(data['qb_code'], 'String');
       if (data.hasOwnProperty('quotes'))
         obj.quotes = ApiClient.convertToType(data['quotes'], [Order]);
       if (data.hasOwnProperty('quotes_summary'))
-        obj.quotesSummary = CustomerQuotesSummary.constructFromObject(data['quotes_summary']);
+        obj.quotes_summary = CustomerQuotesSummary.constructFromObject(data['quotes_summary']);
       if (data.hasOwnProperty('referral_source'))
-        obj.referralSource = ApiClient.convertToType(data['referral_source'], 'String');
+        obj.referral_source = ApiClient.convertToType(data['referral_source'], 'String');
       if (data.hasOwnProperty('reviewer'))
         obj.reviewer = CustomerReviewer.constructFromObject(data['reviewer']);
       if (data.hasOwnProperty('sales_rep_code'))
-        obj.salesRepCode = ApiClient.convertToType(data['sales_rep_code'], 'String');
+        obj.sales_rep_code = ApiClient.convertToType(data['sales_rep_code'], 'String');
       if (data.hasOwnProperty('send_signup_notification'))
-        obj.sendSignupNotification = ApiClient.convertToType(data['send_signup_notification'], 'Boolean');
+        obj.send_signup_notification = ApiClient.convertToType(data['send_signup_notification'], 'Boolean');
       if (data.hasOwnProperty('shipping'))
         obj.shipping = ApiClient.convertToType(data['shipping'], [CustomerShipping]);
       if (data.hasOwnProperty('signup_dts'))
-        obj.signupDts = ApiClient.convertToType(data['signup_dts'], 'String');
+        obj.signup_dts = ApiClient.convertToType(data['signup_dts'], 'String');
       if (data.hasOwnProperty('software_entitlements'))
-        obj.softwareEntitlements = ApiClient.convertToType(data['software_entitlements'], [CustomerSoftwareEntitlement]);
+        obj.software_entitlements = ApiClient.convertToType(data['software_entitlements'], [CustomerSoftwareEntitlement]);
       if (data.hasOwnProperty('suppress_buysafe'))
-        obj.suppressBuysafe = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
+        obj.suppress_buysafe = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
       if (data.hasOwnProperty('tags'))
         obj.tags = ApiClient.convertToType(data['tags'], [CustomerTag]);
       if (data.hasOwnProperty('tax_codes'))
-        obj.taxCodes = CustomerTaxCodes.constructFromObject(data['tax_codes']);
+        obj.tax_codes = CustomerTaxCodes.constructFromObject(data['tax_codes']);
       if (data.hasOwnProperty('tax_exempt'))
-        obj.taxExempt = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
+        obj.tax_exempt = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
       if (data.hasOwnProperty('tax_id'))
-        obj.taxId = ApiClient.convertToType(data['tax_id'], 'String');
+        obj.tax_id = ApiClient.convertToType(data['tax_id'], 'String');
       if (data.hasOwnProperty('terms'))
         obj.terms = ApiClient.convertToType(data['terms'], 'String');
       if (data.hasOwnProperty('track_separately'))
-        obj.trackSeparately = ApiClient.convertToType(data['track_separately'], 'Boolean');
+        obj.track_separately = ApiClient.convertToType(data['track_separately'], 'Boolean');
       if (data.hasOwnProperty('unapproved'))
         obj.unapproved = ApiClient.convertToType(data['unapproved'], 'Boolean');
       if (data.hasOwnProperty('ups_account_number'))
-        obj.upsAccountNumber = ApiClient.convertToType(data['ups_account_number'], 'String');
+        obj.ups_account_number = ApiClient.convertToType(data['ups_account_number'], 'String');
       if (data.hasOwnProperty('website_url'))
-        obj.websiteUrl = ApiClient.convertToType(data['website_url'], 'String');
+        obj.website_url = ApiClient.convertToType(data['website_url'], 'String');
     }
     return obj;
   }
@@ -182,39 +182,39 @@
 
   /**
    * Affiliate oid
-   * @member {Number} affiliateOid
+   * @member {Number} affiliate_oid
    */
-  exports.prototype.affiliateOid = undefined;
+  exports.prototype.affiliate_oid = undefined;
 
   /**
    * Allow 3rd party billing
-   * @member {Boolean} allow3rdPartyBilling
+   * @member {Boolean} allow_3rd_party_billing
    */
-  exports.prototype.allow3rdPartyBilling = undefined;
+  exports.prototype.allow_3rd_party_billing = undefined;
 
   /**
    * Allow COD
-   * @member {Boolean} allowCod
+   * @member {Boolean} allow_cod
    */
-  exports.prototype.allowCod = undefined;
+  exports.prototype.allow_cod = undefined;
 
   /**
    * Allow purchase orders by this customer
-   * @member {Boolean} allowPurchaseOrder
+   * @member {Boolean} allow_purchase_order
    */
-  exports.prototype.allowPurchaseOrder = undefined;
+  exports.prototype.allow_purchase_order = undefined;
 
   /**
    * Allow quote request
-   * @member {Boolean} allowQuoteRequest
+   * @member {Boolean} allow_quote_request
    */
-  exports.prototype.allowQuoteRequest = undefined;
+  exports.prototype.allow_quote_request = undefined;
 
   /**
    * Allow selection of residential or business address type
-   * @member {Boolean} allowSelectionOfAddressType
+   * @member {Boolean} allow_selection_of_address_type
    */
-  exports.prototype.allowSelectionOfAddressType = undefined;
+  exports.prototype.allow_selection_of_address_type = undefined;
 
   /**
    * Attachments
@@ -224,21 +224,21 @@
 
   /**
    * Auto approve COD
-   * @member {Boolean} autoApproveCod
+   * @member {Boolean} auto_approve_cod
    */
-  exports.prototype.autoApproveCod = undefined;
+  exports.prototype.auto_approve_cod = undefined;
 
   /**
    * Auto approve purchase orders by this customer
-   * @member {Boolean} autoApprovePurchaseOrder
+   * @member {Boolean} auto_approve_purchase_order
    */
-  exports.prototype.autoApprovePurchaseOrder = undefined;
+  exports.prototype.auto_approve_purchase_order = undefined;
 
   /**
    * Automatic merchant notes are added to every order placed
-   * @member {String} automaticMerchantNotes
+   * @member {String} automatic_merchant_notes
    */
-  exports.prototype.automaticMerchantNotes = undefined;
+  exports.prototype.automatic_merchant_notes = undefined;
 
   /**
    * Billing addresses for this customer
@@ -248,9 +248,9 @@
 
   /**
    * Business notes (internally visible only)
-   * @member {String} businessNotes
+   * @member {String} business_notes
    */
-  exports.prototype.businessNotes = undefined;
+  exports.prototype.business_notes = undefined;
 
   /**
    * Credit Cards for this customer
@@ -260,27 +260,27 @@
 
   /**
    * Additional emails to CC notification
-   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerEmail>} ccEmails
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerEmail>} cc_emails
    */
-  exports.prototype.ccEmails = undefined;
+  exports.prototype.cc_emails = undefined;
 
   /**
    * Customer profile object identifier
-   * @member {Number} customerProfileOid
+   * @member {Number} customer_profile_oid
    */
-  exports.prototype.customerProfileOid = undefined;
+  exports.prototype.customer_profile_oid = undefined;
 
   /**
    * DHL account number
-   * @member {String} dhlAccountNumber
+   * @member {String} dhl_account_number
    */
-  exports.prototype.dhlAccountNumber = undefined;
+  exports.prototype.dhl_account_number = undefined;
 
   /**
    * DHL duty account number
-   * @member {String} dhlDutyAccountNumber
+   * @member {String} dhl_duty_account_number
    */
-  exports.prototype.dhlDutyAccountNumber = undefined;
+  exports.prototype.dhl_duty_account_number = undefined;
 
   /**
    * Email address of this customer profile
@@ -290,39 +290,39 @@
 
   /**
    * Exempt shipping handling charge
-   * @member {Boolean} exemptShippingHandlingCharge
+   * @member {Boolean} exempt_shipping_handling_charge
    */
-  exports.prototype.exemptShippingHandlingCharge = undefined;
+  exports.prototype.exempt_shipping_handling_charge = undefined;
 
   /**
    * FedEx account number
-   * @member {String} fedexAccountNumber
+   * @member {String} fedex_account_number
    */
-  exports.prototype.fedexAccountNumber = undefined;
+  exports.prototype.fedex_account_number = undefined;
 
   /**
    * This customer always receives free shipping
-   * @member {Boolean} freeShipping
+   * @member {Boolean} free_shipping
    */
-  exports.prototype.freeShipping = undefined;
+  exports.prototype.free_shipping = undefined;
 
   /**
    * If free_shipping is true, this is the minimum subtotal required for free shipping
-   * @member {Number} freeShippingMinimum
+   * @member {Number} free_shipping_minimum
    */
-  exports.prototype.freeShippingMinimum = undefined;
+  exports.prototype.free_shipping_minimum = undefined;
 
   /**
    * Last modified by
-   * @member {String} lastModifiedBy
+   * @member {String} last_modified_by
    */
-  exports.prototype.lastModifiedBy = undefined;
+  exports.prototype.last_modified_by = undefined;
 
   /**
    * Last modified date
-   * @member {String} lastModifiedDts
+   * @member {String} last_modified_dts
    */
-  exports.prototype.lastModifiedDts = undefined;
+  exports.prototype.last_modified_dts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CustomerLoyalty} loyalty
@@ -331,39 +331,39 @@
 
   /**
    * Maximum item count
-   * @member {Number} maximumItemCount
+   * @member {Number} maximum_item_count
    */
-  exports.prototype.maximumItemCount = undefined;
+  exports.prototype.maximum_item_count = undefined;
 
   /**
    * Minimum item count
-   * @member {Number} minimumItemCount
+   * @member {Number} minimum_item_count
    */
-  exports.prototype.minimumItemCount = undefined;
+  exports.prototype.minimum_item_count = undefined;
 
   /**
    * Minimum subtotal
-   * @member {Number} minimumSubtotal
+   * @member {Number} minimum_subtotal
    */
-  exports.prototype.minimumSubtotal = undefined;
+  exports.prototype.minimum_subtotal = undefined;
 
   /**
    * No coupons
-   * @member {Boolean} noCoupons
+   * @member {Boolean} no_coupons
    */
-  exports.prototype.noCoupons = undefined;
+  exports.prototype.no_coupons = undefined;
 
   /**
    * No free shipping regardless of coupons or item level settings
-   * @member {Boolean} noFreeShipping
+   * @member {Boolean} no_free_shipping
    */
-  exports.prototype.noFreeShipping = undefined;
+  exports.prototype.no_free_shipping = undefined;
 
   /**
    * No realtime charge
-   * @member {Boolean} noRealtimeCharge
+   * @member {Boolean} no_realtime_charge
    */
-  exports.prototype.noRealtimeCharge = undefined;
+  exports.prototype.no_realtime_charge = undefined;
 
   /**
    * Orders associated with this customer profile
@@ -372,9 +372,9 @@
   exports.prototype.orders = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CustomerOrdersSummary} ordersSummary
+   * @member {module:com.ultracart.admin.v2.models/CustomerOrdersSummary} orders_summary
    */
-  exports.prototype.ordersSummary = undefined;
+  exports.prototype.orders_summary = undefined;
 
   /**
    * Password (may only be set, never read)
@@ -384,9 +384,9 @@
 
   /**
    * Pricing tiers for this customer
-   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerPricingTier>} pricingTiers
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerPricingTier>} pricing_tiers
    */
-  exports.prototype.pricingTiers = undefined;
+  exports.prototype.pricing_tiers = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CustomerPrivacy} privacy
@@ -395,15 +395,15 @@
 
   /**
    * QuickBooks class to import this customer as
-   * @member {String} qbClass
+   * @member {String} qb_class
    */
-  exports.prototype.qbClass = undefined;
+  exports.prototype.qb_class = undefined;
 
   /**
    * QuickBooks name to import this customer as
-   * @member {String} qbCode
+   * @member {String} qb_code
    */
-  exports.prototype.qbCode = undefined;
+  exports.prototype.qb_code = undefined;
 
   /**
    * Quotes associated with this customer profile
@@ -412,15 +412,15 @@
   exports.prototype.quotes = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CustomerQuotesSummary} quotesSummary
+   * @member {module:com.ultracart.admin.v2.models/CustomerQuotesSummary} quotes_summary
    */
-  exports.prototype.quotesSummary = undefined;
+  exports.prototype.quotes_summary = undefined;
 
   /**
    * Referral Source
-   * @member {String} referralSource
+   * @member {String} referral_source
    */
-  exports.prototype.referralSource = undefined;
+  exports.prototype.referral_source = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CustomerReviewer} reviewer
@@ -429,15 +429,15 @@
 
   /**
    * Sales rep code
-   * @member {String} salesRepCode
+   * @member {String} sales_rep_code
    */
-  exports.prototype.salesRepCode = undefined;
+  exports.prototype.sales_rep_code = undefined;
 
   /**
    * Send signup notification, if true during customer creation, will send a notification.
-   * @member {Boolean} sendSignupNotification
+   * @member {Boolean} send_signup_notification
    */
-  exports.prototype.sendSignupNotification = undefined;
+  exports.prototype.send_signup_notification = undefined;
 
   /**
    * Shipping addresses for this customer
@@ -447,21 +447,21 @@
 
   /**
    * Signup date
-   * @member {String} signupDts
+   * @member {String} signup_dts
    */
-  exports.prototype.signupDts = undefined;
+  exports.prototype.signup_dts = undefined;
 
   /**
    * Software entitlements owned by this customer
-   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerSoftwareEntitlement>} softwareEntitlements
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerSoftwareEntitlement>} software_entitlements
    */
-  exports.prototype.softwareEntitlements = undefined;
+  exports.prototype.software_entitlements = undefined;
 
   /**
    * Suppress buySAFE
-   * @member {Boolean} suppressBuysafe
+   * @member {Boolean} suppress_buysafe
    */
-  exports.prototype.suppressBuysafe = undefined;
+  exports.prototype.suppress_buysafe = undefined;
 
   /**
    * Tags for this customer
@@ -470,21 +470,21 @@
   exports.prototype.tags = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CustomerTaxCodes} taxCodes
+   * @member {module:com.ultracart.admin.v2.models/CustomerTaxCodes} tax_codes
    */
-  exports.prototype.taxCodes = undefined;
+  exports.prototype.tax_codes = undefined;
 
   /**
    * True if the customer is tax exempt
-   * @member {Boolean} taxExempt
+   * @member {Boolean} tax_exempt
    */
-  exports.prototype.taxExempt = undefined;
+  exports.prototype.tax_exempt = undefined;
 
   /**
    * Tax ID
-   * @member {String} taxId
+   * @member {String} tax_id
    */
-  exports.prototype.taxId = undefined;
+  exports.prototype.tax_id = undefined;
 
   /**
    * Terms for this customer
@@ -494,9 +494,9 @@
 
   /**
    * True if the customer should be tracked separately in QuickBooks
-   * @member {Boolean} trackSeparately
+   * @member {Boolean} track_separately
    */
-  exports.prototype.trackSeparately = undefined;
+  exports.prototype.track_separately = undefined;
 
   /**
    * Unapproved
@@ -506,15 +506,15 @@
 
   /**
    * UPS account number
-   * @member {String} upsAccountNumber
+   * @member {String} ups_account_number
    */
-  exports.prototype.upsAccountNumber = undefined;
+  exports.prototype.ups_account_number = undefined;
 
   /**
    * Website url
-   * @member {String} websiteUrl
+   * @member {String} website_url
    */
-  exports.prototype.websiteUrl = undefined;
+  exports.prototype.website_url = undefined;
 
   return exports;
 

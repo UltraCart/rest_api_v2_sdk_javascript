@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `system` (value: `"System"`)
+* `System` (value: `"System"`)
 
-* `userDefined` (value: `"UserDefined"`)
+* `UserDefined` (value: `"UserDefined"`)
 
 
 

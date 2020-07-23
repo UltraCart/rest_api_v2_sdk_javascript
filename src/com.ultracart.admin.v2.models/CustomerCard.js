@@ -56,72 +56,72 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('card_expiration_month'))
-        obj.cardExpirationMonth = ApiClient.convertToType(data['card_expiration_month'], 'Number');
+        obj.card_expiration_month = ApiClient.convertToType(data['card_expiration_month'], 'Number');
       if (data.hasOwnProperty('card_expiration_year'))
-        obj.cardExpirationYear = ApiClient.convertToType(data['card_expiration_year'], 'Number');
+        obj.card_expiration_year = ApiClient.convertToType(data['card_expiration_year'], 'Number');
       if (data.hasOwnProperty('card_number'))
-        obj.cardNumber = ApiClient.convertToType(data['card_number'], 'String');
+        obj.card_number = ApiClient.convertToType(data['card_number'], 'String');
       if (data.hasOwnProperty('card_number_token'))
-        obj.cardNumberToken = ApiClient.convertToType(data['card_number_token'], 'String');
+        obj.card_number_token = ApiClient.convertToType(data['card_number_token'], 'String');
       if (data.hasOwnProperty('card_type'))
-        obj.cardType = ApiClient.convertToType(data['card_type'], 'String');
+        obj.card_type = ApiClient.convertToType(data['card_type'], 'String');
       if (data.hasOwnProperty('customer_profile_credit_card_id'))
-        obj.customerProfileCreditCardId = ApiClient.convertToType(data['customer_profile_credit_card_id'], 'Number');
+        obj.customer_profile_credit_card_id = ApiClient.convertToType(data['customer_profile_credit_card_id'], 'Number');
       if (data.hasOwnProperty('customer_profile_oid'))
-        obj.customerProfileOid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('last_used_dts'))
-        obj.lastUsedDts = ApiClient.convertToType(data['last_used_dts'], 'String');
+        obj.last_used_dts = ApiClient.convertToType(data['last_used_dts'], 'String');
     }
     return obj;
   }
 
   /**
    * Card expiration month (1-12)
-   * @member {Number} cardExpirationMonth
+   * @member {Number} card_expiration_month
    */
-  exports.prototype.cardExpirationMonth = undefined;
+  exports.prototype.card_expiration_month = undefined;
 
   /**
    * Card expiration year (four digit year)
-   * @member {Number} cardExpirationYear
+   * @member {Number} card_expiration_year
    */
-  exports.prototype.cardExpirationYear = undefined;
+  exports.prototype.card_expiration_year = undefined;
 
   /**
    * Card number (masked to the last 4)
-   * @member {String} cardNumber
+   * @member {String} card_number
    */
-  exports.prototype.cardNumber = undefined;
+  exports.prototype.card_number = undefined;
 
   /**
    * Hosted field token for the card number
-   * @member {String} cardNumberToken
+   * @member {String} card_number_token
    */
-  exports.prototype.cardNumberToken = undefined;
+  exports.prototype.card_number_token = undefined;
 
   /**
    * Card type
-   * @member {String} cardType
+   * @member {String} card_type
    */
-  exports.prototype.cardType = undefined;
+  exports.prototype.card_type = undefined;
 
   /**
    * ID of the stored credit card to use
-   * @member {Number} customerProfileCreditCardId
+   * @member {Number} customer_profile_credit_card_id
    */
-  exports.prototype.customerProfileCreditCardId = undefined;
+  exports.prototype.customer_profile_credit_card_id = undefined;
 
   /**
    * Customer profile object identifier
-   * @member {Number} customerProfileOid
+   * @member {Number} customer_profile_oid
    */
-  exports.prototype.customerProfileOid = undefined;
+  exports.prototype.customer_profile_oid = undefined;
 
   /**
    * Last used date
-   * @member {String} lastUsedDts
+   * @member {String} last_used_dts
    */
-  exports.prototype.lastUsedDts = undefined;
+  exports.prototype.last_used_dts = undefined;
 
   return exports;
 

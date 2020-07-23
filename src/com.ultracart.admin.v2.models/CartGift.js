@@ -58,15 +58,15 @@
       if (data.hasOwnProperty('gift'))
         obj.gift = ApiClient.convertToType(data['gift'], 'Boolean');
       if (data.hasOwnProperty('gift_charge'))
-        obj.giftCharge = Currency.constructFromObject(data['gift_charge']);
+        obj.gift_charge = Currency.constructFromObject(data['gift_charge']);
       if (data.hasOwnProperty('gift_email'))
-        obj.giftEmail = ApiClient.convertToType(data['gift_email'], 'String');
+        obj.gift_email = ApiClient.convertToType(data['gift_email'], 'String');
       if (data.hasOwnProperty('gift_message'))
-        obj.giftMessage = ApiClient.convertToType(data['gift_message'], 'String');
+        obj.gift_message = ApiClient.convertToType(data['gift_message'], 'String');
       if (data.hasOwnProperty('gift_wrap_cost'))
-        obj.giftWrapCost = Currency.constructFromObject(data['gift_wrap_cost']);
+        obj.gift_wrap_cost = Currency.constructFromObject(data['gift_wrap_cost']);
       if (data.hasOwnProperty('gift_wrap_title'))
-        obj.giftWrapTitle = ApiClient.convertToType(data['gift_wrap_title'], 'String');
+        obj.gift_wrap_title = ApiClient.convertToType(data['gift_wrap_title'], 'String');
     }
     return obj;
   }
@@ -78,32 +78,32 @@
   exports.prototype.gift = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} giftCharge
+   * @member {module:com.ultracart.admin.v2.models/Currency} gift_charge
    */
-  exports.prototype.giftCharge = undefined;
+  exports.prototype.gift_charge = undefined;
 
   /**
    * Email address of the gift recipient
-   * @member {String} giftEmail
+   * @member {String} gift_email
    */
-  exports.prototype.giftEmail = undefined;
+  exports.prototype.gift_email = undefined;
 
   /**
    * Message to the gift recipient
-   * @member {String} giftMessage
+   * @member {String} gift_message
    */
-  exports.prototype.giftMessage = undefined;
+  exports.prototype.gift_message = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} giftWrapCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} gift_wrap_cost
    */
-  exports.prototype.giftWrapCost = undefined;
+  exports.prototype.gift_wrap_cost = undefined;
 
   /**
    * Title of the selected gift wrap
-   * @member {String} giftWrapTitle
+   * @member {String} gift_wrap_title
    */
-  exports.prototype.giftWrapTitle = undefined;
+  exports.prototype.gift_wrap_title = undefined;
 
   return exports;
 

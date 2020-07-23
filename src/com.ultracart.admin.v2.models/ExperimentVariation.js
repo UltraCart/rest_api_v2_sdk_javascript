@@ -56,39 +56,39 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('add_to_cart_count'))
-        obj.addToCartCount = ApiClient.convertToType(data['add_to_cart_count'], 'Number');
+        obj.add_to_cart_count = ApiClient.convertToType(data['add_to_cart_count'], 'Number');
       if (data.hasOwnProperty('average_duration_seconds'))
-        obj.averageDurationSeconds = ApiClient.convertToType(data['average_duration_seconds'], 'Number');
+        obj.average_duration_seconds = ApiClient.convertToType(data['average_duration_seconds'], 'Number');
       if (data.hasOwnProperty('average_objective_per_session'))
-        obj.averageObjectivePerSession = ApiClient.convertToType(data['average_objective_per_session'], 'Number');
+        obj.average_objective_per_session = ApiClient.convertToType(data['average_objective_per_session'], 'Number');
       if (data.hasOwnProperty('average_order_value'))
-        obj.averageOrderValue = ApiClient.convertToType(data['average_order_value'], 'Number');
+        obj.average_order_value = ApiClient.convertToType(data['average_order_value'], 'Number');
       if (data.hasOwnProperty('bounce_count'))
-        obj.bounceCount = ApiClient.convertToType(data['bounce_count'], 'Number');
+        obj.bounce_count = ApiClient.convertToType(data['bounce_count'], 'Number');
       if (data.hasOwnProperty('conversion_rate'))
-        obj.conversionRate = ApiClient.convertToType(data['conversion_rate'], 'Number');
+        obj.conversion_rate = ApiClient.convertToType(data['conversion_rate'], 'Number');
       if (data.hasOwnProperty('duration_seconds_sum'))
-        obj.durationSecondsSum = ApiClient.convertToType(data['duration_seconds_sum'], 'Number');
+        obj.duration_seconds_sum = ApiClient.convertToType(data['duration_seconds_sum'], 'Number');
       if (data.hasOwnProperty('initiate_checkout_count'))
-        obj.initiateCheckoutCount = ApiClient.convertToType(data['initiate_checkout_count'], 'Number');
+        obj.initiate_checkout_count = ApiClient.convertToType(data['initiate_checkout_count'], 'Number');
       if (data.hasOwnProperty('order_count'))
-        obj.orderCount = ApiClient.convertToType(data['order_count'], 'Number');
+        obj.order_count = ApiClient.convertToType(data['order_count'], 'Number');
       if (data.hasOwnProperty('original_traffic_percentage'))
-        obj.originalTrafficPercentage = ApiClient.convertToType(data['original_traffic_percentage'], 'Number');
+        obj.original_traffic_percentage = ApiClient.convertToType(data['original_traffic_percentage'], 'Number');
       if (data.hasOwnProperty('page_view_count'))
-        obj.pageViewCount = ApiClient.convertToType(data['page_view_count'], 'Number');
+        obj.page_view_count = ApiClient.convertToType(data['page_view_count'], 'Number');
       if (data.hasOwnProperty('revenue'))
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('session_count'))
-        obj.sessionCount = ApiClient.convertToType(data['session_count'], 'Number');
+        obj.session_count = ApiClient.convertToType(data['session_count'], 'Number');
       if (data.hasOwnProperty('traffic_percentage'))
-        obj.trafficPercentage = ApiClient.convertToType(data['traffic_percentage'], 'Number');
+        obj.traffic_percentage = ApiClient.convertToType(data['traffic_percentage'], 'Number');
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
       if (data.hasOwnProperty('variation_name'))
-        obj.variationName = ApiClient.convertToType(data['variation_name'], 'String');
+        obj.variation_name = ApiClient.convertToType(data['variation_name'], 'String');
       if (data.hasOwnProperty('variation_number'))
-        obj.variationNumber = ApiClient.convertToType(data['variation_number'], 'Number');
+        obj.variation_number = ApiClient.convertToType(data['variation_number'], 'Number');
       if (data.hasOwnProperty('winner'))
         obj.winner = ApiClient.convertToType(data['winner'], 'Boolean');
     }
@@ -97,69 +97,69 @@
 
   /**
    * Total add to cart count for this variation
-   * @member {Number} addToCartCount
+   * @member {Number} add_to_cart_count
    */
-  exports.prototype.addToCartCount = undefined;
+  exports.prototype.add_to_cart_count = undefined;
 
   /**
    * Average duration seconds per session for this variation
-   * @member {Number} averageDurationSeconds
+   * @member {Number} average_duration_seconds
    */
-  exports.prototype.averageDurationSeconds = undefined;
+  exports.prototype.average_duration_seconds = undefined;
 
   /**
    * Average objective value per session for this variation
-   * @member {Number} averageObjectivePerSession
+   * @member {Number} average_objective_per_session
    */
-  exports.prototype.averageObjectivePerSession = undefined;
+  exports.prototype.average_objective_per_session = undefined;
 
   /**
    * Average order value for this variation
-   * @member {Number} averageOrderValue
+   * @member {Number} average_order_value
    */
-  exports.prototype.averageOrderValue = undefined;
+  exports.prototype.average_order_value = undefined;
 
   /**
    * Total bounce count for this variation
-   * @member {Number} bounceCount
+   * @member {Number} bounce_count
    */
-  exports.prototype.bounceCount = undefined;
+  exports.prototype.bounce_count = undefined;
 
   /**
    * Conversion rate for this variation
-   * @member {Number} conversionRate
+   * @member {Number} conversion_rate
    */
-  exports.prototype.conversionRate = undefined;
+  exports.prototype.conversion_rate = undefined;
 
   /**
    * Total number of seconds spent on the site for this variation
-   * @member {Number} durationSecondsSum
+   * @member {Number} duration_seconds_sum
    */
-  exports.prototype.durationSecondsSum = undefined;
+  exports.prototype.duration_seconds_sum = undefined;
 
   /**
    * Total initiate checkout count for this variation
-   * @member {Number} initiateCheckoutCount
+   * @member {Number} initiate_checkout_count
    */
-  exports.prototype.initiateCheckoutCount = undefined;
+  exports.prototype.initiate_checkout_count = undefined;
 
   /**
    * Total order count for this variation
-   * @member {Number} orderCount
+   * @member {Number} order_count
    */
-  exports.prototype.orderCount = undefined;
+  exports.prototype.order_count = undefined;
 
   /**
    * Percentage of the traffic the variation originally started out with
-   * @member {Number} originalTrafficPercentage
+   * @member {Number} original_traffic_percentage
    */
-  exports.prototype.originalTrafficPercentage = undefined;
+  exports.prototype.original_traffic_percentage = undefined;
 
   /**
    * Total page view count for this variation
-   * @member {Number} pageViewCount
+   * @member {Number} page_view_count
    */
-  exports.prototype.pageViewCount = undefined;
+  exports.prototype.page_view_count = undefined;
 
   /**
    * Total revenue for this variation
@@ -169,15 +169,15 @@
 
   /**
    * Total sessions for this variation
-   * @member {Number} sessionCount
+   * @member {Number} session_count
    */
-  exports.prototype.sessionCount = undefined;
+  exports.prototype.session_count = undefined;
 
   /**
    * Percentage of the traffic this variation is currently receiving
-   * @member {Number} trafficPercentage
+   * @member {Number} traffic_percentage
    */
-  exports.prototype.trafficPercentage = undefined;
+  exports.prototype.traffic_percentage = undefined;
 
   /**
    * Url of the variation if this experiment is a url experiment.
@@ -187,15 +187,15 @@
 
   /**
    * Name of the variation
-   * @member {String} variationName
+   * @member {String} variation_name
    */
-  exports.prototype.variationName = undefined;
+  exports.prototype.variation_name = undefined;
 
   /**
    * Variation number
-   * @member {Number} variationNumber
+   * @member {Number} variation_number
    */
-  exports.prototype.variationNumber = undefined;
+  exports.prototype.variation_number = undefined;
 
   /**
    * True if this variation has been declared the winner

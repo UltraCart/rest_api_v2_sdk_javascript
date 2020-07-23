@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('any_subscribed'))
-        obj.anySubscribed = ApiClient.convertToType(data['any_subscribed'], 'Boolean');
+        obj.any_subscribed = ApiClient.convertToType(data['any_subscribed'], 'Boolean');
       if (data.hasOwnProperty('available_expansions'))
-        obj.availableExpansions = ApiClient.convertToType(data['available_expansions'], ['String']);
+        obj.available_expansions = ApiClient.convertToType(data['available_expansions'], ['String']);
       if (data.hasOwnProperty('event_category'))
-        obj.eventCategory = ApiClient.convertToType(data['event_category'], 'String');
+        obj.event_category = ApiClient.convertToType(data['event_category'], 'String');
       if (data.hasOwnProperty('events'))
         obj.events = ApiClient.convertToType(data['events'], [WebhookEventSubscription]);
       if (data.hasOwnProperty('subscribed'))
@@ -71,21 +71,21 @@
 
   /**
    * True if any events are subscribed to.
-   * @member {Boolean} anySubscribed
+   * @member {Boolean} any_subscribed
    */
-  exports.prototype.anySubscribed = undefined;
+  exports.prototype.any_subscribed = undefined;
 
   /**
    * Array of available expansion constants
-   * @member {Array.<String>} availableExpansions
+   * @member {Array.<String>} available_expansions
    */
-  exports.prototype.availableExpansions = undefined;
+  exports.prototype.available_expansions = undefined;
 
   /**
    * Name of the event category
-   * @member {String} eventCategory
+   * @member {String} event_category
    */
-  exports.prototype.eventCategory = undefined;
+  exports.prototype.event_category = undefined;
 
   /**
    * The events within the category.  Individual subscription flags contained within the child object.

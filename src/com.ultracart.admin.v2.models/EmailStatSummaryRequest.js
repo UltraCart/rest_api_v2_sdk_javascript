@@ -56,9 +56,9 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('commseq_email_uuids'))
-        obj.commseqEmailUuids = ApiClient.convertToType(data['commseq_email_uuids'], ['String']);
+        obj.commseq_email_uuids = ApiClient.convertToType(data['commseq_email_uuids'], ['String']);
       if (data.hasOwnProperty('commseq_step_uuids'))
-        obj.commseqStepUuids = ApiClient.convertToType(data['commseq_step_uuids'], ['String']);
+        obj.commseq_step_uuids = ApiClient.convertToType(data['commseq_step_uuids'], ['String']);
       if (data.hasOwnProperty('days'))
         obj.days = ApiClient.convertToType(data['days'], 'Number');
     }
@@ -66,14 +66,14 @@
   }
 
   /**
-   * @member {Array.<String>} commseqEmailUuids
+   * @member {Array.<String>} commseq_email_uuids
    */
-  exports.prototype.commseqEmailUuids = undefined;
+  exports.prototype.commseq_email_uuids = undefined;
 
   /**
-   * @member {Array.<String>} commseqStepUuids
+   * @member {Array.<String>} commseq_step_uuids
    */
-  exports.prototype.commseqStepUuids = undefined;
+  exports.prototype.commseq_step_uuids = undefined;
 
   /**
    * @member {Number} days

@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('item_id'))
-        obj.itemId = ApiClient.convertToType(data['item_id'], 'String');
+        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('rebill_count'))
-        obj.rebillCount = ApiClient.convertToType(data['rebill_count'], 'Number');
+        obj.rebill_count = ApiClient.convertToType(data['rebill_count'], 'Number');
       if (data.hasOwnProperty('shipment_dts'))
-        obj.shipmentDts = ApiClient.convertToType(data['shipment_dts'], 'String');
+        obj.shipment_dts = ApiClient.convertToType(data['shipment_dts'], 'String');
       if (data.hasOwnProperty('unit_cost'))
-        obj.unitCost = ApiClient.convertToType(data['unit_cost'], 'Number');
+        obj.unit_cost = ApiClient.convertToType(data['unit_cost'], 'Number');
     }
     return obj;
   }
 
   /**
    * Item ID that should rebill
-   * @member {String} itemId
+   * @member {String} item_id
    */
-  exports.prototype.itemId = undefined;
+  exports.prototype.item_id = undefined;
 
   /**
    * The number of times this rebill represents
-   * @member {Number} rebillCount
+   * @member {Number} rebill_count
    */
-  exports.prototype.rebillCount = undefined;
+  exports.prototype.rebill_count = undefined;
 
   /**
    * Date/time that this item is scheduled to rebill
-   * @member {String} shipmentDts
+   * @member {String} shipment_dts
    */
-  exports.prototype.shipmentDts = undefined;
+  exports.prototype.shipment_dts = undefined;
 
   /**
    * The unit cost of the item rebilling
-   * @member {Number} unitCost
+   * @member {Number} unit_cost
    */
-  exports.prototype.unitCost = undefined;
+  exports.prototype.unit_cost = undefined;
 
   return exports;
 

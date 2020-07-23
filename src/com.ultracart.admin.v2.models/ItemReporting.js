@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('report_as_upsell'))
-        obj.reportAsUpsell = ApiClient.convertToType(data['report_as_upsell'], 'Boolean');
+        obj.report_as_upsell = ApiClient.convertToType(data['report_as_upsell'], 'Boolean');
       if (data.hasOwnProperty('report_pickable_quantities'))
-        obj.reportPickableQuantities = ApiClient.convertToType(data['report_pickable_quantities'], ['Number']);
+        obj.report_pickable_quantities = ApiClient.convertToType(data['report_pickable_quantities'], ['Number']);
     }
     return obj;
   }
 
   /**
    * Report as an upsell
-   * @member {Boolean} reportAsUpsell
+   * @member {Boolean} report_as_upsell
    */
-  exports.prototype.reportAsUpsell = undefined;
+  exports.prototype.report_as_upsell = undefined;
 
   /**
    * Report pickable quantities
-   * @member {Array.<Number>} reportPickableQuantities
+   * @member {Array.<Number>} report_pickable_quantities
    */
-  exports.prototype.reportPickableQuantities = undefined;
+  exports.prototype.report_pickable_quantities = undefined;
 
   return exports;
 

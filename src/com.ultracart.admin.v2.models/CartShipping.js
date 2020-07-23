@@ -64,33 +64,33 @@
       if (data.hasOwnProperty('company'))
         obj.company = ApiClient.convertToType(data['company'], 'String');
       if (data.hasOwnProperty('country_code'))
-        obj.countryCode = ApiClient.convertToType(data['country_code'], 'String');
+        obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('day_phone'))
-        obj.dayPhone = ApiClient.convertToType(data['day_phone'], 'String');
+        obj.day_phone = ApiClient.convertToType(data['day_phone'], 'String');
       if (data.hasOwnProperty('delivery_date'))
-        obj.deliveryDate = ApiClient.convertToType(data['delivery_date'], 'String');
+        obj.delivery_date = ApiClient.convertToType(data['delivery_date'], 'String');
       if (data.hasOwnProperty('evening_phone'))
-        obj.eveningPhone = ApiClient.convertToType(data['evening_phone'], 'String');
+        obj.evening_phone = ApiClient.convertToType(data['evening_phone'], 'String');
       if (data.hasOwnProperty('first_name'))
-        obj.firstName = ApiClient.convertToType(data['first_name'], 'String');
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('last_name'))
-        obj.lastName = ApiClient.convertToType(data['last_name'], 'String');
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
       if (data.hasOwnProperty('lift_gate'))
-        obj.liftGate = ApiClient.convertToType(data['lift_gate'], 'Boolean');
+        obj.lift_gate = ApiClient.convertToType(data['lift_gate'], 'Boolean');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('ship_on_date'))
-        obj.shipOnDate = ApiClient.convertToType(data['ship_on_date'], 'String');
+        obj.ship_on_date = ApiClient.convertToType(data['ship_on_date'], 'String');
       if (data.hasOwnProperty('ship_to_residential'))
-        obj.shipToResidential = ApiClient.convertToType(data['ship_to_residential'], 'Boolean');
+        obj.ship_to_residential = ApiClient.convertToType(data['ship_to_residential'], 'Boolean');
       if (data.hasOwnProperty('shipping_3rd_party_account_number'))
-        obj.shipping3rdPartyAccountNumber = ApiClient.convertToType(data['shipping_3rd_party_account_number'], 'String');
+        obj.shipping_3rd_party_account_number = ApiClient.convertToType(data['shipping_3rd_party_account_number'], 'String');
       if (data.hasOwnProperty('shipping_method'))
-        obj.shippingMethod = ApiClient.convertToType(data['shipping_method'], 'String');
+        obj.shipping_method = ApiClient.convertToType(data['shipping_method'], 'String');
       if (data.hasOwnProperty('special_instructions'))
-        obj.specialInstructions = ApiClient.convertToType(data['special_instructions'], 'String');
+        obj.special_instructions = ApiClient.convertToType(data['special_instructions'], 'String');
       if (data.hasOwnProperty('state_region'))
-        obj.stateRegion = ApiClient.convertToType(data['state_region'], 'String');
+        obj.state_region = ApiClient.convertToType(data['state_region'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
     }
@@ -123,87 +123,87 @@
 
   /**
    * ISO-3166 two letter country code
-   * @member {String} countryCode
+   * @member {String} country_code
    */
-  exports.prototype.countryCode = undefined;
+  exports.prototype.country_code = undefined;
 
   /**
    * Day time phone
-   * @member {String} dayPhone
+   * @member {String} day_phone
    */
-  exports.prototype.dayPhone = undefined;
+  exports.prototype.day_phone = undefined;
 
   /**
    * Date the customer is requesting delivery on. Typically used for perishable product delivery.
-   * @member {String} deliveryDate
+   * @member {String} delivery_date
    */
-  exports.prototype.deliveryDate = undefined;
+  exports.prototype.delivery_date = undefined;
 
   /**
    * Evening phone
-   * @member {String} eveningPhone
+   * @member {String} evening_phone
    */
-  exports.prototype.eveningPhone = undefined;
+  exports.prototype.evening_phone = undefined;
 
   /**
    * First name
-   * @member {String} firstName
+   * @member {String} first_name
    */
-  exports.prototype.firstName = undefined;
+  exports.prototype.first_name = undefined;
 
   /**
    * Last name
-   * @member {String} lastName
+   * @member {String} last_name
    */
-  exports.prototype.lastName = undefined;
+  exports.prototype.last_name = undefined;
 
   /**
    * Lift gate requested (LTL shipping methods only)
-   * @member {Boolean} liftGate
+   * @member {Boolean} lift_gate
    */
-  exports.prototype.liftGate = undefined;
+  exports.prototype.lift_gate = undefined;
 
   /**
    * Postal code
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * Date the customer is requesting that the order ship on.  Typically used for perishable product delivery.
-   * @member {String} shipOnDate
+   * @member {String} ship_on_date
    */
-  exports.prototype.shipOnDate = undefined;
+  exports.prototype.ship_on_date = undefined;
 
   /**
    * True if the shipping adress is residential.  Effects the methods that are available to the customer as well as the price of the shipping method.
-   * @member {Boolean} shipToResidential
+   * @member {Boolean} ship_to_residential
    */
-  exports.prototype.shipToResidential = undefined;
+  exports.prototype.ship_to_residential = undefined;
 
   /**
    * 3rd party account number to ship against for UPS or FedEx
-   * @member {String} shipping3rdPartyAccountNumber
+   * @member {String} shipping_3rd_party_account_number
    */
-  exports.prototype.shipping3rdPartyAccountNumber = undefined;
+  exports.prototype.shipping_3rd_party_account_number = undefined;
 
   /**
    * Shipping method
-   * @member {String} shippingMethod
+   * @member {String} shipping_method
    */
-  exports.prototype.shippingMethod = undefined;
+  exports.prototype.shipping_method = undefined;
 
   /**
    * Special instructions from the customer regarding shipping
-   * @member {String} specialInstructions
+   * @member {String} special_instructions
    */
-  exports.prototype.specialInstructions = undefined;
+  exports.prototype.special_instructions = undefined;
 
   /**
    * State/Region
-   * @member {String} stateRegion
+   * @member {String} state_region
    */
-  exports.prototype.stateRegion = undefined;
+  exports.prototype.state_region = undefined;
 
   /**
    * Title

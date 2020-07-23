@@ -56,27 +56,27 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('cloud_url'))
-        obj.cloudUrl = ApiClient.convertToType(data['cloud_url'], 'String');
+        obj.cloud_url = ApiClient.convertToType(data['cloud_url'], 'String');
       if (data.hasOwnProperty('cloud_url_expiration'))
-        obj.cloudUrlExpiration = ApiClient.convertToType(data['cloud_url_expiration'], 'String');
+        obj.cloud_url_expiration = ApiClient.convertToType(data['cloud_url_expiration'], 'String');
       if (data.hasOwnProperty('code'))
         obj.code = ApiClient.convertToType(data['code'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('exclude_from_gallery'))
-        obj.excludeFromGallery = ApiClient.convertToType(data['exclude_from_gallery'], 'Boolean');
+        obj.exclude_from_gallery = ApiClient.convertToType(data['exclude_from_gallery'], 'Boolean');
       if (data.hasOwnProperty('file_name'))
-        obj.fileName = ApiClient.convertToType(data['file_name'], 'String');
+        obj.file_name = ApiClient.convertToType(data['file_name'], 'String');
       if (data.hasOwnProperty('height'))
         obj.height = ApiClient.convertToType(data['height'], 'Number');
       if (data.hasOwnProperty('merchant_item_multimedia_oid'))
-        obj.merchantItemMultimediaOid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
+        obj.merchant_item_multimedia_oid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
       if (data.hasOwnProperty('orphan'))
         obj.orphan = ApiClient.convertToType(data['orphan'], 'Boolean');
       if (data.hasOwnProperty('placeholder'))
         obj.placeholder = ApiClient.convertToType(data['placeholder'], 'Boolean');
       if (data.hasOwnProperty('temp_multimedia_oid'))
-        obj.tempMultimediaOid = ApiClient.convertToType(data['temp_multimedia_oid'], 'Number');
+        obj.temp_multimedia_oid = ApiClient.convertToType(data['temp_multimedia_oid'], 'Number');
       if (data.hasOwnProperty('thumbnails'))
         obj.thumbnails = ApiClient.convertToType(data['thumbnails'], [ItemContentMultimediaThumbnail]);
       if (data.hasOwnProperty('type'))
@@ -91,15 +91,15 @@
 
   /**
    * URL where the image can be downloaded from the cloud
-   * @member {String} cloudUrl
+   * @member {String} cloud_url
    */
-  exports.prototype.cloudUrl = undefined;
+  exports.prototype.cloud_url = undefined;
 
   /**
    * Expiration date of the cloud URL
-   * @member {String} cloudUrlExpiration
+   * @member {String} cloud_url_expiration
    */
-  exports.prototype.cloudUrlExpiration = undefined;
+  exports.prototype.cloud_url_expiration = undefined;
 
   /**
    * Code assigned to the file
@@ -115,15 +115,15 @@
 
   /**
    * True to exclude from multimedia gallery
-   * @member {Boolean} excludeFromGallery
+   * @member {Boolean} exclude_from_gallery
    */
-  exports.prototype.excludeFromGallery = undefined;
+  exports.prototype.exclude_from_gallery = undefined;
 
   /**
    * File name
-   * @member {String} fileName
+   * @member {String} file_name
    */
-  exports.prototype.fileName = undefined;
+  exports.prototype.file_name = undefined;
 
   /**
    * Height of the image
@@ -133,9 +133,9 @@
 
   /**
    * Item multimedia object identifier
-   * @member {Number} merchantItemMultimediaOid
+   * @member {Number} merchant_item_multimedia_oid
    */
-  exports.prototype.merchantItemMultimediaOid = undefined;
+  exports.prototype.merchant_item_multimedia_oid = undefined;
 
   /**
    * True if the multimedia is an orphan of the active StoreFront themes
@@ -151,9 +151,9 @@
 
   /**
    * Temporary multimedia object identifier assigned if uploading new multimedia
-   * @member {Number} tempMultimediaOid
+   * @member {Number} temp_multimedia_oid
    */
-  exports.prototype.tempMultimediaOid = undefined;
+  exports.prototype.temp_multimedia_oid = undefined;
 
   /**
    * Thumbnails of this image
@@ -190,7 +190,7 @@
      * value: "Image"
      * @const
      */
-    image: "Image",
+    Image: "Image",
 
     /**
      * value: "PDF"
@@ -202,19 +202,19 @@
      * value: "Text"
      * @const
      */
-    text: "Text",
+    Text: "Text",
 
     /**
      * value: "Unknown"
      * @const
      */
-    unknown: "Unknown",
+    Unknown: "Unknown",
 
     /**
      * value: "Video"
      * @const
      */
-    video: "Video"
+    Video: "Video"
   };
 
   return exports;

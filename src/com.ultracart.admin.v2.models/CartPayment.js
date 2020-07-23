@@ -62,13 +62,13 @@
       if (data.hasOwnProperty('check'))
         obj.check = CartPaymentCheck.constructFromObject(data['check']);
       if (data.hasOwnProperty('credit_card'))
-        obj.creditCard = CartPaymentCreditCard.constructFromObject(data['credit_card']);
+        obj.credit_card = CartPaymentCreditCard.constructFromObject(data['credit_card']);
       if (data.hasOwnProperty('payment_method'))
-        obj.paymentMethod = ApiClient.convertToType(data['payment_method'], 'String');
+        obj.payment_method = ApiClient.convertToType(data['payment_method'], 'String');
       if (data.hasOwnProperty('purchase_order'))
-        obj.purchaseOrder = CartPaymentPurchaseOrder.constructFromObject(data['purchase_order']);
+        obj.purchase_order = CartPaymentPurchaseOrder.constructFromObject(data['purchase_order']);
       if (data.hasOwnProperty('rtg_code'))
-        obj.rtgCode = ApiClient.convertToType(data['rtg_code'], 'String');
+        obj.rtg_code = ApiClient.convertToType(data['rtg_code'], 'String');
     }
     return obj;
   }
@@ -89,26 +89,26 @@
   exports.prototype.check = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartPaymentCreditCard} creditCard
+   * @member {module:com.ultracart.admin.v2.models/CartPaymentCreditCard} credit_card
    */
-  exports.prototype.creditCard = undefined;
+  exports.prototype.credit_card = undefined;
 
   /**
    * Payment method
-   * @member {String} paymentMethod
+   * @member {String} payment_method
    */
-  exports.prototype.paymentMethod = undefined;
+  exports.prototype.payment_method = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartPaymentPurchaseOrder} purchaseOrder
+   * @member {module:com.ultracart.admin.v2.models/CartPaymentPurchaseOrder} purchase_order
    */
-  exports.prototype.purchaseOrder = undefined;
+  exports.prototype.purchase_order = undefined;
 
   /**
    * Rotating transaction gateway code
-   * @member {String} rtgCode
+   * @member {String} rtg_code
    */
-  exports.prototype.rtgCode = undefined;
+  exports.prototype.rtg_code = undefined;
 
   return exports;
 

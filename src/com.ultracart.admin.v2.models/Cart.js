@@ -58,39 +58,39 @@
       if (data.hasOwnProperty('affiliate'))
         obj.affiliate = CartAffiliate.constructFromObject(data['affiliate']);
       if (data.hasOwnProperty('base_currency_code'))
-        obj.baseCurrencyCode = ApiClient.convertToType(data['base_currency_code'], 'String');
+        obj.base_currency_code = ApiClient.convertToType(data['base_currency_code'], 'String');
       if (data.hasOwnProperty('billing'))
         obj.billing = CartBilling.constructFromObject(data['billing']);
       if (data.hasOwnProperty('buysafe'))
         obj.buysafe = CartBuysafe.constructFromObject(data['buysafe']);
       if (data.hasOwnProperty('cart_id'))
-        obj.cartId = ApiClient.convertToType(data['cart_id'], 'String');
+        obj.cart_id = ApiClient.convertToType(data['cart_id'], 'String');
       if (data.hasOwnProperty('checkout'))
         obj.checkout = CartCheckout.constructFromObject(data['checkout']);
       if (data.hasOwnProperty('coupons'))
         obj.coupons = ApiClient.convertToType(data['coupons'], [CartCoupon]);
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('currency_conversion'))
-        obj.currencyConversion = CartCurrencyConversion.constructFromObject(data['currency_conversion']);
+        obj.currency_conversion = CartCurrencyConversion.constructFromObject(data['currency_conversion']);
       if (data.hasOwnProperty('customer_profile'))
-        obj.customerProfile = CartCustomerProfile.constructFromObject(data['customer_profile']);
+        obj.customer_profile = CartCustomerProfile.constructFromObject(data['customer_profile']);
       if (data.hasOwnProperty('exchange_rate'))
-        obj.exchangeRate = ApiClient.convertToType(data['exchange_rate'], 'Number');
+        obj.exchange_rate = ApiClient.convertToType(data['exchange_rate'], 'Number');
       if (data.hasOwnProperty('gift'))
         obj.gift = CartGift.constructFromObject(data['gift']);
       if (data.hasOwnProperty('gift_certificate'))
-        obj.giftCertificate = CartGiftCertificate.constructFromObject(data['gift_certificate']);
+        obj.gift_certificate = CartGiftCertificate.constructFromObject(data['gift_certificate']);
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], [CartItem]);
       if (data.hasOwnProperty('language_iso_code'))
-        obj.languageIsoCode = ApiClient.convertToType(data['language_iso_code'], 'String');
+        obj.language_iso_code = ApiClient.convertToType(data['language_iso_code'], 'String');
       if (data.hasOwnProperty('logged_in'))
-        obj.loggedIn = ApiClient.convertToType(data['logged_in'], 'Boolean');
+        obj.logged_in = ApiClient.convertToType(data['logged_in'], 'Boolean');
       if (data.hasOwnProperty('marketing'))
         obj.marketing = CartMarketing.constructFromObject(data['marketing']);
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('payment'))
         obj.payment = CartPayment.constructFromObject(data['payment']);
       if (data.hasOwnProperty('properties'))
@@ -104,7 +104,7 @@
       if (data.hasOwnProperty('taxes'))
         obj.taxes = CartTaxes.constructFromObject(data['taxes']);
       if (data.hasOwnProperty('upsell_after'))
-        obj.upsellAfter = CartUpsellAfter.constructFromObject(data['upsell_after']);
+        obj.upsell_after = CartUpsellAfter.constructFromObject(data['upsell_after']);
     }
     return obj;
   }
@@ -116,9 +116,9 @@
 
   /**
    * The ISO-4217 three letter base currency code of the account
-   * @member {String} baseCurrencyCode
+   * @member {String} base_currency_code
    */
-  exports.prototype.baseCurrencyCode = undefined;
+  exports.prototype.base_currency_code = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CartBilling} billing
@@ -132,9 +132,9 @@
 
   /**
    * Unique identifier for this cart
-   * @member {String} cartId
+   * @member {String} cart_id
    */
-  exports.prototype.cartId = undefined;
+  exports.prototype.cart_id = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CartCheckout} checkout
@@ -149,25 +149,25 @@
 
   /**
    * The ISO-4217 three letter currency code the customer is viewing prices in
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartCurrencyConversion} currencyConversion
+   * @member {module:com.ultracart.admin.v2.models/CartCurrencyConversion} currency_conversion
    */
-  exports.prototype.currencyConversion = undefined;
+  exports.prototype.currency_conversion = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartCustomerProfile} customerProfile
+   * @member {module:com.ultracart.admin.v2.models/CartCustomerProfile} customer_profile
    */
-  exports.prototype.customerProfile = undefined;
+  exports.prototype.customer_profile = undefined;
 
   /**
    * The exchange rate if the customer is viewing a different currency than the base
-   * @member {Number} exchangeRate
+   * @member {Number} exchange_rate
    */
-  exports.prototype.exchangeRate = undefined;
+  exports.prototype.exchange_rate = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CartGift} gift
@@ -175,9 +175,9 @@
   exports.prototype.gift = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartGiftCertificate} giftCertificate
+   * @member {module:com.ultracart.admin.v2.models/CartGiftCertificate} gift_certificate
    */
-  exports.prototype.giftCertificate = undefined;
+  exports.prototype.gift_certificate = undefined;
 
   /**
    * Items
@@ -187,15 +187,15 @@
 
   /**
    * The ISO-631 three letter code the customer would like to checkout with
-   * @member {String} languageIsoCode
+   * @member {String} language_iso_code
    */
-  exports.prototype.languageIsoCode = undefined;
+  exports.prototype.language_iso_code = undefined;
 
   /**
    * True if the customer is logged into their profile
-   * @member {Boolean} loggedIn
+   * @member {Boolean} logged_in
    */
-  exports.prototype.loggedIn = undefined;
+  exports.prototype.logged_in = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CartMarketing} marketing
@@ -204,9 +204,9 @@
 
   /**
    * Merchant ID this cart is associated with
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CartPayment} payment
@@ -240,9 +240,9 @@
   exports.prototype.taxes = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/CartUpsellAfter} upsellAfter
+   * @member {module:com.ultracart.admin.v2.models/CartUpsellAfter} upsell_after
    */
-  exports.prototype.upsellAfter = undefined;
+  exports.prototype.upsell_after = undefined;
 
   return exports;
 

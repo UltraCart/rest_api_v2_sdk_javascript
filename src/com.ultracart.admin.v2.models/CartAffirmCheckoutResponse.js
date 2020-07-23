@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('checkout_json'))
-        obj.checkoutJson = ApiClient.convertToType(data['checkout_json'], 'String');
+        obj.checkout_json = ApiClient.convertToType(data['checkout_json'], 'String');
       if (data.hasOwnProperty('errors'))
         obj.errors = ApiClient.convertToType(data['errors'], ['String']);
     }
@@ -65,9 +65,9 @@
 
   /**
    * Checkout JSON object
-   * @member {String} checkoutJson
+   * @member {String} checkout_json
    */
-  exports.prototype.checkoutJson = undefined;
+  exports.prototype.checkout_json = undefined;
 
   /**
    * Errors that should be displayed to the customer

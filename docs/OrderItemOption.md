@@ -22,9 +22,9 @@ Name | Type | Description | Notes
 
 * `none` (value: `"none"`)
 
-* `setItemTo` (value: `"set item to"`)
+* `set_item_to` (value: `"set item to"`)
 
-* `addItem` (value: `"add item"`)
+* `add_item` (value: `"add item"`)
 
 
 

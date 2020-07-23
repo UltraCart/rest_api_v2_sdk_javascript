@@ -56,13 +56,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('can_downgrade'))
-        obj.canDowngrade = ApiClient.convertToType(data['can_downgrade'], 'Boolean');
+        obj.can_downgrade = ApiClient.convertToType(data['can_downgrade'], 'Boolean');
       if (data.hasOwnProperty('can_upgrade'))
-        obj.canUpgrade = ApiClient.convertToType(data['can_upgrade'], 'Boolean');
+        obj.can_upgrade = ApiClient.convertToType(data['can_upgrade'], 'Boolean');
       if (data.hasOwnProperty('cost'))
         obj.cost = ApiClient.convertToType(data['cost'], 'Number');
       if (data.hasOwnProperty('cost_formatted'))
-        obj.costFormatted = ApiClient.convertToType(data['cost_formatted'], 'String');
+        obj.cost_formatted = ApiClient.convertToType(data['cost_formatted'], 'String');
       if (data.hasOwnProperty('customers'))
         obj.customers = ApiClient.convertToType(data['customers'], 'Number');
       if (data.hasOwnProperty('emails'))
@@ -72,14 +72,14 @@
   }
 
   /**
-   * @member {Boolean} canDowngrade
+   * @member {Boolean} can_downgrade
    */
-  exports.prototype.canDowngrade = undefined;
+  exports.prototype.can_downgrade = undefined;
 
   /**
-   * @member {Boolean} canUpgrade
+   * @member {Boolean} can_upgrade
    */
-  exports.prototype.canUpgrade = undefined;
+  exports.prototype.can_upgrade = undefined;
 
   /**
    * @member {Number} cost
@@ -87,9 +87,9 @@
   exports.prototype.cost = undefined;
 
   /**
-   * @member {String} costFormatted
+   * @member {String} cost_formatted
    */
-  exports.prototype.costFormatted = undefined;
+  exports.prototype.cost_formatted = undefined;
 
   /**
    * @member {Number} customers

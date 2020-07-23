@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('creation_dts'))
-        obj.creationDts = ApiClient.convertToType(data['creation_dts'], 'String');
+        obj.creation_dts = ApiClient.convertToType(data['creation_dts'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('file_size'))
-        obj.fileSize = ApiClient.convertToType(data['file_size'], 'Number');
+        obj.file_size = ApiClient.convertToType(data['file_size'], 'Number');
       if (data.hasOwnProperty('mime_type'))
-        obj.mimeType = ApiClient.convertToType(data['mime_type'], 'String');
+        obj.mime_type = ApiClient.convertToType(data['mime_type'], 'String');
       if (data.hasOwnProperty('original_filename'))
-        obj.originalFilename = ApiClient.convertToType(data['original_filename'], 'String');
+        obj.original_filename = ApiClient.convertToType(data['original_filename'], 'String');
     }
     return obj;
   }
 
   /**
    * File creation date
-   * @member {String} creationDts
+   * @member {String} creation_dts
    */
-  exports.prototype.creationDts = undefined;
+  exports.prototype.creation_dts = undefined;
 
   /**
    * Description of the digital item
@@ -83,21 +83,21 @@
 
   /**
    * File size
-   * @member {Number} fileSize
+   * @member {Number} file_size
    */
-  exports.prototype.fileSize = undefined;
+  exports.prototype.file_size = undefined;
 
   /**
    * Mime type associated with the file
-   * @member {String} mimeType
+   * @member {String} mime_type
    */
-  exports.prototype.mimeType = undefined;
+  exports.prototype.mime_type = undefined;
 
   /**
    * Original filename
-   * @member {String} originalFilename
+   * @member {String} original_filename
    */
-  exports.prototype.originalFilename = undefined;
+  exports.prototype.original_filename = undefined;
 
   return exports;
 

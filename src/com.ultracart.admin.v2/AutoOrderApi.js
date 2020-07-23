@@ -59,27 +59,27 @@
     /**
      * Retrieve an auto order
      * Retrieves a single auto order using the specified auto order oid. 
-     * @param {Number} autoOrderOid The auto order oid to retrieve.
+     * @param {Number} auto_order_oid The auto order oid to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
      */
-    this.getAutoOrder = function(autoOrderOid, opts, callback) {
+    this.getAutoOrder = function(auto_order_oid, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'autoOrderOid' is set
-      if (autoOrderOid === undefined || autoOrderOid === null) {
-        throw new Error("Missing the required parameter 'autoOrderOid' when calling getAutoOrder");
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling getAutoOrder");
       }
 
 
       var pathParams = {
-        'auto_order_oid': autoOrderOid
+        'auto_order_oid': auto_order_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -111,27 +111,27 @@
     /**
      * Retrieve an auto order
      * Retrieves a single auto order using the specified reference (original) order id. 
-     * @param {String} autoOrderCode The auto order oid to retrieve.
+     * @param {String} auto_order_code The auto order oid to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderByCodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
      */
-    this.getAutoOrderByCode = function(autoOrderCode, opts, callback) {
+    this.getAutoOrderByCode = function(auto_order_code, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'autoOrderCode' is set
-      if (autoOrderCode === undefined || autoOrderCode === null) {
-        throw new Error("Missing the required parameter 'autoOrderCode' when calling getAutoOrderByCode");
+      // verify the required parameter 'auto_order_code' is set
+      if (auto_order_code === undefined || auto_order_code === null) {
+        throw new Error("Missing the required parameter 'auto_order_code' when calling getAutoOrderByCode");
       }
 
 
       var pathParams = {
-        'auto_order_code': autoOrderCode
+        'auto_order_code': auto_order_code
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -163,27 +163,27 @@
     /**
      * Retrieve an auto order
      * Retrieves a single auto order using the specified reference (original) order id. 
-     * @param {String} referenceOrderId The auto order oid to retrieve.
+     * @param {String} reference_order_id The auto order oid to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderByReferenceOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
      */
-    this.getAutoOrderByReferenceOrderId = function(referenceOrderId, opts, callback) {
+    this.getAutoOrderByReferenceOrderId = function(reference_order_id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'referenceOrderId' is set
-      if (referenceOrderId === undefined || referenceOrderId === null) {
-        throw new Error("Missing the required parameter 'referenceOrderId' when calling getAutoOrderByReferenceOrderId");
+      // verify the required parameter 'reference_order_id' is set
+      if (reference_order_id === undefined || reference_order_id === null) {
+        throw new Error("Missing the required parameter 'reference_order_id' when calling getAutoOrderByReferenceOrderId");
       }
 
 
       var pathParams = {
-        'reference_order_id': referenceOrderId
+        'reference_order_id': reference_order_id
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -216,29 +216,29 @@
      * Retrieve auto orders
      * Retrieves auto orders from the account.  If no parameters are specified, all auto orders will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.autoOrderCode Auto order code
-     * @param {String} opts.originalOrderId Original order id
-     * @param {String} opts.firstName First name
-     * @param {String} opts.lastName Last name
+     * @param {String} opts.auto_order_code Auto order code
+     * @param {String} opts.original_order_id Original order id
+     * @param {String} opts.first_name First name
+     * @param {String} opts.last_name Last name
      * @param {String} opts.company Company
      * @param {String} opts.city City
      * @param {String} opts.state State
-     * @param {String} opts.postalCode Postal code
-     * @param {String} opts.countryCode Country code (ISO-3166 two letter)
+     * @param {String} opts.postal_code Postal code
+     * @param {String} opts.country_code Country code (ISO-3166 two letter)
      * @param {String} opts.phone Phone
      * @param {String} opts.email Email
-     * @param {String} opts.originalOrderDateBegin Original order date begin
-     * @param {String} opts.originalOrderDateEnd Original order date end
-     * @param {String} opts.nextShipmentDateBegin Next shipment date begin
-     * @param {String} opts.nextShipmentDateEnd Next shipment date end
-     * @param {String} opts.cardType Card type
-     * @param {String} opts.itemId Item ID
+     * @param {String} opts.original_order_date_begin Original order date begin
+     * @param {String} opts.original_order_date_end Original order date end
+     * @param {String} opts.next_shipment_date_begin Next shipment date begin
+     * @param {String} opts.next_shipment_date_end Next shipment date end
+     * @param {String} opts.card_type Card type
+     * @param {String} opts.item_id Item ID
      * @param {String} opts.status Status
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.since Fetch auto orders that have been created/modified since this date/time.
-     * @param {String} opts.sort The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch auto orders that have been created/modified since this date/time.
+     * @param {String} opts._sort The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrdersResponse}
      */
@@ -250,29 +250,29 @@
       var pathParams = {
       };
       var queryParams = {
-        'auto_order_code': opts['autoOrderCode'],
-        'original_order_id': opts['originalOrderId'],
-        'first_name': opts['firstName'],
-        'last_name': opts['lastName'],
+        'auto_order_code': opts['auto_order_code'],
+        'original_order_id': opts['original_order_id'],
+        'first_name': opts['first_name'],
+        'last_name': opts['last_name'],
         'company': opts['company'],
         'city': opts['city'],
         'state': opts['state'],
-        'postal_code': opts['postalCode'],
-        'country_code': opts['countryCode'],
+        'postal_code': opts['postal_code'],
+        'country_code': opts['country_code'],
         'phone': opts['phone'],
         'email': opts['email'],
-        'original_order_date_begin': opts['originalOrderDateBegin'],
-        'original_order_date_end': opts['originalOrderDateEnd'],
-        'next_shipment_date_begin': opts['nextShipmentDateBegin'],
-        'next_shipment_date_end': opts['nextShipmentDateEnd'],
-        'card_type': opts['cardType'],
-        'item_id': opts['itemId'],
+        'original_order_date_begin': opts['original_order_date_begin'],
+        'original_order_date_end': opts['original_order_date_end'],
+        'next_shipment_date_begin': opts['next_shipment_date_begin'],
+        'next_shipment_date_end': opts['next_shipment_date_end'],
+        'card_type': opts['card_type'],
+        'item_id': opts['item_id'],
         'status': opts['status'],
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_since': opts['since'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -304,26 +304,26 @@
     /**
      * Retrieve auto order batch
      * Retrieves a group of auto orders from the account based on an array of auto order oids.  If more than 200 auto order ids are specified, the API call will fail with a bad request error. 
-     * @param {module:com.ultracart.admin.v2.models/AutoOrderQueryBatch} autoOrderBatch Auto order batch
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderQueryBatch} auto_order_batch Auto order batch
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.
+     * @param {String} opts._expand The object expansion to perform on the result.
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrdersBatchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrdersResponse}
      */
-    this.getAutoOrdersBatch = function(autoOrderBatch, opts, callback) {
+    this.getAutoOrdersBatch = function(auto_order_batch, opts, callback) {
       opts = opts || {};
-      var postBody = autoOrderBatch;
+      var postBody = auto_order_batch;
 
-      // verify the required parameter 'autoOrderBatch' is set
-      if (autoOrderBatch === undefined || autoOrderBatch === null) {
-        throw new Error("Missing the required parameter 'autoOrderBatch' when calling getAutoOrdersBatch");
+      // verify the required parameter 'auto_order_batch' is set
+      if (auto_order_batch === undefined || auto_order_batch === null) {
+        throw new Error("Missing the required parameter 'auto_order_batch' when calling getAutoOrdersBatch");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -355,32 +355,32 @@
     /**
      * Retrieve auto orders
      * Retrieves a group of auto orders from the account based on a query object.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/AutoOrderQuery} autoOrderQuery Auto order query
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderQuery} auto_order_query Auto order query
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.sort The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrdersByQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrdersResponse}
      */
-    this.getAutoOrdersByQuery = function(autoOrderQuery, opts, callback) {
+    this.getAutoOrdersByQuery = function(auto_order_query, opts, callback) {
       opts = opts || {};
-      var postBody = autoOrderQuery;
+      var postBody = auto_order_query;
 
-      // verify the required parameter 'autoOrderQuery' is set
-      if (autoOrderQuery === undefined || autoOrderQuery === null) {
-        throw new Error("Missing the required parameter 'autoOrderQuery' when calling getAutoOrdersByQuery");
+      // verify the required parameter 'auto_order_query' is set
+      if (auto_order_query === undefined || auto_order_query === null) {
+        throw new Error("Missing the required parameter 'auto_order_query' when calling getAutoOrdersByQuery");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -412,33 +412,33 @@
     /**
      * Update an auto order
      * Update an auto order on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.models/AutoOrder} autoOrder Auto order to update
-     * @param {Number} autoOrderOid The auto order oid to update.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrder} auto_order Auto order to update
+     * @param {Number} auto_order_oid The auto order oid to update.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
      */
-    this.updateAutoOrder = function(autoOrder, autoOrderOid, opts, callback) {
+    this.updateAutoOrder = function(auto_order, auto_order_oid, opts, callback) {
       opts = opts || {};
-      var postBody = autoOrder;
+      var postBody = auto_order;
 
-      // verify the required parameter 'autoOrder' is set
-      if (autoOrder === undefined || autoOrder === null) {
-        throw new Error("Missing the required parameter 'autoOrder' when calling updateAutoOrder");
+      // verify the required parameter 'auto_order' is set
+      if (auto_order === undefined || auto_order === null) {
+        throw new Error("Missing the required parameter 'auto_order' when calling updateAutoOrder");
       }
 
-      // verify the required parameter 'autoOrderOid' is set
-      if (autoOrderOid === undefined || autoOrderOid === null) {
-        throw new Error("Missing the required parameter 'autoOrderOid' when calling updateAutoOrder");
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling updateAutoOrder");
       }
 
 
       var pathParams = {
-        'auto_order_oid': autoOrderOid
+        'auto_order_oid': auto_order_oid
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -470,30 +470,30 @@
     /**
      * Update multiple auto orders
      * Update multiple auto orders on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.models/AutoOrdersRequest} autoOrdersRequest Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
+     * @param {module:com.ultracart.admin.v2.models/AutoOrdersRequest} auto_orders_request Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts.placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-     * @param {Boolean} opts.async True if the operation should be run async.  No result returned
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {Boolean} opts._async True if the operation should be run async.  No result returned
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrdersBatchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrdersResponse}
      */
-    this.updateAutoOrdersBatch = function(autoOrdersRequest, opts, callback) {
+    this.updateAutoOrdersBatch = function(auto_orders_request, opts, callback) {
       opts = opts || {};
-      var postBody = autoOrdersRequest;
+      var postBody = auto_orders_request;
 
-      // verify the required parameter 'autoOrdersRequest' is set
-      if (autoOrdersRequest === undefined || autoOrdersRequest === null) {
-        throw new Error("Missing the required parameter 'autoOrdersRequest' when calling updateAutoOrdersBatch");
+      // verify the required parameter 'auto_orders_request' is set
+      if (auto_orders_request === undefined || auto_orders_request === null) {
+        throw new Error("Missing the required parameter 'auto_orders_request' when calling updateAutoOrdersBatch");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
-        '_placeholders': opts['placeholders'],
-        '_async': opts['async'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
+        '_async': opts['_async'],
       };
       var collectionQueryParams = {
       };

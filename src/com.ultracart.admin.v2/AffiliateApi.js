@@ -59,30 +59,30 @@
     /**
      * Retrieve clicks
      * Retrieves a group of clicks from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the clicks returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/AffiliateClickQuery} clickQuery Click query
+     * @param {module:com.ultracart.admin.v2.models/AffiliateClickQuery} click_query Click query
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.expand The object expansion to perform on the result.  Only option is link.
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._expand The object expansion to perform on the result.  Only option is link.
      * @param {module:com.ultracart.admin.v2/AffiliateApi~getClicksByQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateClicksResponse}
      */
-    this.getClicksByQuery = function(clickQuery, opts, callback) {
+    this.getClicksByQuery = function(click_query, opts, callback) {
       opts = opts || {};
-      var postBody = clickQuery;
+      var postBody = click_query;
 
-      // verify the required parameter 'clickQuery' is set
-      if (clickQuery === undefined || clickQuery === null) {
-        throw new Error("Missing the required parameter 'clickQuery' when calling getClicksByQuery");
+      // verify the required parameter 'click_query' is set
+      if (click_query === undefined || click_query === null) {
+        throw new Error("Missing the required parameter 'click_query' when calling getClicksByQuery");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -114,30 +114,30 @@
     /**
      * Retrieve ledger entries
      * Retrieves a group of ledger entries from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the ledgers returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/AffiliateLedgerQuery} ledgerQuery Ledger query
+     * @param {module:com.ultracart.admin.v2.models/AffiliateLedgerQuery} ledger_query Ledger query
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.expand The object expansion to perform on the result.  Only option is link.
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._expand The object expansion to perform on the result.  Only option is link.
      * @param {module:com.ultracart.admin.v2/AffiliateApi~getLedgersByQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateLedgersResponse}
      */
-    this.getLedgersByQuery = function(ledgerQuery, opts, callback) {
+    this.getLedgersByQuery = function(ledger_query, opts, callback) {
       opts = opts || {};
-      var postBody = ledgerQuery;
+      var postBody = ledger_query;
 
-      // verify the required parameter 'ledgerQuery' is set
-      if (ledgerQuery === undefined || ledgerQuery === null) {
-        throw new Error("Missing the required parameter 'ledgerQuery' when calling getLedgersByQuery");
+      // verify the required parameter 'ledger_query' is set
+      if (ledger_query === undefined || ledger_query === null) {
+        throw new Error("Missing the required parameter 'ledger_query' when calling getLedgersByQuery");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };

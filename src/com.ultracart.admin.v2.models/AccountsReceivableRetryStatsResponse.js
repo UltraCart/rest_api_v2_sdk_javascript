@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('linked_accounts'))
-        obj.linkedAccounts = ApiClient.convertToType(data['linked_accounts'], [AccountsReceivableRetryStatAccount]);
+        obj.linked_accounts = ApiClient.convertToType(data['linked_accounts'], [AccountsReceivableRetryStatAccount]);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('overall'))
@@ -75,9 +75,9 @@
   exports.prototype.error = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatAccount>} linkedAccounts
+   * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatAccount>} linked_accounts
    */
-  exports.prototype.linkedAccounts = undefined;
+  exports.prototype.linked_accounts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

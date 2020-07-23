@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('exemptions'))
         obj.exemptions = ApiClient.convertToType(data['exemptions'], [ItemTaxExemption]);
       if (data.hasOwnProperty('tax_free'))
-        obj.taxFree = ApiClient.convertToType(data['tax_free'], 'Boolean');
+        obj.tax_free = ApiClient.convertToType(data['tax_free'], 'Boolean');
       if (data.hasOwnProperty('taxable_cost'))
-        obj.taxableCost = ApiClient.convertToType(data['taxable_cost'], 'Number');
+        obj.taxable_cost = ApiClient.convertToType(data['taxable_cost'], 'Number');
     }
     return obj;
   }
@@ -73,15 +73,15 @@
 
   /**
    * True if tax free
-   * @member {Boolean} taxFree
+   * @member {Boolean} tax_free
    */
-  exports.prototype.taxFree = undefined;
+  exports.prototype.tax_free = undefined;
 
   /**
    * Taxable cost if different than regular cost
-   * @member {Number} taxableCost
+   * @member {Number} taxable_cost
    */
-  exports.prototype.taxableCost = undefined;
+  exports.prototype.taxable_cost = undefined;
 
   return exports;
 

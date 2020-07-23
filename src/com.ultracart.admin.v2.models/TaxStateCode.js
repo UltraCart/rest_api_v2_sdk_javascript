@@ -56,48 +56,48 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('accounting_code'))
-        obj.accountingCode = ApiClient.convertToType(data['accounting_code'], 'String');
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('state_code'))
-        obj.stateCode = ApiClient.convertToType(data['state_code'], 'String');
+        obj.state_code = ApiClient.convertToType(data['state_code'], 'String');
       if (data.hasOwnProperty('state_name'))
-        obj.stateName = ApiClient.convertToType(data['state_name'], 'String');
+        obj.state_name = ApiClient.convertToType(data['state_name'], 'String');
       if (data.hasOwnProperty('tax_rate'))
-        obj.taxRate = ApiClient.convertToType(data['tax_rate'], 'Number');
+        obj.tax_rate = ApiClient.convertToType(data['tax_rate'], 'Number');
       if (data.hasOwnProperty('tax_rate_formatted'))
-        obj.taxRateFormatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
+        obj.tax_rate_formatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
     }
     return obj;
   }
 
   /**
    * Accounting code for programs such as QuickBooks
-   * @member {String} accountingCode
+   * @member {String} accounting_code
    */
-  exports.prototype.accountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
    * State code (2 characters
-   * @member {String} stateCode
+   * @member {String} state_code
    */
-  exports.prototype.stateCode = undefined;
+  exports.prototype.state_code = undefined;
 
   /**
    * State name
-   * @member {String} stateName
+   * @member {String} state_name
    */
-  exports.prototype.stateName = undefined;
+  exports.prototype.state_name = undefined;
 
   /**
    * Tax Rate
-   * @member {Number} taxRate
+   * @member {Number} tax_rate
    */
-  exports.prototype.taxRate = undefined;
+  exports.prototype.tax_rate = undefined;
 
   /**
    * Tax rate formatted
-   * @member {String} taxRateFormatted
+   * @member {String} tax_rate_formatted
    */
-  exports.prototype.taxRateFormatted = undefined;
+  exports.prototype.tax_rate_formatted = undefined;
 
   return exports;
 

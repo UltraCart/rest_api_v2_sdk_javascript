@@ -56,48 +56,48 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('api_application_logo_url'))
-        obj.apiApplicationLogoUrl = ApiClient.convertToType(data['api_application_logo_url'], 'String');
+        obj.api_application_logo_url = ApiClient.convertToType(data['api_application_logo_url'], 'String');
       if (data.hasOwnProperty('application_description'))
-        obj.applicationDescription = ApiClient.convertToType(data['application_description'], 'String');
+        obj.application_description = ApiClient.convertToType(data['application_description'], 'String');
       if (data.hasOwnProperty('application_name'))
-        obj.applicationName = ApiClient.convertToType(data['application_name'], 'String');
+        obj.application_name = ApiClient.convertToType(data['application_name'], 'String');
       if (data.hasOwnProperty('developer_name'))
-        obj.developerName = ApiClient.convertToType(data['developer_name'], 'String');
+        obj.developer_name = ApiClient.convertToType(data['developer_name'], 'String');
       if (data.hasOwnProperty('developer_website'))
-        obj.developerWebsite = ApiClient.convertToType(data['developer_website'], 'String');
+        obj.developer_website = ApiClient.convertToType(data['developer_website'], 'String');
     }
     return obj;
   }
 
   /**
    * Application logo URL
-   * @member {String} apiApplicationLogoUrl
+   * @member {String} api_application_logo_url
    */
-  exports.prototype.apiApplicationLogoUrl = undefined;
+  exports.prototype.api_application_logo_url = undefined;
 
   /**
    * Application description
-   * @member {String} applicationDescription
+   * @member {String} application_description
    */
-  exports.prototype.applicationDescription = undefined;
+  exports.prototype.application_description = undefined;
 
   /**
    * Application name
-   * @member {String} applicationName
+   * @member {String} application_name
    */
-  exports.prototype.applicationName = undefined;
+  exports.prototype.application_name = undefined;
 
   /**
    * Developer name
-   * @member {String} developerName
+   * @member {String} developer_name
    */
-  exports.prototype.developerName = undefined;
+  exports.prototype.developer_name = undefined;
 
   /**
    * Developer website
-   * @member {String} developerWebsite
+   * @member {String} developer_website
    */
-  exports.prototype.developerWebsite = undefined;
+  exports.prototype.developer_website = undefined;
 
   return exports;
 

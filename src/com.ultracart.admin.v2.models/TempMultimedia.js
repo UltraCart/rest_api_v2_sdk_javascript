@@ -60,11 +60,11 @@
       if (data.hasOwnProperty('height'))
         obj.height = ApiClient.convertToType(data['height'], 'Number');
       if (data.hasOwnProperty('multimedia_type'))
-        obj.multimediaType = ApiClient.convertToType(data['multimedia_type'], 'String');
+        obj.multimedia_type = ApiClient.convertToType(data['multimedia_type'], 'String');
       if (data.hasOwnProperty('size'))
         obj.size = ApiClient.convertToType(data['size'], 'Number');
       if (data.hasOwnProperty('temp_multimedia_oid'))
-        obj.tempMultimediaOid = ApiClient.convertToType(data['temp_multimedia_oid'], 'Number');
+        obj.temp_multimedia_oid = ApiClient.convertToType(data['temp_multimedia_oid'], 'Number');
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
       if (data.hasOwnProperty('width'))
@@ -87,9 +87,9 @@
 
   /**
    * Multimedia type
-   * @member {module:com.ultracart.admin.v2.models/TempMultimedia.MultimediaTypeEnum} multimediaType
+   * @member {module:com.ultracart.admin.v2.models/TempMultimedia.MultimediaTypeEnum} multimedia_type
    */
-  exports.prototype.multimediaType = undefined;
+  exports.prototype.multimedia_type = undefined;
 
   /**
    * Size
@@ -99,9 +99,9 @@
 
   /**
    * Temporary multimedia object identifier
-   * @member {Number} tempMultimediaOid
+   * @member {Number} temp_multimedia_oid
    */
-  exports.prototype.tempMultimediaOid = undefined;
+  exports.prototype.temp_multimedia_oid = undefined;
 
   /**
    * URL
@@ -117,7 +117,7 @@
 
 
   /**
-   * Allowed values for the <code>multimediaType</code> property.
+   * Allowed values for the <code>multimedia_type</code> property.
    * @enum {String}
    * @readonly
    */
@@ -126,7 +126,7 @@
      * value: "Image"
      * @const
      */
-    image: "Image",
+    Image: "Image",
 
     /**
      * value: "PDF"
@@ -138,13 +138,13 @@
      * value: "Text"
      * @const
      */
-    text: "Text",
+    Text: "Text",
 
     /**
      * value: "Video"
      * @const
      */
-    video: "Video"
+    Video: "Video"
   };
 
   return exports;

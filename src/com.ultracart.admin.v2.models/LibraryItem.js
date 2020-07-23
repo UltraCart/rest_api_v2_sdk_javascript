@@ -66,21 +66,21 @@
       if (data.hasOwnProperty('industries'))
         obj.industries = ApiClient.convertToType(data['industries'], ['String']);
       if (data.hasOwnProperty('library_item_oid'))
-        obj.libraryItemOid = ApiClient.convertToType(data['library_item_oid'], 'Number');
+        obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('price'))
         obj.price = ApiClient.convertToType(data['price'], 'Number');
       if (data.hasOwnProperty('price_formatted'))
-        obj.priceFormatted = ApiClient.convertToType(data['price_formatted'], 'String');
+        obj.price_formatted = ApiClient.convertToType(data['price_formatted'], 'String');
       if (data.hasOwnProperty('public_item'))
-        obj.publicItem = ApiClient.convertToType(data['public_item'], 'Boolean');
+        obj.public_item = ApiClient.convertToType(data['public_item'], 'Boolean');
       if (data.hasOwnProperty('published_dts'))
-        obj.publishedDts = ApiClient.convertToType(data['published_dts'], 'String');
+        obj.published_dts = ApiClient.convertToType(data['published_dts'], 'String');
       if (data.hasOwnProperty('publishing_status'))
-        obj.publishingStatus = ApiClient.convertToType(data['publishing_status'], 'String');
+        obj.publishing_status = ApiClient.convertToType(data['publishing_status'], 'String');
       if (data.hasOwnProperty('purchase_history'))
-        obj.purchaseHistory = ApiClient.convertToType(data['purchase_history'], 'Number');
+        obj.purchase_history = ApiClient.convertToType(data['purchase_history'], 'Number');
       if (data.hasOwnProperty('style'))
         obj.style = ApiClient.convertToType(data['style'], 'String');
       if (data.hasOwnProperty('title'))
@@ -119,14 +119,14 @@
   exports.prototype.industries = undefined;
 
   /**
-   * @member {Number} libraryItemOid
+   * @member {Number} library_item_oid
    */
-  exports.prototype.libraryItemOid = undefined;
+  exports.prototype.library_item_oid = undefined;
 
   /**
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * @member {Number} price
@@ -134,29 +134,29 @@
   exports.prototype.price = undefined;
 
   /**
-   * @member {String} priceFormatted
+   * @member {String} price_formatted
    */
-  exports.prototype.priceFormatted = undefined;
+  exports.prototype.price_formatted = undefined;
 
   /**
-   * @member {Boolean} publicItem
+   * @member {Boolean} public_item
    */
-  exports.prototype.publicItem = undefined;
+  exports.prototype.public_item = undefined;
 
   /**
-   * @member {String} publishedDts
+   * @member {String} published_dts
    */
-  exports.prototype.publishedDts = undefined;
+  exports.prototype.published_dts = undefined;
 
   /**
-   * @member {String} publishingStatus
+   * @member {String} publishing_status
    */
-  exports.prototype.publishingStatus = undefined;
+  exports.prototype.publishing_status = undefined;
 
   /**
-   * @member {Number} purchaseHistory
+   * @member {Number} purchase_history
    */
-  exports.prototype.purchaseHistory = undefined;
+  exports.prototype.purchase_history = undefined;
 
   /**
    * @member {String} style

@@ -59,21 +59,21 @@
     /**
      * Cancel an order
      * Cancel an order on the UltraCart account.  If the success flag is false, then consult the error message for why it failed. 
-     * @param {String} orderId The order id to cancel.
+     * @param {String} order_id The order id to cancel.
      * @param {module:com.ultracart.admin.v2/OrderApi~cancelOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.cancelOrder = function(orderId, callback) {
+    this.cancelOrder = function(order_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling cancelOrder");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling cancelOrder");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -107,20 +107,20 @@
     /**
      * Delete an order
      * Delete an order on the UltraCart account. 
-     * @param {String} orderId The order id to delete.
+     * @param {String} order_id The order id to delete.
      * @param {module:com.ultracart.admin.v2/OrderApi~deleteOrderCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteOrder = function(orderId, callback) {
+    this.deleteOrder = function(order_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling deleteOrder");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling deleteOrder");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -154,27 +154,27 @@
     /**
      * Format order
      * Format the order for display at text or html 
-     * @param {String} orderId The order id to format
-     * @param {module:com.ultracart.admin.v2.models/OrderFormat} formatOptions Format options
+     * @param {String} order_id The order id to format
+     * @param {module:com.ultracart.admin.v2.models/OrderFormat} format_options Format options
      * @param {module:com.ultracart.admin.v2/OrderApi~formatCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderFormatResponse}
      */
-    this.format = function(orderId, formatOptions, callback) {
-      var postBody = formatOptions;
+    this.format = function(order_id, format_options, callback) {
+      var postBody = format_options;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling format");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling format");
       }
 
-      // verify the required parameter 'formatOptions' is set
-      if (formatOptions === undefined || formatOptions === null) {
-        throw new Error("Missing the required parameter 'formatOptions' when calling format");
+      // verify the required parameter 'format_options' is set
+      if (format_options === undefined || format_options === null) {
+        throw new Error("Missing the required parameter 'format_options' when calling format");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -208,21 +208,21 @@
     /**
      * Generate an order token for a given order id
      * Retrieves a single order token for a given order id.  The token can be used with the getOrderByToken API. 
-     * @param {String} orderId The order id to generate a token for.
+     * @param {String} order_id The order id to generate a token for.
      * @param {module:com.ultracart.admin.v2/OrderApi~generateOrderTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderTokenResponse}
      */
-    this.generateOrderToken = function(orderId, callback) {
+    this.generateOrderToken = function(order_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling generateOrderToken");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling generateOrderToken");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -344,27 +344,27 @@
     /**
      * Retrieve an order
      * Retrieves a single order using the specified order id. 
-     * @param {String} orderId The order id to retrieve.
+     * @param {String} order_id The order id to retrieve.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/OrderApi~getOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
      */
-    this.getOrder = function(orderId, opts, callback) {
+    this.getOrder = function(order_id, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling getOrder");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrder");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -396,26 +396,26 @@
     /**
      * Retrieve an order using a token
      * Retrieves a single order using the specified order token. 
-     * @param {module:com.ultracart.admin.v2.models/OrderByTokenQuery} orderByTokenQuery Order by token query
+     * @param {module:com.ultracart.admin.v2.models/OrderByTokenQuery} order_by_token_query Order by token query
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/OrderApi~getOrderByTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
      */
-    this.getOrderByToken = function(orderByTokenQuery, opts, callback) {
+    this.getOrderByToken = function(order_by_token_query, opts, callback) {
       opts = opts || {};
-      var postBody = orderByTokenQuery;
+      var postBody = order_by_token_query;
 
-      // verify the required parameter 'orderByTokenQuery' is set
-      if (orderByTokenQuery === undefined || orderByTokenQuery === null) {
-        throw new Error("Missing the required parameter 'orderByTokenQuery' when calling getOrderByToken");
+      // verify the required parameter 'order_by_token_query' is set
+      if (order_by_token_query === undefined || order_by_token_query === null) {
+        throw new Error("Missing the required parameter 'order_by_token_query' when calling getOrderByToken");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -448,40 +448,40 @@
      * Retrieve orders
      * Retrieves a group of orders from the account.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the orders returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.orderId Order Id
-     * @param {String} opts.paymentMethod Payment Method
+     * @param {String} opts.order_id Order Id
+     * @param {String} opts.payment_method Payment Method
      * @param {String} opts.company Company
-     * @param {String} opts.firstName First Name
-     * @param {String} opts.lastName Last Name
+     * @param {String} opts.first_name First Name
+     * @param {String} opts.last_name Last Name
      * @param {String} opts.city City
-     * @param {String} opts.stateRegion State/Region
-     * @param {String} opts.postalCode Postal Code
-     * @param {String} opts.countryCode Country Code (ISO-3166 two letter)
+     * @param {String} opts.state_region State/Region
+     * @param {String} opts.postal_code Postal Code
+     * @param {String} opts.country_code Country Code (ISO-3166 two letter)
      * @param {String} opts.phone Phone
      * @param {String} opts.email Email
-     * @param {String} opts.ccEmail CC Email
+     * @param {String} opts.cc_email CC Email
      * @param {Number} opts.total Total
-     * @param {String} opts.screenBrandingThemeCode Screen Branding Theme Code
-     * @param {String} opts.storefrontHostName StoreFront Host Name
-     * @param {String} opts.creationDateBegin Creation Date Begin
-     * @param {String} opts.creationDateEnd Creation Date End
-     * @param {String} opts.paymentDateBegin Payment Date Begin
-     * @param {String} opts.paymentDateEnd Payment Date End
-     * @param {String} opts.shipmentDateBegin Shipment Date Begin
-     * @param {String} opts.shipmentDateEnd Shipment Date End
+     * @param {String} opts.screen_branding_theme_code Screen Branding Theme Code
+     * @param {String} opts.storefront_host_name StoreFront Host Name
+     * @param {String} opts.creation_date_begin Creation Date Begin
+     * @param {String} opts.creation_date_end Creation Date End
+     * @param {String} opts.payment_date_begin Payment Date Begin
+     * @param {String} opts.payment_date_end Payment Date End
+     * @param {String} opts.shipment_date_begin Shipment Date Begin
+     * @param {String} opts.shipment_date_end Shipment Date End
      * @param {String} opts.rma RMA
-     * @param {String} opts.purchaseOrderNumber Purchase Order Number
-     * @param {String} opts.itemId Item Id
-     * @param {String} opts.currentStage Current Stage
-     * @param {String} opts.channelPartnerCode Channel Partner Code
-     * @param {String} opts.channelPartnerOrderId Channel Partner Order ID
-     * @param {Number} opts.customerProfileOid 
-     * @param {String} opts.refundDateBegin 
-     * @param {String} opts.refundDateEnd 
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.
+     * @param {String} opts.purchase_order_number Purchase Order Number
+     * @param {String} opts.item_id Item Id
+     * @param {String} opts.current_stage Current Stage
+     * @param {String} opts.channel_partner_code Channel Partner Code
+     * @param {String} opts.channel_partner_order_id Channel Partner Order ID
+     * @param {Number} opts.customer_profile_oid 
+     * @param {String} opts.Refund_Date_Begin 
+     * @param {String} opts.Refund_Date_End 
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.
      * @param {module:com.ultracart.admin.v2/OrderApi~getOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}
      */
@@ -493,40 +493,40 @@
       var pathParams = {
       };
       var queryParams = {
-        'order_id': opts['orderId'],
-        'payment_method': opts['paymentMethod'],
+        'order_id': opts['order_id'],
+        'payment_method': opts['payment_method'],
         'company': opts['company'],
-        'first_name': opts['firstName'],
-        'last_name': opts['lastName'],
+        'first_name': opts['first_name'],
+        'last_name': opts['last_name'],
         'city': opts['city'],
-        'state_region': opts['stateRegion'],
-        'postal_code': opts['postalCode'],
-        'country_code': opts['countryCode'],
+        'state_region': opts['state_region'],
+        'postal_code': opts['postal_code'],
+        'country_code': opts['country_code'],
         'phone': opts['phone'],
         'email': opts['email'],
-        'cc_email': opts['ccEmail'],
+        'cc_email': opts['cc_email'],
         'total': opts['total'],
-        'screen_branding_theme_code': opts['screenBrandingThemeCode'],
-        'storefront_host_name': opts['storefrontHostName'],
-        'creation_date_begin': opts['creationDateBegin'],
-        'creation_date_end': opts['creationDateEnd'],
-        'payment_date_begin': opts['paymentDateBegin'],
-        'payment_date_end': opts['paymentDateEnd'],
-        'shipment_date_begin': opts['shipmentDateBegin'],
-        'shipment_date_end': opts['shipmentDateEnd'],
+        'screen_branding_theme_code': opts['screen_branding_theme_code'],
+        'storefront_host_name': opts['storefront_host_name'],
+        'creation_date_begin': opts['creation_date_begin'],
+        'creation_date_end': opts['creation_date_end'],
+        'payment_date_begin': opts['payment_date_begin'],
+        'payment_date_end': opts['payment_date_end'],
+        'shipment_date_begin': opts['shipment_date_begin'],
+        'shipment_date_end': opts['shipment_date_end'],
         'rma': opts['rma'],
-        'purchase_order_number': opts['purchaseOrderNumber'],
-        'item_id': opts['itemId'],
-        'current_stage': opts['currentStage'],
-        'channel_partner_code': opts['channelPartnerCode'],
-        'channel_partner_order_id': opts['channelPartnerOrderId'],
-        'customer_profile_oid': opts['customerProfileOid'],
-        'Refund Date Begin': opts['refundDateBegin'],
-        'Refund Date End': opts['refundDateEnd'],
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        'purchase_order_number': opts['purchase_order_number'],
+        'item_id': opts['item_id'],
+        'current_stage': opts['current_stage'],
+        'channel_partner_code': opts['channel_partner_code'],
+        'channel_partner_order_id': opts['channel_partner_order_id'],
+        'customer_profile_oid': opts['customer_profile_oid'],
+        'Refund Date Begin': opts['Refund_Date_Begin'],
+        'Refund Date End': opts['Refund_Date_End'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -558,26 +558,26 @@
     /**
      * Retrieve order batch
      * Retrieves a group of orders from the account based on an array of order ids.  If more than 500 order ids are specified, the API call will fail with a bad request error. 
-     * @param {module:com.ultracart.admin.v2.models/OrderQueryBatch} orderBatch Order batch
+     * @param {module:com.ultracart.admin.v2.models/OrderQueryBatch} order_batch Order batch
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.
+     * @param {String} opts._expand The object expansion to perform on the result.
      * @param {module:com.ultracart.admin.v2/OrderApi~getOrdersBatchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}
      */
-    this.getOrdersBatch = function(orderBatch, opts, callback) {
+    this.getOrdersBatch = function(order_batch, opts, callback) {
       opts = opts || {};
-      var postBody = orderBatch;
+      var postBody = order_batch;
 
-      // verify the required parameter 'orderBatch' is set
-      if (orderBatch === undefined || orderBatch === null) {
-        throw new Error("Missing the required parameter 'orderBatch' when calling getOrdersBatch");
+      // verify the required parameter 'order_batch' is set
+      if (order_batch === undefined || order_batch === null) {
+        throw new Error("Missing the required parameter 'order_batch' when calling getOrdersBatch");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -609,32 +609,32 @@
     /**
      * Retrieve orders
      * Retrieves a group of orders from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the orders returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/OrderQuery} orderQuery Order query
+     * @param {module:com.ultracart.admin.v2.models/OrderQuery} order_query Order query
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts.expand The object expansion to perform on the result.
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.
      * @param {module:com.ultracart.admin.v2/OrderApi~getOrdersByQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}
      */
-    this.getOrdersByQuery = function(orderQuery, opts, callback) {
+    this.getOrdersByQuery = function(order_query, opts, callback) {
       opts = opts || {};
-      var postBody = orderQuery;
+      var postBody = order_query;
 
-      // verify the required parameter 'orderQuery' is set
-      if (orderQuery === undefined || orderQuery === null) {
-        throw new Error("Missing the required parameter 'orderQuery' when calling getOrdersByQuery");
+      // verify the required parameter 'order_query' is set
+      if (order_query === undefined || order_query === null) {
+        throw new Error("Missing the required parameter 'order_query' when calling getOrdersByQuery");
       }
 
 
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_sort': opts['sort'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -668,7 +668,7 @@
      * Inserts a new order on the UltraCart account.  This is probably NOT the method you want.  This is for channel orders.  For regular orders the customer is entering, use the CheckoutApi.  It has many, many more features, checks, and validations. 
      * @param {module:com.ultracart.admin.v2.models/Order} order Order to insert
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/OrderApi~insertOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
      */
@@ -685,7 +685,7 @@
       var pathParams = {
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -718,18 +718,18 @@
      * Refund an order
      * Perform a refund operation on an order and then update the order if successful 
      * @param {module:com.ultracart.admin.v2.models/Order} order Order to refund
-     * @param {String} orderId The order id to refund.
+     * @param {String} order_id The order id to refund.
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.rejectAfterRefund Reject order after refund (default to false)
-     * @param {Boolean} opts.skipCustomerNotification Skip customer email notification (default to false)
-     * @param {Boolean} opts.autoOrderCancel Cancel associated auto orders (default to false)
-     * @param {Boolean} opts.manualRefund Consider a manual refund done externally (default to false)
-     * @param {Boolean} opts.reverseAffiliateTransactions Reverse affiliate transactions (default to true)
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts.reject_after_refund Reject order after refund (default to false)
+     * @param {Boolean} opts.skip_customer_notification Skip customer email notification (default to false)
+     * @param {Boolean} opts.auto_order_cancel Cancel associated auto orders (default to false)
+     * @param {Boolean} opts.manual_refund Consider a manual refund done externally (default to false)
+     * @param {Boolean} opts.reverse_affiliate_transactions Reverse affiliate transactions (default to true)
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/OrderApi~refundOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
      */
-    this.refundOrder = function(order, orderId, opts, callback) {
+    this.refundOrder = function(order, order_id, opts, callback) {
       opts = opts || {};
       var postBody = order;
 
@@ -738,22 +738,22 @@
         throw new Error("Missing the required parameter 'order' when calling refundOrder");
       }
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling refundOrder");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling refundOrder");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
-        'reject_after_refund': opts['rejectAfterRefund'],
-        'skip_customer_notification': opts['skipCustomerNotification'],
-        'auto_order_cancel': opts['autoOrderCancel'],
-        'manual_refund': opts['manualRefund'],
-        'reverse_affiliate_transactions': opts['reverseAffiliateTransactions'],
-        '_expand': opts['expand'],
+        'reject_after_refund': opts['reject_after_refund'],
+        'skip_customer_notification': opts['skip_customer_notification'],
+        'auto_order_cancel': opts['auto_order_cancel'],
+        'manual_refund': opts['manual_refund'],
+        'reverse_affiliate_transactions': opts['reverse_affiliate_transactions'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -785,17 +785,17 @@
     /**
      * Replacement order
      * Create a replacement order based upon a previous order 
-     * @param {String} orderId The order id to generate a replacement for.
+     * @param {String} order_id The order id to generate a replacement for.
      * @param {module:com.ultracart.admin.v2.models/OrderReplacement} replacement Replacement order details
      * @param {module:com.ultracart.admin.v2/OrderApi~replacementCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderReplacementResponse}
      */
-    this.replacement = function(orderId, replacement, callback) {
+    this.replacement = function(order_id, replacement, callback) {
       var postBody = replacement;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling replacement");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling replacement");
       }
 
       // verify the required parameter 'replacement' is set
@@ -805,7 +805,7 @@
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -839,21 +839,21 @@
     /**
      * Resend receipt
      * Resend the receipt for an order on the UltraCart account. 
-     * @param {String} orderId The order id to resend the receipt for.
+     * @param {String} order_id The order id to resend the receipt for.
      * @param {module:com.ultracart.admin.v2/OrderApi~resendReceiptCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.resendReceipt = function(orderId, callback) {
+    this.resendReceipt = function(order_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling resendReceipt");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling resendReceipt");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -887,21 +887,21 @@
     /**
      * Resend shipment confirmation
      * Resend shipment confirmation for an order on the UltraCart account. 
-     * @param {String} orderId The order id to resend the shipment notification for.
+     * @param {String} order_id The order id to resend the shipment notification for.
      * @param {module:com.ultracart.admin.v2/OrderApi~resendShipmentConfirmationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.resendShipmentConfirmation = function(orderId, callback) {
+    this.resendShipmentConfirmation = function(order_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling resendShipmentConfirmation");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling resendShipmentConfirmation");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
       };
@@ -935,16 +935,16 @@
     /**
      * Update A/R Retry Configuration
      * Update A/R Retry Configuration.  This is primarily an internal API call.  It is doubtful you would ever need to use it. 
-     * @param {module:com.ultracart.admin.v2.models/AccountsReceivableRetryConfig} retryConfig AccountsReceivableRetryConfig object
+     * @param {module:com.ultracart.admin.v2.models/AccountsReceivableRetryConfig} retry_config AccountsReceivableRetryConfig object
      * @param {module:com.ultracart.admin.v2/OrderApi~updateAccountsReceivableRetryConfigCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.updateAccountsReceivableRetryConfig = function(retryConfig, callback) {
-      var postBody = retryConfig;
+    this.updateAccountsReceivableRetryConfig = function(retry_config, callback) {
+      var postBody = retry_config;
 
-      // verify the required parameter 'retryConfig' is set
-      if (retryConfig === undefined || retryConfig === null) {
-        throw new Error("Missing the required parameter 'retryConfig' when calling updateAccountsReceivableRetryConfig");
+      // verify the required parameter 'retry_config' is set
+      if (retry_config === undefined || retry_config === null) {
+        throw new Error("Missing the required parameter 'retry_config' when calling updateAccountsReceivableRetryConfig");
       }
 
 
@@ -983,13 +983,13 @@
      * Update an order
      * Update a new order on the UltraCart account.  This is probably NOT the method you want.  It is rare to update a completed order.  This will not trigger charges, emails, or any other automation. 
      * @param {module:com.ultracart.admin.v2.models/Order} order Order to update
-     * @param {String} orderId The order id to update.
+     * @param {String} order_id The order id to update.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/OrderApi~updateOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
      */
-    this.updateOrder = function(order, orderId, opts, callback) {
+    this.updateOrder = function(order, order_id, opts, callback) {
       opts = opts || {};
       var postBody = order;
 
@@ -998,17 +998,17 @@
         throw new Error("Missing the required parameter 'order' when calling updateOrder");
       }
 
-      // verify the required parameter 'orderId' is set
-      if (orderId === undefined || orderId === null) {
-        throw new Error("Missing the required parameter 'orderId' when calling updateOrder");
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling updateOrder");
       }
 
 
       var pathParams = {
-        'order_id': orderId
+        'order_id': order_id
       };
       var queryParams = {
-        '_expand': opts['expand'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };

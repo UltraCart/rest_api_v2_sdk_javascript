@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 ## Enum: ApiVersionEnum
 
 
-* `_20170301` (value: `"2017-03-01"`)
+* `_2017_03_01` (value: `"2017-03-01"`)
 
 
 

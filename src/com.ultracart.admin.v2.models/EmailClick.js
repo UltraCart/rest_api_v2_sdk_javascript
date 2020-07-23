@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('click_count'))
-        obj.clickCount = ApiClient.convertToType(data['click_count'], 'Number');
+        obj.click_count = ApiClient.convertToType(data['click_count'], 'Number');
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
     }
@@ -65,9 +65,9 @@
 
   /**
    * Click Count
-   * @member {Number} clickCount
+   * @member {Number} click_count
    */
-  exports.prototype.clickCount = undefined;
+  exports.prototype.click_count = undefined;
 
   /**
    * url

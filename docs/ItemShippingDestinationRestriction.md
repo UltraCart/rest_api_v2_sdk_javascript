@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 ## Enum: ValidityEnum
 
 
-* `validOnlyFor` (value: `"valid only for"`)
+* `valid_only_for` (value: `"valid only for"`)
 
-* `invalidFor` (value: `"invalid for"`)
+* `invalid_for` (value: `"invalid for"`)
 
 
 

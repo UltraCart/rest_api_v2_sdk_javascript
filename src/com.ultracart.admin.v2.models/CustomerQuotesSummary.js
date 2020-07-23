@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('first_quote_dts'))
-        obj.firstQuoteDts = ApiClient.convertToType(data['first_quote_dts'], 'String');
+        obj.first_quote_dts = ApiClient.convertToType(data['first_quote_dts'], 'String');
       if (data.hasOwnProperty('last_quote_dts'))
-        obj.lastQuoteDts = ApiClient.convertToType(data['last_quote_dts'], 'String');
+        obj.last_quote_dts = ApiClient.convertToType(data['last_quote_dts'], 'String');
       if (data.hasOwnProperty('quote_count'))
-        obj.quoteCount = ApiClient.convertToType(data['quote_count'], 'Number');
+        obj.quote_count = ApiClient.convertToType(data['quote_count'], 'Number');
       if (data.hasOwnProperty('total'))
         obj.total = ApiClient.convertToType(data['total'], 'Number');
     }
@@ -69,21 +69,21 @@
 
   /**
    * First quote date
-   * @member {String} firstQuoteDts
+   * @member {String} first_quote_dts
    */
-  exports.prototype.firstQuoteDts = undefined;
+  exports.prototype.first_quote_dts = undefined;
 
   /**
    * Last quote date
-   * @member {String} lastQuoteDts
+   * @member {String} last_quote_dts
    */
-  exports.prototype.lastQuoteDts = undefined;
+  exports.prototype.last_quote_dts = undefined;
 
   /**
    * Total number of quote
-   * @member {Number} quoteCount
+   * @member {Number} quote_count
    */
-  exports.prototype.quoteCount = undefined;
+  exports.prototype.quote_count = undefined;
 
   /**
    * Total amount associated with the quotes

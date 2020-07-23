@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('shipping_methods'))
-        obj.shippingMethods = ApiClient.convertToType(data['shipping_methods'], ['String']);
+        obj.shipping_methods = ApiClient.convertToType(data['shipping_methods'], ['String']);
       if (data.hasOwnProperty('tiers'))
         obj.tiers = ApiClient.convertToType(data['tiers'], [CouponTierPercent]);
     }
@@ -65,9 +65,9 @@
 
   /**
    * One or more shipping methods that may receive this discount
-   * @member {Array.<String>} shippingMethods
+   * @member {Array.<String>} shipping_methods
    */
-  exports.prototype.shippingMethods = undefined;
+  exports.prototype.shipping_methods = undefined;
 
   /**
    * A list of discount tiers.

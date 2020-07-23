@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 * `dropdown` (value: `"dropdown"`)
 
-* `fileAttachment` (value: `"file attachment"`)
+* `file_attachment` (value: `"file attachment"`)
 
 * `fixed` (value: `"fixed"`)
 

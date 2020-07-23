@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**duplicateLibraryItem**](StorefrontApi.md#duplicateLibraryItem) | **POST** /storefront/code_library/{library_item_oid}/duplicate | Duplicate library item.
 [**geocodeAddress**](StorefrontApi.md#geocodeAddress) | **POST** /storefront/{storefront_oid}/email/geocode | Obtain lat/long for an address
 [**getCountries**](StorefrontApi.md#getCountries) | **GET** /storefront/{storefront_oid}/email/countries | Get countries
-[**getEditorToken**](StorefrontApi.md#getEditorToken) | **GET** /storefront/{id}/editor_token | Gets editor token
+[**getEditorToken**](StorefrontApi.md#getEditorToken) | **GET** /storefront/{storefront_oid}/editor_token | Gets editor token
 [**getEmailBaseTemplates**](StorefrontApi.md#getEmailBaseTemplates) | **GET** /storefront/{storefront_oid}/email/baseTemplates | Get email communication base templates
 [**getEmailCampaign**](StorefrontApi.md#getEmailCampaign) | **GET** /storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid} | Get email campaign
 [**getEmailCampaigns**](StorefrontApi.md#getEmailCampaigns) | **GET** /storefront/{storefront_oid}/email/campaigns | Get email campaigns
@@ -74,8 +74,8 @@ Method | HTTP request | Description
 [**getHistogramPropertyValues**](StorefrontApi.md#getHistogramPropertyValues) | **GET** /storefront/{storefront_oid}/email/histogram/property_values | Get histogram property values
 [**getLibraryItem**](StorefrontApi.md#getLibraryItem) | **GET** /storefront/code_library/{library_item_oid} | Get library item.
 [**getLibraryItemsByQuery**](StorefrontApi.md#getLibraryItemsByQuery) | **POST** /storefront/code_library/query | Retrieve library items
-[**getTransactionEmail**](StorefrontApi.md#getTransactionEmail) | **GET** /storefront/{id}/transaction_email/list/{email_id} | Gets a transaction email object
-[**getTransactionEmailList**](StorefrontApi.md#getTransactionEmailList) | **GET** /storefront/{id}/transaction_email/list | Gets a list of transaction email names
+[**getTransactionEmail**](StorefrontApi.md#getTransactionEmail) | **GET** /storefront/{storefront_oid}/transaction_email/list/{email_id} | Gets a transaction email object
+[**getTransactionEmailList**](StorefrontApi.md#getTransactionEmailList) | **GET** /storefront/{storefront_oid}/transaction_email/list | Gets a list of transaction email names
 [**globalUnsubscribe**](StorefrontApi.md#globalUnsubscribe) | **POST** /storefront/{storefront_oid}/email/globalUnsubscribe | Globally unsubscribe a customer
 [**importEmailThirdPartyProviderList**](StorefrontApi.md#importEmailThirdPartyProviderList) | **POST** /storefront/{storefront_oid}/email/third_party_providers/import | Import a third party provider list
 [**insertEmailCampaign**](StorefrontApi.md#insertEmailCampaign) | **POST** /storefront/{storefront_oid}/email/campaigns | Insert email campaign
@@ -108,12 +108,12 @@ Method | HTTP request | Description
 [**updateEmailSettings**](StorefrontApi.md#updateEmailSettings) | **POST** /storefront/{storefront_oid}/email/settings | Update email settings
 [**updateExperiment**](StorefrontApi.md#updateExperiment) | **PUT** /storefront/{storefront_oid}/experiments/{storefront_experiment_oid} | Update experiment
 [**updateLibraryItem**](StorefrontApi.md#updateLibraryItem) | **PUT** /storefront/code_library/{library_item_oid} | Update library item. Note that only certain fields may be updated via this method.
-[**updateTransactionEmail**](StorefrontApi.md#updateTransactionEmail) | **PUT** /storefront/{id}/transaction_email/list/{email_id} | Updates a transaction email object
+[**updateTransactionEmail**](StorefrontApi.md#updateTransactionEmail) | **PUT** /storefront/{storefront_oid}/transaction_email/list/{email_id} | Updates a transaction email object
 
 
 <a name="addToLibrary"></a>
 # **addToLibrary**
-> LibraryItemResponse addToLibrary(addLibraryRequest)
+> LibraryItemResponse addToLibrary(add_library_request)
 
 Add to library
 
@@ -140,7 +140,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var addLibraryRequest = new UltraCartRestApiV2.AddLibraryItemRequest(); // AddLibraryItemRequest | New library item
+var add_library_request = new UltraCartRestApiV2.AddLibraryItemRequest(); // AddLibraryItemRequest | New library item
 
 
 var callback = function(error, data, response) {
@@ -150,14 +150,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.addToLibrary(addLibraryRequest, callback);
+apiInstance.addToLibrary(add_library_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addLibraryRequest** | [**AddLibraryItemRequest**](AddLibraryItemRequest.md)| New library item | 
+ **add_library_request** | [**AddLibraryItemRequest**](AddLibraryItemRequest.md)| New library item | 
 
 ### Return type
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 <a name="applyToStoreFront"></a>
 # **applyToStoreFront**
-> ApplyLibraryItemResponse applyToStoreFront(libraryItemOid, storefrontOid)
+> ApplyLibraryItemResponse applyToStoreFront(library_item_oid, storefront_oid)
 
 Apply library item to storefront.
 
@@ -201,9 +201,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | 
+var library_item_oid = 56; // Number | 
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -213,15 +213,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.applyToStoreFront(libraryItemOid, storefrontOid, callback);
+apiInstance.applyToStoreFront(library_item_oid, storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**|  | 
- **storefrontOid** | **Number**|  | 
+ **library_item_oid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 <a name="archiveEmailList"></a>
 # **archiveEmailList**
-> EmailListArchiveResponse archiveEmailList(storefrontOid, emailListUuid)
+> EmailListArchiveResponse archiveEmailList(storefront_oid, email_list_uuid)
 
 Archive email list
 
@@ -265,9 +265,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -277,15 +277,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.archiveEmailList(storefrontOid, emailListUuid, callback);
+apiInstance.archiveEmailList(storefront_oid, email_list_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
 
 ### Return type
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 <a name="archiveEmailSegment"></a>
 # **archiveEmailSegment**
-> EmailSegmentArchiveResponse archiveEmailSegment(storefrontOid, emailSegmentUuid)
+> EmailSegmentArchiveResponse archiveEmailSegment(storefront_oid, email_segment_uuid)
 
 Archive email segment
 
@@ -329,9 +329,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -341,15 +341,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.archiveEmailSegment(storefrontOid, emailSegmentUuid, callback);
+apiInstance.archiveEmailSegment(storefront_oid, email_segment_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
 
 ### Return type
 
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 <a name="backPopulateEmailFlow"></a>
 # **backPopulateEmailFlow**
-> EmailFlowBackPopulateResponse backPopulateEmailFlow(storefrontOid, emailFlowUuid, backPopulateRequest)
+> EmailFlowBackPopulateResponse backPopulateEmailFlow(storefront_oid, email_flow_uuid, back_populate_request)
 
 Back populate email flow
 
@@ -393,11 +393,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | 
+var email_flow_uuid = "email_flow_uuid_example"; // String | 
 
-var backPopulateRequest = new UltraCartRestApiV2.EmailFlowBackPopulateRequest(); // EmailFlowBackPopulateRequest | The request to back populate
+var back_populate_request = new UltraCartRestApiV2.EmailFlowBackPopulateRequest(); // EmailFlowBackPopulateRequest | The request to back populate
 
 
 var callback = function(error, data, response) {
@@ -407,16 +407,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.backPopulateEmailFlow(storefrontOid, emailFlowUuid, backPopulateRequest, callback);
+apiInstance.backPopulateEmailFlow(storefront_oid, email_flow_uuid, back_populate_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailFlowUuid** | **String**|  | 
- **backPopulateRequest** | [**EmailFlowBackPopulateRequest**](EmailFlowBackPopulateRequest.md)| The request to back populate | 
+ **storefront_oid** | **Number**|  | 
+ **email_flow_uuid** | **String**|  | 
+ **back_populate_request** | [**EmailFlowBackPopulateRequest**](EmailFlowBackPopulateRequest.md)| The request to back populate | 
 
 ### Return type
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 <a name="checkDownloadEmailSegment"></a>
 # **checkDownloadEmailSegment**
-> EmailSegmentDownloadPrepareResponse checkDownloadEmailSegment(storefrontOid, emailSegmentUuid, emailSegmentRebuildUuid)
+> EmailSegmentDownloadPrepareResponse checkDownloadEmailSegment(storefront_oid, email_segment_uuid, email_segment_rebuild_uuid)
 
 Check download of email segment
 
@@ -460,11 +460,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
-var emailSegmentRebuildUuid = "emailSegmentRebuildUuid_example"; // String | 
+var email_segment_rebuild_uuid = "email_segment_rebuild_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -474,16 +474,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkDownloadEmailSegment(storefrontOid, emailSegmentUuid, emailSegmentRebuildUuid, callback);
+apiInstance.checkDownloadEmailSegment(storefront_oid, email_segment_uuid, email_segment_rebuild_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
- **emailSegmentRebuildUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
+ **email_segment_rebuild_uuid** | **String**|  | 
 
 ### Return type
 
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 <a name="cloneEmailCampaign"></a>
 # **cloneEmailCampaign**
-> EmailCampaignResponse cloneEmailCampaign(storefrontOid, emailCampaignUuid, opts)
+> EmailCampaignResponse cloneEmailCampaign(storefront_oid, email_campaign_uuid, opts)
 
 Clone email campaign
 
@@ -527,12 +527,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
+var email_campaign_uuid = "email_campaign_uuid_example"; // String | 
 
 var opts = { 
-  'targetStorefrontOid': 56 // Number | 
+  'target_storefront_oid': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -542,16 +542,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cloneEmailCampaign(storefrontOid, emailCampaignUuid, opts, callback);
+apiInstance.cloneEmailCampaign(storefront_oid, email_campaign_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCampaignUuid** | **String**|  | 
- **targetStorefrontOid** | **Number**|  | [optional] 
+ **storefront_oid** | **Number**|  | 
+ **email_campaign_uuid** | **String**|  | 
+ **target_storefront_oid** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 
 <a name="cloneEmailFlow"></a>
 # **cloneEmailFlow**
-> EmailFlowResponse cloneEmailFlow(storefrontOid, emailFlowUuid, opts)
+> EmailFlowResponse cloneEmailFlow(storefront_oid, email_flow_uuid, opts)
 
 Clone email flow
 
@@ -595,12 +595,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | 
+var email_flow_uuid = "email_flow_uuid_example"; // String | 
 
 var opts = { 
-  'targetStorefrontOid': 56 // Number | 
+  'target_storefront_oid': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -610,16 +610,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cloneEmailFlow(storefrontOid, emailFlowUuid, opts, callback);
+apiInstance.cloneEmailFlow(storefront_oid, email_flow_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailFlowUuid** | **String**|  | 
- **targetStorefrontOid** | **Number**|  | [optional] 
+ **storefront_oid** | **Number**|  | 
+ **email_flow_uuid** | **String**|  | 
+ **target_storefront_oid** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 
 <a name="cloneLibraryItem"></a>
 # **cloneLibraryItem**
-> LibraryItemResponse cloneLibraryItem(libraryItemOid, opts)
+> LibraryItemResponse cloneLibraryItem(library_item_oid, opts)
 
 Clone public library item.
 
@@ -663,10 +663,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | 
+var library_item_oid = 56; // Number | 
 
 var opts = { 
-  'storefrontOid': 56 // Number | 
+  'storefront_oid': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -676,15 +676,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cloneLibraryItem(libraryItemOid, opts, callback);
+apiInstance.cloneLibraryItem(library_item_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**|  | 
- **storefrontOid** | **Number**|  | [optional] 
+ **library_item_oid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteEmailCommseqStat"></a>
 # **deleteEmailCommseqStat**
-> deleteEmailCommseqStat(storefrontOid, commseqUuid)
+> deleteEmailCommseqStat(storefront_oid, commseq_uuid)
 
 Delete communication sequence stats
 
@@ -789,9 +789,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -801,15 +801,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteEmailCommseqStat(storefrontOid, commseqUuid, callback);
+apiInstance.deleteEmailCommseqStat(storefront_oid, commseq_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
 
 ### Return type
 
@@ -826,7 +826,7 @@ null (empty response body)
 
 <a name="deleteEmailEmail"></a>
 # **deleteEmailEmail**
-> BaseResponse deleteEmailEmail(storefrontOid, commseqEmailUuid)
+> BaseResponse deleteEmailEmail(storefront_oid, commseq_email_uuid)
 
 Delete email email
 
@@ -853,9 +853,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -865,15 +865,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.deleteEmailEmail(storefrontOid, commseqEmailUuid, callback);
+apiInstance.deleteEmailEmail(storefront_oid, commseq_email_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqEmailUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_email_uuid** | **String**|  | 
 
 ### Return type
 
@@ -890,7 +890,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteEmailListCustomer"></a>
 # **deleteEmailListCustomer**
-> BaseResponse deleteEmailListCustomer(storefrontOid, emailListUuid, emailCustomerUuid)
+> BaseResponse deleteEmailListCustomer(storefront_oid, email_list_uuid, email_customer_uuid)
 
 Delete email list customer
 
@@ -917,11 +917,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
+var email_customer_uuid = "email_customer_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -931,16 +931,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.deleteEmailListCustomer(storefrontOid, emailListUuid, emailCustomerUuid, callback);
+apiInstance.deleteEmailListCustomer(storefront_oid, email_list_uuid, email_customer_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
- **emailCustomerUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
+ **email_customer_uuid** | **String**|  | 
 
 ### Return type
 
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteEmailPostcard"></a>
 # **deleteEmailPostcard**
-> BaseResponse deleteEmailPostcard(storefrontOid, commseqPostcardUuid)
+> BaseResponse deleteEmailPostcard(storefront_oid, commseq_postcard_uuid)
 
 Delete email postcard
 
@@ -984,9 +984,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
+var commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -996,15 +996,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.deleteEmailPostcard(storefrontOid, commseqPostcardUuid, callback);
+apiInstance.deleteEmailPostcard(storefront_oid, commseq_postcard_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqPostcardUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_postcard_uuid** | **String**|  | 
 
 ### Return type
 
@@ -1082,7 +1082,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteExperiment"></a>
 # **deleteExperiment**
-> deleteExperiment(storefrontOid, storefrontExperimentOid)
+> deleteExperiment(storefront_oid, storefront_experiment_oid)
 
 Delete experiment
 
@@ -1109,9 +1109,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var storefrontExperimentOid = 56; // Number | 
+var storefront_experiment_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1121,15 +1121,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteExperiment(storefrontOid, storefrontExperimentOid, callback);
+apiInstance.deleteExperiment(storefront_oid, storefront_experiment_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **storefrontExperimentOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
+ **storefront_experiment_oid** | **Number**|  | 
 
 ### Return type
 
@@ -1146,7 +1146,7 @@ null (empty response body)
 
 <a name="deleteLibraryItem"></a>
 # **deleteLibraryItem**
-> deleteLibraryItem(libraryItemOid)
+> deleteLibraryItem(library_item_oid)
 
 Delete library item
 
@@ -1173,7 +1173,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | 
+var library_item_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1183,14 +1183,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteLibraryItem(libraryItemOid, callback);
+apiInstance.deleteLibraryItem(library_item_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**|  | 
+ **library_item_oid** | **Number**|  | 
 
 ### Return type
 
@@ -1207,7 +1207,7 @@ null (empty response body)
 
 <a name="duplicateLibraryItem"></a>
 # **duplicateLibraryItem**
-> LibraryItemResponse duplicateLibraryItem(libraryItemOid)
+> LibraryItemResponse duplicateLibraryItem(library_item_oid)
 
 Duplicate library item.
 
@@ -1234,7 +1234,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | 
+var library_item_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1244,14 +1244,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.duplicateLibraryItem(libraryItemOid, callback);
+apiInstance.duplicateLibraryItem(library_item_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**|  | 
+ **library_item_oid** | **Number**|  | 
 
 ### Return type
 
@@ -1268,7 +1268,7 @@ Name | Type | Description  | Notes
 
 <a name="geocodeAddress"></a>
 # **geocodeAddress**
-> GeocodeResponse geocodeAddress(storefrontOid, geocodeRequest)
+> GeocodeResponse geocodeAddress(storefront_oid, geocode_request)
 
 Obtain lat/long for an address
 
@@ -1295,9 +1295,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var geocodeRequest = new UltraCartRestApiV2.GeocodeRequest(); // GeocodeRequest | geocode request
+var geocode_request = new UltraCartRestApiV2.GeocodeRequest(); // GeocodeRequest | geocode request
 
 
 var callback = function(error, data, response) {
@@ -1307,15 +1307,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.geocodeAddress(storefrontOid, geocodeRequest, callback);
+apiInstance.geocodeAddress(storefront_oid, geocode_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **geocodeRequest** | [**GeocodeRequest**](GeocodeRequest.md)| geocode request | 
+ **storefront_oid** | **Number**|  | 
+ **geocode_request** | [**GeocodeRequest**](GeocodeRequest.md)| geocode request | 
 
 ### Return type
 
@@ -1332,7 +1332,7 @@ Name | Type | Description  | Notes
 
 <a name="getCountries"></a>
 # **getCountries**
-> CountriesResponse getCountries(storefrontOid)
+> CountriesResponse getCountries(storefront_oid)
 
 Get countries
 
@@ -1361,7 +1361,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1371,14 +1371,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getCountries(storefrontOid, callback);
+apiInstance.getCountries(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -1395,7 +1395,7 @@ Name | Type | Description  | Notes
 
 <a name="getEditorToken"></a>
 # **getEditorToken**
-> EmailEditorTokenResponse getEditorToken(id)
+> EmailEditorTokenResponse getEditorToken(storefront_oid)
 
 Gets editor token
 
@@ -1424,7 +1424,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1434,14 +1434,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEditorToken(id, callback);
+apiInstance.getEditorToken(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -1458,7 +1458,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailBaseTemplates"></a>
 # **getEmailBaseTemplates**
-> EmailBaseTemplateListResponse getEmailBaseTemplates(storefrontOid)
+> EmailBaseTemplateListResponse getEmailBaseTemplates(storefront_oid)
 
 Get email communication base templates
 
@@ -1485,7 +1485,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1495,14 +1495,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailBaseTemplates(storefrontOid, callback);
+apiInstance.getEmailBaseTemplates(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -1519,7 +1519,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCampaign"></a>
 # **getEmailCampaign**
-> EmailCampaignResponse getEmailCampaign(storefrontOid, emailCampaignUuid)
+> EmailCampaignResponse getEmailCampaign(storefront_oid, email_campaign_uuid)
 
 Get email campaign
 
@@ -1546,9 +1546,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
+var email_campaign_uuid = "email_campaign_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1558,15 +1558,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCampaign(storefrontOid, emailCampaignUuid, callback);
+apiInstance.getEmailCampaign(storefront_oid, email_campaign_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCampaignUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_campaign_uuid** | **String**|  | 
 
 ### Return type
 
@@ -1583,7 +1583,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCampaigns"></a>
 # **getEmailCampaigns**
-> EmailCampaignsResponse getEmailCampaigns(storefrontOid)
+> EmailCampaignsResponse getEmailCampaigns(storefront_oid)
 
 Get email campaigns
 
@@ -1610,7 +1610,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1620,14 +1620,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCampaigns(storefrontOid, callback);
+apiInstance.getEmailCampaigns(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -1644,7 +1644,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCampaignsWithStats"></a>
 # **getEmailCampaignsWithStats**
-> EmailCampaignsResponse getEmailCampaignsWithStats(storefrontOid, statDays)
+> EmailCampaignsResponse getEmailCampaignsWithStats(storefront_oid, stat_days)
 
 Get email campaigns with stats
 
@@ -1671,9 +1671,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var statDays = "statDays_example"; // String | 
+var stat_days = "stat_days_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1683,15 +1683,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCampaignsWithStats(storefrontOid, statDays, callback);
+apiInstance.getEmailCampaignsWithStats(storefront_oid, stat_days, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **statDays** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **stat_days** | **String**|  | 
 
 ### Return type
 
@@ -1708,7 +1708,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseq"></a>
 # **getEmailCommseq**
-> EmailCommseqResponse getEmailCommseq(storefrontOid, commseqUuid)
+> EmailCommseqResponse getEmailCommseq(storefront_oid, commseq_uuid)
 
 Get email commseq
 
@@ -1735,9 +1735,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1747,15 +1747,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseq(storefrontOid, commseqUuid, callback);
+apiInstance.getEmailCommseq(storefront_oid, commseq_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
 
 ### Return type
 
@@ -1772,7 +1772,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqEmailStats"></a>
 # **getEmailCommseqEmailStats**
-> EmailStatSummaryResponse getEmailCommseqEmailStats(storefrontOid, commseqUuid, statsRequest)
+> EmailStatSummaryResponse getEmailCommseqEmailStats(storefront_oid, commseq_uuid, statsRequest)
 
 Get email communication sequence emails stats
 
@@ -1799,9 +1799,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
 var statsRequest = new UltraCartRestApiV2.EmailStatSummaryRequest(); // EmailStatSummaryRequest | StatsRequest
 
@@ -1813,15 +1813,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqEmailStats(storefrontOid, commseqUuid, statsRequest, callback);
+apiInstance.getEmailCommseqEmailStats(storefront_oid, commseq_uuid, statsRequest, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
  **statsRequest** | [**EmailStatSummaryRequest**](EmailStatSummaryRequest.md)| StatsRequest | 
 
 ### Return type
@@ -1839,7 +1839,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqPostcardStats"></a>
 # **getEmailCommseqPostcardStats**
-> EmailStatPostcardSummaryResponse getEmailCommseqPostcardStats(storefrontOid, commseqUuid, statsRequest)
+> EmailStatPostcardSummaryResponse getEmailCommseqPostcardStats(storefront_oid, commseq_uuid, statsRequest)
 
 Get email communication sequence postcard stats
 
@@ -1866,9 +1866,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
 var statsRequest = new UltraCartRestApiV2.EmailStatPostcardSummaryRequest(); // EmailStatPostcardSummaryRequest | StatsRequest
 
@@ -1880,15 +1880,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqPostcardStats(storefrontOid, commseqUuid, statsRequest, callback);
+apiInstance.getEmailCommseqPostcardStats(storefront_oid, commseq_uuid, statsRequest, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
  **statsRequest** | [**EmailStatPostcardSummaryRequest**](EmailStatPostcardSummaryRequest.md)| StatsRequest | 
 
 ### Return type
@@ -1906,7 +1906,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqStatOverall"></a>
 # **getEmailCommseqStatOverall**
-> EmailCommseqStatResponse getEmailCommseqStatOverall(storefrontOid, commseqUuid)
+> EmailCommseqStatResponse getEmailCommseqStatOverall(storefront_oid, commseq_uuid)
 
 Get communication sequence stats overall
 
@@ -1933,9 +1933,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1945,15 +1945,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqStatOverall(storefrontOid, commseqUuid, callback);
+apiInstance.getEmailCommseqStatOverall(storefront_oid, commseq_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
 
 ### Return type
 
@@ -1970,7 +1970,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqStepStats"></a>
 # **getEmailCommseqStepStats**
-> EmailStepStatResponse getEmailCommseqStepStats(storefrontOid, commseqUuid, statsRequest)
+> EmailStepStatResponse getEmailCommseqStepStats(storefront_oid, commseq_uuid, statsRequest)
 
 Get email communication sequence step stats
 
@@ -1997,9 +1997,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
 var statsRequest = new UltraCartRestApiV2.EmailStepStatRequest(); // EmailStepStatRequest | StatsRequest
 
@@ -2011,15 +2011,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqStepStats(storefrontOid, commseqUuid, statsRequest, callback);
+apiInstance.getEmailCommseqStepStats(storefront_oid, commseq_uuid, statsRequest, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
  **statsRequest** | [**EmailStepStatRequest**](EmailStepStatRequest.md)| StatsRequest | 
 
 ### Return type
@@ -2037,7 +2037,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqStepWaiting"></a>
 # **getEmailCommseqStepWaiting**
-> EmailStepWaitingResponse getEmailCommseqStepWaiting(storefrontOid, commseqUuid, waitingRequest)
+> EmailStepWaitingResponse getEmailCommseqStepWaiting(storefront_oid, commseq_uuid, waitingRequest)
 
 Get email communication sequence customers waiting at each requested step
 
@@ -2064,9 +2064,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
 var waitingRequest = new UltraCartRestApiV2.EmailStepWaitingRequest(); // EmailStepWaitingRequest | WaitingRequest
 
@@ -2078,15 +2078,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqStepWaiting(storefrontOid, commseqUuid, waitingRequest, callback);
+apiInstance.getEmailCommseqStepWaiting(storefront_oid, commseq_uuid, waitingRequest, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
  **waitingRequest** | [**EmailStepWaitingRequest**](EmailStepWaitingRequest.md)| WaitingRequest | 
 
 ### Return type
@@ -2104,7 +2104,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCommseqs"></a>
 # **getEmailCommseqs**
-> EmailCommseqsResponse getEmailCommseqs(storefrontOid)
+> EmailCommseqsResponse getEmailCommseqs(storefront_oid)
 
 Get email commseqs
 
@@ -2131,7 +2131,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -2141,14 +2141,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCommseqs(storefrontOid, callback);
+apiInstance.getEmailCommseqs(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -2165,7 +2165,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCustomerEditorUrl"></a>
 # **getEmailCustomerEditorUrl**
-> EmailCustomerEditorUrlResponse getEmailCustomerEditorUrl(storefrontOid, emailCustomerUuid)
+> EmailCustomerEditorUrlResponse getEmailCustomerEditorUrl(storefront_oid, email_customer_uuid)
 
 Get customers editor URL
 
@@ -2192,9 +2192,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
+var email_customer_uuid = "email_customer_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2204,15 +2204,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCustomerEditorUrl(storefrontOid, emailCustomerUuid, callback);
+apiInstance.getEmailCustomerEditorUrl(storefront_oid, email_customer_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCustomerUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_customer_uuid** | **String**|  | 
 
 ### Return type
 
@@ -2229,7 +2229,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailCustomers"></a>
 # **getEmailCustomers**
-> EmailCustomersResponse getEmailCustomers(storefrontOid, opts)
+> EmailCustomersResponse getEmailCustomers(storefront_oid, opts)
 
 Get email customers
 
@@ -2256,7 +2256,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var opts = { 
   'pageNumber': 56, // Number | 
@@ -2271,14 +2271,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailCustomers(storefrontOid, opts, callback);
+apiInstance.getEmailCustomers(storefront_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
  **pageNumber** | **Number**|  | [optional] 
  **pageSize** | **Number**|  | [optional] 
  **searchEmailPrefix** | **String**|  | [optional] 
@@ -2298,7 +2298,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailDashboardActivity"></a>
 # **getEmailDashboardActivity**
-> EmailDashboardActivityResponse getEmailDashboardActivity(storefrontOid, opts)
+> EmailDashboardActivityResponse getEmailDashboardActivity(storefront_oid, opts)
 
 Get email dashboard activity
 
@@ -2325,10 +2325,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var opts = { 
-  'lastRecords': 56 // Number | 
+  'last_records': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -2338,15 +2338,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailDashboardActivity(storefrontOid, opts, callback);
+apiInstance.getEmailDashboardActivity(storefront_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **lastRecords** | **Number**|  | [optional] 
+ **storefront_oid** | **Number**|  | 
+ **last_records** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -2363,7 +2363,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailDashboardStats"></a>
 # **getEmailDashboardStats**
-> EmailDashboardStatsResponse getEmailDashboardStats(storefrontOid, opts)
+> EmailDashboardStatsResponse getEmailDashboardStats(storefront_oid, opts)
 
 Get dashboard stats
 
@@ -2390,7 +2390,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var opts = { 
   'days': 56 // Number | 
@@ -2403,14 +2403,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailDashboardStats(storefrontOid, opts, callback);
+apiInstance.getEmailDashboardStats(storefront_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
  **days** | **Number**|  | [optional] 
 
 ### Return type
@@ -2428,7 +2428,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmail"></a>
 # **getEmailEmail**
-> EmailCommseqEmailResponse getEmailEmail(storefrontOid, commseqEmailUuid)
+> EmailCommseqEmailResponse getEmailEmail(storefront_oid, commseq_email_uuid)
 
 Get email email
 
@@ -2455,9 +2455,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2467,15 +2467,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmail(storefrontOid, commseqEmailUuid, callback);
+apiInstance.getEmailEmail(storefront_oid, commseq_email_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqEmailUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_email_uuid** | **String**|  | 
 
 ### Return type
 
@@ -2492,7 +2492,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmailClicks"></a>
 # **getEmailEmailClicks**
-> EmailClicksResponse getEmailEmailClicks(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts)
+> EmailClicksResponse getEmailEmailClicks(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts)
 
 Get email email clicks
 
@@ -2519,13 +2519,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
-var commseqStepUuid = "commseqStepUuid_example"; // String | 
+var commseq_step_uuid = "commseq_step_uuid_example"; // String | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
 var opts = { 
   'days': 56 // Number | 
@@ -2538,17 +2538,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmailClicks(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback);
+apiInstance.getEmailEmailClicks(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
- **commseqStepUuid** | **String**|  | 
- **commseqEmailUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
+ **commseq_step_uuid** | **String**|  | 
+ **commseq_email_uuid** | **String**|  | 
  **days** | **Number**|  | [optional] 
 
 ### Return type
@@ -2566,7 +2566,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmailCustomerEditorUrl"></a>
 # **getEmailEmailCustomerEditorUrl**
-> EmailCustomerEditorUrlResponse getEmailEmailCustomerEditorUrl(storefrontOid, commseqEmailUuid, orderId)
+> EmailCustomerEditorUrlResponse getEmailEmailCustomerEditorUrl(storefront_oid, commseq_email_uuid, order_id)
 
 Get email order customer editor url
 
@@ -2593,11 +2593,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
-var orderId = "orderId_example"; // String | 
+var order_id = "order_id_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2607,16 +2607,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmailCustomerEditorUrl(storefrontOid, commseqEmailUuid, orderId, callback);
+apiInstance.getEmailEmailCustomerEditorUrl(storefront_oid, commseq_email_uuid, order_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqEmailUuid** | **String**|  | 
- **orderId** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_email_uuid** | **String**|  | 
+ **order_id** | **String**|  | 
 
 ### Return type
 
@@ -2633,7 +2633,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmailOrders"></a>
 # **getEmailEmailOrders**
-> EmailOrdersResponse getEmailEmailOrders(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts)
+> EmailOrdersResponse getEmailEmailOrders(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts)
 
 Get email email orders
 
@@ -2660,13 +2660,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
-var commseqStepUuid = "commseqStepUuid_example"; // String | 
+var commseq_step_uuid = "commseq_step_uuid_example"; // String | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
 var opts = { 
   'days': 56 // Number | 
@@ -2679,17 +2679,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmailOrders(storefrontOid, commseqUuid, commseqStepUuid, commseqEmailUuid, opts, callback);
+apiInstance.getEmailEmailOrders(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
- **commseqStepUuid** | **String**|  | 
- **commseqEmailUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
+ **commseq_step_uuid** | **String**|  | 
+ **commseq_email_uuid** | **String**|  | 
  **days** | **Number**|  | [optional] 
 
 ### Return type
@@ -2707,7 +2707,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmails"></a>
 # **getEmailEmails**
-> EmailCommseqEmailsResponse getEmailEmails(storefrontOid)
+> EmailCommseqEmailsResponse getEmailEmails(storefront_oid)
 
 Get email emails
 
@@ -2734,7 +2734,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -2744,14 +2744,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmails(storefrontOid, callback);
+apiInstance.getEmailEmails(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -2768,7 +2768,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailEmailsMultiple"></a>
 # **getEmailEmailsMultiple**
-> EmailCommseqEmailsResponse getEmailEmailsMultiple(storefrontOid, emailCommseqEmailsRequest)
+> EmailCommseqEmailsResponse getEmailEmailsMultiple(storefront_oid, email_commseq_emails_request)
 
 Get email emails multiple
 
@@ -2795,9 +2795,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCommseqEmailsRequest = new UltraCartRestApiV2.EmailCommseqEmailsRequest(); // EmailCommseqEmailsRequest | Request of email uuids
+var email_commseq_emails_request = new UltraCartRestApiV2.EmailCommseqEmailsRequest(); // EmailCommseqEmailsRequest | Request of email uuids
 
 
 var callback = function(error, data, response) {
@@ -2807,15 +2807,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailEmailsMultiple(storefrontOid, emailCommseqEmailsRequest, callback);
+apiInstance.getEmailEmailsMultiple(storefront_oid, email_commseq_emails_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCommseqEmailsRequest** | [**EmailCommseqEmailsRequest**](EmailCommseqEmailsRequest.md)| Request of email uuids | 
+ **storefront_oid** | **Number**|  | 
+ **email_commseq_emails_request** | [**EmailCommseqEmailsRequest**](EmailCommseqEmailsRequest.md)| Request of email uuids | 
 
 ### Return type
 
@@ -2832,7 +2832,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailFlow"></a>
 # **getEmailFlow**
-> EmailFlowResponse getEmailFlow(storefrontOid, emailFlowUuid)
+> EmailFlowResponse getEmailFlow(storefront_oid, email_flow_uuid)
 
 Get email flow
 
@@ -2859,9 +2859,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | 
+var email_flow_uuid = "email_flow_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2871,15 +2871,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailFlow(storefrontOid, emailFlowUuid, callback);
+apiInstance.getEmailFlow(storefront_oid, email_flow_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailFlowUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_flow_uuid** | **String**|  | 
 
 ### Return type
 
@@ -2896,7 +2896,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailFlows"></a>
 # **getEmailFlows**
-> EmailFlowsResponse getEmailFlows(storefrontOid)
+> EmailFlowsResponse getEmailFlows(storefront_oid)
 
 Get email flows
 
@@ -2923,7 +2923,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -2933,14 +2933,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailFlows(storefrontOid, callback);
+apiInstance.getEmailFlows(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -3012,7 +3012,7 @@ This endpoint does not need any parameter.
 
 <a name="getEmailList"></a>
 # **getEmailList**
-> EmailListResponse getEmailList(storefrontOid, emailListUuid)
+> EmailListResponse getEmailList(storefront_oid, email_list_uuid)
 
 Get email list
 
@@ -3039,9 +3039,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3051,15 +3051,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailList(storefrontOid, emailListUuid, callback);
+apiInstance.getEmailList(storefront_oid, email_list_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
 
 ### Return type
 
@@ -3076,7 +3076,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailListCustomerEditorUrl"></a>
 # **getEmailListCustomerEditorUrl**
-> EmailCustomerEditorUrlResponse getEmailListCustomerEditorUrl(storefrontOid, emailListUuid, emailCustomerUuid)
+> EmailCustomerEditorUrlResponse getEmailListCustomerEditorUrl(storefront_oid, email_list_uuid, email_customer_uuid)
 
 Get email list customer editor url
 
@@ -3103,11 +3103,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
+var email_customer_uuid = "email_customer_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3117,16 +3117,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailListCustomerEditorUrl(storefrontOid, emailListUuid, emailCustomerUuid, callback);
+apiInstance.getEmailListCustomerEditorUrl(storefront_oid, email_list_uuid, email_customer_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
- **emailCustomerUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
+ **email_customer_uuid** | **String**|  | 
 
 ### Return type
 
@@ -3143,7 +3143,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailListCustomers"></a>
 # **getEmailListCustomers**
-> EmailListCustomersResponse getEmailListCustomers(storefrontOid, emailListUuid, opts)
+> EmailListCustomersResponse getEmailListCustomers(storefront_oid, email_list_uuid, opts)
 
 Get email list customers
 
@@ -3170,9 +3170,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
 var opts = { 
   'pageNumber': 56, // Number | 
@@ -3186,15 +3186,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailListCustomers(storefrontOid, emailListUuid, opts, callback);
+apiInstance.getEmailListCustomers(storefront_oid, email_list_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
  **pageNumber** | **Number**|  | [optional] 
  **pageSize** | **Number**|  | [optional] 
 
@@ -3213,7 +3213,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailLists"></a>
 # **getEmailLists**
-> EmailListsResponse getEmailLists(storefrontOid)
+> EmailListsResponse getEmailLists(storefront_oid)
 
 Get email lists
 
@@ -3240,7 +3240,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3250,14 +3250,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailLists(storefrontOid, callback);
+apiInstance.getEmailLists(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -3274,7 +3274,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailPerformance"></a>
 # **getEmailPerformance**
-> EmailPerformanceResponse getEmailPerformance(storefrontOid)
+> EmailPerformanceResponse getEmailPerformance(storefront_oid)
 
 Get email performance
 
@@ -3301,7 +3301,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3311,14 +3311,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailPerformance(storefrontOid, callback);
+apiInstance.getEmailPerformance(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -3335,7 +3335,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailPlan"></a>
 # **getEmailPlan**
-> EmailPlanResponse getEmailPlan(storefrontOid)
+> EmailPlanResponse getEmailPlan(storefront_oid)
 
 Get email plan
 
@@ -3362,7 +3362,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3372,14 +3372,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailPlan(storefrontOid, callback);
+apiInstance.getEmailPlan(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -3396,7 +3396,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailPostcard"></a>
 # **getEmailPostcard**
-> EmailCommseqPostcardResponse getEmailPostcard(storefrontOid, commseqPostcardUuid)
+> EmailCommseqPostcardResponse getEmailPostcard(storefront_oid, commseq_postcard_uuid)
 
 Get email postcard
 
@@ -3423,9 +3423,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
+var commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3435,15 +3435,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailPostcard(storefrontOid, commseqPostcardUuid, callback);
+apiInstance.getEmailPostcard(storefront_oid, commseq_postcard_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqPostcardUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_postcard_uuid** | **String**|  | 
 
 ### Return type
 
@@ -3460,7 +3460,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailPostcards"></a>
 # **getEmailPostcards**
-> EmailCommseqPostcardsResponse getEmailPostcards(storefrontOid)
+> EmailCommseqPostcardsResponse getEmailPostcards(storefront_oid)
 
 Get email postcards
 
@@ -3487,7 +3487,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3497,14 +3497,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailPostcards(storefrontOid, callback);
+apiInstance.getEmailPostcards(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -3521,7 +3521,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailPostcardsMultiple"></a>
 # **getEmailPostcardsMultiple**
-> EmailCommseqPostcardsResponse getEmailPostcardsMultiple(storefrontOid, emailCommseqPostcardsRequest)
+> EmailCommseqPostcardsResponse getEmailPostcardsMultiple(storefront_oid, email_commseq_postcards_request)
 
 Get email postcards multiple
 
@@ -3548,9 +3548,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCommseqPostcardsRequest = new UltraCartRestApiV2.EmailCommseqPostcardsRequest(); // EmailCommseqPostcardsRequest | Request of postcard uuids
+var email_commseq_postcards_request = new UltraCartRestApiV2.EmailCommseqPostcardsRequest(); // EmailCommseqPostcardsRequest | Request of postcard uuids
 
 
 var callback = function(error, data, response) {
@@ -3560,15 +3560,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailPostcardsMultiple(storefrontOid, emailCommseqPostcardsRequest, callback);
+apiInstance.getEmailPostcardsMultiple(storefront_oid, email_commseq_postcards_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCommseqPostcardsRequest** | [**EmailCommseqPostcardsRequest**](EmailCommseqPostcardsRequest.md)| Request of postcard uuids | 
+ **storefront_oid** | **Number**|  | 
+ **email_commseq_postcards_request** | [**EmailCommseqPostcardsRequest**](EmailCommseqPostcardsRequest.md)| Request of postcard uuids | 
 
 ### Return type
 
@@ -3585,7 +3585,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailSegment"></a>
 # **getEmailSegment**
-> EmailSegmentResponse getEmailSegment(storefrontOid, emailSegmentUuid)
+> EmailSegmentResponse getEmailSegment(storefront_oid, email_segment_uuid)
 
 Get email segment
 
@@ -3612,9 +3612,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3624,15 +3624,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailSegment(storefrontOid, emailSegmentUuid, callback);
+apiInstance.getEmailSegment(storefront_oid, email_segment_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
 
 ### Return type
 
@@ -3649,7 +3649,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailSegmentCustomerEditorUrl"></a>
 # **getEmailSegmentCustomerEditorUrl**
-> EmailCustomerEditorUrlResponse getEmailSegmentCustomerEditorUrl(storefrontOid, emailSegmentUuid, emailCustomerUuid)
+> EmailCustomerEditorUrlResponse getEmailSegmentCustomerEditorUrl(storefront_oid, email_segment_uuid, email_customer_uuid)
 
 Get email segment customers editor URL
 
@@ -3676,11 +3676,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
+var email_customer_uuid = "email_customer_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3690,16 +3690,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailSegmentCustomerEditorUrl(storefrontOid, emailSegmentUuid, emailCustomerUuid, callback);
+apiInstance.getEmailSegmentCustomerEditorUrl(storefront_oid, email_segment_uuid, email_customer_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
- **emailCustomerUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
+ **email_customer_uuid** | **String**|  | 
 
 ### Return type
 
@@ -3716,7 +3716,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailSegmentCustomers"></a>
 # **getEmailSegmentCustomers**
-> EmailSegmentCustomersResponse getEmailSegmentCustomers(storefrontOid, emailSegmentUuid, opts)
+> EmailSegmentCustomersResponse getEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts)
 
 Get email segment customers
 
@@ -3743,9 +3743,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
 var opts = { 
   'pageNumber': 56, // Number | 
@@ -3759,15 +3759,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailSegmentCustomers(storefrontOid, emailSegmentUuid, opts, callback);
+apiInstance.getEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
  **pageNumber** | **Number**|  | [optional] 
  **pageSize** | **Number**|  | [optional] 
 
@@ -3786,7 +3786,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailSegments"></a>
 # **getEmailSegments**
-> EmailSegmentsResponse getEmailSegments(storefrontOid)
+> EmailSegmentsResponse getEmailSegments(storefront_oid)
 
 Get email segments
 
@@ -3813,7 +3813,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3823,14 +3823,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailSegments(storefrontOid, callback);
+apiInstance.getEmailSegments(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -4024,7 +4024,7 @@ This endpoint does not need any parameter.
 
 <a name="getEmailSettings"></a>
 # **getEmailSettings**
-> EmailSettingsResponse getEmailSettings(storefrontOid)
+> EmailSettingsResponse getEmailSettings(storefront_oid)
 
 Get email settings
 
@@ -4051,7 +4051,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4061,14 +4061,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailSettings(storefrontOid, callback);
+apiInstance.getEmailSettings(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -4085,7 +4085,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailTemplate"></a>
 # **getEmailTemplate**
-> EmailTemplate getEmailTemplate(storefrontOid, emailTemplateOid)
+> EmailTemplate getEmailTemplate(storefront_oid, email_template_oid)
 
 Get email template
 
@@ -4112,9 +4112,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailTemplateOid = 56; // Number | 
+var email_template_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4124,15 +4124,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailTemplate(storefrontOid, emailTemplateOid, callback);
+apiInstance.getEmailTemplate(storefront_oid, email_template_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailTemplateOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_template_oid** | **Number**|  | 
 
 ### Return type
 
@@ -4149,7 +4149,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailTemplates"></a>
 # **getEmailTemplates**
-> EmailTemplatesResponse getEmailTemplates(storefrontOid, opts)
+> EmailTemplatesResponse getEmailTemplates(storefront_oid, opts)
 
 Get email templates
 
@@ -4176,10 +4176,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var opts = { 
-  'triggerType': "triggerType_example" // String | 
+  'trigger_type': "trigger_type_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -4189,15 +4189,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailTemplates(storefrontOid, opts, callback);
+apiInstance.getEmailTemplates(storefront_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **triggerType** | **String**|  | [optional] 
+ **storefront_oid** | **Number**|  | 
+ **trigger_type** | **String**|  | [optional] 
 
 ### Return type
 
@@ -4214,7 +4214,7 @@ Name | Type | Description  | Notes
 
 <a name="getEmailThirdPartyProviders"></a>
 # **getEmailThirdPartyProviders**
-> EmailThirdPartyProvidersResponse getEmailThirdPartyProviders(storefrontOid)
+> EmailThirdPartyProvidersResponse getEmailThirdPartyProviders(storefront_oid)
 
 Get a list of third party email providers
 
@@ -4241,7 +4241,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4251,14 +4251,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getEmailThirdPartyProviders(storefrontOid, callback);
+apiInstance.getEmailThirdPartyProviders(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -4275,7 +4275,7 @@ Name | Type | Description  | Notes
 
 <a name="getExperiments"></a>
 # **getExperiments**
-> ExperimentsResponse getExperiments(storefrontOid)
+> ExperimentsResponse getExperiments(storefront_oid)
 
 Get experiments
 
@@ -4302,7 +4302,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4312,14 +4312,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getExperiments(storefrontOid, callback);
+apiInstance.getExperiments(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -4336,7 +4336,7 @@ Name | Type | Description  | Notes
 
 <a name="getHistogramPropertyNames"></a>
 # **getHistogramPropertyNames**
-> EmailHistogramPropertyNamesResponse getHistogramPropertyNames(storefrontOid, opts)
+> EmailHistogramPropertyNamesResponse getHistogramPropertyNames(storefront_oid, opts)
 
 Get histogram property names
 
@@ -4365,10 +4365,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var opts = { 
-  'propertyType': "propertyType_example" // String | 
+  'property_type': "property_type_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -4378,15 +4378,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getHistogramPropertyNames(storefrontOid, opts, callback);
+apiInstance.getHistogramPropertyNames(storefront_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **propertyType** | **String**|  | [optional] 
+ **storefront_oid** | **Number**|  | 
+ **property_type** | **String**|  | [optional] 
 
 ### Return type
 
@@ -4403,7 +4403,7 @@ Name | Type | Description  | Notes
 
 <a name="getHistogramPropertyValues"></a>
 # **getHistogramPropertyValues**
-> EmailHistogramPropertyValuesResponse getHistogramPropertyValues(storefrontOid, opts)
+> EmailHistogramPropertyValuesResponse getHistogramPropertyValues(storefront_oid, opts)
 
 Get histogram property values
 
@@ -4432,11 +4432,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var opts = { 
-  'propertyName': "propertyName_example", // String | 
-  'propertyType': "propertyType_example", // String | 
+  'property_name': "property_name_example", // String | 
+  'property_type': "property_type_example", // String | 
   'limit': 56 // Number | 
 };
 
@@ -4447,16 +4447,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getHistogramPropertyValues(storefrontOid, opts, callback);
+apiInstance.getHistogramPropertyValues(storefront_oid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **propertyName** | **String**|  | [optional] 
- **propertyType** | **String**|  | [optional] 
+ **storefront_oid** | **Number**|  | 
+ **property_name** | **String**|  | [optional] 
+ **property_type** | **String**|  | [optional] 
  **limit** | **Number**|  | [optional] 
 
 ### Return type
@@ -4474,7 +4474,7 @@ Name | Type | Description  | Notes
 
 <a name="getLibraryItem"></a>
 # **getLibraryItem**
-> LibraryItemResponse getLibraryItem(libraryItemOid)
+> LibraryItemResponse getLibraryItem(library_item_oid)
 
 Get library item.
 
@@ -4501,7 +4501,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | 
+var library_item_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4511,14 +4511,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getLibraryItem(libraryItemOid, callback);
+apiInstance.getLibraryItem(library_item_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**|  | 
+ **library_item_oid** | **Number**|  | 
 
 ### Return type
 
@@ -4535,7 +4535,7 @@ Name | Type | Description  | Notes
 
 <a name="getLibraryItemsByQuery"></a>
 # **getLibraryItemsByQuery**
-> LibraryItemsResponse getLibraryItemsByQuery(itemQuery, opts)
+> LibraryItemsResponse getLibraryItemsByQuery(item_query, opts)
 
 Retrieve library items
 
@@ -4558,12 +4558,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var itemQuery = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
+var item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
 
 var opts = { 
-  'limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'sort': "sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
 };
 
 var callback = function(error, data, response) {
@@ -4573,17 +4573,17 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getLibraryItemsByQuery(itemQuery, opts, callback);
+apiInstance.getLibraryItemsByQuery(item_query, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **itemQuery** | [**LibraryItemQuery**](LibraryItemQuery.md)| Item query | 
- **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **sort** | **String**| The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **item_query** | [**LibraryItemQuery**](LibraryItemQuery.md)| Item query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
 
 ### Return type
 
@@ -4600,7 +4600,7 @@ Name | Type | Description  | Notes
 
 <a name="getTransactionEmail"></a>
 # **getTransactionEmail**
-> TransactionEmailResponse getTransactionEmail(id, emailId)
+> TransactionEmailResponse getTransactionEmail(storefront_oid, email_id)
 
 Gets a transaction email object
 
@@ -4629,9 +4629,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailId = "emailId_example"; // String | 
+var email_id = "email_id_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -4641,15 +4641,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getTransactionEmail(id, emailId, callback);
+apiInstance.getTransactionEmail(storefront_oid, email_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
- **emailId** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_id** | **String**|  | 
 
 ### Return type
 
@@ -4666,7 +4666,7 @@ Name | Type | Description  | Notes
 
 <a name="getTransactionEmailList"></a>
 # **getTransactionEmailList**
-> TransactionEmailListResponse getTransactionEmailList(id)
+> TransactionEmailListResponse getTransactionEmailList(storefront_oid)
 
 Gets a list of transaction email names
 
@@ -4695,7 +4695,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4705,14 +4705,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getTransactionEmailList(id, callback);
+apiInstance.getTransactionEmailList(storefront_oid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
 
 ### Return type
 
@@ -4729,7 +4729,7 @@ Name | Type | Description  | Notes
 
 <a name="globalUnsubscribe"></a>
 # **globalUnsubscribe**
-> EmailGlobalUnsubscribeResponse globalUnsubscribe(storefrontOid, unsubscribe)
+> EmailGlobalUnsubscribeResponse globalUnsubscribe(storefront_oid, unsubscribe)
 
 Globally unsubscribe a customer
 
@@ -4756,7 +4756,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var unsubscribe = new UltraCartRestApiV2.EmailGlobalUnsubscribeRequest(); // EmailGlobalUnsubscribeRequest | Unsubscribe
 
@@ -4768,14 +4768,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.globalUnsubscribe(storefrontOid, unsubscribe, callback);
+apiInstance.globalUnsubscribe(storefront_oid, unsubscribe, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
  **unsubscribe** | [**EmailGlobalUnsubscribeRequest**](EmailGlobalUnsubscribeRequest.md)| Unsubscribe | 
 
 ### Return type
@@ -4793,7 +4793,7 @@ Name | Type | Description  | Notes
 
 <a name="importEmailThirdPartyProviderList"></a>
 # **importEmailThirdPartyProviderList**
-> importEmailThirdPartyProviderList(storefrontOid, importRequest)
+> importEmailThirdPartyProviderList(storefront_oid, import_request)
 
 Import a third party provider list
 
@@ -4820,9 +4820,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var importRequest = new UltraCartRestApiV2.EmailThirdPartyListImportRequest(); // EmailThirdPartyListImportRequest | lists to import
+var import_request = new UltraCartRestApiV2.EmailThirdPartyListImportRequest(); // EmailThirdPartyListImportRequest | lists to import
 
 
 var callback = function(error, data, response) {
@@ -4832,15 +4832,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.importEmailThirdPartyProviderList(storefrontOid, importRequest, callback);
+apiInstance.importEmailThirdPartyProviderList(storefront_oid, import_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **importRequest** | [**EmailThirdPartyListImportRequest**](EmailThirdPartyListImportRequest.md)| lists to import | 
+ **storefront_oid** | **Number**|  | 
+ **import_request** | [**EmailThirdPartyListImportRequest**](EmailThirdPartyListImportRequest.md)| lists to import | 
 
 ### Return type
 
@@ -4857,7 +4857,7 @@ null (empty response body)
 
 <a name="insertEmailCampaign"></a>
 # **insertEmailCampaign**
-> EmailCampaignResponse insertEmailCampaign(storefrontOid, emailCampaign)
+> EmailCampaignResponse insertEmailCampaign(storefront_oid, email_campaign)
 
 Insert email campaign
 
@@ -4884,9 +4884,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCampaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
+var email_campaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
 
 
 var callback = function(error, data, response) {
@@ -4896,15 +4896,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.insertEmailCampaign(storefrontOid, emailCampaign, callback);
+apiInstance.insertEmailCampaign(storefront_oid, email_campaign, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email campaign | 
+ **storefront_oid** | **Number**|  | 
+ **email_campaign** | [**EmailCampaign**](EmailCampaign.md)| Email campaign | 
 
 ### Return type
 
@@ -4921,7 +4921,7 @@ Name | Type | Description  | Notes
 
 <a name="insertEmailCommseq"></a>
 # **insertEmailCommseq**
-> EmailCommseqResponse insertEmailCommseq(storefrontOid, emailCommseq)
+> EmailCommseqResponse insertEmailCommseq(storefront_oid, email_commseq)
 
 Insert email commseq
 
@@ -4948,9 +4948,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCommseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
+var email_commseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
 
 
 var callback = function(error, data, response) {
@@ -4960,15 +4960,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.insertEmailCommseq(storefrontOid, emailCommseq, callback);
+apiInstance.insertEmailCommseq(storefront_oid, email_commseq, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCommseq** | [**EmailCommseq**](EmailCommseq.md)| Email commseq | 
+ **storefront_oid** | **Number**|  | 
+ **email_commseq** | [**EmailCommseq**](EmailCommseq.md)| Email commseq | 
 
 ### Return type
 
@@ -4985,7 +4985,7 @@ Name | Type | Description  | Notes
 
 <a name="insertEmailEmail"></a>
 # **insertEmailEmail**
-> EmailCommseqEmailResponse insertEmailEmail(storefrontOid, emailCommseqEmail)
+> EmailCommseqEmailResponse insertEmailEmail(storefront_oid, email_commseq_email)
 
 Insert email email
 
@@ -5012,9 +5012,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCommseqEmail = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email email
+var email_commseq_email = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email email
 
 
 var callback = function(error, data, response) {
@@ -5024,15 +5024,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.insertEmailEmail(storefrontOid, emailCommseqEmail, callback);
+apiInstance.insertEmailEmail(storefront_oid, email_commseq_email, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCommseqEmail** | [**EmailCommseqEmail**](EmailCommseqEmail.md)| Email email | 
+ **storefront_oid** | **Number**|  | 
+ **email_commseq_email** | [**EmailCommseqEmail**](EmailCommseqEmail.md)| Email email | 
 
 ### Return type
 
@@ -5049,7 +5049,7 @@ Name | Type | Description  | Notes
 
 <a name="insertEmailFlow"></a>
 # **insertEmailFlow**
-> EmailFlowResponse insertEmailFlow(storefrontOid, emailFlow)
+> EmailFlowResponse insertEmailFlow(storefront_oid, email_flow)
 
 Insert email flow
 
@@ -5076,9 +5076,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailFlow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
+var email_flow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
 
 
 var callback = function(error, data, response) {
@@ -5088,15 +5088,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.insertEmailFlow(storefrontOid, emailFlow, callback);
+apiInstance.insertEmailFlow(storefront_oid, email_flow, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailFlow** | [**EmailFlow**](EmailFlow.md)| Email flow | 
+ **storefront_oid** | **Number**|  | 
+ **email_flow** | [**EmailFlow**](EmailFlow.md)| Email flow | 
 
 ### Return type
 
@@ -5113,7 +5113,7 @@ Name | Type | Description  | Notes
 
 <a name="insertEmailList"></a>
 # **insertEmailList**
-> EmailListResponse insertEmailList(storefrontOid, emailList)
+> EmailListResponse insertEmailList(storefront_oid, email_list)
 
 Insert email list
 
@@ -5140,9 +5140,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailList = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
+var email_list = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
 
 
 var callback = function(error, data, response) {
@@ -5152,15 +5152,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.insertEmailList(storefrontOid, emailList, callback);
+apiInstance.insertEmailList(storefront_oid, email_list, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailList** | [**EmailList**](EmailList.md)| Email list | 
+ **storefront_oid** | **Number**|  | 
+ **email_list** | [**EmailList**](EmailList.md)| Email list | 
 
 ### Return type
 
@@ -5177,7 +5177,7 @@ Name | Type | Description  | Notes
 
 <a name="insertEmailPostcard"></a>
 # **insertEmailPostcard**
-> EmailCommseqPostcardResponse insertEmailPostcard(storefrontOid, emailCommseqPostcard)
+> EmailCommseqPostcardResponse insertEmailPostcard(storefront_oid, email_commseq_postcard)
 
 Insert email postcard
 
@@ -5204,9 +5204,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCommseqPostcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email postcard
+var email_commseq_postcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email postcard
 
 
 var callback = function(error, data, response) {
@@ -5216,15 +5216,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.insertEmailPostcard(storefrontOid, emailCommseqPostcard, callback);
+apiInstance.insertEmailPostcard(storefront_oid, email_commseq_postcard, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCommseqPostcard** | [**EmailCommseqPostcard**](EmailCommseqPostcard.md)| Email postcard | 
+ **storefront_oid** | **Number**|  | 
+ **email_commseq_postcard** | [**EmailCommseqPostcard**](EmailCommseqPostcard.md)| Email postcard | 
 
 ### Return type
 
@@ -5241,7 +5241,7 @@ Name | Type | Description  | Notes
 
 <a name="insertEmailSegment"></a>
 # **insertEmailSegment**
-> EmailSegmentResponse insertEmailSegment(storefrontOid, emailSegment)
+> EmailSegmentResponse insertEmailSegment(storefront_oid, email_segment)
 
 Insert email segment
 
@@ -5268,9 +5268,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
+var email_segment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
 
 
 var callback = function(error, data, response) {
@@ -5280,15 +5280,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.insertEmailSegment(storefrontOid, emailSegment, callback);
+apiInstance.insertEmailSegment(storefront_oid, email_segment, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegment** | [**EmailSegment**](EmailSegment.md)| Email segment | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment** | [**EmailSegment**](EmailSegment.md)| Email segment | 
 
 ### Return type
 
@@ -5305,7 +5305,7 @@ Name | Type | Description  | Notes
 
 <a name="prepareDownloadEmailSegment"></a>
 # **prepareDownloadEmailSegment**
-> EmailSegmentDownloadPrepareResponse prepareDownloadEmailSegment(storefrontOid, emailSegmentUuid)
+> EmailSegmentDownloadPrepareResponse prepareDownloadEmailSegment(storefront_oid, email_segment_uuid)
 
 Prepare download of email segment
 
@@ -5332,9 +5332,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -5344,15 +5344,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.prepareDownloadEmailSegment(storefrontOid, emailSegmentUuid, callback);
+apiInstance.prepareDownloadEmailSegment(storefront_oid, email_segment_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
 
 ### Return type
 
@@ -5369,7 +5369,7 @@ Name | Type | Description  | Notes
 
 <a name="releaseEmailCommseqStepWaiting"></a>
 # **releaseEmailCommseqStepWaiting**
-> releaseEmailCommseqStepWaiting(storefrontOid, commseqUuid, commseqStepUuid)
+> releaseEmailCommseqStepWaiting(storefront_oid, commseq_uuid, commseq_step_uuid)
 
 Release email communication sequence customers waiting at the specified step
 
@@ -5396,11 +5396,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
-var commseqStepUuid = "commseqStepUuid_example"; // String | 
+var commseq_step_uuid = "commseq_step_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -5410,16 +5410,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.releaseEmailCommseqStepWaiting(storefrontOid, commseqUuid, commseqStepUuid, callback);
+apiInstance.releaseEmailCommseqStepWaiting(storefront_oid, commseq_uuid, commseq_step_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
- **commseqStepUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
+ **commseq_step_uuid** | **String**|  | 
 
 ### Return type
 
@@ -5436,7 +5436,7 @@ null (empty response body)
 
 <a name="review"></a>
 # **review**
-> EmailCommseqEmailSendTestResponse review(storefrontOid, commseqEmailUuid, emailCommseqEmailReviewRequest)
+> EmailCommseqEmailSendTestResponse review(storefront_oid, commseq_email_uuid, email_commseq_email_review_request)
 
 Request a review of an email
 
@@ -5463,11 +5463,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
-var emailCommseqEmailReviewRequest = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email review request
+var email_commseq_email_review_request = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email review request
 
 
 var callback = function(error, data, response) {
@@ -5477,16 +5477,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.review(storefrontOid, commseqEmailUuid, emailCommseqEmailReviewRequest, callback);
+apiInstance.review(storefront_oid, commseq_email_uuid, email_commseq_email_review_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqEmailUuid** | **String**|  | 
- **emailCommseqEmailReviewRequest** | [**EmailCommseqEmailSendTestRequest**](EmailCommseqEmailSendTestRequest.md)| Email commseq email review request | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_email_uuid** | **String**|  | 
+ **email_commseq_email_review_request** | [**EmailCommseqEmailSendTestRequest**](EmailCommseqEmailSendTestRequest.md)| Email commseq email review request | 
 
 ### Return type
 
@@ -5533,8 +5533,8 @@ var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 var opts = { 
   'category': "category_example", // String | 
   'matches': "matches_example", // String | 
-  'storefrontOid': "storefrontOid_example", // String | 
-  'maxHits': 56, // Number | 
+  'storefront_oid': "storefront_oid_example", // String | 
+  'max_hits': 56, // Number | 
   'subcategory': "subcategory_example" // String | 
 };
 
@@ -5554,8 +5554,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category** | **String**|  | [optional] 
  **matches** | **String**|  | [optional] 
- **storefrontOid** | **String**|  | [optional] 
- **maxHits** | **Number**|  | [optional] 
+ **storefront_oid** | **String**|  | [optional] 
+ **max_hits** | **Number**|  | [optional] 
  **subcategory** | **String**|  | [optional] 
 
 ### Return type
@@ -5573,7 +5573,7 @@ Name | Type | Description  | Notes
 
 <a name="searchEmailListCustomers"></a>
 # **searchEmailListCustomers**
-> EmailListCustomersResponse searchEmailListCustomers(storefrontOid, emailListUuid, opts)
+> EmailListCustomersResponse searchEmailListCustomers(storefront_oid, email_list_uuid, opts)
 
 Search email list customers
 
@@ -5600,9 +5600,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
 var opts = { 
   'startsWith': "startsWith_example" // String | 
@@ -5615,15 +5615,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.searchEmailListCustomers(storefrontOid, emailListUuid, opts, callback);
+apiInstance.searchEmailListCustomers(storefront_oid, email_list_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
  **startsWith** | **String**|  | [optional] 
 
 ### Return type
@@ -5641,7 +5641,7 @@ Name | Type | Description  | Notes
 
 <a name="searchEmailSegmentCustomers"></a>
 # **searchEmailSegmentCustomers**
-> EmailSegmentCustomersResponse searchEmailSegmentCustomers(storefrontOid, emailSegmentUuid, opts)
+> EmailSegmentCustomersResponse searchEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts)
 
 Search email segment customers
 
@@ -5668,9 +5668,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
 var opts = { 
   'startsWith': "startsWith_example" // String | 
@@ -5683,15 +5683,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.searchEmailSegmentCustomers(storefrontOid, emailSegmentUuid, opts, callback);
+apiInstance.searchEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
  **startsWith** | **String**|  | [optional] 
 
 ### Return type
@@ -5709,7 +5709,7 @@ Name | Type | Description  | Notes
 
 <a name="sendEmailTest"></a>
 # **sendEmailTest**
-> EmailCommseqEmailSendTestResponse sendEmailTest(storefrontOid, commseqEmailUuid, emailCommseqEmailTestRequest)
+> EmailCommseqEmailSendTestResponse sendEmailTest(storefront_oid, commseq_email_uuid, email_commseq_email_test_request)
 
 Send email test
 
@@ -5736,11 +5736,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
-var emailCommseqEmailTestRequest = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email test request
+var email_commseq_email_test_request = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email test request
 
 
 var callback = function(error, data, response) {
@@ -5750,16 +5750,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.sendEmailTest(storefrontOid, commseqEmailUuid, emailCommseqEmailTestRequest, callback);
+apiInstance.sendEmailTest(storefront_oid, commseq_email_uuid, email_commseq_email_test_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqEmailUuid** | **String**|  | 
- **emailCommseqEmailTestRequest** | [**EmailCommseqEmailSendTestRequest**](EmailCommseqEmailSendTestRequest.md)| Email commseq email test request | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_email_uuid** | **String**|  | 
+ **email_commseq_email_test_request** | [**EmailCommseqEmailSendTestRequest**](EmailCommseqEmailSendTestRequest.md)| Email commseq email test request | 
 
 ### Return type
 
@@ -5776,7 +5776,7 @@ Name | Type | Description  | Notes
 
 <a name="sendPostcardTest"></a>
 # **sendPostcardTest**
-> EmailCommseqPostcardSendTestResponse sendPostcardTest(storefrontOid, commseqPostcardUuid, emailCommseqPostcardTestRequest)
+> EmailCommseqPostcardSendTestResponse sendPostcardTest(storefront_oid, commseq_postcard_uuid, email_commseq_postcard_test_request)
 
 Send postcard test
 
@@ -5803,11 +5803,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
+var commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
 
-var emailCommseqPostcardTestRequest = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest(); // EmailCommseqPostcardSendTestRequest | Email commseq email test request
+var email_commseq_postcard_test_request = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest(); // EmailCommseqPostcardSendTestRequest | Email commseq email test request
 
 
 var callback = function(error, data, response) {
@@ -5817,16 +5817,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.sendPostcardTest(storefrontOid, commseqPostcardUuid, emailCommseqPostcardTestRequest, callback);
+apiInstance.sendPostcardTest(storefront_oid, commseq_postcard_uuid, email_commseq_postcard_test_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqPostcardUuid** | **String**|  | 
- **emailCommseqPostcardTestRequest** | [**EmailCommseqPostcardSendTestRequest**](EmailCommseqPostcardSendTestRequest.md)| Email commseq email test request | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_postcard_uuid** | **String**|  | 
+ **email_commseq_postcard_test_request** | [**EmailCommseqPostcardSendTestRequest**](EmailCommseqPostcardSendTestRequest.md)| Email commseq email test request | 
 
 ### Return type
 
@@ -5843,7 +5843,7 @@ Name | Type | Description  | Notes
 
 <a name="startEmailCampaign"></a>
 # **startEmailCampaign**
-> BaseResponse startEmailCampaign(storefrontOid, emailCampaignUuid)
+> BaseResponse startEmailCampaign(storefront_oid, email_campaign_uuid)
 
 Start email campaign
 
@@ -5870,9 +5870,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
+var email_campaign_uuid = "email_campaign_uuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -5882,15 +5882,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.startEmailCampaign(storefrontOid, emailCampaignUuid, callback);
+apiInstance.startEmailCampaign(storefront_oid, email_campaign_uuid, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCampaignUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_campaign_uuid** | **String**|  | 
 
 ### Return type
 
@@ -5907,7 +5907,7 @@ Name | Type | Description  | Notes
 
 <a name="subscribeToEmailList"></a>
 # **subscribeToEmailList**
-> EmailListSubscribeResponse subscribeToEmailList(storefrontOid, emailListUuid, customers)
+> EmailListSubscribeResponse subscribeToEmailList(storefront_oid, email_list_uuid, customers)
 
 Subscribe customers to email list
 
@@ -5934,9 +5934,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
 var customers = [new UltraCartRestApiV2.EmailCustomer()]; // [EmailCustomer] | Customers
 
@@ -5948,15 +5948,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.subscribeToEmailList(storefrontOid, emailListUuid, customers, callback);
+apiInstance.subscribeToEmailList(storefront_oid, email_list_uuid, customers, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
  **customers** | [**[EmailCustomer]**](EmailCustomer.md)| Customers | 
 
 ### Return type
@@ -5974,7 +5974,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailCampaign"></a>
 # **updateEmailCampaign**
-> EmailCampaignResponse updateEmailCampaign(storefrontOid, emailCampaignUuid, emailCampaign)
+> EmailCampaignResponse updateEmailCampaign(storefront_oid, email_campaign_uuid, email_campaign)
 
 Update email campaign
 
@@ -6001,11 +6001,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
+var email_campaign_uuid = "email_campaign_uuid_example"; // String | 
 
-var emailCampaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
+var email_campaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
 
 
 var callback = function(error, data, response) {
@@ -6015,16 +6015,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailCampaign(storefrontOid, emailCampaignUuid, emailCampaign, callback);
+apiInstance.updateEmailCampaign(storefront_oid, email_campaign_uuid, email_campaign, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCampaignUuid** | **String**|  | 
- **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email campaign | 
+ **storefront_oid** | **Number**|  | 
+ **email_campaign_uuid** | **String**|  | 
+ **email_campaign** | [**EmailCampaign**](EmailCampaign.md)| Email campaign | 
 
 ### Return type
 
@@ -6041,7 +6041,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailCommseq"></a>
 # **updateEmailCommseq**
-> EmailCommseqResponse updateEmailCommseq(storefrontOid, commseqUuid, emailCommseq)
+> EmailCommseqResponse updateEmailCommseq(storefront_oid, commseq_uuid, email_commseq)
 
 Update email commseq
 
@@ -6068,11 +6068,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | 
+var commseq_uuid = "commseq_uuid_example"; // String | 
 
-var emailCommseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
+var email_commseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
 
 
 var callback = function(error, data, response) {
@@ -6082,16 +6082,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailCommseq(storefrontOid, commseqUuid, emailCommseq, callback);
+apiInstance.updateEmailCommseq(storefront_oid, commseq_uuid, email_commseq, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqUuid** | **String**|  | 
- **emailCommseq** | [**EmailCommseq**](EmailCommseq.md)| Email commseq | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
+ **email_commseq** | [**EmailCommseq**](EmailCommseq.md)| Email commseq | 
 
 ### Return type
 
@@ -6108,7 +6108,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailCustomer"></a>
 # **updateEmailCustomer**
-> updateEmailCustomer(storefrontOid, emailCustomerUuid, emailCustomer)
+> updateEmailCustomer(storefront_oid, email_customer_uuid, email_customer)
 
 Update email customer
 
@@ -6135,11 +6135,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
+var email_customer_uuid = "email_customer_uuid_example"; // String | 
 
-var emailCustomer = new UltraCartRestApiV2.EmailCustomer(); // EmailCustomer | Email customer
+var email_customer = new UltraCartRestApiV2.EmailCustomer(); // EmailCustomer | Email customer
 
 
 var callback = function(error, data, response) {
@@ -6149,16 +6149,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.updateEmailCustomer(storefrontOid, emailCustomerUuid, emailCustomer, callback);
+apiInstance.updateEmailCustomer(storefront_oid, email_customer_uuid, email_customer, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailCustomerUuid** | **String**|  | 
- **emailCustomer** | [**EmailCustomer**](EmailCustomer.md)| Email customer | 
+ **storefront_oid** | **Number**|  | 
+ **email_customer_uuid** | **String**|  | 
+ **email_customer** | [**EmailCustomer**](EmailCustomer.md)| Email customer | 
 
 ### Return type
 
@@ -6175,7 +6175,7 @@ null (empty response body)
 
 <a name="updateEmailEmail"></a>
 # **updateEmailEmail**
-> EmailCommseqEmailResponse updateEmailEmail(storefrontOid, commseqEmailUuid, emailCommseqEmail)
+> EmailCommseqEmailResponse updateEmailEmail(storefront_oid, commseq_email_uuid, email_commseq_email)
 
 Update email email
 
@@ -6202,11 +6202,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
+var commseq_email_uuid = "commseq_email_uuid_example"; // String | 
 
-var emailCommseqEmail = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email commseq email
+var email_commseq_email = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email commseq email
 
 
 var callback = function(error, data, response) {
@@ -6216,16 +6216,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailEmail(storefrontOid, commseqEmailUuid, emailCommseqEmail, callback);
+apiInstance.updateEmailEmail(storefront_oid, commseq_email_uuid, email_commseq_email, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqEmailUuid** | **String**|  | 
- **emailCommseqEmail** | [**EmailCommseqEmail**](EmailCommseqEmail.md)| Email commseq email | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_email_uuid** | **String**|  | 
+ **email_commseq_email** | [**EmailCommseqEmail**](EmailCommseqEmail.md)| Email commseq email | 
 
 ### Return type
 
@@ -6242,7 +6242,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailFlow"></a>
 # **updateEmailFlow**
-> EmailFlowResponse updateEmailFlow(storefrontOid, emailFlowUuid, emailFlow)
+> EmailFlowResponse updateEmailFlow(storefront_oid, email_flow_uuid, email_flow)
 
 Update email flow
 
@@ -6269,11 +6269,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | 
+var email_flow_uuid = "email_flow_uuid_example"; // String | 
 
-var emailFlow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
+var email_flow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
 
 
 var callback = function(error, data, response) {
@@ -6283,16 +6283,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailFlow(storefrontOid, emailFlowUuid, emailFlow, callback);
+apiInstance.updateEmailFlow(storefront_oid, email_flow_uuid, email_flow, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailFlowUuid** | **String**|  | 
- **emailFlow** | [**EmailFlow**](EmailFlow.md)| Email flow | 
+ **storefront_oid** | **Number**|  | 
+ **email_flow_uuid** | **String**|  | 
+ **email_flow** | [**EmailFlow**](EmailFlow.md)| Email flow | 
 
 ### Return type
 
@@ -6309,7 +6309,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailGlobalSettings"></a>
 # **updateEmailGlobalSettings**
-> EmailGlobalSettingsResponse updateEmailGlobalSettings(globalSettings)
+> EmailGlobalSettingsResponse updateEmailGlobalSettings(global_settings)
 
 Update email global settings
 
@@ -6336,7 +6336,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var globalSettings = new UltraCartRestApiV2.EmailGlobalSettings(); // EmailGlobalSettings | global settings request
+var global_settings = new UltraCartRestApiV2.EmailGlobalSettings(); // EmailGlobalSettings | global settings request
 
 
 var callback = function(error, data, response) {
@@ -6346,14 +6346,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailGlobalSettings(globalSettings, callback);
+apiInstance.updateEmailGlobalSettings(global_settings, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **globalSettings** | [**EmailGlobalSettings**](EmailGlobalSettings.md)| global settings request | 
+ **global_settings** | [**EmailGlobalSettings**](EmailGlobalSettings.md)| global settings request | 
 
 ### Return type
 
@@ -6370,7 +6370,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailList"></a>
 # **updateEmailList**
-> EmailListResponse updateEmailList(storefrontOid, emailListUuid, emailList)
+> EmailListResponse updateEmailList(storefront_oid, email_list_uuid, email_list)
 
 Update email list
 
@@ -6397,11 +6397,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | 
+var email_list_uuid = "email_list_uuid_example"; // String | 
 
-var emailList = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
+var email_list = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
 
 
 var callback = function(error, data, response) {
@@ -6411,16 +6411,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailList(storefrontOid, emailListUuid, emailList, callback);
+apiInstance.updateEmailList(storefront_oid, email_list_uuid, email_list, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailListUuid** | **String**|  | 
- **emailList** | [**EmailList**](EmailList.md)| Email list | 
+ **storefront_oid** | **Number**|  | 
+ **email_list_uuid** | **String**|  | 
+ **email_list** | [**EmailList**](EmailList.md)| Email list | 
 
 ### Return type
 
@@ -6437,7 +6437,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailPlan"></a>
 # **updateEmailPlan**
-> EmailPlanResponse updateEmailPlan(storefrontOid, settings)
+> EmailPlanResponse updateEmailPlan(storefront_oid, settings)
 
 Update email plan
 
@@ -6464,7 +6464,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var settings = new UltraCartRestApiV2.EmailPlan(); // EmailPlan | plan request
 
@@ -6476,14 +6476,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailPlan(storefrontOid, settings, callback);
+apiInstance.updateEmailPlan(storefront_oid, settings, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
  **settings** | [**EmailPlan**](EmailPlan.md)| plan request | 
 
 ### Return type
@@ -6501,7 +6501,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailPostcard"></a>
 # **updateEmailPostcard**
-> EmailCommseqPostcardResponse updateEmailPostcard(storefrontOid, commseqPostcardUuid, emailCommseqPostcard)
+> EmailCommseqPostcardResponse updateEmailPostcard(storefront_oid, commseq_postcard_uuid, email_commseq_postcard)
 
 Update email postcard
 
@@ -6528,11 +6528,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
+var commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
 
-var emailCommseqPostcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email commseq postcard
+var email_commseq_postcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email commseq postcard
 
 
 var callback = function(error, data, response) {
@@ -6542,16 +6542,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailPostcard(storefrontOid, commseqPostcardUuid, emailCommseqPostcard, callback);
+apiInstance.updateEmailPostcard(storefront_oid, commseq_postcard_uuid, email_commseq_postcard, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **commseqPostcardUuid** | **String**|  | 
- **emailCommseqPostcard** | [**EmailCommseqPostcard**](EmailCommseqPostcard.md)| Email commseq postcard | 
+ **storefront_oid** | **Number**|  | 
+ **commseq_postcard_uuid** | **String**|  | 
+ **email_commseq_postcard** | [**EmailCommseqPostcard**](EmailCommseqPostcard.md)| Email commseq postcard | 
 
 ### Return type
 
@@ -6568,7 +6568,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailSegment"></a>
 # **updateEmailSegment**
-> EmailSegmentResponse updateEmailSegment(storefrontOid, emailSegmentUuid, emailSegment)
+> EmailSegmentResponse updateEmailSegment(storefront_oid, email_segment_uuid, email_segment)
 
 Update email segment
 
@@ -6595,11 +6595,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
+var email_segment_uuid = "email_segment_uuid_example"; // String | 
 
-var emailSegment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
+var email_segment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
 
 
 var callback = function(error, data, response) {
@@ -6609,16 +6609,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailSegment(storefrontOid, emailSegmentUuid, emailSegment, callback);
+apiInstance.updateEmailSegment(storefront_oid, email_segment_uuid, email_segment, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **emailSegmentUuid** | **String**|  | 
- **emailSegment** | [**EmailSegment**](EmailSegment.md)| Email segment | 
+ **storefront_oid** | **Number**|  | 
+ **email_segment_uuid** | **String**|  | 
+ **email_segment** | [**EmailSegment**](EmailSegment.md)| Email segment | 
 
 ### Return type
 
@@ -6635,7 +6635,7 @@ Name | Type | Description  | Notes
 
 <a name="updateEmailSettings"></a>
 # **updateEmailSettings**
-> EmailSettingsResponse updateEmailSettings(storefrontOid, settings)
+> EmailSettingsResponse updateEmailSettings(storefront_oid, settings)
 
 Update email settings
 
@@ -6662,7 +6662,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
 var settings = new UltraCartRestApiV2.EmailSettings(); // EmailSettings | settings request
 
@@ -6674,14 +6674,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateEmailSettings(storefrontOid, settings, callback);
+apiInstance.updateEmailSettings(storefront_oid, settings, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
  **settings** | [**EmailSettings**](EmailSettings.md)| settings request | 
 
 ### Return type
@@ -6699,7 +6699,7 @@ Name | Type | Description  | Notes
 
 <a name="updateExperiment"></a>
 # **updateExperiment**
-> ExperimentResponse updateExperiment(storefrontOid, storefrontExperimentOid, experiment)
+> ExperimentResponse updateExperiment(storefront_oid, storefront_experiment_oid, experiment)
 
 Update experiment
 
@@ -6726,9 +6726,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var storefrontExperimentOid = 56; // Number | 
+var storefront_experiment_oid = 56; // Number | 
 
 var experiment = new UltraCartRestApiV2.Experiment(); // Experiment | Experiment
 
@@ -6740,15 +6740,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateExperiment(storefrontOid, storefrontExperimentOid, experiment, callback);
+apiInstance.updateExperiment(storefront_oid, storefront_experiment_oid, experiment, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **Number**|  | 
- **storefrontExperimentOid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | 
+ **storefront_experiment_oid** | **Number**|  | 
  **experiment** | [**Experiment**](Experiment.md)| Experiment | 
 
 ### Return type
@@ -6766,7 +6766,7 @@ Name | Type | Description  | Notes
 
 <a name="updateLibraryItem"></a>
 # **updateLibraryItem**
-> LibraryItemResponse updateLibraryItem(libraryItemOid, libraryItem)
+> LibraryItemResponse updateLibraryItem(library_item_oid, library_item)
 
 Update library item. Note that only certain fields may be updated via this method.
 
@@ -6793,9 +6793,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | 
+var library_item_oid = 56; // Number | 
 
-var libraryItem = new UltraCartRestApiV2.LibraryItem(); // LibraryItem | Library item
+var library_item = new UltraCartRestApiV2.LibraryItem(); // LibraryItem | Library item
 
 
 var callback = function(error, data, response) {
@@ -6805,15 +6805,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateLibraryItem(libraryItemOid, libraryItem, callback);
+apiInstance.updateLibraryItem(library_item_oid, library_item, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**|  | 
- **libraryItem** | [**LibraryItem**](LibraryItem.md)| Library item | 
+ **library_item_oid** | **Number**|  | 
+ **library_item** | [**LibraryItem**](LibraryItem.md)| Library item | 
 
 ### Return type
 
@@ -6830,7 +6830,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTransactionEmail"></a>
 # **updateTransactionEmail**
-> TransactionEmailResponse updateTransactionEmail(id, emailId, transactionEmail)
+> TransactionEmailResponse updateTransactionEmail(storefront_oid, email_id, transaction_email)
 
 Updates a transaction email object
 
@@ -6859,11 +6859,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | 
+var storefront_oid = 56; // Number | 
 
-var emailId = "emailId_example"; // String | 
+var email_id = "email_id_example"; // String | 
 
-var transactionEmail = new UltraCartRestApiV2.TransactionEmail(); // TransactionEmail | TransactionEmail
+var transaction_email = new UltraCartRestApiV2.TransactionEmail(); // TransactionEmail | TransactionEmail
 
 
 var callback = function(error, data, response) {
@@ -6873,16 +6873,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTransactionEmail(id, emailId, transactionEmail, callback);
+apiInstance.updateTransactionEmail(storefront_oid, email_id, transaction_email, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
- **emailId** | **String**|  | 
- **transactionEmail** | [**TransactionEmail**](TransactionEmail.md)| TransactionEmail | 
+ **storefront_oid** | **Number**|  | 
+ **email_id** | **String**|  | 
+ **transaction_email** | [**TransactionEmail**](TransactionEmail.md)| TransactionEmail | 
 
 ### Return type
 

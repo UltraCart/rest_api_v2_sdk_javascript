@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allowed_referrers'))
-        obj.allowedReferrers = ApiClient.convertToType(data['allowed_referrers'], ['String']);
+        obj.allowed_referrers = ApiClient.convertToType(data['allowed_referrers'], ['String']);
     }
     return obj;
   }
 
   /**
    * Allowed referrers.  If URLs are specified, automatic translation will convert them to proper allowed referrer maskes.
-   * @member {Array.<String>} allowedReferrers
+   * @member {Array.<String>} allowed_referrers
    */
-  exports.prototype.allowedReferrers = undefined;
+  exports.prototype.allowed_referrers = undefined;
 
   return exports;
 

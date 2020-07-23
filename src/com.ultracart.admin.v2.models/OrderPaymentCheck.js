@@ -56,16 +56,16 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('check_number'))
-        obj.checkNumber = ApiClient.convertToType(data['check_number'], 'String');
+        obj.check_number = ApiClient.convertToType(data['check_number'], 'String');
     }
     return obj;
   }
 
   /**
    * Check number
-   * @member {String} checkNumber
+   * @member {String} check_number
    */
-  exports.prototype.checkNumber = undefined;
+  exports.prototype.check_number = undefined;
 
   return exports;
 

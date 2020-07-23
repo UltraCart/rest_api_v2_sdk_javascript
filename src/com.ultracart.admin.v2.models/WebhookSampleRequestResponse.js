@@ -62,7 +62,7 @@
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('webhook_sample_request'))
-        obj.webhookSampleRequest = WebhookSampleRequest.constructFromObject(data['webhook_sample_request']);
+        obj.webhook_sample_request = WebhookSampleRequest.constructFromObject(data['webhook_sample_request']);
     }
     return obj;
   }
@@ -84,9 +84,9 @@
   exports.prototype.success = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/WebhookSampleRequest} webhookSampleRequest
+   * @member {module:com.ultracart.admin.v2.models/WebhookSampleRequest} webhook_sample_request
    */
-  exports.prototype.webhookSampleRequest = undefined;
+  exports.prototype.webhook_sample_request = undefined;
 
   return exports;
 

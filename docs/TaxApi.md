@@ -36,7 +36,7 @@ Method | HTTP request | Description
 
 <a name="deleteTaxProviderSelfCity"></a>
 # **deleteTaxProviderSelfCity**
-> deleteTaxProviderSelfCity(city, taxCity)
+> deleteTaxProviderSelfCity(city, tax_city)
 
 Deletes a Self tax provider city
 
@@ -61,7 +61,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var city = "city_example"; // String | The city being deleted.
 
-var taxCity = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be deleted
+var tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be deleted
 
 
 var callback = function(error, data, response) {
@@ -71,7 +71,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteTaxProviderSelfCity(city, taxCity, callback);
+apiInstance.deleteTaxProviderSelfCity(city, tax_city, callback);
 ```
 
 ### Parameters
@@ -79,7 +79,7 @@ apiInstance.deleteTaxProviderSelfCity(city, taxCity, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **city** | **String**| The city being deleted. | 
- **taxCity** | [**TaxCity**](TaxCity.md)| tax city to be deleted | 
+ **tax_city** | [**TaxCity**](TaxCity.md)| tax city to be deleted | 
 
 ### Return type
 
@@ -96,7 +96,7 @@ null (empty response body)
 
 <a name="deleteTaxProviderSelfCountry"></a>
 # **deleteTaxProviderSelfCountry**
-> deleteTaxProviderSelfCountry(countryCode, taxCountry)
+> deleteTaxProviderSelfCountry(countryCode, tax_country)
 
 Deletes a Self tax provider country
 
@@ -121,7 +121,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var countryCode = "countryCode_example"; // String | The country code being deleted.
 
-var taxCountry = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be deleted
+var tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be deleted
 
 
 var callback = function(error, data, response) {
@@ -131,7 +131,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteTaxProviderSelfCountry(countryCode, taxCountry, callback);
+apiInstance.deleteTaxProviderSelfCountry(countryCode, tax_country, callback);
 ```
 
 ### Parameters
@@ -139,7 +139,7 @@ apiInstance.deleteTaxProviderSelfCountry(countryCode, taxCountry, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryCode** | **String**| The country code being deleted. | 
- **taxCountry** | [**TaxCountry**](TaxCountry.md)| tax country to be deleted | 
+ **tax_country** | [**TaxCountry**](TaxCountry.md)| tax country to be deleted | 
 
 ### Return type
 
@@ -156,7 +156,7 @@ null (empty response body)
 
 <a name="deleteTaxProviderSelfCounty"></a>
 # **deleteTaxProviderSelfCounty**
-> deleteTaxProviderSelfCounty(county, taxCounty)
+> deleteTaxProviderSelfCounty(county, tax_county)
 
 Deletes a Self tax provider county
 
@@ -181,7 +181,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var county = "county_example"; // String | The county being deleted.
 
-var taxCounty = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be deleted
+var tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be deleted
 
 
 var callback = function(error, data, response) {
@@ -191,7 +191,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteTaxProviderSelfCounty(county, taxCounty, callback);
+apiInstance.deleteTaxProviderSelfCounty(county, tax_county, callback);
 ```
 
 ### Parameters
@@ -199,7 +199,7 @@ apiInstance.deleteTaxProviderSelfCounty(county, taxCounty, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **county** | **String**| The county being deleted. | 
- **taxCounty** | [**TaxCounty**](TaxCounty.md)| tax county to be deleted | 
+ **tax_county** | [**TaxCounty**](TaxCounty.md)| tax county to be deleted | 
 
 ### Return type
 
@@ -216,7 +216,7 @@ null (empty response body)
 
 <a name="deleteTaxProviderSelfPostalCode"></a>
 # **deleteTaxProviderSelfPostalCode**
-> deleteTaxProviderSelfPostalCode(postalCode, taxPostalCode)
+> deleteTaxProviderSelfPostalCode(postal_code, tax_postal_code)
 
 Deletes a Self tax provider postalCode
 
@@ -239,9 +239,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var postalCode = "postalCode_example"; // String | The postal code being deleted.
+var postal_code = "postal_code_example"; // String | The postal code being deleted.
 
-var taxPostalCode = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be deleted
+var tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be deleted
 
 
 var callback = function(error, data, response) {
@@ -251,15 +251,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteTaxProviderSelfPostalCode(postalCode, taxPostalCode, callback);
+apiInstance.deleteTaxProviderSelfPostalCode(postal_code, tax_postal_code, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postalCode** | **String**| The postal code being deleted. | 
- **taxPostalCode** | [**TaxPostalCode**](TaxPostalCode.md)| tax postal code to be deleted | 
+ **postal_code** | **String**| The postal code being deleted. | 
+ **tax_postal_code** | [**TaxPostalCode**](TaxPostalCode.md)| tax postal code to be deleted | 
 
 ### Return type
 
@@ -276,7 +276,7 @@ null (empty response body)
 
 <a name="deleteTaxProviderSelfState"></a>
 # **deleteTaxProviderSelfState**
-> deleteTaxProviderSelfState(stateCode, taxState)
+> deleteTaxProviderSelfState(stateCode, tax_state)
 
 Deletes a Self tax provider state
 
@@ -301,7 +301,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var stateCode = "stateCode_example"; // String | The state code being deleted.
 
-var taxState = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be deleted
+var tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be deleted
 
 
 var callback = function(error, data, response) {
@@ -311,7 +311,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteTaxProviderSelfState(stateCode, taxState, callback);
+apiInstance.deleteTaxProviderSelfState(stateCode, tax_state, callback);
 ```
 
 ### Parameters
@@ -319,7 +319,7 @@ apiInstance.deleteTaxProviderSelfState(stateCode, taxState, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stateCode** | **String**| The state code being deleted. | 
- **taxState** | [**TaxState**](TaxState.md)| tax state to be deleted | 
+ **tax_state** | [**TaxState**](TaxState.md)| tax state to be deleted | 
 
 ### Return type
 
@@ -387,7 +387,7 @@ This endpoint does not need any parameter.
 
 <a name="getTaxProviderAvalaraCompanies"></a>
 # **getTaxProviderAvalaraCompanies**
-> TaxProviderAvalaraCompaniesResult getTaxProviderAvalaraCompanies(taxProviderAvalara)
+> TaxProviderAvalaraCompaniesResult getTaxProviderAvalaraCompanies(tax_provider_avalara)
 
 Returns Avalara Tax companies configured by the merchant
 
@@ -410,7 +410,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var taxProviderAvalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
+var tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
 
 
 var callback = function(error, data, response) {
@@ -420,14 +420,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getTaxProviderAvalaraCompanies(taxProviderAvalara, callback);
+apiInstance.getTaxProviderAvalaraCompanies(tax_provider_avalara, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxProviderAvalara** | [**TaxProviderAvalara**](TaxProviderAvalara.md)| TaxProviderAvalara object | 
+ **tax_provider_avalara** | [**TaxProviderAvalara**](TaxProviderAvalara.md)| TaxProviderAvalara object | 
 
 ### Return type
 
@@ -933,9 +933,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var opts = { 
-  'limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  'expand': "expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
 var callback = function(error, data, response) {
@@ -952,9 +952,9 @@ apiInstance.getTaxProviders(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
- **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
 
@@ -1028,7 +1028,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderAvalara"></a>
 # **updateTaxProviderAvalara**
-> TaxProviderAvalara updateTaxProviderAvalara(taxProviderAvalara)
+> TaxProviderAvalara updateTaxProviderAvalara(tax_provider_avalara)
 
 Update the Avalara tax provider
 
@@ -1051,7 +1051,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var taxProviderAvalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
+var tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
 
 
 var callback = function(error, data, response) {
@@ -1061,14 +1061,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderAvalara(taxProviderAvalara, callback);
+apiInstance.updateTaxProviderAvalara(tax_provider_avalara, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxProviderAvalara** | [**TaxProviderAvalara**](TaxProviderAvalara.md)| TaxProviderAvalara object | 
+ **tax_provider_avalara** | [**TaxProviderAvalara**](TaxProviderAvalara.md)| TaxProviderAvalara object | 
 
 ### Return type
 
@@ -1085,7 +1085,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderSelf"></a>
 # **updateTaxProviderSelf**
-> TaxProviderSelf updateTaxProviderSelf(taxProviderSelf)
+> TaxProviderSelf updateTaxProviderSelf(tax_provider_self)
 
 Update the Self tax provider
 
@@ -1108,7 +1108,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var taxProviderSelf = new UltraCartRestApiV2.TaxProviderSelf(); // TaxProviderSelf | TaxProviderSelf object
+var tax_provider_self = new UltraCartRestApiV2.TaxProviderSelf(); // TaxProviderSelf | TaxProviderSelf object
 
 
 var callback = function(error, data, response) {
@@ -1118,14 +1118,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderSelf(taxProviderSelf, callback);
+apiInstance.updateTaxProviderSelf(tax_provider_self, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxProviderSelf** | [**TaxProviderSelf**](TaxProviderSelf.md)| TaxProviderSelf object | 
+ **tax_provider_self** | [**TaxProviderSelf**](TaxProviderSelf.md)| TaxProviderSelf object | 
 
 ### Return type
 
@@ -1142,7 +1142,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderSelfCity"></a>
 # **updateTaxProviderSelfCity**
-> TaxCity updateTaxProviderSelfCity(city, taxCity)
+> TaxCity updateTaxProviderSelfCity(city, tax_city)
 
 Updates a Self tax provider city
 
@@ -1167,7 +1167,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var city = "city_example"; // String | The city being updated.
 
-var taxCity = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be updated
+var tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be updated
 
 
 var callback = function(error, data, response) {
@@ -1177,7 +1177,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderSelfCity(city, taxCity, callback);
+apiInstance.updateTaxProviderSelfCity(city, tax_city, callback);
 ```
 
 ### Parameters
@@ -1185,7 +1185,7 @@ apiInstance.updateTaxProviderSelfCity(city, taxCity, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **city** | **String**| The city being updated. | 
- **taxCity** | [**TaxCity**](TaxCity.md)| tax city to be updated | 
+ **tax_city** | [**TaxCity**](TaxCity.md)| tax city to be updated | 
 
 ### Return type
 
@@ -1202,7 +1202,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderSelfCountry"></a>
 # **updateTaxProviderSelfCountry**
-> TaxCountry updateTaxProviderSelfCountry(countryCode, taxCountry)
+> TaxCountry updateTaxProviderSelfCountry(countryCode, tax_country)
 
 Updates a Self tax provider country
 
@@ -1227,7 +1227,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var countryCode = "countryCode_example"; // String | The country code being updated.
 
-var taxCountry = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be updated
+var tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be updated
 
 
 var callback = function(error, data, response) {
@@ -1237,7 +1237,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderSelfCountry(countryCode, taxCountry, callback);
+apiInstance.updateTaxProviderSelfCountry(countryCode, tax_country, callback);
 ```
 
 ### Parameters
@@ -1245,7 +1245,7 @@ apiInstance.updateTaxProviderSelfCountry(countryCode, taxCountry, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryCode** | **String**| The country code being updated. | 
- **taxCountry** | [**TaxCountry**](TaxCountry.md)| tax country to be updated | 
+ **tax_country** | [**TaxCountry**](TaxCountry.md)| tax country to be updated | 
 
 ### Return type
 
@@ -1262,7 +1262,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderSelfCounty"></a>
 # **updateTaxProviderSelfCounty**
-> TaxCounty updateTaxProviderSelfCounty(county, taxCounty)
+> TaxCounty updateTaxProviderSelfCounty(county, tax_county)
 
 Updates a Self tax provider county
 
@@ -1287,7 +1287,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var county = "county_example"; // String | The county being updated.
 
-var taxCounty = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be updated
+var tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be updated
 
 
 var callback = function(error, data, response) {
@@ -1297,7 +1297,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderSelfCounty(county, taxCounty, callback);
+apiInstance.updateTaxProviderSelfCounty(county, tax_county, callback);
 ```
 
 ### Parameters
@@ -1305,7 +1305,7 @@ apiInstance.updateTaxProviderSelfCounty(county, taxCounty, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **county** | **String**| The county being updated. | 
- **taxCounty** | [**TaxCounty**](TaxCounty.md)| tax county to be updated | 
+ **tax_county** | [**TaxCounty**](TaxCounty.md)| tax county to be updated | 
 
 ### Return type
 
@@ -1322,7 +1322,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderSelfPostalCode"></a>
 # **updateTaxProviderSelfPostalCode**
-> TaxPostalCode updateTaxProviderSelfPostalCode(postalCode, taxPostalCode)
+> TaxPostalCode updateTaxProviderSelfPostalCode(postal_code, tax_postal_code)
 
 Updates a Self tax provider postalCode
 
@@ -1345,9 +1345,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var postalCode = "postalCode_example"; // String | The postal code being updated.
+var postal_code = "postal_code_example"; // String | The postal code being updated.
 
-var taxPostalCode = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be updated
+var tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be updated
 
 
 var callback = function(error, data, response) {
@@ -1357,15 +1357,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderSelfPostalCode(postalCode, taxPostalCode, callback);
+apiInstance.updateTaxProviderSelfPostalCode(postal_code, tax_postal_code, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postalCode** | **String**| The postal code being updated. | 
- **taxPostalCode** | [**TaxPostalCode**](TaxPostalCode.md)| tax postal code to be updated | 
+ **postal_code** | **String**| The postal code being updated. | 
+ **tax_postal_code** | [**TaxPostalCode**](TaxPostalCode.md)| tax postal code to be updated | 
 
 ### Return type
 
@@ -1382,7 +1382,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderSelfState"></a>
 # **updateTaxProviderSelfState**
-> TaxState updateTaxProviderSelfState(stateCode, taxState)
+> TaxState updateTaxProviderSelfState(stateCode, tax_state)
 
 Updates a Self tax provider state
 
@@ -1407,7 +1407,7 @@ var apiInstance = new UltraCartRestApiV2.TaxApi();
 
 var stateCode = "stateCode_example"; // String | The state code being updated.
 
-var taxState = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be updated
+var tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be updated
 
 
 var callback = function(error, data, response) {
@@ -1417,7 +1417,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderSelfState(stateCode, taxState, callback);
+apiInstance.updateTaxProviderSelfState(stateCode, tax_state, callback);
 ```
 
 ### Parameters
@@ -1425,7 +1425,7 @@ apiInstance.updateTaxProviderSelfState(stateCode, taxState, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stateCode** | **String**| The state code being updated. | 
- **taxState** | [**TaxState**](TaxState.md)| tax state to be updated | 
+ **tax_state** | [**TaxState**](TaxState.md)| tax state to be updated | 
 
 ### Return type
 
@@ -1442,7 +1442,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderSovos"></a>
 # **updateTaxProviderSovos**
-> TaxProviderSovos updateTaxProviderSovos(taxProviderSovos)
+> TaxProviderSovos updateTaxProviderSovos(tax_provider_sovos)
 
 Update the Sovos tax provider
 
@@ -1465,7 +1465,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var taxProviderSovos = new UltraCartRestApiV2.TaxProviderSovos(); // TaxProviderSovos | TaxProviderSovos object
+var tax_provider_sovos = new UltraCartRestApiV2.TaxProviderSovos(); // TaxProviderSovos | TaxProviderSovos object
 
 
 var callback = function(error, data, response) {
@@ -1475,14 +1475,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderSovos(taxProviderSovos, callback);
+apiInstance.updateTaxProviderSovos(tax_provider_sovos, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxProviderSovos** | [**TaxProviderSovos**](TaxProviderSovos.md)| TaxProviderSovos object | 
+ **tax_provider_sovos** | [**TaxProviderSovos**](TaxProviderSovos.md)| TaxProviderSovos object | 
 
 ### Return type
 
@@ -1499,7 +1499,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderTaxJar"></a>
 # **updateTaxProviderTaxJar**
-> TaxProviderTaxJar updateTaxProviderTaxJar(taxProviderTaxJar)
+> TaxProviderTaxJar updateTaxProviderTaxJar(tax_provider_taxJar)
 
 Update the TaxJar tax provider
 
@@ -1522,7 +1522,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var taxProviderTaxJar = new UltraCartRestApiV2.TaxProviderTaxJar(); // TaxProviderTaxJar | TaxProviderTaxJar object
+var tax_provider_taxJar = new UltraCartRestApiV2.TaxProviderTaxJar(); // TaxProviderTaxJar | TaxProviderTaxJar object
 
 
 var callback = function(error, data, response) {
@@ -1532,14 +1532,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderTaxJar(taxProviderTaxJar, callback);
+apiInstance.updateTaxProviderTaxJar(tax_provider_taxJar, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxProviderTaxJar** | [**TaxProviderTaxJar**](TaxProviderTaxJar.md)| TaxProviderTaxJar object | 
+ **tax_provider_taxJar** | [**TaxProviderTaxJar**](TaxProviderTaxJar.md)| TaxProviderTaxJar object | 
 
 ### Return type
 
@@ -1556,7 +1556,7 @@ Name | Type | Description  | Notes
 
 <a name="updateTaxProviderUltraCart"></a>
 # **updateTaxProviderUltraCart**
-> TaxProviderUltraCart updateTaxProviderUltraCart(taxProviderUltracart)
+> TaxProviderUltraCart updateTaxProviderUltraCart(tax_provider_ultracart)
 
 Update the UltraCart tax provider
 
@@ -1579,7 +1579,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.TaxApi();
 
-var taxProviderUltracart = new UltraCartRestApiV2.TaxProviderUltraCart(); // TaxProviderUltraCart | TaxProviderUltraCart object
+var tax_provider_ultracart = new UltraCartRestApiV2.TaxProviderUltraCart(); // TaxProviderUltraCart | TaxProviderUltraCart object
 
 
 var callback = function(error, data, response) {
@@ -1589,14 +1589,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateTaxProviderUltraCart(taxProviderUltracart, callback);
+apiInstance.updateTaxProviderUltraCart(tax_provider_ultracart, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxProviderUltracart** | [**TaxProviderUltraCart**](TaxProviderUltraCart.md)| TaxProviderUltraCart object | 
+ **tax_provider_ultracart** | [**TaxProviderUltraCart**](TaxProviderUltraCart.md)| TaxProviderUltraCart object | 
 
 ### Return type
 

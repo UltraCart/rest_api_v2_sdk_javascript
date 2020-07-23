@@ -58,17 +58,17 @@
       if (data.hasOwnProperty('enabled'))
         obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean');
       if (data.hasOwnProperty('state_code'))
-        obj.stateCode = ApiClient.convertToType(data['state_code'], 'String');
+        obj.state_code = ApiClient.convertToType(data['state_code'], 'String');
       if (data.hasOwnProperty('state_name'))
-        obj.stateName = ApiClient.convertToType(data['state_name'], 'String');
+        obj.state_name = ApiClient.convertToType(data['state_name'], 'String');
       if (data.hasOwnProperty('tax_gift_charge'))
-        obj.taxGiftCharge = ApiClient.convertToType(data['tax_gift_charge'], 'Boolean');
+        obj.tax_gift_charge = ApiClient.convertToType(data['tax_gift_charge'], 'Boolean');
       if (data.hasOwnProperty('tax_gift_wrap'))
-        obj.taxGiftWrap = ApiClient.convertToType(data['tax_gift_wrap'], 'Boolean');
+        obj.tax_gift_wrap = ApiClient.convertToType(data['tax_gift_wrap'], 'Boolean');
       if (data.hasOwnProperty('tax_rate_formatted'))
-        obj.taxRateFormatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
+        obj.tax_rate_formatted = ApiClient.convertToType(data['tax_rate_formatted'], 'String');
       if (data.hasOwnProperty('tax_shipping'))
-        obj.taxShipping = ApiClient.convertToType(data['tax_shipping'], 'Boolean');
+        obj.tax_shipping = ApiClient.convertToType(data['tax_shipping'], 'Boolean');
     }
     return obj;
   }
@@ -81,39 +81,39 @@
 
   /**
    * State Code (2 digits)
-   * @member {String} stateCode
+   * @member {String} state_code
    */
-  exports.prototype.stateCode = undefined;
+  exports.prototype.state_code = undefined;
 
   /**
    * Fully spelled out state name
-   * @member {String} stateName
+   * @member {String} state_name
    */
-  exports.prototype.stateName = undefined;
+  exports.prototype.state_name = undefined;
 
   /**
    * True if gift charges should be taxed in this state.
-   * @member {Boolean} taxGiftCharge
+   * @member {Boolean} tax_gift_charge
    */
-  exports.prototype.taxGiftCharge = undefined;
+  exports.prototype.tax_gift_charge = undefined;
 
   /**
    * True if gift wrap should be taxed in this state.
-   * @member {Boolean} taxGiftWrap
+   * @member {Boolean} tax_gift_wrap
    */
-  exports.prototype.taxGiftWrap = undefined;
+  exports.prototype.tax_gift_wrap = undefined;
 
   /**
    * State tax rate formatted for display
-   * @member {String} taxRateFormatted
+   * @member {String} tax_rate_formatted
    */
-  exports.prototype.taxRateFormatted = undefined;
+  exports.prototype.tax_rate_formatted = undefined;
 
   /**
    * True if shipping should be taxed in this state.
-   * @member {Boolean} taxShipping
+   * @member {Boolean} tax_shipping
    */
-  exports.prototype.taxShipping = undefined;
+  exports.prototype.tax_shipping = undefined;
 
   return exports;
 

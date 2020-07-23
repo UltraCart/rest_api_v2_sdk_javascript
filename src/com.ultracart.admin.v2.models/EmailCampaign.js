@@ -56,56 +56,56 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('click_rate_formatted'))
-        obj.clickRateFormatted = ApiClient.convertToType(data['click_rate_formatted'], 'String');
+        obj.click_rate_formatted = ApiClient.convertToType(data['click_rate_formatted'], 'String');
       if (data.hasOwnProperty('created_dts'))
-        obj.createdDts = ApiClient.convertToType(data['created_dts'], 'String');
+        obj.created_dts = ApiClient.convertToType(data['created_dts'], 'String');
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('email_campaign_uuid'))
-        obj.emailCampaignUuid = ApiClient.convertToType(data['email_campaign_uuid'], 'String');
+        obj.email_campaign_uuid = ApiClient.convertToType(data['email_campaign_uuid'], 'String');
       if (data.hasOwnProperty('email_communication_sequence_uuid'))
-        obj.emailCommunicationSequenceUuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+        obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       if (data.hasOwnProperty('esp_domain_user'))
-        obj.espDomainUser = ApiClient.convertToType(data['esp_domain_user'], 'String');
+        obj.esp_domain_user = ApiClient.convertToType(data['esp_domain_user'], 'String');
       if (data.hasOwnProperty('esp_domain_uuid'))
-        obj.espDomainUuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+        obj.esp_domain_uuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('esp_friendly_name'))
-        obj.espFriendlyName = ApiClient.convertToType(data['esp_friendly_name'], 'String');
+        obj.esp_friendly_name = ApiClient.convertToType(data['esp_friendly_name'], 'String');
       if (data.hasOwnProperty('memberships'))
         obj.memberships = ApiClient.convertToType(data['memberships'], [EmailListSegmentMembership]);
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('open_rate_formatted'))
-        obj.openRateFormatted = ApiClient.convertToType(data['open_rate_formatted'], 'String');
+        obj.open_rate_formatted = ApiClient.convertToType(data['open_rate_formatted'], 'String');
       if (data.hasOwnProperty('prevent_sending_due_to_spam'))
-        obj.preventSendingDueToSpam = ApiClient.convertToType(data['prevent_sending_due_to_spam'], 'Boolean');
+        obj.prevent_sending_due_to_spam = ApiClient.convertToType(data['prevent_sending_due_to_spam'], 'Boolean');
       if (data.hasOwnProperty('revenue_formatted'))
-        obj.revenueFormatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
+        obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
       if (data.hasOwnProperty('scheduled_dts'))
-        obj.scheduledDts = ApiClient.convertToType(data['scheduled_dts'], 'String');
+        obj.scheduled_dts = ApiClient.convertToType(data['scheduled_dts'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('status_dts'))
-        obj.statusDts = ApiClient.convertToType(data['status_dts'], 'String');
+        obj.status_dts = ApiClient.convertToType(data['status_dts'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
     }
     return obj;
   }
 
   /**
    * Click rate of emails
-   * @member {String} clickRateFormatted
+   * @member {String} click_rate_formatted
    */
-  exports.prototype.clickRateFormatted = undefined;
+  exports.prototype.click_rate_formatted = undefined;
 
   /**
    * Created date
-   * @member {String} createdDts
+   * @member {String} created_dts
    */
-  exports.prototype.createdDts = undefined;
+  exports.prototype.created_dts = undefined;
 
   /**
    * True if this campaign was deleted
@@ -115,33 +115,33 @@
 
   /**
    * Email campaign UUID
-   * @member {String} emailCampaignUuid
+   * @member {String} email_campaign_uuid
    */
-  exports.prototype.emailCampaignUuid = undefined;
+  exports.prototype.email_campaign_uuid = undefined;
 
   /**
    * Email communication sequence UUID
-   * @member {String} emailCommunicationSequenceUuid
+   * @member {String} email_communication_sequence_uuid
    */
-  exports.prototype.emailCommunicationSequenceUuid = undefined;
+  exports.prototype.email_communication_sequence_uuid = undefined;
 
   /**
    * User of the sending address
-   * @member {String} espDomainUser
+   * @member {String} esp_domain_user
    */
-  exports.prototype.espDomainUser = undefined;
+  exports.prototype.esp_domain_user = undefined;
 
   /**
    * UUID of the sending domain
-   * @member {String} espDomainUuid
+   * @member {String} esp_domain_uuid
    */
-  exports.prototype.espDomainUuid = undefined;
+  exports.prototype.esp_domain_uuid = undefined;
 
   /**
    * Friendly name of the sending email
-   * @member {String} espFriendlyName
+   * @member {String} esp_friendly_name
    */
-  exports.prototype.espFriendlyName = undefined;
+  exports.prototype.esp_friendly_name = undefined;
 
   /**
    * List and segment memberships
@@ -151,9 +151,9 @@
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Name of email campaign
@@ -163,27 +163,27 @@
 
   /**
    * Open rate of emails
-   * @member {String} openRateFormatted
+   * @member {String} open_rate_formatted
    */
-  exports.prototype.openRateFormatted = undefined;
+  exports.prototype.open_rate_formatted = undefined;
 
   /**
    * True if this campaign is prevented from sending at this time due to spam complaints.
-   * @member {Boolean} preventSendingDueToSpam
+   * @member {Boolean} prevent_sending_due_to_spam
    */
-  exports.prototype.preventSendingDueToSpam = undefined;
+  exports.prototype.prevent_sending_due_to_spam = undefined;
 
   /**
    * Revenue associated with campaign
-   * @member {String} revenueFormatted
+   * @member {String} revenue_formatted
    */
-  exports.prototype.revenueFormatted = undefined;
+  exports.prototype.revenue_formatted = undefined;
 
   /**
    * Scheduled date
-   * @member {String} scheduledDts
+   * @member {String} scheduled_dts
    */
-  exports.prototype.scheduledDts = undefined;
+  exports.prototype.scheduled_dts = undefined;
 
   /**
    * Status of the campaign of draft, archived, and sent
@@ -193,15 +193,15 @@
 
   /**
    * Timestamp when the last status change happened
-   * @member {String} statusDts
+   * @member {String} status_dts
    */
-  exports.prototype.statusDts = undefined;
+  exports.prototype.status_dts = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   return exports;
 

@@ -56,25 +56,25 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('cost_if_specified'))
-        obj.costIfSpecified = Currency.constructFromObject(data['cost_if_specified']);
+        obj.cost_if_specified = Currency.constructFromObject(data['cost_if_specified']);
       if (data.hasOwnProperty('cost_per_letter'))
-        obj.costPerLetter = Currency.constructFromObject(data['cost_per_letter']);
+        obj.cost_per_letter = Currency.constructFromObject(data['cost_per_letter']);
       if (data.hasOwnProperty('cost_per_line'))
-        obj.costPerLine = Currency.constructFromObject(data['cost_per_line']);
+        obj.cost_per_line = Currency.constructFromObject(data['cost_per_line']);
       if (data.hasOwnProperty('ignore_if_default'))
-        obj.ignoreIfDefault = ApiClient.convertToType(data['ignore_if_default'], 'Boolean');
+        obj.ignore_if_default = ApiClient.convertToType(data['ignore_if_default'], 'Boolean');
       if (data.hasOwnProperty('label'))
         obj.label = ApiClient.convertToType(data['label'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('one_time_fee'))
-        obj.oneTimeFee = ApiClient.convertToType(data['one_time_fee'], 'Boolean');
+        obj.one_time_fee = ApiClient.convertToType(data['one_time_fee'], 'Boolean');
       if (data.hasOwnProperty('option_oid'))
-        obj.optionOid = ApiClient.convertToType(data['option_oid'], 'Number');
+        obj.option_oid = ApiClient.convertToType(data['option_oid'], 'Number');
       if (data.hasOwnProperty('required'))
         obj.required = ApiClient.convertToType(data['required'], 'Boolean');
       if (data.hasOwnProperty('selected_value'))
-        obj.selectedValue = ApiClient.convertToType(data['selected_value'], 'String');
+        obj.selected_value = ApiClient.convertToType(data['selected_value'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('values'))
@@ -84,25 +84,25 @@
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} costIfSpecified
+   * @member {module:com.ultracart.admin.v2.models/Currency} cost_if_specified
    */
-  exports.prototype.costIfSpecified = undefined;
+  exports.prototype.cost_if_specified = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} costPerLetter
+   * @member {module:com.ultracart.admin.v2.models/Currency} cost_per_letter
    */
-  exports.prototype.costPerLetter = undefined;
+  exports.prototype.cost_per_letter = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} costPerLine
+   * @member {module:com.ultracart.admin.v2.models/Currency} cost_per_line
    */
-  exports.prototype.costPerLine = undefined;
+  exports.prototype.cost_per_line = undefined;
 
   /**
    * True if the default answer is ignored
-   * @member {Boolean} ignoreIfDefault
+   * @member {Boolean} ignore_if_default
    */
-  exports.prototype.ignoreIfDefault = undefined;
+  exports.prototype.ignore_if_default = undefined;
 
   /**
    * Display label for the option
@@ -118,15 +118,15 @@
 
   /**
    * Charge the fee a single time instead of multiplying by the quantity
-   * @member {Boolean} oneTimeFee
+   * @member {Boolean} one_time_fee
    */
-  exports.prototype.oneTimeFee = undefined;
+  exports.prototype.one_time_fee = undefined;
 
   /**
    * Unique identifier for the option
-   * @member {Number} optionOid
+   * @member {Number} option_oid
    */
-  exports.prototype.optionOid = undefined;
+  exports.prototype.option_oid = undefined;
 
   /**
    * True if the customer is required to select a value
@@ -136,9 +136,9 @@
 
   /**
    * The value of the option specified by the customer
-   * @member {String} selectedValue
+   * @member {String} selected_value
    */
-  exports.prototype.selectedValue = undefined;
+  exports.prototype.selected_value = undefined;
 
   /**
    * Type of option

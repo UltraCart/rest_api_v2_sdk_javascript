@@ -58,39 +58,39 @@
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('edited_by_user'))
-        obj.editedByUser = ApiClient.convertToType(data['edited_by_user'], 'String');
+        obj.edited_by_user = ApiClient.convertToType(data['edited_by_user'], 'String');
       if (data.hasOwnProperty('email_communication_sequence_email_uuid'))
-        obj.emailCommunicationSequenceEmailUuid = ApiClient.convertToType(data['email_communication_sequence_email_uuid'], 'String');
+        obj.email_communication_sequence_email_uuid = ApiClient.convertToType(data['email_communication_sequence_email_uuid'], 'String');
       if (data.hasOwnProperty('email_communication_sequence_uuid'))
-        obj.emailCommunicationSequenceUuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+        obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       if (data.hasOwnProperty('email_container_cjson'))
-        obj.emailContainerCjson = ApiClient.convertToType(data['email_container_cjson'], 'String');
+        obj.email_container_cjson = ApiClient.convertToType(data['email_container_cjson'], 'String');
       if (data.hasOwnProperty('email_container_cjson_last_modified_dts'))
-        obj.emailContainerCjsonLastModifiedDts = ApiClient.convertToType(data['email_container_cjson_last_modified_dts'], 'String');
+        obj.email_container_cjson_last_modified_dts = ApiClient.convertToType(data['email_container_cjson_last_modified_dts'], 'String');
       if (data.hasOwnProperty('email_template_vm_path'))
-        obj.emailTemplateVmPath = ApiClient.convertToType(data['email_template_vm_path'], 'String');
+        obj.email_template_vm_path = ApiClient.convertToType(data['email_template_vm_path'], 'String');
       if (data.hasOwnProperty('filter_profile_equation_json'))
-        obj.filterProfileEquationJson = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
+        obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('individually_render'))
-        obj.individuallyRender = ApiClient.convertToType(data['individually_render'], 'Boolean');
+        obj.individually_render = ApiClient.convertToType(data['individually_render'], 'Boolean');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('pending_review'))
-        obj.pendingReview = ApiClient.convertToType(data['pending_review'], 'Boolean');
+        obj.pending_review = ApiClient.convertToType(data['pending_review'], 'Boolean');
       if (data.hasOwnProperty('preview_text'))
-        obj.previewText = ApiClient.convertToType(data['preview_text'], 'String');
+        obj.preview_text = ApiClient.convertToType(data['preview_text'], 'String');
       if (data.hasOwnProperty('rejected'))
         obj.rejected = ApiClient.convertToType(data['rejected'], 'Boolean');
       if (data.hasOwnProperty('requires_review'))
-        obj.requiresReview = ApiClient.convertToType(data['requires_review'], 'Boolean');
+        obj.requires_review = ApiClient.convertToType(data['requires_review'], 'Boolean');
       if (data.hasOwnProperty('smart_sending'))
-        obj.smartSending = ApiClient.convertToType(data['smart_sending'], 'Boolean');
+        obj.smart_sending = ApiClient.convertToType(data['smart_sending'], 'Boolean');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('subject'))
         obj.subject = ApiClient.convertToType(data['subject'], 'String');
       if (data.hasOwnProperty('transactional_email'))
-        obj.transactionalEmail = ApiClient.convertToType(data['transactional_email'], 'Boolean');
+        obj.transactional_email = ApiClient.convertToType(data['transactional_email'], 'Boolean');
       if (data.hasOwnProperty('version'))
         obj.version = ApiClient.convertToType(data['version'], 'Number');
     }
@@ -105,69 +105,69 @@
 
   /**
    * Edited by user
-   * @member {String} editedByUser
+   * @member {String} edited_by_user
    */
-  exports.prototype.editedByUser = undefined;
+  exports.prototype.edited_by_user = undefined;
 
   /**
    * Email communication sequence email uuid
-   * @member {String} emailCommunicationSequenceEmailUuid
+   * @member {String} email_communication_sequence_email_uuid
    */
-  exports.prototype.emailCommunicationSequenceEmailUuid = undefined;
+  exports.prototype.email_communication_sequence_email_uuid = undefined;
 
   /**
    * Email commseq UUID
-   * @member {String} emailCommunicationSequenceUuid
+   * @member {String} email_communication_sequence_uuid
    */
-  exports.prototype.emailCommunicationSequenceUuid = undefined;
+  exports.prototype.email_communication_sequence_uuid = undefined;
 
   /**
    * Email container cjson
-   * @member {String} emailContainerCjson
+   * @member {String} email_container_cjson
    */
-  exports.prototype.emailContainerCjson = undefined;
+  exports.prototype.email_container_cjson = undefined;
 
   /**
    * Timestamp the last time the container was modified.
-   * @member {String} emailContainerCjsonLastModifiedDts
+   * @member {String} email_container_cjson_last_modified_dts
    */
-  exports.prototype.emailContainerCjsonLastModifiedDts = undefined;
+  exports.prototype.email_container_cjson_last_modified_dts = undefined;
 
   /**
    * Email template virtual path
-   * @member {String} emailTemplateVmPath
+   * @member {String} email_template_vm_path
    */
-  exports.prototype.emailTemplateVmPath = undefined;
+  exports.prototype.email_template_vm_path = undefined;
 
   /**
    * Filter profile equation json
-   * @member {String} filterProfileEquationJson
+   * @member {String} filter_profile_equation_json
    */
-  exports.prototype.filterProfileEquationJson = undefined;
+  exports.prototype.filter_profile_equation_json = undefined;
 
   /**
    * Individually render
-   * @member {Boolean} individuallyRender
+   * @member {Boolean} individually_render
    */
-  exports.prototype.individuallyRender = undefined;
+  exports.prototype.individually_render = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * True if the content of this email is pending review by UltraCart
-   * @member {Boolean} pendingReview
+   * @member {Boolean} pending_review
    */
-  exports.prototype.pendingReview = undefined;
+  exports.prototype.pending_review = undefined;
 
   /**
    * Preview text
-   * @member {String} previewText
+   * @member {String} preview_text
    */
-  exports.prototype.previewText = undefined;
+  exports.prototype.preview_text = undefined;
 
   /**
    * True if the content of this email was rejected during review by UltraCart
@@ -177,21 +177,21 @@
 
   /**
    * True if the content of this email is requires review by UltraCart
-   * @member {Boolean} requiresReview
+   * @member {Boolean} requires_review
    */
-  exports.prototype.requiresReview = undefined;
+  exports.prototype.requires_review = undefined;
 
   /**
    * Smart sending
-   * @member {Boolean} smartSending
+   * @member {Boolean} smart_sending
    */
-  exports.prototype.smartSending = undefined;
+  exports.prototype.smart_sending = undefined;
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * Subject
@@ -201,9 +201,9 @@
 
   /**
    * Transactional email
-   * @member {Boolean} transactionalEmail
+   * @member {Boolean} transactional_email
    */
-  exports.prototype.transactionalEmail = undefined;
+  exports.prototype.transactional_email = undefined;
 
   /**
    * Version

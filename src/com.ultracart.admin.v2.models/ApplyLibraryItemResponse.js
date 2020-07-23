@@ -58,13 +58,13 @@
       if (data.hasOwnProperty('cjson'))
         obj.cjson = ApiClient.convertToType(data['cjson'], 'String');
       if (data.hasOwnProperty('content_type'))
-        obj.contentType = ApiClient.convertToType(data['content_type'], 'String');
+        obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('title'))
@@ -83,9 +83,9 @@
 
   /**
    * flow, campaign, cjson, or upsell
-   * @member {String} contentType
+   * @member {String} content_type
    */
-  exports.prototype.contentType = undefined;
+  exports.prototype.content_type = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
@@ -99,9 +99,9 @@
 
   /**
    * StoreFront oid where content originates necessary for tracking down relative assets
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * Indicates if API call was successful

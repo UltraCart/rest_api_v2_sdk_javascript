@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
-        obj.discountPercent = ApiClient.convertToType(data['discount_percent'], 'Number');
+        obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
       if (data.hasOwnProperty('item_quantity'))
-        obj.itemQuantity = ApiClient.convertToType(data['item_quantity'], 'Number');
+        obj.item_quantity = ApiClient.convertToType(data['item_quantity'], 'Number');
     }
     return obj;
   }
 
   /**
    * The percent of discount per item.
-   * @member {Number} discountPercent
+   * @member {Number} discount_percent
    */
-  exports.prototype.discountPercent = undefined;
+  exports.prototype.discount_percent = undefined;
 
   /**
    * The quantity of item purchased (in units)
-   * @member {Number} itemQuantity
+   * @member {Number} item_quantity
    */
-  exports.prototype.itemQuantity = undefined;
+  exports.prototype.item_quantity = undefined;
 
   return exports;
 

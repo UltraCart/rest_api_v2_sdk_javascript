@@ -56,107 +56,107 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('accounting_code'))
-        obj.accountingCode = ApiClient.convertToType(data['accounting_code'], 'String');
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('activation_codes'))
-        obj.activationCodes = ApiClient.convertToType(data['activation_codes'], ['String']);
+        obj.activation_codes = ApiClient.convertToType(data['activation_codes'], ['String']);
       if (data.hasOwnProperty('arbitrary_unit_cost'))
-        obj.arbitraryUnitCost = Currency.constructFromObject(data['arbitrary_unit_cost']);
+        obj.arbitrary_unit_cost = Currency.constructFromObject(data['arbitrary_unit_cost']);
       if (data.hasOwnProperty('auto_order_last_rebill_dts'))
-        obj.autoOrderLastRebillDts = ApiClient.convertToType(data['auto_order_last_rebill_dts'], 'String');
+        obj.auto_order_last_rebill_dts = ApiClient.convertToType(data['auto_order_last_rebill_dts'], 'String');
       if (data.hasOwnProperty('auto_order_schedule'))
-        obj.autoOrderSchedule = ApiClient.convertToType(data['auto_order_schedule'], 'String');
+        obj.auto_order_schedule = ApiClient.convertToType(data['auto_order_schedule'], 'String');
       if (data.hasOwnProperty('barcode'))
         obj.barcode = ApiClient.convertToType(data['barcode'], 'String');
       if (data.hasOwnProperty('channel_partner_item_id'))
-        obj.channelPartnerItemId = ApiClient.convertToType(data['channel_partner_item_id'], 'String');
+        obj.channel_partner_item_id = ApiClient.convertToType(data['channel_partner_item_id'], 'String');
       if (data.hasOwnProperty('cogs'))
         obj.cogs = ApiClient.convertToType(data['cogs'], 'Number');
       if (data.hasOwnProperty('component_unit_value'))
-        obj.componentUnitValue = ApiClient.convertToType(data['component_unit_value'], 'Number');
+        obj.component_unit_value = ApiClient.convertToType(data['component_unit_value'], 'Number');
       if (data.hasOwnProperty('cost'))
         obj.cost = Currency.constructFromObject(data['cost']);
       if (data.hasOwnProperty('country_code_of_origin'))
-        obj.countryCodeOfOrigin = ApiClient.convertToType(data['country_code_of_origin'], 'String');
+        obj.country_code_of_origin = ApiClient.convertToType(data['country_code_of_origin'], 'String');
       if (data.hasOwnProperty('customs_description'))
-        obj.customsDescription = ApiClient.convertToType(data['customs_description'], 'String');
+        obj.customs_description = ApiClient.convertToType(data['customs_description'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('discount'))
         obj.discount = Currency.constructFromObject(data['discount']);
       if (data.hasOwnProperty('discount_quantity'))
-        obj.discountQuantity = ApiClient.convertToType(data['discount_quantity'], 'Number');
+        obj.discount_quantity = ApiClient.convertToType(data['discount_quantity'], 'Number');
       if (data.hasOwnProperty('discount_shipping_weight'))
-        obj.discountShippingWeight = Weight.constructFromObject(data['discount_shipping_weight']);
+        obj.discount_shipping_weight = Weight.constructFromObject(data['discount_shipping_weight']);
       if (data.hasOwnProperty('distribution_center_code'))
-        obj.distributionCenterCode = ApiClient.convertToType(data['distribution_center_code'], 'String');
+        obj.distribution_center_code = ApiClient.convertToType(data['distribution_center_code'], 'String');
       if (data.hasOwnProperty('edi'))
         obj.edi = OrderItemEdi.constructFromObject(data['edi']);
       if (data.hasOwnProperty('exclude_coupon'))
-        obj.excludeCoupon = ApiClient.convertToType(data['exclude_coupon'], 'Boolean');
+        obj.exclude_coupon = ApiClient.convertToType(data['exclude_coupon'], 'Boolean');
       if (data.hasOwnProperty('free_shipping'))
-        obj.freeShipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
+        obj.free_shipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
       if (data.hasOwnProperty('hazmat'))
         obj.hazmat = ApiClient.convertToType(data['hazmat'], 'Boolean');
       if (data.hasOwnProperty('height'))
         obj.height = Distance.constructFromObject(data['height']);
       if (data.hasOwnProperty('item_reference_oid'))
-        obj.itemReferenceOid = ApiClient.convertToType(data['item_reference_oid'], 'Number');
+        obj.item_reference_oid = ApiClient.convertToType(data['item_reference_oid'], 'Number');
       if (data.hasOwnProperty('kit'))
         obj.kit = ApiClient.convertToType(data['kit'], 'Boolean');
       if (data.hasOwnProperty('kit_component'))
-        obj.kitComponent = ApiClient.convertToType(data['kit_component'], 'Boolean');
+        obj.kit_component = ApiClient.convertToType(data['kit_component'], 'Boolean');
       if (data.hasOwnProperty('length'))
         obj.length = Distance.constructFromObject(data['length']);
       if (data.hasOwnProperty('manufacturer_sku'))
-        obj.manufacturerSku = ApiClient.convertToType(data['manufacturer_sku'], 'String');
+        obj.manufacturer_sku = ApiClient.convertToType(data['manufacturer_sku'], 'String');
       if (data.hasOwnProperty('max_days_time_in_transit'))
-        obj.maxDaysTimeInTransit = ApiClient.convertToType(data['max_days_time_in_transit'], 'Number');
+        obj.max_days_time_in_transit = ApiClient.convertToType(data['max_days_time_in_transit'], 'Number');
       if (data.hasOwnProperty('merchant_item_id'))
-        obj.merchantItemId = ApiClient.convertToType(data['merchant_item_id'], 'String');
+        obj.merchant_item_id = ApiClient.convertToType(data['merchant_item_id'], 'String');
       if (data.hasOwnProperty('mix_and_match_group_name'))
-        obj.mixAndMatchGroupName = ApiClient.convertToType(data['mix_and_match_group_name'], 'String');
+        obj.mix_and_match_group_name = ApiClient.convertToType(data['mix_and_match_group_name'], 'String');
       if (data.hasOwnProperty('mix_and_match_group_oid'))
-        obj.mixAndMatchGroupOid = ApiClient.convertToType(data['mix_and_match_group_oid'], 'Number');
+        obj.mix_and_match_group_oid = ApiClient.convertToType(data['mix_and_match_group_oid'], 'Number');
       if (data.hasOwnProperty('no_shipping_discount'))
-        obj.noShippingDiscount = ApiClient.convertToType(data['no_shipping_discount'], 'Boolean');
+        obj.no_shipping_discount = ApiClient.convertToType(data['no_shipping_discount'], 'Boolean');
       if (data.hasOwnProperty('options'))
         obj.options = ApiClient.convertToType(data['options'], [OrderItemOption]);
       if (data.hasOwnProperty('packed_by_user'))
-        obj.packedByUser = ApiClient.convertToType(data['packed_by_user'], 'String');
+        obj.packed_by_user = ApiClient.convertToType(data['packed_by_user'], 'String');
       if (data.hasOwnProperty('perishable_class'))
-        obj.perishableClass = ApiClient.convertToType(data['perishable_class'], 'String');
+        obj.perishable_class = ApiClient.convertToType(data['perishable_class'], 'String');
       if (data.hasOwnProperty('pricing_tier_name'))
-        obj.pricingTierName = ApiClient.convertToType(data['pricing_tier_name'], 'String');
+        obj.pricing_tier_name = ApiClient.convertToType(data['pricing_tier_name'], 'String');
       if (data.hasOwnProperty('properties'))
         obj.properties = ApiClient.convertToType(data['properties'], [OrderItemProperty]);
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
       if (data.hasOwnProperty('quantity_refunded'))
-        obj.quantityRefunded = ApiClient.convertToType(data['quantity_refunded'], 'Number');
+        obj.quantity_refunded = ApiClient.convertToType(data['quantity_refunded'], 'Number');
       if (data.hasOwnProperty('quickbooks_class'))
-        obj.quickbooksClass = ApiClient.convertToType(data['quickbooks_class'], 'String');
+        obj.quickbooks_class = ApiClient.convertToType(data['quickbooks_class'], 'String');
       if (data.hasOwnProperty('ship_separately'))
-        obj.shipSeparately = ApiClient.convertToType(data['ship_separately'], 'Boolean');
+        obj.ship_separately = ApiClient.convertToType(data['ship_separately'], 'Boolean');
       if (data.hasOwnProperty('shipped_by_user'))
-        obj.shippedByUser = ApiClient.convertToType(data['shipped_by_user'], 'String');
+        obj.shipped_by_user = ApiClient.convertToType(data['shipped_by_user'], 'String');
       if (data.hasOwnProperty('shipped_dts'))
-        obj.shippedDts = ApiClient.convertToType(data['shipped_dts'], 'String');
+        obj.shipped_dts = ApiClient.convertToType(data['shipped_dts'], 'String');
       if (data.hasOwnProperty('special_product_type'))
-        obj.specialProductType = ApiClient.convertToType(data['special_product_type'], 'String');
+        obj.special_product_type = ApiClient.convertToType(data['special_product_type'], 'String');
       if (data.hasOwnProperty('tags'))
         obj.tags = ApiClient.convertToType(data['tags'], [OrderItemTag]);
       if (data.hasOwnProperty('tax_free'))
-        obj.taxFree = ApiClient.convertToType(data['tax_free'], 'Boolean');
+        obj.tax_free = ApiClient.convertToType(data['tax_free'], 'Boolean');
       if (data.hasOwnProperty('taxable_cost'))
-        obj.taxableCost = Currency.constructFromObject(data['taxable_cost']);
+        obj.taxable_cost = Currency.constructFromObject(data['taxable_cost']);
       if (data.hasOwnProperty('total_cost_with_discount'))
-        obj.totalCostWithDiscount = Currency.constructFromObject(data['total_cost_with_discount']);
+        obj.total_cost_with_discount = Currency.constructFromObject(data['total_cost_with_discount']);
       if (data.hasOwnProperty('total_refunded'))
-        obj.totalRefunded = Currency.constructFromObject(data['total_refunded']);
+        obj.total_refunded = Currency.constructFromObject(data['total_refunded']);
       if (data.hasOwnProperty('transmitted_to_distribution_center_dts'))
-        obj.transmittedToDistributionCenterDts = ApiClient.convertToType(data['transmitted_to_distribution_center_dts'], 'String');
+        obj.transmitted_to_distribution_center_dts = ApiClient.convertToType(data['transmitted_to_distribution_center_dts'], 'String');
       if (data.hasOwnProperty('unit_cost_with_discount'))
-        obj.unitCostWithDiscount = Currency.constructFromObject(data['unit_cost_with_discount']);
+        obj.unit_cost_with_discount = Currency.constructFromObject(data['unit_cost_with_discount']);
       if (data.hasOwnProperty('upsell'))
         obj.upsell = ApiClient.convertToType(data['upsell'], 'Boolean');
       if (data.hasOwnProperty('weight'))
@@ -169,32 +169,32 @@
 
   /**
    * QuickBooks code
-   * @member {String} accountingCode
+   * @member {String} accounting_code
    */
-  exports.prototype.accountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
    * Activation codes assigned to this item
-   * @member {Array.<String>} activationCodes
+   * @member {Array.<String>} activation_codes
    */
-  exports.prototype.activationCodes = undefined;
+  exports.prototype.activation_codes = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} arbitraryUnitCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_unit_cost
    */
-  exports.prototype.arbitraryUnitCost = undefined;
+  exports.prototype.arbitrary_unit_cost = undefined;
 
   /**
    * Date/time of the last rebill, used only during order insert to help project future rebills
-   * @member {String} autoOrderLastRebillDts
+   * @member {String} auto_order_last_rebill_dts
    */
-  exports.prototype.autoOrderLastRebillDts = undefined;
+  exports.prototype.auto_order_last_rebill_dts = undefined;
 
   /**
    * Auto order schedule, used only during inserts supplying the recurring schedule
-   * @member {String} autoOrderSchedule
+   * @member {String} auto_order_schedule
    */
-  exports.prototype.autoOrderSchedule = undefined;
+  exports.prototype.auto_order_schedule = undefined;
 
   /**
    * Barcode
@@ -204,9 +204,9 @@
 
   /**
    * Channel partner item id if this order came through a channel partner and the channel partner item id was mapped to an internal item id
-   * @member {String} channelPartnerItemId
+   * @member {String} channel_partner_item_id
    */
-  exports.prototype.channelPartnerItemId = undefined;
+  exports.prototype.channel_partner_item_id = undefined;
 
   /**
    * Cost of goods sold
@@ -216,9 +216,9 @@
 
   /**
    * Value of the kit component item
-   * @member {Number} componentUnitValue
+   * @member {Number} component_unit_value
    */
-  exports.prototype.componentUnitValue = undefined;
+  exports.prototype.component_unit_value = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} cost
@@ -227,15 +227,15 @@
 
   /**
    * Country of origin (ISO-3166 two letter code)
-   * @member {String} countryCodeOfOrigin
+   * @member {String} country_code_of_origin
    */
-  exports.prototype.countryCodeOfOrigin = undefined;
+  exports.prototype.country_code_of_origin = undefined;
 
   /**
    * Customs description
-   * @member {String} customsDescription
+   * @member {String} customs_description
    */
-  exports.prototype.customsDescription = undefined;
+  exports.prototype.customs_description = undefined;
 
   /**
    * Description
@@ -250,20 +250,20 @@
 
   /**
    * Discount quantity
-   * @member {Number} discountQuantity
+   * @member {Number} discount_quantity
    */
-  exports.prototype.discountQuantity = undefined;
+  exports.prototype.discount_quantity = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Weight} discountShippingWeight
+   * @member {module:com.ultracart.admin.v2.models/Weight} discount_shipping_weight
    */
-  exports.prototype.discountShippingWeight = undefined;
+  exports.prototype.discount_shipping_weight = undefined;
 
   /**
    * Distribution center code responsible for shipping this item
-   * @member {String} distributionCenterCode
+   * @member {String} distribution_center_code
    */
-  exports.prototype.distributionCenterCode = undefined;
+  exports.prototype.distribution_center_code = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderItemEdi} edi
@@ -272,15 +272,15 @@
 
   /**
    * True if this item is excluded from coupons
-   * @member {Boolean} excludeCoupon
+   * @member {Boolean} exclude_coupon
    */
-  exports.prototype.excludeCoupon = undefined;
+  exports.prototype.exclude_coupon = undefined;
 
   /**
    * True if the item receives free shipping
-   * @member {Boolean} freeShipping
+   * @member {Boolean} free_shipping
    */
-  exports.prototype.freeShipping = undefined;
+  exports.prototype.free_shipping = undefined;
 
   /**
    * Hazardous materials indicator
@@ -295,9 +295,9 @@
 
   /**
    * Item reference object identifier used to linked to auto order item record
-   * @member {Number} itemReferenceOid
+   * @member {Number} item_reference_oid
    */
-  exports.prototype.itemReferenceOid = undefined;
+  exports.prototype.item_reference_oid = undefined;
 
   /**
    * True if this item is a kit
@@ -307,9 +307,9 @@
 
   /**
    * True if this item is a kit component
-   * @member {Boolean} kitComponent
+   * @member {Boolean} kit_component
    */
-  exports.prototype.kitComponent = undefined;
+  exports.prototype.kit_component = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Distance} length
@@ -318,39 +318,39 @@
 
   /**
    * Manufacturer SKU
-   * @member {String} manufacturerSku
+   * @member {String} manufacturer_sku
    */
-  exports.prototype.manufacturerSku = undefined;
+  exports.prototype.manufacturer_sku = undefined;
 
   /**
    * Maximum days that the item can be in transit before spoilage (perishable products)
-   * @member {Number} maxDaysTimeInTransit
+   * @member {Number} max_days_time_in_transit
    */
-  exports.prototype.maxDaysTimeInTransit = undefined;
+  exports.prototype.max_days_time_in_transit = undefined;
 
   /**
    * Item ID
-   * @member {String} merchantItemId
+   * @member {String} merchant_item_id
    */
-  exports.prototype.merchantItemId = undefined;
+  exports.prototype.merchant_item_id = undefined;
 
   /**
    * Mix and match group name
-   * @member {String} mixAndMatchGroupName
+   * @member {String} mix_and_match_group_name
    */
-  exports.prototype.mixAndMatchGroupName = undefined;
+  exports.prototype.mix_and_match_group_name = undefined;
 
   /**
    * Mix and match group object identifier
-   * @member {Number} mixAndMatchGroupOid
+   * @member {Number} mix_and_match_group_oid
    */
-  exports.prototype.mixAndMatchGroupOid = undefined;
+  exports.prototype.mix_and_match_group_oid = undefined;
 
   /**
    * True if this item is excluded from shipping discounts
-   * @member {Boolean} noShippingDiscount
+   * @member {Boolean} no_shipping_discount
    */
-  exports.prototype.noShippingDiscount = undefined;
+  exports.prototype.no_shipping_discount = undefined;
 
   /**
    * Options
@@ -360,21 +360,21 @@
 
   /**
    * Packed by user
-   * @member {String} packedByUser
+   * @member {String} packed_by_user
    */
-  exports.prototype.packedByUser = undefined;
+  exports.prototype.packed_by_user = undefined;
 
   /**
    * Perishable class of the item
-   * @member {String} perishableClass
+   * @member {String} perishable_class
    */
-  exports.prototype.perishableClass = undefined;
+  exports.prototype.perishable_class = undefined;
 
   /**
    * Pricing tier that granted the particular price for this item if the customer profile had pricing tiers assigned
-   * @member {String} pricingTierName
+   * @member {String} pricing_tier_name
    */
-  exports.prototype.pricingTierName = undefined;
+  exports.prototype.pricing_tier_name = undefined;
 
   /**
    * Properties
@@ -390,39 +390,39 @@
 
   /**
    * Quantity refunded on this item (read only except refund operation)
-   * @member {Number} quantityRefunded
+   * @member {Number} quantity_refunded
    */
-  exports.prototype.quantityRefunded = undefined;
+  exports.prototype.quantity_refunded = undefined;
 
   /**
    * QuickBooks class
-   * @member {String} quickbooksClass
+   * @member {String} quickbooks_class
    */
-  exports.prototype.quickbooksClass = undefined;
+  exports.prototype.quickbooks_class = undefined;
 
   /**
    * True if this item ships in a separate box
-   * @member {Boolean} shipSeparately
+   * @member {Boolean} ship_separately
    */
-  exports.prototype.shipSeparately = undefined;
+  exports.prototype.ship_separately = undefined;
 
   /**
    * Shipped by user
-   * @member {String} shippedByUser
+   * @member {String} shipped_by_user
    */
-  exports.prototype.shippedByUser = undefined;
+  exports.prototype.shipped_by_user = undefined;
 
   /**
    * Date/time that this item was marked shipped
-   * @member {String} shippedDts
+   * @member {String} shipped_dts
    */
-  exports.prototype.shippedDts = undefined;
+  exports.prototype.shipped_dts = undefined;
 
   /**
    * Special product type (USPS Media Mail)
-   * @member {String} specialProductType
+   * @member {String} special_product_type
    */
-  exports.prototype.specialProductType = undefined;
+  exports.prototype.special_product_type = undefined;
 
   /**
    * Tags
@@ -432,35 +432,35 @@
 
   /**
    * True if the item is tax free
-   * @member {Boolean} taxFree
+   * @member {Boolean} tax_free
    */
-  exports.prototype.taxFree = undefined;
+  exports.prototype.tax_free = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} taxableCost
+   * @member {module:com.ultracart.admin.v2.models/Currency} taxable_cost
    */
-  exports.prototype.taxableCost = undefined;
+  exports.prototype.taxable_cost = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} totalCostWithDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} total_cost_with_discount
    */
-  exports.prototype.totalCostWithDiscount = undefined;
+  exports.prototype.total_cost_with_discount = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} totalRefunded
+   * @member {module:com.ultracart.admin.v2.models/Currency} total_refunded
    */
-  exports.prototype.totalRefunded = undefined;
+  exports.prototype.total_refunded = undefined;
 
   /**
    * Date/time that this item was transmitted to the distribution center
-   * @member {String} transmittedToDistributionCenterDts
+   * @member {String} transmitted_to_distribution_center_dts
    */
-  exports.prototype.transmittedToDistributionCenterDts = undefined;
+  exports.prototype.transmitted_to_distribution_center_dts = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Currency} unitCostWithDiscount
+   * @member {module:com.ultracart.admin.v2.models/Currency} unit_cost_with_discount
    */
-  exports.prototype.unitCostWithDiscount = undefined;
+  exports.prototype.unit_cost_with_discount = undefined;
 
   /**
    * True if this item was added to the order as part of an upsell

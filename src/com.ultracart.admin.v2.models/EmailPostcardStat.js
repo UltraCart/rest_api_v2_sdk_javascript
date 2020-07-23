@@ -56,114 +56,114 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('click_count'))
-        obj.clickCount = ApiClient.convertToType(data['click_count'], 'Number');
+        obj.click_count = ApiClient.convertToType(data['click_count'], 'Number');
       if (data.hasOwnProperty('click_count_formatted'))
-        obj.clickCountFormatted = ApiClient.convertToType(data['click_count_formatted'], 'String');
+        obj.click_count_formatted = ApiClient.convertToType(data['click_count_formatted'], 'String');
       if (data.hasOwnProperty('conversion_count'))
-        obj.conversionCount = ApiClient.convertToType(data['conversion_count'], 'Number');
+        obj.conversion_count = ApiClient.convertToType(data['conversion_count'], 'Number');
       if (data.hasOwnProperty('conversion_count_formatted'))
-        obj.conversionCountFormatted = ApiClient.convertToType(data['conversion_count_formatted'], 'String');
+        obj.conversion_count_formatted = ApiClient.convertToType(data['conversion_count_formatted'], 'String');
       if (data.hasOwnProperty('delivered_count'))
-        obj.deliveredCount = ApiClient.convertToType(data['delivered_count'], 'Number');
+        obj.delivered_count = ApiClient.convertToType(data['delivered_count'], 'Number');
       if (data.hasOwnProperty('delivered_count_formatted'))
-        obj.deliveredCountFormatted = ApiClient.convertToType(data['delivered_count_formatted'], 'String');
+        obj.delivered_count_formatted = ApiClient.convertToType(data['delivered_count_formatted'], 'String');
       if (data.hasOwnProperty('merchant_id'))
-        obj.merchantId = ApiClient.convertToType(data['merchant_id'], 'String');
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('order_count'))
-        obj.orderCount = ApiClient.convertToType(data['order_count'], 'Number');
+        obj.order_count = ApiClient.convertToType(data['order_count'], 'Number');
       if (data.hasOwnProperty('order_count_formatted'))
-        obj.orderCountFormatted = ApiClient.convertToType(data['order_count_formatted'], 'String');
+        obj.order_count_formatted = ApiClient.convertToType(data['order_count_formatted'], 'String');
       if (data.hasOwnProperty('profit'))
         obj.profit = ApiClient.convertToType(data['profit'], 'Number');
       if (data.hasOwnProperty('profit_formatted'))
-        obj.profitFormatted = ApiClient.convertToType(data['profit_formatted'], 'String');
+        obj.profit_formatted = ApiClient.convertToType(data['profit_formatted'], 'String');
       if (data.hasOwnProperty('return_to_sender_count'))
-        obj.returnToSenderCount = ApiClient.convertToType(data['return_to_sender_count'], 'Number');
+        obj.return_to_sender_count = ApiClient.convertToType(data['return_to_sender_count'], 'Number');
       if (data.hasOwnProperty('return_to_sender_count_formatted'))
-        obj.returnToSenderCountFormatted = ApiClient.convertToType(data['return_to_sender_count_formatted'], 'String');
+        obj.return_to_sender_count_formatted = ApiClient.convertToType(data['return_to_sender_count_formatted'], 'String');
       if (data.hasOwnProperty('revenue'))
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('revenue_formatted'))
-        obj.revenueFormatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
+        obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
       if (data.hasOwnProperty('send_count'))
-        obj.sendCount = ApiClient.convertToType(data['send_count'], 'Number');
+        obj.send_count = ApiClient.convertToType(data['send_count'], 'Number');
       if (data.hasOwnProperty('send_count_formatted'))
-        obj.sendCountFormatted = ApiClient.convertToType(data['send_count_formatted'], 'String');
+        obj.send_count_formatted = ApiClient.convertToType(data['send_count_formatted'], 'String');
       if (data.hasOwnProperty('skipped_count'))
-        obj.skippedCount = ApiClient.convertToType(data['skipped_count'], 'Number');
+        obj.skipped_count = ApiClient.convertToType(data['skipped_count'], 'Number');
       if (data.hasOwnProperty('skipped_count_formatted'))
-        obj.skippedCountFormatted = ApiClient.convertToType(data['skipped_count_formatted'], 'String');
+        obj.skipped_count_formatted = ApiClient.convertToType(data['skipped_count_formatted'], 'String');
       if (data.hasOwnProperty('spam_count'))
-        obj.spamCount = ApiClient.convertToType(data['spam_count'], 'Number');
+        obj.spam_count = ApiClient.convertToType(data['spam_count'], 'Number');
       if (data.hasOwnProperty('spam_count_formatted'))
-        obj.spamCountFormatted = ApiClient.convertToType(data['spam_count_formatted'], 'String');
+        obj.spam_count_formatted = ApiClient.convertToType(data['spam_count_formatted'], 'String');
       if (data.hasOwnProperty('stat_type'))
-        obj.statType = ApiClient.convertToType(data['stat_type'], 'String');
+        obj.stat_type = ApiClient.convertToType(data['stat_type'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('status_dts'))
-        obj.statusDts = ApiClient.convertToType(data['status_dts'], 'String');
+        obj.status_dts = ApiClient.convertToType(data['status_dts'], 'String');
       if (data.hasOwnProperty('steps'))
         obj.steps = ApiClient.convertToType(data['steps'], [EmailPostcardStat]);
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('unsubscribe_count'))
-        obj.unsubscribeCount = ApiClient.convertToType(data['unsubscribe_count'], 'Number');
+        obj.unsubscribe_count = ApiClient.convertToType(data['unsubscribe_count'], 'Number');
       if (data.hasOwnProperty('unsubscribe_count_formatted'))
-        obj.unsubscribeCountFormatted = ApiClient.convertToType(data['unsubscribe_count_formatted'], 'String');
+        obj.unsubscribe_count_formatted = ApiClient.convertToType(data['unsubscribe_count_formatted'], 'String');
       if (data.hasOwnProperty('uuid'))
         obj.uuid = ApiClient.convertToType(data['uuid'], 'String');
       if (data.hasOwnProperty('view_count'))
-        obj.viewCount = ApiClient.convertToType(data['view_count'], 'Number');
+        obj.view_count = ApiClient.convertToType(data['view_count'], 'Number');
       if (data.hasOwnProperty('view_count_formatted'))
-        obj.viewCountFormatted = ApiClient.convertToType(data['view_count_formatted'], 'String');
+        obj.view_count_formatted = ApiClient.convertToType(data['view_count_formatted'], 'String');
     }
     return obj;
   }
 
   /**
    * Count of clicked emails
-   * @member {Number} clickCount
+   * @member {Number} click_count
    */
-  exports.prototype.clickCount = undefined;
+  exports.prototype.click_count = undefined;
 
   /**
    * Count of clicked emails, formatted
-   * @member {String} clickCountFormatted
+   * @member {String} click_count_formatted
    */
-  exports.prototype.clickCountFormatted = undefined;
+  exports.prototype.click_count_formatted = undefined;
 
   /**
    * Count of conversions
-   * @member {Number} conversionCount
+   * @member {Number} conversion_count
    */
-  exports.prototype.conversionCount = undefined;
+  exports.prototype.conversion_count = undefined;
 
   /**
    * Count of conversions, formatted
-   * @member {String} conversionCountFormatted
+   * @member {String} conversion_count_formatted
    */
-  exports.prototype.conversionCountFormatted = undefined;
+  exports.prototype.conversion_count_formatted = undefined;
 
   /**
    * Count of delivered emails
-   * @member {Number} deliveredCount
+   * @member {Number} delivered_count
    */
-  exports.prototype.deliveredCount = undefined;
+  exports.prototype.delivered_count = undefined;
 
   /**
    * Count of delivered emails, formatted
-   * @member {String} deliveredCountFormatted
+   * @member {String} delivered_count_formatted
    */
-  exports.prototype.deliveredCountFormatted = undefined;
+  exports.prototype.delivered_count_formatted = undefined;
 
   /**
    * Merchant ID
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
    * List or segment name
@@ -173,15 +173,15 @@
 
   /**
    * Count of orders
-   * @member {Number} orderCount
+   * @member {Number} order_count
    */
-  exports.prototype.orderCount = undefined;
+  exports.prototype.order_count = undefined;
 
   /**
    * Count of orders, formatted
-   * @member {String} orderCountFormatted
+   * @member {String} order_count_formatted
    */
-  exports.prototype.orderCountFormatted = undefined;
+  exports.prototype.order_count_formatted = undefined;
 
   /**
    * Profit
@@ -191,21 +191,21 @@
 
   /**
    * Profit, formatted
-   * @member {String} profitFormatted
+   * @member {String} profit_formatted
    */
-  exports.prototype.profitFormatted = undefined;
+  exports.prototype.profit_formatted = undefined;
 
   /**
    * Count of return to sender
-   * @member {Number} returnToSenderCount
+   * @member {Number} return_to_sender_count
    */
-  exports.prototype.returnToSenderCount = undefined;
+  exports.prototype.return_to_sender_count = undefined;
 
   /**
    * Count of return to sender, formatted
-   * @member {String} returnToSenderCountFormatted
+   * @member {String} return_to_sender_count_formatted
    */
-  exports.prototype.returnToSenderCountFormatted = undefined;
+  exports.prototype.return_to_sender_count_formatted = undefined;
 
   /**
    * Revenue
@@ -215,51 +215,51 @@
 
   /**
    * Revenue, formatted
-   * @member {String} revenueFormatted
+   * @member {String} revenue_formatted
    */
-  exports.prototype.revenueFormatted = undefined;
+  exports.prototype.revenue_formatted = undefined;
 
   /**
    * Count of emails sent
-   * @member {Number} sendCount
+   * @member {Number} send_count
    */
-  exports.prototype.sendCount = undefined;
+  exports.prototype.send_count = undefined;
 
   /**
    * Count of emails sent, formatted
-   * @member {String} sendCountFormatted
+   * @member {String} send_count_formatted
    */
-  exports.prototype.sendCountFormatted = undefined;
+  exports.prototype.send_count_formatted = undefined;
 
   /**
    * Count of skipped emails
-   * @member {Number} skippedCount
+   * @member {Number} skipped_count
    */
-  exports.prototype.skippedCount = undefined;
+  exports.prototype.skipped_count = undefined;
 
   /**
    * Count of skipped emails, formatted
-   * @member {String} skippedCountFormatted
+   * @member {String} skipped_count_formatted
    */
-  exports.prototype.skippedCountFormatted = undefined;
+  exports.prototype.skipped_count_formatted = undefined;
 
   /**
    * Count of emails classified as spam
-   * @member {Number} spamCount
+   * @member {Number} spam_count
    */
-  exports.prototype.spamCount = undefined;
+  exports.prototype.spam_count = undefined;
 
   /**
    * Count of emails classified as spam, formatted
-   * @member {String} spamCountFormatted
+   * @member {String} spam_count_formatted
    */
-  exports.prototype.spamCountFormatted = undefined;
+  exports.prototype.spam_count_formatted = undefined;
 
   /**
    * Campaign, Flow or None (for anything else)
-   * @member {String} statType
+   * @member {String} stat_type
    */
-  exports.prototype.statType = undefined;
+  exports.prototype.stat_type = undefined;
 
   /**
    * Status of campaign or flow
@@ -269,9 +269,9 @@
 
   /**
    * Status dts of campaign or flow
-   * @member {String} statusDts
+   * @member {String} status_dts
    */
-  exports.prototype.statusDts = undefined;
+  exports.prototype.status_dts = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/EmailPostcardStat>} steps
@@ -280,21 +280,21 @@
 
   /**
    * Storefront oid
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * Count of emails classified as unsubscribe
-   * @member {Number} unsubscribeCount
+   * @member {Number} unsubscribe_count
    */
-  exports.prototype.unsubscribeCount = undefined;
+  exports.prototype.unsubscribe_count = undefined;
 
   /**
    * Count of emails classified as unsubscribe, formatted
-   * @member {String} unsubscribeCountFormatted
+   * @member {String} unsubscribe_count_formatted
    */
-  exports.prototype.unsubscribeCountFormatted = undefined;
+  exports.prototype.unsubscribe_count_formatted = undefined;
 
   /**
    * List or segment uuid
@@ -304,15 +304,15 @@
 
   /**
    * Count of views
-   * @member {Number} viewCount
+   * @member {Number} view_count
    */
-  exports.prototype.viewCount = undefined;
+  exports.prototype.view_count = undefined;
 
   /**
    * Count of views, formatted
-   * @member {String} viewCountFormatted
+   * @member {String} view_count_formatted
    */
-  exports.prototype.viewCountFormatted = undefined;
+  exports.prototype.view_count_formatted = undefined;
 
   return exports;
 

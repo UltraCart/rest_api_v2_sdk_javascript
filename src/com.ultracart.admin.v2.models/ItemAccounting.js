@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('accounting_code'))
-        obj.accountingCode = ApiClient.convertToType(data['accounting_code'], 'String');
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('qb_class'))
-        obj.qbClass = ApiClient.convertToType(data['qb_class'], 'String');
+        obj.qb_class = ApiClient.convertToType(data['qb_class'], 'String');
     }
     return obj;
   }
 
   /**
    * QuickBooks item name if different than the item id
-   * @member {String} accountingCode
+   * @member {String} accounting_code
    */
-  exports.prototype.accountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
    * QuickBooks class if you are classifying items on your invoices/receipts
-   * @member {String} qbClass
+   * @member {String} qb_class
    */
-  exports.prototype.qbClass = undefined;
+  exports.prototype.qb_class = undefined;
 
   return exports;
 

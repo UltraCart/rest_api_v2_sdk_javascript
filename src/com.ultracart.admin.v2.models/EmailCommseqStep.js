@@ -56,23 +56,23 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('alt_child_email_communication_sequence_steps'))
-        obj.altChildEmailCommunicationSequenceSteps = ApiClient.convertToType(data['alt_child_email_communication_sequence_steps'], [EmailCommseqStep]);
+        obj.alt_child_email_communication_sequence_steps = ApiClient.convertToType(data['alt_child_email_communication_sequence_steps'], [EmailCommseqStep]);
       if (data.hasOwnProperty('child_email_communication_sequence_steps'))
-        obj.childEmailCommunicationSequenceSteps = ApiClient.convertToType(data['child_email_communication_sequence_steps'], [EmailCommseqStep]);
+        obj.child_email_communication_sequence_steps = ApiClient.convertToType(data['child_email_communication_sequence_steps'], [EmailCommseqStep]);
       if (data.hasOwnProperty('email_communication_sequence_step_uuid'))
-        obj.emailCommunicationSequenceStepUuid = ApiClient.convertToType(data['email_communication_sequence_step_uuid'], 'String');
+        obj.email_communication_sequence_step_uuid = ApiClient.convertToType(data['email_communication_sequence_step_uuid'], 'String');
       if (data.hasOwnProperty('email_pending_review'))
-        obj.emailPendingReview = ApiClient.convertToType(data['email_pending_review'], 'Boolean');
+        obj.email_pending_review = ApiClient.convertToType(data['email_pending_review'], 'Boolean');
       if (data.hasOwnProperty('email_rejected'))
-        obj.emailRejected = ApiClient.convertToType(data['email_rejected'], 'Boolean');
+        obj.email_rejected = ApiClient.convertToType(data['email_rejected'], 'Boolean');
       if (data.hasOwnProperty('email_requires_review'))
-        obj.emailRequiresReview = ApiClient.convertToType(data['email_requires_review'], 'Boolean');
+        obj.email_requires_review = ApiClient.convertToType(data['email_requires_review'], 'Boolean');
       if (data.hasOwnProperty('filter_profile_equation_json'))
-        obj.filterProfileEquationJson = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
+        obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('merchant_notes'))
-        obj.merchantNotes = ApiClient.convertToType(data['merchant_notes'], 'String');
+        obj.merchant_notes = ApiClient.convertToType(data['merchant_notes'], 'String');
       if (data.hasOwnProperty('step_config_json'))
-        obj.stepConfigJson = ApiClient.convertToType(data['step_config_json'], 'String');
+        obj.step_config_json = ApiClient.convertToType(data['step_config_json'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
     }
@@ -81,57 +81,57 @@
 
   /**
    * Array of child steps for the alternate path
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} altChildEmailCommunicationSequenceSteps
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} alt_child_email_communication_sequence_steps
    */
-  exports.prototype.altChildEmailCommunicationSequenceSteps = undefined;
+  exports.prototype.alt_child_email_communication_sequence_steps = undefined;
 
   /**
    * Array of child steps
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} childEmailCommunicationSequenceSteps
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailCommseqStep>} child_email_communication_sequence_steps
    */
-  exports.prototype.childEmailCommunicationSequenceSteps = undefined;
+  exports.prototype.child_email_communication_sequence_steps = undefined;
 
   /**
    * Email commseq step UUID
-   * @member {String} emailCommunicationSequenceStepUuid
+   * @member {String} email_communication_sequence_step_uuid
    */
-  exports.prototype.emailCommunicationSequenceStepUuid = undefined;
+  exports.prototype.email_communication_sequence_step_uuid = undefined;
 
   /**
    * True if the content of the email associated with this step is pending review by UltraCart
-   * @member {Boolean} emailPendingReview
+   * @member {Boolean} email_pending_review
    */
-  exports.prototype.emailPendingReview = undefined;
+  exports.prototype.email_pending_review = undefined;
 
   /**
    * True if the content of the email associated with this step was rejected during review by UltraCart
-   * @member {Boolean} emailRejected
+   * @member {Boolean} email_rejected
    */
-  exports.prototype.emailRejected = undefined;
+  exports.prototype.email_rejected = undefined;
 
   /**
    * True if the content of the email associated with this step requires review by UltraCart
-   * @member {Boolean} emailRequiresReview
+   * @member {Boolean} email_requires_review
    */
-  exports.prototype.emailRequiresReview = undefined;
+  exports.prototype.email_requires_review = undefined;
 
   /**
    * Filter profile equation JSON
-   * @member {String} filterProfileEquationJson
+   * @member {String} filter_profile_equation_json
    */
-  exports.prototype.filterProfileEquationJson = undefined;
+  exports.prototype.filter_profile_equation_json = undefined;
 
   /**
    * Internal merchant notes
-   * @member {String} merchantNotes
+   * @member {String} merchant_notes
    */
-  exports.prototype.merchantNotes = undefined;
+  exports.prototype.merchant_notes = undefined;
 
   /**
    * Arbitrary Configuration for a step
-   * @member {String} stepConfigJson
+   * @member {String} step_config_json
    */
-  exports.prototype.stepConfigJson = undefined;
+  exports.prototype.step_config_json = undefined;
 
   /**
    * Type of step

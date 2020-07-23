@@ -56,128 +56,128 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('allow_back_order'))
-        obj.allowBackOrder = ApiClient.convertToType(data['allow_back_order'], 'Boolean');
+        obj.allow_back_order = ApiClient.convertToType(data['allow_back_order'], 'Boolean');
       if (data.hasOwnProperty('amazon_fba'))
-        obj.amazonFba = ApiClient.convertToType(data['amazon_fba'], 'Boolean');
+        obj.amazon_fba = ApiClient.convertToType(data['amazon_fba'], 'Boolean');
       if (data.hasOwnProperty('case_inner_packs'))
-        obj.caseInnerPacks = ApiClient.convertToType(data['case_inner_packs'], 'Number');
+        obj.case_inner_packs = ApiClient.convertToType(data['case_inner_packs'], 'Number');
       if (data.hasOwnProperty('case_units'))
-        obj.caseUnits = ApiClient.convertToType(data['case_units'], 'Number');
+        obj.case_units = ApiClient.convertToType(data['case_units'], 'Number');
       if (data.hasOwnProperty('cases'))
         obj.cases = ApiClient.convertToType(data['cases'], [ItemShippingCase]);
       if (data.hasOwnProperty('collect_serial_numbers'))
-        obj.collectSerialNumbers = ApiClient.convertToType(data['collect_serial_numbers'], 'Boolean');
+        obj.collect_serial_numbers = ApiClient.convertToType(data['collect_serial_numbers'], 'Boolean');
       if (data.hasOwnProperty('country_code_of_origin'))
-        obj.countryCodeOfOrigin = ApiClient.convertToType(data['country_code_of_origin'], 'String');
+        obj.country_code_of_origin = ApiClient.convertToType(data['country_code_of_origin'], 'String');
       if (data.hasOwnProperty('customs_description'))
-        obj.customsDescription = ApiClient.convertToType(data['customs_description'], 'String');
+        obj.customs_description = ApiClient.convertToType(data['customs_description'], 'String');
       if (data.hasOwnProperty('customs_value'))
-        obj.customsValue = ApiClient.convertToType(data['customs_value'], 'Number');
+        obj.customs_value = ApiClient.convertToType(data['customs_value'], 'Number');
       if (data.hasOwnProperty('delivery_on_friday'))
-        obj.deliveryOnFriday = ApiClient.convertToType(data['delivery_on_friday'], 'Boolean');
+        obj.delivery_on_friday = ApiClient.convertToType(data['delivery_on_friday'], 'Boolean');
       if (data.hasOwnProperty('delivery_on_monday'))
-        obj.deliveryOnMonday = ApiClient.convertToType(data['delivery_on_monday'], 'Boolean');
+        obj.delivery_on_monday = ApiClient.convertToType(data['delivery_on_monday'], 'Boolean');
       if (data.hasOwnProperty('delivery_on_saturday'))
-        obj.deliveryOnSaturday = ApiClient.convertToType(data['delivery_on_saturday'], 'Boolean');
+        obj.delivery_on_saturday = ApiClient.convertToType(data['delivery_on_saturday'], 'Boolean');
       if (data.hasOwnProperty('delivery_on_sunday'))
-        obj.deliveryOnSunday = ApiClient.convertToType(data['delivery_on_sunday'], 'Boolean');
+        obj.delivery_on_sunday = ApiClient.convertToType(data['delivery_on_sunday'], 'Boolean');
       if (data.hasOwnProperty('delivery_on_thursday'))
-        obj.deliveryOnThursday = ApiClient.convertToType(data['delivery_on_thursday'], 'Boolean');
+        obj.delivery_on_thursday = ApiClient.convertToType(data['delivery_on_thursday'], 'Boolean');
       if (data.hasOwnProperty('delivery_on_tuesday'))
-        obj.deliveryOnTuesday = ApiClient.convertToType(data['delivery_on_tuesday'], 'Boolean');
+        obj.delivery_on_tuesday = ApiClient.convertToType(data['delivery_on_tuesday'], 'Boolean');
       if (data.hasOwnProperty('delivery_on_wednesday'))
-        obj.deliveryOnWednesday = ApiClient.convertToType(data['delivery_on_wednesday'], 'Boolean');
+        obj.delivery_on_wednesday = ApiClient.convertToType(data['delivery_on_wednesday'], 'Boolean');
       if (data.hasOwnProperty('destination_markups'))
-        obj.destinationMarkups = ApiClient.convertToType(data['destination_markups'], [ItemShippingDestinationMarkup]);
+        obj.destination_markups = ApiClient.convertToType(data['destination_markups'], [ItemShippingDestinationMarkup]);
       if (data.hasOwnProperty('destination_restrictions'))
-        obj.destinationRestrictions = ApiClient.convertToType(data['destination_restrictions'], [ItemShippingDestinationRestriction]);
+        obj.destination_restrictions = ApiClient.convertToType(data['destination_restrictions'], [ItemShippingDestinationRestriction]);
       if (data.hasOwnProperty('distribution_centers'))
-        obj.distributionCenters = ApiClient.convertToType(data['distribution_centers'], [ItemShippingDistributionCenter]);
+        obj.distribution_centers = ApiClient.convertToType(data['distribution_centers'], [ItemShippingDistributionCenter]);
       if (data.hasOwnProperty('eta'))
         obj.eta = ApiClient.convertToType(data['eta'], 'String');
       if (data.hasOwnProperty('free_shipping'))
-        obj.freeShipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
+        obj.free_shipping = ApiClient.convertToType(data['free_shipping'], 'Boolean');
       if (data.hasOwnProperty('freight_class'))
-        obj.freightClass = ApiClient.convertToType(data['freight_class'], 'String');
+        obj.freight_class = ApiClient.convertToType(data['freight_class'], 'String');
       if (data.hasOwnProperty('hazmat'))
         obj.hazmat = ApiClient.convertToType(data['hazmat'], 'Boolean');
       if (data.hasOwnProperty('made_to_order'))
-        obj.madeToOrder = ApiClient.convertToType(data['made_to_order'], 'Boolean');
+        obj.made_to_order = ApiClient.convertToType(data['made_to_order'], 'Boolean');
       if (data.hasOwnProperty('made_to_order_lead_time'))
-        obj.madeToOrderLeadTime = ApiClient.convertToType(data['made_to_order_lead_time'], 'Number');
+        obj.made_to_order_lead_time = ApiClient.convertToType(data['made_to_order_lead_time'], 'Number');
       if (data.hasOwnProperty('max_days_time_in_transit'))
-        obj.maxDaysTimeInTransit = ApiClient.convertToType(data['max_days_time_in_transit'], 'Number');
+        obj.max_days_time_in_transit = ApiClient.convertToType(data['max_days_time_in_transit'], 'Number');
       if (data.hasOwnProperty('methods'))
         obj.methods = ApiClient.convertToType(data['methods'], [ItemShippingMethod]);
       if (data.hasOwnProperty('no_shipping_discount'))
-        obj.noShippingDiscount = ApiClient.convertToType(data['no_shipping_discount'], 'Boolean');
+        obj.no_shipping_discount = ApiClient.convertToType(data['no_shipping_discount'], 'Boolean');
       if (data.hasOwnProperty('package_requirements'))
-        obj.packageRequirements = ApiClient.convertToType(data['package_requirements'], [ItemShippingPackageRequirement]);
+        obj.package_requirements = ApiClient.convertToType(data['package_requirements'], [ItemShippingPackageRequirement]);
       if (data.hasOwnProperty('perishable_class_name'))
-        obj.perishableClassName = ApiClient.convertToType(data['perishable_class_name'], 'String');
+        obj.perishable_class_name = ApiClient.convertToType(data['perishable_class_name'], 'String');
       if (data.hasOwnProperty('perishable_class_oid'))
-        obj.perishableClassOid = ApiClient.convertToType(data['perishable_class_oid'], 'Number');
+        obj.perishable_class_oid = ApiClient.convertToType(data['perishable_class_oid'], 'Number');
       if (data.hasOwnProperty('preorder'))
         obj.preorder = ApiClient.convertToType(data['preorder'], 'Boolean');
       if (data.hasOwnProperty('require_delivery_date'))
-        obj.requireDeliveryDate = ApiClient.convertToType(data['require_delivery_date'], 'Boolean');
+        obj.require_delivery_date = ApiClient.convertToType(data['require_delivery_date'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_friday'))
-        obj.restrictShipmentOnFriday = ApiClient.convertToType(data['restrict_shipment_on_friday'], 'Boolean');
+        obj.restrict_shipment_on_friday = ApiClient.convertToType(data['restrict_shipment_on_friday'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_monday'))
-        obj.restrictShipmentOnMonday = ApiClient.convertToType(data['restrict_shipment_on_monday'], 'Boolean');
+        obj.restrict_shipment_on_monday = ApiClient.convertToType(data['restrict_shipment_on_monday'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_saturday'))
-        obj.restrictShipmentOnSaturday = ApiClient.convertToType(data['restrict_shipment_on_saturday'], 'Boolean');
+        obj.restrict_shipment_on_saturday = ApiClient.convertToType(data['restrict_shipment_on_saturday'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_sunday'))
-        obj.restrictShipmentOnSunday = ApiClient.convertToType(data['restrict_shipment_on_sunday'], 'Boolean');
+        obj.restrict_shipment_on_sunday = ApiClient.convertToType(data['restrict_shipment_on_sunday'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_thursday'))
-        obj.restrictShipmentOnThursday = ApiClient.convertToType(data['restrict_shipment_on_thursday'], 'Boolean');
+        obj.restrict_shipment_on_thursday = ApiClient.convertToType(data['restrict_shipment_on_thursday'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_tuesday'))
-        obj.restrictShipmentOnTuesday = ApiClient.convertToType(data['restrict_shipment_on_tuesday'], 'Boolean');
+        obj.restrict_shipment_on_tuesday = ApiClient.convertToType(data['restrict_shipment_on_tuesday'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_wednesday'))
-        obj.restrictShipmentOnWednesday = ApiClient.convertToType(data['restrict_shipment_on_wednesday'], 'Boolean');
+        obj.restrict_shipment_on_wednesday = ApiClient.convertToType(data['restrict_shipment_on_wednesday'], 'Boolean');
       if (data.hasOwnProperty('ship_separately'))
-        obj.shipSeparately = ApiClient.convertToType(data['ship_separately'], 'Boolean');
+        obj.ship_separately = ApiClient.convertToType(data['ship_separately'], 'Boolean');
       if (data.hasOwnProperty('ship_separately_additional_weight'))
-        obj.shipSeparatelyAdditionalWeight = Weight.constructFromObject(data['ship_separately_additional_weight']);
+        obj.ship_separately_additional_weight = Weight.constructFromObject(data['ship_separately_additional_weight']);
       if (data.hasOwnProperty('ship_separately_height'))
-        obj.shipSeparatelyHeight = Distance.constructFromObject(data['ship_separately_height']);
+        obj.ship_separately_height = Distance.constructFromObject(data['ship_separately_height']);
       if (data.hasOwnProperty('ship_separately_length'))
-        obj.shipSeparatelyLength = Distance.constructFromObject(data['ship_separately_length']);
+        obj.ship_separately_length = Distance.constructFromObject(data['ship_separately_length']);
       if (data.hasOwnProperty('ship_separately_package_special_type'))
-        obj.shipSeparatelyPackageSpecialType = ApiClient.convertToType(data['ship_separately_package_special_type'], 'String');
+        obj.ship_separately_package_special_type = ApiClient.convertToType(data['ship_separately_package_special_type'], 'String');
       if (data.hasOwnProperty('ship_separately_width'))
-        obj.shipSeparatelyWidth = Distance.constructFromObject(data['ship_separately_width']);
+        obj.ship_separately_width = Distance.constructFromObject(data['ship_separately_width']);
       if (data.hasOwnProperty('special_product_type'))
-        obj.specialProductType = ApiClient.convertToType(data['special_product_type'], 'String');
+        obj.special_product_type = ApiClient.convertToType(data['special_product_type'], 'String');
       if (data.hasOwnProperty('track_inventory'))
-        obj.trackInventory = ApiClient.convertToType(data['track_inventory'], 'Boolean');
+        obj.track_inventory = ApiClient.convertToType(data['track_inventory'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Allow back order
-   * @member {Boolean} allowBackOrder
+   * @member {Boolean} allow_back_order
    */
-  exports.prototype.allowBackOrder = undefined;
+  exports.prototype.allow_back_order = undefined;
 
   /**
    * Fulfillment by Amazon.com
-   * @member {Boolean} amazonFba
+   * @member {Boolean} amazon_fba
    */
-  exports.prototype.amazonFba = undefined;
+  exports.prototype.amazon_fba = undefined;
 
   /**
    * Case inner packs
-   * @member {Number} caseInnerPacks
+   * @member {Number} case_inner_packs
    */
-  exports.prototype.caseInnerPacks = undefined;
+  exports.prototype.case_inner_packs = undefined;
 
   /**
    * Case units
-   * @member {Number} caseUnits
+   * @member {Number} case_units
    */
-  exports.prototype.caseUnits = undefined;
+  exports.prototype.case_units = undefined;
 
   /**
    * Cases
@@ -187,87 +187,87 @@
 
   /**
    * This item is on pre-order
-   * @member {Boolean} collectSerialNumbers
+   * @member {Boolean} collect_serial_numbers
    */
-  exports.prototype.collectSerialNumbers = undefined;
+  exports.prototype.collect_serial_numbers = undefined;
 
   /**
    * Country code of origin for customs forms.  (ISO-3166 two letter code)
-   * @member {String} countryCodeOfOrigin
+   * @member {String} country_code_of_origin
    */
-  exports.prototype.countryCodeOfOrigin = undefined;
+  exports.prototype.country_code_of_origin = undefined;
 
   /**
    * Customs description
-   * @member {String} customsDescription
+   * @member {String} customs_description
    */
-  exports.prototype.customsDescription = undefined;
+  exports.prototype.customs_description = undefined;
 
   /**
    * Customs value
-   * @member {Number} customsValue
+   * @member {Number} customs_value
    */
-  exports.prototype.customsValue = undefined;
+  exports.prototype.customs_value = undefined;
 
   /**
    * Delivery on Friday
-   * @member {Boolean} deliveryOnFriday
+   * @member {Boolean} delivery_on_friday
    */
-  exports.prototype.deliveryOnFriday = undefined;
+  exports.prototype.delivery_on_friday = undefined;
 
   /**
    * Delivery on Monday
-   * @member {Boolean} deliveryOnMonday
+   * @member {Boolean} delivery_on_monday
    */
-  exports.prototype.deliveryOnMonday = undefined;
+  exports.prototype.delivery_on_monday = undefined;
 
   /**
    * Delivery on Saturday
-   * @member {Boolean} deliveryOnSaturday
+   * @member {Boolean} delivery_on_saturday
    */
-  exports.prototype.deliveryOnSaturday = undefined;
+  exports.prototype.delivery_on_saturday = undefined;
 
   /**
    * Delivery on Sunday
-   * @member {Boolean} deliveryOnSunday
+   * @member {Boolean} delivery_on_sunday
    */
-  exports.prototype.deliveryOnSunday = undefined;
+  exports.prototype.delivery_on_sunday = undefined;
 
   /**
    * Delivery on Thursday
-   * @member {Boolean} deliveryOnThursday
+   * @member {Boolean} delivery_on_thursday
    */
-  exports.prototype.deliveryOnThursday = undefined;
+  exports.prototype.delivery_on_thursday = undefined;
 
   /**
    * Delivery on Tuesday
-   * @member {Boolean} deliveryOnTuesday
+   * @member {Boolean} delivery_on_tuesday
    */
-  exports.prototype.deliveryOnTuesday = undefined;
+  exports.prototype.delivery_on_tuesday = undefined;
 
   /**
    * Delivery on Wednesday
-   * @member {Boolean} deliveryOnWednesday
+   * @member {Boolean} delivery_on_wednesday
    */
-  exports.prototype.deliveryOnWednesday = undefined;
+  exports.prototype.delivery_on_wednesday = undefined;
 
   /**
    * Destination markups
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingDestinationMarkup>} destinationMarkups
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingDestinationMarkup>} destination_markups
    */
-  exports.prototype.destinationMarkups = undefined;
+  exports.prototype.destination_markups = undefined;
 
   /**
    * Destination restrictions
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingDestinationRestriction>} destinationRestrictions
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingDestinationRestriction>} destination_restrictions
    */
-  exports.prototype.destinationRestrictions = undefined;
+  exports.prototype.destination_restrictions = undefined;
 
   /**
    * Distribution centers
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter>} distributionCenters
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter>} distribution_centers
    */
-  exports.prototype.distributionCenters = undefined;
+  exports.prototype.distribution_centers = undefined;
 
   /**
    * Estimated time of arrival
@@ -277,15 +277,15 @@
 
   /**
    * Qualifies for free shipping
-   * @member {Boolean} freeShipping
+   * @member {Boolean} free_shipping
    */
-  exports.prototype.freeShipping = undefined;
+  exports.prototype.free_shipping = undefined;
 
   /**
    * Freight class
-   * @member {String} freightClass
+   * @member {String} freight_class
    */
-  exports.prototype.freightClass = undefined;
+  exports.prototype.freight_class = undefined;
 
   /**
    * Hazardous material
@@ -295,21 +295,21 @@
 
   /**
    * True if this item is made to order
-   * @member {Boolean} madeToOrder
+   * @member {Boolean} made_to_order
    */
-  exports.prototype.madeToOrder = undefined;
+  exports.prototype.made_to_order = undefined;
 
   /**
    * Number of days lead time it takes to make the item before ite can ship
-   * @member {Number} madeToOrderLeadTime
+   * @member {Number} made_to_order_lead_time
    */
-  exports.prototype.madeToOrderLeadTime = undefined;
+  exports.prototype.made_to_order_lead_time = undefined;
 
   /**
    * Maximum days allowed in transit
-   * @member {Number} maxDaysTimeInTransit
+   * @member {Number} max_days_time_in_transit
    */
-  exports.prototype.maxDaysTimeInTransit = undefined;
+  exports.prototype.max_days_time_in_transit = undefined;
 
   /**
    * Methods
@@ -319,27 +319,27 @@
 
   /**
    * No shipping discounts
-   * @member {Boolean} noShippingDiscount
+   * @member {Boolean} no_shipping_discount
    */
-  exports.prototype.noShippingDiscount = undefined;
+  exports.prototype.no_shipping_discount = undefined;
 
   /**
    * Package requirements
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingPackageRequirement>} packageRequirements
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemShippingPackageRequirement>} package_requirements
    */
-  exports.prototype.packageRequirements = undefined;
+  exports.prototype.package_requirements = undefined;
 
   /**
    * Perishable class name
-   * @member {String} perishableClassName
+   * @member {String} perishable_class_name
    */
-  exports.prototype.perishableClassName = undefined;
+  exports.prototype.perishable_class_name = undefined;
 
   /**
    * Perishable class object identifier
-   * @member {Number} perishableClassOid
+   * @member {Number} perishable_class_oid
    */
-  exports.prototype.perishableClassOid = undefined;
+  exports.prototype.perishable_class_oid = undefined;
 
   /**
    * This item is on pre-order
@@ -349,95 +349,95 @@
 
   /**
    * True to require customer to select a delivery date
-   * @member {Boolean} requireDeliveryDate
+   * @member {Boolean} require_delivery_date
    */
-  exports.prototype.requireDeliveryDate = undefined;
+  exports.prototype.require_delivery_date = undefined;
 
   /**
    * Restrict shipment on Friday
-   * @member {Boolean} restrictShipmentOnFriday
+   * @member {Boolean} restrict_shipment_on_friday
    */
-  exports.prototype.restrictShipmentOnFriday = undefined;
+  exports.prototype.restrict_shipment_on_friday = undefined;
 
   /**
    * Restrict shipment on Monday
-   * @member {Boolean} restrictShipmentOnMonday
+   * @member {Boolean} restrict_shipment_on_monday
    */
-  exports.prototype.restrictShipmentOnMonday = undefined;
+  exports.prototype.restrict_shipment_on_monday = undefined;
 
   /**
    * Restrict shipment on Saturday
-   * @member {Boolean} restrictShipmentOnSaturday
+   * @member {Boolean} restrict_shipment_on_saturday
    */
-  exports.prototype.restrictShipmentOnSaturday = undefined;
+  exports.prototype.restrict_shipment_on_saturday = undefined;
 
   /**
    * Restrict shipment on Sunday
-   * @member {Boolean} restrictShipmentOnSunday
+   * @member {Boolean} restrict_shipment_on_sunday
    */
-  exports.prototype.restrictShipmentOnSunday = undefined;
+  exports.prototype.restrict_shipment_on_sunday = undefined;
 
   /**
    * Restrict shipment on Thursday
-   * @member {Boolean} restrictShipmentOnThursday
+   * @member {Boolean} restrict_shipment_on_thursday
    */
-  exports.prototype.restrictShipmentOnThursday = undefined;
+  exports.prototype.restrict_shipment_on_thursday = undefined;
 
   /**
    * Restrict shipment on Tuesday
-   * @member {Boolean} restrictShipmentOnTuesday
+   * @member {Boolean} restrict_shipment_on_tuesday
    */
-  exports.prototype.restrictShipmentOnTuesday = undefined;
+  exports.prototype.restrict_shipment_on_tuesday = undefined;
 
   /**
    * Restrict shipment on Wednesday
-   * @member {Boolean} restrictShipmentOnWednesday
+   * @member {Boolean} restrict_shipment_on_wednesday
    */
-  exports.prototype.restrictShipmentOnWednesday = undefined;
+  exports.prototype.restrict_shipment_on_wednesday = undefined;
 
   /**
    * Ship this item in a separate box
-   * @member {Boolean} shipSeparately
+   * @member {Boolean} ship_separately
    */
-  exports.prototype.shipSeparately = undefined;
+  exports.prototype.ship_separately = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Weight} shipSeparatelyAdditionalWeight
+   * @member {module:com.ultracart.admin.v2.models/Weight} ship_separately_additional_weight
    */
-  exports.prototype.shipSeparatelyAdditionalWeight = undefined;
+  exports.prototype.ship_separately_additional_weight = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Distance} shipSeparatelyHeight
+   * @member {module:com.ultracart.admin.v2.models/Distance} ship_separately_height
    */
-  exports.prototype.shipSeparatelyHeight = undefined;
+  exports.prototype.ship_separately_height = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Distance} shipSeparatelyLength
+   * @member {module:com.ultracart.admin.v2.models/Distance} ship_separately_length
    */
-  exports.prototype.shipSeparatelyLength = undefined;
+  exports.prototype.ship_separately_length = undefined;
 
   /**
    * Ship separately package special type
-   * @member {String} shipSeparatelyPackageSpecialType
+   * @member {String} ship_separately_package_special_type
    */
-  exports.prototype.shipSeparatelyPackageSpecialType = undefined;
+  exports.prototype.ship_separately_package_special_type = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Distance} shipSeparatelyWidth
+   * @member {module:com.ultracart.admin.v2.models/Distance} ship_separately_width
    */
-  exports.prototype.shipSeparatelyWidth = undefined;
+  exports.prototype.ship_separately_width = undefined;
 
   /**
    * Special product type (USPS Media Mail)
-   * @member {String} specialProductType
+   * @member {String} special_product_type
    */
-  exports.prototype.specialProductType = undefined;
+  exports.prototype.special_product_type = undefined;
 
   /**
    * Track inventory
-   * @member {Boolean} trackInventory
+   * @member {Boolean} track_inventory
    */
-  exports.prototype.trackInventory = undefined;
+  exports.prototype.track_inventory = undefined;
 
   return exports;
 

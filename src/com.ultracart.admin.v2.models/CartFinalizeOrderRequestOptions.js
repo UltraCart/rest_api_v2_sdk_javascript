@@ -56,112 +56,112 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_approve_purchase_order'))
-        obj.autoApprovePurchaseOrder = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
+        obj.auto_approve_purchase_order = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('channel_partner_code'))
-        obj.channelPartnerCode = ApiClient.convertToType(data['channel_partner_code'], 'String');
+        obj.channel_partner_code = ApiClient.convertToType(data['channel_partner_code'], 'String');
       if (data.hasOwnProperty('channel_partner_oid'))
-        obj.channelPartnerOid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
+        obj.channel_partner_oid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
       if (data.hasOwnProperty('channel_partner_order_id'))
-        obj.channelPartnerOrderId = ApiClient.convertToType(data['channel_partner_order_id'], 'String');
+        obj.channel_partner_order_id = ApiClient.convertToType(data['channel_partner_order_id'], 'String');
       if (data.hasOwnProperty('consider_recurring'))
-        obj.considerRecurring = ApiClient.convertToType(data['consider_recurring'], 'Boolean');
+        obj.consider_recurring = ApiClient.convertToType(data['consider_recurring'], 'Boolean');
       if (data.hasOwnProperty('credit_card_authorization_amount'))
-        obj.creditCardAuthorizationAmount = ApiClient.convertToType(data['credit_card_authorization_amount'], 'Number');
+        obj.credit_card_authorization_amount = ApiClient.convertToType(data['credit_card_authorization_amount'], 'Number');
       if (data.hasOwnProperty('credit_card_authorization_date'))
-        obj.creditCardAuthorizationDate = ApiClient.convertToType(data['credit_card_authorization_date'], 'String');
+        obj.credit_card_authorization_date = ApiClient.convertToType(data['credit_card_authorization_date'], 'String');
       if (data.hasOwnProperty('credit_card_authorization_reference_number'))
-        obj.creditCardAuthorizationReferenceNumber = ApiClient.convertToType(data['credit_card_authorization_reference_number'], 'String');
+        obj.credit_card_authorization_reference_number = ApiClient.convertToType(data['credit_card_authorization_reference_number'], 'String');
       if (data.hasOwnProperty('no_realtime_payment_processing'))
-        obj.noRealtimePaymentProcessing = ApiClient.convertToType(data['no_realtime_payment_processing'], 'Boolean');
+        obj.no_realtime_payment_processing = ApiClient.convertToType(data['no_realtime_payment_processing'], 'Boolean');
       if (data.hasOwnProperty('setup_next_cart'))
-        obj.setupNextCart = ApiClient.convertToType(data['setup_next_cart'], 'Boolean');
+        obj.setup_next_cart = ApiClient.convertToType(data['setup_next_cart'], 'Boolean');
       if (data.hasOwnProperty('skip_payment_processing'))
-        obj.skipPaymentProcessing = ApiClient.convertToType(data['skip_payment_processing'], 'Boolean');
+        obj.skip_payment_processing = ApiClient.convertToType(data['skip_payment_processing'], 'Boolean');
       if (data.hasOwnProperty('store_completed'))
-        obj.storeCompleted = ApiClient.convertToType(data['store_completed'], 'Boolean');
+        obj.store_completed = ApiClient.convertToType(data['store_completed'], 'Boolean');
       if (data.hasOwnProperty('store_if_payment_declines'))
-        obj.storeIfPaymentDeclines = ApiClient.convertToType(data['store_if_payment_declines'], 'Boolean');
+        obj.store_if_payment_declines = ApiClient.convertToType(data['store_if_payment_declines'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Automatically approve the purchase order
-   * @member {Boolean} autoApprovePurchaseOrder
+   * @member {Boolean} auto_approve_purchase_order
    */
-  exports.prototype.autoApprovePurchaseOrder = undefined;
+  exports.prototype.auto_approve_purchase_order = undefined;
 
   /**
    * Channel partner code to associate this order with
-   * @member {String} channelPartnerCode
+   * @member {String} channel_partner_code
    */
-  exports.prototype.channelPartnerCode = undefined;
+  exports.prototype.channel_partner_code = undefined;
 
   /**
    * Channel partner oid to associate this order with
-   * @member {Number} channelPartnerOid
+   * @member {Number} channel_partner_oid
    */
-  exports.prototype.channelPartnerOid = undefined;
+  exports.prototype.channel_partner_oid = undefined;
 
   /**
    * Channel partner order id for reference
-   * @member {String} channelPartnerOrderId
+   * @member {String} channel_partner_order_id
    */
-  exports.prototype.channelPartnerOrderId = undefined;
+  exports.prototype.channel_partner_order_id = undefined;
 
   /**
    * Consider this order a recurring order for the purposes of payment gateway recurring flag
-   * @member {Boolean} considerRecurring
+   * @member {Boolean} consider_recurring
    */
-  exports.prototype.considerRecurring = undefined;
+  exports.prototype.consider_recurring = undefined;
 
   /**
    * If the order was authorized outside of UltraCart, this is the amount of the authorization
-   * @member {Number} creditCardAuthorizationAmount
+   * @member {Number} credit_card_authorization_amount
    */
-  exports.prototype.creditCardAuthorizationAmount = undefined;
+  exports.prototype.credit_card_authorization_amount = undefined;
 
   /**
    * If the order was authorized outside of UltraCart, this is the date/time of the authorization
-   * @member {String} creditCardAuthorizationDate
+   * @member {String} credit_card_authorization_date
    */
-  exports.prototype.creditCardAuthorizationDate = undefined;
+  exports.prototype.credit_card_authorization_date = undefined;
 
   /**
    * If the order was authorized outside of UltraCart, this is the authorization reference number
-   * @member {String} creditCardAuthorizationReferenceNumber
+   * @member {String} credit_card_authorization_reference_number
    */
-  exports.prototype.creditCardAuthorizationReferenceNumber = undefined;
+  exports.prototype.credit_card_authorization_reference_number = undefined;
 
   /**
    * Prevents normal real-time processing of the payment and sends the order to Accounts Receivable
-   * @member {Boolean} noRealtimePaymentProcessing
+   * @member {Boolean} no_realtime_payment_processing
    */
-  exports.prototype.noRealtimePaymentProcessing = undefined;
+  exports.prototype.no_realtime_payment_processing = undefined;
 
   /**
    * True if the system should create another cart automatically if the current cart was logged into a profile
-   * @member {Boolean} setupNextCart
+   * @member {Boolean} setup_next_cart
    */
-  exports.prototype.setupNextCart = undefined;
+  exports.prototype.setup_next_cart = undefined;
 
   /**
    * Skip payment processing and move the order on to shipping (or completed if no shipping required)
-   * @member {Boolean} skipPaymentProcessing
+   * @member {Boolean} skip_payment_processing
    */
-  exports.prototype.skipPaymentProcessing = undefined;
+  exports.prototype.skip_payment_processing = undefined;
 
   /**
    * True the order in the completed stage
-   * @member {Boolean} storeCompleted
+   * @member {Boolean} store_completed
    */
-  exports.prototype.storeCompleted = undefined;
+  exports.prototype.store_completed = undefined;
 
   /**
    * Store the order in accounts receivable if the payment declines
-   * @member {Boolean} storeIfPaymentDeclines
+   * @member {Boolean} store_if_payment_declines
    */
-  exports.prototype.storeIfPaymentDeclines = undefined;
+  exports.prototype.store_if_payment_declines = undefined;
 
   return exports;
 

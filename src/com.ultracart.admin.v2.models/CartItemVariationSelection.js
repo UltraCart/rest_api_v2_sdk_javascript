@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('variation_name'))
-        obj.variationName = ApiClient.convertToType(data['variation_name'], 'String');
+        obj.variation_name = ApiClient.convertToType(data['variation_name'], 'String');
       if (data.hasOwnProperty('variation_value'))
-        obj.variationValue = ApiClient.convertToType(data['variation_value'], 'String');
+        obj.variation_value = ApiClient.convertToType(data['variation_value'], 'String');
     }
     return obj;
   }
 
   /**
    * Variation name
-   * @member {String} variationName
+   * @member {String} variation_name
    */
-  exports.prototype.variationName = undefined;
+  exports.prototype.variation_name = undefined;
 
   /**
    * Variation value
-   * @member {String} variationValue
+   * @member {String} variation_value
    */
-  exports.prototype.variationValue = undefined;
+  exports.prototype.variation_value = undefined;
 
   return exports;
 

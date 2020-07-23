@@ -56,40 +56,40 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('bill_to_edi_code'))
-        obj.billToEdiCode = ApiClient.convertToType(data['bill_to_edi_code'], 'String');
+        obj.bill_to_edi_code = ApiClient.convertToType(data['bill_to_edi_code'], 'String');
       if (data.hasOwnProperty('edi_department'))
-        obj.ediDepartment = ApiClient.convertToType(data['edi_department'], 'String');
+        obj.edi_department = ApiClient.convertToType(data['edi_department'], 'String');
       if (data.hasOwnProperty('edi_internal_vendor_number'))
-        obj.ediInternalVendorNumber = ApiClient.convertToType(data['edi_internal_vendor_number'], 'String');
+        obj.edi_internal_vendor_number = ApiClient.convertToType(data['edi_internal_vendor_number'], 'String');
       if (data.hasOwnProperty('ship_to_edi_code'))
-        obj.shipToEdiCode = ApiClient.convertToType(data['ship_to_edi_code'], 'String');
+        obj.ship_to_edi_code = ApiClient.convertToType(data['ship_to_edi_code'], 'String');
     }
     return obj;
   }
 
   /**
    * Billing address identification code from the EDI order.  Typically DUNS or DUNS+4
-   * @member {String} billToEdiCode
+   * @member {String} bill_to_edi_code
    */
-  exports.prototype.billToEdiCode = undefined;
+  exports.prototype.bill_to_edi_code = undefined;
 
   /**
    * Department number associated with this EDI order
-   * @member {String} ediDepartment
+   * @member {String} edi_department
    */
-  exports.prototype.ediDepartment = undefined;
+  exports.prototype.edi_department = undefined;
 
   /**
    * Internal vendor number associated with this EDI order
-   * @member {String} ediInternalVendorNumber
+   * @member {String} edi_internal_vendor_number
    */
-  exports.prototype.ediInternalVendorNumber = undefined;
+  exports.prototype.edi_internal_vendor_number = undefined;
 
   /**
    * Shipping address identification code from the EDI order.  Typically DUNS or DUNS+4
-   * @member {String} shipToEdiCode
+   * @member {String} ship_to_edi_code
    */
-  exports.prototype.shipToEdiCode = undefined;
+  exports.prototype.ship_to_edi_code = undefined;
 
   return exports;
 

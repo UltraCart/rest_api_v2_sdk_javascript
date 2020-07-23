@@ -56,22 +56,22 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('commseq_step_uuid'))
-        obj.commseqStepUuid = ApiClient.convertToType(data['commseq_step_uuid'], 'String');
+        obj.commseq_step_uuid = ApiClient.convertToType(data['commseq_step_uuid'], 'String');
       if (data.hasOwnProperty('number_waiting'))
-        obj.numberWaiting = ApiClient.convertToType(data['number_waiting'], 'Number');
+        obj.number_waiting = ApiClient.convertToType(data['number_waiting'], 'Number');
     }
     return obj;
   }
 
   /**
-   * @member {String} commseqStepUuid
+   * @member {String} commseq_step_uuid
    */
-  exports.prototype.commseqStepUuid = undefined;
+  exports.prototype.commseq_step_uuid = undefined;
 
   /**
-   * @member {Number} numberWaiting
+   * @member {Number} number_waiting
    */
-  exports.prototype.numberWaiting = undefined;
+  exports.prototype.number_waiting = undefined;
 
   return exports;
 

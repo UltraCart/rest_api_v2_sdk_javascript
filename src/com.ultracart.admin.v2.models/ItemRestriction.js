@@ -56,36 +56,36 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('exclude_coupon'))
-        obj.excludeCoupon = ApiClient.convertToType(data['exclude_coupon'], 'Boolean');
+        obj.exclude_coupon = ApiClient.convertToType(data['exclude_coupon'], 'Boolean');
       if (data.hasOwnProperty('exclude_from_free_promotion'))
-        obj.excludeFromFreePromotion = ApiClient.convertToType(data['exclude_from_free_promotion'], 'Boolean');
+        obj.exclude_from_free_promotion = ApiClient.convertToType(data['exclude_from_free_promotion'], 'Boolean');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], [ItemRestrictionItem]);
       if (data.hasOwnProperty('maximum_quantity'))
-        obj.maximumQuantity = ApiClient.convertToType(data['maximum_quantity'], 'Number');
+        obj.maximum_quantity = ApiClient.convertToType(data['maximum_quantity'], 'Number');
       if (data.hasOwnProperty('minimum_quantity'))
-        obj.minimumQuantity = ApiClient.convertToType(data['minimum_quantity'], 'Number');
+        obj.minimum_quantity = ApiClient.convertToType(data['minimum_quantity'], 'Number');
       if (data.hasOwnProperty('multiple_quantity'))
-        obj.multipleQuantity = ApiClient.convertToType(data['multiple_quantity'], 'Number');
+        obj.multiple_quantity = ApiClient.convertToType(data['multiple_quantity'], 'Number');
       if (data.hasOwnProperty('one_per_customer'))
-        obj.onePerCustomer = ApiClient.convertToType(data['one_per_customer'], 'Boolean');
+        obj.one_per_customer = ApiClient.convertToType(data['one_per_customer'], 'Boolean');
       if (data.hasOwnProperty('purchase_separately'))
-        obj.purchaseSeparately = ApiClient.convertToType(data['purchase_separately'], 'Boolean');
+        obj.purchase_separately = ApiClient.convertToType(data['purchase_separately'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Exclude coupons
-   * @member {Boolean} excludeCoupon
+   * @member {Boolean} exclude_coupon
    */
-  exports.prototype.excludeCoupon = undefined;
+  exports.prototype.exclude_coupon = undefined;
 
   /**
    * Exclude from free promotion
-   * @member {Boolean} excludeFromFreePromotion
+   * @member {Boolean} exclude_from_free_promotion
    */
-  exports.prototype.excludeFromFreePromotion = undefined;
+  exports.prototype.exclude_from_free_promotion = undefined;
 
   /**
    * Items
@@ -95,33 +95,33 @@
 
   /**
    * Maximum quantity
-   * @member {Number} maximumQuantity
+   * @member {Number} maximum_quantity
    */
-  exports.prototype.maximumQuantity = undefined;
+  exports.prototype.maximum_quantity = undefined;
 
   /**
    * Minimum quantity (defaults to 1)
-   * @member {Number} minimumQuantity
+   * @member {Number} minimum_quantity
    */
-  exports.prototype.minimumQuantity = undefined;
+  exports.prototype.minimum_quantity = undefined;
 
   /**
    * Multiple of quantity
-   * @member {Number} multipleQuantity
+   * @member {Number} multiple_quantity
    */
-  exports.prototype.multipleQuantity = undefined;
+  exports.prototype.multiple_quantity = undefined;
 
   /**
    * One per customer
-   * @member {Boolean} onePerCustomer
+   * @member {Boolean} one_per_customer
    */
-  exports.prototype.onePerCustomer = undefined;
+  exports.prototype.one_per_customer = undefined;
 
   /**
    * Purchase separately
-   * @member {Boolean} purchaseSeparately
+   * @member {Boolean} purchase_separately
    */
-  exports.prototype.purchaseSeparately = undefined;
+  exports.prototype.purchase_separately = undefined;
 
   return exports;
 

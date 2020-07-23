@@ -60,20 +60,20 @@
      * Deletes a Self tax provider city
      * Deletes a Self tax provider city. 
      * @param {String} city The city being deleted.
-     * @param {module:com.ultracart.admin.v2.models/TaxCity} taxCity tax city to be deleted
+     * @param {module:com.ultracart.admin.v2.models/TaxCity} tax_city tax city to be deleted
      * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCityCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteTaxProviderSelfCity = function(city, taxCity, callback) {
-      var postBody = taxCity;
+    this.deleteTaxProviderSelfCity = function(city, tax_city, callback) {
+      var postBody = tax_city;
 
       // verify the required parameter 'city' is set
       if (city === undefined || city === null) {
         throw new Error("Missing the required parameter 'city' when calling deleteTaxProviderSelfCity");
       }
 
-      // verify the required parameter 'taxCity' is set
-      if (taxCity === undefined || taxCity === null) {
-        throw new Error("Missing the required parameter 'taxCity' when calling deleteTaxProviderSelfCity");
+      // verify the required parameter 'tax_city' is set
+      if (tax_city === undefined || tax_city === null) {
+        throw new Error("Missing the required parameter 'tax_city' when calling deleteTaxProviderSelfCity");
       }
 
 
@@ -113,20 +113,20 @@
      * Deletes a Self tax provider country
      * Deletes a Self tax provider country. 
      * @param {String} countryCode The country code being deleted.
-     * @param {module:com.ultracart.admin.v2.models/TaxCountry} taxCountry tax country to be deleted
+     * @param {module:com.ultracart.admin.v2.models/TaxCountry} tax_country tax country to be deleted
      * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCountryCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteTaxProviderSelfCountry = function(countryCode, taxCountry, callback) {
-      var postBody = taxCountry;
+    this.deleteTaxProviderSelfCountry = function(countryCode, tax_country, callback) {
+      var postBody = tax_country;
 
       // verify the required parameter 'countryCode' is set
       if (countryCode === undefined || countryCode === null) {
         throw new Error("Missing the required parameter 'countryCode' when calling deleteTaxProviderSelfCountry");
       }
 
-      // verify the required parameter 'taxCountry' is set
-      if (taxCountry === undefined || taxCountry === null) {
-        throw new Error("Missing the required parameter 'taxCountry' when calling deleteTaxProviderSelfCountry");
+      // verify the required parameter 'tax_country' is set
+      if (tax_country === undefined || tax_country === null) {
+        throw new Error("Missing the required parameter 'tax_country' when calling deleteTaxProviderSelfCountry");
       }
 
 
@@ -166,20 +166,20 @@
      * Deletes a Self tax provider county
      * Deletes a Self tax provider county. 
      * @param {String} county The county being deleted.
-     * @param {module:com.ultracart.admin.v2.models/TaxCounty} taxCounty tax county to be deleted
+     * @param {module:com.ultracart.admin.v2.models/TaxCounty} tax_county tax county to be deleted
      * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfCountyCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteTaxProviderSelfCounty = function(county, taxCounty, callback) {
-      var postBody = taxCounty;
+    this.deleteTaxProviderSelfCounty = function(county, tax_county, callback) {
+      var postBody = tax_county;
 
       // verify the required parameter 'county' is set
       if (county === undefined || county === null) {
         throw new Error("Missing the required parameter 'county' when calling deleteTaxProviderSelfCounty");
       }
 
-      // verify the required parameter 'taxCounty' is set
-      if (taxCounty === undefined || taxCounty === null) {
-        throw new Error("Missing the required parameter 'taxCounty' when calling deleteTaxProviderSelfCounty");
+      // verify the required parameter 'tax_county' is set
+      if (tax_county === undefined || tax_county === null) {
+        throw new Error("Missing the required parameter 'tax_county' when calling deleteTaxProviderSelfCounty");
       }
 
 
@@ -218,26 +218,26 @@
     /**
      * Deletes a Self tax provider postalCode
      * Deletes a Self tax provider postalCode. 
-     * @param {String} postalCode The postal code being deleted.
-     * @param {module:com.ultracart.admin.v2.models/TaxPostalCode} taxPostalCode tax postal code to be deleted
+     * @param {String} postal_code The postal code being deleted.
+     * @param {module:com.ultracart.admin.v2.models/TaxPostalCode} tax_postal_code tax postal code to be deleted
      * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfPostalCodeCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteTaxProviderSelfPostalCode = function(postalCode, taxPostalCode, callback) {
-      var postBody = taxPostalCode;
+    this.deleteTaxProviderSelfPostalCode = function(postal_code, tax_postal_code, callback) {
+      var postBody = tax_postal_code;
 
-      // verify the required parameter 'postalCode' is set
-      if (postalCode === undefined || postalCode === null) {
-        throw new Error("Missing the required parameter 'postalCode' when calling deleteTaxProviderSelfPostalCode");
+      // verify the required parameter 'postal_code' is set
+      if (postal_code === undefined || postal_code === null) {
+        throw new Error("Missing the required parameter 'postal_code' when calling deleteTaxProviderSelfPostalCode");
       }
 
-      // verify the required parameter 'taxPostalCode' is set
-      if (taxPostalCode === undefined || taxPostalCode === null) {
-        throw new Error("Missing the required parameter 'taxPostalCode' when calling deleteTaxProviderSelfPostalCode");
+      // verify the required parameter 'tax_postal_code' is set
+      if (tax_postal_code === undefined || tax_postal_code === null) {
+        throw new Error("Missing the required parameter 'tax_postal_code' when calling deleteTaxProviderSelfPostalCode");
       }
 
 
       var pathParams = {
-        'postal_code': postalCode
+        'postal_code': postal_code
       };
       var queryParams = {
       };
@@ -272,20 +272,20 @@
      * Deletes a Self tax provider state
      * Deletes a Self tax provider state. 
      * @param {String} stateCode The state code being deleted.
-     * @param {module:com.ultracart.admin.v2.models/TaxState} taxState tax state to be deleted
+     * @param {module:com.ultracart.admin.v2.models/TaxState} tax_state tax state to be deleted
      * @param {module:com.ultracart.admin.v2/TaxApi~deleteTaxProviderSelfStateCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteTaxProviderSelfState = function(stateCode, taxState, callback) {
-      var postBody = taxState;
+    this.deleteTaxProviderSelfState = function(stateCode, tax_state, callback) {
+      var postBody = tax_state;
 
       // verify the required parameter 'stateCode' is set
       if (stateCode === undefined || stateCode === null) {
         throw new Error("Missing the required parameter 'stateCode' when calling deleteTaxProviderSelfState");
       }
 
-      // verify the required parameter 'taxState' is set
-      if (taxState === undefined || taxState === null) {
-        throw new Error("Missing the required parameter 'taxState' when calling deleteTaxProviderSelfState");
+      // verify the required parameter 'tax_state' is set
+      if (tax_state === undefined || tax_state === null) {
+        throw new Error("Missing the required parameter 'tax_state' when calling deleteTaxProviderSelfState");
       }
 
 
@@ -365,16 +365,16 @@
     /**
      * Returns Avalara Tax companies configured by the merchant
      * Returns Avalara Tax companies configured by the merchant 
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderAvalara} taxProviderAvalara TaxProviderAvalara object
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderAvalara} tax_provider_avalara TaxProviderAvalara object
      * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderAvalaraCompaniesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult}
      */
-    this.getTaxProviderAvalaraCompanies = function(taxProviderAvalara, callback) {
-      var postBody = taxProviderAvalara;
+    this.getTaxProviderAvalaraCompanies = function(tax_provider_avalara, callback) {
+      var postBody = tax_provider_avalara;
 
-      // verify the required parameter 'taxProviderAvalara' is set
-      if (taxProviderAvalara === undefined || taxProviderAvalara === null) {
-        throw new Error("Missing the required parameter 'taxProviderAvalara' when calling getTaxProviderAvalaraCompanies");
+      // verify the required parameter 'tax_provider_avalara' is set
+      if (tax_provider_avalara === undefined || tax_provider_avalara === null) {
+        throw new Error("Missing the required parameter 'tax_provider_avalara' when calling getTaxProviderAvalaraCompanies");
       }
 
 
@@ -789,9 +789,9 @@
      * Retrieve tax methods
      * Retrieves tax methods for this account. 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
-     * @param {Number} opts.offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts.expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProvidersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProvidersResponse}
      */
@@ -803,9 +803,9 @@
       var pathParams = {
       };
       var queryParams = {
-        '_limit': opts['limit'],
-        '_offset': opts['offset'],
-        '_expand': opts['expand'],
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
       };
@@ -885,16 +885,16 @@
     /**
      * Update the Avalara tax provider
      * Update the Avalara tax provider. 
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderAvalara} taxProviderAvalara TaxProviderAvalara object
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderAvalara} tax_provider_avalara TaxProviderAvalara object
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderAvalaraCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderAvalara}
      */
-    this.updateTaxProviderAvalara = function(taxProviderAvalara, callback) {
-      var postBody = taxProviderAvalara;
+    this.updateTaxProviderAvalara = function(tax_provider_avalara, callback) {
+      var postBody = tax_provider_avalara;
 
-      // verify the required parameter 'taxProviderAvalara' is set
-      if (taxProviderAvalara === undefined || taxProviderAvalara === null) {
-        throw new Error("Missing the required parameter 'taxProviderAvalara' when calling updateTaxProviderAvalara");
+      // verify the required parameter 'tax_provider_avalara' is set
+      if (tax_provider_avalara === undefined || tax_provider_avalara === null) {
+        throw new Error("Missing the required parameter 'tax_provider_avalara' when calling updateTaxProviderAvalara");
       }
 
 
@@ -932,16 +932,16 @@
     /**
      * Update the Self tax provider
      * Update the Self tax provider. 
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderSelf} taxProviderSelf TaxProviderSelf object
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderSelf} tax_provider_self TaxProviderSelf object
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSelfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderSelf}
      */
-    this.updateTaxProviderSelf = function(taxProviderSelf, callback) {
-      var postBody = taxProviderSelf;
+    this.updateTaxProviderSelf = function(tax_provider_self, callback) {
+      var postBody = tax_provider_self;
 
-      // verify the required parameter 'taxProviderSelf' is set
-      if (taxProviderSelf === undefined || taxProviderSelf === null) {
-        throw new Error("Missing the required parameter 'taxProviderSelf' when calling updateTaxProviderSelf");
+      // verify the required parameter 'tax_provider_self' is set
+      if (tax_provider_self === undefined || tax_provider_self === null) {
+        throw new Error("Missing the required parameter 'tax_provider_self' when calling updateTaxProviderSelf");
       }
 
 
@@ -980,21 +980,21 @@
      * Updates a Self tax provider city
      * Updates a Self tax provider city. 
      * @param {String} city The city being updated.
-     * @param {module:com.ultracart.admin.v2.models/TaxCity} taxCity tax city to be updated
+     * @param {module:com.ultracart.admin.v2.models/TaxCity} tax_city tax city to be updated
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSelfCityCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxCity}
      */
-    this.updateTaxProviderSelfCity = function(city, taxCity, callback) {
-      var postBody = taxCity;
+    this.updateTaxProviderSelfCity = function(city, tax_city, callback) {
+      var postBody = tax_city;
 
       // verify the required parameter 'city' is set
       if (city === undefined || city === null) {
         throw new Error("Missing the required parameter 'city' when calling updateTaxProviderSelfCity");
       }
 
-      // verify the required parameter 'taxCity' is set
-      if (taxCity === undefined || taxCity === null) {
-        throw new Error("Missing the required parameter 'taxCity' when calling updateTaxProviderSelfCity");
+      // verify the required parameter 'tax_city' is set
+      if (tax_city === undefined || tax_city === null) {
+        throw new Error("Missing the required parameter 'tax_city' when calling updateTaxProviderSelfCity");
       }
 
 
@@ -1034,21 +1034,21 @@
      * Updates a Self tax provider country
      * Updates a Self tax provider country. 
      * @param {String} countryCode The country code being updated.
-     * @param {module:com.ultracart.admin.v2.models/TaxCountry} taxCountry tax country to be updated
+     * @param {module:com.ultracart.admin.v2.models/TaxCountry} tax_country tax country to be updated
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSelfCountryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxCountry}
      */
-    this.updateTaxProviderSelfCountry = function(countryCode, taxCountry, callback) {
-      var postBody = taxCountry;
+    this.updateTaxProviderSelfCountry = function(countryCode, tax_country, callback) {
+      var postBody = tax_country;
 
       // verify the required parameter 'countryCode' is set
       if (countryCode === undefined || countryCode === null) {
         throw new Error("Missing the required parameter 'countryCode' when calling updateTaxProviderSelfCountry");
       }
 
-      // verify the required parameter 'taxCountry' is set
-      if (taxCountry === undefined || taxCountry === null) {
-        throw new Error("Missing the required parameter 'taxCountry' when calling updateTaxProviderSelfCountry");
+      // verify the required parameter 'tax_country' is set
+      if (tax_country === undefined || tax_country === null) {
+        throw new Error("Missing the required parameter 'tax_country' when calling updateTaxProviderSelfCountry");
       }
 
 
@@ -1088,21 +1088,21 @@
      * Updates a Self tax provider county
      * Updates a Self tax provider county. 
      * @param {String} county The county being updated.
-     * @param {module:com.ultracart.admin.v2.models/TaxCounty} taxCounty tax county to be updated
+     * @param {module:com.ultracart.admin.v2.models/TaxCounty} tax_county tax county to be updated
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSelfCountyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxCounty}
      */
-    this.updateTaxProviderSelfCounty = function(county, taxCounty, callback) {
-      var postBody = taxCounty;
+    this.updateTaxProviderSelfCounty = function(county, tax_county, callback) {
+      var postBody = tax_county;
 
       // verify the required parameter 'county' is set
       if (county === undefined || county === null) {
         throw new Error("Missing the required parameter 'county' when calling updateTaxProviderSelfCounty");
       }
 
-      // verify the required parameter 'taxCounty' is set
-      if (taxCounty === undefined || taxCounty === null) {
-        throw new Error("Missing the required parameter 'taxCounty' when calling updateTaxProviderSelfCounty");
+      // verify the required parameter 'tax_county' is set
+      if (tax_county === undefined || tax_county === null) {
+        throw new Error("Missing the required parameter 'tax_county' when calling updateTaxProviderSelfCounty");
       }
 
 
@@ -1141,27 +1141,27 @@
     /**
      * Updates a Self tax provider postalCode
      * Updates a Self tax provider postalCode. 
-     * @param {String} postalCode The postal code being updated.
-     * @param {module:com.ultracart.admin.v2.models/TaxPostalCode} taxPostalCode tax postal code to be updated
+     * @param {String} postal_code The postal code being updated.
+     * @param {module:com.ultracart.admin.v2.models/TaxPostalCode} tax_postal_code tax postal code to be updated
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSelfPostalCodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxPostalCode}
      */
-    this.updateTaxProviderSelfPostalCode = function(postalCode, taxPostalCode, callback) {
-      var postBody = taxPostalCode;
+    this.updateTaxProviderSelfPostalCode = function(postal_code, tax_postal_code, callback) {
+      var postBody = tax_postal_code;
 
-      // verify the required parameter 'postalCode' is set
-      if (postalCode === undefined || postalCode === null) {
-        throw new Error("Missing the required parameter 'postalCode' when calling updateTaxProviderSelfPostalCode");
+      // verify the required parameter 'postal_code' is set
+      if (postal_code === undefined || postal_code === null) {
+        throw new Error("Missing the required parameter 'postal_code' when calling updateTaxProviderSelfPostalCode");
       }
 
-      // verify the required parameter 'taxPostalCode' is set
-      if (taxPostalCode === undefined || taxPostalCode === null) {
-        throw new Error("Missing the required parameter 'taxPostalCode' when calling updateTaxProviderSelfPostalCode");
+      // verify the required parameter 'tax_postal_code' is set
+      if (tax_postal_code === undefined || tax_postal_code === null) {
+        throw new Error("Missing the required parameter 'tax_postal_code' when calling updateTaxProviderSelfPostalCode");
       }
 
 
       var pathParams = {
-        'postal_code': postalCode
+        'postal_code': postal_code
       };
       var queryParams = {
       };
@@ -1196,21 +1196,21 @@
      * Updates a Self tax provider state
      * Updates a Self tax provider state. 
      * @param {String} stateCode The state code being updated.
-     * @param {module:com.ultracart.admin.v2.models/TaxState} taxState tax state to be updated
+     * @param {module:com.ultracart.admin.v2.models/TaxState} tax_state tax state to be updated
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSelfStateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxState}
      */
-    this.updateTaxProviderSelfState = function(stateCode, taxState, callback) {
-      var postBody = taxState;
+    this.updateTaxProviderSelfState = function(stateCode, tax_state, callback) {
+      var postBody = tax_state;
 
       // verify the required parameter 'stateCode' is set
       if (stateCode === undefined || stateCode === null) {
         throw new Error("Missing the required parameter 'stateCode' when calling updateTaxProviderSelfState");
       }
 
-      // verify the required parameter 'taxState' is set
-      if (taxState === undefined || taxState === null) {
-        throw new Error("Missing the required parameter 'taxState' when calling updateTaxProviderSelfState");
+      // verify the required parameter 'tax_state' is set
+      if (tax_state === undefined || tax_state === null) {
+        throw new Error("Missing the required parameter 'tax_state' when calling updateTaxProviderSelfState");
       }
 
 
@@ -1249,16 +1249,16 @@
     /**
      * Update the Sovos tax provider
      * Update the Sovos tax provider. 
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderSovos} taxProviderSovos TaxProviderSovos object
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderSovos} tax_provider_sovos TaxProviderSovos object
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderSovosCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderSovos}
      */
-    this.updateTaxProviderSovos = function(taxProviderSovos, callback) {
-      var postBody = taxProviderSovos;
+    this.updateTaxProviderSovos = function(tax_provider_sovos, callback) {
+      var postBody = tax_provider_sovos;
 
-      // verify the required parameter 'taxProviderSovos' is set
-      if (taxProviderSovos === undefined || taxProviderSovos === null) {
-        throw new Error("Missing the required parameter 'taxProviderSovos' when calling updateTaxProviderSovos");
+      // verify the required parameter 'tax_provider_sovos' is set
+      if (tax_provider_sovos === undefined || tax_provider_sovos === null) {
+        throw new Error("Missing the required parameter 'tax_provider_sovos' when calling updateTaxProviderSovos");
       }
 
 
@@ -1296,16 +1296,16 @@
     /**
      * Update the TaxJar tax provider
      * Update the TaxJar tax provider. 
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderTaxJar} taxProviderTaxJar TaxProviderTaxJar object
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderTaxJar} tax_provider_taxJar TaxProviderTaxJar object
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderTaxJarCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderTaxJar}
      */
-    this.updateTaxProviderTaxJar = function(taxProviderTaxJar, callback) {
-      var postBody = taxProviderTaxJar;
+    this.updateTaxProviderTaxJar = function(tax_provider_taxJar, callback) {
+      var postBody = tax_provider_taxJar;
 
-      // verify the required parameter 'taxProviderTaxJar' is set
-      if (taxProviderTaxJar === undefined || taxProviderTaxJar === null) {
-        throw new Error("Missing the required parameter 'taxProviderTaxJar' when calling updateTaxProviderTaxJar");
+      // verify the required parameter 'tax_provider_taxJar' is set
+      if (tax_provider_taxJar === undefined || tax_provider_taxJar === null) {
+        throw new Error("Missing the required parameter 'tax_provider_taxJar' when calling updateTaxProviderTaxJar");
       }
 
 
@@ -1343,16 +1343,16 @@
     /**
      * Update the UltraCart tax provider
      * Update the UltraCart tax provider. 
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderUltraCart} taxProviderUltracart TaxProviderUltraCart object
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderUltraCart} tax_provider_ultracart TaxProviderUltraCart object
      * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderUltraCartCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderUltraCart}
      */
-    this.updateTaxProviderUltraCart = function(taxProviderUltracart, callback) {
-      var postBody = taxProviderUltracart;
+    this.updateTaxProviderUltraCart = function(tax_provider_ultracart, callback) {
+      var postBody = tax_provider_ultracart;
 
-      // verify the required parameter 'taxProviderUltracart' is set
-      if (taxProviderUltracart === undefined || taxProviderUltracart === null) {
-        throw new Error("Missing the required parameter 'taxProviderUltracart' when calling updateTaxProviderUltraCart");
+      // verify the required parameter 'tax_provider_ultracart' is set
+      if (tax_provider_ultracart === undefined || tax_provider_ultracart === null) {
+        throw new Error("Missing the required parameter 'tax_provider_ultracart' when calling updateTaxProviderUltraCart");
       }
 
 

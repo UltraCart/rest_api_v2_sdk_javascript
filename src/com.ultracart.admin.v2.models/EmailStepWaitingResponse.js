@@ -56,15 +56,15 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('step_waitings'))
-        obj.stepWaitings = ApiClient.convertToType(data['step_waitings'], [StepWaiting]);
+        obj.step_waitings = ApiClient.convertToType(data['step_waitings'], [StepWaiting]);
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/StepWaiting>} stepWaitings
+   * @member {Array.<module:com.ultracart.admin.v2.models/StepWaiting>} step_waitings
    */
-  exports.prototype.stepWaitings = undefined;
+  exports.prototype.step_waitings = undefined;
 
   return exports;
 

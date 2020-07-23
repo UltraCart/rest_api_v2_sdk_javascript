@@ -56,34 +56,34 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('bounce_count'))
-        obj.bounceCount = ApiClient.convertToType(data['bounce_count'], 'Number');
+        obj.bounce_count = ApiClient.convertToType(data['bounce_count'], 'Number');
       if (data.hasOwnProperty('delivered_count'))
-        obj.deliveredCount = ApiClient.convertToType(data['delivered_count'], 'Number');
+        obj.delivered_count = ApiClient.convertToType(data['delivered_count'], 'Number');
       if (data.hasOwnProperty('revenue'))
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('sequence_send_count'))
-        obj.sequenceSendCount = ApiClient.convertToType(data['sequence_send_count'], 'Number');
+        obj.sequence_send_count = ApiClient.convertToType(data['sequence_send_count'], 'Number');
       if (data.hasOwnProperty('spam_count'))
-        obj.spamCount = ApiClient.convertToType(data['spam_count'], 'Number');
+        obj.spam_count = ApiClient.convertToType(data['spam_count'], 'Number');
       if (data.hasOwnProperty('stat_dts'))
-        obj.statDts = ApiClient.convertToType(data['stat_dts'], 'String');
+        obj.stat_dts = ApiClient.convertToType(data['stat_dts'], 'String');
       if (data.hasOwnProperty('transactional_send_count'))
-        obj.transactionalSendCount = ApiClient.convertToType(data['transactional_send_count'], 'Number');
+        obj.transactional_send_count = ApiClient.convertToType(data['transactional_send_count'], 'Number');
     }
     return obj;
   }
 
   /**
    * Bounce count
-   * @member {Number} bounceCount
+   * @member {Number} bounce_count
    */
-  exports.prototype.bounceCount = undefined;
+  exports.prototype.bounce_count = undefined;
 
   /**
    * Delivered count
-   * @member {Number} deliveredCount
+   * @member {Number} delivered_count
    */
-  exports.prototype.deliveredCount = undefined;
+  exports.prototype.delivered_count = undefined;
 
   /**
    * Revenue
@@ -93,27 +93,27 @@
 
   /**
    * Total sequence (campaign/flow) emails sent
-   * @member {Number} sequenceSendCount
+   * @member {Number} sequence_send_count
    */
-  exports.prototype.sequenceSendCount = undefined;
+  exports.prototype.sequence_send_count = undefined;
 
   /**
    * Spam complaints
-   * @member {Number} spamCount
+   * @member {Number} spam_count
    */
-  exports.prototype.spamCount = undefined;
+  exports.prototype.spam_count = undefined;
 
   /**
    * The date that these statistcs are for
-   * @member {String} statDts
+   * @member {String} stat_dts
    */
-  exports.prototype.statDts = undefined;
+  exports.prototype.stat_dts = undefined;
 
   /**
    * Total transactions emails sent
-   * @member {Number} transactionalSendCount
+   * @member {Number} transactional_send_count
    */
-  exports.prototype.transactionalSendCount = undefined;
+  exports.prototype.transactional_send_count = undefined;
 
   return exports;
 

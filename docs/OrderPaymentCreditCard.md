@@ -22,13 +22,13 @@ Name | Type | Description | Notes
 
 * `AMEX` (value: `"AMEX"`)
 
-* `dinersClub` (value: `"Diners Club"`)
+* `Diners_Club` (value: `"Diners Club"`)
 
-* `discover` (value: `"Discover"`)
+* `Discover` (value: `"Discover"`)
 
 * `JCB` (value: `"JCB"`)
 
-* `masterCard` (value: `"MasterCard"`)
+* `MasterCard` (value: `"MasterCard"`)
 
 * `VISA` (value: `"VISA"`)
 

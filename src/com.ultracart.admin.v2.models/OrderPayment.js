@@ -58,35 +58,35 @@
       if (data.hasOwnProperty('check'))
         obj.check = OrderPaymentCheck.constructFromObject(data['check']);
       if (data.hasOwnProperty('credit_card'))
-        obj.creditCard = OrderPaymentCreditCard.constructFromObject(data['credit_card']);
+        obj.credit_card = OrderPaymentCreditCard.constructFromObject(data['credit_card']);
       if (data.hasOwnProperty('echeck'))
         obj.echeck = OrderPaymentECheck.constructFromObject(data['echeck']);
       if (data.hasOwnProperty('hold_for_fraud_review'))
-        obj.holdForFraudReview = ApiClient.convertToType(data['hold_for_fraud_review'], 'Boolean');
+        obj.hold_for_fraud_review = ApiClient.convertToType(data['hold_for_fraud_review'], 'Boolean');
       if (data.hasOwnProperty('payment_dts'))
-        obj.paymentDts = ApiClient.convertToType(data['payment_dts'], 'String');
+        obj.payment_dts = ApiClient.convertToType(data['payment_dts'], 'String');
       if (data.hasOwnProperty('payment_method'))
-        obj.paymentMethod = ApiClient.convertToType(data['payment_method'], 'String');
+        obj.payment_method = ApiClient.convertToType(data['payment_method'], 'String');
       if (data.hasOwnProperty('payment_method_accounting_code'))
-        obj.paymentMethodAccountingCode = ApiClient.convertToType(data['payment_method_accounting_code'], 'String');
+        obj.payment_method_accounting_code = ApiClient.convertToType(data['payment_method_accounting_code'], 'String');
       if (data.hasOwnProperty('payment_method_deposit_to_account'))
-        obj.paymentMethodDepositToAccount = ApiClient.convertToType(data['payment_method_deposit_to_account'], 'String');
+        obj.payment_method_deposit_to_account = ApiClient.convertToType(data['payment_method_deposit_to_account'], 'String');
       if (data.hasOwnProperty('payment_status'))
-        obj.paymentStatus = ApiClient.convertToType(data['payment_status'], 'String');
+        obj.payment_status = ApiClient.convertToType(data['payment_status'], 'String');
       if (data.hasOwnProperty('purchase_order'))
-        obj.purchaseOrder = OrderPaymentPurchaseOrder.constructFromObject(data['purchase_order']);
+        obj.purchase_order = OrderPaymentPurchaseOrder.constructFromObject(data['purchase_order']);
       if (data.hasOwnProperty('rotating_transaction_gateway_code'))
-        obj.rotatingTransactionGatewayCode = ApiClient.convertToType(data['rotating_transaction_gateway_code'], 'String');
+        obj.rotating_transaction_gateway_code = ApiClient.convertToType(data['rotating_transaction_gateway_code'], 'String');
       if (data.hasOwnProperty('surcharge'))
         obj.surcharge = Currency.constructFromObject(data['surcharge']);
       if (data.hasOwnProperty('surcharge_accounting_code'))
-        obj.surchargeAccountingCode = ApiClient.convertToType(data['surcharge_accounting_code'], 'String');
+        obj.surcharge_accounting_code = ApiClient.convertToType(data['surcharge_accounting_code'], 'String');
       if (data.hasOwnProperty('surcharge_transaction_fee'))
-        obj.surchargeTransactionFee = ApiClient.convertToType(data['surcharge_transaction_fee'], 'Number');
+        obj.surcharge_transaction_fee = ApiClient.convertToType(data['surcharge_transaction_fee'], 'Number');
       if (data.hasOwnProperty('surcharge_transaction_percentage'))
-        obj.surchargeTransactionPercentage = ApiClient.convertToType(data['surcharge_transaction_percentage'], 'Number');
+        obj.surcharge_transaction_percentage = ApiClient.convertToType(data['surcharge_transaction_percentage'], 'Number');
       if (data.hasOwnProperty('test_order'))
-        obj.testOrder = ApiClient.convertToType(data['test_order'], 'Boolean');
+        obj.test_order = ApiClient.convertToType(data['test_order'], 'Boolean');
       if (data.hasOwnProperty('transactions'))
         obj.transactions = ApiClient.convertToType(data['transactions'], [OrderPaymentTransaction]);
     }
@@ -99,9 +99,9 @@
   exports.prototype.check = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderPaymentCreditCard} creditCard
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentCreditCard} credit_card
    */
-  exports.prototype.creditCard = undefined;
+  exports.prototype.credit_card = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderPaymentECheck} echeck
@@ -110,50 +110,50 @@
 
   /**
    * True if order has been held for fraud review
-   * @member {Boolean} holdForFraudReview
+   * @member {Boolean} hold_for_fraud_review
    */
-  exports.prototype.holdForFraudReview = undefined;
+  exports.prototype.hold_for_fraud_review = undefined;
 
   /**
    * Date/time that the payment was successfully processed, for new orders, this field is only considered if channel_partner.skip_payment_processing is true
-   * @member {String} paymentDts
+   * @member {String} payment_dts
    */
-  exports.prototype.paymentDts = undefined;
+  exports.prototype.payment_dts = undefined;
 
   /**
    * Payment method
-   * @member {module:com.ultracart.admin.v2.models/OrderPayment.PaymentMethodEnum} paymentMethod
+   * @member {module:com.ultracart.admin.v2.models/OrderPayment.PaymentMethodEnum} payment_method
    */
-  exports.prototype.paymentMethod = undefined;
+  exports.prototype.payment_method = undefined;
 
   /**
    * Payment method QuickBooks code
-   * @member {String} paymentMethodAccountingCode
+   * @member {String} payment_method_accounting_code
    */
-  exports.prototype.paymentMethodAccountingCode = undefined;
+  exports.prototype.payment_method_accounting_code = undefined;
 
   /**
    * Payment method QuickBooks deposit account
-   * @member {String} paymentMethodDepositToAccount
+   * @member {String} payment_method_deposit_to_account
    */
-  exports.prototype.paymentMethodDepositToAccount = undefined;
+  exports.prototype.payment_method_deposit_to_account = undefined;
 
   /**
    * Payment status
-   * @member {module:com.ultracart.admin.v2.models/OrderPayment.PaymentStatusEnum} paymentStatus
+   * @member {module:com.ultracart.admin.v2.models/OrderPayment.PaymentStatusEnum} payment_status
    */
-  exports.prototype.paymentStatus = undefined;
+  exports.prototype.payment_status = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder} purchaseOrder
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder} purchase_order
    */
-  exports.prototype.purchaseOrder = undefined;
+  exports.prototype.purchase_order = undefined;
 
   /**
    * Rotating transaction gateway code used to process this order
-   * @member {String} rotatingTransactionGatewayCode
+   * @member {String} rotating_transaction_gateway_code
    */
-  exports.prototype.rotatingTransactionGatewayCode = undefined;
+  exports.prototype.rotating_transaction_gateway_code = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} surcharge
@@ -162,27 +162,27 @@
 
   /**
    * Surcharge accounting code
-   * @member {String} surchargeAccountingCode
+   * @member {String} surcharge_accounting_code
    */
-  exports.prototype.surchargeAccountingCode = undefined;
+  exports.prototype.surcharge_accounting_code = undefined;
 
   /**
    * Surcharge transaction fee
-   * @member {Number} surchargeTransactionFee
+   * @member {Number} surcharge_transaction_fee
    */
-  exports.prototype.surchargeTransactionFee = undefined;
+  exports.prototype.surcharge_transaction_fee = undefined;
 
   /**
    * Surcharge transaction percentage
-   * @member {Number} surchargeTransactionPercentage
+   * @member {Number} surcharge_transaction_percentage
    */
-  exports.prototype.surchargeTransactionPercentage = undefined;
+  exports.prototype.surcharge_transaction_percentage = undefined;
 
   /**
    * True if this is a test order
-   * @member {Boolean} testOrder
+   * @member {Boolean} test_order
    */
-  exports.prototype.testOrder = undefined;
+  exports.prototype.test_order = undefined;
 
   /**
    * Transactions associated with processing this payment
@@ -192,7 +192,7 @@
 
 
   /**
-   * Allowed values for the <code>paymentMethod</code> property.
+   * Allowed values for the <code>payment_method</code> property.
    * @enum {String}
    * @readonly
    */
@@ -201,31 +201,31 @@
      * value: "Affirm"
      * @const
      */
-    affirm: "Affirm",
+    Affirm: "Affirm",
 
     /**
      * value: "Amazon"
      * @const
      */
-    amazon: "Amazon",
+    Amazon: "Amazon",
 
     /**
      * value: "Amazon SC"
      * @const
      */
-    amazonSC: "Amazon SC",
+    Amazon_SC: "Amazon SC",
 
     /**
      * value: "Cash"
      * @const
      */
-    cash: "Cash",
+    Cash: "Cash",
 
     /**
      * value: "Check"
      * @const
      */
-    check: "Check",
+    Check: "Check",
 
     /**
      * value: "COD"
@@ -237,7 +237,7 @@
      * value: "Credit Card"
      * @const
      */
-    creditCard: "Credit Card",
+    Credit_Card: "Credit Card",
 
     /**
      * value: "eBay"
@@ -255,54 +255,54 @@
      * value: "LoanHero"
      * @const
      */
-    loanHero: "LoanHero",
+    LoanHero: "LoanHero",
 
     /**
      * value: "Money Order"
      * @const
      */
-    moneyOrder: "Money Order",
+    Money_Order: "Money Order",
 
     /**
      * value: "PayPal"
      * @const
      */
-    payPal: "PayPal",
+    PayPal: "PayPal",
 
     /**
      * value: "Purchase Order"
      * @const
      */
-    purchaseOrder: "Purchase Order",
+    Purchase_Order: "Purchase Order",
 
     /**
      * value: "Quote Request"
      * @const
      */
-    quoteRequest: "Quote Request",
+    Quote_Request: "Quote Request",
 
     /**
      * value: "Unknown"
      * @const
      */
-    unknown: "Unknown",
+    Unknown: "Unknown",
 
     /**
      * value: "Wire Transfer"
      * @const
      */
-    wireTransfer: "Wire Transfer",
+    Wire_Transfer: "Wire Transfer",
 
     /**
      * value: "Walmart"
      * @const
      */
-    walmart: "Walmart"
+    Walmart: "Walmart"
   };
 
 
   /**
-   * Allowed values for the <code>paymentStatus</code> property.
+   * Allowed values for the <code>payment_status</code> property.
    * @enum {String}
    * @readonly
    */
@@ -311,49 +311,49 @@
      * value: "Unprocessed"
      * @const
      */
-    unprocessed: "Unprocessed",
+    Unprocessed: "Unprocessed",
 
     /**
      * value: "Authorized"
      * @const
      */
-    authorized: "Authorized",
+    Authorized: "Authorized",
 
     /**
      * value: "Capture Failed"
      * @const
      */
-    captureFailed: "Capture Failed",
+    Capture_Failed: "Capture Failed",
 
     /**
      * value: "Processed"
      * @const
      */
-    processed: "Processed",
+    Processed: "Processed",
 
     /**
      * value: "Declined"
      * @const
      */
-    declined: "Declined",
+    Declined: "Declined",
 
     /**
      * value: "Voided"
      * @const
      */
-    voided: "Voided",
+    Voided: "Voided",
 
     /**
      * value: "Refunded"
      * @const
      */
-    refunded: "Refunded",
+    Refunded: "Refunded",
 
     /**
      * value: "Skipped"
      * @const
      */
-    skipped: "Skipped"
+    Skipped: "Skipped"
   };
 
   return exports;

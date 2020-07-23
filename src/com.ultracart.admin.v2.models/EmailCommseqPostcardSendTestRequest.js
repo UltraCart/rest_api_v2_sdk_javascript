@@ -56,27 +56,27 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('address_1'))
-        obj.address1 = ApiClient.convertToType(data['address_1'], 'String');
+        obj.address_1 = ApiClient.convertToType(data['address_1'], 'String');
       if (data.hasOwnProperty('address_2'))
-        obj.address2 = ApiClient.convertToType(data['address_2'], 'String');
+        obj.address_2 = ApiClient.convertToType(data['address_2'], 'String');
       if (data.hasOwnProperty('cart_id'))
-        obj.cartId = ApiClient.convertToType(data['cart_id'], 'String');
+        obj.cart_id = ApiClient.convertToType(data['cart_id'], 'String');
       if (data.hasOwnProperty('cart_item_ids'))
-        obj.cartItemIds = ApiClient.convertToType(data['cart_item_ids'], ['String']);
+        obj.cart_item_ids = ApiClient.convertToType(data['cart_item_ids'], ['String']);
       if (data.hasOwnProperty('city'))
         obj.city = ApiClient.convertToType(data['city'], 'String');
       if (data.hasOwnProperty('esp_commseq_postcard_uuid'))
-        obj.espCommseqPostcardUuid = ApiClient.convertToType(data['esp_commseq_postcard_uuid'], 'String');
+        obj.esp_commseq_postcard_uuid = ApiClient.convertToType(data['esp_commseq_postcard_uuid'], 'String');
       if (data.hasOwnProperty('esp_commseq_step_uuid'))
-        obj.espCommseqStepUuid = ApiClient.convertToType(data['esp_commseq_step_uuid'], 'String');
+        obj.esp_commseq_step_uuid = ApiClient.convertToType(data['esp_commseq_step_uuid'], 'String');
       if (data.hasOwnProperty('esp_commseq_uuid'))
-        obj.espCommseqUuid = ApiClient.convertToType(data['esp_commseq_uuid'], 'String');
+        obj.esp_commseq_uuid = ApiClient.convertToType(data['esp_commseq_uuid'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('order_id'))
-        obj.orderId = ApiClient.convertToType(data['order_id'], 'String');
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('postal_code'))
-        obj.postalCode = ApiClient.convertToType(data['postal_code'], 'String');
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('state'))
         obj.state = ApiClient.convertToType(data['state'], 'String');
     }
@@ -84,24 +84,24 @@
   }
 
   /**
-   * @member {String} address1
+   * @member {String} address_1
    */
-  exports.prototype.address1 = undefined;
+  exports.prototype.address_1 = undefined;
 
   /**
-   * @member {String} address2
+   * @member {String} address_2
    */
-  exports.prototype.address2 = undefined;
+  exports.prototype.address_2 = undefined;
 
   /**
-   * @member {String} cartId
+   * @member {String} cart_id
    */
-  exports.prototype.cartId = undefined;
+  exports.prototype.cart_id = undefined;
 
   /**
-   * @member {Array.<String>} cartItemIds
+   * @member {Array.<String>} cart_item_ids
    */
-  exports.prototype.cartItemIds = undefined;
+  exports.prototype.cart_item_ids = undefined;
 
   /**
    * @member {String} city
@@ -109,19 +109,19 @@
   exports.prototype.city = undefined;
 
   /**
-   * @member {String} espCommseqPostcardUuid
+   * @member {String} esp_commseq_postcard_uuid
    */
-  exports.prototype.espCommseqPostcardUuid = undefined;
+  exports.prototype.esp_commseq_postcard_uuid = undefined;
 
   /**
-   * @member {String} espCommseqStepUuid
+   * @member {String} esp_commseq_step_uuid
    */
-  exports.prototype.espCommseqStepUuid = undefined;
+  exports.prototype.esp_commseq_step_uuid = undefined;
 
   /**
-   * @member {String} espCommseqUuid
+   * @member {String} esp_commseq_uuid
    */
-  exports.prototype.espCommseqUuid = undefined;
+  exports.prototype.esp_commseq_uuid = undefined;
 
   /**
    * @member {String} name
@@ -129,14 +129,14 @@
   exports.prototype.name = undefined;
 
   /**
-   * @member {String} orderId
+   * @member {String} order_id
    */
-  exports.prototype.orderId = undefined;
+  exports.prototype.order_id = undefined;
 
   /**
-   * @member {String} postalCode
+   * @member {String} postal_code
    */
-  exports.prototype.postalCode = undefined;
+  exports.prototype.postal_code = undefined;
 
   /**
    * @member {String} state

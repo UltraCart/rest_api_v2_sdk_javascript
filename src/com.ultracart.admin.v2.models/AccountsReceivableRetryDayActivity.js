@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('charge'))
         obj.charge = ApiClient.convertToType(data['charge'], 'Boolean');
       if (data.hasOwnProperty('coupon_code'))
-        obj.couponCode = ApiClient.convertToType(data['coupon_code'], 'String');
+        obj.coupon_code = ApiClient.convertToType(data['coupon_code'], 'String');
       if (data.hasOwnProperty('day'))
         obj.day = ApiClient.convertToType(data['day'], 'Number');
     }
@@ -73,9 +73,9 @@
 
   /**
    * The coupon code that should be applied to this order.
-   * @member {String} couponCode
+   * @member {String} coupon_code
    */
-  exports.prototype.couponCode = undefined;
+  exports.prototype.coupon_code = undefined;
 
   /**
    * The number of days since the order placed in Accounts Receivable

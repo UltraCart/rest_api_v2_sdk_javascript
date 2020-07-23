@@ -56,24 +56,24 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('customer_profile_attachment_oid'))
-        obj.customerProfileAttachmentOid = ApiClient.convertToType(data['customer_profile_attachment_oid'], 'Number');
+        obj.customer_profile_attachment_oid = ApiClient.convertToType(data['customer_profile_attachment_oid'], 'Number');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('file_name'))
-        obj.fileName = ApiClient.convertToType(data['file_name'], 'String');
+        obj.file_name = ApiClient.convertToType(data['file_name'], 'String');
       if (data.hasOwnProperty('mime_type'))
-        obj.mimeType = ApiClient.convertToType(data['mime_type'], 'String');
+        obj.mime_type = ApiClient.convertToType(data['mime_type'], 'String');
       if (data.hasOwnProperty('upload_dts'))
-        obj.uploadDts = ApiClient.convertToType(data['upload_dts'], 'String');
+        obj.upload_dts = ApiClient.convertToType(data['upload_dts'], 'String');
     }
     return obj;
   }
 
   /**
    * Attachment identifier
-   * @member {Number} customerProfileAttachmentOid
+   * @member {Number} customer_profile_attachment_oid
    */
-  exports.prototype.customerProfileAttachmentOid = undefined;
+  exports.prototype.customer_profile_attachment_oid = undefined;
 
   /**
    * Description
@@ -83,21 +83,21 @@
 
   /**
    * File name
-   * @member {String} fileName
+   * @member {String} file_name
    */
-  exports.prototype.fileName = undefined;
+  exports.prototype.file_name = undefined;
 
   /**
    * Mime typoe
-   * @member {String} mimeType
+   * @member {String} mime_type
    */
-  exports.prototype.mimeType = undefined;
+  exports.prototype.mime_type = undefined;
 
   /**
    * Upload date/time
-   * @member {String} uploadDts
+   * @member {String} upload_dts
    */
-  exports.prototype.uploadDts = undefined;
+  exports.prototype.upload_dts = undefined;
 
   return exports;
 

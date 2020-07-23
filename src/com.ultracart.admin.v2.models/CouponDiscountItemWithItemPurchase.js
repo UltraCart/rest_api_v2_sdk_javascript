@@ -56,36 +56,36 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('currency_code'))
-        obj.currencyCode = ApiClient.convertToType(data['currency_code'], 'String');
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('discount_item'))
-        obj.discountItem = ApiClient.convertToType(data['discount_item'], 'String');
+        obj.discount_item = ApiClient.convertToType(data['discount_item'], 'String');
       if (data.hasOwnProperty('discount_price'))
-        obj.discountPrice = ApiClient.convertToType(data['discount_price'], 'Number');
+        obj.discount_price = ApiClient.convertToType(data['discount_price'], 'Number');
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
       if (data.hasOwnProperty('required_purchase_item'))
-        obj.requiredPurchaseItem = ApiClient.convertToType(data['required_purchase_item'], 'String');
+        obj.required_purchase_item = ApiClient.convertToType(data['required_purchase_item'], 'String');
     }
     return obj;
   }
 
   /**
    * The ISO-4217 three letter currency code the customer is viewing prices in
-   * @member {String} currencyCode
+   * @member {String} currency_code
    */
-  exports.prototype.currencyCode = undefined;
+  exports.prototype.currency_code = undefined;
 
   /**
    * The item that will be sold at the discount_price when required_purchase_item is purchased.
-   * @member {String} discountItem
+   * @member {String} discount_item
    */
-  exports.prototype.discountItem = undefined;
+  exports.prototype.discount_item = undefined;
 
   /**
    * The price (unit cost) of the discounted item
-   * @member {Number} discountPrice
+   * @member {Number} discount_price
    */
-  exports.prototype.discountPrice = undefined;
+  exports.prototype.discount_price = undefined;
 
   /**
    * The (optional) maximum quantity of discounted items.
@@ -95,9 +95,9 @@
 
   /**
    * The item that must be purchased for the discount to be applied to the discount item.
-   * @member {String} requiredPurchaseItem
+   * @member {String} required_purchase_item
    */
-  exports.prototype.requiredPurchaseItem = undefined;
+  exports.prototype.required_purchase_item = undefined;
 
   return exports;
 

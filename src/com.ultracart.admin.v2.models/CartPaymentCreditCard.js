@@ -56,80 +56,80 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('card_expiration_month'))
-        obj.cardExpirationMonth = ApiClient.convertToType(data['card_expiration_month'], 'Number');
+        obj.card_expiration_month = ApiClient.convertToType(data['card_expiration_month'], 'Number');
       if (data.hasOwnProperty('card_expiration_year'))
-        obj.cardExpirationYear = ApiClient.convertToType(data['card_expiration_year'], 'Number');
+        obj.card_expiration_year = ApiClient.convertToType(data['card_expiration_year'], 'Number');
       if (data.hasOwnProperty('card_number'))
-        obj.cardNumber = ApiClient.convertToType(data['card_number'], 'String');
+        obj.card_number = ApiClient.convertToType(data['card_number'], 'String');
       if (data.hasOwnProperty('card_number_token'))
-        obj.cardNumberToken = ApiClient.convertToType(data['card_number_token'], 'String');
+        obj.card_number_token = ApiClient.convertToType(data['card_number_token'], 'String');
       if (data.hasOwnProperty('card_type'))
-        obj.cardType = ApiClient.convertToType(data['card_type'], 'String');
+        obj.card_type = ApiClient.convertToType(data['card_type'], 'String');
       if (data.hasOwnProperty('card_verification_number'))
-        obj.cardVerificationNumber = ApiClient.convertToType(data['card_verification_number'], 'String');
+        obj.card_verification_number = ApiClient.convertToType(data['card_verification_number'], 'String');
       if (data.hasOwnProperty('card_verification_number_token'))
-        obj.cardVerificationNumberToken = ApiClient.convertToType(data['card_verification_number_token'], 'String');
+        obj.card_verification_number_token = ApiClient.convertToType(data['card_verification_number_token'], 'String');
       if (data.hasOwnProperty('customer_profile_credit_card_id'))
-        obj.customerProfileCreditCardId = ApiClient.convertToType(data['customer_profile_credit_card_id'], 'Number');
+        obj.customer_profile_credit_card_id = ApiClient.convertToType(data['customer_profile_credit_card_id'], 'Number');
       if (data.hasOwnProperty('store_credit_card'))
-        obj.storeCreditCard = ApiClient.convertToType(data['store_credit_card'], 'Boolean');
+        obj.store_credit_card = ApiClient.convertToType(data['store_credit_card'], 'Boolean');
     }
     return obj;
   }
 
   /**
    * Card expiration month (1-12)
-   * @member {Number} cardExpirationMonth
+   * @member {Number} card_expiration_month
    */
-  exports.prototype.cardExpirationMonth = undefined;
+  exports.prototype.card_expiration_month = undefined;
 
   /**
    * Card expiration year (four digit year)
-   * @member {Number} cardExpirationYear
+   * @member {Number} card_expiration_year
    */
-  exports.prototype.cardExpirationYear = undefined;
+  exports.prototype.card_expiration_year = undefined;
 
   /**
    * Card number (masked to the last 4)
-   * @member {String} cardNumber
+   * @member {String} card_number
    */
-  exports.prototype.cardNumber = undefined;
+  exports.prototype.card_number = undefined;
 
   /**
    * Hosted field token for the card number
-   * @member {String} cardNumberToken
+   * @member {String} card_number_token
    */
-  exports.prototype.cardNumberToken = undefined;
+  exports.prototype.card_number_token = undefined;
 
   /**
    * Card type
-   * @member {String} cardType
+   * @member {String} card_type
    */
-  exports.prototype.cardType = undefined;
+  exports.prototype.card_type = undefined;
 
   /**
    * Card verification number (masked)
-   * @member {String} cardVerificationNumber
+   * @member {String} card_verification_number
    */
-  exports.prototype.cardVerificationNumber = undefined;
+  exports.prototype.card_verification_number = undefined;
 
   /**
    * Hosted field token for the card verification number
-   * @member {String} cardVerificationNumberToken
+   * @member {String} card_verification_number_token
    */
-  exports.prototype.cardVerificationNumberToken = undefined;
+  exports.prototype.card_verification_number_token = undefined;
 
   /**
    * ID of the stored credit card to use
-   * @member {Number} customerProfileCreditCardId
+   * @member {Number} customer_profile_credit_card_id
    */
-  exports.prototype.customerProfileCreditCardId = undefined;
+  exports.prototype.customer_profile_credit_card_id = undefined;
 
   /**
    * True if the customer wants to store the card on their profile for future re-use
-   * @member {Boolean} storeCreditCard
+   * @member {Boolean} store_credit_card
    */
-  exports.prototype.storeCreditCard = undefined;
+  exports.prototype.store_credit_card = undefined;
 
   return exports;
 

@@ -56,32 +56,32 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('cumulative_order_limit'))
-        obj.cumulativeOrderLimit = ApiClient.convertToType(data['cumulative_order_limit'], 'Number');
+        obj.cumulative_order_limit = ApiClient.convertToType(data['cumulative_order_limit'], 'Number');
       if (data.hasOwnProperty('individual_order_limit'))
-        obj.individualOrderLimit = ApiClient.convertToType(data['individual_order_limit'], 'Number');
+        obj.individual_order_limit = ApiClient.convertToType(data['individual_order_limit'], 'Number');
       if (data.hasOwnProperty('multiple_quantity'))
-        obj.multipleQuantity = ApiClient.convertToType(data['multiple_quantity'], 'Number');
+        obj.multiple_quantity = ApiClient.convertToType(data['multiple_quantity'], 'Number');
     }
     return obj;
   }
 
   /**
    * Cumulative order limit
-   * @member {Number} cumulativeOrderLimit
+   * @member {Number} cumulative_order_limit
    */
-  exports.prototype.cumulativeOrderLimit = undefined;
+  exports.prototype.cumulative_order_limit = undefined;
 
   /**
    * Individual order limit
-   * @member {Number} individualOrderLimit
+   * @member {Number} individual_order_limit
    */
-  exports.prototype.individualOrderLimit = undefined;
+  exports.prototype.individual_order_limit = undefined;
 
   /**
    * Multiple quantity
-   * @member {Number} multipleQuantity
+   * @member {Number} multiple_quantity
    */
-  exports.prototype.multipleQuantity = undefined;
+  exports.prototype.multiple_quantity = undefined;
 
   return exports;
 

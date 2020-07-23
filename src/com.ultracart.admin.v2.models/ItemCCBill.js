@@ -56,56 +56,56 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('ccbill_allowed_currencies'))
-        obj.ccbillAllowedCurrencies = ApiClient.convertToType(data['ccbill_allowed_currencies'], 'String');
+        obj.ccbill_allowed_currencies = ApiClient.convertToType(data['ccbill_allowed_currencies'], 'String');
       if (data.hasOwnProperty('ccbill_allowed_types'))
-        obj.ccbillAllowedTypes = ApiClient.convertToType(data['ccbill_allowed_types'], 'String');
+        obj.ccbill_allowed_types = ApiClient.convertToType(data['ccbill_allowed_types'], 'String');
       if (data.hasOwnProperty('ccbill_currency_code'))
-        obj.ccbillCurrencyCode = ApiClient.convertToType(data['ccbill_currency_code'], 'String');
+        obj.ccbill_currency_code = ApiClient.convertToType(data['ccbill_currency_code'], 'String');
       if (data.hasOwnProperty('ccbill_form_name'))
-        obj.ccbillFormName = ApiClient.convertToType(data['ccbill_form_name'], 'String');
+        obj.ccbill_form_name = ApiClient.convertToType(data['ccbill_form_name'], 'String');
       if (data.hasOwnProperty('ccbill_subaccount_id'))
-        obj.ccbillSubaccountId = ApiClient.convertToType(data['ccbill_subaccount_id'], 'String');
+        obj.ccbill_subaccount_id = ApiClient.convertToType(data['ccbill_subaccount_id'], 'String');
       if (data.hasOwnProperty('ccbill_subscription_type_id'))
-        obj.ccbillSubscriptionTypeId = ApiClient.convertToType(data['ccbill_subscription_type_id'], 'String');
+        obj.ccbill_subscription_type_id = ApiClient.convertToType(data['ccbill_subscription_type_id'], 'String');
     }
     return obj;
   }
 
   /**
    * Allowed currencies
-   * @member {String} ccbillAllowedCurrencies
+   * @member {String} ccbill_allowed_currencies
    */
-  exports.prototype.ccbillAllowedCurrencies = undefined;
+  exports.prototype.ccbill_allowed_currencies = undefined;
 
   /**
    * Allowed types
-   * @member {String} ccbillAllowedTypes
+   * @member {String} ccbill_allowed_types
    */
-  exports.prototype.ccbillAllowedTypes = undefined;
+  exports.prototype.ccbill_allowed_types = undefined;
 
   /**
    * Currency code
-   * @member {String} ccbillCurrencyCode
+   * @member {String} ccbill_currency_code
    */
-  exports.prototype.ccbillCurrencyCode = undefined;
+  exports.prototype.ccbill_currency_code = undefined;
 
   /**
    * Form name
-   * @member {String} ccbillFormName
+   * @member {String} ccbill_form_name
    */
-  exports.prototype.ccbillFormName = undefined;
+  exports.prototype.ccbill_form_name = undefined;
 
   /**
    * Sub-account id
-   * @member {String} ccbillSubaccountId
+   * @member {String} ccbill_subaccount_id
    */
-  exports.prototype.ccbillSubaccountId = undefined;
+  exports.prototype.ccbill_subaccount_id = undefined;
 
   /**
    * Subscription type id
-   * @member {String} ccbillSubscriptionTypeId
+   * @member {String} ccbill_subscription_type_id
    */
-  exports.prototype.ccbillSubscriptionTypeId = undefined;
+  exports.prototype.ccbill_subscription_type_id = undefined;
 
   return exports;
 

@@ -56,129 +56,129 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('active_customers'))
-        obj.activeCustomers = ApiClient.convertToType(data['active_customers'], 'Number');
+        obj.active_customers = ApiClient.convertToType(data['active_customers'], 'Number');
       if (data.hasOwnProperty('actual_customers'))
-        obj.actualCustomers = ApiClient.convertToType(data['actual_customers'], 'Number');
+        obj.actual_customers = ApiClient.convertToType(data['actual_customers'], 'Number');
       if (data.hasOwnProperty('bounce_count'))
-        obj.bounceCount = ApiClient.convertToType(data['bounce_count'], 'Number');
+        obj.bounce_count = ApiClient.convertToType(data['bounce_count'], 'Number');
       if (data.hasOwnProperty('bounce_percentage'))
-        obj.bouncePercentage = ApiClient.convertToType(data['bounce_percentage'], 'Number');
+        obj.bounce_percentage = ApiClient.convertToType(data['bounce_percentage'], 'Number');
       if (data.hasOwnProperty('bounce_percentage_formatted'))
-        obj.bouncePercentageFormatted = ApiClient.convertToType(data['bounce_percentage_formatted'], 'String');
+        obj.bounce_percentage_formatted = ApiClient.convertToType(data['bounce_percentage_formatted'], 'String');
       if (data.hasOwnProperty('customer_histogram'))
-        obj.customerHistogram = EmailPerformanceCustomerHistogram.constructFromObject(data['customer_histogram']);
+        obj.customer_histogram = EmailPerformanceCustomerHistogram.constructFromObject(data['customer_histogram']);
       if (data.hasOwnProperty('daily_stats'))
-        obj.dailyStats = ApiClient.convertToType(data['daily_stats'], [EmailPerformanceDaily]);
+        obj.daily_stats = ApiClient.convertToType(data['daily_stats'], [EmailPerformanceDaily]);
       if (data.hasOwnProperty('delivered_count'))
-        obj.deliveredCount = ApiClient.convertToType(data['delivered_count'], 'Number');
+        obj.delivered_count = ApiClient.convertToType(data['delivered_count'], 'Number');
       if (data.hasOwnProperty('max_active_customers'))
-        obj.maxActiveCustomers = ApiClient.convertToType(data['max_active_customers'], 'Number');
+        obj.max_active_customers = ApiClient.convertToType(data['max_active_customers'], 'Number');
       if (data.hasOwnProperty('max_emails_per_day'))
-        obj.maxEmailsPerDay = ApiClient.convertToType(data['max_emails_per_day'], 'Number');
+        obj.max_emails_per_day = ApiClient.convertToType(data['max_emails_per_day'], 'Number');
       if (data.hasOwnProperty('max_emails_per_hour'))
-        obj.maxEmailsPerHour = ApiClient.convertToType(data['max_emails_per_hour'], 'Number');
+        obj.max_emails_per_hour = ApiClient.convertToType(data['max_emails_per_hour'], 'Number');
       if (data.hasOwnProperty('max_emails_per_month'))
-        obj.maxEmailsPerMonth = ApiClient.convertToType(data['max_emails_per_month'], 'Number');
+        obj.max_emails_per_month = ApiClient.convertToType(data['max_emails_per_month'], 'Number');
       if (data.hasOwnProperty('paused_for_spam'))
-        obj.pausedForSpam = ApiClient.convertToType(data['paused_for_spam'], 'Boolean');
+        obj.paused_for_spam = ApiClient.convertToType(data['paused_for_spam'], 'Boolean');
       if (data.hasOwnProperty('revenue'))
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('sent_emails_per_day'))
-        obj.sentEmailsPerDay = ApiClient.convertToType(data['sent_emails_per_day'], 'Number');
+        obj.sent_emails_per_day = ApiClient.convertToType(data['sent_emails_per_day'], 'Number');
       if (data.hasOwnProperty('sent_emails_per_hour'))
-        obj.sentEmailsPerHour = ApiClient.convertToType(data['sent_emails_per_hour'], 'Number');
+        obj.sent_emails_per_hour = ApiClient.convertToType(data['sent_emails_per_hour'], 'Number');
       if (data.hasOwnProperty('sent_emails_per_month'))
-        obj.sentEmailsPerMonth = ApiClient.convertToType(data['sent_emails_per_month'], 'Number');
+        obj.sent_emails_per_month = ApiClient.convertToType(data['sent_emails_per_month'], 'Number');
       if (data.hasOwnProperty('sequence_send_count'))
-        obj.sequenceSendCount = ApiClient.convertToType(data['sequence_send_count'], 'Number');
+        obj.sequence_send_count = ApiClient.convertToType(data['sequence_send_count'], 'Number');
       if (data.hasOwnProperty('spam_count'))
-        obj.spamCount = ApiClient.convertToType(data['spam_count'], 'Number');
+        obj.spam_count = ApiClient.convertToType(data['spam_count'], 'Number');
       if (data.hasOwnProperty('spam_percentage'))
-        obj.spamPercentage = ApiClient.convertToType(data['spam_percentage'], 'Number');
+        obj.spam_percentage = ApiClient.convertToType(data['spam_percentage'], 'Number');
       if (data.hasOwnProperty('spam_percentage_formatted'))
-        obj.spamPercentageFormatted = ApiClient.convertToType(data['spam_percentage_formatted'], 'String');
+        obj.spam_percentage_formatted = ApiClient.convertToType(data['spam_percentage_formatted'], 'String');
       if (data.hasOwnProperty('transactional_send_count'))
-        obj.transactionalSendCount = ApiClient.convertToType(data['transactional_send_count'], 'Number');
+        obj.transactional_send_count = ApiClient.convertToType(data['transactional_send_count'], 'Number');
     }
     return obj;
   }
 
   /**
    * Active customers.  The value will be -1 if calculation is pending.
-   * @member {Number} activeCustomers
+   * @member {Number} active_customers
    */
-  exports.prototype.activeCustomers = undefined;
+  exports.prototype.active_customers = undefined;
 
   /**
    * Actual customers that they have regardless of active state.  The value will be -1 if calculation is pending.
-   * @member {Number} actualCustomers
+   * @member {Number} actual_customers
    */
-  exports.prototype.actualCustomers = undefined;
+  exports.prototype.actual_customers = undefined;
 
   /**
    * Bounce count
-   * @member {Number} bounceCount
+   * @member {Number} bounce_count
    */
-  exports.prototype.bounceCount = undefined;
+  exports.prototype.bounce_count = undefined;
 
   /**
    * bounce percentage rate based upon our look back window.  This should be under five percent or the account will be paused for sending.
-   * @member {Number} bouncePercentage
+   * @member {Number} bounce_percentage
    */
-  exports.prototype.bouncePercentage = undefined;
+  exports.prototype.bounce_percentage = undefined;
 
   /**
    * bounce percentage rate (formatted) based upon our look back window.  This should be under five percent or the account will be paused for sending.
-   * @member {String} bouncePercentageFormatted
+   * @member {String} bounce_percentage_formatted
    */
-  exports.prototype.bouncePercentageFormatted = undefined;
+  exports.prototype.bounce_percentage_formatted = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogram} customerHistogram
+   * @member {module:com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogram} customer_histogram
    */
-  exports.prototype.customerHistogram = undefined;
+  exports.prototype.customer_histogram = undefined;
 
   /**
    * Daily statistics used for charting
-   * @member {Array.<module:com.ultracart.admin.v2.models/EmailPerformanceDaily>} dailyStats
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailPerformanceDaily>} daily_stats
    */
-  exports.prototype.dailyStats = undefined;
+  exports.prototype.daily_stats = undefined;
 
   /**
    * Delivered count
-   * @member {Number} deliveredCount
+   * @member {Number} delivered_count
    */
-  exports.prototype.deliveredCount = undefined;
+  exports.prototype.delivered_count = undefined;
 
   /**
    * Maximum active customers allowed under their billing plan
-   * @member {Number} maxActiveCustomers
+   * @member {Number} max_active_customers
    */
-  exports.prototype.maxActiveCustomers = undefined;
+  exports.prototype.max_active_customers = undefined;
 
   /**
    * Max emails per day
-   * @member {Number} maxEmailsPerDay
+   * @member {Number} max_emails_per_day
    */
-  exports.prototype.maxEmailsPerDay = undefined;
+  exports.prototype.max_emails_per_day = undefined;
 
   /**
    * Max emails per hour
-   * @member {Number} maxEmailsPerHour
+   * @member {Number} max_emails_per_hour
    */
-  exports.prototype.maxEmailsPerHour = undefined;
+  exports.prototype.max_emails_per_hour = undefined;
 
   /**
    * Max emails per month
-   * @member {Number} maxEmailsPerMonth
+   * @member {Number} max_emails_per_month
    */
-  exports.prototype.maxEmailsPerMonth = undefined;
+  exports.prototype.max_emails_per_month = undefined;
 
   /**
    * True if campaign/flow emails are paused due to spam complaints.
-   * @member {Boolean} pausedForSpam
+   * @member {Boolean} paused_for_spam
    */
-  exports.prototype.pausedForSpam = undefined;
+  exports.prototype.paused_for_spam = undefined;
 
   /**
    * Revenue
@@ -188,51 +188,51 @@
 
   /**
    * Sent emails last 24 hours
-   * @member {Number} sentEmailsPerDay
+   * @member {Number} sent_emails_per_day
    */
-  exports.prototype.sentEmailsPerDay = undefined;
+  exports.prototype.sent_emails_per_day = undefined;
 
   /**
    * Sent emails last hour
-   * @member {Number} sentEmailsPerHour
+   * @member {Number} sent_emails_per_hour
    */
-  exports.prototype.sentEmailsPerHour = undefined;
+  exports.prototype.sent_emails_per_hour = undefined;
 
   /**
    * Sent emails last 31 days
-   * @member {Number} sentEmailsPerMonth
+   * @member {Number} sent_emails_per_month
    */
-  exports.prototype.sentEmailsPerMonth = undefined;
+  exports.prototype.sent_emails_per_month = undefined;
 
   /**
    * Total sequence (campaign/flow) emails sent
-   * @member {Number} sequenceSendCount
+   * @member {Number} sequence_send_count
    */
-  exports.prototype.sequenceSendCount = undefined;
+  exports.prototype.sequence_send_count = undefined;
 
   /**
    * Spam complaints
-   * @member {Number} spamCount
+   * @member {Number} spam_count
    */
-  exports.prototype.spamCount = undefined;
+  exports.prototype.spam_count = undefined;
 
   /**
    * Spam percentage rate based upon our look back window.  This should be under one half a percent or the account will be paused for sending.
-   * @member {Number} spamPercentage
+   * @member {Number} spam_percentage
    */
-  exports.prototype.spamPercentage = undefined;
+  exports.prototype.spam_percentage = undefined;
 
   /**
    * Spam percentage rate (formatted) based upon our look back window.  This should be under one half a percent or the account will be paused for sending.
-   * @member {String} spamPercentageFormatted
+   * @member {String} spam_percentage_formatted
    */
-  exports.prototype.spamPercentageFormatted = undefined;
+  exports.prototype.spam_percentage_formatted = undefined;
 
   /**
    * Total transactions emails sent
-   * @member {Number} transactionalSendCount
+   * @member {Number} transactional_send_count
    */
-  exports.prototype.transactionalSendCount = undefined;
+  exports.prototype.transactional_send_count = undefined;
 
   return exports;
 

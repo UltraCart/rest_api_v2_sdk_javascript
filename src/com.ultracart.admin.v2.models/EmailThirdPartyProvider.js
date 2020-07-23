@@ -56,13 +56,13 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('connect_url'))
-        obj.connectUrl = ApiClient.convertToType(data['connect_url'], 'String');
+        obj.connect_url = ApiClient.convertToType(data['connect_url'], 'String');
       if (data.hasOwnProperty('list_count'))
-        obj.listCount = ApiClient.convertToType(data['list_count'], 'Number');
+        obj.list_count = ApiClient.convertToType(data['list_count'], 'Number');
       if (data.hasOwnProperty('lists'))
         obj.lists = ApiClient.convertToType(data['lists'], [EmailThirdPartyList]);
       if (data.hasOwnProperty('logo_url'))
-        obj.logoUrl = ApiClient.convertToType(data['logo_url'], 'String');
+        obj.logo_url = ApiClient.convertToType(data['logo_url'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
     }
@@ -71,15 +71,15 @@
 
   /**
    * URL to the settings screen to connect.  Null if the provider is already connected.
-   * @member {String} connectUrl
+   * @member {String} connect_url
    */
-  exports.prototype.connectUrl = undefined;
+  exports.prototype.connect_url = undefined;
 
   /**
    * list_count
-   * @member {Number} listCount
+   * @member {Number} list_count
    */
-  exports.prototype.listCount = undefined;
+  exports.prototype.list_count = undefined;
 
   /**
    * lists
@@ -89,9 +89,9 @@
 
   /**
    * logo_url
-   * @member {String} logoUrl
+   * @member {String} logo_url
    */
-  exports.prototype.logoUrl = undefined;
+  exports.prototype.logo_url = undefined;
 
   /**
    * name

@@ -56,48 +56,48 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('paypal_button_alt_text'))
-        obj.paypalButtonAltText = ApiClient.convertToType(data['paypal_button_alt_text'], 'String');
+        obj.paypal_button_alt_text = ApiClient.convertToType(data['paypal_button_alt_text'], 'String');
       if (data.hasOwnProperty('paypal_button_url'))
-        obj.paypalButtonUrl = ApiClient.convertToType(data['paypal_button_url'], 'String');
+        obj.paypal_button_url = ApiClient.convertToType(data['paypal_button_url'], 'String');
       if (data.hasOwnProperty('paypal_credit_button_url'))
-        obj.paypalCreditButtonUrl = ApiClient.convertToType(data['paypal_credit_button_url'], 'String');
+        obj.paypal_credit_button_url = ApiClient.convertToType(data['paypal_credit_button_url'], 'String');
       if (data.hasOwnProperty('paypal_credit_legal_image_url'))
-        obj.paypalCreditLegalImageUrl = ApiClient.convertToType(data['paypal_credit_legal_image_url'], 'String');
+        obj.paypal_credit_legal_image_url = ApiClient.convertToType(data['paypal_credit_legal_image_url'], 'String');
       if (data.hasOwnProperty('paypal_credit_legal_url'))
-        obj.paypalCreditLegalUrl = ApiClient.convertToType(data['paypal_credit_legal_url'], 'String');
+        obj.paypal_credit_legal_url = ApiClient.convertToType(data['paypal_credit_legal_url'], 'String');
     }
     return obj;
   }
 
   /**
    * PayPal button alt text
-   * @member {String} paypalButtonAltText
+   * @member {String} paypal_button_alt_text
    */
-  exports.prototype.paypalButtonAltText = undefined;
+  exports.prototype.paypal_button_alt_text = undefined;
 
   /**
    * PayPal button URL
-   * @member {String} paypalButtonUrl
+   * @member {String} paypal_button_url
    */
-  exports.prototype.paypalButtonUrl = undefined;
+  exports.prototype.paypal_button_url = undefined;
 
   /**
    * PayPal Credit button URL
-   * @member {String} paypalCreditButtonUrl
+   * @member {String} paypal_credit_button_url
    */
-  exports.prototype.paypalCreditButtonUrl = undefined;
+  exports.prototype.paypal_credit_button_url = undefined;
 
   /**
    * PayPal Credit legal image URL
-   * @member {String} paypalCreditLegalImageUrl
+   * @member {String} paypal_credit_legal_image_url
    */
-  exports.prototype.paypalCreditLegalImageUrl = undefined;
+  exports.prototype.paypal_credit_legal_image_url = undefined;
 
   /**
    * PayPal Credit legal URL
-   * @member {String} paypalCreditLegalUrl
+   * @member {String} paypal_credit_legal_url
    */
-  exports.prototype.paypalCreditLegalUrl = undefined;
+  exports.prototype.paypal_credit_legal_url = undefined;
 
   return exports;
 

@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('cjson'))
         obj.cjson = ApiClient.convertToType(data['cjson'], 'String');
       if (data.hasOwnProperty('content_type'))
-        obj.contentType = ApiClient.convertToType(data['content_type'], 'String');
+        obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
-        obj.storefrontOid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
       if (data.hasOwnProperty('uuid'))
@@ -77,15 +77,15 @@
 
   /**
    * flow, campaign, cjson, or upsell
-   * @member {String} contentType
+   * @member {String} content_type
    */
-  exports.prototype.contentType = undefined;
+  exports.prototype.content_type = undefined;
 
   /**
    * StoreFront oid where content originates necessary for tracking down relative assets
-   * @member {Number} storefrontOid
+   * @member {Number} storefront_oid
    */
-  exports.prototype.storefrontOid = undefined;
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * title of library item, usually the name of the flow or campaign, or description of cjson

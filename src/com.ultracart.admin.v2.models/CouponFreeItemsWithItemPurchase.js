@@ -56,30 +56,30 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('free_item'))
-        obj.freeItem = ApiClient.convertToType(data['free_item'], 'String');
+        obj.free_item = ApiClient.convertToType(data['free_item'], 'String');
       if (data.hasOwnProperty('free_quantity'))
-        obj.freeQuantity = ApiClient.convertToType(data['free_quantity'], 'Number');
+        obj.free_quantity = ApiClient.convertToType(data['free_quantity'], 'Number');
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
       if (data.hasOwnProperty('required_purchase_item'))
-        obj.requiredPurchaseItem = ApiClient.convertToType(data['required_purchase_item'], 'String');
+        obj.required_purchase_item = ApiClient.convertToType(data['required_purchase_item'], 'String');
       if (data.hasOwnProperty('required_purchase_quantity'))
-        obj.requiredPurchaseQuantity = ApiClient.convertToType(data['required_purchase_quantity'], 'Number');
+        obj.required_purchase_quantity = ApiClient.convertToType(data['required_purchase_quantity'], 'Number');
     }
     return obj;
   }
 
   /**
    * The item id of the free item that will be received when the required mix and match group quantity is purchased.
-   * @member {String} freeItem
+   * @member {String} free_item
    */
-  exports.prototype.freeItem = undefined;
+  exports.prototype.free_item = undefined;
 
   /**
    * The quantity of free item that will be received.
-   * @member {Number} freeQuantity
+   * @member {Number} free_quantity
    */
-  exports.prototype.freeQuantity = undefined;
+  exports.prototype.free_quantity = undefined;
 
   /**
    * The limit of free items that may be received when purchasing multiple items
@@ -89,15 +89,15 @@
 
   /**
    * Required item that must be purchased for coupon to be valid
-   * @member {String} requiredPurchaseItem
+   * @member {String} required_purchase_item
    */
-  exports.prototype.requiredPurchaseItem = undefined;
+  exports.prototype.required_purchase_item = undefined;
 
   /**
    * Required quantity of mix and match group items that must be purchased for coupon to be valid
-   * @member {Number} requiredPurchaseQuantity
+   * @member {Number} required_purchase_quantity
    */
-  exports.prototype.requiredPurchaseQuantity = undefined;
+  exports.prototype.required_purchase_quantity = undefined;
 
   return exports;
 

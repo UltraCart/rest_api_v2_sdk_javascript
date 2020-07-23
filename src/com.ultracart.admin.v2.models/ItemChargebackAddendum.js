@@ -56,11 +56,11 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('chargeback_addendum_oid'))
-        obj.chargebackAddendumOid = ApiClient.convertToType(data['chargeback_addendum_oid'], 'Number');
+        obj.chargeback_addendum_oid = ApiClient.convertToType(data['chargeback_addendum_oid'], 'Number');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('file_size'))
-        obj.fileSize = ApiClient.convertToType(data['file_size'], 'Number');
+        obj.file_size = ApiClient.convertToType(data['file_size'], 'Number');
       if (data.hasOwnProperty('pages'))
         obj.pages = ApiClient.convertToType(data['pages'], 'Number');
     }
@@ -69,9 +69,9 @@
 
   /**
    * Chargeback addendum object identifier
-   * @member {Number} chargebackAddendumOid
+   * @member {Number} chargeback_addendum_oid
    */
-  exports.prototype.chargebackAddendumOid = undefined;
+  exports.prototype.chargeback_addendum_oid = undefined;
 
   /**
    * Description
@@ -81,9 +81,9 @@
 
   /**
    * Size of the file
-   * @member {Number} fileSize
+   * @member {Number} file_size
    */
-  exports.prototype.fileSize = undefined;
+  exports.prototype.file_size = undefined;
 
   /**
    * Number of pages
