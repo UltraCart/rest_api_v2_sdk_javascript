@@ -23,11 +23,11 @@ Name | Type | Description | Notes
 ## Enum: CustomHtmlApprovalStatusEnum
 
 
-* `Pending` (value: `"Pending"`)
+* `pending` (value: `"Pending"`)
 
-* `Approved` (value: `"Approved"`)
+* `approved` (value: `"Approved"`)
 
-* `Rejected` (value: `"Rejected"`)
+* `rejected` (value: `"Rejected"`)
 
 
 
@@ -36,11 +36,11 @@ Name | Type | Description | Notes
 ## Enum: InvisibleLinkApprovalStatusEnum
 
 
-* `Pending` (value: `"Pending"`)
+* `pending` (value: `"Pending"`)
 
-* `Approved` (value: `"Approved"`)
+* `approved` (value: `"Approved"`)
 
-* `Rejected` (value: `"Rejected"`)
+* `rejected` (value: `"Rejected"`)
 
 
 

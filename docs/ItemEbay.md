@@ -70,7 +70,7 @@ Name | Type | Description | Notes
 **reserve_price** | **Number** | Reserve price | [optional] 
 **send_dimensions_and_weight** | **String** | How to send the item dimensions and weights to e-Bay | [optional] 
 **start_time** | **String** | Date/time of the auction start | [optional] 
-**status** | **String** | Status of the item&#39;s listing | [optional] 
+**status** | **String** | Status of the item's listing | [optional] 
 **target_dispatch_time_max** | **Number** | Typical number of days it will take to ship the item | [optional] 
 
 

@@ -17,11 +17,11 @@ Name | Type | Description | Notes
 
 * `AMEX` (value: `"AMEX"`)
 
-* `Diners Club` (value: `"Diners Club"`)
+* `dinersClub` (value: `"Diners Club"`)
 
-* `Discover` (value: `"Discover"`)
+* `discover` (value: `"Discover"`)
 
-* `MasterCard` (value: `"MasterCard"`)
+* `masterCard` (value: `"MasterCard"`)
 
 * `JCB` (value: `"JCB"`)
 

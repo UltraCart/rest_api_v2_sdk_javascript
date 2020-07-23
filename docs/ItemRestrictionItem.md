@@ -12,11 +12,11 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `can not be purchased with` (value: `"can not be purchased with"`)
+* `canNotBePurchasedWith` (value: `"can not be purchased with"`)
 
-* `can only be purchased with` (value: `"can only be purchased with"`)
+* `canOnlyBePurchasedWith` (value: `"can only be purchased with"`)
 
-* `must be purchased with` (value: `"must be purchased with"`)
+* `mustBePurchasedWith` (value: `"must be purchased with"`)
 
 
 

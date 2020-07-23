@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **paypal_maximum_upsell_revenue** | **Number** | The maximum amount of revenue that you think the customer could add during a custom upsell after sequence on your checkout. | [optional] 
 **paypal_return_url** | **String** | The URl to return the customers browser to after they have completed the PayPal process. | [optional] 
 **secure_host_name** | **String** | The desired secure host name to perform the handoff on.  This should match the desired StoreFront. | [optional] 
-**ucacid** | **String** | The UltraCart Analytics cookie value.  Populate this if you&#39;re handing off from a different domain than the checkout. | [optional] 
+**ucacid** | **String** | The UltraCart Analytics cookie value.  Populate this if you're handing off from a different domain than the checkout. | [optional] 
 
 
 <a name="OperationEnum"></a>

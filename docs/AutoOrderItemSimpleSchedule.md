@@ -12,31 +12,31 @@ Name | Type | Description | Notes
 ## Enum: FrequencyEnum
 
 
-* `Weekly` (value: `"Weekly"`)
+* `weekly` (value: `"Weekly"`)
 
-* `Biweekly` (value: `"Biweekly"`)
+* `biweekly` (value: `"Biweekly"`)
 
-* `Every...` (value: `"Every..."`)
+* `every_` (value: `"Every..."`)
 
-* `Every 10 Days` (value: `"Every 10 Days"`)
+* `every10Days` (value: `"Every 10 Days"`)
 
-* `Every 24 Days` (value: `"Every 24 Days"`)
+* `every24Days` (value: `"Every 24 Days"`)
 
-* `Every 28 Days` (value: `"Every 28 Days"`)
+* `every28Days` (value: `"Every 28 Days"`)
 
-* `Monthly` (value: `"Monthly"`)
+* `monthly` (value: `"Monthly"`)
 
-* `Every 45 Days` (value: `"Every 45 Days"`)
+* `every45Days` (value: `"Every 45 Days"`)
 
-* `Every 2 Months` (value: `"Every 2 Months"`)
+* `every2Months` (value: `"Every 2 Months"`)
 
-* `Every 3 Months` (value: `"Every 3 Months"`)
+* `every3Months` (value: `"Every 3 Months"`)
 
-* `Every 4 Months` (value: `"Every 4 Months"`)
+* `every4Months` (value: `"Every 4 Months"`)
 
-* `Every 6 Months` (value: `"Every 6 Months"`)
+* `every6Months` (value: `"Every 6 Months"`)
 
-* `Yearly` (value: `"Yearly"`)
+* `yearly` (value: `"Yearly"`)
 
 
 

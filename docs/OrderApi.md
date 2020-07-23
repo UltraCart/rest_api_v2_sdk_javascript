@@ -332,8 +332,8 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.OrderApi();
 
 var opts = { 
-  'from': "from_example", // String | null
-  'to': "to_example" // String | null
+  'from': "from_example", // String | 
+  'to': "to_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -350,8 +350,8 @@ apiInstance.getAccountsReceivableRetryStats(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **from** | **String**| null | [optional] 
- **to** | **String**| null | [optional] 
+ **from** | **String**|  | [optional] 
+ **to** | **String**|  | [optional] 
 
 ### Return type
 
@@ -526,7 +526,7 @@ var opts = {
   'phone': "phone_example", // String | Phone
   'email': "email_example", // String | Email
   'ccEmail': "ccEmail_example", // String | CC Email
-  'total': 3.4, // Number | Total
+  'total': 8.14, // Number | Total
   'screenBrandingThemeCode': "screenBrandingThemeCode_example", // String | Screen Branding Theme Code
   'storefrontHostName': "storefrontHostName_example", // String | StoreFront Host Name
   'creationDateBegin': "creationDateBegin_example", // String | Creation Date Begin
@@ -541,9 +541,9 @@ var opts = {
   'currentStage': "currentStage_example", // String | Current Stage
   'channelPartnerCode': "channelPartnerCode_example", // String | Channel Partner Code
   'channelPartnerOrderId': "channelPartnerOrderId_example", // String | Channel Partner Order ID
-  'customerProfileOid': 56, // Number | null
-  'refundDateBegin': "refundDateBegin_example", // String | null
-  'refundDateEnd': "refundDateEnd_example", // String | null
+  'customerProfileOid': 56, // Number | 
+  'refundDateBegin': "refundDateBegin_example", // String | 
+  'refundDateEnd': "refundDateEnd_example", // String | 
   'limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
   'offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   'sort': "sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -591,9 +591,9 @@ Name | Type | Description  | Notes
  **currentStage** | **String**| Current Stage | [optional] 
  **channelPartnerCode** | **String**| Channel Partner Code | [optional] 
  **channelPartnerOrderId** | **String**| Channel Partner Order ID | [optional] 
- **customerProfileOid** | **Number**| null | [optional] 
- **refundDateBegin** | **String**| null | [optional] 
- **refundDateEnd** | **String**| null | [optional] 
+ **customerProfileOid** | **Number**|  | [optional] 
+ **refundDateBegin** | **String**|  | [optional] 
+ **refundDateEnd** | **String**|  | [optional] 
  **limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
  **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 

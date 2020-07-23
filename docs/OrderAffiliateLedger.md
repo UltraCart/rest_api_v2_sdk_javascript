@@ -18,17 +18,17 @@ Name | Type | Description | Notes
 ## Enum: TransactionStateEnum
 
 
-* `Pending` (value: `"Pending"`)
+* `pending` (value: `"Pending"`)
 
-* `Posted` (value: `"Posted"`)
+* `posted` (value: `"Posted"`)
 
-* `Approved` (value: `"Approved"`)
+* `approved` (value: `"Approved"`)
 
-* `Paid` (value: `"Paid"`)
+* `paid` (value: `"Paid"`)
 
-* `Rejected` (value: `"Rejected"`)
+* `rejected` (value: `"Rejected"`)
 
-* `Partially Paid` (value: `"Partially Paid"`)
+* `partiallyPaid` (value: `"Partially Paid"`)
 
 
 

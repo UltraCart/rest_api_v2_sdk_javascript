@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **checkout** | [**OrderCheckout**](OrderCheckout.md) |  | [optional] 
 **coupons** | [**[OrderCoupon]**](OrderCoupon.md) | Coupons | [optional] 
 **creation_dts** | **String** | Date/time that the order was created | [optional] 
-**currency_code** | **String** | Currency code that the customer used if different than the merchant&#39;s base currency code | [optional] 
+**currency_code** | **String** | Currency code that the customer used if different than the merchant's base currency code | [optional] 
 **current_stage** | **String** | Current stage that the order is in. | [optional] 
 **customer_profile** | [**Customer**](Customer.md) |  | [optional] 
 **digital_order** | [**OrderDigitalOrder**](OrderDigitalOrder.md) |  | [optional] 
@@ -43,25 +43,25 @@ Name | Type | Description | Notes
 ## Enum: CurrentStageEnum
 
 
-* `Accounts Receivable` (value: `"Accounts Receivable"`)
+* `accountsReceivable` (value: `"Accounts Receivable"`)
 
-* `Pending Clearance` (value: `"Pending Clearance"`)
+* `pendingClearance` (value: `"Pending Clearance"`)
 
-* `Fraud Review` (value: `"Fraud Review"`)
+* `fraudReview` (value: `"Fraud Review"`)
 
-* `Rejected` (value: `"Rejected"`)
+* `rejected` (value: `"Rejected"`)
 
-* `Shipping Department` (value: `"Shipping Department"`)
+* `shippingDepartment` (value: `"Shipping Department"`)
 
-* `Completed Order` (value: `"Completed Order"`)
+* `completedOrder` (value: `"Completed Order"`)
 
-* `Quote Request` (value: `"Quote Request"`)
+* `quoteRequest` (value: `"Quote Request"`)
 
-* `Quote Sent` (value: `"Quote Sent"`)
+* `quoteSent` (value: `"Quote Sent"`)
 
-* `Least Cost Routing` (value: `"Least Cost Routing"`)
+* `leastCostRouting` (value: `"Least Cost Routing"`)
 
-* `Unknown` (value: `"Unknown"`)
+* `unknown` (value: `"Unknown"`)
 
 
 

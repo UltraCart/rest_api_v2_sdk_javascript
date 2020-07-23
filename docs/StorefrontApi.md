@@ -72,6 +72,7 @@ Method | HTTP request | Description
 [**getExperiments**](StorefrontApi.md#getExperiments) | **GET** /storefront/{storefront_oid}/experiments | Get experiments
 [**getHistogramPropertyNames**](StorefrontApi.md#getHistogramPropertyNames) | **GET** /storefront/{storefront_oid}/email/histogram/property_names | Get histogram property names
 [**getHistogramPropertyValues**](StorefrontApi.md#getHistogramPropertyValues) | **GET** /storefront/{storefront_oid}/email/histogram/property_values | Get histogram property values
+[**getLibraryItem**](StorefrontApi.md#getLibraryItem) | **GET** /storefront/code_library/{library_item_oid} | Get library item.
 [**getLibraryItemsByQuery**](StorefrontApi.md#getLibraryItemsByQuery) | **POST** /storefront/code_library/query | Retrieve library items
 [**getTransactionEmail**](StorefrontApi.md#getTransactionEmail) | **GET** /storefront/{id}/transaction_email/list/{email_id} | Gets a transaction email object
 [**getTransactionEmailList**](StorefrontApi.md#getTransactionEmailList) | **GET** /storefront/{id}/transaction_email/list | Gets a list of transaction email names
@@ -200,9 +201,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | null
+var libraryItemOid = 56; // Number | 
 
-var storefrontOid = 56; // Number | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -219,8 +220,8 @@ apiInstance.applyToStoreFront(libraryItemOid, storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**| null | 
- **storefrontOid** | **Number**| null | 
+ **libraryItemOid** | **Number**|  | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -264,9 +265,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -283,8 +284,8 @@ apiInstance.archiveEmailList(storefrontOid, emailListUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
 
 ### Return type
 
@@ -328,9 +329,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -347,8 +348,8 @@ apiInstance.archiveEmailSegment(storefrontOid, emailSegmentUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
 
 ### Return type
 
@@ -392,9 +393,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | null
+var emailFlowUuid = "emailFlowUuid_example"; // String | 
 
 var backPopulateRequest = new UltraCartRestApiV2.EmailFlowBackPopulateRequest(); // EmailFlowBackPopulateRequest | The request to back populate
 
@@ -413,8 +414,8 @@ apiInstance.backPopulateEmailFlow(storefrontOid, emailFlowUuid, backPopulateRequ
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailFlowUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailFlowUuid** | **String**|  | 
  **backPopulateRequest** | [**EmailFlowBackPopulateRequest**](EmailFlowBackPopulateRequest.md)| The request to back populate | 
 
 ### Return type
@@ -459,11 +460,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
-var emailSegmentRebuildUuid = "emailSegmentRebuildUuid_example"; // String | null
+var emailSegmentRebuildUuid = "emailSegmentRebuildUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -480,9 +481,9 @@ apiInstance.checkDownloadEmailSegment(storefrontOid, emailSegmentUuid, emailSegm
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
- **emailSegmentRebuildUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
+ **emailSegmentRebuildUuid** | **String**|  | 
 
 ### Return type
 
@@ -526,12 +527,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | null
+var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
 
 var opts = { 
-  'targetStorefrontOid': "targetStorefrontOid_example" // String | null
+  'targetStorefrontOid': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -548,9 +549,9 @@ apiInstance.cloneEmailCampaign(storefrontOid, emailCampaignUuid, opts, callback)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailCampaignUuid** | **String**| null | 
- **targetStorefrontOid** | **String**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **emailCampaignUuid** | **String**|  | 
+ **targetStorefrontOid** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -594,12 +595,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | null
+var emailFlowUuid = "emailFlowUuid_example"; // String | 
 
 var opts = { 
-  'targetStorefrontOid': "targetStorefrontOid_example" // String | null
+  'targetStorefrontOid': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -616,9 +617,9 @@ apiInstance.cloneEmailFlow(storefrontOid, emailFlowUuid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailFlowUuid** | **String**| null | 
- **targetStorefrontOid** | **String**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **emailFlowUuid** | **String**|  | 
+ **targetStorefrontOid** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -662,10 +663,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | null
+var libraryItemOid = 56; // Number | 
 
 var opts = { 
-  'storefrontOid': 56 // Number | null
+  'storefrontOid': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -682,8 +683,8 @@ apiInstance.cloneLibraryItem(libraryItemOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**| null | 
- **storefrontOid** | **Number**| null | [optional] 
+ **libraryItemOid** | **Number**|  | 
+ **storefrontOid** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -727,7 +728,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var domain = "domain_example"; // String | null
+var domain = "domain_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -744,7 +745,7 @@ apiInstance.createEmailSendingDomain(domain, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **String**| null | 
+ **domain** | **String**|  | 
 
 ### Return type
 
@@ -788,9 +789,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -807,8 +808,8 @@ apiInstance.deleteEmailCommseqStat(storefrontOid, commseqUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
 
 ### Return type
 
@@ -852,9 +853,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -871,8 +872,8 @@ apiInstance.deleteEmailEmail(storefrontOid, commseqEmailUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqEmailUuid** | **String**|  | 
 
 ### Return type
 
@@ -916,11 +917,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | null
+var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -937,9 +938,9 @@ apiInstance.deleteEmailListCustomer(storefrontOid, emailListUuid, emailCustomerU
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
- **emailCustomerUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
+ **emailCustomerUuid** | **String**|  | 
 
 ### Return type
 
@@ -983,9 +984,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | null
+var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1002,8 +1003,8 @@ apiInstance.deleteEmailPostcard(storefrontOid, commseqPostcardUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqPostcardUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqPostcardUuid** | **String**|  | 
 
 ### Return type
 
@@ -1047,7 +1048,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var domain = "domain_example"; // String | null
+var domain = "domain_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1064,7 +1065,7 @@ apiInstance.deleteEmailSendingDomain(domain, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **String**| null | 
+ **domain** | **String**|  | 
 
 ### Return type
 
@@ -1108,9 +1109,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var storefrontExperimentOid = 56; // Number | null
+var storefrontExperimentOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1127,8 +1128,8 @@ apiInstance.deleteExperiment(storefrontOid, storefrontExperimentOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **storefrontExperimentOid** | **Number**| null | 
+ **storefrontOid** | **Number**|  | 
+ **storefrontExperimentOid** | **Number**|  | 
 
 ### Return type
 
@@ -1172,7 +1173,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | null
+var libraryItemOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1189,7 +1190,7 @@ apiInstance.deleteLibraryItem(libraryItemOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**| null | 
+ **libraryItemOid** | **Number**|  | 
 
 ### Return type
 
@@ -1233,7 +1234,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | null
+var libraryItemOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1250,7 +1251,7 @@ apiInstance.duplicateLibraryItem(libraryItemOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**| null | 
+ **libraryItemOid** | **Number**|  | 
 
 ### Return type
 
@@ -1294,7 +1295,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var geocodeRequest = new UltraCartRestApiV2.GeocodeRequest(); // GeocodeRequest | geocode request
 
@@ -1313,7 +1314,7 @@ apiInstance.geocodeAddress(storefrontOid, geocodeRequest, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **geocodeRequest** | [**GeocodeRequest**](GeocodeRequest.md)| geocode request | 
 
 ### Return type
@@ -1360,7 +1361,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1377,7 +1378,7 @@ apiInstance.getCountries(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -1423,7 +1424,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | null
+var id = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1440,7 +1441,7 @@ apiInstance.getEditorToken(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| null | 
+ **id** | **Number**|  | 
 
 ### Return type
 
@@ -1484,7 +1485,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1501,7 +1502,7 @@ apiInstance.getEmailBaseTemplates(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -1545,9 +1546,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | null
+var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1564,8 +1565,8 @@ apiInstance.getEmailCampaign(storefrontOid, emailCampaignUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailCampaignUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailCampaignUuid** | **String**|  | 
 
 ### Return type
 
@@ -1609,7 +1610,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -1626,7 +1627,7 @@ apiInstance.getEmailCampaigns(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -1670,9 +1671,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var statDays = "statDays_example"; // String | null
+var statDays = "statDays_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1689,8 +1690,8 @@ apiInstance.getEmailCampaignsWithStats(storefrontOid, statDays, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **statDays** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **statDays** | **String**|  | 
 
 ### Return type
 
@@ -1734,9 +1735,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1753,8 +1754,8 @@ apiInstance.getEmailCommseq(storefrontOid, commseqUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
 
 ### Return type
 
@@ -1798,9 +1799,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 var statsRequest = new UltraCartRestApiV2.EmailStatSummaryRequest(); // EmailStatSummaryRequest | StatsRequest
 
@@ -1819,8 +1820,8 @@ apiInstance.getEmailCommseqEmailStats(storefrontOid, commseqUuid, statsRequest, 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
  **statsRequest** | [**EmailStatSummaryRequest**](EmailStatSummaryRequest.md)| StatsRequest | 
 
 ### Return type
@@ -1865,9 +1866,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 var statsRequest = new UltraCartRestApiV2.EmailStatPostcardSummaryRequest(); // EmailStatPostcardSummaryRequest | StatsRequest
 
@@ -1886,8 +1887,8 @@ apiInstance.getEmailCommseqPostcardStats(storefrontOid, commseqUuid, statsReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
  **statsRequest** | [**EmailStatPostcardSummaryRequest**](EmailStatPostcardSummaryRequest.md)| StatsRequest | 
 
 ### Return type
@@ -1932,9 +1933,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -1951,8 +1952,8 @@ apiInstance.getEmailCommseqStatOverall(storefrontOid, commseqUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
 
 ### Return type
 
@@ -1996,9 +1997,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 var statsRequest = new UltraCartRestApiV2.EmailStepStatRequest(); // EmailStepStatRequest | StatsRequest
 
@@ -2017,8 +2018,8 @@ apiInstance.getEmailCommseqStepStats(storefrontOid, commseqUuid, statsRequest, c
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
  **statsRequest** | [**EmailStepStatRequest**](EmailStepStatRequest.md)| StatsRequest | 
 
 ### Return type
@@ -2063,9 +2064,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 var waitingRequest = new UltraCartRestApiV2.EmailStepWaitingRequest(); // EmailStepWaitingRequest | WaitingRequest
 
@@ -2084,8 +2085,8 @@ apiInstance.getEmailCommseqStepWaiting(storefrontOid, commseqUuid, waitingReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
  **waitingRequest** | [**EmailStepWaitingRequest**](EmailStepWaitingRequest.md)| WaitingRequest | 
 
 ### Return type
@@ -2130,7 +2131,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -2147,7 +2148,7 @@ apiInstance.getEmailCommseqs(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -2191,9 +2192,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | null
+var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2210,8 +2211,8 @@ apiInstance.getEmailCustomerEditorUrl(storefrontOid, emailCustomerUuid, callback
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailCustomerUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailCustomerUuid** | **String**|  | 
 
 ### Return type
 
@@ -2255,12 +2256,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var opts = { 
-  'pageNumber': 56, // Number | null
-  'pageSize': 56, // Number | null
-  'searchEmailPrefix': "searchEmailPrefix_example" // String | null
+  'pageNumber': 56, // Number | 
+  'pageSize': 56, // Number | 
+  'searchEmailPrefix': "searchEmailPrefix_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -2277,10 +2278,10 @@ apiInstance.getEmailCustomers(storefrontOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **pageNumber** | **Number**| null | [optional] 
- **pageSize** | **Number**| null | [optional] 
- **searchEmailPrefix** | **String**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **pageNumber** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
+ **searchEmailPrefix** | **String**|  | [optional] 
 
 ### Return type
 
@@ -2324,10 +2325,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var opts = { 
-  'lastRecords': 56 // Number | null
+  'lastRecords': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -2344,8 +2345,8 @@ apiInstance.getEmailDashboardActivity(storefrontOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **lastRecords** | **Number**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **lastRecords** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -2389,10 +2390,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var opts = { 
-  'days': 56 // Number | null
+  'days': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -2409,8 +2410,8 @@ apiInstance.getEmailDashboardStats(storefrontOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **days** | **Number**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **days** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -2454,9 +2455,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2473,8 +2474,8 @@ apiInstance.getEmailEmail(storefrontOid, commseqEmailUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqEmailUuid** | **String**|  | 
 
 ### Return type
 
@@ -2518,16 +2519,16 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
-var commseqStepUuid = "commseqStepUuid_example"; // String | null
+var commseqStepUuid = "commseqStepUuid_example"; // String | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
 var opts = { 
-  'days': 56 // Number | null
+  'days': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -2544,11 +2545,11 @@ apiInstance.getEmailEmailClicks(storefrontOid, commseqUuid, commseqStepUuid, com
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
- **commseqStepUuid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
- **days** | **Number**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
+ **commseqStepUuid** | **String**|  | 
+ **commseqEmailUuid** | **String**|  | 
+ **days** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -2592,11 +2593,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
-var orderId = "orderId_example"; // String | null
+var orderId = "orderId_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2613,9 +2614,9 @@ apiInstance.getEmailEmailCustomerEditorUrl(storefrontOid, commseqEmailUuid, orde
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
- **orderId** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqEmailUuid** | **String**|  | 
+ **orderId** | **String**|  | 
 
 ### Return type
 
@@ -2659,16 +2660,16 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
-var commseqStepUuid = "commseqStepUuid_example"; // String | null
+var commseqStepUuid = "commseqStepUuid_example"; // String | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
 var opts = { 
-  'days': 56 // Number | null
+  'days': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -2685,11 +2686,11 @@ apiInstance.getEmailEmailOrders(storefrontOid, commseqUuid, commseqStepUuid, com
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
- **commseqStepUuid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
- **days** | **Number**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
+ **commseqStepUuid** | **String**|  | 
+ **commseqEmailUuid** | **String**|  | 
+ **days** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -2733,7 +2734,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -2750,7 +2751,7 @@ apiInstance.getEmailEmails(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -2794,7 +2795,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailCommseqEmailsRequest = new UltraCartRestApiV2.EmailCommseqEmailsRequest(); // EmailCommseqEmailsRequest | Request of email uuids
 
@@ -2813,7 +2814,7 @@ apiInstance.getEmailEmailsMultiple(storefrontOid, emailCommseqEmailsRequest, cal
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailCommseqEmailsRequest** | [**EmailCommseqEmailsRequest**](EmailCommseqEmailsRequest.md)| Request of email uuids | 
 
 ### Return type
@@ -2858,9 +2859,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | null
+var emailFlowUuid = "emailFlowUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -2877,8 +2878,8 @@ apiInstance.getEmailFlow(storefrontOid, emailFlowUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailFlowUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailFlowUuid** | **String**|  | 
 
 ### Return type
 
@@ -2922,7 +2923,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -2939,7 +2940,7 @@ apiInstance.getEmailFlows(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -3038,9 +3039,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3057,8 +3058,8 @@ apiInstance.getEmailList(storefrontOid, emailListUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
 
 ### Return type
 
@@ -3102,11 +3103,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | null
+var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3123,9 +3124,9 @@ apiInstance.getEmailListCustomerEditorUrl(storefrontOid, emailListUuid, emailCus
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
- **emailCustomerUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
+ **emailCustomerUuid** | **String**|  | 
 
 ### Return type
 
@@ -3169,13 +3170,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
 var opts = { 
-  'pageNumber': 56, // Number | null
-  'pageSize': 56 // Number | null
+  'pageNumber': 56, // Number | 
+  'pageSize': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -3192,10 +3193,10 @@ apiInstance.getEmailListCustomers(storefrontOid, emailListUuid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
- **pageNumber** | **Number**| null | [optional] 
- **pageSize** | **Number**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
+ **pageNumber** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -3239,7 +3240,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3256,7 +3257,7 @@ apiInstance.getEmailLists(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -3300,7 +3301,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3317,7 +3318,7 @@ apiInstance.getEmailPerformance(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -3361,7 +3362,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3378,7 +3379,7 @@ apiInstance.getEmailPlan(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -3422,9 +3423,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | null
+var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3441,8 +3442,8 @@ apiInstance.getEmailPostcard(storefrontOid, commseqPostcardUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqPostcardUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqPostcardUuid** | **String**|  | 
 
 ### Return type
 
@@ -3486,7 +3487,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3503,7 +3504,7 @@ apiInstance.getEmailPostcards(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -3547,7 +3548,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailCommseqPostcardsRequest = new UltraCartRestApiV2.EmailCommseqPostcardsRequest(); // EmailCommseqPostcardsRequest | Request of postcard uuids
 
@@ -3566,7 +3567,7 @@ apiInstance.getEmailPostcardsMultiple(storefrontOid, emailCommseqPostcardsReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailCommseqPostcardsRequest** | [**EmailCommseqPostcardsRequest**](EmailCommseqPostcardsRequest.md)| Request of postcard uuids | 
 
 ### Return type
@@ -3611,9 +3612,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3630,8 +3631,8 @@ apiInstance.getEmailSegment(storefrontOid, emailSegmentUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
 
 ### Return type
 
@@ -3675,11 +3676,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | null
+var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3696,9 +3697,9 @@ apiInstance.getEmailSegmentCustomerEditorUrl(storefrontOid, emailSegmentUuid, em
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
- **emailCustomerUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
+ **emailCustomerUuid** | **String**|  | 
 
 ### Return type
 
@@ -3742,13 +3743,13 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
 var opts = { 
-  'pageNumber': 56, // Number | null
-  'pageSize': 56 // Number | null
+  'pageNumber': 56, // Number | 
+  'pageSize': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -3765,10 +3766,10 @@ apiInstance.getEmailSegmentCustomers(storefrontOid, emailSegmentUuid, opts, call
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
- **pageNumber** | **Number**| null | [optional] 
- **pageSize** | **Number**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
+ **pageNumber** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -3812,7 +3813,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -3829,7 +3830,7 @@ apiInstance.getEmailSegments(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -3873,7 +3874,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var domain = "domain_example"; // String | null
+var domain = "domain_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3890,7 +3891,7 @@ apiInstance.getEmailSendingDomain(domain, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **String**| null | 
+ **domain** | **String**|  | 
 
 ### Return type
 
@@ -3934,7 +3935,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var domain = "domain_example"; // String | null
+var domain = "domain_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -3951,7 +3952,7 @@ apiInstance.getEmailSendingDomainStatus(domain, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **String**| null | 
+ **domain** | **String**|  | 
 
 ### Return type
 
@@ -4050,7 +4051,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4067,7 +4068,7 @@ apiInstance.getEmailSettings(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -4111,9 +4112,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailTemplateOid = 56; // Number | null
+var emailTemplateOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4130,8 +4131,8 @@ apiInstance.getEmailTemplate(storefrontOid, emailTemplateOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailTemplateOid** | **Number**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailTemplateOid** | **Number**|  | 
 
 ### Return type
 
@@ -4175,10 +4176,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var opts = { 
-  'triggerType': "triggerType_example" // String | null
+  'triggerType': "triggerType_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -4195,8 +4196,8 @@ apiInstance.getEmailTemplates(storefrontOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **triggerType** | **String**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **triggerType** | **String**|  | [optional] 
 
 ### Return type
 
@@ -4240,7 +4241,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4257,7 +4258,7 @@ apiInstance.getEmailThirdPartyProviders(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -4301,7 +4302,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4318,7 +4319,7 @@ apiInstance.getExperiments(storefrontOid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
 
 ### Return type
 
@@ -4364,10 +4365,10 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var opts = { 
-  'propertyType': "propertyType_example" // String | null
+  'propertyType': "propertyType_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -4384,8 +4385,8 @@ apiInstance.getHistogramPropertyNames(storefrontOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **propertyType** | **String**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **propertyType** | **String**|  | [optional] 
 
 ### Return type
 
@@ -4431,12 +4432,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var opts = { 
-  'propertyName': "propertyName_example", // String | null
-  'propertyType': "propertyType_example", // String | null
-  'limit': 56 // Number | null
+  'propertyName': "propertyName_example", // String | 
+  'propertyType': "propertyType_example", // String | 
+  'limit': 56 // Number | 
 };
 
 var callback = function(error, data, response) {
@@ -4453,14 +4454,75 @@ apiInstance.getHistogramPropertyValues(storefrontOid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **propertyName** | **String**| null | [optional] 
- **propertyType** | **String**| null | [optional] 
- **limit** | **Number**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **propertyName** | **String**|  | [optional] 
+ **propertyType** | **String**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
 
 ### Return type
 
 [**EmailHistogramPropertyValuesResponse**](EmailHistogramPropertyValuesResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getLibraryItem"></a>
+# **getLibraryItem**
+> LibraryItemResponse getLibraryItem(libraryItemOid)
+
+Get library item.
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+var libraryItemOid = 56; // Number | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getLibraryItem(libraryItemOid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **libraryItemOid** | **Number**|  | 
+
+### Return type
+
+[**LibraryItemResponse**](LibraryItemResponse.md)
 
 ### Authorization
 
@@ -4477,7 +4539,7 @@ Name | Type | Description  | Notes
 
 Retrieve library items
 
-Retrieves a lbirary items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
 ### Example
 ```javascript
@@ -4567,9 +4629,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | null
+var id = 56; // Number | 
 
-var emailId = "emailId_example"; // String | null
+var emailId = "emailId_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -4586,8 +4648,8 @@ apiInstance.getTransactionEmail(id, emailId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| null | 
- **emailId** | **String**| null | 
+ **id** | **Number**|  | 
+ **emailId** | **String**|  | 
 
 ### Return type
 
@@ -4633,7 +4695,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | null
+var id = 56; // Number | 
 
 
 var callback = function(error, data, response) {
@@ -4650,7 +4712,7 @@ apiInstance.getTransactionEmailList(id, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| null | 
+ **id** | **Number**|  | 
 
 ### Return type
 
@@ -4694,7 +4756,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var unsubscribe = new UltraCartRestApiV2.EmailGlobalUnsubscribeRequest(); // EmailGlobalUnsubscribeRequest | Unsubscribe
 
@@ -4713,7 +4775,7 @@ apiInstance.globalUnsubscribe(storefrontOid, unsubscribe, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **unsubscribe** | [**EmailGlobalUnsubscribeRequest**](EmailGlobalUnsubscribeRequest.md)| Unsubscribe | 
 
 ### Return type
@@ -4758,7 +4820,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var importRequest = new UltraCartRestApiV2.EmailThirdPartyListImportRequest(); // EmailThirdPartyListImportRequest | lists to import
 
@@ -4777,7 +4839,7 @@ apiInstance.importEmailThirdPartyProviderList(storefrontOid, importRequest, call
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **importRequest** | [**EmailThirdPartyListImportRequest**](EmailThirdPartyListImportRequest.md)| lists to import | 
 
 ### Return type
@@ -4822,7 +4884,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailCampaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
 
@@ -4841,7 +4903,7 @@ apiInstance.insertEmailCampaign(storefrontOid, emailCampaign, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email campaign | 
 
 ### Return type
@@ -4886,7 +4948,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailCommseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
 
@@ -4905,7 +4967,7 @@ apiInstance.insertEmailCommseq(storefrontOid, emailCommseq, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailCommseq** | [**EmailCommseq**](EmailCommseq.md)| Email commseq | 
 
 ### Return type
@@ -4950,7 +5012,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailCommseqEmail = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email email
 
@@ -4969,7 +5031,7 @@ apiInstance.insertEmailEmail(storefrontOid, emailCommseqEmail, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailCommseqEmail** | [**EmailCommseqEmail**](EmailCommseqEmail.md)| Email email | 
 
 ### Return type
@@ -5014,7 +5076,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailFlow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
 
@@ -5033,7 +5095,7 @@ apiInstance.insertEmailFlow(storefrontOid, emailFlow, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailFlow** | [**EmailFlow**](EmailFlow.md)| Email flow | 
 
 ### Return type
@@ -5078,7 +5140,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailList = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
 
@@ -5097,7 +5159,7 @@ apiInstance.insertEmailList(storefrontOid, emailList, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailList** | [**EmailList**](EmailList.md)| Email list | 
 
 ### Return type
@@ -5142,7 +5204,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailCommseqPostcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email postcard
 
@@ -5161,7 +5223,7 @@ apiInstance.insertEmailPostcard(storefrontOid, emailCommseqPostcard, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailCommseqPostcard** | [**EmailCommseqPostcard**](EmailCommseqPostcard.md)| Email postcard | 
 
 ### Return type
@@ -5206,7 +5268,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var emailSegment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
 
@@ -5225,7 +5287,7 @@ apiInstance.insertEmailSegment(storefrontOid, emailSegment, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **emailSegment** | [**EmailSegment**](EmailSegment.md)| Email segment | 
 
 ### Return type
@@ -5270,9 +5332,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -5289,8 +5351,8 @@ apiInstance.prepareDownloadEmailSegment(storefrontOid, emailSegmentUuid, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
 
 ### Return type
 
@@ -5334,11 +5396,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
-var commseqStepUuid = "commseqStepUuid_example"; // String | null
+var commseqStepUuid = "commseqStepUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -5355,9 +5417,9 @@ apiInstance.releaseEmailCommseqStepWaiting(storefrontOid, commseqUuid, commseqSt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
- **commseqStepUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
+ **commseqStepUuid** | **String**|  | 
 
 ### Return type
 
@@ -5401,9 +5463,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
 var emailCommseqEmailReviewRequest = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email review request
 
@@ -5422,8 +5484,8 @@ apiInstance.review(storefrontOid, commseqEmailUuid, emailCommseqEmailReviewReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqEmailUuid** | **String**|  | 
  **emailCommseqEmailReviewRequest** | [**EmailCommseqEmailSendTestRequest**](EmailCommseqEmailSendTestRequest.md)| Email commseq email review request | 
 
 ### Return type
@@ -5469,11 +5531,11 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
 var opts = { 
-  'category': "category_example", // String | null
-  'matches': "matches_example", // String | null
-  'storefrontOid': "storefrontOid_example", // String | null
-  'maxHits': 56, // Number | null
-  'subcategory': "subcategory_example" // String | null
+  'category': "category_example", // String | 
+  'matches': "matches_example", // String | 
+  'storefrontOid': "storefrontOid_example", // String | 
+  'maxHits': 56, // Number | 
+  'subcategory': "subcategory_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -5490,11 +5552,11 @@ apiInstance.search(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category** | **String**| null | [optional] 
- **matches** | **String**| null | [optional] 
- **storefrontOid** | **String**| null | [optional] 
- **maxHits** | **Number**| null | [optional] 
- **subcategory** | **String**| null | [optional] 
+ **category** | **String**|  | [optional] 
+ **matches** | **String**|  | [optional] 
+ **storefrontOid** | **String**|  | [optional] 
+ **maxHits** | **Number**|  | [optional] 
+ **subcategory** | **String**|  | [optional] 
 
 ### Return type
 
@@ -5538,12 +5600,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
 var opts = { 
-  'startsWith': "startsWith_example" // String | null
+  'startsWith': "startsWith_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -5560,9 +5622,9 @@ apiInstance.searchEmailListCustomers(storefrontOid, emailListUuid, opts, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
- **startsWith** | **String**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
+ **startsWith** | **String**|  | [optional] 
 
 ### Return type
 
@@ -5606,12 +5668,12 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
 var opts = { 
-  'startsWith': "startsWith_example" // String | null
+  'startsWith': "startsWith_example" // String | 
 };
 
 var callback = function(error, data, response) {
@@ -5628,9 +5690,9 @@ apiInstance.searchEmailSegmentCustomers(storefrontOid, emailSegmentUuid, opts, c
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
- **startsWith** | **String**| null | [optional] 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
+ **startsWith** | **String**|  | [optional] 
 
 ### Return type
 
@@ -5674,9 +5736,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
 var emailCommseqEmailTestRequest = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email test request
 
@@ -5695,8 +5757,8 @@ apiInstance.sendEmailTest(storefrontOid, commseqEmailUuid, emailCommseqEmailTest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqEmailUuid** | **String**|  | 
  **emailCommseqEmailTestRequest** | [**EmailCommseqEmailSendTestRequest**](EmailCommseqEmailSendTestRequest.md)| Email commseq email test request | 
 
 ### Return type
@@ -5741,9 +5803,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | null
+var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
 
 var emailCommseqPostcardTestRequest = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest(); // EmailCommseqPostcardSendTestRequest | Email commseq email test request
 
@@ -5762,8 +5824,8 @@ apiInstance.sendPostcardTest(storefrontOid, commseqPostcardUuid, emailCommseqPos
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqPostcardUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqPostcardUuid** | **String**|  | 
  **emailCommseqPostcardTestRequest** | [**EmailCommseqPostcardSendTestRequest**](EmailCommseqPostcardSendTestRequest.md)| Email commseq email test request | 
 
 ### Return type
@@ -5808,9 +5870,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | null
+var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
 
 
 var callback = function(error, data, response) {
@@ -5827,8 +5889,8 @@ apiInstance.startEmailCampaign(storefrontOid, emailCampaignUuid, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailCampaignUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailCampaignUuid** | **String**|  | 
 
 ### Return type
 
@@ -5872,9 +5934,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
 var customers = [new UltraCartRestApiV2.EmailCustomer()]; // [EmailCustomer] | Customers
 
@@ -5893,8 +5955,8 @@ apiInstance.subscribeToEmailList(storefrontOid, emailListUuid, customers, callba
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
  **customers** | [**[EmailCustomer]**](EmailCustomer.md)| Customers | 
 
 ### Return type
@@ -5939,9 +6001,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailCampaignUuid = "emailCampaignUuid_example"; // String | null
+var emailCampaignUuid = "emailCampaignUuid_example"; // String | 
 
 var emailCampaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
 
@@ -5960,8 +6022,8 @@ apiInstance.updateEmailCampaign(storefrontOid, emailCampaignUuid, emailCampaign,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailCampaignUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailCampaignUuid** | **String**|  | 
  **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email campaign | 
 
 ### Return type
@@ -6006,9 +6068,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqUuid = "commseqUuid_example"; // String | null
+var commseqUuid = "commseqUuid_example"; // String | 
 
 var emailCommseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
 
@@ -6027,8 +6089,8 @@ apiInstance.updateEmailCommseq(storefrontOid, commseqUuid, emailCommseq, callbac
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqUuid** | **String**|  | 
  **emailCommseq** | [**EmailCommseq**](EmailCommseq.md)| Email commseq | 
 
 ### Return type
@@ -6073,9 +6135,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailCustomerUuid = "emailCustomerUuid_example"; // String | null
+var emailCustomerUuid = "emailCustomerUuid_example"; // String | 
 
 var emailCustomer = new UltraCartRestApiV2.EmailCustomer(); // EmailCustomer | Email customer
 
@@ -6094,8 +6156,8 @@ apiInstance.updateEmailCustomer(storefrontOid, emailCustomerUuid, emailCustomer,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailCustomerUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailCustomerUuid** | **String**|  | 
  **emailCustomer** | [**EmailCustomer**](EmailCustomer.md)| Email customer | 
 
 ### Return type
@@ -6140,9 +6202,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqEmailUuid = "commseqEmailUuid_example"; // String | null
+var commseqEmailUuid = "commseqEmailUuid_example"; // String | 
 
 var emailCommseqEmail = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email commseq email
 
@@ -6161,8 +6223,8 @@ apiInstance.updateEmailEmail(storefrontOid, commseqEmailUuid, emailCommseqEmail,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqEmailUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqEmailUuid** | **String**|  | 
  **emailCommseqEmail** | [**EmailCommseqEmail**](EmailCommseqEmail.md)| Email commseq email | 
 
 ### Return type
@@ -6207,9 +6269,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailFlowUuid = "emailFlowUuid_example"; // String | null
+var emailFlowUuid = "emailFlowUuid_example"; // String | 
 
 var emailFlow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
 
@@ -6228,8 +6290,8 @@ apiInstance.updateEmailFlow(storefrontOid, emailFlowUuid, emailFlow, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailFlowUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailFlowUuid** | **String**|  | 
  **emailFlow** | [**EmailFlow**](EmailFlow.md)| Email flow | 
 
 ### Return type
@@ -6335,9 +6397,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailListUuid = "emailListUuid_example"; // String | null
+var emailListUuid = "emailListUuid_example"; // String | 
 
 var emailList = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
 
@@ -6356,8 +6418,8 @@ apiInstance.updateEmailList(storefrontOid, emailListUuid, emailList, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailListUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailListUuid** | **String**|  | 
  **emailList** | [**EmailList**](EmailList.md)| Email list | 
 
 ### Return type
@@ -6402,7 +6464,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var settings = new UltraCartRestApiV2.EmailPlan(); // EmailPlan | plan request
 
@@ -6421,7 +6483,7 @@ apiInstance.updateEmailPlan(storefrontOid, settings, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **settings** | [**EmailPlan**](EmailPlan.md)| plan request | 
 
 ### Return type
@@ -6466,9 +6528,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | null
+var commseqPostcardUuid = "commseqPostcardUuid_example"; // String | 
 
 var emailCommseqPostcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email commseq postcard
 
@@ -6487,8 +6549,8 @@ apiInstance.updateEmailPostcard(storefrontOid, commseqPostcardUuid, emailCommseq
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **commseqPostcardUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **commseqPostcardUuid** | **String**|  | 
  **emailCommseqPostcard** | [**EmailCommseqPostcard**](EmailCommseqPostcard.md)| Email commseq postcard | 
 
 ### Return type
@@ -6533,9 +6595,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var emailSegmentUuid = "emailSegmentUuid_example"; // String | null
+var emailSegmentUuid = "emailSegmentUuid_example"; // String | 
 
 var emailSegment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
 
@@ -6554,8 +6616,8 @@ apiInstance.updateEmailSegment(storefrontOid, emailSegmentUuid, emailSegment, ca
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **emailSegmentUuid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
+ **emailSegmentUuid** | **String**|  | 
  **emailSegment** | [**EmailSegment**](EmailSegment.md)| Email segment | 
 
 ### Return type
@@ -6600,7 +6662,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
 var settings = new UltraCartRestApiV2.EmailSettings(); // EmailSettings | settings request
 
@@ -6619,7 +6681,7 @@ apiInstance.updateEmailSettings(storefrontOid, settings, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
+ **storefrontOid** | **Number**|  | 
  **settings** | [**EmailSettings**](EmailSettings.md)| settings request | 
 
 ### Return type
@@ -6664,9 +6726,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var storefrontOid = "storefrontOid_example"; // String | null
+var storefrontOid = 56; // Number | 
 
-var storefrontExperimentOid = 56; // Number | null
+var storefrontExperimentOid = 56; // Number | 
 
 var experiment = new UltraCartRestApiV2.Experiment(); // Experiment | Experiment
 
@@ -6685,8 +6747,8 @@ apiInstance.updateExperiment(storefrontOid, storefrontExperimentOid, experiment,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storefrontOid** | **String**| null | 
- **storefrontExperimentOid** | **Number**| null | 
+ **storefrontOid** | **Number**|  | 
+ **storefrontExperimentOid** | **Number**|  | 
  **experiment** | [**Experiment**](Experiment.md)| Experiment | 
 
 ### Return type
@@ -6731,7 +6793,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var libraryItemOid = 56; // Number | null
+var libraryItemOid = 56; // Number | 
 
 var libraryItem = new UltraCartRestApiV2.LibraryItem(); // LibraryItem | Library item
 
@@ -6750,7 +6812,7 @@ apiInstance.updateLibraryItem(libraryItemOid, libraryItem, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemOid** | **Number**| null | 
+ **libraryItemOid** | **Number**|  | 
  **libraryItem** | [**LibraryItem**](LibraryItem.md)| Library item | 
 
 ### Return type
@@ -6797,9 +6859,9 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var id = 56; // Number | null
+var id = 56; // Number | 
 
-var emailId = "emailId_example"; // String | null
+var emailId = "emailId_example"; // String | 
 
 var transactionEmail = new UltraCartRestApiV2.TransactionEmail(); // TransactionEmail | TransactionEmail
 
@@ -6818,8 +6880,8 @@ apiInstance.updateTransactionEmail(id, emailId, transactionEmail, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| null | 
- **emailId** | **String**| null | 
+ **id** | **Number**|  | 
+ **emailId** | **String**|  | 
  **transactionEmail** | [**TransactionEmail**](TransactionEmail.md)| TransactionEmail | 
 
 ### Return type

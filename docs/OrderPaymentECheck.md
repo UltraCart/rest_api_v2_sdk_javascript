@@ -19,9 +19,9 @@ Name | Type | Description | Notes
 ## Enum: BankAccountTypeEnum
 
 
-* `Checking` (value: `"Checking"`)
+* `checking` (value: `"Checking"`)
 
-* `Savings` (value: `"Savings"`)
+* `savings` (value: `"Savings"`)
 
 
 
@@ -30,9 +30,9 @@ Name | Type | Description | Notes
 ## Enum: BankOwnerTypeEnum
 
 
-* `Personal` (value: `"Personal"`)
+* `personal` (value: `"Personal"`)
 
-* `Business` (value: `"Business"`)
+* `business` (value: `"Business"`)
 
 
 

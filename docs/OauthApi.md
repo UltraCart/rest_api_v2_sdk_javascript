@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
  **grantType** | **String**| Type of grant | 
  **code** | **String**| Authorization code received back from the browser redirect | [optional] 
  **redirectUri** | **String**| The URI that you redirect the browser to to start the authorization process | [optional] 
- **refreshToken** | **String**| The refresh token received during the original grant_type&#x3D;authorization_code that can be used to return a new access token | [optional] 
+ **refreshToken** | **String**| The refresh token received during the original grant_type=authorization_code that can be used to return a new access token | [optional] 
 
 ### Return type
 

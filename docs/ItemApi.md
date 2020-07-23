@@ -248,8 +248,8 @@ apiInstance.getItems(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parentCategoryId** | **Number**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root | [optional] 
- **parentCategoryPath** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / &#x3D; root | [optional] 
+ **parentCategoryId** | **Number**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root | [optional] 
+ **parentCategoryPath** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root | [optional] 
  **limit** | **Number**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
  **offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 

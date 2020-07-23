@@ -26,39 +26,39 @@ Name | Type | Description | Notes
 ## Enum: PaymentMethodEnum
 
 
-* `Affirm` (value: `"Affirm"`)
+* `affirm` (value: `"Affirm"`)
 
-* `Amazon` (value: `"Amazon"`)
+* `amazon` (value: `"Amazon"`)
 
-* `Amazon SC` (value: `"Amazon SC"`)
+* `amazonSC` (value: `"Amazon SC"`)
 
-* `Cash` (value: `"Cash"`)
+* `cash` (value: `"Cash"`)
 
-* `Check` (value: `"Check"`)
+* `check` (value: `"Check"`)
 
 * `COD` (value: `"COD"`)
 
-* `Credit Card` (value: `"Credit Card"`)
+* `creditCard` (value: `"Credit Card"`)
 
 * `eBay` (value: `"eBay"`)
 
 * `eCheck` (value: `"eCheck"`)
 
-* `LoanHero` (value: `"LoanHero"`)
+* `loanHero` (value: `"LoanHero"`)
 
-* `Money Order` (value: `"Money Order"`)
+* `moneyOrder` (value: `"Money Order"`)
 
-* `PayPal` (value: `"PayPal"`)
+* `payPal` (value: `"PayPal"`)
 
-* `Purchase Order` (value: `"Purchase Order"`)
+* `purchaseOrder` (value: `"Purchase Order"`)
 
-* `Quote Request` (value: `"Quote Request"`)
+* `quoteRequest` (value: `"Quote Request"`)
 
-* `Unknown` (value: `"Unknown"`)
+* `unknown` (value: `"Unknown"`)
 
-* `Wire Transfer` (value: `"Wire Transfer"`)
+* `wireTransfer` (value: `"Wire Transfer"`)
 
-* `Walmart` (value: `"Walmart"`)
+* `walmart` (value: `"Walmart"`)
 
 
 
@@ -67,21 +67,21 @@ Name | Type | Description | Notes
 ## Enum: PaymentStatusEnum
 
 
-* `Unprocessed` (value: `"Unprocessed"`)
+* `unprocessed` (value: `"Unprocessed"`)
 
-* `Authorized` (value: `"Authorized"`)
+* `authorized` (value: `"Authorized"`)
 
-* `Capture Failed` (value: `"Capture Failed"`)
+* `captureFailed` (value: `"Capture Failed"`)
 
-* `Processed` (value: `"Processed"`)
+* `processed` (value: `"Processed"`)
 
-* `Declined` (value: `"Declined"`)
+* `declined` (value: `"Declined"`)
 
-* `Voided` (value: `"Voided"`)
+* `voided` (value: `"Voided"`)
 
-* `Refunded` (value: `"Refunded"`)
+* `refunded` (value: `"Refunded"`)
 
-* `Skipped` (value: `"Skipped"`)
+* `skipped` (value: `"Skipped"`)
 
 
 
