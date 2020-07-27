@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **file_exists** | **Boolean** | An internal identifier used to aid in retrieving templates from the filesystem. | [optional] 
 **file_name** | **String** | File name | [optional] 
 **group** | **String** | Group | [optional] 
+**handlebar_variables** | **[String]** | Handlebar Variables available for email template | [optional] 
 **invalid** | **Boolean** | Invalid will be true if the template cannot compile | [optional] 
 **last_modified** | **String** | Last modified timestamp | [optional] 
 **options** | [**[TransactionEmailOption]**](TransactionEmailOption.md) | Options that help govern how and when this template is used | [optional] 

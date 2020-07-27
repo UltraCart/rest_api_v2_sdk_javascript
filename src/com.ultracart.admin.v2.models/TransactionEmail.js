@@ -69,6 +69,8 @@
         obj.file_name = ApiClient.convertToType(data['file_name'], 'String');
       if (data.hasOwnProperty('group'))
         obj.group = ApiClient.convertToType(data['group'], 'String');
+      if (data.hasOwnProperty('handlebar_variables'))
+        obj.handlebar_variables = ApiClient.convertToType(data['handlebar_variables'], ['String']);
       if (data.hasOwnProperty('invalid'))
         obj.invalid = ApiClient.convertToType(data['invalid'], 'Boolean');
       if (data.hasOwnProperty('last_modified'))
@@ -136,6 +138,12 @@
    * @member {String} group
    */
   exports.prototype.group = undefined;
+
+  /**
+   * Handlebar Variables available for email template
+   * @member {Array.<String>} handlebar_variables
+   */
+  exports.prototype.handlebar_variables = undefined;
 
   /**
    * Invalid will be true if the template cannot compile
