@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **assets** | [**[LibraryItemAsset]**](LibraryItemAsset.md) |  | [optional] 
 **categories** | **[String]** |  | [optional] 
 **content** | **String** |  | [optional] 
+**content_type** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **industries** | **[String]** |  | [optional] 
 **library_item_oid** | **Number** |  | [optional] 

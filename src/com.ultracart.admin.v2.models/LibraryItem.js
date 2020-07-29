@@ -61,6 +61,8 @@
         obj.categories = ApiClient.convertToType(data['categories'], ['String']);
       if (data.hasOwnProperty('content'))
         obj.content = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('content_type'))
+        obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('industries'))
@@ -107,6 +109,11 @@
    * @member {String} content
    */
   exports.prototype.content = undefined;
+
+  /**
+   * @member {String} content_type
+   */
+  exports.prototype.content_type = undefined;
 
   /**
    * @member {String} description

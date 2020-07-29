@@ -76,7 +76,7 @@
   exports.prototype.cjson = undefined;
 
   /**
-   * flow, campaign, cjson, or upsell
+   * flow, campaign, cjson, email, transactional_email or upsell
    * @member {String} content_type
    */
   exports.prototype.content_type = undefined;
