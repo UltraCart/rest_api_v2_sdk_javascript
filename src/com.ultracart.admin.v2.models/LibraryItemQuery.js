@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('category'))
         obj.category = ApiClient.convertToType(data['category'], 'String');
+      if (data.hasOwnProperty('content_type'))
+        obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('industry'))
@@ -86,6 +88,12 @@
    * @member {String} category
    */
   exports.prototype.category = undefined;
+
+  /**
+   * Library item content type such as flow, campaign, cjson, email, or transactional_email
+   * @member {String} content_type
+   */
+  exports.prototype.content_type = undefined;
 
   /**
    * Description of library item
@@ -142,7 +150,7 @@
   exports.prototype.title = undefined;
 
   /**
-   * Library item type
+   * Library item type such as header, footer, shipping block, etc
    * @member {String} type
    */
   exports.prototype.type = undefined;
