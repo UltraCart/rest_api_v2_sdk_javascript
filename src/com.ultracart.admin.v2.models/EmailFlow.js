@@ -34,7 +34,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 2.0.0
+   * @version 3.0.5
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       if (data.hasOwnProperty('email_flow_uuid'))
         obj.email_flow_uuid = ApiClient.convertToType(data['email_flow_uuid'], 'String');
+      if (data.hasOwnProperty('end_once_customer_purchases'))
+        obj.end_once_customer_purchases = ApiClient.convertToType(data['end_once_customer_purchases'], 'Boolean');
       if (data.hasOwnProperty('enrolled_customers'))
         obj.enrolled_customers = ApiClient.convertToType(data['enrolled_customers'], 'Number');
       if (data.hasOwnProperty('esp_domain_user'))
@@ -144,6 +146,12 @@
    * @member {String} email_flow_uuid
    */
   exports.prototype.email_flow_uuid = undefined;
+
+  /**
+   * True if the customer should end the flow once they purchase
+   * @member {Boolean} end_once_customer_purchases
+   */
+  exports.prototype.end_once_customer_purchases = undefined;
 
   /**
    * Number of enrolled customers.

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **deleted** | **Boolean** | True if this campaign was deleted | [optional] 
 **email_communication_sequence_uuid** | **String** | Email communication sequence UUID | [optional] 
 **email_flow_uuid** | **String** | Email flow UUID | [optional] 
+**end_once_customer_purchases** | **Boolean** | True if the customer should end the flow once they purchase | [optional] 
 **enrolled_customers** | **Number** | Number of enrolled customers. | [optional] 
 **esp_domain_user** | **String** | Username of sending email | [optional] 
 **esp_domain_uuid** | **String** | UUID of sending domain | [optional] 

@@ -34,7 +34,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 2.0.0
+   * @version 3.0.5
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.email_campaign_uuid = ApiClient.convertToType(data['email_campaign_uuid'], 'String');
       if (data.hasOwnProperty('email_communication_sequence_uuid'))
         obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
+      if (data.hasOwnProperty('end_once_customer_purchases'))
+        obj.end_once_customer_purchases = ApiClient.convertToType(data['end_once_customer_purchases'], 'Boolean');
       if (data.hasOwnProperty('esp_domain_user'))
         obj.esp_domain_user = ApiClient.convertToType(data['esp_domain_user'], 'String');
       if (data.hasOwnProperty('esp_domain_uuid'))
@@ -124,6 +126,12 @@
    * @member {String} email_communication_sequence_uuid
    */
   exports.prototype.email_communication_sequence_uuid = undefined;
+
+  /**
+   * True if the customer should end the flow once they purchase
+   * @member {Boolean} end_once_customer_purchases
+   */
+  exports.prototype.end_once_customer_purchases = undefined;
 
   /**
    * User of the sending address

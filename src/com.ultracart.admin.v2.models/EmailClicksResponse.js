@@ -34,7 +34,7 @@
   /**
    * The EmailClicksResponse model module.
    * @module com.ultracart.admin.v2.models/EmailClicksResponse
-   * @version 2.0.0
+   * @version 3.0.5
    */
 
   /**

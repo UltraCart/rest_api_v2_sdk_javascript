@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **deleted** | **Boolean** | True if this campaign was deleted | [optional] 
 **email_campaign_uuid** | **String** | Email campaign UUID | [optional] 
 **email_communication_sequence_uuid** | **String** | Email communication sequence UUID | [optional] 
+**end_once_customer_purchases** | **Boolean** | True if the customer should end the flow once they purchase | [optional] 
 **esp_domain_user** | **String** | User of the sending address | [optional] 
 **esp_domain_uuid** | **String** | UUID of the sending domain | [optional] 
 **esp_friendly_name** | **String** | Friendly name of the sending email | [optional] 
