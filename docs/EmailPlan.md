@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **plan_emails** | **Number** |  | [optional] 
 **plan_name** | **String** |  | [optional] 
 **plan_name_formatted** | **String** |  | [optional] 
+**require_order_within_last_days** | **Number** |  | [optional] 
 **revenue_percent** | **Number** |  | [optional] 
 **spam_percent_limit** | **Number** |  | [optional] 
 **total_customers** | **Number** |  | [optional] 

@@ -34,7 +34,7 @@
   /**
    * The AddLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/AddLibraryItemRequest
-   * @version 3.0.5
+   * @version 3.0.6
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.cjson = ApiClient.convertToType(data['cjson'], 'String');
       if (data.hasOwnProperty('content_type'))
         obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
+      if (data.hasOwnProperty('description'))
+        obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('title'))
@@ -80,6 +82,12 @@
    * @member {String} content_type
    */
   exports.prototype.content_type = undefined;
+
+  /**
+   * description of library item
+   * @member {String} description
+   */
+  exports.prototype.description = undefined;
 
   /**
    * StoreFront oid where content originates necessary for tracking down relative assets

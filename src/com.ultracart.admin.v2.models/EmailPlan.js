@@ -34,7 +34,7 @@
   /**
    * The EmailPlan model module.
    * @module com.ultracart.admin.v2.models/EmailPlan
-   * @version 3.0.5
+   * @version 3.0.6
    */
 
   /**
@@ -73,6 +73,8 @@
         obj.plan_name = ApiClient.convertToType(data['plan_name'], 'String');
       if (data.hasOwnProperty('plan_name_formatted'))
         obj.plan_name_formatted = ApiClient.convertToType(data['plan_name_formatted'], 'String');
+      if (data.hasOwnProperty('require_order_within_last_days'))
+        obj.require_order_within_last_days = ApiClient.convertToType(data['require_order_within_last_days'], 'Number');
       if (data.hasOwnProperty('revenue_percent'))
         obj.revenue_percent = ApiClient.convertToType(data['revenue_percent'], 'Number');
       if (data.hasOwnProperty('spam_percent_limit'))
@@ -131,6 +133,11 @@
    * @member {String} plan_name_formatted
    */
   exports.prototype.plan_name_formatted = undefined;
+
+  /**
+   * @member {Number} require_order_within_last_days
+   */
+  exports.prototype.require_order_within_last_days = undefined;
 
   /**
    * @member {Number} revenue_percent
