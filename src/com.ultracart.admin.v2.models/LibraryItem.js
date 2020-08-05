@@ -34,7 +34,7 @@
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.6
+   * @version 3.0.8
    */
 
   /**
@@ -89,8 +89,8 @@
         obj.title = ApiClient.convertToType(data['title'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
-      if (data.hasOwnProperty('verison'))
-        obj.verison = ApiClient.convertToType(data['verison'], 'String');
+      if (data.hasOwnProperty('version'))
+        obj.version = ApiClient.convertToType(data['version'], 'String');
     }
     return obj;
   }
@@ -181,9 +181,9 @@
   exports.prototype.type = undefined;
 
   /**
-   * @member {String} verison
+   * @member {String} version
    */
-  exports.prototype.verison = undefined;
+  exports.prototype.version = undefined;
 
   return exports;
 
