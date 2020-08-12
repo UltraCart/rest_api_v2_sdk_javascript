@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAsset'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./LibraryItemAsset'));
+    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAsset);
+    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail);
   }
-}(this, function(ApiClient, LibraryItemAsset) {
+}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail) {
   'use strict';
 
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.8
+   * @version 3.0.11
    */
 
   /**
@@ -71,26 +71,18 @@
         obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
-      if (data.hasOwnProperty('price'))
-        obj.price = ApiClient.convertToType(data['price'], 'Number');
-      if (data.hasOwnProperty('price_formatted'))
-        obj.price_formatted = ApiClient.convertToType(data['price_formatted'], 'String');
       if (data.hasOwnProperty('public_item'))
         obj.public_item = ApiClient.convertToType(data['public_item'], 'Boolean');
-      if (data.hasOwnProperty('published_dts'))
-        obj.published_dts = ApiClient.convertToType(data['published_dts'], 'String');
-      if (data.hasOwnProperty('publishing_status'))
-        obj.publishing_status = ApiClient.convertToType(data['publishing_status'], 'String');
-      if (data.hasOwnProperty('purchase_history'))
-        obj.purchase_history = ApiClient.convertToType(data['purchase_history'], 'Number');
+      if (data.hasOwnProperty('share_with_accounts'))
+        obj.share_with_accounts = ApiClient.convertToType(data['share_with_accounts'], [LibraryItemAccount]);
+      if (data.hasOwnProperty('share_with_other_emails'))
+        obj.share_with_other_emails = ApiClient.convertToType(data['share_with_other_emails'], [LibraryItemEmail]);
       if (data.hasOwnProperty('style'))
         obj.style = ApiClient.convertToType(data['style'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
-      if (data.hasOwnProperty('version'))
-        obj.version = ApiClient.convertToType(data['version'], 'String');
     }
     return obj;
   }
@@ -136,34 +128,19 @@
   exports.prototype.merchant_id = undefined;
 
   /**
-   * @member {Number} price
-   */
-  exports.prototype.price = undefined;
-
-  /**
-   * @member {String} price_formatted
-   */
-  exports.prototype.price_formatted = undefined;
-
-  /**
    * @member {Boolean} public_item
    */
   exports.prototype.public_item = undefined;
 
   /**
-   * @member {String} published_dts
+   * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemAccount>} share_with_accounts
    */
-  exports.prototype.published_dts = undefined;
+  exports.prototype.share_with_accounts = undefined;
 
   /**
-   * @member {String} publishing_status
+   * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemEmail>} share_with_other_emails
    */
-  exports.prototype.publishing_status = undefined;
-
-  /**
-   * @member {Number} purchase_history
-   */
-  exports.prototype.purchase_history = undefined;
+  exports.prototype.share_with_other_emails = undefined;
 
   /**
    * @member {String} style
@@ -179,11 +156,6 @@
    * @member {String} type
    */
   exports.prototype.type = undefined;
-
-  /**
-   * @member {String} version
-   */
-  exports.prototype.version = undefined;
 
   return exports;
 

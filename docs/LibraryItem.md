@@ -11,15 +11,11 @@ Name | Type | Description | Notes
 **industries** | **[String]** |  | [optional] 
 **library_item_oid** | **Number** |  | [optional] 
 **merchant_id** | **String** |  | [optional] 
-**price** | **Number** |  | [optional] 
-**price_formatted** | **String** |  | [optional] 
 **public_item** | **Boolean** |  | [optional] 
-**published_dts** | **String** |  | [optional] 
-**publishing_status** | **String** |  | [optional] 
-**purchase_history** | **Number** |  | [optional] 
+**share_with_accounts** | [**[LibraryItemAccount]**](LibraryItemAccount.md) |  | [optional] 
+**share_with_other_emails** | [**[LibraryItemEmail]**](LibraryItemEmail.md) |  | [optional] 
 **style** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-**version** | **String** |  | [optional] 
 
 

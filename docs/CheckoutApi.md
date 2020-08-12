@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**login**](CheckoutApi.md#login) | **POST** /checkout/cart/profile/login | Profile login
 [**logout**](CheckoutApi.md#logout) | **POST** /checkout/cart/profile/logout | Profile logout
 [**register**](CheckoutApi.md#register) | **POST** /checkout/cart/profile/register | Profile registration
+[**registerAffiliateClick**](CheckoutApi.md#registerAffiliateClick) | **POST** /checkout/affiliateClick/register | Register affiliate click
 [**relatedItemsForCart**](CheckoutApi.md#relatedItemsForCart) | **POST** /checkout/related_items | Related items
 [**relatedItemsForItem**](CheckoutApi.md#relatedItemsForItem) | **POST** /checkout/relatedItems/{item_id} | Related items (specific item)
 [**setupBrowserKey**](CheckoutApi.md#setupBrowserKey) | **PUT** /checkout/browser_key | Setup Browser Application
@@ -782,6 +783,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CartProfileRegisterResponse**](CartProfileRegisterResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="registerAffiliateClick"></a>
+# **registerAffiliateClick**
+> CheckoutHandoffResponse registerAffiliateClick(register_affiliate_click_request, opts)
+
+Register affiliate click
+
+Register an affiliate click.  Used by custom checkouts that are completely API based and do not perform checkout handoff. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CheckoutApi();
+
+var register_affiliate_click_request = new UltraCartRestApiV2.RegisterAffiliateClickRequest(); // RegisterAffiliateClickRequest | Register affiliate click request
+
+var opts = { 
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.registerAffiliateClick(register_affiliate_click_request, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **register_affiliate_click_request** | [**RegisterAffiliateClickRequest**](RegisterAffiliateClickRequest.md)| Register affiliate click request | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**CheckoutHandoffResponse**](CheckoutHandoffResponse.md)
 
 ### Authorization
 
