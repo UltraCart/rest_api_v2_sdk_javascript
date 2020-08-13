@@ -34,7 +34,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 3.0.11
+   * @version 3.0.12
    */
 
   /**
@@ -87,6 +87,8 @@
         obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
       if (data.hasOwnProperty('scheduled_dts'))
         obj.scheduled_dts = ApiClient.convertToType(data['scheduled_dts'], 'String');
+      if (data.hasOwnProperty('screenshot_large_full_url'))
+        obj.screenshot_large_full_url = ApiClient.convertToType(data['screenshot_large_full_url'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('status_dts'))
@@ -192,6 +194,12 @@
    * @member {String} scheduled_dts
    */
   exports.prototype.scheduled_dts = undefined;
+
+  /**
+   * URL to a large full length screenshot
+   * @member {String} screenshot_large_full_url
+   */
+  exports.prototype.screenshot_large_full_url = undefined;
 
   /**
    * Status of the campaign of draft, archived, and sent

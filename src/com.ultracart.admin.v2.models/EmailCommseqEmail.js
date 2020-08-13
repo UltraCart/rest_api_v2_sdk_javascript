@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 3.0.11
+   * @version 3.0.12
    */
 
   /**
@@ -83,6 +83,14 @@
         obj.rejected = ApiClient.convertToType(data['rejected'], 'Boolean');
       if (data.hasOwnProperty('requires_review'))
         obj.requires_review = ApiClient.convertToType(data['requires_review'], 'Boolean');
+      if (data.hasOwnProperty('screenshot_large_full_url'))
+        obj.screenshot_large_full_url = ApiClient.convertToType(data['screenshot_large_full_url'], 'String');
+      if (data.hasOwnProperty('screenshot_large_viewport_url'))
+        obj.screenshot_large_viewport_url = ApiClient.convertToType(data['screenshot_large_viewport_url'], 'String');
+      if (data.hasOwnProperty('screenshot_small_full_url'))
+        obj.screenshot_small_full_url = ApiClient.convertToType(data['screenshot_small_full_url'], 'String');
+      if (data.hasOwnProperty('screenshot_small_viewport_url'))
+        obj.screenshot_small_viewport_url = ApiClient.convertToType(data['screenshot_small_viewport_url'], 'String');
       if (data.hasOwnProperty('smart_sending'))
         obj.smart_sending = ApiClient.convertToType(data['smart_sending'], 'Boolean');
       if (data.hasOwnProperty('storefront_oid'))
@@ -180,6 +188,30 @@
    * @member {Boolean} requires_review
    */
   exports.prototype.requires_review = undefined;
+
+  /**
+   * URL to screenshot in large form factor full page
+   * @member {String} screenshot_large_full_url
+   */
+  exports.prototype.screenshot_large_full_url = undefined;
+
+  /**
+   * URL to screenshot in large form factor viewport
+   * @member {String} screenshot_large_viewport_url
+   */
+  exports.prototype.screenshot_large_viewport_url = undefined;
+
+  /**
+   * URL to screenshot in small form factor full page
+   * @member {String} screenshot_small_full_url
+   */
+  exports.prototype.screenshot_small_full_url = undefined;
+
+  /**
+   * URL to screenshot in small form factor viewport
+   * @member {String} screenshot_small_viewport_url
+   */
+  exports.prototype.screenshot_small_viewport_url = undefined;
 
   /**
    * Smart sending

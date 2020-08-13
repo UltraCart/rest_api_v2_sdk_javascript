@@ -34,7 +34,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 3.0.11
+   * @version 3.0.12
    */
 
   /**
@@ -89,6 +89,8 @@
         obj.open_rate_formatted = ApiClient.convertToType(data['open_rate_formatted'], 'String');
       if (data.hasOwnProperty('revenue_formatted'))
         obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
+      if (data.hasOwnProperty('screenshot_large_full_url'))
+        obj.screenshot_large_full_url = ApiClient.convertToType(data['screenshot_large_full_url'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('status_dts'))
@@ -206,6 +208,12 @@
    * @member {String} revenue_formatted
    */
   exports.prototype.revenue_formatted = undefined;
+
+  /**
+   * URL to a large full length screenshot
+   * @member {String} screenshot_large_full_url
+   */
+  exports.prototype.screenshot_large_full_url = undefined;
 
   /**
    * Status of the campaign of draft, archived, active, and inactive

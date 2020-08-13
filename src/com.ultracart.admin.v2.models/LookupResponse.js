@@ -34,7 +34,7 @@
   /**
    * The LookupResponse model module.
    * @module com.ultracart.admin.v2.models/LookupResponse
-   * @version 3.0.11
+   * @version 3.0.12
    */
 
   /**

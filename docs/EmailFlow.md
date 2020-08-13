@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name of email flow | [optional] 
 **open_rate_formatted** | **String** | Open rate of emails, formatted | [optional] 
 **revenue_formatted** | **String** | Revenue, formatted | [optional] 
+**screenshot_large_full_url** | **String** | URL to a large full length screenshot | [optional] 
 **status** | **String** | Status of the campaign of draft, archived, active, and inactive | [optional] 
 **status_dts** | **String** | Timestamp when the last status change happened | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
