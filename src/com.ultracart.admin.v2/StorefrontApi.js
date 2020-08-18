@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.0.12
+   * @version 3.0.13
    */
 
   /**
@@ -488,57 +488,6 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/flows/{email_flow_uuid}/clone', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the cloneLibraryItem operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~cloneLibraryItemCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/LibraryItemResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Clone public library item.
-     * @param {Number} library_item_oid 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.storefront_oid 
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~cloneLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
-     */
-    this.cloneLibraryItem = function(library_item_oid, opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-      // verify the required parameter 'library_item_oid' is set
-      if (library_item_oid === undefined || library_item_oid === null) {
-        throw new Error("Missing the required parameter 'library_item_oid' when calling cloneLibraryItem");
-      }
-
-
-      var pathParams = {
-        'library_item_oid': library_item_oid
-      };
-      var queryParams = {
-        'storefront_oid': opts['storefront_oid'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = LibraryItemResponse;
-
-      return this.apiClient.callApi(
-        '/storefront/code_library/{library_item_oid}/clone', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3731,61 +3680,6 @@
     }
 
     /**
-     * Callback function to receive the result of the getLibraryItemsByQuery operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~getLibraryItemsByQueryCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/LibraryItemsResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve library items
-     * Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-     * @param {module:com.ultracart.admin.v2.models/LibraryItemQuery} item_query Item query
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
-     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts._sort The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~getLibraryItemsByQueryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemsResponse}
-     */
-    this.getLibraryItemsByQuery = function(item_query, opts, callback) {
-      opts = opts || {};
-      var postBody = item_query;
-
-      // verify the required parameter 'item_query' is set
-      if (item_query === undefined || item_query === null) {
-        throw new Error("Missing the required parameter 'item_query' when calling getLibraryItemsByQuery");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        '_limit': opts['_limit'],
-        '_offset': opts['_offset'],
-        '_sort': opts['_sort'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = LibraryItemsResponse;
-
-      return this.apiClient.callApi(
-        '/storefront/code_library/query', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the getTransactionEmail operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getTransactionEmailCallback
      * @param {String} error Error message, if any.
@@ -4419,6 +4313,104 @@
     }
 
     /**
+     * Callback function to receive the result of the publishLibraryItem operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~publishLibraryItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Publish library item.
+     * @param {Number} library_item_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~publishLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
+     */
+    this.publishLibraryItem = function(library_item_oid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling publishLibraryItem");
+      }
+
+
+      var pathParams = {
+        'library_item_oid': library_item_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LibraryItemResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/code_library/{library_item_oid}/publish', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the purchaseLibraryItem operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~purchaseLibraryItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone public library item.
+     * @param {Number} library_item_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.storefront_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~purchaseLibraryItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
+     */
+    this.purchaseLibraryItem = function(library_item_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling purchaseLibraryItem");
+      }
+
+
+      var pathParams = {
+        'library_item_oid': library_item_oid
+      };
+      var queryParams = {
+        'storefront_oid': opts['storefront_oid'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LibraryItemResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/code_library/{library_item_oid}/purchase', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the releaseEmailCommseqStepWaiting operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~releaseEmailCommseqStepWaitingCallback
      * @param {String} error Error message, if any.
@@ -4701,6 +4693,61 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/segments/{email_segment_uuid}/search', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the searchSharedItems operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~searchSharedItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve library items
+     * Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemQuery} item_query Item query
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~searchSharedItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemsResponse}
+     */
+    this.searchSharedItems = function(item_query, opts, callback) {
+      opts = opts || {};
+      var postBody = item_query;
+
+      // verify the required parameter 'item_query' is set
+      if (item_query === undefined || item_query === null) {
+        throw new Error("Missing the required parameter 'item_query' when calling searchSharedItems");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LibraryItemsResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/code_library/search', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

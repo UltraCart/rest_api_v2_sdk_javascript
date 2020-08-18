@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**checkDownloadEmailSegment**](StorefrontApi.md#checkDownloadEmailSegment) | **POST** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/downloadPrepare/{email_segment_rebuild_uuid} | Check download of email segment
 [**cloneEmailCampaign**](StorefrontApi.md#cloneEmailCampaign) | **POST** /storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid}/clone | Clone email campaign
 [**cloneEmailFlow**](StorefrontApi.md#cloneEmailFlow) | **POST** /storefront/{storefront_oid}/email/flows/{email_flow_uuid}/clone | Clone email flow
-[**cloneLibraryItem**](StorefrontApi.md#cloneLibraryItem) | **POST** /storefront/code_library/{library_item_oid}/clone | Clone public library item.
 [**createEmailSendingDomain**](StorefrontApi.md#createEmailSendingDomain) | **POST** /storefront/email/sending_domains/{domain}/create | Create email campaign
 [**deleteEmailCommseqStat**](StorefrontApi.md#deleteEmailCommseqStat) | **DELETE** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/stat | Delete communication sequence stats
 [**deleteEmailEmail**](StorefrontApi.md#deleteEmailEmail) | **DELETE** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid} | Delete email email
@@ -74,7 +73,6 @@ Method | HTTP request | Description
 [**getHistogramPropertyValues**](StorefrontApi.md#getHistogramPropertyValues) | **GET** /storefront/{storefront_oid}/email/histogram/property_values | Get histogram property values
 [**getLibraryFilterValues**](StorefrontApi.md#getLibraryFilterValues) | **GET** /storefront/code_library/filter_values | Get library values used to populate drop down boxes for filtering.
 [**getLibraryItem**](StorefrontApi.md#getLibraryItem) | **GET** /storefront/code_library/{library_item_oid} | Get library item.
-[**getLibraryItemsByQuery**](StorefrontApi.md#getLibraryItemsByQuery) | **POST** /storefront/code_library/query | Retrieve library items
 [**getTransactionEmail**](StorefrontApi.md#getTransactionEmail) | **GET** /storefront/{storefront_oid}/transaction_email/list/{email_id} | Gets a transaction email object
 [**getTransactionEmailList**](StorefrontApi.md#getTransactionEmailList) | **GET** /storefront/{storefront_oid}/transaction_email/list | Gets a list of transaction email names
 [**globalUnsubscribe**](StorefrontApi.md#globalUnsubscribe) | **POST** /storefront/{storefront_oid}/email/globalUnsubscribe | Globally unsubscribe a customer
@@ -87,11 +85,14 @@ Method | HTTP request | Description
 [**insertEmailPostcard**](StorefrontApi.md#insertEmailPostcard) | **POST** /storefront/{storefront_oid}/email/postcards | Insert email postcard
 [**insertEmailSegment**](StorefrontApi.md#insertEmailSegment) | **POST** /storefront/{storefront_oid}/email/segments | Insert email segment
 [**prepareDownloadEmailSegment**](StorefrontApi.md#prepareDownloadEmailSegment) | **POST** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/downloadPrepare | Prepare download of email segment
+[**publishLibraryItem**](StorefrontApi.md#publishLibraryItem) | **POST** /storefront/code_library/{library_item_oid}/publish | Publish library item.
+[**purchaseLibraryItem**](StorefrontApi.md#purchaseLibraryItem) | **POST** /storefront/code_library/{library_item_oid}/purchase | Clone public library item.
 [**releaseEmailCommseqStepWaiting**](StorefrontApi.md#releaseEmailCommseqStepWaiting) | **POST** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/waiting/{commseq_step_uuid} | Release email communication sequence customers waiting at the specified step
 [**review**](StorefrontApi.md#review) | **POST** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/review | Request a review of an email
 [**search**](StorefrontApi.md#search) | **GET** /storefront/search | Searches for all matching values
 [**searchEmailListCustomers**](StorefrontApi.md#searchEmailListCustomers) | **GET** /storefront/{storefront_oid}/email/lists/{email_list_uuid}/search | Search email list customers
 [**searchEmailSegmentCustomers**](StorefrontApi.md#searchEmailSegmentCustomers) | **GET** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/search | Search email segment customers
+[**searchSharedItems**](StorefrontApi.md#searchSharedItems) | **POST** /storefront/code_library/search | Retrieve library items
 [**sendEmailTest**](StorefrontApi.md#sendEmailTest) | **POST** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/test | Send email test
 [**sendPostcardTest**](StorefrontApi.md#sendPostcardTest) | **POST** /storefront/{storefront_oid}/email/postcards/{commseq_postcard_uuid}/test | Send postcard test
 [**startEmailCampaign**](StorefrontApi.md#startEmailCampaign) | **PUT** /storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid}/start | Start email campaign
@@ -625,71 +626,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailFlowResponse**](EmailFlowResponse.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="cloneLibraryItem"></a>
-# **cloneLibraryItem**
-> LibraryItemResponse cloneLibraryItem(library_item_oid, opts)
-
-Clone public library item.
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
-
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.StorefrontApi();
-
-var library_item_oid = 56; // Number | 
-
-var opts = { 
-  'storefront_oid': 56 // Number | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.cloneLibraryItem(library_item_oid, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **library_item_oid** | **Number**|  | 
- **storefront_oid** | **Number**|  | [optional] 
-
-### Return type
-
-[**LibraryItemResponse**](LibraryItemResponse.md)
 
 ### Authorization
 
@@ -4589,71 +4525,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getLibraryItemsByQuery"></a>
-# **getLibraryItemsByQuery**
-> LibraryItemsResponse getLibraryItemsByQuery(item_query, opts)
-
-Retrieve library items
-
-Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
-var apiInstance = new UltraCartRestApiV2.StorefrontApi();
-
-var item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
-
-var opts = { 
-  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getLibraryItemsByQuery(item_query, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **item_query** | [**LibraryItemQuery**](LibraryItemQuery.md)| Item query | 
- **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
- **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **_sort** | **String**| The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
-
-### Return type
-
-[**LibraryItemsResponse**](LibraryItemsResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="getTransactionEmail"></a>
 # **getTransactionEmail**
 > TransactionEmailResponse getTransactionEmail(storefront_oid, email_id)
@@ -5423,6 +5294,132 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="publishLibraryItem"></a>
+# **publishLibraryItem**
+> LibraryItemResponse publishLibraryItem(library_item_oid)
+
+Publish library item.
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+var library_item_oid = 56; // Number | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.publishLibraryItem(library_item_oid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **library_item_oid** | **Number**|  | 
+
+### Return type
+
+[**LibraryItemResponse**](LibraryItemResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="purchaseLibraryItem"></a>
+# **purchaseLibraryItem**
+> LibraryItemResponse purchaseLibraryItem(library_item_oid, opts)
+
+Clone public library item.
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure API key authorization: ultraCartBrowserApiKey
+var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
+ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+var library_item_oid = 56; // Number | 
+
+var opts = { 
+  'storefront_oid': 56 // Number | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.purchaseLibraryItem(library_item_oid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **library_item_oid** | **Number**|  | 
+ **storefront_oid** | **Number**|  | [optional] 
+
+### Return type
+
+[**LibraryItemResponse**](LibraryItemResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="releaseEmailCommseqStepWaiting"></a>
 # **releaseEmailCommseqStepWaiting**
 > releaseEmailCommseqStepWaiting(storefront_oid, commseq_uuid, commseq_step_uuid)
@@ -5757,6 +5754,71 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="searchSharedItems"></a>
+# **searchSharedItems**
+> LibraryItemsResponse searchSharedItems(item_query, opts)
+
+Retrieve library items
+
+Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+var item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
+
+var opts = { 
+  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.searchSharedItems(item_query, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **item_query** | [**LibraryItemQuery**](LibraryItemQuery.md)| Item query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 10000) | [optional] [default to 10000]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+
+### Return type
+
+[**LibraryItemsResponse**](LibraryItemsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
 
 ### HTTP request headers
 
