@@ -26,46 +26,52 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderPaymentCheck = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.LibraryItemScreenshot = factory(root.UltraCartRestApiV2.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The OrderPaymentCheck model module.
-   * @module com.ultracart.admin.v2.models/OrderPaymentCheck
+   * The LibraryItemScreenshot model module.
+   * @module com.ultracart.admin.v2.models/LibraryItemScreenshot
    * @version 3.0.14
    */
 
   /**
-   * Constructs a new <code>OrderPaymentCheck</code>.
-   * @alias module:com.ultracart.admin.v2.models/OrderPaymentCheck
+   * Constructs a new <code>LibraryItemScreenshot</code>.
+   * @alias module:com.ultracart.admin.v2.models/LibraryItemScreenshot
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>OrderPaymentCheck</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>LibraryItemScreenshot</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/OrderPaymentCheck} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/OrderPaymentCheck} The populated <code>OrderPaymentCheck</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/LibraryItemScreenshot} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/LibraryItemScreenshot} The populated <code>LibraryItemScreenshot</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('check_number'))
-        obj.check_number = ApiClient.convertToType(data['check_number'], 'String');
+      if (data.hasOwnProperty('default_url'))
+        obj.default_url = ApiClient.convertToType(data['default_url'], 'Boolean');
+      if (data.hasOwnProperty('screenshot_url'))
+        obj.screenshot_url = ApiClient.convertToType(data['screenshot_url'], 'String');
     }
     return obj;
   }
 
   /**
-   * Check number
-   * @member {String} check_number
+   * @member {Boolean} default_url
    */
-  exports.prototype.check_number = undefined;
+  exports.prototype.default_url = undefined;
+
+  /**
+   * @member {String} screenshot_url
+   */
+  exports.prototype.screenshot_url = undefined;
 
   return exports;
 

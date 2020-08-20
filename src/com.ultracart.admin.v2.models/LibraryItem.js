@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'));
+    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'), require('./LibraryItemScreenshot'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail);
+    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail, root.UltraCartRestApiV2.LibraryItemScreenshot);
   }
-}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail) {
+}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail, LibraryItemScreenshot) {
   'use strict';
 
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.13
+   * @version 3.0.14
    */
 
   /**
@@ -75,8 +75,6 @@
         obj.price = ApiClient.convertToType(data['price'], 'Number');
       if (data.hasOwnProperty('price_formatted'))
         obj.price_formatted = ApiClient.convertToType(data['price_formatted'], 'String');
-      if (data.hasOwnProperty('public_item'))
-        obj.public_item = ApiClient.convertToType(data['public_item'], 'Boolean');
       if (data.hasOwnProperty('published'))
         obj.published = ApiClient.convertToType(data['published'], 'Boolean');
       if (data.hasOwnProperty('published_from_library_item_oid'))
@@ -89,6 +87,8 @@
         obj.purchased_from_library_item_oid = ApiClient.convertToType(data['purchased_from_library_item_oid'], 'Number');
       if (data.hasOwnProperty('purchased_version'))
         obj.purchased_version = ApiClient.convertToType(data['purchased_version'], 'Number');
+      if (data.hasOwnProperty('screenshots'))
+        obj.screenshots = ApiClient.convertToType(data['screenshots'], [LibraryItemScreenshot]);
       if (data.hasOwnProperty('share_with_accounts'))
         obj.share_with_accounts = ApiClient.convertToType(data['share_with_accounts'], [LibraryItemAccount]);
       if (data.hasOwnProperty('share_with_other_emails'))
@@ -166,11 +166,6 @@
   exports.prototype.price_formatted = undefined;
 
   /**
-   * @member {Boolean} public_item
-   */
-  exports.prototype.public_item = undefined;
-
-  /**
    * True if this library item is a published item (not source)
    * @member {Boolean} published
    */
@@ -205,6 +200,11 @@
    * @member {Number} purchased_version
    */
   exports.prototype.purchased_version = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemScreenshot>} screenshots
+   */
+  exports.prototype.screenshots = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemAccount>} share_with_accounts
