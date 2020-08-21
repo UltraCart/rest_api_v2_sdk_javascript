@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./LibraryItemScreenshot'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AddLibraryItemRequest = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.AddLibraryItemRequest = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemScreenshot);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, LibraryItemScreenshot) {
   'use strict';
 
   /**
    * The AddLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/AddLibraryItemRequest
-   * @version 3.0.14
+   * @version 3.0.15
    */
 
   /**
@@ -61,6 +61,12 @@
         obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
+      if (data.hasOwnProperty('email_name'))
+        obj.email_name = ApiClient.convertToType(data['email_name'], 'String');
+      if (data.hasOwnProperty('email_path'))
+        obj.email_path = ApiClient.convertToType(data['email_path'], 'String');
+      if (data.hasOwnProperty('screenshots'))
+        obj.screenshots = ApiClient.convertToType(data['screenshots'], [LibraryItemScreenshot]);
       if (data.hasOwnProperty('storefront_oid'))
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('title'))
@@ -88,6 +94,24 @@
    * @member {String} description
    */
   exports.prototype.description = undefined;
+
+  /**
+   * Required if content_type is transactional_email. This is the name of the email template (html, not text).  This name should have a .vm file extension.  An example is auto_order_cancel_html.vm
+   * @member {String} email_name
+   */
+  exports.prototype.email_name = undefined;
+
+  /**
+   * Required if content_type is transactional_email. This is the full path to the email template stored in the file system.  This defines which StoreFront contains the desired email template.  An example is /themes/Elements/core/emails/auto_order_cancel_html.vm
+   * @member {String} email_path
+   */
+  exports.prototype.email_path = undefined;
+
+  /**
+   * Screenshot urls for display
+   * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemScreenshot>} screenshots
+   */
+  exports.prototype.screenshots = undefined;
 
   /**
    * StoreFront oid where content originates necessary for tracking down relative assets

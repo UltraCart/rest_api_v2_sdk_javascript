@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.0.14
+   * @version 3.0.15
    */
 
   /**
@@ -4368,7 +4368,7 @@
      */
 
     /**
-     * Clone public library item.
+     * Purchase public library item, which creates a copy of the item in your personal code library
      * @param {Number} library_item_oid 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.storefront_oid 
