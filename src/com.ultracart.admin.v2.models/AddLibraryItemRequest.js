@@ -34,7 +34,7 @@
   /**
    * The AddLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/AddLibraryItemRequest
-   * @version 3.0.15
+   * @version 3.0.16
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
+      if (data.hasOwnProperty('upsell_offer_oid'))
+        obj.upsell_offer_oid = ApiClient.convertToType(data['upsell_offer_oid'], 'Number');
       if (data.hasOwnProperty('uuid'))
         obj.uuid = ApiClient.convertToType(data['uuid'], 'String');
     }
@@ -124,6 +126,12 @@
    * @member {String} title
    */
   exports.prototype.title = undefined;
+
+  /**
+   * Required if content_type is upsell. This is object identifier of a StoreFront Upsell Offer.
+   * @member {Number} upsell_offer_oid
+   */
+  exports.prototype.upsell_offer_oid = undefined;
 
   /**
    * UUID of communication flow or campaign, null if this item is neither

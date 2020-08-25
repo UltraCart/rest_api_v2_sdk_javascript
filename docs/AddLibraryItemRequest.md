@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **screenshots** | [**[LibraryItemScreenshot]**](LibraryItemScreenshot.md) | Screenshot urls for display | [optional] 
 **storefront_oid** | **Number** | StoreFront oid where content originates necessary for tracking down relative assets | [optional] 
 **title** | **String** | title of library item, usually the name of the flow or campaign, or description of cjson | [optional] 
+**upsell_offer_oid** | **Number** | Required if content_type is upsell. This is object identifier of a StoreFront Upsell Offer. | [optional] 
 **uuid** | **String** | UUID of communication flow or campaign, null if this item is neither | [optional] 
 
 
