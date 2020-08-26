@@ -34,7 +34,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 3.0.17
+   * @version 3.0.18
    */
 
   /**

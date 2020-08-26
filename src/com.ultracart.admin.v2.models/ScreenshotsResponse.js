@@ -34,7 +34,7 @@
   /**
    * The ScreenshotsResponse model module.
    * @module com.ultracart.admin.v2.models/ScreenshotsResponse
-   * @version 3.0.17
+   * @version 3.0.18
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('screenshots'))
+        obj.screenshots = ApiClient.convertToType(data['screenshots'], ['String']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
     }
@@ -74,6 +76,12 @@
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype.metadata = undefined;
+
+  /**
+   * List of screenshot urls related to the object (depends on which method was called).
+   * @member {Array.<String>} screenshots
+   */
+  exports.prototype.screenshots = undefined;
 
   /**
    * Indicates if API call was successful
