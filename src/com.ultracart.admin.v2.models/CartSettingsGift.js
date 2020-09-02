@@ -34,7 +34,7 @@
   /**
    * The CartSettingsGift model module.
    * @module com.ultracart.admin.v2.models/CartSettingsGift
-   * @version 3.0.19
+   * @version 3.0.23
    */
 
   /**

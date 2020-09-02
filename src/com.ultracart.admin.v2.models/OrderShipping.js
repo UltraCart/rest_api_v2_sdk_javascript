@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Weight'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/OrderTrackingNumberDetails', 'com.ultracart.admin.v2.models/Weight'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Weight'));
+    module.exports = factory(require('../ApiClient'), require('./OrderTrackingNumberDetails'), require('./Weight'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderShipping = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Weight);
+    root.UltraCartRestApiV2.OrderShipping = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.OrderTrackingNumberDetails, root.UltraCartRestApiV2.Weight);
   }
-}(this, function(ApiClient, Weight) {
+}(this, function(ApiClient, OrderTrackingNumberDetails, Weight) {
   'use strict';
 
   /**
    * The OrderShipping model module.
    * @module com.ultracart.admin.v2.models/OrderShipping
-   * @version 3.0.19
+   * @version 3.0.23
    */
 
   /**
@@ -107,6 +107,8 @@
         obj.state_region = ApiClient.convertToType(data['state_region'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
+      if (data.hasOwnProperty('tracking_number_details'))
+        obj.tracking_number_details = ApiClient.convertToType(data['tracking_number_details'], [OrderTrackingNumberDetails]);
       if (data.hasOwnProperty('tracking_numbers'))
         obj.tracking_numbers = ApiClient.convertToType(data['tracking_numbers'], ['String']);
       if (data.hasOwnProperty('weight'))
@@ -270,6 +272,12 @@
    * @member {String} title
    */
   exports.prototype.title = undefined;
+
+  /**
+   * Tracking number details (Available for 1 year after shipment starting 8/1/2020)
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderTrackingNumberDetails>} tracking_number_details
+   */
+  exports.prototype.tracking_number_details = undefined;
 
   /**
    * Tracking numbers

@@ -34,7 +34,7 @@
   /**
    * The EmailPlan model module.
    * @module com.ultracart.admin.v2.models/EmailPlan
-   * @version 3.0.19
+   * @version 3.0.23
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.additional_emails = ApiClient.convertToType(data['additional_emails'], 'Number');
       if (data.hasOwnProperty('allow_list_import'))
         obj.allow_list_import = ApiClient.convertToType(data['allow_list_import'], 'Boolean');
+      if (data.hasOwnProperty('allow_tracking_emails'))
+        obj.allow_tracking_emails = ApiClient.convertToType(data['allow_tracking_emails'], 'Boolean');
       if (data.hasOwnProperty('customer_tiers'))
         obj.customer_tiers = ApiClient.convertToType(data['customer_tiers'], [EmailPlanAdditional]);
       if (data.hasOwnProperty('initial_sending_limits'))
@@ -103,6 +105,11 @@
    * @member {Boolean} allow_list_import
    */
   exports.prototype.allow_list_import = undefined;
+
+  /**
+   * @member {Boolean} allow_tracking_emails
+   */
+  exports.prototype.allow_tracking_emails = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/EmailPlanAdditional>} customer_tiers
