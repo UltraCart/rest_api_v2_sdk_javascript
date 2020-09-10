@@ -795,7 +795,7 @@ Name | Type | Description  | Notes
 
 <a name="registerAffiliateClick"></a>
 # **registerAffiliateClick**
-> CheckoutHandoffResponse registerAffiliateClick(register_affiliate_click_request, opts)
+> RegisterAffiliateClickResponse registerAffiliateClick(register_affiliate_click_request, opts)
 
 Register affiliate click
 
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CheckoutHandoffResponse**](CheckoutHandoffResponse.md)
+[**RegisterAffiliateClickResponse**](RegisterAffiliateClickResponse.md)
 
 ### Authorization
 

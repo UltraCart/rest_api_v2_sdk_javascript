@@ -34,7 +34,7 @@
   /**
    * The OrderShipping model module.
    * @module com.ultracart.admin.v2.models/OrderShipping
-   * @version 3.0.23
+   * @version 3.0.24
    */
 
   /**
@@ -274,7 +274,7 @@
   exports.prototype.title = undefined;
 
   /**
-   * Tracking number details (Available for 1 year after shipment starting 8/1/2020)
+   * Tracking number details
    * @member {Array.<module:com.ultracart.admin.v2.models/OrderTrackingNumberDetails>} tracking_number_details
    */
   exports.prototype.tracking_number_details = undefined;

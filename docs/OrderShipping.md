@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **special_instructions** | **String** | Special instructions from the customer regarding shipping | [optional] 
 **state_region** | **String** | State | [optional] 
 **title** | **String** | Title | [optional] 
-**tracking_number_details** | [**[OrderTrackingNumberDetails]**](OrderTrackingNumberDetails.md) | Tracking number details (Available for 1 year after shipment starting 8/1/2020) | [optional] 
+**tracking_number_details** | [**[OrderTrackingNumberDetails]**](OrderTrackingNumberDetails.md) | Tracking number details | [optional] 
 **tracking_numbers** | **[String]** | Tracking numbers | [optional] 
 **weight** | [**Weight**](Weight.md) |  | [optional] 
 

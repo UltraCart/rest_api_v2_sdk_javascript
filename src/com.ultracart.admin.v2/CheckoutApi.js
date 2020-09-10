@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Cart', 'com.ultracart.admin.v2.models/CartAffirmCheckoutResponse', 'com.ultracart.admin.v2.models/CartFinalizeOrderRequest', 'com.ultracart.admin.v2.models/CartFinalizeOrderResponse', 'com.ultracart.admin.v2.models/CartProfileLoginRequest', 'com.ultracart.admin.v2.models/CartProfileLoginResponse', 'com.ultracart.admin.v2.models/CartProfileRegisterRequest', 'com.ultracart.admin.v2.models/CartProfileRegisterResponse', 'com.ultracart.admin.v2.models/CartResponse', 'com.ultracart.admin.v2.models/CartValidationRequest', 'com.ultracart.admin.v2.models/CartValidationResponse', 'com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse', 'com.ultracart.admin.v2.models/CheckoutHandoffRequest', 'com.ultracart.admin.v2.models/CheckoutHandoffResponse', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse', 'com.ultracart.admin.v2.models/CheckoutStateProvinceResponse', 'com.ultracart.admin.v2.models/CityStateZip', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/RegisterAffiliateClickRequest'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Cart', 'com.ultracart.admin.v2.models/CartAffirmCheckoutResponse', 'com.ultracart.admin.v2.models/CartFinalizeOrderRequest', 'com.ultracart.admin.v2.models/CartFinalizeOrderResponse', 'com.ultracart.admin.v2.models/CartProfileLoginRequest', 'com.ultracart.admin.v2.models/CartProfileLoginResponse', 'com.ultracart.admin.v2.models/CartProfileRegisterRequest', 'com.ultracart.admin.v2.models/CartProfileRegisterResponse', 'com.ultracart.admin.v2.models/CartResponse', 'com.ultracart.admin.v2.models/CartValidationRequest', 'com.ultracart.admin.v2.models/CartValidationResponse', 'com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse', 'com.ultracart.admin.v2.models/CheckoutHandoffRequest', 'com.ultracart.admin.v2.models/CheckoutHandoffResponse', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest', 'com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse', 'com.ultracart.admin.v2.models/CheckoutStateProvinceResponse', 'com.ultracart.admin.v2.models/CityStateZip', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/RegisterAffiliateClickRequest', 'com.ultracart.admin.v2.models/RegisterAffiliateClickResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Cart'), require('../com.ultracart.admin.v2.models/CartAffirmCheckoutResponse'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderRequest'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderResponse'), require('../com.ultracart.admin.v2.models/CartProfileLoginRequest'), require('../com.ultracart.admin.v2.models/CartProfileLoginResponse'), require('../com.ultracart.admin.v2.models/CartProfileRegisterRequest'), require('../com.ultracart.admin.v2.models/CartProfileRegisterResponse'), require('../com.ultracart.admin.v2.models/CartResponse'), require('../com.ultracart.admin.v2.models/CartValidationRequest'), require('../com.ultracart.admin.v2.models/CartValidationResponse'), require('../com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse'), require('../com.ultracart.admin.v2.models/CheckoutHandoffRequest'), require('../com.ultracart.admin.v2.models/CheckoutHandoffResponse'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse'), require('../com.ultracart.admin.v2.models/CheckoutStateProvinceResponse'), require('../com.ultracart.admin.v2.models/CityStateZip'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/RegisterAffiliateClickRequest'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Cart'), require('../com.ultracart.admin.v2.models/CartAffirmCheckoutResponse'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderRequest'), require('../com.ultracart.admin.v2.models/CartFinalizeOrderResponse'), require('../com.ultracart.admin.v2.models/CartProfileLoginRequest'), require('../com.ultracart.admin.v2.models/CartProfileLoginResponse'), require('../com.ultracart.admin.v2.models/CartProfileRegisterRequest'), require('../com.ultracart.admin.v2.models/CartProfileRegisterResponse'), require('../com.ultracart.admin.v2.models/CartResponse'), require('../com.ultracart.admin.v2.models/CartValidationRequest'), require('../com.ultracart.admin.v2.models/CartValidationResponse'), require('../com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse'), require('../com.ultracart.admin.v2.models/CheckoutHandoffRequest'), require('../com.ultracart.admin.v2.models/CheckoutHandoffResponse'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest'), require('../com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse'), require('../com.ultracart.admin.v2.models/CheckoutStateProvinceResponse'), require('../com.ultracart.admin.v2.models/CityStateZip'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/RegisterAffiliateClickRequest'), require('../com.ultracart.admin.v2.models/RegisterAffiliateClickResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CheckoutApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Cart, root.UltraCartRestApiV2.CartAffirmCheckoutResponse, root.UltraCartRestApiV2.CartFinalizeOrderRequest, root.UltraCartRestApiV2.CartFinalizeOrderResponse, root.UltraCartRestApiV2.CartProfileLoginRequest, root.UltraCartRestApiV2.CartProfileLoginResponse, root.UltraCartRestApiV2.CartProfileRegisterRequest, root.UltraCartRestApiV2.CartProfileRegisterResponse, root.UltraCartRestApiV2.CartResponse, root.UltraCartRestApiV2.CartValidationRequest, root.UltraCartRestApiV2.CartValidationResponse, root.UltraCartRestApiV2.CheckoutAllowedCountriesResponse, root.UltraCartRestApiV2.CheckoutHandoffRequest, root.UltraCartRestApiV2.CheckoutHandoffResponse, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyResponse, root.UltraCartRestApiV2.CheckoutStateProvinceResponse, root.UltraCartRestApiV2.CityStateZip, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.RegisterAffiliateClickRequest);
+    root.UltraCartRestApiV2.CheckoutApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Cart, root.UltraCartRestApiV2.CartAffirmCheckoutResponse, root.UltraCartRestApiV2.CartFinalizeOrderRequest, root.UltraCartRestApiV2.CartFinalizeOrderResponse, root.UltraCartRestApiV2.CartProfileLoginRequest, root.UltraCartRestApiV2.CartProfileLoginResponse, root.UltraCartRestApiV2.CartProfileRegisterRequest, root.UltraCartRestApiV2.CartProfileRegisterResponse, root.UltraCartRestApiV2.CartResponse, root.UltraCartRestApiV2.CartValidationRequest, root.UltraCartRestApiV2.CartValidationResponse, root.UltraCartRestApiV2.CheckoutAllowedCountriesResponse, root.UltraCartRestApiV2.CheckoutHandoffRequest, root.UltraCartRestApiV2.CheckoutHandoffResponse, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest, root.UltraCartRestApiV2.CheckoutSetupBrowserKeyResponse, root.UltraCartRestApiV2.CheckoutStateProvinceResponse, root.UltraCartRestApiV2.CityStateZip, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.RegisterAffiliateClickRequest, root.UltraCartRestApiV2.RegisterAffiliateClickResponse);
   }
-}(this, function(ApiClient, Cart, CartAffirmCheckoutResponse, CartFinalizeOrderRequest, CartFinalizeOrderResponse, CartProfileLoginRequest, CartProfileLoginResponse, CartProfileRegisterRequest, CartProfileRegisterResponse, CartResponse, CartValidationRequest, CartValidationResponse, CheckoutAllowedCountriesResponse, CheckoutHandoffRequest, CheckoutHandoffResponse, CheckoutSetupBrowserKeyRequest, CheckoutSetupBrowserKeyResponse, CheckoutStateProvinceResponse, CityStateZip, ErrorResponse, ItemsResponse, RegisterAffiliateClickRequest) {
+}(this, function(ApiClient, Cart, CartAffirmCheckoutResponse, CartFinalizeOrderRequest, CartFinalizeOrderResponse, CartProfileLoginRequest, CartProfileLoginResponse, CartProfileRegisterRequest, CartProfileRegisterResponse, CartResponse, CartValidationRequest, CartValidationResponse, CheckoutAllowedCountriesResponse, CheckoutHandoffRequest, CheckoutHandoffResponse, CheckoutSetupBrowserKeyRequest, CheckoutSetupBrowserKeyResponse, CheckoutStateProvinceResponse, CityStateZip, ErrorResponse, ItemsResponse, RegisterAffiliateClickRequest, RegisterAffiliateClickResponse) {
   'use strict';
 
   /**
    * Checkout service.
    * @module com.ultracart.admin.v2/CheckoutApi
-   * @version 3.0.23
+   * @version 3.0.24
    */
 
   /**
@@ -636,7 +636,7 @@
      * Callback function to receive the result of the registerAffiliateClick operation.
      * @callback module:com.ultracart.admin.v2/CheckoutApi~registerAffiliateClickCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CheckoutHandoffResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/RegisterAffiliateClickResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -647,7 +647,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/CheckoutApi~registerAffiliateClickCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CheckoutHandoffResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/RegisterAffiliateClickResponse}
      */
     this.registerAffiliateClick = function(register_affiliate_click_request, opts, callback) {
       opts = opts || {};
@@ -674,7 +674,7 @@
       var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CheckoutHandoffResponse;
+      var returnType = RegisterAffiliateClickResponse;
 
       return this.apiClient.callApi(
         '/checkout/affiliateClick/register', 'POST',
