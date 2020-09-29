@@ -34,7 +34,7 @@
   /**
    * The CouponFreeItemWithItemPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchase
-   * @version 3.0.28
+   * @version 3.0.29
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.items = ApiClient.convertToType(data['items'], ['String']);
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
+      if (data.hasOwnProperty('match_required_purchase_item_to_free_item'))
+        obj.match_required_purchase_item_to_free_item = ApiClient.convertToType(data['match_required_purchase_item_to_free_item'], 'Boolean');
       if (data.hasOwnProperty('required_purchase_items'))
         obj.required_purchase_items = ApiClient.convertToType(data['required_purchase_items'], ['String']);
     }
@@ -76,6 +78,12 @@
    * @member {Number} limit
    */
   exports.prototype.limit = undefined;
+
+  /**
+   * If true then the free item is matched 1:1 with the free item in the list.
+   * @member {Boolean} match_required_purchase_item_to_free_item
+   */
+  exports.prototype.match_required_purchase_item_to_free_item = undefined;
 
   /**
    * Required items (at least one from the list) that must be purchased for coupon to be valid
