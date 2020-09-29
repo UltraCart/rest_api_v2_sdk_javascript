@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/TaxProviderAvalara', 'com.ultracart.admin.v2.models/TaxProviderSelf', 'com.ultracart.admin.v2.models/TaxProviderSovos', 'com.ultracart.admin.v2.models/TaxProviderTaxJar', 'com.ultracart.admin.v2.models/TaxProviderUltraCart'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/TaxProviderAvalara', 'com.ultracart.admin.v2.models/TaxProviderSelf', 'com.ultracart.admin.v2.models/TaxProviderSovos', 'com.ultracart.admin.v2.models/TaxProviderTaxJar', 'com.ultracart.admin.v2.models/TaxProviderUltraCart', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./TaxProviderAvalara'), require('./TaxProviderSelf'), require('./TaxProviderSovos'), require('./TaxProviderTaxJar'), require('./TaxProviderUltraCart'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./TaxProviderAvalara'), require('./TaxProviderSelf'), require('./TaxProviderSovos'), require('./TaxProviderTaxJar'), require('./TaxProviderUltraCart'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.TaxProvidersResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.TaxProviderAvalara, root.UltraCartRestApiV2.TaxProviderSelf, root.UltraCartRestApiV2.TaxProviderSovos, root.UltraCartRestApiV2.TaxProviderTaxJar, root.UltraCartRestApiV2.TaxProviderUltraCart);
+    root.UltraCartRestApiV2.TaxProvidersResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.TaxProviderAvalara, root.UltraCartRestApiV2.TaxProviderSelf, root.UltraCartRestApiV2.TaxProviderSovos, root.UltraCartRestApiV2.TaxProviderTaxJar, root.UltraCartRestApiV2.TaxProviderUltraCart, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient, Error, ResponseMetadata, TaxProviderAvalara, TaxProviderSelf, TaxProviderSovos, TaxProviderTaxJar, TaxProviderUltraCart) {
+}(this, function(ApiClient, Error, ResponseMetadata, TaxProviderAvalara, TaxProviderSelf, TaxProviderSovos, TaxProviderTaxJar, TaxProviderUltraCart, Warning) {
   'use strict';
 
   /**
    * The TaxProvidersResponse model module.
    * @module com.ultracart.admin.v2.models/TaxProvidersResponse
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.taxjar = TaxProviderTaxJar.constructFromObject(data['taxjar']);
       if (data.hasOwnProperty('ultracart'))
         obj.ultracart = TaxProviderUltraCart.constructFromObject(data['ultracart']);
+      if (data.hasOwnProperty('warning'))
+        obj.warning = Warning.constructFromObject(data['warning']);
     }
     return obj;
   }
@@ -115,6 +117,11 @@
    * @member {module:com.ultracart.admin.v2.models/TaxProviderUltraCart} ultracart
    */
   exports.prototype.ultracart = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Warning} warning
+   */
+  exports.prototype.warning = undefined;
 
   return exports;
 

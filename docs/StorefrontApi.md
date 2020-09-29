@@ -5,7 +5,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addToLibrary**](StorefrontApi.md#addToLibrary) | **POST** /storefront/code_library | Add to library
-[**applyToStoreFront**](StorefrontApi.md#applyToStoreFront) | **POST** /storefront/code_library/{library_item_oid}/applyToStoreFront/{storefront_oid} | Apply library item to storefront.
+[**applyToStoreFront**](StorefrontApi.md#applyToStoreFront) | **POST** /storefront/code_library/apply | Apply library item to storefront.
 [**archiveEmailList**](StorefrontApi.md#archiveEmailList) | **POST** /storefront/{storefront_oid}/email/lists/{email_list_uuid}/archive | Archive email list
 [**archiveEmailSegment**](StorefrontApi.md#archiveEmailSegment) | **POST** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/archive | Archive email segment
 [**backPopulateEmailFlow**](StorefrontApi.md#backPopulateEmailFlow) | **POST** /storefront/{storefront_oid}/email/flows/{email_flow_uuid}/backfill | Back populate email flow
@@ -147,7 +147,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var add_library_request = new UltraCartRestApiV2.AddLibraryItemRequest(); // AddLibraryItemRequest | New library item
+var add_library_request = new UltraCartRestApiV2.AddLibraryItemRequest(); // AddLibraryItemRequest | New library item request
 
 
 var callback = function(error, data, response) {
@@ -164,7 +164,7 @@ apiInstance.addToLibrary(add_library_request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **add_library_request** | [**AddLibraryItemRequest**](AddLibraryItemRequest.md)| New library item | 
+ **add_library_request** | [**AddLibraryItemRequest**](AddLibraryItemRequest.md)| New library item request | 
 
 ### Return type
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 <a name="applyToStoreFront"></a>
 # **applyToStoreFront**
-> ApplyLibraryItemResponse applyToStoreFront(library_item_oid, storefront_oid)
+> ApplyLibraryItemResponse applyToStoreFront(apply_library_request)
 
 Apply library item to storefront.
 
@@ -208,9 +208,7 @@ ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
-var library_item_oid = 56; // Number | 
-
-var storefront_oid = 56; // Number | 
+var apply_library_request = new UltraCartRestApiV2.ApplyLibraryItemRequest(); // ApplyLibraryItemRequest | New library item
 
 
 var callback = function(error, data, response) {
@@ -220,15 +218,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.applyToStoreFront(library_item_oid, storefront_oid, callback);
+apiInstance.applyToStoreFront(apply_library_request, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **library_item_oid** | **Number**|  | 
- **storefront_oid** | **Number**|  | 
+ **apply_library_request** | [**ApplyLibraryItemRequest**](ApplyLibraryItemRequest.md)| New library item | 
 
 ### Return type
 

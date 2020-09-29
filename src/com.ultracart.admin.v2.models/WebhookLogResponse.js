@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/WebhookLog'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning', 'com.ultracart.admin.v2.models/WebhookLog'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./WebhookLog'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./Warning'), require('./WebhookLog'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.WebhookLogResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.WebhookLog);
+    root.UltraCartRestApiV2.WebhookLogResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning, root.UltraCartRestApiV2.WebhookLog);
   }
-}(this, function(ApiClient, Error, ResponseMetadata, WebhookLog) {
+}(this, function(ApiClient, Error, ResponseMetadata, Warning, WebhookLog) {
   'use strict';
 
   /**
    * The WebhookLogResponse model module.
    * @module com.ultracart.admin.v2.models/WebhookLogResponse
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      if (data.hasOwnProperty('warning'))
+        obj.warning = Warning.constructFromObject(data['warning']);
       if (data.hasOwnProperty('webhook_log'))
         obj.webhook_log = WebhookLog.constructFromObject(data['webhook_log']);
     }
@@ -82,6 +84,11 @@
    * @member {Boolean} success
    */
   exports.prototype.success = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Warning} warning
+   */
+  exports.prototype.warning = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/WebhookLog} webhook_log

@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **percentage_complete** | **Number** |  | [optional] 
 **proceed** | **Boolean** |  | [optional] 
 **success** | **Boolean** | Indicates if API call was successful | [optional] 
+**warning** | [**Warning**](Warning.md) |  | [optional] 
 
 

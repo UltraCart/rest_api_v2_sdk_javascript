@@ -34,7 +34,7 @@
   /**
    * The OrderSummary model module.
    * @module com.ultracart.admin.v2.models/OrderSummary
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -55,6 +55,10 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('actual_fulfillment'))
+        obj.actual_fulfillment = Currency.constructFromObject(data['actual_fulfillment']);
+      if (data.hasOwnProperty('actual_shipping'))
+        obj.actual_shipping = Currency.constructFromObject(data['actual_shipping']);
       if (data.hasOwnProperty('arbitrary_shipping_handling_total'))
         obj.arbitrary_shipping_handling_total = Currency.constructFromObject(data['arbitrary_shipping_handling_total']);
       if (data.hasOwnProperty('other_refunded'))
@@ -88,6 +92,16 @@
     }
     return obj;
   }
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} actual_fulfillment
+   */
+  exports.prototype.actual_fulfillment = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} actual_shipping
+   */
+  exports.prototype.actual_shipping = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_shipping_handling_total

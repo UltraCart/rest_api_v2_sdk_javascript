@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ApplyLibraryItemResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata);
+    root.UltraCartRestApiV2.ApplyLibraryItemResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient, Error, ResponseMetadata) {
+}(this, function(ApiClient, Error, ResponseMetadata, Warning) {
   'use strict';
 
   /**
    * The ApplyLibraryItemResponse model module.
    * @module com.ultracart.admin.v2.models/ApplyLibraryItemResponse
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.cjson = ApiClient.convertToType(data['cjson'], 'String');
       if (data.hasOwnProperty('content_type'))
         obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
+      if (data.hasOwnProperty('email_template_vm_path'))
+        obj.email_template_vm_path = ApiClient.convertToType(data['email_template_vm_path'], 'String');
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -71,21 +73,29 @@
         obj.title = ApiClient.convertToType(data['title'], 'String');
       if (data.hasOwnProperty('uuid'))
         obj.uuid = ApiClient.convertToType(data['uuid'], 'String');
+      if (data.hasOwnProperty('warning'))
+        obj.warning = Warning.constructFromObject(data['warning']);
     }
     return obj;
   }
 
   /**
-   * Cjson from library item, only populated if this library item was a cjson snippet
+   * Cjson from library item, only populated if this library item was a cjson snippet or marketing email (not transactional)
    * @member {String} cjson
    */
   exports.prototype.cjson = undefined;
 
   /**
-   * flow, campaign, cjson, or upsell
+   * flow, campaign, cjson, upsell, transactional_email or email
    * @member {String} content_type
    */
   exports.prototype.content_type = undefined;
+
+  /**
+   * If a marketing email was applied, this is the path to the template encapsulating the cjson.  This is needed for the UltraCart UI.
+   * @member {String} email_template_vm_path
+   */
+  exports.prototype.email_template_vm_path = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
@@ -116,10 +126,15 @@
   exports.prototype.title = undefined;
 
   /**
-   * UUID of communication flow or campaign if this library item was a campaign or flow
+   * UUID of marketing email or communication flow/campaign if this library item was an email, campaign or flow
    * @member {String} uuid
    */
   exports.prototype.uuid = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Warning} warning
+   */
+  exports.prototype.warning = undefined;
 
   return exports;
 

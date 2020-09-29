@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -47,6 +47,61 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the adjustOrderTotal operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~adjustOrderTotalCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Adjusts an order total
+     * Adjusts an order total.  Adjusts individual items appropriately and considers taxes.  Desired total should be provided in the same currency as the order.  Returns true if successful. 
+     * @param {String} order_id The order id to cancel.
+     * @param {String} desired_total The desired total with no formatting. example 123.45
+     * @param {module:com.ultracart.admin.v2/OrderApi~adjustOrderTotalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    this.adjustOrderTotal = function(order_id, desired_total, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling adjustOrderTotal");
+      }
+
+      // verify the required parameter 'desired_total' is set
+      if (desired_total === undefined || desired_total === null) {
+        throw new Error("Missing the required parameter 'desired_total' when calling adjustOrderTotal");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id,
+        'desired_total': desired_total
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = BaseResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/adjust_order_total/{desired_total}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the cancelOrder operation.

@@ -34,7 +34,7 @@
   /**
    * The CartCheckout model module.
    * @module com.ultracart.admin.v2.models/CartCheckout
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.return_code = ApiClient.convertToType(data['return_code'], 'String');
       if (data.hasOwnProperty('screen_branding_theme_code'))
         obj.screen_branding_theme_code = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
+      if (data.hasOwnProperty('storefront_host_name'))
+        obj.storefront_host_name = ApiClient.convertToType(data['storefront_host_name'], 'String');
       if (data.hasOwnProperty('user_agent'))
         obj.user_agent = ApiClient.convertToType(data['user_agent'], 'String');
     }
@@ -148,6 +150,12 @@
    * @member {String} screen_branding_theme_code
    */
   exports.prototype.screen_branding_theme_code = undefined;
+
+  /**
+   * StoreFront Host Name
+   * @member {String} storefront_host_name
+   */
+  exports.prototype.storefront_host_name = undefined;
 
   /**
    * User agent of the browser

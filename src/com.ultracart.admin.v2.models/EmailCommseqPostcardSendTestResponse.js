@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata);
+    root.UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient, Error, ResponseMetadata) {
+}(this, function(ApiClient, Error, ResponseMetadata, Warning) {
   'use strict';
 
   /**
    * The EmailCommseqPostcardSendTestResponse model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestResponse
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.renderedPdf = ApiClient.convertToType(data['renderedPdf'], 'String');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      if (data.hasOwnProperty('warning'))
+        obj.warning = Warning.constructFromObject(data['warning']);
     }
     return obj;
   }
@@ -101,6 +103,11 @@
    * @member {Boolean} success
    */
   exports.prototype.success = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Warning} warning
+   */
+  exports.prototype.warning = undefined;
 
   return exports;
 

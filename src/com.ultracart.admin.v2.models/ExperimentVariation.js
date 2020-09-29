@@ -34,7 +34,7 @@
   /**
    * The ExperimentVariation model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariation
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.conversion_rate = ApiClient.convertToType(data['conversion_rate'], 'Number');
       if (data.hasOwnProperty('duration_seconds_sum'))
         obj.duration_seconds_sum = ApiClient.convertToType(data['duration_seconds_sum'], 'Number');
+      if (data.hasOwnProperty('event_count'))
+        obj.event_count = ApiClient.convertToType(data['event_count'], 'Number');
       if (data.hasOwnProperty('initiate_checkout_count'))
         obj.initiate_checkout_count = ApiClient.convertToType(data['initiate_checkout_count'], 'Number');
       if (data.hasOwnProperty('order_count'))
@@ -136,6 +138,12 @@
    * @member {Number} duration_seconds_sum
    */
   exports.prototype.duration_seconds_sum = undefined;
+
+  /**
+   * Total event ocunt for this variation
+   * @member {Number} event_count
+   */
+  exports.prototype.event_count = undefined;
 
   /**
    * Total initiate checkout count for this variation

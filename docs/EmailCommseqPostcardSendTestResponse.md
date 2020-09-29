@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **metadata** | [**ResponseMetadata**](ResponseMetadata.md) |  | [optional] 
 **renderedPdf** | **String** |  | [optional] 
 **success** | **Boolean** | Indicates if API call was successful | [optional] 
+**warning** | [**Warning**](Warning.md) |  | [optional] 
 
 

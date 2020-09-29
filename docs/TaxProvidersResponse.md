@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **success** | **Boolean** | Indicates if API call was successful | [optional] 
 **taxjar** | [**TaxProviderTaxJar**](TaxProviderTaxJar.md) |  | [optional] 
 **ultracart** | [**TaxProviderUltraCart**](TaxProviderUltraCart.md) |  | [optional] 
+**warning** | [**Warning**](Warning.md) |  | [optional] 
 
 

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/TempMultimedia'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/TempMultimedia', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./TempMultimedia'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./TempMultimedia'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.TempMultimediaResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.TempMultimedia);
+    root.UltraCartRestApiV2.TempMultimediaResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.TempMultimedia, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient, Error, ResponseMetadata, TempMultimedia) {
+}(this, function(ApiClient, Error, ResponseMetadata, TempMultimedia, Warning) {
   'use strict';
 
   /**
    * The TempMultimediaResponse model module.
    * @module com.ultracart.admin.v2.models/TempMultimediaResponse
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('temp_multimedia'))
         obj.temp_multimedia = TempMultimedia.constructFromObject(data['temp_multimedia']);
+      if (data.hasOwnProperty('warning'))
+        obj.warning = Warning.constructFromObject(data['warning']);
     }
     return obj;
   }
@@ -87,6 +89,11 @@
    * @member {module:com.ultracart.admin.v2.models/TempMultimedia} temp_multimedia
    */
   exports.prototype.temp_multimedia = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Warning} warning
+   */
+  exports.prototype.warning = undefined;
 
   return exports;
 

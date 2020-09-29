@@ -34,7 +34,7 @@
   /**
    * The Experiment model module.
    * @module com.ultracart.admin.v2.models/Experiment
-   * @version 3.0.24
+   * @version 3.0.27
    */
 
   /**
@@ -73,6 +73,8 @@
         obj.notes = ApiClient.convertToType(data['notes'], 'String');
       if (data.hasOwnProperty('objective'))
         obj.objective = ApiClient.convertToType(data['objective'], 'String');
+      if (data.hasOwnProperty('objective_parameter'))
+        obj.objective_parameter = ApiClient.convertToType(data['objective_parameter'], 'String');
       if (data.hasOwnProperty('optimization_type'))
         obj.optimization_type = ApiClient.convertToType(data['optimization_type'], 'String');
       if (data.hasOwnProperty('session_count'))
@@ -146,6 +148,12 @@
    * @member {String} objective
    */
   exports.prototype.objective = undefined;
+
+  /**
+   * Objective parameter (such as event name) that is being optimized
+   * @member {String} objective_parameter
+   */
+  exports.prototype.objective_parameter = undefined;
 
   /**
    * Type of optimization
