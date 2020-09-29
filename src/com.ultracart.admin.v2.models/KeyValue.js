@@ -34,7 +34,7 @@
   /**
    * The KeyValue model module.
    * @module com.ultracart.admin.v2.models/KeyValue
-   * @version 3.0.27
+   * @version 3.0.28
    */
 
   /**
