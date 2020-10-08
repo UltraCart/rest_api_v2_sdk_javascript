@@ -34,7 +34,7 @@
   /**
    * The CartCoupon model module.
    * @module com.ultracart.admin.v2.models/CartCoupon
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The CouponTierPercent model module.
    * @module com.ultracart.admin.v2.models/CouponTierPercent
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**

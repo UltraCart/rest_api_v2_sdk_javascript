@@ -34,7 +34,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**
@@ -81,6 +81,8 @@
         obj.esp_friendly_name = ApiClient.convertToType(data['esp_friendly_name'], 'String');
       if (data.hasOwnProperty('filter_profile_equation_json'))
         obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
+      if (data.hasOwnProperty('library_item_oid'))
+        obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
@@ -184,6 +186,12 @@
    * @member {String} filter_profile_equation_json
    */
   exports.prototype.filter_profile_equation_json = undefined;
+
+  /**
+   * If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated.
+   * @member {Number} library_item_oid
+   */
+  exports.prototype.library_item_oid = undefined;
 
   /**
    * Merchant ID

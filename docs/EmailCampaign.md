@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **esp_domain_user** | **String** | User of the sending address | [optional] 
 **esp_domain_uuid** | **String** | UUID of the sending domain | [optional] 
 **esp_friendly_name** | **String** | Friendly name of the sending email | [optional] 
+**library_item_oid** | **Number** | If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated. | [optional] 
 **memberships** | [**[EmailListSegmentMembership]**](EmailListSegmentMembership.md) | List and segment memberships | [optional] 
 **merchant_id** | **String** | Merchant ID | [optional] 
 **name** | **String** | Name of email campaign | [optional] 

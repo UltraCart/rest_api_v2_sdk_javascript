@@ -34,7 +34,7 @@
   /**
    * The CouponEditorValues model module.
    * @module com.ultracart.admin.v2.models/CouponEditorValues
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**

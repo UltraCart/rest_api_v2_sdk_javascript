@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**
@@ -4949,6 +4949,61 @@
 
       return this.apiClient.callApi(
         '/storefront/code_library/search_published', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the searchReviewItems operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~searchReviewItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve library items needing review or rejected
+     * Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemQuery} item_query Item query
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~searchReviewItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemsResponse}
+     */
+    this.searchReviewItems = function(item_query, opts, callback) {
+      opts = opts || {};
+      var postBody = item_query;
+
+      // verify the required parameter 'item_query' is set
+      if (item_query === undefined || item_query === null) {
+        throw new Error("Missing the required parameter 'item_query' when calling searchReviewItems");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = LibraryItemsResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/code_library/search_review', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

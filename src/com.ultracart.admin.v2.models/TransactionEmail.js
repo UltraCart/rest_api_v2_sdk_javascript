@@ -34,7 +34,7 @@
   /**
    * The TransactionEmail model module.
    * @module com.ultracart.admin.v2.models/TransactionEmail
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.invalid = ApiClient.convertToType(data['invalid'], 'Boolean');
       if (data.hasOwnProperty('last_modified'))
         obj.last_modified = ApiClient.convertToType(data['last_modified'], 'String');
+      if (data.hasOwnProperty('library_item_oid'))
+        obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('options'))
         obj.options = ApiClient.convertToType(data['options'], [TransactionEmailOption]);
       if (data.hasOwnProperty('path'))
@@ -156,6 +158,12 @@
    * @member {String} last_modified
    */
   exports.prototype.last_modified = undefined;
+
+  /**
+   * If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated.
+   * @member {Number} library_item_oid
+   */
+  exports.prototype.library_item_oid = undefined;
 
   /**
    * Options that help govern how and when this template is used

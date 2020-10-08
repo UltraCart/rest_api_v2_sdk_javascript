@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **handlebar_variables** | **[String]** | Handlebar Variables available for email template | [optional] 
 **invalid** | **Boolean** | Invalid will be true if the template cannot compile | [optional] 
 **last_modified** | **String** | Last modified timestamp | [optional] 
+**library_item_oid** | **Number** | If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated. | [optional] 
 **options** | [**[TransactionEmailOption]**](TransactionEmailOption.md) | Options that help govern how and when this template is used | [optional] 
 **path** | **String** | directory path where template is stored in file system | [optional] 
 **size** | **String** | Size of file in friendly description | [optional] 

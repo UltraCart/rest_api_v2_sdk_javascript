@@ -34,7 +34,7 @@
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('original_object_id'))
+        obj.original_object_id = ApiClient.convertToType(data['original_object_id'], 'String');
       if (data.hasOwnProperty('price'))
         obj.price = ApiClient.convertToType(data['price'], 'Number');
       if (data.hasOwnProperty('price_formatted'))
@@ -87,6 +89,14 @@
         obj.purchased_from_library_item_oid = ApiClient.convertToType(data['purchased_from_library_item_oid'], 'Number');
       if (data.hasOwnProperty('purchased_version'))
         obj.purchased_version = ApiClient.convertToType(data['purchased_version'], 'Number');
+      if (data.hasOwnProperty('rejected'))
+        obj.rejected = ApiClient.convertToType(data['rejected'], 'Boolean');
+      if (data.hasOwnProperty('rejected_reason'))
+        obj.rejected_reason = ApiClient.convertToType(data['rejected_reason'], 'String');
+      if (data.hasOwnProperty('reviewed'))
+        obj.reviewed = ApiClient.convertToType(data['reviewed'], 'Boolean');
+      if (data.hasOwnProperty('reviewed_dts'))
+        obj.reviewed_dts = ApiClient.convertToType(data['reviewed_dts'], Object);
       if (data.hasOwnProperty('screenshots'))
         obj.screenshots = ApiClient.convertToType(data['screenshots'], [LibraryItemScreenshot]);
       if (data.hasOwnProperty('share_with_accounts'))
@@ -154,6 +164,12 @@
   exports.prototype.merchant_id = undefined;
 
   /**
+   * This id points to the original object that was added to the library. For flows and campaigns, this is a uuid string.  For upsells, it is an oid integer.  For transactional_emails, it is an email name.
+   * @member {String} original_object_id
+   */
+  exports.prototype.original_object_id = undefined;
+
+  /**
    * The price of the published item.  Null for any private library items.
    * @member {Number} price
    */
@@ -200,6 +216,30 @@
    * @member {Number} purchased_version
    */
   exports.prototype.purchased_version = undefined;
+
+  /**
+   * Any published library reviewed by UltraCart staff for malicious or inappropriate content will have this flag set to true.  This is always false for non-published items
+   * @member {Boolean} rejected
+   */
+  exports.prototype.rejected = undefined;
+
+  /**
+   * Any rejected published item will have this field populated with the reason.
+   * @member {String} rejected_reason
+   */
+  exports.prototype.rejected_reason = undefined;
+
+  /**
+   * Any published library items must be reviewed by UltraCart staff for malicious content.  This flag shows the status of that review.  This is always false for non-published items
+   * @member {Boolean} reviewed
+   */
+  exports.prototype.reviewed = undefined;
+
+  /**
+   * This is the timestamp for a published items formal review by UltraCart staff for malicious content.
+   * @member {Object} reviewed_dts
+   */
+  exports.prototype.reviewed_dts = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemScreenshot>} screenshots

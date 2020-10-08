@@ -34,7 +34,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 3.0.29
+   * @version 3.0.30
    */
 
   /**
@@ -73,6 +73,8 @@
         obj.esp_domain_uuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('esp_friendly_name'))
         obj.esp_friendly_name = ApiClient.convertToType(data['esp_friendly_name'], 'String');
+      if (data.hasOwnProperty('library_item_oid'))
+        obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('memberships'))
         obj.memberships = ApiClient.convertToType(data['memberships'], [EmailListSegmentMembership]);
       if (data.hasOwnProperty('merchant_id'))
@@ -152,6 +154,12 @@
    * @member {String} esp_friendly_name
    */
   exports.prototype.esp_friendly_name = undefined;
+
+  /**
+   * If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated.
+   * @member {Number} library_item_oid
+   */
+  exports.prototype.library_item_oid = undefined;
 
   /**
    * List and segment memberships
