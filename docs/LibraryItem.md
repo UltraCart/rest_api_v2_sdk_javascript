@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **industries** | **[String]** |  | [optional] 
 **library_item_oid** | **Number** |  | [optional] 
 **merchant_id** | **String** |  | [optional] 
+**my_purchased_version** | **Number** | If this is a public item and the merchant has already purchased it, this is their version.  If not yet purchased, this will be zero.  This value will only be populated during a searchPublicItems() call. | [optional] 
 **original_object_id** | **String** | This id points to the original object that was added to the library. For flows and campaigns, this is a uuid string.  For upsells, it is an oid integer.  For transactional_emails, it is an email name. | [optional] 
 **price** | **Number** | The price of the published item.  Null for any private library items. | [optional] 
 **price_formatted** | **String** | The formatted price of the published item.  Null for any private library items. | [optional] 

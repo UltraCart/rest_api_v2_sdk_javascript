@@ -34,7 +34,7 @@
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.30
+   * @version 3.0.31
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('my_purchased_version'))
+        obj.my_purchased_version = ApiClient.convertToType(data['my_purchased_version'], 'Number');
       if (data.hasOwnProperty('original_object_id'))
         obj.original_object_id = ApiClient.convertToType(data['original_object_id'], 'String');
       if (data.hasOwnProperty('price'))
@@ -162,6 +164,12 @@
    * @member {String} merchant_id
    */
   exports.prototype.merchant_id = undefined;
+
+  /**
+   * If this is a public item and the merchant has already purchased it, this is their version.  If not yet purchased, this will be zero.  This value will only be populated during a searchPublicItems() call.
+   * @member {Number} my_purchased_version
+   */
+  exports.prototype.my_purchased_version = undefined;
 
   /**
    * This id points to the original object that was added to the library. For flows and campaigns, this is a uuid string.  For upsells, it is an oid integer.  For transactional_emails, it is an email name.
