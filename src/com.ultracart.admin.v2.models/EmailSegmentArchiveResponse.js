@@ -34,7 +34,7 @@
   /**
    * The EmailSegmentArchiveResponse model module.
    * @module com.ultracart.admin.v2.models/EmailSegmentArchiveResponse
-   * @version 3.0.31
+   * @version 3.0.32
    */
 
   /**
