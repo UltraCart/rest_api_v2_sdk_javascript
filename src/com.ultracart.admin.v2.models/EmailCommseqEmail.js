@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 3.0.32
+   * @version 3.0.33
    */
 
   /**
@@ -73,6 +73,8 @@
         obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('individually_render'))
         obj.individually_render = ApiClient.convertToType(data['individually_render'], 'Boolean');
+      if (data.hasOwnProperty('library_item_oid'))
+        obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('pending_review'))
@@ -158,6 +160,12 @@
    * @member {Boolean} individually_render
    */
   exports.prototype.individually_render = undefined;
+
+  /**
+   * If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated.
+   * @member {Number} library_item_oid
+   */
+  exports.prototype.library_item_oid = undefined;
 
   /**
    * Merchant ID
