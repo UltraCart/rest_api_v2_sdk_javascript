@@ -34,7 +34,7 @@
   /**
    * The ItemDigitalDelivery model module.
    * @module com.ultracart.admin.v2.models/ItemDigitalDelivery
-   * @version 3.0.33
+   * @version 3.0.35
    */
 
   /**

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Group', 'com.ultracart.admin.v2.models/GroupResponse', 'com.ultracart.admin.v2.models/GroupsResponse', 'com.ultracart.admin.v2.models/User', 'com.ultracart.admin.v2.models/UserResponse', 'com.ultracart.admin.v2.models/UsersResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Group', 'com.ultracart.admin.v2.models/GroupResponse', 'com.ultracart.admin.v2.models/GroupsResponse', 'com.ultracart.admin.v2.models/User', 'com.ultracart.admin.v2.models/UserLoginsResponse', 'com.ultracart.admin.v2.models/UserResponse', 'com.ultracart.admin.v2.models/UsersResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Group'), require('../com.ultracart.admin.v2.models/GroupResponse'), require('../com.ultracart.admin.v2.models/GroupsResponse'), require('../com.ultracart.admin.v2.models/User'), require('../com.ultracart.admin.v2.models/UserResponse'), require('../com.ultracart.admin.v2.models/UsersResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Group'), require('../com.ultracart.admin.v2.models/GroupResponse'), require('../com.ultracart.admin.v2.models/GroupsResponse'), require('../com.ultracart.admin.v2.models/User'), require('../com.ultracart.admin.v2.models/UserLoginsResponse'), require('../com.ultracart.admin.v2.models/UserResponse'), require('../com.ultracart.admin.v2.models/UsersResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.UserApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Group, root.UltraCartRestApiV2.GroupResponse, root.UltraCartRestApiV2.GroupsResponse, root.UltraCartRestApiV2.User, root.UltraCartRestApiV2.UserResponse, root.UltraCartRestApiV2.UsersResponse);
+    root.UltraCartRestApiV2.UserApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Group, root.UltraCartRestApiV2.GroupResponse, root.UltraCartRestApiV2.GroupsResponse, root.UltraCartRestApiV2.User, root.UltraCartRestApiV2.UserLoginsResponse, root.UltraCartRestApiV2.UserResponse, root.UltraCartRestApiV2.UsersResponse);
   }
-}(this, function(ApiClient, ErrorResponse, Group, GroupResponse, GroupsResponse, User, UserResponse, UsersResponse) {
+}(this, function(ApiClient, ErrorResponse, Group, GroupResponse, GroupsResponse, User, UserLoginsResponse, UserResponse, UsersResponse) {
   'use strict';
 
   /**
    * User service.
    * @module com.ultracart.admin.v2/UserApi
-   * @version 3.0.33
+   * @version 3.0.35
    */
 
   /**
@@ -272,6 +272,54 @@
 
       return this.apiClient.callApi(
         '/user/users/{user_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getUserLogins operation.
+     * @callback module:com.ultracart.admin.v2/UserApi~getUserLoginsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/UserLoginsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a user's login history
+     * Retrieves logins for a single user using the specified user id. 
+     * @param {Number} user_id The user id to retrieve.
+     * @param {module:com.ultracart.admin.v2/UserApi~getUserLoginsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/UserLoginsResponse}
+     */
+    this.getUserLogins = function(user_id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling getUserLogins");
+      }
+
+
+      var pathParams = {
+        'user_id': user_id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = UserLoginsResponse;
+
+      return this.apiClient.callApi(
+        '/user/users/{user_id}/logins', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

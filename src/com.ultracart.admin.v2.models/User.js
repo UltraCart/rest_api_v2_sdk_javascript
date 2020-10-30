@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/LinkedAccount', 'com.ultracart.admin.v2.models/Notification', 'com.ultracart.admin.v2.models/Permission', 'com.ultracart.admin.v2.models/UserGroupMembership', 'com.ultracart.admin.v2.models/UserLogin'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./LinkedAccount'), require('./Notification'), require('./Permission'), require('./UserGroupMembership'), require('./UserLogin'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.User = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.User = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LinkedAccount, root.UltraCartRestApiV2.Notification, root.UltraCartRestApiV2.Permission, root.UltraCartRestApiV2.UserGroupMembership, root.UltraCartRestApiV2.UserLogin);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, LinkedAccount, Notification, Permission, UserGroupMembership, UserLogin) {
   'use strict';
 
   /**
    * The User model module.
    * @module com.ultracart.admin.v2.models/User
-   * @version 3.0.33
+   * @version 3.0.35
    */
 
   /**
@@ -66,17 +66,19 @@
       if (data.hasOwnProperty('full_name'))
         obj.full_name = ApiClient.convertToType(data['full_name'], 'String');
       if (data.hasOwnProperty('groups'))
-        obj.groups = ApiClient.convertToType(data['groups'], Object);
+        obj.groups = ApiClient.convertToType(data['groups'], [UserGroupMembership]);
       if (data.hasOwnProperty('linked_accounts'))
-        obj.linked_accounts = ApiClient.convertToType(data['linked_accounts'], Object);
+        obj.linked_accounts = ApiClient.convertToType(data['linked_accounts'], [LinkedAccount]);
       if (data.hasOwnProperty('login'))
         obj.login = ApiClient.convertToType(data['login'], 'String');
+      if (data.hasOwnProperty('login_histories'))
+        obj.login_histories = ApiClient.convertToType(data['login_histories'], [UserLogin]);
       if (data.hasOwnProperty('notifications'))
-        obj.notifications = ApiClient.convertToType(data['notifications'], Object);
+        obj.notifications = ApiClient.convertToType(data['notifications'], [Notification]);
       if (data.hasOwnProperty('otp_serial_number'))
         obj.otp_serial_number = ApiClient.convertToType(data['otp_serial_number'], 'String');
       if (data.hasOwnProperty('permissions'))
-        obj.permissions = ApiClient.convertToType(data['permissions'], Object);
+        obj.permissions = ApiClient.convertToType(data['permissions'], [Permission]);
       if (data.hasOwnProperty('phone'))
         obj.phone = ApiClient.convertToType(data['phone'], 'String');
       if (data.hasOwnProperty('user_id'))
@@ -117,13 +119,13 @@
 
   /**
    * A list of groups for this merchant and whether or not this user is a member of those groups.
-   * @member {Object} groups
+   * @member {Array.<module:com.ultracart.admin.v2.models/UserGroupMembership>} groups
    */
   exports.prototype.groups = undefined;
 
   /**
    * A list of linked accounts and whether or not this user is mirrored to any of those accounts.
-   * @member {Object} linked_accounts
+   * @member {Array.<module:com.ultracart.admin.v2.models/LinkedAccount>} linked_accounts
    */
   exports.prototype.linked_accounts = undefined;
 
@@ -134,8 +136,14 @@
   exports.prototype.login = undefined;
 
   /**
+   * A list of user logins over the past 90 days
+   * @member {Array.<module:com.ultracart.admin.v2.models/UserLogin>} login_histories
+   */
+  exports.prototype.login_histories = undefined;
+
+  /**
    * A list of notifications the user receives.
-   * @member {Object} notifications
+   * @member {Array.<module:com.ultracart.admin.v2.models/Notification>} notifications
    */
   exports.prototype.notifications = undefined;
 
@@ -147,7 +155,7 @@
 
   /**
    * A list of permissions the user enjoys for accessing the backend of UltraCart.
-   * @member {Object} permissions
+   * @member {Array.<module:com.ultracart.admin.v2.models/Permission>} permissions
    */
   exports.prototype.permissions = undefined;
 

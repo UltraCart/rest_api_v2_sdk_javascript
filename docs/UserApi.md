@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getGroup**](UserApi.md#getGroup) | **GET** /user/groups/{group_oid} | Retrieve a group
 [**getGroups**](UserApi.md#getGroups) | **GET** /user/groups | Get groups
 [**getUser**](UserApi.md#getUser) | **GET** /user/users/{user_id} | Retrieve a user
+[**getUserLogins**](UserApi.md#getUserLogins) | **GET** /user/users/{user_id}/logins | Retrieve a user's login history
 [**getUsers**](UserApi.md#getUsers) | **GET** /user/users | Get users
 [**insertGroup**](UserApi.md#insertGroup) | **POST** /user/groups | Insert a group
 [**insertUser**](UserApi.md#insertUser) | **POST** /user/users | Insert a user
@@ -283,6 +284,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserResponse**](UserResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getUserLogins"></a>
+# **getUserLogins**
+> UserLoginsResponse getUserLogins(user_id)
+
+Retrieve a user's login history
+
+Retrieves logins for a single user using the specified user id. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.UserApi();
+
+var user_id = 56; // Number | The user id to retrieve.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getUserLogins(user_id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Number**| The user id to retrieve. | 
+
+### Return type
+
+[**UserLoginsResponse**](UserLoginsResponse.md)
 
 ### Authorization
 

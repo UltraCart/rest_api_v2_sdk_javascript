@@ -34,7 +34,7 @@
   /**
    * The LibraryItemEmail model module.
    * @module com.ultracart.admin.v2.models/LibraryItemEmail
-   * @version 3.0.33
+   * @version 3.0.35
    */
 
   /**

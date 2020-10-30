@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/GroupUserMembership', 'com.ultracart.admin.v2.models/Notification', 'com.ultracart.admin.v2.models/Permission'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./GroupUserMembership'), require('./Notification'), require('./Permission'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Group = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.Group = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.GroupUserMembership, root.UltraCartRestApiV2.Notification, root.UltraCartRestApiV2.Permission);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, GroupUserMembership, Notification, Permission) {
   'use strict';
 
   /**
    * The Group model module.
    * @module com.ultracart.admin.v2.models/Group
-   * @version 3.0.33
+   * @version 3.0.35
    */
 
   /**
@@ -60,11 +60,11 @@
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('notifications'))
-        obj.notifications = ApiClient.convertToType(data['notifications'], Object);
+        obj.notifications = ApiClient.convertToType(data['notifications'], [Notification]);
       if (data.hasOwnProperty('permissions'))
-        obj.permissions = ApiClient.convertToType(data['permissions'], Object);
+        obj.permissions = ApiClient.convertToType(data['permissions'], [Permission]);
       if (data.hasOwnProperty('users'))
-        obj.users = ApiClient.convertToType(data['users'], Object);
+        obj.users = ApiClient.convertToType(data['users'], [GroupUserMembership]);
     }
     return obj;
   }
@@ -83,19 +83,19 @@
 
   /**
    * A list of notifications the user receives.
-   * @member {Object} notifications
+   * @member {Array.<module:com.ultracart.admin.v2.models/Notification>} notifications
    */
   exports.prototype.notifications = undefined;
 
   /**
    * A list of permissions the user enjoys for accessing the backend of UltraCart.
-   * @member {Object} permissions
+   * @member {Array.<module:com.ultracart.admin.v2.models/Permission>} permissions
    */
   exports.prototype.permissions = undefined;
 
   /**
    * A list of users that belong to this group.
-   * @member {Object} users
+   * @member {Array.<module:com.ultracart.admin.v2.models/GroupUserMembership>} users
    */
   exports.prototype.users = undefined;
 
