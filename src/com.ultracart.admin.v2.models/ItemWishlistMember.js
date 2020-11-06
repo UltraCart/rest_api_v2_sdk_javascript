@@ -34,7 +34,7 @@
   /**
    * The ItemWishlistMember model module.
    * @module com.ultracart.admin.v2.models/ItemWishlistMember
-   * @version 3.0.35
+   * @version 3.0.37
    */
 
   /**

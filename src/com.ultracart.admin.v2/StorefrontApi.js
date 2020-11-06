@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.0.35
+   * @version 3.0.37
    */
 
   /**
@@ -3923,6 +3923,60 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/transaction_email/list', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTransactionEmailScreenshots operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getTransactionEmailScreenshotsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ScreenshotsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get transactional email screenshots
+     * @param {Number} storefront_oid 
+     * @param {String} email_id 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getTransactionEmailScreenshotsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ScreenshotsResponse}
+     */
+    this.getTransactionEmailScreenshots = function(storefront_oid, email_id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getTransactionEmailScreenshots");
+      }
+
+      // verify the required parameter 'email_id' is set
+      if (email_id === undefined || email_id === null) {
+        throw new Error("Missing the required parameter 'email_id' when calling getTransactionEmailScreenshots");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'email_id': email_id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ScreenshotsResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/transaction_email/list/{email_id}/screenshots', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

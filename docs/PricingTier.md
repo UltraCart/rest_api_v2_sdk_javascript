@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **pricing_tier_oid** | **Number** | Pricing Tier Oid | [optional] 
 **realtime_percentage_discount** | **Number** | Realtime percentage discount | [optional] 
 **signup_notification** | [**PricingTierNotification**](PricingTierNotification.md) |  | [optional] 
-**suppress_buysafe** | **Boolean** | Suppress buySAFE | [optional] 
+**suppress_buysafe** | **Boolean** | Suppress buySAFE (deprecated) | [optional] 
 **suppress_mailing_list** | **Boolean** | Suppress mailing list | [optional] 
 **tax_exempt** | **Boolean** | Tax Exempt | [optional] 
 **track_separately** | **Boolean** | Track separately | [optional] 

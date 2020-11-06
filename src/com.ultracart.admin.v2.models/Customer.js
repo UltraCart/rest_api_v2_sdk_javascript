@@ -34,7 +34,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 3.0.35
+   * @version 3.0.37
    */
 
   /**
@@ -458,7 +458,7 @@
   exports.prototype.software_entitlements = undefined;
 
   /**
-   * Suppress buySAFE
+   * Suppress buySAFE (deprecated)
    * @member {Boolean} suppress_buysafe
    */
   exports.prototype.suppress_buysafe = undefined;

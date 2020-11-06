@@ -34,7 +34,7 @@
   /**
    * The Order model module.
    * @module com.ultracart.admin.v2.models/Order
-   * @version 3.0.35
+   * @version 3.0.37
    */
 
   /**
@@ -376,7 +376,13 @@
      * value: "Unknown"
      * @const
      */
-    Unknown: "Unknown"
+    Unknown: "Unknown",
+
+    /**
+     * value: "Pre-ordered"
+     * @const
+     */
+    Pre_ordered: "Pre-ordered"
   };
 
   return exports;

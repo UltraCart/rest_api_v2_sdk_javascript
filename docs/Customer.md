@@ -51,7 +51,7 @@ Name | Type | Description | Notes
 **shipping** | [**[CustomerShipping]**](CustomerShipping.md) | Shipping addresses for this customer | [optional] 
 **signup_dts** | **String** | Signup date | [optional] 
 **software_entitlements** | [**[CustomerSoftwareEntitlement]**](CustomerSoftwareEntitlement.md) | Software entitlements owned by this customer | [optional] 
-**suppress_buysafe** | **Boolean** | Suppress buySAFE | [optional] 
+**suppress_buysafe** | **Boolean** | Suppress buySAFE (deprecated) | [optional] 
 **tags** | [**[CustomerTag]**](CustomerTag.md) | Tags for this customer | [optional] 
 **tax_codes** | [**CustomerTaxCodes**](CustomerTaxCodes.md) |  | [optional] 
 **tax_exempt** | **Boolean** | True if the customer is tax exempt | [optional] 

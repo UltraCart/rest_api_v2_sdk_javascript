@@ -34,7 +34,7 @@
   /**
    * The ItemCheckout model module.
    * @module com.ultracart.admin.v2.models/ItemCheckout
-   * @version 3.0.35
+   * @version 3.0.37
    */
 
   /**
@@ -66,7 +66,7 @@
   }
 
   /**
-   * True to suppress buySAFE
+   * True to suppress buySAFE (deprecated)
    * @member {Boolean} suppress_buysafe
    */
   exports.prototype.suppress_buysafe = undefined;

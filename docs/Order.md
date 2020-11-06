@@ -63,6 +63,8 @@ Name | Type | Description | Notes
 
 * `Unknown` (value: `"Unknown"`)
 
+* `Pre_ordered` (value: `"Pre-ordered"`)
+
 
 
 

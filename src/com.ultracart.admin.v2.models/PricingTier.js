@@ -34,7 +34,7 @@
   /**
    * The PricingTier model module.
    * @module com.ultracart.admin.v2.models/PricingTier
-   * @version 3.0.35
+   * @version 3.0.37
    */
 
   /**
@@ -282,7 +282,7 @@
   exports.prototype.signup_notification = undefined;
 
   /**
-   * Suppress buySAFE
+   * Suppress buySAFE (deprecated)
    * @member {Boolean} suppress_buysafe
    */
   exports.prototype.suppress_buysafe = undefined;

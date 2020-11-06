@@ -34,7 +34,7 @@
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.35
+   * @version 3.0.37
    */
 
   /**
@@ -81,6 +81,8 @@
         obj.price_formatted = ApiClient.convertToType(data['price_formatted'], 'String');
       if (data.hasOwnProperty('published'))
         obj.published = ApiClient.convertToType(data['published'], 'Boolean');
+      if (data.hasOwnProperty('published_dts'))
+        obj.published_dts = ApiClient.convertToType(data['published_dts'], Object);
       if (data.hasOwnProperty('published_from_library_item_oid'))
         obj.published_from_library_item_oid = ApiClient.convertToType(data['published_from_library_item_oid'], 'Number');
       if (data.hasOwnProperty('published_version'))
@@ -194,6 +196,12 @@
    * @member {Boolean} published
    */
   exports.prototype.published = undefined;
+
+  /**
+   * The timestamp of the last published version
+   * @member {Object} published_dts
+   */
+  exports.prototype.published_dts = undefined;
 
   /**
    * The source item used to publish this item.  This allows for comparisons between source and published
