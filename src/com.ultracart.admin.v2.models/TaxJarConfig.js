@@ -34,7 +34,7 @@
   /**
    * The TaxJarConfig model module.
    * @module com.ultracart.admin.v2.models/TaxJarConfig
-   * @version 3.0.37
+   * @version 3.0.38
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.api_key = ApiClient.convertToType(data['api_key'], 'String');
       if (data.hasOwnProperty('estimate_only'))
         obj.estimate_only = ApiClient.convertToType(data['estimate_only'], 'Boolean');
+      if (data.hasOwnProperty('send_outside_nexus'))
+        obj.send_outside_nexus = ApiClient.convertToType(data['send_outside_nexus'], 'Boolean');
       if (data.hasOwnProperty('send_test_orders'))
         obj.send_test_orders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
       if (data.hasOwnProperty('use_distribution_center_from'))
@@ -86,6 +88,12 @@
    * @member {Boolean} estimate_only
    */
   exports.prototype.estimate_only = undefined;
+
+  /**
+   * Send orders outside your nexus TaxJar.  The default is to not transmit outside orders to TaxJar to reduce API calls.  However, this will prevent TaxJar from dynamically creating new Nexus when thresholds are exceeded for a state.
+   * @member {Boolean} send_outside_nexus
+   */
+  exports.prototype.send_outside_nexus = undefined;
 
   /**
    * Send test orders through to TaxJar.  The default is to not transmit test orders to TaxJar.

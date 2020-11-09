@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.0.37
+   * @version 3.0.38
    */
 
   /**

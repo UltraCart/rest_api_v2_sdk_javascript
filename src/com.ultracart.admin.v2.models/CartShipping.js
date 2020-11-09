@@ -34,7 +34,7 @@
   /**
    * The CartShipping model module.
    * @module com.ultracart.admin.v2.models/CartShipping
-   * @version 3.0.37
+   * @version 3.0.38
    */
 
   /**
