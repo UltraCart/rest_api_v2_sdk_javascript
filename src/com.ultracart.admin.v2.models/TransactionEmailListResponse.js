@@ -34,7 +34,7 @@
   /**
    * The TransactionEmailListResponse model module.
    * @module com.ultracart.admin.v2.models/TransactionEmailListResponse
-   * @version 3.0.38
+   * @version 3.0.39
    */
 
   /**

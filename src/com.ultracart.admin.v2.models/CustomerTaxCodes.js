@@ -34,7 +34,7 @@
   /**
    * The CustomerTaxCodes model module.
    * @module com.ultracart.admin.v2.models/CustomerTaxCodes
-   * @version 3.0.38
+   * @version 3.0.39
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.sovos_customer_code = ApiClient.convertToType(data['sovos_customer_code'], 'String');
       if (data.hasOwnProperty('taxjar_customer_id'))
         obj.taxjar_customer_id = ApiClient.convertToType(data['taxjar_customer_id'], 'String');
+      if (data.hasOwnProperty('taxjar_exemption_type'))
+        obj.taxjar_exemption_type = ApiClient.convertToType(data['taxjar_exemption_type'], 'String');
     }
     return obj;
   }
@@ -90,6 +92,12 @@
    * @member {String} taxjar_customer_id
    */
   exports.prototype.taxjar_customer_id = undefined;
+
+  /**
+   * TaxJar exemption type
+   * @member {String} taxjar_exemption_type
+   */
+  exports.prototype.taxjar_exemption_type = undefined;
 
   return exports;
 
