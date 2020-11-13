@@ -34,7 +34,7 @@
   /**
    * The CountriesResponse model module.
    * @module com.ultracart.admin.v2.models/CountriesResponse
-   * @version 3.0.39
+   * @version 3.0.40
    */
 
   /**
