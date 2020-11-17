@@ -34,7 +34,7 @@
   /**
    * The OrderAffiliateLedger model module.
    * @module com.ultracart.admin.v2.models/OrderAffiliateLedger
-   * @version 3.0.40
+   * @version 3.0.41
    */
 
   /**
