@@ -34,7 +34,7 @@
   /**
    * The EmailListArchiveResponse model module.
    * @module com.ultracart.admin.v2.models/EmailListArchiveResponse
-   * @version 3.0.41
+   * @version 3.0.42
    */
 
   /**

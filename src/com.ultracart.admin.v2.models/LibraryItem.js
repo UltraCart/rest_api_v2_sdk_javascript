@@ -34,7 +34,7 @@
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.41
+   * @version 3.0.42
    */
 
   /**
@@ -97,6 +97,8 @@
         obj.rejected = ApiClient.convertToType(data['rejected'], 'Boolean');
       if (data.hasOwnProperty('rejected_reason'))
         obj.rejected_reason = ApiClient.convertToType(data['rejected_reason'], 'String');
+      if (data.hasOwnProperty('release_version'))
+        obj.release_version = ApiClient.convertToType(data['release_version'], 'Number');
       if (data.hasOwnProperty('reviewed'))
         obj.reviewed = ApiClient.convertToType(data['reviewed'], 'Boolean');
       if (data.hasOwnProperty('reviewed_dts'))
@@ -123,6 +125,8 @@
         obj.title = ApiClient.convertToType(data['title'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('under_review'))
+        obj.under_review = ApiClient.convertToType(data['under_review'], 'Boolean');
     }
     return obj;
   }
@@ -246,6 +250,12 @@
   exports.prototype.rejected_reason = undefined;
 
   /**
+   * This counter records how many times a library item has been published.  This is used to show version history.
+   * @member {Number} release_version
+   */
+  exports.prototype.release_version = undefined;
+
+  /**
    * Any published library items must be reviewed by UltraCart staff for malicious content.  This flag shows the status of that review.  This is always false for non-published items
    * @member {Boolean} reviewed
    */
@@ -315,6 +325,12 @@
    * @member {String} type
    */
   exports.prototype.type = undefined;
+
+  /**
+   * True if this library item was published but is awaiting review from UltraCart staff.
+   * @member {Boolean} under_review
+   */
+  exports.prototype.under_review = undefined;
 
   return exports;
 

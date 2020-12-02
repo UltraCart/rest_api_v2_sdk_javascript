@@ -34,7 +34,7 @@
   /**
    * The RegisterAffiliateClickResponse model module.
    * @module com.ultracart.admin.v2.models/RegisterAffiliateClickResponse
-   * @version 3.0.41
+   * @version 3.0.42
    */
 
   /**

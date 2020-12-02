@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **purchased_version** | **Number** | The published version when this item was purchased.  This allows for out-of-date alerts to be shown when there is a difference between published and purchased | [optional] 
 **rejected** | **Boolean** | Any published library reviewed by UltraCart staff for malicious or inappropriate content will have this flag set to true.  This is always false for non-published items | [optional] 
 **rejected_reason** | **String** | Any rejected published item will have this field populated with the reason. | [optional] 
+**release_version** | **Number** | This counter records how many times a library item has been published.  This is used to show version history. | [optional] 
 **reviewed** | **Boolean** | Any published library items must be reviewed by UltraCart staff for malicious content.  This flag shows the status of that review.  This is always false for non-published items | [optional] 
 **reviewed_dts** | **Object** | This is the timestamp for a published items formal review by UltraCart staff for malicious content. | [optional] 
 **screenshots** | [**[LibraryItemScreenshot]**](LibraryItemScreenshot.md) |  | [optional] 
@@ -37,5 +38,6 @@ Name | Type | Description | Notes
 **times_purchased** | **Number** |  | [optional] 
 **title** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
+**under_review** | **Boolean** | True if this library item was published but is awaiting review from UltraCart staff. | [optional] 
 
 

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CouponType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./CouponType'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CouponEditorValues = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.CouponEditorValues = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CouponType);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, CouponType) {
   'use strict';
 
   /**
    * The CouponEditorValues model module.
    * @module com.ultracart.admin.v2.models/CouponEditorValues
-   * @version 3.0.41
+   * @version 3.0.42
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('coupon_types'))
         obj.coupon_types = ApiClient.convertToType(data['coupon_types'], ['String']);
+      if (data.hasOwnProperty('coupon_types_for_display'))
+        obj.coupon_types_for_display = ApiClient.convertToType(data['coupon_types_for_display'], [CouponType]);
     }
     return obj;
   }
@@ -66,6 +68,12 @@
    * @member {Array.<String>} coupon_types
    */
   exports.prototype.coupon_types = undefined;
+
+  /**
+   * coupon_types_for_display
+   * @member {Array.<module:com.ultracart.admin.v2.models/CouponType>} coupon_types_for_display
+   */
+  exports.prototype.coupon_types_for_display = undefined;
 
   return exports;
 
