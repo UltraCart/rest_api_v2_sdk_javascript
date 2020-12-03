@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **published** | **Boolean** | True if this library item is a published item (not source) | [optional] 
 **published_dts** | **Object** | The timestamp of the last published version | [optional] 
 **published_from_library_item_oid** | **Number** | The source item used to publish this item.  This allows for comparisons between source and published | [optional] 
+**published_meta** | [**LibraryItemPublishedMeta**](LibraryItemPublishedMeta.md) |  | [optional] 
 **published_version** | **Number** | The source version when this item was published.  This allows for out-of-date alerts to be shown when there is a difference between source and published | [optional] 
 **purchased** | **Boolean** | True if this library item has been purchased | [optional] 
 **purchased_from_library_item_oid** | **Number** | The published item that was purchased to make this item.  This allows for comparisons between published and purchased | [optional] 

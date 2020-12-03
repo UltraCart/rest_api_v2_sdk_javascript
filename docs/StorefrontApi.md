@@ -5616,7 +5616,7 @@ Name | Type | Description  | Notes
 
 <a name="publishLibraryItem"></a>
 # **publishLibraryItem**
-> LibraryItemResponse publishLibraryItem(library_item_oid)
+> LibraryItemResponse publishLibraryItem(library_item_oid, publish_library_request)
 
 Publish library item.
 
@@ -5645,6 +5645,8 @@ var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
 var library_item_oid = 56; // Number | 
 
+var publish_library_request = new UltraCartRestApiV2.PublishLibraryItemRequest(); // PublishLibraryItemRequest | Publish library item request
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -5653,7 +5655,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.publishLibraryItem(library_item_oid, callback);
+apiInstance.publishLibraryItem(library_item_oid, publish_library_request, callback);
 ```
 
 ### Parameters
@@ -5661,6 +5663,7 @@ apiInstance.publishLibraryItem(library_item_oid, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **library_item_oid** | **Number**|  | 
+ **publish_library_request** | [**PublishLibraryItemRequest**](PublishLibraryItemRequest.md)| Publish library item request | 
 
 ### Return type
 

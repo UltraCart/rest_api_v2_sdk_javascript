@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail', 'com.ultracart.admin.v2.models/LibraryItemPublishedMeta', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'), require('./LibraryItemScreenshot'));
+    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'), require('./LibraryItemPublishedMeta'), require('./LibraryItemScreenshot'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail, root.UltraCartRestApiV2.LibraryItemScreenshot);
+    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail, root.UltraCartRestApiV2.LibraryItemPublishedMeta, root.UltraCartRestApiV2.LibraryItemScreenshot);
   }
-}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail, LibraryItemScreenshot) {
+}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail, LibraryItemPublishedMeta, LibraryItemScreenshot) {
   'use strict';
 
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.43
+   * @version 3.0.44
    */
 
   /**
@@ -85,6 +85,8 @@
         obj.published_dts = ApiClient.convertToType(data['published_dts'], Object);
       if (data.hasOwnProperty('published_from_library_item_oid'))
         obj.published_from_library_item_oid = ApiClient.convertToType(data['published_from_library_item_oid'], 'Number');
+      if (data.hasOwnProperty('published_meta'))
+        obj.published_meta = LibraryItemPublishedMeta.constructFromObject(data['published_meta']);
       if (data.hasOwnProperty('published_version'))
         obj.published_version = ApiClient.convertToType(data['published_version'], 'Number');
       if (data.hasOwnProperty('purchased'))
@@ -212,6 +214,11 @@
    * @member {Number} published_from_library_item_oid
    */
   exports.prototype.published_from_library_item_oid = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/LibraryItemPublishedMeta} published_meta
+   */
+  exports.prototype.published_meta = undefined;
 
   /**
    * The source version when this item was published.  This allows for out-of-date alerts to be shown when there is a difference between source and published
