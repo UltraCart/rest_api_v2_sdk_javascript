@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.0.48
+   * @version 3.0.49
    */
 
   /**
@@ -895,6 +895,52 @@
 
       return this.apiClient.callApi(
         '/storefront/code_library/{library_item_oid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteLibraryItemPublishedVersions operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteLibraryItemPublishedVersionsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete all published versions for a library item, including anything in review.
+     * @param {Number} library_item_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteLibraryItemPublishedVersionsCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteLibraryItemPublishedVersions = function(library_item_oid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling deleteLibraryItemPublishedVersions");
+      }
+
+
+      var pathParams = {
+        'library_item_oid': library_item_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/storefront/code_library/{library_item_oid}/published_versions', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
