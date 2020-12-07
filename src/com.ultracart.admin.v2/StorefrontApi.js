@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.0.44
+   * @version 3.0.47
    */
 
   /**
@@ -3783,7 +3783,7 @@
      * Callback function to receive the result of the getLibraryItemPublishedVersions operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getLibraryItemPublishedVersionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/LibraryItemResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/LibraryItemsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -3791,7 +3791,7 @@
      * Get all published versions for a library item.
      * @param {Number} library_item_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getLibraryItemPublishedVersionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/LibraryItemsResponse}
      */
     this.getLibraryItemPublishedVersions = function(library_item_oid, callback) {
       var postBody = null;
@@ -3817,7 +3817,7 @@
       var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = LibraryItemResponse;
+      var returnType = LibraryItemsResponse;
 
       return this.apiClient.callApi(
         '/storefront/code_library/{library_item_oid}/published_versions', 'GET',

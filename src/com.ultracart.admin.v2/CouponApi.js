@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Coupon', 'com.ultracart.admin.v2.models/CouponCodesRequest', 'com.ultracart.admin.v2.models/CouponCodesResponse', 'com.ultracart.admin.v2.models/CouponEditorValues', 'com.ultracart.admin.v2.models/CouponQuery', 'com.ultracart.admin.v2.models/CouponResponse', 'com.ultracart.admin.v2.models/CouponsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Coupon', 'com.ultracart.admin.v2.models/CouponCodesRequest', 'com.ultracart.admin.v2.models/CouponCodesResponse', 'com.ultracart.admin.v2.models/CouponDeletesRequest', 'com.ultracart.admin.v2.models/CouponEditorValues', 'com.ultracart.admin.v2.models/CouponQuery', 'com.ultracart.admin.v2.models/CouponResponse', 'com.ultracart.admin.v2.models/CouponsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Coupon'), require('../com.ultracart.admin.v2.models/CouponCodesRequest'), require('../com.ultracart.admin.v2.models/CouponCodesResponse'), require('../com.ultracart.admin.v2.models/CouponEditorValues'), require('../com.ultracart.admin.v2.models/CouponQuery'), require('../com.ultracart.admin.v2.models/CouponResponse'), require('../com.ultracart.admin.v2.models/CouponsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Coupon'), require('../com.ultracart.admin.v2.models/CouponCodesRequest'), require('../com.ultracart.admin.v2.models/CouponCodesResponse'), require('../com.ultracart.admin.v2.models/CouponDeletesRequest'), require('../com.ultracart.admin.v2.models/CouponEditorValues'), require('../com.ultracart.admin.v2.models/CouponQuery'), require('../com.ultracart.admin.v2.models/CouponResponse'), require('../com.ultracart.admin.v2.models/CouponsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CouponApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Coupon, root.UltraCartRestApiV2.CouponCodesRequest, root.UltraCartRestApiV2.CouponCodesResponse, root.UltraCartRestApiV2.CouponEditorValues, root.UltraCartRestApiV2.CouponQuery, root.UltraCartRestApiV2.CouponResponse, root.UltraCartRestApiV2.CouponsResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.CouponApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Coupon, root.UltraCartRestApiV2.CouponCodesRequest, root.UltraCartRestApiV2.CouponCodesResponse, root.UltraCartRestApiV2.CouponDeletesRequest, root.UltraCartRestApiV2.CouponEditorValues, root.UltraCartRestApiV2.CouponQuery, root.UltraCartRestApiV2.CouponResponse, root.UltraCartRestApiV2.CouponsResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, Coupon, CouponCodesRequest, CouponCodesResponse, CouponEditorValues, CouponQuery, CouponResponse, CouponsResponse, ErrorResponse) {
+}(this, function(ApiClient, Coupon, CouponCodesRequest, CouponCodesResponse, CouponDeletesRequest, CouponEditorValues, CouponQuery, CouponResponse, CouponsResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 3.0.44
+   * @version 3.0.47
    */
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the deleteCoupon operation.
      * @callback module:com.ultracart.admin.v2/CouponApi~deleteCouponCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CouponResponse} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,6 @@
      * Delete a coupon on the UltraCart account. 
      * @param {Number} coupon_oid The coupon_oid to delete.
      * @param {module:com.ultracart.admin.v2/CouponApi~deleteCouponCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CouponResponse}
      */
     this.deleteCoupon = function(coupon_oid, callback) {
       var postBody = null;
@@ -87,10 +86,102 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CouponResponse;
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/coupon/coupons/{coupon_oid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteCouponsByCode operation.
+     * @callback module:com.ultracart.admin.v2/CouponApi~deleteCouponsByCodeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deletes multiple coupons
+     * Delete coupons on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/CouponDeletesRequest} coupon_delete_request Coupon oids to delete
+     * @param {module:com.ultracart.admin.v2/CouponApi~deleteCouponsByCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteCouponsByCode = function(coupon_delete_request, callback) {
+      var postBody = coupon_delete_request;
+
+      // verify the required parameter 'coupon_delete_request' is set
+      if (coupon_delete_request === undefined || coupon_delete_request === null) {
+        throw new Error("Missing the required parameter 'coupon_delete_request' when calling deleteCouponsByCode");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/coupon/coupons/by_code', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteCouponsByOid operation.
+     * @callback module:com.ultracart.admin.v2/CouponApi~deleteCouponsByOidCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deletes multiple coupons
+     * Delete coupons on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/CouponDeletesRequest} coupon_delete_request Coupon oids to delete
+     * @param {module:com.ultracart.admin.v2/CouponApi~deleteCouponsByOidCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteCouponsByOid = function(coupon_delete_request, callback) {
+      var postBody = coupon_delete_request;
+
+      // verify the required parameter 'coupon_delete_request' is set
+      if (coupon_delete_request === undefined || coupon_delete_request === null) {
+        throw new Error("Missing the required parameter 'coupon_delete_request' when calling deleteCouponsByOid");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/coupon/coupons/by_oid', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

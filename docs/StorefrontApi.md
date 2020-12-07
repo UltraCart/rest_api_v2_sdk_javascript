@@ -4661,7 +4661,7 @@ Name | Type | Description  | Notes
 
 <a name="getLibraryItemPublishedVersions"></a>
 # **getLibraryItemPublishedVersions**
-> LibraryItemResponse getLibraryItemPublishedVersions(library_item_oid)
+> LibraryItemsResponse getLibraryItemPublishedVersions(library_item_oid)
 
 Get all published versions for a library item.
 
@@ -4709,7 +4709,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LibraryItemResponse**](LibraryItemResponse.md)
+[**LibraryItemsResponse**](LibraryItemsResponse.md)
 
 ### Authorization
 
