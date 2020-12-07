@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Coupon', 'com.ultracart.admin.v2.models/CouponCodesRequest', 'com.ultracart.admin.v2.models/CouponCodesResponse', 'com.ultracart.admin.v2.models/CouponDeletesRequest', 'com.ultracart.admin.v2.models/CouponEditorValues', 'com.ultracart.admin.v2.models/CouponQuery', 'com.ultracart.admin.v2.models/CouponResponse', 'com.ultracart.admin.v2.models/CouponsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Coupon', 'com.ultracart.admin.v2.models/CouponCodesRequest', 'com.ultracart.admin.v2.models/CouponCodesResponse', 'com.ultracart.admin.v2.models/CouponDeletesRequest', 'com.ultracart.admin.v2.models/CouponEditorValues', 'com.ultracart.admin.v2.models/CouponQuery', 'com.ultracart.admin.v2.models/CouponResponse', 'com.ultracart.admin.v2.models/CouponsResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/UploadCouponCodesRequest', 'com.ultracart.admin.v2.models/UploadCouponCodesResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Coupon'), require('../com.ultracart.admin.v2.models/CouponCodesRequest'), require('../com.ultracart.admin.v2.models/CouponCodesResponse'), require('../com.ultracart.admin.v2.models/CouponDeletesRequest'), require('../com.ultracart.admin.v2.models/CouponEditorValues'), require('../com.ultracart.admin.v2.models/CouponQuery'), require('../com.ultracart.admin.v2.models/CouponResponse'), require('../com.ultracart.admin.v2.models/CouponsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Coupon'), require('../com.ultracart.admin.v2.models/CouponCodesRequest'), require('../com.ultracart.admin.v2.models/CouponCodesResponse'), require('../com.ultracart.admin.v2.models/CouponDeletesRequest'), require('../com.ultracart.admin.v2.models/CouponEditorValues'), require('../com.ultracart.admin.v2.models/CouponQuery'), require('../com.ultracart.admin.v2.models/CouponResponse'), require('../com.ultracart.admin.v2.models/CouponsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/UploadCouponCodesRequest'), require('../com.ultracart.admin.v2.models/UploadCouponCodesResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CouponApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Coupon, root.UltraCartRestApiV2.CouponCodesRequest, root.UltraCartRestApiV2.CouponCodesResponse, root.UltraCartRestApiV2.CouponDeletesRequest, root.UltraCartRestApiV2.CouponEditorValues, root.UltraCartRestApiV2.CouponQuery, root.UltraCartRestApiV2.CouponResponse, root.UltraCartRestApiV2.CouponsResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.CouponApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Coupon, root.UltraCartRestApiV2.CouponCodesRequest, root.UltraCartRestApiV2.CouponCodesResponse, root.UltraCartRestApiV2.CouponDeletesRequest, root.UltraCartRestApiV2.CouponEditorValues, root.UltraCartRestApiV2.CouponQuery, root.UltraCartRestApiV2.CouponResponse, root.UltraCartRestApiV2.CouponsResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.UploadCouponCodesRequest, root.UltraCartRestApiV2.UploadCouponCodesResponse);
   }
-}(this, function(ApiClient, Coupon, CouponCodesRequest, CouponCodesResponse, CouponDeletesRequest, CouponEditorValues, CouponQuery, CouponResponse, CouponsResponse, ErrorResponse) {
+}(this, function(ApiClient, Coupon, CouponCodesRequest, CouponCodesResponse, CouponDeletesRequest, CouponEditorValues, CouponQuery, CouponResponse, CouponsResponse, ErrorResponse, UploadCouponCodesRequest, UploadCouponCodesResponse) {
   'use strict';
 
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 3.0.47
+   * @version 3.0.48
    */
 
   /**
@@ -670,6 +670,60 @@
 
       return this.apiClient.callApi(
         '/coupon/coupons/{coupon_oid}', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uploadCouponCodes operation.
+     * @callback module:com.ultracart.admin.v2/CouponApi~uploadCouponCodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/UploadCouponCodesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Upload one-time codes for a coupon
+     * Upload one-time codes for a coupon 
+     * @param {Number} coupon_oid The coupon oid to associate with the provided one-time codes.
+     * @param {module:com.ultracart.admin.v2.models/UploadCouponCodesRequest} upload_coupon_codes_request One-time coupon codes
+     * @param {module:com.ultracart.admin.v2/CouponApi~uploadCouponCodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/UploadCouponCodesResponse}
+     */
+    this.uploadCouponCodes = function(coupon_oid, upload_coupon_codes_request, callback) {
+      var postBody = upload_coupon_codes_request;
+
+      // verify the required parameter 'coupon_oid' is set
+      if (coupon_oid === undefined || coupon_oid === null) {
+        throw new Error("Missing the required parameter 'coupon_oid' when calling uploadCouponCodes");
+      }
+
+      // verify the required parameter 'upload_coupon_codes_request' is set
+      if (upload_coupon_codes_request === undefined || upload_coupon_codes_request === null) {
+        throw new Error("Missing the required parameter 'upload_coupon_codes_request' when calling uploadCouponCodes");
+      }
+
+
+      var pathParams = {
+        'coupon_oid': coupon_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = UploadCouponCodesResponse;
+
+      return this.apiClient.callApi(
+        '/coupon/coupons/{coupon_oid}/upload_codes', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

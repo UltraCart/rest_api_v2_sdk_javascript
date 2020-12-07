@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**getEditorValues**](CouponApi.md#getEditorValues) | **GET** /coupon/editor_values | Retrieve values needed for a coupon editor
 [**insertCoupon**](CouponApi.md#insertCoupon) | **POST** /coupon/coupons | Insert a coupon
 [**updateCoupon**](CouponApi.md#updateCoupon) | **PUT** /coupon/coupons/{coupon_oid} | Update a coupon
+[**uploadCouponCodes**](CouponApi.md#uploadCouponCodes) | **POST** /coupon/coupons/{coupon_oid}/upload_codes | Upload one-time codes for a coupon
 
 
 <a name="deleteCoupon"></a>
@@ -746,6 +747,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CouponResponse**](CouponResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="uploadCouponCodes"></a>
+# **uploadCouponCodes**
+> UploadCouponCodesResponse uploadCouponCodes(coupon_oid, upload_coupon_codes_request)
+
+Upload one-time codes for a coupon
+
+Upload one-time codes for a coupon 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+var defaultClient = UltraCartRestApiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: ultraCartOauth
+var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+
+// Configure API key authorization: ultraCartSimpleApiKey
+var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+
+var apiInstance = new UltraCartRestApiV2.CouponApi();
+
+var coupon_oid = 56; // Number | The coupon oid to associate with the provided one-time codes.
+
+var upload_coupon_codes_request = new UltraCartRestApiV2.UploadCouponCodesRequest(); // UploadCouponCodesRequest | One-time coupon codes
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.uploadCouponCodes(coupon_oid, upload_coupon_codes_request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **coupon_oid** | **Number**| The coupon oid to associate with the provided one-time codes. | 
+ **upload_coupon_codes_request** | [**UploadCouponCodesRequest**](UploadCouponCodesRequest.md)| One-time coupon codes | 
+
+### Return type
+
+[**UploadCouponCodesResponse**](UploadCouponCodesResponse.md)
 
 ### Authorization
 
