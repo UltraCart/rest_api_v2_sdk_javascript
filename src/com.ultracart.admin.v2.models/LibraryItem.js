@@ -34,7 +34,7 @@
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.49
+   * @version 3.0.50
    */
 
   /**
@@ -99,6 +99,8 @@
         obj.rejected = ApiClient.convertToType(data['rejected'], 'Boolean');
       if (data.hasOwnProperty('rejected_reason'))
         obj.rejected_reason = ApiClient.convertToType(data['rejected_reason'], 'String');
+      if (data.hasOwnProperty('release_notes'))
+        obj.release_notes = ApiClient.convertToType(data['release_notes'], 'String');
       if (data.hasOwnProperty('release_version'))
         obj.release_version = ApiClient.convertToType(data['release_version'], 'Number');
       if (data.hasOwnProperty('reviewed'))
@@ -255,6 +257,12 @@
    * @member {String} rejected_reason
    */
   exports.prototype.rejected_reason = undefined;
+
+  /**
+   * Release notes specific to each published version and only appearing on public items.
+   * @member {String} release_notes
+   */
+  exports.prototype.release_notes = undefined;
 
   /**
    * This counter records how many times a library item has been published.  This is used to show version history.
