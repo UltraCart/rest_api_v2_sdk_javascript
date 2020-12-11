@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail', 'com.ultracart.admin.v2.models/LibraryItemPublishedMeta', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail', 'com.ultracart.admin.v2.models/LibraryItemPublishedMeta', 'com.ultracart.admin.v2.models/LibraryItemPurchasedMeta', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'), require('./LibraryItemPublishedMeta'), require('./LibraryItemScreenshot'));
+    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'), require('./LibraryItemPublishedMeta'), require('./LibraryItemPurchasedMeta'), require('./LibraryItemScreenshot'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail, root.UltraCartRestApiV2.LibraryItemPublishedMeta, root.UltraCartRestApiV2.LibraryItemScreenshot);
+    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail, root.UltraCartRestApiV2.LibraryItemPublishedMeta, root.UltraCartRestApiV2.LibraryItemPurchasedMeta, root.UltraCartRestApiV2.LibraryItemScreenshot);
   }
-}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail, LibraryItemPublishedMeta, LibraryItemScreenshot) {
+}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail, LibraryItemPublishedMeta, LibraryItemPurchasedMeta, LibraryItemScreenshot) {
   'use strict';
 
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.50
+   * @version 3.0.52
    */
 
   /**
@@ -93,6 +93,8 @@
         obj.purchased = ApiClient.convertToType(data['purchased'], 'Boolean');
       if (data.hasOwnProperty('purchased_from_library_item_oid'))
         obj.purchased_from_library_item_oid = ApiClient.convertToType(data['purchased_from_library_item_oid'], 'Number');
+      if (data.hasOwnProperty('purchased_meta'))
+        obj.purchased_meta = LibraryItemPurchasedMeta.constructFromObject(data['purchased_meta']);
       if (data.hasOwnProperty('purchased_version'))
         obj.purchased_version = ApiClient.convertToType(data['purchased_version'], 'Number');
       if (data.hasOwnProperty('rejected'))
@@ -239,6 +241,11 @@
    * @member {Number} purchased_from_library_item_oid
    */
   exports.prototype.purchased_from_library_item_oid = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/LibraryItemPurchasedMeta} purchased_meta
+   */
+  exports.prototype.purchased_meta = undefined;
 
   /**
    * The published version when this item was purchased.  This allows for out-of-date alerts to be shown when there is a difference between published and purchased

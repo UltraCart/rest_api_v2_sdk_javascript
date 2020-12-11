@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **published_version** | **Number** | The source version when this item was published.  This allows for out-of-date alerts to be shown when there is a difference between source and published | [optional] 
 **purchased** | **Boolean** | True if this library item has been purchased | [optional] 
 **purchased_from_library_item_oid** | **Number** | The published item that was purchased to make this item.  This allows for comparisons between published and purchased | [optional] 
+**purchased_meta** | [**LibraryItemPurchasedMeta**](LibraryItemPurchasedMeta.md) |  | [optional] 
 **purchased_version** | **Number** | The published version when this item was purchased.  This allows for out-of-date alerts to be shown when there is a difference between published and purchased | [optional] 
 **rejected** | **Boolean** | Any published library reviewed by UltraCart staff for malicious or inappropriate content will have this flag set to true.  This is always false for non-published items | [optional] 
 **rejected_reason** | **String** | Any rejected published item will have this field populated with the reason. | [optional] 

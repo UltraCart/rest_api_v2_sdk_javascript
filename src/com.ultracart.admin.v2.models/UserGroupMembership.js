@@ -34,7 +34,7 @@
   /**
    * The UserGroupMembership model module.
    * @module com.ultracart.admin.v2.models/UserGroupMembership
-   * @version 3.0.50
+   * @version 3.0.52
    */
 
   /**
@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('groupOid'))
-        obj.groupOid = ApiClient.convertToType(data['groupOid'], 'Number');
+      if (data.hasOwnProperty('group_oid'))
+        obj.group_oid = ApiClient.convertToType(data['group_oid'], 'Number');
       if (data.hasOwnProperty('member'))
         obj.member = ApiClient.convertToType(data['member'], 'Boolean');
       if (data.hasOwnProperty('name'))
@@ -66,16 +66,19 @@
   }
 
   /**
-   * @member {Number} groupOid
+   * The unique object identifier (oid for short) for this group
+   * @member {Number} group_oid
    */
-  exports.prototype.groupOid = undefined;
+  exports.prototype.group_oid = undefined;
 
   /**
+   * True if this user is a member of the group.
    * @member {Boolean} member
    */
   exports.prototype.member = undefined;
 
   /**
+   * The name of this group.
    * @member {String} name
    */
   exports.prototype.name = undefined;

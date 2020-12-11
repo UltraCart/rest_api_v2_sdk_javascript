@@ -34,7 +34,7 @@
   /**
    * The EmailThirdPartyProvider model module.
    * @module com.ultracart.admin.v2.models/EmailThirdPartyProvider
-   * @version 3.0.50
+   * @version 3.0.52
    */
 
   /**
@@ -65,6 +65,14 @@
         obj.logo_url = ApiClient.convertToType(data['logo_url'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('supports_add_tags'))
+        obj.supports_add_tags = ApiClient.convertToType(data['supports_add_tags'], 'Boolean');
+      if (data.hasOwnProperty('supports_list_subscribe'))
+        obj.supports_list_subscribe = ApiClient.convertToType(data['supports_list_subscribe'], 'Boolean');
+      if (data.hasOwnProperty('supports_list_unsubscribe'))
+        obj.supports_list_unsubscribe = ApiClient.convertToType(data['supports_list_unsubscribe'], 'Boolean');
+      if (data.hasOwnProperty('supports_remove_tags'))
+        obj.supports_remove_tags = ApiClient.convertToType(data['supports_remove_tags'], 'Boolean');
     }
     return obj;
   }
@@ -98,6 +106,30 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * True if this provider can support adding tags
+   * @member {Boolean} supports_add_tags
+   */
+  exports.prototype.supports_add_tags = undefined;
+
+  /**
+   * True if this provider can support list subscribe
+   * @member {Boolean} supports_list_subscribe
+   */
+  exports.prototype.supports_list_subscribe = undefined;
+
+  /**
+   * True if this provider can support list unsubscribe
+   * @member {Boolean} supports_list_unsubscribe
+   */
+  exports.prototype.supports_list_unsubscribe = undefined;
+
+  /**
+   * True if this provider can support remove tags
+   * @member {Boolean} supports_remove_tags
+   */
+  exports.prototype.supports_remove_tags = undefined;
 
   return exports;
 

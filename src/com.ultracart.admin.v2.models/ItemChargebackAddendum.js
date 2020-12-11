@@ -34,7 +34,7 @@
   /**
    * The ItemChargebackAddendum model module.
    * @module com.ultracart.admin.v2.models/ItemChargebackAddendum
-   * @version 3.0.50
+   * @version 3.0.52
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The EmailEditorTokenResponse model module.
    * @module com.ultracart.admin.v2.models/EmailEditorTokenResponse
-   * @version 3.0.50
+   * @version 3.0.52
    */
 
   /**
