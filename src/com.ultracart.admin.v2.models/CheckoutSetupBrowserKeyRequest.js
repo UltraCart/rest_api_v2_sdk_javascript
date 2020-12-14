@@ -34,7 +34,7 @@
   /**
    * The CheckoutSetupBrowserKeyRequest model module.
    * @module com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyRequest
-   * @version 3.0.52
+   * @version 3.0.53
    */
 
   /**
