@@ -34,7 +34,7 @@
   /**
    * The CustomerSoftwareEntitlement model module.
    * @module com.ultracart.admin.v2.models/CustomerSoftwareEntitlement
-   * @version 3.0.53
+   * @version 3.0.54
    */
 
   /**

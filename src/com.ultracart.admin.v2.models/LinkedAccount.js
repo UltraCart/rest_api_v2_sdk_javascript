@@ -34,7 +34,7 @@
   /**
    * The LinkedAccount model module.
    * @module com.ultracart.admin.v2.models/LinkedAccount
-   * @version 3.0.53
+   * @version 3.0.54
    */
 
   /**

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **rejected** | **Boolean** | True if this is a source item and is under review and was rejected. | [optional] 
 **rejected_reason** | **String** | The reason for rejection if this item is a source item, is under review, and was rejected.  For all other cases, this value will be null or missing. | [optional] 
 **release_version** | **Number** | If this library item is a source item and it is published, this is the most recent release version number | [optional] 
+**review_version** | **Number** | If this library item is a source item and has a published item currently under review, this is that version number | [optional] 
 **under_review** | **Boolean** | True if this library item is a source item and is currently under review | [optional] 
 
 

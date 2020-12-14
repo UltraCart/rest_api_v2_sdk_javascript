@@ -34,7 +34,7 @@
   /**
    * The LibraryItemPublishedMeta model module.
    * @module com.ultracart.admin.v2.models/LibraryItemPublishedMeta
-   * @version 3.0.53
+   * @version 3.0.54
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.rejected_reason = ApiClient.convertToType(data['rejected_reason'], 'String');
       if (data.hasOwnProperty('release_version'))
         obj.release_version = ApiClient.convertToType(data['release_version'], 'Number');
+      if (data.hasOwnProperty('review_version'))
+        obj.review_version = ApiClient.convertToType(data['review_version'], 'Number');
       if (data.hasOwnProperty('under_review'))
         obj.under_review = ApiClient.convertToType(data['under_review'], 'Boolean');
     }
@@ -108,6 +110,12 @@
    * @member {Number} release_version
    */
   exports.prototype.release_version = undefined;
+
+  /**
+   * If this library item is a source item and has a published item currently under review, this is that version number
+   * @member {Number} review_version
+   */
+  exports.prototype.review_version = undefined;
 
   /**
    * True if this library item is a source item and is currently under review
