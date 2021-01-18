@@ -27,6 +27,8 @@ Name | Type | Description | Notes
 
 * `affirm` (value: `"affirm"`)
 
+* `sezzle` (value: `"sezzle"`)
+
 
 
 

@@ -34,7 +34,7 @@
   /**
    * The CouponAmountOffItems model module.
    * @module com.ultracart.admin.v2.models/CouponAmountOffItems
-   * @version 3.0.54
+   * @version 3.0.61
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.discount_amount = ApiClient.convertToType(data['discount_amount'], 'Number');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
+      if (data.hasOwnProperty('limit'))
+        obj.limit = ApiClient.convertToType(data['limit'], 'Number');
     }
     return obj;
   }
@@ -82,6 +84,12 @@
    * @member {Array.<String>} items
    */
   exports.prototype.items = undefined;
+
+  /**
+   * The limit of items which are eligible for the discount amount.
+   * @member {Number} limit
+   */
+  exports.prototype.limit = undefined;
 
   return exports;
 

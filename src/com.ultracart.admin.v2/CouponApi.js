@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Coupon', 'com.ultracart.admin.v2.models/CouponCodesRequest', 'com.ultracart.admin.v2.models/CouponCodesResponse', 'com.ultracart.admin.v2.models/CouponDeletesRequest', 'com.ultracart.admin.v2.models/CouponEditorValues', 'com.ultracart.admin.v2.models/CouponQuery', 'com.ultracart.admin.v2.models/CouponResponse', 'com.ultracart.admin.v2.models/CouponsResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/UploadCouponCodesRequest', 'com.ultracart.admin.v2.models/UploadCouponCodesResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Coupon', 'com.ultracart.admin.v2.models/CouponAutoApplyConditions', 'com.ultracart.admin.v2.models/CouponCodesRequest', 'com.ultracart.admin.v2.models/CouponCodesResponse', 'com.ultracart.admin.v2.models/CouponDeletesRequest', 'com.ultracart.admin.v2.models/CouponEditorValues', 'com.ultracart.admin.v2.models/CouponItemSearchResultsResponse', 'com.ultracart.admin.v2.models/CouponQuery', 'com.ultracart.admin.v2.models/CouponResponse', 'com.ultracart.admin.v2.models/CouponsResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/UploadCouponCodesRequest', 'com.ultracart.admin.v2.models/UploadCouponCodesResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Coupon'), require('../com.ultracart.admin.v2.models/CouponCodesRequest'), require('../com.ultracart.admin.v2.models/CouponCodesResponse'), require('../com.ultracart.admin.v2.models/CouponDeletesRequest'), require('../com.ultracart.admin.v2.models/CouponEditorValues'), require('../com.ultracart.admin.v2.models/CouponQuery'), require('../com.ultracart.admin.v2.models/CouponResponse'), require('../com.ultracart.admin.v2.models/CouponsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/UploadCouponCodesRequest'), require('../com.ultracart.admin.v2.models/UploadCouponCodesResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Coupon'), require('../com.ultracart.admin.v2.models/CouponAutoApplyConditions'), require('../com.ultracart.admin.v2.models/CouponCodesRequest'), require('../com.ultracart.admin.v2.models/CouponCodesResponse'), require('../com.ultracart.admin.v2.models/CouponDeletesRequest'), require('../com.ultracart.admin.v2.models/CouponEditorValues'), require('../com.ultracart.admin.v2.models/CouponItemSearchResultsResponse'), require('../com.ultracart.admin.v2.models/CouponQuery'), require('../com.ultracart.admin.v2.models/CouponResponse'), require('../com.ultracart.admin.v2.models/CouponsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/UploadCouponCodesRequest'), require('../com.ultracart.admin.v2.models/UploadCouponCodesResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CouponApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Coupon, root.UltraCartRestApiV2.CouponCodesRequest, root.UltraCartRestApiV2.CouponCodesResponse, root.UltraCartRestApiV2.CouponDeletesRequest, root.UltraCartRestApiV2.CouponEditorValues, root.UltraCartRestApiV2.CouponQuery, root.UltraCartRestApiV2.CouponResponse, root.UltraCartRestApiV2.CouponsResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.UploadCouponCodesRequest, root.UltraCartRestApiV2.UploadCouponCodesResponse);
+    root.UltraCartRestApiV2.CouponApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Coupon, root.UltraCartRestApiV2.CouponAutoApplyConditions, root.UltraCartRestApiV2.CouponCodesRequest, root.UltraCartRestApiV2.CouponCodesResponse, root.UltraCartRestApiV2.CouponDeletesRequest, root.UltraCartRestApiV2.CouponEditorValues, root.UltraCartRestApiV2.CouponItemSearchResultsResponse, root.UltraCartRestApiV2.CouponQuery, root.UltraCartRestApiV2.CouponResponse, root.UltraCartRestApiV2.CouponsResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.UploadCouponCodesRequest, root.UltraCartRestApiV2.UploadCouponCodesResponse);
   }
-}(this, function(ApiClient, Coupon, CouponCodesRequest, CouponCodesResponse, CouponDeletesRequest, CouponEditorValues, CouponQuery, CouponResponse, CouponsResponse, ErrorResponse, UploadCouponCodesRequest, UploadCouponCodesResponse) {
+}(this, function(ApiClient, Coupon, CouponAutoApplyConditions, CouponCodesRequest, CouponCodesResponse, CouponDeletesRequest, CouponEditorValues, CouponItemSearchResultsResponse, CouponQuery, CouponResponse, CouponsResponse, ErrorResponse, UploadCouponCodesRequest, UploadCouponCodesResponse) {
   'use strict';
 
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 3.0.54
+   * @version 3.0.61
    */
 
   /**
@@ -290,6 +290,47 @@
 
       return this.apiClient.callApi(
         '/coupon/coupons/merchant_code/{merchant_code}/generate_codes', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAutoApply operation.
+     * @callback module:com.ultracart.admin.v2/CouponApi~getAutoApplyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CouponAutoApplyConditions} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve auto apply rules and conditions
+     * Retrieve auto apply rules and conditions 
+     * @param {module:com.ultracart.admin.v2/CouponApi~getAutoApplyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CouponAutoApplyConditions}
+     */
+    this.getAutoApply = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CouponAutoApplyConditions;
+
+      return this.apiClient.callApi(
+        '/coupon/auto_apply', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -612,6 +653,99 @@
 
       return this.apiClient.callApi(
         '/coupon/coupons', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the searchItems operation.
+     * @callback module:com.ultracart.admin.v2/CouponApi~searchItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CouponItemSearchResultsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Searches for items to display within a coupon editor and assign to coupons
+     * Searches for items to display within a coupon editor and assign to coupons 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.s 
+     * @param {Number} opts.m 
+     * @param {module:com.ultracart.admin.v2/CouponApi~searchItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CouponItemSearchResultsResponse}
+     */
+    this.searchItems = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        's': opts['s'],
+        'm': opts['m'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CouponItemSearchResultsResponse;
+
+      return this.apiClient.callApi(
+        '/coupon/searchItems', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateAutoApply operation.
+     * @callback module:com.ultracart.admin.v2/CouponApi~updateAutoApplyCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update auto apply rules and conditions
+     * Update auto apply rules and conditions 
+     * @param {module:com.ultracart.admin.v2.models/CouponAutoApplyConditions} conditions Conditions
+     * @param {module:com.ultracart.admin.v2/CouponApi~updateAutoApplyCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.updateAutoApply = function(conditions, callback) {
+      var postBody = conditions;
+
+      // verify the required parameter 'conditions' is set
+      if (conditions === undefined || conditions === null) {
+        throw new Error("Missing the required parameter 'conditions' when calling updateAutoApply");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/coupon/auto_apply', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

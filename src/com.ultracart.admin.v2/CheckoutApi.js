@@ -34,7 +34,7 @@
   /**
    * Checkout service.
    * @module com.ultracart.admin.v2/CheckoutApi
-   * @version 3.0.54
+   * @version 3.0.61
    */
 
   /**
@@ -438,7 +438,7 @@
 
     /**
      * Handoff cart
-     * Handoff the browser to UltraCart for view cart on StoreFront, transfer to PayPal, transfer to Affirm or finalization of the order (including upsell processing). 
+     * Handoff the browser to UltraCart for view cart on StoreFront, transfer to PayPal, transfer to Affirm, transfer to Sezzle or finalization of the order (including upsell processing). 
      * @param {module:com.ultracart.admin.v2.models/CheckoutHandoffRequest} handoff_request Handoff request
      * @param {Object} opts Optional parameters
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples

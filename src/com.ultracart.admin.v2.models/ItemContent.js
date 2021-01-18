@@ -34,7 +34,7 @@
   /**
    * The ItemContent model module.
    * @module com.ultracart.admin.v2.models/ItemContent
-   * @version 3.0.54
+   * @version 3.0.61
    */
 
   /**
@@ -114,7 +114,7 @@
   exports.prototype.exclude_from_top_sellers = undefined;
 
   /**
-   * Extended description (max 2000 characters)
+   * Extended description (max 10000 characters)
    * @member {String} extended_description
    */
   exports.prototype.extended_description = undefined;

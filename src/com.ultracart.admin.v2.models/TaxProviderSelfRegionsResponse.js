@@ -34,7 +34,7 @@
   /**
    * The TaxProviderSelfRegionsResponse model module.
    * @module com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse
-   * @version 3.0.54
+   * @version 3.0.61
    */
 
   /**

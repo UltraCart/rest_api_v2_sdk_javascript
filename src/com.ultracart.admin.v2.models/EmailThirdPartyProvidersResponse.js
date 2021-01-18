@@ -34,7 +34,7 @@
   /**
    * The EmailThirdPartyProvidersResponse model module.
    * @module com.ultracart.admin.v2.models/EmailThirdPartyProvidersResponse
-   * @version 3.0.54
+   * @version 3.0.61
    */
 
   /**

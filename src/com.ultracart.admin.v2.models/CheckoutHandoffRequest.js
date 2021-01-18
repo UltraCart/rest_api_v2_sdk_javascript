@@ -34,7 +34,7 @@
   /**
    * The CheckoutHandoffRequest model module.
    * @module com.ultracart.admin.v2.models/CheckoutHandoffRequest
-   * @version 3.0.54
+   * @version 3.0.61
    */
 
   /**
@@ -157,7 +157,13 @@
      * value: "affirm"
      * @const
      */
-    affirm: "affirm"
+    affirm: "affirm",
+
+    /**
+     * value: "sezzle"
+     * @const
+     */
+    sezzle: "sezzle"
   };
 
   return exports;
