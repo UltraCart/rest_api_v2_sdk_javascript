@@ -1,0 +1,34 @@
+# UltraCartRestApiV2.ScreenRecordingFilter
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**email** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**email_identified** | **Boolean** |  | [optional] 
+**end_timestamp** | [**ScreenRecordingFilterRangeDate**](ScreenRecordingFilterRangeDate.md) |  | [optional] 
+**esp_customer_uuid** | **String** |  | [optional] 
+**favorite** | **Boolean** |  | [optional] 
+**geolocation** | [**ScreenRecordingFilterGeoDistance**](ScreenRecordingFilterGeoDistance.md) |  | [optional] 
+**geolocation_country** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**geolocation_state** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**max_filter_values** | **Number** |  | [optional] 
+**order_id** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**page_view_count** | [**ScreenRecordingFilterRangeInteger**](ScreenRecordingFilterRangeInteger.md) |  | [optional] 
+**page_views** | [**[ScreenRecordingFilterPageView]**](ScreenRecordingFilterPageView.md) |  | [optional] 
+**placed_order** | **Boolean** |  | [optional] 
+**screen_recording_uuids** | **[String]** |  | [optional] 
+**screen_sizes** | **[String]** |  | [optional] 
+**skip_filter_values** | **Boolean** |  | [optional] 
+**skip_hits** | **Boolean** |  | [optional] 
+**start_timestamp** | [**ScreenRecordingFilterRangeDate**](ScreenRecordingFilterRangeDate.md) |  | [optional] 
+**tags** | **[String]** |  | [optional] 
+**time_on_site** | [**ScreenRecordingFilterRangeInteger**](ScreenRecordingFilterRangeInteger.md) |  | [optional] 
+**user_agent_device_name** | **String** |  | [optional] 
+**user_agent_name** | **String** |  | [optional] 
+**user_agent_original** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**user_agent_os_name** | **String** |  | [optional] 
+**user_agent_os_version** | **String** |  | [optional] 
+**user_ip** | [**ScreenRecordingFilterIpSearch**](ScreenRecordingFilterIpSearch.md) |  | [optional] 
+**watched** | **Boolean** |  | [optional] 
+
+

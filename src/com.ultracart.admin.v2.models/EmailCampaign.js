@@ -34,7 +34,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 3.0.61
+   * @version 3.0.63
    */
 
   /**
@@ -87,6 +87,8 @@
         obj.prevent_sending_due_to_spam = ApiClient.convertToType(data['prevent_sending_due_to_spam'], 'Boolean');
       if (data.hasOwnProperty('revenue_formatted'))
         obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
+      if (data.hasOwnProperty('revenue_per_customer_formatted'))
+        obj.revenue_per_customer_formatted = ApiClient.convertToType(data['revenue_per_customer_formatted'], 'String');
       if (data.hasOwnProperty('scheduled_dts'))
         obj.scheduled_dts = ApiClient.convertToType(data['scheduled_dts'], 'String');
       if (data.hasOwnProperty('screenshot_large_full_url'))
@@ -196,6 +198,12 @@
    * @member {String} revenue_formatted
    */
   exports.prototype.revenue_formatted = undefined;
+
+  /**
+   * Revenue per customer associated with campaign
+   * @member {String} revenue_per_customer_formatted
+   */
+  exports.prototype.revenue_per_customer_formatted = undefined;
 
   /**
    * Scheduled date

@@ -34,7 +34,7 @@
   /**
    * The CartAffiliate model module.
    * @module com.ultracart.admin.v2.models/CartAffiliate
-   * @version 3.0.61
+   * @version 3.0.63
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ScreenshotsResponse model module.
    * @module com.ultracart.admin.v2.models/ScreenshotsResponse
-   * @version 3.0.61
+   * @version 3.0.63
    */
 
   /**

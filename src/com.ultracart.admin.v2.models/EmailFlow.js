@@ -34,7 +34,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 3.0.61
+   * @version 3.0.63
    */
 
   /**
@@ -91,6 +91,8 @@
         obj.open_rate_formatted = ApiClient.convertToType(data['open_rate_formatted'], 'String');
       if (data.hasOwnProperty('revenue_formatted'))
         obj.revenue_formatted = ApiClient.convertToType(data['revenue_formatted'], 'String');
+      if (data.hasOwnProperty('revenue_per_customerformatted'))
+        obj.revenue_per_customerformatted = ApiClient.convertToType(data['revenue_per_customerformatted'], 'String');
       if (data.hasOwnProperty('screenshot_large_full_url'))
         obj.screenshot_large_full_url = ApiClient.convertToType(data['screenshot_large_full_url'], 'String');
       if (data.hasOwnProperty('status'))
@@ -216,6 +218,12 @@
    * @member {String} revenue_formatted
    */
   exports.prototype.revenue_formatted = undefined;
+
+  /**
+   * Revenue per customer, formatted
+   * @member {String} revenue_per_customerformatted
+   */
+  exports.prototype.revenue_per_customerformatted = undefined;
 
   /**
    * URL to a large full length screenshot
