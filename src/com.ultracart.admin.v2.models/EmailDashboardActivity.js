@@ -34,7 +34,7 @@
   /**
    * The EmailDashboardActivity model module.
    * @module com.ultracart.admin.v2.models/EmailDashboardActivity
-   * @version 3.0.66
+   * @version 3.0.67
    */
 
   /**

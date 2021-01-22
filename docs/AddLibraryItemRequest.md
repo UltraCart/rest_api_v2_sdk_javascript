@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**attributes** | [**[LibraryItemAttribute]**](LibraryItemAttribute.md) | Attributes associated with the library item to contain additional configuration. | [optional] 
 **cjson** | **String** | Cjson to be added to library | [optional] 
 **content_type** | **String** | flow, campaign, cjson, email, transactional_email or upsell | [optional] 
 **description** | **String** | description of library item | [optional] 
