@@ -34,7 +34,7 @@
   /**
    * The TempMultimediaResponse model module.
    * @module com.ultracart.admin.v2.models/TempMultimediaResponse
-   * @version 3.0.64
+   * @version 3.0.65
    */
 
   /**

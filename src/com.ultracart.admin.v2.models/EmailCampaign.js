@@ -34,7 +34,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 3.0.64
+   * @version 3.0.65
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       if (data.hasOwnProperty('end_once_customer_purchases'))
         obj.end_once_customer_purchases = ApiClient.convertToType(data['end_once_customer_purchases'], 'Boolean');
+      if (data.hasOwnProperty('esp_campaign_folder_uuid'))
+        obj.esp_campaign_folder_uuid = ApiClient.convertToType(data['esp_campaign_folder_uuid'], 'String');
       if (data.hasOwnProperty('esp_domain_user'))
         obj.esp_domain_user = ApiClient.convertToType(data['esp_domain_user'], 'String');
       if (data.hasOwnProperty('esp_domain_uuid'))
@@ -138,6 +140,12 @@
    * @member {Boolean} end_once_customer_purchases
    */
   exports.prototype.end_once_customer_purchases = undefined;
+
+  /**
+   * Campaign folder UUID.  Null for uncategorized
+   * @member {String} esp_campaign_folder_uuid
+   */
+  exports.prototype.esp_campaign_folder_uuid = undefined;
 
   /**
    * User of the sending address

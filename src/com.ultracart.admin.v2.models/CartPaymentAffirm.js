@@ -34,7 +34,7 @@
   /**
    * The CartPaymentAffirm model module.
    * @module com.ultracart.admin.v2.models/CartPaymentAffirm
-   * @version 3.0.64
+   * @version 3.0.65
    */
 
   /**

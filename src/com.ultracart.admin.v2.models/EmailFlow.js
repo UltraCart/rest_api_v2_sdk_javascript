@@ -34,7 +34,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 3.0.64
+   * @version 3.0.65
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.esp_domain_user = ApiClient.convertToType(data['esp_domain_user'], 'String');
       if (data.hasOwnProperty('esp_domain_uuid'))
         obj.esp_domain_uuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
+      if (data.hasOwnProperty('esp_flow_folder_uuid'))
+        obj.esp_flow_folder_uuid = ApiClient.convertToType(data['esp_flow_folder_uuid'], 'String');
       if (data.hasOwnProperty('esp_friendly_name'))
         obj.esp_friendly_name = ApiClient.convertToType(data['esp_friendly_name'], 'String');
       if (data.hasOwnProperty('filter_profile_equation_json'))
@@ -176,6 +178,12 @@
    * @member {String} esp_domain_uuid
    */
   exports.prototype.esp_domain_uuid = undefined;
+
+  /**
+   * Flow folder UUID.  Null for uncategorized
+   * @member {String} esp_flow_folder_uuid
+   */
+  exports.prototype.esp_flow_folder_uuid = undefined;
 
   /**
    * Friendly name of the sending email

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **enrolled_customers** | **Number** | Number of enrolled customers. | [optional] 
 **esp_domain_user** | **String** | Username of sending email | [optional] 
 **esp_domain_uuid** | **String** | UUID of sending domain | [optional] 
+**esp_flow_folder_uuid** | **String** | Flow folder UUID.  Null for uncategorized | [optional] 
 **esp_friendly_name** | **String** | Friendly name of the sending email | [optional] 
 **filter_profile_equation_json** | **String** | File profile equation json | [optional] 
 **library_item_oid** | **Number** | If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated. | [optional] 
