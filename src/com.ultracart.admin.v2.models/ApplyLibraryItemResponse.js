@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/LibraryItemAttribute', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./Warning'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./LibraryItemAttribute'), require('./ResponseMetadata'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ApplyLibraryItemResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
+    root.UltraCartRestApiV2.ApplyLibraryItemResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.LibraryItemAttribute, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient, Error, ResponseMetadata, Warning) {
+}(this, function(ApiClient, Error, LibraryItemAttribute, ResponseMetadata, Warning) {
   'use strict';
 
   /**
    * The ApplyLibraryItemResponse model module.
    * @module com.ultracart.admin.v2.models/ApplyLibraryItemResponse
-   * @version 3.0.67
+   * @version 3.0.68
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('attributes'))
+        obj.attributes = ApiClient.convertToType(data['attributes'], [LibraryItemAttribute]);
       if (data.hasOwnProperty('cjson'))
         obj.cjson = ApiClient.convertToType(data['cjson'], 'String');
       if (data.hasOwnProperty('content_type'))
@@ -78,6 +80,12 @@
     }
     return obj;
   }
+
+  /**
+   * Attributes from the library item
+   * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemAttribute>} attributes
+   */
+  exports.prototype.attributes = undefined;
 
   /**
    * Cjson from library item, only populated if this library item was a cjson snippet or marketing email (not transactional)

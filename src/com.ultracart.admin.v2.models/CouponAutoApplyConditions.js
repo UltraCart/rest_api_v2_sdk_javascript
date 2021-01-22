@@ -34,7 +34,7 @@
   /**
    * The CouponAutoApplyConditions model module.
    * @module com.ultracart.admin.v2.models/CouponAutoApplyConditions
-   * @version 3.0.67
+   * @version 3.0.68
    */
 
   /**

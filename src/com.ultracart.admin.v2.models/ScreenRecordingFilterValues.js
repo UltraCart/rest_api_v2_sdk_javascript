@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValues model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValues
-   * @version 3.0.67
+   * @version 3.0.68
    */
 
   /**
