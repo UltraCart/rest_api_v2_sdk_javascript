@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemEmail', 'com.ultracart.admin.v2.models/LibraryItemPublishedMeta', 'com.ultracart.admin.v2.models/LibraryItemPurchasedMeta', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/LibraryItemAccount', 'com.ultracart.admin.v2.models/LibraryItemAsset', 'com.ultracart.admin.v2.models/LibraryItemAttribute', 'com.ultracart.admin.v2.models/LibraryItemEmail', 'com.ultracart.admin.v2.models/LibraryItemPublishedMeta', 'com.ultracart.admin.v2.models/LibraryItemPurchasedMeta', 'com.ultracart.admin.v2.models/LibraryItemScreenshot'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemEmail'), require('./LibraryItemPublishedMeta'), require('./LibraryItemPurchasedMeta'), require('./LibraryItemScreenshot'));
+    module.exports = factory(require('../ApiClient'), require('./LibraryItemAccount'), require('./LibraryItemAsset'), require('./LibraryItemAttribute'), require('./LibraryItemEmail'), require('./LibraryItemPublishedMeta'), require('./LibraryItemPurchasedMeta'), require('./LibraryItemScreenshot'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemEmail, root.UltraCartRestApiV2.LibraryItemPublishedMeta, root.UltraCartRestApiV2.LibraryItemPurchasedMeta, root.UltraCartRestApiV2.LibraryItemScreenshot);
+    root.UltraCartRestApiV2.LibraryItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.LibraryItemAccount, root.UltraCartRestApiV2.LibraryItemAsset, root.UltraCartRestApiV2.LibraryItemAttribute, root.UltraCartRestApiV2.LibraryItemEmail, root.UltraCartRestApiV2.LibraryItemPublishedMeta, root.UltraCartRestApiV2.LibraryItemPurchasedMeta, root.UltraCartRestApiV2.LibraryItemScreenshot);
   }
-}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemEmail, LibraryItemPublishedMeta, LibraryItemPurchasedMeta, LibraryItemScreenshot) {
+}(this, function(ApiClient, LibraryItemAccount, LibraryItemAsset, LibraryItemAttribute, LibraryItemEmail, LibraryItemPublishedMeta, LibraryItemPurchasedMeta, LibraryItemScreenshot) {
   'use strict';
 
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.0.65
+   * @version 3.0.66
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('assets'))
         obj.assets = ApiClient.convertToType(data['assets'], [LibraryItemAsset]);
+      if (data.hasOwnProperty('attributes'))
+        obj.attributes = ApiClient.convertToType(data['attributes'], [LibraryItemAttribute]);
       if (data.hasOwnProperty('categories'))
         obj.categories = ApiClient.convertToType(data['categories'], ['String']);
       if (data.hasOwnProperty('content'))
@@ -141,6 +143,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemAsset>} assets
    */
   exports.prototype.assets = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/LibraryItemAttribute>} attributes
+   */
+  exports.prototype.attributes = undefined;
 
   /**
    * @member {Array.<String>} categories
