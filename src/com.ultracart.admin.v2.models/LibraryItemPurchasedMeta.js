@@ -34,7 +34,7 @@
   /**
    * The LibraryItemPurchasedMeta model module.
    * @module com.ultracart.admin.v2.models/LibraryItemPurchasedMeta
-   * @version 3.0.75
+   * @version 3.0.76
    */
 
   /**
