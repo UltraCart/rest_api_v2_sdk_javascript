@@ -34,7 +34,7 @@
   /**
    * The GeocodeRequest model module.
    * @module com.ultracart.admin.v2.models/GeocodeRequest
-   * @version 3.0.70
+   * @version 3.0.75
    */
 
   /**

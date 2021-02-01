@@ -34,7 +34,7 @@
   /**
    * The EmailPlan model module.
    * @module com.ultracart.admin.v2.models/EmailPlan
-   * @version 3.0.70
+   * @version 3.0.75
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.additional_customers = ApiClient.convertToType(data['additional_customers'], 'Number');
       if (data.hasOwnProperty('additional_emails'))
         obj.additional_emails = ApiClient.convertToType(data['additional_emails'], 'Number');
+      if (data.hasOwnProperty('additional_fee'))
+        obj.additional_fee = ApiClient.convertToType(data['additional_fee'], 'Number');
       if (data.hasOwnProperty('allow_list_import'))
         obj.allow_list_import = ApiClient.convertToType(data['allow_list_import'], 'Boolean');
       if (data.hasOwnProperty('allow_tracking_emails'))
@@ -100,6 +102,11 @@
    * @member {Number} additional_emails
    */
   exports.prototype.additional_emails = undefined;
+
+  /**
+   * @member {Number} additional_fee
+   */
+  exports.prototype.additional_fee = undefined;
 
   /**
    * @member {Boolean} allow_list_import

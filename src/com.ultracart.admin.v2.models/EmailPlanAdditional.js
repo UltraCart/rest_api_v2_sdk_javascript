@@ -34,7 +34,7 @@
   /**
    * The EmailPlanAdditional model module.
    * @module com.ultracart.admin.v2.models/EmailPlanAdditional
-   * @version 3.0.70
+   * @version 3.0.75
    */
 
   /**
@@ -61,6 +61,10 @@
         obj.can_upgrade = ApiClient.convertToType(data['can_upgrade'], 'Boolean');
       if (data.hasOwnProperty('cost'))
         obj.cost = ApiClient.convertToType(data['cost'], 'Number');
+      if (data.hasOwnProperty('cost_change'))
+        obj.cost_change = ApiClient.convertToType(data['cost_change'], 'Number');
+      if (data.hasOwnProperty('cost_change_formatted'))
+        obj.cost_change_formatted = ApiClient.convertToType(data['cost_change_formatted'], 'String');
       if (data.hasOwnProperty('cost_formatted'))
         obj.cost_formatted = ApiClient.convertToType(data['cost_formatted'], 'String');
       if (data.hasOwnProperty('customers'))
@@ -85,6 +89,16 @@
    * @member {Number} cost
    */
   exports.prototype.cost = undefined;
+
+  /**
+   * @member {Number} cost_change
+   */
+  exports.prototype.cost_change = undefined;
+
+  /**
+   * @member {String} cost_change_formatted
+   */
+  exports.prototype.cost_change_formatted = undefined;
 
   /**
    * @member {String} cost_formatted

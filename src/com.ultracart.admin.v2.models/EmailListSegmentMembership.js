@@ -34,7 +34,7 @@
   /**
    * The EmailListSegmentMembership model module.
    * @module com.ultracart.admin.v2.models/EmailListSegmentMembership
-   * @version 3.0.70
+   * @version 3.0.75
    */
 
   /**
