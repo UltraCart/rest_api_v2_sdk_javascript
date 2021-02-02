@@ -34,7 +34,7 @@
   /**
    * The CartKitComponentOption model module.
    * @module com.ultracart.admin.v2.models/CartKitComponentOption
-   * @version 3.0.76
+   * @version 3.1.0
    */
 
   /**

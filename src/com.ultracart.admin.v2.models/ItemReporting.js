@@ -34,7 +34,7 @@
   /**
    * The ItemReporting model module.
    * @module com.ultracart.admin.v2.models/ItemReporting
-   * @version 3.0.76
+   * @version 3.1.0
    */
 
   /**

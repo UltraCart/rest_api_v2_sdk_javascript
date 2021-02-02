@@ -45,19 +45,12 @@ Deletes a Self tax provider city.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var city = "city_example"; // String | The city being deleted.
 
@@ -105,19 +98,12 @@ Deletes a Self tax provider country.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var countryCode = "countryCode_example"; // String | The country code being deleted.
 
@@ -165,19 +151,12 @@ Deletes a Self tax provider county.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var county = "county_example"; // String | The county being deleted.
 
@@ -225,19 +204,12 @@ Deletes a Self tax provider postalCode.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var postal_code = "postal_code_example"; // String | The postal code being deleted.
 
@@ -285,19 +257,12 @@ Deletes a Self tax provider state.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var stateCode = "stateCode_example"; // String | The state code being deleted.
 
@@ -345,19 +310,13 @@ Retrieves the Avalara tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -396,19 +355,12 @@ Returns Avalara Tax companies configured by the merchant
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
 
@@ -453,19 +405,13 @@ Attempts to connect to Avalara and returns back the response.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -504,19 +450,13 @@ Retrieves the Self tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -555,19 +495,13 @@ Retrieves the Self tax provider countries.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -606,19 +540,12 @@ Retrieves the Self tax provider regions for a given country code.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var countryCode = "countryCode_example"; // String | The country code regions desired.
 
@@ -663,19 +590,13 @@ Retrieves the Sovos tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -714,19 +635,13 @@ Attempts to connect to Sovos and returns back the response.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -765,19 +680,13 @@ Retrieves the TaxJar tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -816,19 +725,13 @@ Attempts to connect to TaxJar and returns back the response.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -867,19 +770,13 @@ Retrieves the UltraCart tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -918,19 +815,12 @@ Retrieves tax methods for this account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var opts = { 
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
@@ -980,19 +870,12 @@ Toggle a tax provider to active.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var providerName = "providerName_example"; // String | The tax provider to set active.
 
@@ -1037,19 +920,12 @@ Update the Avalara tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
 
@@ -1094,19 +970,12 @@ Update the Self tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var tax_provider_self = new UltraCartRestApiV2.TaxProviderSelf(); // TaxProviderSelf | TaxProviderSelf object
 
@@ -1151,19 +1020,12 @@ Updates a Self tax provider city.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var city = "city_example"; // String | The city being updated.
 
@@ -1211,19 +1073,12 @@ Updates a Self tax provider country.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var countryCode = "countryCode_example"; // String | The country code being updated.
 
@@ -1271,19 +1126,12 @@ Updates a Self tax provider county.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var county = "county_example"; // String | The county being updated.
 
@@ -1331,19 +1179,12 @@ Updates a Self tax provider postalCode.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var postal_code = "postal_code_example"; // String | The postal code being updated.
 
@@ -1391,19 +1232,12 @@ Updates a Self tax provider state.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var stateCode = "stateCode_example"; // String | The state code being updated.
 
@@ -1451,19 +1285,12 @@ Update the Sovos tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var tax_provider_sovos = new UltraCartRestApiV2.TaxProviderSovos(); // TaxProviderSovos | TaxProviderSovos object
 
@@ -1508,19 +1335,12 @@ Update the TaxJar tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var tax_provider_taxJar = new UltraCartRestApiV2.TaxProviderTaxJar(); // TaxProviderTaxJar | TaxProviderTaxJar object
 
@@ -1565,19 +1385,12 @@ Update the UltraCart tax provider.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.TaxApi();
+
 
 var tax_provider_ultracart = new UltraCartRestApiV2.TaxProviderUltraCart(); // TaxProviderUltraCart | TaxProviderUltraCart object
 

@@ -158,25 +158,12 @@ Add to library
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var add_library_request = new UltraCartRestApiV2.AddLibraryItemRequest(); // AddLibraryItemRequest | New library item request
 
@@ -219,25 +206,12 @@ Apply library item to storefront.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var apply_library_request = new UltraCartRestApiV2.ApplyLibraryItemRequest(); // ApplyLibraryItemRequest | New library item
 
@@ -280,25 +254,12 @@ Archive email list
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -344,25 +305,12 @@ Archive email segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -408,25 +356,12 @@ Back populate email flow
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -475,25 +410,12 @@ Check download of email segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -542,25 +464,12 @@ Clone email campaign
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -610,25 +519,12 @@ Clone email flow
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -678,25 +574,12 @@ Create email campaign
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var domain = "domain_example"; // String | 
 
@@ -739,25 +622,12 @@ Delete email campaignFolder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -803,25 +673,12 @@ Delete communication sequence stats
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -867,25 +724,12 @@ Delete email email
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -931,25 +775,12 @@ Delete email flowFolder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -995,25 +826,12 @@ Delete email list customer
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1062,25 +880,12 @@ Delete email postcard
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1126,25 +931,12 @@ delete email campaign
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var domain = "domain_example"; // String | 
 
@@ -1187,25 +979,12 @@ Delete experiment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1251,25 +1030,12 @@ Delete library item
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -1312,25 +1078,12 @@ Delete all published versions for a library item, including anything in review.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -1373,25 +1126,12 @@ Delete screen recording segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1437,25 +1177,12 @@ Duplicate library item.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -1500,19 +1227,12 @@ Update favorite flag on screen recording
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1558,25 +1278,12 @@ Obtain lat/long for an address
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1624,25 +1331,12 @@ Obtain a list of all the countries
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1687,25 +1381,12 @@ Fetches a temporary authentication token for the editor
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1748,25 +1429,12 @@ Get email communication base templates
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1809,25 +1477,12 @@ Get email campaign
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1873,25 +1528,12 @@ Get email campaign folder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1937,25 +1579,12 @@ Get email campaign folders
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -1998,25 +1627,12 @@ Get email campaign screenshots
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2062,25 +1678,12 @@ Get email campaigns
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2123,25 +1726,12 @@ Get email campaigns with stats
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2187,25 +1777,12 @@ Get email commseq
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2251,25 +1828,12 @@ Get email communication sequence emails stats
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2318,25 +1882,12 @@ Get email communication sequence postcard stats
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2385,25 +1936,12 @@ Get communication sequence stats overall
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2449,25 +1987,12 @@ Get email communication sequence step stats
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2516,25 +2041,12 @@ Get email communication sequence customers waiting at each requested step
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2583,25 +2095,12 @@ Get email commseqs
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2644,25 +2143,12 @@ Get customers editor URL
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2708,25 +2194,12 @@ Get email customers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2777,25 +2250,12 @@ Get email dashboard activity
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2842,25 +2302,12 @@ Get dashboard stats
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2907,25 +2354,12 @@ Get email email
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -2971,25 +2405,12 @@ Get email email clicks
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3045,25 +2466,12 @@ Get email order customer editor url
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3112,25 +2520,12 @@ Get email email orders
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3186,25 +2581,12 @@ Get email emails
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3247,25 +2629,12 @@ Get email emails multiple
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3311,25 +2680,12 @@ Get email flow
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3375,25 +2731,12 @@ Get email flow folder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3439,25 +2782,12 @@ Get email flow folders
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3500,25 +2830,12 @@ Get email flow screenshots
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3564,25 +2881,12 @@ Get email flows
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3625,25 +2929,13 @@ Get email globalsettings
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -3680,25 +2972,12 @@ Get email list
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3744,25 +3023,12 @@ Get email list customer editor url
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3811,25 +3077,12 @@ Get email list customers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3881,25 +3134,12 @@ Get email lists
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -3942,25 +3182,12 @@ Get email performance
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4003,25 +3230,12 @@ Get email plan
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4064,25 +3278,12 @@ Get email postcard
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4128,25 +3329,12 @@ Get email postcards
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4189,25 +3377,12 @@ Get email postcards multiple
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4253,25 +3428,12 @@ Get email segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4317,25 +3479,12 @@ Get email segment customers editor URL
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4384,25 +3533,12 @@ Get email segment customers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4454,25 +3590,12 @@ Get email segments
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4515,25 +3638,12 @@ Get email sending domain
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var domain = "domain_example"; // String | 
 
@@ -4576,25 +3686,12 @@ Get email sending domain status
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var domain = "domain_example"; // String | 
 
@@ -4637,25 +3734,13 @@ Get email sending domains
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -4692,25 +3777,12 @@ Get email settings
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4753,25 +3825,12 @@ Get email template
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4817,25 +3876,12 @@ Get email templates
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4882,25 +3928,12 @@ Get a list of third party email providers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -4943,25 +3976,12 @@ Get experiments
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5006,25 +4026,12 @@ Obtain a list of property names for a given property type
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5073,25 +4080,12 @@ Obtain a list of property values for a given property name and type
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5142,25 +4136,13 @@ Get library values used to populate drop down boxes for filtering.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -5197,25 +4179,12 @@ Get library item.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -5258,25 +4227,12 @@ Get all published versions for a library item.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -5321,19 +4277,12 @@ Retrieves the pricing tiers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var opts = { 
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -5379,19 +4328,12 @@ Get screen recording
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5439,19 +4381,12 @@ Get screen recording page view data
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5500,25 +4435,12 @@ Get screen recording segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5564,25 +4486,12 @@ Get screen recording segments
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5625,25 +4534,12 @@ Get screen recording settings
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5688,19 +4584,12 @@ Get tags used by screen recording
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5745,19 +4634,12 @@ Query screen recordings
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5813,19 +4695,12 @@ Get screen recordings by segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -5879,25 +4754,12 @@ Get thumbnail parameters
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var thumbnail_parameters = new UltraCartRestApiV2.ThumbnailParametersRequest(); // ThumbnailParametersRequest | Thumbnail Parameters
 
@@ -5942,25 +4804,12 @@ Fetch a transactional email
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6008,25 +4857,12 @@ Obtain a list of all transactional emails and return back just their names
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6069,25 +4905,12 @@ Get transactional email screenshots
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6133,25 +4956,12 @@ Globally unsubscribe a customer
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6197,25 +5007,12 @@ Import a third party provider list
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6261,25 +5058,12 @@ Insert email campaign
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6325,25 +5109,12 @@ Insert email campaign folder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6389,25 +5160,12 @@ Insert email commseq
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6453,25 +5211,12 @@ Insert email email
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6517,25 +5262,12 @@ Insert email flow
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6581,25 +5313,12 @@ Insert email flow folder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6645,25 +5364,12 @@ Insert email list
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6709,25 +5415,12 @@ Insert email postcard
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6773,25 +5466,12 @@ Insert email segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6837,25 +5517,12 @@ Insert screen recording segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6901,25 +5568,12 @@ Prepare download of email segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -6965,25 +5619,12 @@ Publish library item.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -7029,25 +5670,12 @@ Purchase public library item, which creates a copy of the item in your personal 
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -7094,25 +5722,12 @@ Release email communication sequence customers waiting at the specified step
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -7161,25 +5776,12 @@ Request a review of an email
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -7228,25 +5830,12 @@ Searches for all matching values
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var opts = { 
   'category': "category_example", // String | 
@@ -7298,25 +5887,12 @@ Searches for all matching values (using POST)
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var lookup_request = new UltraCartRestApiV2.LookupRequest(); // LookupRequest | LookupRequest
 
@@ -7359,25 +5935,12 @@ Search email list customers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -7427,25 +5990,12 @@ Search email segment customers
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -7497,19 +6047,12 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
 
@@ -7562,19 +6105,12 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
 
@@ -7627,19 +6163,12 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
 
@@ -7692,19 +6221,12 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
 
@@ -7755,25 +6277,12 @@ Send email test
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -7822,25 +6331,12 @@ Send postcard test
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -7889,25 +6385,12 @@ Start email campaign
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -7953,25 +6436,12 @@ Subscribe customers to email list
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8022,19 +6492,12 @@ Remove favorite flag on screen recording
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8080,25 +6543,12 @@ Update email campaign
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8147,25 +6597,12 @@ Update email campaign folder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8214,25 +6651,12 @@ Update email commseq
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8281,25 +6705,12 @@ Update email customer
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8348,25 +6759,12 @@ Update email email
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8415,25 +6813,12 @@ Update email flow
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8482,25 +6867,12 @@ Update email flow folder
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8549,25 +6921,12 @@ Update email global settings
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var global_settings = new UltraCartRestApiV2.EmailGlobalSettings(); // EmailGlobalSettings | global settings request
 
@@ -8610,25 +6969,12 @@ Update email list
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8677,25 +7023,12 @@ Update email plan
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8741,25 +7074,12 @@ Update email postcard
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8808,25 +7128,12 @@ Update email segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8875,25 +7182,12 @@ Update email settings
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -8939,25 +7233,12 @@ Update experiment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -9006,25 +7287,12 @@ Update library item. Note that only certain fields may be updated via this metho
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var library_item_oid = 56; // Number | 
 
@@ -9070,25 +7338,12 @@ Update screen recording segment
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -9137,25 +7392,12 @@ Update screen recording settings
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -9203,19 +7445,12 @@ Update tags on a screen recording
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 
@@ -9266,25 +7501,12 @@ Updates a transactional email
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure API key authorization: ultraCartBrowserApiKey
-var ultraCartBrowserApiKey = defaultClient.authentications['ultraCartBrowserApiKey'];
-ultraCartBrowserApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartBrowserApiKey.apiKeyPrefix = 'Token';
-
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
 
 var storefront_oid = 56; // Number | 
 

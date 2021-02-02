@@ -34,7 +34,7 @@
   /**
    * The TaxProviderSovos model module.
    * @module com.ultracart.admin.v2.models/TaxProviderSovos
-   * @version 3.0.76
+   * @version 3.1.0
    */
 
   /**

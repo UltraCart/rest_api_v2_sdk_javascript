@@ -25,19 +25,12 @@ Retrieves a single auto order using the specified auto order oid.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var auto_order_oid = 56; // Number | The auto order oid to retrieve.
 
@@ -86,19 +79,12 @@ Retrieves a single auto order using the specified reference (original) order id.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var auto_order_code = "auto_order_code_example"; // String | The auto order oid to retrieve.
 
@@ -147,19 +133,12 @@ Retrieves a single auto order using the specified reference (original) order id.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var reference_order_id = "reference_order_id_example"; // String | The auto order oid to retrieve.
 
@@ -208,19 +187,12 @@ Retrieves auto orders from the account.  If no parameters are specified, all aut
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var opts = { 
   'auto_order_code': "auto_order_code_example", // String | Auto order code
@@ -310,19 +282,12 @@ Retrieves a group of auto orders from the account based on an array of auto orde
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var auto_order_batch = new UltraCartRestApiV2.AutoOrderQueryBatch(); // AutoOrderQueryBatch | Auto order batch
 
@@ -371,19 +336,12 @@ Retrieves a group of auto orders from the account based on a query object.  You 
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var auto_order_query = new UltraCartRestApiV2.AutoOrderQuery(); // AutoOrderQuery | Auto order query
 
@@ -438,19 +396,12 @@ Update an auto order on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
 
@@ -502,19 +453,12 @@ Update multiple auto orders on the UltraCart account.
 ### Example
 ```javascript
 var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-var defaultClient = UltraCartRestApiV2.ApiClient.instance;
 
-// Configure OAuth2 access token for authorization: ultraCartOauth
-var ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-
-// Configure API key authorization: ultraCartSimpleApiKey
-var ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
-
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
 
 var auto_orders_request = new UltraCartRestApiV2.AutoOrdersRequest(); // AutoOrdersRequest | Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
 

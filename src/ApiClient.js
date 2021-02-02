@@ -33,7 +33,7 @@
 
   /**
    * @module ApiClient
-   * @version 3.0.76
+   * @version 3.1.0
    */
 
   /**
@@ -598,6 +598,24 @@
    * @type {module:ApiClient}
    */
   exports.instance = new exports();
+
+
+  /**
+   * Configures the default instance to use simple key authentication.  Do not use
+   * verifySsl = true for a production operation.
+   * @param apiKey {String} The simple key.
+   * @param verifySsl {boolean} If true, NODE_TLS_REJECT_UNAUTHORIZED is set to 0
+   */
+  exports.usingApiKey = function(apiKey, verifySsl = true){
+    if(!verifySsl){
+      // -- development code to work with UltraCart test servers.
+      process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+      // -- end of development code
+    }
+    exports.instance.authentications['ultraCartSimpleApiKey'].apiKey = apiKey;
+    exports.instance.defaultHeaders["X-UltraCart-Api-Version"] = "2017-03-01";
+  }
+
 
   return exports;
 }));
