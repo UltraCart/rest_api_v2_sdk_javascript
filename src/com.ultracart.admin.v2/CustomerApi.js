@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.1.0
+   * @version 3.1.1
    */
 
   /**
@@ -143,6 +143,58 @@
 
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerByEmail operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerByEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a customer by Email
+     * Retrieves a single customer using the specified customer email address. 
+     * @param {String} email The email address of the customer to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerByEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerResponse}
+     */
+    this.getCustomerByEmail = function(email, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'email' is set
+      if (email === undefined || email === null) {
+        throw new Error("Missing the required parameter 'email' when calling getCustomerByEmail");
+      }
+
+
+      var pathParams = {
+        'email': email
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CustomerResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/by_email/{email}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

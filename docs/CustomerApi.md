@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /customer/customers/{customer_profile_oid} | Delete a customer
 [**getCustomer**](CustomerApi.md#getCustomer) | **GET** /customer/customers/{customer_profile_oid} | Retrieve a customer
+[**getCustomerByEmail**](CustomerApi.md#getCustomerByEmail) | **GET** /customer/customers/by_email/{email} | Retrieve a customer by Email
 [**getCustomers**](CustomerApi.md#getCustomers) | **GET** /customer/customers | Retrieve customers
 [**getCustomersByQuery**](CustomerApi.md#getCustomersByQuery) | **POST** /customer/customers/query | Retrieve customers by query
 [**getCustomersForDataTables**](CustomerApi.md#getCustomersForDataTables) | **POST** /customer/customers/dataTables | Retrieve customers for DataTables plugin
@@ -105,6 +106,60 @@ apiInstance.getCustomer(customer_profile_oid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_profile_oid** | **Number**| The customer oid to retrieve. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**CustomerResponse**](CustomerResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getCustomerByEmail"></a>
+# **getCustomerByEmail**
+> CustomerResponse getCustomerByEmail(email, opts)
+
+Retrieve a customer by Email
+
+Retrieves a single customer using the specified customer email address. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.CustomerApi();
+
+
+var email = "email_example"; // String | The email address of the customer to retrieve.
+
+var opts = { 
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getCustomerByEmail(email, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **String**| The email address of the customer to retrieve. | 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

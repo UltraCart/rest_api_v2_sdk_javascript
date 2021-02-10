@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingTagsRequest model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingTagsRequest
-   * @version 3.1.0
+   * @version 3.1.1
    */
 
   /**

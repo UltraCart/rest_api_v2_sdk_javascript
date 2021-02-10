@@ -34,7 +34,7 @@
   /**
    * The CouponMultipleAmountsOffItems model module.
    * @module com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems
-   * @version 3.1.0
+   * @version 3.1.1
    */
 
   /**

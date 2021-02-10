@@ -34,7 +34,7 @@
   /**
    * The CouponTieredPercentOffItems model module.
    * @module com.ultracart.admin.v2.models/CouponTieredPercentOffItems
-   * @version 3.1.0
+   * @version 3.1.1
    */
 
   /**
@@ -72,7 +72,7 @@
   exports.prototype.items = undefined;
 
   /**
-   * The maximum amount of total discount by this coupon.
+   * The (optional) maximum quantity of discounted items.
    * @member {Number} limit
    */
   exports.prototype.limit = undefined;
