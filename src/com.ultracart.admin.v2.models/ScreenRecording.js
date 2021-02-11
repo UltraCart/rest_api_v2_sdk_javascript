@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.1
+   * @version 3.1.2
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.events_gz_size = ApiClient.convertToType(data['events_gz_size'], 'Number');
       if (data.hasOwnProperty('events_json_key'))
         obj.events_json_key = ApiClient.convertToType(data['events_json_key'], 'String');
+      if (data.hasOwnProperty('favorite'))
+        obj.favorite = ApiClient.convertToType(data['favorite'], 'Boolean');
       if (data.hasOwnProperty('favorites'))
         obj.favorites = ApiClient.convertToType(data['favorites'], ['Number']);
       if (data.hasOwnProperty('geolocation'))
@@ -165,6 +167,13 @@
   exports.prototype.events_json_key = undefined;
 
   /**
+   * True if the user calling the API has favorited this particular screen recording.
+   * @member {Boolean} favorite
+   */
+  exports.prototype.favorite = undefined;
+
+  /**
+   * Array of user ids that favorited this particular screen recording.
    * @member {Array.<Number>} favorites
    */
   exports.prototype.favorites = undefined;

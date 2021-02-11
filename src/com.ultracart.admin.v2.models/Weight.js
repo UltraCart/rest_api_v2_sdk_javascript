@@ -34,7 +34,7 @@
   /**
    * The Weight model module.
    * @module com.ultracart.admin.v2.models/Weight
-   * @version 3.1.1
+   * @version 3.1.2
    */
 
   /**
