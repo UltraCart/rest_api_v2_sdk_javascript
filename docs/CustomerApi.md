@@ -709,7 +709,7 @@ Name | Type | Description  | Notes
 
 <a name="validateEmailVerificationToken"></a>
 # **validateEmailVerificationToken**
-> EmailVerifyTokenResponse validateEmailVerificationToken(validation_request)
+> EmailVerifyTokenValidateResponse validateEmailVerificationToken(validation_request)
 
 Validate a token that can be used to verify a customer email address
 
@@ -746,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EmailVerifyTokenResponse**](EmailVerifyTokenResponse.md)
+[**EmailVerifyTokenValidateResponse**](EmailVerifyTokenValidateResponse.md)
 
 ### Authorization
 
