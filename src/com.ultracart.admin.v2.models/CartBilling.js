@@ -34,7 +34,7 @@
   /**
    * The CartBilling model module.
    * @module com.ultracart.admin.v2.models/CartBilling
-   * @version 3.1.3
+   * @version 3.1.4
    */
 
   /**
