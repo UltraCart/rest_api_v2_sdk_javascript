@@ -4372,7 +4372,7 @@ Name | Type | Description  | Notes
 
 <a name="getScreenRecordingPageViewData"></a>
 # **getScreenRecordingPageViewData**
-> ScreenRecordingResponse getScreenRecordingPageViewData(storefront_oid, screen_recording_uuid, screen_recording_page_view_uuid)
+> ScreenRecordingPageViewDataResponse getScreenRecordingPageViewData(storefront_oid, screen_recording_uuid, screen_recording_page_view_uuid)
 
 Get screen recording page view data
 
@@ -4415,7 +4415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ScreenRecordingResponse**](ScreenRecordingResponse.md)
+[**ScreenRecordingPageViewDataResponse**](ScreenRecordingPageViewDataResponse.md)
 
 ### Authorization
 

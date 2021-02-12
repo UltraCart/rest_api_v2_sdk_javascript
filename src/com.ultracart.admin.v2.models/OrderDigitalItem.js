@@ -34,7 +34,7 @@
   /**
    * The OrderDigitalItem model module.
    * @module com.ultracart.admin.v2.models/OrderDigitalItem
-   * @version 3.1.5
+   * @version 3.1.6
    */
 
   /**
