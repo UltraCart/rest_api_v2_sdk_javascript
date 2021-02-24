@@ -34,7 +34,7 @@
   /**
    * The CartPaymentCheck model module.
    * @module com.ultracart.admin.v2.models/CartPaymentCheck
-   * @version 3.1.10
+   * @version 3.1.11
    */
 
   /**

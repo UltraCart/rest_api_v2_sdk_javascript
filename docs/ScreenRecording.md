@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **user_agent_raw** | **String** |  | [optional] 
 **user_ip** | **String** |  | [optional] 
 **user_properties** | [**[ScreenRecordingUserProperty]**](ScreenRecordingUserProperty.md) |  | [optional] 
+**visitor_number** | **Number** |  | [optional] 
 **watched** | **Boolean** |  | [optional] 
 **window_height** | **Number** |  | [optional] 
 **window_width** | **Number** |  | [optional] 
