@@ -34,7 +34,7 @@
   /**
    * The OrderInternal model module.
    * @module com.ultracart.admin.v2.models/OrderInternal
-   * @version 3.1.8
+   * @version 3.1.9
    */
 
   /**

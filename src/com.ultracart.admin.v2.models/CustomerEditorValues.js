@@ -34,7 +34,7 @@
   /**
    * The CustomerEditorValues model module.
    * @module com.ultracart.admin.v2.models/CustomerEditorValues
-   * @version 3.1.8
+   * @version 3.1.9
    */
 
   /**
