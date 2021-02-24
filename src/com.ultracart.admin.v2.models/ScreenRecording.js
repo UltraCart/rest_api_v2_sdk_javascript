@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.9
+   * @version 3.1.10
    */
 
   /**
@@ -83,6 +83,8 @@
         obj.geolocation_state = ApiClient.convertToType(data['geolocation_state'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('merchant_notes'))
+        obj.merchant_notes = ApiClient.convertToType(data['merchant_notes'], 'String');
       if (data.hasOwnProperty('order_id'))
         obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('page_view_count'))
@@ -197,6 +199,11 @@
    * @member {String} merchant_id
    */
   exports.prototype.merchant_id = undefined;
+
+  /**
+   * @member {String} merchant_notes
+   */
+  exports.prototype.merchant_notes = undefined;
 
   /**
    * @member {String} order_id

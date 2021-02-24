@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **geolocation_country** | **String** |  | [optional] 
 **geolocation_state** | **String** |  | [optional] 
 **merchant_id** | **String** |  | [optional] 
+**merchant_notes** | **String** |  | [optional] 
 **order_id** | **String** |  | [optional] 
 **page_view_count** | **Number** |  | [optional] 
 **page_views** | [**[ScreenRecordingPageView]**](ScreenRecordingPageView.md) |  | [optional] 
