@@ -34,7 +34,7 @@
   /**
    * The CartResponse model module.
    * @module com.ultracart.admin.v2.models/CartResponse
-   * @version 3.1.7
+   * @version 3.1.8
    */
 
   /**

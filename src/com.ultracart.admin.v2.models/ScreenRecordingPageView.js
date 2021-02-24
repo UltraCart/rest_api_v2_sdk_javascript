@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageView
-   * @version 3.1.7
+   * @version 3.1.8
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.http_post = ApiClient.convertToType(data['http_post'], 'Boolean');
       if (data.hasOwnProperty('last_event_timestamp'))
         obj.last_event_timestamp = ApiClient.convertToType(data['last_event_timestamp'], 'String');
+      if (data.hasOwnProperty('missing_events'))
+        obj.missing_events = ApiClient.convertToType(data['missing_events'], 'Boolean');
       if (data.hasOwnProperty('params'))
         obj.params = ApiClient.convertToType(data['params'], [ScreenRecordingPageViewParameter]);
       if (data.hasOwnProperty('range_end'))
@@ -110,6 +112,11 @@
    * @member {String} last_event_timestamp
    */
   exports.prototype.last_event_timestamp = undefined;
+
+  /**
+   * @member {Boolean} missing_events
+   */
+  exports.prototype.missing_events = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingPageViewParameter>} params

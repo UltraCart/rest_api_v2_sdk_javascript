@@ -34,7 +34,7 @@
   /**
    * The EmailPlanResponse model module.
    * @module com.ultracart.admin.v2.models/EmailPlanResponse
-   * @version 3.1.7
+   * @version 3.1.8
    */
 
   /**
