@@ -34,7 +34,7 @@
   /**
    * The EmailFlowFolderResponse model module.
    * @module com.ultracart.admin.v2.models/EmailFlowFolderResponse
-   * @version 3.1.11
+   * @version 3.1.12
    */
 
   /**

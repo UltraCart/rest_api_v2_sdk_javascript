@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.11
+   * @version 3.1.12
    */
 
   /**
@@ -117,6 +117,8 @@
         obj.user_ip = ApiClient.convertToType(data['user_ip'], 'String');
       if (data.hasOwnProperty('user_properties'))
         obj.user_properties = ApiClient.convertToType(data['user_properties'], [ScreenRecordingUserProperty]);
+      if (data.hasOwnProperty('visitor_first_seen'))
+        obj.visitor_first_seen = ApiClient.convertToType(data['visitor_first_seen'], 'String');
       if (data.hasOwnProperty('visitor_number'))
         obj.visitor_number = ApiClient.convertToType(data['visitor_number'], 'Number');
       if (data.hasOwnProperty('watched'))
@@ -287,6 +289,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingUserProperty>} user_properties
    */
   exports.prototype.user_properties = undefined;
+
+  /**
+   * Timestamp this visitor was first seen
+   * @member {String} visitor_first_seen
+   */
+  exports.prototype.visitor_first_seen = undefined;
 
   /**
    * @member {Number} visitor_number
