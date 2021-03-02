@@ -736,7 +736,7 @@ UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.CouponApi();
 
 
-var coupons_request = new UltraCartRestApiV2.CouponsRequest(); // CouponsRequest | Coupons to insert (maximum 20)
+var coupons_request = new UltraCartRestApiV2.CouponsRequest(); // CouponsRequest | Coupons to insert (maximum 50)
 
 var opts = { 
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
@@ -757,7 +757,7 @@ apiInstance.insertCoupons(coupons_request, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **coupons_request** | [**CouponsRequest**](CouponsRequest.md)| Coupons to insert (maximum 20) | 
+ **coupons_request** | [**CouponsRequest**](CouponsRequest.md)| Coupons to insert (maximum 50) | 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
  **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 

@@ -34,7 +34,7 @@
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 3.1.12
+   * @version 3.1.13
    */
 
   /**
@@ -717,7 +717,7 @@
     /**
      * Insert multiple coupons
      * Insert multiple coupon on the UltraCart account. 
-     * @param {module:com.ultracart.admin.v2.models/CouponsRequest} coupons_request Coupons to insert (maximum 20)
+     * @param {module:com.ultracart.admin.v2.models/CouponsRequest} coupons_request Coupons to insert (maximum 50)
      * @param {Object} opts Optional parameters
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
