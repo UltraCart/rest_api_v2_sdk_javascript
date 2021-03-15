@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.1.14
+   * @version 3.1.15
    */
 
   /**
@@ -1058,7 +1058,7 @@
      * Callback function to receive the result of the deleteScreenRecordingSegment operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteScreenRecordingSegmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/ScreenRecordingSegmentResponse} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1067,7 +1067,6 @@
      * @param {Number} storefront_oid 
      * @param {Number} screen_recording_segment_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteScreenRecordingSegmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/ScreenRecordingSegmentResponse}
      */
     this.deleteScreenRecordingSegment = function(storefront_oid, screen_recording_segment_oid, callback) {
       var postBody = null;
@@ -1099,7 +1098,7 @@
       var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ScreenRecordingSegmentResponse;
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/screen_recordings/segments/{screen_recording_segment_oid}', 'DELETE',

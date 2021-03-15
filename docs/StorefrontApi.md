@@ -1120,7 +1120,7 @@ null (empty response body)
 
 <a name="deleteScreenRecordingSegment"></a>
 # **deleteScreenRecordingSegment**
-> ScreenRecordingSegmentResponse deleteScreenRecordingSegment(storefront_oid, screen_recording_segment_oid)
+> deleteScreenRecordingSegment(storefront_oid, screen_recording_segment_oid)
 
 Delete screen recording segment
 
@@ -1143,7 +1143,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
 apiInstance.deleteScreenRecordingSegment(storefront_oid, screen_recording_segment_oid, callback);
@@ -1158,7 +1158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ScreenRecordingSegmentResponse**](ScreenRecordingSegmentResponse.md)
+null (empty response body)
 
 ### Authorization
 
