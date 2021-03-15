@@ -34,7 +34,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 3.1.13
+   * @version 3.1.14
    */
 
   /**
@@ -73,6 +73,20 @@
         obj.creation_date_end = ApiClient.convertToType(data['creation_date_end'], 'String');
       if (data.hasOwnProperty('current_stage'))
         obj.current_stage = ApiClient.convertToType(data['current_stage'], 'String');
+      if (data.hasOwnProperty('custom_field_1'))
+        obj.custom_field_1 = ApiClient.convertToType(data['custom_field_1'], 'String');
+      if (data.hasOwnProperty('custom_field_2'))
+        obj.custom_field_2 = ApiClient.convertToType(data['custom_field_2'], 'String');
+      if (data.hasOwnProperty('custom_field_3'))
+        obj.custom_field_3 = ApiClient.convertToType(data['custom_field_3'], 'String');
+      if (data.hasOwnProperty('custom_field_4'))
+        obj.custom_field_4 = ApiClient.convertToType(data['custom_field_4'], 'String');
+      if (data.hasOwnProperty('custom_field_5'))
+        obj.custom_field_5 = ApiClient.convertToType(data['custom_field_5'], 'String');
+      if (data.hasOwnProperty('custom_field_6'))
+        obj.custom_field_6 = ApiClient.convertToType(data['custom_field_6'], 'String');
+      if (data.hasOwnProperty('custom_field_7'))
+        obj.custom_field_7 = ApiClient.convertToType(data['custom_field_7'], 'String');
       if (data.hasOwnProperty('customer_profile_oid'))
         obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('email'))
@@ -172,6 +186,48 @@
    * @member {module:com.ultracart.admin.v2.models/OrderQuery.CurrentStageEnum} current_stage
    */
   exports.prototype.current_stage = undefined;
+
+  /**
+   * Custom field 1
+   * @member {String} custom_field_1
+   */
+  exports.prototype.custom_field_1 = undefined;
+
+  /**
+   * Custom field 2
+   * @member {String} custom_field_2
+   */
+  exports.prototype.custom_field_2 = undefined;
+
+  /**
+   * Custom field 3
+   * @member {String} custom_field_3
+   */
+  exports.prototype.custom_field_3 = undefined;
+
+  /**
+   * Custom field 4
+   * @member {String} custom_field_4
+   */
+  exports.prototype.custom_field_4 = undefined;
+
+  /**
+   * Custom field 5
+   * @member {String} custom_field_5
+   */
+  exports.prototype.custom_field_5 = undefined;
+
+  /**
+   * Custom field 6
+   * @member {String} custom_field_6
+   */
+  exports.prototype.custom_field_6 = undefined;
+
+  /**
+   * Custom field 7
+   * @member {String} custom_field_7
+   */
+  exports.prototype.custom_field_7 = undefined;
 
   /**
    * The customer profile to find associated orders for

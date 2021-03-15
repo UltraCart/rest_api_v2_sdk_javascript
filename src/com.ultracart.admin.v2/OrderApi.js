@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.1.13
+   * @version 3.1.14
    */
 
   /**
@@ -533,6 +533,13 @@
      * @param {Number} opts.customer_profile_oid 
      * @param {String} opts.Refund_Date_Begin 
      * @param {String} opts.Refund_Date_End 
+     * @param {String} opts.Custom_Field_1 
+     * @param {String} opts.Custom_Field_2 
+     * @param {String} opts.Custom_Field_3 
+     * @param {String} opts.Custom_Field_4 
+     * @param {String} opts.Custom_Field_5 
+     * @param {String} opts.Custom_Field_6 
+     * @param {String} opts.Custom_Field_7 
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts._sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -578,6 +585,13 @@
         'customer_profile_oid': opts['customer_profile_oid'],
         'Refund Date Begin': opts['Refund_Date_Begin'],
         'Refund Date End': opts['Refund_Date_End'],
+        'Custom Field 1': opts['Custom_Field_1'],
+        'Custom Field 2': opts['Custom_Field_2'],
+        'Custom Field 3': opts['Custom_Field_3'],
+        'Custom Field 4': opts['Custom_Field_4'],
+        'Custom Field 5': opts['Custom_Field_5'],
+        'Custom Field 6': opts['Custom_Field_6'],
+        'Custom Field 7': opts['Custom_Field_7'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset'],
         '_sort': opts['_sort'],
