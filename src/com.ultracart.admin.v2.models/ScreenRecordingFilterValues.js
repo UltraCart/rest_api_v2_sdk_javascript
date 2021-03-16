@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEvent'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEvent', 'com.ultracart.admin.v2.models/ScreenRecordingFilterValuesPageParam'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ScreenRecordingFilterValuesEvent'));
+    module.exports = factory(require('../ApiClient'), require('./ScreenRecordingFilterValuesEvent'), require('./ScreenRecordingFilterValuesPageParam'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ScreenRecordingFilterValues = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ScreenRecordingFilterValuesEvent);
+    root.UltraCartRestApiV2.ScreenRecordingFilterValues = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ScreenRecordingFilterValuesEvent, root.UltraCartRestApiV2.ScreenRecordingFilterValuesPageParam);
   }
-}(this, function(ApiClient, ScreenRecordingFilterValuesEvent) {
+}(this, function(ApiClient, ScreenRecordingFilterValuesEvent, ScreenRecordingFilterValuesPageParam) {
   'use strict';
 
   /**
    * The ScreenRecordingFilterValues model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValues
-   * @version 3.1.15
+   * @version 3.1.16
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.geolocation_states = ApiClient.convertToType(data['geolocation_states'], ['String']);
       if (data.hasOwnProperty('max_values'))
         obj.max_values = ApiClient.convertToType(data['max_values'], 'Number');
+      if (data.hasOwnProperty('page_params'))
+        obj.page_params = ApiClient.convertToType(data['page_params'], [ScreenRecordingFilterValuesPageParam]);
       if (data.hasOwnProperty('urls'))
         obj.urls = ApiClient.convertToType(data['urls'], ['String']);
       if (data.hasOwnProperty('user_agent_device_names'))
@@ -98,6 +100,11 @@
    * @member {Number} max_values
    */
   exports.prototype.max_values = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingFilterValuesPageParam>} page_params
+   */
+  exports.prototype.page_params = undefined;
 
   /**
    * @member {Array.<String>} urls

@@ -34,7 +34,7 @@
   /**
    * The CustomerPrivacy model module.
    * @module com.ultracart.admin.v2.models/CustomerPrivacy
-   * @version 3.1.15
+   * @version 3.1.16
    */
 
   /**
