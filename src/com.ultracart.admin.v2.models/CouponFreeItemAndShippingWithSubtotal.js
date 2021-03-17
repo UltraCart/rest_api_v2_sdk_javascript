@@ -34,7 +34,7 @@
   /**
    * The CouponFreeItemAndShippingWithSubtotal model module.
    * @module com.ultracart.admin.v2.models/CouponFreeItemAndShippingWithSubtotal
-   * @version 3.1.16
+   * @version 3.1.17
    */
 
   /**

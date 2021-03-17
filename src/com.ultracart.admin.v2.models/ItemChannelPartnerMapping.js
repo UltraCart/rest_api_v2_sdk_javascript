@@ -34,7 +34,7 @@
   /**
    * The ItemChannelPartnerMapping model module.
    * @module com.ultracart.admin.v2.models/ItemChannelPartnerMapping
-   * @version 3.1.16
+   * @version 3.1.17
    */
 
   /**
