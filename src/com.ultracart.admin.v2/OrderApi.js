@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.1.17
+   * @version 3.1.18
    */
 
   /**
@@ -540,6 +540,8 @@
      * @param {String} opts.Custom_Field_5 
      * @param {String} opts.Custom_Field_6 
      * @param {String} opts.Custom_Field_7 
+     * @param {String} opts.ship_on_date_begin 
+     * @param {String} opts.ship_on_date_end 
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts._sort The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -592,6 +594,8 @@
         'Custom Field 5': opts['Custom_Field_5'],
         'Custom Field 6': opts['Custom_Field_6'],
         'Custom Field 7': opts['Custom_Field_7'],
+        'ship_on_date_begin': opts['ship_on_date_begin'],
+        'ship_on_date_end': opts['ship_on_date_end'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset'],
         '_sort': opts['_sort'],

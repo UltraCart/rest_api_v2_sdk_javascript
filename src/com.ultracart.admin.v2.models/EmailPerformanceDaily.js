@@ -34,7 +34,7 @@
   /**
    * The EmailPerformanceDaily model module.
    * @module com.ultracart.admin.v2.models/EmailPerformanceDaily
-   * @version 3.1.17
+   * @version 3.1.18
    */
 
   /**

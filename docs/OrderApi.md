@@ -544,6 +544,8 @@ var opts = {
   'Custom_Field_5': "Custom_Field_5_example", // String | 
   'Custom_Field_6': "Custom_Field_6_example", // String | 
   'Custom_Field_7': "Custom_Field_7_example", // String | 
+  'ship_on_date_begin': "ship_on_date_begin_example", // String | 
+  'ship_on_date_end': "ship_on_date_end_example", // String | 
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_sort': "_sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -601,6 +603,8 @@ Name | Type | Description  | Notes
  **Custom_Field_5** | **String**|  | [optional] 
  **Custom_Field_6** | **String**|  | [optional] 
  **Custom_Field_7** | **String**|  | [optional] 
+ **ship_on_date_begin** | **String**|  | [optional] 
+ **ship_on_date_end** | **String**|  | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **_sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 

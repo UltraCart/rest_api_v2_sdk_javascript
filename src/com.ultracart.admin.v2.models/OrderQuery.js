@@ -34,7 +34,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 3.1.17
+   * @version 3.1.18
    */
 
   /**
@@ -123,6 +123,10 @@
         obj.shipment_date_begin = ApiClient.convertToType(data['shipment_date_begin'], 'String');
       if (data.hasOwnProperty('shipment_date_end'))
         obj.shipment_date_end = ApiClient.convertToType(data['shipment_date_end'], 'String');
+      if (data.hasOwnProperty('shipped_on_date_begin'))
+        obj.shipped_on_date_begin = ApiClient.convertToType(data['shipped_on_date_begin'], 'String');
+      if (data.hasOwnProperty('shipped_on_date_end'))
+        obj.shipped_on_date_end = ApiClient.convertToType(data['shipped_on_date_end'], 'String');
       if (data.hasOwnProperty('state_region'))
         obj.state_region = ApiClient.convertToType(data['state_region'], 'String');
       if (data.hasOwnProperty('storefront_host_name'))
@@ -326,7 +330,7 @@
   exports.prototype.screen_branding_theme_code = undefined;
 
   /**
-   * Date/time that the order was shipping
+   * Date/time that the order was shipped
    * @member {String} shipment_date_begin
    */
   exports.prototype.shipment_date_begin = undefined;
@@ -336,6 +340,18 @@
    * @member {String} shipment_date_end
    */
   exports.prototype.shipment_date_end = undefined;
+
+  /**
+   * Date/time that the order should ship on
+   * @member {String} shipped_on_date_begin
+   */
+  exports.prototype.shipped_on_date_begin = undefined;
+
+  /**
+   * Date/time that the order should ship on
+   * @member {String} shipped_on_date_end
+   */
+  exports.prototype.shipped_on_date_end = undefined;
 
   /**
    * State for United States otherwise region or province for other countries
