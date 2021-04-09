@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **geolocation_states** | **[String]** |  | [optional] 
 **max_values** | **Number** |  | [optional] 
 **page_views** | [**[ScreenRecordingFilterValuesPageView]**](ScreenRecordingFilterValuesPageView.md) |  | [optional] 
+**time_on_site_max** | **Number** |  | [optional] 
+**time_on_site_min** | **Number** |  | [optional] 
 **urls** | **[String]** |  | [optional] 
 **user_agent_device_names** | **[String]** |  | [optional] 
 **user_agent_device_os_names** | **[String]** |  | [optional] 

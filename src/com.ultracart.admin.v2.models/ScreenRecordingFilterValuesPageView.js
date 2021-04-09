@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValuesPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValuesPageView
-   * @version 3.1.22
+   * @version 3.1.23
    */
 
   /**
@@ -59,6 +59,10 @@
         obj.events = ApiClient.convertToType(data['events'], [ScreenRecordingFilterValuesEvent]);
       if (data.hasOwnProperty('page_params'))
         obj.page_params = ApiClient.convertToType(data['page_params'], [ScreenRecordingFilterValuesPageParam]);
+      if (data.hasOwnProperty('time_on_page_max'))
+        obj.time_on_page_max = ApiClient.convertToType(data['time_on_page_max'], 'Number');
+      if (data.hasOwnProperty('time_on_page_min'))
+        obj.time_on_page_min = ApiClient.convertToType(data['time_on_page_min'], 'Number');
       if (data.hasOwnProperty('urls'))
         obj.urls = ApiClient.convertToType(data['urls'], ['String']);
     }
@@ -74,6 +78,16 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingFilterValuesPageParam>} page_params
    */
   exports.prototype.page_params = undefined;
+
+  /**
+   * @member {Number} time_on_page_max
+   */
+  exports.prototype.time_on_page_max = undefined;
+
+  /**
+   * @member {Number} time_on_page_min
+   */
+  exports.prototype.time_on_page_min = undefined;
 
   /**
    * @member {Array.<String>} urls

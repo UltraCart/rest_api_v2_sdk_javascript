@@ -34,7 +34,7 @@
   /**
    * The CartProfileRegisterRequest model module.
    * @module com.ultracart.admin.v2.models/CartProfileRegisterRequest
-   * @version 3.1.22
+   * @version 3.1.23
    */
 
   /**
