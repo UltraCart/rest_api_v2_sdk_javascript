@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageViewEventParameter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewEventParameter
-   * @version 3.1.18
+   * @version 3.1.22
    */
 
   /**

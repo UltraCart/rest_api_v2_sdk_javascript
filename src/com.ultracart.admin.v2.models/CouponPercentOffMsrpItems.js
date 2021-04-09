@@ -34,7 +34,7 @@
   /**
    * The CouponPercentOffMsrpItems model module.
    * @module com.ultracart.admin.v2.models/CouponPercentOffMsrpItems
-   * @version 3.1.18
+   * @version 3.1.22
    */
 
   /**
@@ -80,7 +80,7 @@
   exports.prototype.excluded_items = undefined;
 
   /**
-   * An optional list of items which will receive a discount.  If blank, discount applies to all items except excluded items.
+   * An list of items which will receive a discount.
    * @member {Array.<String>} items
    */
   exports.prototype.items = undefined;
