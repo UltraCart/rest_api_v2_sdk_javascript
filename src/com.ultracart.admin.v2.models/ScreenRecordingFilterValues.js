@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValues model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValues
-   * @version 3.1.23
+   * @version 3.1.24
    */
 
   /**
@@ -55,6 +55,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('communications_campaign_names'))
+        obj.communications_campaign_names = ApiClient.convertToType(data['communications_campaign_names'], ['String']);
+      if (data.hasOwnProperty('communications_email_subjects'))
+        obj.communications_email_subjects = ApiClient.convertToType(data['communications_email_subjects'], ['String']);
+      if (data.hasOwnProperty('communications_flow_names'))
+        obj.communications_flow_names = ApiClient.convertToType(data['communications_flow_names'], ['String']);
       if (data.hasOwnProperty('geolocation_countries'))
         obj.geolocation_countries = ApiClient.convertToType(data['geolocation_countries'], ['String']);
       if (data.hasOwnProperty('geolocation_states'))
@@ -82,6 +88,21 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Array.<String>} communications_campaign_names
+   */
+  exports.prototype.communications_campaign_names = undefined;
+
+  /**
+   * @member {Array.<String>} communications_email_subjects
+   */
+  exports.prototype.communications_email_subjects = undefined;
+
+  /**
+   * @member {Array.<String>} communications_flow_names
+   */
+  exports.prototype.communications_flow_names = undefined;
 
   /**
    * @member {Array.<String>} geolocation_countries

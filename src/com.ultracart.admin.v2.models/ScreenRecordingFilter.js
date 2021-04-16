@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
-   * @version 3.1.23
+   * @version 3.1.24
    */
 
   /**
@@ -55,6 +55,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('communications_campaign_name'))
+        obj.communications_campaign_name = ApiClient.convertToType(data['communications_campaign_name'], 'String');
+      if (data.hasOwnProperty('communications_email_subject'))
+        obj.communications_email_subject = ApiClient.convertToType(data['communications_email_subject'], 'String');
+      if (data.hasOwnProperty('communications_flow_name'))
+        obj.communications_flow_name = ApiClient.convertToType(data['communications_flow_name'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ScreenRecordingFilterStringSearch.constructFromObject(data['email']);
       if (data.hasOwnProperty('email_identified'))
@@ -114,6 +120,21 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} communications_campaign_name
+   */
+  exports.prototype.communications_campaign_name = undefined;
+
+  /**
+   * @member {String} communications_email_subject
+   */
+  exports.prototype.communications_email_subject = undefined;
+
+  /**
+   * @member {String} communications_flow_name
+   */
+  exports.prototype.communications_flow_name = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} email

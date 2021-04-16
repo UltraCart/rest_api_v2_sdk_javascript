@@ -34,7 +34,7 @@
   /**
    * The CustomersResponse model module.
    * @module com.ultracart.admin.v2.models/CustomersResponse
-   * @version 3.1.23
+   * @version 3.1.24
    */
 
   /**

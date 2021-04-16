@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.23
+   * @version 3.1.24
    */
 
   /**
@@ -61,6 +61,18 @@
         obj.analytics_session_dts = ApiClient.convertToType(data['analytics_session_dts'], 'Number');
       if (data.hasOwnProperty('analytics_session_oid'))
         obj.analytics_session_oid = ApiClient.convertToType(data['analytics_session_oid'], 'Number');
+      if (data.hasOwnProperty('communications_campaign_name'))
+        obj.communications_campaign_name = ApiClient.convertToType(data['communications_campaign_name'], 'String');
+      if (data.hasOwnProperty('communications_campaign_uuid'))
+        obj.communications_campaign_uuid = ApiClient.convertToType(data['communications_campaign_uuid'], 'String');
+      if (data.hasOwnProperty('communications_email_subject'))
+        obj.communications_email_subject = ApiClient.convertToType(data['communications_email_subject'], 'String');
+      if (data.hasOwnProperty('communications_email_uuid'))
+        obj.communications_email_uuid = ApiClient.convertToType(data['communications_email_uuid'], 'String');
+      if (data.hasOwnProperty('communications_flow_name'))
+        obj.communications_flow_name = ApiClient.convertToType(data['communications_flow_name'], 'String');
+      if (data.hasOwnProperty('communications_flow_uuid'))
+        obj.communications_flow_uuid = ApiClient.convertToType(data['communications_flow_uuid'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('end_timestamp'))
@@ -145,6 +157,42 @@
    * @member {Number} analytics_session_oid
    */
   exports.prototype.analytics_session_oid = undefined;
+
+  /**
+   * Campaign Name
+   * @member {String} communications_campaign_name
+   */
+  exports.prototype.communications_campaign_name = undefined;
+
+  /**
+   * Campaign UUID
+   * @member {String} communications_campaign_uuid
+   */
+  exports.prototype.communications_campaign_uuid = undefined;
+
+  /**
+   * Email subject
+   * @member {String} communications_email_subject
+   */
+  exports.prototype.communications_email_subject = undefined;
+
+  /**
+   * Email UUID
+   * @member {String} communications_email_uuid
+   */
+  exports.prototype.communications_email_uuid = undefined;
+
+  /**
+   * Flow Name
+   * @member {String} communications_flow_name
+   */
+  exports.prototype.communications_flow_name = undefined;
+
+  /**
+   * Flow UUID
+   * @member {String} communications_flow_uuid
+   */
+  exports.prototype.communications_flow_uuid = undefined;
 
   /**
    * @member {String} email
