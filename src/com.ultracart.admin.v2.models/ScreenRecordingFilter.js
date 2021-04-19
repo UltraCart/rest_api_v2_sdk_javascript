@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
-   * @version 3.1.24
+   * @version 3.1.25
    */
 
   /**
@@ -113,6 +113,10 @@
         obj.user_agent_os_version = ApiClient.convertToType(data['user_agent_os_version'], 'String');
       if (data.hasOwnProperty('user_ip'))
         obj.user_ip = ScreenRecordingFilterIpSearch.constructFromObject(data['user_ip']);
+      if (data.hasOwnProperty('utm_campaign'))
+        obj.utm_campaign = ApiClient.convertToType(data['utm_campaign'], 'String');
+      if (data.hasOwnProperty('utm_source'))
+        obj.utm_source = ApiClient.convertToType(data['utm_source'], 'String');
       if (data.hasOwnProperty('visitor_number'))
         obj.visitor_number = ApiClient.convertToType(data['visitor_number'], 'Number');
       if (data.hasOwnProperty('watched'))
@@ -265,6 +269,16 @@
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterIpSearch} user_ip
    */
   exports.prototype.user_ip = undefined;
+
+  /**
+   * @member {String} utm_campaign
+   */
+  exports.prototype.utm_campaign = undefined;
+
+  /**
+   * @member {String} utm_source
+   */
+  exports.prototype.utm_source = undefined;
 
   /**
    * @member {Number} visitor_number

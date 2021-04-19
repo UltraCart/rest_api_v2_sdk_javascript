@@ -34,7 +34,7 @@
   /**
    * The CustomerAttachment model module.
    * @module com.ultracart.admin.v2.models/CustomerAttachment
-   * @version 3.1.24
+   * @version 3.1.25
    */
 
   /**

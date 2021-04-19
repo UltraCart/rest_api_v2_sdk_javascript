@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterRangeBigDecimal model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeBigDecimal
-   * @version 3.1.24
+   * @version 3.1.25
    */
 
   /**

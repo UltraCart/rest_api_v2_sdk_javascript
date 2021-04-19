@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.24
+   * @version 3.1.25
    */
 
   /**
@@ -129,6 +129,10 @@
         obj.user_ip = ApiClient.convertToType(data['user_ip'], 'String');
       if (data.hasOwnProperty('user_properties'))
         obj.user_properties = ApiClient.convertToType(data['user_properties'], [ScreenRecordingUserProperty]);
+      if (data.hasOwnProperty('utm_campaign'))
+        obj.utm_campaign = ApiClient.convertToType(data['utm_campaign'], 'String');
+      if (data.hasOwnProperty('utm_source'))
+        obj.utm_source = ApiClient.convertToType(data['utm_source'], 'String');
       if (data.hasOwnProperty('visitor_first_seen'))
         obj.visitor_first_seen = ApiClient.convertToType(data['visitor_first_seen'], 'String');
       if (data.hasOwnProperty('visitor_number'))
@@ -337,6 +341,18 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingUserProperty>} user_properties
    */
   exports.prototype.user_properties = undefined;
+
+  /**
+   * UTM Campaign
+   * @member {String} utm_campaign
+   */
+  exports.prototype.utm_campaign = undefined;
+
+  /**
+   * UTM Source
+   * @member {String} utm_source
+   */
+  exports.prototype.utm_source = undefined;
 
   /**
    * Timestamp this visitor was first seen

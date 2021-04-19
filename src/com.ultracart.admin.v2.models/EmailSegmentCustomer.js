@@ -34,7 +34,7 @@
   /**
    * The EmailSegmentCustomer model module.
    * @module com.ultracart.admin.v2.models/EmailSegmentCustomer
-   * @version 3.1.24
+   * @version 3.1.25
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValues model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValues
-   * @version 3.1.24
+   * @version 3.1.25
    */
 
   /**
@@ -85,6 +85,10 @@
         obj.user_agent_names = ApiClient.convertToType(data['user_agent_names'], ['String']);
       if (data.hasOwnProperty('user_agent_originals'))
         obj.user_agent_originals = ApiClient.convertToType(data['user_agent_originals'], ['String']);
+      if (data.hasOwnProperty('utm_campaigns'))
+        obj.utm_campaigns = ApiClient.convertToType(data['utm_campaigns'], ['String']);
+      if (data.hasOwnProperty('utm_sources'))
+        obj.utm_sources = ApiClient.convertToType(data['utm_sources'], ['String']);
     }
     return obj;
   }
@@ -163,6 +167,16 @@
    * @member {Array.<String>} user_agent_originals
    */
   exports.prototype.user_agent_originals = undefined;
+
+  /**
+   * @member {Array.<String>} utm_campaigns
+   */
+  exports.prototype.utm_campaigns = undefined;
+
+  /**
+   * @member {Array.<String>} utm_sources
+   */
+  exports.prototype.utm_sources = undefined;
 
   return exports;
 
