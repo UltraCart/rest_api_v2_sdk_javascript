@@ -34,7 +34,7 @@
   /**
    * The EmailCampaign model module.
    * @module com.ultracart.admin.v2.models/EmailCampaign
-   * @version 3.1.26
+   * @version 3.1.27
    */
 
   /**
@@ -67,8 +67,8 @@
         obj.email_communication_sequence_uuid = ApiClient.convertToType(data['email_communication_sequence_uuid'], 'String');
       if (data.hasOwnProperty('end_once_customer_purchases'))
         obj.end_once_customer_purchases = ApiClient.convertToType(data['end_once_customer_purchases'], 'Boolean');
-      if (data.hasOwnProperty('end_once_customer_purchases_anwyere'))
-        obj.end_once_customer_purchases_anwyere = ApiClient.convertToType(data['end_once_customer_purchases_anwyere'], 'Boolean');
+      if (data.hasOwnProperty('end_once_customer_purchases_anywhere'))
+        obj.end_once_customer_purchases_anywhere = ApiClient.convertToType(data['end_once_customer_purchases_anywhere'], 'Boolean');
       if (data.hasOwnProperty('esp_campaign_folder_uuid'))
         obj.esp_campaign_folder_uuid = ApiClient.convertToType(data['esp_campaign_folder_uuid'], 'String');
       if (data.hasOwnProperty('esp_domain_user'))
@@ -145,9 +145,9 @@
 
   /**
    * True if the customer should end the flow once they purchase from anywhere
-   * @member {Boolean} end_once_customer_purchases_anwyere
+   * @member {Boolean} end_once_customer_purchases_anywhere
    */
-  exports.prototype.end_once_customer_purchases_anwyere = undefined;
+  exports.prototype.end_once_customer_purchases_anywhere = undefined;
 
   /**
    * Campaign folder UUID.  Null for uncategorized
