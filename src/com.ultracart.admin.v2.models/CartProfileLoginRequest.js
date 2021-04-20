@@ -34,7 +34,7 @@
   /**
    * The CartProfileLoginRequest model module.
    * @module com.ultracart.admin.v2.models/CartProfileLoginRequest
-   * @version 3.1.25
+   * @version 3.1.26
    */
 
   /**

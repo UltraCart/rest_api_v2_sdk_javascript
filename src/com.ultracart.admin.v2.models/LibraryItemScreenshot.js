@@ -34,7 +34,7 @@
   /**
    * The LibraryItemScreenshot model module.
    * @module com.ultracart.admin.v2.models/LibraryItemScreenshot
-   * @version 3.1.25
+   * @version 3.1.26
    */
 
   /**
