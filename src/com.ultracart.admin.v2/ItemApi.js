@@ -34,7 +34,7 @@
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.1.27
+   * @version 3.1.28
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingSegmentResponse model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingSegmentResponse
-   * @version 3.1.27
+   * @version 3.1.28
    */
 
   /**

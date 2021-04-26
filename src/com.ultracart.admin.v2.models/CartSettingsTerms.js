@@ -34,7 +34,7 @@
   /**
    * The CartSettingsTerms model module.
    * @module com.ultracart.admin.v2.models/CartSettingsTerms
-   * @version 3.1.27
+   * @version 3.1.28
    */
 
   /**

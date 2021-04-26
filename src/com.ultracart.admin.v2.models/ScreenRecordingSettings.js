@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingSettings model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingSettings
-   * @version 3.1.27
+   * @version 3.1.28
    */
 
   /**
@@ -57,6 +57,16 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('enabled'))
         obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean');
+      if (data.hasOwnProperty('sessions_current_billing_period'))
+        obj.sessions_current_billing_period = ApiClient.convertToType(data['sessions_current_billing_period'], 'Number');
+      if (data.hasOwnProperty('sessions_last_billing_period'))
+        obj.sessions_last_billing_period = ApiClient.convertToType(data['sessions_last_billing_period'], 'Number');
+      if (data.hasOwnProperty('sessions_trial_billing_period'))
+        obj.sessions_trial_billing_period = ApiClient.convertToType(data['sessions_trial_billing_period'], 'Number');
+      if (data.hasOwnProperty('trial_expiration'))
+        obj.trial_expiration = ApiClient.convertToType(data['trial_expiration'], 'String');
+      if (data.hasOwnProperty('trial_expired'))
+        obj.trial_expired = ApiClient.convertToType(data['trial_expired'], 'Boolean');
     }
     return obj;
   }
@@ -65,6 +75,31 @@
    * @member {Boolean} enabled
    */
   exports.prototype.enabled = undefined;
+
+  /**
+   * @member {Number} sessions_current_billing_period
+   */
+  exports.prototype.sessions_current_billing_period = undefined;
+
+  /**
+   * @member {Number} sessions_last_billing_period
+   */
+  exports.prototype.sessions_last_billing_period = undefined;
+
+  /**
+   * @member {Number} sessions_trial_billing_period
+   */
+  exports.prototype.sessions_trial_billing_period = undefined;
+
+  /**
+   * @member {String} trial_expiration
+   */
+  exports.prototype.trial_expiration = undefined;
+
+  /**
+   * @member {Boolean} trial_expired
+   */
+  exports.prototype.trial_expired = undefined;
 
   return exports;
 
