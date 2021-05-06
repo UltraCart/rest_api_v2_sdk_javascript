@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.28
+   * @version 3.1.32
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.communications_flow_uuid = ApiClient.convertToType(data['communications_flow_uuid'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('email_domain'))
+        obj.email_domain = ApiClient.convertToType(data['email_domain'], 'String');
       if (data.hasOwnProperty('end_timestamp'))
         obj.end_timestamp = ApiClient.convertToType(data['end_timestamp'], 'String');
       if (data.hasOwnProperty('esp_customer_uuid'))
@@ -93,6 +95,8 @@
         obj.geolocation_country = ApiClient.convertToType(data['geolocation_country'], 'String');
       if (data.hasOwnProperty('geolocation_state'))
         obj.geolocation_state = ApiClient.convertToType(data['geolocation_state'], 'String');
+      if (data.hasOwnProperty('language_iso_code'))
+        obj.language_iso_code = ApiClient.convertToType(data['language_iso_code'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('merchant_notes'))
@@ -204,6 +208,11 @@
   exports.prototype.email = undefined;
 
   /**
+   * @member {String} email_domain
+   */
+  exports.prototype.email_domain = undefined;
+
+  /**
    * Ending timestamp
    * @member {String} end_timestamp
    */
@@ -250,6 +259,12 @@
    * @member {String} geolocation_state
    */
   exports.prototype.geolocation_state = undefined;
+
+  /**
+   * Language ISO code
+   * @member {String} language_iso_code
+   */
+  exports.prototype.language_iso_code = undefined;
 
   /**
    * @member {String} merchant_id

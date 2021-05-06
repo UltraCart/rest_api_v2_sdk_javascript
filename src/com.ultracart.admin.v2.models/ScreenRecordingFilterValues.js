@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValues model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValues
-   * @version 3.1.28
+   * @version 3.1.32
    */
 
   /**
@@ -61,10 +61,14 @@
         obj.communications_email_subjects = ApiClient.convertToType(data['communications_email_subjects'], ['String']);
       if (data.hasOwnProperty('communications_flow_names'))
         obj.communications_flow_names = ApiClient.convertToType(data['communications_flow_names'], ['String']);
+      if (data.hasOwnProperty('email_domains'))
+        obj.email_domains = ApiClient.convertToType(data['email_domains'], ['String']);
       if (data.hasOwnProperty('geolocation_countries'))
         obj.geolocation_countries = ApiClient.convertToType(data['geolocation_countries'], ['String']);
       if (data.hasOwnProperty('geolocation_states'))
         obj.geolocation_states = ApiClient.convertToType(data['geolocation_states'], ['String']);
+      if (data.hasOwnProperty('language_iso_codes'))
+        obj.language_iso_codes = ApiClient.convertToType(data['language_iso_codes'], ['String']);
       if (data.hasOwnProperty('max_values'))
         obj.max_values = ApiClient.convertToType(data['max_values'], 'Number');
       if (data.hasOwnProperty('page_views'))
@@ -109,6 +113,11 @@
   exports.prototype.communications_flow_names = undefined;
 
   /**
+   * @member {Array.<String>} email_domains
+   */
+  exports.prototype.email_domains = undefined;
+
+  /**
    * @member {Array.<String>} geolocation_countries
    */
   exports.prototype.geolocation_countries = undefined;
@@ -117,6 +126,11 @@
    * @member {Array.<String>} geolocation_states
    */
   exports.prototype.geolocation_states = undefined;
+
+  /**
+   * @member {Array.<String>} language_iso_codes
+   */
+  exports.prototype.language_iso_codes = undefined;
 
   /**
    * @member {Number} max_values

@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
-   * @version 3.1.28
+   * @version 3.1.32
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.communications_flow_name = ApiClient.convertToType(data['communications_flow_name'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ScreenRecordingFilterStringSearch.constructFromObject(data['email']);
+      if (data.hasOwnProperty('email_domain'))
+        obj.email_domain = ApiClient.convertToType(data['email_domain'], 'String');
       if (data.hasOwnProperty('email_identified'))
         obj.email_identified = ApiClient.convertToType(data['email_identified'], 'Boolean');
       if (data.hasOwnProperty('end_timestamp'))
@@ -77,6 +79,8 @@
         obj.geolocation_country = ScreenRecordingFilterStringSearch.constructFromObject(data['geolocation_country']);
       if (data.hasOwnProperty('geolocation_state'))
         obj.geolocation_state = ScreenRecordingFilterStringSearch.constructFromObject(data['geolocation_state']);
+      if (data.hasOwnProperty('language_iso_code'))
+        obj.language_iso_code = ScreenRecordingFilterStringSearch.constructFromObject(data['language_iso_code']);
       if (data.hasOwnProperty('max_filter_values'))
         obj.max_filter_values = ApiClient.convertToType(data['max_filter_values'], 'Number');
       if (data.hasOwnProperty('order_id'))
@@ -146,6 +150,11 @@
   exports.prototype.email = undefined;
 
   /**
+   * @member {String} email_domain
+   */
+  exports.prototype.email_domain = undefined;
+
+  /**
    * @member {Boolean} email_identified
    */
   exports.prototype.email_identified = undefined;
@@ -179,6 +188,11 @@
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} geolocation_state
    */
   exports.prototype.geolocation_state = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} language_iso_code
+   */
+  exports.prototype.language_iso_code = undefined;
 
   /**
    * @member {Number} max_filter_values
