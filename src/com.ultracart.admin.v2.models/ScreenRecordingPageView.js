@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageView
-   * @version 3.1.32
+   * @version 3.1.37
    */
 
   /**
@@ -81,6 +81,10 @@
         obj.screen_recording_page_view_uuid = ApiClient.convertToType(data['screen_recording_page_view_uuid'], 'String');
       if (data.hasOwnProperty('time_on_page'))
         obj.time_on_page = ApiClient.convertToType(data['time_on_page'], 'Number');
+      if (data.hasOwnProperty('timing_dom_content_loaded'))
+        obj.timing_dom_content_loaded = ApiClient.convertToType(data['timing_dom_content_loaded'], 'Number');
+      if (data.hasOwnProperty('timing_loaded'))
+        obj.timing_loaded = ApiClient.convertToType(data['timing_loaded'], 'Number');
       if (data.hasOwnProperty('truncated_events'))
         obj.truncated_events = ApiClient.convertToType(data['truncated_events'], 'Boolean');
       if (data.hasOwnProperty('ucapv'))
@@ -157,6 +161,18 @@
    * @member {Number} time_on_page
    */
   exports.prototype.time_on_page = undefined;
+
+  /**
+   * Amount of time for DOMContentLoaded event to fire (milliseconds)
+   * @member {Number} timing_dom_content_loaded
+   */
+  exports.prototype.timing_dom_content_loaded = undefined;
+
+  /**
+   * Amount of time for loaded event to fire (milliseconds)
+   * @member {Number} timing_loaded
+   */
+  exports.prototype.timing_loaded = undefined;
 
   /**
    * @member {Boolean} truncated_events

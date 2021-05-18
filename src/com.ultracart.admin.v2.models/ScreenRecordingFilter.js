@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
-   * @version 3.1.32
+   * @version 3.1.37
    */
 
   /**
@@ -55,6 +55,10 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('affiliate_email'))
+        obj.affiliate_email = ApiClient.convertToType(data['affiliate_email'], 'String');
+      if (data.hasOwnProperty('affiliate_id'))
+        obj.affiliate_id = ApiClient.convertToType(data['affiliate_id'], 'Number');
       if (data.hasOwnProperty('communications_campaign_name'))
         obj.communications_campaign_name = ApiClient.convertToType(data['communications_campaign_name'], 'String');
       if (data.hasOwnProperty('communications_email_subject'))
@@ -81,6 +85,8 @@
         obj.geolocation_state = ScreenRecordingFilterStringSearch.constructFromObject(data['geolocation_state']);
       if (data.hasOwnProperty('language_iso_code'))
         obj.language_iso_code = ScreenRecordingFilterStringSearch.constructFromObject(data['language_iso_code']);
+      if (data.hasOwnProperty('last_x_days'))
+        obj.last_x_days = ApiClient.convertToType(data['last_x_days'], 'Number');
       if (data.hasOwnProperty('max_filter_values'))
         obj.max_filter_values = ApiClient.convertToType(data['max_filter_values'], 'Number');
       if (data.hasOwnProperty('order_id'))
@@ -91,6 +97,10 @@
         obj.page_views = ApiClient.convertToType(data['page_views'], [ScreenRecordingFilterPageView]);
       if (data.hasOwnProperty('placed_order'))
         obj.placed_order = ApiClient.convertToType(data['placed_order'], 'Boolean');
+      if (data.hasOwnProperty('preferred_language'))
+        obj.preferred_language = ScreenRecordingFilterStringSearch.constructFromObject(data['preferred_language']);
+      if (data.hasOwnProperty('referrer_domain'))
+        obj.referrer_domain = ApiClient.convertToType(data['referrer_domain'], 'String');
       if (data.hasOwnProperty('screen_recording_uuids'))
         obj.screen_recording_uuids = ApiClient.convertToType(data['screen_recording_uuids'], ['String']);
       if (data.hasOwnProperty('screen_sizes'))
@@ -128,6 +138,16 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} affiliate_email
+   */
+  exports.prototype.affiliate_email = undefined;
+
+  /**
+   * @member {Number} affiliate_id
+   */
+  exports.prototype.affiliate_id = undefined;
 
   /**
    * @member {String} communications_campaign_name
@@ -195,6 +215,11 @@
   exports.prototype.language_iso_code = undefined;
 
   /**
+   * @member {Number} last_x_days
+   */
+  exports.prototype.last_x_days = undefined;
+
+  /**
    * @member {Number} max_filter_values
    */
   exports.prototype.max_filter_values = undefined;
@@ -218,6 +243,16 @@
    * @member {Boolean} placed_order
    */
   exports.prototype.placed_order = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} preferred_language
+   */
+  exports.prototype.preferred_language = undefined;
+
+  /**
+   * @member {String} referrer_domain
+   */
+  exports.prototype.referrer_domain = undefined;
 
   /**
    * @member {Array.<String>} screen_recording_uuids

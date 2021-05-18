@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValues model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValues
-   * @version 3.1.32
+   * @version 3.1.37
    */
 
   /**
@@ -73,6 +73,10 @@
         obj.max_values = ApiClient.convertToType(data['max_values'], 'Number');
       if (data.hasOwnProperty('page_views'))
         obj.page_views = ApiClient.convertToType(data['page_views'], [ScreenRecordingFilterValuesPageView]);
+      if (data.hasOwnProperty('preferred_languages'))
+        obj.preferred_languages = ApiClient.convertToType(data['preferred_languages'], ['String']);
+      if (data.hasOwnProperty('referrer_domains'))
+        obj.referrer_domains = ApiClient.convertToType(data['referrer_domains'], ['String']);
       if (data.hasOwnProperty('time_on_site_max'))
         obj.time_on_site_max = ApiClient.convertToType(data['time_on_site_max'], 'Number');
       if (data.hasOwnProperty('time_on_site_min'))
@@ -141,6 +145,16 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingFilterValuesPageView>} page_views
    */
   exports.prototype.page_views = undefined;
+
+  /**
+   * @member {Array.<String>} preferred_languages
+   */
+  exports.prototype.preferred_languages = undefined;
+
+  /**
+   * @member {Array.<String>} referrer_domains
+   */
+  exports.prototype.referrer_domains = undefined;
 
   /**
    * @member {Number} time_on_site_max

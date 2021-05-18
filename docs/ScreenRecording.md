@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ad_platform** | [**ScreenRecordingAdPlatform**](ScreenRecordingAdPlatform.md) |  | [optional] 
 **analytics_client_oid** | **Number** |  | [optional] 
 **analytics_session_dts** | **Number** |  | [optional] 
 **analytics_session_oid** | **Number** |  | [optional] 
@@ -29,6 +30,8 @@ Name | Type | Description | Notes
 **order_id** | **String** |  | [optional] 
 **page_view_count** | **Number** |  | [optional] 
 **page_views** | [**[ScreenRecordingPageView]**](ScreenRecordingPageView.md) |  | [optional] 
+**preferred_language** | **String** | ISO 3 Letter language code that the customer would prefer | [optional] 
+**referrer_domain** | **String** |  | [optional] 
 **rrweb_version** | **String** |  | [optional] 
 **screen_recording_uuid** | **String** |  | [optional] 
 **signed_download_url** | **String** |  | [optional] 

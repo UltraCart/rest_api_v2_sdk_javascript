@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/GeoPoint', 'com.ultracart.admin.v2.models/ScreenRecordingPageView', 'com.ultracart.admin.v2.models/ScreenRecordingStoreFront', 'com.ultracart.admin.v2.models/ScreenRecordingUserAgent', 'com.ultracart.admin.v2.models/ScreenRecordingUserProperty'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/GeoPoint', 'com.ultracart.admin.v2.models/ScreenRecordingAdPlatform', 'com.ultracart.admin.v2.models/ScreenRecordingPageView', 'com.ultracart.admin.v2.models/ScreenRecordingStoreFront', 'com.ultracart.admin.v2.models/ScreenRecordingUserAgent', 'com.ultracart.admin.v2.models/ScreenRecordingUserProperty'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GeoPoint'), require('./ScreenRecordingPageView'), require('./ScreenRecordingStoreFront'), require('./ScreenRecordingUserAgent'), require('./ScreenRecordingUserProperty'));
+    module.exports = factory(require('../ApiClient'), require('./GeoPoint'), require('./ScreenRecordingAdPlatform'), require('./ScreenRecordingPageView'), require('./ScreenRecordingStoreFront'), require('./ScreenRecordingUserAgent'), require('./ScreenRecordingUserProperty'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ScreenRecording = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.GeoPoint, root.UltraCartRestApiV2.ScreenRecordingPageView, root.UltraCartRestApiV2.ScreenRecordingStoreFront, root.UltraCartRestApiV2.ScreenRecordingUserAgent, root.UltraCartRestApiV2.ScreenRecordingUserProperty);
+    root.UltraCartRestApiV2.ScreenRecording = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.GeoPoint, root.UltraCartRestApiV2.ScreenRecordingAdPlatform, root.UltraCartRestApiV2.ScreenRecordingPageView, root.UltraCartRestApiV2.ScreenRecordingStoreFront, root.UltraCartRestApiV2.ScreenRecordingUserAgent, root.UltraCartRestApiV2.ScreenRecordingUserProperty);
   }
-}(this, function(ApiClient, GeoPoint, ScreenRecordingPageView, ScreenRecordingStoreFront, ScreenRecordingUserAgent, ScreenRecordingUserProperty) {
+}(this, function(ApiClient, GeoPoint, ScreenRecordingAdPlatform, ScreenRecordingPageView, ScreenRecordingStoreFront, ScreenRecordingUserAgent, ScreenRecordingUserProperty) {
   'use strict';
 
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.32
+   * @version 3.1.37
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ad_platform'))
+        obj.ad_platform = ScreenRecordingAdPlatform.constructFromObject(data['ad_platform']);
       if (data.hasOwnProperty('analytics_client_oid'))
         obj.analytics_client_oid = ApiClient.convertToType(data['analytics_client_oid'], 'Number');
       if (data.hasOwnProperty('analytics_session_dts'))
@@ -107,6 +109,10 @@
         obj.page_view_count = ApiClient.convertToType(data['page_view_count'], 'Number');
       if (data.hasOwnProperty('page_views'))
         obj.page_views = ApiClient.convertToType(data['page_views'], [ScreenRecordingPageView]);
+      if (data.hasOwnProperty('preferred_language'))
+        obj.preferred_language = ApiClient.convertToType(data['preferred_language'], 'String');
+      if (data.hasOwnProperty('referrer_domain'))
+        obj.referrer_domain = ApiClient.convertToType(data['referrer_domain'], 'String');
       if (data.hasOwnProperty('rrweb_version'))
         obj.rrweb_version = ApiClient.convertToType(data['rrweb_version'], 'String');
       if (data.hasOwnProperty('screen_recording_uuid'))
@@ -150,6 +156,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ScreenRecordingAdPlatform} ad_platform
+   */
+  exports.prototype.ad_platform = undefined;
 
   /**
    * @member {Number} analytics_client_oid
@@ -290,6 +301,17 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingPageView>} page_views
    */
   exports.prototype.page_views = undefined;
+
+  /**
+   * ISO 3 Letter language code that the customer would prefer
+   * @member {String} preferred_language
+   */
+  exports.prototype.preferred_language = undefined;
+
+  /**
+   * @member {String} referrer_domain
+   */
+  exports.prototype.referrer_domain = undefined;
 
   /**
    * @member {String} rrweb_version

@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**affiliate_email** | **String** |  | [optional] 
+**affiliate_id** | **Number** |  | [optional] 
 **communications_campaign_name** | **String** |  | [optional] 
 **communications_email_subject** | **String** |  | [optional] 
 **communications_flow_name** | **String** |  | [optional] 
@@ -16,11 +18,14 @@ Name | Type | Description | Notes
 **geolocation_country** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
 **geolocation_state** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
 **language_iso_code** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**last_x_days** | **Number** |  | [optional] 
 **max_filter_values** | **Number** |  | [optional] 
 **order_id** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
 **page_view_count** | [**ScreenRecordingFilterRangeInteger**](ScreenRecordingFilterRangeInteger.md) |  | [optional] 
 **page_views** | [**[ScreenRecordingFilterPageView]**](ScreenRecordingFilterPageView.md) |  | [optional] 
 **placed_order** | **Boolean** |  | [optional] 
+**preferred_language** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**referrer_domain** | **String** |  | [optional] 
 **screen_recording_uuids** | **[String]** |  | [optional] 
 **screen_sizes** | **[String]** |  | [optional] 
 **skip_filter_values** | **Boolean** |  | [optional] 
