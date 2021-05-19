@@ -34,7 +34,7 @@
   /**
    * Fulfillment service.
    * @module com.ultracart.admin.v2/FulfillmentApi
-   * @version 3.1.37
+   * @version 3.1.39
    */
 
   /**
