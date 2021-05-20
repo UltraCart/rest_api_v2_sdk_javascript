@@ -34,7 +34,7 @@
   /**
    * The OrderTokenResponse model module.
    * @module com.ultracart.admin.v2.models/OrderTokenResponse
-   * @version 3.1.39
+   * @version 3.1.40
    */
 
   /**
