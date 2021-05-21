@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**domain** | **String** |  | [optional] 
 **events** | [**[ScreenRecordingPageViewEvent]**](ScreenRecordingPageViewEvent.md) |  | [optional] 
 **first_event_timestamp** | **String** | First event timestamp | [optional] 
 **http_post** | **Boolean** |  | [optional] 

@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageView
-   * @version 3.1.40
+   * @version 3.1.41
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('domain'))
+        obj.domain = ApiClient.convertToType(data['domain'], 'String');
       if (data.hasOwnProperty('events'))
         obj.events = ApiClient.convertToType(data['events'], [ScreenRecordingPageViewEvent]);
       if (data.hasOwnProperty('first_event_timestamp'))
@@ -94,6 +96,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} domain
+   */
+  exports.prototype.domain = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingPageViewEvent>} events

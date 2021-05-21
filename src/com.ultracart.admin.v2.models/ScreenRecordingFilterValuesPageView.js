@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValuesPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValuesPageView
-   * @version 3.1.40
+   * @version 3.1.41
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('domains'))
+        obj.domains = ApiClient.convertToType(data['domains'], ['String']);
       if (data.hasOwnProperty('events'))
         obj.events = ApiClient.convertToType(data['events'], [ScreenRecordingFilterValuesEvent]);
       if (data.hasOwnProperty('page_params'))
@@ -68,6 +70,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Array.<String>} domains
+   */
+  exports.prototype.domains = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEvent>} events
