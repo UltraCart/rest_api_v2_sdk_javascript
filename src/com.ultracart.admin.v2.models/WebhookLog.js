@@ -34,7 +34,7 @@
   /**
    * The WebhookLog model module.
    * @module com.ultracart.admin.v2.models/WebhookLog
-   * @version 3.1.41
+   * @version 3.1.42
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.delivery_dts = ApiClient.convertToType(data['delivery_dts'], 'String');
       if (data.hasOwnProperty('duration'))
         obj.duration = ApiClient.convertToType(data['duration'], 'Number');
+      if (data.hasOwnProperty('queue_delay'))
+        obj.queue_delay = ApiClient.convertToType(data['queue_delay'], 'Number');
       if (data.hasOwnProperty('request'))
         obj.request = ApiClient.convertToType(data['request'], 'String');
       if (data.hasOwnProperty('request_headers'))
@@ -90,6 +92,12 @@
    * @member {Number} duration
    */
   exports.prototype.duration = undefined;
+
+  /**
+   * Number of milliseconds of delay caused by queuing
+   * @member {Number} queue_delay
+   */
+  exports.prototype.queue_delay = undefined;
 
   /**
    * Request payload (first 100,000 characters)

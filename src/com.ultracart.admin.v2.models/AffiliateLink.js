@@ -34,7 +34,7 @@
   /**
    * The AffiliateLink model module.
    * @module com.ultracart.admin.v2.models/AffiliateLink
-   * @version 3.1.41
+   * @version 3.1.42
    */
 
   /**
