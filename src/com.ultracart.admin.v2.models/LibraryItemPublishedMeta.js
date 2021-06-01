@@ -34,7 +34,7 @@
   /**
    * The LibraryItemPublishedMeta model module.
    * @module com.ultracart.admin.v2.models/LibraryItemPublishedMeta
-   * @version 3.1.42
+   * @version 3.1.43
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The CustomerEmailListChanges model module.
    * @module com.ultracart.admin.v2.models/CustomerEmailListChanges
-   * @version 3.1.42
+   * @version 3.1.43
    */
 
   /**
