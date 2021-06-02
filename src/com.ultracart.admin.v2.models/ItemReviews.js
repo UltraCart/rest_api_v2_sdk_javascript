@@ -34,7 +34,7 @@
   /**
    * The ItemReviews model module.
    * @module com.ultracart.admin.v2.models/ItemReviews
-   * @version 3.1.43
+   * @version 3.1.44
    */
 
   /**
@@ -69,6 +69,10 @@
         obj.review_template_oid = ApiClient.convertToType(data['review_template_oid'], 'Number');
       if (data.hasOwnProperty('reviewable'))
         obj.reviewable = ApiClient.convertToType(data['reviewable'], 'Boolean');
+      if (data.hasOwnProperty('share_reviews_with_merchant_item_id'))
+        obj.share_reviews_with_merchant_item_id = ApiClient.convertToType(data['share_reviews_with_merchant_item_id'], 'String');
+      if (data.hasOwnProperty('share_reviews_with_merchant_item_oid'))
+        obj.share_reviews_with_merchant_item_oid = ApiClient.convertToType(data['share_reviews_with_merchant_item_oid'], 'Number');
     }
     return obj;
   }
@@ -114,6 +118,18 @@
    * @member {Boolean} reviewable
    */
   exports.prototype.reviewable = undefined;
+
+  /**
+   * Share reviews with item id.  To set, use the share_reviews_with_merchant_item_oid field.
+   * @member {String} share_reviews_with_merchant_item_id
+   */
+  exports.prototype.share_reviews_with_merchant_item_id = undefined;
+
+  /**
+   * Share reviews with item oid.  To null out this field, set teh value to zero.
+   * @member {Number} share_reviews_with_merchant_item_oid
+   */
+  exports.prototype.share_reviews_with_merchant_item_oid = undefined;
 
   return exports;
 

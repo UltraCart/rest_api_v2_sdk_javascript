@@ -34,7 +34,7 @@
   /**
    * The StateProvince model module.
    * @module com.ultracart.admin.v2.models/StateProvince
-   * @version 3.1.43
+   * @version 3.1.44
    */
 
   /**
