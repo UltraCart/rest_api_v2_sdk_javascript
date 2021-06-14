@@ -34,7 +34,7 @@
   /**
    * The OrderAutoOrder model module.
    * @module com.ultracart.admin.v2.models/OrderAutoOrder
-   * @version 3.1.45
+   * @version 3.1.46
    */
 
   /**

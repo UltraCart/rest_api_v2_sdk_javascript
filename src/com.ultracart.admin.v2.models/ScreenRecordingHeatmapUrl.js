@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingHeatmapUrl model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapUrl
-   * @version 3.1.45
+   * @version 3.1.46
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.histogram_interval = ApiClient.convertToType(data['histogram_interval'], 'String');
       if (data.hasOwnProperty('histogram_start_dts'))
         obj.histogram_start_dts = ApiClient.convertToType(data['histogram_start_dts'], 'String');
+      if (data.hasOwnProperty('page_rank'))
+        obj.page_rank = ApiClient.convertToType(data['page_rank'], 'Number');
       if (data.hasOwnProperty('session_count'))
         obj.session_count = ApiClient.convertToType(data['session_count'], 'Number');
       if (data.hasOwnProperty('url'))
@@ -83,6 +85,11 @@
    * @member {String} histogram_start_dts
    */
   exports.prototype.histogram_start_dts = undefined;
+
+  /**
+   * @member {Number} page_rank
+   */
+  exports.prototype.page_rank = undefined;
 
   /**
    * @member {Number} session_count

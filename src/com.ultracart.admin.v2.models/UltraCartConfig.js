@@ -34,7 +34,7 @@
   /**
    * The UltraCartConfig model module.
    * @module com.ultracart.admin.v2.models/UltraCartConfig
-   * @version 3.1.45
+   * @version 3.1.46
    */
 
   /**

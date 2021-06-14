@@ -34,7 +34,7 @@
   /**
    * The User model module.
    * @module com.ultracart.admin.v2.models/User
-   * @version 3.1.45
+   * @version 3.1.46
    */
 
   /**

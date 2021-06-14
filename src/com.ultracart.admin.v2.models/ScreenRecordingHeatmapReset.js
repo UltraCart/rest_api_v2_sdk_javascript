@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingHeatmapReset model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapReset
-   * @version 3.1.45
+   * @version 3.1.46
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ItemChannelPartnerMapping model module.
    * @module com.ultracart.admin.v2.models/ItemChannelPartnerMapping
-   * @version 3.1.45
+   * @version 3.1.46
    */
 
   /**
@@ -73,6 +73,8 @@
         obj.channel_partner_code = ApiClient.convertToType(data['channel_partner_code'], 'String');
       if (data.hasOwnProperty('channel_partner_oid'))
         obj.channel_partner_oid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
+      if (data.hasOwnProperty('cost'))
+        obj.cost = ApiClient.convertToType(data['cost'], 'Number');
       if (data.hasOwnProperty('from_item_id'))
         obj.from_item_id = ApiClient.convertToType(data['from_item_id'], 'String');
       if (data.hasOwnProperty('from_sku'))
@@ -148,6 +150,12 @@
    * @member {Number} channel_partner_oid
    */
   exports.prototype.channel_partner_oid = undefined;
+
+  /**
+   * Cost given to this channel partner
+   * @member {Number} cost
+   */
+  exports.prototype.cost = undefined;
 
   /**
    * From Item ID

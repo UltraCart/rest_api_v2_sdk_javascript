@@ -4127,7 +4127,7 @@ Name | Type | Description  | Notes
 
 <a name="getHeatmapIndex"></a>
 # **getHeatmapIndex**
-> ScreenRecordingHeatmapIndexResponse getHeatmapIndex(storefront_oid)
+> ScreenRecordingHeatmapIndexResponse getHeatmapIndex(storefront_oid, query, opts)
 
 Get screen recording heatmap index
 
@@ -4145,6 +4145,13 @@ var apiInstance = new UltraCartRestApiV2.StorefrontApi();
 
 var storefront_oid = 56; // Number | 
 
+var query = new UltraCartRestApiV2.ScreenRecordingHeatmapIndexRequest(); // ScreenRecordingHeatmapIndexRequest | Query
+
+var opts = { 
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 500)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_sort': "_sort_example" // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -4153,7 +4160,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getHeatmapIndex(storefront_oid, callback);
+apiInstance.getHeatmapIndex(storefront_oid, query, opts, callback);
 ```
 
 ### Parameters
@@ -4161,6 +4168,10 @@ apiInstance.getHeatmapIndex(storefront_oid, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefront_oid** | **Number**|  | 
+ **query** | [**ScreenRecordingHeatmapIndexRequest**](ScreenRecordingHeatmapIndexRequest.md)| Query | 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Default 100, Max 500) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
 
 ### Return type
 
