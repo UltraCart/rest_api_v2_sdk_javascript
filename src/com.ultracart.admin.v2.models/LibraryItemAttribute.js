@@ -34,7 +34,7 @@
   /**
    * The LibraryItemAttribute model module.
    * @module com.ultracart.admin.v2.models/LibraryItemAttribute
-   * @version 3.1.47
+   * @version 3.1.48
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('libraryItemOid'))
+        obj.libraryItemOid = ApiClient.convertToType(data['libraryItemOid'], 'Number');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('value'))
@@ -62,6 +64,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Number} libraryItemOid
+   */
+  exports.prototype.libraryItemOid = undefined;
 
   /**
    * @member {String} name
