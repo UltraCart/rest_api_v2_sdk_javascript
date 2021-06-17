@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingHeatmap model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmap
-   * @version 3.1.48
+   * @version 3.1.49
    */
 
   /**
@@ -55,28 +55,52 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('large_click_thumbnail_url'))
+        obj.large_click_thumbnail_url = ApiClient.convertToType(data['large_click_thumbnail_url'], 'String');
       if (data.hasOwnProperty('large_click_url'))
         obj.large_click_url = ApiClient.convertToType(data['large_click_url'], 'String');
+      if (data.hasOwnProperty('large_movement_thumbnail_url'))
+        obj.large_movement_thumbnail_url = ApiClient.convertToType(data['large_movement_thumbnail_url'], 'String');
       if (data.hasOwnProperty('large_movement_url'))
         obj.large_movement_url = ApiClient.convertToType(data['large_movement_url'], 'String');
+      if (data.hasOwnProperty('large_regular_thumbnail_url'))
+        obj.large_regular_thumbnail_url = ApiClient.convertToType(data['large_regular_thumbnail_url'], 'String');
       if (data.hasOwnProperty('large_regular_url'))
         obj.large_regular_url = ApiClient.convertToType(data['large_regular_url'], 'String');
+      if (data.hasOwnProperty('large_scroll_thumbnail_url'))
+        obj.large_scroll_thumbnail_url = ApiClient.convertToType(data['large_scroll_thumbnail_url'], 'String');
       if (data.hasOwnProperty('large_scroll_url'))
         obj.large_scroll_url = ApiClient.convertToType(data['large_scroll_url'], 'String');
+      if (data.hasOwnProperty('medium_click_thumbnail_url'))
+        obj.medium_click_thumbnail_url = ApiClient.convertToType(data['medium_click_thumbnail_url'], 'String');
       if (data.hasOwnProperty('medium_click_url'))
         obj.medium_click_url = ApiClient.convertToType(data['medium_click_url'], 'String');
+      if (data.hasOwnProperty('medium_movement_thumbnail_url'))
+        obj.medium_movement_thumbnail_url = ApiClient.convertToType(data['medium_movement_thumbnail_url'], 'String');
       if (data.hasOwnProperty('medium_movement_url'))
         obj.medium_movement_url = ApiClient.convertToType(data['medium_movement_url'], 'String');
+      if (data.hasOwnProperty('medium_regular_thumbnail_url'))
+        obj.medium_regular_thumbnail_url = ApiClient.convertToType(data['medium_regular_thumbnail_url'], 'String');
       if (data.hasOwnProperty('medium_regular_url'))
         obj.medium_regular_url = ApiClient.convertToType(data['medium_regular_url'], 'String');
+      if (data.hasOwnProperty('medium_scroll_thumbnail_url'))
+        obj.medium_scroll_thumbnail_url = ApiClient.convertToType(data['medium_scroll_thumbnail_url'], 'String');
       if (data.hasOwnProperty('medium_scroll_url'))
         obj.medium_scroll_url = ApiClient.convertToType(data['medium_scroll_url'], 'String');
+      if (data.hasOwnProperty('small_click_thumbnail_url'))
+        obj.small_click_thumbnail_url = ApiClient.convertToType(data['small_click_thumbnail_url'], 'String');
       if (data.hasOwnProperty('small_click_url'))
         obj.small_click_url = ApiClient.convertToType(data['small_click_url'], 'String');
+      if (data.hasOwnProperty('small_movement_thumbnail_url'))
+        obj.small_movement_thumbnail_url = ApiClient.convertToType(data['small_movement_thumbnail_url'], 'String');
       if (data.hasOwnProperty('small_movement_url'))
         obj.small_movement_url = ApiClient.convertToType(data['small_movement_url'], 'String');
+      if (data.hasOwnProperty('small_regular_thumbnail_url'))
+        obj.small_regular_thumbnail_url = ApiClient.convertToType(data['small_regular_thumbnail_url'], 'String');
       if (data.hasOwnProperty('small_regular_url'))
         obj.small_regular_url = ApiClient.convertToType(data['small_regular_url'], 'String');
+      if (data.hasOwnProperty('small_scroll_thumbnail_url'))
+        obj.small_scroll_thumbnail_url = ApiClient.convertToType(data['small_scroll_thumbnail_url'], 'String');
       if (data.hasOwnProperty('small_scroll_url'))
         obj.small_scroll_url = ApiClient.convertToType(data['small_scroll_url'], 'String');
     }
@@ -84,9 +108,19 @@
   }
 
   /**
+   * @member {String} large_click_thumbnail_url
+   */
+  exports.prototype.large_click_thumbnail_url = undefined;
+
+  /**
    * @member {String} large_click_url
    */
   exports.prototype.large_click_url = undefined;
+
+  /**
+   * @member {String} large_movement_thumbnail_url
+   */
+  exports.prototype.large_movement_thumbnail_url = undefined;
 
   /**
    * @member {String} large_movement_url
@@ -94,9 +128,19 @@
   exports.prototype.large_movement_url = undefined;
 
   /**
+   * @member {String} large_regular_thumbnail_url
+   */
+  exports.prototype.large_regular_thumbnail_url = undefined;
+
+  /**
    * @member {String} large_regular_url
    */
   exports.prototype.large_regular_url = undefined;
+
+  /**
+   * @member {String} large_scroll_thumbnail_url
+   */
+  exports.prototype.large_scroll_thumbnail_url = undefined;
 
   /**
    * @member {String} large_scroll_url
@@ -104,9 +148,19 @@
   exports.prototype.large_scroll_url = undefined;
 
   /**
+   * @member {String} medium_click_thumbnail_url
+   */
+  exports.prototype.medium_click_thumbnail_url = undefined;
+
+  /**
    * @member {String} medium_click_url
    */
   exports.prototype.medium_click_url = undefined;
+
+  /**
+   * @member {String} medium_movement_thumbnail_url
+   */
+  exports.prototype.medium_movement_thumbnail_url = undefined;
 
   /**
    * @member {String} medium_movement_url
@@ -114,9 +168,19 @@
   exports.prototype.medium_movement_url = undefined;
 
   /**
+   * @member {String} medium_regular_thumbnail_url
+   */
+  exports.prototype.medium_regular_thumbnail_url = undefined;
+
+  /**
    * @member {String} medium_regular_url
    */
   exports.prototype.medium_regular_url = undefined;
+
+  /**
+   * @member {String} medium_scroll_thumbnail_url
+   */
+  exports.prototype.medium_scroll_thumbnail_url = undefined;
 
   /**
    * @member {String} medium_scroll_url
@@ -124,9 +188,19 @@
   exports.prototype.medium_scroll_url = undefined;
 
   /**
+   * @member {String} small_click_thumbnail_url
+   */
+  exports.prototype.small_click_thumbnail_url = undefined;
+
+  /**
    * @member {String} small_click_url
    */
   exports.prototype.small_click_url = undefined;
+
+  /**
+   * @member {String} small_movement_thumbnail_url
+   */
+  exports.prototype.small_movement_thumbnail_url = undefined;
 
   /**
    * @member {String} small_movement_url
@@ -134,9 +208,19 @@
   exports.prototype.small_movement_url = undefined;
 
   /**
+   * @member {String} small_regular_thumbnail_url
+   */
+  exports.prototype.small_regular_thumbnail_url = undefined;
+
+  /**
    * @member {String} small_regular_url
    */
   exports.prototype.small_regular_url = undefined;
+
+  /**
+   * @member {String} small_scroll_thumbnail_url
+   */
+  exports.prototype.small_scroll_thumbnail_url = undefined;
 
   /**
    * @member {String} small_scroll_url

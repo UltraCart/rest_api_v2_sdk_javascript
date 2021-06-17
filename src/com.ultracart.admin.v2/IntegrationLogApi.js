@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/IntegrationLog', 'com.ultracart.admin.v2.models/IntegrationLogQueryRequest', 'com.ultracart.admin.v2.models/IntegrationLogQueryResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/IntegrationLogQueryRequest', 'com.ultracart.admin.v2.models/IntegrationLogQueryResponse', 'com.ultracart.admin.v2.models/IntegrationLogResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/IntegrationLog'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryRequest'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryRequest'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryResponse'), require('../com.ultracart.admin.v2.models/IntegrationLogResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.IntegrationLogApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.IntegrationLog, root.UltraCartRestApiV2.IntegrationLogQueryRequest, root.UltraCartRestApiV2.IntegrationLogQueryResponse);
+    root.UltraCartRestApiV2.IntegrationLogApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.IntegrationLogQueryRequest, root.UltraCartRestApiV2.IntegrationLogQueryResponse, root.UltraCartRestApiV2.IntegrationLogResponse);
   }
-}(this, function(ApiClient, ErrorResponse, IntegrationLog, IntegrationLogQueryRequest, IntegrationLogQueryResponse) {
+}(this, function(ApiClient, ErrorResponse, IntegrationLogQueryRequest, IntegrationLogQueryResponse, IntegrationLogResponse) {
   'use strict';
 
   /**
    * IntegrationLog service.
    * @module com.ultracart.admin.v2/IntegrationLogApi
-   * @version 3.1.48
+   * @version 3.1.49
    */
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the getIntegrationLog operation.
      * @callback module:com.ultracart.admin.v2/IntegrationLogApi~getIntegrationLogCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/IntegrationLog} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/IntegrationLogResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -62,7 +62,7 @@
      * @param {String} pk 
      * @param {String} sk 
      * @param {module:com.ultracart.admin.v2/IntegrationLogApi~getIntegrationLogCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/IntegrationLog}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/IntegrationLogResponse}
      */
     this.getIntegrationLog = function(pk, sk, callback) {
       var postBody = null;
@@ -94,7 +94,7 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = IntegrationLog;
+      var returnType = IntegrationLogResponse;
 
       return this.apiClient.callApi(
         '/integration_log/query/{pk}/{sk}', 'GET',

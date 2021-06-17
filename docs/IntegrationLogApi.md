@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getIntegrationLog"></a>
 # **getIntegrationLog**
-> IntegrationLog getIntegrationLog(pk, sk)
+> IntegrationLogResponse getIntegrationLog(pk, sk)
 
 Retrieve an integration log
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IntegrationLog**](IntegrationLog.md)
+[**IntegrationLogResponse**](IntegrationLogResponse.md)
 
 ### Authorization
 

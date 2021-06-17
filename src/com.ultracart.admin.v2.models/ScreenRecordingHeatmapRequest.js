@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingHeatmapRequest model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapRequest
-   * @version 3.1.48
+   * @version 3.1.49
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('range'))
         obj.range = ScreenRecordingFilterRangeDate.constructFromObject(data['range']);
+      if (data.hasOwnProperty('screen_sizes'))
+        obj.screen_sizes = ApiClient.convertToType(data['screen_sizes'], ['String']);
       if (data.hasOwnProperty('url'))
         obj.url = ApiClient.convertToType(data['url'], 'String');
     }
@@ -67,6 +69,11 @@
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterRangeDate} range
    */
   exports.prototype.range = undefined;
+
+  /**
+   * @member {Array.<String>} screen_sizes
+   */
+  exports.prototype.screen_sizes = undefined;
 
   /**
    * @member {String} url
