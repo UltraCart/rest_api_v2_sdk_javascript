@@ -34,7 +34,7 @@
   /**
    * The Item model module.
    * @module com.ultracart.admin.v2.models/Item
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -63,8 +63,8 @@
         obj.auto_order = ItemAutoOrder.constructFromObject(data['auto_order']);
       if (data.hasOwnProperty('ccbill'))
         obj.ccbill = ItemCCBill.constructFromObject(data['ccbill']);
-      if (data.hasOwnProperty('channelPartnerMappings'))
-        obj.channelPartnerMappings = ApiClient.convertToType(data['channelPartnerMappings'], [ItemChannelPartnerMapping]);
+      if (data.hasOwnProperty('channel_partner_item_mappings'))
+        obj.channel_partner_item_mappings = ApiClient.convertToType(data['channel_partner_item_mappings'], [ItemChannelPartnerMapping]);
       if (data.hasOwnProperty('chargeback'))
         obj.chargeback = ItemChargeback.constructFromObject(data['chargeback']);
       if (data.hasOwnProperty('checkout'))
@@ -181,9 +181,9 @@
 
   /**
    * Channel Partner Item Mapping
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemChannelPartnerMapping>} channelPartnerMappings
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemChannelPartnerMapping>} channel_partner_item_mappings
    */
-  exports.prototype.channelPartnerMappings = undefined;
+  exports.prototype.channel_partner_item_mappings = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ItemChargeback} chargeback

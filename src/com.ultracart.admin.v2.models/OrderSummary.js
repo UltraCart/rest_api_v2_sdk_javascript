@@ -34,7 +34,7 @@
   /**
    * The OrderSummary model module.
    * @module com.ultracart.admin.v2.models/OrderSummary
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('actual_fulfillment'))
         obj.actual_fulfillment = Currency.constructFromObject(data['actual_fulfillment']);
+      if (data.hasOwnProperty('actual_payment_processing'))
+        obj.actual_payment_processing = Currency.constructFromObject(data['actual_payment_processing']);
       if (data.hasOwnProperty('actual_shipping'))
         obj.actual_shipping = Currency.constructFromObject(data['actual_shipping']);
       if (data.hasOwnProperty('arbitrary_shipping_handling_total'))
@@ -97,6 +99,11 @@
    * @member {module:com.ultracart.admin.v2.models/Currency} actual_fulfillment
    */
   exports.prototype.actual_fulfillment = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} actual_payment_processing
+   */
+  exports.prototype.actual_payment_processing = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} actual_shipping

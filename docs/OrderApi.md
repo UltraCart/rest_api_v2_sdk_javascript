@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**getOrderByToken**](OrderApi.md#getOrderByToken) | **POST** /order/orders/token | Retrieve an order using a token
 [**getOrders**](OrderApi.md#getOrders) | **GET** /order/orders | Retrieve orders
 [**getOrdersBatch**](OrderApi.md#getOrdersBatch) | **POST** /order/orders/batch | Retrieve order batch
-[**getOrdersByQuery**](OrderApi.md#getOrdersByQuery) | **POST** /order/orders/query | Retrieve orders
+[**getOrdersByQuery**](OrderApi.md#getOrdersByQuery) | **POST** /order/orders/query | Retrieve orders by query
 [**insertOrder**](OrderApi.md#insertOrder) | **POST** /order/orders | Insert an order
 [**processPayment**](OrderApi.md#processPayment) | **POST** /order/orders/{order_id}/process_payment | Process payment
 [**refundOrder**](OrderApi.md#refundOrder) | **PUT** /order/orders/{order_id}/refund | Refund an order
@@ -32,7 +32,7 @@ Method | HTTP request | Description
 
 Adjusts an order total
 
-Adjusts an order total.  Adjusts individual items appropriately and considers taxes.  Desired total should be provided in the same currency as the order.  Returns true if successful. 
+Adjusts an order total.  Adjusts individual items appropriately and considers taxes.  Desired total should be provided in the same currency as the order and must be less than the current total and greater than zero.  This call will change the order total.  It returns true if the desired total is achieved.  If the goal seeking algorithm falls short (usually by pennies), this method returns back false.  View the merchant notes for the order for further details. 
 
 ### Example
 ```javascript
@@ -537,6 +537,15 @@ var opts = {
   'customer_profile_oid': 56, // Number | 
   'Refund_Date_Begin': "Refund_Date_Begin_example", // String | 
   'Refund_Date_End': "Refund_Date_End_example", // String | 
+  'Custom_Field_1': "Custom_Field_1_example", // String | 
+  'Custom_Field_2': "Custom_Field_2_example", // String | 
+  'Custom_Field_3': "Custom_Field_3_example", // String | 
+  'Custom_Field_4': "Custom_Field_4_example", // String | 
+  'Custom_Field_5': "Custom_Field_5_example", // String | 
+  'Custom_Field_6': "Custom_Field_6_example", // String | 
+  'Custom_Field_7': "Custom_Field_7_example", // String | 
+  'ship_on_date_begin': "ship_on_date_begin_example", // String | 
+  'ship_on_date_end': "ship_on_date_end_example", // String | 
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_sort': "_sort_example", // String | The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -587,6 +596,15 @@ Name | Type | Description  | Notes
  **customer_profile_oid** | **Number**|  | [optional] 
  **Refund_Date_Begin** | **String**|  | [optional] 
  **Refund_Date_End** | **String**|  | [optional] 
+ **Custom_Field_1** | **String**|  | [optional] 
+ **Custom_Field_2** | **String**|  | [optional] 
+ **Custom_Field_3** | **String**|  | [optional] 
+ **Custom_Field_4** | **String**|  | [optional] 
+ **Custom_Field_5** | **String**|  | [optional] 
+ **Custom_Field_6** | **String**|  | [optional] 
+ **Custom_Field_7** | **String**|  | [optional] 
+ **ship_on_date_begin** | **String**|  | [optional] 
+ **ship_on_date_end** | **String**|  | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. (Maximum 200) | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **_sort** | **String**| The sort order of the orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
@@ -663,7 +681,7 @@ Name | Type | Description  | Notes
 # **getOrdersByQuery**
 > OrdersResponse getOrdersByQuery(order_query, opts)
 
-Retrieve orders
+Retrieve orders by query
 
 Retrieves a group of orders from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the orders returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 

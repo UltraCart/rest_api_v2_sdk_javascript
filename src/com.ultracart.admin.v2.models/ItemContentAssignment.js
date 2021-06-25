@@ -34,7 +34,7 @@
   /**
    * The ItemContentAssignment model module.
    * @module com.ultracart.admin.v2.models/ItemContentAssignment
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('default_assignment'))
+        obj.default_assignment = ApiClient.convertToType(data['default_assignment'], 'Boolean');
       if (data.hasOwnProperty('group_oid'))
         obj.group_oid = ApiClient.convertToType(data['group_oid'], 'Number');
       if (data.hasOwnProperty('group_path'))
@@ -68,6 +70,12 @@
     }
     return obj;
   }
+
+  /**
+   * True if this group is the default assignment for this item
+   * @member {Boolean} default_assignment
+   */
+  exports.prototype.default_assignment = undefined;
 
   /**
    * Page (group) object identifier

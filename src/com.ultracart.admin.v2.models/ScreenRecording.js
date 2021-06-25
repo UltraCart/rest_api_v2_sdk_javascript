@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/GeoPoint', 'com.ultracart.admin.v2.models/ScreenRecordingPageView', 'com.ultracart.admin.v2.models/ScreenRecordingStoreFront', 'com.ultracart.admin.v2.models/ScreenRecordingUserAgent', 'com.ultracart.admin.v2.models/ScreenRecordingUserProperty'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/GeoPoint', 'com.ultracart.admin.v2.models/ScreenRecordingAdPlatform', 'com.ultracart.admin.v2.models/ScreenRecordingPageView', 'com.ultracart.admin.v2.models/ScreenRecordingStoreFront', 'com.ultracart.admin.v2.models/ScreenRecordingUserAgent', 'com.ultracart.admin.v2.models/ScreenRecordingUserProperty'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GeoPoint'), require('./ScreenRecordingPageView'), require('./ScreenRecordingStoreFront'), require('./ScreenRecordingUserAgent'), require('./ScreenRecordingUserProperty'));
+    module.exports = factory(require('../ApiClient'), require('./GeoPoint'), require('./ScreenRecordingAdPlatform'), require('./ScreenRecordingPageView'), require('./ScreenRecordingStoreFront'), require('./ScreenRecordingUserAgent'), require('./ScreenRecordingUserProperty'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ScreenRecording = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.GeoPoint, root.UltraCartRestApiV2.ScreenRecordingPageView, root.UltraCartRestApiV2.ScreenRecordingStoreFront, root.UltraCartRestApiV2.ScreenRecordingUserAgent, root.UltraCartRestApiV2.ScreenRecordingUserProperty);
+    root.UltraCartRestApiV2.ScreenRecording = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.GeoPoint, root.UltraCartRestApiV2.ScreenRecordingAdPlatform, root.UltraCartRestApiV2.ScreenRecordingPageView, root.UltraCartRestApiV2.ScreenRecordingStoreFront, root.UltraCartRestApiV2.ScreenRecordingUserAgent, root.UltraCartRestApiV2.ScreenRecordingUserProperty);
   }
-}(this, function(ApiClient, GeoPoint, ScreenRecordingPageView, ScreenRecordingStoreFront, ScreenRecordingUserAgent, ScreenRecordingUserProperty) {
+}(this, function(ApiClient, GeoPoint, ScreenRecordingAdPlatform, ScreenRecordingPageView, ScreenRecordingStoreFront, ScreenRecordingUserAgent, ScreenRecordingUserProperty) {
   'use strict';
 
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -55,14 +55,30 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ad_platform'))
+        obj.ad_platform = ScreenRecordingAdPlatform.constructFromObject(data['ad_platform']);
       if (data.hasOwnProperty('analytics_client_oid'))
         obj.analytics_client_oid = ApiClient.convertToType(data['analytics_client_oid'], 'Number');
       if (data.hasOwnProperty('analytics_session_dts'))
         obj.analytics_session_dts = ApiClient.convertToType(data['analytics_session_dts'], 'Number');
       if (data.hasOwnProperty('analytics_session_oid'))
         obj.analytics_session_oid = ApiClient.convertToType(data['analytics_session_oid'], 'Number');
+      if (data.hasOwnProperty('communications_campaign_name'))
+        obj.communications_campaign_name = ApiClient.convertToType(data['communications_campaign_name'], 'String');
+      if (data.hasOwnProperty('communications_campaign_uuid'))
+        obj.communications_campaign_uuid = ApiClient.convertToType(data['communications_campaign_uuid'], 'String');
+      if (data.hasOwnProperty('communications_email_subject'))
+        obj.communications_email_subject = ApiClient.convertToType(data['communications_email_subject'], 'String');
+      if (data.hasOwnProperty('communications_email_uuid'))
+        obj.communications_email_uuid = ApiClient.convertToType(data['communications_email_uuid'], 'String');
+      if (data.hasOwnProperty('communications_flow_name'))
+        obj.communications_flow_name = ApiClient.convertToType(data['communications_flow_name'], 'String');
+      if (data.hasOwnProperty('communications_flow_uuid'))
+        obj.communications_flow_uuid = ApiClient.convertToType(data['communications_flow_uuid'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('email_domain'))
+        obj.email_domain = ApiClient.convertToType(data['email_domain'], 'String');
       if (data.hasOwnProperty('end_timestamp'))
         obj.end_timestamp = ApiClient.convertToType(data['end_timestamp'], 'String');
       if (data.hasOwnProperty('esp_customer_uuid'))
@@ -71,6 +87,8 @@
         obj.events_gz_size = ApiClient.convertToType(data['events_gz_size'], 'Number');
       if (data.hasOwnProperty('events_json_key'))
         obj.events_json_key = ApiClient.convertToType(data['events_json_key'], 'String');
+      if (data.hasOwnProperty('favorite'))
+        obj.favorite = ApiClient.convertToType(data['favorite'], 'Boolean');
       if (data.hasOwnProperty('favorites'))
         obj.favorites = ApiClient.convertToType(data['favorites'], ['Number']);
       if (data.hasOwnProperty('geolocation'))
@@ -79,14 +97,22 @@
         obj.geolocation_country = ApiClient.convertToType(data['geolocation_country'], 'String');
       if (data.hasOwnProperty('geolocation_state'))
         obj.geolocation_state = ApiClient.convertToType(data['geolocation_state'], 'String');
+      if (data.hasOwnProperty('language_iso_code'))
+        obj.language_iso_code = ApiClient.convertToType(data['language_iso_code'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('merchant_notes'))
+        obj.merchant_notes = ApiClient.convertToType(data['merchant_notes'], 'String');
       if (data.hasOwnProperty('order_id'))
         obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('page_view_count'))
         obj.page_view_count = ApiClient.convertToType(data['page_view_count'], 'Number');
       if (data.hasOwnProperty('page_views'))
         obj.page_views = ApiClient.convertToType(data['page_views'], [ScreenRecordingPageView]);
+      if (data.hasOwnProperty('preferred_language'))
+        obj.preferred_language = ApiClient.convertToType(data['preferred_language'], 'String');
+      if (data.hasOwnProperty('referrer_domain'))
+        obj.referrer_domain = ApiClient.convertToType(data['referrer_domain'], 'String');
       if (data.hasOwnProperty('rrweb_version'))
         obj.rrweb_version = ApiClient.convertToType(data['rrweb_version'], 'String');
       if (data.hasOwnProperty('screen_recording_uuid'))
@@ -113,6 +139,14 @@
         obj.user_ip = ApiClient.convertToType(data['user_ip'], 'String');
       if (data.hasOwnProperty('user_properties'))
         obj.user_properties = ApiClient.convertToType(data['user_properties'], [ScreenRecordingUserProperty]);
+      if (data.hasOwnProperty('utm_campaign'))
+        obj.utm_campaign = ApiClient.convertToType(data['utm_campaign'], 'String');
+      if (data.hasOwnProperty('utm_source'))
+        obj.utm_source = ApiClient.convertToType(data['utm_source'], 'String');
+      if (data.hasOwnProperty('visitor_first_seen'))
+        obj.visitor_first_seen = ApiClient.convertToType(data['visitor_first_seen'], 'String');
+      if (data.hasOwnProperty('visitor_number'))
+        obj.visitor_number = ApiClient.convertToType(data['visitor_number'], 'Number');
       if (data.hasOwnProperty('watched'))
         obj.watched = ApiClient.convertToType(data['watched'], 'Boolean');
       if (data.hasOwnProperty('window_height'))
@@ -122,6 +156,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ScreenRecordingAdPlatform} ad_platform
+   */
+  exports.prototype.ad_platform = undefined;
 
   /**
    * @member {Number} analytics_client_oid
@@ -139,9 +178,50 @@
   exports.prototype.analytics_session_oid = undefined;
 
   /**
+   * Campaign Name
+   * @member {String} communications_campaign_name
+   */
+  exports.prototype.communications_campaign_name = undefined;
+
+  /**
+   * Campaign UUID
+   * @member {String} communications_campaign_uuid
+   */
+  exports.prototype.communications_campaign_uuid = undefined;
+
+  /**
+   * Email subject
+   * @member {String} communications_email_subject
+   */
+  exports.prototype.communications_email_subject = undefined;
+
+  /**
+   * Email UUID
+   * @member {String} communications_email_uuid
+   */
+  exports.prototype.communications_email_uuid = undefined;
+
+  /**
+   * Flow Name
+   * @member {String} communications_flow_name
+   */
+  exports.prototype.communications_flow_name = undefined;
+
+  /**
+   * Flow UUID
+   * @member {String} communications_flow_uuid
+   */
+  exports.prototype.communications_flow_uuid = undefined;
+
+  /**
    * @member {String} email
    */
   exports.prototype.email = undefined;
+
+  /**
+   * @member {String} email_domain
+   */
+  exports.prototype.email_domain = undefined;
 
   /**
    * Ending timestamp
@@ -165,6 +245,13 @@
   exports.prototype.events_json_key = undefined;
 
   /**
+   * True if the user calling the API has favorited this particular screen recording.
+   * @member {Boolean} favorite
+   */
+  exports.prototype.favorite = undefined;
+
+  /**
+   * Array of user ids that favorited this particular screen recording.
    * @member {Array.<Number>} favorites
    */
   exports.prototype.favorites = undefined;
@@ -185,9 +272,20 @@
   exports.prototype.geolocation_state = undefined;
 
   /**
+   * Language ISO code
+   * @member {String} language_iso_code
+   */
+  exports.prototype.language_iso_code = undefined;
+
+  /**
    * @member {String} merchant_id
    */
   exports.prototype.merchant_id = undefined;
+
+  /**
+   * @member {String} merchant_notes
+   */
+  exports.prototype.merchant_notes = undefined;
 
   /**
    * @member {String} order_id
@@ -203,6 +301,17 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingPageView>} page_views
    */
   exports.prototype.page_views = undefined;
+
+  /**
+   * ISO 3 Letter language code that the customer would prefer
+   * @member {String} preferred_language
+   */
+  exports.prototype.preferred_language = undefined;
+
+  /**
+   * @member {String} referrer_domain
+   */
+  exports.prototype.referrer_domain = undefined;
 
   /**
    * @member {String} rrweb_version
@@ -269,6 +378,29 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingUserProperty>} user_properties
    */
   exports.prototype.user_properties = undefined;
+
+  /**
+   * UTM Campaign
+   * @member {String} utm_campaign
+   */
+  exports.prototype.utm_campaign = undefined;
+
+  /**
+   * UTM Source
+   * @member {String} utm_source
+   */
+  exports.prototype.utm_source = undefined;
+
+  /**
+   * Timestamp this visitor was first seen
+   * @member {String} visitor_first_seen
+   */
+  exports.prototype.visitor_first_seen = undefined;
+
+  /**
+   * @member {Number} visitor_number
+   */
+  exports.prototype.visitor_number = undefined;
 
   /**
    * @member {Boolean} watched

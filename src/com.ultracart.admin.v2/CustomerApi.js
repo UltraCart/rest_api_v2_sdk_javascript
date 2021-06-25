@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerEmailListChanges', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerEmailListChanges', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerEmailListChanges'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerEmailListChanges'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerEmailListChanges, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerEmailListChanges, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.EmailVerifyTokenRequest, root.UltraCartRestApiV2.EmailVerifyTokenResponse, root.UltraCartRestApiV2.EmailVerifyTokenValidateRequest, root.UltraCartRestApiV2.EmailVerifyTokenValidateResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, Customer, CustomerEditorValues, CustomerEmailListChanges, CustomerQuery, CustomerResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, ErrorResponse) {
+}(this, function(ApiClient, Customer, CustomerEditorValues, CustomerEmailListChanges, CustomerQuery, CustomerResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, EmailVerifyTokenRequest, EmailVerifyTokenResponse, EmailVerifyTokenValidateRequest, EmailVerifyTokenValidateResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -143,6 +143,140 @@
 
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerByEmail operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerByEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a customer by Email
+     * Retrieves a single customer using the specified customer email address. 
+     * @param {String} email The email address of the customer to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerByEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerResponse}
+     */
+    this.getCustomerByEmail = function(email, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'email' is set
+      if (email === undefined || email === null) {
+        throw new Error("Missing the required parameter 'email' when calling getCustomerByEmail");
+      }
+
+
+      var pathParams = {
+        'email': email
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CustomerResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/by_email/{email}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerEditorValues operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerEditorValuesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerEditorValues} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve values needed for a customer profile editor
+     * Retrieve values needed for a customer profile editor. 
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerEditorValuesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerEditorValues}
+     */
+    this.getCustomerEditorValues = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CustomerEditorValues;
+
+      return this.apiClient.callApi(
+        '/customer/editor_values', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerEmailLists operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerEmailListsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailListsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve all email lists across all storefronts
+     * Retrieve all email lists across all storefronts 
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListsResponse}
+     */
+    this.getCustomerEmailLists = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailListsResponse;
+
+      return this.apiClient.callApi(
+        '/customer/email_lists', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -360,21 +494,27 @@
     }
 
     /**
-     * Callback function to receive the result of the getEditorValues operation.
-     * @callback module:com.ultracart.admin.v2/CustomerApi~getEditorValuesCallback
+     * Callback function to receive the result of the getEmailVerificationToken operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getEmailVerificationTokenCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CustomerEditorValues} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/EmailVerifyTokenResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Retrieve values needed for a customer profile editor
-     * Retrieve values needed for a customer profile editor. 
-     * @param {module:com.ultracart.admin.v2/CustomerApi~getEditorValuesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerEditorValues}
+     * Create a token that can be used to verify a customer email address
+     * Create a token that can be used to verify a customer email address.  The implementation of how a customer interacts with this token is left to the merchant. 
+     * @param {module:com.ultracart.admin.v2.models/EmailVerifyTokenRequest} token_request Token request
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getEmailVerificationTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailVerifyTokenResponse}
      */
-    this.getEditorValues = function(callback) {
-      var postBody = null;
+    this.getEmailVerificationToken = function(token_request, callback) {
+      var postBody = token_request;
+
+      // verify the required parameter 'token_request' is set
+      if (token_request === undefined || token_request === null) {
+        throw new Error("Missing the required parameter 'token_request' when calling getEmailVerificationToken");
+      }
 
 
       var pathParams = {
@@ -391,51 +531,10 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = CustomerEditorValues;
+      var returnType = EmailVerifyTokenResponse;
 
       return this.apiClient.callApi(
-        '/customer/editor_values', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEmailLists operation.
-     * @callback module:com.ultracart.admin.v2/CustomerApi~getEmailListsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/EmailListsResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve all email lists across all storefronts
-     * Retrieve all email lists across all storefronts 
-     * @param {module:com.ultracart.admin.v2/CustomerApi~getEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListsResponse}
-     */
-    this.getEmailLists = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = EmailListsResponse;
-
-      return this.apiClient.callApi(
-        '/customer/email_lists', 'GET',
+        '/customer/customers/email_verify/get_token', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -599,6 +698,53 @@
 
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}/email_lists', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateEmailVerificationToken operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~validateEmailVerificationTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a token that can be used to verify a customer email address
+     * Validate a token that can be used to verify a customer email address.  The implementation of how a customer interacts with this token is left to the merchant. 
+     * @param {module:com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest} validation_request Token validation request
+     * @param {module:com.ultracart.admin.v2/CustomerApi~validateEmailVerificationTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse}
+     */
+    this.validateEmailVerificationToken = function(validation_request, callback) {
+      var postBody = validation_request;
+
+      // verify the required parameter 'validation_request' is set
+      if (validation_request === undefined || validation_request === null) {
+        throw new Error("Missing the required parameter 'validation_request' when calling validateEmailVerificationToken");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailVerifyTokenValidateResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/email_verify/validate_token', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

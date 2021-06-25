@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**active** | **Boolean** |  | [optional] 
 **can_downgrade** | **Boolean** |  | [optional] 
 **can_upgrade** | **Boolean** |  | [optional] 
 **cost** | **Number** |  | [optional] 

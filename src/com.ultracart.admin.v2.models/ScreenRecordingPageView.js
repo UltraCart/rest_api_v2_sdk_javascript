@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageView
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('domain'))
+        obj.domain = ApiClient.convertToType(data['domain'], 'String');
       if (data.hasOwnProperty('events'))
         obj.events = ApiClient.convertToType(data['events'], [ScreenRecordingPageViewEvent]);
       if (data.hasOwnProperty('first_event_timestamp'))
@@ -63,6 +65,8 @@
         obj.http_post = ApiClient.convertToType(data['http_post'], 'Boolean');
       if (data.hasOwnProperty('last_event_timestamp'))
         obj.last_event_timestamp = ApiClient.convertToType(data['last_event_timestamp'], 'String');
+      if (data.hasOwnProperty('missing_events'))
+        obj.missing_events = ApiClient.convertToType(data['missing_events'], 'Boolean');
       if (data.hasOwnProperty('params'))
         obj.params = ApiClient.convertToType(data['params'], [ScreenRecordingPageViewParameter]);
       if (data.hasOwnProperty('range_end'))
@@ -79,6 +83,10 @@
         obj.screen_recording_page_view_uuid = ApiClient.convertToType(data['screen_recording_page_view_uuid'], 'String');
       if (data.hasOwnProperty('time_on_page'))
         obj.time_on_page = ApiClient.convertToType(data['time_on_page'], 'Number');
+      if (data.hasOwnProperty('timing_dom_content_loaded'))
+        obj.timing_dom_content_loaded = ApiClient.convertToType(data['timing_dom_content_loaded'], 'Number');
+      if (data.hasOwnProperty('timing_loaded'))
+        obj.timing_loaded = ApiClient.convertToType(data['timing_loaded'], 'Number');
       if (data.hasOwnProperty('truncated_events'))
         obj.truncated_events = ApiClient.convertToType(data['truncated_events'], 'Boolean');
       if (data.hasOwnProperty('ucapv'))
@@ -88,6 +96,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} domain
+   */
+  exports.prototype.domain = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingPageViewEvent>} events
@@ -110,6 +123,11 @@
    * @member {String} last_event_timestamp
    */
   exports.prototype.last_event_timestamp = undefined;
+
+  /**
+   * @member {Boolean} missing_events
+   */
+  exports.prototype.missing_events = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingPageViewParameter>} params
@@ -150,6 +168,18 @@
    * @member {Number} time_on_page
    */
   exports.prototype.time_on_page = undefined;
+
+  /**
+   * Amount of time for DOMContentLoaded event to fire (milliseconds)
+   * @member {Number} timing_dom_content_loaded
+   */
+  exports.prototype.timing_dom_content_loaded = undefined;
+
+  /**
+   * Amount of time for loaded event to fire (milliseconds)
+   * @member {Number} timing_loaded
+   */
+  exports.prototype.timing_loaded = undefined;
 
   /**
    * @member {Boolean} truncated_events

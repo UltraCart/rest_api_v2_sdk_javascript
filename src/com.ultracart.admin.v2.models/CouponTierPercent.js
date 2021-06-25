@@ -34,7 +34,7 @@
   /**
    * The CouponTierPercent model module.
    * @module com.ultracart.admin.v2.models/CouponTierPercent
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
         obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
+      if (data.hasOwnProperty('quickbooks_code'))
+        obj.quickbooks_code = ApiClient.convertToType(data['quickbooks_code'], 'String');
       if (data.hasOwnProperty('subtotal_amount'))
         obj.subtotal_amount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
     }
@@ -68,6 +70,12 @@
    * @member {Number} discount_percent
    */
   exports.prototype.discount_percent = undefined;
+
+  /**
+   * Quickbooks accounting code.
+   * @member {String} quickbooks_code
+   */
+  exports.prototype.quickbooks_code = undefined;
 
   /**
    * The amount of subtotal required to receive the discount percent

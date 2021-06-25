@@ -34,7 +34,7 @@
   /**
    * The CouponTieredPercentOffShipping model module.
    * @module com.ultracart.admin.v2.models/CouponTieredPercentOffShipping
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('quickbooks_code'))
+        obj.quickbooks_code = ApiClient.convertToType(data['quickbooks_code'], 'String');
       if (data.hasOwnProperty('shipping_methods'))
         obj.shipping_methods = ApiClient.convertToType(data['shipping_methods'], ['String']);
       if (data.hasOwnProperty('tiers'))
@@ -62,6 +64,12 @@
     }
     return obj;
   }
+
+  /**
+   * Quickbooks accounting code.
+   * @member {String} quickbooks_code
+   */
+  exports.prototype.quickbooks_code = undefined;
 
   /**
    * One or more shipping methods that may receive this discount

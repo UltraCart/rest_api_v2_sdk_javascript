@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -55,8 +55,20 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('affiliate_email'))
+        obj.affiliate_email = ApiClient.convertToType(data['affiliate_email'], 'String');
+      if (data.hasOwnProperty('affiliate_id'))
+        obj.affiliate_id = ApiClient.convertToType(data['affiliate_id'], 'Number');
+      if (data.hasOwnProperty('communications_campaign_name'))
+        obj.communications_campaign_name = ApiClient.convertToType(data['communications_campaign_name'], 'String');
+      if (data.hasOwnProperty('communications_email_subject'))
+        obj.communications_email_subject = ApiClient.convertToType(data['communications_email_subject'], 'String');
+      if (data.hasOwnProperty('communications_flow_name'))
+        obj.communications_flow_name = ApiClient.convertToType(data['communications_flow_name'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ScreenRecordingFilterStringSearch.constructFromObject(data['email']);
+      if (data.hasOwnProperty('email_domain'))
+        obj.email_domain = ApiClient.convertToType(data['email_domain'], 'String');
       if (data.hasOwnProperty('email_identified'))
         obj.email_identified = ApiClient.convertToType(data['email_identified'], 'Boolean');
       if (data.hasOwnProperty('end_timestamp'))
@@ -71,6 +83,10 @@
         obj.geolocation_country = ScreenRecordingFilterStringSearch.constructFromObject(data['geolocation_country']);
       if (data.hasOwnProperty('geolocation_state'))
         obj.geolocation_state = ScreenRecordingFilterStringSearch.constructFromObject(data['geolocation_state']);
+      if (data.hasOwnProperty('language_iso_code'))
+        obj.language_iso_code = ScreenRecordingFilterStringSearch.constructFromObject(data['language_iso_code']);
+      if (data.hasOwnProperty('last_x_days'))
+        obj.last_x_days = ApiClient.convertToType(data['last_x_days'], 'Number');
       if (data.hasOwnProperty('max_filter_values'))
         obj.max_filter_values = ApiClient.convertToType(data['max_filter_values'], 'Number');
       if (data.hasOwnProperty('order_id'))
@@ -81,6 +97,10 @@
         obj.page_views = ApiClient.convertToType(data['page_views'], [ScreenRecordingFilterPageView]);
       if (data.hasOwnProperty('placed_order'))
         obj.placed_order = ApiClient.convertToType(data['placed_order'], 'Boolean');
+      if (data.hasOwnProperty('preferred_language'))
+        obj.preferred_language = ScreenRecordingFilterStringSearch.constructFromObject(data['preferred_language']);
+      if (data.hasOwnProperty('referrer_domain'))
+        obj.referrer_domain = ApiClient.convertToType(data['referrer_domain'], 'String');
       if (data.hasOwnProperty('screen_recording_uuids'))
         obj.screen_recording_uuids = ApiClient.convertToType(data['screen_recording_uuids'], ['String']);
       if (data.hasOwnProperty('screen_sizes'))
@@ -107,6 +127,12 @@
         obj.user_agent_os_version = ApiClient.convertToType(data['user_agent_os_version'], 'String');
       if (data.hasOwnProperty('user_ip'))
         obj.user_ip = ScreenRecordingFilterIpSearch.constructFromObject(data['user_ip']);
+      if (data.hasOwnProperty('utm_campaign'))
+        obj.utm_campaign = ApiClient.convertToType(data['utm_campaign'], 'String');
+      if (data.hasOwnProperty('utm_source'))
+        obj.utm_source = ApiClient.convertToType(data['utm_source'], 'String');
+      if (data.hasOwnProperty('visitor_number'))
+        obj.visitor_number = ApiClient.convertToType(data['visitor_number'], 'Number');
       if (data.hasOwnProperty('watched'))
         obj.watched = ApiClient.convertToType(data['watched'], 'Boolean');
     }
@@ -114,9 +140,39 @@
   }
 
   /**
+   * @member {String} affiliate_email
+   */
+  exports.prototype.affiliate_email = undefined;
+
+  /**
+   * @member {Number} affiliate_id
+   */
+  exports.prototype.affiliate_id = undefined;
+
+  /**
+   * @member {String} communications_campaign_name
+   */
+  exports.prototype.communications_campaign_name = undefined;
+
+  /**
+   * @member {String} communications_email_subject
+   */
+  exports.prototype.communications_email_subject = undefined;
+
+  /**
+   * @member {String} communications_flow_name
+   */
+  exports.prototype.communications_flow_name = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} email
    */
   exports.prototype.email = undefined;
+
+  /**
+   * @member {String} email_domain
+   */
+  exports.prototype.email_domain = undefined;
 
   /**
    * @member {Boolean} email_identified
@@ -154,6 +210,16 @@
   exports.prototype.geolocation_state = undefined;
 
   /**
+   * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} language_iso_code
+   */
+  exports.prototype.language_iso_code = undefined;
+
+  /**
+   * @member {Number} last_x_days
+   */
+  exports.prototype.last_x_days = undefined;
+
+  /**
    * @member {Number} max_filter_values
    */
   exports.prototype.max_filter_values = undefined;
@@ -177,6 +243,16 @@
    * @member {Boolean} placed_order
    */
   exports.prototype.placed_order = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} preferred_language
+   */
+  exports.prototype.preferred_language = undefined;
+
+  /**
+   * @member {String} referrer_domain
+   */
+  exports.prototype.referrer_domain = undefined;
 
   /**
    * @member {Array.<String>} screen_recording_uuids
@@ -242,6 +318,21 @@
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterIpSearch} user_ip
    */
   exports.prototype.user_ip = undefined;
+
+  /**
+   * @member {String} utm_campaign
+   */
+  exports.prototype.utm_campaign = undefined;
+
+  /**
+   * @member {String} utm_source
+   */
+  exports.prototype.utm_source = undefined;
+
+  /**
+   * @member {Number} visitor_number
+   */
+  exports.prototype.visitor_number = undefined;
 
   /**
    * @member {Boolean} watched

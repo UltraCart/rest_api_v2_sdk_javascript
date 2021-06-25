@@ -34,7 +34,7 @@
   /**
    * The CouponTierQuantityPercent model module.
    * @module com.ultracart.admin.v2.models/CouponTierQuantityPercent
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
       if (data.hasOwnProperty('item_quantity'))
         obj.item_quantity = ApiClient.convertToType(data['item_quantity'], 'Number');
+      if (data.hasOwnProperty('quickbooks_code'))
+        obj.quickbooks_code = ApiClient.convertToType(data['quickbooks_code'], 'String');
     }
     return obj;
   }
@@ -74,6 +76,12 @@
    * @member {Number} item_quantity
    */
   exports.prototype.item_quantity = undefined;
+
+  /**
+   * Quickbooks accounting code.
+   * @member {String} quickbooks_code
+   */
+  exports.prototype.quickbooks_code = undefined;
 
   return exports;
 

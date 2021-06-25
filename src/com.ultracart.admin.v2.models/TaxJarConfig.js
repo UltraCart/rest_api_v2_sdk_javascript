@@ -34,7 +34,7 @@
   /**
    * The TaxJarConfig model module.
    * @module com.ultracart.admin.v2.models/TaxJarConfig
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.send_outside_nexus = ApiClient.convertToType(data['send_outside_nexus'], 'Boolean');
       if (data.hasOwnProperty('send_test_orders'))
         obj.send_test_orders = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
+      if (data.hasOwnProperty('skip_channel_orders'))
+        obj.skip_channel_orders = ApiClient.convertToType(data['skip_channel_orders'], 'Boolean');
       if (data.hasOwnProperty('use_distribution_center_from'))
         obj.use_distribution_center_from = ApiClient.convertToType(data['use_distribution_center_from'], 'Boolean');
     }
@@ -100,6 +102,12 @@
    * @member {Boolean} send_test_orders
    */
   exports.prototype.send_test_orders = undefined;
+
+  /**
+   * Do not send channel partner orders to TaxJar.  Set this to true if your channel partner reports tax on their own.
+   * @member {Boolean} skip_channel_orders
+   */
+  exports.prototype.skip_channel_orders = undefined;
 
   /**
    * Use distribution center from address

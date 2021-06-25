@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **smart_sending** | **Boolean** | Smart sending | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
 **subject** | **String** | Subject | [optional] 
+**suspended_for_spam** | **Boolean** | True if the email was suspended for too high of a spam rate. | [optional] 
 **transactional_email** | **Boolean** | Transactional email | [optional] 
 **version** | **Number** | Version | [optional] 
 

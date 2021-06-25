@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingQueryResponse model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingQueryResponse
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -61,6 +61,12 @@
         obj.filter = ScreenRecordingFilter.constructFromObject(data['filter']);
       if (data.hasOwnProperty('filter_values'))
         obj.filter_values = ScreenRecordingFilterValues.constructFromObject(data['filter_values']);
+      if (data.hasOwnProperty('histogram_data'))
+        obj.histogram_data = ApiClient.convertToType(data['histogram_data'], ['Number']);
+      if (data.hasOwnProperty('histogram_interval'))
+        obj.histogram_interval = ApiClient.convertToType(data['histogram_interval'], 'String');
+      if (data.hasOwnProperty('histogram_start_dts'))
+        obj.histogram_start_dts = ApiClient.convertToType(data['histogram_start_dts'], 'String');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('screen_recordings'))
@@ -87,6 +93,21 @@
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterValues} filter_values
    */
   exports.prototype.filter_values = undefined;
+
+  /**
+   * @member {Array.<Number>} histogram_data
+   */
+  exports.prototype.histogram_data = undefined;
+
+  /**
+   * @member {String} histogram_interval
+   */
+  exports.prototype.histogram_interval = undefined;
+
+  /**
+   * @member {String} histogram_start_dts
+   */
+  exports.prototype.histogram_start_dts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

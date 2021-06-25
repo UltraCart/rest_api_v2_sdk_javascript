@@ -34,7 +34,7 @@
   /**
    * AutoOrder service.
    * @module com.ultracart.admin.v2/AutoOrderApi
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -57,7 +57,7 @@
      */
 
     /**
-     * Retrieve an auto order
+     * Retrieve an auto order by oid
      * Retrieves a single auto order using the specified auto order oid. 
      * @param {Number} auto_order_oid The auto order oid to retrieve.
      * @param {Object} opts Optional parameters
@@ -109,7 +109,7 @@
      */
 
     /**
-     * Retrieve an auto order
+     * Retrieve an auto order by code
      * Retrieves a single auto order using the specified reference (original) order id. 
      * @param {String} auto_order_code The auto order oid to retrieve.
      * @param {Object} opts Optional parameters
@@ -161,7 +161,7 @@
      */
 
     /**
-     * Retrieve an auto order
+     * Retrieve an auto order by order id
      * Retrieves a single auto order using the specified reference (original) order id. 
      * @param {String} reference_order_id The auto order oid to retrieve.
      * @param {Object} opts Optional parameters
@@ -353,7 +353,7 @@
      */
 
     /**
-     * Retrieve auto orders
+     * Retrieve auto orders by query
      * Retrieves a group of auto orders from the account based on a query object.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
      * @param {module:com.ultracart.admin.v2.models/AutoOrderQuery} auto_order_query Auto order query
      * @param {Object} opts Optional parameters

@@ -34,7 +34,7 @@
   /**
    * The CouponTierAmount model module.
    * @module com.ultracart.admin.v2.models/CouponTierAmount
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_amount'))
         obj.discount_amount = ApiClient.convertToType(data['discount_amount'], 'Number');
+      if (data.hasOwnProperty('quickbooks_code'))
+        obj.quickbooks_code = ApiClient.convertToType(data['quickbooks_code'], 'String');
       if (data.hasOwnProperty('subtotal_amount'))
         obj.subtotal_amount = ApiClient.convertToType(data['subtotal_amount'], 'Number');
     }
@@ -68,6 +70,12 @@
    * @member {Number} discount_amount
    */
   exports.prototype.discount_amount = undefined;
+
+  /**
+   * Quickbooks accounting code.
+   * @member {String} quickbooks_code
+   */
+  exports.prototype.quickbooks_code = undefined;
 
   /**
    * The amount of subtotal required to receive the discount amount

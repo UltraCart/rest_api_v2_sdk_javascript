@@ -34,7 +34,7 @@
   /**
    * The Error model module.
    * @module com.ultracart.admin.v2.models/Error
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.error_code = ApiClient.convertToType(data['error_code'], 'String');
       if (data.hasOwnProperty('more_info'))
         obj.more_info = ApiClient.convertToType(data['more_info'], 'String');
+      if (data.hasOwnProperty('object_id'))
+        obj.object_id = ApiClient.convertToType(data['object_id'], 'String');
       if (data.hasOwnProperty('user_message'))
         obj.user_message = ApiClient.convertToType(data['user_message'], 'String');
     }
@@ -84,6 +86,12 @@
    * @member {String} more_info
    */
   exports.prototype.more_info = undefined;
+
+  /**
+   * Object id that the error is associated with
+   * @member {String} object_id
+   */
+  exports.prototype.object_id = undefined;
 
   /**
    * An end-user friendly message suitable for display to the customer

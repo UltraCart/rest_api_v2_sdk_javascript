@@ -34,7 +34,7 @@
   /**
    * The PublishLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/PublishLibraryItemRequest
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**

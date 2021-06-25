@@ -34,7 +34,7 @@
   /**
    * The CustomerLoyalty model module.
    * @module com.ultracart.admin.v2.models/CustomerLoyalty
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.current_points = ApiClient.convertToType(data['current_points'], 'Number');
       if (data.hasOwnProperty('ledger_entries'))
         obj.ledger_entries = ApiClient.convertToType(data['ledger_entries'], [CustomerLoyaltyLedger]);
+      if (data.hasOwnProperty('pending_points'))
+        obj.pending_points = ApiClient.convertToType(data['pending_points'], 'Number');
       if (data.hasOwnProperty('redemptions'))
         obj.redemptions = ApiClient.convertToType(data['redemptions'], [CustomerLoyaltyRedemption]);
     }
@@ -76,6 +78,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/CustomerLoyaltyLedger>} ledger_entries
    */
   exports.prototype.ledger_entries = undefined;
+
+  /**
+   * Pending Points
+   * @member {Number} pending_points
+   */
+  exports.prototype.pending_points = undefined;
 
   /**
    * Redemptions

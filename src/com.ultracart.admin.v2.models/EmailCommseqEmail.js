@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -99,6 +99,8 @@
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('subject'))
         obj.subject = ApiClient.convertToType(data['subject'], 'String');
+      if (data.hasOwnProperty('suspended_for_spam'))
+        obj.suspended_for_spam = ApiClient.convertToType(data['suspended_for_spam'], 'Boolean');
       if (data.hasOwnProperty('transactional_email'))
         obj.transactional_email = ApiClient.convertToType(data['transactional_email'], 'Boolean');
       if (data.hasOwnProperty('version'))
@@ -238,6 +240,12 @@
    * @member {String} subject
    */
   exports.prototype.subject = undefined;
+
+  /**
+   * True if the email was suspended for too high of a spam rate.
+   * @member {Boolean} suspended_for_spam
+   */
+  exports.prototype.suspended_for_spam = undefined;
 
   /**
    * Transactional email

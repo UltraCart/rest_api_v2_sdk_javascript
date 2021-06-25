@@ -34,7 +34,7 @@
   /**
    * The OrderProcessPaymentRequest model module.
    * @module com.ultracart.admin.v2.models/OrderProcessPaymentRequest
-   * @version 3.1.0
+   * @version 3.2.3
    */
 
   /**
@@ -55,11 +55,19 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('amount'))
+        obj.amount = ApiClient.convertToType(data['amount'], 'Number');
       if (data.hasOwnProperty('card_verification_number_token'))
         obj.card_verification_number_token = ApiClient.convertToType(data['card_verification_number_token'], 'String');
     }
     return obj;
   }
+
+  /**
+   * Specific amount to bill (optional).  If not specified the total of the order is billed.
+   * @member {Number} amount
+   */
+  exports.prototype.amount = undefined;
 
   /**
    * Card verification number token from hosted fields used during credit card transaction processing (optional)
