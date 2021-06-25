@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.1.49
+   * @version 3.2.4
    */
 
   /**
@@ -195,6 +195,88 @@
 
       return this.apiClient.callApi(
         '/customer/customers/by_email/{email}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerEditorValues operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerEditorValuesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerEditorValues} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve values needed for a customer profile editor
+     * Retrieve values needed for a customer profile editor. 
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerEditorValuesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerEditorValues}
+     */
+    this.getCustomerEditorValues = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CustomerEditorValues;
+
+      return this.apiClient.callApi(
+        '/customer/editor_values', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerEmailLists operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerEmailListsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailListsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve all email lists across all storefronts
+     * Retrieve all email lists across all storefronts 
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListsResponse}
+     */
+    this.getCustomerEmailLists = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = EmailListsResponse;
+
+      return this.apiClient.callApi(
+        '/customer/email_lists', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -406,88 +488,6 @@
 
       return this.apiClient.callApi(
         '/customer/customers/dataTables', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEditorValues operation.
-     * @callback module:com.ultracart.admin.v2/CustomerApi~getEditorValuesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CustomerEditorValues} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve values needed for a customer profile editor
-     * Retrieve values needed for a customer profile editor. 
-     * @param {module:com.ultracart.admin.v2/CustomerApi~getEditorValuesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerEditorValues}
-     */
-    this.getEditorValues = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = CustomerEditorValues;
-
-      return this.apiClient.callApi(
-        '/customer/editor_values', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEmailLists operation.
-     * @callback module:com.ultracart.admin.v2/CustomerApi~getEmailListsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/EmailListsResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve all email lists across all storefronts
-     * Retrieve all email lists across all storefronts 
-     * @param {module:com.ultracart.admin.v2/CustomerApi~getEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailListsResponse}
-     */
-    this.getEmailLists = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = EmailListsResponse;
-
-      return this.apiClient.callApi(
-        '/customer/email_lists', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

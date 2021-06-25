@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogFile model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogFile
-   * @version 3.1.49
+   * @version 3.2.4
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('mime_type'))
+        obj.mime_type = ApiClient.convertToType(data['mime_type'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('size'))
@@ -64,6 +66,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} mime_type
+   */
+  exports.prototype.mime_type = undefined;
 
   /**
    * @member {String} name

@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.1.49
+   * @version 3.2.4
    */
 
   /**
@@ -4459,51 +4459,6 @@
     }
 
     /**
-     * Callback function to receive the result of the getPricingTiers operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~getPricingTiersCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/PricingTiersResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve pricing tiers
-     * Retrieves the pricing tiers 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~getPricingTiersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/PricingTiersResponse}
-     */
-    this.getPricingTiers = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        '_expand': opts['_expand'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = PricingTiersResponse;
-
-      return this.apiClient.callApi(
-        '/storefront/pricing_tiers', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the getScreenRecording operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getScreenRecordingCallback
      * @param {String} error Error message, if any.
@@ -4936,6 +4891,51 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/screen_recordings/segments/{screen_recording_segment_oid}/query', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getStoreFrontPricingTiers operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getStoreFrontPricingTiersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/PricingTiersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve pricing tiers
+     * Retrieves the pricing tiers 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getStoreFrontPricingTiersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/PricingTiersResponse}
+     */
+    this.getStoreFrontPricingTiers = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = PricingTiersResponse;
+
+      return this.apiClient.callApi(
+        '/storefront/pricing_tiers', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
