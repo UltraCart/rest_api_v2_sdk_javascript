@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **log_dts** | **String** |  | [optional] 
 **log_type** | **String** |  | [optional] 
 **logger_id** | **String** |  | [optional] 
+**logger_name** | **String** |  | [optional] 
 **logs** | [**[IntegrationLogLog]**](IntegrationLogLog.md) |  | [optional] 
 **order_ids** | **[String]** |  | [optional] 
 **pk** | **String** |  | [optional] 

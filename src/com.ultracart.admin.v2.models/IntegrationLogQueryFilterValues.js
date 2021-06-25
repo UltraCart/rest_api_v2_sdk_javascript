@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogQueryFilterValues model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogQueryFilterValues
-   * @version 3.2.4
+   * @version 3.2.6
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.item_ipn_oids = ApiClient.convertToType(data['item_ipn_oids'], ['Number']);
       if (data.hasOwnProperty('log_types'))
         obj.log_types = ApiClient.convertToType(data['log_types'], ['String']);
+      if (data.hasOwnProperty('logger_names'))
+        obj.logger_names = ApiClient.convertToType(data['logger_names'], ['String']);
       if (data.hasOwnProperty('order_ids'))
         obj.order_ids = ApiClient.convertToType(data['order_ids'], ['String']);
       if (data.hasOwnProperty('statuses'))
@@ -111,6 +113,11 @@
    * @member {Array.<String>} log_types
    */
   exports.prototype.log_types = undefined;
+
+  /**
+   * @member {Array.<String>} logger_names
+   */
+  exports.prototype.logger_names = undefined;
 
   /**
    * @member {Array.<String>} order_ids

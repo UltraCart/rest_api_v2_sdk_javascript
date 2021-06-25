@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogQueryRequest model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogQueryRequest
-   * @version 3.2.4
+   * @version 3.2.6
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.log_type = ApiClient.convertToType(data['log_type'], 'String');
       if (data.hasOwnProperty('logger_id'))
         obj.logger_id = ApiClient.convertToType(data['logger_id'], 'String');
+      if (data.hasOwnProperty('logger_name'))
+        obj.logger_name = ApiClient.convertToType(data['logger_name'], 'String');
       if (data.hasOwnProperty('order_ids'))
         obj.order_ids = ApiClient.convertToType(data['order_ids'], ['String']);
       if (data.hasOwnProperty('status'))
@@ -134,6 +136,11 @@
    * @member {String} logger_id
    */
   exports.prototype.logger_id = undefined;
+
+  /**
+   * @member {String} logger_name
+   */
+  exports.prototype.logger_name = undefined;
 
   /**
    * @member {Array.<String>} order_ids
