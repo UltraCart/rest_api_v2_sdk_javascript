@@ -34,7 +34,7 @@
   /**
    * The IntegrationLog model module.
    * @module com.ultracart.admin.v2.models/IntegrationLog
-   * @version 3.2.6
+   * @version 3.2.7
    */
 
   /**
@@ -79,6 +79,8 @@
         obj.logger_name = ApiClient.convertToType(data['logger_name'], 'String');
       if (data.hasOwnProperty('logs'))
         obj.logs = ApiClient.convertToType(data['logs'], [IntegrationLogLog]);
+      if (data.hasOwnProperty('omit_log_map'))
+        obj.omit_log_map = ApiClient.convertToType(data['omit_log_map'], 'Boolean');
       if (data.hasOwnProperty('order_ids'))
         obj.order_ids = ApiClient.convertToType(data['order_ids'], ['String']);
       if (data.hasOwnProperty('pk'))
@@ -87,6 +89,8 @@
         obj.sk = ApiClient.convertToType(data['sk'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('status_code'))
+        obj.status_code = ApiClient.convertToType(data['status_code'], 'Number');
     }
     return obj;
   }
@@ -152,6 +156,11 @@
   exports.prototype.logs = undefined;
 
   /**
+   * @member {Boolean} omit_log_map
+   */
+  exports.prototype.omit_log_map = undefined;
+
+  /**
    * @member {Array.<String>} order_ids
    */
   exports.prototype.order_ids = undefined;
@@ -170,6 +179,11 @@
    * @member {String} status
    */
   exports.prototype.status = undefined;
+
+  /**
+   * @member {Number} status_code
+   */
+  exports.prototype.status_code = undefined;
 
   return exports;
 

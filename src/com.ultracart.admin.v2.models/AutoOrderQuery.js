@@ -34,7 +34,7 @@
   /**
    * The AutoOrderQuery model module.
    * @module com.ultracart.admin.v2.models/AutoOrderQuery
-   * @version 3.2.6
+   * @version 3.2.7
    */
 
   /**
@@ -75,10 +75,14 @@
         obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('last_name'))
         obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
+      if (data.hasOwnProperty('next_item_id'))
+        obj.next_item_id = ApiClient.convertToType(data['next_item_id'], 'String');
       if (data.hasOwnProperty('next_shipment_date_begin'))
         obj.next_shipment_date_begin = ApiClient.convertToType(data['next_shipment_date_begin'], 'String');
       if (data.hasOwnProperty('next_shipment_date_end'))
         obj.next_shipment_date_end = ApiClient.convertToType(data['next_shipment_date_end'], 'String');
+      if (data.hasOwnProperty('original_item_id'))
+        obj.original_item_id = ApiClient.convertToType(data['original_item_id'], 'String');
       if (data.hasOwnProperty('original_order_date_begin'))
         obj.original_order_date_begin = ApiClient.convertToType(data['original_order_date_begin'], 'String');
       if (data.hasOwnProperty('original_order_date_end'))
@@ -146,7 +150,7 @@
   exports.prototype.first_name = undefined;
 
   /**
-   * Item ID
+   * Item ID.  Deprecated query field.  This incorrectly meant the original order contained this item id.
    * @member {String} item_id
    */
   exports.prototype.item_id = undefined;
@@ -156,6 +160,12 @@
    * @member {String} last_name
    */
   exports.prototype.last_name = undefined;
+
+  /**
+   * Next Item ID that is supposed to ship.  This is calculated based upon the schedule associated with the original item id.
+   * @member {String} next_item_id
+   */
+  exports.prototype.next_item_id = undefined;
 
   /**
    * Next shipment date begin
@@ -168,6 +178,12 @@
    * @member {String} next_shipment_date_end
    */
   exports.prototype.next_shipment_date_end = undefined;
+
+  /**
+   * Original Item ID purchased on auto order.
+   * @member {String} original_item_id
+   */
+  exports.prototype.original_item_id = undefined;
 
   /**
    * Original order date begin
