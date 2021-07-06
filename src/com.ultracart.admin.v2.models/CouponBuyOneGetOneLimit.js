@@ -34,7 +34,7 @@
   /**
    * The CouponBuyOneGetOneLimit model module.
    * @module com.ultracart.admin.v2.models/CouponBuyOneGetOneLimit
-   * @version 3.2.7
+   * @version 3.2.8
    */
 
   /**

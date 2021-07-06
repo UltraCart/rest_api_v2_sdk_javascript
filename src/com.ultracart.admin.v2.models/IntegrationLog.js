@@ -34,7 +34,7 @@
   /**
    * The IntegrationLog model module.
    * @module com.ultracart.admin.v2.models/IntegrationLog
-   * @version 3.2.7
+   * @version 3.2.8
    */
 
   /**
@@ -131,6 +131,7 @@
   exports.prototype.item_ipn_oid = undefined;
 
   /**
+   * Date/time the integration log was created
    * @member {String} log_dts
    */
   exports.prototype.log_dts = undefined;

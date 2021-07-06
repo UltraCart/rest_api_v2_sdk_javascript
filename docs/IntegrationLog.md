@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **integration_log_oid** | **Number** |  | [optional] 
 **item_id** | **String** |  | [optional] 
 **item_ipn_oid** | **Number** |  | [optional] 
-**log_dts** | **String** |  | [optional] 
+**log_dts** | **String** | Date/time the integration log was created | [optional] 
 **log_type** | **String** |  | [optional] 
 **logger_id** | **String** |  | [optional] 
 **logger_name** | **String** |  | [optional] 

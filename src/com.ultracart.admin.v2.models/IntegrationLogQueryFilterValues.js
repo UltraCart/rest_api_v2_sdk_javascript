@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogQueryFilterValues model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogQueryFilterValues
-   * @version 3.2.7
+   * @version 3.2.8
    */
 
   /**
@@ -67,6 +67,10 @@
         obj.item_ids = ApiClient.convertToType(data['item_ids'], ['String']);
       if (data.hasOwnProperty('item_ipn_oids'))
         obj.item_ipn_oids = ApiClient.convertToType(data['item_ipn_oids'], ['Number']);
+      if (data.hasOwnProperty('log_dts_max'))
+        obj.log_dts_max = ApiClient.convertToType(data['log_dts_max'], 'String');
+      if (data.hasOwnProperty('log_dts_min'))
+        obj.log_dts_min = ApiClient.convertToType(data['log_dts_min'], 'String');
       if (data.hasOwnProperty('log_types'))
         obj.log_types = ApiClient.convertToType(data['log_types'], ['String']);
       if (data.hasOwnProperty('logger_names'))
@@ -108,6 +112,18 @@
    * @member {Array.<Number>} item_ipn_oids
    */
   exports.prototype.item_ipn_oids = undefined;
+
+  /**
+   * Maximum date/time log date/time
+   * @member {String} log_dts_max
+   */
+  exports.prototype.log_dts_max = undefined;
+
+  /**
+   * Minimum date/time log date/time
+   * @member {String} log_dts_min
+   */
+  exports.prototype.log_dts_min = undefined;
 
   /**
    * @member {Array.<String>} log_types
