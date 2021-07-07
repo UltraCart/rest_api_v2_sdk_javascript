@@ -34,7 +34,7 @@
   /**
    * The CartSettingsPaymentAmazon model module.
    * @module com.ultracart.admin.v2.models/CartSettingsPaymentAmazon
-   * @version 3.2.8
+   * @version 3.2.9
    */
 
   /**

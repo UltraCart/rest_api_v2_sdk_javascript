@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingSettings model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingSettings
-   * @version 3.2.8
+   * @version 3.2.9
    */
 
   /**
@@ -55,8 +55,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('cost_per_thousand'))
+        obj.cost_per_thousand = ApiClient.convertToType(data['cost_per_thousand'], 'Number');
       if (data.hasOwnProperty('enabled'))
         obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean');
+      if (data.hasOwnProperty('retention_interval'))
+        obj.retention_interval = ApiClient.convertToType(data['retention_interval'], 'String');
       if (data.hasOwnProperty('sessions_current_billing_period'))
         obj.sessions_current_billing_period = ApiClient.convertToType(data['sessions_current_billing_period'], 'Number');
       if (data.hasOwnProperty('sessions_last_billing_period'))
@@ -72,9 +76,21 @@
   }
 
   /**
+   * Cost per one thousand sessions
+   * @member {Number} cost_per_thousand
+   */
+  exports.prototype.cost_per_thousand = undefined;
+
+  /**
    * @member {Boolean} enabled
    */
   exports.prototype.enabled = undefined;
+
+  /**
+   * How long screen recording data is retained
+   * @member {String} retention_interval
+   */
+  exports.prototype.retention_interval = undefined;
 
   /**
    * @member {Number} sessions_current_billing_period
