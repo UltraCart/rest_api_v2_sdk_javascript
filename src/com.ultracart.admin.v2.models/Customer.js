@@ -34,7 +34,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 3.2.9
+   * @version 3.2.10
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.allow_3rd_party_billing = ApiClient.convertToType(data['allow_3rd_party_billing'], 'Boolean');
       if (data.hasOwnProperty('allow_cod'))
         obj.allow_cod = ApiClient.convertToType(data['allow_cod'], 'Boolean');
+      if (data.hasOwnProperty('allow_drop_shipping'))
+        obj.allow_drop_shipping = ApiClient.convertToType(data['allow_drop_shipping'], 'Boolean');
       if (data.hasOwnProperty('allow_purchase_order'))
         obj.allow_purchase_order = ApiClient.convertToType(data['allow_purchase_order'], 'Boolean');
       if (data.hasOwnProperty('allow_quote_request'))
@@ -197,6 +199,12 @@
    * @member {Boolean} allow_cod
    */
   exports.prototype.allow_cod = undefined;
+
+  /**
+   * Allow Drop Shipping
+   * @member {Boolean} allow_drop_shipping
+   */
+  exports.prototype.allow_drop_shipping = undefined;
 
   /**
    * Allow purchase orders by this customer
