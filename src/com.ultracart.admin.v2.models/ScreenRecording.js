@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.2.10
+   * @version 3.2.11
    */
 
   /**
@@ -103,6 +103,8 @@
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('merchant_notes'))
         obj.merchant_notes = ApiClient.convertToType(data['merchant_notes'], 'String');
+      if (data.hasOwnProperty('missing_external_tracking'))
+        obj.missing_external_tracking = ApiClient.convertToType(data['missing_external_tracking'], 'Boolean');
       if (data.hasOwnProperty('order_id'))
         obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('page_view_count'))
@@ -286,6 +288,12 @@
    * @member {String} merchant_notes
    */
   exports.prototype.merchant_notes = undefined;
+
+  /**
+   * True if external page view was not tracked
+   * @member {Boolean} missing_external_tracking
+   */
+  exports.prototype.missing_external_tracking = undefined;
 
   /**
    * @member {String} order_id

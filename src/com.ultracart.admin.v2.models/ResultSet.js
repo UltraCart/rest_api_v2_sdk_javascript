@@ -34,7 +34,7 @@
   /**
    * The ResultSet model module.
    * @module com.ultracart.admin.v2.models/ResultSet
-   * @version 3.2.10
+   * @version 3.2.11
    */
 
   /**

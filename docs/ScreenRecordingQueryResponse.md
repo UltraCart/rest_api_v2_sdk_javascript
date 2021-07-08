@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**checkout_only** | **Boolean** |  | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
 **filter** | [**ScreenRecordingFilter**](ScreenRecordingFilter.md) |  | [optional] 
 **filter_values** | [**ScreenRecordingFilterValues**](ScreenRecordingFilterValues.md) |  | [optional] 

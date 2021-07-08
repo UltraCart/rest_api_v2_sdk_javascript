@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingResponse model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingResponse
-   * @version 3.2.10
+   * @version 3.2.11
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('checkout_only'))
+        obj.checkout_only = ApiClient.convertToType(data['checkout_only'], 'Boolean');
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -68,6 +70,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} checkout_only
+   */
+  exports.prototype.checkout_only = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
