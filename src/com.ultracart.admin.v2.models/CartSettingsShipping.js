@@ -34,7 +34,7 @@
   /**
    * The CartSettingsShipping model module.
    * @module com.ultracart.admin.v2.models/CartSettingsShipping
-   * @version 3.2.11
+   * @version 3.2.12
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * Fulfillment service.
    * @module com.ultracart.admin.v2/FulfillmentApi
-   * @version 3.2.11
+   * @version 3.2.12
    */
 
   /**
@@ -96,6 +96,61 @@
 
       return this.apiClient.callApi(
         '/fulfillment/distribution_centers/{distribution_center_code}/acknowledgements', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the generatePackingSlip operation.
+     * @callback module:com.ultracart.admin.v2/FulfillmentApi~generatePackingSlipCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrdersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Generate a packing slip for this order for the given distribution center.
+     * The packing slip PDF that is returned is base 64 encoded 
+     * @param {String} distribution_center_code Distribution center code
+     * @param {String} order_id Order ID
+     * @param {module:com.ultracart.admin.v2/FulfillmentApi~generatePackingSlipCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}
+     */
+    this.generatePackingSlip = function(distribution_center_code, order_id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'distribution_center_code' is set
+      if (distribution_center_code === undefined || distribution_center_code === null) {
+        throw new Error("Missing the required parameter 'distribution_center_code' when calling generatePackingSlip");
+      }
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling generatePackingSlip");
+      }
+
+
+      var pathParams = {
+        'distribution_center_code': distribution_center_code,
+        'order_id': order_id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OrdersResponse;
+
+      return this.apiClient.callApi(
+        '/fulfillment/distribution_centers/{distribution_center_code}/orders/{order_id}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
