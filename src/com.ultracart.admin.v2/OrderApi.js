@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.2.13
+   * @version 3.2.14
    */
 
   /**
@@ -309,7 +309,7 @@
      */
 
     /**
-     * Generate a packing slip for this order for the given distribution center.
+     * Generate a packing slip for this order across all distribution centers.
      * The packing slip PDF that is returned is base 64 encoded 
      * @param {String} order_id Order ID
      * @param {module:com.ultracart.admin.v2/OrderApi~generatePackingSlipAllDCCallback} callback The callback function, accepting three arguments: error, data, response

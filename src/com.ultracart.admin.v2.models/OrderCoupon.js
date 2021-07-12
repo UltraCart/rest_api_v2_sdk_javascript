@@ -34,7 +34,7 @@
   /**
    * The OrderCoupon model module.
    * @module com.ultracart.admin.v2.models/OrderCoupon
-   * @version 3.2.13
+   * @version 3.2.14
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.base_coupon_code = ApiClient.convertToType(data['base_coupon_code'], 'String');
       if (data.hasOwnProperty('coupon_code'))
         obj.coupon_code = ApiClient.convertToType(data['coupon_code'], 'String');
+      if (data.hasOwnProperty('hdie_from_customer'))
+        obj.hdie_from_customer = ApiClient.convertToType(data['hdie_from_customer'], 'Boolean');
     }
     return obj;
   }
@@ -90,6 +92,12 @@
    * @member {String} coupon_code
    */
   exports.prototype.coupon_code = undefined;
+
+  /**
+   * True if this coupon is hidde from the customer
+   * @member {Boolean} hdie_from_customer
+   */
+  exports.prototype.hdie_from_customer = undefined;
 
   return exports;
 
