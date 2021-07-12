@@ -34,7 +34,7 @@
   /**
    * The Coupon model module.
    * @module com.ultracart.admin.v2.models/Coupon
-   * @version 3.2.12
+   * @version 3.2.13
    */
 
   /**
@@ -115,6 +115,8 @@
         obj.free_shipping_with_items_purchase = CouponFreeShippingWithItemsPurchase.constructFromObject(data['free_shipping_with_items_purchase']);
       if (data.hasOwnProperty('free_shipping_with_subtotal'))
         obj.free_shipping_with_subtotal = CouponFreeShippingWithSubtotal.constructFromObject(data['free_shipping_with_subtotal']);
+      if (data.hasOwnProperty('hide_from_customer'))
+        obj.hide_from_customer = ApiClient.convertToType(data['hide_from_customer'], 'Boolean');
       if (data.hasOwnProperty('merchant_code'))
         obj.merchant_code = ApiClient.convertToType(data['merchant_code'], 'String');
       if (data.hasOwnProperty('merchant_notes'))
@@ -332,6 +334,12 @@
    * @member {module:com.ultracart.admin.v2.models/CouponFreeShippingWithSubtotal} free_shipping_with_subtotal
    */
   exports.prototype.free_shipping_with_subtotal = undefined;
+
+  /**
+   * Hide coupon from customer during checkout.  Often used when coupons are automatic discounting mechanisms.
+   * @member {Boolean} hide_from_customer
+   */
+  exports.prototype.hide_from_customer = undefined;
 
   /**
    * Merchant code of coupon up to 20 characters.

@@ -34,7 +34,7 @@
   /**
    * The CustomerQuery model module.
    * @module com.ultracart.admin.v2.models/CustomerQuery
-   * @version 3.2.12
+   * @version 3.2.13
    */
 
   /**
