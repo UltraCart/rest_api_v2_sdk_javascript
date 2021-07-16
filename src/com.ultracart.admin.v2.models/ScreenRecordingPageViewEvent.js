@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageViewEvent model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewEvent
-   * @version 3.3.0
+   * @version 3.3.1
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.params = ApiClient.convertToType(data['params'], [ScreenRecordingPageViewEventParameter]);
       if (data.hasOwnProperty('prior_page_view'))
         obj.prior_page_view = ApiClient.convertToType(data['prior_page_view'], 'Boolean');
+      if (data.hasOwnProperty('sub_text'))
+        obj.sub_text = ApiClient.convertToType(data['sub_text'], 'String');
       if (data.hasOwnProperty('timestamp'))
         obj.timestamp = ApiClient.convertToType(data['timestamp'], 'String');
       if (data.hasOwnProperty('ts'))
@@ -83,6 +85,11 @@
    * @member {Boolean} prior_page_view
    */
   exports.prototype.prior_page_view = undefined;
+
+  /**
+   * @member {String} sub_text
+   */
+  exports.prototype.sub_text = undefined;
 
   /**
    * Timestamp of the event

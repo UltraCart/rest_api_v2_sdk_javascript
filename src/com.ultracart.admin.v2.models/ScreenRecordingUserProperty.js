@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingUserProperty model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingUserProperty
-   * @version 3.3.0
+   * @version 3.3.1
    */
 
   /**

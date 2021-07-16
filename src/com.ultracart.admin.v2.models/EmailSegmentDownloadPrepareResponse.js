@@ -34,7 +34,7 @@
   /**
    * The EmailSegmentDownloadPrepareResponse model module.
    * @module com.ultracart.admin.v2.models/EmailSegmentDownloadPrepareResponse
-   * @version 3.3.0
+   * @version 3.3.1
    */
 
   /**

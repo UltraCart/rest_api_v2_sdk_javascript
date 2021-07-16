@@ -34,7 +34,7 @@
   /**
    * The EmailStatSummaryRequest model module.
    * @module com.ultracart.admin.v2.models/EmailStatSummaryRequest
-   * @version 3.3.0
+   * @version 3.3.1
    */
 
   /**
