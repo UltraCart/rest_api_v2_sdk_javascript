@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 
 <a name="ssoAuthorize"></a>
 # **ssoAuthorize**
-> ItemsResponse ssoAuthorize(authorization_request)
+> SingleSignOnAuthorizeResponse ssoAuthorize(authorization_request)
 
 Authorize a single sign on session
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ItemsResponse**](ItemsResponse.md)
+[**SingleSignOnAuthorizeResponse**](SingleSignOnAuthorizeResponse.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ null (empty response body)
 
 <a name="ssoToken"></a>
 # **ssoToken**
-> ItemsResponse ssoToken(token_request)
+> SingleSignOnTokenResponse ssoToken(token_request)
 
 Exchange a single sign on code for a simple key token
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ItemsResponse**](ItemsResponse.md)
+[**SingleSignOnTokenResponse**](SingleSignOnTokenResponse.md)
 
 ### Authorization
 
