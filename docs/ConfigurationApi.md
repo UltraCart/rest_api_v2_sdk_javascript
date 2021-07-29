@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 <a name="getPaymentsConfiguration"></a>
 # **getPaymentsConfiguration**
-> PaymentsConfiguration getPaymentsConfiguration()
+> PaymentsConfigurationResponse getPaymentsConfiguration()
 
 Retrieve payments configuration
 
@@ -155,7 +155,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PaymentsConfiguration**](PaymentsConfiguration.md)
+[**PaymentsConfigurationResponse**](PaymentsConfigurationResponse.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ This endpoint does not need any parameter.
 
 <a name="getPaymentsRotatingGateway"></a>
 # **getPaymentsRotatingGateway**
-> RotatingTransactionGateway getPaymentsRotatingGateway(rtg_oid)
+> RotatingTransactionGatewayResponse getPaymentsRotatingGateway(rtg_oid)
 
 Retrieve a rotating transaction gateway
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RotatingTransactionGateway**](RotatingTransactionGateway.md)
+[**RotatingTransactionGatewayResponse**](RotatingTransactionGatewayResponse.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 <a name="getPaymentsRotatingGatewayByCode"></a>
 # **getPaymentsRotatingGatewayByCode**
-> RotatingTransactionGateway getPaymentsRotatingGatewayByCode(code)
+> RotatingTransactionGatewayResponse getPaymentsRotatingGatewayByCode(code)
 
 Retrieve a rotating transaction gateway by code
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RotatingTransactionGateway**](RotatingTransactionGateway.md)
+[**RotatingTransactionGatewayResponse**](RotatingTransactionGatewayResponse.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ This endpoint does not need any parameter.
 
 <a name="getPaymentsRtgSummaries"></a>
 # **getPaymentsRtgSummaries**
-> RtgSummary getPaymentsRtgSummaries()
+> RtgSummaryResponse getPaymentsRtgSummaries()
 
 Retrieve a summary of rotating transaction gateways
 
@@ -345,7 +345,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RtgSummary**](RtgSummary.md)
+[**RtgSummaryResponse**](RtgSummaryResponse.md)
 
 ### Authorization
 
@@ -403,7 +403,7 @@ This endpoint does not need any parameter.
 
 <a name="insertRotatingTransactionGateway"></a>
 # **insertRotatingTransactionGateway**
-> RotatingTransactionGateway insertRotatingTransactionGateway(rotating_transaction_gateway)
+> RotatingTransactionGatewayResponse insertRotatingTransactionGateway(rotating_transaction_gateway)
 
 Insert a rotating transaction gateway
 
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RotatingTransactionGateway**](RotatingTransactionGateway.md)
+[**RotatingTransactionGatewayResponse**](RotatingTransactionGatewayResponse.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 
 <a name="migrateToRotatingTransactionGateway"></a>
 # **migrateToRotatingTransactionGateway**
-> RotatingTransactionGateway migrateToRotatingTransactionGateway(code)
+> RotatingTransactionGatewayResponse migrateToRotatingTransactionGateway(code)
 
 Migrate a normal transaction gateway to a rotating transaction gateway
 
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RotatingTransactionGateway**](RotatingTransactionGateway.md)
+[**RotatingTransactionGatewayResponse**](RotatingTransactionGatewayResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# UltraCartRestApiV2.RtgSummary
+# UltraCartRestApiV2.RtgSummaryResponse
 
 ## Properties
 Name | Type | Description | Notes

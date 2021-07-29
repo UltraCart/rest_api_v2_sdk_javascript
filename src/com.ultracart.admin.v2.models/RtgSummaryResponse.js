@@ -26,31 +26,31 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.RtgSummary = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.RtgSummaryGateway);
+    root.UltraCartRestApiV2.RtgSummaryResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.RtgSummaryGateway);
   }
 }(this, function(ApiClient, RtgSummaryGateway) {
   'use strict';
 
   /**
-   * The RtgSummary model module.
-   * @module com.ultracart.admin.v2.models/RtgSummary
-   * @version 3.4.1
+   * The RtgSummaryResponse model module.
+   * @module com.ultracart.admin.v2.models/RtgSummaryResponse
+   * @version 3.4.2
    */
 
   /**
-   * Constructs a new <code>RtgSummary</code>.
-   * @alias module:com.ultracart.admin.v2.models/RtgSummary
+   * Constructs a new <code>RtgSummaryResponse</code>.
+   * @alias module:com.ultracart.admin.v2.models/RtgSummaryResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>RtgSummary</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>RtgSummaryResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/RtgSummary} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/RtgSummary} The populated <code>RtgSummary</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/RtgSummaryResponse} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/RtgSummaryResponse} The populated <code>RtgSummaryResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
