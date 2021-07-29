@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/IntegrationLogQueryRequest', 'com.ultracart.admin.v2.models/IntegrationLogQueryResponse', 'com.ultracart.admin.v2.models/IntegrationLogResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/IntegrationLogQueryRequest', 'com.ultracart.admin.v2.models/IntegrationLogQueryResponse', 'com.ultracart.admin.v2.models/IntegrationLogResponse', 'com.ultracart.admin.v2.models/IntegrationLogSummaryQueryRequest', 'com.ultracart.admin.v2.models/IntegrationLogSummaryQueryResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryRequest'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryResponse'), require('../com.ultracart.admin.v2.models/IntegrationLogResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryRequest'), require('../com.ultracart.admin.v2.models/IntegrationLogQueryResponse'), require('../com.ultracart.admin.v2.models/IntegrationLogResponse'), require('../com.ultracart.admin.v2.models/IntegrationLogSummaryQueryRequest'), require('../com.ultracart.admin.v2.models/IntegrationLogSummaryQueryResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.IntegrationLogApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.IntegrationLogQueryRequest, root.UltraCartRestApiV2.IntegrationLogQueryResponse, root.UltraCartRestApiV2.IntegrationLogResponse);
+    root.UltraCartRestApiV2.IntegrationLogApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.IntegrationLogQueryRequest, root.UltraCartRestApiV2.IntegrationLogQueryResponse, root.UltraCartRestApiV2.IntegrationLogResponse, root.UltraCartRestApiV2.IntegrationLogSummaryQueryRequest, root.UltraCartRestApiV2.IntegrationLogSummaryQueryResponse);
   }
-}(this, function(ApiClient, ErrorResponse, IntegrationLogQueryRequest, IntegrationLogQueryResponse, IntegrationLogResponse) {
+}(this, function(ApiClient, ErrorResponse, IntegrationLogQueryRequest, IntegrationLogQueryResponse, IntegrationLogResponse, IntegrationLogSummaryQueryRequest, IntegrationLogSummaryQueryResponse) {
   'use strict';
 
   /**
    * IntegrationLog service.
    * @module com.ultracart.admin.v2/IntegrationLogApi
-   * @version 3.4.0
+   * @version 3.4.1
    */
 
   /**
@@ -160,6 +160,53 @@
 
       return this.apiClient.callApi(
         '/integration_log/query/{pk}/{sk}/{uuid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getIntegrationLogSummariesQuery operation.
+     * @callback module:com.ultracart.admin.v2/IntegrationLogApi~getIntegrationLogSummariesQueryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/IntegrationLogSummaryQueryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve integration log summaries
+     * Retrieves a set of integration log summaries from the account based on a query object. 
+     * @param {module:com.ultracart.admin.v2.models/IntegrationLogSummaryQueryRequest} integration_log_summaries_query Integration log summaries query
+     * @param {module:com.ultracart.admin.v2/IntegrationLogApi~getIntegrationLogSummariesQueryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/IntegrationLogSummaryQueryResponse}
+     */
+    this.getIntegrationLogSummariesQuery = function(integration_log_summaries_query, callback) {
+      var postBody = integration_log_summaries_query;
+
+      // verify the required parameter 'integration_log_summaries_query' is set
+      if (integration_log_summaries_query === undefined || integration_log_summaries_query === null) {
+        throw new Error("Missing the required parameter 'integration_log_summaries_query' when calling getIntegrationLogSummariesQuery");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = IntegrationLogSummaryQueryResponse;
+
+      return this.apiClient.callApi(
+        '/integration_log/summary/query', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

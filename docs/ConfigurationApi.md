@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 <a name="getPaymentsRotatingTransactionGateways"></a>
 # **getPaymentsRotatingTransactionGateways**
-> RotatingTransactionGateway getPaymentsRotatingTransactionGateways()
+> RotatingTransactionGatewaysResponse getPaymentsRotatingTransactionGateways()
 
 Retrieve a list of rotating transaction gateways
 
@@ -300,7 +300,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RotatingTransactionGateway**](RotatingTransactionGateway.md)
+[**RotatingTransactionGatewaysResponse**](RotatingTransactionGatewaysResponse.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ This endpoint does not need any parameter.
 
 <a name="getPaymentsRtgSummaries"></a>
 # **getPaymentsRtgSummaries**
-> RotatingTransactionGateway getPaymentsRtgSummaries()
+> RtgSummary getPaymentsRtgSummaries()
 
 Retrieve a summary of rotating transaction gateways
 
@@ -345,7 +345,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RotatingTransactionGateway**](RotatingTransactionGateway.md)
+[**RtgSummary**](RtgSummary.md)
 
 ### Authorization
 
