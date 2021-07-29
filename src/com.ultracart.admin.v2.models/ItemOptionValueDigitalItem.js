@@ -34,7 +34,7 @@
   /**
    * The ItemOptionValueDigitalItem model module.
    * @module com.ultracart.admin.v2.models/ItemOptionValueDigitalItem
-   * @version 3.3.2
+   * @version 3.4.0
    */
 
   /**

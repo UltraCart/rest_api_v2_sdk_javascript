@@ -34,7 +34,7 @@
   /**
    * The CartTaxes model module.
    * @module com.ultracart.admin.v2.models/CartTaxes
-   * @version 3.3.2
+   * @version 3.4.0
    */
 
   /**
