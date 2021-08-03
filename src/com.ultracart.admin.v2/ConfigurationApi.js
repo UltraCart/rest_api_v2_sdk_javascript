@@ -34,7 +34,7 @@
   /**
    * Configuration service.
    * @module com.ultracart.admin.v2/ConfigurationApi
-   * @version 3.4.4
+   * @version 3.4.5
    */
 
   /**
@@ -645,7 +645,7 @@
      * Callback function to receive the result of the updateRotatingTransactionGateway operation.
      * @callback module:com.ultracart.admin.v2/ConfigurationApi~updateRotatingTransactionGatewayCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/RotatingTransactionGateway} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/RotatingTransactionGatewayResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -655,7 +655,7 @@
      * @param {Number} rtg_oid The rtg_oid to update.
      * @param {module:com.ultracart.admin.v2.models/RotatingTransactionGateway} rotating_transaction_gateway Rotating transaction gateway
      * @param {module:com.ultracart.admin.v2/ConfigurationApi~updateRotatingTransactionGatewayCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/RotatingTransactionGateway}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/RotatingTransactionGatewayResponse}
      */
     this.updateRotatingTransactionGateway = function(rtg_oid, rotating_transaction_gateway, callback) {
       var postBody = rotating_transaction_gateway;
@@ -686,7 +686,7 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
-      var returnType = RotatingTransactionGateway;
+      var returnType = RotatingTransactionGatewayResponse;
 
       return this.apiClient.callApi(
         '/configuration/checkout/payments/rtg/{rtg_oid}', 'PUT',

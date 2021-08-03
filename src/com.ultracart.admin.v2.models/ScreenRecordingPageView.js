@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageView
-   * @version 3.4.4
+   * @version 3.4.5
    */
 
   /**
