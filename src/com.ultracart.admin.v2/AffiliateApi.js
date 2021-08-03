@@ -34,7 +34,7 @@
   /**
    * Affiliate service.
    * @module com.ultracart.admin.v2/AffiliateApi
-   * @version 3.4.5
+   * @version 3.4.6
    */
 
   /**

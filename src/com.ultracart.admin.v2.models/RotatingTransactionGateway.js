@@ -34,7 +34,7 @@
   /**
    * The RotatingTransactionGateway model module.
    * @module com.ultracart.admin.v2.models/RotatingTransactionGateway
-   * @version 3.4.5
+   * @version 3.4.6
    */
 
   /**
@@ -139,6 +139,8 @@
         obj.trial_daily_amount = ApiClient.convertToType(data['trial_daily_amount'], 'Number');
       if (data.hasOwnProperty('trial_daily_limit'))
         obj.trial_daily_limit = ApiClient.convertToType(data['trial_daily_limit'], 'Number');
+      if (data.hasOwnProperty('trial_monthly_amount'))
+        obj.trial_monthly_amount = ApiClient.convertToType(data['trial_monthly_amount'], 'Number');
       if (data.hasOwnProperty('trial_monthly_limit'))
         obj.trial_monthly_limit = ApiClient.convertToType(data['trial_monthly_limit'], 'Number');
     }
@@ -386,19 +388,25 @@
   exports.prototype.traffic_percentage = undefined;
 
   /**
-   * If specified, limits the total daily dollar amount of trial orders
+   * If specified, limits the total daily count of trial orders
    * @member {Number} trial_daily_amount
    */
   exports.prototype.trial_daily_amount = undefined;
 
   /**
-   * If specified, limits the total month count of trial orders
+   * If specified, limits the total daily dollar amount of trial orders
    * @member {Number} trial_daily_limit
    */
   exports.prototype.trial_daily_limit = undefined;
 
   /**
    * If specified, limits the total month dollar amount of trial orders
+   * @member {Number} trial_monthly_amount
+   */
+  exports.prototype.trial_monthly_amount = undefined;
+
+  /**
+   * If specified, limits the total month count of trial orders
    * @member {Number} trial_monthly_limit
    */
   exports.prototype.trial_monthly_limit = undefined;

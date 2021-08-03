@@ -43,9 +43,10 @@ Name | Type | Description | Notes
 **status** | **String** | A field used to take a gateway offline without removing/deleting the configuration. Inactive marks the gateway as completely unusable.  Standby takes the gateway offline and will not be used unless all other active gateways fail. | [optional] 
 **theme_restrictions** | [**[RtgThemeRestriction]**](RtgThemeRestriction.md) | Optional restrictions by theme/storefront | [optional] 
 **traffic_percentage** | **Number** | Required field between 0 and 1 that dictates the percentage of traffic that should flow through this gateway | [optional] 
-**trial_daily_amount** | **Number** | If specified, limits the total daily dollar amount of trial orders | [optional] 
-**trial_daily_limit** | **Number** | If specified, limits the total month count of trial orders | [optional] 
-**trial_monthly_limit** | **Number** | If specified, limits the total month dollar amount of trial orders | [optional] 
+**trial_daily_amount** | **Number** | If specified, limits the total daily count of trial orders | [optional] 
+**trial_daily_limit** | **Number** | If specified, limits the total daily dollar amount of trial orders | [optional] 
+**trial_monthly_amount** | **Number** | If specified, limits the total month dollar amount of trial orders | [optional] 
+**trial_monthly_limit** | **Number** | If specified, limits the total month count of trial orders | [optional] 
 
 
 <a name="OrderTotalComparisonEnum"></a>

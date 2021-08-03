@@ -34,7 +34,7 @@
   /**
    * The CustomerEmail model module.
    * @module com.ultracart.admin.v2.models/CustomerEmail
-   * @version 3.4.5
+   * @version 3.4.6
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The AffiliateClickQuery model module.
    * @module com.ultracart.admin.v2.models/AffiliateClickQuery
-   * @version 3.4.5
+   * @version 3.4.6
    */
 
   /**
