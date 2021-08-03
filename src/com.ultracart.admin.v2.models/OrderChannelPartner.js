@@ -34,7 +34,7 @@
   /**
    * The OrderChannelPartner model module.
    * @module com.ultracart.admin.v2.models/OrderChannelPartner
-   * @version 3.4.2
+   * @version 3.4.3
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.channel_partner_oid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
       if (data.hasOwnProperty('channel_partner_order_id'))
         obj.channel_partner_order_id = ApiClient.convertToType(data['channel_partner_order_id'], 'String');
+      if (data.hasOwnProperty('ignore_invalid_shipping_method'))
+        obj.ignore_invalid_shipping_method = ApiClient.convertToType(data['ignore_invalid_shipping_method'], 'Boolean');
       if (data.hasOwnProperty('no_realtime_payment_processing'))
         obj.no_realtime_payment_processing = ApiClient.convertToType(data['no_realtime_payment_processing'], 'Boolean');
       if (data.hasOwnProperty('skip_payment_processing'))
@@ -108,6 +110,12 @@
    * @member {String} channel_partner_order_id
    */
   exports.prototype.channel_partner_order_id = undefined;
+
+  /**
+   * Set to true to ignore invalid shipping method being specified.  Only applicable on inserting orders.
+   * @member {Boolean} ignore_invalid_shipping_method
+   */
+  exports.prototype.ignore_invalid_shipping_method = undefined;
 
   /**
    * Indicates this order should be placed in Account Receivable for later payment processing

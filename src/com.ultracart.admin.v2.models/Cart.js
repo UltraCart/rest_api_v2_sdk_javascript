@@ -34,7 +34,7 @@
   /**
    * The Cart model module.
    * @module com.ultracart.admin.v2.models/Cart
-   * @version 3.4.2
+   * @version 3.4.3
    */
 
   /**
