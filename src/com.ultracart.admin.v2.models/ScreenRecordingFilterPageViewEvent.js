@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterPageViewEvent model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewEvent
-   * @version 3.4.3
+   * @version 3.4.4
    */
 
   /**

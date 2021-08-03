@@ -34,7 +34,7 @@
   /**
    * The OrderTrackingNumberDetail model module.
    * @module com.ultracart.admin.v2.models/OrderTrackingNumberDetail
-   * @version 3.4.3
+   * @version 3.4.4
    */
 
   /**
@@ -57,10 +57,14 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('city'))
         obj.city = ApiClient.convertToType(data['city'], 'String');
+      if (data.hasOwnProperty('event_dts'))
+        obj.event_dts = ApiClient.convertToType(data['event_dts'], 'String');
       if (data.hasOwnProperty('event_local_date'))
         obj.event_local_date = ApiClient.convertToType(data['event_local_date'], 'String');
       if (data.hasOwnProperty('event_local_time'))
         obj.event_local_time = ApiClient.convertToType(data['event_local_time'], 'String');
+      if (data.hasOwnProperty('event_timezone_id'))
+        obj.event_timezone_id = ApiClient.convertToType(data['event_timezone_id'], 'String');
       if (data.hasOwnProperty('state'))
         obj.state = ApiClient.convertToType(data['state'], 'String');
       if (data.hasOwnProperty('subtag'))
@@ -85,6 +89,12 @@
   exports.prototype.city = undefined;
 
   /**
+   * ISO 8601 timestamp that the event occurred
+   * @member {String} event_dts
+   */
+  exports.prototype.event_dts = undefined;
+
+  /**
    * @member {String} event_local_date
    */
   exports.prototype.event_local_date = undefined;
@@ -93,6 +103,12 @@
    * @member {String} event_local_time
    */
   exports.prototype.event_local_time = undefined;
+
+  /**
+   * Timezone the event occurred in.  Use this in conjunction with event_dts to format a local date/time.
+   * @member {String} event_timezone_id
+   */
+  exports.prototype.event_timezone_id = undefined;
 
   /**
    * @member {String} state
