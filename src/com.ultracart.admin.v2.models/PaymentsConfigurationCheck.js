@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCheck model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCheck
-   * @version 3.4.7
+   * @version 3.4.8
    */
 
   /**
@@ -57,20 +57,12 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('acceptCheckOrders'))
         obj.acceptCheckOrders = ApiClient.convertToType(data['acceptCheckOrders'], 'Boolean');
-      if (data.hasOwnProperty('acceptECheck'))
-        obj.acceptECheck = ApiClient.convertToType(data['acceptECheck'], 'Boolean');
-      if (data.hasOwnProperty('acceptMoneyOrders'))
-        obj.acceptMoneyOrders = ApiClient.convertToType(data['acceptMoneyOrders'], 'Boolean');
       if (data.hasOwnProperty('checkAccountingCode'))
         obj.checkAccountingCode = ApiClient.convertToType(data['checkAccountingCode'], 'String');
       if (data.hasOwnProperty('checkDepositToAccount'))
         obj.checkDepositToAccount = ApiClient.convertToType(data['checkDepositToAccount'], 'String');
       if (data.hasOwnProperty('checksPayableTo'))
         obj.checksPayableTo = ApiClient.convertToType(data['checksPayableTo'], 'String');
-      if (data.hasOwnProperty('eCheckAccountingCode'))
-        obj.eCheckAccountingCode = ApiClient.convertToType(data['eCheckAccountingCode'], 'String');
-      if (data.hasOwnProperty('eCheckDepositToAccount'))
-        obj.eCheckDepositToAccount = ApiClient.convertToType(data['eCheckDepositToAccount'], 'String');
       if (data.hasOwnProperty('mailToAddress1'))
         obj.mailToAddress1 = ApiClient.convertToType(data['mailToAddress1'], 'String');
       if (data.hasOwnProperty('mailToAddress2'))
@@ -101,16 +93,6 @@
   exports.prototype.acceptCheckOrders = undefined;
 
   /**
-   * @member {Boolean} acceptECheck
-   */
-  exports.prototype.acceptECheck = undefined;
-
-  /**
-   * @member {Boolean} acceptMoneyOrders
-   */
-  exports.prototype.acceptMoneyOrders = undefined;
-
-  /**
    * @member {String} checkAccountingCode
    */
   exports.prototype.checkAccountingCode = undefined;
@@ -124,16 +106,6 @@
    * @member {String} checksPayableTo
    */
   exports.prototype.checksPayableTo = undefined;
-
-  /**
-   * @member {String} eCheckAccountingCode
-   */
-  exports.prototype.eCheckAccountingCode = undefined;
-
-  /**
-   * @member {String} eCheckDepositToAccount
-   */
-  exports.prototype.eCheckDepositToAccount = undefined;
 
   /**
    * @member {String} mailToAddress1

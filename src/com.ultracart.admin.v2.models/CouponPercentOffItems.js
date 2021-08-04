@@ -34,7 +34,7 @@
   /**
    * The CouponPercentOffItems model module.
    * @module com.ultracart.admin.v2.models/CouponPercentOffItems
-   * @version 3.4.7
+   * @version 3.4.8
    */
 
   /**

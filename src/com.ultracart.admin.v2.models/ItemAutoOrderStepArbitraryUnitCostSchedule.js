@@ -34,7 +34,7 @@
   /**
    * The ItemAutoOrderStepArbitraryUnitCostSchedule model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule
-   * @version 3.4.7
+   * @version 3.4.8
    */
 
   /**
