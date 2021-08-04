@@ -34,7 +34,7 @@
   /**
    * The EmailList model module.
    * @module com.ultracart.admin.v2.models/EmailList
-   * @version 3.4.6
+   * @version 3.4.7
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('email_list_uuid'))
         obj.email_list_uuid = ApiClient.convertToType(data['email_list_uuid'], 'String');
+      if (data.hasOwnProperty('esp_list_segment_folder_uuid'))
+        obj.esp_list_segment_folder_uuid = ApiClient.convertToType(data['esp_list_segment_folder_uuid'], 'String');
       if (data.hasOwnProperty('member_count'))
         obj.member_count = ApiClient.convertToType(data['member_count'], 'Number');
       if (data.hasOwnProperty('merchant_id'))
@@ -104,6 +106,12 @@
    * @member {String} email_list_uuid
    */
   exports.prototype.email_list_uuid = undefined;
+
+  /**
+   * List/Segment folder UUID
+   * @member {String} esp_list_segment_folder_uuid
+   */
+  exports.prototype.esp_list_segment_folder_uuid = undefined;
 
   /**
    * Count of members in this list

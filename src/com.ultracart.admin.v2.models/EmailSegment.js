@@ -34,7 +34,7 @@
   /**
    * The EmailSegment model module.
    * @module com.ultracart.admin.v2.models/EmailSegment
-   * @version 3.4.6
+   * @version 3.4.7
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('email_segment_uuid'))
         obj.email_segment_uuid = ApiClient.convertToType(data['email_segment_uuid'], 'String');
+      if (data.hasOwnProperty('esp_list_segment_folder_uuid'))
+        obj.esp_list_segment_folder_uuid = ApiClient.convertToType(data['esp_list_segment_folder_uuid'], 'String');
       if (data.hasOwnProperty('facebook_custom_audience'))
         obj.facebook_custom_audience = ApiClient.convertToType(data['facebook_custom_audience'], 'Boolean');
       if (data.hasOwnProperty('filter_profile_equation_json'))
@@ -116,6 +118,12 @@
    * @member {String} email_segment_uuid
    */
   exports.prototype.email_segment_uuid = undefined;
+
+  /**
+   * List/Segment folder UUID
+   * @member {String} esp_list_segment_folder_uuid
+   */
+  exports.prototype.esp_list_segment_folder_uuid = undefined;
 
   /**
    * True if you want to sync to a facebook custom audience

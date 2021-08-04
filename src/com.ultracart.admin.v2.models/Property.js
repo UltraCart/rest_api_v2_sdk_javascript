@@ -34,7 +34,7 @@
   /**
    * The Property model module.
    * @module com.ultracart.admin.v2.models/Property
-   * @version 3.4.6
+   * @version 3.4.7
    */
 
   /**

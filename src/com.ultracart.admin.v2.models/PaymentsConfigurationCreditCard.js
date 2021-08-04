@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCreditCard model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard
-   * @version 3.4.6
+   * @version 3.4.7
    */
 
   /**
@@ -69,8 +69,6 @@
         obj.failedAttempts = ApiClient.convertToType(data['failedAttempts'], 'String');
       if (data.hasOwnProperty('hideConnectSingleGateway'))
         obj.hideConnectSingleGateway = ApiClient.convertToType(data['hideConnectSingleGateway'], 'Boolean');
-      if (data.hasOwnProperty('immediateFinalizeDomains'))
-        obj.immediateFinalizeDomains = ApiClient.convertToType(data['immediateFinalizeDomains'], 'String');
       if (data.hasOwnProperty('sendCustomerBillingUpdateOnDecline'))
         obj.sendCustomerBillingUpdateOnDecline = ApiClient.convertToType(data['sendCustomerBillingUpdateOnDecline'], 'Boolean');
     }
@@ -111,11 +109,6 @@
    * @member {Boolean} hideConnectSingleGateway
    */
   exports.prototype.hideConnectSingleGateway = undefined;
-
-  /**
-   * @member {String} immediateFinalizeDomains
-   */
-  exports.prototype.immediateFinalizeDomains = undefined;
 
   /**
    * @member {Boolean} sendCustomerBillingUpdateOnDecline
