@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationCreditCardType', 'com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions', 'com.ultracart.admin.v2.models/PaymentsConfigurationTestMethod'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationCreditCardType'), require('./PaymentsConfigurationRestrictions'), require('./PaymentsConfigurationTestMethod'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.PaymentsConfigurationCreditCard = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.PaymentsConfigurationCreditCard = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationCreditCardType, root.UltraCartRestApiV2.PaymentsConfigurationRestrictions, root.UltraCartRestApiV2.PaymentsConfigurationTestMethod);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PaymentsConfigurationCreditCardType, PaymentsConfigurationRestrictions, PaymentsConfigurationTestMethod) {
   'use strict';
 
   /**
    * The PaymentsConfigurationCreditCard model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard
-   * @version 3.4.9
+   * @version 3.4.10
    */
 
   /**
@@ -70,13 +70,13 @@
       if (data.hasOwnProperty('hide_connect_single_gateway'))
         obj.hide_connect_single_gateway = ApiClient.convertToType(data['hide_connect_single_gateway'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
-        obj.restrictions = ApiClient.convertToType(data['restrictions'], Object);
+        obj.restrictions = ApiClient.convertToType(data['restrictions'], [PaymentsConfigurationRestrictions]);
       if (data.hasOwnProperty('send_customer_billing_update_on_decline'))
         obj.send_customer_billing_update_on_decline = ApiClient.convertToType(data['send_customer_billing_update_on_decline'], 'Boolean');
       if (data.hasOwnProperty('supported_cards'))
-        obj.supported_cards = ApiClient.convertToType(data['supported_cards'], Object);
+        obj.supported_cards = ApiClient.convertToType(data['supported_cards'], [PaymentsConfigurationCreditCardType]);
       if (data.hasOwnProperty('test_methods'))
-        obj.test_methods = ApiClient.convertToType(data['test_methods'], Object);
+        obj.test_methods = ApiClient.convertToType(data['test_methods'], [PaymentsConfigurationTestMethod]);
     }
     return obj;
   }
@@ -125,7 +125,7 @@
 
   /**
    * Restrictions for this payment method
-   * @member {Object} restrictions
+   * @member {Array.<module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions>} restrictions
    */
   exports.prototype.restrictions = undefined;
 
@@ -137,13 +137,13 @@
 
   /**
    * A list of credit cards the merchant wishes to accept.
-   * @member {Object} supported_cards
+   * @member {Array.<module:com.ultracart.admin.v2.models/PaymentsConfigurationCreditCardType>} supported_cards
    */
   exports.prototype.supported_cards = undefined;
 
   /**
    * An array of test methods for placing test orders.  The cards defined here may be real or fake, but any order placed with them will be marked as Test orders
-   * @member {Object} test_methods
+   * @member {Array.<module:com.ultracart.admin.v2.models/PaymentsConfigurationTestMethod>} test_methods
    */
   exports.prototype.test_methods = undefined;
 

@@ -34,7 +34,7 @@
   /**
    * The CartMarketing model module.
    * @module com.ultracart.admin.v2.models/CartMarketing
-   * @version 3.4.9
+   * @version 3.4.10
    */
 
   /**
