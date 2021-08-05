@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCreditCard model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,65 +55,97 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptCreditCards'))
-        obj.acceptCreditCards = ApiClient.convertToType(data['acceptCreditCards'], 'Boolean');
-      if (data.hasOwnProperty('billedBy'))
-        obj.billedBy = ApiClient.convertToType(data['billedBy'], 'String');
-      if (data.hasOwnProperty('chargeDuringCheckout'))
-        obj.chargeDuringCheckout = ApiClient.convertToType(data['chargeDuringCheckout'], 'Boolean');
-      if (data.hasOwnProperty('collectCvv2'))
-        obj.collectCvv2 = ApiClient.convertToType(data['collectCvv2'], 'Boolean');
-      if (data.hasOwnProperty('configuredGatewaysDetails'))
-        obj.configuredGatewaysDetails = ApiClient.convertToType(data['configuredGatewaysDetails'], 'String');
-      if (data.hasOwnProperty('failedAttempts'))
-        obj.failedAttempts = ApiClient.convertToType(data['failedAttempts'], 'String');
-      if (data.hasOwnProperty('hideConnectSingleGateway'))
-        obj.hideConnectSingleGateway = ApiClient.convertToType(data['hideConnectSingleGateway'], 'Boolean');
-      if (data.hasOwnProperty('sendCustomerBillingUpdateOnDecline'))
-        obj.sendCustomerBillingUpdateOnDecline = ApiClient.convertToType(data['sendCustomerBillingUpdateOnDecline'], 'Boolean');
+      if (data.hasOwnProperty('accept_credit_card'))
+        obj.accept_credit_card = ApiClient.convertToType(data['accept_credit_card'], 'Boolean');
+      if (data.hasOwnProperty('billed_by'))
+        obj.billed_by = ApiClient.convertToType(data['billed_by'], 'String');
+      if (data.hasOwnProperty('charge_during_checkout'))
+        obj.charge_during_checkout = ApiClient.convertToType(data['charge_during_checkout'], 'Boolean');
+      if (data.hasOwnProperty('collect_cvv2'))
+        obj.collect_cvv2 = ApiClient.convertToType(data['collect_cvv2'], 'Boolean');
+      if (data.hasOwnProperty('configured_gateway_details'))
+        obj.configured_gateway_details = ApiClient.convertToType(data['configured_gateway_details'], 'String');
+      if (data.hasOwnProperty('failed_attempts'))
+        obj.failed_attempts = ApiClient.convertToType(data['failed_attempts'], 'String');
+      if (data.hasOwnProperty('hide_connect_single_gateway'))
+        obj.hide_connect_single_gateway = ApiClient.convertToType(data['hide_connect_single_gateway'], 'Boolean');
+      if (data.hasOwnProperty('restrictions'))
+        obj.restrictions = ApiClient.convertToType(data['restrictions'], Object);
+      if (data.hasOwnProperty('send_customer_billing_update_on_decline'))
+        obj.send_customer_billing_update_on_decline = ApiClient.convertToType(data['send_customer_billing_update_on_decline'], 'Boolean');
+      if (data.hasOwnProperty('supported_cards'))
+        obj.supported_cards = ApiClient.convertToType(data['supported_cards'], Object);
+      if (data.hasOwnProperty('test_methods'))
+        obj.test_methods = ApiClient.convertToType(data['test_methods'], Object);
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptCreditCards
+   * Master flag indicating whether this merchant accepts credit card payments
+   * @member {Boolean} accept_credit_card
    */
-  exports.prototype.acceptCreditCards = undefined;
+  exports.prototype.accept_credit_card = undefined;
 
   /**
-   * @member {String} billedBy
+   * Description that appears on customer statements
+   * @member {String} billed_by
    */
-  exports.prototype.billedBy = undefined;
+  exports.prototype.billed_by = undefined;
 
   /**
-   * @member {Boolean} chargeDuringCheckout
+   * If false, order will be accepted and placed into Accounts Receivable without charging card first
+   * @member {Boolean} charge_during_checkout
    */
-  exports.prototype.chargeDuringCheckout = undefined;
+  exports.prototype.charge_during_checkout = undefined;
 
   /**
-   * @member {Boolean} collectCvv2
+   * UltraCart will require customer to enter cvv if this is true
+   * @member {Boolean} collect_cvv2
    */
-  exports.prototype.collectCvv2 = undefined;
+  exports.prototype.collect_cvv2 = undefined;
 
   /**
-   * @member {String} configuredGatewaysDetails
+   * Human readable description of the credit card gateway currently configured
+   * @member {String} configured_gateway_details
    */
-  exports.prototype.configuredGatewaysDetails = undefined;
+  exports.prototype.configured_gateway_details = undefined;
 
   /**
-   * @member {String} failedAttempts
+   * The number of failed attempts before the order is placed into Accounts Receivable for manual intervention
+   * @member {String} failed_attempts
    */
-  exports.prototype.failedAttempts = undefined;
+  exports.prototype.failed_attempts = undefined;
 
   /**
-   * @member {Boolean} hideConnectSingleGateway
+   * This internal flag aids the UI in determining which buttons to show.
+   * @member {Boolean} hide_connect_single_gateway
    */
-  exports.prototype.hideConnectSingleGateway = undefined;
+  exports.prototype.hide_connect_single_gateway = undefined;
 
   /**
-   * @member {Boolean} sendCustomerBillingUpdateOnDecline
+   * Restrictions for this payment method
+   * @member {Object} restrictions
    */
-  exports.prototype.sendCustomerBillingUpdateOnDecline = undefined;
+  exports.prototype.restrictions = undefined;
+
+  /**
+   * UltraCart will send customers emails to update their credit card if the card is declined
+   * @member {Boolean} send_customer_billing_update_on_decline
+   */
+  exports.prototype.send_customer_billing_update_on_decline = undefined;
+
+  /**
+   * A list of credit cards the merchant wishes to accept.
+   * @member {Object} supported_cards
+   */
+  exports.prototype.supported_cards = undefined;
+
+  /**
+   * An array of test methods for placing test orders.  The cards defined here may be real or fake, but any order placed with them will be marked as Test orders
+   * @member {Object} test_methods
+   */
+  exports.prototype.test_methods = undefined;
 
   return exports;
 

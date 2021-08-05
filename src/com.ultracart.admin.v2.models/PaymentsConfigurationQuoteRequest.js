@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationQuoteRequest model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationQuoteRequest
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,10 +55,10 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptQuoteRequests'))
-        obj.acceptQuoteRequests = ApiClient.convertToType(data['acceptQuoteRequests'], 'Boolean');
-      if (data.hasOwnProperty('quoteRequestApprovedCustomersOnly'))
-        obj.quoteRequestApprovedCustomersOnly = ApiClient.convertToType(data['quoteRequestApprovedCustomersOnly'], 'Boolean');
+      if (data.hasOwnProperty('accept_quote_requests'))
+        obj.accept_quote_requests = ApiClient.convertToType(data['accept_quote_requests'], 'Boolean');
+      if (data.hasOwnProperty('approved_customers_only'))
+        obj.approved_customers_only = ApiClient.convertToType(data['approved_customers_only'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
     }
@@ -66,14 +66,16 @@
   }
 
   /**
-   * @member {Boolean} acceptQuoteRequests
+   * Master flag indicating this merchant accepts quote requests
+   * @member {Boolean} accept_quote_requests
    */
-  exports.prototype.acceptQuoteRequests = undefined;
+  exports.prototype.accept_quote_requests = undefined;
 
   /**
-   * @member {Boolean} quoteRequestApprovedCustomersOnly
+   * If true, only approved customers may use quote requests
+   * @member {Boolean} approved_customers_only
    */
-  exports.prototype.quoteRequestApprovedCustomersOnly = undefined;
+  exports.prototype.approved_customers_only = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions

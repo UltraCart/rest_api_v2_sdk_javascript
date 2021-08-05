@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationAmazon model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationAmazon
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,65 +55,72 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptAmazon'))
-        obj.acceptAmazon = ApiClient.convertToType(data['acceptAmazon'], 'Boolean');
-      if (data.hasOwnProperty('amazonAccessKeyId'))
-        obj.amazonAccessKeyId = ApiClient.convertToType(data['amazonAccessKeyId'], 'String');
-      if (data.hasOwnProperty('amazonAccountingCode'))
-        obj.amazonAccountingCode = ApiClient.convertToType(data['amazonAccountingCode'], 'String');
-      if (data.hasOwnProperty('amazonDepositToAccount'))
-        obj.amazonDepositToAccount = ApiClient.convertToType(data['amazonDepositToAccount'], 'String');
-      if (data.hasOwnProperty('amazonMerchantId'))
-        obj.amazonMerchantId = ApiClient.convertToType(data['amazonMerchantId'], 'String');
-      if (data.hasOwnProperty('amazonSandbox'))
-        obj.amazonSandbox = ApiClient.convertToType(data['amazonSandbox'], 'Boolean');
-      if (data.hasOwnProperty('amazonSecretAccessKey'))
-        obj.amazonSecretAccessKey = ApiClient.convertToType(data['amazonSecretAccessKey'], 'String');
+      if (data.hasOwnProperty('accept_amazon'))
+        obj.accept_amazon = ApiClient.convertToType(data['accept_amazon'], 'Boolean');
+      if (data.hasOwnProperty('access_key_id'))
+        obj.access_key_id = ApiClient.convertToType(data['access_key_id'], 'String');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('amazon_merchant_id'))
+        obj.amazon_merchant_id = ApiClient.convertToType(data['amazon_merchant_id'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
+      if (data.hasOwnProperty('sandbox'))
+        obj.sandbox = ApiClient.convertToType(data['sandbox'], 'Boolean');
+      if (data.hasOwnProperty('secret_access_key'))
+        obj.secret_access_key = ApiClient.convertToType(data['secret_access_key'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptAmazon
+   * Master flag to determine if this merchant accepts Pay by Amazon
+   * @member {Boolean} accept_amazon
    */
-  exports.prototype.acceptAmazon = undefined;
+  exports.prototype.accept_amazon = undefined;
 
   /**
-   * @member {String} amazonAccessKeyId
+   * Amazon access key ID
+   * @member {String} access_key_id
    */
-  exports.prototype.amazonAccessKeyId = undefined;
+  exports.prototype.access_key_id = undefined;
 
   /**
-   * @member {String} amazonAccountingCode
+   * Optional accounting code for use with Quickbooks integrations
+   * @member {String} accounting_code
    */
-  exports.prototype.amazonAccountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
-   * @member {String} amazonDepositToAccount
+   * Amazon merchant ID
+   * @member {String} amazon_merchant_id
    */
-  exports.prototype.amazonDepositToAccount = undefined;
+  exports.prototype.amazon_merchant_id = undefined;
 
   /**
-   * @member {String} amazonMerchantId
+   * Optional deposit to account field for use with Quickbooks integrations
+   * @member {String} deposit_to_account
    */
-  exports.prototype.amazonMerchantId = undefined;
-
-  /**
-   * @member {Boolean} amazonSandbox
-   */
-  exports.prototype.amazonSandbox = undefined;
-
-  /**
-   * @member {String} amazonSecretAccessKey
-   */
-  exports.prototype.amazonSecretAccessKey = undefined;
+  exports.prototype.deposit_to_account = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
    */
   exports.prototype.restrictions = undefined;
+
+  /**
+   * True if transactions should run against the Amazon sandbox.  Useful for testing not configurations
+   * @member {Boolean} sandbox
+   */
+  exports.prototype.sandbox = undefined;
+
+  /**
+   * Amazon secret access key
+   * @member {String} secret_access_key
+   */
+  exports.prototype.secret_access_key = undefined;
 
   return exports;
 

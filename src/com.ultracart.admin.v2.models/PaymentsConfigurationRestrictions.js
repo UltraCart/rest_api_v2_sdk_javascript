@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationRestrictions model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,93 +55,105 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('maximumSubtotal'))
-        obj.maximumSubtotal = ApiClient.convertToType(data['maximumSubtotal'], 'String');
-      if (data.hasOwnProperty('minimumSubtotal'))
-        obj.minimumSubtotal = ApiClient.convertToType(data['minimumSubtotal'], 'String');
-      if (data.hasOwnProperty('paymentMethod'))
-        obj.paymentMethod = ApiClient.convertToType(data['paymentMethod'], 'String');
-      if (data.hasOwnProperty('restrictionAlaskaHawaii'))
-        obj.restrictionAlaskaHawaii = ApiClient.convertToType(data['restrictionAlaskaHawaii'], 'String');
-      if (data.hasOwnProperty('restrictionApoFpo'))
-        obj.restrictionApoFpo = ApiClient.convertToType(data['restrictionApoFpo'], 'String');
-      if (data.hasOwnProperty('restrictionCanada'))
-        obj.restrictionCanada = ApiClient.convertToType(data['restrictionCanada'], 'String');
-      if (data.hasOwnProperty('restrictionContinentalUS'))
-        obj.restrictionContinentalUS = ApiClient.convertToType(data['restrictionContinentalUS'], 'String');
-      if (data.hasOwnProperty('restrictionDomesticOnly'))
-        obj.restrictionDomesticOnly = ApiClient.convertToType(data['restrictionDomesticOnly'], 'String');
-      if (data.hasOwnProperty('restrictionInternationalOnly'))
-        obj.restrictionInternationalOnly = ApiClient.convertToType(data['restrictionInternationalOnly'], 'String');
-      if (data.hasOwnProperty('restrictionPoBox'))
-        obj.restrictionPoBox = ApiClient.convertToType(data['restrictionPoBox'], 'String');
-      if (data.hasOwnProperty('restrictionPuertoRico'))
-        obj.restrictionPuertoRico = ApiClient.convertToType(data['restrictionPuertoRico'], 'String');
-      if (data.hasOwnProperty('restrictionUSTerritories'))
-        obj.restrictionUSTerritories = ApiClient.convertToType(data['restrictionUSTerritories'], 'String');
+      if (data.hasOwnProperty('maximum_subtotal'))
+        obj.maximum_subtotal = ApiClient.convertToType(data['maximum_subtotal'], 'String');
+      if (data.hasOwnProperty('minimum_subtotal'))
+        obj.minimum_subtotal = ApiClient.convertToType(data['minimum_subtotal'], 'String');
+      if (data.hasOwnProperty('payment_method'))
+        obj.payment_method = ApiClient.convertToType(data['payment_method'], 'String');
+      if (data.hasOwnProperty('restriction_alaska_hawaii'))
+        obj.restriction_alaska_hawaii = ApiClient.convertToType(data['restriction_alaska_hawaii'], 'String');
+      if (data.hasOwnProperty('restriction_apo_fpo'))
+        obj.restriction_apo_fpo = ApiClient.convertToType(data['restriction_apo_fpo'], 'String');
+      if (data.hasOwnProperty('restriction_canada'))
+        obj.restriction_canada = ApiClient.convertToType(data['restriction_canada'], 'String');
+      if (data.hasOwnProperty('restriction_continental_us'))
+        obj.restriction_continental_us = ApiClient.convertToType(data['restriction_continental_us'], 'String');
+      if (data.hasOwnProperty('restriction_domestic_only'))
+        obj.restriction_domestic_only = ApiClient.convertToType(data['restriction_domestic_only'], 'String');
+      if (data.hasOwnProperty('restriction_international_only'))
+        obj.restriction_international_only = ApiClient.convertToType(data['restriction_international_only'], 'String');
+      if (data.hasOwnProperty('restriction_po_box'))
+        obj.restriction_po_box = ApiClient.convertToType(data['restriction_po_box'], 'String');
+      if (data.hasOwnProperty('restriction_puerto_rico'))
+        obj.restriction_puerto_rico = ApiClient.convertToType(data['restriction_puerto_rico'], 'String');
+      if (data.hasOwnProperty('restriction_us_territories'))
+        obj.restriction_us_territories = ApiClient.convertToType(data['restriction_us_territories'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} maximumSubtotal
+   * Maximum subtotal
+   * @member {String} maximum_subtotal
    */
-  exports.prototype.maximumSubtotal = undefined;
+  exports.prototype.maximum_subtotal = undefined;
 
   /**
-   * @member {String} minimumSubtotal
+   * Minimum subtotal
+   * @member {String} minimum_subtotal
    */
-  exports.prototype.minimumSubtotal = undefined;
+  exports.prototype.minimum_subtotal = undefined;
 
   /**
-   * @member {String} paymentMethod
+   * Payment method
+   * @member {String} payment_method
    */
-  exports.prototype.paymentMethod = undefined;
+  exports.prototype.payment_method = undefined;
 
   /**
-   * @member {String} restrictionAlaskaHawaii
+   * Alaska and Hawaii restriction
+   * @member {String} restriction_alaska_hawaii
    */
-  exports.prototype.restrictionAlaskaHawaii = undefined;
+  exports.prototype.restriction_alaska_hawaii = undefined;
 
   /**
-   * @member {String} restrictionApoFpo
+   * APO/FPO restriction
+   * @member {String} restriction_apo_fpo
    */
-  exports.prototype.restrictionApoFpo = undefined;
+  exports.prototype.restriction_apo_fpo = undefined;
 
   /**
-   * @member {String} restrictionCanada
+   * Canada restriction
+   * @member {String} restriction_canada
    */
-  exports.prototype.restrictionCanada = undefined;
+  exports.prototype.restriction_canada = undefined;
 
   /**
-   * @member {String} restrictionContinentalUS
+   * Continental US restriction
+   * @member {String} restriction_continental_us
    */
-  exports.prototype.restrictionContinentalUS = undefined;
+  exports.prototype.restriction_continental_us = undefined;
 
   /**
-   * @member {String} restrictionDomesticOnly
+   * Domestic only restriction
+   * @member {String} restriction_domestic_only
    */
-  exports.prototype.restrictionDomesticOnly = undefined;
+  exports.prototype.restriction_domestic_only = undefined;
 
   /**
-   * @member {String} restrictionInternationalOnly
+   * International only restriction
+   * @member {String} restriction_international_only
    */
-  exports.prototype.restrictionInternationalOnly = undefined;
+  exports.prototype.restriction_international_only = undefined;
 
   /**
-   * @member {String} restrictionPoBox
+   * PO Box restriction
+   * @member {String} restriction_po_box
    */
-  exports.prototype.restrictionPoBox = undefined;
+  exports.prototype.restriction_po_box = undefined;
 
   /**
-   * @member {String} restrictionPuertoRico
+   * Puerto Rico restriction
+   * @member {String} restriction_puerto_rico
    */
-  exports.prototype.restrictionPuertoRico = undefined;
+  exports.prototype.restriction_puerto_rico = undefined;
 
   /**
-   * @member {String} restrictionUSTerritories
+   * US Territories restriction
+   * @member {String} restriction_us_territories
    */
-  exports.prototype.restrictionUSTerritories = undefined;
+  exports.prototype.restriction_us_territories = undefined;
 
   return exports;
 

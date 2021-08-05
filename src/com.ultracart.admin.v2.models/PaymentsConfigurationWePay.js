@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationWePay model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationWePay
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,80 +55,179 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptWepay'))
-        obj.acceptWepay = ApiClient.convertToType(data['acceptWepay'], 'Boolean');
-      if (data.hasOwnProperty('hideCreditCardsNonUltraCartPayments'))
-        obj.hideCreditCardsNonUltraCartPayments = ApiClient.convertToType(data['hideCreditCardsNonUltraCartPayments'], 'Boolean');
-      if (data.hasOwnProperty('hideSurchargeContent'))
-        obj.hideSurchargeContent = ApiClient.convertToType(data['hideSurchargeContent'], 'Boolean');
+      if (data.hasOwnProperty('accept_wepay'))
+        obj.accept_wepay = ApiClient.convertToType(data['accept_wepay'], 'Boolean');
+      if (data.hasOwnProperty('account_update_uri'))
+        obj.account_update_uri = ApiClient.convertToType(data['account_update_uri'], 'String');
+      if (data.hasOwnProperty('address1'))
+        obj.address1 = ApiClient.convertToType(data['address1'], 'String');
+      if (data.hasOwnProperty('address2'))
+        obj.address2 = ApiClient.convertToType(data['address2'], 'String');
+      if (data.hasOwnProperty('canada_accept_debit_cards'))
+        obj.canada_accept_debit_cards = ApiClient.convertToType(data['canada_accept_debit_cards'], 'Boolean');
+      if (data.hasOwnProperty('city'))
+        obj.city = ApiClient.convertToType(data['city'], 'String');
+      if (data.hasOwnProperty('company'))
+        obj.company = ApiClient.convertToType(data['company'], 'String');
+      if (data.hasOwnProperty('company_description'))
+        obj.company_description = ApiClient.convertToType(data['company_description'], 'String');
+      if (data.hasOwnProperty('console_hostname'))
+        obj.console_hostname = ApiClient.convertToType(data['console_hostname'], 'String');
+      if (data.hasOwnProperty('country'))
+        obj.country = ApiClient.convertToType(data['country'], 'String');
+      if (data.hasOwnProperty('currency'))
+        obj.currency = ApiClient.convertToType(data['currency'], 'String');
+      if (data.hasOwnProperty('expected_revenue'))
+        obj.expected_revenue = ApiClient.convertToType(data['expected_revenue'], 'String');
+      if (data.hasOwnProperty('hide_credit_card_non_ultracart_payments'))
+        obj.hide_credit_card_non_ultracart_payments = ApiClient.convertToType(data['hide_credit_card_non_ultracart_payments'], 'Boolean');
+      if (data.hasOwnProperty('hide_surcharge_amount'))
+        obj.hide_surcharge_amount = ApiClient.convertToType(data['hide_surcharge_amount'], 'Boolean');
+      if (data.hasOwnProperty('industry'))
+        obj.industry = ApiClient.convertToType(data['industry'], 'String');
+      if (data.hasOwnProperty('owner_email'))
+        obj.owner_email = ApiClient.convertToType(data['owner_email'], 'String');
+      if (data.hasOwnProperty('owner_name'))
+        obj.owner_name = ApiClient.convertToType(data['owner_name'], 'String');
+      if (data.hasOwnProperty('owner_phone'))
+        obj.owner_phone = ApiClient.convertToType(data['owner_phone'], 'String');
+      if (data.hasOwnProperty('postal_code'))
+        obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('removePayPalPro'))
         obj.removePayPalPro = ApiClient.convertToType(data['removePayPalPro'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
-      if (data.hasOwnProperty('shortPayPalMarketingText'))
-        obj.shortPayPalMarketingText = ApiClient.convertToType(data['shortPayPalMarketingText'], 'Boolean');
-      if (data.hasOwnProperty('showUltraCartPaymentsDisabled'))
-        obj.showUltraCartPaymentsDisabled = ApiClient.convertToType(data['showUltraCartPaymentsDisabled'], 'Boolean');
-      if (data.hasOwnProperty('showUltraCartPaymentsIntro'))
-        obj.showUltraCartPaymentsIntro = ApiClient.convertToType(data['showUltraCartPaymentsIntro'], 'Boolean');
-      if (data.hasOwnProperty('showUltraCartPaymentsVerification'))
-        obj.showUltraCartPaymentsVerification = ApiClient.convertToType(data['showUltraCartPaymentsVerification'], 'Boolean');
-      if (data.hasOwnProperty('showUltraCartPaymentsVerified'))
-        obj.showUltraCartPaymentsVerified = ApiClient.convertToType(data['showUltraCartPaymentsVerified'], 'Boolean');
-      if (data.hasOwnProperty('wepayAccountUpdateUri'))
-        obj.wepayAccountUpdateUri = ApiClient.convertToType(data['wepayAccountUpdateUri'], 'String');
-      if (data.hasOwnProperty('wepayAddress1'))
-        obj.wepayAddress1 = ApiClient.convertToType(data['wepayAddress1'], 'String');
-      if (data.hasOwnProperty('wepayAddress2'))
-        obj.wepayAddress2 = ApiClient.convertToType(data['wepayAddress2'], 'String');
-      if (data.hasOwnProperty('wepayCanadaAcceptDebitCards'))
-        obj.wepayCanadaAcceptDebitCards = ApiClient.convertToType(data['wepayCanadaAcceptDebitCards'], 'Boolean');
-      if (data.hasOwnProperty('wepayCity'))
-        obj.wepayCity = ApiClient.convertToType(data['wepayCity'], 'String');
-      if (data.hasOwnProperty('wepayCompany'))
-        obj.wepayCompany = ApiClient.convertToType(data['wepayCompany'], 'String');
-      if (data.hasOwnProperty('wepayCompanyDescription'))
-        obj.wepayCompanyDescription = ApiClient.convertToType(data['wepayCompanyDescription'], 'String');
-      if (data.hasOwnProperty('wepayConsoleHostname'))
-        obj.wepayConsoleHostname = ApiClient.convertToType(data['wepayConsoleHostname'], 'String');
-      if (data.hasOwnProperty('wepayCountry'))
-        obj.wepayCountry = ApiClient.convertToType(data['wepayCountry'], 'String');
-      if (data.hasOwnProperty('wepayCurrency'))
-        obj.wepayCurrency = ApiClient.convertToType(data['wepayCurrency'], 'String');
-      if (data.hasOwnProperty('wepayExpectedRevenue'))
-        obj.wepayExpectedRevenue = ApiClient.convertToType(data['wepayExpectedRevenue'], 'String');
-      if (data.hasOwnProperty('wepayIndustry'))
-        obj.wepayIndustry = ApiClient.convertToType(data['wepayIndustry'], 'String');
-      if (data.hasOwnProperty('wepayOwnerEmail'))
-        obj.wepayOwnerEmail = ApiClient.convertToType(data['wepayOwnerEmail'], 'String');
-      if (data.hasOwnProperty('wepayOwnerName'))
-        obj.wepayOwnerName = ApiClient.convertToType(data['wepayOwnerName'], 'String');
-      if (data.hasOwnProperty('wepayOwnerPhone'))
-        obj.wepayOwnerPhone = ApiClient.convertToType(data['wepayOwnerPhone'], 'String');
-      if (data.hasOwnProperty('wepayState'))
-        obj.wepayState = ApiClient.convertToType(data['wepayState'], 'String');
-      if (data.hasOwnProperty('wepayWebsiteUrl'))
-        obj.wepayWebsiteUrl = ApiClient.convertToType(data['wepayWebsiteUrl'], 'String');
-      if (data.hasOwnProperty('wepayZip'))
-        obj.wepayZip = ApiClient.convertToType(data['wepayZip'], 'String');
+      if (data.hasOwnProperty('short_paypal_marketing_text'))
+        obj.short_paypal_marketing_text = ApiClient.convertToType(data['short_paypal_marketing_text'], 'Boolean');
+      if (data.hasOwnProperty('show_ultracart_payments_disabled'))
+        obj.show_ultracart_payments_disabled = ApiClient.convertToType(data['show_ultracart_payments_disabled'], 'Boolean');
+      if (data.hasOwnProperty('show_ultracart_payments_intro'))
+        obj.show_ultracart_payments_intro = ApiClient.convertToType(data['show_ultracart_payments_intro'], 'Boolean');
+      if (data.hasOwnProperty('show_ultracart_payments_verification'))
+        obj.show_ultracart_payments_verification = ApiClient.convertToType(data['show_ultracart_payments_verification'], 'Boolean');
+      if (data.hasOwnProperty('show_ultracart_payments_verified'))
+        obj.show_ultracart_payments_verified = ApiClient.convertToType(data['show_ultracart_payments_verified'], 'Boolean');
+      if (data.hasOwnProperty('state'))
+        obj.state = ApiClient.convertToType(data['state'], 'String');
+      if (data.hasOwnProperty('website_url'))
+        obj.website_url = ApiClient.convertToType(data['website_url'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptWepay
+   * Master flag indicating this merchant accepts UltraCart Payments WePay
+   * @member {Boolean} accept_wepay
    */
-  exports.prototype.acceptWepay = undefined;
+  exports.prototype.accept_wepay = undefined;
 
   /**
-   * @member {Boolean} hideCreditCardsNonUltraCartPayments
+   * URI for updating the WePay account
+   * @member {String} account_update_uri
    */
-  exports.prototype.hideCreditCardsNonUltraCartPayments = undefined;
+  exports.prototype.account_update_uri = undefined;
 
   /**
-   * @member {Boolean} hideSurchargeContent
+   * Address line 1
+   * @member {String} address1
    */
-  exports.prototype.hideSurchargeContent = undefined;
+  exports.prototype.address1 = undefined;
+
+  /**
+   * Address line 2
+   * @member {String} address2
+   */
+  exports.prototype.address2 = undefined;
+
+  /**
+   * For Canadian merchants, true if they wish to accept debit cards
+   * @member {Boolean} canada_accept_debit_cards
+   */
+  exports.prototype.canada_accept_debit_cards = undefined;
+
+  /**
+   * City
+   * @member {String} city
+   */
+  exports.prototype.city = undefined;
+
+  /**
+   * Company
+   * @member {String} company
+   */
+  exports.prototype.company = undefined;
+
+  /**
+   * Company description
+   * @member {String} company_description
+   */
+  exports.prototype.company_description = undefined;
+
+  /**
+   * Console hostname
+   * @member {String} console_hostname
+   */
+  exports.prototype.console_hostname = undefined;
+
+  /**
+   * Country
+   * @member {String} country
+   */
+  exports.prototype.country = undefined;
+
+  /**
+   * Base currency for transactions
+   * @member {String} currency
+   */
+  exports.prototype.currency = undefined;
+
+  /**
+   * Expected Revenue
+   * @member {String} expected_revenue
+   */
+  exports.prototype.expected_revenue = undefined;
+
+  /**
+   * Internal flag to aid UI
+   * @member {Boolean} hide_credit_card_non_ultracart_payments
+   */
+  exports.prototype.hide_credit_card_non_ultracart_payments = undefined;
+
+  /**
+   * Internal flag to aid UI
+   * @member {Boolean} hide_surcharge_amount
+   */
+  exports.prototype.hide_surcharge_amount = undefined;
+
+  /**
+   * Industry
+   * @member {String} industry
+   */
+  exports.prototype.industry = undefined;
+
+  /**
+   * Owner email
+   * @member {String} owner_email
+   */
+  exports.prototype.owner_email = undefined;
+
+  /**
+   * Owner name
+   * @member {String} owner_name
+   */
+  exports.prototype.owner_name = undefined;
+
+  /**
+   * Owner phone
+   * @member {String} owner_phone
+   */
+  exports.prototype.owner_phone = undefined;
+
+  /**
+   * Postal code
+   * @member {String} postal_code
+   */
+  exports.prototype.postal_code = undefined;
 
   /**
    * @member {Boolean} removePayPalPro
@@ -141,119 +240,46 @@
   exports.prototype.restrictions = undefined;
 
   /**
-   * @member {Boolean} shortPayPalMarketingText
+   * Internal UI aid
+   * @member {Boolean} short_paypal_marketing_text
    */
-  exports.prototype.shortPayPalMarketingText = undefined;
+  exports.prototype.short_paypal_marketing_text = undefined;
 
   /**
-   * @member {Boolean} showUltraCartPaymentsDisabled
+   * Internal flag to aid UI
+   * @member {Boolean} show_ultracart_payments_disabled
    */
-  exports.prototype.showUltraCartPaymentsDisabled = undefined;
+  exports.prototype.show_ultracart_payments_disabled = undefined;
 
   /**
-   * @member {Boolean} showUltraCartPaymentsIntro
+   * Internal flag to aid UI
+   * @member {Boolean} show_ultracart_payments_intro
    */
-  exports.prototype.showUltraCartPaymentsIntro = undefined;
+  exports.prototype.show_ultracart_payments_intro = undefined;
 
   /**
-   * @member {Boolean} showUltraCartPaymentsVerification
+   * Internal flag to aid UI
+   * @member {Boolean} show_ultracart_payments_verification
    */
-  exports.prototype.showUltraCartPaymentsVerification = undefined;
+  exports.prototype.show_ultracart_payments_verification = undefined;
 
   /**
-   * @member {Boolean} showUltraCartPaymentsVerified
+   * Internal flag to aid UI
+   * @member {Boolean} show_ultracart_payments_verified
    */
-  exports.prototype.showUltraCartPaymentsVerified = undefined;
+  exports.prototype.show_ultracart_payments_verified = undefined;
 
   /**
-   * @member {String} wepayAccountUpdateUri
+   * State
+   * @member {String} state
    */
-  exports.prototype.wepayAccountUpdateUri = undefined;
+  exports.prototype.state = undefined;
 
   /**
-   * @member {String} wepayAddress1
+   * Website URL
+   * @member {String} website_url
    */
-  exports.prototype.wepayAddress1 = undefined;
-
-  /**
-   * @member {String} wepayAddress2
-   */
-  exports.prototype.wepayAddress2 = undefined;
-
-  /**
-   * @member {Boolean} wepayCanadaAcceptDebitCards
-   */
-  exports.prototype.wepayCanadaAcceptDebitCards = undefined;
-
-  /**
-   * @member {String} wepayCity
-   */
-  exports.prototype.wepayCity = undefined;
-
-  /**
-   * @member {String} wepayCompany
-   */
-  exports.prototype.wepayCompany = undefined;
-
-  /**
-   * @member {String} wepayCompanyDescription
-   */
-  exports.prototype.wepayCompanyDescription = undefined;
-
-  /**
-   * @member {String} wepayConsoleHostname
-   */
-  exports.prototype.wepayConsoleHostname = undefined;
-
-  /**
-   * @member {String} wepayCountry
-   */
-  exports.prototype.wepayCountry = undefined;
-
-  /**
-   * @member {String} wepayCurrency
-   */
-  exports.prototype.wepayCurrency = undefined;
-
-  /**
-   * @member {String} wepayExpectedRevenue
-   */
-  exports.prototype.wepayExpectedRevenue = undefined;
-
-  /**
-   * @member {String} wepayIndustry
-   */
-  exports.prototype.wepayIndustry = undefined;
-
-  /**
-   * @member {String} wepayOwnerEmail
-   */
-  exports.prototype.wepayOwnerEmail = undefined;
-
-  /**
-   * @member {String} wepayOwnerName
-   */
-  exports.prototype.wepayOwnerName = undefined;
-
-  /**
-   * @member {String} wepayOwnerPhone
-   */
-  exports.prototype.wepayOwnerPhone = undefined;
-
-  /**
-   * @member {String} wepayState
-   */
-  exports.prototype.wepayState = undefined;
-
-  /**
-   * @member {String} wepayWebsiteUrl
-   */
-  exports.prototype.wepayWebsiteUrl = undefined;
-
-  /**
-   * @member {String} wepayZip
-   */
-  exports.prototype.wepayZip = undefined;
+  exports.prototype.website_url = undefined;
 
   return exports;
 

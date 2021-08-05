@@ -3,13 +3,25 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**acceptSezzle** | **Boolean** |  | [optional] 
+**accept_sezzle** | **Boolean** | Master flag for this merchant accepting Sezzle payments | [optional] 
+**accounting_code** | **String** | Optional Quickbooks code for this payment method | [optional] 
+**business_id** | **String** | Business ID | [optional] 
+**deposit_to_account** | **String** | Optional Quickbooks Deposit to Account value | [optional] 
+**environment** | **String** | Sezzle environment | [optional] 
+**environments** | **Object** | List of environments possible | [optional] 
+**private_api_key** | **String** | Private API key | [optional] 
+**public_api_key** | **String** | Public API key | [optional] 
 **restrictions** | [**PaymentsConfigurationRestrictions**](PaymentsConfigurationRestrictions.md) |  | [optional] 
-**sezzleAccountingCode** | **String** |  | [optional] 
-**sezzleBusinessId** | **String** |  | [optional] 
-**sezzleDepositToAccount** | **String** |  | [optional] 
-**sezzleEnvironment** | **String** |  | [optional] 
-**sezzlePrivateApiKey** | **String** |  | [optional] 
-**sezzlePublicApiKey** | **String** |  | [optional] 
+
+
+<a name="EnvironmentEnum"></a>
+## Enum: EnvironmentEnum
+
+
+* `Live` (value: `"Live"`)
+
+* `Sandbox` (value: `"Sandbox"`)
+
+
 
 

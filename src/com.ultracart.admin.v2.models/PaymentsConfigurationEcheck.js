@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationEcheck model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationEcheck
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,12 +55,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptECheck'))
-        obj.acceptECheck = ApiClient.convertToType(data['acceptECheck'], 'Boolean');
-      if (data.hasOwnProperty('eCheckAccountingCode'))
-        obj.eCheckAccountingCode = ApiClient.convertToType(data['eCheckAccountingCode'], 'String');
-      if (data.hasOwnProperty('eCheckDepositToAccount'))
-        obj.eCheckDepositToAccount = ApiClient.convertToType(data['eCheckDepositToAccount'], 'String');
+      if (data.hasOwnProperty('accept_echeck'))
+        obj.accept_echeck = ApiClient.convertToType(data['accept_echeck'], 'Boolean');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
     }
@@ -68,19 +68,22 @@
   }
 
   /**
-   * @member {Boolean} acceptECheck
+   * Master flag indicating this merchant accepts eChecks
+   * @member {Boolean} accept_echeck
    */
-  exports.prototype.acceptECheck = undefined;
+  exports.prototype.accept_echeck = undefined;
 
   /**
-   * @member {String} eCheckAccountingCode
+   * Optional Quickbooks accounting code
+   * @member {String} accounting_code
    */
-  exports.prototype.eCheckAccountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
-   * @member {String} eCheckDepositToAccount
+   * Optional Quickbooks deposit to account
+   * @member {String} deposit_to_account
    */
-  exports.prototype.eCheckDepositToAccount = undefined;
+  exports.prototype.deposit_to_account = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions

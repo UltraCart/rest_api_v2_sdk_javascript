@@ -34,7 +34,7 @@
   /**
    * Sso service.
    * @module com.ultracart.admin.v2/SsoApi
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCOD model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCOD
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,51 +55,56 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptCod'))
-        obj.acceptCod = ApiClient.convertToType(data['acceptCod'], 'Boolean');
-      if (data.hasOwnProperty('codApprovedCustomersOnly'))
-        obj.codApprovedCustomersOnly = ApiClient.convertToType(data['codApprovedCustomersOnly'], 'Boolean');
-      if (data.hasOwnProperty('codSurchargeAccountingCode'))
-        obj.codSurchargeAccountingCode = ApiClient.convertToType(data['codSurchargeAccountingCode'], 'String');
-      if (data.hasOwnProperty('codSurchargeFee'))
-        obj.codSurchargeFee = ApiClient.convertToType(data['codSurchargeFee'], 'String');
-      if (data.hasOwnProperty('codSurchargePerc'))
-        obj.codSurchargePerc = ApiClient.convertToType(data['codSurchargePerc'], 'String');
+      if (data.hasOwnProperty('accept_cod'))
+        obj.accept_cod = ApiClient.convertToType(data['accept_cod'], 'Boolean');
+      if (data.hasOwnProperty('approved_customers_only'))
+        obj.approved_customers_only = ApiClient.convertToType(data['approved_customers_only'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
+      if (data.hasOwnProperty('surcharge_accounting_code'))
+        obj.surcharge_accounting_code = ApiClient.convertToType(data['surcharge_accounting_code'], 'String');
+      if (data.hasOwnProperty('surcharge_fee'))
+        obj.surcharge_fee = ApiClient.convertToType(data['surcharge_fee'], 'String');
+      if (data.hasOwnProperty('surcharge_percentage'))
+        obj.surcharge_percentage = ApiClient.convertToType(data['surcharge_percentage'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptCod
+   * Master flag indicating this merchant accepts COD
+   * @member {Boolean} accept_cod
    */
-  exports.prototype.acceptCod = undefined;
+  exports.prototype.accept_cod = undefined;
 
   /**
-   * @member {Boolean} codApprovedCustomersOnly
+   * If true, only approved customers may pay with COD
+   * @member {Boolean} approved_customers_only
    */
-  exports.prototype.codApprovedCustomersOnly = undefined;
-
-  /**
-   * @member {String} codSurchargeAccountingCode
-   */
-  exports.prototype.codSurchargeAccountingCode = undefined;
-
-  /**
-   * @member {String} codSurchargeFee
-   */
-  exports.prototype.codSurchargeFee = undefined;
-
-  /**
-   * @member {String} codSurchargePerc
-   */
-  exports.prototype.codSurchargePerc = undefined;
+  exports.prototype.approved_customers_only = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
    */
   exports.prototype.restrictions = undefined;
+
+  /**
+   * Optional field, if surcharge is set, this is the accounting code the surcharge is tagged with when sent to Quickbooks
+   * @member {String} surcharge_accounting_code
+   */
+  exports.prototype.surcharge_accounting_code = undefined;
+
+  /**
+   * Additional cost for using COD
+   * @member {String} surcharge_fee
+   */
+  exports.prototype.surcharge_fee = undefined;
+
+  /**
+   * Additional percentage cost for using COD
+   * @member {String} surcharge_percentage
+   */
+  exports.prototype.surcharge_percentage = undefined;
 
   return exports;
 

@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationAffirm model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationAffirm
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,20 +55,20 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptAffirm'))
-        obj.acceptAffirm = ApiClient.convertToType(data['acceptAffirm'], 'Boolean');
-      if (data.hasOwnProperty('affirmAccountingCode'))
-        obj.affirmAccountingCode = ApiClient.convertToType(data['affirmAccountingCode'], 'String');
-      if (data.hasOwnProperty('affirmDepositToAccount'))
-        obj.affirmDepositToAccount = ApiClient.convertToType(data['affirmDepositToAccount'], 'String');
-      if (data.hasOwnProperty('affirmEnvironment'))
-        obj.affirmEnvironment = ApiClient.convertToType(data['affirmEnvironment'], 'String');
-      if (data.hasOwnProperty('affirmFinancialProductKey'))
-        obj.affirmFinancialProductKey = ApiClient.convertToType(data['affirmFinancialProductKey'], 'String');
-      if (data.hasOwnProperty('affirmPrivateApiKey'))
-        obj.affirmPrivateApiKey = ApiClient.convertToType(data['affirmPrivateApiKey'], 'String');
-      if (data.hasOwnProperty('affirmPublicApiKey'))
-        obj.affirmPublicApiKey = ApiClient.convertToType(data['affirmPublicApiKey'], 'String');
+      if (data.hasOwnProperty('accept_affirm'))
+        obj.accept_affirm = ApiClient.convertToType(data['accept_affirm'], 'Boolean');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
+      if (data.hasOwnProperty('environment'))
+        obj.environment = ApiClient.convertToType(data['environment'], 'String');
+      if (data.hasOwnProperty('financial_product_key'))
+        obj.financial_product_key = ApiClient.convertToType(data['financial_product_key'], 'String');
+      if (data.hasOwnProperty('private_api_key'))
+        obj.private_api_key = ApiClient.convertToType(data['private_api_key'], 'String');
+      if (data.hasOwnProperty('public_api_key'))
+        obj.public_api_key = ApiClient.convertToType(data['public_api_key'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
     }
@@ -76,44 +76,71 @@
   }
 
   /**
-   * @member {Boolean} acceptAffirm
+   * Master flag indicating this merchant accepts Affirm payments
+   * @member {Boolean} accept_affirm
    */
-  exports.prototype.acceptAffirm = undefined;
+  exports.prototype.accept_affirm = undefined;
 
   /**
-   * @member {String} affirmAccountingCode
+   * Optional Quickbooks code for this payment method
+   * @member {String} accounting_code
    */
-  exports.prototype.affirmAccountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
-   * @member {String} affirmDepositToAccount
+   * Optional Quickbooks Deposit to Account value
+   * @member {String} deposit_to_account
    */
-  exports.prototype.affirmDepositToAccount = undefined;
+  exports.prototype.deposit_to_account = undefined;
 
   /**
-   * @member {String} affirmEnvironment
+   * Environment
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationAffirm.EnvironmentEnum} environment
    */
-  exports.prototype.affirmEnvironment = undefined;
+  exports.prototype.environment = undefined;
 
   /**
-   * @member {String} affirmFinancialProductKey
+   * Financial product key
+   * @member {String} financial_product_key
    */
-  exports.prototype.affirmFinancialProductKey = undefined;
+  exports.prototype.financial_product_key = undefined;
 
   /**
-   * @member {String} affirmPrivateApiKey
+   * Private API key
+   * @member {String} private_api_key
    */
-  exports.prototype.affirmPrivateApiKey = undefined;
+  exports.prototype.private_api_key = undefined;
 
   /**
-   * @member {String} affirmPublicApiKey
+   * Public API key
+   * @member {String} public_api_key
    */
-  exports.prototype.affirmPublicApiKey = undefined;
+  exports.prototype.public_api_key = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
    */
   exports.prototype.restrictions = undefined;
+
+
+  /**
+   * Allowed values for the <code>environment</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.EnvironmentEnum = {
+    /**
+     * value: "Live"
+     * @const
+     */
+    Live: "Live",
+
+    /**
+     * value: "Sandbox"
+     * @const
+     */
+    Sandbox: "Sandbox"
+  };
 
   return exports;
 

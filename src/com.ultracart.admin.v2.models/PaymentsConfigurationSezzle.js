@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationSezzle model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationSezzle
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,65 +55,100 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptSezzle'))
-        obj.acceptSezzle = ApiClient.convertToType(data['acceptSezzle'], 'Boolean');
+      if (data.hasOwnProperty('accept_sezzle'))
+        obj.accept_sezzle = ApiClient.convertToType(data['accept_sezzle'], 'Boolean');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('business_id'))
+        obj.business_id = ApiClient.convertToType(data['business_id'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
+      if (data.hasOwnProperty('environment'))
+        obj.environment = ApiClient.convertToType(data['environment'], 'String');
+      if (data.hasOwnProperty('environments'))
+        obj.environments = ApiClient.convertToType(data['environments'], Object);
+      if (data.hasOwnProperty('private_api_key'))
+        obj.private_api_key = ApiClient.convertToType(data['private_api_key'], 'String');
+      if (data.hasOwnProperty('public_api_key'))
+        obj.public_api_key = ApiClient.convertToType(data['public_api_key'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
-      if (data.hasOwnProperty('sezzleAccountingCode'))
-        obj.sezzleAccountingCode = ApiClient.convertToType(data['sezzleAccountingCode'], 'String');
-      if (data.hasOwnProperty('sezzleBusinessId'))
-        obj.sezzleBusinessId = ApiClient.convertToType(data['sezzleBusinessId'], 'String');
-      if (data.hasOwnProperty('sezzleDepositToAccount'))
-        obj.sezzleDepositToAccount = ApiClient.convertToType(data['sezzleDepositToAccount'], 'String');
-      if (data.hasOwnProperty('sezzleEnvironment'))
-        obj.sezzleEnvironment = ApiClient.convertToType(data['sezzleEnvironment'], 'String');
-      if (data.hasOwnProperty('sezzlePrivateApiKey'))
-        obj.sezzlePrivateApiKey = ApiClient.convertToType(data['sezzlePrivateApiKey'], 'String');
-      if (data.hasOwnProperty('sezzlePublicApiKey'))
-        obj.sezzlePublicApiKey = ApiClient.convertToType(data['sezzlePublicApiKey'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptSezzle
+   * Master flag for this merchant accepting Sezzle payments
+   * @member {Boolean} accept_sezzle
    */
-  exports.prototype.acceptSezzle = undefined;
+  exports.prototype.accept_sezzle = undefined;
+
+  /**
+   * Optional Quickbooks code for this payment method
+   * @member {String} accounting_code
+   */
+  exports.prototype.accounting_code = undefined;
+
+  /**
+   * Business ID
+   * @member {String} business_id
+   */
+  exports.prototype.business_id = undefined;
+
+  /**
+   * Optional Quickbooks Deposit to Account value
+   * @member {String} deposit_to_account
+   */
+  exports.prototype.deposit_to_account = undefined;
+
+  /**
+   * Sezzle environment
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationSezzle.EnvironmentEnum} environment
+   */
+  exports.prototype.environment = undefined;
+
+  /**
+   * List of environments possible
+   * @member {Object} environments
+   */
+  exports.prototype.environments = undefined;
+
+  /**
+   * Private API key
+   * @member {String} private_api_key
+   */
+  exports.prototype.private_api_key = undefined;
+
+  /**
+   * Public API key
+   * @member {String} public_api_key
+   */
+  exports.prototype.public_api_key = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
    */
   exports.prototype.restrictions = undefined;
 
-  /**
-   * @member {String} sezzleAccountingCode
-   */
-  exports.prototype.sezzleAccountingCode = undefined;
 
   /**
-   * @member {String} sezzleBusinessId
+   * Allowed values for the <code>environment</code> property.
+   * @enum {String}
+   * @readonly
    */
-  exports.prototype.sezzleBusinessId = undefined;
+  exports.EnvironmentEnum = {
+    /**
+     * value: "Live"
+     * @const
+     */
+    Live: "Live",
 
-  /**
-   * @member {String} sezzleDepositToAccount
-   */
-  exports.prototype.sezzleDepositToAccount = undefined;
-
-  /**
-   * @member {String} sezzleEnvironment
-   */
-  exports.prototype.sezzleEnvironment = undefined;
-
-  /**
-   * @member {String} sezzlePrivateApiKey
-   */
-  exports.prototype.sezzlePrivateApiKey = undefined;
-
-  /**
-   * @member {String} sezzlePublicApiKey
-   */
-  exports.prototype.sezzlePublicApiKey = undefined;
+    /**
+     * value: "Sandbox"
+     * @const
+     */
+    Sandbox: "Sandbox"
+  };
 
   return exports;
 

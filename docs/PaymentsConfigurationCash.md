@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**acceptCash** | **Boolean** |  | [optional] 
+**accept_cash** | **Boolean** | Master flag indicating this merchant accepts cash | [optional] 
 **restrictions** | [**PaymentsConfigurationRestrictions**](PaymentsConfigurationRestrictions.md) |  | [optional] 
 
 

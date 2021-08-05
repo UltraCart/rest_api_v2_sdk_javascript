@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationLoanHero model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationLoanHero
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,34 +55,37 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptLoanHero'))
-        obj.acceptLoanHero = ApiClient.convertToType(data['acceptLoanHero'], 'Boolean');
-      if (data.hasOwnProperty('loanHeroAccountingCode'))
-        obj.loanHeroAccountingCode = ApiClient.convertToType(data['loanHeroAccountingCode'], 'String');
-      if (data.hasOwnProperty('loanHeroDepositToAccount'))
-        obj.loanHeroDepositToAccount = ApiClient.convertToType(data['loanHeroDepositToAccount'], 'String');
+      if (data.hasOwnProperty('accept_loan_hero'))
+        obj.accept_loan_hero = ApiClient.convertToType(data['accept_loan_hero'], 'Boolean');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
-      if (data.hasOwnProperty('showLoanHero'))
-        obj.showLoanHero = ApiClient.convertToType(data['showLoanHero'], 'Boolean');
+      if (data.hasOwnProperty('show_loan_hero'))
+        obj.show_loan_hero = ApiClient.convertToType(data['show_loan_hero'], 'Boolean');
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptLoanHero
+   * Master flag indicating this merchant accepts Loan Hero
+   * @member {Boolean} accept_loan_hero
    */
-  exports.prototype.acceptLoanHero = undefined;
+  exports.prototype.accept_loan_hero = undefined;
 
   /**
-   * @member {String} loanHeroAccountingCode
+   * Optional Quickbooks accounting code
+   * @member {String} accounting_code
    */
-  exports.prototype.loanHeroAccountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
-   * @member {String} loanHeroDepositToAccount
+   * Optional Quickbooks deposit to account
+   * @member {String} deposit_to_account
    */
-  exports.prototype.loanHeroDepositToAccount = undefined;
+  exports.prototype.deposit_to_account = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
@@ -90,9 +93,10 @@
   exports.prototype.restrictions = undefined;
 
   /**
-   * @member {Boolean} showLoanHero
+   * Internal field to aid UI
+   * @member {Boolean} show_loan_hero
    */
-  exports.prototype.showLoanHero = undefined;
+  exports.prototype.show_loan_hero = undefined;
 
   return exports;
 

@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCheck model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCheck
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,107 +55,112 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptCheckOrders'))
-        obj.acceptCheckOrders = ApiClient.convertToType(data['acceptCheckOrders'], 'Boolean');
-      if (data.hasOwnProperty('checkAccountingCode'))
-        obj.checkAccountingCode = ApiClient.convertToType(data['checkAccountingCode'], 'String');
-      if (data.hasOwnProperty('checkDepositToAccount'))
-        obj.checkDepositToAccount = ApiClient.convertToType(data['checkDepositToAccount'], 'String');
-      if (data.hasOwnProperty('checksPayableTo'))
-        obj.checksPayableTo = ApiClient.convertToType(data['checksPayableTo'], 'String');
-      if (data.hasOwnProperty('mailToAddress1'))
-        obj.mailToAddress1 = ApiClient.convertToType(data['mailToAddress1'], 'String');
-      if (data.hasOwnProperty('mailToAddress2'))
-        obj.mailToAddress2 = ApiClient.convertToType(data['mailToAddress2'], 'String');
-      if (data.hasOwnProperty('mailToCity'))
-        obj.mailToCity = ApiClient.convertToType(data['mailToCity'], 'String');
-      if (data.hasOwnProperty('mailToCountry'))
-        obj.mailToCountry = ApiClient.convertToType(data['mailToCountry'], 'String');
-      if (data.hasOwnProperty('mailToName'))
-        obj.mailToName = ApiClient.convertToType(data['mailToName'], 'String');
-      if (data.hasOwnProperty('mailToState'))
-        obj.mailToState = ApiClient.convertToType(data['mailToState'], 'String');
-      if (data.hasOwnProperty('mailToZip'))
-        obj.mailToZip = ApiClient.convertToType(data['mailToZip'], 'String');
-      if (data.hasOwnProperty('moneyOrderAccountingCode'))
-        obj.moneyOrderAccountingCode = ApiClient.convertToType(data['moneyOrderAccountingCode'], 'String');
-      if (data.hasOwnProperty('moneyOrderDepositToAccount'))
-        obj.moneyOrderDepositToAccount = ApiClient.convertToType(data['moneyOrderDepositToAccount'], 'String');
+      if (data.hasOwnProperty('accept_check_orders'))
+        obj.accept_check_orders = ApiClient.convertToType(data['accept_check_orders'], 'Boolean');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('checks_payable_to'))
+        obj.checks_payable_to = ApiClient.convertToType(data['checks_payable_to'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
+      if (data.hasOwnProperty('mail_to_address1'))
+        obj.mail_to_address1 = ApiClient.convertToType(data['mail_to_address1'], 'String');
+      if (data.hasOwnProperty('mail_to_address2'))
+        obj.mail_to_address2 = ApiClient.convertToType(data['mail_to_address2'], 'String');
+      if (data.hasOwnProperty('mail_to_city'))
+        obj.mail_to_city = ApiClient.convertToType(data['mail_to_city'], 'String');
+      if (data.hasOwnProperty('mail_to_country'))
+        obj.mail_to_country = ApiClient.convertToType(data['mail_to_country'], 'String');
+      if (data.hasOwnProperty('mail_to_name'))
+        obj.mail_to_name = ApiClient.convertToType(data['mail_to_name'], 'String');
+      if (data.hasOwnProperty('mail_to_postal_code'))
+        obj.mail_to_postal_code = ApiClient.convertToType(data['mail_to_postal_code'], 'String');
+      if (data.hasOwnProperty('mail_to_store'))
+        obj.mail_to_store = ApiClient.convertToType(data['mail_to_store'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
+      if (data.hasOwnProperty('test_methods'))
+        obj.test_methods = ApiClient.convertToType(data['test_methods'], Object);
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptCheckOrders
+   * Master flag indicating this merchant accepts paper checks
+   * @member {Boolean} accept_check_orders
    */
-  exports.prototype.acceptCheckOrders = undefined;
+  exports.prototype.accept_check_orders = undefined;
 
   /**
-   * @member {String} checkAccountingCode
+   * Optional Quickbooks accounting code
+   * @member {String} accounting_code
    */
-  exports.prototype.checkAccountingCode = undefined;
+  exports.prototype.accounting_code = undefined;
 
   /**
-   * @member {String} checkDepositToAccount
+   * This is who the customer makes the check out to
+   * @member {String} checks_payable_to
    */
-  exports.prototype.checkDepositToAccount = undefined;
+  exports.prototype.checks_payable_to = undefined;
 
   /**
-   * @member {String} checksPayableTo
+   * Optional Quickbooks deposit to account
+   * @member {String} deposit_to_account
    */
-  exports.prototype.checksPayableTo = undefined;
+  exports.prototype.deposit_to_account = undefined;
 
   /**
-   * @member {String} mailToAddress1
+   * MailTo address line 1
+   * @member {String} mail_to_address1
    */
-  exports.prototype.mailToAddress1 = undefined;
+  exports.prototype.mail_to_address1 = undefined;
 
   /**
-   * @member {String} mailToAddress2
+   * MailTo address line 2
+   * @member {String} mail_to_address2
    */
-  exports.prototype.mailToAddress2 = undefined;
+  exports.prototype.mail_to_address2 = undefined;
 
   /**
-   * @member {String} mailToCity
+   * MailTo city
+   * @member {String} mail_to_city
    */
-  exports.prototype.mailToCity = undefined;
+  exports.prototype.mail_to_city = undefined;
 
   /**
-   * @member {String} mailToCountry
+   * MailTo country
+   * @member {String} mail_to_country
    */
-  exports.prototype.mailToCountry = undefined;
+  exports.prototype.mail_to_country = undefined;
 
   /**
-   * @member {String} mailToName
+   * MailTo name
+   * @member {String} mail_to_name
    */
-  exports.prototype.mailToName = undefined;
+  exports.prototype.mail_to_name = undefined;
 
   /**
-   * @member {String} mailToState
+   * MailTo postal code
+   * @member {String} mail_to_postal_code
    */
-  exports.prototype.mailToState = undefined;
+  exports.prototype.mail_to_postal_code = undefined;
 
   /**
-   * @member {String} mailToZip
+   * MailTo store
+   * @member {String} mail_to_store
    */
-  exports.prototype.mailToZip = undefined;
-
-  /**
-   * @member {String} moneyOrderAccountingCode
-   */
-  exports.prototype.moneyOrderAccountingCode = undefined;
-
-  /**
-   * @member {String} moneyOrderDepositToAccount
-   */
-  exports.prototype.moneyOrderDepositToAccount = undefined;
+  exports.prototype.mail_to_store = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
    */
   exports.prototype.restrictions = undefined;
+
+  /**
+   * Test methods for this payment method
+   * @member {Object} test_methods
+   */
+  exports.prototype.test_methods = undefined;
 
   return exports;
 

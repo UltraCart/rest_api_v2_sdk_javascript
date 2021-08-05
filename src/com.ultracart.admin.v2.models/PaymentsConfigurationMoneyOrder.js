@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationMoneyOrder model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationMoneyOrder
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,8 +55,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptMoneyOrders'))
-        obj.acceptMoneyOrders = ApiClient.convertToType(data['acceptMoneyOrders'], 'Boolean');
+      if (data.hasOwnProperty('accept_money_orders'))
+        obj.accept_money_orders = ApiClient.convertToType(data['accept_money_orders'], 'Boolean');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
     }
@@ -64,9 +68,22 @@
   }
 
   /**
-   * @member {Boolean} acceptMoneyOrders
+   * Master flag for this merchant accepting money orders
+   * @member {Boolean} accept_money_orders
    */
-  exports.prototype.acceptMoneyOrders = undefined;
+  exports.prototype.accept_money_orders = undefined;
+
+  /**
+   * Optional Quickbooks accounting code
+   * @member {String} accounting_code
+   */
+  exports.prototype.accounting_code = undefined;
+
+  /**
+   * Optional Quickbooks deposit to account
+   * @member {String} deposit_to_account
+   */
+  exports.prototype.deposit_to_account = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions

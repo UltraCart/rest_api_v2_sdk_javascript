@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationPurchaseOrder model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationPurchaseOrder
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,12 +55,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptPurchaseOrders'))
-        obj.acceptPurchaseOrders = ApiClient.convertToType(data['acceptPurchaseOrders'], 'Boolean');
-      if (data.hasOwnProperty('purchaseOrderApprovedCustomersOnly'))
-        obj.purchaseOrderApprovedCustomersOnly = ApiClient.convertToType(data['purchaseOrderApprovedCustomersOnly'], 'Boolean');
-      if (data.hasOwnProperty('purchaseOrderPreventDuplicateNumber'))
-        obj.purchaseOrderPreventDuplicateNumber = ApiClient.convertToType(data['purchaseOrderPreventDuplicateNumber'], 'Boolean');
+      if (data.hasOwnProperty('accept_purchase_orders'))
+        obj.accept_purchase_orders = ApiClient.convertToType(data['accept_purchase_orders'], 'Boolean');
+      if (data.hasOwnProperty('approved_customers_only'))
+        obj.approved_customers_only = ApiClient.convertToType(data['approved_customers_only'], 'Boolean');
+      if (data.hasOwnProperty('prevent_duplicate_number'))
+        obj.prevent_duplicate_number = ApiClient.convertToType(data['prevent_duplicate_number'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
     }
@@ -68,19 +68,22 @@
   }
 
   /**
-   * @member {Boolean} acceptPurchaseOrders
+   * Master flag indicating this merchant accepts purchase orders
+   * @member {Boolean} accept_purchase_orders
    */
-  exports.prototype.acceptPurchaseOrders = undefined;
+  exports.prototype.accept_purchase_orders = undefined;
 
   /**
-   * @member {Boolean} purchaseOrderApprovedCustomersOnly
+   * If true, only approved customers may pay with a purchase order
+   * @member {Boolean} approved_customers_only
    */
-  exports.prototype.purchaseOrderApprovedCustomersOnly = undefined;
+  exports.prototype.approved_customers_only = undefined;
 
   /**
-   * @member {Boolean} purchaseOrderPreventDuplicateNumber
+   * If true, customers may not use duplicate PO numbers for any order
+   * @member {Boolean} prevent_duplicate_number
    */
-  exports.prototype.purchaseOrderPreventDuplicateNumber = undefined;
+  exports.prototype.prevent_duplicate_number = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions

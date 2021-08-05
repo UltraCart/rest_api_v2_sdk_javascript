@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfiguration model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfiguration
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -65,32 +65,32 @@
         obj.check = PaymentsConfigurationCheck.constructFromObject(data['check']);
       if (data.hasOwnProperty('cod'))
         obj.cod = PaymentsConfigurationCOD.constructFromObject(data['cod']);
-      if (data.hasOwnProperty('creditCard'))
-        obj.creditCard = PaymentsConfigurationCreditCard.constructFromObject(data['creditCard']);
-      if (data.hasOwnProperty('eCheck'))
-        obj.eCheck = PaymentsConfigurationEcheck.constructFromObject(data['eCheck']);
-      if (data.hasOwnProperty('loanHero'))
-        obj.loanHero = PaymentsConfigurationLoanHero.constructFromObject(data['loanHero']);
-      if (data.hasOwnProperty('moneyOrder'))
-        obj.moneyOrder = PaymentsConfigurationMoneyOrder.constructFromObject(data['moneyOrder']);
-      if (data.hasOwnProperty('payPal'))
-        obj.payPal = PaymentsConfigurationPayPal.constructFromObject(data['payPal']);
-      if (data.hasOwnProperty('purchaseOrder'))
-        obj.purchaseOrder = PaymentsConfigurationPurchaseOrder.constructFromObject(data['purchaseOrder']);
-      if (data.hasOwnProperty('quoteRequest'))
-        obj.quoteRequest = PaymentsConfigurationQuoteRequest.constructFromObject(data['quoteRequest']);
+      if (data.hasOwnProperty('credit_card'))
+        obj.credit_card = PaymentsConfigurationCreditCard.constructFromObject(data['credit_card']);
+      if (data.hasOwnProperty('echeck'))
+        obj.echeck = PaymentsConfigurationEcheck.constructFromObject(data['echeck']);
+      if (data.hasOwnProperty('loan_hero'))
+        obj.loan_hero = PaymentsConfigurationLoanHero.constructFromObject(data['loan_hero']);
+      if (data.hasOwnProperty('money_order'))
+        obj.money_order = PaymentsConfigurationMoneyOrder.constructFromObject(data['money_order']);
+      if (data.hasOwnProperty('paypal'))
+        obj.paypal = PaymentsConfigurationPayPal.constructFromObject(data['paypal']);
+      if (data.hasOwnProperty('purchase_order'))
+        obj.purchase_order = PaymentsConfigurationPurchaseOrder.constructFromObject(data['purchase_order']);
+      if (data.hasOwnProperty('quote_request'))
+        obj.quote_request = PaymentsConfigurationQuoteRequest.constructFromObject(data['quote_request']);
       if (data.hasOwnProperty('sezzle'))
         obj.sezzle = PaymentsConfigurationSezzle.constructFromObject(data['sezzle']);
-      if (data.hasOwnProperty('showAccountingCode'))
-        obj.showAccountingCode = ApiClient.convertToType(data['showAccountingCode'], 'Boolean');
+      if (data.hasOwnProperty('show_accounting_code'))
+        obj.show_accounting_code = ApiClient.convertToType(data['show_accounting_code'], 'Boolean');
       if (data.hasOwnProperty('switchToSubTab'))
         obj.switchToSubTab = ApiClient.convertToType(data['switchToSubTab'], 'String');
       if (data.hasOwnProperty('switchToTab'))
         obj.switchToTab = ApiClient.convertToType(data['switchToTab'], 'String');
-      if (data.hasOwnProperty('wePay'))
-        obj.wePay = PaymentsConfigurationWePay.constructFromObject(data['wePay']);
-      if (data.hasOwnProperty('wireTransfer'))
-        obj.wireTransfer = PaymentsConfigurationWireTransfer.constructFromObject(data['wireTransfer']);
+      if (data.hasOwnProperty('ultracart_payments_wepay'))
+        obj.ultracart_payments_wepay = PaymentsConfigurationWePay.constructFromObject(data['ultracart_payments_wepay']);
+      if (data.hasOwnProperty('wire_transfer'))
+        obj.wire_transfer = PaymentsConfigurationWireTransfer.constructFromObject(data['wire_transfer']);
     }
     return obj;
   }
@@ -121,39 +121,39 @@
   exports.prototype.cod = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard} creditCard
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard} credit_card
    */
-  exports.prototype.creditCard = undefined;
+  exports.prototype.credit_card = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationEcheck} eCheck
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationEcheck} echeck
    */
-  exports.prototype.eCheck = undefined;
+  exports.prototype.echeck = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationLoanHero} loanHero
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationLoanHero} loan_hero
    */
-  exports.prototype.loanHero = undefined;
+  exports.prototype.loan_hero = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationMoneyOrder} moneyOrder
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationMoneyOrder} money_order
    */
-  exports.prototype.moneyOrder = undefined;
+  exports.prototype.money_order = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationPayPal} payPal
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationPayPal} paypal
    */
-  exports.prototype.payPal = undefined;
+  exports.prototype.paypal = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationPurchaseOrder} purchaseOrder
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationPurchaseOrder} purchase_order
    */
-  exports.prototype.purchaseOrder = undefined;
+  exports.prototype.purchase_order = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationQuoteRequest} quoteRequest
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationQuoteRequest} quote_request
    */
-  exports.prototype.quoteRequest = undefined;
+  exports.prototype.quote_request = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationSezzle} sezzle
@@ -161,9 +161,10 @@
   exports.prototype.sezzle = undefined;
 
   /**
-   * @member {Boolean} showAccountingCode
+   * Internal flag used to determine if accounting codes should be shown on the screen or not.  This flag is true if the merchant has a Quickbooks integration configured.
+   * @member {Boolean} show_accounting_code
    */
-  exports.prototype.showAccountingCode = undefined;
+  exports.prototype.show_accounting_code = undefined;
 
   /**
    * @member {String} switchToSubTab
@@ -176,14 +177,14 @@
   exports.prototype.switchToTab = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationWePay} wePay
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationWePay} ultracart_payments_wepay
    */
-  exports.prototype.wePay = undefined;
+  exports.prototype.ultracart_payments_wepay = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationWireTransfer} wireTransfer
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationWireTransfer} wire_transfer
    */
-  exports.prototype.wireTransfer = undefined;
+  exports.prototype.wire_transfer = undefined;
 
   return exports;
 

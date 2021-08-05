@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationWireTransfer model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationWireTransfer
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,36 +55,67 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptWireTransfer'))
-        obj.acceptWireTransfer = ApiClient.convertToType(data['acceptWireTransfer'], 'Boolean');
+      if (data.hasOwnProperty('accept_wire_transfer'))
+        obj.accept_wire_transfer = ApiClient.convertToType(data['accept_wire_transfer'], 'Boolean');
+      if (data.hasOwnProperty('account_number'))
+        obj.account_number = ApiClient.convertToType(data['account_number'], 'String');
+      if (data.hasOwnProperty('accounting_code'))
+        obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
+      if (data.hasOwnProperty('bank_address'))
+        obj.bank_address = ApiClient.convertToType(data['bank_address'], 'String');
+      if (data.hasOwnProperty('deposit_to_account'))
+        obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
+      if (data.hasOwnProperty('intermediate_routing_number'))
+        obj.intermediate_routing_number = ApiClient.convertToType(data['intermediate_routing_number'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
-      if (data.hasOwnProperty('wireTransferAccountingCode'))
-        obj.wireTransferAccountingCode = ApiClient.convertToType(data['wireTransferAccountingCode'], 'String');
-      if (data.hasOwnProperty('wireTransferAccountNumber'))
-        obj.wireTransferAccountNumber = ApiClient.convertToType(data['wireTransferAccountNumber'], 'String');
-      if (data.hasOwnProperty('wireTransferBankAddress'))
-        obj.wireTransferBankAddress = ApiClient.convertToType(data['wireTransferBankAddress'], 'String');
-      if (data.hasOwnProperty('wireTransferDepositToAccount'))
-        obj.wireTransferDepositToAccount = ApiClient.convertToType(data['wireTransferDepositToAccount'], 'String');
-      if (data.hasOwnProperty('wireTransferIntermediateRoutingNumber'))
-        obj.wireTransferIntermediateRoutingNumber = ApiClient.convertToType(data['wireTransferIntermediateRoutingNumber'], 'String');
-      if (data.hasOwnProperty('wireTransferRoutingNumber'))
-        obj.wireTransferRoutingNumber = ApiClient.convertToType(data['wireTransferRoutingNumber'], 'String');
-      if (data.hasOwnProperty('wireTransferSurchargeAccountingCode'))
-        obj.wireTransferSurchargeAccountingCode = ApiClient.convertToType(data['wireTransferSurchargeAccountingCode'], 'String');
-      if (data.hasOwnProperty('wireTransferSurchargeFee'))
-        obj.wireTransferSurchargeFee = ApiClient.convertToType(data['wireTransferSurchargeFee'], 'String');
-      if (data.hasOwnProperty('wireTransferSurchargePerc'))
-        obj.wireTransferSurchargePerc = ApiClient.convertToType(data['wireTransferSurchargePerc'], 'String');
+      if (data.hasOwnProperty('routing_number'))
+        obj.routing_number = ApiClient.convertToType(data['routing_number'], 'String');
+      if (data.hasOwnProperty('surcharge_accounting_code'))
+        obj.surcharge_accounting_code = ApiClient.convertToType(data['surcharge_accounting_code'], 'String');
+      if (data.hasOwnProperty('surcharge_fee'))
+        obj.surcharge_fee = ApiClient.convertToType(data['surcharge_fee'], 'String');
+      if (data.hasOwnProperty('surcharge_percentage'))
+        obj.surcharge_percentage = ApiClient.convertToType(data['surcharge_percentage'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Boolean} acceptWireTransfer
+   * Master flag indicating this merchant accepts wire transfers
+   * @member {Boolean} accept_wire_transfer
    */
-  exports.prototype.acceptWireTransfer = undefined;
+  exports.prototype.accept_wire_transfer = undefined;
+
+  /**
+   * account_number
+   * @member {String} account_number
+   */
+  exports.prototype.account_number = undefined;
+
+  /**
+   * Optional Quickbooks accounting code
+   * @member {String} accounting_code
+   */
+  exports.prototype.accounting_code = undefined;
+
+  /**
+   * Bank address
+   * @member {String} bank_address
+   */
+  exports.prototype.bank_address = undefined;
+
+  /**
+   * Optional Quickbooks deposit to account
+   * @member {String} deposit_to_account
+   */
+  exports.prototype.deposit_to_account = undefined;
+
+  /**
+   * Intermediate routing number
+   * @member {String} intermediate_routing_number
+   */
+  exports.prototype.intermediate_routing_number = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
@@ -92,49 +123,28 @@
   exports.prototype.restrictions = undefined;
 
   /**
-   * @member {String} wireTransferAccountingCode
+   * Routing number
+   * @member {String} routing_number
    */
-  exports.prototype.wireTransferAccountingCode = undefined;
+  exports.prototype.routing_number = undefined;
 
   /**
-   * @member {String} wireTransferAccountNumber
+   * If a surcharge is present and this merchant is integrated with Quickbooks, this is the accounting code for the surcharge amount
+   * @member {String} surcharge_accounting_code
    */
-  exports.prototype.wireTransferAccountNumber = undefined;
+  exports.prototype.surcharge_accounting_code = undefined;
 
   /**
-   * @member {String} wireTransferBankAddress
+   * surcharge_fee
+   * @member {String} surcharge_fee
    */
-  exports.prototype.wireTransferBankAddress = undefined;
+  exports.prototype.surcharge_fee = undefined;
 
   /**
-   * @member {String} wireTransferDepositToAccount
+   * surcharge_percentage
+   * @member {String} surcharge_percentage
    */
-  exports.prototype.wireTransferDepositToAccount = undefined;
-
-  /**
-   * @member {String} wireTransferIntermediateRoutingNumber
-   */
-  exports.prototype.wireTransferIntermediateRoutingNumber = undefined;
-
-  /**
-   * @member {String} wireTransferRoutingNumber
-   */
-  exports.prototype.wireTransferRoutingNumber = undefined;
-
-  /**
-   * @member {String} wireTransferSurchargeAccountingCode
-   */
-  exports.prototype.wireTransferSurchargeAccountingCode = undefined;
-
-  /**
-   * @member {String} wireTransferSurchargeFee
-   */
-  exports.prototype.wireTransferSurchargeFee = undefined;
-
-  /**
-   * @member {String} wireTransferSurchargePerc
-   */
-  exports.prototype.wireTransferSurchargePerc = undefined;
+  exports.prototype.surcharge_percentage = undefined;
 
   return exports;
 

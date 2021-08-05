@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCash model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCash
-   * @version 3.4.8
+   * @version 3.4.9
    */
 
   /**
@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('acceptCash'))
-        obj.acceptCash = ApiClient.convertToType(data['acceptCash'], 'Boolean');
+      if (data.hasOwnProperty('accept_cash'))
+        obj.accept_cash = ApiClient.convertToType(data['accept_cash'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
     }
@@ -64,9 +64,10 @@
   }
 
   /**
-   * @member {Boolean} acceptCash
+   * Master flag indicating this merchant accepts cash
+   * @member {Boolean} accept_cash
    */
-  exports.prototype.acceptCash = undefined;
+  exports.prototype.accept_cash = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
