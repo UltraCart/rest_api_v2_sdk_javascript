@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationRestrictions model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions
-   * @version 3.4.10
+   * @version 3.4.11
    */
 
   /**
@@ -58,9 +58,9 @@
       if (data.hasOwnProperty('descriptions'))
         obj.descriptions = ApiClient.convertToType(data['descriptions'], ['String']);
       if (data.hasOwnProperty('maximum_subtotal'))
-        obj.maximum_subtotal = ApiClient.convertToType(data['maximum_subtotal'], 'String');
+        obj.maximum_subtotal = ApiClient.convertToType(data['maximum_subtotal'], 'Number');
       if (data.hasOwnProperty('minimum_subtotal'))
-        obj.minimum_subtotal = ApiClient.convertToType(data['minimum_subtotal'], 'String');
+        obj.minimum_subtotal = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
       if (data.hasOwnProperty('payment_method'))
         obj.payment_method = ApiClient.convertToType(data['payment_method'], 'String');
       if (data.hasOwnProperty('restriction_alaska_hawaii'))
@@ -94,13 +94,13 @@
 
   /**
    * Maximum subtotal
-   * @member {String} maximum_subtotal
+   * @member {Number} maximum_subtotal
    */
   exports.prototype.maximum_subtotal = undefined;
 
   /**
    * Minimum subtotal
-   * @member {String} minimum_subtotal
+   * @member {Number} minimum_subtotal
    */
   exports.prototype.minimum_subtotal = undefined;
 

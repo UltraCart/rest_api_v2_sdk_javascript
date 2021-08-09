@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCreditCard model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard
-   * @version 3.4.10
+   * @version 3.4.11
    */
 
   /**
@@ -66,7 +66,7 @@
       if (data.hasOwnProperty('configured_gateway_details'))
         obj.configured_gateway_details = ApiClient.convertToType(data['configured_gateway_details'], 'String');
       if (data.hasOwnProperty('failed_attempts'))
-        obj.failed_attempts = ApiClient.convertToType(data['failed_attempts'], 'String');
+        obj.failed_attempts = ApiClient.convertToType(data['failed_attempts'], 'Number');
       if (data.hasOwnProperty('hide_connect_single_gateway'))
         obj.hide_connect_single_gateway = ApiClient.convertToType(data['hide_connect_single_gateway'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
@@ -113,7 +113,7 @@
 
   /**
    * The number of failed attempts before the order is placed into Accounts Receivable for manual intervention
-   * @member {String} failed_attempts
+   * @member {Number} failed_attempts
    */
   exports.prototype.failed_attempts = undefined;
 
