@@ -34,7 +34,7 @@
   /**
    * The CouponTieredPercentOffShipping model module.
    * @module com.ultracart.admin.v2.models/CouponTieredPercentOffShipping
-   * @version 3.4.11
+   * @version 3.4.12
    */
 
   /**

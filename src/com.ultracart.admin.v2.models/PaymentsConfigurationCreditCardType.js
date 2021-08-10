@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCreditCardType model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCardType
-   * @version 3.4.11
+   * @version 3.4.12
    */
 
   /**
@@ -66,15 +66,15 @@
       if (data.hasOwnProperty('enabled'))
         obj.enabled = ApiClient.convertToType(data['enabled'], 'Boolean');
       if (data.hasOwnProperty('processing_fee'))
-        obj.processing_fee = ApiClient.convertToType(data['processing_fee'], 'String');
+        obj.processing_fee = ApiClient.convertToType(data['processing_fee'], 'Number');
       if (data.hasOwnProperty('processing_percentage'))
-        obj.processing_percentage = ApiClient.convertToType(data['processing_percentage'], 'String');
+        obj.processing_percentage = ApiClient.convertToType(data['processing_percentage'], 'Number');
       if (data.hasOwnProperty('surcharge_accounting_code'))
         obj.surcharge_accounting_code = ApiClient.convertToType(data['surcharge_accounting_code'], 'String');
       if (data.hasOwnProperty('transaction_fee'))
-        obj.transaction_fee = ApiClient.convertToType(data['transaction_fee'], 'String');
+        obj.transaction_fee = ApiClient.convertToType(data['transaction_fee'], 'Number');
       if (data.hasOwnProperty('transaction_percentage'))
-        obj.transaction_percentage = ApiClient.convertToType(data['transaction_percentage'], 'String');
+        obj.transaction_percentage = ApiClient.convertToType(data['transaction_percentage'], 'Number');
     }
     return obj;
   }
@@ -111,13 +111,13 @@
 
   /**
    * Optional additional fee applied to order for this card
-   * @member {String} processing_fee
+   * @member {Number} processing_fee
    */
   exports.prototype.processing_fee = undefined;
 
   /**
    * Optional additional fee applied to order for this card
-   * @member {String} processing_percentage
+   * @member {Number} processing_percentage
    */
   exports.prototype.processing_percentage = undefined;
 
@@ -129,13 +129,13 @@
 
   /**
    * An optional additional fee to charge the customer for using this card.
-   * @member {String} transaction_fee
+   * @member {Number} transaction_fee
    */
   exports.prototype.transaction_fee = undefined;
 
   /**
    * An optional transaction percentage to charge the customer for using this card
-   * @member {String} transaction_percentage
+   * @member {Number} transaction_percentage
    */
   exports.prototype.transaction_percentage = undefined;
 
