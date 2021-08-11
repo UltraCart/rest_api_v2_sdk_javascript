@@ -34,7 +34,7 @@
   /**
    * The WebhookEventSubscription model module.
    * @module com.ultracart.admin.v2.models/WebhookEventSubscription
-   * @version 3.5.0
+   * @version 3.5.1
    */
 
   /**

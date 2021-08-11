@@ -34,7 +34,7 @@
   /**
    * The CartGiftCertificate model module.
    * @module com.ultracart.admin.v2.models/CartGiftCertificate
-   * @version 3.5.0
+   * @version 3.5.1
    */
 
   /**

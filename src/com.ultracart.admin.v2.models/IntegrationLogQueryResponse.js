@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogQueryResponse model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogQueryResponse
-   * @version 3.5.0
+   * @version 3.5.1
    */
 
   /**

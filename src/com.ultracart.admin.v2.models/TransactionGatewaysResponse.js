@@ -34,7 +34,7 @@
   /**
    * The TransactionGatewaysResponse model module.
    * @module com.ultracart.admin.v2.models/TransactionGatewaysResponse
-   * @version 3.5.0
+   * @version 3.5.1
    */
 
   /**

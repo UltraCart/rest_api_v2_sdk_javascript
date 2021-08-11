@@ -34,7 +34,7 @@
   /**
    * The ScreenRecording model module.
    * @module com.ultracart.admin.v2.models/ScreenRecording
-   * @version 3.5.0
+   * @version 3.5.1
    */
 
   /**
