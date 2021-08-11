@@ -34,7 +34,7 @@
   /**
    * The ItemEbayMarketListing model module.
    * @module com.ultracart.admin.v2.models/ItemEbayMarketListing
-   * @version 3.4.12
+   * @version 3.4.13
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The RtgDayOfWeekRestriction model module.
    * @module com.ultracart.admin.v2.models/RtgDayOfWeekRestriction
-   * @version 3.4.12
+   * @version 3.4.13
    */
 
   /**

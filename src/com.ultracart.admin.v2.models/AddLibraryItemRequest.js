@@ -34,7 +34,7 @@
   /**
    * The AddLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/AddLibraryItemRequest
-   * @version 3.4.12
+   * @version 3.4.13
    */
 
   /**
