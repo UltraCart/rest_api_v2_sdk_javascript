@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationPayPal model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationPayPal
-   * @version 3.4.13
+   * @version 3.5.0
    */
 
   /**
@@ -88,9 +88,9 @@
       if (data.hasOwnProperty('private_key_password'))
         obj.private_key_password = ApiClient.convertToType(data['private_key_password'], 'String');
       if (data.hasOwnProperty('processing_fee'))
-        obj.processing_fee = ApiClient.convertToType(data['processing_fee'], 'String');
+        obj.processing_fee = ApiClient.convertToType(data['processing_fee'], 'Number');
       if (data.hasOwnProperty('processing_percentage'))
-        obj.processing_percentage = ApiClient.convertToType(data['processing_percentage'], 'String');
+        obj.processing_percentage = ApiClient.convertToType(data['processing_percentage'], 'Number');
       if (data.hasOwnProperty('push_paypal'))
         obj.push_paypal = ApiClient.convertToType(data['push_paypal'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
@@ -215,13 +215,13 @@
 
   /**
    * Optional additional fee to charge if PayPal is used.  It is rare for this to be used.
-   * @member {String} processing_fee
+   * @member {Number} processing_fee
    */
   exports.prototype.processing_fee = undefined;
 
   /**
    * The processing percentage charged by PayPal
-   * @member {String} processing_percentage
+   * @member {Number} processing_percentage
    */
   exports.prototype.processing_percentage = undefined;
 

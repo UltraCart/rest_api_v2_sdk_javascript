@@ -34,7 +34,7 @@
   /**
    * The RtgThemeRestriction model module.
    * @module com.ultracart.admin.v2.models/RtgThemeRestriction
-   * @version 3.4.13
+   * @version 3.5.0
    */
 
   /**

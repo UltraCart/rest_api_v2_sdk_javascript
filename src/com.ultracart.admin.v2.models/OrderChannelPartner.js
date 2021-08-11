@@ -34,7 +34,7 @@
   /**
    * The OrderChannelPartner model module.
    * @module com.ultracart.admin.v2.models/OrderChannelPartner
-   * @version 3.4.13
+   * @version 3.5.0
    */
 
   /**
@@ -130,7 +130,7 @@
   exports.prototype.skip_payment_processing = undefined;
 
   /**
-   * Instructs UltraCart to skip shipping department and mark this order as fully complete.  Set this flag if you have already shipped product for this order.
+   * Instructs UltraCart to skip shipping department and mark this order as fully complete.  This flag defaults to true.  Set this flag to false to shipped product for this order.
    * @member {Boolean} store_completed
    */
   exports.prototype.store_completed = undefined;

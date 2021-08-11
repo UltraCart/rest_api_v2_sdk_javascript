@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationWePay model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationWePay
-   * @version 3.4.13
+   * @version 3.5.0
    */
 
   /**

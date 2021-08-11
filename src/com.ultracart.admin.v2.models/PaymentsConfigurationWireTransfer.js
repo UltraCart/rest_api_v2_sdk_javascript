@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationWireTransfer model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationWireTransfer
-   * @version 3.4.13
+   * @version 3.5.0
    */
 
   /**
@@ -74,9 +74,9 @@
       if (data.hasOwnProperty('surcharge_accounting_code'))
         obj.surcharge_accounting_code = ApiClient.convertToType(data['surcharge_accounting_code'], 'String');
       if (data.hasOwnProperty('surcharge_fee'))
-        obj.surcharge_fee = ApiClient.convertToType(data['surcharge_fee'], 'String');
+        obj.surcharge_fee = ApiClient.convertToType(data['surcharge_fee'], 'Number');
       if (data.hasOwnProperty('surcharge_percentage'))
-        obj.surcharge_percentage = ApiClient.convertToType(data['surcharge_percentage'], 'String');
+        obj.surcharge_percentage = ApiClient.convertToType(data['surcharge_percentage'], 'Number');
     }
     return obj;
   }
@@ -136,13 +136,13 @@
 
   /**
    * surcharge_fee
-   * @member {String} surcharge_fee
+   * @member {Number} surcharge_fee
    */
   exports.prototype.surcharge_fee = undefined;
 
   /**
    * surcharge_percentage
-   * @member {String} surcharge_percentage
+   * @member {Number} surcharge_percentage
    */
   exports.prototype.surcharge_percentage = undefined;
 
