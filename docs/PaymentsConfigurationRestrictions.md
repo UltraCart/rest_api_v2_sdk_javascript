@@ -19,3 +19,120 @@ Name | Type | Description | Notes
 **themes** | [**[PaymentsConfigurationRestrictionsTheme]**](PaymentsConfigurationRestrictionsTheme.md) |  | [optional] 
 
 
+<a name="RestrictionAlaskaHawaiiEnum"></a>
+## Enum: RestrictionAlaskaHawaiiEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionApoFpoEnum"></a>
+## Enum: RestrictionApoFpoEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionCanadaEnum"></a>
+## Enum: RestrictionCanadaEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionContinentalUsEnum"></a>
+## Enum: RestrictionContinentalUsEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionDomesticOnlyEnum"></a>
+## Enum: RestrictionDomesticOnlyEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionInternationalOnlyEnum"></a>
+## Enum: RestrictionInternationalOnlyEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionPoBoxEnum"></a>
+## Enum: RestrictionPoBoxEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionPuertoRicoEnum"></a>
+## Enum: RestrictionPuertoRicoEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+
+<a name="RestrictionUsTerritoriesEnum"></a>
+## Enum: RestrictionUsTerritoriesEnum
+
+
+* `invalid` (value: `"invalid"`)
+
+* `invalidOnly` (value: `"invalidOnly"`)
+
+* `valid` (value: `"valid"`)
+
+
+
+

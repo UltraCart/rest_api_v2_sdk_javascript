@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationCreditCardType', 'com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions', 'com.ultracart.admin.v2.models/PaymentsConfigurationTestMethod'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationCreditCardType', 'com.ultracart.admin.v2.models/PaymentsConfigurationTestMethod'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationCreditCardType'), require('./PaymentsConfigurationRestrictions'), require('./PaymentsConfigurationTestMethod'));
+    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationCreditCardType'), require('./PaymentsConfigurationTestMethod'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.PaymentsConfigurationCreditCard = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationCreditCardType, root.UltraCartRestApiV2.PaymentsConfigurationRestrictions, root.UltraCartRestApiV2.PaymentsConfigurationTestMethod);
+    root.UltraCartRestApiV2.PaymentsConfigurationCreditCard = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationCreditCardType, root.UltraCartRestApiV2.PaymentsConfigurationTestMethod);
   }
-}(this, function(ApiClient, PaymentsConfigurationCreditCardType, PaymentsConfigurationRestrictions, PaymentsConfigurationTestMethod) {
+}(this, function(ApiClient, PaymentsConfigurationCreditCardType, PaymentsConfigurationTestMethod) {
   'use strict';
 
   /**
    * The PaymentsConfigurationCreditCard model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard
-   * @version 3.5.1
+   * @version 3.5.2
    */
 
   /**
@@ -69,8 +69,6 @@
         obj.failed_attempts = ApiClient.convertToType(data['failed_attempts'], 'Number');
       if (data.hasOwnProperty('hide_connect_single_gateway'))
         obj.hide_connect_single_gateway = ApiClient.convertToType(data['hide_connect_single_gateway'], 'Boolean');
-      if (data.hasOwnProperty('restrictions'))
-        obj.restrictions = ApiClient.convertToType(data['restrictions'], [PaymentsConfigurationRestrictions]);
       if (data.hasOwnProperty('send_customer_billing_update_on_decline'))
         obj.send_customer_billing_update_on_decline = ApiClient.convertToType(data['send_customer_billing_update_on_decline'], 'Boolean');
       if (data.hasOwnProperty('supported_cards'))
@@ -122,12 +120,6 @@
    * @member {Boolean} hide_connect_single_gateway
    */
   exports.prototype.hide_connect_single_gateway = undefined;
-
-  /**
-   * Restrictions for this payment method
-   * @member {Array.<module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions>} restrictions
-   */
-  exports.prototype.restrictions = undefined;
 
   /**
    * UltraCart will send customers emails to update their credit card if the card is declined

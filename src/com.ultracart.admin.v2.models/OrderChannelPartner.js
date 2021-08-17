@@ -34,7 +34,7 @@
   /**
    * The OrderChannelPartner model module.
    * @module com.ultracart.admin.v2.models/OrderChannelPartner
-   * @version 3.5.1
+   * @version 3.5.2
    */
 
   /**
@@ -106,7 +106,7 @@
   exports.prototype.channel_partner_oid = undefined;
 
   /**
-   * The order ID assigned by the channel partner for this order
+   * The order ID assigned by the channel partner for this order.
    * @member {String} channel_partner_order_id
    */
   exports.prototype.channel_partner_order_id = undefined;

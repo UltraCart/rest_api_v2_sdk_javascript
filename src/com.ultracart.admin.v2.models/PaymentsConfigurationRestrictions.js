@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationRestrictions model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions
-   * @version 3.5.1
+   * @version 3.5.2
    */
 
   /**
@@ -112,55 +112,55 @@
 
   /**
    * Alaska and Hawaii restriction
-   * @member {String} restriction_alaska_hawaii
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionAlaskaHawaiiEnum} restriction_alaska_hawaii
    */
   exports.prototype.restriction_alaska_hawaii = undefined;
 
   /**
    * APO/FPO restriction
-   * @member {String} restriction_apo_fpo
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionApoFpoEnum} restriction_apo_fpo
    */
   exports.prototype.restriction_apo_fpo = undefined;
 
   /**
    * Canada restriction
-   * @member {String} restriction_canada
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionCanadaEnum} restriction_canada
    */
   exports.prototype.restriction_canada = undefined;
 
   /**
    * Continental US restriction
-   * @member {String} restriction_continental_us
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionContinentalUsEnum} restriction_continental_us
    */
   exports.prototype.restriction_continental_us = undefined;
 
   /**
    * Domestic only restriction
-   * @member {String} restriction_domestic_only
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionDomesticOnlyEnum} restriction_domestic_only
    */
   exports.prototype.restriction_domestic_only = undefined;
 
   /**
    * International only restriction
-   * @member {String} restriction_international_only
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionInternationalOnlyEnum} restriction_international_only
    */
   exports.prototype.restriction_international_only = undefined;
 
   /**
    * PO Box restriction
-   * @member {String} restriction_po_box
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionPoBoxEnum} restriction_po_box
    */
   exports.prototype.restriction_po_box = undefined;
 
   /**
    * Puerto Rico restriction
-   * @member {String} restriction_puerto_rico
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionPuertoRicoEnum} restriction_puerto_rico
    */
   exports.prototype.restriction_puerto_rico = undefined;
 
   /**
    * US Territories restriction
-   * @member {String} restriction_us_territories
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions.RestrictionUsTerritoriesEnum} restriction_us_territories
    */
   exports.prototype.restriction_us_territories = undefined;
 
@@ -168,6 +168,240 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictionsTheme>} themes
    */
   exports.prototype.themes = undefined;
+
+
+  /**
+   * Allowed values for the <code>restriction_alaska_hawaii</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionAlaskaHawaiiEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_apo_fpo</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionApoFpoEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_canada</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionCanadaEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_continental_us</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionContinentalUsEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_domestic_only</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionDomesticOnlyEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_international_only</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionInternationalOnlyEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_po_box</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionPoBoxEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_puerto_rico</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionPuertoRicoEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
+
+
+  /**
+   * Allowed values for the <code>restriction_us_territories</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RestrictionUsTerritoriesEnum = {
+    /**
+     * value: "invalid"
+     * @const
+     */
+    invalid: "invalid",
+
+    /**
+     * value: "invalidOnly"
+     * @const
+     */
+    invalidOnly: "invalidOnly",
+
+    /**
+     * value: "valid"
+     * @const
+     */
+    valid: "valid"
+  };
 
   return exports;
 

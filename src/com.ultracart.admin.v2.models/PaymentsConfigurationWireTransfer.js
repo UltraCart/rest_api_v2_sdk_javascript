@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationWireTransfer model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationWireTransfer
-   * @version 3.5.1
+   * @version 3.5.2
    */
 
   /**

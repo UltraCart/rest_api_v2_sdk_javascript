@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationRestrictions'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.PaymentsConfigurationCreditCardType = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.PaymentsConfigurationCreditCardType = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationRestrictions);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PaymentsConfigurationRestrictions) {
   'use strict';
 
   /**
    * The PaymentsConfigurationCreditCardType model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCardType
-   * @version 3.5.1
+   * @version 3.5.2
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.processing_fee = ApiClient.convertToType(data['processing_fee'], 'Number');
       if (data.hasOwnProperty('processing_percentage'))
         obj.processing_percentage = ApiClient.convertToType(data['processing_percentage'], 'Number');
+      if (data.hasOwnProperty('restrictions'))
+        obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
       if (data.hasOwnProperty('surcharge_accounting_code'))
         obj.surcharge_accounting_code = ApiClient.convertToType(data['surcharge_accounting_code'], 'String');
       if (data.hasOwnProperty('transaction_fee'))
@@ -120,6 +122,11 @@
    * @member {Number} processing_percentage
    */
   exports.prototype.processing_percentage = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
+   */
+  exports.prototype.restrictions = undefined;
 
   /**
    * Optional field. If integrated with Quickbooks, this code will be used when informing Quickbooks about any surcharges applied to orders
