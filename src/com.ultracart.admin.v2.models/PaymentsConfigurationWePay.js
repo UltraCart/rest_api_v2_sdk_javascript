@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationWePay model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationWePay
-   * @version 3.5.2
+   * @version 3.5.3
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.console_hostname = ApiClient.convertToType(data['console_hostname'], 'String');
       if (data.hasOwnProperty('country'))
         obj.country = ApiClient.convertToType(data['country'], 'String');
+      if (data.hasOwnProperty('credit_card_rate'))
+        obj.credit_card_rate = ApiClient.convertToType(data['credit_card_rate'], 'String');
       if (data.hasOwnProperty('currency'))
         obj.currency = ApiClient.convertToType(data['currency'], 'String');
       if (data.hasOwnProperty('expected_revenue'))
@@ -174,6 +176,12 @@
    * @member {String} country
    */
   exports.prototype.country = undefined;
+
+  /**
+   * WePay credit card rate
+   * @member {String} credit_card_rate
+   */
+  exports.prototype.credit_card_rate = undefined;
 
   /**
    * Base currency for transactions

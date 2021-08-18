@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **company_description** | **String** | Company description | [optional] 
 **console_hostname** | **String** | Console hostname | [optional] 
 **country** | **String** | Country | [optional] 
+**credit_card_rate** | **String** | WePay credit card rate | [optional] 
 **currency** | **String** | Base currency for transactions | [optional] 
 **expected_revenue** | **String** | Expected Revenue | [optional] 
 **hide_credit_card_non_ultracart_payments** | **Boolean** | Internal flag to aid UI | [optional] 

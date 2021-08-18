@@ -34,7 +34,7 @@
   /**
    * The Experiment model module.
    * @module com.ultracart.admin.v2.models/Experiment
-   * @version 3.5.2
+   * @version 3.5.3
    */
 
   /**
