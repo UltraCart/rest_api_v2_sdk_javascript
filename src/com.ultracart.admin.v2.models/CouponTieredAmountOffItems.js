@@ -26,37 +26,37 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CouponTieredAmountOffItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CouponTierQuantityAmount);
+    root.UltraCartRestApiV2.CouponTieredAmountOffItems = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CouponTierQuantityAmount);
   }
 }(this, function(ApiClient, CouponTierQuantityAmount) {
   'use strict';
 
   /**
-   * The CouponTieredAmountOffItem model module.
-   * @module com.ultracart.admin.v2.models/CouponTieredAmountOffItem
-   * @version 3.5.3
+   * The CouponTieredAmountOffItems model module.
+   * @module com.ultracart.admin.v2.models/CouponTieredAmountOffItems
+   * @version 3.6.0
    */
 
   /**
-   * Constructs a new <code>CouponTieredAmountOffItem</code>.
-   * @alias module:com.ultracart.admin.v2.models/CouponTieredAmountOffItem
+   * Constructs a new <code>CouponTieredAmountOffItems</code>.
+   * @alias module:com.ultracart.admin.v2.models/CouponTieredAmountOffItems
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>CouponTieredAmountOffItem</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>CouponTieredAmountOffItems</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/CouponTieredAmountOffItem} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/CouponTieredAmountOffItem} The populated <code>CouponTieredAmountOffItem</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/CouponTieredAmountOffItems} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/CouponTieredAmountOffItems} The populated <code>CouponTieredAmountOffItems</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('item'))
-        obj.item = ApiClient.convertToType(data['item'], 'String');
+      if (data.hasOwnProperty('items'))
+        obj.items = ApiClient.convertToType(data['items'], ['String']);
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
       if (data.hasOwnProperty('tiers'))
@@ -66,10 +66,10 @@
   }
 
   /**
-   * The item being discounted by this coupon.
-   * @member {String} item
+   * The items being discounted by this coupon.
+   * @member {Array.<String>} items
    */
-  exports.prototype.item = undefined;
+  exports.prototype.items = undefined;
 
   /**
    * The maximum number of discounted items.
