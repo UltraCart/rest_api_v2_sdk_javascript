@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
-   * @version 3.6.0
+   * @version 3.6.1
    */
 
   /**
@@ -101,6 +101,8 @@
         obj.preferred_language = ScreenRecordingFilterStringSearch.constructFromObject(data['preferred_language']);
       if (data.hasOwnProperty('referrer_domain'))
         obj.referrer_domain = ApiClient.convertToType(data['referrer_domain'], 'String');
+      if (data.hasOwnProperty('return_filter_values'))
+        obj.return_filter_values = ApiClient.convertToType(data['return_filter_values'], ['String']);
       if (data.hasOwnProperty('screen_recording_uuids'))
         obj.screen_recording_uuids = ApiClient.convertToType(data['screen_recording_uuids'], ['String']);
       if (data.hasOwnProperty('screen_sizes'))
@@ -253,6 +255,11 @@
    * @member {String} referrer_domain
    */
   exports.prototype.referrer_domain = undefined;
+
+  /**
+   * @member {Array.<String>} return_filter_values
+   */
+  exports.prototype.return_filter_values = undefined;
 
   /**
    * @member {Array.<String>} screen_recording_uuids

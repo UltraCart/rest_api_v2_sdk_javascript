@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCreditCardType model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCreditCardType
-   * @version 3.6.0
+   * @version 3.6.1
    */
 
   /**
@@ -160,12 +160,6 @@
     AMEX: "AMEX",
 
     /**
-     * value: "Visa"
-     * @const
-     */
-    Visa: "Visa",
-
-    /**
      * value: "Diners Club"
      * @const
      */
@@ -178,16 +172,22 @@
     Discover: "Discover",
 
     /**
+     * value: "MasterCard"
+     * @const
+     */
+    MasterCard: "MasterCard",
+
+    /**
      * value: "JCB"
      * @const
      */
     JCB: "JCB",
 
     /**
-     * value: "MasterCard"
+     * value: "VISA"
      * @const
      */
-    MasterCard: "MasterCard"
+    VISA: "VISA"
   };
 
   return exports;

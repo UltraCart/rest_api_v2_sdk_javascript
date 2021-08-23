@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageView
-   * @version 3.6.0
+   * @version 3.6.1
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.referrer_params = ApiClient.convertToType(data['referrer_params'], [ScreenRecordingFilterPageViewReferrerParam]);
       if (data.hasOwnProperty('referrer_raw'))
         obj.referrer_raw = ScreenRecordingFilterStringSearch.constructFromObject(data['referrer_raw']);
+      if (data.hasOwnProperty('return_filter_values'))
+        obj.return_filter_values = ApiClient.convertToType(data['return_filter_values'], ['String']);
       if (data.hasOwnProperty('time_on_page'))
         obj.time_on_page = ScreenRecordingFilterRangeInteger.constructFromObject(data['time_on_page']);
       if (data.hasOwnProperty('url'))
@@ -104,6 +106,11 @@
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} referrer_raw
    */
   exports.prototype.referrer_raw = undefined;
+
+  /**
+   * @member {Array.<String>} return_filter_values
+   */
+  exports.prototype.return_filter_values = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterRangeInteger} time_on_page

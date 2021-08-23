@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **referrer** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
 **referrer_params** | [**[ScreenRecordingFilterPageViewReferrerParam]**](ScreenRecordingFilterPageViewReferrerParam.md) |  | [optional] 
 **referrer_raw** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
+**return_filter_values** | **[String]** |  | [optional] 
 **time_on_page** | [**ScreenRecordingFilterRangeInteger**](ScreenRecordingFilterRangeInteger.md) |  | [optional] 
 **url** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 
 

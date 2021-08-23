@@ -34,7 +34,7 @@
   /**
    * The CouponPercentOffShipping model module.
    * @module com.ultracart.admin.v2.models/CouponPercentOffShipping
-   * @version 3.6.0
+   * @version 3.6.1
    */
 
   /**
