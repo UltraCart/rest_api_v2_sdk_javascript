@@ -34,7 +34,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 3.6.1
+   * @version 3.6.3
    */
 
   /**
@@ -153,6 +153,8 @@
         obj.total_cost_with_discount = Currency.constructFromObject(data['total_cost_with_discount']);
       if (data.hasOwnProperty('total_refunded'))
         obj.total_refunded = Currency.constructFromObject(data['total_refunded']);
+      if (data.hasOwnProperty('tracking_number'))
+        obj.tracking_number = ApiClient.convertToType(data['tracking_number'], 'String');
       if (data.hasOwnProperty('transmitted_to_distribution_center_dts'))
         obj.transmitted_to_distribution_center_dts = ApiClient.convertToType(data['transmitted_to_distribution_center_dts'], 'String');
       if (data.hasOwnProperty('unit_cost_with_discount'))
@@ -450,6 +452,12 @@
    * @member {module:com.ultracart.admin.v2.models/Currency} total_refunded
    */
   exports.prototype.total_refunded = undefined;
+
+  /**
+   * Tracking number, if null or missing, use order level tracking number(s). Used if there are multiple shipments for one order
+   * @member {String} tracking_number
+   */
+  exports.prototype.tracking_number = undefined;
 
   /**
    * Date/time that this item was transmitted to the distribution center
