@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationAffirm', 'com.ultracart.admin.v2.models/PaymentsConfigurationAmazon', 'com.ultracart.admin.v2.models/PaymentsConfigurationCOD', 'com.ultracart.admin.v2.models/PaymentsConfigurationCash', 'com.ultracart.admin.v2.models/PaymentsConfigurationCheck', 'com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard', 'com.ultracart.admin.v2.models/PaymentsConfigurationEcheck', 'com.ultracart.admin.v2.models/PaymentsConfigurationLoanHero', 'com.ultracart.admin.v2.models/PaymentsConfigurationMoneyOrder', 'com.ultracart.admin.v2.models/PaymentsConfigurationPayPal', 'com.ultracart.admin.v2.models/PaymentsConfigurationPurchaseOrder', 'com.ultracart.admin.v2.models/PaymentsConfigurationQuoteRequest', 'com.ultracart.admin.v2.models/PaymentsConfigurationSezzle', 'com.ultracart.admin.v2.models/PaymentsConfigurationWePay', 'com.ultracart.admin.v2.models/PaymentsConfigurationWireTransfer'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationAffirm', 'com.ultracart.admin.v2.models/PaymentsConfigurationAmazon', 'com.ultracart.admin.v2.models/PaymentsConfigurationCOD', 'com.ultracart.admin.v2.models/PaymentsConfigurationCash', 'com.ultracart.admin.v2.models/PaymentsConfigurationCheck', 'com.ultracart.admin.v2.models/PaymentsConfigurationCreditCard', 'com.ultracart.admin.v2.models/PaymentsConfigurationEcheck', 'com.ultracart.admin.v2.models/PaymentsConfigurationInsurance', 'com.ultracart.admin.v2.models/PaymentsConfigurationLoanHero', 'com.ultracart.admin.v2.models/PaymentsConfigurationMoneyOrder', 'com.ultracart.admin.v2.models/PaymentsConfigurationPayPal', 'com.ultracart.admin.v2.models/PaymentsConfigurationPurchaseOrder', 'com.ultracart.admin.v2.models/PaymentsConfigurationQuoteRequest', 'com.ultracart.admin.v2.models/PaymentsConfigurationSezzle', 'com.ultracart.admin.v2.models/PaymentsConfigurationWePay', 'com.ultracart.admin.v2.models/PaymentsConfigurationWireTransfer'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationAffirm'), require('./PaymentsConfigurationAmazon'), require('./PaymentsConfigurationCOD'), require('./PaymentsConfigurationCash'), require('./PaymentsConfigurationCheck'), require('./PaymentsConfigurationCreditCard'), require('./PaymentsConfigurationEcheck'), require('./PaymentsConfigurationLoanHero'), require('./PaymentsConfigurationMoneyOrder'), require('./PaymentsConfigurationPayPal'), require('./PaymentsConfigurationPurchaseOrder'), require('./PaymentsConfigurationQuoteRequest'), require('./PaymentsConfigurationSezzle'), require('./PaymentsConfigurationWePay'), require('./PaymentsConfigurationWireTransfer'));
+    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationAffirm'), require('./PaymentsConfigurationAmazon'), require('./PaymentsConfigurationCOD'), require('./PaymentsConfigurationCash'), require('./PaymentsConfigurationCheck'), require('./PaymentsConfigurationCreditCard'), require('./PaymentsConfigurationEcheck'), require('./PaymentsConfigurationInsurance'), require('./PaymentsConfigurationLoanHero'), require('./PaymentsConfigurationMoneyOrder'), require('./PaymentsConfigurationPayPal'), require('./PaymentsConfigurationPurchaseOrder'), require('./PaymentsConfigurationQuoteRequest'), require('./PaymentsConfigurationSezzle'), require('./PaymentsConfigurationWePay'), require('./PaymentsConfigurationWireTransfer'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.PaymentsConfiguration = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationAffirm, root.UltraCartRestApiV2.PaymentsConfigurationAmazon, root.UltraCartRestApiV2.PaymentsConfigurationCOD, root.UltraCartRestApiV2.PaymentsConfigurationCash, root.UltraCartRestApiV2.PaymentsConfigurationCheck, root.UltraCartRestApiV2.PaymentsConfigurationCreditCard, root.UltraCartRestApiV2.PaymentsConfigurationEcheck, root.UltraCartRestApiV2.PaymentsConfigurationLoanHero, root.UltraCartRestApiV2.PaymentsConfigurationMoneyOrder, root.UltraCartRestApiV2.PaymentsConfigurationPayPal, root.UltraCartRestApiV2.PaymentsConfigurationPurchaseOrder, root.UltraCartRestApiV2.PaymentsConfigurationQuoteRequest, root.UltraCartRestApiV2.PaymentsConfigurationSezzle, root.UltraCartRestApiV2.PaymentsConfigurationWePay, root.UltraCartRestApiV2.PaymentsConfigurationWireTransfer);
+    root.UltraCartRestApiV2.PaymentsConfiguration = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationAffirm, root.UltraCartRestApiV2.PaymentsConfigurationAmazon, root.UltraCartRestApiV2.PaymentsConfigurationCOD, root.UltraCartRestApiV2.PaymentsConfigurationCash, root.UltraCartRestApiV2.PaymentsConfigurationCheck, root.UltraCartRestApiV2.PaymentsConfigurationCreditCard, root.UltraCartRestApiV2.PaymentsConfigurationEcheck, root.UltraCartRestApiV2.PaymentsConfigurationInsurance, root.UltraCartRestApiV2.PaymentsConfigurationLoanHero, root.UltraCartRestApiV2.PaymentsConfigurationMoneyOrder, root.UltraCartRestApiV2.PaymentsConfigurationPayPal, root.UltraCartRestApiV2.PaymentsConfigurationPurchaseOrder, root.UltraCartRestApiV2.PaymentsConfigurationQuoteRequest, root.UltraCartRestApiV2.PaymentsConfigurationSezzle, root.UltraCartRestApiV2.PaymentsConfigurationWePay, root.UltraCartRestApiV2.PaymentsConfigurationWireTransfer);
   }
-}(this, function(ApiClient, PaymentsConfigurationAffirm, PaymentsConfigurationAmazon, PaymentsConfigurationCOD, PaymentsConfigurationCash, PaymentsConfigurationCheck, PaymentsConfigurationCreditCard, PaymentsConfigurationEcheck, PaymentsConfigurationLoanHero, PaymentsConfigurationMoneyOrder, PaymentsConfigurationPayPal, PaymentsConfigurationPurchaseOrder, PaymentsConfigurationQuoteRequest, PaymentsConfigurationSezzle, PaymentsConfigurationWePay, PaymentsConfigurationWireTransfer) {
+}(this, function(ApiClient, PaymentsConfigurationAffirm, PaymentsConfigurationAmazon, PaymentsConfigurationCOD, PaymentsConfigurationCash, PaymentsConfigurationCheck, PaymentsConfigurationCreditCard, PaymentsConfigurationEcheck, PaymentsConfigurationInsurance, PaymentsConfigurationLoanHero, PaymentsConfigurationMoneyOrder, PaymentsConfigurationPayPal, PaymentsConfigurationPurchaseOrder, PaymentsConfigurationQuoteRequest, PaymentsConfigurationSezzle, PaymentsConfigurationWePay, PaymentsConfigurationWireTransfer) {
   'use strict';
 
   /**
    * The PaymentsConfiguration model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfiguration
-   * @version 3.6.3
+   * @version 3.6.4
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.credit_card = PaymentsConfigurationCreditCard.constructFromObject(data['credit_card']);
       if (data.hasOwnProperty('echeck'))
         obj.echeck = PaymentsConfigurationEcheck.constructFromObject(data['echeck']);
+      if (data.hasOwnProperty('insurance'))
+        obj.insurance = PaymentsConfigurationInsurance.constructFromObject(data['insurance']);
       if (data.hasOwnProperty('loan_hero'))
         obj.loan_hero = PaymentsConfigurationLoanHero.constructFromObject(data['loan_hero']);
       if (data.hasOwnProperty('money_order'))
@@ -129,6 +131,11 @@
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationEcheck} echeck
    */
   exports.prototype.echeck = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationInsurance} insurance
+   */
+  exports.prototype.insurance = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationLoanHero} loan_hero

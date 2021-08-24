@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **credit_card** | [**OrderPaymentCreditCard**](OrderPaymentCreditCard.md) |  | [optional] 
 **echeck** | [**OrderPaymentECheck**](OrderPaymentECheck.md) |  | [optional] 
 **hold_for_fraud_review** | **Boolean** | True if order has been held for fraud review | [optional] 
+**insurance** | [**OrderPaymentInsurance**](OrderPaymentInsurance.md) |  | [optional] 
 **payment_dts** | **String** | Date/time that the payment was successfully processed, for new orders, this field is only considered if channel_partner.skip_payment_processing is true | [optional] 
 **payment_method** | **String** | Payment method | [optional] 
 **payment_method_accounting_code** | **String** | Payment method QuickBooks code | [optional] 
@@ -43,6 +44,8 @@ Name | Type | Description | Notes
 * `eBay` (value: `"eBay"`)
 
 * `eCheck` (value: `"eCheck"`)
+
+* `Insurance` (value: `"Insurance"`)
 
 * `LoanHero` (value: `"LoanHero"`)
 

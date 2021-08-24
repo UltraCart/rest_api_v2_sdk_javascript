@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilter model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
-   * @version 3.6.3
+   * @version 3.6.4
    */
 
   /**
@@ -61,14 +61,22 @@
         obj.affiliate_id = ApiClient.convertToType(data['affiliate_id'], 'Number');
       if (data.hasOwnProperty('communications_campaign_name'))
         obj.communications_campaign_name = ApiClient.convertToType(data['communications_campaign_name'], 'String');
+      if (data.hasOwnProperty('communications_campaign_name_filter'))
+        obj.communications_campaign_name_filter = ApiClient.convertToType(data['communications_campaign_name_filter'], 'Boolean');
       if (data.hasOwnProperty('communications_email_subject'))
         obj.communications_email_subject = ApiClient.convertToType(data['communications_email_subject'], 'String');
+      if (data.hasOwnProperty('communications_email_subject_filter'))
+        obj.communications_email_subject_filter = ApiClient.convertToType(data['communications_email_subject_filter'], 'Boolean');
       if (data.hasOwnProperty('communications_flow_name'))
         obj.communications_flow_name = ApiClient.convertToType(data['communications_flow_name'], 'String');
+      if (data.hasOwnProperty('communications_flow_name_filter'))
+        obj.communications_flow_name_filter = ApiClient.convertToType(data['communications_flow_name_filter'], 'Boolean');
       if (data.hasOwnProperty('email'))
         obj.email = ScreenRecordingFilterStringSearch.constructFromObject(data['email']);
       if (data.hasOwnProperty('email_domain'))
         obj.email_domain = ApiClient.convertToType(data['email_domain'], 'String');
+      if (data.hasOwnProperty('email_domain_filter'))
+        obj.email_domain_filter = ApiClient.convertToType(data['email_domain_filter'], 'Boolean');
       if (data.hasOwnProperty('email_identified'))
         obj.email_identified = ApiClient.convertToType(data['email_identified'], 'Boolean');
       if (data.hasOwnProperty('end_timestamp'))
@@ -81,10 +89,16 @@
         obj.geolocation = ScreenRecordingFilterGeoDistance.constructFromObject(data['geolocation']);
       if (data.hasOwnProperty('geolocation_country'))
         obj.geolocation_country = ScreenRecordingFilterStringSearch.constructFromObject(data['geolocation_country']);
+      if (data.hasOwnProperty('geolocation_country_filter'))
+        obj.geolocation_country_filter = ApiClient.convertToType(data['geolocation_country_filter'], 'Boolean');
       if (data.hasOwnProperty('geolocation_state'))
         obj.geolocation_state = ScreenRecordingFilterStringSearch.constructFromObject(data['geolocation_state']);
+      if (data.hasOwnProperty('geolocation_state_filter'))
+        obj.geolocation_state_filter = ApiClient.convertToType(data['geolocation_state_filter'], 'Boolean');
       if (data.hasOwnProperty('language_iso_code'))
         obj.language_iso_code = ScreenRecordingFilterStringSearch.constructFromObject(data['language_iso_code']);
+      if (data.hasOwnProperty('language_iso_code_filter'))
+        obj.language_iso_code_filter = ApiClient.convertToType(data['language_iso_code_filter'], 'Boolean');
       if (data.hasOwnProperty('last_x_days'))
         obj.last_x_days = ApiClient.convertToType(data['last_x_days'], 'Number');
       if (data.hasOwnProperty('max_filter_values'))
@@ -99,16 +113,20 @@
         obj.placed_order = ApiClient.convertToType(data['placed_order'], 'Boolean');
       if (data.hasOwnProperty('preferred_language'))
         obj.preferred_language = ScreenRecordingFilterStringSearch.constructFromObject(data['preferred_language']);
+      if (data.hasOwnProperty('preferred_language_filter'))
+        obj.preferred_language_filter = ApiClient.convertToType(data['preferred_language_filter'], 'Boolean');
       if (data.hasOwnProperty('referrer_domain'))
         obj.referrer_domain = ApiClient.convertToType(data['referrer_domain'], 'String');
-      if (data.hasOwnProperty('return_filter_values'))
-        obj.return_filter_values = ApiClient.convertToType(data['return_filter_values'], ['String']);
+      if (data.hasOwnProperty('referrer_domain_filter'))
+        obj.referrer_domain_filter = ApiClient.convertToType(data['referrer_domain_filter'], 'Boolean');
       if (data.hasOwnProperty('screen_recording_uuids'))
         obj.screen_recording_uuids = ApiClient.convertToType(data['screen_recording_uuids'], ['String']);
       if (data.hasOwnProperty('screen_sizes'))
         obj.screen_sizes = ApiClient.convertToType(data['screen_sizes'], ['String']);
       if (data.hasOwnProperty('skip_filter_values'))
         obj.skip_filter_values = ApiClient.convertToType(data['skip_filter_values'], 'Boolean');
+      if (data.hasOwnProperty('skip_histogram'))
+        obj.skip_histogram = ApiClient.convertToType(data['skip_histogram'], 'Boolean');
       if (data.hasOwnProperty('skip_hits'))
         obj.skip_hits = ApiClient.convertToType(data['skip_hits'], 'Boolean');
       if (data.hasOwnProperty('start_timestamp'))
@@ -117,12 +135,28 @@
         obj.tags = ApiClient.convertToType(data['tags'], ['String']);
       if (data.hasOwnProperty('time_on_site'))
         obj.time_on_site = ScreenRecordingFilterRangeInteger.constructFromObject(data['time_on_site']);
+      if (data.hasOwnProperty('time_on_site_max_filter'))
+        obj.time_on_site_max_filter = ApiClient.convertToType(data['time_on_site_max_filter'], 'Boolean');
+      if (data.hasOwnProperty('time_on_site_min_filter'))
+        obj.time_on_site_min_filter = ApiClient.convertToType(data['time_on_site_min_filter'], 'Boolean');
+      if (data.hasOwnProperty('url_filter'))
+        obj.url_filter = ApiClient.convertToType(data['url_filter'], 'Boolean');
       if (data.hasOwnProperty('user_agent_device_name'))
         obj.user_agent_device_name = ApiClient.convertToType(data['user_agent_device_name'], 'String');
+      if (data.hasOwnProperty('user_agent_device_name_filter'))
+        obj.user_agent_device_name_filter = ApiClient.convertToType(data['user_agent_device_name_filter'], 'Boolean');
+      if (data.hasOwnProperty('user_agent_device_os_name_filter'))
+        obj.user_agent_device_os_name_filter = ApiClient.convertToType(data['user_agent_device_os_name_filter'], 'Boolean');
+      if (data.hasOwnProperty('user_agent_device_os_version_filter'))
+        obj.user_agent_device_os_version_filter = ApiClient.convertToType(data['user_agent_device_os_version_filter'], 'Boolean');
       if (data.hasOwnProperty('user_agent_name'))
         obj.user_agent_name = ApiClient.convertToType(data['user_agent_name'], 'String');
+      if (data.hasOwnProperty('user_agent_name_filter'))
+        obj.user_agent_name_filter = ApiClient.convertToType(data['user_agent_name_filter'], 'Boolean');
       if (data.hasOwnProperty('user_agent_original'))
         obj.user_agent_original = ScreenRecordingFilterStringSearch.constructFromObject(data['user_agent_original']);
+      if (data.hasOwnProperty('user_agent_original_filter'))
+        obj.user_agent_original_filter = ApiClient.convertToType(data['user_agent_original_filter'], 'Boolean');
       if (data.hasOwnProperty('user_agent_os_name'))
         obj.user_agent_os_name = ApiClient.convertToType(data['user_agent_os_name'], 'String');
       if (data.hasOwnProperty('user_agent_os_version'))
@@ -131,8 +165,12 @@
         obj.user_ip = ScreenRecordingFilterIpSearch.constructFromObject(data['user_ip']);
       if (data.hasOwnProperty('utm_campaign'))
         obj.utm_campaign = ApiClient.convertToType(data['utm_campaign'], 'String');
+      if (data.hasOwnProperty('utm_campaign_filter'))
+        obj.utm_campaign_filter = ApiClient.convertToType(data['utm_campaign_filter'], 'Boolean');
       if (data.hasOwnProperty('utm_source'))
         obj.utm_source = ApiClient.convertToType(data['utm_source'], 'String');
+      if (data.hasOwnProperty('utm_source_filter'))
+        obj.utm_source_filter = ApiClient.convertToType(data['utm_source_filter'], 'Boolean');
       if (data.hasOwnProperty('visitor_number'))
         obj.visitor_number = ApiClient.convertToType(data['visitor_number'], 'Number');
       if (data.hasOwnProperty('watched'))
@@ -157,14 +195,29 @@
   exports.prototype.communications_campaign_name = undefined;
 
   /**
+   * @member {Boolean} communications_campaign_name_filter
+   */
+  exports.prototype.communications_campaign_name_filter = undefined;
+
+  /**
    * @member {String} communications_email_subject
    */
   exports.prototype.communications_email_subject = undefined;
 
   /**
+   * @member {Boolean} communications_email_subject_filter
+   */
+  exports.prototype.communications_email_subject_filter = undefined;
+
+  /**
    * @member {String} communications_flow_name
    */
   exports.prototype.communications_flow_name = undefined;
+
+  /**
+   * @member {Boolean} communications_flow_name_filter
+   */
+  exports.prototype.communications_flow_name_filter = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} email
@@ -175,6 +228,11 @@
    * @member {String} email_domain
    */
   exports.prototype.email_domain = undefined;
+
+  /**
+   * @member {Boolean} email_domain_filter
+   */
+  exports.prototype.email_domain_filter = undefined;
 
   /**
    * @member {Boolean} email_identified
@@ -207,14 +265,29 @@
   exports.prototype.geolocation_country = undefined;
 
   /**
+   * @member {Boolean} geolocation_country_filter
+   */
+  exports.prototype.geolocation_country_filter = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} geolocation_state
    */
   exports.prototype.geolocation_state = undefined;
 
   /**
+   * @member {Boolean} geolocation_state_filter
+   */
+  exports.prototype.geolocation_state_filter = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} language_iso_code
    */
   exports.prototype.language_iso_code = undefined;
+
+  /**
+   * @member {Boolean} language_iso_code_filter
+   */
+  exports.prototype.language_iso_code_filter = undefined;
 
   /**
    * @member {Number} last_x_days
@@ -252,14 +325,19 @@
   exports.prototype.preferred_language = undefined;
 
   /**
+   * @member {Boolean} preferred_language_filter
+   */
+  exports.prototype.preferred_language_filter = undefined;
+
+  /**
    * @member {String} referrer_domain
    */
   exports.prototype.referrer_domain = undefined;
 
   /**
-   * @member {Array.<String>} return_filter_values
+   * @member {Boolean} referrer_domain_filter
    */
-  exports.prototype.return_filter_values = undefined;
+  exports.prototype.referrer_domain_filter = undefined;
 
   /**
    * @member {Array.<String>} screen_recording_uuids
@@ -275,6 +353,11 @@
    * @member {Boolean} skip_filter_values
    */
   exports.prototype.skip_filter_values = undefined;
+
+  /**
+   * @member {Boolean} skip_histogram
+   */
+  exports.prototype.skip_histogram = undefined;
 
   /**
    * @member {Boolean} skip_hits
@@ -297,9 +380,39 @@
   exports.prototype.time_on_site = undefined;
 
   /**
+   * @member {Boolean} time_on_site_max_filter
+   */
+  exports.prototype.time_on_site_max_filter = undefined;
+
+  /**
+   * @member {Boolean} time_on_site_min_filter
+   */
+  exports.prototype.time_on_site_min_filter = undefined;
+
+  /**
+   * @member {Boolean} url_filter
+   */
+  exports.prototype.url_filter = undefined;
+
+  /**
    * @member {String} user_agent_device_name
    */
   exports.prototype.user_agent_device_name = undefined;
+
+  /**
+   * @member {Boolean} user_agent_device_name_filter
+   */
+  exports.prototype.user_agent_device_name_filter = undefined;
+
+  /**
+   * @member {Boolean} user_agent_device_os_name_filter
+   */
+  exports.prototype.user_agent_device_os_name_filter = undefined;
+
+  /**
+   * @member {Boolean} user_agent_device_os_version_filter
+   */
+  exports.prototype.user_agent_device_os_version_filter = undefined;
 
   /**
    * @member {String} user_agent_name
@@ -307,9 +420,19 @@
   exports.prototype.user_agent_name = undefined;
 
   /**
+   * @member {Boolean} user_agent_name_filter
+   */
+  exports.prototype.user_agent_name_filter = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} user_agent_original
    */
   exports.prototype.user_agent_original = undefined;
+
+  /**
+   * @member {Boolean} user_agent_original_filter
+   */
+  exports.prototype.user_agent_original_filter = undefined;
 
   /**
    * @member {String} user_agent_os_name
@@ -332,9 +455,19 @@
   exports.prototype.utm_campaign = undefined;
 
   /**
+   * @member {Boolean} utm_campaign_filter
+   */
+  exports.prototype.utm_campaign_filter = undefined;
+
+  /**
    * @member {String} utm_source
    */
   exports.prototype.utm_source = undefined;
+
+  /**
+   * @member {Boolean} utm_source_filter
+   */
+  exports.prototype.utm_source_filter = undefined;
 
   /**
    * @member {Number} visitor_number

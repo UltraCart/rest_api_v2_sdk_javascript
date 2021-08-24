@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterPageView model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageView
-   * @version 3.6.3
+   * @version 3.6.4
    */
 
   /**
@@ -57,8 +57,20 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('domain'))
         obj.domain = ScreenRecordingFilterStringSearch.constructFromObject(data['domain']);
+      if (data.hasOwnProperty('domain_filter'))
+        obj.domain_filter = ApiClient.convertToType(data['domain_filter'], 'Boolean');
+      if (data.hasOwnProperty('event_name_filter'))
+        obj.event_name_filter = ApiClient.convertToType(data['event_name_filter'], 'Boolean');
+      if (data.hasOwnProperty('event_param_name_filter'))
+        obj.event_param_name_filter = ApiClient.convertToType(data['event_param_name_filter'], 'Boolean');
+      if (data.hasOwnProperty('event_param_value_filter'))
+        obj.event_param_value_filter = ApiClient.convertToType(data['event_param_value_filter'], 'Boolean');
       if (data.hasOwnProperty('events'))
         obj.events = ApiClient.convertToType(data['events'], [ScreenRecordingFilterPageViewEvent]);
+      if (data.hasOwnProperty('param_name_filter'))
+        obj.param_name_filter = ApiClient.convertToType(data['param_name_filter'], 'Boolean');
+      if (data.hasOwnProperty('param_value_filter'))
+        obj.param_value_filter = ApiClient.convertToType(data['param_value_filter'], 'Boolean');
       if (data.hasOwnProperty('params'))
         obj.params = ApiClient.convertToType(data['params'], [ScreenRecordingFilterPageViewParam]);
       if (data.hasOwnProperty('referrer'))
@@ -67,12 +79,16 @@
         obj.referrer_params = ApiClient.convertToType(data['referrer_params'], [ScreenRecordingFilterPageViewReferrerParam]);
       if (data.hasOwnProperty('referrer_raw'))
         obj.referrer_raw = ScreenRecordingFilterStringSearch.constructFromObject(data['referrer_raw']);
-      if (data.hasOwnProperty('return_filter_values'))
-        obj.return_filter_values = ApiClient.convertToType(data['return_filter_values'], ['String']);
       if (data.hasOwnProperty('time_on_page'))
         obj.time_on_page = ScreenRecordingFilterRangeInteger.constructFromObject(data['time_on_page']);
+      if (data.hasOwnProperty('time_on_page_max_filter'))
+        obj.time_on_page_max_filter = ApiClient.convertToType(data['time_on_page_max_filter'], 'Boolean');
+      if (data.hasOwnProperty('time_on_page_min_filter'))
+        obj.time_on_page_min_filter = ApiClient.convertToType(data['time_on_page_min_filter'], 'Boolean');
       if (data.hasOwnProperty('url'))
         obj.url = ScreenRecordingFilterStringSearch.constructFromObject(data['url']);
+      if (data.hasOwnProperty('url_filter'))
+        obj.url_filter = ApiClient.convertToType(data['url_filter'], 'Boolean');
     }
     return obj;
   }
@@ -83,9 +99,39 @@
   exports.prototype.domain = undefined;
 
   /**
+   * @member {Boolean} domain_filter
+   */
+  exports.prototype.domain_filter = undefined;
+
+  /**
+   * @member {Boolean} event_name_filter
+   */
+  exports.prototype.event_name_filter = undefined;
+
+  /**
+   * @member {Boolean} event_param_name_filter
+   */
+  exports.prototype.event_param_name_filter = undefined;
+
+  /**
+   * @member {Boolean} event_param_value_filter
+   */
+  exports.prototype.event_param_value_filter = undefined;
+
+  /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewEvent>} events
    */
   exports.prototype.events = undefined;
+
+  /**
+   * @member {Boolean} param_name_filter
+   */
+  exports.prototype.param_name_filter = undefined;
+
+  /**
+   * @member {Boolean} param_value_filter
+   */
+  exports.prototype.param_value_filter = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewParam>} params
@@ -108,19 +154,29 @@
   exports.prototype.referrer_raw = undefined;
 
   /**
-   * @member {Array.<String>} return_filter_values
-   */
-  exports.prototype.return_filter_values = undefined;
-
-  /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterRangeInteger} time_on_page
    */
   exports.prototype.time_on_page = undefined;
 
   /**
+   * @member {Boolean} time_on_page_max_filter
+   */
+  exports.prototype.time_on_page_max_filter = undefined;
+
+  /**
+   * @member {Boolean} time_on_page_min_filter
+   */
+  exports.prototype.time_on_page_min_filter = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch} url
    */
   exports.prototype.url = undefined;
+
+  /**
+   * @member {Boolean} url_filter
+   */
+  exports.prototype.url_filter = undefined;
 
   return exports;
 

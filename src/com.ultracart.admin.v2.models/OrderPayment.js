@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/OrderPaymentCheck', 'com.ultracart.admin.v2.models/OrderPaymentCreditCard', 'com.ultracart.admin.v2.models/OrderPaymentECheck', 'com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder', 'com.ultracart.admin.v2.models/OrderPaymentTransaction'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/OrderPaymentCheck', 'com.ultracart.admin.v2.models/OrderPaymentCreditCard', 'com.ultracart.admin.v2.models/OrderPaymentECheck', 'com.ultracart.admin.v2.models/OrderPaymentInsurance', 'com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder', 'com.ultracart.admin.v2.models/OrderPaymentTransaction'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./OrderPaymentCheck'), require('./OrderPaymentCreditCard'), require('./OrderPaymentECheck'), require('./OrderPaymentPurchaseOrder'), require('./OrderPaymentTransaction'));
+    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./OrderPaymentCheck'), require('./OrderPaymentCreditCard'), require('./OrderPaymentECheck'), require('./OrderPaymentInsurance'), require('./OrderPaymentPurchaseOrder'), require('./OrderPaymentTransaction'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.OrderPaymentCheck, root.UltraCartRestApiV2.OrderPaymentCreditCard, root.UltraCartRestApiV2.OrderPaymentECheck, root.UltraCartRestApiV2.OrderPaymentPurchaseOrder, root.UltraCartRestApiV2.OrderPaymentTransaction);
+    root.UltraCartRestApiV2.OrderPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.OrderPaymentCheck, root.UltraCartRestApiV2.OrderPaymentCreditCard, root.UltraCartRestApiV2.OrderPaymentECheck, root.UltraCartRestApiV2.OrderPaymentInsurance, root.UltraCartRestApiV2.OrderPaymentPurchaseOrder, root.UltraCartRestApiV2.OrderPaymentTransaction);
   }
-}(this, function(ApiClient, Currency, OrderPaymentCheck, OrderPaymentCreditCard, OrderPaymentECheck, OrderPaymentPurchaseOrder, OrderPaymentTransaction) {
+}(this, function(ApiClient, Currency, OrderPaymentCheck, OrderPaymentCreditCard, OrderPaymentECheck, OrderPaymentInsurance, OrderPaymentPurchaseOrder, OrderPaymentTransaction) {
   'use strict';
 
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.6.3
+   * @version 3.6.4
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.echeck = OrderPaymentECheck.constructFromObject(data['echeck']);
       if (data.hasOwnProperty('hold_for_fraud_review'))
         obj.hold_for_fraud_review = ApiClient.convertToType(data['hold_for_fraud_review'], 'Boolean');
+      if (data.hasOwnProperty('insurance'))
+        obj.insurance = OrderPaymentInsurance.constructFromObject(data['insurance']);
       if (data.hasOwnProperty('payment_dts'))
         obj.payment_dts = ApiClient.convertToType(data['payment_dts'], 'String');
       if (data.hasOwnProperty('payment_method'))
@@ -113,6 +115,11 @@
    * @member {Boolean} hold_for_fraud_review
    */
   exports.prototype.hold_for_fraud_review = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentInsurance} insurance
+   */
+  exports.prototype.insurance = undefined;
 
   /**
    * Date/time that the payment was successfully processed, for new orders, this field is only considered if channel_partner.skip_payment_processing is true
@@ -250,6 +257,12 @@
      * @const
      */
     eCheck: "eCheck",
+
+    /**
+     * value: "Insurance"
+     * @const
+     */
+    Insurance: "Insurance",
 
     /**
      * value: "LoanHero"

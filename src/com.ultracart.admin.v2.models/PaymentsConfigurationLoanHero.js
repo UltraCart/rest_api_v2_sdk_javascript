@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationLoanHero model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationLoanHero
-   * @version 3.6.3
+   * @version 3.6.4
    */
 
   /**
