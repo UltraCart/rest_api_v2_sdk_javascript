@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfiguration model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfiguration
-   * @version 3.6.4
+   * @version 3.6.5
    */
 
   /**
@@ -85,10 +85,6 @@
         obj.sezzle = PaymentsConfigurationSezzle.constructFromObject(data['sezzle']);
       if (data.hasOwnProperty('show_accounting_code'))
         obj.show_accounting_code = ApiClient.convertToType(data['show_accounting_code'], 'Boolean');
-      if (data.hasOwnProperty('switchToSubTab'))
-        obj.switchToSubTab = ApiClient.convertToType(data['switchToSubTab'], 'String');
-      if (data.hasOwnProperty('switchToTab'))
-        obj.switchToTab = ApiClient.convertToType(data['switchToTab'], 'String');
       if (data.hasOwnProperty('ultracart_payments_wepay'))
         obj.ultracart_payments_wepay = PaymentsConfigurationWePay.constructFromObject(data['ultracart_payments_wepay']);
       if (data.hasOwnProperty('wire_transfer'))
@@ -172,16 +168,6 @@
    * @member {Boolean} show_accounting_code
    */
   exports.prototype.show_accounting_code = undefined;
-
-  /**
-   * @member {String} switchToSubTab
-   */
-  exports.prototype.switchToSubTab = undefined;
-
-  /**
-   * @member {String} switchToTab
-   */
-  exports.prototype.switchToTab = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationWePay} ultracart_payments_wepay

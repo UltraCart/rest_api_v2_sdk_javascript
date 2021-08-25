@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationWePay model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationWePay
-   * @version 3.6.4
+   * @version 3.6.5
    */
 
   /**
@@ -95,8 +95,6 @@
         obj.owner_phone = ApiClient.convertToType(data['owner_phone'], 'String');
       if (data.hasOwnProperty('postal_code'))
         obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
-      if (data.hasOwnProperty('removePayPalPro'))
-        obj.removePayPalPro = ApiClient.convertToType(data['removePayPalPro'], 'Boolean');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
       if (data.hasOwnProperty('short_paypal_marketing_text'))
@@ -236,11 +234,6 @@
    * @member {String} postal_code
    */
   exports.prototype.postal_code = undefined;
-
-  /**
-   * @member {Boolean} removePayPalPro
-   */
-  exports.prototype.removePayPalPro = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
