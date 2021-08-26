@@ -34,7 +34,7 @@
   /**
    * The CartCustomerProfile model module.
    * @module com.ultracart.admin.v2.models/CartCustomerProfile
-   * @version 3.6.5
+   * @version 3.6.6
    */
 
   /**

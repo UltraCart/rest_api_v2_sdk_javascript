@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationSezzle model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationSezzle
-   * @version 3.6.5
+   * @version 3.6.6
    */
 
   /**
@@ -65,8 +65,6 @@
         obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
       if (data.hasOwnProperty('environment'))
         obj.environment = ApiClient.convertToType(data['environment'], 'String');
-      if (data.hasOwnProperty('environments'))
-        obj.environments = ApiClient.convertToType(data['environments'], ['String']);
       if (data.hasOwnProperty('private_api_key'))
         obj.private_api_key = ApiClient.convertToType(data['private_api_key'], 'String');
       if (data.hasOwnProperty('public_api_key'))
@@ -106,12 +104,6 @@
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationSezzle.EnvironmentEnum} environment
    */
   exports.prototype.environment = undefined;
-
-  /**
-   * List of environments possible
-   * @member {Array.<String>} environments
-   */
-  exports.prototype.environments = undefined;
 
   /**
    * Private API key

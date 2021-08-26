@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationAmazon model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationAmazon
-   * @version 3.6.5
+   * @version 3.6.6
    */
 
   /**
@@ -65,10 +65,10 @@
         obj.amazon_merchant_id = ApiClient.convertToType(data['amazon_merchant_id'], 'String');
       if (data.hasOwnProperty('deposit_to_account'))
         obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
+      if (data.hasOwnProperty('environment'))
+        obj.environment = ApiClient.convertToType(data['environment'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
-      if (data.hasOwnProperty('sandbox'))
-        obj.sandbox = ApiClient.convertToType(data['sandbox'], 'Boolean');
       if (data.hasOwnProperty('secret_access_key'))
         obj.secret_access_key = ApiClient.convertToType(data['secret_access_key'], 'String');
     }
@@ -106,21 +106,41 @@
   exports.prototype.deposit_to_account = undefined;
 
   /**
+   * Environment
+   * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationAmazon.EnvironmentEnum} environment
+   */
+  exports.prototype.environment = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
    */
   exports.prototype.restrictions = undefined;
-
-  /**
-   * True if transactions should run against the Amazon sandbox.  Useful for testing not configurations
-   * @member {Boolean} sandbox
-   */
-  exports.prototype.sandbox = undefined;
 
   /**
    * Amazon secret access key
    * @member {String} secret_access_key
    */
   exports.prototype.secret_access_key = undefined;
+
+
+  /**
+   * Allowed values for the <code>environment</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.EnvironmentEnum = {
+    /**
+     * value: "Live"
+     * @const
+     */
+    Live: "Live",
+
+    /**
+     * value: "Sandbox"
+     * @const
+     */
+    Sandbox: "Sandbox"
+  };
 
   return exports;
 

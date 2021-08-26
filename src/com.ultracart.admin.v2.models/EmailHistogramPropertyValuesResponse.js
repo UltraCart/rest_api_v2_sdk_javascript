@@ -34,7 +34,7 @@
   /**
    * The EmailHistogramPropertyValuesResponse model module.
    * @module com.ultracart.admin.v2.models/EmailHistogramPropertyValuesResponse
-   * @version 3.6.5
+   * @version 3.6.6
    */
 
   /**
