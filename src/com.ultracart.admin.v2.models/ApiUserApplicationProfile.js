@@ -34,7 +34,7 @@
   /**
    * The ApiUserApplicationProfile model module.
    * @module com.ultracart.admin.v2.models/ApiUserApplicationProfile
-   * @version 3.6.6
+   * @version 3.6.7
    */
 
   /**

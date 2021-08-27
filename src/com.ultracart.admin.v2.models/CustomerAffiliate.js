@@ -34,7 +34,7 @@
   /**
    * The CustomerAffiliate model module.
    * @module com.ultracart.admin.v2.models/CustomerAffiliate
-   * @version 3.6.6
+   * @version 3.6.7
    */
 
   /**
@@ -59,6 +59,10 @@
         obj.affiliate_oid = ApiClient.convertToType(data['affiliate_oid'], 'Number');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('first_name'))
+        obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
+      if (data.hasOwnProperty('last_name'))
+        obj.last_name = ApiClient.convertToType(data['last_name'], 'String');
     }
     return obj;
   }
@@ -74,6 +78,18 @@
    * @member {String} email
    */
   exports.prototype.email = undefined;
+
+  /**
+   * First name
+   * @member {String} first_name
+   */
+  exports.prototype.first_name = undefined;
+
+  /**
+   * Last name
+   * @member {String} last_name
+   */
+  exports.prototype.last_name = undefined;
 
   return exports;
 
