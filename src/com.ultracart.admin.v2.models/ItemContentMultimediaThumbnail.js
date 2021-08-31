@@ -34,7 +34,7 @@
   /**
    * The ItemContentMultimediaThumbnail model module.
    * @module com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail
-   * @version 3.6.7
+   * @version 3.6.8
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterRangeInteger model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeInteger
-   * @version 3.6.7
+   * @version 3.6.8
    */
 
   /**

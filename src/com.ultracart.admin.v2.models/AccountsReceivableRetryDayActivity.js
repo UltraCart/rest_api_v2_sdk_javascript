@@ -34,7 +34,7 @@
   /**
    * The AccountsReceivableRetryDayActivity model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity
-   * @version 3.6.7
+   * @version 3.6.8
    */
 
   /**

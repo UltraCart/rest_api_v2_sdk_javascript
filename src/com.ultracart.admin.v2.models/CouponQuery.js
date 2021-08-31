@@ -34,7 +34,7 @@
   /**
    * The CouponQuery model module.
    * @module com.ultracart.admin.v2.models/CouponQuery
-   * @version 3.6.7
+   * @version 3.6.8
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.expiration_dts_end = ApiClient.convertToType(data['expiration_dts_end'], 'String');
       if (data.hasOwnProperty('merchant_code'))
         obj.merchant_code = ApiClient.convertToType(data['merchant_code'], 'String');
+      if (data.hasOwnProperty('merchant_code_or_description'))
+        obj.merchant_code_or_description = ApiClient.convertToType(data['merchant_code_or_description'], 'String');
       if (data.hasOwnProperty('start_dts_begin'))
         obj.start_dts_begin = ApiClient.convertToType(data['start_dts_begin'], 'String');
       if (data.hasOwnProperty('start_dts_end'))
@@ -118,6 +120,12 @@
    * @member {String} merchant_code
    */
   exports.prototype.merchant_code = undefined;
+
+  /**
+   * Merchant code description used for searching
+   * @member {String} merchant_code_or_description
+   */
+  exports.prototype.merchant_code_or_description = undefined;
 
   /**
    * Start date begin

@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterIpSearch model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterIpSearch
-   * @version 3.6.7
+   * @version 3.6.8
    */
 
   /**

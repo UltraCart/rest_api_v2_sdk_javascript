@@ -34,7 +34,7 @@
   /**
    * The TaxJarConfig model module.
    * @module com.ultracart.admin.v2.models/TaxJarConfig
-   * @version 3.6.7
+   * @version 3.6.8
    */
 
   /**
