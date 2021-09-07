@@ -34,7 +34,7 @@
   /**
    * The CartItemPhysical model module.
    * @module com.ultracart.admin.v2.models/CartItemPhysical
-   * @version 3.6.8
+   * @version 3.6.9
    */
 
   /**

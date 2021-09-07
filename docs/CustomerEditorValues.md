@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **countries** | [**[Country]**](Country.md) | countries | [optional] 
 **qb_classes** | **[String]** | qb_classes | [optional] 
 **sales_rep_codes** | **[String]** | sales_rep_codes | [optional] 
+**state_optional_countries** | [**[Country]**](Country.md) | state_optional_countries | [optional] 
 **terms** | **[String]** | terms | [optional] 
 
 

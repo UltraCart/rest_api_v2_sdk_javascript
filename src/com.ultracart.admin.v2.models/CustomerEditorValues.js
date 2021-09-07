@@ -34,7 +34,7 @@
   /**
    * The CustomerEditorValues model module.
    * @module com.ultracart.admin.v2.models/CustomerEditorValues
-   * @version 3.6.8
+   * @version 3.6.9
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.qb_classes = ApiClient.convertToType(data['qb_classes'], ['String']);
       if (data.hasOwnProperty('sales_rep_codes'))
         obj.sales_rep_codes = ApiClient.convertToType(data['sales_rep_codes'], ['String']);
+      if (data.hasOwnProperty('state_optional_countries'))
+        obj.state_optional_countries = ApiClient.convertToType(data['state_optional_countries'], [Country]);
       if (data.hasOwnProperty('terms'))
         obj.terms = ApiClient.convertToType(data['terms'], ['String']);
     }
@@ -116,6 +118,12 @@
    * @member {Array.<String>} sales_rep_codes
    */
   exports.prototype.sales_rep_codes = undefined;
+
+  /**
+   * state_optional_countries
+   * @member {Array.<module:com.ultracart.admin.v2.models/Country>} state_optional_countries
+   */
+  exports.prototype.state_optional_countries = undefined;
 
   /**
    * terms
