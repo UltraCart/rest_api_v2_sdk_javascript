@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.6.9
+   * @version 3.6.10
    */
 
   /**
@@ -257,6 +257,12 @@
      * @const
      */
     eCheck: "eCheck",
+
+    /**
+     * value: "Google Shopping"
+     * @const
+     */
+    Google_Shopping: "Google Shopping",
 
     /**
      * value: "Insurance"

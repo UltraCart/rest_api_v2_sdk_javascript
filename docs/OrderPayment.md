@@ -45,6 +45,8 @@ Name | Type | Description | Notes
 
 * `eCheck` (value: `"eCheck"`)
 
+* `Google_Shopping` (value: `"Google Shopping"`)
+
 * `Insurance` (value: `"Insurance"`)
 
 * `LoanHero` (value: `"LoanHero"`)
