@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationInsurance model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationInsurance
-   * @version 3.6.10
+   * @version 3.6.11
    */
 
   /**

@@ -512,7 +512,6 @@ var opts = {
   'expiration_date_end': "expiration_date_end_example", // String | Expiration date end
   'affiliate_oid': 56, // Number | Affiliate oid
   'exclude_expired': true, // Boolean | Exclude expired
-  'merchant_code_or_description': "merchant_code_or_description_example", // String | Merchant code or description
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_sort': "_sort_example", // String | The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -542,7 +541,6 @@ Name | Type | Description  | Notes
  **expiration_date_end** | **String**| Expiration date end | [optional] 
  **affiliate_oid** | **Number**| Affiliate oid | [optional] 
  **exclude_expired** | **Boolean**| Exclude expired | [optional] 
- **merchant_code_or_description** | **String**| Merchant code or description | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **_sort** | **String**| The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 

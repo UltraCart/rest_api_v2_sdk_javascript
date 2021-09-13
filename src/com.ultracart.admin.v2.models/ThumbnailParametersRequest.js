@@ -34,7 +34,7 @@
   /**
    * The ThumbnailParametersRequest model module.
    * @module com.ultracart.admin.v2.models/ThumbnailParametersRequest
-   * @version 3.6.10
+   * @version 3.6.11
    */
 
   /**

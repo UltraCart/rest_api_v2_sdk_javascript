@@ -34,7 +34,7 @@
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 3.6.10
+   * @version 3.6.11
    */
 
   /**
@@ -509,7 +509,6 @@
      * @param {String} opts.expiration_date_end Expiration date end
      * @param {Number} opts.affiliate_oid Affiliate oid
      * @param {Boolean} opts.exclude_expired Exclude expired
-     * @param {String} opts.merchant_code_or_description Merchant code or description
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts._sort The sort order of the coupons.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
@@ -534,7 +533,6 @@
         'expiration_date_end': opts['expiration_date_end'],
         'affiliate_oid': opts['affiliate_oid'],
         'exclude_expired': opts['exclude_expired'],
-        'merchant_code_or_description': opts['merchant_code_or_description'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset'],
         '_sort': opts['_sort'],
