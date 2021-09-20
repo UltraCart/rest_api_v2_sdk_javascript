@@ -34,7 +34,7 @@
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 3.6.11
+   * @version 3.6.12
    */
 
   /**
@@ -608,7 +608,7 @@
       var returnType = CouponsResponse;
 
       return this.apiClient.callApi(
-        '/coupon/coupons/query', 'GET',
+        '/coupon/coupons/query', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
