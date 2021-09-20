@@ -34,7 +34,7 @@
   /**
    * The OrderTrackingNumberDetails model module.
    * @module com.ultracart.admin.v2.models/OrderTrackingNumberDetails
-   * @version 3.6.12
+   * @version 3.6.13
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.actual_delivery_date_formatted = ApiClient.convertToType(data['actual_delivery_date_formatted'], 'String');
       if (data.hasOwnProperty('details'))
         obj.details = ApiClient.convertToType(data['details'], [OrderTrackingNumberDetail]);
+      if (data.hasOwnProperty('easypost_tracker_id'))
+        obj.easypost_tracker_id = ApiClient.convertToType(data['easypost_tracker_id'], 'String');
       if (data.hasOwnProperty('expected_delivery_date'))
         obj.expected_delivery_date = ApiClient.convertToType(data['expected_delivery_date'], 'String');
       if (data.hasOwnProperty('expected_delivery_date_formatted'))
@@ -107,6 +109,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/OrderTrackingNumberDetail>} details
    */
   exports.prototype.details = undefined;
+
+  /**
+   * @member {String} easypost_tracker_id
+   */
+  exports.prototype.easypost_tracker_id = undefined;
 
   /**
    * @member {String} expected_delivery_date

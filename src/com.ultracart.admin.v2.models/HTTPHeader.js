@@ -34,7 +34,7 @@
   /**
    * The HTTPHeader model module.
    * @module com.ultracart.admin.v2.models/HTTPHeader
-   * @version 3.6.12
+   * @version 3.6.13
    */
 
   /**
