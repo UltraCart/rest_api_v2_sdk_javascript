@@ -34,7 +34,7 @@
   /**
    * The EmailBaseTemplateListResponse model module.
    * @module com.ultracart.admin.v2.models/EmailBaseTemplateListResponse
-   * @version 3.6.13
+   * @version 3.6.14
    */
 
   /**

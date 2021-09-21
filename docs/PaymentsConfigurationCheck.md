@@ -15,6 +15,5 @@ Name | Type | Description | Notes
 **mail_to_postal_code** | **String** | MailTo postal code | [optional] 
 **mail_to_store** | **String** | MailTo store | [optional] 
 **restrictions** | [**PaymentsConfigurationRestrictions**](PaymentsConfigurationRestrictions.md) |  | [optional] 
-**test_methods** | [**[PaymentsConfigurationTestMethod]**](PaymentsConfigurationTestMethod.md) | Test methods for this payment method | [optional] 
 
 

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions', 'com.ultracart.admin.v2.models/PaymentsConfigurationTestMethod'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationRestrictions'));
+    module.exports = factory(require('../ApiClient'), require('./PaymentsConfigurationRestrictions'), require('./PaymentsConfigurationTestMethod'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.PaymentsConfigurationEcheck = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationRestrictions);
+    root.UltraCartRestApiV2.PaymentsConfigurationEcheck = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.PaymentsConfigurationRestrictions, root.UltraCartRestApiV2.PaymentsConfigurationTestMethod);
   }
-}(this, function(ApiClient, PaymentsConfigurationRestrictions) {
+}(this, function(ApiClient, PaymentsConfigurationRestrictions, PaymentsConfigurationTestMethod) {
   'use strict';
 
   /**
    * The PaymentsConfigurationEcheck model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationEcheck
-   * @version 3.6.13
+   * @version 3.6.14
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.deposit_to_account = ApiClient.convertToType(data['deposit_to_account'], 'String');
       if (data.hasOwnProperty('restrictions'))
         obj.restrictions = PaymentsConfigurationRestrictions.constructFromObject(data['restrictions']);
+      if (data.hasOwnProperty('test_methods'))
+        obj.test_methods = ApiClient.convertToType(data['test_methods'], [PaymentsConfigurationTestMethod]);
     }
     return obj;
   }
@@ -89,6 +91,12 @@
    * @member {module:com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions} restrictions
    */
   exports.prototype.restrictions = undefined;
+
+  /**
+   * Test methods for this payment method
+   * @member {Array.<module:com.ultracart.admin.v2.models/PaymentsConfigurationTestMethod>} test_methods
+   */
+  exports.prototype.test_methods = undefined;
 
   return exports;
 
