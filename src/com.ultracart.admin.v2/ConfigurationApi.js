@@ -34,7 +34,7 @@
   /**
    * Configuration service.
    * @module com.ultracart.admin.v2/ConfigurationApi
-   * @version 3.6.14
+   * @version 3.6.15
    */
 
   /**

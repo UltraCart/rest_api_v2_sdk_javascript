@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.6.14
+   * @version 3.6.15
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentCreditCard model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentCreditCard
-   * @version 3.6.14
+   * @version 3.6.15
    */
 
   /**
@@ -124,7 +124,7 @@
   exports.prototype.card_number = undefined;
 
   /**
-   * Card number token from hosted fields used to update the cart number
+   * Card number token from hosted fields used to update the card number
    * @member {String} card_number_token
    */
   exports.prototype.card_number_token = undefined;

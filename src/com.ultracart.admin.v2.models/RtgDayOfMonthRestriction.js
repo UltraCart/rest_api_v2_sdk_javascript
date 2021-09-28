@@ -34,7 +34,7 @@
   /**
    * The RtgDayOfMonthRestriction model module.
    * @module com.ultracart.admin.v2.models/RtgDayOfMonthRestriction
-   * @version 3.6.14
+   * @version 3.6.15
    */
 
   /**
