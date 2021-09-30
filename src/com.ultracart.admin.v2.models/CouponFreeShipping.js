@@ -34,7 +34,7 @@
   /**
    * The CouponFreeShipping model module.
    * @module com.ultracart.admin.v2.models/CouponFreeShipping
-   * @version 3.6.16
+   * @version 3.6.17
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ItemContent model module.
    * @module com.ultracart.admin.v2.models/ItemContent
-   * @version 3.6.16
+   * @version 3.6.17
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.custom_thank_you_url = ApiClient.convertToType(data['custom_thank_you_url'], 'String');
       if (data.hasOwnProperty('exclude_from_search'))
         obj.exclude_from_search = ApiClient.convertToType(data['exclude_from_search'], 'Boolean');
+      if (data.hasOwnProperty('exclude_from_sitemap'))
+        obj.exclude_from_sitemap = ApiClient.convertToType(data['exclude_from_sitemap'], 'Boolean');
       if (data.hasOwnProperty('exclude_from_top_sellers'))
         obj.exclude_from_top_sellers = ApiClient.convertToType(data['exclude_from_top_sellers'], 'Boolean');
       if (data.hasOwnProperty('extended_description'))
@@ -106,6 +108,12 @@
    * @member {Boolean} exclude_from_search
    */
   exports.prototype.exclude_from_search = undefined;
+
+  /**
+   * Exclude from the sitemap for the StoreFront
+   * @member {Boolean} exclude_from_sitemap
+   */
+  exports.prototype.exclude_from_sitemap = undefined;
 
   /**
    * Exclude from the top sellers list in the StoreFront

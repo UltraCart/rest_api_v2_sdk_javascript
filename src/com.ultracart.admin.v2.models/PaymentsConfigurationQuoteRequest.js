@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationQuoteRequest model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationQuoteRequest
-   * @version 3.6.16
+   * @version 3.6.17
    */
 
   /**
