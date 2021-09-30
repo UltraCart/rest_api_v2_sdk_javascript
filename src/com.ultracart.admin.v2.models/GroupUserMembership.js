@@ -34,7 +34,7 @@
   /**
    * The GroupUserMembership model module.
    * @module com.ultracart.admin.v2.models/GroupUserMembership
-   * @version 3.6.15
+   * @version 3.6.16
    */
 
   /**
