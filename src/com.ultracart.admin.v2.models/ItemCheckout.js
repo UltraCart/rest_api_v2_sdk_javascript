@@ -34,7 +34,7 @@
   /**
    * The ItemCheckout model module.
    * @module com.ultracart.admin.v2.models/ItemCheckout
-   * @version 3.6.17
+   * @version 3.6.18
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.suppress_buysafe = ApiClient.convertToType(data['suppress_buysafe'], 'Boolean');
       if (data.hasOwnProperty('terms'))
         obj.terms = ApiClient.convertToType(data['terms'], 'String');
+      if (data.hasOwnProperty('terms_if_auto_order'))
+        obj.terms_if_auto_order = ApiClient.convertToType(data['terms_if_auto_order'], 'Boolean');
       if (data.hasOwnProperty('terms_translated_text_instance_oid'))
         obj.terms_translated_text_instance_oid = ApiClient.convertToType(data['terms_translated_text_instance_oid'], 'Number');
     }
@@ -76,6 +78,12 @@
    * @member {String} terms
    */
   exports.prototype.terms = undefined;
+
+  /**
+   * Terms only apply if the item is on auto order
+   * @member {Boolean} terms_if_auto_order
+   */
+  exports.prototype.terms_if_auto_order = undefined;
 
   /**
    * Terms translated text instance identifier

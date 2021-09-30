@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterValuesEventParams model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEventParams
-   * @version 3.6.17
+   * @version 3.6.18
    */
 
   /**
