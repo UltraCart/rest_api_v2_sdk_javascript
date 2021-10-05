@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationRestrictions model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationRestrictions
-   * @version 3.6.18
+   * @version 3.6.19
    */
 
   /**

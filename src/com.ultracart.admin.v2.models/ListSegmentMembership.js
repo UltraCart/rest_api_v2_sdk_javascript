@@ -34,7 +34,7 @@
   /**
    * The ListSegmentMembership model module.
    * @module com.ultracart.admin.v2.models/ListSegmentMembership
-   * @version 3.6.18
+   * @version 3.6.19
    */
 
   /**

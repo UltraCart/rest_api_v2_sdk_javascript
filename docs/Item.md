@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **ebay** | [**ItemEbay**](ItemEbay.md) |  | [optional] 
 **email_notifications** | [**ItemEmailNotifications**](ItemEmailNotifications.md) |  | [optional] 
 **enrollment123** | [**ItemEnrollment123**](ItemEnrollment123.md) |  | [optional] 
+**fulfillment_addons** | [**[ItemFulfillmentAddon]**](ItemFulfillmentAddon.md) | Fulfillment Add-ons | [optional] 
 **gift_certificate** | [**ItemGiftCertificate**](ItemGiftCertificate.md) |  | [optional] 
 **google_product_search** | [**ItemGoogleProductSearch**](ItemGoogleProductSearch.md) |  | [optional] 
 **identifiers** | [**ItemIdentifiers**](ItemIdentifiers.md) |  | [optional] 
