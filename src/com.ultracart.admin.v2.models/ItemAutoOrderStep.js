@@ -34,7 +34,7 @@
   /**
    * The ItemAutoOrderStep model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrderStep
-   * @version 3.6.19
+   * @version 3.6.20
    */
 
   /**
@@ -174,7 +174,7 @@
   exports.prototype.subscribe_email_list_oid = undefined;
 
   /**
-   * Type of step (item or pause)
+   * Type of step (item, kit only, loop or pause)
    * @member {module:com.ultracart.admin.v2.models/ItemAutoOrderStep.TypeEnum} type
    */
   exports.prototype.type = undefined;
@@ -196,7 +196,19 @@
      * value: "pause"
      * @const
      */
-    pause: "pause"
+    pause: "pause",
+
+    /**
+     * value: "loop"
+     * @const
+     */
+    loop: "loop",
+
+    /**
+     * value: "kit only"
+     * @const
+     */
+    kit_only: "kit only"
   };
 
   return exports;

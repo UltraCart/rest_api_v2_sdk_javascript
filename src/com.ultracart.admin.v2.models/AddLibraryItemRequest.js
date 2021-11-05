@@ -34,7 +34,7 @@
   /**
    * The AddLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/AddLibraryItemRequest
-   * @version 3.6.19
+   * @version 3.6.20
    */
 
   /**
@@ -94,7 +94,7 @@
   exports.prototype.cjson = undefined;
 
   /**
-   * flow, campaign, cjson, email, transactional_email or upsell
+   * flow, campaign, cjson, email, transactional_email, postcard or upsell
    * @member {String} content_type
    */
   exports.prototype.content_type = undefined;
@@ -142,7 +142,7 @@
   exports.prototype.upsell_offer_oid = undefined;
 
   /**
-   * UUID of communication flow, campaign, email, or null if this item is something else. transactional_email do not have a uuid because they are singleton objects within a storefront and easily identifiable by name
+   * UUID of communication flow, campaign, email, postcard, or null if this item is something else. transactional_email do not have a uuid because they are singleton objects within a storefront and easily identifiable by name
    * @member {String} uuid
    */
   exports.prototype.uuid = undefined;

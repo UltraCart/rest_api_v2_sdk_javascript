@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **schedule** | **String** | Frequency of the rebill | [optional] 
 **subscribe_email_list_name** | **String** | Email list name to subscribe the customer to when the rebill occurs | [optional] 
 **subscribe_email_list_oid** | **Number** | Email list identifier to subscribe the customer to when this rebill occurs | [optional] 
-**type** | **String** | Type of step (item or pause) | [optional] 
+**type** | **String** | Type of step (item, kit only, loop or pause) | [optional] 
 
 
 <a name="TypeEnum"></a>
@@ -27,6 +27,10 @@ Name | Type | Description | Notes
 * `item` (value: `"item"`)
 
 * `pause` (value: `"pause"`)
+
+* `loop` (value: `"loop"`)
+
+* `kit_only` (value: `"kit only"`)
 
 
 

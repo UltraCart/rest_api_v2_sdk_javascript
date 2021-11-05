@@ -34,7 +34,7 @@
   /**
    * The AffiliateLedger model module.
    * @module com.ultracart.admin.v2.models/AffiliateLedger
-   * @version 3.6.19
+   * @version 3.6.20
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate_click_oid'))
         obj.affiliate_click_oid = ApiClient.convertToType(data['affiliate_click_oid'], 'Number');
+      if (data.hasOwnProperty('affiliate_ledger_oid'))
+        obj.affiliate_ledger_oid = ApiClient.convertToType(data['affiliate_ledger_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_link_oid'))
         obj.affiliate_link_oid = ApiClient.convertToType(data['affiliate_link_oid'], 'Number');
       if (data.hasOwnProperty('affiliate_oid'))
@@ -78,7 +80,7 @@
       if (data.hasOwnProperty('sub_id'))
         obj.sub_id = ApiClient.convertToType(data['sub_id'], 'String');
       if (data.hasOwnProperty('tier_number'))
-        obj.tier_number = ApiClient.convertToType(data['tier_number'], 'String');
+        obj.tier_number = ApiClient.convertToType(data['tier_number'], 'Number');
       if (data.hasOwnProperty('transaction_amount'))
         obj.transaction_amount = ApiClient.convertToType(data['transaction_amount'], 'Number');
       if (data.hasOwnProperty('transaction_amount_paid'))
@@ -88,7 +90,7 @@
       if (data.hasOwnProperty('transaction_memo'))
         obj.transaction_memo = ApiClient.convertToType(data['transaction_memo'], 'String');
       if (data.hasOwnProperty('transaction_percentage'))
-        obj.transaction_percentage = ApiClient.convertToType(data['transaction_percentage'], 'String');
+        obj.transaction_percentage = ApiClient.convertToType(data['transaction_percentage'], 'Number');
       if (data.hasOwnProperty('transaction_state'))
         obj.transaction_state = ApiClient.convertToType(data['transaction_state'], 'String');
     }
@@ -100,6 +102,12 @@
    * @member {Number} affiliate_click_oid
    */
   exports.prototype.affiliate_click_oid = undefined;
+
+  /**
+   * Affiliate ledger object ID associated with this ledger
+   * @member {Number} affiliate_ledger_oid
+   */
+  exports.prototype.affiliate_ledger_oid = undefined;
 
   /**
    * Unique object identifier for the link that this click is associated with
@@ -160,7 +168,7 @@
 
   /**
    * Tier number that this transaction earned
-   * @member {String} tier_number
+   * @member {Number} tier_number
    */
   exports.prototype.tier_number = undefined;
 
@@ -190,7 +198,7 @@
 
   /**
    * Percentage associated with this transaction
-   * @member {String} transaction_percentage
+   * @member {Number} transaction_percentage
    */
   exports.prototype.transaction_percentage = undefined;
 

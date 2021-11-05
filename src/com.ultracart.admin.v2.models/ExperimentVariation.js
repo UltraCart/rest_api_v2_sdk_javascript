@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ExperimentVariationStat'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ExperimentVariationStat'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ExperimentVariation = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ExperimentVariation = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ExperimentVariationStat);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ExperimentVariationStat) {
   'use strict';
 
   /**
    * The ExperimentVariation model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariation
-   * @version 3.6.19
+   * @version 3.6.20
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.bounce_count = ApiClient.convertToType(data['bounce_count'], 'Number');
       if (data.hasOwnProperty('conversion_rate'))
         obj.conversion_rate = ApiClient.convertToType(data['conversion_rate'], 'Number');
+      if (data.hasOwnProperty('daily_statistics'))
+        obj.daily_statistics = ApiClient.convertToType(data['daily_statistics'], [ExperimentVariationStat]);
       if (data.hasOwnProperty('duration_seconds_sum'))
         obj.duration_seconds_sum = ApiClient.convertToType(data['duration_seconds_sum'], 'Number');
       if (data.hasOwnProperty('event_count'))
@@ -75,6 +77,8 @@
         obj.initiate_checkout_count = ApiClient.convertToType(data['initiate_checkout_count'], 'Number');
       if (data.hasOwnProperty('order_count'))
         obj.order_count = ApiClient.convertToType(data['order_count'], 'Number');
+      if (data.hasOwnProperty('order_item_count'))
+        obj.order_item_count = ApiClient.convertToType(data['order_item_count'], 'Number');
       if (data.hasOwnProperty('original_traffic_percentage'))
         obj.original_traffic_percentage = ApiClient.convertToType(data['original_traffic_percentage'], 'Number');
       if (data.hasOwnProperty('page_view_count'))
@@ -134,6 +138,12 @@
   exports.prototype.conversion_rate = undefined;
 
   /**
+   * Array of daily statistics for this variation
+   * @member {Array.<module:com.ultracart.admin.v2.models/ExperimentVariationStat>} daily_statistics
+   */
+  exports.prototype.daily_statistics = undefined;
+
+  /**
    * Total number of seconds spent on the site for this variation
    * @member {Number} duration_seconds_sum
    */
@@ -156,6 +166,12 @@
    * @member {Number} order_count
    */
   exports.prototype.order_count = undefined;
+
+  /**
+   * Total order item count for this variation
+   * @member {Number} order_item_count
+   */
+  exports.prototype.order_item_count = undefined;
 
   /**
    * Percentage of the traffic the variation originally started out with

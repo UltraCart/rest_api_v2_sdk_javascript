@@ -34,7 +34,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 3.6.19
+   * @version 3.6.20
    */
 
   /**
@@ -493,12 +493,6 @@
      * @const
      */
     eCheck: "eCheck",
-
-    /**
-     * value: "Google Shopping"
-     * @const
-     */
-    Google_Shopping: "Google Shopping",
 
     /**
      * value: "LoanHero"

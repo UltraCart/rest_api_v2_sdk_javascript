@@ -34,7 +34,7 @@
   /**
    * The ApplyLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/ApplyLibraryItemRequest
-   * @version 3.6.19
+   * @version 3.6.20
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.email_uuid = ApiClient.convertToType(data['email_uuid'], 'String');
       if (data.hasOwnProperty('library_item_oid'))
         obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
+      if (data.hasOwnProperty('postcard_uuid'))
+        obj.postcard_uuid = ApiClient.convertToType(data['postcard_uuid'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
     }
@@ -76,6 +78,12 @@
    * @member {Number} library_item_oid
    */
   exports.prototype.library_item_oid = undefined;
+
+  /**
+   * The postcard uuid you wish to apply to a given StoreFront.
+   * @member {String} postcard_uuid
+   */
+  exports.prototype.postcard_uuid = undefined;
 
   /**
    * StoreFront oid where content originates necessary for tracking down relative assets

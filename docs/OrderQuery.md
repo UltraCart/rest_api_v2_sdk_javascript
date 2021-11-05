@@ -91,8 +91,6 @@ Name | Type | Description | Notes
 
 * `eCheck` (value: `"eCheck"`)
 
-* `Google_Shopping` (value: `"Google Shopping"`)
-
 * `LoanHero` (value: `"LoanHero"`)
 
 * `Money_Order` (value: `"Money Order"`)

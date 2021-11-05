@@ -34,7 +34,7 @@
   /**
    * The ApplyLibraryItemResponse model module.
    * @module com.ultracart.admin.v2.models/ApplyLibraryItemResponse
-   * @version 3.6.19
+   * @version 3.6.20
    */
 
   /**
@@ -94,7 +94,7 @@
   exports.prototype.cjson = undefined;
 
   /**
-   * flow, campaign, cjson, upsell, transactional_email or email
+   * flow, campaign, cjson, upsell, postcard, transactional_email or email
    * @member {String} content_type
    */
   exports.prototype.content_type = undefined;
