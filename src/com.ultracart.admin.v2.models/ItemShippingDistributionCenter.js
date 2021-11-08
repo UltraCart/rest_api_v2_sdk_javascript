@@ -34,7 +34,7 @@
   /**
    * The ItemShippingDistributionCenter model module.
    * @module com.ultracart.admin.v2.models/ItemShippingDistributionCenter
-   * @version 3.6.20
+   * @version 3.6.21
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.allocated_to_shopping_carts = ApiClient.convertToType(data['allocated_to_shopping_carts'], 'Number');
       if (data.hasOwnProperty('available_to_allocate'))
         obj.available_to_allocate = ApiClient.convertToType(data['available_to_allocate'], 'Number');
+      if (data.hasOwnProperty('cogs'))
+        obj.cogs = ApiClient.convertToType(data['cogs'], 'Number');
       if (data.hasOwnProperty('desired_inventory_level'))
         obj.desired_inventory_level = ApiClient.convertToType(data['desired_inventory_level'], 'Number');
       if (data.hasOwnProperty('distribution_center_code'))
@@ -102,6 +104,12 @@
    * @member {Number} available_to_allocate
    */
   exports.prototype.available_to_allocate = undefined;
+
+  /**
+   * Cost of goods sold override at the distribution center level
+   * @member {Number} cogs
+   */
+  exports.prototype.cogs = undefined;
 
   /**
    * Desired inventory level

@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationResponse model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationResponse
-   * @version 3.6.20
+   * @version 3.6.21
    */
 
   /**
