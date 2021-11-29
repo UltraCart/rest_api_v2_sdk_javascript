@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **auto_order_cancel_item_oid** | **Number** | Item object identifier to attempt charging the customer for if they cancel | [optional] 
 **auto_order_downgrade_items** | **[String]** | List of downgrade items presented to customer service representatives | [optional] 
 **auto_order_paused** | **Boolean** | True if the rebill processing of this item is paused | [optional] 
+**auto_order_prohibit_expiring_cards** | **Number** | Minimum number of months before expiration for the card.  Overrides the account level setting if higher.  Set to zero to disable. | [optional] 
 **auto_order_schedules** | **[String]** | The user selectable schedules that are available | [optional] 
 **auto_order_upgrade_items** | **[String]** | List of upgrade items presented to customer service representatives | [optional] 
 **auto_order_upsell** | **Boolean** | True if this item uses a fixed upsell step schedule | [optional] 

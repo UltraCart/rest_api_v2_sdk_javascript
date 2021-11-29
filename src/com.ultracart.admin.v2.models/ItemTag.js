@@ -34,7 +34,7 @@
   /**
    * The ItemTag model module.
    * @module com.ultracart.admin.v2.models/ItemTag
-   * @version 3.6.22
+   * @version 3.6.23
    */
 
   /**

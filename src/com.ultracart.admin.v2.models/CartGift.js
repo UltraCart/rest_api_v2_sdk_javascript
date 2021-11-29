@@ -34,7 +34,7 @@
   /**
    * The CartGift model module.
    * @module com.ultracart.admin.v2.models/CartGift
-   * @version 3.6.22
+   * @version 3.6.23
    */
 
   /**

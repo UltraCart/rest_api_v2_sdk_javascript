@@ -34,7 +34,7 @@
   /**
    * The ItemAutoOrder model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrder
-   * @version 3.6.22
+   * @version 3.6.23
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.auto_order_downgrade_items = ApiClient.convertToType(data['auto_order_downgrade_items'], ['String']);
       if (data.hasOwnProperty('auto_order_paused'))
         obj.auto_order_paused = ApiClient.convertToType(data['auto_order_paused'], 'Boolean');
+      if (data.hasOwnProperty('auto_order_prohibit_expiring_cards'))
+        obj.auto_order_prohibit_expiring_cards = ApiClient.convertToType(data['auto_order_prohibit_expiring_cards'], 'Number');
       if (data.hasOwnProperty('auto_order_schedules'))
         obj.auto_order_schedules = ApiClient.convertToType(data['auto_order_schedules'], ['String']);
       if (data.hasOwnProperty('auto_order_upgrade_items'))
@@ -126,6 +128,12 @@
    * @member {Boolean} auto_order_paused
    */
   exports.prototype.auto_order_paused = undefined;
+
+  /**
+   * Minimum number of months before expiration for the card.  Overrides the account level setting if higher.  Set to zero to disable.
+   * @member {Number} auto_order_prohibit_expiring_cards
+   */
+  exports.prototype.auto_order_prohibit_expiring_cards = undefined;
 
   /**
    * The user selectable schedules that are available
