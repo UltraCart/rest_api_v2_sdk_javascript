@@ -34,7 +34,7 @@
   /**
    * The AffiliateClick model module.
    * @module com.ultracart.admin.v2.models/AffiliateClick
-   * @version 3.6.23
+   * @version 3.6.24
    */
 
   /**

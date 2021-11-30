@@ -34,7 +34,7 @@
   /**
    * The CustomerQuotesSummary model module.
    * @module com.ultracart.admin.v2.models/CustomerQuotesSummary
-   * @version 3.6.23
+   * @version 3.6.24
    */
 
   /**

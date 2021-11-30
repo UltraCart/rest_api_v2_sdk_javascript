@@ -34,7 +34,7 @@
   /**
    * The CouponResponse model module.
    * @module com.ultracart.admin.v2.models/CouponResponse
-   * @version 3.6.23
+   * @version 3.6.24
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.coupon = Coupon.constructFromObject(data['coupon']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
+      if (data.hasOwnProperty('items_invalid_for_coupons'))
+        obj.items_invalid_for_coupons = ApiClient.convertToType(data['items_invalid_for_coupons'], ['String']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -78,6 +80,12 @@
    * @member {module:com.ultracart.admin.v2.models/Error} error
    */
   exports.prototype.error = undefined;
+
+  /**
+   * Items invalid for coupons.  These will display as warnings within the UI.
+   * @member {Array.<String>} items_invalid_for_coupons
+   */
+  exports.prototype.items_invalid_for_coupons = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
