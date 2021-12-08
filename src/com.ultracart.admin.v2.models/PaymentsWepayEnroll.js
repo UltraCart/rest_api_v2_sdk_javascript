@@ -34,7 +34,7 @@
   /**
    * The PaymentsWepayEnroll model module.
    * @module com.ultracart.admin.v2.models/PaymentsWepayEnroll
-   * @version 3.6.24
+   * @version 3.6.27
    */
 
   /**

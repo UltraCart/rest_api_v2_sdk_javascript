@@ -34,7 +34,7 @@
   /**
    * The EmailFlowBackPopulateRequest model module.
    * @module com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest
-   * @version 3.6.24
+   * @version 3.6.27
    */
 
   /**
