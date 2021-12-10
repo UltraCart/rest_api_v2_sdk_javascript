@@ -34,7 +34,7 @@
   /**
    * The VerificationRecord model module.
    * @module com.ultracart.admin.v2.models/VerificationRecord
-   * @version 3.6.27
+   * @version 3.6.30
    */
 
   /**
