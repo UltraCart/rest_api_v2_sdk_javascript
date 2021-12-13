@@ -34,7 +34,7 @@
   /**
    * The ItemShippingCase model module.
    * @module com.ultracart.admin.v2.models/ItemShippingCase
-   * @version 3.6.32
+   * @version 3.6.33
    */
 
   /**
