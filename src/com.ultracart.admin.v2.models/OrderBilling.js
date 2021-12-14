@@ -34,7 +34,7 @@
   /**
    * The OrderBilling model module.
    * @module com.ultracart.admin.v2.models/OrderBilling
-   * @version 3.6.33
+   * @version 3.6.34
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('evening_phone'))
         obj.evening_phone = ApiClient.convertToType(data['evening_phone'], 'String');
+      if (data.hasOwnProperty('evening_phone_e164'))
+        obj.evening_phone_e164 = ApiClient.convertToType(data['evening_phone_e164'], 'String');
       if (data.hasOwnProperty('first_name'))
         obj.first_name = ApiClient.convertToType(data['first_name'], 'String');
       if (data.hasOwnProperty('last_name'))
@@ -148,6 +150,12 @@
    * @member {String} evening_phone
    */
   exports.prototype.evening_phone = undefined;
+
+  /**
+   * Evening phone (E164 format)
+   * @member {String} evening_phone_e164
+   */
+  exports.prototype.evening_phone_e164 = undefined;
 
   /**
    * First name
