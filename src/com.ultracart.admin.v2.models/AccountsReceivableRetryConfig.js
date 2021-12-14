@@ -34,7 +34,7 @@
   /**
    * The AccountsReceivableRetryConfig model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
-   * @version 3.6.34
+   * @version 3.6.35
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.active = ApiClient.convertToType(data['active'], 'Boolean');
       if (data.hasOwnProperty('allow_process_linked_accounts'))
         obj.allow_process_linked_accounts = ApiClient.convertToType(data['allow_process_linked_accounts'], 'Boolean');
+      if (data.hasOwnProperty('cancel_auto_order'))
+        obj.cancel_auto_order = ApiClient.convertToType(data['cancel_auto_order'], 'Boolean');
       if (data.hasOwnProperty('current_service_plan'))
         obj.current_service_plan = ApiClient.convertToType(data['current_service_plan'], 'String');
       if (data.hasOwnProperty('daily_activity_list'))
@@ -98,6 +100,12 @@
    * @member {Boolean} allow_process_linked_accounts
    */
   exports.prototype.allow_process_linked_accounts = undefined;
+
+  /**
+   * If true also cancel the auto order if the order is rejected at the end
+   * @member {Boolean} cancel_auto_order
+   */
+  exports.prototype.cancel_auto_order = undefined;
 
   /**
    * The current service plan that the account is on.

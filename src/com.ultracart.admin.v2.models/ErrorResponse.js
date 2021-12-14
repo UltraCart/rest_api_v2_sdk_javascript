@@ -34,7 +34,7 @@
   /**
    * The ErrorResponse model module.
    * @module com.ultracart.admin.v2.models/ErrorResponse
-   * @version 3.6.34
+   * @version 3.6.35
    */
 
   /**
