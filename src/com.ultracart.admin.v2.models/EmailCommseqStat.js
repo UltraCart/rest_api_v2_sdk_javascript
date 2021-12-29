@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqStat model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqStat
-   * @version 3.6.35
+   * @version 3.6.36
    */
 
   /**

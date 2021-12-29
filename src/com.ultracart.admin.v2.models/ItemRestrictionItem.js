@@ -34,7 +34,7 @@
   /**
    * The ItemRestrictionItem model module.
    * @module com.ultracart.admin.v2.models/ItemRestrictionItem
-   * @version 3.6.35
+   * @version 3.6.36
    */
 
   /**

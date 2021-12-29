@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqPostcardSendTestRequest model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest
-   * @version 3.6.35
+   * @version 3.6.36
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.esp_commseq_step_uuid = ApiClient.convertToType(data['esp_commseq_step_uuid'], 'String');
       if (data.hasOwnProperty('esp_commseq_uuid'))
         obj.esp_commseq_uuid = ApiClient.convertToType(data['esp_commseq_uuid'], 'String');
+      if (data.hasOwnProperty('mail_card'))
+        obj.mail_card = ApiClient.convertToType(data['mail_card'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('order_id'))
@@ -122,6 +124,11 @@
    * @member {String} esp_commseq_uuid
    */
   exports.prototype.esp_commseq_uuid = undefined;
+
+  /**
+   * @member {Boolean} mail_card
+   */
+  exports.prototype.mail_card = undefined;
 
   /**
    * @member {String} name
