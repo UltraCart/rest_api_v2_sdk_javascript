@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **gacid** | **String** | Google Analytics CID (Cookie) | [optional] 
 **glcid** | **String** | Google Adwords Click Id (Parameter) | [optional] 
 **msclkid** | **String** | Bing Click Id (Parameter | [optional] 
+**ttclid** | **String** | TikTok Click Id (Parameter | [optional] 
 
 

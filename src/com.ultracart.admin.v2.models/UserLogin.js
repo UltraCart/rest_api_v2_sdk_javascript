@@ -34,7 +34,7 @@
   /**
    * The UserLogin model module.
    * @module com.ultracart.admin.v2.models/UserLogin
-   * @version 3.6.36
+   * @version 3.6.37
    */
 
   /**

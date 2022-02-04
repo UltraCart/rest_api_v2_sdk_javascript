@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentInsurance model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentInsurance
-   * @version 3.6.36
+   * @version 3.6.37
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.application_id = ApiClient.convertToType(data['application_id'], 'String');
       if (data.hasOwnProperty('claim_id'))
         obj.claim_id = ApiClient.convertToType(data['claim_id'], 'String');
+      if (data.hasOwnProperty('insurance_type'))
+        obj.insurance_type = ApiClient.convertToType(data['insurance_type'], 'String');
       if (data.hasOwnProperty('refund_claim_id'))
         obj.refund_claim_id = ApiClient.convertToType(data['refund_claim_id'], 'String');
     }
@@ -76,6 +78,12 @@
    * @member {String} claim_id
    */
   exports.prototype.claim_id = undefined;
+
+  /**
+   * insurance type
+   * @member {String} insurance_type
+   */
+  exports.prototype.insurance_type = undefined;
 
   /**
    * refund claim id

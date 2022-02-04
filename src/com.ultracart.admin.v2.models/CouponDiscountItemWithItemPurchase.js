@@ -34,7 +34,7 @@
   /**
    * The CouponDiscountItemWithItemPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponDiscountItemWithItemPurchase
-   * @version 3.6.36
+   * @version 3.6.37
    */
 
   /**

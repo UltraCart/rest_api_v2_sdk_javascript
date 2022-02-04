@@ -34,7 +34,7 @@
   /**
    * The ItemSalesforce model module.
    * @module com.ultracart.admin.v2.models/ItemSalesforce
-   * @version 3.6.36
+   * @version 3.6.37
    */
 
   /**

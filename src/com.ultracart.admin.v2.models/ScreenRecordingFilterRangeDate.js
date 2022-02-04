@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterRangeDate model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeDate
-   * @version 3.6.36
+   * @version 3.6.37
    */
 
   /**

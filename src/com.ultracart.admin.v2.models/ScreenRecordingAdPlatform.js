@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingAdPlatform model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingAdPlatform
-   * @version 3.6.36
+   * @version 3.6.37
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.glcid = ApiClient.convertToType(data['glcid'], 'String');
       if (data.hasOwnProperty('msclkid'))
         obj.msclkid = ApiClient.convertToType(data['msclkid'], 'String');
+      if (data.hasOwnProperty('ttclid'))
+        obj.ttclid = ApiClient.convertToType(data['ttclid'], 'String');
     }
     return obj;
   }
@@ -106,6 +108,12 @@
    * @member {String} msclkid
    */
   exports.prototype.msclkid = undefined;
+
+  /**
+   * TikTok Click Id (Parameter
+   * @member {String} ttclid
+   */
+  exports.prototype.ttclid = undefined;
 
   return exports;
 
