@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/Order'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/AutoOrderLog', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AutoOrderItem'), require('./Order'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrderItem'), require('./AutoOrderLog'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.AutoOrderLog, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, AutoOrderItem, Order) {
+}(this, function(ApiClient, AutoOrderItem, AutoOrderLog, Order) {
   'use strict';
 
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 3.6.37
+   * @version 3.6.38
    */
 
   /**
@@ -81,6 +81,8 @@
         obj.failure_reason = ApiClient.convertToType(data['failure_reason'], 'String');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], [AutoOrderItem]);
+      if (data.hasOwnProperty('logs'))
+        obj.logs = ApiClient.convertToType(data['logs'], [AutoOrderLog]);
       if (data.hasOwnProperty('next_attempt'))
         obj.next_attempt = ApiClient.convertToType(data['next_attempt'], 'String');
       if (data.hasOwnProperty('original_order'))
@@ -176,6 +178,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderItem>} items
    */
   exports.prototype.items = undefined;
+
+  /**
+   * Logs associated with this auto order
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderLog>} logs
+   */
+  exports.prototype.logs = undefined;
 
   /**
    * The next time that the auto order will be attempted for processing

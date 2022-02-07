@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **enabled** | **Boolean** | True if this auto order is enabled | [optional] 
 **failure_reason** | **String** | The reason this auto order failed during the last rebill attempt | [optional] 
 **items** | [**[AutoOrderItem]**](AutoOrderItem.md) | The items that are setup to rebill | [optional] 
+**logs** | [**[AutoOrderLog]**](AutoOrderLog.md) | Logs associated with this auto order | [optional] 
 **next_attempt** | **String** | The next time that the auto order will be attempted for processing | [optional] 
 **original_order** | [**Order**](Order.md) |  | [optional] 
 **original_order_id** | **String** | The original order id that this auto order is associated with. | [optional] 
