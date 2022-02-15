@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 <a name="deleteCustomer"></a>
 # **deleteCustomer**
-> CustomerResponse deleteCustomer(customer_profile_oid)
+> deleteCustomer(customer_profile_oid)
 
 Delete a customer
 
@@ -44,7 +44,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
 apiInstance.deleteCustomer(customer_profile_oid, callback);
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomerResponse**](CustomerResponse.md)
+null (empty response body)
 
 ### Authorization
 

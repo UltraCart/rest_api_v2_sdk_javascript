@@ -34,7 +34,7 @@
   /**
    * The ExperimentVariation model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariation
-   * @version 3.6.38
+   * @version 3.7.38
    */
 
   /**
@@ -83,6 +83,8 @@
         obj.original_traffic_percentage = ApiClient.convertToType(data['original_traffic_percentage'], 'Number');
       if (data.hasOwnProperty('page_view_count'))
         obj.page_view_count = ApiClient.convertToType(data['page_view_count'], 'Number');
+      if (data.hasOwnProperty('paused'))
+        obj.paused = ApiClient.convertToType(data['paused'], 'Boolean');
       if (data.hasOwnProperty('revenue'))
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('session_count'))
@@ -184,6 +186,12 @@
    * @member {Number} page_view_count
    */
   exports.prototype.page_view_count = undefined;
+
+  /**
+   * True if traffic should be paused to this variation
+   * @member {Boolean} paused
+   */
+  exports.prototype.paused = undefined;
 
   /**
    * Total revenue for this variation

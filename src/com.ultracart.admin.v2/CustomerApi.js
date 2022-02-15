@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.6.38
+   * @version 3.7.38
    */
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the deleteCustomer operation.
      * @callback module:com.ultracart.admin.v2/CustomerApi~deleteCustomerCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CustomerResponse} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,6 @@
      * Delete a customer on the UltraCart account. 
      * @param {Number} customer_profile_oid The customer_profile_oid to delete.
      * @param {module:com.ultracart.admin.v2/CustomerApi~deleteCustomerCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerResponse}
      */
     this.deleteCustomer = function(customer_profile_oid, callback) {
       var postBody = null;
@@ -87,7 +86,7 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json; charset=UTF-8'];
       var accepts = ['application/json'];
-      var returnType = CustomerResponse;
+      var returnType = null;
 
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}', 'DELETE',

@@ -34,7 +34,7 @@
   /**
    * The EmailGlobalSettingsResponse model module.
    * @module com.ultracart.admin.v2.models/EmailGlobalSettingsResponse
-   * @version 3.6.38
+   * @version 3.7.38
    */
 
   /**
