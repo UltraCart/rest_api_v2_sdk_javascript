@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogQueryFilterValues model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogQueryFilterValues
-   * @version 3.8.0
+   * @version 3.8.1
    */
 
   /**

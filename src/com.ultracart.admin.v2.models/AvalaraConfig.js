@@ -34,7 +34,7 @@
   /**
    * The AvalaraConfig model module.
    * @module com.ultracart.admin.v2.models/AvalaraConfig
-   * @version 3.8.0
+   * @version 3.8.1
    */
 
   /**
