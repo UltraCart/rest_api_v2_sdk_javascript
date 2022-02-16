@@ -34,7 +34,7 @@
   /**
    * The OrderQuote model module.
    * @module com.ultracart.admin.v2.models/OrderQuote
-   * @version 3.7.38
+   * @version 3.8.0
    */
 
   /**

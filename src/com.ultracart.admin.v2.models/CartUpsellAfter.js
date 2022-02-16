@@ -34,7 +34,7 @@
   /**
    * The CartUpsellAfter model module.
    * @module com.ultracart.admin.v2.models/CartUpsellAfter
-   * @version 3.7.38
+   * @version 3.8.0
    */
 
   /**
