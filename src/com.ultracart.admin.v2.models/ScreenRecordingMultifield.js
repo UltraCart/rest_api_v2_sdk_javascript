@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingMultifield model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingMultifield
-   * @version 3.8.1
+   * @version 3.8.2
    */
 
   /**

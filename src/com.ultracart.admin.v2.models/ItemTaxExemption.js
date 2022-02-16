@@ -34,7 +34,7 @@
   /**
    * The ItemTaxExemption model module.
    * @module com.ultracart.admin.v2.models/ItemTaxExemption
-   * @version 3.8.1
+   * @version 3.8.2
    */
 
   /**

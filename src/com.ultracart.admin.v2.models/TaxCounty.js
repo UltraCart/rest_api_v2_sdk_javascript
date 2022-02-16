@@ -34,7 +34,7 @@
   /**
    * The TaxCounty model module.
    * @module com.ultracart.admin.v2.models/TaxCounty
-   * @version 3.8.1
+   * @version 3.8.2
    */
 
   /**

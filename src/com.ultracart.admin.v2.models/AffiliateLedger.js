@@ -34,7 +34,7 @@
   /**
    * The AffiliateLedger model module.
    * @module com.ultracart.admin.v2.models/AffiliateLedger
-   * @version 3.8.1
+   * @version 3.8.2
    */
 
   /**

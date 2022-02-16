@@ -34,7 +34,7 @@
   /**
    * The GiftCertificateCreateRequest model module.
    * @module com.ultracart.admin.v2.models/GiftCertificateCreateRequest
-   * @version 3.8.1
+   * @version 3.8.2
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('amount'))
         obj.amount = ApiClient.convertToType(data['amount'], 'Number');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('expiration_dts'))
         obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('initial_ledger_description'))
@@ -72,6 +74,12 @@
    * @member {Number} amount
    */
   exports.prototype.amount = undefined;
+
+  /**
+   * The email address (customer/owner) associated with this gift certificate.
+   * @member {String} email
+   */
+  exports.prototype.email = undefined;
 
   /**
    * Expiration date time.

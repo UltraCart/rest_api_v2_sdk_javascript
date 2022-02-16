@@ -34,7 +34,7 @@
   /**
    * The OrderTrackingNumberDetail model module.
    * @module com.ultracart.admin.v2.models/OrderTrackingNumberDetail
-   * @version 3.8.1
+   * @version 3.8.2
    */
 
   /**

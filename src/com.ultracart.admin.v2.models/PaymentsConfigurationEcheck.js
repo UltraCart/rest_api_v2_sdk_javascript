@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationEcheck model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationEcheck
-   * @version 3.8.1
+   * @version 3.8.2
    */
 
   /**
