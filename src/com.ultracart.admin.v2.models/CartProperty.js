@@ -34,7 +34,7 @@
   /**
    * The CartProperty model module.
    * @module com.ultracart.admin.v2.models/CartProperty
-   * @version 3.8.2
+   * @version 3.8.5
    */
 
   /**
