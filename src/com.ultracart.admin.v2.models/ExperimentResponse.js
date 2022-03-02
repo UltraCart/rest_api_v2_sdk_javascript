@@ -34,7 +34,7 @@
   /**
    * The ExperimentResponse model module.
    * @module com.ultracart.admin.v2.models/ExperimentResponse
-   * @version 3.8.5
+   * @version 3.8.6
    */
 
   /**

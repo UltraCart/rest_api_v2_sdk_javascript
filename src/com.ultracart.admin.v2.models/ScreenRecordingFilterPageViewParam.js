@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterPageViewParam model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewParam
-   * @version 3.8.5
+   * @version 3.8.6
    */
 
   /**

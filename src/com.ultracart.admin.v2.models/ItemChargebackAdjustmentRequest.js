@@ -34,7 +34,7 @@
   /**
    * The ItemChargebackAdjustmentRequest model module.
    * @module com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest
-   * @version 3.8.5
+   * @version 3.8.6
    */
 
   /**
