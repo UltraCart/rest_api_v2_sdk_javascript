@@ -34,7 +34,7 @@
   /**
    * The OrderEdi model module.
    * @module com.ultracart.admin.v2.models/OrderEdi
-   * @version 3.8.6
+   * @version 3.8.7
    */
 
   /**

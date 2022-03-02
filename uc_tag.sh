@@ -1,3 +1,3 @@
 #!/bin/sh
-git tag 3.8.5
+git tag 3.8.6
 git push --tags origin
