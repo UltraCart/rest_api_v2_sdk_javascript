@@ -34,7 +34,7 @@
   /**
    * The CouponType model module.
    * @module com.ultracart.admin.v2.models/CouponType
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**

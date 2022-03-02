@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCOD model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCOD
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**

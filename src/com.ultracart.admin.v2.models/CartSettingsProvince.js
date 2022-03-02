@@ -34,7 +34,7 @@
   /**
    * The CartSettingsProvince model module.
    * @module com.ultracart.admin.v2.models/CartSettingsProvince
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**

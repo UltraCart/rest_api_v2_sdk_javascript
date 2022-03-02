@@ -34,7 +34,7 @@
   /**
    * The ItemTax model module.
    * @module com.ultracart.admin.v2.models/ItemTax
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**

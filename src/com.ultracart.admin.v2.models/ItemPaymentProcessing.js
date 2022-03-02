@@ -34,7 +34,7 @@
   /**
    * The ItemPaymentProcessing model module.
    * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**

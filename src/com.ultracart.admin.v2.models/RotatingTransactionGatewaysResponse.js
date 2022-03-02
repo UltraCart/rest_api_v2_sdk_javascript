@@ -34,7 +34,7 @@
   /**
    * The RotatingTransactionGatewaysResponse model module.
    * @module com.ultracart.admin.v2.models/RotatingTransactionGatewaysResponse
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**

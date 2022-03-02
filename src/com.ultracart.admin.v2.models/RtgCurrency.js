@@ -34,7 +34,7 @@
   /**
    * The RtgCurrency model module.
    * @module com.ultracart.admin.v2.models/RtgCurrency
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**

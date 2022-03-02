@@ -34,7 +34,7 @@
   /**
    * The EmailClick model module.
    * @module com.ultracart.admin.v2.models/EmailClick
-   * @version 3.8.7
+   * @version 3.8.8
    */
 
   /**
