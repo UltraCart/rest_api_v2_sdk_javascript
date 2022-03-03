@@ -34,7 +34,7 @@
   /**
    * The CouponDeletesRequest model module.
    * @module com.ultracart.admin.v2.models/CouponDeletesRequest
-   * @version 3.8.8
+   * @version 3.9.0
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationAmazon model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationAmazon
-   * @version 3.8.8
+   * @version 3.9.0
    */
 
   /**
