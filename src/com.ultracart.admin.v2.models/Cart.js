@@ -34,7 +34,7 @@
   /**
    * The Cart model module.
    * @module com.ultracart.admin.v2.models/Cart
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('affiliate'))
         obj.affiliate = CartAffiliate.constructFromObject(data['affiliate']);
+      if (data.hasOwnProperty('affiliate_network_pixel_oid'))
+        obj.affiliate_network_pixel_oid = ApiClient.convertToType(data['affiliate_network_pixel_oid'], 'Number');
       if (data.hasOwnProperty('base_currency_code'))
         obj.base_currency_code = ApiClient.convertToType(data['base_currency_code'], 'String');
       if (data.hasOwnProperty('billing'))
@@ -113,6 +115,12 @@
    * @member {module:com.ultracart.admin.v2.models/CartAffiliate} affiliate
    */
   exports.prototype.affiliate = undefined;
+
+  /**
+   * The affiliate network pixel identifier associated with the cart
+   * @member {Number} affiliate_network_pixel_oid
+   */
+  exports.prototype.affiliate_network_pixel_oid = undefined;
 
   /**
    * The ISO-4217 three letter base currency code of the account

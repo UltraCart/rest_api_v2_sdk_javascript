@@ -34,7 +34,7 @@
   /**
    * The DistributionCenter model module.
    * @module com.ultracart.admin.v2.models/DistributionCenter
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**
@@ -121,6 +121,8 @@
         obj.shipment_cutoff_time_wednesday = ApiClient.convertToType(data['shipment_cutoff_time_wednesday'], 'String');
       if (data.hasOwnProperty('state'))
         obj.state = ApiClient.convertToType(data['state'], 'String');
+      if (data.hasOwnProperty('transmit_blank_costs'))
+        obj.transmit_blank_costs = ApiClient.convertToType(data['transmit_blank_costs'], 'Boolean');
       if (data.hasOwnProperty('transport'))
         obj.transport = ApiClient.convertToType(data['transport'], 'String');
     }
@@ -323,6 +325,12 @@
    * @member {String} state
    */
   exports.prototype.state = undefined;
+
+  /**
+   * True if monetary amounts should be zeroed before transmission
+   * @member {Boolean} transmit_blank_costs
+   */
+  exports.prototype.transmit_blank_costs = undefined;
 
   /**
    * Transport mechanism for this distribution center

@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationPurchaseOrder model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationPurchaseOrder
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**

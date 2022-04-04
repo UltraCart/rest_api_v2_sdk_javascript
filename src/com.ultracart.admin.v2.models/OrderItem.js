@@ -34,7 +34,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**
@@ -147,6 +147,8 @@
         obj.tags = ApiClient.convertToType(data['tags'], [OrderItemTag]);
       if (data.hasOwnProperty('tax_free'))
         obj.tax_free = ApiClient.convertToType(data['tax_free'], 'Boolean');
+      if (data.hasOwnProperty('tax_product_type'))
+        obj.tax_product_type = ApiClient.convertToType(data['tax_product_type'], 'String');
       if (data.hasOwnProperty('taxable_cost'))
         obj.taxable_cost = Currency.constructFromObject(data['taxable_cost']);
       if (data.hasOwnProperty('total_cost_with_discount'))
@@ -437,6 +439,12 @@
   exports.prototype.tax_free = undefined;
 
   /**
+   * Type of product for tax purposes (self or UltraCart Managed taxes)
+   * @member {module:com.ultracart.admin.v2.models/OrderItem.TaxProductTypeEnum} tax_product_type
+   */
+  exports.prototype.tax_product_type = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/Currency} taxable_cost
    */
   exports.prototype.taxable_cost = undefined;
@@ -477,6 +485,38 @@
    * @member {module:com.ultracart.admin.v2.models/Distance} width
    */
   exports.prototype.width = undefined;
+
+
+  /**
+   * Allowed values for the <code>tax_product_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TaxProductTypeEnum = {
+    /**
+     * value: ""
+     * @const
+     */
+    empty: "",
+
+    /**
+     * value: "digital"
+     * @const
+     */
+    digital: "digital",
+
+    /**
+     * value: "physical"
+     * @const
+     */
+    physical: "physical",
+
+    /**
+     * value: "service"
+     * @const
+     */
+    service: "service"
+  };
 
   return exports;
 

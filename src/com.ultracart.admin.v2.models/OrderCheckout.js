@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Browser'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Browser'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderCheckout = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.OrderCheckout = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Browser);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Browser) {
   'use strict';
 
   /**
    * The OrderCheckout model module.
    * @module com.ultracart.admin.v2.models/OrderCheckout
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('browser'))
+        obj.browser = Browser.constructFromObject(data['browser']);
       if (data.hasOwnProperty('comments'))
         obj.comments = ApiClient.convertToType(data['comments'], 'String');
       if (data.hasOwnProperty('custom_field1'))
@@ -75,6 +77,8 @@
         obj.customer_ip_address = ApiClient.convertToType(data['customer_ip_address'], 'String');
       if (data.hasOwnProperty('screen_branding_theme_code'))
         obj.screen_branding_theme_code = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
+      if (data.hasOwnProperty('screen_size'))
+        obj.screen_size = ApiClient.convertToType(data['screen_size'], 'String');
       if (data.hasOwnProperty('storefront_host_name'))
         obj.storefront_host_name = ApiClient.convertToType(data['storefront_host_name'], 'String');
       if (data.hasOwnProperty('upsell_path_code'))
@@ -82,6 +86,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Browser} browser
+   */
+  exports.prototype.browser = undefined;
 
   /**
    * Comments from the customer.  Rarely used on the single page checkout.
@@ -142,6 +151,12 @@
    * @member {String} screen_branding_theme_code
    */
   exports.prototype.screen_branding_theme_code = undefined;
+
+  /**
+   * Screen size small, medium or large
+   * @member {String} screen_size
+   */
+  exports.prototype.screen_size = undefined;
 
   /**
    * StoreFront host name associated with the order

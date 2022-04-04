@@ -34,7 +34,7 @@
   /**
    * The GiftCertificate model module.
    * @module com.ultracart.admin.v2.models/GiftCertificate
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.activated = ApiClient.convertToType(data['activated'], 'Boolean');
       if (data.hasOwnProperty('code'))
         obj.code = ApiClient.convertToType(data['code'], 'String');
+      if (data.hasOwnProperty('customer_profile_oid'))
+        obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('email'))
@@ -67,6 +69,8 @@
         obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('gift_certificate_oid'))
         obj.gift_certificate_oid = ApiClient.convertToType(data['gift_certificate_oid'], 'Number');
+      if (data.hasOwnProperty('internal'))
+        obj.internal = ApiClient.convertToType(data['internal'], 'Boolean');
       if (data.hasOwnProperty('ledger_entries'))
         obj.ledger_entries = ApiClient.convertToType(data['ledger_entries'], [GiftCertificateLedgerEntry]);
       if (data.hasOwnProperty('merchant_id'))
@@ -96,6 +100,12 @@
   exports.prototype.code = undefined;
 
   /**
+   * This is the customer profile oid associated with this internally managed gift certificate.
+   * @member {Number} customer_profile_oid
+   */
+  exports.prototype.customer_profile_oid = undefined;
+
+  /**
    * True if this gift certificate was deleted.
    * @member {Boolean} deleted
    */
@@ -118,6 +128,12 @@
    * @member {Number} gift_certificate_oid
    */
   exports.prototype.gift_certificate_oid = undefined;
+
+  /**
+   * This is an internally managed gift certificate associated with the loyalty cash rewards program.
+   * @member {Boolean} internal
+   */
+  exports.prototype.internal = undefined;
 
   /**
    * A list of all ledger activity for this gift certificate.

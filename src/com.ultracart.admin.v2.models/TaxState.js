@@ -34,7 +34,7 @@
   /**
    * The TaxState model module.
    * @module com.ultracart.admin.v2.models/TaxState
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**
@@ -69,6 +69,12 @@
         obj.dont_collect_postal_code = ApiClient.convertToType(data['dont_collect_postal_code'], 'Boolean');
       if (data.hasOwnProperty('dont_collect_state'))
         obj.dont_collect_state = ApiClient.convertToType(data['dont_collect_state'], 'Boolean');
+      if (data.hasOwnProperty('exempt_digital_items'))
+        obj.exempt_digital_items = ApiClient.convertToType(data['exempt_digital_items'], 'Boolean');
+      if (data.hasOwnProperty('exempt_physical_items'))
+        obj.exempt_physical_items = ApiClient.convertToType(data['exempt_physical_items'], 'Boolean');
+      if (data.hasOwnProperty('exempt_service_items'))
+        obj.exempt_service_items = ApiClient.convertToType(data['exempt_service_items'], 'Boolean');
       if (data.hasOwnProperty('state_code'))
         obj.state_code = ApiClient.convertToType(data['state_code'], 'String');
       if (data.hasOwnProperty('state_oid'))
@@ -130,6 +136,24 @@
    * @member {Boolean} dont_collect_state
    */
   exports.prototype.dont_collect_state = undefined;
+
+  /**
+   * True if digital items are exempt from sales tax in this state.
+   * @member {Boolean} exempt_digital_items
+   */
+  exports.prototype.exempt_digital_items = undefined;
+
+  /**
+   * True if physical items are exempt from sales tax in this state.
+   * @member {Boolean} exempt_physical_items
+   */
+  exports.prototype.exempt_physical_items = undefined;
+
+  /**
+   * True if service items are exempt from sales tax in this state.
+   * @member {Boolean} exempt_service_items
+   */
+  exports.prototype.exempt_service_items = undefined;
 
   /**
    * State code

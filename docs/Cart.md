@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate** | [**CartAffiliate**](CartAffiliate.md) |  | [optional] 
+**affiliate_network_pixel_oid** | **Number** | The affiliate network pixel identifier associated with the cart | [optional] 
 **base_currency_code** | **String** | The ISO-4217 three letter base currency code of the account | [optional] 
 **billing** | [**CartBilling**](CartBilling.md) |  | [optional] 
 **buysafe** | [**CartBuysafe**](CartBuysafe.md) |  | [optional] 

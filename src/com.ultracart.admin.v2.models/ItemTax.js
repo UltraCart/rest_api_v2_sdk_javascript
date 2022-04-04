@@ -34,7 +34,7 @@
   /**
    * The ItemTax model module.
    * @module com.ultracart.admin.v2.models/ItemTax
-   * @version 3.9.1
+   * @version 3.9.2
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.exemptions = ApiClient.convertToType(data['exemptions'], [ItemTaxExemption]);
       if (data.hasOwnProperty('tax_free'))
         obj.tax_free = ApiClient.convertToType(data['tax_free'], 'Boolean');
+      if (data.hasOwnProperty('tax_product_type'))
+        obj.tax_product_type = ApiClient.convertToType(data['tax_product_type'], 'String');
       if (data.hasOwnProperty('taxable_cost'))
         obj.taxable_cost = ApiClient.convertToType(data['taxable_cost'], 'Number');
     }
@@ -78,10 +80,48 @@
   exports.prototype.tax_free = undefined;
 
   /**
+   * Tax product type
+   * @member {module:com.ultracart.admin.v2.models/ItemTax.TaxProductTypeEnum} tax_product_type
+   */
+  exports.prototype.tax_product_type = undefined;
+
+  /**
    * Taxable cost if different than regular cost
    * @member {Number} taxable_cost
    */
   exports.prototype.taxable_cost = undefined;
+
+
+  /**
+   * Allowed values for the <code>tax_product_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TaxProductTypeEnum = {
+    /**
+     * value: ""
+     * @const
+     */
+    empty: "",
+
+    /**
+     * value: "digital"
+     * @const
+     */
+    digital: "digital",
+
+    /**
+     * value: "physical"
+     * @const
+     */
+    physical: "physical",
+
+    /**
+     * value: "service"
+     * @const
+     */
+    service: "service"
+  };
 
   return exports;
 
