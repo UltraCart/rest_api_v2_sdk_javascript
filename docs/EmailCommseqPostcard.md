@@ -13,14 +13,8 @@ Name | Type | Description | Notes
 **postcard_container_cjson_last_modified_dts** | **String** | Timestamp the last time the container was modified. | [optional] 
 **postcard_front_container_cjson** | **String** | Postcard front container cjson | [optional] 
 **postcard_front_container_uuid** | **String** | Postcard front container uuid | [optional] 
-**screenshot_back_large_full_url** | **String** | URL to screenshot (back) in large form factor full page | [optional] 
-**screenshot_back_large_viewport_url** | **String** | URL to screenshot (back) in large form factor viewport | [optional] 
-**screenshot_back_small_full_url** | **String** | URL to screenshot (back) in small form factor full page | [optional] 
-**screenshot_back_small_viewport_url** | **String** | URL to screenshot (back) in small form factor viewport | [optional] 
-**screenshot_large_full_url** | **String** | URL to screenshot in large form factor full page | [optional] 
-**screenshot_large_viewport_url** | **String** | URL to screenshot in large form factor viewport | [optional] 
-**screenshot_small_full_url** | **String** | URL to screenshot in small form factor full page | [optional] 
-**screenshot_small_viewport_url** | **String** | URL to screenshot in small form factor viewport | [optional] 
+**screenshot_front_url** | **String** | URL for front screenshot | [optional] 
+**screenshot_small_full_url** | **String** | URL for back screenshot | [optional] 
 **storefront_oid** | **Number** | Storefront oid | [optional] 
 
 

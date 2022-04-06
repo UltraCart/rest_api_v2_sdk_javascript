@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationMoneyOrder model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationMoneyOrder
-   * @version 3.9.2
+   * @version 3.9.3
    */
 
   /**

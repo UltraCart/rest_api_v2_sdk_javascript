@@ -7055,7 +7055,7 @@ Name | Type | Description  | Notes
 
 <a name="sendWebhookTest"></a>
 # **sendWebhookTest**
-> EmailCommseqEmailSendTestResponse sendWebhookTest(storefront_oid, email_commseq_webhook_test_request)
+> EmailCommseqWebhookSendTestResponse sendWebhookTest(storefront_oid, email_commseq_webhook_test_request)
 
 Send webhook test
 
@@ -7093,7 +7093,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EmailCommseqEmailSendTestResponse**](EmailCommseqEmailSendTestResponse.md)
+[**EmailCommseqWebhookSendTestResponse**](EmailCommseqWebhookSendTestResponse.md)
 
 ### Authorization
 

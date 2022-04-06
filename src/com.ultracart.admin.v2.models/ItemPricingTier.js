@@ -34,7 +34,7 @@
   /**
    * The ItemPricingTier model module.
    * @module com.ultracart.admin.v2.models/ItemPricingTier
-   * @version 3.9.2
+   * @version 3.9.3
    */
 
   /**

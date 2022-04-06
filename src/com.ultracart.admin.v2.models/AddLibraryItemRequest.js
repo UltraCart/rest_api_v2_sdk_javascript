@@ -34,7 +34,7 @@
   /**
    * The AddLibraryItemRequest model module.
    * @module com.ultracart.admin.v2.models/AddLibraryItemRequest
-   * @version 3.9.2
+   * @version 3.9.3
    */
 
   /**
@@ -59,8 +59,6 @@
         obj.attributes = ApiClient.convertToType(data['attributes'], [LibraryItemAttribute]);
       if (data.hasOwnProperty('cjson'))
         obj.cjson = ApiClient.convertToType(data['cjson'], 'String');
-      if (data.hasOwnProperty('cjson2'))
-        obj.cjson2 = ApiClient.convertToType(data['cjson2'], 'String');
       if (data.hasOwnProperty('content_type'))
         obj.content_type = ApiClient.convertToType(data['content_type'], 'String');
       if (data.hasOwnProperty('description'))
@@ -94,12 +92,6 @@
    * @member {String} cjson
    */
   exports.prototype.cjson = undefined;
-
-  /**
-   * Additional Cjson to be added to library, notably for the postcard which has a front and back.
-   * @member {String} cjson2
-   */
-  exports.prototype.cjson2 = undefined;
 
   /**
    * flow, campaign, cjson, email, transactional_email, postcard or upsell

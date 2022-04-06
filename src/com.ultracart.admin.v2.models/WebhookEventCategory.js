@@ -34,7 +34,7 @@
   /**
    * The WebhookEventCategory model module.
    * @module com.ultracart.admin.v2.models/WebhookEventCategory
-   * @version 3.9.2
+   * @version 3.9.3
    */
 
   /**

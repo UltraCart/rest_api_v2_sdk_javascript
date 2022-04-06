@@ -34,7 +34,7 @@
   /**
    * The TransactionGateway model module.
    * @module com.ultracart.admin.v2.models/TransactionGateway
-   * @version 3.9.2
+   * @version 3.9.3
    */
 
   /**

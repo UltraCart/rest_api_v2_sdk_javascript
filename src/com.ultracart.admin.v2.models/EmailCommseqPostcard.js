@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqPostcard model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqPostcard
-   * @version 3.9.2
+   * @version 3.9.3
    */
 
   /**
@@ -75,22 +75,10 @@
         obj.postcard_front_container_cjson = ApiClient.convertToType(data['postcard_front_container_cjson'], 'String');
       if (data.hasOwnProperty('postcard_front_container_uuid'))
         obj.postcard_front_container_uuid = ApiClient.convertToType(data['postcard_front_container_uuid'], 'String');
-      if (data.hasOwnProperty('screenshot_back_large_full_url'))
-        obj.screenshot_back_large_full_url = ApiClient.convertToType(data['screenshot_back_large_full_url'], 'String');
-      if (data.hasOwnProperty('screenshot_back_large_viewport_url'))
-        obj.screenshot_back_large_viewport_url = ApiClient.convertToType(data['screenshot_back_large_viewport_url'], 'String');
-      if (data.hasOwnProperty('screenshot_back_small_full_url'))
-        obj.screenshot_back_small_full_url = ApiClient.convertToType(data['screenshot_back_small_full_url'], 'String');
-      if (data.hasOwnProperty('screenshot_back_small_viewport_url'))
-        obj.screenshot_back_small_viewport_url = ApiClient.convertToType(data['screenshot_back_small_viewport_url'], 'String');
-      if (data.hasOwnProperty('screenshot_large_full_url'))
-        obj.screenshot_large_full_url = ApiClient.convertToType(data['screenshot_large_full_url'], 'String');
-      if (data.hasOwnProperty('screenshot_large_viewport_url'))
-        obj.screenshot_large_viewport_url = ApiClient.convertToType(data['screenshot_large_viewport_url'], 'String');
+      if (data.hasOwnProperty('screenshot_front_url'))
+        obj.screenshot_front_url = ApiClient.convertToType(data['screenshot_front_url'], 'String');
       if (data.hasOwnProperty('screenshot_small_full_url'))
         obj.screenshot_small_full_url = ApiClient.convertToType(data['screenshot_small_full_url'], 'String');
-      if (data.hasOwnProperty('screenshot_small_viewport_url'))
-        obj.screenshot_small_viewport_url = ApiClient.convertToType(data['screenshot_small_viewport_url'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
     }
@@ -158,52 +146,16 @@
   exports.prototype.postcard_front_container_uuid = undefined;
 
   /**
-   * URL to screenshot (back) in large form factor full page
-   * @member {String} screenshot_back_large_full_url
+   * URL for front screenshot
+   * @member {String} screenshot_front_url
    */
-  exports.prototype.screenshot_back_large_full_url = undefined;
+  exports.prototype.screenshot_front_url = undefined;
 
   /**
-   * URL to screenshot (back) in large form factor viewport
-   * @member {String} screenshot_back_large_viewport_url
-   */
-  exports.prototype.screenshot_back_large_viewport_url = undefined;
-
-  /**
-   * URL to screenshot (back) in small form factor full page
-   * @member {String} screenshot_back_small_full_url
-   */
-  exports.prototype.screenshot_back_small_full_url = undefined;
-
-  /**
-   * URL to screenshot (back) in small form factor viewport
-   * @member {String} screenshot_back_small_viewport_url
-   */
-  exports.prototype.screenshot_back_small_viewport_url = undefined;
-
-  /**
-   * URL to screenshot in large form factor full page
-   * @member {String} screenshot_large_full_url
-   */
-  exports.prototype.screenshot_large_full_url = undefined;
-
-  /**
-   * URL to screenshot in large form factor viewport
-   * @member {String} screenshot_large_viewport_url
-   */
-  exports.prototype.screenshot_large_viewport_url = undefined;
-
-  /**
-   * URL to screenshot in small form factor full page
+   * URL for back screenshot
    * @member {String} screenshot_small_full_url
    */
   exports.prototype.screenshot_small_full_url = undefined;
-
-  /**
-   * URL to screenshot in small form factor viewport
-   * @member {String} screenshot_small_viewport_url
-   */
-  exports.prototype.screenshot_small_viewport_url = undefined;
 
   /**
    * Storefront oid
