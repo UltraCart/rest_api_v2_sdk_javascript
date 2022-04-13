@@ -34,7 +34,7 @@
   /**
    * The WebhookSampleRequestResponse model module.
    * @module com.ultracart.admin.v2.models/WebhookSampleRequestResponse
-   * @version 3.9.3
+   * @version 3.9.4
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The EmailDomain model module.
    * @module com.ultracart.admin.v2.models/EmailDomain
-   * @version 3.9.3
+   * @version 3.9.4
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('provider'))
         obj.provider = ApiClient.convertToType(data['provider'], 'String');
+      if (data.hasOwnProperty('spf'))
+        obj.spf = VerificationRecord.constructFromObject(data['spf']);
       if (data.hasOwnProperty('start_dkim_dts'))
         obj.start_dkim_dts = ApiClient.convertToType(data['start_dkim_dts'], 'String');
       if (data.hasOwnProperty('start_identity_dts'))
@@ -120,6 +122,11 @@
    * @member {String} provider
    */
   exports.prototype.provider = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/VerificationRecord} spf
+   */
+  exports.prototype.spf = undefined;
 
   /**
    * @member {String} start_dkim_dts

@@ -34,7 +34,7 @@
   /**
    * The CustomerLoyalty model module.
    * @module com.ultracart.admin.v2.models/CustomerLoyalty
-   * @version 3.9.3
+   * @version 3.9.4
    */
 
   /**
@@ -57,6 +57,10 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('current_points'))
         obj.current_points = ApiClient.convertToType(data['current_points'], 'Number');
+      if (data.hasOwnProperty('internal_gift_certificate_balance'))
+        obj.internal_gift_certificate_balance = ApiClient.convertToType(data['internal_gift_certificate_balance'], 'String');
+      if (data.hasOwnProperty('internal_gift_certificate_oid'))
+        obj.internal_gift_certificate_oid = ApiClient.convertToType(data['internal_gift_certificate_oid'], 'Number');
       if (data.hasOwnProperty('ledger_entries'))
         obj.ledger_entries = ApiClient.convertToType(data['ledger_entries'], [CustomerLoyaltyLedger]);
       if (data.hasOwnProperty('pending_points'))
@@ -72,6 +76,18 @@
    * @member {Number} current_points
    */
   exports.prototype.current_points = undefined;
+
+  /**
+   * Loyalty Cashback / Store credit balance (internal gift certificate balance)
+   * @member {String} internal_gift_certificate_balance
+   */
+  exports.prototype.internal_gift_certificate_balance = undefined;
+
+  /**
+   * Internal gift certificate oid used to tracking loyalty cashback / store credit.
+   * @member {Number} internal_gift_certificate_oid
+   */
+  exports.prototype.internal_gift_certificate_oid = undefined;
 
   /**
    * Ledger entries
