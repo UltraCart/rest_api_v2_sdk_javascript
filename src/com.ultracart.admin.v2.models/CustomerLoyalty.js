@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerLoyaltyLedger', 'com.ultracart.admin.v2.models/CustomerLoyaltyRedemption'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerLoyaltyLedger', 'com.ultracart.admin.v2.models/CustomerLoyaltyRedemption', 'com.ultracart.admin.v2.models/GiftCertificate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomerLoyaltyLedger'), require('./CustomerLoyaltyRedemption'));
+    module.exports = factory(require('../ApiClient'), require('./CustomerLoyaltyLedger'), require('./CustomerLoyaltyRedemption'), require('./GiftCertificate'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerLoyalty = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerLoyaltyLedger, root.UltraCartRestApiV2.CustomerLoyaltyRedemption);
+    root.UltraCartRestApiV2.CustomerLoyalty = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerLoyaltyLedger, root.UltraCartRestApiV2.CustomerLoyaltyRedemption, root.UltraCartRestApiV2.GiftCertificate);
   }
-}(this, function(ApiClient, CustomerLoyaltyLedger, CustomerLoyaltyRedemption) {
+}(this, function(ApiClient, CustomerLoyaltyLedger, CustomerLoyaltyRedemption, GiftCertificate) {
   'use strict';
 
   /**
    * The CustomerLoyalty model module.
    * @module com.ultracart.admin.v2.models/CustomerLoyalty
-   * @version 3.9.6
+   * @version 3.9.7
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('current_points'))
         obj.current_points = ApiClient.convertToType(data['current_points'], 'Number');
+      if (data.hasOwnProperty('internal_gift_certificate'))
+        obj.internal_gift_certificate = GiftCertificate.constructFromObject(data['internal_gift_certificate']);
       if (data.hasOwnProperty('internal_gift_certificate_balance'))
         obj.internal_gift_certificate_balance = ApiClient.convertToType(data['internal_gift_certificate_balance'], 'String');
       if (data.hasOwnProperty('internal_gift_certificate_oid'))
@@ -72,10 +74,15 @@
   }
 
   /**
-   * Current Points
+   * Current points
    * @member {Number} current_points
    */
   exports.prototype.current_points = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/GiftCertificate} internal_gift_certificate
+   */
+  exports.prototype.internal_gift_certificate = undefined;
 
   /**
    * Loyalty Cashback / Store credit balance (internal gift certificate balance)

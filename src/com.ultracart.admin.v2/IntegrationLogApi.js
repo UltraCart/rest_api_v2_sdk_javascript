@@ -34,7 +34,7 @@
   /**
    * IntegrationLog service.
    * @module com.ultracart.admin.v2/IntegrationLogApi
-   * @version 3.9.6
+   * @version 3.9.7
    */
 
   /**
@@ -160,6 +160,68 @@
 
       return this.apiClient.callApi(
         '/integration_log/query/{pk}/{sk}/{uuid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getIntegrationLogFilePdf operation.
+     * @callback module:com.ultracart.admin.v2/IntegrationLogApi~getIntegrationLogFilePdfCallback
+     * @param {String} error Error message, if any.
+     * @param {File} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an integration log file converted to PDF
+     * Retrieve an integration log file from the account based identifiers 
+     * @param {String} pk 
+     * @param {String} sk 
+     * @param {String} uuid 
+     * @param {module:com.ultracart.admin.v2/IntegrationLogApi~getIntegrationLogFilePdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link File}
+     */
+    this.getIntegrationLogFilePdf = function(pk, sk, uuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'pk' is set
+      if (pk === undefined || pk === null) {
+        throw new Error("Missing the required parameter 'pk' when calling getIntegrationLogFilePdf");
+      }
+
+      // verify the required parameter 'sk' is set
+      if (sk === undefined || sk === null) {
+        throw new Error("Missing the required parameter 'sk' when calling getIntegrationLogFilePdf");
+      }
+
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling getIntegrationLogFilePdf");
+      }
+
+
+      var pathParams = {
+        'pk': pk,
+        'sk': sk,
+        'uuid': uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/octet-stream'];
+      var returnType = File;
+
+      return this.apiClient.callApi(
+        '/integration_log/query/{pk}/{sk}/{uuid}/pdf', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

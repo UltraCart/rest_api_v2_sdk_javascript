@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerEmailListChanges', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AdjustInternalCertificateRequest', 'com.ultracart.admin.v2.models/AdjustInternalCertificateResponse', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerEmailListChanges', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerEmailListChanges'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AdjustInternalCertificateRequest'), require('../com.ultracart.admin.v2.models/AdjustInternalCertificateResponse'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerEmailListChanges'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerEmailListChanges, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.EmailVerifyTokenRequest, root.UltraCartRestApiV2.EmailVerifyTokenResponse, root.UltraCartRestApiV2.EmailVerifyTokenValidateRequest, root.UltraCartRestApiV2.EmailVerifyTokenValidateResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AdjustInternalCertificateRequest, root.UltraCartRestApiV2.AdjustInternalCertificateResponse, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerEmailListChanges, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.EmailVerifyTokenRequest, root.UltraCartRestApiV2.EmailVerifyTokenResponse, root.UltraCartRestApiV2.EmailVerifyTokenValidateRequest, root.UltraCartRestApiV2.EmailVerifyTokenValidateResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, Customer, CustomerEditorValues, CustomerEmailListChanges, CustomerQuery, CustomerResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, EmailVerifyTokenRequest, EmailVerifyTokenResponse, EmailVerifyTokenValidateRequest, EmailVerifyTokenValidateResponse, ErrorResponse) {
+}(this, function(ApiClient, AdjustInternalCertificateRequest, AdjustInternalCertificateResponse, Customer, CustomerEditorValues, CustomerEmailListChanges, CustomerQuery, CustomerResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, EmailVerifyTokenRequest, EmailVerifyTokenResponse, EmailVerifyTokenValidateRequest, EmailVerifyTokenValidateResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.9.6
+   * @version 3.9.7
    */
 
   /**
@@ -47,6 +47,60 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the adjustInternalCertificate operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~adjustInternalCertificateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AdjustInternalCertificateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates the cashback balance for a customer by updating the internal gift certificate used, creating the gift certificate if needed.
+     * Updates the cashback balance for a customer by updating the internal gift certificate used, creating the gift certificate if needed. 
+     * @param {Number} customer_profile_oid The customer profile oid
+     * @param {module:com.ultracart.admin.v2.models/AdjustInternalCertificateRequest} adjust_internal_certificate_request adjustInternalCertificateRequest
+     * @param {module:com.ultracart.admin.v2/CustomerApi~adjustInternalCertificateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AdjustInternalCertificateResponse}
+     */
+    this.adjustInternalCertificate = function(customer_profile_oid, adjust_internal_certificate_request, callback) {
+      var postBody = adjust_internal_certificate_request;
+
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling adjustInternalCertificate");
+      }
+
+      // verify the required parameter 'adjust_internal_certificate_request' is set
+      if (adjust_internal_certificate_request === undefined || adjust_internal_certificate_request === null) {
+        throw new Error("Missing the required parameter 'adjust_internal_certificate_request' when calling adjustInternalCertificate");
+      }
+
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = AdjustInternalCertificateResponse;
+
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}/adjust_cashback_balance', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteCustomer operation.

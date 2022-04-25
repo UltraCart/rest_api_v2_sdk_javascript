@@ -34,7 +34,7 @@
   /**
    * The ApplyLibraryItemResponse model module.
    * @module com.ultracart.admin.v2.models/ApplyLibraryItemResponse
-   * @version 3.9.6
+   * @version 3.9.7
    */
 
   /**
