@@ -34,7 +34,7 @@
   /**
    * The ItemPricing model module.
    * @module com.ultracart.admin.v2.models/ItemPricing
-   * @version 3.9.5
+   * @version 3.9.6
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The Distance model module.
    * @module com.ultracart.admin.v2.models/Distance
-   * @version 3.9.5
+   * @version 3.9.6
    */
 
   /**

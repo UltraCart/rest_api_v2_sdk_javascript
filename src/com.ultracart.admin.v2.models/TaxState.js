@@ -34,7 +34,7 @@
   /**
    * The TaxState model module.
    * @module com.ultracart.admin.v2.models/TaxState
-   * @version 3.9.5
+   * @version 3.9.6
    */
 
   /**

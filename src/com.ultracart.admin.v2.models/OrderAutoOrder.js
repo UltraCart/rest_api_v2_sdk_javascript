@@ -34,7 +34,7 @@
   /**
    * The OrderAutoOrder model module.
    * @module com.ultracart.admin.v2.models/OrderAutoOrder
-   * @version 3.9.5
+   * @version 3.9.6
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.cancel_after_next_x_orders = ApiClient.convertToType(data['cancel_after_next_x_orders'], 'Number');
       if (data.hasOwnProperty('cancel_downgrade'))
         obj.cancel_downgrade = ApiClient.convertToType(data['cancel_downgrade'], 'Boolean');
+      if (data.hasOwnProperty('cancel_reason'))
+        obj.cancel_reason = ApiClient.convertToType(data['cancel_reason'], 'String');
       if (data.hasOwnProperty('cancel_upgrade'))
         obj.cancel_upgrade = ApiClient.convertToType(data['cancel_upgrade'], 'Boolean');
       if (data.hasOwnProperty('canceled_by_user'))
@@ -120,6 +122,12 @@
    * @member {Boolean} cancel_downgrade
    */
   exports.prototype.cancel_downgrade = undefined;
+
+  /**
+   * The reason this auto order was canceled by either merchant or customer
+   * @member {String} cancel_reason
+   */
+  exports.prototype.cancel_reason = undefined;
 
   /**
    * True if the auto order was canceled because the customer purchased an upgrade item

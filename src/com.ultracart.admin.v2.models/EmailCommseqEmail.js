@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 3.9.5
+   * @version 3.9.6
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.individually_render = ApiClient.convertToType(data['individually_render'], 'Boolean');
       if (data.hasOwnProperty('library_item_oid'))
         obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
+      if (data.hasOwnProperty('magic_link'))
+        obj.magic_link = ApiClient.convertToType(data['magic_link'], 'Boolean');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('pending_review'))
@@ -168,6 +170,12 @@
    * @member {Number} library_item_oid
    */
   exports.prototype.library_item_oid = undefined;
+
+  /**
+   * True if email links should contain magic link tokens to log the customer in automatically
+   * @member {Boolean} magic_link
+   */
+  exports.prototype.magic_link = undefined;
 
   /**
    * Merchant ID

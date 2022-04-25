@@ -34,7 +34,7 @@
   /**
    * The RtgSummaryResponse model module.
    * @module com.ultracart.admin.v2.models/RtgSummaryResponse
-   * @version 3.9.5
+   * @version 3.9.6
    */
 
   /**

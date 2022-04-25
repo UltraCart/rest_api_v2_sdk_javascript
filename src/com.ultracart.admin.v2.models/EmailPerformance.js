@@ -34,7 +34,7 @@
   /**
    * The EmailPerformance model module.
    * @module com.ultracart.admin.v2.models/EmailPerformance
-   * @version 3.9.5
+   * @version 3.9.6
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.daily_stats = ApiClient.convertToType(data['daily_stats'], [EmailPerformanceDaily]);
       if (data.hasOwnProperty('delivered_count'))
         obj.delivered_count = ApiClient.convertToType(data['delivered_count'], 'Number');
+      if (data.hasOwnProperty('loyalty_program_type'))
+        obj.loyalty_program_type = ApiClient.convertToType(data['loyalty_program_type'], 'String');
       if (data.hasOwnProperty('max_active_customers'))
         obj.max_active_customers = ApiClient.convertToType(data['max_active_customers'], 'Number');
       if (data.hasOwnProperty('max_emails_per_day'))
@@ -149,6 +151,12 @@
    * @member {Number} delivered_count
    */
   exports.prototype.delivered_count = undefined;
+
+  /**
+   * Loyalty Program Type
+   * @member {module:com.ultracart.admin.v2.models/EmailPerformance.LoyaltyProgramTypeEnum} loyalty_program_type
+   */
+  exports.prototype.loyalty_program_type = undefined;
 
   /**
    * Maximum active customers allowed under their billing plan
@@ -233,6 +241,32 @@
    * @member {Number} transactional_send_count
    */
   exports.prototype.transactional_send_count = undefined;
+
+
+  /**
+   * Allowed values for the <code>loyalty_program_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.LoyaltyProgramTypeEnum = {
+    /**
+     * value: "disabled"
+     * @const
+     */
+    disabled: "disabled",
+
+    /**
+     * value: "points"
+     * @const
+     */
+    points: "points",
+
+    /**
+     * value: "cashback"
+     * @const
+     */
+    cashback: "cashback"
+  };
 
   return exports;
 

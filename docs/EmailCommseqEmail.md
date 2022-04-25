@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **filter_profile_equation_json** | **String** | Filter profile equation json | [optional] 
 **individually_render** | **Boolean** | Individually render | [optional] 
 **library_item_oid** | **Number** | If this item was ever added to the Code Library, this is the oid for that library item, or 0 if never added before.  This value is used to determine if a library item should be inserted or updated. | [optional] 
+**magic_link** | **Boolean** | True if email links should contain magic link tokens to log the customer in automatically | [optional] 
 **merchant_id** | **String** | Merchant ID | [optional] 
 **pending_review** | **Boolean** | True if the content of this email is pending review by UltraCart | [optional] 
 **preview_text** | **String** | Preview text | [optional] 
