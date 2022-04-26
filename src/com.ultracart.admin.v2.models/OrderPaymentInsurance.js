@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentInsurance model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentInsurance
-   * @version 3.9.7
+   * @version 3.9.8
    */
 
   /**

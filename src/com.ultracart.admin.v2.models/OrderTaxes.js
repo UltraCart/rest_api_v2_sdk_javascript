@@ -34,7 +34,7 @@
   /**
    * The OrderTaxes model module.
    * @module com.ultracart.admin.v2.models/OrderTaxes
-   * @version 3.9.7
+   * @version 3.9.8
    */
 
   /**

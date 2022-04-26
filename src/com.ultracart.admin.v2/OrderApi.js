@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.9.7
+   * @version 3.9.8
    */
 
   /**
@@ -193,6 +193,58 @@
 
       return this.apiClient.callApi(
         '/order/orders/{order_id}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the duplicateOrder operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~duplicateOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Duplicate an order
+     * Perform a duplicate of the specified order_id and return a new order located in Accounts Receivable. 
+     * @param {String} order_id The order id to duplicate.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~duplicateOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.duplicateOrder = function(order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling duplicateOrder");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/duplicate', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

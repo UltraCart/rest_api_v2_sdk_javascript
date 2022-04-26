@@ -34,7 +34,7 @@
   /**
    * The EmailListSegmentFolder model module.
    * @module com.ultracart.admin.v2.models/EmailListSegmentFolder
-   * @version 3.9.7
+   * @version 3.9.8
    */
 
   /**

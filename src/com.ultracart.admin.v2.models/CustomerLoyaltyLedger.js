@@ -34,7 +34,7 @@
   /**
    * The CustomerLoyaltyLedger model module.
    * @module com.ultracart.admin.v2.models/CustomerLoyaltyLedger
-   * @version 3.9.7
+   * @version 3.9.8
    */
 
   /**
