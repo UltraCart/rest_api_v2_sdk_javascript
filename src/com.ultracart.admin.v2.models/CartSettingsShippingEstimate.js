@@ -34,7 +34,7 @@
   /**
    * The CartSettingsShippingEstimate model module.
    * @module com.ultracart.admin.v2.models/CartSettingsShippingEstimate
-   * @version 3.9.8
+   * @version 3.10.0
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.lift_gate_option = ApiClient.convertToType(data['lift_gate_option'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('pickup'))
+        obj.pickup = ApiClient.convertToType(data['pickup'], 'Boolean');
       if (data.hasOwnProperty('tax'))
         obj.tax = Currency.constructFromObject(data['tax']);
       if (data.hasOwnProperty('total_tax'))
@@ -147,6 +149,12 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * True if this shipping method requires customers to physically pickup product themselves
+   * @member {Boolean} pickup
+   */
+  exports.prototype.pickup = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} tax
