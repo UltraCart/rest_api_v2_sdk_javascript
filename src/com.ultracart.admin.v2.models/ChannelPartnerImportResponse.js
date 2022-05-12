@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerImportResponse model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerImportResponse
-   * @version 3.10.0
+   * @version 3.10.1
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.import_warnings = ApiClient.convertToType(data['import_warnings'], ['String']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('order_id'))
+        obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('warning'))
@@ -92,6 +94,12 @@
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype.metadata = undefined;
+
+  /**
+   * The order id of the newly imported order if successful
+   * @member {String} order_id
+   */
+  exports.prototype.order_id = undefined;
 
   /**
    * Indicates if API call was successful

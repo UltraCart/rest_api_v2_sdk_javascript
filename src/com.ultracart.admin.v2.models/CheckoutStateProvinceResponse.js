@@ -34,7 +34,7 @@
   /**
    * The CheckoutStateProvinceResponse model module.
    * @module com.ultracart.admin.v2.models/CheckoutStateProvinceResponse
-   * @version 3.10.0
+   * @version 3.10.1
    */
 
   /**
