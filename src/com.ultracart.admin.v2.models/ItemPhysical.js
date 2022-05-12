@@ -34,7 +34,7 @@
   /**
    * The ItemPhysical model module.
    * @module com.ultracart.admin.v2.models/ItemPhysical
-   * @version 3.10.1
+   * @version 3.10.2
    */
 
   /**

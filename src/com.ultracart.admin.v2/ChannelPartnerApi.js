@@ -34,7 +34,7 @@
   /**
    * ChannelPartner service.
    * @module com.ultracart.admin.v2/ChannelPartnerApi
-   * @version 3.10.1
+   * @version 3.10.2
    */
 
   /**
@@ -97,8 +97,8 @@
     }
 
     /**
-     * Callback function to receive the result of the cancelOrderByChannelUltraCartOrderId operation.
-     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~cancelOrderByChannelUltraCartOrderIdCallback
+     * Callback function to receive the result of the cancelOrderByUltraCartOrderId operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~cancelOrderByUltraCartOrderIdCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.models/ChannelPartnerCancelResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -108,15 +108,15 @@
      * Cancel channel partner order by UltraCart order id
      * Cancel channel partner order by UltraCart order id 
      * @param {String} order_id The UltraCart order id to delete.
-     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~cancelOrderByChannelUltraCartOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~cancelOrderByUltraCartOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ChannelPartnerCancelResponse}
      */
-    this.cancelOrderByChannelUltraCartOrderId = function(order_id, callback) {
+    this.cancelOrderByUltraCartOrderId = function(order_id, callback) {
       var postBody = null;
 
       // verify the required parameter 'order_id' is set
       if (order_id === undefined || order_id === null) {
-        throw new Error("Missing the required parameter 'order_id' when calling cancelOrderByChannelUltraCartOrderId");
+        throw new Error("Missing the required parameter 'order_id' when calling cancelOrderByUltraCartOrderId");
       }
 
 

@@ -5,7 +5,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancelOrderByChannelPartnerOrderId**](ChannelPartnerApi.md#cancelOrderByChannelPartnerOrderId) | **DELETE** /channel_partner/cancel/by_channel_partner_order_id/{order_id} | Cancel channel partner order by channel partner order id
-[**cancelOrderByChannelUltraCartOrderId**](ChannelPartnerApi.md#cancelOrderByChannelUltraCartOrderId) | **DELETE** /channel_partner/cancel/by_ultracart_order_id/{order_id} | Cancel channel partner order by UltraCart order id
+[**cancelOrderByUltraCartOrderId**](ChannelPartnerApi.md#cancelOrderByUltraCartOrderId) | **DELETE** /channel_partner/cancel/by_ultracart_order_id/{order_id} | Cancel channel partner order by UltraCart order id
 [**estimateShippingForChannelPartnerOrder**](ChannelPartnerApi.md#estimateShippingForChannelPartnerOrder) | **POST** /channel_partner/estimate_shipping | Estimate shipping for channel partner order
 [**importChannelPartnerOrder**](ChannelPartnerApi.md#importChannelPartnerOrder) | **POST** /channel_partner/import | Insert channel partner order
 
@@ -60,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
-<a name="cancelOrderByChannelUltraCartOrderId"></a>
-# **cancelOrderByChannelUltraCartOrderId**
-> ChannelPartnerCancelResponse cancelOrderByChannelUltraCartOrderId(order_id)
+<a name="cancelOrderByUltraCartOrderId"></a>
+# **cancelOrderByUltraCartOrderId**
+> ChannelPartnerCancelResponse cancelOrderByUltraCartOrderId(order_id)
 
 Cancel channel partner order by UltraCart order id
 
@@ -88,7 +88,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cancelOrderByChannelUltraCartOrderId(order_id, callback);
+apiInstance.cancelOrderByUltraCartOrderId(order_id, callback);
 ```
 
 ### Parameters
