@@ -34,7 +34,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 3.10.2
+   * @version 3.10.3
    */
 
   /**
@@ -141,6 +141,8 @@
         obj.shipped_by_user = ApiClient.convertToType(data['shipped_by_user'], 'String');
       if (data.hasOwnProperty('shipped_dts'))
         obj.shipped_dts = ApiClient.convertToType(data['shipped_dts'], 'String');
+      if (data.hasOwnProperty('shipping_status'))
+        obj.shipping_status = ApiClient.convertToType(data['shipping_status'], 'String');
       if (data.hasOwnProperty('special_product_type'))
         obj.special_product_type = ApiClient.convertToType(data['special_product_type'], 'String');
       if (data.hasOwnProperty('tags'))
@@ -419,6 +421,12 @@
    * @member {String} shipped_dts
    */
   exports.prototype.shipped_dts = undefined;
+
+  /**
+   * Shipping status for this item.  This is the replacement for the old order level shipping status.
+   * @member {String} shipping_status
+   */
+  exports.prototype.shipping_status = undefined;
 
   /**
    * Special product type (USPS Media Mail)

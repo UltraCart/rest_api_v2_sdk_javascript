@@ -34,7 +34,7 @@
   /**
    * The OrderFormat model module.
    * @module com.ultracart.admin.v2.models/OrderFormat
-   * @version 3.10.2
+   * @version 3.10.3
    */
 
   /**
@@ -63,8 +63,8 @@
         obj.email_as_link = ApiClient.convertToType(data['email_as_link'], 'Boolean');
       if (data.hasOwnProperty('filter_distribution_center_oid'))
         obj.filter_distribution_center_oid = ApiClient.convertToType(data['filter_distribution_center_oid'], 'Number');
-      if (data.hasOwnProperty('filter_to_items_in_contact_oid'))
-        obj.filter_to_items_in_contact_oid = ApiClient.convertToType(data['filter_to_items_in_contact_oid'], 'Number');
+      if (data.hasOwnProperty('filter_to_items_in_container_oid'))
+        obj.filter_to_items_in_container_oid = ApiClient.convertToType(data['filter_to_items_in_container_oid'], 'Number');
       if (data.hasOwnProperty('format'))
         obj.format = ApiClient.convertToType(data['format'], 'String');
       if (data.hasOwnProperty('hide_bill_to_address'))
@@ -117,9 +117,9 @@
 
   /**
    * The container oid to filter items to.
-   * @member {Number} filter_to_items_in_contact_oid
+   * @member {Number} filter_to_items_in_container_oid
    */
-  exports.prototype.filter_to_items_in_contact_oid = undefined;
+  exports.prototype.filter_to_items_in_container_oid = undefined;
 
   /**
    * The desired format.

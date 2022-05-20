@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 <a name="generatePackingSlipAllDC"></a>
 # **generatePackingSlipAllDC**
-> OrdersResponse generatePackingSlipAllDC(order_id)
+> OrderPackingSlipResponse generatePackingSlipAllDC(order_id)
 
 Generate a packing slip for this order across all distribution centers.
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrdersResponse**](OrdersResponse.md)
+[**OrderPackingSlipResponse**](OrderPackingSlipResponse.md)
 
 ### Authorization
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 <a name="generatePackingSlipSpecificDC"></a>
 # **generatePackingSlipSpecificDC**
-> OrdersResponse generatePackingSlipSpecificDC(distribution_center_code, order_id)
+> OrderPackingSlipResponse generatePackingSlipSpecificDC(distribution_center_code, order_id)
 
 Generate a packing slip for this order for the given distribution center.
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrdersResponse**](OrdersResponse.md)
+[**OrderPackingSlipResponse**](OrderPackingSlipResponse.md)
 
 ### Authorization
 

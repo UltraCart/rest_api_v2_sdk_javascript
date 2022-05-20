@@ -34,7 +34,7 @@
   /**
    * ChannelPartner service.
    * @module com.ultracart.admin.v2/ChannelPartnerApi
-   * @version 3.10.2
+   * @version 3.10.3
    */
 
   /**
@@ -85,7 +85,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ChannelPartnerCancelResponse;
 
@@ -133,7 +133,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ChannelPartnerCancelResponse;
 
