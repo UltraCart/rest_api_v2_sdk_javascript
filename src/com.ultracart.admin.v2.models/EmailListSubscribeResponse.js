@@ -34,7 +34,7 @@
   /**
    * The EmailListSubscribeResponse model module.
    * @module com.ultracart.admin.v2.models/EmailListSubscribeResponse
-   * @version 3.10.3
+   * @version 3.10.4
    */
 
   /**

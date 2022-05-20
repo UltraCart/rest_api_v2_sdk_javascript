@@ -34,7 +34,7 @@
   /**
    * The PaymentsThemeTransactionType model module.
    * @module com.ultracart.admin.v2.models/PaymentsThemeTransactionType
-   * @version 3.10.3
+   * @version 3.10.4
    */
 
   /**
