@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCash model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCash
-   * @version 3.10.4
+   * @version 3.10.5
    */
 
   /**
