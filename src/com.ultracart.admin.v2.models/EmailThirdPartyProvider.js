@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailThirdPartyList'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/EmailThirdPartyList', 'com.ultracart.admin.v2.models/EmailThirdPartyTag'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EmailThirdPartyList'));
+    module.exports = factory(require('../ApiClient'), require('./EmailThirdPartyList'), require('./EmailThirdPartyTag'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailThirdPartyProvider = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailThirdPartyList);
+    root.UltraCartRestApiV2.EmailThirdPartyProvider = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.EmailThirdPartyList, root.UltraCartRestApiV2.EmailThirdPartyTag);
   }
-}(this, function(ApiClient, EmailThirdPartyList) {
+}(this, function(ApiClient, EmailThirdPartyList, EmailThirdPartyTag) {
   'use strict';
 
   /**
    * The EmailThirdPartyProvider model module.
    * @module com.ultracart.admin.v2.models/EmailThirdPartyProvider
-   * @version 3.10.6
+   * @version 3.10.7
    */
 
   /**
@@ -73,6 +73,10 @@
         obj.supports_list_unsubscribe = ApiClient.convertToType(data['supports_list_unsubscribe'], 'Boolean');
       if (data.hasOwnProperty('supports_remove_tags'))
         obj.supports_remove_tags = ApiClient.convertToType(data['supports_remove_tags'], 'Boolean');
+      if (data.hasOwnProperty('tag_count'))
+        obj.tag_count = ApiClient.convertToType(data['tag_count'], 'Number');
+      if (data.hasOwnProperty('tags'))
+        obj.tags = ApiClient.convertToType(data['tags'], [EmailThirdPartyTag]);
     }
     return obj;
   }
@@ -130,6 +134,18 @@
    * @member {Boolean} supports_remove_tags
    */
   exports.prototype.supports_remove_tags = undefined;
+
+  /**
+   * tag_count
+   * @member {Number} tag_count
+   */
+  exports.prototype.tag_count = undefined;
+
+  /**
+   * tags
+   * @member {Array.<module:com.ultracart.admin.v2.models/EmailThirdPartyTag>} tags
+   */
+  exports.prototype.tags = undefined;
 
   return exports;
 
