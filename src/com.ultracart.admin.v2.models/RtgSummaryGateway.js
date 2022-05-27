@@ -34,7 +34,7 @@
   /**
    * The RtgSummaryGateway model module.
    * @module com.ultracart.admin.v2.models/RtgSummaryGateway
-   * @version 3.10.7
+   * @version 3.10.8
    */
 
   /**

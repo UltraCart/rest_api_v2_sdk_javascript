@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationTestMethod model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationTestMethod
-   * @version 3.10.7
+   * @version 3.10.8
    */
 
   /**

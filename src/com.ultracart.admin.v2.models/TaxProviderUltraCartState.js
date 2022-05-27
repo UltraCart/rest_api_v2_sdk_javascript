@@ -34,7 +34,7 @@
   /**
    * The TaxProviderUltraCartState model module.
    * @module com.ultracart.admin.v2.models/TaxProviderUltraCartState
-   * @version 3.10.7
+   * @version 3.10.8
    */
 
   /**

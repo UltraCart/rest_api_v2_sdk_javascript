@@ -34,7 +34,7 @@
   /**
    * The CustomerEditorValues model module.
    * @module com.ultracart.admin.v2.models/CustomerEditorValues
-   * @version 3.10.7
+   * @version 3.10.8
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.card_types = ApiClient.convertToType(data['card_types'], ['String']);
       if (data.hasOwnProperty('countries'))
         obj.countries = ApiClient.convertToType(data['countries'], [Country]);
+      if (data.hasOwnProperty('loyalty_program_type'))
+        obj.loyalty_program_type = ApiClient.convertToType(data['loyalty_program_type'], 'String');
       if (data.hasOwnProperty('qb_classes'))
         obj.qb_classes = ApiClient.convertToType(data['qb_classes'], ['String']);
       if (data.hasOwnProperty('sales_rep_codes'))
@@ -106,6 +108,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/Country>} countries
    */
   exports.prototype.countries = undefined;
+
+  /**
+   * loyalty_program_type
+   * @member {String} loyalty_program_type
+   */
+  exports.prototype.loyalty_program_type = undefined;
 
   /**
    * qb_classes
