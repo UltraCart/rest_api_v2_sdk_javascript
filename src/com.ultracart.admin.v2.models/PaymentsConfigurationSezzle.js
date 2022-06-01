@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationSezzle model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationSezzle
-   * @version 3.10.8
+   * @version 3.10.9
    */
 
   /**

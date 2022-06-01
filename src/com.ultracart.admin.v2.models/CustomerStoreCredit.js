@@ -34,7 +34,7 @@
   /**
    * The CustomerStoreCredit model module.
    * @module com.ultracart.admin.v2.models/CustomerStoreCredit
-   * @version 3.10.8
+   * @version 3.10.9
    */
 
   /**
@@ -59,10 +59,10 @@
         obj.available = ApiClient.convertToType(data['available'], 'Number');
       if (data.hasOwnProperty('expiring'))
         obj.expiring = ApiClient.convertToType(data['expiring'], 'Number');
-      if (data.hasOwnProperty('futureLedgers'))
-        obj.futureLedgers = ApiClient.convertToType(data['futureLedgers'], [CustomerStoreCreditLedgerEntry]);
-      if (data.hasOwnProperty('pastLedgers'))
-        obj.pastLedgers = ApiClient.convertToType(data['pastLedgers'], [CustomerStoreCreditLedgerEntry]);
+      if (data.hasOwnProperty('future_ledgers'))
+        obj.future_ledgers = ApiClient.convertToType(data['future_ledgers'], [CustomerStoreCreditLedgerEntry]);
+      if (data.hasOwnProperty('past_ledgers'))
+        obj.past_ledgers = ApiClient.convertToType(data['past_ledgers'], [CustomerStoreCreditLedgerEntry]);
       if (data.hasOwnProperty('total'))
         obj.total = ApiClient.convertToType(data['total'], 'Number');
       if (data.hasOwnProperty('vesting'))
@@ -72,31 +72,37 @@
   }
 
   /**
+   * Available store credit which is defined as unused and vested
    * @member {Number} available
    */
   exports.prototype.available = undefined;
 
   /**
+   * Amount of store credit expiring within 30 days
    * @member {Number} expiring
    */
   exports.prototype.expiring = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry>} futureLedgers
+   * Array of future ledger entries including expiring entries
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry>} future_ledgers
    */
-  exports.prototype.futureLedgers = undefined;
+  exports.prototype.future_ledgers = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry>} pastLedgers
+   * Array of past ledger entries including accrual, usage, and expiring entries
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry>} past_ledgers
    */
-  exports.prototype.pastLedgers = undefined;
+  exports.prototype.past_ledgers = undefined;
 
   /**
+   * Total lifetime store credit for this customer.
    * @member {Number} total
    */
   exports.prototype.total = undefined;
 
   /**
+   * Amount of store credit vesting
    * @member {Number} vesting
    */
   exports.prototype.vesting = undefined;
