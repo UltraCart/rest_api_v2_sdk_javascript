@@ -34,7 +34,7 @@
   /**
    * The EmailSegment model module.
    * @module com.ultracart.admin.v2.models/EmailSegment
-   * @version 3.10.9
+   * @version 3.10.10
    */
 
   /**
@@ -83,6 +83,10 @@
         obj.rebuild_required = ApiClient.convertToType(data['rebuild_required'], 'Boolean');
       if (data.hasOwnProperty('storefront_oid'))
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+      if (data.hasOwnProperty('thirdparty_list_id'))
+        obj.thirdparty_list_id = ApiClient.convertToType(data['thirdparty_list_id'], 'String');
+      if (data.hasOwnProperty('thirdparty_provider_name'))
+        obj.thirdparty_provider_name = ApiClient.convertToType(data['thirdparty_provider_name'], 'String');
       if (data.hasOwnProperty('used_by'))
         obj.used_by = ApiClient.convertToType(data['used_by'], [EmailListSegmentUsedBy]);
     }
@@ -172,6 +176,18 @@
    * @member {Number} storefront_oid
    */
   exports.prototype.storefront_oid = undefined;
+
+  /**
+   * List id of third party provider to sync with.
+   * @member {String} thirdparty_list_id
+   */
+  exports.prototype.thirdparty_list_id = undefined;
+
+  /**
+   * Name of third party provider to sync segment to a list with.
+   * @member {String} thirdparty_provider_name
+   */
+  exports.prototype.thirdparty_provider_name = undefined;
 
   /**
    * Details on the flows or campaigns that use this list.
