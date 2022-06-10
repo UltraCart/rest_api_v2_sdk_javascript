@@ -34,7 +34,7 @@
   /**
    * The EmailSegment model module.
    * @module com.ultracart.admin.v2.models/EmailSegment
-   * @version 3.10.10
+   * @version 3.10.11
    */
 
   /**
@@ -83,6 +83,14 @@
         obj.rebuild_required = ApiClient.convertToType(data['rebuild_required'], 'Boolean');
       if (data.hasOwnProperty('storefront_oid'))
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
+      if (data.hasOwnProperty('thirdparty_join_add_tags'))
+        obj.thirdparty_join_add_tags = ApiClient.convertToType(data['thirdparty_join_add_tags'], ['String']);
+      if (data.hasOwnProperty('thirdparty_join_remove_tags'))
+        obj.thirdparty_join_remove_tags = ApiClient.convertToType(data['thirdparty_join_remove_tags'], ['String']);
+      if (data.hasOwnProperty('thirdparty_leave_add_tags'))
+        obj.thirdparty_leave_add_tags = ApiClient.convertToType(data['thirdparty_leave_add_tags'], ['String']);
+      if (data.hasOwnProperty('thirdparty_leave_remove_tags'))
+        obj.thirdparty_leave_remove_tags = ApiClient.convertToType(data['thirdparty_leave_remove_tags'], ['String']);
       if (data.hasOwnProperty('thirdparty_list_id'))
         obj.thirdparty_list_id = ApiClient.convertToType(data['thirdparty_list_id'], 'String');
       if (data.hasOwnProperty('thirdparty_provider_name'))
@@ -176,6 +184,30 @@
    * @member {Number} storefront_oid
    */
   exports.prototype.storefront_oid = undefined;
+
+  /**
+   * Third party provider tags to add when a customer joins the segment.
+   * @member {Array.<String>} thirdparty_join_add_tags
+   */
+  exports.prototype.thirdparty_join_add_tags = undefined;
+
+  /**
+   * Third party provider tags to remove when a customer joins the segment.
+   * @member {Array.<String>} thirdparty_join_remove_tags
+   */
+  exports.prototype.thirdparty_join_remove_tags = undefined;
+
+  /**
+   * Third party provider tags to add when a customer leaves the segment.
+   * @member {Array.<String>} thirdparty_leave_add_tags
+   */
+  exports.prototype.thirdparty_leave_add_tags = undefined;
+
+  /**
+   * Third party provider tags to remove when a customer leaves the segment.
+   * @member {Array.<String>} thirdparty_leave_remove_tags
+   */
+  exports.prototype.thirdparty_leave_remove_tags = undefined;
 
   /**
    * List id of third party provider to sync with.
