@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.10.12
+   * @version 3.10.13
    */
 
   /**
@@ -747,8 +747,8 @@
     }
 
     /**
-     * Callback function to receive the result of the search operation.
-     * @callback module:com.ultracart.admin.v2/CustomerApi~searchCallback
+     * Callback function to receive the result of the searchCustomerProfileValues operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~searchCustomerProfileValuesCallback
      * @param {String} error Error message, if any.
      * @param {module:com.ultracart.admin.v2.models/LookupResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -757,15 +757,15 @@
     /**
      * Searches for all matching values (using POST)
      * @param {module:com.ultracart.admin.v2.models/LookupRequest} lookup_request LookupRequest
-     * @param {module:com.ultracart.admin.v2/CustomerApi~searchCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.ultracart.admin.v2/CustomerApi~searchCustomerProfileValuesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/LookupResponse}
      */
-    this.search = function(lookup_request, callback) {
+    this.searchCustomerProfileValues = function(lookup_request, callback) {
       var postBody = lookup_request;
 
       // verify the required parameter 'lookup_request' is set
       if (lookup_request === undefined || lookup_request === null) {
-        throw new Error("Missing the required parameter 'lookup_request' when calling search");
+        throw new Error("Missing the required parameter 'lookup_request' when calling searchCustomerProfileValues");
       }
 
 
