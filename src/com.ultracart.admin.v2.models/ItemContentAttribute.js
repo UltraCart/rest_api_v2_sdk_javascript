@@ -34,7 +34,7 @@
   /**
    * The ItemContentAttribute model module.
    * @module com.ultracart.admin.v2.models/ItemContentAttribute
-   * @version 3.10.11
+   * @version 3.10.12
    */
 
   /**

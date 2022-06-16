@@ -34,7 +34,7 @@
   /**
    * The StripeConnectResponse model module.
    * @module com.ultracart.admin.v2.models/StripeConnectResponse
-   * @version 3.10.11
+   * @version 3.10.12
    */
 
   /**
