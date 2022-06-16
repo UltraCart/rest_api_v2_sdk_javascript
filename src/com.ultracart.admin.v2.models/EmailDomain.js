@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/VerificationRecord'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Mailgun', 'com.ultracart.admin.v2.models/VerificationRecord'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./VerificationRecord'));
+    module.exports = factory(require('../ApiClient'), require('./Mailgun'), require('./VerificationRecord'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.EmailDomain = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.VerificationRecord);
+    root.UltraCartRestApiV2.EmailDomain = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Mailgun, root.UltraCartRestApiV2.VerificationRecord);
   }
-}(this, function(ApiClient, VerificationRecord) {
+}(this, function(ApiClient, Mailgun, VerificationRecord) {
   'use strict';
 
   /**
    * The EmailDomain model module.
    * @module com.ultracart.admin.v2.models/EmailDomain
-   * @version 3.10.13
+   * @version 3.10.14
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.esp_domain_uuid = ApiClient.convertToType(data['esp_domain_uuid'], 'String');
       if (data.hasOwnProperty('identity_status'))
         obj.identity_status = ApiClient.convertToType(data['identity_status'], 'String');
+      if (data.hasOwnProperty('mailgun'))
+        obj.mailgun = Mailgun.constructFromObject(data['mailgun']);
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('provider'))
@@ -112,6 +114,11 @@
    * @member {String} identity_status
    */
   exports.prototype.identity_status = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Mailgun} mailgun
+   */
+  exports.prototype.mailgun = undefined;
 
   /**
    * @member {String} merchant_id

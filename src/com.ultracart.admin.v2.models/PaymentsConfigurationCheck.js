@@ -34,7 +34,7 @@
   /**
    * The PaymentsConfigurationCheck model module.
    * @module com.ultracart.admin.v2.models/PaymentsConfigurationCheck
-   * @version 3.10.13
+   * @version 3.10.14
    */
 
   /**

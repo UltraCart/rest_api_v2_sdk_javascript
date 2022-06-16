@@ -34,7 +34,7 @@
   /**
    * The EmailListSegmentUsedBy model module.
    * @module com.ultracart.admin.v2.models/EmailListSegmentUsedBy
-   * @version 3.10.13
+   * @version 3.10.14
    */
 
   /**
