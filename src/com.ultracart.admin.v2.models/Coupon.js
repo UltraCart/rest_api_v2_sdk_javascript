@@ -58,7 +58,7 @@ import CouponTieredPercentOffSubtotal from './CouponTieredPercentOffSubtotal';
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.3
+ * @version 4.0.5
  */
 class Coupon {
     /**
