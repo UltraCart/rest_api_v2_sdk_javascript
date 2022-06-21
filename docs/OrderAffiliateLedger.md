@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderAffiliateLedger
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **assigned_by_user** | **String** | UltraCart user name that assigned this commission if manually assigned | [optional] 
@@ -14,7 +15,7 @@ Name | Type | Description | Notes
 **transaction_state** | **String** | The state of the transaction | [optional] 
 
 
-<a name="TransactionStateEnum"></a>
+
 ## Enum: TransactionStateEnum
 
 
@@ -28,7 +29,7 @@ Name | Type | Description | Notes
 
 * `Rejected` (value: `"Rejected"`)
 
-* `Partially_Paid` (value: `"Partially Paid"`)
+* `Partially Paid` (value: `"Partially Paid"`)
 
 
 

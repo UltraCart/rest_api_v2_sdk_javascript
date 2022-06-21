@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingQueryResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **checkout_only** | **Boolean** |  | [optional] 

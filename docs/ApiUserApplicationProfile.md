@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ApiUserApplicationProfile
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_application_logo_url** | **String** | Application logo URL | [optional] 

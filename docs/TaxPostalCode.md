@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxPostalCode
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounting_code** | **String** | Accounting code for programs such as QuickBooks | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderPaymentTransaction
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **details** | [**[OrderPaymentTransactionDetail]**](OrderPaymentTransactionDetail.md) | Details | [optional] 

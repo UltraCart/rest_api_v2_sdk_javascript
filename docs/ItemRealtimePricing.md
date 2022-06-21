@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemRealtimePricing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **realtime_pricing_parameter** | **String** | Real-time pricing provider parameters | [optional] 

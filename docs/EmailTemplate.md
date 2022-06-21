@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailTemplate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **container_cjson** | **String** | Container cjson | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.IntegrationLogQueryFilterValues
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **actions** | **[String]** |  | [optional] 

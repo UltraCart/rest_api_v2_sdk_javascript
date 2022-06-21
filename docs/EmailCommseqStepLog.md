@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqStepLog
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** | Email | [optional] 

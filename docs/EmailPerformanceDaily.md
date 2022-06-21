@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailPerformanceDaily
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bounce_count** | **Number** | Bounce count | [optional] 

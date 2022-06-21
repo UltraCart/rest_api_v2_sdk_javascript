@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LibraryItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **assets** | [**[LibraryItemAsset]**](LibraryItemAsset.md) |  | [optional] 

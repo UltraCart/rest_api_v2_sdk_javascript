@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AccountsReceivableRetryStatMetrics
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attempts** | **Number** |  | [optional] 

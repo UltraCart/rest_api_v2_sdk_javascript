@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerLoyaltyLedger
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_by** | **String** | Created By | [optional] 

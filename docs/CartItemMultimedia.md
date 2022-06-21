@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartItemMultimedia
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | Code assigned to the multimedia | [optional] 
@@ -14,7 +15,7 @@ Name | Type | Description | Notes
 **url** | **String** | URL to view multimedia at | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProvidersResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **avalara** | [**TaxProviderAvalara**](TaxProviderAvalara.md) |  | [optional] 

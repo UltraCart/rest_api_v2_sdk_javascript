@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemDigitalItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **creation_dts** | **String** | File creation date | [optional] 

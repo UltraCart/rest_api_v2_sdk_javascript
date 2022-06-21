@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerStoreCredit
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **available** | **Number** | Available store credit which is defined as unused and vested | [optional] 

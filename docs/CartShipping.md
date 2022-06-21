@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartShipping
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address1** | **String** | Address line 1 | [optional] 

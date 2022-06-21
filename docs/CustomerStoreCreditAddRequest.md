@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerStoreCreditAddRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **Number** | Amount of store credit | [optional] 

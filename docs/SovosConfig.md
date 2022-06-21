@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.SovosConfig
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_key** | **String** | Sovos access key | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AdjustInternalCertificateResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **adjustment_amount** | **Number** | The adjustment amount | [optional] 

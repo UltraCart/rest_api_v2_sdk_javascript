@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerTaxCodes
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **avalara_customer_code** | **String** | Avalara customer code | [optional] 

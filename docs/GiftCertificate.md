@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.GiftCertificate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activated** | **Boolean** | True if this gift certificate is activated and ready to apply to purchases. | [optional] 

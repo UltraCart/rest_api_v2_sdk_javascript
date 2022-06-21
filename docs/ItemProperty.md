@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemProperty
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **expirationDts** | **String** | Expiration of the property | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderDigitalOrder
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **creation_dts** | **String** | Date/time that the digital order was created | [optional] 

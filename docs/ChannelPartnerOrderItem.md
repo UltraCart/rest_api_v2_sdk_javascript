@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ChannelPartnerOrderItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **arbitrary_unit_cost** | **Number** | Arbitrary unit cost for this item that differs from the listed price | [optional] 
@@ -12,31 +13,31 @@ Name | Type | Description | Notes
 **upsell** | **Boolean** | True if this item was an upsell item. | [optional] 
 
 
-<a name="AutoOrderScheduleEnum"></a>
+
 ## Enum: AutoOrderScheduleEnum
 
 
 * `Weekly` (value: `"Weekly"`)
 
-* `Every_10_Days` (value: `"Every 10 Days"`)
+* `Every 10 Days` (value: `"Every 10 Days"`)
 
 * `Biweekly` (value: `"Biweekly"`)
 
-* `Every_24_Days` (value: `"Every 24 Days"`)
+* `Every 24 Days` (value: `"Every 24 Days"`)
 
-* `Every_28_Days` (value: `"Every 28 Days"`)
+* `Every 28 Days` (value: `"Every 28 Days"`)
 
 * `Monthly` (value: `"Monthly"`)
 
-* `Every_45_Days` (value: `"Every 45 Days"`)
+* `Every 45 Days` (value: `"Every 45 Days"`)
 
-* `Every_2_Months` (value: `"Every 2 Months"`)
+* `Every 2 Months` (value: `"Every 2 Months"`)
 
-* `Every_3_Months` (value: `"Every 3 Months"`)
+* `Every 3 Months` (value: `"Every 3 Months"`)
 
-* `Every_4_Months` (value: `"Every 4 Months"`)
+* `Every 4 Months` (value: `"Every 4 Months"`)
 
-* `Every_6_Months` (value: `"Every 6 Months"`)
+* `Every 6 Months` (value: `"Every 6 Months"`)
 
 * `Yearly` (value: `"Yearly"`)
 

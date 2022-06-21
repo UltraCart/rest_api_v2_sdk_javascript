@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemPaymentProcessing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **block_prepaid** | **Boolean** | True if prepaid cards should be blocked from buying this item | [optional] 

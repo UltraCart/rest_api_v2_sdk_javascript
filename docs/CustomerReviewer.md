@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerReviewer
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_approve** | **Boolean** | True if reviewes from this customer profile should automatically be approved | [optional] 

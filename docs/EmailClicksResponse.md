@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailClicksResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicks** | [**[EmailClick]**](EmailClick.md) |  | [optional] 

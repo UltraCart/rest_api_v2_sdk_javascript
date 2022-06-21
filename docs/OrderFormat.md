@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderFormat
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **context** | **String** | The context to generate the order view for. | [optional] 
@@ -21,7 +22,7 @@ Name | Type | Description | Notes
 **translate** | **Boolean** | True to translate the order into the native language of the customer | [optional] 
 
 
-<a name="FormatEnum"></a>
+
 ## Enum: FormatEnum
 
 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemVariation
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_text** | **String** | Default text | [optional] 

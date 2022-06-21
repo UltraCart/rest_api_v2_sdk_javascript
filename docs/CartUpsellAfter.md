@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartUpsellAfter
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **finalize_after_dts** | **String** | The date/time after which the cart will finalize into an order. | [optional] 

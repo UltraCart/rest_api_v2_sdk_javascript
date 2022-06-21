@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerEmailListChanges
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **add_to_lists** | **[String]** | Add this customer to these email lists | [optional] 

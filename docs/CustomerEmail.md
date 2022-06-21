@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerEmail
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **customer_profile_email_oid** | **Number** | ID of the email | [optional] 

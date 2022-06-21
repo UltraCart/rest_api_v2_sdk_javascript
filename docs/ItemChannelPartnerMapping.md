@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemChannelPartnerMapping
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **barcode_ua** | **String** | Barcode UA (EDI only) | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailPlan
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_customers** | **Number** |  | [optional] 

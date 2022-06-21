@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **arbitrary_unit_cost** | [**Currency**](Currency.md) |  | [optional] 

@@ -15,8 +15,9 @@ Method | HTTP request | Description
 [**uploadTemporaryMultimedia**](ItemApi.md#uploadTemporaryMultimedia) | **POST** /item/temp_multimedia | Upload an image to the temporary multimedia.
 
 
-<a name="deleteItem"></a>
-# **deleteItem**
+
+## deleteItem
+
 > deleteItem(merchant_item_oid)
 
 Delete an item
@@ -24,29 +25,32 @@ Delete an item
 Delete an item on the UltraCart account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var merchant_item_oid = 56; // Number | The item oid to delete.
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let merchant_item_oid = 56; // Number | The item oid to delete.
+apiInstance.deleteItem(merchant_item_oid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteItem(merchant_item_oid, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,11 +66,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getItem"></a>
-# **getItem**
+
+## getItem
+
 > ItemResponse getItem(merchant_item_oid, opts)
 
 Retrieve an item
@@ -74,33 +79,36 @@ Retrieve an item
 Retrieves a single item using the specified item oid. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var merchant_item_oid = 56; // Number | The item oid to retrieve.
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let merchant_item_oid = 56; // Number | The item oid to retrieve.
+let opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
   '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
-
-var callback = function(error, data, response) {
+apiInstance.getItem(merchant_item_oid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getItem(merchant_item_oid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -118,11 +126,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getItemByMerchantItemId"></a>
-# **getItemByMerchantItemId**
+
+## getItemByMerchantItemId
+
 > ItemResponse getItemByMerchantItemId(merchant_item_id, opts)
 
 Retrieve an item by item id
@@ -130,33 +139,36 @@ Retrieve an item by item id
 Retrieves a single item using the specified item id. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var merchant_item_id = "merchant_item_id_example"; // String | The item id to retrieve.
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let merchant_item_id = "merchant_item_id_example"; // String | The item id to retrieve.
+let opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
   '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
-
-var callback = function(error, data, response) {
+apiInstance.getItemByMerchantItemId(merchant_item_id, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getItemByMerchantItemId(merchant_item_id, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -174,11 +186,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getItems"></a>
-# **getItems**
+
+## getItems
+
 > ItemsResponse getItems(opts)
 
 Retrieve items
@@ -186,16 +199,21 @@ Retrieve items
 Retrieves a group of items from the account.  If no parameters are specified, all items will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let opts = {
   'parent_category_id': 56, // Number | The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
   'parent_category_path': "parent_category_path_example", // String | The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
@@ -205,23 +223,22 @@ var opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
   '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
-
-var callback = function(error, data, response) {
+apiInstance.getItems(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getItems(opts, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parent_category_id** | **Number**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root | [optional] 
- **parent_category_path** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root | [optional] 
+ **parent_category_id** | **Number**| The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 &#x3D; root | [optional] 
+ **parent_category_path** | **String**| The parent category path to retrieve items for.  Unspecified means all items on the account.  / &#x3D; root | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **_since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 
@@ -239,11 +256,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getPricingTiers"></a>
-# **getPricingTiers**
+
+## getPricingTiers
+
 > PricingTiersResponse getPricingTiers(opts)
 
 Retrieve pricing tiers
@@ -251,30 +269,34 @@ Retrieve pricing tiers
 Retrieves the pricing tiers 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
-
-var callback = function(error, data, response) {
+apiInstance.getPricingTiers(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getPricingTiers(opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -290,11 +312,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="insertItem"></a>
-# **insertItem**
+
+## insertItem
+
 > ItemResponse insertItem(item, opts)
 
 Create an item
@@ -302,33 +325,36 @@ Create an item
 Create a new item on the UltraCart account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var item = new UltraCartRestApiV2.Item(); // Item | Item to create
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let item = new UltraCartRestApiV2.Item(); // Item | Item to create
+let opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
   '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
-
-var callback = function(error, data, response) {
+apiInstance.insertItem(item, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.insertItem(item, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -346,52 +372,55 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
 
-<a name="updateItem"></a>
-# **updateItem**
-> ItemResponse updateItem(item, merchant_item_oid, opts)
+
+## updateItem
+
+> ItemResponse updateItem(merchant_item_oid, item, opts)
 
 Update an item
 
 Update a new item on the UltraCart account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var item = new UltraCartRestApiV2.Item(); // Item | Item to update
-
-var merchant_item_oid = 56; // Number | The item oid to update.
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let merchant_item_oid = 56; // Number | The item oid to update.
+let item = new UltraCartRestApiV2.Item(); // Item | Item to update
+let opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
   '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
 };
-
-var callback = function(error, data, response) {
+apiInstance.updateItem(merchant_item_oid, item, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateItem(item, merchant_item_oid, opts, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item** | [**Item**](Item.md)| Item to update | 
  **merchant_item_oid** | **Number**| The item oid to update. | 
+ **item** | [**Item**](Item.md)| Item to update | 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
  **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
@@ -405,11 +434,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
 
-<a name="updateItems"></a>
-# **updateItems**
+
+## updateItems
+
 > ItemsResponse updateItems(items_request, opts)
 
 Update multiple items
@@ -417,34 +447,37 @@ Update multiple items
 Update multiple item on the UltraCart account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var items_request = new UltraCartRestApiV2.ItemsRequest(); // ItemsRequest | Items to update (synchronous maximum 20 / asynchronous maximum 100)
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let items_request = new UltraCartRestApiV2.ItemsRequest(); // ItemsRequest | Items to update (synchronous maximum 20 / asynchronous maximum 100)
+let opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
   '_placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
   '_async': true // Boolean | True if the operation should be run async.  No result returned
 };
-
-var callback = function(error, data, response) {
+apiInstance.updateItems(items_request, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateItems(items_request, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -463,11 +496,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
 
-<a name="uploadTemporaryMultimedia"></a>
-# **uploadTemporaryMultimedia**
+
+## uploadTemporaryMultimedia
+
 > TempMultimediaResponse uploadTemporaryMultimedia(file)
 
 Upload an image to the temporary multimedia.
@@ -475,29 +509,32 @@ Upload an image to the temporary multimedia.
 Uploads an image and returns back meta information about the image as well as the identifier needed for the item update. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ItemApi();
-
-
-var file = "/path/to/file.txt"; // File | File to upload
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.ItemApi();
+let file = "/path/to/file"; // File | File to upload
+apiInstance.uploadTemporaryMultimedia(file, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.uploadTemporaryMultimedia(file, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -513,6 +550,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemOptionValue
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_dimension_application** | **String** | Additional dimensions application | [optional] 
@@ -20,15 +21,15 @@ Name | Type | Description | Notes
 **width** | [**Distance**](Distance.md) |  | [optional] 
 
 
-<a name="AdditionalDimensionApplicationEnum"></a>
+
 ## Enum: AdditionalDimensionApplicationEnum
 
 
 * `none` (value: `"none"`)
 
-* `set_item_to` (value: `"set item to"`)
+* `set item to` (value: `"set item to"`)
 
-* `add_item` (value: `"add item"`)
+* `add item` (value: `"add item"`)
 
 
 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCustomersResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **customers** | [**[EmailCustomer]**](EmailCustomer.md) | Customers on the page | [optional] 

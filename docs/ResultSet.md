@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ResultSet
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **count** | **Number** | Number of results in this set | [optional] 

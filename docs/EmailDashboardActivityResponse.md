@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailDashboardActivityResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activity** | [**[EmailDashboardActivity]**](EmailDashboardActivity.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartItemPhysical
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **height** | [**Distance**](Distance.md) |  | [optional] 

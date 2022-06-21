@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.PricingTier
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_3rd_party_billing** | **Boolean** | Allow 3rd party billing | [optional] 

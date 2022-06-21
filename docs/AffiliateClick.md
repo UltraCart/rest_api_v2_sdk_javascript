@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AffiliateClick
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_click_oid** | **Number** | Unique object identifier for this click | [optional] 

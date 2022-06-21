@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.IntegrationLogFile
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **mime_type** | **String** |  | [optional] 

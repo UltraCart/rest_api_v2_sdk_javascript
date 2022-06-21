@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TransactionEmailResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | [**TransactionEmail**](TransactionEmail.md) |  | [optional] 

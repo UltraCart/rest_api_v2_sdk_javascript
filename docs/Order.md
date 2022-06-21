@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Order
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliates** | [**[OrderAffiliate]**](OrderAffiliate.md) | Affiliates if any were associated with the order.  The first one in the array sent the order and each subsequent affiliate is the recruiter that earns a downline commission. | [optional] 
@@ -11,7 +12,7 @@ Name | Type | Description | Notes
 **checkout** | [**OrderCheckout**](OrderCheckout.md) |  | [optional] 
 **coupons** | [**[OrderCoupon]**](OrderCoupon.md) | Coupons | [optional] 
 **creation_dts** | **String** | Date/time that the order was created | [optional] 
-**currency_code** | **String** | Currency code that the customer used if different than the merchant's base currency code | [optional] 
+**currency_code** | **String** | Currency code that the customer used if different than the merchant&#39;s base currency code | [optional] 
 **current_stage** | **String** | Current stage that the order is in. | [optional] 
 **customer_profile** | [**Customer**](Customer.md) |  | [optional] 
 **digital_order** | [**OrderDigitalOrder**](OrderDigitalOrder.md) |  | [optional] 
@@ -39,31 +40,31 @@ Name | Type | Description | Notes
 **taxes** | [**OrderTaxes**](OrderTaxes.md) |  | [optional] 
 
 
-<a name="CurrentStageEnum"></a>
+
 ## Enum: CurrentStageEnum
 
 
-* `Accounts_Receivable` (value: `"Accounts Receivable"`)
+* `Accounts Receivable` (value: `"Accounts Receivable"`)
 
-* `Pending_Clearance` (value: `"Pending Clearance"`)
+* `Pending Clearance` (value: `"Pending Clearance"`)
 
-* `Fraud_Review` (value: `"Fraud Review"`)
+* `Fraud Review` (value: `"Fraud Review"`)
 
 * `Rejected` (value: `"Rejected"`)
 
-* `Shipping_Department` (value: `"Shipping Department"`)
+* `Shipping Department` (value: `"Shipping Department"`)
 
-* `Completed_Order` (value: `"Completed Order"`)
+* `Completed Order` (value: `"Completed Order"`)
 
-* `Quote_Request` (value: `"Quote Request"`)
+* `Quote Request` (value: `"Quote Request"`)
 
-* `Quote_Sent` (value: `"Quote Sent"`)
+* `Quote Sent` (value: `"Quote Sent"`)
 
-* `Least_Cost_Routing` (value: `"Least Cost Routing"`)
+* `Least Cost Routing` (value: `"Least Cost Routing"`)
 
 * `Unknown` (value: `"Unknown"`)
 
-* `Pre_ordered` (value: `"Pre-ordered"`)
+* `Pre-ordered` (value: `"Pre-ordered"`)
 
 
 

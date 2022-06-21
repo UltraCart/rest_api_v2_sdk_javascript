@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.RegisterAffiliateClickResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cookie_max_age** | **Number** | The cookie max age to use | [optional] 

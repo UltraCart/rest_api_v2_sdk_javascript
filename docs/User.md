@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.User
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_ip_address_masks** | **[String]** | A list of IP addresses whitelisted for any user with API Access permission.  Without this list, each ip address must be authenticated by a user, which can be a pain for some servers. | [optional] 

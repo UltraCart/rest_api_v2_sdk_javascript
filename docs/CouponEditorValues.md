@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponEditorValues
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliates** | [**[SimpleValue]**](SimpleValue.md) | affiliates | [optional] 

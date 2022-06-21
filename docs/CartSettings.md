@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **billing** | [**CartSettingsBilling**](CartSettingsBilling.md) |  | [optional] 

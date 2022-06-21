@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCampaignsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **campaigns** | [**[EmailCampaign]**](EmailCampaign.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponTierPercent
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **discount_percent** | **Number** | The percent of subtotal discount | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailDomain
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **comment** | **String** |  | [optional] 

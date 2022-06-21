@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderInternal
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **exported_to_accounting** | **Boolean** | True if the order has been exported to QuickBooks. If QuickBooks is not configured, then this will already be true | [optional] 

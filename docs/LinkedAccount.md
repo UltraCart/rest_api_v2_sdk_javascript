@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LinkedAccount
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **company** | **String** | The company name of this linked account. | [optional] 

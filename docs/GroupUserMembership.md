@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.GroupUserMembership
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** | The email for this user. | [optional] 

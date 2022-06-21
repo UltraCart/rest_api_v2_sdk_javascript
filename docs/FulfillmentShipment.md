@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.FulfillmentShipment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fulfillment_fee** | **Number** | Fees charged by the fulfillment company other than the shipping cost to process the order. | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsPayment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amazon** | [**CartSettingsPaymentAmazon**](CartSettingsPaymentAmazon.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSummary
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **arbitrary_shipping_handling_total** | [**Currency**](Currency.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemShippingDestinationMarkup
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **country_code** | **String** | Country code (ISO-3166 two letter) | [optional] 

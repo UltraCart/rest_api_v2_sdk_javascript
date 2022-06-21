@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AffiliateClicksResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clicks** | [**[AffiliateClick]**](AffiliateClick.md) | clicks | [optional] 

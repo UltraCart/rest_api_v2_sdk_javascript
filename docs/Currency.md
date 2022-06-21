@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Currency
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency_code** | **String** | Currency code of the localized value | [optional] 

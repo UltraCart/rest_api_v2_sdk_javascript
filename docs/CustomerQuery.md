@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerQuery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **all_tags** | **[String]** | All tags the customer must have | [optional] 

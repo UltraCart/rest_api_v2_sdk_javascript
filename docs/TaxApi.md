@@ -34,8 +34,9 @@ Method | HTTP request | Description
 [**updateTaxProviderUltraCart**](TaxApi.md#updateTaxProviderUltraCart) | **POST** /tax/providers/ultracart | Update the UltraCart tax provider
 
 
-<a name="deleteTaxProviderSelfCity"></a>
-# **deleteTaxProviderSelfCity**
+
+## deleteTaxProviderSelfCity
+
 > deleteTaxProviderSelfCity(city, tax_city)
 
 Deletes a Self tax provider city
@@ -43,31 +44,33 @@ Deletes a Self tax provider city
 Deletes a Self tax provider city. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var city = "city_example"; // String | The city being deleted.
-
-var tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be deleted
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let city = "city_example"; // String | The city being deleted.
+let tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be deleted
+apiInstance.deleteTaxProviderSelfCity(city, tax_city, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteTaxProviderSelfCity(city, tax_city, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -84,11 +87,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteTaxProviderSelfCountry"></a>
-# **deleteTaxProviderSelfCountry**
+
+## deleteTaxProviderSelfCountry
+
 > deleteTaxProviderSelfCountry(countryCode, tax_country)
 
 Deletes a Self tax provider country
@@ -96,31 +100,33 @@ Deletes a Self tax provider country
 Deletes a Self tax provider country. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var countryCode = "countryCode_example"; // String | The country code being deleted.
-
-var tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be deleted
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let countryCode = "countryCode_example"; // String | The country code being deleted.
+let tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be deleted
+apiInstance.deleteTaxProviderSelfCountry(countryCode, tax_country, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteTaxProviderSelfCountry(countryCode, tax_country, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -137,11 +143,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteTaxProviderSelfCounty"></a>
-# **deleteTaxProviderSelfCounty**
+
+## deleteTaxProviderSelfCounty
+
 > deleteTaxProviderSelfCounty(county, tax_county)
 
 Deletes a Self tax provider county
@@ -149,31 +156,33 @@ Deletes a Self tax provider county
 Deletes a Self tax provider county. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var county = "county_example"; // String | The county being deleted.
-
-var tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be deleted
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let county = "county_example"; // String | The county being deleted.
+let tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be deleted
+apiInstance.deleteTaxProviderSelfCounty(county, tax_county, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteTaxProviderSelfCounty(county, tax_county, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -190,11 +199,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteTaxProviderSelfPostalCode"></a>
-# **deleteTaxProviderSelfPostalCode**
+
+## deleteTaxProviderSelfPostalCode
+
 > deleteTaxProviderSelfPostalCode(postal_code, tax_postal_code)
 
 Deletes a Self tax provider postalCode
@@ -202,31 +212,33 @@ Deletes a Self tax provider postalCode
 Deletes a Self tax provider postalCode. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var postal_code = "postal_code_example"; // String | The postal code being deleted.
-
-var tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be deleted
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let postal_code = "postal_code_example"; // String | The postal code being deleted.
+let tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be deleted
+apiInstance.deleteTaxProviderSelfPostalCode(postal_code, tax_postal_code, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteTaxProviderSelfPostalCode(postal_code, tax_postal_code, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -243,11 +255,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteTaxProviderSelfState"></a>
-# **deleteTaxProviderSelfState**
+
+## deleteTaxProviderSelfState
+
 > deleteTaxProviderSelfState(stateCode, tax_state)
 
 Deletes a Self tax provider state
@@ -255,31 +268,33 @@ Deletes a Self tax provider state
 Deletes a Self tax provider state. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var stateCode = "stateCode_example"; // String | The state code being deleted.
-
-var tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be deleted
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let stateCode = "stateCode_example"; // String | The state code being deleted.
+let tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be deleted
+apiInstance.deleteTaxProviderSelfState(stateCode, tax_state, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteTaxProviderSelfState(stateCode, tax_state, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -296,11 +311,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="getTaxProviderAvalara"></a>
-# **getTaxProviderAvalara**
+
+## getTaxProviderAvalara
+
 > TaxProviderAvalara getTaxProviderAvalara()
 
 Retrieve the Avalara tax provider
@@ -308,27 +324,31 @@ Retrieve the Avalara tax provider
 Retrieves the Avalara tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderAvalara((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderAvalara(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -341,11 +361,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderAvalaraCompanies"></a>
-# **getTaxProviderAvalaraCompanies**
+
+## getTaxProviderAvalaraCompanies
+
 > TaxProviderAvalaraCompaniesResult getTaxProviderAvalaraCompanies(tax_provider_avalara)
 
 Returns Avalara Tax companies configured by the merchant
@@ -353,29 +374,32 @@ Returns Avalara Tax companies configured by the merchant
 Returns Avalara Tax companies configured by the merchant 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
+apiInstance.getTaxProviderAvalaraCompanies(tax_provider_avalara, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderAvalaraCompanies(tax_provider_avalara, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -391,11 +415,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="getTaxProviderAvalaraTest"></a>
-# **getTaxProviderAvalaraTest**
+
+## getTaxProviderAvalaraTest
+
 > TaxProviderTestResult getTaxProviderAvalaraTest()
 
 Attempts to connect to Avalara and returns back the response
@@ -403,27 +428,31 @@ Attempts to connect to Avalara and returns back the response
 Attempts to connect to Avalara and returns back the response. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderAvalaraTest((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderAvalaraTest(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -436,11 +465,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderSelf"></a>
-# **getTaxProviderSelf**
+
+## getTaxProviderSelf
+
 > TaxProviderSelf getTaxProviderSelf()
 
 Retrieve the Self tax provider
@@ -448,27 +478,31 @@ Retrieve the Self tax provider
 Retrieves the Self tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderSelf((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderSelf(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -481,11 +515,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderSelfCountries"></a>
-# **getTaxProviderSelfCountries**
+
+## getTaxProviderSelfCountries
+
 > TaxProviderSelfCountriesResponse getTaxProviderSelfCountries()
 
 Retrieve the Self tax provider countries
@@ -493,27 +528,31 @@ Retrieve the Self tax provider countries
 Retrieves the Self tax provider countries. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderSelfCountries((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderSelfCountries(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -526,11 +565,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderSelfRegionsByCountryCode"></a>
-# **getTaxProviderSelfRegionsByCountryCode**
+
+## getTaxProviderSelfRegionsByCountryCode
+
 > TaxProviderSelfRegionsResponse getTaxProviderSelfRegionsByCountryCode(countryCode)
 
 Retrieve the Self tax provider regions for a given country code
@@ -538,29 +578,32 @@ Retrieve the Self tax provider regions for a given country code
 Retrieves the Self tax provider regions for a given country code. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var countryCode = "countryCode_example"; // String | The country code regions desired.
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let countryCode = "countryCode_example"; // String | The country code regions desired.
+apiInstance.getTaxProviderSelfRegionsByCountryCode(countryCode, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderSelfRegionsByCountryCode(countryCode, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -576,11 +619,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderSovos"></a>
-# **getTaxProviderSovos**
+
+## getTaxProviderSovos
+
 > TaxProviderSovos getTaxProviderSovos()
 
 Retrieve the Sovos tax provider
@@ -588,27 +632,31 @@ Retrieve the Sovos tax provider
 Retrieves the Sovos tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderSovos((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderSovos(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -621,11 +669,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderSovosTest"></a>
-# **getTaxProviderSovosTest**
+
+## getTaxProviderSovosTest
+
 > TaxProviderTestResult getTaxProviderSovosTest()
 
 Attempts to connect to Sovos and returns back the response
@@ -633,27 +682,31 @@ Attempts to connect to Sovos and returns back the response
 Attempts to connect to Sovos and returns back the response. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderSovosTest((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderSovosTest(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -666,11 +719,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderTaxJar"></a>
-# **getTaxProviderTaxJar**
+
+## getTaxProviderTaxJar
+
 > TaxProviderTaxJar getTaxProviderTaxJar()
 
 Retrieve the TaxJar tax provider
@@ -678,27 +732,31 @@ Retrieve the TaxJar tax provider
 Retrieves the TaxJar tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderTaxJar((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderTaxJar(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -711,11 +769,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderTaxJarTest"></a>
-# **getTaxProviderTaxJarTest**
+
+## getTaxProviderTaxJarTest
+
 > TaxProviderTestResult getTaxProviderTaxJarTest()
 
 Attempts to connect to TaxJar and returns back the response
@@ -723,27 +782,31 @@ Attempts to connect to TaxJar and returns back the response
 Attempts to connect to TaxJar and returns back the response. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderTaxJarTest((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderTaxJarTest(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -756,11 +819,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviderUltraCart"></a>
-# **getTaxProviderUltraCart**
+
+## getTaxProviderUltraCart
+
 > TaxProviderUltraCart getTaxProviderUltraCart()
 
 Retrieve the UltraCart tax provider
@@ -768,27 +832,31 @@ Retrieve the UltraCart tax provider
 Retrieves the UltraCart tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+apiInstance.getTaxProviderUltraCart((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviderUltraCart(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -801,11 +869,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTaxProviders"></a>
-# **getTaxProviders**
+
+## getTaxProviders
+
 > TaxProvidersResponse getTaxProviders(opts)
 
 Retrieve tax methods
@@ -813,32 +882,36 @@ Retrieve tax methods
 Retrieves tax methods for this account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let opts = {
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
-
-var callback = function(error, data, response) {
+apiInstance.getTaxProviders(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTaxProviders(opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -856,11 +929,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="setActiveTaxProvider"></a>
-# **setActiveTaxProvider**
+
+## setActiveTaxProvider
+
 > TaxProviderActivateResult setActiveTaxProvider(providerName)
 
 Toggle a tax provider to active
@@ -868,29 +942,32 @@ Toggle a tax provider to active
 Toggle a tax provider to active. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var providerName = "providerName_example"; // String | The tax provider to set active.
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let providerName = "providerName_example"; // String | The tax provider to set active.
+apiInstance.setActiveTaxProvider(providerName, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.setActiveTaxProvider(providerName, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -906,11 +983,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="updateTaxProviderAvalara"></a>
-# **updateTaxProviderAvalara**
+
+## updateTaxProviderAvalara
+
 > TaxProviderAvalara updateTaxProviderAvalara(tax_provider_avalara)
 
 Update the Avalara tax provider
@@ -918,29 +996,32 @@ Update the Avalara tax provider
 Update the Avalara tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
+apiInstance.updateTaxProviderAvalara(tax_provider_avalara, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderAvalara(tax_provider_avalara, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -956,11 +1037,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderSelf"></a>
-# **updateTaxProviderSelf**
+
+## updateTaxProviderSelf
+
 > TaxProviderSelf updateTaxProviderSelf(tax_provider_self)
 
 Update the Self tax provider
@@ -968,29 +1050,32 @@ Update the Self tax provider
 Update the Self tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var tax_provider_self = new UltraCartRestApiV2.TaxProviderSelf(); // TaxProviderSelf | TaxProviderSelf object
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let tax_provider_self = new UltraCartRestApiV2.TaxProviderSelf(); // TaxProviderSelf | TaxProviderSelf object
+apiInstance.updateTaxProviderSelf(tax_provider_self, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderSelf(tax_provider_self, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1006,11 +1091,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderSelfCity"></a>
-# **updateTaxProviderSelfCity**
+
+## updateTaxProviderSelfCity
+
 > TaxCity updateTaxProviderSelfCity(city, tax_city)
 
 Updates a Self tax provider city
@@ -1018,31 +1104,33 @@ Updates a Self tax provider city
 Updates a Self tax provider city. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var city = "city_example"; // String | The city being updated.
-
-var tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be updated
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let city = "city_example"; // String | The city being updated.
+let tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be updated
+apiInstance.updateTaxProviderSelfCity(city, tax_city, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderSelfCity(city, tax_city, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1059,11 +1147,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderSelfCountry"></a>
-# **updateTaxProviderSelfCountry**
+
+## updateTaxProviderSelfCountry
+
 > TaxCountry updateTaxProviderSelfCountry(countryCode, tax_country)
 
 Updates a Self tax provider country
@@ -1071,31 +1160,33 @@ Updates a Self tax provider country
 Updates a Self tax provider country. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var countryCode = "countryCode_example"; // String | The country code being updated.
-
-var tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be updated
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let countryCode = "countryCode_example"; // String | The country code being updated.
+let tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be updated
+apiInstance.updateTaxProviderSelfCountry(countryCode, tax_country, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderSelfCountry(countryCode, tax_country, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1112,11 +1203,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderSelfCounty"></a>
-# **updateTaxProviderSelfCounty**
+
+## updateTaxProviderSelfCounty
+
 > TaxCounty updateTaxProviderSelfCounty(county, tax_county)
 
 Updates a Self tax provider county
@@ -1124,31 +1216,33 @@ Updates a Self tax provider county
 Updates a Self tax provider county. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var county = "county_example"; // String | The county being updated.
-
-var tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be updated
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let county = "county_example"; // String | The county being updated.
+let tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be updated
+apiInstance.updateTaxProviderSelfCounty(county, tax_county, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderSelfCounty(county, tax_county, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1165,11 +1259,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderSelfPostalCode"></a>
-# **updateTaxProviderSelfPostalCode**
+
+## updateTaxProviderSelfPostalCode
+
 > TaxPostalCode updateTaxProviderSelfPostalCode(postal_code, tax_postal_code)
 
 Updates a Self tax provider postalCode
@@ -1177,31 +1272,33 @@ Updates a Self tax provider postalCode
 Updates a Self tax provider postalCode. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var postal_code = "postal_code_example"; // String | The postal code being updated.
-
-var tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be updated
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let postal_code = "postal_code_example"; // String | The postal code being updated.
+let tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be updated
+apiInstance.updateTaxProviderSelfPostalCode(postal_code, tax_postal_code, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderSelfPostalCode(postal_code, tax_postal_code, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1218,11 +1315,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderSelfState"></a>
-# **updateTaxProviderSelfState**
+
+## updateTaxProviderSelfState
+
 > TaxState updateTaxProviderSelfState(stateCode, tax_state)
 
 Updates a Self tax provider state
@@ -1230,31 +1328,33 @@ Updates a Self tax provider state
 Updates a Self tax provider state. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var stateCode = "stateCode_example"; // String | The state code being updated.
-
-var tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be updated
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let stateCode = "stateCode_example"; // String | The state code being updated.
+let tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be updated
+apiInstance.updateTaxProviderSelfState(stateCode, tax_state, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderSelfState(stateCode, tax_state, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1271,11 +1371,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderSovos"></a>
-# **updateTaxProviderSovos**
+
+## updateTaxProviderSovos
+
 > TaxProviderSovos updateTaxProviderSovos(tax_provider_sovos)
 
 Update the Sovos tax provider
@@ -1283,29 +1384,32 @@ Update the Sovos tax provider
 Update the Sovos tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var tax_provider_sovos = new UltraCartRestApiV2.TaxProviderSovos(); // TaxProviderSovos | TaxProviderSovos object
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let tax_provider_sovos = new UltraCartRestApiV2.TaxProviderSovos(); // TaxProviderSovos | TaxProviderSovos object
+apiInstance.updateTaxProviderSovos(tax_provider_sovos, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderSovos(tax_provider_sovos, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1321,11 +1425,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderTaxJar"></a>
-# **updateTaxProviderTaxJar**
+
+## updateTaxProviderTaxJar
+
 > TaxProviderTaxJar updateTaxProviderTaxJar(tax_provider_taxJar)
 
 Update the TaxJar tax provider
@@ -1333,29 +1438,32 @@ Update the TaxJar tax provider
 Update the TaxJar tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var tax_provider_taxJar = new UltraCartRestApiV2.TaxProviderTaxJar(); // TaxProviderTaxJar | TaxProviderTaxJar object
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let tax_provider_taxJar = new UltraCartRestApiV2.TaxProviderTaxJar(); // TaxProviderTaxJar | TaxProviderTaxJar object
+apiInstance.updateTaxProviderTaxJar(tax_provider_taxJar, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderTaxJar(tax_provider_taxJar, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1371,11 +1479,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateTaxProviderUltraCart"></a>
-# **updateTaxProviderUltraCart**
+
+## updateTaxProviderUltraCart
+
 > TaxProviderUltraCart updateTaxProviderUltraCart(tax_provider_ultracart)
 
 Update the UltraCart tax provider
@@ -1383,29 +1492,32 @@ Update the UltraCart tax provider
 Update the UltraCart tax provider. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.TaxApi();
-
-
-var tax_provider_ultracart = new UltraCartRestApiV2.TaxProviderUltraCart(); // TaxProviderUltraCart | TaxProviderUltraCart object
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.TaxApi();
+let tax_provider_ultracart = new UltraCartRestApiV2.TaxProviderUltraCart(); // TaxProviderUltraCart | TaxProviderUltraCart object
+apiInstance.updateTaxProviderUltraCart(tax_provider_ultracart, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateTaxProviderUltraCart(tax_provider_ultracart, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1421,6 +1533,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

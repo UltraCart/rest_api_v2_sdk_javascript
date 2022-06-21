@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TempMultimedia
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filename** | **String** | Filename | [optional] 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 **width** | **Number** | Width | [optional] 
 
 
-<a name="MultimediaTypeEnum"></a>
+
 ## Enum: MultimediaTypeEnum
 
 

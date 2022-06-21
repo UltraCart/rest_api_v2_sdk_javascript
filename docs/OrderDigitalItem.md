@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderDigitalItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **file_size** | **Number** | File size | [optional] 

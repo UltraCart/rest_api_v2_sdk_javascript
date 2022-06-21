@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemShippingCase
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **case_label** | **String** | Case label | [optional] 

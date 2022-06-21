@@ -10,8 +10,9 @@ Method | HTTP request | Description
 [**ssoToken**](SsoApi.md#ssoToken) | **PUT** /sso/token | Exchange a single sign on code for a simple key token
 
 
-<a name="getSsoSessionUser"></a>
-# **getSsoSessionUser**
+
+## getSsoSessionUser
+
 > User getSsoSessionUser()
 
 Get single sign on session user
@@ -19,27 +20,31 @@ Get single sign on session user
 This is the equivalent of logging out of the single sign on session 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.SsoApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.SsoApi();
+apiInstance.getSsoSessionUser((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getSsoSessionUser(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -52,11 +57,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="ssoAuthorize"></a>
-# **ssoAuthorize**
+
+## ssoAuthorize
+
 > SingleSignOnAuthorizeResponse ssoAuthorize(authorization_request)
 
 Authorize a single sign on session
@@ -64,29 +70,32 @@ Authorize a single sign on session
 Starts the process of authorizing a single sign on session. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.SsoApi();
-
-
-var authorization_request = new UltraCartRestApiV2.SingleSignOnAuthorizeRequest(); // SingleSignOnAuthorizeRequest | Authorization request
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.SsoApi();
+let authorization_request = new UltraCartRestApiV2.SingleSignOnAuthorizeRequest(); // SingleSignOnAuthorizeRequest | Authorization request
+apiInstance.ssoAuthorize(authorization_request, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.ssoAuthorize(authorization_request, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -102,11 +111,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
 
-<a name="ssoSessionRevoke"></a>
-# **ssoSessionRevoke**
+
+## ssoSessionRevoke
+
 > ssoSessionRevoke()
 
 Revoke single sign on session
@@ -114,27 +124,31 @@ Revoke single sign on session
 This is the equivalent of logging out of the single sign on session 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.SsoApi();
-
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.SsoApi();
+apiInstance.ssoSessionRevoke((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.ssoSessionRevoke(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -147,11 +161,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="ssoToken"></a>
-# **ssoToken**
+
+## ssoToken
+
 > SingleSignOnTokenResponse ssoToken(token_request)
 
 Exchange a single sign on code for a simple key token
@@ -159,29 +174,32 @@ Exchange a single sign on code for a simple key token
 Called by your application after receiving the code back on the redirect URI to obtain a simple key token to make API calls with 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.SsoApi();
-
-
-var token_request = new UltraCartRestApiV2.SingleSignOnTokenRequest(); // SingleSignOnTokenRequest | Token request
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.SsoApi();
+let token_request = new UltraCartRestApiV2.SingleSignOnTokenRequest(); // SingleSignOnTokenRequest | Token request
+apiInstance.ssoToken(token_request, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.ssoToken(token_request, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -197,6 +215,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
- - **Accept**: application/json
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
 

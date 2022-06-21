@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemOption
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost_if_specified** | **Number** | Cost if specified | [optional] 
@@ -19,13 +20,13 @@ Name | Type | Description | Notes
 **values** | [**[ItemOptionValue]**](ItemOptionValue.md) | Values | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 
 * `dropdown` (value: `"dropdown"`)
 
-* `file_attachment` (value: `"file attachment"`)
+* `file attachment` (value: `"file attachment"`)
 
 * `fixed` (value: `"fixed"`)
 

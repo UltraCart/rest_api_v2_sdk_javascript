@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LibraryItemEmail
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** |  | [optional] 

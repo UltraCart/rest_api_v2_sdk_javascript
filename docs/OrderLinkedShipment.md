@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderLinkedShipment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **has_linked_shipment** | **Boolean** | True if this order has child linked shipments | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemVariationOption
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_option** | **Boolean** | True if default option | [optional] 

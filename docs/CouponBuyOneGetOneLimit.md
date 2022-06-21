@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponBuyOneGetOneLimit
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **items** | **[String]** | An optional list of items of which one must be purchased to receive free quantity of the same item. | [optional] 

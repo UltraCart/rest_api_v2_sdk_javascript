@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AffiliateClickQuery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_link_oid** | **Number** | Unique object identifier for for the link that this click is associated with | [optional] 

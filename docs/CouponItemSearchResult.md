@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponItemSearchResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost** | **String** | The cost of this item. | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailSegmentDownloadPrepareResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email_segment_rebuild_uuid** | **String** |  | [optional] 

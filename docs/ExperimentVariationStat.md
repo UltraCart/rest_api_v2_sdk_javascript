@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ExperimentVariationStat
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **add_to_cart_count** | **Number** | Total add to cart count for this variation | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponExistsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **coupon_code** | **String** | Coupon Code | [optional] 

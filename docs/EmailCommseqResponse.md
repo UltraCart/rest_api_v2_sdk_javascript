@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **communication_sequence** | [**EmailCommseq**](EmailCommseq.md) |  | [optional] 

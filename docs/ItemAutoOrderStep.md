@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemAutoOrderStep
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **arbitrary_schedule_days** | **Number** | If the schedule is arbitrary, then this is the number of days | [optional] 
@@ -20,7 +21,7 @@ Name | Type | Description | Notes
 **type** | **String** | Type of step (item, kit only, loop or pause) | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 
@@ -30,7 +31,7 @@ Name | Type | Description | Notes
 
 * `loop` (value: `"loop"`)
 
-* `kit_only` (value: `"kit only"`)
+* `kit only` (value: `"kit only"`)
 
 
 

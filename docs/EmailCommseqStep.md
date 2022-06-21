@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqStep
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alt_child_email_communication_sequence_steps** | [**[EmailCommseqStep]**](EmailCommseqStep.md) | Array of child steps for the alternate path | [optional] 
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 **type** | **String** | Type of step | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

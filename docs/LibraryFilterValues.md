@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LibraryFilterValues
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **categories** | **[String]** |  | [optional] 

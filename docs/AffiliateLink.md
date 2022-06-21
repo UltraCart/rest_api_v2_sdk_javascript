@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AffiliateLink
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_link_oid** | **Number** | Unique object identifier associated with this link | [optional] 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 **type** | **String** | Type of link | [optional] 
 
 
-<a name="CustomHtmlApprovalStatusEnum"></a>
+
 ## Enum: CustomHtmlApprovalStatusEnum
 
 
@@ -32,7 +33,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="InvisibleLinkApprovalStatusEnum"></a>
+
 ## Enum: InvisibleLinkApprovalStatusEnum
 
 
@@ -45,7 +46,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

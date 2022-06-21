@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TransactionEmail
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **content** | **String** | Actual template contents | [optional] 

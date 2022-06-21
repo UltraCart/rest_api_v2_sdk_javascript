@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.WebhookEventCategory
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **any_subscribed** | **Boolean** | True if any events are subscribed to. | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartFinalizeOrderRequestOptions
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_approve_purchase_order** | **Boolean** | Automatically approve the purchase order | [optional] 

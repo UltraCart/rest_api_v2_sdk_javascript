@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartMarketing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **advertising_source** | **String** | The advertising source the customer indicated | [optional] 

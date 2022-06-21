@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Customer
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activity** | [**CustomerActivity**](CustomerActivity.md) |  | [optional] 

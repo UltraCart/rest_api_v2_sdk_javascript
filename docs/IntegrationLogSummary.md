@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.IntegrationLogSummary
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **critical** | **Number** |  | [optional] 

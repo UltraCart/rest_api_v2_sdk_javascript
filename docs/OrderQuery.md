@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderQuery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cc_email** | **String** | CC Email | [optional] 
@@ -44,34 +45,34 @@ Name | Type | Description | Notes
 **total** | **Number** | Total | [optional] 
 
 
-<a name="CurrentStageEnum"></a>
+
 ## Enum: CurrentStageEnum
 
 
-* `Accounts_Receivable` (value: `"Accounts Receivable"`)
+* `Accounts Receivable` (value: `"Accounts Receivable"`)
 
-* `Pending_Clearance` (value: `"Pending Clearance"`)
+* `Pending Clearance` (value: `"Pending Clearance"`)
 
-* `Fraud_Review` (value: `"Fraud Review"`)
+* `Fraud Review` (value: `"Fraud Review"`)
 
 * `Rejected` (value: `"Rejected"`)
 
-* `Shipping_Department` (value: `"Shipping Department"`)
+* `Shipping Department` (value: `"Shipping Department"`)
 
-* `Completed_Order` (value: `"Completed Order"`)
+* `Completed Order` (value: `"Completed Order"`)
 
-* `Quote_Request` (value: `"Quote Request"`)
+* `Quote Request` (value: `"Quote Request"`)
 
-* `Quote_Sent` (value: `"Quote Sent"`)
+* `Quote Sent` (value: `"Quote Sent"`)
 
-* `Least_Cost_Routing` (value: `"Least Cost Routing"`)
+* `Least Cost Routing` (value: `"Least Cost Routing"`)
 
 * `Unknown` (value: `"Unknown"`)
 
 
 
 
-<a name="PaymentMethodEnum"></a>
+
 ## Enum: PaymentMethodEnum
 
 
@@ -79,7 +80,7 @@ Name | Type | Description | Notes
 
 * `Amazon` (value: `"Amazon"`)
 
-* `Amazon_SC` (value: `"Amazon SC"`)
+* `Amazon SC` (value: `"Amazon SC"`)
 
 * `Cash` (value: `"Cash"`)
 
@@ -87,23 +88,23 @@ Name | Type | Description | Notes
 
 * `COD` (value: `"COD"`)
 
-* `Credit_Card` (value: `"Credit Card"`)
+* `Credit Card` (value: `"Credit Card"`)
 
 * `eCheck` (value: `"eCheck"`)
 
 * `LoanHero` (value: `"LoanHero"`)
 
-* `Money_Order` (value: `"Money Order"`)
+* `Money Order` (value: `"Money Order"`)
 
 * `PayPal` (value: `"PayPal"`)
 
-* `Purchase_Order` (value: `"Purchase Order"`)
+* `Purchase Order` (value: `"Purchase Order"`)
 
-* `Quote_Request` (value: `"Quote Request"`)
+* `Quote Request` (value: `"Quote Request"`)
 
 * `Unknown` (value: `"Unknown"`)
 
-* `Wire_Transfer` (value: `"Wire Transfer"`)
+* `Wire Transfer` (value: `"Wire Transfer"`)
 
 
 

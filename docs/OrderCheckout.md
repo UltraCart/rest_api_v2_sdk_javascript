@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderCheckout
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **browser** | [**Browser**](Browser.md) |  | [optional] 

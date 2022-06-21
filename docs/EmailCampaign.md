@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCampaign
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **click_rate_formatted** | **String** | Click rate of emails | [optional] 

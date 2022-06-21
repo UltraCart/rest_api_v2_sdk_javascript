@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsGiftWrap
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost** | [**Currency**](Currency.md) |  | [optional] 

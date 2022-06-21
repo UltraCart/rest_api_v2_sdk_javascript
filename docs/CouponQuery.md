@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponQuery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_oid** | **Number** | Affiliate oid | [optional] 

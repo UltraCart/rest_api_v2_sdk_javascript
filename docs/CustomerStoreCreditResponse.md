@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerStoreCreditResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **customer_store_credit** | [**CustomerStoreCredit**](CustomerStoreCredit.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AffiliateLedger
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_click_oid** | **Number** | Unique object identifier for the click associated with this ledger entry | [optional] 
@@ -24,7 +25,7 @@ Name | Type | Description | Notes
 **transaction_state** | **String** | Transaction state | [optional] 
 
 
-<a name="TransactionStateEnum"></a>
+
 ## Enum: TransactionStateEnum
 
 
@@ -38,7 +39,7 @@ Name | Type | Description | Notes
 
 * `Rejected` (value: `"Rejected"`)
 
-* `Partially_Paid` (value: `"Partially Paid"`)
+* `Partially Paid` (value: `"Partially Paid"`)
 
 
 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ChargebackDisputesResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chargebacks** | [**[ChargebackDispute]**](ChargebackDispute.md) |  | [optional] 

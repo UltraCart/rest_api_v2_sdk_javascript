@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailSendingDomainResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | [**EmailDomain**](EmailDomain.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailDashboardActivity
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **String** | Type of action such as add, remove, subscribe, unsubscribe | [optional] 

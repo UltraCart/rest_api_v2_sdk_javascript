@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address_1** | **String** |  | [optional] 

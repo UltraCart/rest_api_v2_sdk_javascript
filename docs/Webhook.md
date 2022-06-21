@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Webhook
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_user_oid** | **Number** | Populated if webhook associated with an API user | [optional] 
@@ -23,16 +24,16 @@ Name | Type | Description | Notes
 **webhook_url** | **String** | The URL to deliver events to.  Must be HTTPS for customer related information. | [optional] 
 
 
-<a name="ApiVersionEnum"></a>
+
 ## Enum: ApiVersionEnum
 
 
-* `_2017_03_01` (value: `"2017-03-01"`)
+* `2017-03-01` (value: `"2017-03-01"`)
 
 
 
 
-<a name="AuthenticationTypeEnum"></a>
+
 ## Enum: AuthenticationTypeEnum
 
 

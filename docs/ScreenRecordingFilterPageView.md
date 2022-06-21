@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingFilterPageView
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | [**ScreenRecordingFilterStringSearch**](ScreenRecordingFilterStringSearch.md) |  | [optional] 

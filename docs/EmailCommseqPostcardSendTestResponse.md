@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqPostcardSendTestResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **backThumbnail** | **String** |  | [optional] 

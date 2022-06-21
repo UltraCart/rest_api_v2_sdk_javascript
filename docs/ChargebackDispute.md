@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ChargebackDispute
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_number** | **String** | Account number | [optional] 

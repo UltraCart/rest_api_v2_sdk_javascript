@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **coupons** | [**[Coupon]**](Coupon.md) |  | [optional] 

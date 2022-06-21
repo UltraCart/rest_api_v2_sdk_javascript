@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AutoOrderItemFutureSchedule
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_id** | **String** | Item ID that should rebill | [optional] 

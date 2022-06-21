@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemAccounting
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounting_code** | **String** | QuickBooks item name if different than the item id | [optional] 

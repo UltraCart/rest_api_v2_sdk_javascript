@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.DistributionCenter
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address1** | **String** | Address line 1 of the distribution center | [optional] 

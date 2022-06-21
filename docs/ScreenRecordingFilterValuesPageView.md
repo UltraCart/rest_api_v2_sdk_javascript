@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingFilterValuesPageView
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domains** | **[String]** |  | [optional] 

@@ -14,8 +14,9 @@ Method | HTTP request | Description
 [**updateGiftCertificate**](GiftCertificateApi.md#updateGiftCertificate) | **PUT** /gift_certificate/gift_certificates/{gift_certificate_oid} | Update a gift certificate
 
 
-<a name="addGiftCertificateLedgerEntry"></a>
-# **addGiftCertificateLedgerEntry**
+
+## addGiftCertificateLedgerEntry
+
 > GiftCertificateResponse addGiftCertificateLedgerEntry(gift_certificate_oid, gift_certificate_ledger_entry)
 
 Add a gift certificate ledger entry
@@ -23,31 +24,33 @@ Add a gift certificate ledger entry
 Adds a ledger entry for this gift certificate. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var gift_certificate_oid = 56; // Number | 
-
-var gift_certificate_ledger_entry = new UltraCartRestApiV2.GiftCertificateLedgerEntry(); // GiftCertificateLedgerEntry | Gift certificate ledger entry
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let gift_certificate_oid = 56; // Number | 
+let gift_certificate_ledger_entry = new UltraCartRestApiV2.GiftCertificateLedgerEntry(); // GiftCertificateLedgerEntry | Gift certificate ledger entry
+apiInstance.addGiftCertificateLedgerEntry(gift_certificate_oid, gift_certificate_ledger_entry, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.addGiftCertificateLedgerEntry(gift_certificate_oid, gift_certificate_ledger_entry, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -64,11 +67,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="createGiftCertificate"></a>
-# **createGiftCertificate**
+
+## createGiftCertificate
+
 > GiftCertificateResponse createGiftCertificate(gift_certificate_create_request)
 
 Create a gift certificate
@@ -76,29 +80,32 @@ Create a gift certificate
 Creates a gift certificate for this merchant account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var gift_certificate_create_request = new UltraCartRestApiV2.GiftCertificateCreateRequest(); // GiftCertificateCreateRequest | Gift certificate create request
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let gift_certificate_create_request = new UltraCartRestApiV2.GiftCertificateCreateRequest(); // GiftCertificateCreateRequest | Gift certificate create request
+apiInstance.createGiftCertificate(gift_certificate_create_request, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createGiftCertificate(gift_certificate_create_request, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -114,11 +121,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteGiftCertificate"></a>
-# **deleteGiftCertificate**
+
+## deleteGiftCertificate
+
 > deleteGiftCertificate(gift_certificate_oid)
 
 Delete a gift certificate
@@ -126,29 +134,32 @@ Delete a gift certificate
 Deletes a gift certificate for this merchant account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var gift_certificate_oid = 56; // Number | 
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let gift_certificate_oid = 56; // Number | 
+apiInstance.deleteGiftCertificate(gift_certificate_oid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteGiftCertificate(gift_certificate_oid, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -164,11 +175,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getGiftCertificateByCode"></a>
-# **getGiftCertificateByCode**
+
+## getGiftCertificateByCode
+
 > GiftCertificateResponse getGiftCertificateByCode(code)
 
 Retrieve gift certificate by code
@@ -176,29 +188,32 @@ Retrieve gift certificate by code
 Retrieves a gift certificate from the account based on the code (the value the customer enters at checkout time). 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var code = "code_example"; // String | 
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let code = "code_example"; // String | 
+apiInstance.getGiftCertificateByCode(code, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getGiftCertificateByCode(code, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -214,11 +229,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getGiftCertificateByOid"></a>
-# **getGiftCertificateByOid**
+
+## getGiftCertificateByOid
+
 > GiftCertificateResponse getGiftCertificateByOid(gift_certificate_oid)
 
 Retrieve gift certificate by oid
@@ -226,29 +242,32 @@ Retrieve gift certificate by oid
 Retrieves a gift certificate from the account based on the internal primary key. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var gift_certificate_oid = 56; // Number | 
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let gift_certificate_oid = 56; // Number | 
+apiInstance.getGiftCertificateByOid(gift_certificate_oid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getGiftCertificateByOid(gift_certificate_oid, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -264,11 +283,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getGiftCertificatesByEmail"></a>
-# **getGiftCertificatesByEmail**
+
+## getGiftCertificatesByEmail
+
 > GiftCertificatesResponse getGiftCertificatesByEmail(email)
 
 Retrieve gift certificate by email
@@ -276,29 +296,32 @@ Retrieve gift certificate by email
 Retrieves all gift certificates from the account based on customer email. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var email = "email_example"; // String | 
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let email = "email_example"; // String | 
+apiInstance.getGiftCertificatesByEmail(email, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getGiftCertificatesByEmail(email, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -314,11 +337,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getGiftCertificatesByQuery"></a>
-# **getGiftCertificatesByQuery**
+
+## getGiftCertificatesByQuery
+
 > GiftCertificatesResponse getGiftCertificatesByQuery(gift_certificate_query, opts)
 
 Retrieve gift certificates by query
@@ -326,36 +350,39 @@ Retrieve gift certificates by query
 Retrieves gift certificates from the account.  If no parameters are specified, all gift certificates will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var gift_certificate_query = new UltraCartRestApiV2.GiftCertificateQuery(); // GiftCertificateQuery | Gift certificates query
-
-var opts = { 
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let gift_certificate_query = new UltraCartRestApiV2.GiftCertificateQuery(); // GiftCertificateQuery | Gift certificates query
+let opts = {
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
   '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
-
-var callback = function(error, data, response) {
+apiInstance.getGiftCertificatesByQuery(gift_certificate_query, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getGiftCertificatesByQuery(gift_certificate_query, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -376,11 +403,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateGiftCertificate"></a>
-# **updateGiftCertificate**
+
+## updateGiftCertificate
+
 > GiftCertificateResponse updateGiftCertificate(gift_certificate_oid, gift_certificate)
 
 Update a gift certificate
@@ -388,31 +416,33 @@ Update a gift certificate
 Update a gift certificate for this merchant account. 
 
 ### Example
+
 ```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
+let defaultClient = UltraCartRestApiV2.ApiClient.instance;
+// Configure OAuth2 access token for authorization: ultraCartOauth
+let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
+ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
+// Configure API key authorization: ultraCartSimpleApiKey
+let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
+ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
 
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
-
-
-var gift_certificate_oid = 56; // Number | 
-
-var gift_certificate = new UltraCartRestApiV2.GiftCertificate(); // GiftCertificate | Gift certificate
-
-
-var callback = function(error, data, response) {
+let apiInstance = new UltraCartRestApiV2.GiftCertificateApi();
+let gift_certificate_oid = 56; // Number | 
+let gift_certificate = new UltraCartRestApiV2.GiftCertificate(); // GiftCertificate | Gift certificate
+apiInstance.updateGiftCertificate(gift_certificate_oid, gift_certificate, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateGiftCertificate(gift_certificate_oid, gift_certificate, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -429,6 +459,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

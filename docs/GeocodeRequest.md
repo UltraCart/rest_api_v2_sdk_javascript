@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.GeocodeRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **String** | address | [optional] 

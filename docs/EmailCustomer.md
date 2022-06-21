@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCustomer
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **Boolean** | True if the customer is flagged as active within StoreFront Communications | [optional] 

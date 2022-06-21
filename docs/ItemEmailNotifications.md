@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemEmailNotifications
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **skip_receipt** | **Boolean** | Skip receipt email to customer | [optional] 

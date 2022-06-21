@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemPricingTierLimit
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cumulative_order_limit** | **Number** | Cumulative order limit | [optional] 

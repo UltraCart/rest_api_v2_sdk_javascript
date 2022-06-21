@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailListSegmentUsedBy
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email_campaign_uuid** | **String** | Email campaign UUID | [optional] 

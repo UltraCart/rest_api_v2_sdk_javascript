@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Browser
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **device** | [**BrowserDevice**](BrowserDevice.md) |  | [optional] 

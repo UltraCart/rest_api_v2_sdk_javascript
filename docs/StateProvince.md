@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.StateProvince
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **abbreviation** | **String** | abbreviation | [optional] 

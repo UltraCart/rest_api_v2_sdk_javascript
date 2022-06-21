@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemCheckout
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **suppress_buysafe** | **Boolean** | True to suppress buySAFE (deprecated) | [optional] 

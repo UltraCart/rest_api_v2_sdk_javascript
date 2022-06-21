@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemRestriction
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **exclude_coupon** | **Boolean** | Exclude coupons | [optional] 

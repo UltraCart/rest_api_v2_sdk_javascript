@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AvalaraConfig
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_id** | **String** | Avalara account ID | [optional] 

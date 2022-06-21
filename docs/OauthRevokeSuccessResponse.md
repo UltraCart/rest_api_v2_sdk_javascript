@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OauthRevokeSuccessResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** | Message confirming revocation of credentials | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProviderSelf
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configuration** | [**SelfConfig**](SelfConfig.md) |  | [optional] 

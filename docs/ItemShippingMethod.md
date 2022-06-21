@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemShippingMethod
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost** | **Number** | Cost | [optional] 
@@ -20,15 +21,15 @@ Name | Type | Description | Notes
 **signature_required** | **Boolean** | Signature required | [optional] 
 
 
-<a name="ShippingMethodValidityEnum"></a>
+
 ## Enum: ShippingMethodValidityEnum
 
 
-* `invalid_for` (value: `"invalid for"`)
+* `invalid for` (value: `"invalid for"`)
 
-* `valid_for` (value: `"valid for"`)
+* `valid for` (value: `"valid for"`)
 
-* `valid_only_for` (value: `"valid only for"`)
+* `valid only for` (value: `"valid only for"`)
 
 
 

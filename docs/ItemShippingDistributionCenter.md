@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemShippingDistributionCenter
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allocated_to_placed_orders** | **Number** | Allocated to placed orders | [optional] 

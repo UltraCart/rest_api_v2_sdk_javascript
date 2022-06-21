@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CouponTieredPercentOffShipping
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **quickbooks_code** | **String** | Quickbooks accounting code. | [optional] 

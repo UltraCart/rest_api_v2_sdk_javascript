@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProviderSovos
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configuration** | [**SovosConfig**](SovosConfig.md) |  | [optional] 

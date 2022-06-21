@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartAffirmCheckoutResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **checkout_json** | **String** | Checkout JSON object | [optional] 

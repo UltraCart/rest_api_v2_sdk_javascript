@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemEbayMarketListing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auction_id** | **String** | Auction ID | [optional] 

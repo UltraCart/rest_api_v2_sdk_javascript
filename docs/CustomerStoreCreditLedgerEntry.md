@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerStoreCreditLedgerEntry
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **String** | Identifies the state of this ledger entry whether the entry is Vesting or Expiring | [optional] 

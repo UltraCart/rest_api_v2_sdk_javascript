@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.GiftCertificateCreateRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **Number** | Initial amount of this gift certificate. | [optional] 

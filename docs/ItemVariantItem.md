@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemVariantItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **String** | Description | [optional] 

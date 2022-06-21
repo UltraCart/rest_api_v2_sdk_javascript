@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemContentMultimedia
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cloud_url** | **String** | URL where the image can be downloaded from the cloud | [optional] 
@@ -20,7 +21,7 @@ Name | Type | Description | Notes
 **width** | **Number** | Width of the image | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

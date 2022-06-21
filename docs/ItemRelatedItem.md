@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemRelatedItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **related_merchant_item_id** | **String** | Related item id | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **type** | **String** | Relationship type | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

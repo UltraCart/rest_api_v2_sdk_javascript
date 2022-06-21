@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailFlowFolder
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **esp_flow_folder_uuid** | **String** | Email flow folder UUID | [optional] 

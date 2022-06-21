@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartFinalizeOrderResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **errors** | **[String]** | Error messages if the order could not be completed | [optional] 

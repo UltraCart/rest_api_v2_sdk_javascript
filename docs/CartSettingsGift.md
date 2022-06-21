@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsGift
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_gifts** | **Boolean** | True if this checkout supports gift giving | [optional] 

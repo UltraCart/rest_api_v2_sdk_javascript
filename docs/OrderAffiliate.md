@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderAffiliate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_oid** | **Number** | Affiliate ID | [optional] 

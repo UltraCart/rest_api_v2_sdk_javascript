@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsShippingEstimate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_3rd_party_billing** | **Boolean** | True if this method allows the customer to use their own shipper account number | [optional] 

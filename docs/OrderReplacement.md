@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderReplacement
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_merchant_notes_new_order** | **String** | Additional merchant notes to append to the new order | [optional] 

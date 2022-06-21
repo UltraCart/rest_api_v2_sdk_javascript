@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailListSegmentFoldersResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **error** | [**Error**](Error.md) |  | [optional] 

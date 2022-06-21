@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemRevguard
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **revguard_canceled_csr_prompt_group** | **Number** | Canceled CSR prompt group | [optional] 

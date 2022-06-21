@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartGiftCertificate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gift_certificate_amount** | [**Currency**](Currency.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.SingleSignOnAuthorizeRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **redirect_uri** | **String** | The URL that the customer should be redirected to after they have approved a single sign on session. | [optional] 

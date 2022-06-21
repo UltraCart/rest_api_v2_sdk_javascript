@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsShipping
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **deliver_on_date** | [**CartSettingsShippingCalendar**](CartSettingsShippingCalendar.md) |  | [optional] 

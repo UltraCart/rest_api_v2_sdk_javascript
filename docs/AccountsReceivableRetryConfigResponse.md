@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AccountsReceivableRetryConfigResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **config** | [**AccountsReceivableRetryConfig**](AccountsReceivableRetryConfig.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LibraryItemsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **error** | [**Error**](Error.md) |  | [optional] 

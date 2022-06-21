@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderTrackingNumberDetails
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **actual_delivery_date** | **String** |  | [optional] 

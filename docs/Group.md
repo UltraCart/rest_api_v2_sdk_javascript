@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Group
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **group_oid** | **Number** | The unique object identifier (oid for short) for this group | [optional] 

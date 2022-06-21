@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingFilterRangeInteger
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eq** | **Number** |  | [optional] 

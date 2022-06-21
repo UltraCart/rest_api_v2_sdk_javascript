@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderCoupon
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounting_code** | **String** | QuickBooks accounting code for this coupon | [optional] 

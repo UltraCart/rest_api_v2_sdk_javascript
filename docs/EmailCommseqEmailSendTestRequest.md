@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqEmailSendTestRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cart_id** | **String** |  | [optional] 

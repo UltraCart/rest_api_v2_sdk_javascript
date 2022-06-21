@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProviderTaxJar
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configuration** | [**TaxJarConfig**](TaxJarConfig.md) |  | [optional] 

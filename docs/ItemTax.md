@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemTax
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **exemptions** | [**[ItemTaxExemption]**](ItemTaxExemption.md) | Exemptions | [optional] 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 **taxable_cost** | **Number** | Taxable cost if different than regular cost | [optional] 
 
 
-<a name="TaxProductTypeEnum"></a>
+
 ## Enum: TaxProductTypeEnum
 
 

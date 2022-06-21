@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LibraryItemPublishedMeta
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **count_of_versions** | **Number** | The number of published versions a source item has, or zero if this item is not a source or is private | [optional] 

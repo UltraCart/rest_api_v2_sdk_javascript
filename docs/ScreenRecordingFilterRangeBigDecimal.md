@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingFilterRangeBigDecimal
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eq** | **Number** |  | [optional] 

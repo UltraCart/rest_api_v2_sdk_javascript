@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AddLibraryItemRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attributes** | [**[LibraryItemAttribute]**](LibraryItemAttribute.md) | Attributes associated with the library item to contain additional configuration. | [optional] 

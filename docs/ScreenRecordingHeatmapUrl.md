@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingHeatmapUrl
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **histogram_data** | **[Number]** |  | [optional] 

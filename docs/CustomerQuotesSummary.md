@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerQuotesSummary
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **first_quote_dts** | **String** | First quote date | [optional] 

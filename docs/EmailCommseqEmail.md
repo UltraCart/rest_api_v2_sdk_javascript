@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqEmail
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **deleted** | **Boolean** | Deleted | [optional] 

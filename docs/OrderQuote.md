@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderQuote
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **quote_expiration_dts** | **String** | Expiration of quote at date/time | [optional] 

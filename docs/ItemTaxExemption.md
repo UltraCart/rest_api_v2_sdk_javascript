@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemTaxExemption
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **city** | **String** | City | [optional] 

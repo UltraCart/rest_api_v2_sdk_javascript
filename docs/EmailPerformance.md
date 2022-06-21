@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailPerformance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active_customers** | **Number** | Active customers.  The value will be -1 if calculation is pending. | [optional] 
@@ -28,7 +29,7 @@ Name | Type | Description | Notes
 **transactional_send_count** | **Number** | Total transactions emails sent | [optional] 
 
 
-<a name="LoyaltyProgramTypeEnum"></a>
+
 ## Enum: LoyaltyProgramTypeEnum
 
 

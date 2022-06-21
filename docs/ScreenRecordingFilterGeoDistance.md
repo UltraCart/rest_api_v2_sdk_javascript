@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingFilterGeoDistance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **distance** | **Number** |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailStepStat
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **left_conversion_count** | **Number** | conversion count (left/default side) | [optional] 

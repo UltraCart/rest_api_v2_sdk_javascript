@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingSegment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **create_dts** | **String** |  | [optional] 

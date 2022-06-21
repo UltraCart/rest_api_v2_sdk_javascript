@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderAutoOrder
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_order_code** | **String** | Unique code assigned to this auto order | [optional] 
@@ -25,7 +26,7 @@ Name | Type | Description | Notes
 **status** | **String** | The status of the auto order | [optional] 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 

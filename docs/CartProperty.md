@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartProperty
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **display** | **Boolean** | True if this property is displayed to the customer | [optional] 

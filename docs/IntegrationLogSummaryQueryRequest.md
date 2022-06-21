@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.IntegrationLogSummaryQueryRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **log_dts_begin** | **String** | Log date/time begin | [optional] 

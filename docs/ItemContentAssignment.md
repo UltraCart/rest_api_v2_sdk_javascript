@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemContentAssignment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_assignment** | **Boolean** | True if this group is the default assignment for this item | [optional] 

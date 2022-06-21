@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderItemEdiIdentification
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identification** | **String** | Identification value | [optional] 

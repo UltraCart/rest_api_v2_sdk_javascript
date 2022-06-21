@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderPaymentInsurance
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **application_id** | **String** | application id | [optional] 

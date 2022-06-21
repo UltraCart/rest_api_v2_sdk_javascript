@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderReplacementResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chargeSuccessful** | **Boolean** |  | [optional] 

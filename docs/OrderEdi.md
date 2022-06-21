@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderEdi
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bill_to_edi_code** | **String** | Billing address identification code from the EDI order.  Typically DUNS or DUNS+4 | [optional] 

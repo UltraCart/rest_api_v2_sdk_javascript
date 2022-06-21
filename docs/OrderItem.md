@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounting_code** | **String** | QuickBooks code | [optional] 
@@ -61,7 +62,7 @@ Name | Type | Description | Notes
 **width** | [**Distance**](Distance.md) |  | [optional] 
 
 
-<a name="TaxProductTypeEnum"></a>
+
 ## Enum: TaxProductTypeEnum
 
 

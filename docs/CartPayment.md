@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartPayment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affirm** | [**CartPaymentAffirm**](CartPaymentAffirm.md) |  | [optional] 

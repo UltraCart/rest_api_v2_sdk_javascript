@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LibraryItemQuery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **category** | **String** | Category | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCustomerEditorUrlResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **editor_url** | **String** |  | [optional] 

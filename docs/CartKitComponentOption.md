@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartKitComponentOption
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost_if_specified** | [**Currency**](Currency.md) |  | [optional] 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 **values** | [**[CartItemOptionValue]**](CartItemOptionValue.md) | Values that the customer can select from for radio or select type options | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartCustomerProfile
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_3rd_party_billing** | **Boolean** | True if profile is allowed to bill to their 3rd party shipping account | [optional] 

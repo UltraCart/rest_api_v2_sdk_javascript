@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCampaignFolderResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **campaign_folder** | [**EmailCampaignFolder**](EmailCampaignFolder.md) |  | [optional] 

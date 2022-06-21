@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartCurrencyConversion
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **base_currency_Code** | **String** | Base currency code for this merchant | [optional] 

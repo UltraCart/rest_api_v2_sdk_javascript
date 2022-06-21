@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Item
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounting** | [**ItemAccounting**](ItemAccounting.md) |  | [optional] 

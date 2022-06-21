@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingFilterValues
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **communications_campaign_names** | **[String]** |  | [optional] 

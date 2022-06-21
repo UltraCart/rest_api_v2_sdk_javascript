@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemPricing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_arbitrary_cost** | **Boolean** | Allow arbitrary cost | [optional] 

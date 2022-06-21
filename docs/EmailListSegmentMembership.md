@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailListSegmentMembership
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email_list_uuid** | **String** | UUID identifying this email list or null if this is a segment | [optional] 

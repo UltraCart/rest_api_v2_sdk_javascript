@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailVerifyTokenResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **error** | [**Error**](Error.md) |  | [optional] 

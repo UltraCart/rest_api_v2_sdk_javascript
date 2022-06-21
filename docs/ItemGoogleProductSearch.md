@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemGoogleProductSearch
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **adwords_grouping** | **String** | Adwords grouping | [optional] 

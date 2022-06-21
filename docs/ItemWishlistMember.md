@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemWishlistMember
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **wishlist_member_instance_description** | **String** | WishList Member instance description | [optional] 

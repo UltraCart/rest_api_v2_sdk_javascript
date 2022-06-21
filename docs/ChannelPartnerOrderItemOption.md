@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ChannelPartnerOrderItemOption
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | The name of the item option. | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemPricingTier
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **default_tier** | **Boolean** | True if this is the default tier | [optional] 

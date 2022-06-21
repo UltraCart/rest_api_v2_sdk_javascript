@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AccountsReceivableRetryStatAccount
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **days** | [**[AccountsReceivableRetryStatMetrics]**](AccountsReceivableRetryStatMetrics.md) |  | [optional] 

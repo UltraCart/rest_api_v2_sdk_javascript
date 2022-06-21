@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerEditorValues
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliates** | [**[CustomerAffiliate]**](CustomerAffiliate.md) | affiliates | [optional] 

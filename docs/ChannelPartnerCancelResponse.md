@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ChannelPartnerCancelResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cancel_errors** | **[String]** | Array of errors if errors occurred | [optional] 

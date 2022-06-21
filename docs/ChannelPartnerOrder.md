@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ChannelPartnerOrder
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **advertisingSource** | **String** | advertising_source | [optional] 
@@ -85,7 +86,7 @@ Name | Type | Description | Notes
 **treat_warnings_as_errors** | **Boolean** | If true all warnings are considered errors, this is true by default | [optional] 
 
 
-<a name="PaymentMethodEnum"></a>
+
 ## Enum: PaymentMethodEnum
 
 
@@ -97,19 +98,19 @@ Name | Type | Description | Notes
 
 * `COD` (value: `"COD"`)
 
-* `Credit_Card` (value: `"Credit Card"`)
+* `Credit Card` (value: `"Credit Card"`)
 
 * `LoanHero` (value: `"LoanHero"`)
 
-* `Money_Order` (value: `"Money Order"`)
+* `Money Order` (value: `"Money Order"`)
 
 * `PayPal` (value: `"PayPal"`)
 
-* `Purchase_Order` (value: `"Purchase Order"`)
+* `Purchase Order` (value: `"Purchase Order"`)
 
-* `Quote_Request` (value: `"Quote Request"`)
+* `Quote Request` (value: `"Quote Request"`)
 
-* `Wire_Transfer` (value: `"Wire Transfer"`)
+* `Wire Transfer` (value: `"Wire Transfer"`)
 
 
 

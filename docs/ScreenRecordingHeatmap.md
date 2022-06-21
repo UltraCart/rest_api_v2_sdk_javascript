@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingHeatmap
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **large_click_thumbnail_url** | **String** |  | [optional] 

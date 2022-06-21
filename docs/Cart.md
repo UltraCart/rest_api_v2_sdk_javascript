@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Cart
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate** | [**CartAffiliate**](CartAffiliate.md) |  | [optional] 

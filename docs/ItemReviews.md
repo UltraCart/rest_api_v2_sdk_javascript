@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemReviews
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **has_approved_review** | **Boolean** | True if the item has an approved review | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemGiftCertificate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gift_certificate** | **Boolean** | True if the purchase of this item generates a gift certificate | [optional] 

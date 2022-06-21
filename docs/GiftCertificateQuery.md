@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.GiftCertificateQuery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | Gift certificate code | [optional] 

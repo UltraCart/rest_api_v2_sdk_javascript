@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProviderAvalaraCompany
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **company_code** | **String** | Company code | [optional] 

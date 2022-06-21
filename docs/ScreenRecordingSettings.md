@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost_per_thousand** | **Number** | Cost per one thousand sessions | [optional] 

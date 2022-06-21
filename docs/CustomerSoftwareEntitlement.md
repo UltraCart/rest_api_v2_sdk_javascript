@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerSoftwareEntitlement
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation_code** | **String** | Activation Code Associated with the software | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderChannelPartner
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_approve_purchase_order** | **Boolean** | If true, any purchase order submitted is automatically approved | [optional] 

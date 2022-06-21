@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AccountsReceivableRetryConfig
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **Boolean** | True if the retry should run daily.  False puts the retry service into an inactive state for this merchant. | [optional] 

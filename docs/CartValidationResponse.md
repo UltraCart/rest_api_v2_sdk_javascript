@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartValidationResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cart** | [**Cart**](Cart.md) |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailListCustomer
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **add_dts** | **String** | Added timestamp | [optional] 

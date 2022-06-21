@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartCustomerProfileCreditCard
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **card_expiration_month** | **Number** | Card expiration month (1-12) | [optional] 
@@ -11,13 +12,13 @@ Name | Type | Description | Notes
 **last_used_date** | **String** | Last used | [optional] 
 
 
-<a name="CardTypeEnum"></a>
+
 ## Enum: CardTypeEnum
 
 
 * `AMEX` (value: `"AMEX"`)
 
-* `Diners_Club` (value: `"Diners Club"`)
+* `Diners Club` (value: `"Diners Club"`)
 
 * `Discover` (value: `"Discover"`)
 

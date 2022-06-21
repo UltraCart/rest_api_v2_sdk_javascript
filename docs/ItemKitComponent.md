@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemKitComponent
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **component_cost** | **Number** | Component item cost | [optional] 

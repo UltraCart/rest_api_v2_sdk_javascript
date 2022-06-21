@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemThirdPartyEmailMarketing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **add_tags** | **[String]** | Add tags | [optional] 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 **unsubscribe_lists** | **[String]** | Unsubscribe from lists | [optional] 
 
 
-<a name="ProviderNameEnum"></a>
+
 ## Enum: ProviderNameEnum
 
 
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 
 * `AWeber` (value: `"AWeber"`)
 
-* `Campaign_Monitor` (value: `"Campaign Monitor"`)
+* `Campaign Monitor` (value: `"Campaign Monitor"`)
 
 * `ConstantContact` (value: `"ConstantContact"`)
 

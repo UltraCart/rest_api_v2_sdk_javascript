@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderPayment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **check** | [**OrderPaymentCheck**](OrderPaymentCheck.md) |  | [optional] 
@@ -23,7 +24,7 @@ Name | Type | Description | Notes
 **transactions** | [**[OrderPaymentTransaction]**](OrderPaymentTransaction.md) | Transactions associated with processing this payment | [optional] 
 
 
-<a name="PaymentMethodEnum"></a>
+
 ## Enum: PaymentMethodEnum
 
 
@@ -31,7 +32,7 @@ Name | Type | Description | Notes
 
 * `Amazon` (value: `"Amazon"`)
 
-* `Amazon_SC` (value: `"Amazon SC"`)
+* `Amazon SC` (value: `"Amazon SC"`)
 
 * `Cash` (value: `"Cash"`)
 
@@ -39,36 +40,36 @@ Name | Type | Description | Notes
 
 * `COD` (value: `"COD"`)
 
-* `Credit_Card` (value: `"Credit Card"`)
+* `Credit Card` (value: `"Credit Card"`)
 
 * `eBay` (value: `"eBay"`)
 
 * `eCheck` (value: `"eCheck"`)
 
-* `Google_Shopping` (value: `"Google Shopping"`)
+* `Google Shopping` (value: `"Google Shopping"`)
 
 * `Insurance` (value: `"Insurance"`)
 
 * `LoanHero` (value: `"LoanHero"`)
 
-* `Money_Order` (value: `"Money Order"`)
+* `Money Order` (value: `"Money Order"`)
 
 * `PayPal` (value: `"PayPal"`)
 
-* `Purchase_Order` (value: `"Purchase Order"`)
+* `Purchase Order` (value: `"Purchase Order"`)
 
-* `Quote_Request` (value: `"Quote Request"`)
+* `Quote Request` (value: `"Quote Request"`)
 
 * `Unknown` (value: `"Unknown"`)
 
-* `Wire_Transfer` (value: `"Wire Transfer"`)
+* `Wire Transfer` (value: `"Wire Transfer"`)
 
 * `Walmart` (value: `"Walmart"`)
 
 
 
 
-<a name="PaymentStatusEnum"></a>
+
 ## Enum: PaymentStatusEnum
 
 
@@ -76,7 +77,7 @@ Name | Type | Description | Notes
 
 * `Authorized` (value: `"Authorized"`)
 
-* `Capture_Failed` (value: `"Capture Failed"`)
+* `Capture Failed` (value: `"Capture Failed"`)
 
 * `Processed` (value: `"Processed"`)
 

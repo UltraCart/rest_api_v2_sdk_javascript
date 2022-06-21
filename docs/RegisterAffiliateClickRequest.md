@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.RegisterAffiliateClickRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affid** | **Number** | Affiliate Id (must be specified if landing_page_url is not) | [optional] 

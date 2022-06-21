@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Error
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **developer_message** | **String** | A technical message meant to be read by a developer | [optional] 

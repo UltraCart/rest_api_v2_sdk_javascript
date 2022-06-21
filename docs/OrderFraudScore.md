@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderFraudScore
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **anonymous_proxy** | **Boolean** | True if the IP address is a known anonymous proxy server | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **carder_email** | **Boolean** | True if the email address belongs to a known credit card fraudster | [optional] 
 **country_code** | **String** | Country code | [optional] 
 **country_match** | **Boolean** | Country code matches BIN country | [optional] 
-**customer_phone_in_billing_location** | **String** | Whether the customer's phone number is located in the area of the billing address | [optional] 
+**customer_phone_in_billing_location** | **String** | Whether the customer&#39;s phone number is located in the area of the billing address | [optional] 
 **distance_km** | **Number** | Distance in kilometers between the IP address and the BIN | [optional] 
 **free_email** | **Boolean** | True if the email address is for a free service like gmail.com | [optional] 
 **high_risk_country** | **Boolean** | True if the customer is in a high risk country known for internet fraud | [optional] 
@@ -25,7 +26,7 @@ Name | Type | Description | Notes
 **transparent_proxy** | **Boolean** | True if the IP address that placed the order is a transparent proxy server | [optional] 
 
 
-<a name="BinMatchEnum"></a>
+
 ## Enum: BinMatchEnum
 
 

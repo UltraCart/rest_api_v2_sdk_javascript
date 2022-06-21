@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OauthTokenResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_token** | **String** | Access token to use in OAuth authenticated API call | [optional] 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **token_type** | **String** | Type of token | [optional] 
 
 
-<a name="TokenTypeEnum"></a>
+
 ## Enum: TokenTypeEnum
 
 

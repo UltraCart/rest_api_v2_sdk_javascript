@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailThirdPartyProvider
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **connect_url** | **String** | URL to the settings screen to connect.  Null if the provider is already connected. | [optional] 

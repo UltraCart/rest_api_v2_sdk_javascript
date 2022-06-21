@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartCheckout
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **comments** | **String** | Comments from the customer.  Rarely used on the single page checkout. | [optional] 

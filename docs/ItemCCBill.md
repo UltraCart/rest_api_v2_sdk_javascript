@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemCCBill
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ccbill_allowed_currencies** | **String** | Allowed currencies | [optional] 

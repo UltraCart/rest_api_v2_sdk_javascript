@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingAdPlatform
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fbc** | **String** | Facebook Click Id (Cookie) | [optional] 

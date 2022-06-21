@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerOrdersSummary
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **first_order_dts** | **String** | First order date | [optional] 

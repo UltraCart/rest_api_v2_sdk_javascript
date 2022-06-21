@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemChargebackAddendum
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chargeback_addendum_oid** | **Number** | Chargeback addendum object identifier | [optional] 

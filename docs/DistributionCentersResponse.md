@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.DistributionCentersResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **distribution_centers** | [**[DistributionCenter]**](DistributionCenter.md) |  | [optional] 

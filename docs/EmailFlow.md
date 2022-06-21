@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailFlow
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_multiple_concurrent_enrollments** | **Boolean** | True if a customer may be enrolled in this flow multiple times | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderBilling
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address1** | **String** | Address line 1 | [optional] 

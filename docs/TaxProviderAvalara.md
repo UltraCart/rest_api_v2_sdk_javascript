@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProviderAvalara
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configuration** | [**AvalaraConfig**](AvalaraConfig.md) |  | [optional] 

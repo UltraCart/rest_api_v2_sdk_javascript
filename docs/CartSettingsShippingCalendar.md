@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsShippingCalendar
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blackouts** | **[String]** | Specified dates that are blacked out on the calendar in ISO8601 format | [optional] 

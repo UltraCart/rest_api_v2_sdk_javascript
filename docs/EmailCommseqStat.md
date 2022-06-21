@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailCommseqStat
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **click_count** | **Number** | Count of clicked emails | [optional] 

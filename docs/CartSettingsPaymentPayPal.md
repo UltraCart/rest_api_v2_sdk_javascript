@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsPaymentPayPal
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **paypal_button_alt_text** | **String** | PayPal button alt text | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemAutoOrder
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auth_future_amount** | **Number** | Amount to try and authorize for the future rebill | [optional] 

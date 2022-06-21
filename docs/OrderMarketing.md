@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderMarketing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **advertising_source** | **String** | Advertising source | [optional] 

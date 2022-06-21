@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartSettingsPaymentAmazon
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amazon_button_url** | **String** | Amazon button URL | [optional] 

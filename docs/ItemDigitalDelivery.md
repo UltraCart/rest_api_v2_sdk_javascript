@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemDigitalDelivery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation_code_description** | **String** | Description of the activation code | [optional] 

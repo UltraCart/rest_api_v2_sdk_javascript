@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerLoyalty
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **current_points** | **Number** | Current points | [optional] 

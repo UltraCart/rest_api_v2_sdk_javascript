@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartCustomerProfileAddress
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address1** | **String** | Address 1 | [optional] 

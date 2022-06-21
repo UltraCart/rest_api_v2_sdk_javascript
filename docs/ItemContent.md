@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemContent
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **assignments** | [**[ItemContentAssignment]**](ItemContentAssignment.md) | StoreFront assignments | [optional] 

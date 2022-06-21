@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **marketing_esp_domain_user** | **String** |  | [optional] 

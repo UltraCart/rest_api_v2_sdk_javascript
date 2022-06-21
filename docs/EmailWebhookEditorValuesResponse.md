@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailWebhookEditorValuesResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **available_expansions** | **[String]** |  | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemShipping
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_back_order** | **Boolean** | Allow back order | [optional] 

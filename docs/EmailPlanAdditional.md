@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.EmailPlanAdditional
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | **Boolean** |  | [optional] 

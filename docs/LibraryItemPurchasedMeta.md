@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.LibraryItemPurchasedMeta
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **most_recent_version** | **Number** | The most recent version of the item purchased | [optional] 

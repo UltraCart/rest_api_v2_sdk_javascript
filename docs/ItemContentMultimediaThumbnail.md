@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemContentMultimediaThumbnail
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **height** | **Number** | Height of the thumbnail | [optional] 

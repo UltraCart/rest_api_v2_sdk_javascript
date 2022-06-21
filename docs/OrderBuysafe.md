@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderBuysafe
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **buysafe_bond_available** | **Boolean** | True if a buySAFE bond was available for purchase on this order | [optional] 

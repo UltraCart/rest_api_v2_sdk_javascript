@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemEbayMarketPlaceAnalysis
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **adjusted_price** | **Number** | Adjusted price | [optional] 

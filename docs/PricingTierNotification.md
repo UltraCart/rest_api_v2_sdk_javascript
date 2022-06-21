@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.PricingTierNotification
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **format** | **String** | Notification format | [optional] 

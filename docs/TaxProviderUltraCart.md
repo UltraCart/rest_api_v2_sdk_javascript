@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProviderUltraCart
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configuration** | [**UltraCartConfig**](UltraCartConfig.md) |  | [optional] 

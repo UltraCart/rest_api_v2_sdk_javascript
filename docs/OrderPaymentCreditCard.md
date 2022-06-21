@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderPaymentCreditCard
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **card_auth_ticket** | **String** | Card authorization ticket | [optional] 
@@ -16,13 +17,13 @@ Name | Type | Description | Notes
 **card_verification_number_token** | **String** | Card verification number token from hosted fields, only for import/insert of new orders, completely ignored for updates, and always null/empty for queries | [optional] 
 
 
-<a name="CardTypeEnum"></a>
+
 ## Enum: CardTypeEnum
 
 
 * `AMEX` (value: `"AMEX"`)
 
-* `Diners_Club` (value: `"Diners Club"`)
+* `Diners Club` (value: `"Diners Club"`)
 
 * `Discover` (value: `"Discover"`)
 

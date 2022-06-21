@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ApplyLibraryItemResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **attributes** | [**[LibraryItemAttribute]**](LibraryItemAttribute.md) | Attributes from the library item | [optional] 

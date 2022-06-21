@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AutoOrderItemSimpleSchedule
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **frequency** | **String** | Frequency of the rebill if not a fixed schedule | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **repeat_count** | **Number** | The number of times this simple schedule is configured for | [optional] 
 
 
-<a name="FrequencyEnum"></a>
+
 ## Enum: FrequencyEnum
 
 
@@ -16,25 +17,25 @@ Name | Type | Description | Notes
 
 * `Biweekly` (value: `"Biweekly"`)
 
-* `Every___` (value: `"Every..."`)
+* `Every...` (value: `"Every..."`)
 
-* `Every_10_Days` (value: `"Every 10 Days"`)
+* `Every 10 Days` (value: `"Every 10 Days"`)
 
-* `Every_24_Days` (value: `"Every 24 Days"`)
+* `Every 24 Days` (value: `"Every 24 Days"`)
 
-* `Every_28_Days` (value: `"Every 28 Days"`)
+* `Every 28 Days` (value: `"Every 28 Days"`)
 
 * `Monthly` (value: `"Monthly"`)
 
-* `Every_45_Days` (value: `"Every 45 Days"`)
+* `Every 45 Days` (value: `"Every 45 Days"`)
 
-* `Every_2_Months` (value: `"Every 2 Months"`)
+* `Every 2 Months` (value: `"Every 2 Months"`)
 
-* `Every_3_Months` (value: `"Every 3 Months"`)
+* `Every 3 Months` (value: `"Every 3 Months"`)
 
-* `Every_4_Months` (value: `"Every 4 Months"`)
+* `Every 4 Months` (value: `"Every 4 Months"`)
 
-* `Every_6_Months` (value: `"Every 6 Months"`)
+* `Every 6 Months` (value: `"Every 6 Months"`)
 
 * `Yearly` (value: `"Yearly"`)
 

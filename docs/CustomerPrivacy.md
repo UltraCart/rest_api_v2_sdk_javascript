@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CustomerPrivacy
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **last_update_dts** | **String** | Last update date | [optional] 

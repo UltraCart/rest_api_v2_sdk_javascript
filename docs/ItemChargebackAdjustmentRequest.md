@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ItemChargebackAdjustmentRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chargeback_adjustment_request_oid** | **Number** | Chargeback adjustment request object identifier | [optional] 

@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.AffiliateLedgerQuery
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_oid** | **Number** | Affiliate ID associated with the ledger | [optional] 

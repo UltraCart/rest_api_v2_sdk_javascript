@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderGift
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gift** | **Boolean** | True if the order is a gift | [optional] 

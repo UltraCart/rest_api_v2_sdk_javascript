@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderTrackingNumberDetail
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **city** | **String** |  | [optional] 

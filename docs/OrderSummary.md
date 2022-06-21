@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderSummary
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **actual_fulfillment** | [**Currency**](Currency.md) |  | [optional] 

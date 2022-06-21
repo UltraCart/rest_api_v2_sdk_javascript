@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.TaxProviderTestResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **details** | **String** |  | [optional] 

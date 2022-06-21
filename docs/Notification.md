@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.Notification
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **can_filter_by_distribution_centers** | **Boolean** | True if this notification can be filtered to only send for one or more distribution centers. | [optional] 

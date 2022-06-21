@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.OrderPaymentECheck
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bank_aba_code** | **String** | Bank routing code | [optional] 
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 **drivers_license_state** | **String** | Driver license state | [optional] 
 
 
-<a name="BankAccountTypeEnum"></a>
+
 ## Enum: BankAccountTypeEnum
 
 
@@ -26,7 +27,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="BankOwnerTypeEnum"></a>
+
 ## Enum: BankOwnerTypeEnum
 
 

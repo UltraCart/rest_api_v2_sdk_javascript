@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.CartPaymentCreditCard
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **card_expiration_month** | **Number** | Card expiration month (1-12) | [optional] 

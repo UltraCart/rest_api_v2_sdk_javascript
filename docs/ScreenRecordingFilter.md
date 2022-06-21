@@ -1,6 +1,7 @@
 # UltraCartRestApiV2.ScreenRecordingFilter
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **affiliate_email** | **String** |  | [optional] 
