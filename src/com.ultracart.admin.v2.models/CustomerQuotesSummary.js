@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerQuotesSummary model module.
  * @module com.ultracart.admin.v2.models/CustomerQuotesSummary
- * @version 4.0.1-RC
+ * @version 4.0.3
  */
 class CustomerQuotesSummary {
     /**
