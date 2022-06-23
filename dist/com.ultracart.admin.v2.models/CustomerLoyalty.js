@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerLoyalty model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyalty
- * @version 4.0.5
+ * @version 4.0.6-RC
  */
 var CustomerLoyalty = /*#__PURE__*/function () {
   /**

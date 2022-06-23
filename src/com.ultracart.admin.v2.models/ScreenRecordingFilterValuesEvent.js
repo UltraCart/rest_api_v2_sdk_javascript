@@ -17,7 +17,7 @@ import ScreenRecordingFilterValuesEventParams from './ScreenRecordingFilterValue
 /**
  * The ScreenRecordingFilterValuesEvent model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEvent
- * @version 4.0.6-RC
+ * @version 4.0.23-RC
  */
 class ScreenRecordingFilterValuesEvent {
     /**

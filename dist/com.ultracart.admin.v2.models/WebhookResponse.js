@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WebhookResponse model module.
  * @module com.ultracart.admin.v2.models/WebhookResponse
- * @version 4.0.5
+ * @version 4.0.6-RC
  */
 var WebhookResponse = /*#__PURE__*/function () {
   /**

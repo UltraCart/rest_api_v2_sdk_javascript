@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailFlow model module.
  * @module com.ultracart.admin.v2.models/EmailFlow
- * @version 4.0.5
+ * @version 4.0.6-RC
  */
 var EmailFlow = /*#__PURE__*/function () {
   /**

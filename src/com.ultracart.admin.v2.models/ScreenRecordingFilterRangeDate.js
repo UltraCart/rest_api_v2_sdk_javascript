@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingFilterRangeDate model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeDate
- * @version 4.0.6-RC
+ * @version 4.0.23-RC
  */
 class ScreenRecordingFilterRangeDate {
     /**

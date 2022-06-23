@@ -17,7 +17,7 @@ import EmailThirdPartyProvider from './EmailThirdPartyProvider';
 /**
  * The EmailThirdPartyListImportRequest model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyListImportRequest
- * @version 4.0.6-RC
+ * @version 4.0.23-RC
  */
 class EmailThirdPartyListImportRequest {
     /**
