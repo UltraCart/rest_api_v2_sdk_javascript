@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailVerifyTokenRequest model module.
  * @module com.ultracart.admin.v2.models/EmailVerifyTokenRequest
- * @version 4.0.23-RC
+ * @version 4.0.24-RC
  */
 class EmailVerifyTokenRequest {
     /**

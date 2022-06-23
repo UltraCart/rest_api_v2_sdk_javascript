@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The OrderTokenResponse model module.
  * @module com.ultracart.admin.v2.models/OrderTokenResponse
- * @version 4.0.23-RC
+ * @version 4.0.24-RC
  */
 class OrderTokenResponse {
     /**

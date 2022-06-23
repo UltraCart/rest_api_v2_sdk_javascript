@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLogFile model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogFile
- * @version 4.0.6-RC
+ * @version 4.0.23-RC
  */
 var IntegrationLogFile = /*#__PURE__*/function () {
   /**
