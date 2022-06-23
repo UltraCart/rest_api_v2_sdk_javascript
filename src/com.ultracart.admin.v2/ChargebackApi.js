@@ -34,7 +34,7 @@
   /**
    * Chargeback service.
    * @module com.ultracart.admin.v2/ChargebackApi
-   * @version 3.10.17
+   * @version 3.10.18
    */
 
   /**
@@ -85,7 +85,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ChargebackDisputeResponse;
 

@@ -34,7 +34,7 @@
   /**
    * Sso service.
    * @module com.ultracart.admin.v2/SsoApi
-   * @version 3.10.17
+   * @version 3.10.18
    */
 
   /**
@@ -78,7 +78,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = User;
 
@@ -165,7 +165,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 
