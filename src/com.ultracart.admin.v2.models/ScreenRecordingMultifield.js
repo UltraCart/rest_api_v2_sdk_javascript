@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingMultifield model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingMultifield
- * @version 4.0.24-RC
+ * @version 4.0.25-RC
  */
 class ScreenRecordingMultifield {
     /**

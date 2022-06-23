@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemChargebackAdjustmentRequest model module.
  * @module com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest
- * @version 4.0.23-RC
+ * @version 4.0.24-RC
  */
 var ItemChargebackAdjustmentRequest = /*#__PURE__*/function () {
   /**

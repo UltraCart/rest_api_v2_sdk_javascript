@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemSalesforce model module.
  * @module com.ultracart.admin.v2.models/ItemSalesforce
- * @version 4.0.24-RC
+ * @version 4.0.25-RC
  */
 class ItemSalesforce {
     /**

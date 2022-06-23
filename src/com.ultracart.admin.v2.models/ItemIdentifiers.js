@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemIdentifiers model module.
  * @module com.ultracart.admin.v2.models/ItemIdentifiers
- * @version 4.0.24-RC
+ * @version 4.0.25-RC
  */
 class ItemIdentifiers {
     /**

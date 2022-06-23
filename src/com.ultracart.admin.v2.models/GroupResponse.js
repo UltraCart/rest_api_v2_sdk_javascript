@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The GroupResponse model module.
  * @module com.ultracart.admin.v2.models/GroupResponse
- * @version 4.0.24-RC
+ * @version 4.0.25-RC
  */
 class GroupResponse {
     /**

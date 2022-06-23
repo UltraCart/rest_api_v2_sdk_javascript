@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Weight model module.
  * @module com.ultracart.admin.v2.models/Weight
- * @version 4.0.24-RC
+ * @version 4.0.25-RC
  */
 class Weight {
     /**

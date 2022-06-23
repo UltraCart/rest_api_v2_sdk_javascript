@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateLedgerQuery model module.
  * @module com.ultracart.admin.v2.models/AffiliateLedgerQuery
- * @version 4.0.24-RC
+ * @version 4.0.25-RC
  */
 class AffiliateLedgerQuery {
     /**
