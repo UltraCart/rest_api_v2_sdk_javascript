@@ -26,39 +26,39 @@
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.DelayAutoOrdersResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
+    root.UltraCartRestApiV2.ChannelPartnerEstimateTaxResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
   }
 }(this, function(ApiClient, Error, ResponseMetadata, Warning) {
   'use strict';
 
   /**
-   * The DelayAutoOrdersResponse model module.
-   * @module com.ultracart.admin.v2.models/DelayAutoOrdersResponse
-   * @version 3.10.14
+   * The ChannelPartnerEstimateTaxResponse model module.
+   * @module com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse
+   * @version 3.10.17
    */
 
   /**
-   * Constructs a new <code>DelayAutoOrdersResponse</code>.
-   * @alias module:com.ultracart.admin.v2.models/DelayAutoOrdersResponse
+   * Constructs a new <code>ChannelPartnerEstimateTaxResponse</code>.
+   * @alias module:com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>DelayAutoOrdersResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ChannelPartnerEstimateTaxResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/DelayAutoOrdersResponse} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/DelayAutoOrdersResponse} The populated <code>DelayAutoOrdersResponse</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse} The populated <code>ChannelPartnerEstimateTaxResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('arbitrary_tax'))
+        obj.arbitrary_tax = ApiClient.convertToType(data['arbitrary_tax'], 'Number');
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
-      if (data.hasOwnProperty('message'))
-        obj.message = ApiClient.convertToType(data['message'], 'String');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
@@ -70,14 +70,14 @@
   }
 
   /**
+   * @member {Number} arbitrary_tax
+   */
+  exports.prototype.arbitrary_tax = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
    */
   exports.prototype.error = undefined;
-
-  /**
-   * @member {String} message
-   */
-  exports.prototype.message = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

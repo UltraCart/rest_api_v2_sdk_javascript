@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ChannelPartnerCancelResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse', 'com.ultracart.admin.v2.models/ChannelPartnerImportResponse', 'com.ultracart.admin.v2.models/ChannelPartnerOrder', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ChannelPartnerCancelResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse', 'com.ultracart.admin.v2.models/ChannelPartnerImportResponse', 'com.ultracart.admin.v2.models/ChannelPartnerOrder', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChannelPartnerCancelResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerImportResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerOrder'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChannelPartnerCancelResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerImportResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerOrder'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ChannelPartnerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChannelPartnerCancelResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateShippingResponse, root.UltraCartRestApiV2.ChannelPartnerImportResponse, root.UltraCartRestApiV2.ChannelPartnerOrder, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.ChannelPartnerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChannelPartnerCancelResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateShippingResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateTaxResponse, root.UltraCartRestApiV2.ChannelPartnerImportResponse, root.UltraCartRestApiV2.ChannelPartnerOrder, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, ChannelPartnerCancelResponse, ChannelPartnerEstimateShippingResponse, ChannelPartnerImportResponse, ChannelPartnerOrder, ErrorResponse) {
+}(this, function(ApiClient, ChannelPartnerCancelResponse, ChannelPartnerEstimateShippingResponse, ChannelPartnerEstimateTaxResponse, ChannelPartnerImportResponse, ChannelPartnerOrder, ErrorResponse) {
   'use strict';
 
   /**
    * ChannelPartner service.
    * @module com.ultracart.admin.v2/ChannelPartnerApi
-   * @version 3.10.14
+   * @version 3.10.17
    */
 
   /**
@@ -186,6 +186,53 @@
 
       return this.apiClient.callApi(
         '/channel_partner/estimate_shipping', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the estimateTaxForChannelPartnerOrder operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~estimateTaxForChannelPartnerOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Estimate tax for channel partner order
+     * Estimate tax for order from a channel partner. 
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerOrder} channel_partner_order Order needing tax estimate
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~estimateTaxForChannelPartnerOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse}
+     */
+    this.estimateTaxForChannelPartnerOrder = function(channel_partner_order, callback) {
+      var postBody = channel_partner_order;
+
+      // verify the required parameter 'channel_partner_order' is set
+      if (channel_partner_order === undefined || channel_partner_order === null) {
+        throw new Error("Missing the required parameter 'channel_partner_order' when calling estimateTaxForChannelPartnerOrder");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = ChannelPartnerEstimateTaxResponse;
+
+      return this.apiClient.callApi(
+        '/channel_partner/estimate_tax', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
