@@ -24,18 +24,14 @@ Acknowledge receipt of orders so that they are removed from the fulfillment queu
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.FulfillmentApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.FulfillmentApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 let orderIds = ["null"]; // [String] | Orders to acknowledge receipt of (limit 100)
 apiInstance.acknowledgeOrders(distribution_center_code, orderIds, (error, data, response) => {
@@ -80,18 +76,14 @@ The packing slip PDF that is returned is base 64 encoded
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.FulfillmentApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.FulfillmentApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 let order_id = "order_id_example"; // String | Order ID
 apiInstance.generatePackingSlip(distribution_center_code, order_id, (error, data, response) => {
@@ -136,18 +128,14 @@ Retrieves up to 100 orders that are queued up in this distribution center.  You 
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.FulfillmentApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.FulfillmentApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 apiInstance.getDistributionCenterOrders(distribution_center_code, (error, data, response) => {
   if (error) {
@@ -190,18 +178,14 @@ Retrieves the distribution centers that this user has access to.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.FulfillmentApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.FulfillmentApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.getDistributionCenters((error, data, response) => {
   if (error) {
     console.error(error);
@@ -240,18 +224,14 @@ Store the tracking information and mark the order shipped for this distribution 
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.FulfillmentApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.FulfillmentApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 let shipments = [new UltraCartRestApiV2.FulfillmentShipment()]; // [FulfillmentShipment] | Orders to mark shipped
 apiInstance.shipOrders(distribution_center_code, shipments, (error, data, response) => {
@@ -296,18 +276,14 @@ Update the inventory for items associated with this distribution center
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.FulfillmentApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.FulfillmentApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 let inventories = [new UltraCartRestApiV2.FulfillmentInventory()]; // [FulfillmentInventory] | Inventory updates (limit 500)
 apiInstance.updateInventory(distribution_center_code, inventories, (error, data, response) => {

@@ -29,18 +29,14 @@ Delete a group on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let group_oid = 56; // Number | The group_oid to delete.
 apiInstance.deleteGroup(group_oid, (error, data, response) => {
   if (error) {
@@ -83,18 +79,14 @@ Delete a user on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let user_id = 56; // Number | The user_id to delete.
 apiInstance.deleteUser(user_id, (error, data, response) => {
   if (error) {
@@ -137,18 +129,14 @@ Retrieves a single group using the specified group id.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let group_oid = 56; // Number | The group id to retrieve.
 apiInstance.getGroup(group_oid, (error, data, response) => {
   if (error) {
@@ -189,18 +177,14 @@ Get groups
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.getGroups((error, data, response) => {
   if (error) {
     console.error(error);
@@ -239,18 +223,14 @@ Retrieves a single user using the specified user id.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let user_id = 56; // Number | The user id to retrieve.
 apiInstance.getUser(user_id, (error, data, response) => {
   if (error) {
@@ -293,18 +273,14 @@ Retrieves logins for a single user using the specified user id.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let user_id = 56; // Number | The user id to retrieve.
 apiInstance.getUserLogins(user_id, (error, data, response) => {
   if (error) {
@@ -345,18 +321,14 @@ Get users
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.getUsers((error, data, response) => {
   if (error) {
     console.error(error);
@@ -395,18 +367,14 @@ Insert a group on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let group = new UltraCartRestApiV2.Group(); // Group | Group to insert
 apiInstance.insertGroup(group, (error, data, response) => {
   if (error) {
@@ -449,18 +417,14 @@ Insert a user on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let user = new UltraCartRestApiV2.User(); // User | User to insert
 apiInstance.insertUser(user, (error, data, response) => {
   if (error) {
@@ -503,18 +467,14 @@ Update a group on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let group_oid = 56; // Number | The group_oid to update.
 let group = new UltraCartRestApiV2.Group(); // Group | Group to update
 apiInstance.updateGroup(group_oid, group, (error, data, response) => {
@@ -559,18 +519,14 @@ Update a user on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.UserApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.UserApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let user_id = 56; // Number | The user_id to update.
 let user = new UltraCartRestApiV2.User(); // User | User to update
 apiInstance.updateUser(user_id, user, (error, data, response) => {

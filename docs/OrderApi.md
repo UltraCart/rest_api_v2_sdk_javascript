@@ -41,18 +41,14 @@ Adjusts an order total.  Adjusts individual items appropriately and considers ta
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to cancel.
 let desired_total = "desired_total_example"; // String | The desired total with no formatting. example 123.45
 apiInstance.adjustOrderTotal(order_id, desired_total, (error, data, response) => {
@@ -97,18 +93,14 @@ Cancel an order on the UltraCart account.  If the success flag is false, then co
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to cancel.
 apiInstance.cancelOrder(order_id, (error, data, response) => {
   if (error) {
@@ -151,18 +143,14 @@ Delete an order on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to delete.
 apiInstance.deleteOrder(order_id, (error, data, response) => {
   if (error) {
@@ -205,18 +193,14 @@ Perform a duplicate of the specified order_id and return a new order located in 
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to duplicate.
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -263,18 +247,14 @@ Format the order for display at text or html
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to format
 let format_options = new UltraCartRestApiV2.OrderFormat(); // OrderFormat | Format options
 apiInstance.format(order_id, format_options, (error, data, response) => {
@@ -319,18 +299,14 @@ Retrieves a single order token for a given order id.  The token can be used with
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to generate a token for.
 apiInstance.generateOrderToken(order_id, (error, data, response) => {
   if (error) {
@@ -373,18 +349,14 @@ The packing slip PDF that is returned is base 64 encoded
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | Order ID
 apiInstance.generatePackingSlipAllDC(order_id, (error, data, response) => {
   if (error) {
@@ -427,18 +399,14 @@ The packing slip PDF that is returned is base 64 encoded
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let distribution_center_code = "distribution_center_code_example"; // String | Distribution center code
 let order_id = "order_id_example"; // String | Order ID
 apiInstance.generatePackingSlipSpecificDC(distribution_center_code, order_id, (error, data, response) => {
@@ -483,18 +451,14 @@ Retrieve A/R Retry Configuration. This is primarily an internal API call.  It is
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.getAccountsReceivableRetryConfig((error, data, response) => {
   if (error) {
     console.error(error);
@@ -533,18 +497,14 @@ Retrieve A/R Retry Statistics. This is primarily an internal API call.  It is do
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let opts = {
   'from': "from_example", // String | 
   'to': "to_example" // String | 
@@ -591,18 +551,14 @@ Retrieves a single order using the specified order id.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to retrieve.
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -649,18 +605,14 @@ Retrieves a single order using the specified order token.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_by_token_query = new UltraCartRestApiV2.OrderByTokenQuery(); // OrderByTokenQuery | Order by token query
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -707,18 +659,14 @@ Retrieves a group of orders from the account.  If no parameters are specified, t
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let opts = {
   'order_id': "order_id_example", // String | Order Id
   'payment_method': "payment_method_example", // String | Payment Method
@@ -823,18 +771,14 @@ Retrieves a group of orders from the account based on an array of order ids.  If
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_batch = new UltraCartRestApiV2.OrderQueryBatch(); // OrderQueryBatch | Order batch
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.
@@ -881,18 +825,14 @@ Retrieves a group of orders from the account based on a query object.  If no par
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_query = new UltraCartRestApiV2.OrderQuery(); // OrderQuery | Order query
 let opts = {
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
@@ -945,18 +885,14 @@ Inserts a new order on the UltraCart account.  This is probably NOT the method y
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order = new UltraCartRestApiV2.Order(); // Order | Order to insert
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -1003,18 +939,14 @@ Process payment on order
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to process payment on
 let process_payment_request = new UltraCartRestApiV2.OrderProcessPaymentRequest(); // OrderProcessPaymentRequest | Process payment parameters
 apiInstance.processPayment(order_id, process_payment_request, (error, data, response) => {
@@ -1059,18 +991,14 @@ Perform a refund operation on an order and then update the order if successful
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to refund.
 let order = new UltraCartRestApiV2.Order(); // Order | Order to refund
 let opts = {
@@ -1129,18 +1057,14 @@ Create a replacement order based upon a previous order
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to generate a replacement for.
 let replacement = new UltraCartRestApiV2.OrderReplacement(); // OrderReplacement | Replacement order details
 apiInstance.replacement(order_id, replacement, (error, data, response) => {
@@ -1185,18 +1109,14 @@ Resend the receipt for an order on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to resend the receipt for.
 apiInstance.resendReceipt(order_id, (error, data, response) => {
   if (error) {
@@ -1239,18 +1159,14 @@ Resend shipment confirmation for an order on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to resend the shipment notification for.
 apiInstance.resendShipmentConfirmation(order_id, (error, data, response) => {
   if (error) {
@@ -1293,18 +1209,14 @@ Update A/R Retry Configuration.  This is primarily an internal API call.  It is 
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let retry_config = new UltraCartRestApiV2.AccountsReceivableRetryConfig(); // AccountsReceivableRetryConfig | AccountsReceivableRetryConfig object
 apiInstance.updateAccountsReceivableRetryConfig(retry_config, (error, data, response) => {
   if (error) {
@@ -1347,18 +1259,14 @@ Update a new order on the UltraCart account.  This is probably NOT the method yo
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.OrderApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let order_id = "order_id_example"; // String | The order id to update.
 let order = new UltraCartRestApiV2.Order(); // Order | Order to update
 let opts = {

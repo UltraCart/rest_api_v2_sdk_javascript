@@ -37,18 +37,14 @@ Delete a coupon on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_oid = 56; // Number | The coupon_oid to delete.
 apiInstance.deleteCoupon(coupon_oid, (error, data, response) => {
   if (error) {
@@ -91,18 +87,14 @@ Delete coupons on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_delete_request = new UltraCartRestApiV2.CouponDeletesRequest(); // CouponDeletesRequest | Coupon oids to delete
 apiInstance.deleteCouponsByCode(coupon_delete_request, (error, data, response) => {
   if (error) {
@@ -145,18 +137,14 @@ Delete coupons on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_delete_request = new UltraCartRestApiV2.CouponDeletesRequest(); // CouponDeletesRequest | Coupon oids to delete
 apiInstance.deleteCouponsByOid(coupon_delete_request, (error, data, response) => {
   if (error) {
@@ -199,18 +187,14 @@ Determines if a coupon merchant code already exists.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let merchant_code = "merchant_code_example"; // String | The coupon merchant code to examine.
 apiInstance.doesCouponCodeExist(merchant_code, (error, data, response) => {
   if (error) {
@@ -253,18 +237,14 @@ Generate one time codes for a coupon
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_oid = 56; // Number | The coupon oid to generate codes.
 let coupon_codes_request = new UltraCartRestApiV2.CouponCodesRequest(); // CouponCodesRequest | Coupon code generation parameters
 apiInstance.generateCouponCodes(coupon_oid, coupon_codes_request, (error, data, response) => {
@@ -309,18 +289,14 @@ Generate one time codes by merchant code
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let merchant_code = "merchant_code_example"; // String | The merchant code to generate one time codes.
 let coupon_codes_request = new UltraCartRestApiV2.CouponCodesRequest(); // CouponCodesRequest | Coupon code generation parameters
 apiInstance.generateOneTimeCodesByMerchantCode(merchant_code, coupon_codes_request, (error, data, response) => {
@@ -365,18 +341,14 @@ Retrieve auto apply rules and conditions
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.getAutoApply((error, data, response) => {
   if (error) {
     console.error(error);
@@ -415,18 +387,14 @@ Retrieves a single coupon using the specified coupon profile oid.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_oid = 56; // Number | The coupon oid to retrieve.
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -473,18 +441,14 @@ Retrieves a single coupon using the specified merchant code.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let merchant_code = "merchant_code_example"; // String | The coupon merchant code to retrieve.
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -531,18 +495,14 @@ Retrieves coupons for this account.  If no parameters are specified, all coupons
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let opts = {
   'merchant_code': "merchant_code_example", // String | Merchant code
   'description': "description_example", // String | Description
@@ -611,18 +571,14 @@ Retrieves coupons from the account.  If no parameters are specified, all coupons
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_query = new UltraCartRestApiV2.CouponQuery(); // CouponQuery | Coupon query
 let opts = {
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
@@ -675,18 +631,14 @@ Retrieve values needed for a coupon editor
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.getEditorValues((error, data, response) => {
   if (error) {
     console.error(error);
@@ -725,18 +677,14 @@ Insert a coupon on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon = new UltraCartRestApiV2.Coupon(); // Coupon | Coupon to insert
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
@@ -783,18 +731,14 @@ Insert multiple coupon on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupons_request = new UltraCartRestApiV2.CouponsRequest(); // CouponsRequest | Coupons to insert (maximum 50)
 let opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
@@ -843,18 +787,14 @@ Searches for items to display within a coupon editor and assign to coupons
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let opts = {
   's': "s_example", // String | 
   'm': 56 // Number | 
@@ -901,18 +841,14 @@ Update auto apply rules and conditions
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let conditions = new UltraCartRestApiV2.CouponAutoApplyConditions(); // CouponAutoApplyConditions | Conditions
 apiInstance.updateAutoApply(conditions, (error, data, response) => {
   if (error) {
@@ -955,18 +891,14 @@ Update a coupon on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_oid = 56; // Number | The coupon_oid to update.
 let coupon = new UltraCartRestApiV2.Coupon(); // Coupon | Coupon to update
 let opts = {
@@ -1015,18 +947,14 @@ Update multiple coupon on the UltraCart account.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupons_request = new UltraCartRestApiV2.CouponsRequest(); // CouponsRequest | Coupons to update (synchronous maximum 50 / asynchronous maximum 100)
 let opts = {
   '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
@@ -1077,18 +1005,14 @@ Upload one-time codes for a coupon
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CouponApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.CouponApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let coupon_oid = 56; // Number | The coupon oid to associate with the provided one-time codes.
 let upload_coupon_codes_request = new UltraCartRestApiV2.UploadCouponCodesRequest(); // UploadCouponCodesRequest | One-time coupon codes
 apiInstance.uploadCouponCodes(coupon_oid, upload_coupon_codes_request, (error, data, response) => {

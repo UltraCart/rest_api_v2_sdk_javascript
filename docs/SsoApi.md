@@ -22,18 +22,14 @@ This is the equivalent of logging out of the single sign on session
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.SsoApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.SsoApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.getSsoSessionUser((error, data, response) => {
   if (error) {
     console.error(error);
@@ -72,18 +68,14 @@ Starts the process of authorizing a single sign on session.
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.SsoApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.SsoApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let authorization_request = new UltraCartRestApiV2.SingleSignOnAuthorizeRequest(); // SingleSignOnAuthorizeRequest | Authorization request
 apiInstance.ssoAuthorize(authorization_request, (error, data, response) => {
   if (error) {
@@ -126,18 +118,14 @@ This is the equivalent of logging out of the single sign on session
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.SsoApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.SsoApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 apiInstance.ssoSessionRevoke((error, data, response) => {
   if (error) {
     console.error(error);
@@ -176,18 +164,14 @@ Called by your application after receiving the code back on the redirect URI to 
 ### Example
 
 ```javascript
-import UltraCartRestApiV2 from 'ultra_cart_rest_api_v2';
-let defaultClient = UltraCartRestApiV2.ApiClient.instance;
-// Configure OAuth2 access token for authorization: ultraCartOauth
-let ultraCartOauth = defaultClient.authentications['ultraCartOauth'];
-ultraCartOauth.accessToken = 'YOUR ACCESS TOKEN';
-// Configure API key authorization: ultraCartSimpleApiKey
-let ultraCartSimpleApiKey = defaultClient.authentications['ultraCartSimpleApiKey'];
-ultraCartSimpleApiKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ultraCartSimpleApiKey.apiKeyPrefix = 'Token';
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.SsoApi(apiClient);
 
-let apiInstance = new UltraCartRestApiV2.SsoApi();
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
 let token_request = new UltraCartRestApiV2.SingleSignOnTokenRequest(); // SingleSignOnTokenRequest | Token request
 apiInstance.ssoToken(token_request, (error, data, response) => {
   if (error) {

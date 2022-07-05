@@ -17,7 +17,7 @@ import TaxPostalCode from './TaxPostalCode';
 /**
  * The TaxCity model module.
  * @module com.ultracart.admin.v2.models/TaxCity
- * @version 4.0.25-RC
+ * @version 4.0.33-RC
  */
 class TaxCity {
     /**

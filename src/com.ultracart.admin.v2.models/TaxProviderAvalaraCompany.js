@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxProviderAvalaraCompany model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAvalaraCompany
- * @version 4.0.25-RC
+ * @version 4.0.33-RC
  */
 class TaxProviderAvalaraCompany {
     /**

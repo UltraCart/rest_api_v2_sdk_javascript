@@ -17,7 +17,7 @@ import ScreenRecordingFilterPageViewEventParam from './ScreenRecordingFilterPage
 /**
  * The ScreenRecordingFilterPageViewEvent model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewEvent
- * @version 4.0.25-RC
+ * @version 4.0.33-RC
  */
 class ScreenRecordingFilterPageViewEvent {
     /**
