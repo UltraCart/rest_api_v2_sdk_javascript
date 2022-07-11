@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AdjustInternalCertificateRequest', 'com.ultracart.admin.v2.models/AdjustInternalCertificateResponse', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerEmailListChanges', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomerStoreCreditAddRequest', 'com.ultracart.admin.v2.models/CustomerStoreCreditResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/LookupRequest', 'com.ultracart.admin.v2.models/LookupResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AdjustInternalCertificateRequest', 'com.ultracart.admin.v2.models/AdjustInternalCertificateResponse', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/CustomerEditorValues', 'com.ultracart.admin.v2.models/CustomerEmailListChanges', 'com.ultracart.admin.v2.models/CustomerMergeRequest', 'com.ultracart.admin.v2.models/CustomerQuery', 'com.ultracart.admin.v2.models/CustomerResponse', 'com.ultracart.admin.v2.models/CustomerStoreCreditAddRequest', 'com.ultracart.admin.v2.models/CustomerStoreCreditResponse', 'com.ultracart.admin.v2.models/CustomersResponse', 'com.ultracart.admin.v2.models/DataTablesServerSideResponse', 'com.ultracart.admin.v2.models/EmailListsResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenResponse', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest', 'com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/LookupRequest', 'com.ultracart.admin.v2.models/LookupResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AdjustInternalCertificateRequest'), require('../com.ultracart.admin.v2.models/AdjustInternalCertificateResponse'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerEmailListChanges'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomerStoreCreditAddRequest'), require('../com.ultracart.admin.v2.models/CustomerStoreCreditResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/LookupRequest'), require('../com.ultracart.admin.v2.models/LookupResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AdjustInternalCertificateRequest'), require('../com.ultracart.admin.v2.models/AdjustInternalCertificateResponse'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/Customer'), require('../com.ultracart.admin.v2.models/CustomerEditorValues'), require('../com.ultracart.admin.v2.models/CustomerEmailListChanges'), require('../com.ultracart.admin.v2.models/CustomerMergeRequest'), require('../com.ultracart.admin.v2.models/CustomerQuery'), require('../com.ultracart.admin.v2.models/CustomerResponse'), require('../com.ultracart.admin.v2.models/CustomerStoreCreditAddRequest'), require('../com.ultracart.admin.v2.models/CustomerStoreCreditResponse'), require('../com.ultracart.admin.v2.models/CustomersResponse'), require('../com.ultracart.admin.v2.models/DataTablesServerSideResponse'), require('../com.ultracart.admin.v2.models/EmailListsResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenResponse'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateRequest'), require('../com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/LookupRequest'), require('../com.ultracart.admin.v2.models/LookupResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AdjustInternalCertificateRequest, root.UltraCartRestApiV2.AdjustInternalCertificateResponse, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerEmailListChanges, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomerStoreCreditAddRequest, root.UltraCartRestApiV2.CustomerStoreCreditResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.EmailVerifyTokenRequest, root.UltraCartRestApiV2.EmailVerifyTokenResponse, root.UltraCartRestApiV2.EmailVerifyTokenValidateRequest, root.UltraCartRestApiV2.EmailVerifyTokenValidateResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.LookupRequest, root.UltraCartRestApiV2.LookupResponse);
+    root.UltraCartRestApiV2.CustomerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AdjustInternalCertificateRequest, root.UltraCartRestApiV2.AdjustInternalCertificateResponse, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.CustomerEditorValues, root.UltraCartRestApiV2.CustomerEmailListChanges, root.UltraCartRestApiV2.CustomerMergeRequest, root.UltraCartRestApiV2.CustomerQuery, root.UltraCartRestApiV2.CustomerResponse, root.UltraCartRestApiV2.CustomerStoreCreditAddRequest, root.UltraCartRestApiV2.CustomerStoreCreditResponse, root.UltraCartRestApiV2.CustomersResponse, root.UltraCartRestApiV2.DataTablesServerSideResponse, root.UltraCartRestApiV2.EmailListsResponse, root.UltraCartRestApiV2.EmailVerifyTokenRequest, root.UltraCartRestApiV2.EmailVerifyTokenResponse, root.UltraCartRestApiV2.EmailVerifyTokenValidateRequest, root.UltraCartRestApiV2.EmailVerifyTokenValidateResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.LookupRequest, root.UltraCartRestApiV2.LookupResponse);
   }
-}(this, function(ApiClient, AdjustInternalCertificateRequest, AdjustInternalCertificateResponse, BaseResponse, Customer, CustomerEditorValues, CustomerEmailListChanges, CustomerQuery, CustomerResponse, CustomerStoreCreditAddRequest, CustomerStoreCreditResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, EmailVerifyTokenRequest, EmailVerifyTokenResponse, EmailVerifyTokenValidateRequest, EmailVerifyTokenValidateResponse, ErrorResponse, LookupRequest, LookupResponse) {
+}(this, function(ApiClient, AdjustInternalCertificateRequest, AdjustInternalCertificateResponse, BaseResponse, Customer, CustomerEditorValues, CustomerEmailListChanges, CustomerMergeRequest, CustomerQuery, CustomerResponse, CustomerStoreCreditAddRequest, CustomerStoreCreditResponse, CustomersResponse, DataTablesServerSideResponse, EmailListsResponse, EmailVerifyTokenRequest, EmailVerifyTokenResponse, EmailVerifyTokenValidateRequest, EmailVerifyTokenValidateResponse, ErrorResponse, LookupRequest, LookupResponse) {
   'use strict';
 
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.10.18
+   * @version 3.10.19
    */
 
   /**
@@ -741,6 +741,63 @@
 
       return this.apiClient.callApi(
         '/customer/customers', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeCustomer operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~mergeCustomerCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge customer into this customer
+     * Merge customer into this customer. 
+     * @param {module:com.ultracart.admin.v2.models/CustomerMergeRequest} customer Customer to merge into this profile.
+     * @param {Number} customer_profile_oid The customer_profile_oid to update.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/CustomerApi~mergeCustomerCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.mergeCustomer = function(customer, customer_profile_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = customer;
+
+      // verify the required parameter 'customer' is set
+      if (customer === undefined || customer === null) {
+        throw new Error("Missing the required parameter 'customer' when calling mergeCustomer");
+      }
+
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling mergeCustomer");
+      }
+
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}/merge', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

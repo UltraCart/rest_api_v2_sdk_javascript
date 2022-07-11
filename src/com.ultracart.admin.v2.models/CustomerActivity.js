@@ -34,7 +34,7 @@
   /**
    * The CustomerActivity model module.
    * @module com.ultracart.admin.v2.models/CustomerActivity
-   * @version 3.10.18
+   * @version 3.10.19
    */
 
   /**
@@ -57,12 +57,20 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('activities'))
         obj.activities = ApiClient.convertToType(data['activities'], [Activity]);
+      if (data.hasOwnProperty('global_unsubscribed'))
+        obj.global_unsubscribed = ApiClient.convertToType(data['global_unsubscribed'], 'Boolean');
+      if (data.hasOwnProperty('global_unsubscribed_dts'))
+        obj.global_unsubscribed_dts = ApiClient.convertToType(data['global_unsubscribed_dts'], 'String');
       if (data.hasOwnProperty('memberships'))
         obj.memberships = ApiClient.convertToType(data['memberships'], [ListSegmentMembership]);
       if (data.hasOwnProperty('metrics'))
         obj.metrics = ApiClient.convertToType(data['metrics'], [Metric]);
       if (data.hasOwnProperty('properties_list'))
         obj.properties_list = ApiClient.convertToType(data['properties_list'], [Property]);
+      if (data.hasOwnProperty('spam_complaint'))
+        obj.spam_complaint = ApiClient.convertToType(data['spam_complaint'], 'Boolean');
+      if (data.hasOwnProperty('spam_complaint_dts'))
+        obj.spam_complaint_dts = ApiClient.convertToType(data['spam_complaint_dts'], 'String');
     }
     return obj;
   }
@@ -71,6 +79,16 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/Activity>} activities
    */
   exports.prototype.activities = undefined;
+
+  /**
+   * @member {Boolean} global_unsubscribed
+   */
+  exports.prototype.global_unsubscribed = undefined;
+
+  /**
+   * @member {String} global_unsubscribed_dts
+   */
+  exports.prototype.global_unsubscribed_dts = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ListSegmentMembership>} memberships
@@ -86,6 +104,16 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/Property>} properties_list
    */
   exports.prototype.properties_list = undefined;
+
+  /**
+   * @member {Boolean} spam_complaint
+   */
+  exports.prototype.spam_complaint = undefined;
+
+  /**
+   * @member {String} spam_complaint_dts
+   */
+  exports.prototype.spam_complaint_dts = undefined;
 
   return exports;
 

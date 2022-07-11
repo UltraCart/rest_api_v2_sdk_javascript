@@ -34,7 +34,7 @@
   /**
    * The SingleSignOnTokenRequest model module.
    * @module com.ultracart.admin.v2.models/SingleSignOnTokenRequest
-   * @version 3.10.18
+   * @version 3.10.19
    */
 
   /**
