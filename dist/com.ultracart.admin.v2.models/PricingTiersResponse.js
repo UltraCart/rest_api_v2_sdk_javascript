@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PricingTiersResponse model module.
  * @module com.ultracart.admin.v2.models/PricingTiersResponse
- * @version 4.0.25-RC
+ * @version 4.0.33-RC
  */
 var PricingTiersResponse = /*#__PURE__*/function () {
   /**

@@ -206,6 +206,7 @@ import CustomerEmailListChanges from './com.ultracart.admin.v2.models/CustomerEm
 import CustomerLoyalty from './com.ultracart.admin.v2.models/CustomerLoyalty';
 import CustomerLoyaltyLedger from './com.ultracart.admin.v2.models/CustomerLoyaltyLedger';
 import CustomerLoyaltyRedemption from './com.ultracart.admin.v2.models/CustomerLoyaltyRedemption';
+import CustomerMergeRequest from './com.ultracart.admin.v2.models/CustomerMergeRequest';
 import CustomerOrdersSummary from './com.ultracart.admin.v2.models/CustomerOrdersSummary';
 import CustomerPricingTier from './com.ultracart.admin.v2.models/CustomerPricingTier';
 import CustomerPrivacy from './com.ultracart.admin.v2.models/CustomerPrivacy';
@@ -694,7 +695,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.33-RC
+* @version 4.0.34-RC
 */
 export {
     /**
@@ -1860,6 +1861,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomerLoyaltyRedemption}
      */
     CustomerLoyaltyRedemption,
+
+    /**
+     * The CustomerMergeRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerMergeRequest}
+     */
+    CustomerMergeRequest,
 
     /**
      * The CustomerOrdersSummary model constructor.

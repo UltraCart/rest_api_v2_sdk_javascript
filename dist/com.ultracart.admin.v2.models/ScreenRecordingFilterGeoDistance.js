@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilterGeoDistance model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterGeoDistance
- * @version 4.0.25-RC
+ * @version 4.0.33-RC
  */
 var ScreenRecordingFilterGeoDistance = /*#__PURE__*/function () {
   /**

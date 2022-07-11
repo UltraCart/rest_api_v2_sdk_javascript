@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderItemEdiLot model module.
  * @module com.ultracart.admin.v2.models/OrderItemEdiLot
- * @version 4.0.33-RC
+ * @version 4.0.34-RC
  */
 class OrderItemEdiLot {
     /**

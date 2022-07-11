@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCampaignFolder model module.
  * @module com.ultracart.admin.v2.models/EmailCampaignFolder
- * @version 4.0.33-RC
+ * @version 4.0.34-RC
  */
 class EmailCampaignFolder {
     /**

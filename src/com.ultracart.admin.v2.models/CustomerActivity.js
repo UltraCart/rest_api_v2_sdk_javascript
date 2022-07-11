@@ -20,7 +20,7 @@ import Property from './Property';
 /**
  * The CustomerActivity model module.
  * @module com.ultracart.admin.v2.models/CustomerActivity
- * @version 4.0.33-RC
+ * @version 4.0.34-RC
  */
 class CustomerActivity {
     /**
@@ -54,6 +54,12 @@ class CustomerActivity {
             if (data.hasOwnProperty('activities')) {
                 obj['activities'] = ApiClient.convertToType(data['activities'], [Activity]);
             }
+            if (data.hasOwnProperty('global_unsubscribed')) {
+                obj['global_unsubscribed'] = ApiClient.convertToType(data['global_unsubscribed'], 'Boolean');
+            }
+            if (data.hasOwnProperty('global_unsubscribed_dts')) {
+                obj['global_unsubscribed_dts'] = ApiClient.convertToType(data['global_unsubscribed_dts'], 'String');
+            }
             if (data.hasOwnProperty('memberships')) {
                 obj['memberships'] = ApiClient.convertToType(data['memberships'], [ListSegmentMembership]);
             }
@@ -62,6 +68,12 @@ class CustomerActivity {
             }
             if (data.hasOwnProperty('properties_list')) {
                 obj['properties_list'] = ApiClient.convertToType(data['properties_list'], [Property]);
+            }
+            if (data.hasOwnProperty('spam_complaint')) {
+                obj['spam_complaint'] = ApiClient.convertToType(data['spam_complaint'], 'Boolean');
+            }
+            if (data.hasOwnProperty('spam_complaint_dts')) {
+                obj['spam_complaint_dts'] = ApiClient.convertToType(data['spam_complaint_dts'], 'String');
             }
         }
         return obj;
@@ -74,6 +86,16 @@ class CustomerActivity {
  * @member {Array.<module:com.ultracart.admin.v2.models/Activity>} activities
  */
 CustomerActivity.prototype['activities'] = undefined;
+
+/**
+ * @member {Boolean} global_unsubscribed
+ */
+CustomerActivity.prototype['global_unsubscribed'] = undefined;
+
+/**
+ * @member {String} global_unsubscribed_dts
+ */
+CustomerActivity.prototype['global_unsubscribed_dts'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ListSegmentMembership>} memberships
@@ -89,6 +111,16 @@ CustomerActivity.prototype['metrics'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/Property>} properties_list
  */
 CustomerActivity.prototype['properties_list'] = undefined;
+
+/**
+ * @member {Boolean} spam_complaint
+ */
+CustomerActivity.prototype['spam_complaint'] = undefined;
+
+/**
+ * @member {String} spam_complaint_dts
+ */
+CustomerActivity.prototype['spam_complaint_dts'] = undefined;
 
 
 

@@ -202,6 +202,7 @@ docs/CustomerEmailListChanges.md
 docs/CustomerLoyalty.md
 docs/CustomerLoyaltyLedger.md
 docs/CustomerLoyaltyRedemption.md
+docs/CustomerMergeRequest.md
 docs/CustomerOrdersSummary.md
 docs/CustomerPricingTier.md
 docs/CustomerPrivacy.md
@@ -849,6 +850,7 @@ src/com.ultracart.admin.v2.models/CustomerEmailListChanges.js
 src/com.ultracart.admin.v2.models/CustomerLoyalty.js
 src/com.ultracart.admin.v2.models/CustomerLoyaltyLedger.js
 src/com.ultracart.admin.v2.models/CustomerLoyaltyRedemption.js
+src/com.ultracart.admin.v2.models/CustomerMergeRequest.js
 src/com.ultracart.admin.v2.models/CustomerOrdersSummary.js
 src/com.ultracart.admin.v2.models/CustomerPricingTier.js
 src/com.ultracart.admin.v2.models/CustomerPrivacy.js
