@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderQuote model module.
  * @module com.ultracart.admin.v2.models/OrderQuote
- * @version 4.0.33-RC
+ * @version 4.0.34-RC
  */
 var OrderQuote = /*#__PURE__*/function () {
   /**

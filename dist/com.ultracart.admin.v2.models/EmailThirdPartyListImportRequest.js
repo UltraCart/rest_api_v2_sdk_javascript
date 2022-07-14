@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailThirdPartyListImportRequest model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyListImportRequest
- * @version 4.0.33-RC
+ * @version 4.0.34-RC
  */
 var EmailThirdPartyListImportRequest = /*#__PURE__*/function () {
   /**

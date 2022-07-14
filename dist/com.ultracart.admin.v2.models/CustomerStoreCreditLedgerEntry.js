@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerStoreCreditLedgerEntry model module.
  * @module com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry
- * @version 4.0.33-RC
+ * @version 4.0.34-RC
  */
 var CustomerStoreCreditLedgerEntry = /*#__PURE__*/function () {
   /**

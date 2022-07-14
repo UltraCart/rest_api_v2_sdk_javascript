@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemContentMultimedia model module.
  * @module com.ultracart.admin.v2.models/ItemContentMultimedia
- * @version 4.0.33-RC
+ * @version 4.0.34-RC
  */
 var ItemContentMultimedia = /*#__PURE__*/function () {
   /**

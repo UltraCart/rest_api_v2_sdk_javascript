@@ -129,6 +129,14 @@ import CheckoutSetupBrowserKeyRequest from './com.ultracart.admin.v2.models/Chec
 import CheckoutSetupBrowserKeyResponse from './com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse';
 import CheckoutStateProvinceResponse from './com.ultracart.admin.v2.models/CheckoutStateProvinceResponse';
 import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
+import Conversation from './com.ultracart.admin.v2.models/Conversation';
+import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
+import ConversationParticipant from './com.ultracart.admin.v2.models/ConversationParticipant';
+import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
+import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
+import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
+import ConversationsResponse from './com.ultracart.admin.v2.models/ConversationsResponse';
 import CountriesResponse from './com.ultracart.admin.v2.models/CountriesResponse';
 import Country from './com.ultracart.admin.v2.models/Country';
 import Coupon from './com.ultracart.admin.v2.models/Coupon';
@@ -651,6 +659,7 @@ import AutoOrderApi from './com.ultracart.admin.v2/AutoOrderApi';
 import ChannelPartnerApi from './com.ultracart.admin.v2/ChannelPartnerApi';
 import ChargebackApi from './com.ultracart.admin.v2/ChargebackApi';
 import CheckoutApi from './com.ultracart.admin.v2/CheckoutApi';
+import ConversationApi from './com.ultracart.admin.v2/ConversationApi';
 import CouponApi from './com.ultracart.admin.v2/CouponApi';
 import CustomerApi from './com.ultracart.admin.v2/CustomerApi';
 import FulfillmentApi from './com.ultracart.admin.v2/FulfillmentApi';
@@ -695,7 +704,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.34-RC
+* @version 4.0.35-RC
 */
 export {
     /**
@@ -1399,6 +1408,54 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CityStateZip}
      */
     CityStateZip,
+
+    /**
+     * The Conversation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/Conversation}
+     */
+    Conversation,
+
+    /**
+     * The ConversationAgentAuthResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse}
+     */
+    ConversationAgentAuthResponse,
+
+    /**
+     * The ConversationMessage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMessage}
+     */
+    ConversationMessage,
+
+    /**
+     * The ConversationParticipant model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationParticipant}
+     */
+    ConversationParticipant,
+
+    /**
+     * The ConversationStartRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationStartRequest}
+     */
+    ConversationStartRequest,
+
+    /**
+     * The ConversationStartResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationStartResponse}
+     */
+    ConversationStartResponse,
+
+    /**
+     * The ConversationSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationSummary}
+     */
+    ConversationSummary,
+
+    /**
+     * The ConversationsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationsResponse}
+     */
+    ConversationsResponse,
 
     /**
      * The CountriesResponse model constructor.
@@ -4531,6 +4588,12 @@ export {
     * @property {module:com.ultracart.admin.v2/CheckoutApi}
     */
     CheckoutApi,
+
+    /**
+    * The ConversationApi service constructor.
+    * @property {module:com.ultracart.admin.v2/ConversationApi}
+    */
+    ConversationApi,
 
     /**
     * The CouponApi service constructor.

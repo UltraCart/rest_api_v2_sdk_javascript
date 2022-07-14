@@ -1209,6 +1209,12 @@ Object.defineProperty(exports, "CustomerLoyaltyRedemption", {
     return _CustomerLoyaltyRedemption["default"];
   }
 });
+Object.defineProperty(exports, "CustomerMergeRequest", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerMergeRequest["default"];
+  }
+});
 Object.defineProperty(exports, "CustomerOrdersSummary", {
   enumerable: true,
   get: function get() {
@@ -4297,6 +4303,8 @@ var _CustomerLoyalty = _interopRequireDefault(require("./com.ultracart.admin.v2.
 var _CustomerLoyaltyLedger = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyLedger"));
 
 var _CustomerLoyaltyRedemption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyRedemption"));
+
+var _CustomerMergeRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerMergeRequest"));
 
 var _CustomerOrdersSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerOrdersSummary"));
 

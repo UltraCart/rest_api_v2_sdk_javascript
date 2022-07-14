@@ -19,6 +19,8 @@ var _CustomerEditorValues = _interopRequireDefault(require("../com.ultracart.adm
 
 var _CustomerEmailListChanges = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEmailListChanges"));
 
+var _CustomerMergeRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerMergeRequest"));
+
 var _CustomerQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerQuery"));
 
 var _CustomerResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerResponse"));
@@ -58,7 +60,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.0.33-RC
+* @version 4.0.34-RC
 */
 var CustomerApi = /*#__PURE__*/function () {
   /**
@@ -627,6 +629,53 @@ var CustomerApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _CustomerResponse["default"];
       return this.apiClient.callApi('/customer/customers', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the mergeCustomer operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~mergeCustomerCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge customer into this customer
+     * Merge customer into this customer. 
+     * @param {Number} customer_profile_oid The customer_profile_oid to update.
+     * @param {module:com.ultracart.admin.v2.models/CustomerMergeRequest} customer Customer to merge into this profile.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/CustomerApi~mergeCustomerCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
+    key: "mergeCustomer",
+    value: function mergeCustomer(customer_profile_oid, customer, opts, callback) {
+      opts = opts || {};
+      var postBody = customer; // verify the required parameter 'customer_profile_oid' is set
+
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling mergeCustomer");
+      } // verify the required parameter 'customer' is set
+
+
+      if (customer === undefined || customer === null) {
+        throw new Error("Missing the required parameter 'customer' when calling mergeCustomer");
+      }
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/merge', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the searchCustomerProfileValues operation.
