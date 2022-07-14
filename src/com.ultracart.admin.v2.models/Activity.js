@@ -34,7 +34,7 @@
   /**
    * The Activity model module.
    * @module com.ultracart.admin.v2.models/Activity
-   * @version 3.10.19
+   * @version 3.10.20
    */
 
   /**
@@ -57,8 +57,12 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('action'))
         obj.action = ApiClient.convertToType(data['action'], 'String');
+      if (data.hasOwnProperty('channel'))
+        obj.channel = ApiClient.convertToType(data['channel'], 'String');
       if (data.hasOwnProperty('metric'))
         obj.metric = ApiClient.convertToType(data['metric'], 'String');
+      if (data.hasOwnProperty('storefront_oid'))
+        obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('subject'))
         obj.subject = ApiClient.convertToType(data['subject'], 'String');
       if (data.hasOwnProperty('ts'))
@@ -77,9 +81,19 @@
   exports.prototype.action = undefined;
 
   /**
+   * @member {String} channel
+   */
+  exports.prototype.channel = undefined;
+
+  /**
    * @member {String} metric
    */
   exports.prototype.metric = undefined;
+
+  /**
+   * @member {Number} storefront_oid
+   */
+  exports.prototype.storefront_oid = undefined;
 
   /**
    * @member {String} subject

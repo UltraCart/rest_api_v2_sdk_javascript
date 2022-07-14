@@ -34,7 +34,7 @@
   /**
    * The OrderShipping model module.
    * @module com.ultracart.admin.v2.models/OrderShipping
-   * @version 3.10.19
+   * @version 3.10.20
    */
 
   /**
