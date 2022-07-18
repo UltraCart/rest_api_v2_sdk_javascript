@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ScreenRecordingHeatmapResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapResponse
- * @version 4.0.35-RC
+ * @version 4.0.36-RC
  */
 class ScreenRecordingHeatmapResponse {
     /**

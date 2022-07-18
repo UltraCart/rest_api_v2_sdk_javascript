@@ -23,7 +23,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.35-RC
+* @version 4.0.36-RC
 */
 export default class ConversationApi {
 
@@ -114,6 +114,48 @@ export default class ConversationApi {
       let returnType = Conversation;
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationMultimediaUploadUrl operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a presigned conersation multimedia upload URL
+     * Get a presigned conersation multimedia upload URL 
+     * @param {String} extension 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getConversationMultimediaUploadUrl(extension, callback) {
+      let postBody = null;
+      // verify the required parameter 'extension' is set
+      if (extension === undefined || extension === null) {
+        throw new Error("Missing the required parameter 'extension' when calling getConversationMultimediaUploadUrl");
+      }
+
+      let pathParams = {
+        'extension': extension
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/conversation/upload_url/{extension}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

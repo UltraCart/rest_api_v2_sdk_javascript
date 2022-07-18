@@ -735,6 +735,60 @@ Object.defineProperty(exports, "CityStateZip", {
     return _CityStateZip["default"];
   }
 });
+Object.defineProperty(exports, "Conversation", {
+  enumerable: true,
+  get: function get() {
+    return _Conversation["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentAuthResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentAuthResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationApi", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationApi["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMessage["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationParticipant", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationParticipant["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationStartRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationStartRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationStartResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationStartResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationSummary", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationSummary["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "CountriesResponse", {
   enumerable: true,
   get: function get() {
@@ -4150,6 +4204,22 @@ var _CheckoutStateProvinceResponse = _interopRequireDefault(require("./com.ultra
 
 var _CityStateZip = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CityStateZip"));
 
+var _Conversation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Conversation"));
+
+var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
+
+var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
+
+var _ConversationParticipant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationParticipant"));
+
+var _ConversationStartRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartRequest"));
+
+var _ConversationStartResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartResponse"));
+
+var _ConversationSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSummary"));
+
+var _ConversationsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationsResponse"));
+
 var _CountriesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CountriesResponse"));
 
 var _Country = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Country"));
@@ -5193,6 +5263,8 @@ var _ChannelPartnerApi = _interopRequireDefault(require("./com.ultracart.admin.v
 var _ChargebackApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ChargebackApi"));
 
 var _CheckoutApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CheckoutApi"));
+
+var _ConversationApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ConversationApi"));
 
 var _CouponApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CouponApi"));
 

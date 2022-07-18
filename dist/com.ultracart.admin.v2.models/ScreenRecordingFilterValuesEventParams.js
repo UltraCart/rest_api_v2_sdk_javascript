@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilterValuesEventParams model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEventParams
- * @version 4.0.34-RC
+ * @version 4.0.35-RC
  */
 var ScreenRecordingFilterValuesEventParams = /*#__PURE__*/function () {
   /**

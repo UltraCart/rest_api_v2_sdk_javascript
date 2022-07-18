@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderEdi model module.
  * @module com.ultracart.admin.v2.models/OrderEdi
- * @version 4.0.34-RC
+ * @version 4.0.35-RC
  */
 var OrderEdi = /*#__PURE__*/function () {
   /**

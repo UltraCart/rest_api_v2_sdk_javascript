@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * ChannelPartner service.
 * @module com.ultracart.admin.v2/ChannelPartnerApi
-* @version 4.0.34-RC
+* @version 4.0.35-RC
 */
 var ChannelPartnerApi = /*#__PURE__*/function () {
   /**

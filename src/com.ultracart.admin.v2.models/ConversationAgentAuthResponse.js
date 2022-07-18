@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentAuthResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuthResponse
- * @version 4.0.35-RC
+ * @version 4.0.36-RC
  */
 class ConversationAgentAuthResponse {
     /**
@@ -53,6 +53,12 @@ class ConversationAgentAuthResponse {
             if (data.hasOwnProperty('jwt')) {
                 obj['jwt'] = ApiClient.convertToType(data['jwt'], 'String');
             }
+            if (data.hasOwnProperty('merchant_id')) {
+                obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+            }
+            if (data.hasOwnProperty('twilio_phone_numbers')) {
+                obj['twilio_phone_numbers'] = ApiClient.convertToType(data['twilio_phone_numbers'], ['String']);
+            }
             if (data.hasOwnProperty('websocket_url')) {
                 obj['websocket_url'] = ApiClient.convertToType(data['websocket_url'], 'String');
             }
@@ -72,6 +78,16 @@ ConversationAgentAuthResponse.prototype['conversation_participant_arn'] = undefi
  * @member {String} jwt
  */
 ConversationAgentAuthResponse.prototype['jwt'] = undefined;
+
+/**
+ * @member {String} merchant_id
+ */
+ConversationAgentAuthResponse.prototype['merchant_id'] = undefined;
+
+/**
+ * @member {Array.<String>} twilio_phone_numbers
+ */
+ConversationAgentAuthResponse.prototype['twilio_phone_numbers'] = undefined;
 
 /**
  * @member {String} websocket_url

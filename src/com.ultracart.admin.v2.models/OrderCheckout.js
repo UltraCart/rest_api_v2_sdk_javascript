@@ -17,7 +17,7 @@ import Browser from './Browser';
 /**
  * The OrderCheckout model module.
  * @module com.ultracart.admin.v2.models/OrderCheckout
- * @version 4.0.35-RC
+ * @version 4.0.36-RC
  */
 class OrderCheckout {
     /**

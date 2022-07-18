@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Activity model module.
  * @module com.ultracart.admin.v2.models/Activity
- * @version 4.0.34-RC
+ * @version 4.0.35-RC
  */
 var Activity = /*#__PURE__*/function () {
   /**
@@ -58,8 +58,16 @@ var Activity = /*#__PURE__*/function () {
           obj['action'] = _ApiClient["default"].convertToType(data['action'], 'String');
         }
 
+        if (data.hasOwnProperty('channel')) {
+          obj['channel'] = _ApiClient["default"].convertToType(data['channel'], 'String');
+        }
+
         if (data.hasOwnProperty('metric')) {
           obj['metric'] = _ApiClient["default"].convertToType(data['metric'], 'String');
+        }
+
+        if (data.hasOwnProperty('storefront_oid')) {
+          obj['storefront_oid'] = _ApiClient["default"].convertToType(data['storefront_oid'], 'Number');
         }
 
         if (data.hasOwnProperty('subject')) {
@@ -92,10 +100,20 @@ var Activity = /*#__PURE__*/function () {
 
 Activity.prototype['action'] = undefined;
 /**
+ * @member {String} channel
+ */
+
+Activity.prototype['channel'] = undefined;
+/**
  * @member {String} metric
  */
 
 Activity.prototype['metric'] = undefined;
+/**
+ * @member {Number} storefront_oid
+ */
+
+Activity.prototype['storefront_oid'] = undefined;
 /**
  * @member {String} subject
  */

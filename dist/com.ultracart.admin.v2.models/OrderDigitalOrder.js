@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderDigitalOrder model module.
  * @module com.ultracart.admin.v2.models/OrderDigitalOrder
- * @version 4.0.34-RC
+ * @version 4.0.35-RC
  */
 var OrderDigitalOrder = /*#__PURE__*/function () {
   /**
