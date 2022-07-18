@@ -34,7 +34,7 @@
   /**
    * The ItemShippingDestinationRestriction model module.
    * @module com.ultracart.admin.v2.models/ItemShippingDestinationRestriction
-   * @version 3.10.20
+   * @version 3.10.21
    */
 
   /**

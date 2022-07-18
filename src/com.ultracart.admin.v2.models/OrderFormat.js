@@ -34,7 +34,7 @@
   /**
    * The OrderFormat model module.
    * @module com.ultracart.admin.v2.models/OrderFormat
-   * @version 3.10.20
+   * @version 3.10.21
    */
 
   /**

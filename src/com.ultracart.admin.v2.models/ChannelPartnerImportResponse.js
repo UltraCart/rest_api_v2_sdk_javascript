@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerImportResponse model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerImportResponse
-   * @version 3.10.20
+   * @version 3.10.21
    */
 
   /**
