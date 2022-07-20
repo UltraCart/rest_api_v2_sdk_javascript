@@ -17,7 +17,7 @@ import Item from './Item';
 /**
  * The ItemsRequest model module.
  * @module com.ultracart.admin.v2.models/ItemsRequest
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 class ItemsRequest {
     /**

@@ -38,7 +38,7 @@ import LookupResponse from '../com.ultracart.admin.v2.models/LookupResponse';
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.0.36-RC
+* @version 4.0.37-RC
 */
 export default class CustomerApi {
 

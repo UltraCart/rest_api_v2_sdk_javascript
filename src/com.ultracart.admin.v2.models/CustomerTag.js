@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerTag model module.
  * @module com.ultracart.admin.v2.models/CustomerTag
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 class CustomerTag {
     /**

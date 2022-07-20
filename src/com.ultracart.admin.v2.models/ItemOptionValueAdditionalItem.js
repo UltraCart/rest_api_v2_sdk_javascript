@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemOptionValueAdditionalItem model module.
  * @module com.ultracart.admin.v2.models/ItemOptionValueAdditionalItem
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 class ItemOptionValueAdditionalItem {
     /**

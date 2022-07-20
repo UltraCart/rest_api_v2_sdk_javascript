@@ -132,6 +132,7 @@ import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
 import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
+import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
 import ConversationParticipant from './com.ultracart.admin.v2.models/ConversationParticipant';
 import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
@@ -704,7 +705,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.36-RC
+* @version 4.0.37-RC
 */
 export {
     /**
@@ -1426,6 +1427,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationMessage}
      */
     ConversationMessage,
+
+    /**
+     * The ConversationMessageTransportStatus model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus}
+     */
+    ConversationMessageTransportStatus,
 
     /**
      * The ConversationParticipant model constructor.

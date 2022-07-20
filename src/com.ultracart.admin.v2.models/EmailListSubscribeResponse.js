@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailListSubscribeResponse model module.
  * @module com.ultracart.admin.v2.models/EmailListSubscribeResponse
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 class EmailListSubscribeResponse {
     /**

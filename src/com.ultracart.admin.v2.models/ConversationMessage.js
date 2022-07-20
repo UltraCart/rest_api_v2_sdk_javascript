@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationMessageTransportStatus from './ConversationMessageTransportStatus';
 
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 class ConversationMessage {
     /**
@@ -62,6 +63,9 @@ class ConversationMessage {
             if (data.hasOwnProperty('message_dts')) {
                 obj['message_dts'] = ApiClient.convertToType(data['message_dts'], 'String');
             }
+            if (data.hasOwnProperty('transport_statuses')) {
+                obj['transport_statuses'] = ApiClient.convertToType(data['transport_statuses'], [ConversationMessageTransportStatus]);
+            }
         }
         return obj;
     }
@@ -94,6 +98,11 @@ ConversationMessage.prototype['media_urls'] = undefined;
  * @member {String} message_dts
  */
 ConversationMessage.prototype['message_dts'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses
+ */
+ConversationMessage.prototype['transport_statuses'] = undefined;
 
 
 

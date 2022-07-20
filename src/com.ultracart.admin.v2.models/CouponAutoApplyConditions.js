@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The CouponAutoApplyConditions model module.
  * @module com.ultracart.admin.v2.models/CouponAutoApplyConditions
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 class CouponAutoApplyConditions {
     /**

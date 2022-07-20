@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentAuthResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuthResponse
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 class ConversationAgentAuthResponse {
     /**
@@ -50,6 +50,9 @@ class ConversationAgentAuthResponse {
             if (data.hasOwnProperty('conversation_participant_arn')) {
                 obj['conversation_participant_arn'] = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
             }
+            if (data.hasOwnProperty('conversation_participant_name')) {
+                obj['conversation_participant_name'] = ApiClient.convertToType(data['conversation_participant_name'], 'String');
+            }
             if (data.hasOwnProperty('jwt')) {
                 obj['jwt'] = ApiClient.convertToType(data['jwt'], 'String');
             }
@@ -73,6 +76,11 @@ class ConversationAgentAuthResponse {
  * @member {String} conversation_participant_arn
  */
 ConversationAgentAuthResponse.prototype['conversation_participant_arn'] = undefined;
+
+/**
+ * @member {String} conversation_participant_name
+ */
+ConversationAgentAuthResponse.prototype['conversation_participant_name'] = undefined;
 
 /**
  * @member {String} jwt

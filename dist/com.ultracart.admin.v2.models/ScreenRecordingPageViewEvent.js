@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingPageViewEvent model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewEvent
- * @version 4.0.35-RC
+ * @version 4.0.36-RC
  */
 var ScreenRecordingPageViewEvent = /*#__PURE__*/function () {
   /**

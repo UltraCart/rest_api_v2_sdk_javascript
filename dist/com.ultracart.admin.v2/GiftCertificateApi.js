@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * GiftCertificate service.
 * @module com.ultracart.admin.v2/GiftCertificateApi
-* @version 4.0.35-RC
+* @version 4.0.36-RC
 */
 var GiftCertificateApi = /*#__PURE__*/function () {
   /**

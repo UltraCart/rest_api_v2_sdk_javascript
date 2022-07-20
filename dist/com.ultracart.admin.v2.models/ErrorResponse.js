@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ErrorResponse model module.
  * @module com.ultracart.admin.v2.models/ErrorResponse
- * @version 4.0.35-RC
+ * @version 4.0.36-RC
  */
 var ErrorResponse = /*#__PURE__*/function () {
   /**

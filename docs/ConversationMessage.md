@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **body** | **String** |  | [optional] 
 **media_urls** | **[String]** |  | [optional] 
 **message_dts** | **String** | Message date/time | [optional] 
+**transport_statuses** | [**[ConversationMessageTransportStatus]**](ConversationMessageTransportStatus.md) |  | [optional] 
 
 
