@@ -34,7 +34,7 @@
   /**
    * Coupon service.
    * @module com.ultracart.admin.v2/CouponApi
-   * @version 3.10.21
+   * @version 3.10.22
    */
 
   /**

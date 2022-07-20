@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentAuthResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuthResponse
-   * @version 3.10.21
+   * @version 3.10.22
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('conversation_participant_arn'))
         obj.conversation_participant_arn = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
+      if (data.hasOwnProperty('conversation_participant_name'))
+        obj.conversation_participant_name = ApiClient.convertToType(data['conversation_participant_name'], 'String');
       if (data.hasOwnProperty('jwt'))
         obj.jwt = ApiClient.convertToType(data['jwt'], 'String');
       if (data.hasOwnProperty('merchant_id'))
@@ -73,6 +75,11 @@
    * @member {String} conversation_participant_arn
    */
   exports.prototype.conversation_participant_arn = undefined;
+
+  /**
+   * @member {String} conversation_participant_name
+   */
+  exports.prototype.conversation_participant_name = undefined;
 
   /**
    * @member {String} jwt

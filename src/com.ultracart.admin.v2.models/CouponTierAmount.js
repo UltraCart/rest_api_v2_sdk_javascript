@@ -34,7 +34,7 @@
   /**
    * The CouponTierAmount model module.
    * @module com.ultracart.admin.v2.models/CouponTierAmount
-   * @version 3.10.21
+   * @version 3.10.22
    */
 
   /**
