@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationAgentAuthResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuthResponse
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 var ConversationAgentAuthResponse = /*#__PURE__*/function () {
   /**
@@ -58,6 +58,10 @@ var ConversationAgentAuthResponse = /*#__PURE__*/function () {
           obj['conversation_participant_arn'] = _ApiClient["default"].convertToType(data['conversation_participant_arn'], 'String');
         }
 
+        if (data.hasOwnProperty('conversation_participant_name')) {
+          obj['conversation_participant_name'] = _ApiClient["default"].convertToType(data['conversation_participant_name'], 'String');
+        }
+
         if (data.hasOwnProperty('jwt')) {
           obj['jwt'] = _ApiClient["default"].convertToType(data['jwt'], 'String');
         }
@@ -87,6 +91,11 @@ var ConversationAgentAuthResponse = /*#__PURE__*/function () {
 
 
 ConversationAgentAuthResponse.prototype['conversation_participant_arn'] = undefined;
+/**
+ * @member {String} conversation_participant_name
+ */
+
+ConversationAgentAuthResponse.prototype['conversation_participant_name'] = undefined;
 /**
  * @member {String} jwt
  */

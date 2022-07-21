@@ -759,6 +759,12 @@ Object.defineProperty(exports, "ConversationMessage", {
     return _ConversationMessage["default"];
   }
 });
+Object.defineProperty(exports, "ConversationMessageTransportStatus", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMessageTransportStatus["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationParticipant", {
   enumerable: true,
   get: function get() {
@@ -4209,6 +4215,8 @@ var _Conversation = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
+
+var _ConversationMessageTransportStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTransportStatus"));
 
 var _ConversationParticipant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationParticipant"));
 

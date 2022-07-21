@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartPaymentAffirm model module.
  * @module com.ultracart.admin.v2.models/CartPaymentAffirm
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class CartPaymentAffirm {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailSettings model module.
  * @module com.ultracart.admin.v2.models/EmailSettings
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class EmailSettings {
     /**

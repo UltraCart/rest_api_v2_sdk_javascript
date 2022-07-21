@@ -17,7 +17,7 @@ import Cart from './Cart';
 /**
  * The CartResponse model module.
  * @module com.ultracart.admin.v2.models/CartResponse
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class CartResponse {
     /**

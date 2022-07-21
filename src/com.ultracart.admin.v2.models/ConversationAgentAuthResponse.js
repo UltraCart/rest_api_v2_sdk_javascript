@@ -12,11 +12,15 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationAgentAuth from './ConversationAgentAuth';
+import Error from './Error';
+import ResponseMetadata from './ResponseMetadata';
+import Warning from './Warning';
 
 /**
  * The ConversationAgentAuthResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuthResponse
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class ConversationAgentAuthResponse {
     /**
@@ -47,23 +51,20 @@ class ConversationAgentAuthResponse {
         if (data) {
             obj = obj || new ConversationAgentAuthResponse();
 
-            if (data.hasOwnProperty('conversation_participant_arn')) {
-                obj['conversation_participant_arn'] = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
+            if (data.hasOwnProperty('agent_auth')) {
+                obj['agent_auth'] = ConversationAgentAuth.constructFromObject(data['agent_auth']);
             }
-            if (data.hasOwnProperty('conversation_participant_name')) {
-                obj['conversation_participant_name'] = ApiClient.convertToType(data['conversation_participant_name'], 'String');
+            if (data.hasOwnProperty('error')) {
+                obj['error'] = Error.constructFromObject(data['error']);
             }
-            if (data.hasOwnProperty('jwt')) {
-                obj['jwt'] = ApiClient.convertToType(data['jwt'], 'String');
+            if (data.hasOwnProperty('metadata')) {
+                obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
             }
-            if (data.hasOwnProperty('merchant_id')) {
-                obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+            if (data.hasOwnProperty('success')) {
+                obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
-            if (data.hasOwnProperty('twilio_phone_numbers')) {
-                obj['twilio_phone_numbers'] = ApiClient.convertToType(data['twilio_phone_numbers'], ['String']);
-            }
-            if (data.hasOwnProperty('websocket_url')) {
-                obj['websocket_url'] = ApiClient.convertToType(data['websocket_url'], 'String');
+            if (data.hasOwnProperty('warning')) {
+                obj['warning'] = Warning.constructFromObject(data['warning']);
             }
         }
         return obj;
@@ -73,34 +74,30 @@ class ConversationAgentAuthResponse {
 }
 
 /**
- * @member {String} conversation_participant_arn
+ * @member {module:com.ultracart.admin.v2.models/ConversationAgentAuth} agent_auth
  */
-ConversationAgentAuthResponse.prototype['conversation_participant_arn'] = undefined;
+ConversationAgentAuthResponse.prototype['agent_auth'] = undefined;
 
 /**
- * @member {String} conversation_participant_name
+ * @member {module:com.ultracart.admin.v2.models/Error} error
  */
-ConversationAgentAuthResponse.prototype['conversation_participant_name'] = undefined;
+ConversationAgentAuthResponse.prototype['error'] = undefined;
 
 /**
- * @member {String} jwt
+ * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
-ConversationAgentAuthResponse.prototype['jwt'] = undefined;
+ConversationAgentAuthResponse.prototype['metadata'] = undefined;
 
 /**
- * @member {String} merchant_id
+ * Indicates if API call was successful
+ * @member {Boolean} success
  */
-ConversationAgentAuthResponse.prototype['merchant_id'] = undefined;
+ConversationAgentAuthResponse.prototype['success'] = undefined;
 
 /**
- * @member {Array.<String>} twilio_phone_numbers
+ * @member {module:com.ultracart.admin.v2.models/Warning} warning
  */
-ConversationAgentAuthResponse.prototype['twilio_phone_numbers'] = undefined;
-
-/**
- * @member {String} websocket_url
- */
-ConversationAgentAuthResponse.prototype['websocket_url'] = undefined;
+ConversationAgentAuthResponse.prototype['warning'] = undefined;
 
 
 

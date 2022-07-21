@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingQueryResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingQueryResponse
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 var ScreenRecordingQueryResponse = /*#__PURE__*/function () {
   /**

@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import Conversation from './Conversation';
 
 /**
  * The ConversationStartResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationStartResponse
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class ConversationStartResponse {
     /**
@@ -47,11 +48,8 @@ class ConversationStartResponse {
         if (data) {
             obj = obj || new ConversationStartResponse();
 
-            if (data.hasOwnProperty('conversation_arn')) {
-                obj['conversation_arn'] = ApiClient.convertToType(data['conversation_arn'], 'String');
-            }
-            if (data.hasOwnProperty('conversation_uuid')) {
-                obj['conversation_uuid'] = ApiClient.convertToType(data['conversation_uuid'], 'String');
+            if (data.hasOwnProperty('conversation')) {
+                obj['conversation'] = Conversation.constructFromObject(data['conversation']);
             }
         }
         return obj;
@@ -61,14 +59,9 @@ class ConversationStartResponse {
 }
 
 /**
- * @member {String} conversation_arn
+ * @member {module:com.ultracart.admin.v2.models/Conversation} conversation
  */
-ConversationStartResponse.prototype['conversation_arn'] = undefined;
-
-/**
- * @member {String} conversation_uuid
- */
-ConversationStartResponse.prototype['conversation_uuid'] = undefined;
+ConversationStartResponse.prototype['conversation'] = undefined;
 
 
 

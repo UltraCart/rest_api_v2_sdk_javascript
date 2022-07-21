@@ -124,11 +124,13 @@ docs/CheckoutSetupBrowserKeyResponse.md
 docs/CheckoutStateProvinceResponse.md
 docs/CityStateZip.md
 docs/Conversation.md
+docs/ConversationAgentAuth.md
 docs/ConversationAgentAuthResponse.md
 docs/ConversationApi.md
 docs/ConversationMessage.md
 docs/ConversationMessageTransportStatus.md
 docs/ConversationParticipant.md
+docs/ConversationResponse.md
 docs/ConversationStartRequest.md
 docs/ConversationStartResponse.md
 docs/ConversationSummary.md
@@ -784,10 +786,12 @@ src/com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse.js
 src/com.ultracart.admin.v2.models/CheckoutStateProvinceResponse.js
 src/com.ultracart.admin.v2.models/CityStateZip.js
 src/com.ultracart.admin.v2.models/Conversation.js
+src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
 src/com.ultracart.admin.v2.models/ConversationMessage.js
 src/com.ultracart.admin.v2.models/ConversationMessageTransportStatus.js
 src/com.ultracart.admin.v2.models/ConversationParticipant.js
+src/com.ultracart.admin.v2.models/ConversationResponse.js
 src/com.ultracart.admin.v2.models/ConversationStartRequest.js
 src/com.ultracart.admin.v2.models/ConversationStartResponse.js
 src/com.ultracart.admin.v2.models/ConversationSummary.js

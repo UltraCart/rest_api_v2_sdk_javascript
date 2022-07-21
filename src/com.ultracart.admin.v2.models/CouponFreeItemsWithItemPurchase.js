@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponFreeItemsWithItemPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponFreeItemsWithItemPurchase
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class CouponFreeItemsWithItemPurchase {
     /**

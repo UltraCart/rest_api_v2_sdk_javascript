@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemPaymentProcessing model module.
  * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 var ItemPaymentProcessing = /*#__PURE__*/function () {
   /**

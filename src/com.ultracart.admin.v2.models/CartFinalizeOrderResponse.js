@@ -18,7 +18,7 @@ import Order from './Order';
 /**
  * The CartFinalizeOrderResponse model module.
  * @module com.ultracart.admin.v2.models/CartFinalizeOrderResponse
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class CartFinalizeOrderResponse {
     /**

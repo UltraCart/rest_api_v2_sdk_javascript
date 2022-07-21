@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import Conversation from '../com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuthResponse from '../com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationResponse from '../com.ultracart.admin.v2.models/ConversationResponse';
 import ConversationStartRequest from '../com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from '../com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationsResponse from '../com.ultracart.admin.v2.models/ConversationsResponse';
@@ -23,7 +23,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.37-RC
+* @version 4.0.38-RC
 */
 export default class ConversationApi {
 
@@ -80,7 +80,7 @@ export default class ConversationApi {
      * Callback function to receive the result of the getConversation operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/Conversation} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/ConversationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -89,7 +89,7 @@ export default class ConversationApi {
      * Retrieve a conversation including the participants and messages 
      * @param {String} conversation_uuid 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/Conversation}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationResponse}
      */
     getConversation(conversation_uuid, callback) {
       let postBody = null;
@@ -111,7 +111,7 @@ export default class ConversationApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Conversation;
+      let returnType = ConversationResponse;
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ScreenRecordingTagsResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingTagsResponse
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 class ScreenRecordingTagsResponse {
     /**

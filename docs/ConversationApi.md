@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ## getConversation
 
-> Conversation getConversation(conversation_uuid)
+> ConversationResponse getConversation(conversation_uuid)
 
 Retrieve a conversation
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Conversation**](Conversation.md)
+[**ConversationResponse**](ConversationResponse.md)
 
 ### Authorization
 

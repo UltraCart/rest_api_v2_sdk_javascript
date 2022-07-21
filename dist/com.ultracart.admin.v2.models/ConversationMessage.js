@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationMessageTransportStatus = _interopRequireDefault(require("./ConversationMessageTransportStatus"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.36-RC
+ * @version 4.0.37-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -73,6 +75,10 @@ var ConversationMessage = /*#__PURE__*/function () {
         if (data.hasOwnProperty('message_dts')) {
           obj['message_dts'] = _ApiClient["default"].convertToType(data['message_dts'], 'String');
         }
+
+        if (data.hasOwnProperty('transport_statuses')) {
+          obj['transport_statuses'] = _ApiClient["default"].convertToType(data['transport_statuses'], [_ConversationMessageTransportStatus["default"]]);
+        }
       }
 
       return obj;
@@ -108,5 +114,10 @@ ConversationMessage.prototype['media_urls'] = undefined;
  */
 
 ConversationMessage.prototype['message_dts'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses
+ */
+
+ConversationMessage.prototype['transport_statuses'] = undefined;
 var _default = ConversationMessage;
 exports["default"] = _default;
