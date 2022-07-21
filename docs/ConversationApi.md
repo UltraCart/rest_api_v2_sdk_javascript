@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ## getConversationMultimediaUploadUrl
 
-> getConversationMultimediaUploadUrl(extension)
+> ConversationMultimediaUploadUrlResponse getConversationMultimediaUploadUrl(extension)
 
 Get a presigned conersation multimedia upload URL
 
@@ -134,7 +134,7 @@ apiInstance.getConversationMultimediaUploadUrl(extension, (error, data, response
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ConversationMultimediaUploadUrlResponse**](ConversationMultimediaUploadUrlResponse.md)
 
 ### Authorization
 

@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Conversation = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Conversation"));
-
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
+
+var _ConversationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationResponse"));
 
 var _ConversationStartRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationStartRequest"));
 
@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.37-RC
+* @version 4.0.38-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -79,7 +79,7 @@ var ConversationApi = /*#__PURE__*/function () {
      * Callback function to receive the result of the getConversation operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/Conversation} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/ConversationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -88,7 +88,7 @@ var ConversationApi = /*#__PURE__*/function () {
      * Retrieve a conversation including the participants and messages 
      * @param {String} conversation_uuid 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/Conversation}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationResponse}
      */
 
   }, {
@@ -109,7 +109,7 @@ var ConversationApi = /*#__PURE__*/function () {
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _Conversation["default"];
+      var returnType = _ConversationResponse["default"];
       return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**

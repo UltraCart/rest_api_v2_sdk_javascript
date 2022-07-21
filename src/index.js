@@ -134,6 +134,8 @@ import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationA
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
+import ConversationMultimediaUploadUrl from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl';
+import ConversationMultimediaUploadUrlResponse from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationParticipant from './com.ultracart.admin.v2.models/ConversationParticipant';
 import ConversationResponse from './com.ultracart.admin.v2.models/ConversationResponse';
 import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
@@ -707,7 +709,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.38-RC
+* @version 4.0.39-RC
 */
 export {
     /**
@@ -1441,6 +1443,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus}
      */
     ConversationMessageTransportStatus,
+
+    /**
+     * The ConversationMultimediaUploadUrl model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl}
+     */
+    ConversationMultimediaUploadUrl,
+
+    /**
+     * The ConversationMultimediaUploadUrlResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse}
+     */
+    ConversationMultimediaUploadUrlResponse,
 
     /**
      * The ConversationParticipant model constructor.

@@ -741,6 +741,12 @@ Object.defineProperty(exports, "Conversation", {
     return _Conversation["default"];
   }
 });
+Object.defineProperty(exports, "ConversationAgentAuth", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentAuth["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationAgentAuthResponse", {
   enumerable: true,
   get: function get() {
@@ -769,6 +775,12 @@ Object.defineProperty(exports, "ConversationParticipant", {
   enumerable: true,
   get: function get() {
     return _ConversationParticipant["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationResponse["default"];
   }
 });
 Object.defineProperty(exports, "ConversationStartRequest", {
@@ -4212,6 +4224,8 @@ var _CityStateZip = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 
 var _Conversation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Conversation"));
 
+var _ConversationAgentAuth = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuth"));
+
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
@@ -4219,6 +4233,8 @@ var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin
 var _ConversationMessageTransportStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTransportStatus"));
 
 var _ConversationParticipant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationParticipant"));
+
+var _ConversationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationResponse"));
 
 var _ConversationStartRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartRequest"));
 

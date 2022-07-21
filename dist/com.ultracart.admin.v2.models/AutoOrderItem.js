@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 var AutoOrderItem = /*#__PURE__*/function () {
   /**
@@ -88,6 +88,10 @@ var AutoOrderItem = /*#__PURE__*/function () {
           obj['auto_order_item_oid'] = _ApiClient["default"].convertToType(data['auto_order_item_oid'], 'Number');
         }
 
+        if (data.hasOwnProperty('first_order_dts')) {
+          obj['first_order_dts'] = _ApiClient["default"].convertToType(data['first_order_dts'], 'String');
+        }
+
         if (data.hasOwnProperty('frequency')) {
           obj['frequency'] = _ApiClient["default"].convertToType(data['frequency'], 'String');
         }
@@ -130,6 +134,10 @@ var AutoOrderItem = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('original_quantity')) {
           obj['original_quantity'] = _ApiClient["default"].convertToType(data['original_quantity'], 'Number');
+        }
+
+        if (data.hasOwnProperty('paused')) {
+          obj['paused'] = _ApiClient["default"].convertToType(data['paused'], 'Boolean');
         }
 
         if (data.hasOwnProperty('paypal_payer_id')) {
@@ -207,6 +215,12 @@ AutoOrderItem.prototype['arbitrary_unit_cost_remaining_orders'] = undefined;
 
 AutoOrderItem.prototype['auto_order_item_oid'] = undefined;
 /**
+ * Date/time of the first order of this item.  Null if item added to auto order and has not been rebilled yet.
+ * @member {String} first_order_dts
+ */
+
+AutoOrderItem.prototype['first_order_dts'] = undefined;
+/**
  * Frequency of the rebill if not a fixed schedule
  * @member {module:com.ultracart.admin.v2.models/AutoOrderItem.FrequencyEnum} frequency
  */
@@ -272,6 +286,12 @@ AutoOrderItem.prototype['original_item_id'] = undefined;
  */
 
 AutoOrderItem.prototype['original_quantity'] = undefined;
+/**
+ * True if paused.  This field is an object instead of a primitive for backwards compatibility.
+ * @member {Boolean} paused
+ */
+
+AutoOrderItem.prototype['paused'] = undefined;
 /**
  * The PayPal Payer ID tied to this item
  * @member {String} paypal_payer_id

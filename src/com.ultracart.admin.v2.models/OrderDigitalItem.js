@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderDigitalItem model module.
  * @module com.ultracart.admin.v2.models/OrderDigitalItem
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 class OrderDigitalItem {
     /**

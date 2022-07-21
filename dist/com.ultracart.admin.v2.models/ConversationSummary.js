@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 var ConversationSummary = /*#__PURE__*/function () {
   /**

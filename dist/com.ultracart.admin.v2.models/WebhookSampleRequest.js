@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WebhookSampleRequest model module.
  * @module com.ultracart.admin.v2.models/WebhookSampleRequest
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 var WebhookSampleRequest = /*#__PURE__*/function () {
   /**

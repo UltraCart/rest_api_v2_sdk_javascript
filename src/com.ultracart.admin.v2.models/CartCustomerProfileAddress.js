@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartCustomerProfileAddress model module.
  * @module com.ultracart.admin.v2.models/CartCustomerProfileAddress
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 class CartCustomerProfileAddress {
     /**

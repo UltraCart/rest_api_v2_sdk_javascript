@@ -17,7 +17,7 @@ import ResultSet from './ResultSet';
 /**
  * The ResponseMetadata model module.
  * @module com.ultracart.admin.v2.models/ResponseMetadata
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 class ResponseMetadata {
     /**

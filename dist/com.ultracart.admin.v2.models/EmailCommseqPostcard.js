@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseqPostcard model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqPostcard
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 var EmailCommseqPostcard = /*#__PURE__*/function () {
   /**
@@ -175,7 +175,7 @@ EmailCommseqPostcard.prototype['postcard_front_container_cjson'] = undefined;
 
 EmailCommseqPostcard.prototype['postcard_front_container_uuid'] = undefined;
 /**
- * URL to screenshot of the back of the postcard
+ * URL to screenshot of the front of the postcard
  * @member {String} screenshot_back_url
  */
 

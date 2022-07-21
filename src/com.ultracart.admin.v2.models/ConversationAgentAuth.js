@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 class ConversationAgentAuth {
     /**

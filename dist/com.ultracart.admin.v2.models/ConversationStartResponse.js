@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _Conversation = _interopRequireDefault(require("./Conversation"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationStartResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationStartResponse
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 var ConversationStartResponse = /*#__PURE__*/function () {
   /**
@@ -54,12 +56,8 @@ var ConversationStartResponse = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ConversationStartResponse();
 
-        if (data.hasOwnProperty('conversation_arn')) {
-          obj['conversation_arn'] = _ApiClient["default"].convertToType(data['conversation_arn'], 'String');
-        }
-
-        if (data.hasOwnProperty('conversation_uuid')) {
-          obj['conversation_uuid'] = _ApiClient["default"].convertToType(data['conversation_uuid'], 'String');
+        if (data.hasOwnProperty('conversation')) {
+          obj['conversation'] = _Conversation["default"].constructFromObject(data['conversation']);
         }
       }
 
@@ -70,15 +68,10 @@ var ConversationStartResponse = /*#__PURE__*/function () {
   return ConversationStartResponse;
 }();
 /**
- * @member {String} conversation_arn
+ * @member {module:com.ultracart.admin.v2.models/Conversation} conversation
  */
 
 
-ConversationStartResponse.prototype['conversation_arn'] = undefined;
-/**
- * @member {String} conversation_uuid
- */
-
-ConversationStartResponse.prototype['conversation_uuid'] = undefined;
+ConversationStartResponse.prototype['conversation'] = undefined;
 var _default = ConversationStartResponse;
 exports["default"] = _default;

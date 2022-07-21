@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderAutoOrder model module.
  * @module com.ultracart.admin.v2.models/OrderAutoOrder
- * @version 4.0.37-RC
+ * @version 4.0.38-RC
  */
 var OrderAutoOrder = /*#__PURE__*/function () {
   /**

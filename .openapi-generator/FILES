@@ -129,6 +129,8 @@ docs/ConversationAgentAuthResponse.md
 docs/ConversationApi.md
 docs/ConversationMessage.md
 docs/ConversationMessageTransportStatus.md
+docs/ConversationMultimediaUploadUrl.md
+docs/ConversationMultimediaUploadUrlResponse.md
 docs/ConversationParticipant.md
 docs/ConversationResponse.md
 docs/ConversationStartRequest.md
@@ -790,6 +792,8 @@ src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
 src/com.ultracart.admin.v2.models/ConversationMessage.js
 src/com.ultracart.admin.v2.models/ConversationMessageTransportStatus.js
+src/com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl.js
+src/com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/ConversationParticipant.js
 src/com.ultracart.admin.v2.models/ConversationResponse.js
 src/com.ultracart.admin.v2.models/ConversationStartRequest.js
