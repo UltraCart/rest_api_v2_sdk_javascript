@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.40-RC
+* @version 4.0.41-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 class Conversation {
     /**
@@ -49,6 +49,9 @@ class Conversation {
         if (data) {
             obj = obj || new Conversation();
 
+            if (data.hasOwnProperty('closed')) {
+                obj['closed'] = ApiClient.convertToType(data['closed'], 'Boolean');
+            }
             if (data.hasOwnProperty('conversation_arn')) {
                 obj['conversation_arn'] = ApiClient.convertToType(data['conversation_arn'], 'String');
             }
@@ -70,6 +73,11 @@ class Conversation {
 
 
 }
+
+/**
+ * @member {Boolean} closed
+ */
+Conversation.prototype['closed'] = undefined;
 
 /**
  * @member {String} conversation_arn

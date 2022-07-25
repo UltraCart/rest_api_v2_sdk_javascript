@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 class ConversationSummary {
     /**
@@ -47,6 +47,9 @@ class ConversationSummary {
         if (data) {
             obj = obj || new ConversationSummary();
 
+            if (data.hasOwnProperty('closed')) {
+                obj['closed'] = ApiClient.convertToType(data['closed'], 'Boolean');
+            }
             if (data.hasOwnProperty('conversation_arn')) {
                 obj['conversation_arn'] = ApiClient.convertToType(data['conversation_arn'], 'String');
             }
@@ -80,6 +83,11 @@ class ConversationSummary {
 
 
 }
+
+/**
+ * @member {Boolean} closed
+ */
+ConversationSummary.prototype['closed'] = undefined;
 
 /**
  * @member {String} conversation_arn

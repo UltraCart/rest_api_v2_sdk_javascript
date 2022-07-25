@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _Conversation = _interopRequireDefault(require("./Conversation"));
 
+var _ConversationEventQueuePosition = _interopRequireDefault(require("./ConversationEventQueuePosition"));
+
 var _ConversationMessage = _interopRequireDefault(require("./ConversationMessage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -22,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.40-RC
+ * @version 4.0.41-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -71,11 +73,11 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('event_new_message')) {
-          obj['event_new_message'] = _ConversationMessage["default"].constructFromObject(data['event_new_message']);
+          obj['event_new_message'] = _Conversation["default"].constructFromObject(data['event_new_message']);
         }
 
         if (data.hasOwnProperty('event_queue_position')) {
-          obj['event_queue_position'] = _ApiClient["default"].convertToType(data['event_queue_position'], Object);
+          obj['event_queue_position'] = _ConversationEventQueuePosition["default"].constructFromObject(data['event_queue_position']);
         }
 
         if (data.hasOwnProperty('event_type')) {
@@ -119,12 +121,12 @@ ConversationWebsocketMessage.prototype['event_conversation_closed'] = undefined;
 
 ConversationWebsocketMessage.prototype['event_new_conversation'] = undefined;
 /**
- * @member {module:com.ultracart.admin.v2.models/ConversationMessage} event_new_message
+ * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_message
  */
 
 ConversationWebsocketMessage.prototype['event_new_message'] = undefined;
 /**
- * @member {Object} event_queue_position
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventQueuePosition} event_queue_position
  */
 
 ConversationWebsocketMessage.prototype['event_queue_position'] = undefined;

@@ -712,7 +712,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.41-RC
+* @version 4.0.42-RC
 */
 export {
     /**

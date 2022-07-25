@@ -12,14 +12,14 @@
  */
 
 import ApiClient from '../ApiClient';
-import Conversation from './Conversation';
 import ConversationEventQueuePosition from './ConversationEventQueuePosition';
 import ConversationMessage from './ConversationMessage';
+import ConversationSummary from './ConversationSummary';
 
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -54,13 +54,13 @@ class ConversationWebsocketMessage {
                 obj['conversation_uuid'] = ApiClient.convertToType(data['conversation_uuid'], 'String');
             }
             if (data.hasOwnProperty('event_conversation_closed')) {
-                obj['event_conversation_closed'] = Conversation.constructFromObject(data['event_conversation_closed']);
+                obj['event_conversation_closed'] = ConversationSummary.constructFromObject(data['event_conversation_closed']);
             }
             if (data.hasOwnProperty('event_new_conversation')) {
-                obj['event_new_conversation'] = Conversation.constructFromObject(data['event_new_conversation']);
+                obj['event_new_conversation'] = ConversationSummary.constructFromObject(data['event_new_conversation']);
             }
             if (data.hasOwnProperty('event_new_message')) {
-                obj['event_new_message'] = Conversation.constructFromObject(data['event_new_message']);
+                obj['event_new_message'] = ConversationSummary.constructFromObject(data['event_new_message']);
             }
             if (data.hasOwnProperty('event_queue_position')) {
                 obj['event_queue_position'] = ConversationEventQueuePosition.constructFromObject(data['event_queue_position']);
@@ -91,17 +91,17 @@ class ConversationWebsocketMessage {
 ConversationWebsocketMessage.prototype['conversation_uuid'] = undefined;
 
 /**
- * @member {module:com.ultracart.admin.v2.models/Conversation} event_conversation_closed
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_conversation_closed
  */
 ConversationWebsocketMessage.prototype['event_conversation_closed'] = undefined;
 
 /**
- * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_conversation
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_conversation
  */
 ConversationWebsocketMessage.prototype['event_new_conversation'] = undefined;
 
 /**
- * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_message
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_message
  */
 ConversationWebsocketMessage.prototype['event_new_message'] = undefined;
 

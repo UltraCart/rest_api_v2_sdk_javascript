@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPaymentCheck model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCheck
- * @version 4.0.40-RC
+ * @version 4.0.41-RC
  */
 var OrderPaymentCheck = /*#__PURE__*/function () {
   /**
