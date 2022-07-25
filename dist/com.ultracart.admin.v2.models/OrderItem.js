@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItem model module.
  * @module com.ultracart.admin.v2.models/OrderItem
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var OrderItem = /*#__PURE__*/function () {
   /**

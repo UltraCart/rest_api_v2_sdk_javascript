@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqPostcard model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqPostcard
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class EmailCommseqPostcard {
     /**
@@ -154,7 +154,7 @@ EmailCommseqPostcard.prototype['postcard_front_container_cjson'] = undefined;
 EmailCommseqPostcard.prototype['postcard_front_container_uuid'] = undefined;
 
 /**
- * URL to screenshot of the front of the postcard
+ * URL to screenshot of the back of the postcard
  * @member {String} screenshot_back_url
  */
 EmailCommseqPostcard.prototype['screenshot_back_url'] = undefined;

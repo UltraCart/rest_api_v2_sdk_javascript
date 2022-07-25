@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
+var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
+
 var _ConversationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationResponse"));
 
 var _ConversationStartRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationStartRequest"));
@@ -30,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.38-RC
+* @version 4.0.39-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -116,7 +118,7 @@ var ConversationApi = /*#__PURE__*/function () {
      * Callback function to receive the result of the getConversationMultimediaUploadUrl operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -125,6 +127,7 @@ var ConversationApi = /*#__PURE__*/function () {
      * Get a presigned conersation multimedia upload URL 
      * @param {String} extension 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse}
      */
 
   }, {
@@ -145,7 +148,7 @@ var ConversationApi = /*#__PURE__*/function () {
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = _ConversationMultimediaUploadUrlResponse["default"];
       return this.apiClient.callApi('/conversation/upload_url/{extension}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**

@@ -31,6 +31,7 @@ docs/AutoOrderItemFutureSchedule.md
 docs/AutoOrderItemOption.md
 docs/AutoOrderItemSimpleSchedule.md
 docs/AutoOrderLog.md
+docs/AutoOrderManagement.md
 docs/AutoOrderQuery.md
 docs/AutoOrderQueryBatch.md
 docs/AutoOrderResponse.md
@@ -136,6 +137,7 @@ docs/ConversationResponse.md
 docs/ConversationStartRequest.md
 docs/ConversationStartResponse.md
 docs/ConversationSummary.md
+docs/ConversationWebsocketMessage.md
 docs/ConversationsResponse.md
 docs/CountriesResponse.md
 docs/Country.md
@@ -698,6 +700,7 @@ src/com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule.js
 src/com.ultracart.admin.v2.models/AutoOrderItemOption.js
 src/com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule.js
 src/com.ultracart.admin.v2.models/AutoOrderLog.js
+src/com.ultracart.admin.v2.models/AutoOrderManagement.js
 src/com.ultracart.admin.v2.models/AutoOrderQuery.js
 src/com.ultracart.admin.v2.models/AutoOrderQueryBatch.js
 src/com.ultracart.admin.v2.models/AutoOrderResponse.js
@@ -799,6 +802,7 @@ src/com.ultracart.admin.v2.models/ConversationResponse.js
 src/com.ultracart.admin.v2.models/ConversationStartRequest.js
 src/com.ultracart.admin.v2.models/ConversationStartResponse.js
 src/com.ultracart.admin.v2.models/ConversationSummary.js
+src/com.ultracart.admin.v2.models/ConversationWebsocketMessage.js
 src/com.ultracart.admin.v2.models/ConversationsResponse.js
 src/com.ultracart.admin.v2.models/CountriesResponse.js
 src/com.ultracart.admin.v2.models/Country.js

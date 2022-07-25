@@ -18,7 +18,7 @@ import Order from './Order';
 /**
  * The OrderAutoOrder model module.
  * @module com.ultracart.admin.v2.models/OrderAutoOrder
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class OrderAutoOrder {
     /**

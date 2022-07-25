@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The CustomerResponse model module.
  * @module com.ultracart.admin.v2.models/CustomerResponse
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class CustomerResponse {
     /**

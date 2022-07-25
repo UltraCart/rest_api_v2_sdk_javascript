@@ -14,12 +14,13 @@
 import ApiClient from '../ApiClient';
 import AutoOrderItem from './AutoOrderItem';
 import AutoOrderLog from './AutoOrderLog';
+import AutoOrderManagement from './AutoOrderManagement';
 import Order from './Order';
 
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class AutoOrder {
     /**
@@ -94,6 +95,9 @@ class AutoOrder {
             }
             if (data.hasOwnProperty('logs')) {
                 obj['logs'] = ApiClient.convertToType(data['logs'], [AutoOrderLog]);
+            }
+            if (data.hasOwnProperty('management')) {
+                obj['management'] = AutoOrderManagement.constructFromObject(data['management']);
             }
             if (data.hasOwnProperty('next_attempt')) {
                 obj['next_attempt'] = ApiClient.convertToType(data['next_attempt'], 'String');
@@ -212,6 +216,11 @@ AutoOrder.prototype['items'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderLog>} logs
  */
 AutoOrder.prototype['logs'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/AutoOrderManagement} management
+ */
+AutoOrder.prototype['management'] = undefined;
 
 /**
  * The next time that the auto order will be attempted for processing

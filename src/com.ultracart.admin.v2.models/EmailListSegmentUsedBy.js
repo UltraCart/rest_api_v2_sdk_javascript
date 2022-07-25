@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailListSegmentUsedBy model module.
  * @module com.ultracart.admin.v2.models/EmailListSegmentUsedBy
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class EmailListSegmentUsedBy {
     /**

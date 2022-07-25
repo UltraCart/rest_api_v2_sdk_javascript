@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StateProvince model module.
  * @module com.ultracart.admin.v2.models/StateProvince
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var StateProvince = /*#__PURE__*/function () {
   /**

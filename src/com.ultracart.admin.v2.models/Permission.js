@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Permission model module.
  * @module com.ultracart.admin.v2.models/Permission
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class Permission {
     /**

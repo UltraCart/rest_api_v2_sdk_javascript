@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TempMultimediaResponse model module.
  * @module com.ultracart.admin.v2.models/TempMultimediaResponse
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var TempMultimediaResponse = /*#__PURE__*/function () {
   /**

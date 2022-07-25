@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ExperimentVariation model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariation
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var ExperimentVariation = /*#__PURE__*/function () {
   /**

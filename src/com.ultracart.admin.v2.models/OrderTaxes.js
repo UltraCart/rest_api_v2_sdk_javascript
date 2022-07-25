@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderTaxes model module.
  * @module com.ultracart.admin.v2.models/OrderTaxes
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class OrderTaxes {
     /**

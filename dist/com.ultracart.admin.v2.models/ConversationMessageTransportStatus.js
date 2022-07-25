@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessageTransportStatus model module.
  * @module com.ultracart.admin.v2.models/ConversationMessageTransportStatus
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var ConversationMessageTransportStatus = /*#__PURE__*/function () {
   /**

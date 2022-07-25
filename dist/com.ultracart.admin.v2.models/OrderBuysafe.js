@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderBuysafe model module.
  * @module com.ultracart.admin.v2.models/OrderBuysafe
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var OrderBuysafe = /*#__PURE__*/function () {
   /**

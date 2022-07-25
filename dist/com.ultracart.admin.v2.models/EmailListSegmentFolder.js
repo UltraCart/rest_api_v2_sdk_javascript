@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailListSegmentFolder model module.
  * @module com.ultracart.admin.v2.models/EmailListSegmentFolder
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var EmailListSegmentFolder = /*#__PURE__*/function () {
   /**

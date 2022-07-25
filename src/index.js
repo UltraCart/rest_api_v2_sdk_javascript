@@ -40,6 +40,7 @@ import AutoOrderItemFutureSchedule from './com.ultracart.admin.v2.models/AutoOrd
 import AutoOrderItemOption from './com.ultracart.admin.v2.models/AutoOrderItemOption';
 import AutoOrderItemSimpleSchedule from './com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule';
 import AutoOrderLog from './com.ultracart.admin.v2.models/AutoOrderLog';
+import AutoOrderManagement from './com.ultracart.admin.v2.models/AutoOrderManagement';
 import AutoOrderQuery from './com.ultracart.admin.v2.models/AutoOrderQuery';
 import AutoOrderQueryBatch from './com.ultracart.admin.v2.models/AutoOrderQueryBatch';
 import AutoOrderResponse from './com.ultracart.admin.v2.models/AutoOrderResponse';
@@ -141,6 +142,7 @@ import ConversationResponse from './com.ultracart.admin.v2.models/ConversationRe
 import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
+import ConversationWebsocketMessage from './com.ultracart.admin.v2.models/ConversationWebsocketMessage';
 import ConversationsResponse from './com.ultracart.admin.v2.models/ConversationsResponse';
 import CountriesResponse from './com.ultracart.admin.v2.models/CountriesResponse';
 import Country from './com.ultracart.admin.v2.models/Country';
@@ -709,7 +711,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.39-RC
+* @version 4.0.40-RC
 */
 export {
     /**
@@ -879,6 +881,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AutoOrderLog}
      */
     AutoOrderLog,
+
+    /**
+     * The AutoOrderManagement model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderManagement}
+     */
+    AutoOrderManagement,
 
     /**
      * The AutoOrderQuery model constructor.
@@ -1485,6 +1493,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationSummary}
      */
     ConversationSummary,
+
+    /**
+     * The ConversationWebsocketMessage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationWebsocketMessage}
+     */
+    ConversationWebsocketMessage,
 
     /**
      * The ConversationsResponse model constructor.

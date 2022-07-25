@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ResultSet model module.
  * @module com.ultracart.admin.v2.models/ResultSet
- * @version 4.0.38-RC
+ * @version 4.0.39-RC
  */
 var ResultSet = /*#__PURE__*/function () {
   /**

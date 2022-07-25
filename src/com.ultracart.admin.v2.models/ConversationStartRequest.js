@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationStartRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationStartRequest
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 class ConversationStartRequest {
     /**
@@ -53,6 +53,9 @@ class ConversationStartRequest {
             if (data.hasOwnProperty('conversation_arn')) {
                 obj['conversation_arn'] = ApiClient.convertToType(data['conversation_arn'], 'String');
             }
+            if (data.hasOwnProperty('conversation_webchat_queue_uuid')) {
+                obj['conversation_webchat_queue_uuid'] = ApiClient.convertToType(data['conversation_webchat_queue_uuid'], 'String');
+            }
         }
         return obj;
     }
@@ -69,6 +72,11 @@ ConversationStartRequest.prototype['add_conversation_participant_arns'] = undefi
  * @member {String} conversation_arn
  */
 ConversationStartRequest.prototype['conversation_arn'] = undefined;
+
+/**
+ * @member {String} conversation_webchat_queue_uuid
+ */
+ConversationStartRequest.prototype['conversation_webchat_queue_uuid'] = undefined;
 
 
 
