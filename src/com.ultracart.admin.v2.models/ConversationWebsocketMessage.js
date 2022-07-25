@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Conversation', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationMessage'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationSummary'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Conversation'), require('./ConversationEventQueuePosition'), require('./ConversationMessage'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationEventQueuePosition'), require('./ConversationMessage'), require('./ConversationSummary'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Conversation, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationMessage);
+    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationSummary);
   }
-}(this, function(ApiClient, Conversation, ConversationEventQueuePosition, ConversationMessage) {
+}(this, function(ApiClient, ConversationEventQueuePosition, ConversationMessage, ConversationSummary) {
   'use strict';
 
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.24
+   * @version 3.10.25
    */
 
   /**
@@ -58,11 +58,11 @@
       if (data.hasOwnProperty('conversation_uuid'))
         obj.conversation_uuid = ApiClient.convertToType(data['conversation_uuid'], 'String');
       if (data.hasOwnProperty('event_conversation_closed'))
-        obj.event_conversation_closed = Conversation.constructFromObject(data['event_conversation_closed']);
+        obj.event_conversation_closed = ConversationSummary.constructFromObject(data['event_conversation_closed']);
       if (data.hasOwnProperty('event_new_conversation'))
-        obj.event_new_conversation = Conversation.constructFromObject(data['event_new_conversation']);
+        obj.event_new_conversation = ConversationSummary.constructFromObject(data['event_new_conversation']);
       if (data.hasOwnProperty('event_new_message'))
-        obj.event_new_message = Conversation.constructFromObject(data['event_new_message']);
+        obj.event_new_message = ConversationSummary.constructFromObject(data['event_new_message']);
       if (data.hasOwnProperty('event_queue_position'))
         obj.event_queue_position = ConversationEventQueuePosition.constructFromObject(data['event_queue_position']);
       if (data.hasOwnProperty('event_type'))
@@ -84,17 +84,17 @@
   exports.prototype.conversation_uuid = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Conversation} event_conversation_closed
+   * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_conversation_closed
    */
   exports.prototype.event_conversation_closed = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_conversation
+   * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_conversation
    */
   exports.prototype.event_new_conversation = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_message
+   * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_message
    */
   exports.prototype.event_new_message = undefined;
 

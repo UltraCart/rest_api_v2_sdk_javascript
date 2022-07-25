@@ -34,7 +34,7 @@
   /**
    * The Conversation model module.
    * @module com.ultracart.admin.v2.models/Conversation
-   * @version 3.10.24
+   * @version 3.10.25
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('closed'))
+        obj.closed = ApiClient.convertToType(data['closed'], 'Boolean');
       if (data.hasOwnProperty('conversation_arn'))
         obj.conversation_arn = ApiClient.convertToType(data['conversation_arn'], 'String');
       if (data.hasOwnProperty('conversation_uuid'))
@@ -68,6 +70,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} closed
+   */
+  exports.prototype.closed = undefined;
 
   /**
    * @member {String} conversation_arn

@@ -1,3 +1,3 @@
 #!/bin/sh
-git tag 3.10.23
+git tag 3.10.24
 git push --tags origin

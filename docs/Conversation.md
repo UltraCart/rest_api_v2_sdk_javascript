@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**closed** | **Boolean** |  | [optional] 
 **conversation_arn** | **String** |  | [optional] 
 **conversation_uuid** | **String** |  | [optional] 
 **merchant_id** | **String** |  | [optional] 
