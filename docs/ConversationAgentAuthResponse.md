@@ -3,11 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conversation_participant_arn** | **String** |  | [optional] 
-**conversation_participant_name** | **String** |  | [optional] 
-**jwt** | **String** |  | [optional] 
-**merchant_id** | **String** |  | [optional] 
-**twilio_phone_numbers** | **[String]** |  | [optional] 
-**websocket_url** | **String** |  | [optional] 
+**agent_auth** | [**ConversationAgentAuth**](ConversationAgentAuth.md) |  | [optional] 
+**error** | [**Error**](Error.md) |  | [optional] 
+**metadata** | [**ResponseMetadata**](ResponseMetadata.md) |  | [optional] 
+**success** | **Boolean** | Indicates if API call was successful | [optional] 
+**warning** | [**Warning**](Warning.md) |  | [optional] 
 
 

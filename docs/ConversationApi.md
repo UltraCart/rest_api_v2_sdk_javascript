@@ -60,7 +60,7 @@ This endpoint does not need any parameter.
 
 <a name="getConversation"></a>
 # **getConversation**
-> Conversation getConversation(conversation_uuid)
+> ConversationResponse getConversation(conversation_uuid)
 
 Retrieve a conversation
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Conversation**](Conversation.md)
+[**ConversationResponse**](ConversationResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 <a name="getConversationMultimediaUploadUrl"></a>
 # **getConversationMultimediaUploadUrl**
-> getConversationMultimediaUploadUrl(extension)
+> ConversationMultimediaUploadUrlResponse getConversationMultimediaUploadUrl(extension)
 
 Get a presigned conersation multimedia upload URL
 
@@ -133,7 +133,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.getConversationMultimediaUploadUrl(extension, callback);
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ConversationMultimediaUploadUrlResponse**](ConversationMultimediaUploadUrlResponse.md)
 
 ### Authorization
 

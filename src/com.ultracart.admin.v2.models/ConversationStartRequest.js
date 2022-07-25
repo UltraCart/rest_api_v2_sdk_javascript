@@ -34,7 +34,7 @@
   /**
    * The ConversationStartRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationStartRequest
-   * @version 3.10.22
+   * @version 3.10.23
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.add_conversation_participant_arns = ApiClient.convertToType(data['add_conversation_participant_arns'], ['String']);
       if (data.hasOwnProperty('conversation_arn'))
         obj.conversation_arn = ApiClient.convertToType(data['conversation_arn'], 'String');
+      if (data.hasOwnProperty('conversation_webchat_queue_uuid'))
+        obj.conversation_webchat_queue_uuid = ApiClient.convertToType(data['conversation_webchat_queue_uuid'], 'String');
     }
     return obj;
   }
@@ -72,6 +74,11 @@
    * @member {String} conversation_arn
    */
   exports.prototype.conversation_arn = undefined;
+
+  /**
+   * @member {String} conversation_webchat_queue_uuid
+   */
+  exports.prototype.conversation_webchat_queue_uuid = undefined;
 
   return exports;
 

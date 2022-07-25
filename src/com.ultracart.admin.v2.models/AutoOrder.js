@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/AutoOrderLog', 'com.ultracart.admin.v2.models/Order'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/AutoOrderLog', 'com.ultracart.admin.v2.models/AutoOrderManagement', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AutoOrderItem'), require('./AutoOrderLog'), require('./Order'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrderItem'), require('./AutoOrderLog'), require('./AutoOrderManagement'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.AutoOrderLog, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.AutoOrderLog, root.UltraCartRestApiV2.AutoOrderManagement, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, AutoOrderItem, AutoOrderLog, Order) {
+}(this, function(ApiClient, AutoOrderItem, AutoOrderLog, AutoOrderManagement, Order) {
   'use strict';
 
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 3.10.22
+   * @version 3.10.23
    */
 
   /**
@@ -85,6 +85,8 @@
         obj.items = ApiClient.convertToType(data['items'], [AutoOrderItem]);
       if (data.hasOwnProperty('logs'))
         obj.logs = ApiClient.convertToType(data['logs'], [AutoOrderLog]);
+      if (data.hasOwnProperty('management'))
+        obj.management = AutoOrderManagement.constructFromObject(data['management']);
       if (data.hasOwnProperty('next_attempt'))
         obj.next_attempt = ApiClient.convertToType(data['next_attempt'], 'String');
       if (data.hasOwnProperty('original_order'))
@@ -192,6 +194,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderLog>} logs
    */
   exports.prototype.logs = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/AutoOrderManagement} management
+   */
+  exports.prototype.management = undefined;
 
   /**
    * The next time that the auto order will be attempted for processing

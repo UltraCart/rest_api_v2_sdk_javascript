@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Conversation', 'com.ultracart.admin.v2.models/ConversationAgentAuthResponse', 'com.ultracart.admin.v2.models/ConversationStartRequest', 'com.ultracart.admin.v2.models/ConversationStartResponse', 'com.ultracart.admin.v2.models/ConversationsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationAgentAuthResponse', 'com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationResponse', 'com.ultracart.admin.v2.models/ConversationStartRequest', 'com.ultracart.admin.v2.models/ConversationStartResponse', 'com.ultracart.admin.v2.models/ConversationsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/Conversation'), require('../com.ultracart.admin.v2.models/ConversationAgentAuthResponse'), require('../com.ultracart.admin.v2.models/ConversationStartRequest'), require('../com.ultracart.admin.v2.models/ConversationStartResponse'), require('../com.ultracart.admin.v2.models/ConversationsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ConversationAgentAuthResponse'), require('../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationResponse'), require('../com.ultracart.admin.v2.models/ConversationStartRequest'), require('../com.ultracart.admin.v2.models/ConversationStartResponse'), require('../com.ultracart.admin.v2.models/ConversationsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Conversation, root.UltraCartRestApiV2.ConversationAgentAuthResponse, root.UltraCartRestApiV2.ConversationStartRequest, root.UltraCartRestApiV2.ConversationStartResponse, root.UltraCartRestApiV2.ConversationsResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.ConversationApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationAgentAuthResponse, root.UltraCartRestApiV2.ConversationMultimediaUploadUrlResponse, root.UltraCartRestApiV2.ConversationResponse, root.UltraCartRestApiV2.ConversationStartRequest, root.UltraCartRestApiV2.ConversationStartResponse, root.UltraCartRestApiV2.ConversationsResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, Conversation, ConversationAgentAuthResponse, ConversationStartRequest, ConversationStartResponse, ConversationsResponse, ErrorResponse) {
+}(this, function(ApiClient, ConversationAgentAuthResponse, ConversationMultimediaUploadUrlResponse, ConversationResponse, ConversationStartRequest, ConversationStartResponse, ConversationsResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.10.22
+   * @version 3.10.23
    */
 
   /**
@@ -93,7 +93,7 @@
      * Callback function to receive the result of the getConversation operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/Conversation} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/ConversationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -102,7 +102,7 @@
      * Retrieve a conversation including the participants and messages 
      * @param {String} conversation_uuid 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/Conversation}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationResponse}
      */
     this.getConversation = function(conversation_uuid, callback) {
       var postBody = null;
@@ -128,7 +128,7 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Conversation;
+      var returnType = ConversationResponse;
 
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}', 'GET',
@@ -141,7 +141,7 @@
      * Callback function to receive the result of the getConversationMultimediaUploadUrl operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -150,6 +150,7 @@
      * Get a presigned conersation multimedia upload URL 
      * @param {String} extension 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse}
      */
     this.getConversationMultimediaUploadUrl = function(extension, callback) {
       var postBody = null;
@@ -175,7 +176,7 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = ConversationMultimediaUploadUrlResponse;
 
       return this.apiClient.callApi(
         '/conversation/upload_url/{extension}', 'GET',

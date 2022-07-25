@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationAgentAuth', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationAgentAuth'), require('./Error'), require('./ResponseMetadata'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationAgentAuthResponse = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ConversationAgentAuthResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationAgentAuth, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ConversationAgentAuth, Error, ResponseMetadata, Warning) {
   'use strict';
 
   /**
    * The ConversationAgentAuthResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuthResponse
-   * @version 3.10.22
+   * @version 3.10.23
    */
 
   /**
@@ -55,51 +55,45 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('conversation_participant_arn'))
-        obj.conversation_participant_arn = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
-      if (data.hasOwnProperty('conversation_participant_name'))
-        obj.conversation_participant_name = ApiClient.convertToType(data['conversation_participant_name'], 'String');
-      if (data.hasOwnProperty('jwt'))
-        obj.jwt = ApiClient.convertToType(data['jwt'], 'String');
-      if (data.hasOwnProperty('merchant_id'))
-        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
-      if (data.hasOwnProperty('twilio_phone_numbers'))
-        obj.twilio_phone_numbers = ApiClient.convertToType(data['twilio_phone_numbers'], ['String']);
-      if (data.hasOwnProperty('websocket_url'))
-        obj.websocket_url = ApiClient.convertToType(data['websocket_url'], 'String');
+      if (data.hasOwnProperty('agent_auth'))
+        obj.agent_auth = ConversationAgentAuth.constructFromObject(data['agent_auth']);
+      if (data.hasOwnProperty('error'))
+        obj.error = Error.constructFromObject(data['error']);
+      if (data.hasOwnProperty('metadata'))
+        obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('success'))
+        obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      if (data.hasOwnProperty('warning'))
+        obj.warning = Warning.constructFromObject(data['warning']);
     }
     return obj;
   }
 
   /**
-   * @member {String} conversation_participant_arn
+   * @member {module:com.ultracart.admin.v2.models/ConversationAgentAuth} agent_auth
    */
-  exports.prototype.conversation_participant_arn = undefined;
+  exports.prototype.agent_auth = undefined;
 
   /**
-   * @member {String} conversation_participant_name
+   * @member {module:com.ultracart.admin.v2.models/Error} error
    */
-  exports.prototype.conversation_participant_name = undefined;
+  exports.prototype.error = undefined;
 
   /**
-   * @member {String} jwt
+   * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
-  exports.prototype.jwt = undefined;
+  exports.prototype.metadata = undefined;
 
   /**
-   * @member {String} merchant_id
+   * Indicates if API call was successful
+   * @member {Boolean} success
    */
-  exports.prototype.merchant_id = undefined;
+  exports.prototype.success = undefined;
 
   /**
-   * @member {Array.<String>} twilio_phone_numbers
+   * @member {module:com.ultracart.admin.v2.models/Warning} warning
    */
-  exports.prototype.twilio_phone_numbers = undefined;
-
-  /**
-   * @member {String} websocket_url
-   */
-  exports.prototype.websocket_url = undefined;
+  exports.prototype.warning = undefined;
 
   return exports;
 
