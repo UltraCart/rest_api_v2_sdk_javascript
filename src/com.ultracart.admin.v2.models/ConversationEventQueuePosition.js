@@ -34,7 +34,7 @@
   /**
    * The ConversationEventQueuePosition model module.
    * @module com.ultracart.admin.v2.models/ConversationEventQueuePosition
-   * @version 3.10.23
+   * @version 3.10.24
    */
 
   /**
@@ -55,9 +55,25 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('available'))
+        obj.available = ApiClient.convertToType(data['available'], 'Boolean');
+      if (data.hasOwnProperty('position'))
+        obj.position = ApiClient.convertToType(data['position'], 'Number');
     }
     return obj;
   }
+
+  /**
+   * True if agents are logged into the queue
+   * @member {Boolean} available
+   */
+  exports.prototype.available = undefined;
+
+  /**
+   * Position in the queue.  Value will be -1 if they cant be found in the queue.
+   * @member {Number} position
+   */
+  exports.prototype.position = undefined;
 
   return exports;
 

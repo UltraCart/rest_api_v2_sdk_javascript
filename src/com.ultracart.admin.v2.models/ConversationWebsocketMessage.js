@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.23
+   * @version 3.10.24
    */
 
   /**
@@ -62,7 +62,7 @@
       if (data.hasOwnProperty('event_new_conversation'))
         obj.event_new_conversation = Conversation.constructFromObject(data['event_new_conversation']);
       if (data.hasOwnProperty('event_new_message'))
-        obj.event_new_message = ConversationMessage.constructFromObject(data['event_new_message']);
+        obj.event_new_message = Conversation.constructFromObject(data['event_new_message']);
       if (data.hasOwnProperty('event_queue_position'))
         obj.event_queue_position = ConversationEventQueuePosition.constructFromObject(data['event_queue_position']);
       if (data.hasOwnProperty('event_type'))
@@ -94,7 +94,7 @@
   exports.prototype.event_new_conversation = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ConversationMessage} event_new_message
+   * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_message
    */
   exports.prototype.event_new_message = undefined;
 
