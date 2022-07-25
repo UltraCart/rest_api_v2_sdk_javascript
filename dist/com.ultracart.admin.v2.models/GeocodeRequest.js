@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GeocodeRequest model module.
  * @module com.ultracart.admin.v2.models/GeocodeRequest
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 var GeocodeRequest = /*#__PURE__*/function () {
   /**

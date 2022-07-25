@@ -11,6 +11,8 @@ var _AutoOrderItem = _interopRequireDefault(require("./AutoOrderItem"));
 
 var _AutoOrderLog = _interopRequireDefault(require("./AutoOrderLog"));
 
+var _AutoOrderManagement = _interopRequireDefault(require("./AutoOrderManagement"));
+
 var _Order = _interopRequireDefault(require("./Order"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -24,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 var AutoOrder = /*#__PURE__*/function () {
   /**
@@ -118,6 +120,10 @@ var AutoOrder = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('logs')) {
           obj['logs'] = _ApiClient["default"].convertToType(data['logs'], [_AutoOrderLog["default"]]);
+        }
+
+        if (data.hasOwnProperty('management')) {
+          obj['management'] = _AutoOrderManagement["default"].constructFromObject(data['management']);
         }
 
         if (data.hasOwnProperty('next_attempt')) {
@@ -246,6 +252,11 @@ AutoOrder.prototype['items'] = undefined;
  */
 
 AutoOrder.prototype['logs'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/AutoOrderManagement} management
+ */
+
+AutoOrder.prototype['management'] = undefined;
 /**
  * The next time that the auto order will be attempted for processing
  * @member {String} next_attempt

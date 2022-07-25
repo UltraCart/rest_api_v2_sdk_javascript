@@ -20,7 +20,7 @@ import Weight from './Weight';
 /**
  * The OrderItemOption model module.
  * @module com.ultracart.admin.v2.models/OrderItemOption
- * @version 4.0.40-RC
+ * @version 4.0.41-RC
  */
 class OrderItemOption {
     /**

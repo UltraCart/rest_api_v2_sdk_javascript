@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationStartRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationStartRequest
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 var ConversationStartRequest = /*#__PURE__*/function () {
   /**
@@ -61,6 +61,10 @@ var ConversationStartRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('conversation_arn')) {
           obj['conversation_arn'] = _ApiClient["default"].convertToType(data['conversation_arn'], 'String');
         }
+
+        if (data.hasOwnProperty('conversation_webchat_queue_uuid')) {
+          obj['conversation_webchat_queue_uuid'] = _ApiClient["default"].convertToType(data['conversation_webchat_queue_uuid'], 'String');
+        }
       }
 
       return obj;
@@ -80,5 +84,10 @@ ConversationStartRequest.prototype['add_conversation_participant_arns'] = undefi
  */
 
 ConversationStartRequest.prototype['conversation_arn'] = undefined;
+/**
+ * @member {String} conversation_webchat_queue_uuid
+ */
+
+ConversationStartRequest.prototype['conversation_webchat_queue_uuid'] = undefined;
 var _default = ConversationStartRequest;
 exports["default"] = _default;

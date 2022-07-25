@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LibraryItemScreenshot model module.
  * @module com.ultracart.admin.v2.models/LibraryItemScreenshot
- * @version 4.0.39-RC
+ * @version 4.0.40-RC
  */
 var LibraryItemScreenshot = /*#__PURE__*/function () {
   /**

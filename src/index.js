@@ -133,6 +133,7 @@ import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
 import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationAgentAuth';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationEventQueuePosition from './com.ultracart.admin.v2.models/ConversationEventQueuePosition';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
 import ConversationMultimediaUploadUrl from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl';
@@ -711,7 +712,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.40-RC
+* @version 4.0.41-RC
 */
 export {
     /**
@@ -1439,6 +1440,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse}
      */
     ConversationAgentAuthResponse,
+
+    /**
+     * The ConversationEventQueuePosition model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEventQueuePosition}
+     */
+    ConversationEventQueuePosition,
 
     /**
      * The ConversationMessage model constructor.

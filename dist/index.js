@@ -183,6 +183,12 @@ Object.defineProperty(exports, "AutoOrderLog", {
     return _AutoOrderLog["default"];
   }
 });
+Object.defineProperty(exports, "AutoOrderManagement", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderManagement["default"];
+  }
+});
 Object.defineProperty(exports, "AutoOrderQuery", {
   enumerable: true,
   get: function get() {
@@ -811,6 +817,12 @@ Object.defineProperty(exports, "ConversationSummary", {
   enumerable: true,
   get: function get() {
     return _ConversationSummary["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationWebsocketMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationWebsocketMessage["default"];
   }
 });
 Object.defineProperty(exports, "ConversationsResponse", {
@@ -4056,6 +4068,8 @@ var _AutoOrderItemSimpleSchedule = _interopRequireDefault(require("./com.ultraca
 
 var _AutoOrderLog = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderLog"));
 
+var _AutoOrderManagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderManagement"));
+
 var _AutoOrderQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderQuery"));
 
 var _AutoOrderQueryBatch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderQueryBatch"));
@@ -4257,6 +4271,8 @@ var _ConversationStartRequest = _interopRequireDefault(require("./com.ultracart.
 var _ConversationStartResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartResponse"));
 
 var _ConversationSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSummary"));
+
+var _ConversationWebsocketMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebsocketMessage"));
 
 var _ConversationsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationsResponse"));
 
