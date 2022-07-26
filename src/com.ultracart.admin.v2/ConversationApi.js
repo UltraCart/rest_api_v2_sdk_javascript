@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationAgentAuthResponse', 'com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationResponse', 'com.ultracart.admin.v2.models/ConversationStartRequest', 'com.ultracart.admin.v2.models/ConversationStartResponse', 'com.ultracart.admin.v2.models/ConversationsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationAgentAuthResponse', 'com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationResponse', 'com.ultracart.admin.v2.models/ConversationStartRequest', 'com.ultracart.admin.v2.models/ConversationStartResponse', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse', 'com.ultracart.admin.v2.models/ConversationsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ConversationAgentAuthResponse'), require('../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationResponse'), require('../com.ultracart.admin.v2.models/ConversationStartRequest'), require('../com.ultracart.admin.v2.models/ConversationStartResponse'), require('../com.ultracart.admin.v2.models/ConversationsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ConversationAgentAuthResponse'), require('../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationResponse'), require('../com.ultracart.admin.v2.models/ConversationStartRequest'), require('../com.ultracart.admin.v2.models/ConversationStartResponse'), require('../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest'), require('../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse'), require('../com.ultracart.admin.v2.models/ConversationsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationAgentAuthResponse, root.UltraCartRestApiV2.ConversationMultimediaUploadUrlResponse, root.UltraCartRestApiV2.ConversationResponse, root.UltraCartRestApiV2.ConversationStartRequest, root.UltraCartRestApiV2.ConversationStartResponse, root.UltraCartRestApiV2.ConversationsResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.ConversationApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationAgentAuthResponse, root.UltraCartRestApiV2.ConversationMultimediaUploadUrlResponse, root.UltraCartRestApiV2.ConversationResponse, root.UltraCartRestApiV2.ConversationStartRequest, root.UltraCartRestApiV2.ConversationStartResponse, root.UltraCartRestApiV2.ConversationWebchatQueueStatusUpdateRequest, root.UltraCartRestApiV2.ConversationWebchatQueueStatusesResponse, root.UltraCartRestApiV2.ConversationsResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, ConversationAgentAuthResponse, ConversationMultimediaUploadUrlResponse, ConversationResponse, ConversationStartRequest, ConversationStartResponse, ConversationsResponse, ErrorResponse) {
+}(this, function(ApiClient, ConversationAgentAuthResponse, ConversationMultimediaUploadUrlResponse, ConversationResponse, ConversationStartRequest, ConversationStartResponse, ConversationWebchatQueueStatusUpdateRequest, ConversationWebchatQueueStatusesResponse, ConversationsResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.10.25
+   * @version 3.10.26
    */
 
   /**
@@ -180,6 +180,47 @@
 
       return this.apiClient.callApi(
         '/conversation/upload_url/{extension}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationWebchatQueueStatuses operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationWebchatQueueStatusesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a conversation webchat queue statuses
+     * Retrieve a conversation webchat queue statuses including agent status and queue entries 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationWebchatQueueStatusesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse}
+     */
+    this.getConversationWebchatQueueStatuses = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConversationWebchatQueueStatusesResponse;
+
+      return this.apiClient.callApi(
+        '/conversation/conversations/queues/statuses', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -368,6 +409,59 @@
 
       return this.apiClient.callApi(
         '/conversation/conversations', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateConversationWebchatQueueStatus operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateConversationWebchatQueueStatusCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update status within the queue
+     * Update status within the queue 
+     * @param {String} queue_name 
+     * @param {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest} status_request Status request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateConversationWebchatQueueStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.updateConversationWebchatQueueStatus = function(queue_name, status_request, callback) {
+      var postBody = status_request;
+
+      // verify the required parameter 'queue_name' is set
+      if (queue_name === undefined || queue_name === null) {
+        throw new Error("Missing the required parameter 'queue_name' when calling updateConversationWebchatQueueStatus");
+      }
+
+      // verify the required parameter 'status_request' is set
+      if (status_request === undefined || status_request === null) {
+        throw new Error("Missing the required parameter 'status_request' when calling updateConversationWebchatQueueStatus");
+      }
+
+
+      var pathParams = {
+        'queue_name': queue_name
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/conversation/conversations/queues/{queue_name}/status', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
