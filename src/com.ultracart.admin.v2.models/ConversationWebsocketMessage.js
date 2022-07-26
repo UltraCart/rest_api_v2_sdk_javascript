@@ -15,11 +15,12 @@ import ApiClient from '../ApiClient';
 import ConversationEventQueuePosition from './ConversationEventQueuePosition';
 import ConversationMessage from './ConversationMessage';
 import ConversationSummary from './ConversationSummary';
+import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.42-RC
+ * @version 4.0.43-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -65,6 +66,9 @@ class ConversationWebsocketMessage {
             if (data.hasOwnProperty('event_queue_position')) {
                 obj['event_queue_position'] = ConversationEventQueuePosition.constructFromObject(data['event_queue_position']);
             }
+            if (data.hasOwnProperty('event_queue_status_update')) {
+                obj['event_queue_status_update'] = ConversationWebchatQueueStatus.constructFromObject(data['event_queue_status_update']);
+            }
             if (data.hasOwnProperty('event_type')) {
                 obj['event_type'] = ApiClient.convertToType(data['event_type'], 'String');
             }
@@ -109,6 +113,11 @@ ConversationWebsocketMessage.prototype['event_new_message'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ConversationEventQueuePosition} event_queue_position
  */
 ConversationWebsocketMessage.prototype['event_queue_position'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatus} event_queue_status_update
+ */
+ConversationWebsocketMessage.prototype['event_queue_status_update'] = undefined;
 
 /**
  * Type of event
@@ -177,7 +186,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
      * value: "updated message"
      * @const
      */
-    "updated message": "updated message"
+    "updated message": "updated message",
+
+    /**
+     * value: "queue status update"
+     * @const
+     */
+    "queue status update": "queue status update"
 };
 
 

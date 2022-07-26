@@ -17,7 +17,7 @@ import TaxStateCode from './TaxStateCode';
 /**
  * The TaxProviderSelfRegionsResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse
- * @version 4.0.42-RC
+ * @version 4.0.43-RC
  */
 class TaxProviderSelfRegionsResponse {
     /**

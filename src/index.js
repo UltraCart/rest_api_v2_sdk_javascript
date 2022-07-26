@@ -143,6 +143,11 @@ import ConversationResponse from './com.ultracart.admin.v2.models/ConversationRe
 import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
+import ConversationWebchatQueueStatus from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatus';
+import ConversationWebchatQueueStatusAgent from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent';
+import ConversationWebchatQueueStatusQueueEntry from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry';
+import ConversationWebchatQueueStatusUpdateRequest from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest';
+import ConversationWebchatQueueStatusesResponse from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse';
 import ConversationWebsocketMessage from './com.ultracart.admin.v2.models/ConversationWebsocketMessage';
 import ConversationsResponse from './com.ultracart.admin.v2.models/ConversationsResponse';
 import CountriesResponse from './com.ultracart.admin.v2.models/CountriesResponse';
@@ -712,7 +717,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.42-RC
+* @version 4.0.43-RC
 */
 export {
     /**
@@ -1500,6 +1505,36 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationSummary}
      */
     ConversationSummary,
+
+    /**
+     * The ConversationWebchatQueueStatus model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatus}
+     */
+    ConversationWebchatQueueStatus,
+
+    /**
+     * The ConversationWebchatQueueStatusAgent model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent}
+     */
+    ConversationWebchatQueueStatusAgent,
+
+    /**
+     * The ConversationWebchatQueueStatusQueueEntry model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry}
+     */
+    ConversationWebchatQueueStatusQueueEntry,
+
+    /**
+     * The ConversationWebchatQueueStatusUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest}
+     */
+    ConversationWebchatQueueStatusUpdateRequest,
+
+    /**
+     * The ConversationWebchatQueueStatusesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse}
+     */
+    ConversationWebchatQueueStatusesResponse,
 
     /**
      * The ConversationWebsocketMessage model constructor.

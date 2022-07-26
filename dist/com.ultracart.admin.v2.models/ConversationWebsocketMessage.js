@@ -7,11 +7,11 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Conversation = _interopRequireDefault(require("./Conversation"));
-
 var _ConversationEventQueuePosition = _interopRequireDefault(require("./ConversationEventQueuePosition"));
 
 var _ConversationMessage = _interopRequireDefault(require("./ConversationMessage"));
+
+var _ConversationSummary = _interopRequireDefault(require("./ConversationSummary"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -65,15 +65,15 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('event_conversation_closed')) {
-          obj['event_conversation_closed'] = _Conversation["default"].constructFromObject(data['event_conversation_closed']);
+          obj['event_conversation_closed'] = _ConversationSummary["default"].constructFromObject(data['event_conversation_closed']);
         }
 
         if (data.hasOwnProperty('event_new_conversation')) {
-          obj['event_new_conversation'] = _Conversation["default"].constructFromObject(data['event_new_conversation']);
+          obj['event_new_conversation'] = _ConversationSummary["default"].constructFromObject(data['event_new_conversation']);
         }
 
         if (data.hasOwnProperty('event_new_message')) {
-          obj['event_new_message'] = _Conversation["default"].constructFromObject(data['event_new_message']);
+          obj['event_new_message'] = _ConversationSummary["default"].constructFromObject(data['event_new_message']);
         }
 
         if (data.hasOwnProperty('event_queue_position')) {
@@ -111,17 +111,17 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
 
 ConversationWebsocketMessage.prototype['conversation_uuid'] = undefined;
 /**
- * @member {module:com.ultracart.admin.v2.models/Conversation} event_conversation_closed
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_conversation_closed
  */
 
 ConversationWebsocketMessage.prototype['event_conversation_closed'] = undefined;
 /**
- * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_conversation
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_conversation
  */
 
 ConversationWebsocketMessage.prototype['event_new_conversation'] = undefined;
 /**
- * @member {module:com.ultracart.admin.v2.models/Conversation} event_new_message
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_message
  */
 
 ConversationWebsocketMessage.prototype['event_new_message'] = undefined;

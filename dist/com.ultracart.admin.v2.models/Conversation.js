@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 var Conversation = /*#__PURE__*/function () {
   /**
@@ -58,6 +58,10 @@ var Conversation = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Conversation();
 
+        if (data.hasOwnProperty('closed')) {
+          obj['closed'] = _ApiClient["default"].convertToType(data['closed'], 'Boolean');
+        }
+
         if (data.hasOwnProperty('conversation_arn')) {
           obj['conversation_arn'] = _ApiClient["default"].convertToType(data['conversation_arn'], 'String');
         }
@@ -86,9 +90,14 @@ var Conversation = /*#__PURE__*/function () {
   return Conversation;
 }();
 /**
- * @member {String} conversation_arn
+ * @member {Boolean} closed
  */
 
+
+Conversation.prototype['closed'] = undefined;
+/**
+ * @member {String} conversation_arn
+ */
 
 Conversation.prototype['conversation_arn'] = undefined;
 /**

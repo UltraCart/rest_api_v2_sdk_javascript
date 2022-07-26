@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**

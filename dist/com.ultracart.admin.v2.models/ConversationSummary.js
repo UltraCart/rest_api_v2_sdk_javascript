@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 var ConversationSummary = /*#__PURE__*/function () {
   /**
@@ -53,6 +53,10 @@ var ConversationSummary = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationSummary();
+
+        if (data.hasOwnProperty('closed')) {
+          obj['closed'] = _ApiClient["default"].convertToType(data['closed'], 'Boolean');
+        }
 
         if (data.hasOwnProperty('conversation_arn')) {
           obj['conversation_arn'] = _ApiClient["default"].convertToType(data['conversation_arn'], 'String');
@@ -98,9 +102,14 @@ var ConversationSummary = /*#__PURE__*/function () {
   return ConversationSummary;
 }();
 /**
- * @member {String} conversation_arn
+ * @member {Boolean} closed
  */
 
+
+ConversationSummary.prototype['closed'] = undefined;
+/**
+ * @member {String} conversation_arn
+ */
 
 ConversationSummary.prototype['conversation_arn'] = undefined;
 /**

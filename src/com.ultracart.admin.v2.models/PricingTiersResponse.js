@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The PricingTiersResponse model module.
  * @module com.ultracart.admin.v2.models/PricingTiersResponse
- * @version 4.0.42-RC
+ * @version 4.0.43-RC
  */
 class PricingTiersResponse {
     /**

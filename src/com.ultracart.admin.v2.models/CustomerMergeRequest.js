@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerMergeRequest model module.
  * @module com.ultracart.admin.v2.models/CustomerMergeRequest
- * @version 4.0.42-RC
+ * @version 4.0.43-RC
  */
 class CustomerMergeRequest {
     /**

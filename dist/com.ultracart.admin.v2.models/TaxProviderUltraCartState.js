@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxProviderUltraCartState model module.
  * @module com.ultracart.admin.v2.models/TaxProviderUltraCartState
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 var TaxProviderUltraCartState = /*#__PURE__*/function () {
   /**

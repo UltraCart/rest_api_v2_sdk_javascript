@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Warning model module.
  * @module com.ultracart.admin.v2.models/Warning
- * @version 4.0.41-RC
+ * @version 4.0.42-RC
  */
 var Warning = /*#__PURE__*/function () {
   /**

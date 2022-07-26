@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderSalesforce model module.
  * @module com.ultracart.admin.v2.models/OrderSalesforce
- * @version 4.0.42-RC
+ * @version 4.0.43-RC
  */
 class OrderSalesforce {
     /**
