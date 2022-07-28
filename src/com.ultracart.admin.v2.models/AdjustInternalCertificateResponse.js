@@ -34,7 +34,7 @@
   /**
    * The AdjustInternalCertificateResponse model module.
    * @module com.ultracart.admin.v2.models/AdjustInternalCertificateResponse
-   * @version 3.10.26
+   * @version 3.10.27
    */
 
   /**

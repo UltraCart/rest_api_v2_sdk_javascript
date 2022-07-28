@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentCreditCard model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentCreditCard
-   * @version 3.10.26
+   * @version 3.10.27
    */
 
   /**

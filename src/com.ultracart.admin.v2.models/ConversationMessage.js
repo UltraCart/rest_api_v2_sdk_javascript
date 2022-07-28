@@ -34,7 +34,7 @@
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.10.26
+   * @version 3.10.27
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.message_dts = ApiClient.convertToType(data['message_dts'], 'String');
       if (data.hasOwnProperty('transport_statuses'))
         obj.transport_statuses = ApiClient.convertToType(data['transport_statuses'], [ConversationMessageTransportStatus]);
+      if (data.hasOwnProperty('upload_keys'))
+        obj.upload_keys = ApiClient.convertToType(data['upload_keys'], ['String']);
     }
     return obj;
   }
@@ -101,6 +103,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses
    */
   exports.prototype.transport_statuses = undefined;
+
+  /**
+   * @member {Array.<String>} upload_keys
+   */
+  exports.prototype.upload_keys = undefined;
 
   return exports;
 

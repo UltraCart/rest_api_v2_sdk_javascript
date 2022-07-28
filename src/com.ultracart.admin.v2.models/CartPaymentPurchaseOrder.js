@@ -34,7 +34,7 @@
   /**
    * The CartPaymentPurchaseOrder model module.
    * @module com.ultracart.admin.v2.models/CartPaymentPurchaseOrder
-   * @version 3.10.26
+   * @version 3.10.27
    */
 
   /**
