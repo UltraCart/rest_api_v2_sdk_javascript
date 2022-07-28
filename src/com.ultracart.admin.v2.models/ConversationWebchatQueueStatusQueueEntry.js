@@ -34,7 +34,7 @@
   /**
    * The ConversationWebchatQueueStatusQueueEntry model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
-   * @version 3.10.27
+   * @version 3.10.28
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.conversation_participant_name = ApiClient.convertToType(data['conversation_participant_name'], 'String');
       if (data.hasOwnProperty('conversation_webchat_queue_uuid'))
         obj.conversation_webchat_queue_uuid = ApiClient.convertToType(data['conversation_webchat_queue_uuid'], 'String');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('join_dts'))
         obj.join_dts = ApiClient.convertToType(data['join_dts'], 'String');
       if (data.hasOwnProperty('question'))
@@ -83,6 +85,11 @@
    * @member {String} conversation_webchat_queue_uuid
    */
   exports.prototype.conversation_webchat_queue_uuid = undefined;
+
+  /**
+   * @member {String} email
+   */
+  exports.prototype.email = undefined;
 
   /**
    * Date/time the customer joined the queue

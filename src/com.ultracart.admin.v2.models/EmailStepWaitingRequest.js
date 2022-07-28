@@ -34,7 +34,7 @@
   /**
    * The EmailStepWaitingRequest model module.
    * @module com.ultracart.admin.v2.models/EmailStepWaitingRequest
-   * @version 3.10.27
+   * @version 3.10.28
    */
 
   /**

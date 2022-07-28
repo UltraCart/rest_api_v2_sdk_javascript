@@ -34,7 +34,7 @@
   /**
    * The ConversationWebchatQueueStatus model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatus
-   * @version 3.10.27
+   * @version 3.10.28
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.customer_average_chat_time_seconds = ApiClient.convertToType(data['customer_average_chat_time_seconds'], 'Number');
       if (data.hasOwnProperty('customer_average_hold_time_seconds'))
         obj.customer_average_hold_time_seconds = ApiClient.convertToType(data['customer_average_hold_time_seconds'], 'Number');
+      if (data.hasOwnProperty('customer_chat_count'))
+        obj.customer_chat_count = ApiClient.convertToType(data['customer_chat_count'], 'Number');
       if (data.hasOwnProperty('customer_waiting_count'))
         obj.customer_waiting_count = ApiClient.convertToType(data['customer_waiting_count'], 'Number');
       if (data.hasOwnProperty('customer_waiting_join_dts'))
@@ -136,6 +138,11 @@
    * @member {Number} customer_average_hold_time_seconds
    */
   exports.prototype.customer_average_hold_time_seconds = undefined;
+
+  /**
+   * @member {Number} customer_chat_count
+   */
+  exports.prototype.customer_chat_count = undefined;
 
   /**
    * @member {Number} customer_waiting_count
