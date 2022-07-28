@@ -17,6 +17,10 @@ var _ConversationStartRequest = _interopRequireDefault(require("../com.ultracart
 
 var _ConversationStartResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationStartResponse"));
 
+var _ConversationWebchatQueueStatusUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest"));
+
+var _ConversationWebchatQueueStatusesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse"));
+
 var _ConversationsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationsResponse"));
 
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
@@ -32,7 +36,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.42-RC
+* @version 4.0.43-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -150,6 +154,35 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationMultimediaUploadUrlResponse["default"];
       return this.apiClient.callApi('/conversation/upload_url/{extension}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getConversationWebchatQueueStatuses operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationWebchatQueueStatusesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a conversation webchat queue statuses
+     * Retrieve a conversation webchat queue statuses including agent status and queue entries 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationWebchatQueueStatusesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse}
+     */
+
+  }, {
+    key: "getConversationWebchatQueueStatuses",
+    value: function getConversationWebchatQueueStatuses(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationWebchatQueueStatusesResponse["default"];
+      return this.apiClient.callApi('/conversation/conversations/queues/statuses', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getConversations operation.
@@ -293,6 +326,48 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationStartResponse["default"];
       return this.apiClient.callApi('/conversation/conversations', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the updateConversationWebchatQueueStatus operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateConversationWebchatQueueStatusCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update status within the queue
+     * Update status within the queue 
+     * @param {String} queue_name 
+     * @param {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest} status_request Status request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateConversationWebchatQueueStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
+    key: "updateConversationWebchatQueueStatus",
+    value: function updateConversationWebchatQueueStatus(queue_name, status_request, callback) {
+      var postBody = status_request; // verify the required parameter 'queue_name' is set
+
+      if (queue_name === undefined || queue_name === null) {
+        throw new Error("Missing the required parameter 'queue_name' when calling updateConversationWebchatQueueStatus");
+      } // verify the required parameter 'status_request' is set
+
+
+      if (status_request === undefined || status_request === null) {
+        throw new Error("Missing the required parameter 'status_request' when calling updateConversationWebchatQueueStatus");
+      }
+
+      var pathParams = {
+        'queue_name': queue_name
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/conversations/queues/{queue_name}/status', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
   }]);
 

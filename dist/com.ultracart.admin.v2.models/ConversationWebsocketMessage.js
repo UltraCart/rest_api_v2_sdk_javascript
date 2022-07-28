@@ -13,6 +13,8 @@ var _ConversationMessage = _interopRequireDefault(require("./ConversationMessage
 
 var _ConversationSummary = _interopRequireDefault(require("./ConversationSummary"));
 
+var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./ConversationWebchatQueueStatus"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.42-RC
+ * @version 4.0.43-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -80,6 +82,10 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
           obj['event_queue_position'] = _ConversationEventQueuePosition["default"].constructFromObject(data['event_queue_position']);
         }
 
+        if (data.hasOwnProperty('event_queue_status_update')) {
+          obj['event_queue_status_update'] = _ConversationWebchatQueueStatus["default"].constructFromObject(data['event_queue_status_update']);
+        }
+
         if (data.hasOwnProperty('event_type')) {
           obj['event_type'] = _ApiClient["default"].convertToType(data['event_type'], 'String');
         }
@@ -130,6 +136,11 @@ ConversationWebsocketMessage.prototype['event_new_message'] = undefined;
  */
 
 ConversationWebsocketMessage.prototype['event_queue_position'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatus} event_queue_status_update
+ */
+
+ConversationWebsocketMessage.prototype['event_queue_status_update'] = undefined;
 /**
  * Type of event
  * @member {module:com.ultracart.admin.v2.models/ConversationWebsocketMessage.EventTypeEnum} event_type
@@ -193,7 +204,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
    * value: "updated message"
    * @const
    */
-  "updated message": "updated message"
+  "updated message": "updated message",
+
+  /**
+   * value: "queue status update"
+   * @const
+   */
+  "queue status update": "queue status update"
 };
 /**
  * Allowed values for the <code>type</code> property.

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettingsPaymentPayPal model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentPayPal
- * @version 4.0.42-RC
+ * @version 4.0.43-RC
  */
 var CartSettingsPaymentPayPal = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ import OrderItemEdiLot from './OrderItemEdiLot';
 /**
  * The OrderItemEdi model module.
  * @module com.ultracart.admin.v2.models/OrderItemEdi
- * @version 4.0.43-RC
+ * @version 4.0.44-RC
  */
 class OrderItemEdi {
     /**

@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **media_urls** | **[String]** |  | [optional] 
 **message_dts** | **String** | Message date/time | [optional] 
 **transport_statuses** | [**[ConversationMessageTransportStatus]**](ConversationMessageTransportStatus.md) |  | [optional] 
+**upload_keys** | **[String]** |  | [optional] 
 
 

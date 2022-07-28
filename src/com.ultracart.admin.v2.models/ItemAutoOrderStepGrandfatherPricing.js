@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemAutoOrderStepGrandfatherPricing model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing
- * @version 4.0.43-RC
+ * @version 4.0.44-RC
  */
 class ItemAutoOrderStepGrandfatherPricing {
     /**

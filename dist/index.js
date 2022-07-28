@@ -825,6 +825,36 @@ Object.defineProperty(exports, "ConversationSummary", {
     return _ConversationSummary["default"];
   }
 });
+Object.defineProperty(exports, "ConversationWebchatQueueStatus", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationWebchatQueueStatus["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationWebchatQueueStatusAgent", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationWebchatQueueStatusAgent["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationWebchatQueueStatusQueueEntry", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationWebchatQueueStatusQueueEntry["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationWebchatQueueStatusUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationWebchatQueueStatusUpdateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationWebchatQueueStatusesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationWebchatQueueStatusesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationWebsocketMessage", {
   enumerable: true,
   get: function get() {
@@ -4279,6 +4309,16 @@ var _ConversationStartRequest = _interopRequireDefault(require("./com.ultracart.
 var _ConversationStartResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartResponse"));
 
 var _ConversationSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSummary"));
+
+var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatus"));
+
+var _ConversationWebchatQueueStatusAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent"));
+
+var _ConversationWebchatQueueStatusQueueEntry = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry"));
+
+var _ConversationWebchatQueueStatusUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest"));
+
+var _ConversationWebchatQueueStatusesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse"));
 
 var _ConversationWebsocketMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebsocketMessage"));
 
