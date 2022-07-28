@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxProviderSovos model module.
  * @module com.ultracart.admin.v2.models/TaxProviderSovos
- * @version 4.0.43-RC
+ * @version 4.0.44-RC
  */
 var TaxProviderSovos = /*#__PURE__*/function () {
   /**

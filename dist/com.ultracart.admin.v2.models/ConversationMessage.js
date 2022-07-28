@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.43-RC
+ * @version 4.0.44-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -79,6 +79,10 @@ var ConversationMessage = /*#__PURE__*/function () {
         if (data.hasOwnProperty('transport_statuses')) {
           obj['transport_statuses'] = _ApiClient["default"].convertToType(data['transport_statuses'], [_ConversationMessageTransportStatus["default"]]);
         }
+
+        if (data.hasOwnProperty('upload_keys')) {
+          obj['upload_keys'] = _ApiClient["default"].convertToType(data['upload_keys'], ['String']);
+        }
       }
 
       return obj;
@@ -119,5 +123,10 @@ ConversationMessage.prototype['message_dts'] = undefined;
  */
 
 ConversationMessage.prototype['transport_statuses'] = undefined;
+/**
+ * @member {Array.<String>} upload_keys
+ */
+
+ConversationMessage.prototype['upload_keys'] = undefined;
 var _default = ConversationMessage;
 exports["default"] = _default;

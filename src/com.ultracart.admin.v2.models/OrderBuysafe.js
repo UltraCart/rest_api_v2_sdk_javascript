@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The OrderBuysafe model module.
  * @module com.ultracart.admin.v2.models/OrderBuysafe
- * @version 4.0.44-RC
+ * @version 4.0.45-RC
  */
 class OrderBuysafe {
     /**

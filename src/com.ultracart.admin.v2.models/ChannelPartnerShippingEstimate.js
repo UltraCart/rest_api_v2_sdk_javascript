@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChannelPartnerShippingEstimate model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate
- * @version 4.0.44-RC
+ * @version 4.0.45-RC
  */
 class ChannelPartnerShippingEstimate {
     /**

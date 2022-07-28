@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderCoupon model module.
  * @module com.ultracart.admin.v2.models/OrderCoupon
- * @version 4.0.43-RC
+ * @version 4.0.44-RC
  */
 var OrderCoupon = /*#__PURE__*/function () {
   /**

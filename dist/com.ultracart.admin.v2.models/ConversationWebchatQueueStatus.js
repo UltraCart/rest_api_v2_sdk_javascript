@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatus model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatus
- * @version 4.0.43-RC
+ * @version 4.0.44-RC
  */
 var ConversationWebchatQueueStatus = /*#__PURE__*/function () {
   /**
@@ -86,6 +86,18 @@ var ConversationWebchatQueueStatus = /*#__PURE__*/function () {
           obj['customer_active_count'] = _ApiClient["default"].convertToType(data['customer_active_count'], 'Number');
         }
 
+        if (data.hasOwnProperty('customer_average_abandon_time_seconds')) {
+          obj['customer_average_abandon_time_seconds'] = _ApiClient["default"].convertToType(data['customer_average_abandon_time_seconds'], 'Number');
+        }
+
+        if (data.hasOwnProperty('customer_average_chat_time_seconds')) {
+          obj['customer_average_chat_time_seconds'] = _ApiClient["default"].convertToType(data['customer_average_chat_time_seconds'], 'Number');
+        }
+
+        if (data.hasOwnProperty('customer_average_hold_time_seconds')) {
+          obj['customer_average_hold_time_seconds'] = _ApiClient["default"].convertToType(data['customer_average_hold_time_seconds'], 'Number');
+        }
+
         if (data.hasOwnProperty('customer_waiting_count')) {
           obj['customer_waiting_count'] = _ApiClient["default"].convertToType(data['customer_waiting_count'], 'Number');
         }
@@ -145,6 +157,21 @@ ConversationWebchatQueueStatus.prototype['customer_abandon_count'] = undefined;
  */
 
 ConversationWebchatQueueStatus.prototype['customer_active_count'] = undefined;
+/**
+ * @member {Number} customer_average_abandon_time_seconds
+ */
+
+ConversationWebchatQueueStatus.prototype['customer_average_abandon_time_seconds'] = undefined;
+/**
+ * @member {Number} customer_average_chat_time_seconds
+ */
+
+ConversationWebchatQueueStatus.prototype['customer_average_chat_time_seconds'] = undefined;
+/**
+ * @member {Number} customer_average_hold_time_seconds
+ */
+
+ConversationWebchatQueueStatus.prototype['customer_average_hold_time_seconds'] = undefined;
 /**
  * @member {Number} customer_waiting_count
  */

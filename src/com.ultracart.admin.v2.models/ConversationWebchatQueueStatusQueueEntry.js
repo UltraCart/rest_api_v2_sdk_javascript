@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationWebchatQueueStatusQueueEntry model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
- * @version 4.0.44-RC
+ * @version 4.0.45-RC
  */
 class ConversationWebchatQueueStatusQueueEntry {
     /**
@@ -56,6 +56,9 @@ class ConversationWebchatQueueStatusQueueEntry {
             if (data.hasOwnProperty('conversation_webchat_queue_uuid')) {
                 obj['conversation_webchat_queue_uuid'] = ApiClient.convertToType(data['conversation_webchat_queue_uuid'], 'String');
             }
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            }
             if (data.hasOwnProperty('join_dts')) {
                 obj['join_dts'] = ApiClient.convertToType(data['join_dts'], 'String');
             }
@@ -83,6 +86,11 @@ ConversationWebchatQueueStatusQueueEntry.prototype['conversation_participant_nam
  * @member {String} conversation_webchat_queue_uuid
  */
 ConversationWebchatQueueStatusQueueEntry.prototype['conversation_webchat_queue_uuid'] = undefined;
+
+/**
+ * @member {String} email
+ */
+ConversationWebchatQueueStatusQueueEntry.prototype['email'] = undefined;
 
 /**
  * Date/time the customer joined the queue
