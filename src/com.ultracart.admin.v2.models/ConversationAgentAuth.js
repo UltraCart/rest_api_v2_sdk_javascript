@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationTwilioAccount'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationTwilioAccount'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationAgentAuth = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ConversationAgentAuth = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationTwilioAccount);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ConversationTwilioAccount) {
   'use strict';
 
   /**
    * The ConversationAgentAuth model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuth
-   * @version 3.10.28
+   * @version 3.10.29
    */
 
   /**
@@ -63,8 +63,8 @@
         obj.jwt = ApiClient.convertToType(data['jwt'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
-      if (data.hasOwnProperty('twilio_phone_numbers'))
-        obj.twilio_phone_numbers = ApiClient.convertToType(data['twilio_phone_numbers'], ['String']);
+      if (data.hasOwnProperty('twilio_accounts'))
+        obj.twilio_accounts = ApiClient.convertToType(data['twilio_accounts'], [ConversationTwilioAccount]);
       if (data.hasOwnProperty('websocket_url'))
         obj.websocket_url = ApiClient.convertToType(data['websocket_url'], 'String');
     }
@@ -92,9 +92,9 @@
   exports.prototype.merchant_id = undefined;
 
   /**
-   * @member {Array.<String>} twilio_phone_numbers
+   * @member {Array.<module:com.ultracart.admin.v2.models/ConversationTwilioAccount>} twilio_accounts
    */
-  exports.prototype.twilio_phone_numbers = undefined;
+  exports.prototype.twilio_accounts = undefined;
 
   /**
    * @member {String} websocket_url

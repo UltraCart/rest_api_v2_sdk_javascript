@@ -34,7 +34,7 @@
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.10.28
+   * @version 3.10.29
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.author_conversation_participant_name = ApiClient.convertToType(data['author_conversation_participant_name'], 'String');
       if (data.hasOwnProperty('body'))
         obj.body = ApiClient.convertToType(data['body'], 'String');
+      if (data.hasOwnProperty('client_message_id'))
+        obj.client_message_id = ApiClient.convertToType(data['client_message_id'], 'String');
       if (data.hasOwnProperty('media_urls'))
         obj.media_urls = ApiClient.convertToType(data['media_urls'], ['String']);
       if (data.hasOwnProperty('message_dts'))
@@ -87,6 +89,11 @@
    * @member {String} body
    */
   exports.prototype.body = undefined;
+
+  /**
+   * @member {String} client_message_id
+   */
+  exports.prototype.client_message_id = undefined;
 
   /**
    * @member {Array.<String>} media_urls

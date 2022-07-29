@@ -34,7 +34,7 @@
   /**
    * The ConversationSummary model module.
    * @module com.ultracart.admin.v2.models/ConversationSummary
-   * @version 3.10.28
+   * @version 3.10.29
    */
 
   /**
@@ -73,8 +73,12 @@
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('message_count'))
         obj.message_count = ApiClient.convertToType(data['message_count'], 'Number');
+      if (data.hasOwnProperty('start_dts'))
+        obj.start_dts = ApiClient.convertToType(data['start_dts'], 'String');
       if (data.hasOwnProperty('unread_messages'))
         obj.unread_messages = ApiClient.convertToType(data['unread_messages'], 'Boolean');
+      if (data.hasOwnProperty('visible'))
+        obj.visible = ApiClient.convertToType(data['visible'], 'Boolean');
     }
     return obj;
   }
@@ -126,9 +130,20 @@
   exports.prototype.message_count = undefined;
 
   /**
+   * Start of the conversation date/time
+   * @member {String} start_dts
+   */
+  exports.prototype.start_dts = undefined;
+
+  /**
    * @member {Boolean} unread_messages
    */
   exports.prototype.unread_messages = undefined;
+
+  /**
+   * @member {Boolean} visible
+   */
+  exports.prototype.visible = undefined;
 
   return exports;
 
