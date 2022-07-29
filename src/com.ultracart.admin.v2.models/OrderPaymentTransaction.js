@@ -17,7 +17,7 @@ import OrderPaymentTransactionDetail from './OrderPaymentTransactionDetail';
 /**
  * The OrderPaymentTransaction model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentTransaction
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 class OrderPaymentTransaction {
     /**

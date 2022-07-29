@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatus model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatus
- * @version 4.0.44-RC
+ * @version 4.0.45-RC
  */
 var ConversationWebchatQueueStatus = /*#__PURE__*/function () {
   /**
@@ -96,6 +96,10 @@ var ConversationWebchatQueueStatus = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('customer_average_hold_time_seconds')) {
           obj['customer_average_hold_time_seconds'] = _ApiClient["default"].convertToType(data['customer_average_hold_time_seconds'], 'Number');
+        }
+
+        if (data.hasOwnProperty('customer_chat_count')) {
+          obj['customer_chat_count'] = _ApiClient["default"].convertToType(data['customer_chat_count'], 'Number');
         }
 
         if (data.hasOwnProperty('customer_waiting_count')) {
@@ -172,6 +176,11 @@ ConversationWebchatQueueStatus.prototype['customer_average_chat_time_seconds'] =
  */
 
 ConversationWebchatQueueStatus.prototype['customer_average_hold_time_seconds'] = undefined;
+/**
+ * @member {Number} customer_chat_count
+ */
+
+ConversationWebchatQueueStatus.prototype['customer_chat_count'] = undefined;
 /**
  * @member {Number} customer_waiting_count
  */

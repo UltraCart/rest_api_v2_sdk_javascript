@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationStartRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationStartRequest
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 class ConversationStartRequest {
     /**

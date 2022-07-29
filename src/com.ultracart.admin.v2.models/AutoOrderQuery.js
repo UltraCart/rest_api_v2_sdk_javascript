@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderQuery model module.
  * @module com.ultracart.admin.v2.models/AutoOrderQuery
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 class AutoOrderQuery {
     /**

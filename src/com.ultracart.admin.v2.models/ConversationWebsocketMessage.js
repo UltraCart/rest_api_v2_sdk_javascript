@@ -20,7 +20,7 @@ import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 class ConversationWebsocketMessage {
     /**

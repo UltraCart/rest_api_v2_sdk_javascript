@@ -18,7 +18,7 @@ import CartFinalizeOrderRequestOptions from './CartFinalizeOrderRequestOptions';
 /**
  * The CartFinalizeOrderRequest model module.
  * @module com.ultracart.admin.v2.models/CartFinalizeOrderRequest
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 class CartFinalizeOrderRequest {
     /**

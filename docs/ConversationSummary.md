@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **last_message_dts** | **String** | Last message date/time | [optional] 
 **merchant_id** | **String** |  | [optional] 
 **message_count** | **Number** |  | [optional] 
+**start_dts** | **String** | Start of the conversation date/time | [optional] 
 **unread_messages** | **Boolean** |  | [optional] 
+**visible** | **Boolean** |  | [optional] 
 
 

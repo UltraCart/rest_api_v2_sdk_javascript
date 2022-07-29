@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatusQueueEntry model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
- * @version 4.0.44-RC
+ * @version 4.0.45-RC
  */
 var ConversationWebchatQueueStatusQueueEntry = /*#__PURE__*/function () {
   /**
@@ -66,6 +66,10 @@ var ConversationWebchatQueueStatusQueueEntry = /*#__PURE__*/function () {
           obj['conversation_webchat_queue_uuid'] = _ApiClient["default"].convertToType(data['conversation_webchat_queue_uuid'], 'String');
         }
 
+        if (data.hasOwnProperty('email')) {
+          obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
+        }
+
         if (data.hasOwnProperty('join_dts')) {
           obj['join_dts'] = _ApiClient["default"].convertToType(data['join_dts'], 'String');
         }
@@ -97,6 +101,11 @@ ConversationWebchatQueueStatusQueueEntry.prototype['conversation_participant_nam
  */
 
 ConversationWebchatQueueStatusQueueEntry.prototype['conversation_webchat_queue_uuid'] = undefined;
+/**
+ * @member {String} email
+ */
+
+ConversationWebchatQueueStatusQueueEntry.prototype['email'] = undefined;
 /**
  * Date/time the customer joined the queue
  * @member {String} join_dts

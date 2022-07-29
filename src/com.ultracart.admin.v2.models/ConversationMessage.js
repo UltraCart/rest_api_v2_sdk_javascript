@@ -17,7 +17,7 @@ import ConversationMessageTransportStatus from './ConversationMessageTransportSt
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 class ConversationMessage {
     /**
@@ -57,6 +57,9 @@ class ConversationMessage {
             if (data.hasOwnProperty('body')) {
                 obj['body'] = ApiClient.convertToType(data['body'], 'String');
             }
+            if (data.hasOwnProperty('client_message_id')) {
+                obj['client_message_id'] = ApiClient.convertToType(data['client_message_id'], 'String');
+            }
             if (data.hasOwnProperty('media_urls')) {
                 obj['media_urls'] = ApiClient.convertToType(data['media_urls'], ['String']);
             }
@@ -90,6 +93,11 @@ ConversationMessage.prototype['author_conversation_participant_name'] = undefine
  * @member {String} body
  */
 ConversationMessage.prototype['body'] = undefined;
+
+/**
+ * @member {String} client_message_id
+ */
+ConversationMessage.prototype['client_message_id'] = undefined;
 
 /**
  * @member {Array.<String>} media_urls

@@ -143,6 +143,7 @@ import ConversationResponse from './com.ultracart.admin.v2.models/ConversationRe
 import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
+import ConversationTwilioAccount from './com.ultracart.admin.v2.models/ConversationTwilioAccount';
 import ConversationWebchatQueueStatus from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatus';
 import ConversationWebchatQueueStatusAgent from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent';
 import ConversationWebchatQueueStatusQueueEntry from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry';
@@ -717,7 +718,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.45-RC
+* @version 4.0.46-RC
 */
 export {
     /**
@@ -1505,6 +1506,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationSummary}
      */
     ConversationSummary,
+
+    /**
+     * The ConversationTwilioAccount model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationTwilioAccount}
+     */
+    ConversationTwilioAccount,
 
     /**
      * The ConversationWebchatQueueStatus model constructor.
