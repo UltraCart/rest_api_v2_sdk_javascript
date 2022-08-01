@@ -134,6 +134,7 @@ import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationAgentAuth';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationEventQueuePosition from './com.ultracart.admin.v2.models/ConversationEventQueuePosition';
+import ConversationEventRRWeb from './com.ultracart.admin.v2.models/ConversationEventRRWeb';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
 import ConversationMultimediaUploadUrl from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl';
@@ -718,7 +719,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.46-RC
+* @version 4.0.47-RC
 */
 export {
     /**
@@ -1452,6 +1453,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationEventQueuePosition}
      */
     ConversationEventQueuePosition,
+
+    /**
+     * The ConversationEventRRWeb model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEventRRWeb}
+     */
+    ConversationEventRRWeb,
 
     /**
      * The ConversationMessage model constructor.

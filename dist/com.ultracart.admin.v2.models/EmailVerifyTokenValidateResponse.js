@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailVerifyTokenValidateResponse model module.
  * @module com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 var EmailVerifyTokenValidateResponse = /*#__PURE__*/function () {
   /**

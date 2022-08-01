@@ -32,7 +32,7 @@ import Order from './Order';
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 class Customer {
     /**

@@ -20,7 +20,7 @@ import Webhook from './Webhook';
 /**
  * The WebhooksResponse model module.
  * @module com.ultracart.admin.v2.models/WebhooksResponse
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 class WebhooksResponse {
     /**

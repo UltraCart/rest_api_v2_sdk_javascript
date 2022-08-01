@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemEnrollment123 model module.
  * @module com.ultracart.admin.v2.models/ItemEnrollment123
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 var ItemEnrollment123 = /*#__PURE__*/function () {
   /**

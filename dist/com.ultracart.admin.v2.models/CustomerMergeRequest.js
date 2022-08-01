@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerMergeRequest model module.
  * @module com.ultracart.admin.v2.models/CustomerMergeRequest
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 var CustomerMergeRequest = /*#__PURE__*/function () {
   /**

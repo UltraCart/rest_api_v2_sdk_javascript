@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ApplyLibraryItemResponse model module.
  * @module com.ultracart.admin.v2.models/ApplyLibraryItemResponse
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 var ApplyLibraryItemResponse = /*#__PURE__*/function () {
   /**

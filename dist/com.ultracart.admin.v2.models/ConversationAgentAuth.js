@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationTwilioAccount = _interopRequireDefault(require("./ConversationTwilioAccount"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 var ConversationAgentAuth = /*#__PURE__*/function () {
   /**
@@ -70,8 +72,8 @@ var ConversationAgentAuth = /*#__PURE__*/function () {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
 
-        if (data.hasOwnProperty('twilio_phone_numbers')) {
-          obj['twilio_phone_numbers'] = _ApiClient["default"].convertToType(data['twilio_phone_numbers'], ['String']);
+        if (data.hasOwnProperty('twilio_accounts')) {
+          obj['twilio_accounts'] = _ApiClient["default"].convertToType(data['twilio_accounts'], [_ConversationTwilioAccount["default"]]);
         }
 
         if (data.hasOwnProperty('websocket_url')) {
@@ -107,10 +109,10 @@ ConversationAgentAuth.prototype['jwt'] = undefined;
 
 ConversationAgentAuth.prototype['merchant_id'] = undefined;
 /**
- * @member {Array.<String>} twilio_phone_numbers
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationTwilioAccount>} twilio_accounts
  */
 
-ConversationAgentAuth.prototype['twilio_phone_numbers'] = undefined;
+ConversationAgentAuth.prototype['twilio_accounts'] = undefined;
 /**
  * @member {String} websocket_url
  */

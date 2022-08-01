@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingFilterValuesEventParams model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEventParams
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 class ScreenRecordingFilterValuesEventParams {
     /**

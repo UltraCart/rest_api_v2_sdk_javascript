@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LibraryItemAttribute model module.
  * @module com.ultracart.admin.v2.models/LibraryItemAttribute
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 class LibraryItemAttribute {
     /**

@@ -17,7 +17,7 @@ import ConversationMessageTransportStatus from './ConversationMessageTransportSt
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 class ConversationMessage {
     /**
@@ -69,6 +69,9 @@ class ConversationMessage {
             if (data.hasOwnProperty('transport_statuses')) {
                 obj['transport_statuses'] = ApiClient.convertToType(data['transport_statuses'], [ConversationMessageTransportStatus]);
             }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
             if (data.hasOwnProperty('upload_keys')) {
                 obj['upload_keys'] = ApiClient.convertToType(data['upload_keys'], ['String']);
             }
@@ -116,12 +119,39 @@ ConversationMessage.prototype['message_dts'] = undefined;
 ConversationMessage.prototype['transport_statuses'] = undefined;
 
 /**
+ * Message type
+ * @member {module:com.ultracart.admin.v2.models/ConversationMessage.TypeEnum} type
+ */
+ConversationMessage.prototype['type'] = undefined;
+
+/**
  * @member {Array.<String>} upload_keys
  */
 ConversationMessage.prototype['upload_keys'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationMessage['TypeEnum'] = {
+
+    /**
+     * value: "message"
+     * @const
+     */
+    "message": "message",
+
+    /**
+     * value: "notice"
+     * @const
+     */
+    "notice": "notice"
+};
 
 
 

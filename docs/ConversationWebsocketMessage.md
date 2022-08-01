@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **event_new_message** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_queue_position** | [**ConversationEventQueuePosition**](ConversationEventQueuePosition.md) |  | [optional] 
 **event_queue_status_update** | [**ConversationWebchatQueueStatus**](ConversationWebchatQueueStatus.md) |  | [optional] 
+**event_rrweb** | [**ConversationEventRRWeb**](ConversationEventRRWeb.md) |  | [optional] 
 **event_type** | **String** | Type of event | [optional] 
 **event_updated_message** | [**ConversationMessage**](ConversationMessage.md) |  | [optional] 
 **message** | [**ConversationMessage**](ConversationMessage.md) |  | [optional] 
@@ -34,6 +35,8 @@ Name | Type | Description | Notes
 
 * `queue status update` (value: `"queue status update"`)
 
+* `rrweb` (value: `"rrweb"`)
+
 
 
 
@@ -46,6 +49,8 @@ Name | Type | Description | Notes
 * `event` (value: `"event"`)
 
 * `ping` (value: `"ping"`)
+
+* `check queue position` (value: `"check queue position"`)
 
 
 

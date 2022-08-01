@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GroupUserMembership model module.
  * @module com.ultracart.admin.v2.models/GroupUserMembership
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 class GroupUserMembership {
     /**

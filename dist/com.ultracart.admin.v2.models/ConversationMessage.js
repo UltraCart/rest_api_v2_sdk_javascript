@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,10 @@ var ConversationMessage = /*#__PURE__*/function () {
           obj['body'] = _ApiClient["default"].convertToType(data['body'], 'String');
         }
 
+        if (data.hasOwnProperty('client_message_id')) {
+          obj['client_message_id'] = _ApiClient["default"].convertToType(data['client_message_id'], 'String');
+        }
+
         if (data.hasOwnProperty('media_urls')) {
           obj['media_urls'] = _ApiClient["default"].convertToType(data['media_urls'], ['String']);
         }
@@ -107,6 +111,11 @@ ConversationMessage.prototype['author_conversation_participant_name'] = undefine
  */
 
 ConversationMessage.prototype['body'] = undefined;
+/**
+ * @member {String} client_message_id
+ */
+
+ConversationMessage.prototype['client_message_id'] = undefined;
 /**
  * @member {Array.<String>} media_urls
  */

@@ -825,6 +825,12 @@ Object.defineProperty(exports, "ConversationSummary", {
     return _ConversationSummary["default"];
   }
 });
+Object.defineProperty(exports, "ConversationTwilioAccount", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationTwilioAccount["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationWebchatQueueStatus", {
   enumerable: true,
   get: function get() {
@@ -4309,6 +4315,8 @@ var _ConversationStartRequest = _interopRequireDefault(require("./com.ultracart.
 var _ConversationStartResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartResponse"));
 
 var _ConversationSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSummary"));
+
+var _ConversationTwilioAccount = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationTwilioAccount"));
 
 var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatus"));
 

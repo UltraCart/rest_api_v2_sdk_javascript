@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.45-RC
+ * @version 4.0.46-RC
  */
 var ConversationSummary = /*#__PURE__*/function () {
   /**
@@ -90,8 +90,16 @@ var ConversationSummary = /*#__PURE__*/function () {
           obj['message_count'] = _ApiClient["default"].convertToType(data['message_count'], 'Number');
         }
 
+        if (data.hasOwnProperty('start_dts')) {
+          obj['start_dts'] = _ApiClient["default"].convertToType(data['start_dts'], 'String');
+        }
+
         if (data.hasOwnProperty('unread_messages')) {
           obj['unread_messages'] = _ApiClient["default"].convertToType(data['unread_messages'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('visible')) {
+          obj['visible'] = _ApiClient["default"].convertToType(data['visible'], 'Boolean');
         }
       }
 
@@ -149,9 +157,20 @@ ConversationSummary.prototype['merchant_id'] = undefined;
 
 ConversationSummary.prototype['message_count'] = undefined;
 /**
+ * Start of the conversation date/time
+ * @member {String} start_dts
+ */
+
+ConversationSummary.prototype['start_dts'] = undefined;
+/**
  * @member {Boolean} unread_messages
  */
 
 ConversationSummary.prototype['unread_messages'] = undefined;
+/**
+ * @member {Boolean} visible
+ */
+
+ConversationSummary.prototype['visible'] = undefined;
 var _default = ConversationSummary;
 exports["default"] = _default;
