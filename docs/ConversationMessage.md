@@ -10,6 +10,18 @@ Name | Type | Description | Notes
 **media_urls** | **[String]** |  | [optional] 
 **message_dts** | **String** | Message date/time | [optional] 
 **transport_statuses** | [**[ConversationMessageTransportStatus]**](ConversationMessageTransportStatus.md) |  | [optional] 
+**type** | **String** | Message type | [optional] 
 **upload_keys** | **[String]** |  | [optional] 
+
+
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
+
+
+* `message` (value: `"message"`)
+
+* `notice` (value: `"notice"`)
+
+
 
 

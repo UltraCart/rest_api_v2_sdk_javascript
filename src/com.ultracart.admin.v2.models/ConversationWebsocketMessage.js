@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationEventRRWeb', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ConversationEventQueuePosition'), require('./ConversationMessage'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationEventQueuePosition'), require('./ConversationEventRRWeb'), require('./ConversationMessage'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus);
+    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationEventRRWeb, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus);
   }
-}(this, function(ApiClient, ConversationEventQueuePosition, ConversationMessage, ConversationSummary, ConversationWebchatQueueStatus) {
+}(this, function(ApiClient, ConversationEventQueuePosition, ConversationEventRRWeb, ConversationMessage, ConversationSummary, ConversationWebchatQueueStatus) {
   'use strict';
 
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.29
+   * @version 3.10.30
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.event_queue_position = ConversationEventQueuePosition.constructFromObject(data['event_queue_position']);
       if (data.hasOwnProperty('event_queue_status_update'))
         obj.event_queue_status_update = ConversationWebchatQueueStatus.constructFromObject(data['event_queue_status_update']);
+      if (data.hasOwnProperty('event_rrweb'))
+        obj.event_rrweb = ConversationEventRRWeb.constructFromObject(data['event_rrweb']);
       if (data.hasOwnProperty('event_type'))
         obj.event_type = ApiClient.convertToType(data['event_type'], 'String');
       if (data.hasOwnProperty('event_updated_message'))
@@ -109,6 +111,11 @@
    * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatus} event_queue_status_update
    */
   exports.prototype.event_queue_status_update = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationEventRRWeb} event_rrweb
+   */
+  exports.prototype.event_rrweb = undefined;
 
   /**
    * Type of event
@@ -179,7 +186,13 @@
      * value: "queue status update"
      * @const
      */
-    queue_status_update: "queue status update"
+    queue_status_update: "queue status update",
+
+    /**
+     * value: "rrweb"
+     * @const
+     */
+    rrweb: "rrweb"
   };
 
 
@@ -205,7 +218,13 @@
      * value: "ping"
      * @const
      */
-    ping: "ping"
+    ping: "ping",
+
+    /**
+     * value: "check queue position"
+     * @const
+     */
+    check_queue_position: "check queue position"
   };
 
   return exports;

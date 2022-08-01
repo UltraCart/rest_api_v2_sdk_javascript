@@ -34,7 +34,7 @@
   /**
    * The EmailThirdPartyTag model module.
    * @module com.ultracart.admin.v2.models/EmailThirdPartyTag
-   * @version 3.10.29
+   * @version 3.10.30
    */
 
   /**

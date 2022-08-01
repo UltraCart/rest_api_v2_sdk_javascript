@@ -34,7 +34,7 @@
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.10.29
+   * @version 3.10.30
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.message_dts = ApiClient.convertToType(data['message_dts'], 'String');
       if (data.hasOwnProperty('transport_statuses'))
         obj.transport_statuses = ApiClient.convertToType(data['transport_statuses'], [ConversationMessageTransportStatus]);
+      if (data.hasOwnProperty('type'))
+        obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('upload_keys'))
         obj.upload_keys = ApiClient.convertToType(data['upload_keys'], ['String']);
     }
@@ -112,9 +114,35 @@
   exports.prototype.transport_statuses = undefined;
 
   /**
+   * Message type
+   * @member {module:com.ultracart.admin.v2.models/ConversationMessage.TypeEnum} type
+   */
+  exports.prototype.type = undefined;
+
+  /**
    * @member {Array.<String>} upload_keys
    */
   exports.prototype.upload_keys = undefined;
+
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "message"
+     * @const
+     */
+    message: "message",
+
+    /**
+     * value: "notice"
+     * @const
+     */
+    notice: "notice"
+  };
 
   return exports;
 
