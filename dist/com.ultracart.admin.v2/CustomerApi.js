@@ -60,7 +60,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.0.46-RC
+* @version 4.0.47-RC
 */
 var CustomerApi = /*#__PURE__*/function () {
   /**

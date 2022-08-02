@@ -40,6 +40,8 @@ import EmailCommseqPostcardSendTestResponse from '../com.ultracart.admin.v2.mode
 import EmailCommseqPostcardsRequest from '../com.ultracart.admin.v2.models/EmailCommseqPostcardsRequest';
 import EmailCommseqPostcardsResponse from '../com.ultracart.admin.v2.models/EmailCommseqPostcardsResponse';
 import EmailCommseqResponse from '../com.ultracart.admin.v2.models/EmailCommseqResponse';
+import EmailCommseqSequenceTestRequest from '../com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest';
+import EmailCommseqSequenceTestResponse from '../com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse';
 import EmailCommseqStatResponse from '../com.ultracart.admin.v2.models/EmailCommseqStatResponse';
 import EmailCommseqStepLogsResponse from '../com.ultracart.admin.v2.models/EmailCommseqStepLogsResponse';
 import EmailCommseqWebhookSendTestRequest from '../com.ultracart.admin.v2.models/EmailCommseqWebhookSendTestRequest';
@@ -147,7 +149,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.47-RC
+* @version 4.0.48-RC
 */
 export default class StorefrontApi {
 
@@ -6549,6 +6551,59 @@ export default class StorefrontApi {
       let returnType = EmailCommseqWebhookSendTestResponse;
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/webhooks/test', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sequenceTest operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~sequenceTestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sequence test
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest} email_commseq_sequence_test_request Commseq test request
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~sequenceTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse}
+     */
+    sequenceTest(storefront_oid, commseq_uuid, email_commseq_sequence_test_request, callback) {
+      let postBody = email_commseq_sequence_test_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling sequenceTest");
+      }
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling sequenceTest");
+      }
+      // verify the required parameter 'email_commseq_sequence_test_request' is set
+      if (email_commseq_sequence_test_request === undefined || email_commseq_sequence_test_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_sequence_test_request' when calling sequenceTest");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EmailCommseqSequenceTestResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/test', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

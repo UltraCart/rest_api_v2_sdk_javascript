@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The AffiliateLedgersResponse model module.
  * @module com.ultracart.admin.v2.models/AffiliateLedgersResponse
- * @version 4.0.47-RC
+ * @version 4.0.48-RC
  */
 class AffiliateLedgersResponse {
     /**

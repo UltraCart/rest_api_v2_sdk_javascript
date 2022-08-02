@@ -273,6 +273,8 @@ import EmailCommseqPostcardSendTestResponse from './com.ultracart.admin.v2.model
 import EmailCommseqPostcardsRequest from './com.ultracart.admin.v2.models/EmailCommseqPostcardsRequest';
 import EmailCommseqPostcardsResponse from './com.ultracart.admin.v2.models/EmailCommseqPostcardsResponse';
 import EmailCommseqResponse from './com.ultracart.admin.v2.models/EmailCommseqResponse';
+import EmailCommseqSequenceTestRequest from './com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest';
+import EmailCommseqSequenceTestResponse from './com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse';
 import EmailCommseqStat from './com.ultracart.admin.v2.models/EmailCommseqStat';
 import EmailCommseqStatResponse from './com.ultracart.admin.v2.models/EmailCommseqStatResponse';
 import EmailCommseqStep from './com.ultracart.admin.v2.models/EmailCommseqStep';
@@ -719,7 +721,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.47-RC
+* @version 4.0.48-RC
 */
 export {
     /**
@@ -2287,6 +2289,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/EmailCommseqResponse}
      */
     EmailCommseqResponse,
+
+    /**
+     * The EmailCommseqSequenceTestRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest}
+     */
+    EmailCommseqSequenceTestRequest,
+
+    /**
+     * The EmailCommseqSequenceTestResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse}
+     */
+    EmailCommseqSequenceTestResponse,
 
     /**
      * The EmailCommseqStat model constructor.

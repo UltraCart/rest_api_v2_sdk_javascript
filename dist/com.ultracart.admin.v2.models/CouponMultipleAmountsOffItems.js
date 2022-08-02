@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponMultipleAmountsOffItems model module.
  * @module com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 var CouponMultipleAmountsOffItems = /*#__PURE__*/function () {
   /**

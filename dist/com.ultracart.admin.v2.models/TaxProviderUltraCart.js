@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxProviderUltraCart model module.
  * @module com.ultracart.admin.v2.models/TaxProviderUltraCart
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 var TaxProviderUltraCart = /*#__PURE__*/function () {
   /**

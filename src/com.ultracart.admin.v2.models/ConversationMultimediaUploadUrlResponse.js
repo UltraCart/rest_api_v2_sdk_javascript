@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationMultimediaUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse
- * @version 4.0.47-RC
+ * @version 4.0.48-RC
  */
 class ConversationMultimediaUploadUrlResponse {
     /**

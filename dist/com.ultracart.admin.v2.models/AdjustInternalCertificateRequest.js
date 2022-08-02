@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AdjustInternalCertificateRequest model module.
  * @module com.ultracart.admin.v2.models/AdjustInternalCertificateRequest
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 var AdjustInternalCertificateRequest = /*#__PURE__*/function () {
   /**

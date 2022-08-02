@@ -771,6 +771,12 @@ Object.defineProperty(exports, "ConversationEventQueuePosition", {
     return _ConversationEventQueuePosition["default"];
   }
 });
+Object.defineProperty(exports, "ConversationEventRRWeb", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEventRRWeb["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationMessage", {
   enumerable: true,
   get: function get() {
@@ -4297,6 +4303,8 @@ var _ConversationAgentAuth = _interopRequireDefault(require("./com.ultracart.adm
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
 var _ConversationEventQueuePosition = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventQueuePosition"));
+
+var _ConversationEventRRWeb = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventRRWeb"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
 

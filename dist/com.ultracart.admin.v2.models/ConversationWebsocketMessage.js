@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _ConversationEventQueuePosition = _interopRequireDefault(require("./ConversationEventQueuePosition"));
 
+var _ConversationEventRRWeb = _interopRequireDefault(require("./ConversationEventRRWeb"));
+
 var _ConversationMessage = _interopRequireDefault(require("./ConversationMessage"));
 
 var _ConversationSummary = _interopRequireDefault(require("./ConversationSummary"));
@@ -26,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.46-RC
+ * @version 4.0.47-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -86,6 +88,10 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
           obj['event_queue_status_update'] = _ConversationWebchatQueueStatus["default"].constructFromObject(data['event_queue_status_update']);
         }
 
+        if (data.hasOwnProperty('event_rrweb')) {
+          obj['event_rrweb'] = _ConversationEventRRWeb["default"].constructFromObject(data['event_rrweb']);
+        }
+
         if (data.hasOwnProperty('event_type')) {
           obj['event_type'] = _ApiClient["default"].convertToType(data['event_type'], 'String');
         }
@@ -141,6 +147,11 @@ ConversationWebsocketMessage.prototype['event_queue_position'] = undefined;
  */
 
 ConversationWebsocketMessage.prototype['event_queue_status_update'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventRRWeb} event_rrweb
+ */
+
+ConversationWebsocketMessage.prototype['event_rrweb'] = undefined;
 /**
  * Type of event
  * @member {module:com.ultracart.admin.v2.models/ConversationWebsocketMessage.EventTypeEnum} event_type
@@ -210,7 +221,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
    * value: "queue status update"
    * @const
    */
-  "queue status update": "queue status update"
+  "queue status update": "queue status update",
+
+  /**
+   * value: "rrweb"
+   * @const
+   */
+  "rrweb": "rrweb"
 };
 /**
  * Allowed values for the <code>type</code> property.
@@ -235,7 +252,13 @@ ConversationWebsocketMessage['TypeEnum'] = {
    * value: "ping"
    * @const
    */
-  "ping": "ping"
+  "ping": "ping",
+
+  /**
+   * value: "check queue position"
+   * @const
+   */
+  "check queue position": "check queue position"
 };
 var _default = ConversationWebsocketMessage;
 exports["default"] = _default;
