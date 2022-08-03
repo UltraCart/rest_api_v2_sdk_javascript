@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationEventRRWeb', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationEventRRWeb', 'com.ultracart.admin.v2.models/ConversationEventTyping', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ConversationEventQueuePosition'), require('./ConversationEventRRWeb'), require('./ConversationMessage'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationEventQueuePosition'), require('./ConversationEventRRWeb'), require('./ConversationEventTyping'), require('./ConversationMessage'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationEventRRWeb, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus);
+    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationEventRRWeb, root.UltraCartRestApiV2.ConversationEventTyping, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus);
   }
-}(this, function(ApiClient, ConversationEventQueuePosition, ConversationEventRRWeb, ConversationMessage, ConversationSummary, ConversationWebchatQueueStatus) {
+}(this, function(ApiClient, ConversationEventQueuePosition, ConversationEventRRWeb, ConversationEventTyping, ConversationMessage, ConversationSummary, ConversationWebchatQueueStatus) {
   'use strict';
 
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.31
+   * @version 3.10.32
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.event_rrweb = ConversationEventRRWeb.constructFromObject(data['event_rrweb']);
       if (data.hasOwnProperty('event_type'))
         obj.event_type = ApiClient.convertToType(data['event_type'], 'String');
+      if (data.hasOwnProperty('event_typing'))
+        obj.event_typing = ConversationEventTyping.constructFromObject(data['event_typing']);
       if (data.hasOwnProperty('event_updated_message'))
         obj.event_updated_message = ConversationMessage.constructFromObject(data['event_updated_message']);
       if (data.hasOwnProperty('message'))
@@ -122,6 +124,11 @@
    * @member {module:com.ultracart.admin.v2.models/ConversationWebsocketMessage.EventTypeEnum} event_type
    */
   exports.prototype.event_type = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationEventTyping} event_typing
+   */
+  exports.prototype.event_typing = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ConversationMessage} event_updated_message
