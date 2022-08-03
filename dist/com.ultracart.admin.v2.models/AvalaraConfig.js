@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AvalaraConfig model module.
  * @module com.ultracart.admin.v2.models/AvalaraConfig
- * @version 4.0.47-RC
+ * @version 4.0.48-RC
  */
 var AvalaraConfig = /*#__PURE__*/function () {
   /**

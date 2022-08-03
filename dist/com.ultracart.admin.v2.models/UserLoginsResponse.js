@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UserLoginsResponse model module.
  * @module com.ultracart.admin.v2.models/UserLoginsResponse
- * @version 4.0.47-RC
+ * @version 4.0.48-RC
  */
 var UserLoginsResponse = /*#__PURE__*/function () {
   /**

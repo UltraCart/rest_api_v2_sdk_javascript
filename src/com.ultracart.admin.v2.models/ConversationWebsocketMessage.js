@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import ConversationEventQueuePosition from './ConversationEventQueuePosition';
 import ConversationEventRRWeb from './ConversationEventRRWeb';
+import ConversationEventTyping from './ConversationEventTyping';
 import ConversationMessage from './ConversationMessage';
 import ConversationSummary from './ConversationSummary';
 import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
@@ -21,7 +22,7 @@ import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.48-RC
+ * @version 4.0.49-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -75,6 +76,9 @@ class ConversationWebsocketMessage {
             }
             if (data.hasOwnProperty('event_type')) {
                 obj['event_type'] = ApiClient.convertToType(data['event_type'], 'String');
+            }
+            if (data.hasOwnProperty('event_typing')) {
+                obj['event_typing'] = ConversationEventTyping.constructFromObject(data['event_typing']);
             }
             if (data.hasOwnProperty('event_updated_message')) {
                 obj['event_updated_message'] = ConversationMessage.constructFromObject(data['event_updated_message']);
@@ -133,6 +137,11 @@ ConversationWebsocketMessage.prototype['event_rrweb'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ConversationWebsocketMessage.EventTypeEnum} event_type
  */
 ConversationWebsocketMessage.prototype['event_type'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventTyping} event_typing
+ */
+ConversationWebsocketMessage.prototype['event_typing'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationMessage} event_updated_message

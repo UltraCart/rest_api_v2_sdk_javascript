@@ -18,7 +18,7 @@ import SimpleValue from './SimpleValue';
 /**
  * The CouponEditorValues model module.
  * @module com.ultracart.admin.v2.models/CouponEditorValues
- * @version 4.0.48-RC
+ * @version 4.0.49-RC
  */
 class CouponEditorValues {
     /**

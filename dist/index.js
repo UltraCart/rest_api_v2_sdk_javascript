@@ -1617,6 +1617,18 @@ Object.defineProperty(exports, "EmailCommseqResponse", {
     return _EmailCommseqResponse["default"];
   }
 });
+Object.defineProperty(exports, "EmailCommseqSequenceTestRequest", {
+  enumerable: true,
+  get: function get() {
+    return _EmailCommseqSequenceTestRequest["default"];
+  }
+});
+Object.defineProperty(exports, "EmailCommseqSequenceTestResponse", {
+  enumerable: true,
+  get: function get() {
+    return _EmailCommseqSequenceTestResponse["default"];
+  }
+});
 Object.defineProperty(exports, "EmailCommseqStat", {
   enumerable: true,
   get: function get() {
@@ -4581,6 +4593,10 @@ var _EmailCommseqPostcardsRequest = _interopRequireDefault(require("./com.ultrac
 var _EmailCommseqPostcardsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqPostcardsResponse"));
 
 var _EmailCommseqResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqResponse"));
+
+var _EmailCommseqSequenceTestRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest"));
+
+var _EmailCommseqSequenceTestResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse"));
 
 var _EmailCommseqStat = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqStat"));
 

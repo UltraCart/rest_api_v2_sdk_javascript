@@ -34,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * User service.
 * @module com.ultracart.admin.v2/UserApi
-* @version 4.0.47-RC
+* @version 4.0.48-RC
 */
 var UserApi = /*#__PURE__*/function () {
   /**

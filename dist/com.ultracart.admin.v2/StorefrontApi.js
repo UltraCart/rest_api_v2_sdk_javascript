@@ -61,6 +61,10 @@ var _EmailCommseqPostcardsResponse = _interopRequireDefault(require("../com.ultr
 
 var _EmailCommseqResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqResponse"));
 
+var _EmailCommseqSequenceTestRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest"));
+
+var _EmailCommseqSequenceTestResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse"));
+
 var _EmailCommseqStatResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqStatResponse"));
 
 var _EmailCommseqStepLogsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqStepLogsResponse"));
@@ -278,7 +282,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.47-RC
+* @version 4.0.48-RC
 */
 var StorefrontApi = /*#__PURE__*/function () {
   /**
@@ -5970,6 +5974,55 @@ var StorefrontApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _EmailCommseqWebhookSendTestResponse["default"];
       return this.apiClient.callApi('/storefront/{storefront_oid}/email/webhooks/test', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the sequenceTest operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~sequenceTestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sequence test
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest} email_commseq_sequence_test_request Commseq test request
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~sequenceTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse}
+     */
+
+  }, {
+    key: "sequenceTest",
+    value: function sequenceTest(storefront_oid, commseq_uuid, email_commseq_sequence_test_request, callback) {
+      var postBody = email_commseq_sequence_test_request; // verify the required parameter 'storefront_oid' is set
+
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling sequenceTest");
+      } // verify the required parameter 'commseq_uuid' is set
+
+
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling sequenceTest");
+      } // verify the required parameter 'email_commseq_sequence_test_request' is set
+
+
+      if (email_commseq_sequence_test_request === undefined || email_commseq_sequence_test_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_sequence_test_request' when calling sequenceTest");
+      }
+
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _EmailCommseqSequenceTestResponse["default"];
+      return this.apiClient.callApi('/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/test', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the startEmailCampaign operation.

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponTierQuantityAmount model module.
  * @module com.ultracart.admin.v2.models/CouponTierQuantityAmount
- * @version 4.0.47-RC
+ * @version 4.0.48-RC
  */
 var CouponTierQuantityAmount = /*#__PURE__*/function () {
   /**
