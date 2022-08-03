@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.32
+   * @version 3.10.33
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.event_new_conversation = ConversationSummary.constructFromObject(data['event_new_conversation']);
       if (data.hasOwnProperty('event_new_message'))
         obj.event_new_message = ConversationSummary.constructFromObject(data['event_new_message']);
+      if (data.hasOwnProperty('event_participant_update'))
+        obj.event_participant_update = ConversationSummary.constructFromObject(data['event_participant_update']);
       if (data.hasOwnProperty('event_queue_position'))
         obj.event_queue_position = ConversationEventQueuePosition.constructFromObject(data['event_queue_position']);
       if (data.hasOwnProperty('event_queue_status_update'))
@@ -103,6 +105,11 @@
    * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_message
    */
   exports.prototype.event_new_message = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_update
+   */
+  exports.prototype.event_participant_update = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ConversationEventQueuePosition} event_queue_position
@@ -199,7 +206,13 @@
      * value: "rrweb"
      * @const
      */
-    rrweb: "rrweb"
+    rrweb: "rrweb",
+
+    /**
+     * value: "participant update"
+     * @const
+     */
+    participant_update: "participant update"
   };
 
 
