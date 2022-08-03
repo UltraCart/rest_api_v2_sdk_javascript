@@ -18,7 +18,7 @@ import VerificationRecord from './VerificationRecord';
 /**
  * The EmailDomain model module.
  * @module com.ultracart.admin.v2.models/EmailDomain
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 class EmailDomain {
     /**

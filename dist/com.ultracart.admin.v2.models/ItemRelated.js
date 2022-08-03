@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemRelated model module.
  * @module com.ultracart.admin.v2.models/ItemRelated
- * @version 4.0.48-RC
+ * @version 4.0.49-RC
  */
 var ItemRelated = /*#__PURE__*/function () {
   /**

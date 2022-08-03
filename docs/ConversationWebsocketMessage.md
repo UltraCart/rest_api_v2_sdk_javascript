@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **event_conversation_closed** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_new_conversation** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_new_message** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
+**event_participant_update** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_queue_position** | [**ConversationEventQueuePosition**](ConversationEventQueuePosition.md) |  | [optional] 
 **event_queue_status_update** | [**ConversationWebchatQueueStatus**](ConversationWebchatQueueStatus.md) |  | [optional] 
 **event_rrweb** | [**ConversationEventRRWeb**](ConversationEventRRWeb.md) |  | [optional] 
@@ -37,6 +38,8 @@ Name | Type | Description | Notes
 * `queue status update` (value: `"queue status update"`)
 
 * `rrweb` (value: `"rrweb"`)
+
+* `participant update` (value: `"participant update"`)
 
 
 

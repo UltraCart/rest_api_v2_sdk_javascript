@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPaymentTransaction model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentTransaction
- * @version 4.0.48-RC
+ * @version 4.0.49-RC
  */
 var OrderPaymentTransaction = /*#__PURE__*/function () {
   /**

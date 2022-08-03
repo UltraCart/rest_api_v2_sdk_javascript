@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AffiliateClicksResponse model module.
  * @module com.ultracart.admin.v2.models/AffiliateClicksResponse
- * @version 4.0.48-RC
+ * @version 4.0.49-RC
  */
 var AffiliateClicksResponse = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerAttachment model module.
  * @module com.ultracart.admin.v2.models/CustomerAttachment
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 class CustomerAttachment {
     /**

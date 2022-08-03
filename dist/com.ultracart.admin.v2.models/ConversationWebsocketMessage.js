@@ -11,6 +11,8 @@ var _ConversationEventQueuePosition = _interopRequireDefault(require("./Conversa
 
 var _ConversationEventRRWeb = _interopRequireDefault(require("./ConversationEventRRWeb"));
 
+var _ConversationEventTyping = _interopRequireDefault(require("./ConversationEventTyping"));
+
 var _ConversationMessage = _interopRequireDefault(require("./ConversationMessage"));
 
 var _ConversationSummary = _interopRequireDefault(require("./ConversationSummary"));
@@ -28,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.48-RC
+ * @version 4.0.49-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -96,6 +98,10 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
           obj['event_type'] = _ApiClient["default"].convertToType(data['event_type'], 'String');
         }
 
+        if (data.hasOwnProperty('event_typing')) {
+          obj['event_typing'] = _ConversationEventTyping["default"].constructFromObject(data['event_typing']);
+        }
+
         if (data.hasOwnProperty('event_updated_message')) {
           obj['event_updated_message'] = _ConversationMessage["default"].constructFromObject(data['event_updated_message']);
         }
@@ -158,6 +164,11 @@ ConversationWebsocketMessage.prototype['event_rrweb'] = undefined;
  */
 
 ConversationWebsocketMessage.prototype['event_type'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventTyping} event_typing
+ */
+
+ConversationWebsocketMessage.prototype['event_typing'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationMessage} event_updated_message
  */

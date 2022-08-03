@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationParticipant from './ConversationParticipant';
 
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 class ConversationSummary {
     /**
@@ -73,6 +74,9 @@ class ConversationSummary {
             }
             if (data.hasOwnProperty('message_count')) {
                 obj['message_count'] = ApiClient.convertToType(data['message_count'], 'Number');
+            }
+            if (data.hasOwnProperty('participants')) {
+                obj['participants'] = ApiClient.convertToType(data['participants'], [ConversationParticipant]);
             }
             if (data.hasOwnProperty('start_dts')) {
                 obj['start_dts'] = ApiClient.convertToType(data['start_dts'], 'String');
@@ -135,6 +139,11 @@ ConversationSummary.prototype['merchant_id'] = undefined;
  * @member {Number} message_count
  */
 ConversationSummary.prototype['message_count'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationParticipant>} participants
+ */
+ConversationSummary.prototype['participants'] = undefined;
 
 /**
  * Start of the conversation date/time

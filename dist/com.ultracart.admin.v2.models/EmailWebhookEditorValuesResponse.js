@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailWebhookEditorValuesResponse model module.
  * @module com.ultracart.admin.v2.models/EmailWebhookEditorValuesResponse
- * @version 4.0.48-RC
+ * @version 4.0.49-RC
  */
 var EmailWebhookEditorValuesResponse = /*#__PURE__*/function () {
   /**
