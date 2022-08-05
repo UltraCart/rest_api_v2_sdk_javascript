@@ -11,11 +11,23 @@ Name | Type | Description | Notes
 **last_conversation_participant_arn** | **String** |  | [optional] 
 **last_conversation_participant_name** | **String** |  | [optional] 
 **last_message_dts** | **String** | Last message date/time | [optional] 
+**medium** | **String** | The communication medium of the customer. | [optional] 
 **merchant_id** | **String** |  | [optional] 
 **message_count** | **Number** |  | [optional] 
 **participants** | [**[ConversationParticipant]**](ConversationParticipant.md) |  | [optional] 
 **start_dts** | **String** | Start of the conversation date/time | [optional] 
 **unread_messages** | **Boolean** |  | [optional] 
 **visible** | **Boolean** |  | [optional] 
+
+
+
+## Enum: MediumEnum
+
+
+* `sms` (value: `"sms"`)
+
+* `websocket` (value: `"websocket"`)
+
+
 
 

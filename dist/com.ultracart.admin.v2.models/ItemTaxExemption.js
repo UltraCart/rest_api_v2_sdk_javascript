@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemTaxExemption model module.
  * @module com.ultracart.admin.v2.models/ItemTaxExemption
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var ItemTaxExemption = /*#__PURE__*/function () {
   /**

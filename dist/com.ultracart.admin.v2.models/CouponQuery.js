@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponQuery model module.
  * @module com.ultracart.admin.v2.models/CouponQuery
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var CouponQuery = /*#__PURE__*/function () {
   /**

@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationParticipant = _interopRequireDefault(require("./ConversationParticipant"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var ConversationSummary = /*#__PURE__*/function () {
   /**
@@ -90,6 +92,10 @@ var ConversationSummary = /*#__PURE__*/function () {
           obj['message_count'] = _ApiClient["default"].convertToType(data['message_count'], 'Number');
         }
 
+        if (data.hasOwnProperty('participants')) {
+          obj['participants'] = _ApiClient["default"].convertToType(data['participants'], [_ConversationParticipant["default"]]);
+        }
+
         if (data.hasOwnProperty('start_dts')) {
           obj['start_dts'] = _ApiClient["default"].convertToType(data['start_dts'], 'String');
         }
@@ -156,6 +162,11 @@ ConversationSummary.prototype['merchant_id'] = undefined;
  */
 
 ConversationSummary.prototype['message_count'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationParticipant>} participants
+ */
+
+ConversationSummary.prototype['participants'] = undefined;
 /**
  * Start of the conversation date/time
  * @member {String} start_dts

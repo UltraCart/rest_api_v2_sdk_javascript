@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -80,6 +80,10 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('event_new_message')) {
           obj['event_new_message'] = _ConversationSummary["default"].constructFromObject(data['event_new_message']);
+        }
+
+        if (data.hasOwnProperty('event_participant_update')) {
+          obj['event_participant_update'] = _ConversationSummary["default"].constructFromObject(data['event_participant_update']);
         }
 
         if (data.hasOwnProperty('event_queue_position')) {
@@ -143,6 +147,11 @@ ConversationWebsocketMessage.prototype['event_new_conversation'] = undefined;
  */
 
 ConversationWebsocketMessage.prototype['event_new_message'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_update
+ */
+
+ConversationWebsocketMessage.prototype['event_participant_update'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationEventQueuePosition} event_queue_position
  */
@@ -238,7 +247,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
    * value: "rrweb"
    * @const
    */
-  "rrweb": "rrweb"
+  "rrweb": "rrweb",
+
+  /**
+   * value: "participant update"
+   * @const
+   */
+  "participant update": "participant update"
 };
 /**
  * Allowed values for the <code>type</code> property.

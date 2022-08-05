@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Property model module.
  * @module com.ultracart.admin.v2.models/Property
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var Property = /*#__PURE__*/function () {
   /**

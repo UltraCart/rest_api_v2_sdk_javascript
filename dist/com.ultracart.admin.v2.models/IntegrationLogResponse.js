@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLogResponse model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogResponse
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var IntegrationLogResponse = /*#__PURE__*/function () {
   /**

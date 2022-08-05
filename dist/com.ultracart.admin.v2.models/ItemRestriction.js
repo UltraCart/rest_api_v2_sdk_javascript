@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemRestriction model module.
  * @module com.ultracart.admin.v2.models/ItemRestriction
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var ItemRestriction = /*#__PURE__*/function () {
   /**

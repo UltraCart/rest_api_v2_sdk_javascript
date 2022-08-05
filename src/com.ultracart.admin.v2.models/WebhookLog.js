@@ -17,7 +17,7 @@ import HTTPHeader from './HTTPHeader';
 /**
  * The WebhookLog model module.
  * @module com.ultracart.admin.v2.models/WebhookLog
- * @version 4.0.50-RC
+ * @version 4.0.51-RC
  */
 class WebhookLog {
     /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartCurrencyConversion model module.
  * @module com.ultracart.admin.v2.models/CartCurrencyConversion
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var CartCurrencyConversion = /*#__PURE__*/function () {
   /**

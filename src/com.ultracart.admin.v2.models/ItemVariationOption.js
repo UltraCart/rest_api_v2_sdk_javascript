@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemVariationOption model module.
  * @module com.ultracart.admin.v2.models/ItemVariationOption
- * @version 4.0.50-RC
+ * @version 4.0.51-RC
  */
 class ItemVariationOption {
     /**

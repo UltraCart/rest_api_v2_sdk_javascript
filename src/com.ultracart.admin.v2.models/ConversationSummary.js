@@ -17,7 +17,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.50-RC
+ * @version 4.0.51-RC
  */
 class ConversationSummary {
     /**
@@ -68,6 +68,9 @@ class ConversationSummary {
             }
             if (data.hasOwnProperty('last_message_dts')) {
                 obj['last_message_dts'] = ApiClient.convertToType(data['last_message_dts'], 'String');
+            }
+            if (data.hasOwnProperty('medium')) {
+                obj['medium'] = ApiClient.convertToType(data['medium'], 'String');
             }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
@@ -131,6 +134,12 @@ ConversationSummary.prototype['last_conversation_participant_name'] = undefined;
 ConversationSummary.prototype['last_message_dts'] = undefined;
 
 /**
+ * The communication medium of the customer.
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary.MediumEnum} medium
+ */
+ConversationSummary.prototype['medium'] = undefined;
+
+/**
  * @member {String} merchant_id
  */
 ConversationSummary.prototype['merchant_id'] = undefined;
@@ -163,6 +172,27 @@ ConversationSummary.prototype['visible'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>medium</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationSummary['MediumEnum'] = {
+
+    /**
+     * value: "sms"
+     * @const
+     */
+    "sms": "sms",
+
+    /**
+     * value: "websocket"
+     * @const
+     */
+    "websocket": "websocket"
+};
 
 
 

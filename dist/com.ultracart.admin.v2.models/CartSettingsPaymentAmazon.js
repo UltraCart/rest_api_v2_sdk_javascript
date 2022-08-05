@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettingsPaymentAmazon model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentAmazon
- * @version 4.0.49-RC
+ * @version 4.0.50-RC
  */
 var CartSettingsPaymentAmazon = /*#__PURE__*/function () {
   /**

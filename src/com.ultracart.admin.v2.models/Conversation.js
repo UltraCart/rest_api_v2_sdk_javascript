@@ -18,7 +18,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.50-RC
+ * @version 4.0.51-RC
  */
 class Conversation {
     /**
@@ -58,14 +58,41 @@ class Conversation {
             if (data.hasOwnProperty('conversation_uuid')) {
                 obj['conversation_uuid'] = ApiClient.convertToType(data['conversation_uuid'], 'String');
             }
+            if (data.hasOwnProperty('last_conversation_message_body')) {
+                obj['last_conversation_message_body'] = ApiClient.convertToType(data['last_conversation_message_body'], 'String');
+            }
+            if (data.hasOwnProperty('last_conversation_participant_arn')) {
+                obj['last_conversation_participant_arn'] = ApiClient.convertToType(data['last_conversation_participant_arn'], 'String');
+            }
+            if (data.hasOwnProperty('last_conversation_participant_name')) {
+                obj['last_conversation_participant_name'] = ApiClient.convertToType(data['last_conversation_participant_name'], 'String');
+            }
+            if (data.hasOwnProperty('last_message_dts')) {
+                obj['last_message_dts'] = ApiClient.convertToType(data['last_message_dts'], 'String');
+            }
+            if (data.hasOwnProperty('medium')) {
+                obj['medium'] = ApiClient.convertToType(data['medium'], 'String');
+            }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+            }
+            if (data.hasOwnProperty('message_count')) {
+                obj['message_count'] = ApiClient.convertToType(data['message_count'], 'Number');
             }
             if (data.hasOwnProperty('messages')) {
                 obj['messages'] = ApiClient.convertToType(data['messages'], [ConversationMessage]);
             }
             if (data.hasOwnProperty('participants')) {
                 obj['participants'] = ApiClient.convertToType(data['participants'], [ConversationParticipant]);
+            }
+            if (data.hasOwnProperty('start_dts')) {
+                obj['start_dts'] = ApiClient.convertToType(data['start_dts'], 'String');
+            }
+            if (data.hasOwnProperty('unread_messages')) {
+                obj['unread_messages'] = ApiClient.convertToType(data['unread_messages'], 'Boolean');
+            }
+            if (data.hasOwnProperty('visible')) {
+                obj['visible'] = ApiClient.convertToType(data['visible'], 'Boolean');
             }
         }
         return obj;
@@ -90,9 +117,41 @@ Conversation.prototype['conversation_arn'] = undefined;
 Conversation.prototype['conversation_uuid'] = undefined;
 
 /**
+ * @member {String} last_conversation_message_body
+ */
+Conversation.prototype['last_conversation_message_body'] = undefined;
+
+/**
+ * @member {String} last_conversation_participant_arn
+ */
+Conversation.prototype['last_conversation_participant_arn'] = undefined;
+
+/**
+ * @member {String} last_conversation_participant_name
+ */
+Conversation.prototype['last_conversation_participant_name'] = undefined;
+
+/**
+ * Last message date/time
+ * @member {String} last_message_dts
+ */
+Conversation.prototype['last_message_dts'] = undefined;
+
+/**
+ * The communication medium of the customer.
+ * @member {module:com.ultracart.admin.v2.models/Conversation.MediumEnum} medium
+ */
+Conversation.prototype['medium'] = undefined;
+
+/**
  * @member {String} merchant_id
  */
 Conversation.prototype['merchant_id'] = undefined;
+
+/**
+ * @member {Number} message_count
+ */
+Conversation.prototype['message_count'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessage>} messages
@@ -104,8 +163,45 @@ Conversation.prototype['messages'] = undefined;
  */
 Conversation.prototype['participants'] = undefined;
 
+/**
+ * Start of the conversation date/time
+ * @member {String} start_dts
+ */
+Conversation.prototype['start_dts'] = undefined;
+
+/**
+ * @member {Boolean} unread_messages
+ */
+Conversation.prototype['unread_messages'] = undefined;
+
+/**
+ * @member {Boolean} visible
+ */
+Conversation.prototype['visible'] = undefined;
 
 
+
+
+
+/**
+ * Allowed values for the <code>medium</code> property.
+ * @enum {String}
+ * @readonly
+ */
+Conversation['MediumEnum'] = {
+
+    /**
+     * value: "sms"
+     * @const
+     */
+    "sms": "sms",
+
+    /**
+     * value: "websocket"
+     * @const
+     */
+    "websocket": "websocket"
+};
 
 
 
