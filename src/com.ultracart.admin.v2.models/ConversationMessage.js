@@ -34,7 +34,7 @@
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.10.34
+   * @version 3.10.35
    */
 
   /**
@@ -63,8 +63,12 @@
         obj.body = ApiClient.convertToType(data['body'], 'String');
       if (data.hasOwnProperty('client_message_id'))
         obj.client_message_id = ApiClient.convertToType(data['client_message_id'], 'String');
+      if (data.hasOwnProperty('conversation_message_uuid'))
+        obj.conversation_message_uuid = ApiClient.convertToType(data['conversation_message_uuid'], 'String');
       if (data.hasOwnProperty('media_urls'))
         obj.media_urls = ApiClient.convertToType(data['media_urls'], ['String']);
+      if (data.hasOwnProperty('merchant_id'))
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('message_dts'))
         obj.message_dts = ApiClient.convertToType(data['message_dts'], 'String');
       if (data.hasOwnProperty('transport_statuses'))
@@ -98,9 +102,19 @@
   exports.prototype.client_message_id = undefined;
 
   /**
+   * @member {String} conversation_message_uuid
+   */
+  exports.prototype.conversation_message_uuid = undefined;
+
+  /**
    * @member {Array.<String>} media_urls
    */
   exports.prototype.media_urls = undefined;
+
+  /**
+   * @member {String} merchant_id
+   */
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Message date/time
