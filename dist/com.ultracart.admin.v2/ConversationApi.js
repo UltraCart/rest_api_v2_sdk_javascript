@@ -36,7 +36,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.50-RC
+* @version 4.0.51-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -196,6 +196,7 @@ var ConversationApi = /*#__PURE__*/function () {
      * Retrieve a list of conversation summaries newest to oldest
      * Retrieve a list of conversation summaries that are ordered newest to oldest, include the most recent message and whether its been read. 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.medium 
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -209,6 +210,7 @@ var ConversationApi = /*#__PURE__*/function () {
       var postBody = null;
       var pathParams = {};
       var queryParams = {
+        'medium': opts['medium'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset']
       };

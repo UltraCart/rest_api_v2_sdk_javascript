@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenshotsResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenshotsResponse
- * @version 4.0.50-RC
+ * @version 4.0.51-RC
  */
 var ScreenshotsResponse = /*#__PURE__*/function () {
   /**

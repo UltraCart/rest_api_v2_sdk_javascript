@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.50-RC
+ * @version 4.0.51-RC
  */
 var Conversation = /*#__PURE__*/function () {
   /**
@@ -70,8 +70,32 @@ var Conversation = /*#__PURE__*/function () {
           obj['conversation_uuid'] = _ApiClient["default"].convertToType(data['conversation_uuid'], 'String');
         }
 
+        if (data.hasOwnProperty('last_conversation_message_body')) {
+          obj['last_conversation_message_body'] = _ApiClient["default"].convertToType(data['last_conversation_message_body'], 'String');
+        }
+
+        if (data.hasOwnProperty('last_conversation_participant_arn')) {
+          obj['last_conversation_participant_arn'] = _ApiClient["default"].convertToType(data['last_conversation_participant_arn'], 'String');
+        }
+
+        if (data.hasOwnProperty('last_conversation_participant_name')) {
+          obj['last_conversation_participant_name'] = _ApiClient["default"].convertToType(data['last_conversation_participant_name'], 'String');
+        }
+
+        if (data.hasOwnProperty('last_message_dts')) {
+          obj['last_message_dts'] = _ApiClient["default"].convertToType(data['last_message_dts'], 'String');
+        }
+
+        if (data.hasOwnProperty('medium')) {
+          obj['medium'] = _ApiClient["default"].convertToType(data['medium'], 'String');
+        }
+
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
+        }
+
+        if (data.hasOwnProperty('message_count')) {
+          obj['message_count'] = _ApiClient["default"].convertToType(data['message_count'], 'Number');
         }
 
         if (data.hasOwnProperty('messages')) {
@@ -80,6 +104,18 @@ var Conversation = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('participants')) {
           obj['participants'] = _ApiClient["default"].convertToType(data['participants'], [_ConversationParticipant["default"]]);
+        }
+
+        if (data.hasOwnProperty('start_dts')) {
+          obj['start_dts'] = _ApiClient["default"].convertToType(data['start_dts'], 'String');
+        }
+
+        if (data.hasOwnProperty('unread_messages')) {
+          obj['unread_messages'] = _ApiClient["default"].convertToType(data['unread_messages'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('visible')) {
+          obj['visible'] = _ApiClient["default"].convertToType(data['visible'], 'Boolean');
         }
       }
 
@@ -106,10 +142,42 @@ Conversation.prototype['conversation_arn'] = undefined;
 
 Conversation.prototype['conversation_uuid'] = undefined;
 /**
+ * @member {String} last_conversation_message_body
+ */
+
+Conversation.prototype['last_conversation_message_body'] = undefined;
+/**
+ * @member {String} last_conversation_participant_arn
+ */
+
+Conversation.prototype['last_conversation_participant_arn'] = undefined;
+/**
+ * @member {String} last_conversation_participant_name
+ */
+
+Conversation.prototype['last_conversation_participant_name'] = undefined;
+/**
+ * Last message date/time
+ * @member {String} last_message_dts
+ */
+
+Conversation.prototype['last_message_dts'] = undefined;
+/**
+ * The communication medium of the customer.
+ * @member {module:com.ultracart.admin.v2.models/Conversation.MediumEnum} medium
+ */
+
+Conversation.prototype['medium'] = undefined;
+/**
  * @member {String} merchant_id
  */
 
 Conversation.prototype['merchant_id'] = undefined;
+/**
+ * @member {Number} message_count
+ */
+
+Conversation.prototype['message_count'] = undefined;
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessage>} messages
  */
@@ -120,5 +188,40 @@ Conversation.prototype['messages'] = undefined;
  */
 
 Conversation.prototype['participants'] = undefined;
+/**
+ * Start of the conversation date/time
+ * @member {String} start_dts
+ */
+
+Conversation.prototype['start_dts'] = undefined;
+/**
+ * @member {Boolean} unread_messages
+ */
+
+Conversation.prototype['unread_messages'] = undefined;
+/**
+ * @member {Boolean} visible
+ */
+
+Conversation.prototype['visible'] = undefined;
+/**
+ * Allowed values for the <code>medium</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+Conversation['MediumEnum'] = {
+  /**
+   * value: "sms"
+   * @const
+   */
+  "sms": "sms",
+
+  /**
+   * value: "websocket"
+   * @const
+   */
+  "websocket": "websocket"
+};
 var _default = Conversation;
 exports["default"] = _default;

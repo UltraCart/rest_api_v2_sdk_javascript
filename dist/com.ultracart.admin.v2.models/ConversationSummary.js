@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.50-RC
+ * @version 4.0.51-RC
  */
 var ConversationSummary = /*#__PURE__*/function () {
   /**
@@ -82,6 +82,10 @@ var ConversationSummary = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('last_message_dts')) {
           obj['last_message_dts'] = _ApiClient["default"].convertToType(data['last_message_dts'], 'String');
+        }
+
+        if (data.hasOwnProperty('medium')) {
+          obj['medium'] = _ApiClient["default"].convertToType(data['medium'], 'String');
         }
 
         if (data.hasOwnProperty('merchant_id')) {
@@ -153,6 +157,12 @@ ConversationSummary.prototype['last_conversation_participant_name'] = undefined;
 
 ConversationSummary.prototype['last_message_dts'] = undefined;
 /**
+ * The communication medium of the customer.
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary.MediumEnum} medium
+ */
+
+ConversationSummary.prototype['medium'] = undefined;
+/**
  * @member {String} merchant_id
  */
 
@@ -183,5 +193,24 @@ ConversationSummary.prototype['unread_messages'] = undefined;
  */
 
 ConversationSummary.prototype['visible'] = undefined;
+/**
+ * Allowed values for the <code>medium</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+ConversationSummary['MediumEnum'] = {
+  /**
+   * value: "sms"
+   * @const
+   */
+  "sms": "sms",
+
+  /**
+   * value: "websocket"
+   * @const
+   */
+  "websocket": "websocket"
+};
 var _default = ConversationSummary;
 exports["default"] = _default;
