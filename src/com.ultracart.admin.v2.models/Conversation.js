@@ -34,7 +34,7 @@
   /**
    * The Conversation model module.
    * @module com.ultracart.admin.v2.models/Conversation
-   * @version 3.10.33
+   * @version 3.10.34
    */
 
   /**
@@ -61,12 +61,30 @@
         obj.conversation_arn = ApiClient.convertToType(data['conversation_arn'], 'String');
       if (data.hasOwnProperty('conversation_uuid'))
         obj.conversation_uuid = ApiClient.convertToType(data['conversation_uuid'], 'String');
+      if (data.hasOwnProperty('last_conversation_message_body'))
+        obj.last_conversation_message_body = ApiClient.convertToType(data['last_conversation_message_body'], 'String');
+      if (data.hasOwnProperty('last_conversation_participant_arn'))
+        obj.last_conversation_participant_arn = ApiClient.convertToType(data['last_conversation_participant_arn'], 'String');
+      if (data.hasOwnProperty('last_conversation_participant_name'))
+        obj.last_conversation_participant_name = ApiClient.convertToType(data['last_conversation_participant_name'], 'String');
+      if (data.hasOwnProperty('last_message_dts'))
+        obj.last_message_dts = ApiClient.convertToType(data['last_message_dts'], 'String');
+      if (data.hasOwnProperty('medium'))
+        obj.medium = ApiClient.convertToType(data['medium'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('message_count'))
+        obj.message_count = ApiClient.convertToType(data['message_count'], 'Number');
       if (data.hasOwnProperty('messages'))
         obj.messages = ApiClient.convertToType(data['messages'], [ConversationMessage]);
       if (data.hasOwnProperty('participants'))
         obj.participants = ApiClient.convertToType(data['participants'], [ConversationParticipant]);
+      if (data.hasOwnProperty('start_dts'))
+        obj.start_dts = ApiClient.convertToType(data['start_dts'], 'String');
+      if (data.hasOwnProperty('unread_messages'))
+        obj.unread_messages = ApiClient.convertToType(data['unread_messages'], 'Boolean');
+      if (data.hasOwnProperty('visible'))
+        obj.visible = ApiClient.convertToType(data['visible'], 'Boolean');
     }
     return obj;
   }
@@ -87,9 +105,41 @@
   exports.prototype.conversation_uuid = undefined;
 
   /**
+   * @member {String} last_conversation_message_body
+   */
+  exports.prototype.last_conversation_message_body = undefined;
+
+  /**
+   * @member {String} last_conversation_participant_arn
+   */
+  exports.prototype.last_conversation_participant_arn = undefined;
+
+  /**
+   * @member {String} last_conversation_participant_name
+   */
+  exports.prototype.last_conversation_participant_name = undefined;
+
+  /**
+   * Last message date/time
+   * @member {String} last_message_dts
+   */
+  exports.prototype.last_message_dts = undefined;
+
+  /**
+   * The communication medium of the customer.
+   * @member {module:com.ultracart.admin.v2.models/Conversation.MediumEnum} medium
+   */
+  exports.prototype.medium = undefined;
+
+  /**
    * @member {String} merchant_id
    */
   exports.prototype.merchant_id = undefined;
+
+  /**
+   * @member {Number} message_count
+   */
+  exports.prototype.message_count = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessage>} messages
@@ -100,6 +150,42 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationParticipant>} participants
    */
   exports.prototype.participants = undefined;
+
+  /**
+   * Start of the conversation date/time
+   * @member {String} start_dts
+   */
+  exports.prototype.start_dts = undefined;
+
+  /**
+   * @member {Boolean} unread_messages
+   */
+  exports.prototype.unread_messages = undefined;
+
+  /**
+   * @member {Boolean} visible
+   */
+  exports.prototype.visible = undefined;
+
+
+  /**
+   * Allowed values for the <code>medium</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.MediumEnum = {
+    /**
+     * value: "sms"
+     * @const
+     */
+    sms: "sms",
+
+    /**
+     * value: "websocket"
+     * @const
+     */
+    websocket: "websocket"
+  };
 
   return exports;
 
