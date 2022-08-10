@@ -36,6 +36,7 @@ import CouponFreeShippingSpecificItems from './CouponFreeShippingSpecificItems';
 import CouponFreeShippingWithItemsPurchase from './CouponFreeShippingWithItemsPurchase';
 import CouponFreeShippingWithSubtotal from './CouponFreeShippingWithSubtotal';
 import CouponMultipleAmountsOffItems from './CouponMultipleAmountsOffItems';
+import CouponNoDiscount from './CouponNoDiscount';
 import CouponPercentOffItemWithItemsQuantityPurchase from './CouponPercentOffItemWithItemsQuantityPurchase';
 import CouponPercentOffItems from './CouponPercentOffItems';
 import CouponPercentOffItemsAndFreeShipping from './CouponPercentOffItemsAndFreeShipping';
@@ -58,7 +59,7 @@ import CouponTieredPercentOffSubtotal from './CouponTieredPercentOffSubtotal';
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 class Coupon {
     /**
@@ -195,7 +196,7 @@ class Coupon {
                 obj['multiple_amounts_off_items'] = CouponMultipleAmountsOffItems.constructFromObject(data['multiple_amounts_off_items']);
             }
             if (data.hasOwnProperty('no_discount')) {
-                obj['no_discount'] = ApiClient.convertToType(data['no_discount'], Object);
+                obj['no_discount'] = CouponNoDiscount.constructFromObject(data['no_discount']);
             }
             if (data.hasOwnProperty('percent_off_item_with_items_quantity_purchase')) {
                 obj['percent_off_item_with_items_quantity_purchase'] = CouponPercentOffItemWithItemsQuantityPurchase.constructFromObject(data['percent_off_item_with_items_quantity_purchase']);
@@ -463,7 +464,7 @@ Coupon.prototype['merchant_notes'] = undefined;
 Coupon.prototype['multiple_amounts_off_items'] = undefined;
 
 /**
- * @member {Object} no_discount
+ * @member {module:com.ultracart.admin.v2.models/CouponNoDiscount} no_discount
  */
 Coupon.prototype['no_discount'] = undefined;
 

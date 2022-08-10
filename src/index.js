@@ -135,6 +135,7 @@ import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationA
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationEventQueuePosition from './com.ultracart.admin.v2.models/ConversationEventQueuePosition';
 import ConversationEventRRWeb from './com.ultracart.admin.v2.models/ConversationEventRRWeb';
+import ConversationEventReadMessage from './com.ultracart.admin.v2.models/ConversationEventReadMessage';
 import ConversationEventTyping from './com.ultracart.admin.v2.models/ConversationEventTyping';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
@@ -189,6 +190,7 @@ import CouponFreeShippingWithSubtotal from './com.ultracart.admin.v2.models/Coup
 import CouponItemSearchResult from './com.ultracart.admin.v2.models/CouponItemSearchResult';
 import CouponItemSearchResultsResponse from './com.ultracart.admin.v2.models/CouponItemSearchResultsResponse';
 import CouponMultipleAmountsOffItems from './com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems';
+import CouponNoDiscount from './com.ultracart.admin.v2.models/CouponNoDiscount';
 import CouponPercentOffItemWithItemsQuantityPurchase from './com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase';
 import CouponPercentOffItems from './com.ultracart.admin.v2.models/CouponPercentOffItems';
 import CouponPercentOffItemsAndFreeShipping from './com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping';
@@ -722,7 +724,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.52-RC
+* @version 4.0.53-RC
 */
 export {
     /**
@@ -1464,6 +1466,12 @@ export {
     ConversationEventRRWeb,
 
     /**
+     * The ConversationEventReadMessage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEventReadMessage}
+     */
+    ConversationEventReadMessage,
+
+    /**
      * The ConversationEventTyping model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationEventTyping}
      */
@@ -1786,6 +1794,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems}
      */
     CouponMultipleAmountsOffItems,
+
+    /**
+     * The CouponNoDiscount model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponNoDiscount}
+     */
+    CouponNoDiscount,
 
     /**
      * The CouponPercentOffItemWithItemsQuantityPurchase model constructor.

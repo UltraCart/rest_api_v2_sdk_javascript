@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import ConversationEventQueuePosition from './ConversationEventQueuePosition';
 import ConversationEventRRWeb from './ConversationEventRRWeb';
+import ConversationEventReadMessage from './ConversationEventReadMessage';
 import ConversationEventTyping from './ConversationEventTyping';
 import ConversationMessage from './ConversationMessage';
 import ConversationSummary from './ConversationSummary';
@@ -22,7 +23,7 @@ import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -73,6 +74,9 @@ class ConversationWebsocketMessage {
             }
             if (data.hasOwnProperty('event_queue_status_update')) {
                 obj['event_queue_status_update'] = ConversationWebchatQueueStatus.constructFromObject(data['event_queue_status_update']);
+            }
+            if (data.hasOwnProperty('event_read_message')) {
+                obj['event_read_message'] = ConversationEventReadMessage.constructFromObject(data['event_read_message']);
             }
             if (data.hasOwnProperty('event_rrweb')) {
                 obj['event_rrweb'] = ConversationEventRRWeb.constructFromObject(data['event_rrweb']);
@@ -134,6 +138,11 @@ ConversationWebsocketMessage.prototype['event_queue_position'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatus} event_queue_status_update
  */
 ConversationWebsocketMessage.prototype['event_queue_status_update'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventReadMessage} event_read_message
+ */
+ConversationWebsocketMessage.prototype['event_read_message'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationEventRRWeb} event_rrweb
@@ -230,7 +239,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
      * value: "participant update"
      * @const
      */
-    "participant update": "participant update"
+    "participant update": "participant update",
+
+    /**
+     * value: "read message"
+     * @const
+     */
+    "read message": "read message"
 };
 
 

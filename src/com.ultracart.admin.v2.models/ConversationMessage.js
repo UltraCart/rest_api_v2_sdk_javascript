@@ -17,7 +17,7 @@ import ConversationMessageTransportStatus from './ConversationMessageTransportSt
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 class ConversationMessage {
     /**
@@ -71,6 +71,9 @@ class ConversationMessage {
             }
             if (data.hasOwnProperty('message_dts')) {
                 obj['message_dts'] = ApiClient.convertToType(data['message_dts'], 'String');
+            }
+            if (data.hasOwnProperty('message_epoch')) {
+                obj['message_epoch'] = ApiClient.convertToType(data['message_epoch'], 'Number');
             }
             if (data.hasOwnProperty('transport_statuses')) {
                 obj['transport_statuses'] = ApiClient.convertToType(data['transport_statuses'], [ConversationMessageTransportStatus]);
@@ -128,6 +131,12 @@ ConversationMessage.prototype['merchant_id'] = undefined;
  * @member {String} message_dts
  */
 ConversationMessage.prototype['message_dts'] = undefined;
+
+/**
+ * Message epoch milliseconds
+ * @member {Number} message_epoch
+ */
+ConversationMessage.prototype['message_epoch'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses

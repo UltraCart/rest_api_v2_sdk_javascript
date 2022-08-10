@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationMessageTransportStatus model module.
  * @module com.ultracart.admin.v2.models/ConversationMessageTransportStatus
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 class ConversationMessageTransportStatus {
     /**
@@ -66,12 +66,88 @@ class ConversationMessageTransportStatus {
 ConversationMessageTransportStatus.prototype['conversation_participant_arn'] = undefined;
 
 /**
- * @member {String} status
+ * The status of the message transport
+ * @member {module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus.StatusEnum} status
  */
 ConversationMessageTransportStatus.prototype['status'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationMessageTransportStatus['StatusEnum'] = {
+
+    /**
+     * value: "accepted"
+     * @const
+     */
+    "accepted": "accepted",
+
+    /**
+     * value: "scheduled"
+     * @const
+     */
+    "scheduled": "scheduled",
+
+    /**
+     * value: "queued"
+     * @const
+     */
+    "queued": "queued",
+
+    /**
+     * value: "sending"
+     * @const
+     */
+    "sending": "sending",
+
+    /**
+     * value: "sent"
+     * @const
+     */
+    "sent": "sent",
+
+    /**
+     * value: "read"
+     * @const
+     */
+    "read": "read",
+
+    /**
+     * value: "TWILIO_CREDENTIALS_MISSING"
+     * @const
+     */
+    "TWILIO_CREDENTIALS_MISSING": "TWILIO_CREDENTIALS_MISSING",
+
+    /**
+     * value: "SENT_TO_TWILIO"
+     * @const
+     */
+    "SENT_TO_TWILIO": "SENT_TO_TWILIO",
+
+    /**
+     * value: "TWILIO_ERROR"
+     * @const
+     */
+    "TWILIO_ERROR": "TWILIO_ERROR",
+
+    /**
+     * value: "SENT_TO_PINPOINT"
+     * @const
+     */
+    "SENT_TO_PINPOINT": "SENT_TO_PINPOINT",
+
+    /**
+     * value: "PINPOINT_ERROR"
+     * @const
+     */
+    "PINPOINT_ERROR": "PINPOINT_ERROR"
+};
 
 
 

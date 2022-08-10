@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemShippingPackageRequirement model module.
  * @module com.ultracart.admin.v2.models/ItemShippingPackageRequirement
- * @version 4.0.51-RC
+ * @version 4.0.52-RC
  */
 var ItemShippingPackageRequirement = /*#__PURE__*/function () {
   /**

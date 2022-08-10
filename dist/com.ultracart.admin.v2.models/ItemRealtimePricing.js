@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemRealtimePricing model module.
  * @module com.ultracart.admin.v2.models/ItemRealtimePricing
- * @version 4.0.51-RC
+ * @version 4.0.52-RC
  */
 var ItemRealtimePricing = /*#__PURE__*/function () {
   /**

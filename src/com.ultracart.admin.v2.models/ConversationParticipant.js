@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 class ConversationParticipant {
     /**
@@ -68,6 +68,9 @@ class ConversationParticipant {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('unread_messages')) {
+                obj['unread_messages'] = ApiClient.convertToType(data['unread_messages'], 'Number');
+            }
         }
         return obj;
     }
@@ -112,6 +115,11 @@ ConversationParticipant.prototype['left_dts'] = undefined;
  * @member {String} status
  */
 ConversationParticipant.prototype['status'] = undefined;
+
+/**
+ * @member {Number} unread_messages
+ */
+ConversationParticipant.prototype['unread_messages'] = undefined;
 
 
 

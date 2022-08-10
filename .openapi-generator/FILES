@@ -130,6 +130,7 @@ docs/ConversationAgentAuthResponse.md
 docs/ConversationApi.md
 docs/ConversationEventQueuePosition.md
 docs/ConversationEventRRWeb.md
+docs/ConversationEventReadMessage.md
 docs/ConversationEventTyping.md
 docs/ConversationMessage.md
 docs/ConversationMessageTransportStatus.md
@@ -185,6 +186,7 @@ docs/CouponFreeShippingWithSubtotal.md
 docs/CouponItemSearchResult.md
 docs/CouponItemSearchResultsResponse.md
 docs/CouponMultipleAmountsOffItems.md
+docs/CouponNoDiscount.md
 docs/CouponPercentOffItemWithItemsQuantityPurchase.md
 docs/CouponPercentOffItems.md
 docs/CouponPercentOffItemsAndFreeShipping.md
@@ -806,6 +808,7 @@ src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
 src/com.ultracart.admin.v2.models/ConversationEventQueuePosition.js
 src/com.ultracart.admin.v2.models/ConversationEventRRWeb.js
+src/com.ultracart.admin.v2.models/ConversationEventReadMessage.js
 src/com.ultracart.admin.v2.models/ConversationEventTyping.js
 src/com.ultracart.admin.v2.models/ConversationMessage.js
 src/com.ultracart.admin.v2.models/ConversationMessageTransportStatus.js
@@ -860,6 +863,7 @@ src/com.ultracart.admin.v2.models/CouponFreeShippingWithSubtotal.js
 src/com.ultracart.admin.v2.models/CouponItemSearchResult.js
 src/com.ultracart.admin.v2.models/CouponItemSearchResultsResponse.js
 src/com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems.js
+src/com.ultracart.admin.v2.models/CouponNoDiscount.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItems.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping.js

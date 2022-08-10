@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The UploadCouponCodesResponse model module.
  * @module com.ultracart.admin.v2.models/UploadCouponCodesResponse
- * @version 4.0.51-RC
+ * @version 4.0.52-RC
  */
 var UploadCouponCodesResponse = /*#__PURE__*/function () {
   /**

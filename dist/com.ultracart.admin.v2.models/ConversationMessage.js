@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.51-RC
+ * @version 4.0.52-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -72,8 +72,16 @@ var ConversationMessage = /*#__PURE__*/function () {
           obj['client_message_id'] = _ApiClient["default"].convertToType(data['client_message_id'], 'String');
         }
 
+        if (data.hasOwnProperty('conversation_message_uuid')) {
+          obj['conversation_message_uuid'] = _ApiClient["default"].convertToType(data['conversation_message_uuid'], 'String');
+        }
+
         if (data.hasOwnProperty('media_urls')) {
           obj['media_urls'] = _ApiClient["default"].convertToType(data['media_urls'], ['String']);
+        }
+
+        if (data.hasOwnProperty('merchant_id')) {
+          obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
 
         if (data.hasOwnProperty('message_dts')) {
@@ -121,10 +129,20 @@ ConversationMessage.prototype['body'] = undefined;
 
 ConversationMessage.prototype['client_message_id'] = undefined;
 /**
+ * @member {String} conversation_message_uuid
+ */
+
+ConversationMessage.prototype['conversation_message_uuid'] = undefined;
+/**
  * @member {Array.<String>} media_urls
  */
 
 ConversationMessage.prototype['media_urls'] = undefined;
+/**
+ * @member {String} merchant_id
+ */
+
+ConversationMessage.prototype['merchant_id'] = undefined;
 /**
  * Message date/time
  * @member {String} message_dts

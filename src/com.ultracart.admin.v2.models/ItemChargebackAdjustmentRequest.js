@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemChargebackAdjustmentRequest model module.
  * @module com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 class ItemChargebackAdjustmentRequest {
     /**

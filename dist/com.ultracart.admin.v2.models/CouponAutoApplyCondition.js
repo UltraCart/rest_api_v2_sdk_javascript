@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponAutoApplyCondition model module.
  * @module com.ultracart.admin.v2.models/CouponAutoApplyCondition
- * @version 4.0.51-RC
+ * @version 4.0.52-RC
  */
 var CouponAutoApplyCondition = /*#__PURE__*/function () {
   /**
