@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **last_message_dts** | **String** | Last message date/time | [optional] 
 **left_dts** | **String** | Left conversation date/time | [optional] 
 **status** | **String** |  | [optional] 
+**unread_messages** | **Number** |  | [optional] 
 
 
