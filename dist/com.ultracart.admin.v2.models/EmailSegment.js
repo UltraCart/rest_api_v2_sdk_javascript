@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailSegment model module.
  * @module com.ultracart.admin.v2.models/EmailSegment
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 var EmailSegment = /*#__PURE__*/function () {
   /**

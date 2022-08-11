@@ -55,6 +55,8 @@ var _CouponFreeShippingWithSubtotal = _interopRequireDefault(require("./CouponFr
 
 var _CouponMultipleAmountsOffItems = _interopRequireDefault(require("./CouponMultipleAmountsOffItems"));
 
+var _CouponNoDiscount = _interopRequireDefault(require("./CouponNoDiscount"));
+
 var _CouponPercentOffItemWithItemsQuantityPurchase = _interopRequireDefault(require("./CouponPercentOffItemWithItemsQuantityPurchase"));
 
 var _CouponPercentOffItems = _interopRequireDefault(require("./CouponPercentOffItems"));
@@ -102,7 +104,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -279,7 +281,7 @@ var Coupon = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('no_discount')) {
-          obj['no_discount'] = _ApiClient["default"].convertToType(data['no_discount'], Object);
+          obj['no_discount'] = _CouponNoDiscount["default"].constructFromObject(data['no_discount']);
         }
 
         if (data.hasOwnProperty('percent_off_item_with_items_quantity_purchase')) {
@@ -573,7 +575,7 @@ Coupon.prototype['merchant_notes'] = undefined;
 
 Coupon.prototype['multiple_amounts_off_items'] = undefined;
 /**
- * @member {Object} no_discount
+ * @member {module:com.ultracart.admin.v2.models/CouponNoDiscount} no_discount
  */
 
 Coupon.prototype['no_discount'] = undefined;

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -88,6 +88,10 @@ var ConversationMessage = /*#__PURE__*/function () {
           obj['message_dts'] = _ApiClient["default"].convertToType(data['message_dts'], 'String');
         }
 
+        if (data.hasOwnProperty('message_epoch')) {
+          obj['message_epoch'] = _ApiClient["default"].convertToType(data['message_epoch'], 'Number');
+        }
+
         if (data.hasOwnProperty('transport_statuses')) {
           obj['transport_statuses'] = _ApiClient["default"].convertToType(data['transport_statuses'], [_ConversationMessageTransportStatus["default"]]);
         }
@@ -149,6 +153,12 @@ ConversationMessage.prototype['merchant_id'] = undefined;
  */
 
 ConversationMessage.prototype['message_dts'] = undefined;
+/**
+ * Message epoch milliseconds
+ * @member {Number} message_epoch
+ */
+
+ConversationMessage.prototype['message_epoch'] = undefined;
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses
  */

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponBuyOneGetOneLimit model module.
  * @module com.ultracart.admin.v2.models/CouponBuyOneGetOneLimit
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 var CouponBuyOneGetOneLimit = /*#__PURE__*/function () {
   /**

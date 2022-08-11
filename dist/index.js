@@ -777,6 +777,12 @@ Object.defineProperty(exports, "ConversationEventRRWeb", {
     return _ConversationEventRRWeb["default"];
   }
 });
+Object.defineProperty(exports, "ConversationEventReadMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEventReadMessage["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationEventTyping", {
   enumerable: true,
   get: function get() {
@@ -1105,6 +1111,12 @@ Object.defineProperty(exports, "CouponMultipleAmountsOffItems", {
   enumerable: true,
   get: function get() {
     return _CouponMultipleAmountsOffItems["default"];
+  }
+});
+Object.defineProperty(exports, "CouponNoDiscount", {
+  enumerable: true,
+  get: function get() {
+    return _CouponNoDiscount["default"];
   }
 });
 Object.defineProperty(exports, "CouponPercentOffItemWithItemsQuantityPurchase", {
@@ -4324,6 +4336,8 @@ var _ConversationEventQueuePosition = _interopRequireDefault(require("./com.ultr
 
 var _ConversationEventRRWeb = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventRRWeb"));
 
+var _ConversationEventReadMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventReadMessage"));
+
 var _ConversationEventTyping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventTyping"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
@@ -4431,6 +4445,8 @@ var _CouponItemSearchResult = _interopRequireDefault(require("./com.ultracart.ad
 var _CouponItemSearchResultsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponItemSearchResultsResponse"));
 
 var _CouponMultipleAmountsOffItems = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems"));
+
+var _CouponNoDiscount = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponNoDiscount"));
 
 var _CouponPercentOffItemWithItemsQuantityPurchase = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase"));
 

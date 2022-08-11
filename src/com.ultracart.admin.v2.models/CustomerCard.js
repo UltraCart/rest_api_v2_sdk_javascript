@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerCard model module.
  * @module com.ultracart.admin.v2.models/CustomerCard
- * @version 4.0.53-RC
+ * @version 4.0.54-RC
  */
 class CustomerCard {
     /**

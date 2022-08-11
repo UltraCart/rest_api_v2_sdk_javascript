@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 var ConversationParticipant = /*#__PURE__*/function () {
   /**
@@ -81,6 +81,10 @@ var ConversationParticipant = /*#__PURE__*/function () {
         if (data.hasOwnProperty('status')) {
           obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
         }
+
+        if (data.hasOwnProperty('unread_messages')) {
+          obj['unread_messages'] = _ApiClient["default"].convertToType(data['unread_messages'], 'Number');
+        }
       }
 
       return obj;
@@ -128,5 +132,10 @@ ConversationParticipant.prototype['left_dts'] = undefined;
  */
 
 ConversationParticipant.prototype['status'] = undefined;
+/**
+ * @member {Number} unread_messages
+ */
+
+ConversationParticipant.prototype['unread_messages'] = undefined;
 var _default = ConversationParticipant;
 exports["default"] = _default;

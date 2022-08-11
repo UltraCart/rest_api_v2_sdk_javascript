@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartCustomerProfileAddress model module.
  * @module com.ultracart.admin.v2.models/CartCustomerProfileAddress
- * @version 4.0.52-RC
+ * @version 4.0.53-RC
  */
 var CartCustomerProfileAddress = /*#__PURE__*/function () {
   /**
