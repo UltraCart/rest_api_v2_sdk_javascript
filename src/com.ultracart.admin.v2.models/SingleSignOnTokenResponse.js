@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SingleSignOnTokenResponse model module.
  * @module com.ultracart.admin.v2.models/SingleSignOnTokenResponse
- * @version 4.0.54-RC
+ * @version 4.0.55-RC
  */
 class SingleSignOnTokenResponse {
     /**

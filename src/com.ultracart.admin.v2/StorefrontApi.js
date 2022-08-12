@@ -137,6 +137,7 @@ import ScreenRecordingSettingsResponse from '../com.ultracart.admin.v2.models/Sc
 import ScreenRecordingTagsRequest from '../com.ultracart.admin.v2.models/ScreenRecordingTagsRequest';
 import ScreenRecordingTagsResponse from '../com.ultracart.admin.v2.models/ScreenRecordingTagsResponse';
 import ScreenshotsResponse from '../com.ultracart.admin.v2.models/ScreenshotsResponse';
+import StoreFrontsResponse from '../com.ultracart.admin.v2.models/StoreFrontsResponse';
 import ThumbnailParametersRequest from '../com.ultracart.admin.v2.models/ThumbnailParametersRequest';
 import ThumbnailParametersResponse from '../com.ultracart.admin.v2.models/ThumbnailParametersResponse';
 import TransactionEmail from '../com.ultracart.admin.v2.models/TransactionEmail';
@@ -149,7 +150,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.54-RC
+* @version 4.0.55-RC
 */
 export default class StorefrontApi {
 
@@ -4889,6 +4890,42 @@ export default class StorefrontApi {
       let returnType = PricingTiersResponse;
       return this.apiClient.callApi(
         '/storefront/pricing_tiers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getStoreFronts operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getStoreFrontsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/StoreFrontsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get storefronts (internal use only for security reasons)
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getStoreFrontsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/StoreFrontsResponse}
+     */
+    getStoreFronts(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = StoreFrontsResponse;
+      return this.apiClient.callApi(
+        '/storefront/', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -17,7 +17,7 @@ import Cart from './Cart';
 /**
  * The CartValidationResponse model module.
  * @module com.ultracart.admin.v2.models/CartValidationResponse
- * @version 4.0.54-RC
+ * @version 4.0.55-RC
  */
 class CartValidationResponse {
     /**

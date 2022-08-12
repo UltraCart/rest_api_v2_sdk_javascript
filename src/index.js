@@ -232,6 +232,7 @@ import CustomerEmailListChanges from './com.ultracart.admin.v2.models/CustomerEm
 import CustomerLoyalty from './com.ultracart.admin.v2.models/CustomerLoyalty';
 import CustomerLoyaltyLedger from './com.ultracart.admin.v2.models/CustomerLoyaltyLedger';
 import CustomerLoyaltyRedemption from './com.ultracart.admin.v2.models/CustomerLoyaltyRedemption';
+import CustomerMagicLinkResponse from './com.ultracart.admin.v2.models/CustomerMagicLinkResponse';
 import CustomerMergeRequest from './com.ultracart.admin.v2.models/CustomerMergeRequest';
 import CustomerOrdersSummary from './com.ultracart.admin.v2.models/CustomerOrdersSummary';
 import CustomerPricingTier from './com.ultracart.admin.v2.models/CustomerPricingTier';
@@ -619,6 +620,8 @@ import SingleSignOnTokenResponse from './com.ultracart.admin.v2.models/SingleSig
 import SovosConfig from './com.ultracart.admin.v2.models/SovosConfig';
 import StateProvince from './com.ultracart.admin.v2.models/StateProvince';
 import StepWaiting from './com.ultracart.admin.v2.models/StepWaiting';
+import StoreFront from './com.ultracart.admin.v2.models/StoreFront';
+import StoreFrontsResponse from './com.ultracart.admin.v2.models/StoreFrontsResponse';
 import TaxCity from './com.ultracart.admin.v2.models/TaxCity';
 import TaxCountry from './com.ultracart.admin.v2.models/TaxCountry';
 import TaxCountryCode from './com.ultracart.admin.v2.models/TaxCountryCode';
@@ -724,7 +727,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.54-RC
+* @version 4.0.55-RC
 */
 export {
     /**
@@ -2046,6 +2049,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomerLoyaltyRedemption}
      */
     CustomerLoyaltyRedemption,
+
+    /**
+     * The CustomerMagicLinkResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerMagicLinkResponse}
+     */
+    CustomerMagicLinkResponse,
 
     /**
      * The CustomerMergeRequest model constructor.
@@ -4368,6 +4377,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/StepWaiting}
      */
     StepWaiting,
+
+    /**
+     * The StoreFront model constructor.
+     * @property {module:com.ultracart.admin.v2.models/StoreFront}
+     */
+    StoreFront,
+
+    /**
+     * The StoreFrontsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/StoreFrontsResponse}
+     */
+    StoreFrontsResponse,
 
     /**
      * The TaxCity model constructor.

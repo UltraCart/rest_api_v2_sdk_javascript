@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailPerformanceResponse model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceResponse
- * @version 4.0.54-RC
+ * @version 4.0.55-RC
  */
 class EmailPerformanceResponse {
     /**

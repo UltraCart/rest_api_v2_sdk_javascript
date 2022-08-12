@@ -19,6 +19,7 @@ import BaseResponse from '../com.ultracart.admin.v2.models/BaseResponse';
 import Customer from '../com.ultracart.admin.v2.models/Customer';
 import CustomerEditorValues from '../com.ultracart.admin.v2.models/CustomerEditorValues';
 import CustomerEmailListChanges from '../com.ultracart.admin.v2.models/CustomerEmailListChanges';
+import CustomerMagicLinkResponse from '../com.ultracart.admin.v2.models/CustomerMagicLinkResponse';
 import CustomerMergeRequest from '../com.ultracart.admin.v2.models/CustomerMergeRequest';
 import CustomerQuery from '../com.ultracart.admin.v2.models/CustomerQuery';
 import CustomerResponse from '../com.ultracart.admin.v2.models/CustomerResponse';
@@ -38,7 +39,7 @@ import LookupResponse from '../com.ultracart.admin.v2.models/LookupResponse';
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.0.54-RC
+* @version 4.0.55-RC
 */
 export default class CustomerApi {
 
@@ -638,6 +639,55 @@ export default class CustomerApi {
       let returnType = EmailVerifyTokenResponse;
       return this.apiClient.callApi(
         '/customer/customers/email_verify/get_token', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getMagicLink operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getMagicLinkCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerMagicLinkResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getMagicLink
+     * Retrieves a magic link to allow a merchant to login as a customer.  This method is a PUT call intentionally. 
+     * @param {Number} customer_profile_oid The customer_profile_oid of the customer.
+     * @param {String} storefront_host_name The storefront to log into.
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getMagicLinkCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerMagicLinkResponse}
+     */
+    getMagicLink(customer_profile_oid, storefront_host_name, callback) {
+      let postBody = null;
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling getMagicLink");
+      }
+      // verify the required parameter 'storefront_host_name' is set
+      if (storefront_host_name === undefined || storefront_host_name === null) {
+        throw new Error("Missing the required parameter 'storefront_host_name' when calling getMagicLink");
+      }
+
+      let pathParams = {
+        'customer_profile_oid': customer_profile_oid,
+        'storefront_host_name': storefront_host_name
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomerMagicLinkResponse;
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}/magic_link/{storefront_host_name}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

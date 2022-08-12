@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemTag model module.
  * @module com.ultracart.admin.v2.models/ItemTag
- * @version 4.0.54-RC
+ * @version 4.0.55-RC
  */
 class ItemTag {
     /**

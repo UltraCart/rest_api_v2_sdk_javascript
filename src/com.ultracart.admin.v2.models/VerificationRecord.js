@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The VerificationRecord model module.
  * @module com.ultracart.admin.v2.models/VerificationRecord
- * @version 4.0.54-RC
+ * @version 4.0.55-RC
  */
 class VerificationRecord {
     /**

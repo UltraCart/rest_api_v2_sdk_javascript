@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxProviderSelfRegionsResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse
- * @version 4.0.53-RC
+ * @version 4.0.54-RC
  */
 var TaxProviderSelfRegionsResponse = /*#__PURE__*/function () {
   /**
