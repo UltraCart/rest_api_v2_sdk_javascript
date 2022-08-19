@@ -255,6 +255,8 @@ var _ScreenRecordingTagsResponse = _interopRequireDefault(require("../com.ultrac
 
 var _ScreenshotsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ScreenshotsResponse"));
 
+var _StoreFrontsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/StoreFrontsResponse"));
+
 var _ThumbnailParametersRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ThumbnailParametersRequest"));
 
 var _ThumbnailParametersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ThumbnailParametersResponse"));
@@ -282,7 +284,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.54-RC
+* @version 4.0.55-RC
 */
 var StorefrontApi = /*#__PURE__*/function () {
   /**
@@ -4496,6 +4498,34 @@ var StorefrontApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _PricingTiersResponse["default"];
       return this.apiClient.callApi('/storefront/pricing_tiers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getStoreFronts operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getStoreFrontsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/StoreFrontsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get storefronts (internal use only for security reasons)
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getStoreFrontsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/StoreFrontsResponse}
+     */
+
+  }, {
+    key: "getStoreFronts",
+    value: function getStoreFronts(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _StoreFrontsResponse["default"];
+      return this.apiClient.callApi('/storefront/', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getThumbnailParameters operation.

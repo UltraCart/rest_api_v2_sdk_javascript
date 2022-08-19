@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OauthTokenResponse model module.
  * @module com.ultracart.admin.v2.models/OauthTokenResponse
- * @version 4.0.54-RC
+ * @version 4.0.55-RC
  */
 var OauthTokenResponse = /*#__PURE__*/function () {
   /**

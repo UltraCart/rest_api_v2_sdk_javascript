@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 class ConversationParticipant {
     /**
@@ -65,6 +65,9 @@ class ConversationParticipant {
             if (data.hasOwnProperty('left_dts')) {
                 obj['left_dts'] = ApiClient.convertToType(data['left_dts'], 'String');
             }
+            if (data.hasOwnProperty('profile_image_url')) {
+                obj['profile_image_url'] = ApiClient.convertToType(data['profile_image_url'], 'String');
+            }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
@@ -110,6 +113,11 @@ ConversationParticipant.prototype['last_message_dts'] = undefined;
  * @member {String} left_dts
  */
 ConversationParticipant.prototype['left_dts'] = undefined;
+
+/**
+ * @member {String} profile_image_url
+ */
+ConversationParticipant.prototype['profile_image_url'] = undefined;
 
 /**
  * @member {String} status

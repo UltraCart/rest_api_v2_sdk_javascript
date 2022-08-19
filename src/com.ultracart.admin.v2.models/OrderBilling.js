@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderBilling model module.
  * @module com.ultracart.admin.v2.models/OrderBilling
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 class OrderBilling {
     /**
@@ -55,6 +55,12 @@ class OrderBilling {
             }
             if (data.hasOwnProperty('cc_emails')) {
                 obj['cc_emails'] = ApiClient.convertToType(data['cc_emails'], ['String']);
+            }
+            if (data.hasOwnProperty('cell_phone')) {
+                obj['cell_phone'] = ApiClient.convertToType(data['cell_phone'], 'String');
+            }
+            if (data.hasOwnProperty('cell_phone_e164')) {
+                obj['cell_phone_e164'] = ApiClient.convertToType(data['cell_phone_e164'], 'String');
             }
             if (data.hasOwnProperty('city')) {
                 obj['city'] = ApiClient.convertToType(data['city'], 'String');
@@ -119,6 +125,18 @@ OrderBilling.prototype['address2'] = undefined;
  * @member {Array.<String>} cc_emails
  */
 OrderBilling.prototype['cc_emails'] = undefined;
+
+/**
+ * Cell phone
+ * @member {String} cell_phone
+ */
+OrderBilling.prototype['cell_phone'] = undefined;
+
+/**
+ * Cell phone (E164 format)
+ * @member {String} cell_phone_e164
+ */
+OrderBilling.prototype['cell_phone_e164'] = undefined;
 
 /**
  * City

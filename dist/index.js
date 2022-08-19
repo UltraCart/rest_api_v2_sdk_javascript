@@ -1371,6 +1371,12 @@ Object.defineProperty(exports, "CustomerLoyaltyRedemption", {
     return _CustomerLoyaltyRedemption["default"];
   }
 });
+Object.defineProperty(exports, "CustomerMagicLinkResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerMagicLinkResponse["default"];
+  }
+});
 Object.defineProperty(exports, "CustomerMergeRequest", {
   enumerable: true,
   get: function get() {
@@ -3735,6 +3741,18 @@ Object.defineProperty(exports, "StepWaiting", {
     return _StepWaiting["default"];
   }
 });
+Object.defineProperty(exports, "StoreFront", {
+  enumerable: true,
+  get: function get() {
+    return _StoreFront["default"];
+  }
+});
+Object.defineProperty(exports, "StoreFrontsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _StoreFrontsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "StorefrontApi", {
   enumerable: true,
   get: function get() {
@@ -4530,6 +4548,8 @@ var _CustomerLoyaltyLedger = _interopRequireDefault(require("./com.ultracart.adm
 
 var _CustomerLoyaltyRedemption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyRedemption"));
 
+var _CustomerMagicLinkResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerMagicLinkResponse"));
+
 var _CustomerMergeRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerMergeRequest"));
 
 var _CustomerOrdersSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerOrdersSummary"));
@@ -5303,6 +5323,10 @@ var _SovosConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.mode
 var _StateProvince = _interopRequireDefault(require("./com.ultracart.admin.v2.models/StateProvince"));
 
 var _StepWaiting = _interopRequireDefault(require("./com.ultracart.admin.v2.models/StepWaiting"));
+
+var _StoreFront = _interopRequireDefault(require("./com.ultracart.admin.v2.models/StoreFront"));
+
+var _StoreFrontsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/StoreFrontsResponse"));
 
 var _TaxCity = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxCity"));
 

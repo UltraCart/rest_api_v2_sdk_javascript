@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StateProvince model module.
  * @module com.ultracart.admin.v2.models/StateProvince
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 class StateProvince {
     /**

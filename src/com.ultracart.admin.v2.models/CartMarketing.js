@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartMarketing model module.
  * @module com.ultracart.admin.v2.models/CartMarketing
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 class CartMarketing {
     /**
@@ -50,6 +50,9 @@ class CartMarketing {
             if (data.hasOwnProperty('advertising_source')) {
                 obj['advertising_source'] = ApiClient.convertToType(data['advertising_source'], 'String');
             }
+            if (data.hasOwnProperty('cell_phone_opt_in')) {
+                obj['cell_phone_opt_in'] = ApiClient.convertToType(data['cell_phone_opt_in'], 'Boolean');
+            }
             if (data.hasOwnProperty('mailing_list_opt_in')) {
                 obj['mailing_list_opt_in'] = ApiClient.convertToType(data['mailing_list_opt_in'], 'Boolean');
             }
@@ -65,6 +68,12 @@ class CartMarketing {
  * @member {String} advertising_source
  */
 CartMarketing.prototype['advertising_source'] = undefined;
+
+/**
+ * True if the customer agrees to receiving marketing SMS messages
+ * @member {Boolean} cell_phone_opt_in
+ */
+CartMarketing.prototype['cell_phone_opt_in'] = undefined;
 
 /**
  * True if the customer agrees to receiving marketing emails

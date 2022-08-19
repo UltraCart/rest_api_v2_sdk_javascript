@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderItemEdiIdentification model module.
  * @module com.ultracart.admin.v2.models/OrderItemEdiIdentification
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 class OrderItemEdiIdentification {
     /**

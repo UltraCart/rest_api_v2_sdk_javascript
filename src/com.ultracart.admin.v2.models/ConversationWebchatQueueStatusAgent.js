@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationWebchatQueueStatusAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 class ConversationWebchatQueueStatusAgent {
     /**
@@ -62,6 +62,9 @@ class ConversationWebchatQueueStatusAgent {
             if (data.hasOwnProperty('next_round_robin')) {
                 obj['next_round_robin'] = ApiClient.convertToType(data['next_round_robin'], 'Boolean');
             }
+            if (data.hasOwnProperty('profile_image_url')) {
+                obj['profile_image_url'] = ApiClient.convertToType(data['profile_image_url'], 'String');
+            }
         }
         return obj;
     }
@@ -70,7 +73,8 @@ class ConversationWebchatQueueStatusAgent {
 }
 
 /**
- * @member {String} agent_status
+ * Status of the agent
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent.AgentStatusEnum} agent_status
  */
 ConversationWebchatQueueStatusAgent.prototype['agent_status'] = undefined;
 
@@ -95,8 +99,41 @@ ConversationWebchatQueueStatusAgent.prototype['last_chat_dts'] = undefined;
  */
 ConversationWebchatQueueStatusAgent.prototype['next_round_robin'] = undefined;
 
+/**
+ * Profile image URL
+ * @member {String} profile_image_url
+ */
+ConversationWebchatQueueStatusAgent.prototype['profile_image_url'] = undefined;
 
 
+
+
+
+/**
+ * Allowed values for the <code>agent_status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationWebchatQueueStatusAgent['AgentStatusEnum'] = {
+
+    /**
+     * value: "available"
+     * @const
+     */
+    "available": "available",
+
+    /**
+     * value: "busy"
+     * @const
+     */
+    "busy": "busy",
+
+    /**
+     * value: "unavailable"
+     * @const
+     */
+    "unavailable": "unavailable"
+};
 
 
 

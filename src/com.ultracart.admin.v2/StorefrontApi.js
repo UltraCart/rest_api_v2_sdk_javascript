@@ -150,7 +150,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.55-RC
+* @version 4.0.56-RC
 */
 export default class StorefrontApi {
 
@@ -4925,7 +4925,7 @@ export default class StorefrontApi {
       let accepts = ['application/json'];
       let returnType = StoreFrontsResponse;
       return this.apiClient.callApi(
-        '/storefront/', 'GET',
+        '/storefront', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

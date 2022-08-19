@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SovosConfig model module.
  * @module com.ultracart.admin.v2.models/SovosConfig
- * @version 4.0.54-RC
+ * @version 4.0.55-RC
  */
 var SovosConfig = /*#__PURE__*/function () {
   /**
