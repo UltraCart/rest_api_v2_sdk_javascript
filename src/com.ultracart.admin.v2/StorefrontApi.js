@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.10.38
+   * @version 3.10.39
    */
 
   /**
@@ -5384,7 +5384,7 @@
       var returnType = StoreFrontsResponse;
 
       return this.apiClient.callApi(
-        '/storefront/', 'GET',
+        '/storefront', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -34,7 +34,7 @@
   /**
    * The ConversationParticipant model module.
    * @module com.ultracart.admin.v2.models/ConversationParticipant
-   * @version 3.10.38
+   * @version 3.10.39
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.last_message_dts = ApiClient.convertToType(data['last_message_dts'], 'String');
       if (data.hasOwnProperty('left_dts'))
         obj.left_dts = ApiClient.convertToType(data['left_dts'], 'String');
+      if (data.hasOwnProperty('profile_image_url'))
+        obj.profile_image_url = ApiClient.convertToType(data['profile_image_url'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('unread_messages'))
@@ -107,6 +109,11 @@
    * @member {String} left_dts
    */
   exports.prototype.left_dts = undefined;
+
+  /**
+   * @member {String} profile_image_url
+   */
+  exports.prototype.profile_image_url = undefined;
 
   /**
    * @member {String} status

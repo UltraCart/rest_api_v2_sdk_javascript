@@ -34,7 +34,7 @@
   /**
    * The OrderMarketing model module.
    * @module com.ultracart.admin.v2.models/OrderMarketing
-   * @version 3.10.38
+   * @version 3.10.39
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('advertising_source'))
         obj.advertising_source = ApiClient.convertToType(data['advertising_source'], 'String');
+      if (data.hasOwnProperty('cell_phone_opt_in'))
+        obj.cell_phone_opt_in = ApiClient.convertToType(data['cell_phone_opt_in'], 'Boolean');
       if (data.hasOwnProperty('mailing_list'))
         obj.mailing_list = ApiClient.convertToType(data['mailing_list'], 'Boolean');
       if (data.hasOwnProperty('referral_code'))
@@ -70,6 +72,12 @@
    * @member {String} advertising_source
    */
   exports.prototype.advertising_source = undefined;
+
+  /**
+   * True if the customer has opted into SMS marketing
+   * @member {Boolean} cell_phone_opt_in
+   */
+  exports.prototype.cell_phone_opt_in = undefined;
 
   /**
    * True if the customer has opted into mailing list subscription
