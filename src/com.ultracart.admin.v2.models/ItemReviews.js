@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ItemReview'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ItemReview'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemReviews = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ItemReviews = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ItemReview);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ItemReview) {
   'use strict';
 
   /**
    * The ItemReviews model module.
    * @module com.ultracart.admin.v2.models/ItemReviews
-   * @version 3.10.39
+   * @version 3.10.40
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.has_approved_review = ApiClient.convertToType(data['has_approved_review'], 'Boolean');
       if (data.hasOwnProperty('has_review'))
         obj.has_review = ApiClient.convertToType(data['has_review'], 'Boolean');
+      if (data.hasOwnProperty('individual_reviews'))
+        obj.individual_reviews = ApiClient.convertToType(data['individual_reviews'], [ItemReview]);
       if (data.hasOwnProperty('review_count'))
         obj.review_count = ApiClient.convertToType(data['review_count'], 'Number');
       if (data.hasOwnProperty('review_overall'))
@@ -88,6 +90,11 @@
    * @member {Boolean} has_review
    */
   exports.prototype.has_review = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemReview>} individual_reviews
+   */
+  exports.prototype.individual_reviews = undefined;
 
   /**
    * Number of approved reviews
