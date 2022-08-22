@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 var ConversationParticipant = /*#__PURE__*/function () {
   /**
@@ -78,6 +78,10 @@ var ConversationParticipant = /*#__PURE__*/function () {
           obj['left_dts'] = _ApiClient["default"].convertToType(data['left_dts'], 'String');
         }
 
+        if (data.hasOwnProperty('profile_image_url')) {
+          obj['profile_image_url'] = _ApiClient["default"].convertToType(data['profile_image_url'], 'String');
+        }
+
         if (data.hasOwnProperty('status')) {
           obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
         }
@@ -127,6 +131,11 @@ ConversationParticipant.prototype['last_message_dts'] = undefined;
  */
 
 ConversationParticipant.prototype['left_dts'] = undefined;
+/**
+ * @member {String} profile_image_url
+ */
+
+ConversationParticipant.prototype['profile_image_url'] = undefined;
 /**
  * @member {String} status
  */

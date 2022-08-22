@@ -453,6 +453,7 @@ docs/ItemResponse.md
 docs/ItemRestriction.md
 docs/ItemRestrictionItem.md
 docs/ItemRevguard.md
+docs/ItemReview.md
 docs/ItemReviews.md
 docs/ItemSalesforce.md
 docs/ItemShipping.md
@@ -1128,6 +1129,7 @@ src/com.ultracart.admin.v2.models/ItemResponse.js
 src/com.ultracart.admin.v2.models/ItemRestriction.js
 src/com.ultracart.admin.v2.models/ItemRestrictionItem.js
 src/com.ultracart.admin.v2.models/ItemRevguard.js
+src/com.ultracart.admin.v2.models/ItemReview.js
 src/com.ultracart.admin.v2.models/ItemReviews.js
 src/com.ultracart.admin.v2.models/ItemSalesforce.js
 src/com.ultracart.admin.v2.models/ItemShipping.js

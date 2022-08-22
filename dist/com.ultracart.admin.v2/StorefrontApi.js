@@ -284,7 +284,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.55-RC
+* @version 4.0.56-RC
 */
 var StorefrontApi = /*#__PURE__*/function () {
   /**
@@ -4525,7 +4525,7 @@ var StorefrontApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StoreFrontsResponse["default"];
-      return this.apiClient.callApi('/storefront/', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/storefront', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getThumbnailParameters operation.

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CheckoutStateProvinceResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutStateProvinceResponse
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 var CheckoutStateProvinceResponse = /*#__PURE__*/function () {
   /**

@@ -452,6 +452,7 @@ import ItemResponse from './com.ultracart.admin.v2.models/ItemResponse';
 import ItemRestriction from './com.ultracart.admin.v2.models/ItemRestriction';
 import ItemRestrictionItem from './com.ultracart.admin.v2.models/ItemRestrictionItem';
 import ItemRevguard from './com.ultracart.admin.v2.models/ItemRevguard';
+import ItemReview from './com.ultracart.admin.v2.models/ItemReview';
 import ItemReviews from './com.ultracart.admin.v2.models/ItemReviews';
 import ItemSalesforce from './com.ultracart.admin.v2.models/ItemSalesforce';
 import ItemShipping from './com.ultracart.admin.v2.models/ItemShipping';
@@ -727,7 +728,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.56-RC
+* @version 4.0.57-RC
 */
 export {
     /**
@@ -3369,6 +3370,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemRevguard}
      */
     ItemRevguard,
+
+    /**
+     * The ItemReview model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemReview}
+     */
+    ItemReview,
 
     /**
      * The ItemReviews model constructor.

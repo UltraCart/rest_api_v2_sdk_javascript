@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ItemReview from './ItemReview';
 
 /**
  * The ItemReviews model module.
  * @module com.ultracart.admin.v2.models/ItemReviews
- * @version 4.0.56-RC
+ * @version 4.0.57-RC
  */
 class ItemReviews {
     /**
@@ -52,6 +53,9 @@ class ItemReviews {
             }
             if (data.hasOwnProperty('has_review')) {
                 obj['has_review'] = ApiClient.convertToType(data['has_review'], 'Boolean');
+            }
+            if (data.hasOwnProperty('individual_reviews')) {
+                obj['individual_reviews'] = ApiClient.convertToType(data['individual_reviews'], [ItemReview]);
             }
             if (data.hasOwnProperty('review_count')) {
                 obj['review_count'] = ApiClient.convertToType(data['review_count'], 'Number');
@@ -92,6 +96,11 @@ ItemReviews.prototype['has_approved_review'] = undefined;
  * @member {Boolean} has_review
  */
 ItemReviews.prototype['has_review'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ItemReview>} individual_reviews
+ */
+ItemReviews.prototype['individual_reviews'] = undefined;
 
 /**
  * Number of approved reviews

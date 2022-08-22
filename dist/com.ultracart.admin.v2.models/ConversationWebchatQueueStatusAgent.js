@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatusAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent
- * @version 4.0.55-RC
+ * @version 4.0.56-RC
  */
 var ConversationWebchatQueueStatusAgent = /*#__PURE__*/function () {
   /**
@@ -73,6 +73,10 @@ var ConversationWebchatQueueStatusAgent = /*#__PURE__*/function () {
         if (data.hasOwnProperty('next_round_robin')) {
           obj['next_round_robin'] = _ApiClient["default"].convertToType(data['next_round_robin'], 'Boolean');
         }
+
+        if (data.hasOwnProperty('profile_image_url')) {
+          obj['profile_image_url'] = _ApiClient["default"].convertToType(data['profile_image_url'], 'String');
+        }
       }
 
       return obj;
@@ -82,7 +86,8 @@ var ConversationWebchatQueueStatusAgent = /*#__PURE__*/function () {
   return ConversationWebchatQueueStatusAgent;
 }();
 /**
- * @member {String} agent_status
+ * Status of the agent
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent.AgentStatusEnum} agent_status
  */
 
 
@@ -108,5 +113,36 @@ ConversationWebchatQueueStatusAgent.prototype['last_chat_dts'] = undefined;
  */
 
 ConversationWebchatQueueStatusAgent.prototype['next_round_robin'] = undefined;
+/**
+ * Profile image URL
+ * @member {String} profile_image_url
+ */
+
+ConversationWebchatQueueStatusAgent.prototype['profile_image_url'] = undefined;
+/**
+ * Allowed values for the <code>agent_status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+ConversationWebchatQueueStatusAgent['AgentStatusEnum'] = {
+  /**
+   * value: "available"
+   * @const
+   */
+  "available": "available",
+
+  /**
+   * value: "busy"
+   * @const
+   */
+  "busy": "busy",
+
+  /**
+   * value: "unavailable"
+   * @const
+   */
+  "unavailable": "unavailable"
+};
 var _default = ConversationWebchatQueueStatusAgent;
 exports["default"] = _default;

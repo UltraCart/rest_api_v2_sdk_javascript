@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingFilterStringSearch model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch
- * @version 4.0.56-RC
+ * @version 4.0.57-RC
  */
 class ScreenRecordingFilterStringSearch {
     /**
