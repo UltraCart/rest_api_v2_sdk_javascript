@@ -34,7 +34,7 @@
   /**
    * The AutoOrdersRequest model module.
    * @module com.ultracart.admin.v2.models/AutoOrdersRequest
-   * @version 3.10.40
+   * @version 3.10.41
    */
 
   /**

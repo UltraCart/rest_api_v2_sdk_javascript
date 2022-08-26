@@ -34,7 +34,7 @@
   /**
    * The ExperimentVariation model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariation
-   * @version 3.10.40
+   * @version 3.10.41
    */
 
   /**
@@ -89,6 +89,8 @@
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('session_count'))
         obj.session_count = ApiClient.convertToType(data['session_count'], 'Number');
+      if (data.hasOwnProperty('sms_opt_ins'))
+        obj.sms_opt_ins = ApiClient.convertToType(data['sms_opt_ins'], 'Number');
       if (data.hasOwnProperty('traffic_percentage'))
         obj.traffic_percentage = ApiClient.convertToType(data['traffic_percentage'], 'Number');
       if (data.hasOwnProperty('url'))
@@ -204,6 +206,12 @@
    * @member {Number} session_count
    */
   exports.prototype.session_count = undefined;
+
+  /**
+   * SMS Opt Ins for this variation
+   * @member {Number} sms_opt_ins
+   */
+  exports.prototype.sms_opt_ins = undefined;
 
   /**
    * Percentage of the traffic this variation is currently receiving

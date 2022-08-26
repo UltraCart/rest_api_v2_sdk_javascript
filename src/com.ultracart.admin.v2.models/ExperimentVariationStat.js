@@ -34,7 +34,7 @@
   /**
    * The ExperimentVariationStat model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariationStat
-   * @version 3.10.40
+   * @version 3.10.41
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.revenue = ApiClient.convertToType(data['revenue'], 'Number');
       if (data.hasOwnProperty('session_count'))
         obj.session_count = ApiClient.convertToType(data['session_count'], 'Number');
+      if (data.hasOwnProperty('sms_opt_in_count'))
+        obj.sms_opt_in_count = ApiClient.convertToType(data['sms_opt_in_count'], 'Number');
       if (data.hasOwnProperty('stat_dts'))
         obj.stat_dts = ApiClient.convertToType(data['stat_dts'], 'String');
     }
@@ -140,6 +142,12 @@
    * @member {Number} session_count
    */
   exports.prototype.session_count = undefined;
+
+  /**
+   * Total SMS opt in count for this variation
+   * @member {Number} sms_opt_in_count
+   */
+  exports.prototype.sms_opt_in_count = undefined;
 
   /**
    * Date/time that the statistic was created
