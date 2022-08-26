@@ -17,7 +17,7 @@ import ExperimentVariationStat from './ExperimentVariationStat';
 /**
  * The ExperimentVariation model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariation
- * @version 4.0.57-RC
+ * @version 4.0.58-RC
  */
 class ExperimentVariation {
     /**
@@ -98,6 +98,9 @@ class ExperimentVariation {
             }
             if (data.hasOwnProperty('session_count')) {
                 obj['session_count'] = ApiClient.convertToType(data['session_count'], 'Number');
+            }
+            if (data.hasOwnProperty('sms_opt_ins')) {
+                obj['sms_opt_ins'] = ApiClient.convertToType(data['sms_opt_ins'], 'Number');
             }
             if (data.hasOwnProperty('traffic_percentage')) {
                 obj['traffic_percentage'] = ApiClient.convertToType(data['traffic_percentage'], 'Number');
@@ -222,6 +225,12 @@ ExperimentVariation.prototype['revenue'] = undefined;
  * @member {Number} session_count
  */
 ExperimentVariation.prototype['session_count'] = undefined;
+
+/**
+ * SMS Opt Ins for this variation
+ * @member {Number} sms_opt_ins
+ */
+ExperimentVariation.prototype['sms_opt_ins'] = undefined;
 
 /**
  * Percentage of the traffic this variation is currently receiving

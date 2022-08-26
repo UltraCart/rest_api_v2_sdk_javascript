@@ -17,7 +17,7 @@ import ScreenRecordingFilter from './ScreenRecordingFilter';
 /**
  * The ScreenRecordingSegment model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingSegment
- * @version 4.0.57-RC
+ * @version 4.0.58-RC
  */
 class ScreenRecordingSegment {
     /**

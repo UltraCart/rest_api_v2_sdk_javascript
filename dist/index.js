@@ -2715,6 +2715,12 @@ Object.defineProperty(exports, "ItemRevguard", {
     return _ItemRevguard["default"];
   }
 });
+Object.defineProperty(exports, "ItemReview", {
+  enumerable: true,
+  get: function get() {
+    return _ItemReview["default"];
+  }
+});
 Object.defineProperty(exports, "ItemReviews", {
   enumerable: true,
   get: function get() {
@@ -4987,6 +4993,8 @@ var _ItemRestriction = _interopRequireDefault(require("./com.ultracart.admin.v2.
 var _ItemRestrictionItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemRestrictionItem"));
 
 var _ItemRevguard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemRevguard"));
+
+var _ItemReview = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemReview"));
 
 var _ItemReviews = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemReviews"));
 

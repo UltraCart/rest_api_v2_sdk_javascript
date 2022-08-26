@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemWishlistMember model module.
  * @module com.ultracart.admin.v2.models/ItemWishlistMember
- * @version 4.0.56-RC
+ * @version 4.0.57-RC
  */
 var ItemWishlistMember = /*#__PURE__*/function () {
   /**

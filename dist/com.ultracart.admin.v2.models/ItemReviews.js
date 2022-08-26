@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ItemReview = _interopRequireDefault(require("./ItemReview"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemReviews model module.
  * @module com.ultracart.admin.v2.models/ItemReviews
- * @version 4.0.56-RC
+ * @version 4.0.57-RC
  */
 var ItemReviews = /*#__PURE__*/function () {
   /**
@@ -60,6 +62,10 @@ var ItemReviews = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('has_review')) {
           obj['has_review'] = _ApiClient["default"].convertToType(data['has_review'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('individual_reviews')) {
+          obj['individual_reviews'] = _ApiClient["default"].convertToType(data['individual_reviews'], [_ItemReview["default"]]);
         }
 
         if (data.hasOwnProperty('review_count')) {
@@ -110,6 +116,11 @@ ItemReviews.prototype['has_approved_review'] = undefined;
  */
 
 ItemReviews.prototype['has_review'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ItemReview>} individual_reviews
+ */
+
+ItemReviews.prototype['individual_reviews'] = undefined;
 /**
  * Number of approved reviews
  * @member {Number} review_count

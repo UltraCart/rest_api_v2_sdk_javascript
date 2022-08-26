@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqSequenceTestRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest
- * @version 4.0.57-RC
+ * @version 4.0.58-RC
  */
 class EmailCommseqSequenceTestRequest {
     /**
@@ -47,14 +47,26 @@ class EmailCommseqSequenceTestRequest {
         if (data) {
             obj = obj || new EmailCommseqSequenceTestRequest();
 
+            if (data.hasOwnProperty('address_1')) {
+                obj['address_1'] = ApiClient.convertToType(data['address_1'], 'String');
+            }
+            if (data.hasOwnProperty('address_2')) {
+                obj['address_2'] = ApiClient.convertToType(data['address_2'], 'String');
+            }
             if (data.hasOwnProperty('cart_id')) {
                 obj['cart_id'] = ApiClient.convertToType(data['cart_id'], 'String');
             }
             if (data.hasOwnProperty('cart_item_ids')) {
                 obj['cart_item_ids'] = ApiClient.convertToType(data['cart_item_ids'], ['String']);
             }
+            if (data.hasOwnProperty('city')) {
+                obj['city'] = ApiClient.convertToType(data['city'], 'String');
+            }
             if (data.hasOwnProperty('esp_commseq_uuid')) {
                 obj['esp_commseq_uuid'] = ApiClient.convertToType(data['esp_commseq_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('mail_card')) {
+                obj['mail_card'] = ApiClient.convertToType(data['mail_card'], 'Boolean');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -65,11 +77,17 @@ class EmailCommseqSequenceTestRequest {
             if (data.hasOwnProperty('please_review')) {
                 obj['please_review'] = ApiClient.convertToType(data['please_review'], 'Boolean');
             }
+            if (data.hasOwnProperty('postal_code')) {
+                obj['postal_code'] = ApiClient.convertToType(data['postal_code'], 'String');
+            }
             if (data.hasOwnProperty('send_to_email')) {
                 obj['send_to_email'] = ApiClient.convertToType(data['send_to_email'], 'String');
             }
             if (data.hasOwnProperty('send_to_logged_in_user')) {
                 obj['send_to_logged_in_user'] = ApiClient.convertToType(data['send_to_logged_in_user'], 'Boolean');
+            }
+            if (data.hasOwnProperty('state')) {
+                obj['state'] = ApiClient.convertToType(data['state'], 'String');
             }
         }
         return obj;
@@ -77,6 +95,16 @@ class EmailCommseqSequenceTestRequest {
 
 
 }
+
+/**
+ * @member {String} address_1
+ */
+EmailCommseqSequenceTestRequest.prototype['address_1'] = undefined;
+
+/**
+ * @member {String} address_2
+ */
+EmailCommseqSequenceTestRequest.prototype['address_2'] = undefined;
 
 /**
  * @member {String} cart_id
@@ -89,9 +117,19 @@ EmailCommseqSequenceTestRequest.prototype['cart_id'] = undefined;
 EmailCommseqSequenceTestRequest.prototype['cart_item_ids'] = undefined;
 
 /**
+ * @member {String} city
+ */
+EmailCommseqSequenceTestRequest.prototype['city'] = undefined;
+
+/**
  * @member {String} esp_commseq_uuid
  */
 EmailCommseqSequenceTestRequest.prototype['esp_commseq_uuid'] = undefined;
+
+/**
+ * @member {Boolean} mail_card
+ */
+EmailCommseqSequenceTestRequest.prototype['mail_card'] = undefined;
 
 /**
  * @member {String} name
@@ -109,6 +147,11 @@ EmailCommseqSequenceTestRequest.prototype['order_id'] = undefined;
 EmailCommseqSequenceTestRequest.prototype['please_review'] = undefined;
 
 /**
+ * @member {String} postal_code
+ */
+EmailCommseqSequenceTestRequest.prototype['postal_code'] = undefined;
+
+/**
  * @member {String} send_to_email
  */
 EmailCommseqSequenceTestRequest.prototype['send_to_email'] = undefined;
@@ -117,6 +160,11 @@ EmailCommseqSequenceTestRequest.prototype['send_to_email'] = undefined;
  * @member {Boolean} send_to_logged_in_user
  */
 EmailCommseqSequenceTestRequest.prototype['send_to_logged_in_user'] = undefined;
+
+/**
+ * @member {String} state
+ */
+EmailCommseqSequenceTestRequest.prototype['state'] = undefined;
 
 
 
