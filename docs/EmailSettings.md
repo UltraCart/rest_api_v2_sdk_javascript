@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **postcard_from_name** | **String** |  | [optional] 
 **postcard_from_postal_code** | **String** |  | [optional] 
 **postcard_from_state** | **String** |  | [optional] 
+**sms_esp_twilio_uuid** | **String** |  | [optional] 
+**sms_phone_number** | **String** |  | [optional] 
 **transactional_esp_domain_user** | **String** |  | [optional] 
 **transactional_esp_domain_uuid** | **String** |  | [optional] 
 **transactional_esp_friendly_name** | **String** |  | [optional] 

@@ -34,7 +34,7 @@
   /**
    * The EmailSettings model module.
    * @module com.ultracart.admin.v2.models/EmailSettings
-   * @version 3.10.41
+   * @version 3.10.42
    */
 
   /**
@@ -73,6 +73,10 @@
         obj.postcard_from_postal_code = ApiClient.convertToType(data['postcard_from_postal_code'], 'String');
       if (data.hasOwnProperty('postcard_from_state'))
         obj.postcard_from_state = ApiClient.convertToType(data['postcard_from_state'], 'String');
+      if (data.hasOwnProperty('sms_esp_twilio_uuid'))
+        obj.sms_esp_twilio_uuid = ApiClient.convertToType(data['sms_esp_twilio_uuid'], 'String');
+      if (data.hasOwnProperty('sms_phone_number'))
+        obj.sms_phone_number = ApiClient.convertToType(data['sms_phone_number'], 'String');
       if (data.hasOwnProperty('transactional_esp_domain_user'))
         obj.transactional_esp_domain_user = ApiClient.convertToType(data['transactional_esp_domain_user'], 'String');
       if (data.hasOwnProperty('transactional_esp_domain_uuid'))
@@ -127,6 +131,16 @@
    * @member {String} postcard_from_state
    */
   exports.prototype.postcard_from_state = undefined;
+
+  /**
+   * @member {String} sms_esp_twilio_uuid
+   */
+  exports.prototype.sms_esp_twilio_uuid = undefined;
+
+  /**
+   * @member {String} sms_phone_number
+   */
+  exports.prototype.sms_phone_number = undefined;
 
   /**
    * @member {String} transactional_esp_domain_user
