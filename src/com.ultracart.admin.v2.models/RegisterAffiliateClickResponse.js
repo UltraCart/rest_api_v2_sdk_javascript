@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RegisterAffiliateClickResponse model module.
  * @module com.ultracart.admin.v2.models/RegisterAffiliateClickResponse
- * @version 4.0.58-RC
+ * @version 4.0.59-RC
  */
 class RegisterAffiliateClickResponse {
     /**

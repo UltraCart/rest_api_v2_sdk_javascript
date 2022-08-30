@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseqSequenceTestRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest
- * @version 4.0.57-RC
+ * @version 4.0.58-RC
  */
 var EmailCommseqSequenceTestRequest = /*#__PURE__*/function () {
   /**
@@ -54,6 +54,14 @@ var EmailCommseqSequenceTestRequest = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new EmailCommseqSequenceTestRequest();
 
+        if (data.hasOwnProperty('address_1')) {
+          obj['address_1'] = _ApiClient["default"].convertToType(data['address_1'], 'String');
+        }
+
+        if (data.hasOwnProperty('address_2')) {
+          obj['address_2'] = _ApiClient["default"].convertToType(data['address_2'], 'String');
+        }
+
         if (data.hasOwnProperty('cart_id')) {
           obj['cart_id'] = _ApiClient["default"].convertToType(data['cart_id'], 'String');
         }
@@ -62,8 +70,16 @@ var EmailCommseqSequenceTestRequest = /*#__PURE__*/function () {
           obj['cart_item_ids'] = _ApiClient["default"].convertToType(data['cart_item_ids'], ['String']);
         }
 
+        if (data.hasOwnProperty('city')) {
+          obj['city'] = _ApiClient["default"].convertToType(data['city'], 'String');
+        }
+
         if (data.hasOwnProperty('esp_commseq_uuid')) {
           obj['esp_commseq_uuid'] = _ApiClient["default"].convertToType(data['esp_commseq_uuid'], 'String');
+        }
+
+        if (data.hasOwnProperty('mail_card')) {
+          obj['mail_card'] = _ApiClient["default"].convertToType(data['mail_card'], 'Boolean');
         }
 
         if (data.hasOwnProperty('name')) {
@@ -78,12 +94,20 @@ var EmailCommseqSequenceTestRequest = /*#__PURE__*/function () {
           obj['please_review'] = _ApiClient["default"].convertToType(data['please_review'], 'Boolean');
         }
 
+        if (data.hasOwnProperty('postal_code')) {
+          obj['postal_code'] = _ApiClient["default"].convertToType(data['postal_code'], 'String');
+        }
+
         if (data.hasOwnProperty('send_to_email')) {
           obj['send_to_email'] = _ApiClient["default"].convertToType(data['send_to_email'], 'String');
         }
 
         if (data.hasOwnProperty('send_to_logged_in_user')) {
           obj['send_to_logged_in_user'] = _ApiClient["default"].convertToType(data['send_to_logged_in_user'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('state')) {
+          obj['state'] = _ApiClient["default"].convertToType(data['state'], 'String');
         }
       }
 
@@ -94,9 +118,19 @@ var EmailCommseqSequenceTestRequest = /*#__PURE__*/function () {
   return EmailCommseqSequenceTestRequest;
 }();
 /**
- * @member {String} cart_id
+ * @member {String} address_1
  */
 
+
+EmailCommseqSequenceTestRequest.prototype['address_1'] = undefined;
+/**
+ * @member {String} address_2
+ */
+
+EmailCommseqSequenceTestRequest.prototype['address_2'] = undefined;
+/**
+ * @member {String} cart_id
+ */
 
 EmailCommseqSequenceTestRequest.prototype['cart_id'] = undefined;
 /**
@@ -105,10 +139,20 @@ EmailCommseqSequenceTestRequest.prototype['cart_id'] = undefined;
 
 EmailCommseqSequenceTestRequest.prototype['cart_item_ids'] = undefined;
 /**
+ * @member {String} city
+ */
+
+EmailCommseqSequenceTestRequest.prototype['city'] = undefined;
+/**
  * @member {String} esp_commseq_uuid
  */
 
 EmailCommseqSequenceTestRequest.prototype['esp_commseq_uuid'] = undefined;
+/**
+ * @member {Boolean} mail_card
+ */
+
+EmailCommseqSequenceTestRequest.prototype['mail_card'] = undefined;
 /**
  * @member {String} name
  */
@@ -125,6 +169,11 @@ EmailCommseqSequenceTestRequest.prototype['order_id'] = undefined;
 
 EmailCommseqSequenceTestRequest.prototype['please_review'] = undefined;
 /**
+ * @member {String} postal_code
+ */
+
+EmailCommseqSequenceTestRequest.prototype['postal_code'] = undefined;
+/**
  * @member {String} send_to_email
  */
 
@@ -134,5 +183,10 @@ EmailCommseqSequenceTestRequest.prototype['send_to_email'] = undefined;
  */
 
 EmailCommseqSequenceTestRequest.prototype['send_to_logged_in_user'] = undefined;
+/**
+ * @member {String} state
+ */
+
+EmailCommseqSequenceTestRequest.prototype['state'] = undefined;
 var _default = EmailCommseqSequenceTestRequest;
 exports["default"] = _default;

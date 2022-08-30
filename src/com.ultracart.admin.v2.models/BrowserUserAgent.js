@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BrowserUserAgent model module.
  * @module com.ultracart.admin.v2.models/BrowserUserAgent
- * @version 4.0.58-RC
+ * @version 4.0.59-RC
  */
 class BrowserUserAgent {
     /**

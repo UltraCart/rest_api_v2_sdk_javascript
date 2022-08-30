@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailFlow model module.
  * @module com.ultracart.admin.v2.models/EmailFlow
- * @version 4.0.58-RC
+ * @version 4.0.59-RC
  */
 class EmailFlow {
     /**
@@ -112,6 +112,12 @@ class EmailFlow {
             }
             if (data.hasOwnProperty('screenshot_large_full_url')) {
                 obj['screenshot_large_full_url'] = ApiClient.convertToType(data['screenshot_large_full_url'], 'String');
+            }
+            if (data.hasOwnProperty('sms_esp_twilio_uuid')) {
+                obj['sms_esp_twilio_uuid'] = ApiClient.convertToType(data['sms_esp_twilio_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('sms_phone_number')) {
+                obj['sms_phone_number'] = ApiClient.convertToType(data['sms_phone_number'], 'String');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -269,6 +275,18 @@ EmailFlow.prototype['revenue_per_customer_formatted'] = undefined;
  * @member {String} screenshot_large_full_url
  */
 EmailFlow.prototype['screenshot_large_full_url'] = undefined;
+
+/**
+ * Twilio Account UUID.  Null for none
+ * @member {String} sms_esp_twilio_uuid
+ */
+EmailFlow.prototype['sms_esp_twilio_uuid'] = undefined;
+
+/**
+ * Twilio SMS Phone Number.  Null for none
+ * @member {String} sms_phone_number
+ */
+EmailFlow.prototype['sms_phone_number'] = undefined;
 
 /**
  * Status of the campaign of draft, archived, active, and inactive

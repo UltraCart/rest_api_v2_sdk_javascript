@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ExperimentVariation model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariation
- * @version 4.0.57-RC
+ * @version 4.0.58-RC
  */
 var ExperimentVariation = /*#__PURE__*/function () {
   /**
@@ -122,6 +122,10 @@ var ExperimentVariation = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('session_count')) {
           obj['session_count'] = _ApiClient["default"].convertToType(data['session_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('sms_opt_ins')) {
+          obj['sms_opt_ins'] = _ApiClient["default"].convertToType(data['sms_opt_ins'], 'Number');
         }
 
         if (data.hasOwnProperty('traffic_percentage')) {
@@ -254,6 +258,12 @@ ExperimentVariation.prototype['revenue'] = undefined;
  */
 
 ExperimentVariation.prototype['session_count'] = undefined;
+/**
+ * SMS Opt Ins for this variation
+ * @member {Number} sms_opt_ins
+ */
+
+ExperimentVariation.prototype['sms_opt_ins'] = undefined;
 /**
  * Percentage of the traffic this variation is currently receiving
  * @member {Number} traffic_percentage

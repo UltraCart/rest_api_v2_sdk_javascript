@@ -56,7 +56,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.57-RC
+* @version 4.0.58-RC
 */
 var OrderApi = /*#__PURE__*/function () {
   /**
@@ -821,6 +821,7 @@ var OrderApi = /*#__PURE__*/function () {
      * @param {Boolean} opts.auto_order_cancel Cancel associated auto orders (default to false)
      * @param {Boolean} opts.manual_refund Consider a manual refund done externally (default to false)
      * @param {Boolean} opts.reverse_affiliate_transactions Reverse affiliate transactions (default to true)
+     * @param {Boolean} opts.issue_store_credit Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account (default to false)
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/OrderApi~refundOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
@@ -850,6 +851,7 @@ var OrderApi = /*#__PURE__*/function () {
         'auto_order_cancel': opts['auto_order_cancel'],
         'manual_refund': opts['manual_refund'],
         'reverse_affiliate_transactions': opts['reverse_affiliate_transactions'],
+        'issue_store_credit': opts['issue_store_credit'],
         '_expand': opts['_expand']
       };
       var headerParams = {};

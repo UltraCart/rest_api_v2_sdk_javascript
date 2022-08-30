@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ExperimentVariationStat model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariationStat
- * @version 4.0.57-RC
+ * @version 4.0.58-RC
  */
 var ExperimentVariationStat = /*#__PURE__*/function () {
   /**
@@ -94,6 +94,10 @@ var ExperimentVariationStat = /*#__PURE__*/function () {
           obj['session_count'] = _ApiClient["default"].convertToType(data['session_count'], 'Number');
         }
 
+        if (data.hasOwnProperty('sms_opt_in_count')) {
+          obj['sms_opt_in_count'] = _ApiClient["default"].convertToType(data['sms_opt_in_count'], 'Number');
+        }
+
         if (data.hasOwnProperty('stat_dts')) {
           obj['stat_dts'] = _ApiClient["default"].convertToType(data['stat_dts'], 'String');
         }
@@ -166,6 +170,12 @@ ExperimentVariationStat.prototype['revenue'] = undefined;
  */
 
 ExperimentVariationStat.prototype['session_count'] = undefined;
+/**
+ * Total SMS opt in count for this variation
+ * @member {Number} sms_opt_in_count
+ */
+
+ExperimentVariationStat.prototype['sms_opt_in_count'] = undefined;
 /**
  * Date/time that the statistic was created
  * @member {String} stat_dts

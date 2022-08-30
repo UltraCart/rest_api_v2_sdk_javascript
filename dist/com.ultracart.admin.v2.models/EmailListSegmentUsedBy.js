@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailListSegmentUsedBy model module.
  * @module com.ultracart.admin.v2.models/EmailListSegmentUsedBy
- * @version 4.0.57-RC
+ * @version 4.0.58-RC
  */
 var EmailListSegmentUsedBy = /*#__PURE__*/function () {
   /**
