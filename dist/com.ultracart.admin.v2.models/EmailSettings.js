@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailSettings model module.
  * @module com.ultracart.admin.v2.models/EmailSettings
- * @version 4.0.58-RC
+ * @version 4.0.59-RC
  */
 var EmailSettings = /*#__PURE__*/function () {
   /**
@@ -90,6 +90,14 @@ var EmailSettings = /*#__PURE__*/function () {
           obj['postcard_from_state'] = _ApiClient["default"].convertToType(data['postcard_from_state'], 'String');
         }
 
+        if (data.hasOwnProperty('sms_esp_twilio_uuid')) {
+          obj['sms_esp_twilio_uuid'] = _ApiClient["default"].convertToType(data['sms_esp_twilio_uuid'], 'String');
+        }
+
+        if (data.hasOwnProperty('sms_phone_number')) {
+          obj['sms_phone_number'] = _ApiClient["default"].convertToType(data['sms_phone_number'], 'String');
+        }
+
         if (data.hasOwnProperty('transactional_esp_domain_user')) {
           obj['transactional_esp_domain_user'] = _ApiClient["default"].convertToType(data['transactional_esp_domain_user'], 'String');
         }
@@ -155,6 +163,16 @@ EmailSettings.prototype['postcard_from_postal_code'] = undefined;
  */
 
 EmailSettings.prototype['postcard_from_state'] = undefined;
+/**
+ * @member {String} sms_esp_twilio_uuid
+ */
+
+EmailSettings.prototype['sms_esp_twilio_uuid'] = undefined;
+/**
+ * @member {String} sms_phone_number
+ */
+
+EmailSettings.prototype['sms_phone_number'] = undefined;
 /**
  * @member {String} transactional_esp_domain_user
  */

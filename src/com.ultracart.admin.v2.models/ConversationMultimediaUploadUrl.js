@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationMultimediaUploadUrl model module.
  * @module com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl
- * @version 4.0.59-RC
+ * @version 4.0.60-RC
  */
 class ConversationMultimediaUploadUrl {
     /**

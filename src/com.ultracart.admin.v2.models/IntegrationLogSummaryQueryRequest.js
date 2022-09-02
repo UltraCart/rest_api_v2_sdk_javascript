@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IntegrationLogSummaryQueryRequest model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogSummaryQueryRequest
- * @version 4.0.59-RC
+ * @version 4.0.60-RC
  */
 class IntegrationLogSummaryQueryRequest {
     /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCampaign model module.
  * @module com.ultracart.admin.v2.models/EmailCampaign
- * @version 4.0.58-RC
+ * @version 4.0.59-RC
  */
 var EmailCampaign = /*#__PURE__*/function () {
   /**
@@ -138,6 +138,14 @@ var EmailCampaign = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('screenshot_large_full_url')) {
           obj['screenshot_large_full_url'] = _ApiClient["default"].convertToType(data['screenshot_large_full_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('sms_esp_twilio_uuid')) {
+          obj['sms_esp_twilio_uuid'] = _ApiClient["default"].convertToType(data['sms_esp_twilio_uuid'], 'String');
+        }
+
+        if (data.hasOwnProperty('sms_phone_number')) {
+          obj['sms_phone_number'] = _ApiClient["default"].convertToType(data['sms_phone_number'], 'String');
         }
 
         if (data.hasOwnProperty('status')) {
@@ -286,6 +294,18 @@ EmailCampaign.prototype['scheduled_dts'] = undefined;
  */
 
 EmailCampaign.prototype['screenshot_large_full_url'] = undefined;
+/**
+ * Twilio Account UUID.  Null for none
+ * @member {String} sms_esp_twilio_uuid
+ */
+
+EmailCampaign.prototype['sms_esp_twilio_uuid'] = undefined;
+/**
+ * Twilio SMS Phone Number.  Null for none
+ * @member {String} sms_phone_number
+ */
+
+EmailCampaign.prototype['sms_phone_number'] = undefined;
 /**
  * Status of the campaign of draft, archived, and sent
  * @member {String} status

@@ -52,7 +52,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Tax service.
 * @module com.ultracart.admin.v2/TaxApi
-* @version 4.0.58-RC
+* @version 4.0.59-RC
 */
 var TaxApi = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ import CustomerAffiliate from './CustomerAffiliate';
 /**
  * The CustomerEditorValues model module.
  * @module com.ultracart.admin.v2.models/CustomerEditorValues
- * @version 4.0.59-RC
+ * @version 4.0.60-RC
  */
 class CustomerEditorValues {
     /**
@@ -63,6 +63,9 @@ class CustomerEditorValues {
             }
             if (data.hasOwnProperty('countries')) {
                 obj['countries'] = ApiClient.convertToType(data['countries'], [Country]);
+            }
+            if (data.hasOwnProperty('loyalty_ledger_descriptions')) {
+                obj['loyalty_ledger_descriptions'] = ApiClient.convertToType(data['loyalty_ledger_descriptions'], ['String']);
             }
             if (data.hasOwnProperty('loyalty_program_type')) {
                 obj['loyalty_program_type'] = ApiClient.convertToType(data['loyalty_program_type'], 'String');
@@ -115,6 +118,12 @@ CustomerEditorValues.prototype['card_types'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/Country>} countries
  */
 CustomerEditorValues.prototype['countries'] = undefined;
+
+/**
+ * loyalty_ledger_descriptions
+ * @member {Array.<String>} loyalty_ledger_descriptions
+ */
+CustomerEditorValues.prototype['loyalty_ledger_descriptions'] = undefined;
 
 /**
  * loyalty_program_type
