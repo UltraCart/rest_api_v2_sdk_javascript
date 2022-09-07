@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponBuyOneGetOneLimit model module.
  * @module com.ultracart.admin.v2.models/CouponBuyOneGetOneLimit
- * @version 4.0.60-RC
+ * @version 4.0.61-RC
  */
 class CouponBuyOneGetOneLimit {
     /**

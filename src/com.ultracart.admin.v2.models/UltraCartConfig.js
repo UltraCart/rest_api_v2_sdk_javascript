@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UltraCartConfig model module.
  * @module com.ultracart.admin.v2.models/UltraCartConfig
- * @version 4.0.60-RC
+ * @version 4.0.61-RC
  */
 class UltraCartConfig {
     /**

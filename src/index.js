@@ -563,6 +563,8 @@ import RegisterAffiliateClickRequest from './com.ultracart.admin.v2.models/Regis
 import RegisterAffiliateClickResponse from './com.ultracart.admin.v2.models/RegisterAffiliateClickResponse';
 import ResponseMetadata from './com.ultracart.admin.v2.models/ResponseMetadata';
 import ResultSet from './com.ultracart.admin.v2.models/ResultSet';
+import RulerValidationRequest from './com.ultracart.admin.v2.models/RulerValidationRequest';
+import RulerValidationResponse from './com.ultracart.admin.v2.models/RulerValidationResponse';
 import ScreenRecording from './com.ultracart.admin.v2.models/ScreenRecording';
 import ScreenRecordingAdPlatform from './com.ultracart.admin.v2.models/ScreenRecordingAdPlatform';
 import ScreenRecordingFilter from './com.ultracart.admin.v2.models/ScreenRecordingFilter';
@@ -728,7 +730,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.60-RC
+* @version 4.0.61-RC
 */
 export {
     /**
@@ -4036,6 +4038,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ResultSet}
      */
     ResultSet,
+
+    /**
+     * The RulerValidationRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/RulerValidationRequest}
+     */
+    RulerValidationRequest,
+
+    /**
+     * The RulerValidationResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/RulerValidationResponse}
+     */
+    RulerValidationResponse,
 
     /**
      * The ScreenRecording model constructor.

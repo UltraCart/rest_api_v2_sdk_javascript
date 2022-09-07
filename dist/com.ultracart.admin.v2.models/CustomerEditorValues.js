@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerEditorValues model module.
  * @module com.ultracart.admin.v2.models/CustomerEditorValues
- * @version 4.0.59-RC
+ * @version 4.0.60-RC
  */
 var CustomerEditorValues = /*#__PURE__*/function () {
   /**
@@ -76,6 +76,10 @@ var CustomerEditorValues = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('countries')) {
           obj['countries'] = _ApiClient["default"].convertToType(data['countries'], [_Country["default"]]);
+        }
+
+        if (data.hasOwnProperty('loyalty_ledger_descriptions')) {
+          obj['loyalty_ledger_descriptions'] = _ApiClient["default"].convertToType(data['loyalty_ledger_descriptions'], ['String']);
         }
 
         if (data.hasOwnProperty('loyalty_program_type')) {
@@ -136,6 +140,12 @@ CustomerEditorValues.prototype['card_types'] = undefined;
  */
 
 CustomerEditorValues.prototype['countries'] = undefined;
+/**
+ * loyalty_ledger_descriptions
+ * @member {Array.<String>} loyalty_ledger_descriptions
+ */
+
+CustomerEditorValues.prototype['loyalty_ledger_descriptions'] = undefined;
 /**
  * loyalty_program_type
  * @member {String} loyalty_program_type

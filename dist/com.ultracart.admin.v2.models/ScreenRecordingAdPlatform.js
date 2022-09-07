@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingAdPlatform model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingAdPlatform
- * @version 4.0.59-RC
+ * @version 4.0.60-RC
  */
 var ScreenRecordingAdPlatform = /*#__PURE__*/function () {
   /**

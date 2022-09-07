@@ -566,6 +566,8 @@ docs/RegisterAffiliateClickRequest.md
 docs/RegisterAffiliateClickResponse.md
 docs/ResponseMetadata.md
 docs/ResultSet.md
+docs/RulerValidationRequest.md
+docs/RulerValidationResponse.md
 docs/ScreenRecording.md
 docs/ScreenRecordingAdPlatform.md
 docs/ScreenRecordingFilter.md
@@ -1240,6 +1242,8 @@ src/com.ultracart.admin.v2.models/RegisterAffiliateClickRequest.js
 src/com.ultracart.admin.v2.models/RegisterAffiliateClickResponse.js
 src/com.ultracart.admin.v2.models/ResponseMetadata.js
 src/com.ultracart.admin.v2.models/ResultSet.js
+src/com.ultracart.admin.v2.models/RulerValidationRequest.js
+src/com.ultracart.admin.v2.models/RulerValidationResponse.js
 src/com.ultracart.admin.v2.models/ScreenRecording.js
 src/com.ultracart.admin.v2.models/ScreenRecordingAdPlatform.js
 src/com.ultracart.admin.v2.models/ScreenRecordingFilter.js

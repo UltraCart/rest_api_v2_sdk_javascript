@@ -119,6 +119,8 @@ import LookupRequest from '../com.ultracart.admin.v2.models/LookupRequest';
 import LookupResponse from '../com.ultracart.admin.v2.models/LookupResponse';
 import PricingTiersResponse from '../com.ultracart.admin.v2.models/PricingTiersResponse';
 import PublishLibraryItemRequest from '../com.ultracart.admin.v2.models/PublishLibraryItemRequest';
+import RulerValidationRequest from '../com.ultracart.admin.v2.models/RulerValidationRequest';
+import RulerValidationResponse from '../com.ultracart.admin.v2.models/RulerValidationResponse';
 import ScreenRecordingHeatmapIndexRequest from '../com.ultracart.admin.v2.models/ScreenRecordingHeatmapIndexRequest';
 import ScreenRecordingHeatmapIndexResponse from '../com.ultracart.admin.v2.models/ScreenRecordingHeatmapIndexResponse';
 import ScreenRecordingHeatmapRequest from '../com.ultracart.admin.v2.models/ScreenRecordingHeatmapRequest';
@@ -150,7 +152,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.60-RC
+* @version 4.0.61-RC
 */
 export default class StorefrontApi {
 
@@ -7961,6 +7963,47 @@ export default class StorefrontApi {
       let returnType = TwilioResponse;
       return this.apiClient.callApi(
         '/storefront/twilio/accounts/{esp_twilio_uuid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateRuler operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~validateRulerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/RulerValidationResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate AWS Event Ruler
+     * @param {module:com.ultracart.admin.v2.models/RulerValidationRequest} ruler_validate_request Ruler Validate Request
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~validateRulerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/RulerValidationResponse}
+     */
+    validateRuler(ruler_validate_request, callback) {
+      let postBody = ruler_validate_request;
+      // verify the required parameter 'ruler_validate_request' is set
+      if (ruler_validate_request === undefined || ruler_validate_request === null) {
+        throw new Error("Missing the required parameter 'ruler_validate_request' when calling validateRuler");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = RulerValidationResponse;
+      return this.apiClient.callApi(
+        '/storefront/ruler/validate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
