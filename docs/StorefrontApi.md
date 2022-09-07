@@ -168,6 +168,7 @@ Method | HTTP request | Description
 [**updateScreenRecordingTags**](StorefrontApi.md#updateScreenRecordingTags) | **POST** /storefront/{storefront_oid}/screen_recordings/{screen_recording_uuid}/tags | Update tags on a screen recording
 [**updateTransactionEmail**](StorefrontApi.md#updateTransactionEmail) | **PUT** /storefront/{storefront_oid}/transaction_email/list/{email_id} | Updates a transaction email object
 [**updateTwilioAccount**](StorefrontApi.md#updateTwilioAccount) | **PUT** /storefront/twilio/accounts/{esp_twilio_uuid} | Update Twilio account
+[**validateRuler**](StorefrontApi.md#validateRuler) | **POST** /storefront/ruler/validate | Validate AWS Event Ruler
 
 
 <a name="addToLibrary"></a>
@@ -8625,6 +8626,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TwilioResponse**](TwilioResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validateRuler"></a>
+# **validateRuler**
+> RulerValidationResponse validateRuler(ruler_validate_request)
+
+Validate AWS Event Ruler
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
+var ruler_validate_request = new UltraCartRestApiV2.RulerValidationRequest(); // RulerValidationRequest | Ruler Validate Request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validateRuler(ruler_validate_request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ruler_validate_request** | [**RulerValidationRequest**](RulerValidationRequest.md)| Ruler Validate Request | 
+
+### Return type
+
+[**RulerValidationResponse**](RulerValidationResponse.md)
 
 ### Authorization
 
