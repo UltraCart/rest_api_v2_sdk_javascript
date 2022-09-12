@@ -34,7 +34,7 @@
   /**
    * The UserLoginsResponse model module.
    * @module com.ultracart.admin.v2.models/UserLoginsResponse
-   * @version 3.10.44
+   * @version 3.10.45
    */
 
   /**

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **postcard_from_name** | **String** |  | [optional] 
 **postcard_from_postal_code** | **String** |  | [optional] 
 **postcard_from_state** | **String** |  | [optional] 
+**reviews_io_configured** | **Boolean** | True if the Reviews.io integration is configured | [optional] 
 **sms_esp_twilio_uuid** | **String** |  | [optional] 
 **sms_phone_number** | **String** |  | [optional] 
 **transactional_esp_domain_user** | **String** |  | [optional] 

@@ -34,7 +34,7 @@
   /**
    * The EmailSettings model module.
    * @module com.ultracart.admin.v2.models/EmailSettings
-   * @version 3.10.44
+   * @version 3.10.45
    */
 
   /**
@@ -73,6 +73,8 @@
         obj.postcard_from_postal_code = ApiClient.convertToType(data['postcard_from_postal_code'], 'String');
       if (data.hasOwnProperty('postcard_from_state'))
         obj.postcard_from_state = ApiClient.convertToType(data['postcard_from_state'], 'String');
+      if (data.hasOwnProperty('reviews_io_configured'))
+        obj.reviews_io_configured = ApiClient.convertToType(data['reviews_io_configured'], 'Boolean');
       if (data.hasOwnProperty('sms_esp_twilio_uuid'))
         obj.sms_esp_twilio_uuid = ApiClient.convertToType(data['sms_esp_twilio_uuid'], 'String');
       if (data.hasOwnProperty('sms_phone_number'))
@@ -131,6 +133,12 @@
    * @member {String} postcard_from_state
    */
   exports.prototype.postcard_from_state = undefined;
+
+  /**
+   * True if the Reviews.io integration is configured
+   * @member {Boolean} reviews_io_configured
+   */
+  exports.prototype.reviews_io_configured = undefined;
 
   /**
    * @member {String} sms_esp_twilio_uuid
