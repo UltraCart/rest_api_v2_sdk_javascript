@@ -3393,6 +3393,18 @@ Object.defineProperty(exports, "ResultSet", {
     return _ResultSet["default"];
   }
 });
+Object.defineProperty(exports, "RulerValidationRequest", {
+  enumerable: true,
+  get: function get() {
+    return _RulerValidationRequest["default"];
+  }
+});
+Object.defineProperty(exports, "RulerValidationResponse", {
+  enumerable: true,
+  get: function get() {
+    return _RulerValidationResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ScreenRecording", {
   enumerable: true,
   get: function get() {
@@ -5215,6 +5227,10 @@ var _RegisterAffiliateClickResponse = _interopRequireDefault(require("./com.ultr
 var _ResponseMetadata = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ResponseMetadata"));
 
 var _ResultSet = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ResultSet"));
+
+var _RulerValidationRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/RulerValidationRequest"));
+
+var _RulerValidationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/RulerValidationResponse"));
 
 var _ScreenRecording = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ScreenRecording"));
 

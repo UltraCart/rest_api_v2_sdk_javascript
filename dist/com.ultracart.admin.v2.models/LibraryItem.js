@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LibraryItem model module.
  * @module com.ultracart.admin.v2.models/LibraryItem
- * @version 4.0.60-RC
+ * @version 4.0.61-RC
  */
 var LibraryItem = /*#__PURE__*/function () {
   /**

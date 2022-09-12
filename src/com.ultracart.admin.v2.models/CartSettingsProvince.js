@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartSettingsProvince model module.
  * @module com.ultracart.admin.v2.models/CartSettingsProvince
- * @version 4.0.61-RC
+ * @version 4.0.62-RC
  */
 class CartSettingsProvince {
     /**

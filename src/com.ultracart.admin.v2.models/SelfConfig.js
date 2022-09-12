@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SelfConfig model module.
  * @module com.ultracart.admin.v2.models/SelfConfig
- * @version 4.0.61-RC
+ * @version 4.0.62-RC
  */
 class SelfConfig {
     /**
