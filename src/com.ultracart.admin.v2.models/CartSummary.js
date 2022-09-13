@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CartSummary model module.
  * @module com.ultracart.admin.v2.models/CartSummary
- * @version 4.0.62-RC
+ * @version 4.0.63-RC
  */
 class CartSummary {
     /**

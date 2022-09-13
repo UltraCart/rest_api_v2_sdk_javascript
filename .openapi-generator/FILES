@@ -329,6 +329,8 @@ docs/EmailPlan.md
 docs/EmailPlanAdditional.md
 docs/EmailPlanResponse.md
 docs/EmailPostcardStat.md
+docs/EmailPostcardTracking.md
+docs/EmailPostcardTrackingResponse.md
 docs/EmailSegment.md
 docs/EmailSegmentArchiveResponse.md
 docs/EmailSegmentCustomer.md
@@ -1011,6 +1013,8 @@ src/com.ultracart.admin.v2.models/EmailPlan.js
 src/com.ultracart.admin.v2.models/EmailPlanAdditional.js
 src/com.ultracart.admin.v2.models/EmailPlanResponse.js
 src/com.ultracart.admin.v2.models/EmailPostcardStat.js
+src/com.ultracart.admin.v2.models/EmailPostcardTracking.js
+src/com.ultracart.admin.v2.models/EmailPostcardTrackingResponse.js
 src/com.ultracart.admin.v2.models/EmailSegment.js
 src/com.ultracart.admin.v2.models/EmailSegmentArchiveResponse.js
 src/com.ultracart.admin.v2.models/EmailSegmentCustomer.js

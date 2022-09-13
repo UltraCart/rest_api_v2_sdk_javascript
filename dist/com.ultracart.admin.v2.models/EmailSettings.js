@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailSettings model module.
  * @module com.ultracart.admin.v2.models/EmailSettings
- * @version 4.0.61-RC
+ * @version 4.0.62-RC
  */
 var EmailSettings = /*#__PURE__*/function () {
   /**
@@ -88,6 +88,10 @@ var EmailSettings = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('postcard_from_state')) {
           obj['postcard_from_state'] = _ApiClient["default"].convertToType(data['postcard_from_state'], 'String');
+        }
+
+        if (data.hasOwnProperty('reviews_io_configured')) {
+          obj['reviews_io_configured'] = _ApiClient["default"].convertToType(data['reviews_io_configured'], 'Boolean');
         }
 
         if (data.hasOwnProperty('sms_esp_twilio_uuid')) {
@@ -163,6 +167,12 @@ EmailSettings.prototype['postcard_from_postal_code'] = undefined;
  */
 
 EmailSettings.prototype['postcard_from_state'] = undefined;
+/**
+ * True if the Reviews.io integration is configured
+ * @member {Boolean} reviews_io_configured
+ */
+
+EmailSettings.prototype['reviews_io_configured'] = undefined;
 /**
  * @member {String} sms_esp_twilio_uuid
  */

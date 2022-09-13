@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.0.61-RC
+ * @version 4.0.62-RC
  */
 var ConversationAgentAuth = /*#__PURE__*/function () {
   /**

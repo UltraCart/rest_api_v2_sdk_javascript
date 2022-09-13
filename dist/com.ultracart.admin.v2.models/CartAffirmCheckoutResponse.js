@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartAffirmCheckoutResponse model module.
  * @module com.ultracart.admin.v2.models/CartAffirmCheckoutResponse
- * @version 4.0.61-RC
+ * @version 4.0.62-RC
  */
 var CartAffirmCheckoutResponse = /*#__PURE__*/function () {
   /**

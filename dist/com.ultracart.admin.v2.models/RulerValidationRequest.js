@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The RulerValidationRequest model module.
  * @module com.ultracart.admin.v2.models/RulerValidationRequest
- * @version 4.0.61-RC
+ * @version 4.0.62-RC
  */
 var RulerValidationRequest = /*#__PURE__*/function () {
   /**

@@ -332,6 +332,8 @@ import EmailPlan from './com.ultracart.admin.v2.models/EmailPlan';
 import EmailPlanAdditional from './com.ultracart.admin.v2.models/EmailPlanAdditional';
 import EmailPlanResponse from './com.ultracart.admin.v2.models/EmailPlanResponse';
 import EmailPostcardStat from './com.ultracart.admin.v2.models/EmailPostcardStat';
+import EmailPostcardTracking from './com.ultracart.admin.v2.models/EmailPostcardTracking';
+import EmailPostcardTrackingResponse from './com.ultracart.admin.v2.models/EmailPostcardTrackingResponse';
 import EmailSegment from './com.ultracart.admin.v2.models/EmailSegment';
 import EmailSegmentArchiveResponse from './com.ultracart.admin.v2.models/EmailSegmentArchiveResponse';
 import EmailSegmentCustomer from './com.ultracart.admin.v2.models/EmailSegmentCustomer';
@@ -730,7 +732,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.62-RC
+* @version 4.0.63-RC
 */
 export {
     /**
@@ -2652,6 +2654,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/EmailPostcardStat}
      */
     EmailPostcardStat,
+
+    /**
+     * The EmailPostcardTracking model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailPostcardTracking}
+     */
+    EmailPostcardTracking,
+
+    /**
+     * The EmailPostcardTrackingResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailPostcardTrackingResponse}
+     */
+    EmailPostcardTrackingResponse,
 
     /**
      * The EmailSegment model constructor.

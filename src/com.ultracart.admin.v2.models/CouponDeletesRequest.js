@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponDeletesRequest model module.
  * @module com.ultracart.admin.v2.models/CouponDeletesRequest
- * @version 4.0.62-RC
+ * @version 4.0.63-RC
  */
 class CouponDeletesRequest {
     /**
