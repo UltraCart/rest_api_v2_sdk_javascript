@@ -34,7 +34,7 @@
   /**
    * The TempMultimedia model module.
    * @module com.ultracart.admin.v2.models/TempMultimedia
-   * @version 3.10.45
+   * @version 3.10.46
    */
 
   /**
