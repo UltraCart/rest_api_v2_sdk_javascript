@@ -34,7 +34,7 @@
   /**
    * The EmailGlobalUnsubscribeResponse model module.
    * @module com.ultracart.admin.v2.models/EmailGlobalUnsubscribeResponse
-   * @version 3.10.46
+   * @version 3.10.47
    */
 
   /**
