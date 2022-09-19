@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseq model module.
  * @module com.ultracart.admin.v2.models/EmailCommseq
- * @version 4.0.62-RC
+ * @version 4.0.63-RC
  */
 var EmailCommseq = /*#__PURE__*/function () {
   /**

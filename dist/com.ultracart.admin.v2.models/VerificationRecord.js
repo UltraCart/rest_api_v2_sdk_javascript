@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The VerificationRecord model module.
  * @module com.ultracart.admin.v2.models/VerificationRecord
- * @version 4.0.62-RC
+ * @version 4.0.63-RC
  */
 var VerificationRecord = /*#__PURE__*/function () {
   /**

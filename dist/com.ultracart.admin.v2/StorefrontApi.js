@@ -143,6 +143,8 @@ var _EmailPlan = _interopRequireDefault(require("../com.ultracart.admin.v2.model
 
 var _EmailPlanResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailPlanResponse"));
 
+var _EmailPostcardTrackingResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailPostcardTrackingResponse"));
+
 var _EmailSegment = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailSegment"));
 
 var _EmailSegmentArchiveResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailSegmentArchiveResponse"));
@@ -288,7 +290,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.62-RC
+* @version 4.0.63-RC
 */
 var StorefrontApi = /*#__PURE__*/function () {
   /**
@@ -1947,6 +1949,49 @@ var StorefrontApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _EmailStatPostcardSummaryResponse["default"];
       return this.apiClient.callApi('/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/postcardStats', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getEmailCommseqPostcardTracking operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqPostcardTrackingCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailPostcardTrackingResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get email communication postcard tracking
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_postcard_uuid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqPostcardTrackingCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailPostcardTrackingResponse}
+     */
+
+  }, {
+    key: "getEmailCommseqPostcardTracking",
+    value: function getEmailCommseqPostcardTracking(storefront_oid, commseq_postcard_uuid, callback) {
+      var postBody = null; // verify the required parameter 'storefront_oid' is set
+
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqPostcardTracking");
+      } // verify the required parameter 'commseq_postcard_uuid' is set
+
+
+      if (commseq_postcard_uuid === undefined || commseq_postcard_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_postcard_uuid' when calling getEmailCommseqPostcardTracking");
+      }
+
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_postcard_uuid': commseq_postcard_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _EmailPostcardTrackingResponse["default"];
+      return this.apiClient.callApi('/storefront/{storefront_oid}/email/postcards/{commseq_postcard_uuid}/tracking', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getEmailCommseqStatOverall operation.

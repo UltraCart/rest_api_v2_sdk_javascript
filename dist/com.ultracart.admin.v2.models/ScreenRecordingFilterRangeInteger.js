@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilterRangeInteger model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeInteger
- * @version 4.0.62-RC
+ * @version 4.0.63-RC
  */
 var ScreenRecordingFilterRangeInteger = /*#__PURE__*/function () {
   /**

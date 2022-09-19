@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The DataTablesServerSideResponse model module.
  * @module com.ultracart.admin.v2.models/DataTablesServerSideResponse
- * @version 4.0.62-RC
+ * @version 4.0.63-RC
  */
 var DataTablesServerSideResponse = /*#__PURE__*/function () {
   /**

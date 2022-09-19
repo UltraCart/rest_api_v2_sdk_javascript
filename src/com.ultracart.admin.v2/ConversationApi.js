@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ConversationAgentAuthResponse from '../com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationMessagesResponse from '../com.ultracart.admin.v2.models/ConversationMessagesResponse';
 import ConversationMultimediaUploadUrlResponse from '../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationResponse from '../com.ultracart.admin.v2.models/ConversationResponse';
 import ConversationStartRequest from '../com.ultracart.admin.v2.models/ConversationStartRequest';
@@ -26,7 +27,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.63-RC
+* @version 4.0.64-RC
 */
 export default class ConversationApi {
 
@@ -41,6 +42,42 @@ export default class ConversationApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the getAgentKeepAlive operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Agent keep alive
+     * Called periodically by the conversation API to keep the session alive. 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getAgentKeepAlive(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/conversation/agent/keepalive', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the getAgentWebsocketAuthorization operation.
@@ -91,10 +128,13 @@ export default class ConversationApi {
      * Retrieve a conversation
      * Retrieve a conversation including the participants and messages 
      * @param {String} conversation_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationResponse}
      */
-    getConversation(conversation_uuid, callback) {
+    getConversation(conversation_uuid, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'conversation_uuid' is set
       if (conversation_uuid === undefined || conversation_uuid === null) {
@@ -105,6 +145,7 @@ export default class ConversationApi {
         'conversation_uuid': conversation_uuid
       };
       let queryParams = {
+        'limit': opts['limit']
       };
       let headerParams = {
       };
@@ -117,6 +158,59 @@ export default class ConversationApi {
       let returnType = ConversationResponse;
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationMessages operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationMessagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve conversation messages
+     * Retrieve conversation messages since a particular time 
+     * @param {String} conversation_uuid 
+     * @param {Number} since 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMessagesResponse}
+     */
+    getConversationMessages(conversation_uuid, since, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'conversation_uuid' is set
+      if (conversation_uuid === undefined || conversation_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_uuid' when calling getConversationMessages");
+      }
+      // verify the required parameter 'since' is set
+      if (since === undefined || since === null) {
+        throw new Error("Missing the required parameter 'since' when calling getConversationMessages");
+      }
+
+      let pathParams = {
+        'conversation_uuid': conversation_uuid,
+        'since': since
+      };
+      let queryParams = {
+        'limit': opts['limit']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationMessagesResponse;
+      return this.apiClient.callApi(
+        '/conversation/conversations/{conversation_uuid}/messages/{since}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

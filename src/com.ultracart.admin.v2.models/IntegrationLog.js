@@ -18,7 +18,7 @@ import IntegrationLogLog from './IntegrationLogLog';
 /**
  * The IntegrationLog model module.
  * @module com.ultracart.admin.v2.models/IntegrationLog
- * @version 4.0.63-RC
+ * @version 4.0.64-RC
  */
 class IntegrationLog {
     /**

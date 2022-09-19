@@ -1971,6 +1971,18 @@ Object.defineProperty(exports, "EmailPostcardStat", {
     return _EmailPostcardStat["default"];
   }
 });
+Object.defineProperty(exports, "EmailPostcardTracking", {
+  enumerable: true,
+  get: function get() {
+    return _EmailPostcardTracking["default"];
+  }
+});
+Object.defineProperty(exports, "EmailPostcardTrackingResponse", {
+  enumerable: true,
+  get: function get() {
+    return _EmailPostcardTrackingResponse["default"];
+  }
+});
 Object.defineProperty(exports, "EmailSegment", {
   enumerable: true,
   get: function get() {
@@ -4765,6 +4777,10 @@ var _EmailPlanAdditional = _interopRequireDefault(require("./com.ultracart.admin
 var _EmailPlanResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailPlanResponse"));
 
 var _EmailPostcardStat = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailPostcardStat"));
+
+var _EmailPostcardTracking = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailPostcardTracking"));
+
+var _EmailPostcardTrackingResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailPostcardTrackingResponse"));
 
 var _EmailSegment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailSegment"));
 

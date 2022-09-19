@@ -4,8 +4,10 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getAgentKeepAlive**](ConversationApi.md#getAgentKeepAlive) | **GET** /conversation/agent/keepalive | Agent keep alive
 [**getAgentWebsocketAuthorization**](ConversationApi.md#getAgentWebsocketAuthorization) | **PUT** /conversation/agent/auth | Get agent websocket authorization
 [**getConversation**](ConversationApi.md#getConversation) | **GET** /conversation/conversations/{conversation_uuid} | Retrieve a conversation
+[**getConversationMessages**](ConversationApi.md#getConversationMessages) | **GET** /conversation/conversations/{conversation_uuid}/messages/{since} | Retrieve conversation messages
 [**getConversationMultimediaUploadUrl**](ConversationApi.md#getConversationMultimediaUploadUrl) | **GET** /conversation/upload_url/{extension} | Get a presigned conersation multimedia upload URL
 [**getConversationWebchatQueueStatuses**](ConversationApi.md#getConversationWebchatQueueStatuses) | **GET** /conversation/conversations/queues/statuses | Retrieve a conversation webchat queue statuses
 [**getConversations**](ConversationApi.md#getConversations) | **GET** /conversation/conversations | Retrieve a list of conversation summaries newest to oldest
@@ -14,6 +16,52 @@ Method | HTTP request | Description
 [**startConversation**](ConversationApi.md#startConversation) | **PUT** /conversation/conversations | Start a conversation
 [**updateConversationWebchatQueueStatus**](ConversationApi.md#updateConversationWebchatQueueStatus) | **PUT** /conversation/conversations/queues/{queue_name}/status | Update status within the queue
 
+
+
+## getAgentKeepAlive
+
+> getAgentKeepAlive()
+
+Agent keep alive
+
+Called periodically by the conversation API to keep the session alive. 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getAgentKeepAlive((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## getAgentWebsocketAuthorization
@@ -64,7 +112,7 @@ This endpoint does not need any parameter.
 
 ## getConversation
 
-> ConversationResponse getConversation(conversation_uuid)
+> ConversationResponse getConversation(conversation_uuid, opts)
 
 Retrieve a conversation
 
@@ -82,7 +130,10 @@ let apiInstance = new ucApi.ConversationApi(apiClient);
 // Please see https://github.com/UltraCart/sdk_samples for working examples.
 
 let conversation_uuid = "conversation_uuid_example"; // String | 
-apiInstance.getConversation(conversation_uuid, (error, data, response) => {
+let opts = {
+  'limit': 56 // Number | 
+};
+apiInstance.getConversation(conversation_uuid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -97,10 +148,67 @@ apiInstance.getConversation(conversation_uuid, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversation_uuid** | **String**|  | 
+ **limit** | **Number**|  | [optional] 
 
 ### Return type
 
 [**ConversationResponse**](ConversationResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getConversationMessages
+
+> ConversationMessagesResponse getConversationMessages(conversation_uuid, since, opts)
+
+Retrieve conversation messages
+
+Retrieve conversation messages since a particular time 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let conversation_uuid = "conversation_uuid_example"; // String | 
+let since = 789; // Number | 
+let opts = {
+  'limit': 56 // Number | 
+};
+apiInstance.getConversationMessages(conversation_uuid, since, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_uuid** | **String**|  | 
+ **since** | **Number**|  | 
+ **limit** | **Number**|  | [optional] 
+
+### Return type
+
+[**ConversationMessagesResponse**](ConversationMessagesResponse.md)
 
 ### Authorization
 

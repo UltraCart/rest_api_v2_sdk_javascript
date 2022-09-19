@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponAmountOffSubtotalFreeShippingWithPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponAmountOffSubtotalFreeShippingWithPurchase
- * @version 4.0.63-RC
+ * @version 4.0.64-RC
  */
 class CouponAmountOffSubtotalFreeShippingWithPurchase {
     /**
