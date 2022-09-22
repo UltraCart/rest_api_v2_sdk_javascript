@@ -2529,6 +2529,24 @@ Object.defineProperty(exports, "ItemDigitalItem", {
     return _ItemDigitalItem["default"];
   }
 });
+Object.defineProperty(exports, "ItemDigitalItemPdfMeta", {
+  enumerable: true,
+  get: function get() {
+    return _ItemDigitalItemPdfMeta["default"];
+  }
+});
+Object.defineProperty(exports, "ItemDigitalItemResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemDigitalItemResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ItemDigitalItemsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemDigitalItemsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ItemEbay", {
   enumerable: true,
   get: function get() {
@@ -4961,6 +4979,12 @@ var _ItemContentMultimediaThumbnail = _interopRequireDefault(require("./com.ultr
 var _ItemDigitalDelivery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemDigitalDelivery"));
 
 var _ItemDigitalItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemDigitalItem"));
+
+var _ItemDigitalItemPdfMeta = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemDigitalItemPdfMeta"));
+
+var _ItemDigitalItemResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemDigitalItemResponse"));
+
+var _ItemDigitalItemsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemDigitalItemsResponse"));
 
 var _ItemEbay = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemEbay"));
 

@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ItemDigitalItemPdfMeta = _interopRequireDefault(require("./ItemDigitalItemPdfMeta"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemDigitalItem model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalItem
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 var ItemDigitalItem = /*#__PURE__*/function () {
   /**
@@ -54,6 +56,10 @@ var ItemDigitalItem = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ItemDigitalItem();
 
+        if (data.hasOwnProperty('click_wrap_agreement')) {
+          obj['click_wrap_agreement'] = _ApiClient["default"].convertToType(data['click_wrap_agreement'], 'String');
+        }
+
         if (data.hasOwnProperty('creation_dts')) {
           obj['creation_dts'] = _ApiClient["default"].convertToType(data['creation_dts'], 'String');
         }
@@ -62,8 +68,16 @@ var ItemDigitalItem = /*#__PURE__*/function () {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
 
+        if (data.hasOwnProperty('digital_item_oid')) {
+          obj['digital_item_oid'] = _ApiClient["default"].convertToType(data['digital_item_oid'], 'Number');
+        }
+
         if (data.hasOwnProperty('file_size')) {
           obj['file_size'] = _ApiClient["default"].convertToType(data['file_size'], 'Number');
+        }
+
+        if (data.hasOwnProperty('import_from_url')) {
+          obj['import_from_url'] = _ApiClient["default"].convertToType(data['import_from_url'], 'String');
         }
 
         if (data.hasOwnProperty('mime_type')) {
@@ -72,6 +86,10 @@ var ItemDigitalItem = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('original_filename')) {
           obj['original_filename'] = _ApiClient["default"].convertToType(data['original_filename'], 'String');
+        }
+
+        if (data.hasOwnProperty('pdf_meta')) {
+          obj['pdf_meta'] = _ItemDigitalItemPdfMeta["default"].constructFromObject(data['pdf_meta']);
         }
       }
 
@@ -82,10 +100,16 @@ var ItemDigitalItem = /*#__PURE__*/function () {
   return ItemDigitalItem;
 }();
 /**
+ * Click wrap agreement is presented to the customer before they can purchase your product.
+ * @member {String} click_wrap_agreement
+ */
+
+
+ItemDigitalItem.prototype['click_wrap_agreement'] = undefined;
+/**
  * File creation date
  * @member {String} creation_dts
  */
-
 
 ItemDigitalItem.prototype['creation_dts'] = undefined;
 /**
@@ -95,11 +119,23 @@ ItemDigitalItem.prototype['creation_dts'] = undefined;
 
 ItemDigitalItem.prototype['description'] = undefined;
 /**
+ * The Digital item oid is a primary key used internally by UltraCart.  You should not set or change this value.  Doing so will have no effect.
+ * @member {Number} digital_item_oid
+ */
+
+ItemDigitalItem.prototype['digital_item_oid'] = undefined;
+/**
  * File size
  * @member {Number} file_size
  */
 
 ItemDigitalItem.prototype['file_size'] = undefined;
+/**
+ * This url is sourced to create or update a digital file in your digital library.  It is only considered during an insert or update operation.
+ * @member {String} import_from_url
+ */
+
+ItemDigitalItem.prototype['import_from_url'] = undefined;
 /**
  * Mime type associated with the file
  * @member {String} mime_type
@@ -112,5 +148,10 @@ ItemDigitalItem.prototype['mime_type'] = undefined;
  */
 
 ItemDigitalItem.prototype['original_filename'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ItemDigitalItemPdfMeta} pdf_meta
+ */
+
+ItemDigitalItem.prototype['pdf_meta'] = undefined;
 var _default = ItemDigitalItem;
 exports["default"] = _default;

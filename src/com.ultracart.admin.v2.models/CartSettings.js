@@ -22,7 +22,7 @@ import CartSettingsTerms from './CartSettingsTerms';
 /**
  * The CartSettings model module.
  * @module com.ultracart.admin.v2.models/CartSettings
- * @version 4.0.65-RC
+ * @version 4.0.66-RC
  */
 class CartSettings {
     /**

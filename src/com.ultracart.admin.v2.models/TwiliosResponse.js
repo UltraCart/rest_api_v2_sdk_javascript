@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The TwiliosResponse model module.
  * @module com.ultracart.admin.v2.models/TwiliosResponse
- * @version 4.0.65-RC
+ * @version 4.0.66-RC
  */
 class TwiliosResponse {
     /**
