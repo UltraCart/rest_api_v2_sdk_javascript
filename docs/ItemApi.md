@@ -122,7 +122,7 @@ null (empty response body)
 
 <a name="getDigitalItem"></a>
 # **getDigitalItem**
-> ItemDigitalItemResponse getDigitalItem(digital_item_oid, opts)
+> ItemDigitalItemResponse getDigitalItem(digital_item_oid)
 
 Retrieve a digital item from the digital library, which are digital files that may be attached to normal items
 
@@ -140,14 +140,6 @@ var apiInstance = new UltraCartRestApiV2.ItemApi();
 
 var digital_item_oid = 56; // Number | The digital item oid to retrieve.
 
-var opts = { 
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch items that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -156,7 +148,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getDigitalItem(digital_item_oid, opts, callback);
+apiInstance.getDigitalItem(digital_item_oid, callback);
 ```
 
 ### Parameters
@@ -164,12 +156,6 @@ apiInstance.getDigitalItem(digital_item_oid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **digital_item_oid** | **Number**| The digital item oid to retrieve. | 
- **_limit** | **Number**| The maximum number of records to return on this one API call. (Default 100, Max 2000) | [optional] [default to 100]
- **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
- **_since** | **String**| Fetch items that have been created/modified since this date/time. | [optional] 
- **_sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
- **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
 
 ### Return type
 
