@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.models/ItemsRequest', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/PricingTiersResponse', 'com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.models/ItemDigitalItem', 'com.ultracart.admin.v2.models/ItemDigitalItemResponse', 'com.ultracart.admin.v2.models/ItemDigitalItemsResponse', 'com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.models/ItemsRequest', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/PricingTiersResponse', 'com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemsRequest'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/PricingTiersResponse'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/ItemDigitalItem'), require('../com.ultracart.admin.v2.models/ItemDigitalItemResponse'), require('../com.ultracart.admin.v2.models/ItemDigitalItemsResponse'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemsRequest'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/PricingTiersResponse'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemsRequest, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.PricingTiersResponse, root.UltraCartRestApiV2.TempMultimediaResponse);
+    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ItemDigitalItem, root.UltraCartRestApiV2.ItemDigitalItemResponse, root.UltraCartRestApiV2.ItemDigitalItemsResponse, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemsRequest, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.PricingTiersResponse, root.UltraCartRestApiV2.TempMultimediaResponse);
   }
-}(this, function(ApiClient, ErrorResponse, Item, ItemResponse, ItemsRequest, ItemsResponse, PricingTiersResponse, TempMultimediaResponse) {
+}(this, function(ApiClient, ErrorResponse, Item, ItemDigitalItem, ItemDigitalItemResponse, ItemDigitalItemsResponse, ItemResponse, ItemsRequest, ItemsResponse, PricingTiersResponse, TempMultimediaResponse) {
   'use strict';
 
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.10.47
+   * @version 3.10.48
    */
 
   /**
@@ -47,6 +47,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the deleteDigitalItem operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~deleteDigitalItemCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a digital item, which is a file within the digital library, not an actual merchant item
+     * Delete a digital item on the UltraCart account. 
+     * @param {Number} digital_item_oid The digital item oid to delete.
+     * @param {module:com.ultracart.admin.v2/ItemApi~deleteDigitalItemCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteDigitalItem = function(digital_item_oid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'digital_item_oid' is set
+      if (digital_item_oid === undefined || digital_item_oid === null) {
+        throw new Error("Missing the required parameter 'digital_item_oid' when calling deleteDigitalItem");
+      }
+
+
+      var pathParams = {
+        'digital_item_oid': digital_item_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/item/digital_library/{digital_item_oid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteItem operation.
@@ -90,6 +137,123 @@
 
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDigitalItem operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getDigitalItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemDigitalItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a digital item from the digital library, which are digital files that may be attached to normal items
+     * Retrieves a digital item (file information) from the account.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items. 
+     * @param {Number} digital_item_oid The digital item oid to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Default 100, Max 2000) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch items that have been created/modified since this date/time.
+     * @param {String} opts._sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {module:com.ultracart.admin.v2/ItemApi~getDigitalItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemDigitalItemResponse}
+     */
+    this.getDigitalItem = function(digital_item_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'digital_item_oid' is set
+      if (digital_item_oid === undefined || digital_item_oid === null) {
+        throw new Error("Missing the required parameter 'digital_item_oid' when calling getDigitalItem");
+      }
+
+
+      var pathParams = {
+        'digital_item_oid': digital_item_oid
+      };
+      var queryParams = {
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ItemDigitalItemResponse;
+
+      return this.apiClient.callApi(
+        '/item/digital_library/{digital_item_oid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDigitalItems operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getDigitalItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemDigitalItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve digital items from the digital library which are digital files that may be attached to normal items
+     * Retrieves a group of digital items (file information) from the account.  If no parameters are specified, all digital items will be returned.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Default 100, Max 2000) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._since Fetch items that have been created/modified since this date/time.
+     * @param {String} opts._sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {module:com.ultracart.admin.v2/ItemApi~getDigitalItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemDigitalItemsResponse}
+     */
+    this.getDigitalItems = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_since': opts['_since'],
+        '_sort': opts['_sort'],
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ItemDigitalItemsResponse;
+
+      return this.apiClient.callApi(
+        '/item/digital_library', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -308,6 +472,53 @@
     }
 
     /**
+     * Callback function to receive the result of the insertDigitalItem operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~insertDigitalItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemDigitalItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a file within the digital library
+     * Create a file within the digital library.  This does not create an item, but makes this digital file available and selectable as part (or all) of an item. 
+     * @param {module:com.ultracart.admin.v2.models/ItemDigitalItem} digital_item Digital item to create
+     * @param {module:com.ultracart.admin.v2/ItemApi~insertDigitalItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemDigitalItemResponse}
+     */
+    this.insertDigitalItem = function(digital_item, callback) {
+      var postBody = digital_item;
+
+      // verify the required parameter 'digital_item' is set
+      if (digital_item === undefined || digital_item === null) {
+        throw new Error("Missing the required parameter 'digital_item' when calling insertDigitalItem");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = ItemDigitalItemResponse;
+
+      return this.apiClient.callApi(
+        '/item/digital_library', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertItem operation.
      * @callback module:com.ultracart.admin.v2/ItemApi~insertItemCallback
      * @param {String} error Error message, if any.
@@ -355,6 +566,60 @@
 
       return this.apiClient.callApi(
         '/item/items', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateDigitalItem operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~updateDigitalItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemDigitalItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates a file within the digital library
+     * Updates a file within the digital library.  This does not update an item, but updates a digital file available and selectable as part (or all) of an item. 
+     * @param {Number} digital_item_oid The digital item oid to update.
+     * @param {module:com.ultracart.admin.v2.models/ItemDigitalItem} digital_item Digital item to update
+     * @param {module:com.ultracart.admin.v2/ItemApi~updateDigitalItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemDigitalItemResponse}
+     */
+    this.updateDigitalItem = function(digital_item_oid, digital_item, callback) {
+      var postBody = digital_item;
+
+      // verify the required parameter 'digital_item_oid' is set
+      if (digital_item_oid === undefined || digital_item_oid === null) {
+        throw new Error("Missing the required parameter 'digital_item_oid' when calling updateDigitalItem");
+      }
+
+      // verify the required parameter 'digital_item' is set
+      if (digital_item === undefined || digital_item === null) {
+        throw new Error("Missing the required parameter 'digital_item' when calling updateDigitalItem");
+      }
+
+
+      var pathParams = {
+        'digital_item_oid': digital_item_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = ItemDigitalItemResponse;
+
+      return this.apiClient.callApi(
+        '/item/digital_library/{digital_item_oid}', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
