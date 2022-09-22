@@ -17,7 +17,7 @@ import CouponTierAmount from './CouponTierAmount';
 /**
  * The CouponTieredAmountOffSubtotal model module.
  * @module com.ultracart.admin.v2.models/CouponTieredAmountOffSubtotal
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 class CouponTieredAmountOffSubtotal {
     /**

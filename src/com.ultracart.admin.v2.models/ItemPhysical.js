@@ -18,7 +18,7 @@ import Weight from './Weight';
 /**
  * The ItemPhysical model module.
  * @module com.ultracart.admin.v2.models/ItemPhysical
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 class ItemPhysical {
     /**

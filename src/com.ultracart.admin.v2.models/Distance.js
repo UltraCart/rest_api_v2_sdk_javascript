@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Distance model module.
  * @module com.ultracart.admin.v2.models/Distance
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 class Distance {
     /**

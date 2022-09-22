@@ -18,7 +18,7 @@ import Currency from './Currency';
 /**
  * The CartKitComponentOption model module.
  * @module com.ultracart.admin.v2.models/CartKitComponentOption
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 class CartKitComponentOption {
     /**

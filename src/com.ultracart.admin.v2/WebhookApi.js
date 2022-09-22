@@ -24,7 +24,7 @@ import WebhooksResponse from '../com.ultracart.admin.v2.models/WebhooksResponse'
 /**
 * Webhook service.
 * @module com.ultracart.admin.v2/WebhookApi
-* @version 4.0.64-RC
+* @version 4.0.65-RC
 */
 export default class WebhookApi {
 

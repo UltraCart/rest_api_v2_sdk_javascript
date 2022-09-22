@@ -17,7 +17,7 @@ import ItemTaxExemption from './ItemTaxExemption';
 /**
  * The ItemTax model module.
  * @module com.ultracart.admin.v2.models/ItemTax
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 class ItemTax {
     /**

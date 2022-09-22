@@ -17,7 +17,7 @@ import ItemPricingTier from './ItemPricingTier';
 /**
  * The ItemPricing model module.
  * @module com.ultracart.admin.v2.models/ItemPricing
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 class ItemPricing {
     /**

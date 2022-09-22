@@ -17,7 +17,7 @@ import ItemAutoOrderStep from './ItemAutoOrderStep';
 /**
  * The ItemAutoOrder model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrder
- * @version 4.0.64-RC
+ * @version 4.0.65-RC
  */
 class ItemAutoOrder {
     /**

@@ -422,6 +422,9 @@ docs/ItemContentMultimedia.md
 docs/ItemContentMultimediaThumbnail.md
 docs/ItemDigitalDelivery.md
 docs/ItemDigitalItem.md
+docs/ItemDigitalItemPdfMeta.md
+docs/ItemDigitalItemResponse.md
+docs/ItemDigitalItemsResponse.md
 docs/ItemEbay.md
 docs/ItemEbayCategorySpecific.md
 docs/ItemEbayMarketListing.md
@@ -1103,6 +1106,9 @@ src/com.ultracart.admin.v2.models/ItemContentMultimedia.js
 src/com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail.js
 src/com.ultracart.admin.v2.models/ItemDigitalDelivery.js
 src/com.ultracart.admin.v2.models/ItemDigitalItem.js
+src/com.ultracart.admin.v2.models/ItemDigitalItemPdfMeta.js
+src/com.ultracart.admin.v2.models/ItemDigitalItemResponse.js
+src/com.ultracart.admin.v2.models/ItemDigitalItemsResponse.js
 src/com.ultracart.admin.v2.models/ItemEbay.js
 src/com.ultracart.admin.v2.models/ItemEbayCategorySpecific.js
 src/com.ultracart.admin.v2.models/ItemEbayMarketListing.js

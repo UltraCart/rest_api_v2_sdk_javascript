@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailOrder model module.
  * @module com.ultracart.admin.v2.models/EmailOrder
- * @version 4.0.63-RC
+ * @version 4.0.64-RC
  */
 var EmailOrder = /*#__PURE__*/function () {
   /**

@@ -801,6 +801,12 @@ Object.defineProperty(exports, "ConversationMessageTransportStatus", {
     return _ConversationMessageTransportStatus["default"];
   }
 });
+Object.defineProperty(exports, "ConversationMessagesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMessagesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationMultimediaUploadUrl", {
   enumerable: true,
   get: function get() {
@@ -4391,6 +4397,8 @@ var _ConversationEventTyping = _interopRequireDefault(require("./com.ultracart.a
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
 
 var _ConversationMessageTransportStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTransportStatus"));
+
+var _ConversationMessagesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessagesResponse"));
 
 var _ConversationMultimediaUploadUrl = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl"));
 

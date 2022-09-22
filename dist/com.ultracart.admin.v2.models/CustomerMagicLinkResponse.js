@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerMagicLinkResponse model module.
  * @module com.ultracart.admin.v2.models/CustomerMagicLinkResponse
- * @version 4.0.63-RC
+ * @version 4.0.64-RC
  */
 var CustomerMagicLinkResponse = /*#__PURE__*/function () {
   /**

@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
+var _ConversationMessagesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMessagesResponse"));
+
 var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
 
 var _ConversationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationResponse"));
@@ -36,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.63-RC
+* @version 4.0.64-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -52,22 +54,50 @@ var ConversationApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Callback function to receive the result of the getAgentWebsocketAuthorization operation.
-   * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentWebsocketAuthorizationCallback
+   * Callback function to receive the result of the getAgentKeepAlive operation.
+   * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback
    * @param {String} error Error message, if any.
-   * @param {module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse} data The data returned by the service call.
+   * @param data This operation does not return a value.
    * @param {String} response The complete HTTP response.
    */
 
   /**
-   * Get agent websocket authorization
-   * Retrieve a JWT to authorize an agent to make a websocket connection. 
-   * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentWebsocketAuthorizationCallback} callback The callback function, accepting three arguments: error, data, response
-   * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse}
+   * Agent keep alive
+   * Called periodically by the conversation API to keep the session alive. 
+   * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback} callback The callback function, accepting three arguments: error, data, response
    */
 
 
   _createClass(ConversationApi, [{
+    key: "getAgentKeepAlive",
+    value: function getAgentKeepAlive(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/agent/keepalive', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getAgentWebsocketAuthorization operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentWebsocketAuthorizationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get agent websocket authorization
+     * Retrieve a JWT to authorize an agent to make a websocket connection. 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentWebsocketAuthorizationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse}
+     */
+
+  }, {
     key: "getAgentWebsocketAuthorization",
     value: function getAgentWebsocketAuthorization(callback) {
       var postBody = null;
@@ -93,13 +123,16 @@ var ConversationApi = /*#__PURE__*/function () {
      * Retrieve a conversation
      * Retrieve a conversation including the participants and messages 
      * @param {String} conversation_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationResponse}
      */
 
   }, {
     key: "getConversation",
-    value: function getConversation(conversation_uuid, callback) {
+    value: function getConversation(conversation_uuid, opts, callback) {
+      opts = opts || {};
       var postBody = null; // verify the required parameter 'conversation_uuid' is set
 
       if (conversation_uuid === undefined || conversation_uuid === null) {
@@ -109,7 +142,9 @@ var ConversationApi = /*#__PURE__*/function () {
       var pathParams = {
         'conversation_uuid': conversation_uuid
       };
-      var queryParams = {};
+      var queryParams = {
+        'limit': opts['limit']
+      };
       var headerParams = {};
       var formParams = {};
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
@@ -117,6 +152,55 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationResponse["default"];
       return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getConversationMessages operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationMessagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve conversation messages
+     * Retrieve conversation messages since a particular time 
+     * @param {String} conversation_uuid 
+     * @param {Number} since 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMessagesResponse}
+     */
+
+  }, {
+    key: "getConversationMessages",
+    value: function getConversationMessages(conversation_uuid, since, opts, callback) {
+      opts = opts || {};
+      var postBody = null; // verify the required parameter 'conversation_uuid' is set
+
+      if (conversation_uuid === undefined || conversation_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_uuid' when calling getConversationMessages");
+      } // verify the required parameter 'since' is set
+
+
+      if (since === undefined || since === null) {
+        throw new Error("Missing the required parameter 'since' when calling getConversationMessages");
+      }
+
+      var pathParams = {
+        'conversation_uuid': conversation_uuid,
+        'since': since
+      };
+      var queryParams = {
+        'limit': opts['limit']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationMessagesResponse["default"];
+      return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}/messages/{since}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getConversationMultimediaUploadUrl operation.

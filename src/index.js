@@ -421,6 +421,9 @@ import ItemContentMultimedia from './com.ultracart.admin.v2.models/ItemContentMu
 import ItemContentMultimediaThumbnail from './com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail';
 import ItemDigitalDelivery from './com.ultracart.admin.v2.models/ItemDigitalDelivery';
 import ItemDigitalItem from './com.ultracart.admin.v2.models/ItemDigitalItem';
+import ItemDigitalItemPdfMeta from './com.ultracart.admin.v2.models/ItemDigitalItemPdfMeta';
+import ItemDigitalItemResponse from './com.ultracart.admin.v2.models/ItemDigitalItemResponse';
+import ItemDigitalItemsResponse from './com.ultracart.admin.v2.models/ItemDigitalItemsResponse';
 import ItemEbay from './com.ultracart.admin.v2.models/ItemEbay';
 import ItemEbayCategorySpecific from './com.ultracart.admin.v2.models/ItemEbayCategorySpecific';
 import ItemEbayMarketListing from './com.ultracart.admin.v2.models/ItemEbayMarketListing';
@@ -733,7 +736,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.64-RC
+* @version 4.0.65-RC
 */
 export {
     /**
@@ -3189,6 +3192,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemDigitalItem}
      */
     ItemDigitalItem,
+
+    /**
+     * The ItemDigitalItemPdfMeta model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemDigitalItemPdfMeta}
+     */
+    ItemDigitalItemPdfMeta,
+
+    /**
+     * The ItemDigitalItemResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemDigitalItemResponse}
+     */
+    ItemDigitalItemResponse,
+
+    /**
+     * The ItemDigitalItemsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemDigitalItemsResponse}
+     */
+    ItemDigitalItemsResponse,
 
     /**
      * The ItemEbay model constructor.
