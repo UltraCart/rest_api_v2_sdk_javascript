@@ -38,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.0.65-RC
+* @version 4.0.66-RC
 */
 var ItemApi = /*#__PURE__*/function () {
   /**
@@ -138,21 +138,13 @@ var ItemApi = /*#__PURE__*/function () {
      * Retrieve a digital item from the digital library, which are digital files that may be attached to normal items
      * Retrieves a digital item (file information) from the account.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items. 
      * @param {Number} digital_item_oid The digital item oid to retrieve.
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Default 100, Max 2000) (default to 100)
-     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-     * @param {String} opts._since Fetch items that have been created/modified since this date/time.
-     * @param {String} opts._sort The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
      * @param {module:com.ultracart.admin.v2/ItemApi~getDigitalItemCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemDigitalItemResponse}
      */
 
   }, {
     key: "getDigitalItem",
-    value: function getDigitalItem(digital_item_oid, opts, callback) {
-      opts = opts || {};
+    value: function getDigitalItem(digital_item_oid, callback) {
       var postBody = null; // verify the required parameter 'digital_item_oid' is set
 
       if (digital_item_oid === undefined || digital_item_oid === null) {
@@ -162,14 +154,7 @@ var ItemApi = /*#__PURE__*/function () {
       var pathParams = {
         'digital_item_oid': digital_item_oid
       };
-      var queryParams = {
-        '_limit': opts['_limit'],
-        '_offset': opts['_offset'],
-        '_since': opts['_since'],
-        '_sort': opts['_sort'],
-        '_expand': opts['_expand'],
-        '_placeholders': opts['_placeholders']
-      };
+      var queryParams = {};
       var headerParams = {};
       var formParams = {};
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];

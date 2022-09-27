@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingUserAgentDevice model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingUserAgentDevice
- * @version 4.0.66-RC
+ * @version 4.0.67-RC
  */
 class ScreenRecordingUserAgentDevice {
     /**

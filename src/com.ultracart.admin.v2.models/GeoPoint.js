@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GeoPoint model module.
  * @module com.ultracart.admin.v2.models/GeoPoint
- * @version 4.0.66-RC
+ * @version 4.0.67-RC
  */
 class GeoPoint {
     /**

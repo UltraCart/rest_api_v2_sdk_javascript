@@ -375,6 +375,7 @@ import ExperimentResponse from './com.ultracart.admin.v2.models/ExperimentRespon
 import ExperimentVariation from './com.ultracart.admin.v2.models/ExperimentVariation';
 import ExperimentVariationStat from './com.ultracart.admin.v2.models/ExperimentVariationStat';
 import ExperimentsResponse from './com.ultracart.admin.v2.models/ExperimentsResponse';
+import FileManagerPage from './com.ultracart.admin.v2.models/FileManagerPage';
 import FulfillmentInventory from './com.ultracart.admin.v2.models/FulfillmentInventory';
 import FulfillmentShipment from './com.ultracart.admin.v2.models/FulfillmentShipment';
 import GeoPoint from './com.ultracart.admin.v2.models/GeoPoint';
@@ -736,7 +737,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.66-RC
+* @version 4.0.67-RC
 */
 export {
     /**
@@ -2916,6 +2917,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ExperimentsResponse}
      */
     ExperimentsResponse,
+
+    /**
+     * The FileManagerPage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FileManagerPage}
+     */
+    FileManagerPage,
 
     /**
      * The FulfillmentInventory model constructor.

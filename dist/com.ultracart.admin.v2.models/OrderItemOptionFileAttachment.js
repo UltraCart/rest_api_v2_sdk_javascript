@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItemOptionFileAttachment model module.
  * @module com.ultracart.admin.v2.models/OrderItemOptionFileAttachment
- * @version 4.0.65-RC
+ * @version 4.0.66-RC
  */
 var OrderItemOptionFileAttachment = /*#__PURE__*/function () {
   /**

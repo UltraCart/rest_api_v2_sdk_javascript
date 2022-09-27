@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingHeatmapUrl model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapUrl
- * @version 4.0.65-RC
+ * @version 4.0.66-RC
  */
 var ScreenRecordingHeatmapUrl = /*#__PURE__*/function () {
   /**
