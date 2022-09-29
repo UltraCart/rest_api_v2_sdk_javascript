@@ -34,7 +34,7 @@
   /**
    * The ItemDigitalItem model module.
    * @module com.ultracart.admin.v2.models/ItemDigitalItem
-   * @version 3.10.50
+   * @version 3.10.51
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('digital_item_oid'))
         obj.digital_item_oid = ApiClient.convertToType(data['digital_item_oid'], 'Number');
+      if (data.hasOwnProperty('external_id'))
+        obj.external_id = ApiClient.convertToType(data['external_id'], 'String');
       if (data.hasOwnProperty('file_size'))
         obj.file_size = ApiClient.convertToType(data['file_size'], 'Number');
       if (data.hasOwnProperty('import_from_url'))
@@ -100,6 +102,12 @@
    * @member {Number} digital_item_oid
    */
   exports.prototype.digital_item_oid = undefined;
+
+  /**
+   * External Id useful for syncing with a remote filesystem, this may be an MD5 hash or whatever suits your needs.
+   * @member {String} external_id
+   */
+  exports.prototype.external_id = undefined;
 
   /**
    * File size

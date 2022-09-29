@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerEstimateTaxResponse model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse
-   * @version 3.10.50
+   * @version 3.10.51
    */
 
   /**

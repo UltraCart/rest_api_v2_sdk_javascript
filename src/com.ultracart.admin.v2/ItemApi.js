@@ -34,7 +34,7 @@
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.10.50
+   * @version 3.10.51
    */
 
   /**
@@ -240,6 +240,54 @@
 
       return this.apiClient.callApi(
         '/item/digital_library', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDigitalItemsByExternalId operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getDigitalItemsByExternalIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemDigitalItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id
+     * Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items. 
+     * @param {String} external_id The external id to match against.
+     * @param {module:com.ultracart.admin.v2/ItemApi~getDigitalItemsByExternalIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemDigitalItemsResponse}
+     */
+    this.getDigitalItemsByExternalId = function(external_id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'external_id' is set
+      if (external_id === undefined || external_id === null) {
+        throw new Error("Missing the required parameter 'external_id' when calling getDigitalItemsByExternalId");
+      }
+
+
+      var pathParams = {
+        'external_id': external_id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ItemDigitalItemsResponse;
+
+      return this.apiClient.callApi(
+        '/item/digital_library/by_external/{external_id}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

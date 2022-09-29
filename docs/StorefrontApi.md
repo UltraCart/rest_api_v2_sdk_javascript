@@ -12,12 +12,10 @@ Method | HTTP request | Description
 [**checkDownloadEmailSegment**](StorefrontApi.md#checkDownloadEmailSegment) | **POST** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/downloadPrepare/{email_segment_rebuild_uuid} | Check download of email segment
 [**cloneEmailCampaign**](StorefrontApi.md#cloneEmailCampaign) | **POST** /storefront/{storefront_oid}/email/campaigns/{email_campaign_uuid}/clone | Clone email campaign
 [**cloneEmailFlow**](StorefrontApi.md#cloneEmailFlow) | **POST** /storefront/{storefront_oid}/email/flows/{email_flow_uuid}/clone | Clone email flow
-[**createAdminPanelFsDirectory**](StorefrontApi.md#createAdminPanelFsDirectory) | **POST** /storefront/{id}/adminPanel/fs/dir | Create file manager directory for admin panel
-[**createAdminPanelFsFileUpload**](StorefrontApi.md#createAdminPanelFsFileUpload) | **POST** /storefront/{id}/adminPanel/fs/file | Upload file manager file for admin panel
 [**createEmailSendingDomain**](StorefrontApi.md#createEmailSendingDomain) | **POST** /storefront/email/sending_domains/{domain}/create | Create email campaign
 [**createEmailSendingDomain2**](StorefrontApi.md#createEmailSendingDomain2) | **POST** /storefront/email/sending_domains | Create email sending domain for various providers
+[**createFsDirectory**](StorefrontApi.md#createFsDirectory) | **POST** /storefront/{id}/fs/dir | Create file manager directory
 [**createTwilioAccount**](StorefrontApi.md#createTwilioAccount) | **POST** /storefront/twilio/accounts | Create Twilio account
-[**deleteAdminPanelFsFile**](StorefrontApi.md#deleteAdminPanelFsFile) | **DELETE** /storefront/{id}/adminPanel/fs/file | Delete file manager directory for admin panel
 [**deleteEmailCampaignFolder**](StorefrontApi.md#deleteEmailCampaignFolder) | **DELETE** /storefront/{storefront_oid}/email/campaign_folders/{email_campaign_folder_uuid} | Delete email campaignFolder
 [**deleteEmailCommseqStat**](StorefrontApi.md#deleteEmailCommseqStat) | **DELETE** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/stat | Delete communication sequence stats
 [**deleteEmailEmail**](StorefrontApi.md#deleteEmailEmail) | **DELETE** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid} | Delete email email
@@ -27,6 +25,7 @@ Method | HTTP request | Description
 [**deleteEmailPostcard**](StorefrontApi.md#deleteEmailPostcard) | **DELETE** /storefront/{storefront_oid}/email/postcards/{commseq_postcard_uuid} | Delete email postcard
 [**deleteEmailSendingDomain**](StorefrontApi.md#deleteEmailSendingDomain) | **DELETE** /storefront/email/sending_domains/{domain} | delete email campaign
 [**deleteExperiment**](StorefrontApi.md#deleteExperiment) | **DELETE** /storefront/{storefront_oid}/experiments/{storefront_experiment_oid} | Delete experiment
+[**deleteFsFile**](StorefrontApi.md#deleteFsFile) | **DELETE** /storefront/{id}/fs/file | Delete file manager directory
 [**deleteHeatmap**](StorefrontApi.md#deleteHeatmap) | **DELETE** /storefront/{storefront_oid}/screen_recordings/heatmap | Delete screen recording heatmap
 [**deleteLibraryItem**](StorefrontApi.md#deleteLibraryItem) | **DELETE** /storefront/code_library/{library_item_oid} | Delete library item
 [**deleteLibraryItemPublishedVersions**](StorefrontApi.md#deleteLibraryItemPublishedVersions) | **DELETE** /storefront/code_library/{library_item_oid}/published_versions | Delete all published versions for a library item, including anything in review.
@@ -35,7 +34,6 @@ Method | HTTP request | Description
 [**duplicateLibraryItem**](StorefrontApi.md#duplicateLibraryItem) | **POST** /storefront/code_library/{library_item_oid}/duplicate | Duplicate library item.
 [**favoriteScreenRecording**](StorefrontApi.md#favoriteScreenRecording) | **POST** /storefront/{storefront_oid}/screen_recordings/{screen_recording_uuid}/favorite | Update favorite flag on screen recording
 [**geocodeAddress**](StorefrontApi.md#geocodeAddress) | **POST** /storefront/{storefront_oid}/email/geocode | Obtain lat/long for an address
-[**getAdminPanelFsDirectory**](StorefrontApi.md#getAdminPanelFsDirectory) | **GET** /storefront/{id}/adminPanel/fs/dir | Get file manager directory for admin panel
 [**getCountries**](StorefrontApi.md#getCountries) | **GET** /storefront/{storefront_oid}/email/countries | Get countries
 [**getEditorToken**](StorefrontApi.md#getEditorToken) | **GET** /storefront/{storefront_oid}/editor_token | Gets editor token
 [**getEmailBaseTemplates**](StorefrontApi.md#getEmailBaseTemplates) | **GET** /storefront/{storefront_oid}/email/baseTemplates | Get email communication base templates
@@ -94,6 +92,7 @@ Method | HTTP request | Description
 [**getEmailTemplates**](StorefrontApi.md#getEmailTemplates) | **GET** /storefront/{storefront_oid}/email/templates | Get email templates
 [**getEmailThirdPartyProviders**](StorefrontApi.md#getEmailThirdPartyProviders) | **GET** /storefront/{storefront_oid}/email/third_party_providers | Get a list of third party email providers
 [**getExperiments**](StorefrontApi.md#getExperiments) | **GET** /storefront/{storefront_oid}/experiments | Get experiments
+[**getFsDirectory**](StorefrontApi.md#getFsDirectory) | **GET** /storefront/{id}/fs/dir | Get file manager directory
 [**getHeatmap**](StorefrontApi.md#getHeatmap) | **POST** /storefront/{storefront_oid}/screen_recordings/heatmap | Get screen recording heatmap
 [**getHeatmapIndex**](StorefrontApi.md#getHeatmapIndex) | **POST** /storefront/{storefront_oid}/screen_recordings/heatmap/index | Get screen recording heatmap index
 [**getHistogramPropertyNames**](StorefrontApi.md#getHistogramPropertyNames) | **GET** /storefront/{storefront_oid}/email/histogram/property_names | Get histogram property names
@@ -117,6 +116,7 @@ Method | HTTP request | Description
 [**getTransactionEmailScreenshots**](StorefrontApi.md#getTransactionEmailScreenshots) | **GET** /storefront/{storefront_oid}/transaction_email/list/{email_id}/screenshots | Get transactional email screenshots
 [**getTwilioAccount**](StorefrontApi.md#getTwilioAccount) | **GET** /storefront/twilio/accounts/{esp_twilio_uuid} | Get Twilio account
 [**getTwilioAccounts**](StorefrontApi.md#getTwilioAccounts) | **GET** /storefront/twilio/accounts | Get all Twilio accounts
+[**getUploadFsFileUrl**](StorefrontApi.md#getUploadFsFileUrl) | **GET** /storefront/{id}/fs/upload_url/{extension} | Retrieves a S3 url where a file may be uploaded. Once uploaded, use uploadFsFile to trigger the server into reading the S3 bucket and retrieving the file.
 [**globalUnsubscribe**](StorefrontApi.md#globalUnsubscribe) | **POST** /storefront/{storefront_oid}/email/globalUnsubscribe | Globally unsubscribe a customer
 [**importEmailThirdPartyProviderList**](StorefrontApi.md#importEmailThirdPartyProviderList) | **POST** /storefront/{storefront_oid}/email/third_party_providers/import | Import a third party provider list
 [**insertEmailCampaign**](StorefrontApi.md#insertEmailCampaign) | **POST** /storefront/{storefront_oid}/email/campaigns | Insert email campaign
@@ -173,6 +173,7 @@ Method | HTTP request | Description
 [**updateScreenRecordingTags**](StorefrontApi.md#updateScreenRecordingTags) | **POST** /storefront/{storefront_oid}/screen_recordings/{screen_recording_uuid}/tags | Update tags on a screen recording
 [**updateTransactionEmail**](StorefrontApi.md#updateTransactionEmail) | **PUT** /storefront/{storefront_oid}/transaction_email/list/{email_id} | Updates a transaction email object
 [**updateTwilioAccount**](StorefrontApi.md#updateTwilioAccount) | **PUT** /storefront/twilio/accounts/{esp_twilio_uuid} | Update Twilio account
+[**uploadFsFile**](StorefrontApi.md#uploadFsFile) | **POST** /storefront/{id}/fs/upload | This is the last step in uploading a file after 1) calling getUploadFsFileUrl and 2) uploading a file to the provided url, then finally 3) calling this method and providing the key to trigger the server into reading the S3 bucket and retrieving the file.
 [**validateRuler**](StorefrontApi.md#validateRuler) | **POST** /storefront/ruler/validate | Validate AWS Event Ruler
 
 
@@ -592,112 +593,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="createAdminPanelFsDirectory"></a>
-# **createAdminPanelFsDirectory**
-> FileManagerPage createAdminPanelFsDirectory(id, opts)
-
-Create file manager directory for admin panel
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.StorefrontApi();
-
-
-var id = 56; // Number | 
-
-var opts = { 
-  'name': "name_example", // String | 
-  'parent_storefront_fs_directory_oid': 56 // Number | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createAdminPanelFsDirectory(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
- **name** | **String**|  | [optional] 
- **parent_storefront_fs_directory_oid** | **Number**|  | [optional] 
-
-### Return type
-
-[**FileManagerPage**](FileManagerPage.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="createAdminPanelFsFileUpload"></a>
-# **createAdminPanelFsFileUpload**
-> FileManagerPage createAdminPanelFsFileUpload(id, opts)
-
-Upload file manager file for admin panel
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.StorefrontApi();
-
-
-var id = 56; // Number | 
-
-var opts = { 
-  'parent_storefront_fs_directory_oid': 56 // Number | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.createAdminPanelFsFileUpload(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
- **parent_storefront_fs_directory_oid** | **Number**|  | [optional] 
-
-### Return type
-
-[**FileManagerPage**](FileManagerPage.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
-
 <a name="createEmailSendingDomain"></a>
 # **createEmailSendingDomain**
 > EmailSendingDomainResponse createEmailSendingDomain(domain)
@@ -794,6 +689,60 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="createFsDirectory"></a>
+# **createFsDirectory**
+> FileManagerPage createFsDirectory(id, opts)
+
+Create file manager directory
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
+var id = 56; // Number | 
+
+var opts = { 
+  'name': "name_example", // String | 
+  'parent_storefront_fs_directory_oid': 56 // Number | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.createFsDirectory(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **name** | **String**|  | [optional] 
+ **parent_storefront_fs_directory_oid** | **Number**|  | [optional] 
+
+### Return type
+
+[**FileManagerPage**](FileManagerPage.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="createTwilioAccount"></a>
 # **createTwilioAccount**
 > TwilioResponse createTwilioAccount(twilio)
@@ -832,60 +781,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TwilioResponse**](TwilioResponse.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="deleteAdminPanelFsFile"></a>
-# **deleteAdminPanelFsFile**
-> FileManagerPage deleteAdminPanelFsFile(id, opts)
-
-Delete file manager directory for admin panel
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.StorefrontApi();
-
-
-var id = 56; // Number | 
-
-var opts = { 
-  'parent_storefront_fs_directory_oid': 56, // Number | 
-  'storefront_fs_file_oid': 56 // Number | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.deleteAdminPanelFsFile(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
- **parent_storefront_fs_directory_oid** | **Number**|  | [optional] 
- **storefront_fs_file_oid** | **Number**|  | [optional] 
-
-### Return type
-
-[**FileManagerPage**](FileManagerPage.md)
 
 ### Authorization
 
@@ -1355,6 +1250,60 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="deleteFsFile"></a>
+# **deleteFsFile**
+> FileManagerPage deleteFsFile(id, opts)
+
+Delete file manager directory
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
+var id = 56; // Number | 
+
+var opts = { 
+  'parent_storefront_fs_directory_oid': 56, // Number | 
+  'storefront_fs_file_oid': 56 // Number | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.deleteFsFile(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **parent_storefront_fs_directory_oid** | **Number**|  | [optional] 
+ **storefront_fs_file_oid** | **Number**|  | [optional] 
+
+### Return type
+
+[**FileManagerPage**](FileManagerPage.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="deleteHeatmap"></a>
 # **deleteHeatmap**
 > deleteHeatmap(storefront_oid, query)
@@ -1745,62 +1694,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GeocodeResponse**](GeocodeResponse.md)
-
-### Authorization
-
-[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getAdminPanelFsDirectory"></a>
-# **getAdminPanelFsDirectory**
-> FileManagerPage getAdminPanelFsDirectory(id, opts)
-
-Get file manager directory for admin panel
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.StorefrontApi();
-
-
-var id = 56; // Number | 
-
-var opts = { 
-  'path': "path_example", // String | 
-  'storefront_fs_directory_oid': 56, // Number | 
-  'storefront_theme_oid': 56 // Number | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getAdminPanelFsDirectory(id, opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
- **path** | **String**|  | [optional] 
- **storefront_fs_directory_oid** | **Number**|  | [optional] 
- **storefront_theme_oid** | **Number**|  | [optional] 
-
-### Return type
-
-[**FileManagerPage**](FileManagerPage.md)
 
 ### Authorization
 
@@ -4761,6 +4654,62 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="getFsDirectory"></a>
+# **getFsDirectory**
+> FileManagerPage getFsDirectory(id, opts)
+
+Get file manager directory
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
+var id = 56; // Number | 
+
+var opts = { 
+  'path': "path_example", // String | 
+  'storefront_fs_directory_oid': 56, // Number | 
+  'storefront_theme_oid': 56 // Number | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getFsDirectory(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **path** | **String**|  | [optional] 
+ **storefront_fs_directory_oid** | **Number**|  | [optional] 
+ **storefront_theme_oid** | **Number**|  | [optional] 
+
+### Return type
+
+[**FileManagerPage**](FileManagerPage.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="getHeatmap"></a>
 # **getHeatmap**
 > ScreenRecordingHeatmapResponse getHeatmap(storefront_oid, query)
@@ -5931,6 +5880,57 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**TwiliosResponse**](TwiliosResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getUploadFsFileUrl"></a>
+# **getUploadFsFileUrl**
+> FileManagerUploadUrlResponse getUploadFsFileUrl(id, extension)
+
+Retrieves a S3 url where a file may be uploaded. Once uploaded, use uploadFsFile to trigger the server into reading the S3 bucket and retrieving the file.
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
+var id = 56; // Number | 
+
+var extension = "extension_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getUploadFsFileUrl(id, extension, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **extension** | **String**|  | 
+
+### Return type
+
+[**FileManagerUploadUrlResponse**](FileManagerUploadUrlResponse.md)
 
 ### Authorization
 
@@ -8898,6 +8898,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TwilioResponse**](TwilioResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="uploadFsFile"></a>
+# **uploadFsFile**
+> uploadFsFile(id, upload_request)
+
+This is the last step in uploading a file after 1) calling getUploadFsFileUrl and 2) uploading a file to the provided url, then finally 3) calling this method and providing the key to trigger the server into reading the S3 bucket and retrieving the file.
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.StorefrontApi();
+
+
+var id = 56; // Number | 
+
+var upload_request = new UltraCartRestApiV2.FileManagerUploadRequest(); // FileManagerUploadRequest | UploadRequest
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.uploadFsFile(id, upload_request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **upload_request** | [**FileManagerUploadRequest**](FileManagerUploadRequest.md)| UploadRequest | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
