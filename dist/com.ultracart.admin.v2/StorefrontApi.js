@@ -201,6 +201,10 @@ var _ExperimentsResponse = _interopRequireDefault(require("../com.ultracart.admi
 
 var _FileManagerPage = _interopRequireDefault(require("../com.ultracart.admin.v2.models/FileManagerPage"));
 
+var _FileManagerUploadRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/FileManagerUploadRequest"));
+
+var _FileManagerUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/FileManagerUploadUrlResponse"));
+
 var _GeocodeRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/GeocodeRequest"));
 
 var _GeocodeResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/GeocodeResponse"));
@@ -292,7 +296,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.67-RC
+* @version 4.0.68-RC
 */
 var StorefrontApi = /*#__PURE__*/function () {
   /**
@@ -658,90 +662,6 @@ var StorefrontApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/storefront/{storefront_oid}/email/flows/{email_flow_uuid}/clone', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
-     * Callback function to receive the result of the createAdminPanelFsDirectory operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~createAdminPanelFsDirectoryCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Create file manager directory for admin panel
-     * @param {Number} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.name 
-     * @param {Number} opts.parent_storefront_fs_directory_oid 
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~createAdminPanelFsDirectoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
-     */
-
-  }, {
-    key: "createAdminPanelFsDirectory",
-    value: function createAdminPanelFsDirectory(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'id' is set
-
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling createAdminPanelFsDirectory");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'name': opts['name'],
-        'parent_storefront_fs_directory_oid': opts['parent_storefront_fs_directory_oid']
-      };
-      var headerParams = {};
-      var formParams = {};
-      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _FileManagerPage["default"];
-      return this.apiClient.callApi('/storefront/{id}/adminPanel/fs/dir', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
-    }
-    /**
-     * Callback function to receive the result of the createAdminPanelFsFileUpload operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~createAdminPanelFsFileUploadCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Upload file manager file for admin panel
-     * @param {Number} id 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.parent_storefront_fs_directory_oid 
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~createAdminPanelFsFileUploadCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
-     */
-
-  }, {
-    key: "createAdminPanelFsFileUpload",
-    value: function createAdminPanelFsFileUpload(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'id' is set
-
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling createAdminPanelFsFileUpload");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'parent_storefront_fs_directory_oid': opts['parent_storefront_fs_directory_oid']
-      };
-      var headerParams = {};
-      var formParams = {};
-      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _FileManagerPage["default"];
-      return this.apiClient.callApi('/storefront/{id}/adminPanel/fs/file', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
-    }
-    /**
      * Callback function to receive the result of the createEmailSendingDomain operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~createEmailSendingDomainCallback
      * @param {String} error Error message, if any.
@@ -812,6 +732,49 @@ var StorefrontApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/storefront/email/sending_domains', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the createFsDirectory operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~createFsDirectoryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create file manager directory
+     * @param {Number} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name 
+     * @param {Number} opts.parent_storefront_fs_directory_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~createFsDirectoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
+     */
+
+  }, {
+    key: "createFsDirectory",
+    value: function createFsDirectory(id, opts, callback) {
+      opts = opts || {};
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling createFsDirectory");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'name': opts['name'],
+        'parent_storefront_fs_directory_oid': opts['parent_storefront_fs_directory_oid']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _FileManagerPage["default"];
+      return this.apiClient.callApi('/storefront/{id}/fs/dir', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the createTwilioAccount operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~createTwilioAccountCallback
      * @param {String} error Error message, if any.
@@ -844,49 +807,6 @@ var StorefrontApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _TwilioResponse["default"];
       return this.apiClient.callApi('/storefront/twilio/accounts', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
-    }
-    /**
-     * Callback function to receive the result of the deleteAdminPanelFsFile operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteAdminPanelFsFileCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete file manager directory for admin panel
-     * @param {Number} id 
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.parent_storefront_fs_directory_oid 
-     * @param {Number} opts.storefront_fs_file_oid 
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteAdminPanelFsFileCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
-     */
-
-  }, {
-    key: "deleteAdminPanelFsFile",
-    value: function deleteAdminPanelFsFile(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'id' is set
-
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling deleteAdminPanelFsFile");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'parent_storefront_fs_directory_oid': opts['parent_storefront_fs_directory_oid'],
-        'storefront_fs_file_oid': opts['storefront_fs_file_oid']
-      };
-      var headerParams = {};
-      var formParams = {};
-      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _FileManagerPage["default"];
-      return this.apiClient.callApi('/storefront/{id}/adminPanel/fs/file', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the deleteEmailCampaignFolder operation.
@@ -1274,6 +1194,49 @@ var StorefrontApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/storefront/{storefront_oid}/experiments/{storefront_experiment_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the deleteFsFile operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteFsFileCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete file manager directory
+     * @param {Number} id 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.parent_storefront_fs_directory_oid 
+     * @param {Number} opts.storefront_fs_file_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteFsFileCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
+     */
+
+  }, {
+    key: "deleteFsFile",
+    value: function deleteFsFile(id, opts, callback) {
+      opts = opts || {};
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling deleteFsFile");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'parent_storefront_fs_directory_oid': opts['parent_storefront_fs_directory_oid'],
+        'storefront_fs_file_oid': opts['storefront_fs_file_oid']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _FileManagerPage["default"];
+      return this.apiClient.callApi('/storefront/{id}/fs/file', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the deleteHeatmap operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteHeatmapCallback
      * @param {String} error Error message, if any.
@@ -1583,51 +1546,6 @@ var StorefrontApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _GeocodeResponse["default"];
       return this.apiClient.callApi('/storefront/{storefront_oid}/email/geocode', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
-    }
-    /**
-     * Callback function to receive the result of the getAdminPanelFsDirectory operation.
-     * @callback module:com.ultracart.admin.v2/StorefrontApi~getAdminPanelFsDirectoryCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get file manager directory for admin panel
-     * @param {Number} id 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.path 
-     * @param {Number} opts.storefront_fs_directory_oid 
-     * @param {Number} opts.storefront_theme_oid 
-     * @param {module:com.ultracart.admin.v2/StorefrontApi~getAdminPanelFsDirectoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
-     */
-
-  }, {
-    key: "getAdminPanelFsDirectory",
-    value: function getAdminPanelFsDirectory(id, opts, callback) {
-      opts = opts || {};
-      var postBody = null; // verify the required parameter 'id' is set
-
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getAdminPanelFsDirectory");
-      }
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-        'path': opts['path'],
-        'storefront_fs_directory_oid': opts['storefront_fs_directory_oid'],
-        'storefront_theme_oid': opts['storefront_theme_oid']
-      };
-      var headerParams = {};
-      var formParams = {};
-      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = _FileManagerPage["default"];
-      return this.apiClient.callApi('/storefront/{id}/adminPanel/fs/dir', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getCountries operation.
@@ -4054,6 +3972,51 @@ var StorefrontApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/storefront/{storefront_oid}/experiments', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the getFsDirectory operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getFsDirectoryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get file manager directory
+     * @param {Number} id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.path 
+     * @param {Number} opts.storefront_fs_directory_oid 
+     * @param {Number} opts.storefront_theme_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getFsDirectoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
+     */
+
+  }, {
+    key: "getFsDirectory",
+    value: function getFsDirectory(id, opts, callback) {
+      opts = opts || {};
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getFsDirectory");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+        'path': opts['path'],
+        'storefront_fs_directory_oid': opts['storefront_fs_directory_oid'],
+        'storefront_theme_oid': opts['storefront_theme_oid']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _FileManagerPage["default"];
+      return this.apiClient.callApi('/storefront/{id}/fs/dir', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the getHeatmap operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getHeatmapCallback
      * @param {String} error Error message, if any.
@@ -4971,6 +4934,49 @@ var StorefrontApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _TwiliosResponse["default"];
       return this.apiClient.callApi('/storefront/twilio/accounts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getUploadFsFileUrl operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getUploadFsFileUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/FileManagerUploadUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieves a S3 url where a file may be uploaded. Once uploaded, use uploadFsFile to trigger the server into reading the S3 bucket and retrieving the file.
+     * @param {Number} id 
+     * @param {String} extension 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getUploadFsFileUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerUploadUrlResponse}
+     */
+
+  }, {
+    key: "getUploadFsFileUrl",
+    value: function getUploadFsFileUrl(id, extension, callback) {
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getUploadFsFileUrl");
+      } // verify the required parameter 'extension' is set
+
+
+      if (extension === undefined || extension === null) {
+        throw new Error("Missing the required parameter 'extension' when calling getUploadFsFileUrl");
+      }
+
+      var pathParams = {
+        'id': id,
+        'extension': extension
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _FileManagerUploadUrlResponse["default"];
+      return this.apiClient.callApi('/storefront/{id}/fs/upload_url/{extension}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the globalUnsubscribe operation.
@@ -7481,6 +7487,47 @@ var StorefrontApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _TwilioResponse["default"];
       return this.apiClient.callApi('/storefront/twilio/accounts/{esp_twilio_uuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the uploadFsFile operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~uploadFsFileCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * This is the last step in uploading a file after 1) calling getUploadFsFileUrl and 2) uploading a file to the provided url, then finally 3) calling this method and providing the key to trigger the server into reading the S3 bucket and retrieving the file.
+     * @param {Number} id 
+     * @param {module:com.ultracart.admin.v2.models/FileManagerUploadRequest} upload_request UploadRequest
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~uploadFsFileCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
+    key: "uploadFsFile",
+    value: function uploadFsFile(id, upload_request, callback) {
+      var postBody = upload_request; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling uploadFsFile");
+      } // verify the required parameter 'upload_request' is set
+
+
+      if (upload_request === undefined || upload_request === null) {
+        throw new Error("Missing the required parameter 'upload_request' when calling uploadFsFile");
+      }
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/storefront/{id}/fs/upload', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the validateRuler operation.

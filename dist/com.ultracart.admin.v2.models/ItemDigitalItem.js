@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemDigitalItem model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalItem
- * @version 4.0.67-RC
+ * @version 4.0.68-RC
  */
 var ItemDigitalItem = /*#__PURE__*/function () {
   /**
@@ -70,6 +70,10 @@ var ItemDigitalItem = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('digital_item_oid')) {
           obj['digital_item_oid'] = _ApiClient["default"].convertToType(data['digital_item_oid'], 'Number');
+        }
+
+        if (data.hasOwnProperty('external_id')) {
+          obj['external_id'] = _ApiClient["default"].convertToType(data['external_id'], 'String');
         }
 
         if (data.hasOwnProperty('file_size')) {
@@ -124,6 +128,12 @@ ItemDigitalItem.prototype['description'] = undefined;
  */
 
 ItemDigitalItem.prototype['digital_item_oid'] = undefined;
+/**
+ * External Id useful for syncing with a remote filesystem, this may be an MD5 hash or whatever suits your needs.
+ * @member {String} external_id
+ */
+
+ItemDigitalItem.prototype['external_id'] = undefined;
 /**
  * File size
  * @member {Number} file_size

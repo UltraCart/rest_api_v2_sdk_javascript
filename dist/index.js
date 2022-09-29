@@ -2229,10 +2229,34 @@ Object.defineProperty(exports, "ExperimentsResponse", {
     return _ExperimentsResponse["default"];
   }
 });
+Object.defineProperty(exports, "FileManagerDirectory", {
+  enumerable: true,
+  get: function get() {
+    return _FileManagerDirectory["default"];
+  }
+});
+Object.defineProperty(exports, "FileManagerFile", {
+  enumerable: true,
+  get: function get() {
+    return _FileManagerFile["default"];
+  }
+});
 Object.defineProperty(exports, "FileManagerPage", {
   enumerable: true,
   get: function get() {
     return _FileManagerPage["default"];
+  }
+});
+Object.defineProperty(exports, "FileManagerUploadRequest", {
+  enumerable: true,
+  get: function get() {
+    return _FileManagerUploadRequest["default"];
+  }
+});
+Object.defineProperty(exports, "FileManagerUploadUrlResponse", {
+  enumerable: true,
+  get: function get() {
+    return _FileManagerUploadUrlResponse["default"];
   }
 });
 Object.defineProperty(exports, "FulfillmentApi", {
@@ -4894,7 +4918,15 @@ var _ExperimentVariationStat = _interopRequireDefault(require("./com.ultracart.a
 
 var _ExperimentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ExperimentsResponse"));
 
+var _FileManagerDirectory = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerDirectory"));
+
+var _FileManagerFile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerFile"));
+
 var _FileManagerPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerPage"));
+
+var _FileManagerUploadRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerUploadRequest"));
+
+var _FileManagerUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerUploadUrlResponse"));
 
 var _FulfillmentInventory = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FulfillmentInventory"));
 

@@ -109,7 +109,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Experiment from '../com.ultracart.admin.v2.models/Experiment';
 import ExperimentResponse from '../com.ultracart.admin.v2.models/ExperimentResponse';
 import ExperimentsResponse from '../com.ultracart.admin.v2.models/ExperimentsResponse';
-import FileManagerPage from '../com.ultracart.admin.v2.models/FileManagerPage';
+import FileManagerPageResponse from '../com.ultracart.admin.v2.models/FileManagerPageResponse';
 import FileManagerUploadRequest from '../com.ultracart.admin.v2.models/FileManagerUploadRequest';
 import FileManagerUploadUrlResponse from '../com.ultracart.admin.v2.models/FileManagerUploadUrlResponse';
 import GeocodeRequest from '../com.ultracart.admin.v2.models/GeocodeRequest';
@@ -156,7 +156,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.68-RC
+* @version 4.0.69-RC
 */
 export default class StorefrontApi {
 
@@ -648,7 +648,7 @@ export default class StorefrontApi {
      * Callback function to receive the result of the createFsDirectory operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~createFsDirectoryCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/FileManagerPageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -659,7 +659,7 @@ export default class StorefrontApi {
      * @param {String} opts.name 
      * @param {Number} opts.parent_storefront_fs_directory_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~createFsDirectoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPageResponse}
      */
     createFsDirectory(id, opts, callback) {
       opts = opts || {};
@@ -684,7 +684,7 @@ export default class StorefrontApi {
       let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = FileManagerPage;
+      let returnType = FileManagerPageResponse;
       return this.apiClient.callApi(
         '/storefront/{id}/fs/dir', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1167,7 +1167,7 @@ export default class StorefrontApi {
      * Callback function to receive the result of the deleteFsFile operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~deleteFsFileCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/FileManagerPageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1178,7 +1178,7 @@ export default class StorefrontApi {
      * @param {Number} opts.parent_storefront_fs_directory_oid 
      * @param {Number} opts.storefront_fs_file_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~deleteFsFileCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPageResponse}
      */
     deleteFsFile(id, opts, callback) {
       opts = opts || {};
@@ -1203,7 +1203,7 @@ export default class StorefrontApi {
       let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = FileManagerPage;
+      let returnType = FileManagerPageResponse;
       return this.apiClient.callApi(
         '/storefront/{id}/fs/file', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -4294,7 +4294,7 @@ export default class StorefrontApi {
      * Callback function to receive the result of the getFsDirectory operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getFsDirectoryCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/FileManagerPage} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/FileManagerPageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -4306,7 +4306,7 @@ export default class StorefrontApi {
      * @param {Number} opts.storefront_fs_directory_oid 
      * @param {Number} opts.storefront_theme_oid 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getFsDirectoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPage}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FileManagerPageResponse}
      */
     getFsDirectory(id, opts, callback) {
       opts = opts || {};
@@ -4332,7 +4332,7 @@ export default class StorefrontApi {
       let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = FileManagerPage;
+      let returnType = FileManagerPageResponse;
       return this.apiClient.callApi(
         '/storefront/{id}/fs/dir', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

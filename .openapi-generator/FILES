@@ -375,6 +375,7 @@ docs/ExperimentsResponse.md
 docs/FileManagerDirectory.md
 docs/FileManagerFile.md
 docs/FileManagerPage.md
+docs/FileManagerPageResponse.md
 docs/FileManagerUploadRequest.md
 docs/FileManagerUploadUrlResponse.md
 docs/FulfillmentApi.md
@@ -1068,6 +1069,7 @@ src/com.ultracart.admin.v2.models/ExperimentsResponse.js
 src/com.ultracart.admin.v2.models/FileManagerDirectory.js
 src/com.ultracart.admin.v2.models/FileManagerFile.js
 src/com.ultracart.admin.v2.models/FileManagerPage.js
+src/com.ultracart.admin.v2.models/FileManagerPageResponse.js
 src/com.ultracart.admin.v2.models/FileManagerUploadRequest.js
 src/com.ultracart.admin.v2.models/FileManagerUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/FulfillmentInventory.js

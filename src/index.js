@@ -378,6 +378,7 @@ import ExperimentsResponse from './com.ultracart.admin.v2.models/ExperimentsResp
 import FileManagerDirectory from './com.ultracart.admin.v2.models/FileManagerDirectory';
 import FileManagerFile from './com.ultracart.admin.v2.models/FileManagerFile';
 import FileManagerPage from './com.ultracart.admin.v2.models/FileManagerPage';
+import FileManagerPageResponse from './com.ultracart.admin.v2.models/FileManagerPageResponse';
 import FileManagerUploadRequest from './com.ultracart.admin.v2.models/FileManagerUploadRequest';
 import FileManagerUploadUrlResponse from './com.ultracart.admin.v2.models/FileManagerUploadUrlResponse';
 import FulfillmentInventory from './com.ultracart.admin.v2.models/FulfillmentInventory';
@@ -741,7 +742,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.68-RC
+* @version 4.0.69-RC
 */
 export {
     /**
@@ -2939,6 +2940,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/FileManagerPage}
      */
     FileManagerPage,
+
+    /**
+     * The FileManagerPageResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FileManagerPageResponse}
+     */
+    FileManagerPageResponse,
 
     /**
      * The FileManagerUploadRequest model constructor.
