@@ -691,7 +691,7 @@ Name | Type | Description  | Notes
 
 <a name="createFsDirectory"></a>
 # **createFsDirectory**
-> FileManagerPage createFsDirectory(id, opts)
+> FileManagerPageResponse createFsDirectory(id, opts)
 
 Create file manager directory
 
@@ -732,7 +732,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FileManagerPage**](FileManagerPage.md)
+[**FileManagerPageResponse**](FileManagerPageResponse.md)
 
 ### Authorization
 
@@ -1252,7 +1252,7 @@ null (empty response body)
 
 <a name="deleteFsFile"></a>
 # **deleteFsFile**
-> FileManagerPage deleteFsFile(id, opts)
+> FileManagerPageResponse deleteFsFile(id, opts)
 
 Delete file manager directory
 
@@ -1293,7 +1293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FileManagerPage**](FileManagerPage.md)
+[**FileManagerPageResponse**](FileManagerPageResponse.md)
 
 ### Authorization
 
@@ -4656,7 +4656,7 @@ Name | Type | Description  | Notes
 
 <a name="getFsDirectory"></a>
 # **getFsDirectory**
-> FileManagerPage getFsDirectory(id, opts)
+> FileManagerPageResponse getFsDirectory(id, opts)
 
 Get file manager directory
 
@@ -4699,7 +4699,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FileManagerPage**](FileManagerPage.md)
+[**FileManagerPageResponse**](FileManagerPageResponse.md)
 
 ### Authorization
 
