@@ -17,7 +17,7 @@ import ConversationTwilioAccount from './ConversationTwilioAccount';
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.0.67-RC
+ * @version 4.0.68-RC
  */
 class ConversationAgentAuth {
     /**

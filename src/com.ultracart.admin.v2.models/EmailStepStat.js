@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailStepStat model module.
  * @module com.ultracart.admin.v2.models/EmailStepStat
- * @version 4.0.67-RC
+ * @version 4.0.68-RC
  */
 class EmailStepStat {
     /**

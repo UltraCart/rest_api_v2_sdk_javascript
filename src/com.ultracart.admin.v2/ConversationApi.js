@@ -27,7 +27,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.67-RC
+* @version 4.0.68-RC
 */
 export default class ConversationApi {
 

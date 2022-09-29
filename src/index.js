@@ -375,7 +375,11 @@ import ExperimentResponse from './com.ultracart.admin.v2.models/ExperimentRespon
 import ExperimentVariation from './com.ultracart.admin.v2.models/ExperimentVariation';
 import ExperimentVariationStat from './com.ultracart.admin.v2.models/ExperimentVariationStat';
 import ExperimentsResponse from './com.ultracart.admin.v2.models/ExperimentsResponse';
+import FileManagerDirectory from './com.ultracart.admin.v2.models/FileManagerDirectory';
+import FileManagerFile from './com.ultracart.admin.v2.models/FileManagerFile';
 import FileManagerPage from './com.ultracart.admin.v2.models/FileManagerPage';
+import FileManagerUploadRequest from './com.ultracart.admin.v2.models/FileManagerUploadRequest';
+import FileManagerUploadUrlResponse from './com.ultracart.admin.v2.models/FileManagerUploadUrlResponse';
 import FulfillmentInventory from './com.ultracart.admin.v2.models/FulfillmentInventory';
 import FulfillmentShipment from './com.ultracart.admin.v2.models/FulfillmentShipment';
 import GeoPoint from './com.ultracart.admin.v2.models/GeoPoint';
@@ -737,7 +741,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.67-RC
+* @version 4.0.68-RC
 */
 export {
     /**
@@ -2919,10 +2923,34 @@ export {
     ExperimentsResponse,
 
     /**
+     * The FileManagerDirectory model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FileManagerDirectory}
+     */
+    FileManagerDirectory,
+
+    /**
+     * The FileManagerFile model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FileManagerFile}
+     */
+    FileManagerFile,
+
+    /**
      * The FileManagerPage model constructor.
      * @property {module:com.ultracart.admin.v2.models/FileManagerPage}
      */
     FileManagerPage,
+
+    /**
+     * The FileManagerUploadRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FileManagerUploadRequest}
+     */
+    FileManagerUploadRequest,
+
+    /**
+     * The FileManagerUploadUrlResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FileManagerUploadUrlResponse}
+     */
+    FileManagerUploadUrlResponse,
 
     /**
      * The FulfillmentInventory model constructor.

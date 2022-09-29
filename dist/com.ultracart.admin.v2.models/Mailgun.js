@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Mailgun model module.
  * @module com.ultracart.admin.v2.models/Mailgun
- * @version 4.0.66-RC
+ * @version 4.0.67-RC
  */
 var Mailgun = /*#__PURE__*/function () {
   /**

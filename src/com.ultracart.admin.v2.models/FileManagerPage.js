@@ -12,11 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import FileManagerDirectory from './FileManagerDirectory';
+import FileManagerFile from './FileManagerFile';
 
 /**
  * The FileManagerPage model module.
  * @module com.ultracart.admin.v2.models/FileManagerPage
- * @version 4.0.67-RC
+ * @version 4.0.68-RC
  */
 class FileManagerPage {
     /**
@@ -50,6 +52,12 @@ class FileManagerPage {
             if (data.hasOwnProperty('current_storefront_fs_directory_oid')) {
                 obj['current_storefront_fs_directory_oid'] = ApiClient.convertToType(data['current_storefront_fs_directory_oid'], 'Number');
             }
+            if (data.hasOwnProperty('directories')) {
+                obj['directories'] = ApiClient.convertToType(data['directories'], [FileManagerDirectory]);
+            }
+            if (data.hasOwnProperty('files')) {
+                obj['files'] = ApiClient.convertToType(data['files'], [FileManagerFile]);
+            }
             if (data.hasOwnProperty('hostname')) {
                 obj['hostname'] = ApiClient.convertToType(data['hostname'], 'String');
             }
@@ -58,6 +66,9 @@ class FileManagerPage {
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('path_list')) {
+                obj['path_list'] = ApiClient.convertToType(data['path_list'], [FileManagerDirectory]);
             }
             if (data.hasOwnProperty('storefront_oid')) {
                 obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
@@ -75,6 +86,16 @@ class FileManagerPage {
 FileManagerPage.prototype['current_storefront_fs_directory_oid'] = undefined;
 
 /**
+ * @member {Array.<module:com.ultracart.admin.v2.models/FileManagerDirectory>} directories
+ */
+FileManagerPage.prototype['directories'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/FileManagerFile>} files
+ */
+FileManagerPage.prototype['files'] = undefined;
+
+/**
  * @member {String} hostname
  */
 FileManagerPage.prototype['hostname'] = undefined;
@@ -88,6 +109,11 @@ FileManagerPage.prototype['parent_storefront_fs_directory_oid'] = undefined;
  * @member {String} path
  */
 FileManagerPage.prototype['path'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/FileManagerDirectory>} path_list
+ */
+FileManagerPage.prototype['path_list'] = undefined;
 
 /**
  * @member {Number} storefront_oid

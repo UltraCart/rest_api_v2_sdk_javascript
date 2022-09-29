@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteItem**](ItemApi.md#deleteItem) | **DELETE** /item/items/{merchant_item_oid} | Delete an item
 [**getDigitalItem**](ItemApi.md#getDigitalItem) | **GET** /item/digital_library/{digital_item_oid} | Retrieve a digital item from the digital library, which are digital files that may be attached to normal items
 [**getDigitalItems**](ItemApi.md#getDigitalItems) | **GET** /item/digital_library | Retrieve digital items from the digital library which are digital files that may be attached to normal items
+[**getDigitalItemsByExternalId**](ItemApi.md#getDigitalItemsByExternalId) | **GET** /item/digital_library/by_external/{external_id} | Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id
 [**getItem**](ItemApi.md#getItem) | **GET** /item/items/{merchant_item_oid} | Retrieve an item
 [**getItemByMerchantItemId**](ItemApi.md#getItemByMerchantItemId) | **GET** /item/items/merchant_item_id/{merchant_item_id} | Retrieve an item by item id
 [**getItems**](ItemApi.md#getItems) | **GET** /item/items | Retrieve items
@@ -219,6 +220,56 @@ Name | Type | Description  | Notes
  **_sort** | **String**| The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
  **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+
+### Return type
+
+[**ItemDigitalItemsResponse**](ItemDigitalItemsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getDigitalItemsByExternalId
+
+> ItemDigitalItemsResponse getDigitalItemsByExternalId(external_id)
+
+Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id
+
+Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items. 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let external_id = "external_id_example"; // String | The external id to match against.
+apiInstance.getDigitalItemsByExternalId(external_id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **external_id** | **String**| The external id to match against. | 
 
 ### Return type
 

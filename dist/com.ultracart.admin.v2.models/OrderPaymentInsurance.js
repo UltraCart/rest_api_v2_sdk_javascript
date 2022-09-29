@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPaymentInsurance model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentInsurance
- * @version 4.0.66-RC
+ * @version 4.0.67-RC
  */
 var OrderPaymentInsurance = /*#__PURE__*/function () {
   /**

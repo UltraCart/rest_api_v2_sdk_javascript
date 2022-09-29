@@ -2229,6 +2229,12 @@ Object.defineProperty(exports, "ExperimentsResponse", {
     return _ExperimentsResponse["default"];
   }
 });
+Object.defineProperty(exports, "FileManagerPage", {
+  enumerable: true,
+  get: function get() {
+    return _FileManagerPage["default"];
+  }
+});
 Object.defineProperty(exports, "FulfillmentApi", {
   enumerable: true,
   get: function get() {
@@ -4887,6 +4893,8 @@ var _ExperimentVariation = _interopRequireDefault(require("./com.ultracart.admin
 var _ExperimentVariationStat = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ExperimentVariationStat"));
 
 var _ExperimentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ExperimentsResponse"));
+
+var _FileManagerPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerPage"));
 
 var _FulfillmentInventory = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FulfillmentInventory"));
 

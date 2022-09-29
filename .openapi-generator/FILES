@@ -372,7 +372,11 @@ docs/ExperimentResponse.md
 docs/ExperimentVariation.md
 docs/ExperimentVariationStat.md
 docs/ExperimentsResponse.md
+docs/FileManagerDirectory.md
+docs/FileManagerFile.md
 docs/FileManagerPage.md
+docs/FileManagerUploadRequest.md
+docs/FileManagerUploadUrlResponse.md
 docs/FulfillmentApi.md
 docs/FulfillmentInventory.md
 docs/FulfillmentShipment.md
@@ -1061,7 +1065,11 @@ src/com.ultracart.admin.v2.models/ExperimentResponse.js
 src/com.ultracart.admin.v2.models/ExperimentVariation.js
 src/com.ultracart.admin.v2.models/ExperimentVariationStat.js
 src/com.ultracart.admin.v2.models/ExperimentsResponse.js
+src/com.ultracart.admin.v2.models/FileManagerDirectory.js
+src/com.ultracart.admin.v2.models/FileManagerFile.js
 src/com.ultracart.admin.v2.models/FileManagerPage.js
+src/com.ultracart.admin.v2.models/FileManagerUploadRequest.js
+src/com.ultracart.admin.v2.models/FileManagerUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/FulfillmentInventory.js
 src/com.ultracart.admin.v2.models/FulfillmentShipment.js
 src/com.ultracart.admin.v2.models/GeoPoint.js

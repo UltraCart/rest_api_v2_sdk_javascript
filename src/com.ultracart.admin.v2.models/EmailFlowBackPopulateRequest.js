@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailFlowBackPopulateRequest model module.
  * @module com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest
- * @version 4.0.67-RC
+ * @version 4.0.68-RC
  */
 class EmailFlowBackPopulateRequest {
     /**
