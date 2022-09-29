@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponType model module.
  * @module com.ultracart.admin.v2.models/CouponType
- * @version 4.0.69-RC
+ * @version 4.0.70-RC
  */
 class CouponType {
     /**

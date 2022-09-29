@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GiftCertificateCreateRequest model module.
  * @module com.ultracart.admin.v2.models/GiftCertificateCreateRequest
- * @version 4.0.69-RC
+ * @version 4.0.70-RC
  */
 class GiftCertificateCreateRequest {
     /**

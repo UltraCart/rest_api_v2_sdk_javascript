@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OauthRevokeSuccessResponse model module.
  * @module com.ultracart.admin.v2.models/OauthRevokeSuccessResponse
- * @version 4.0.68-RC
+ * @version 4.0.69-RC
  */
 var OauthRevokeSuccessResponse = /*#__PURE__*/function () {
   /**

@@ -2247,6 +2247,12 @@ Object.defineProperty(exports, "FileManagerPage", {
     return _FileManagerPage["default"];
   }
 });
+Object.defineProperty(exports, "FileManagerPageResponse", {
+  enumerable: true,
+  get: function get() {
+    return _FileManagerPageResponse["default"];
+  }
+});
 Object.defineProperty(exports, "FileManagerUploadRequest", {
   enumerable: true,
   get: function get() {
@@ -4923,6 +4929,8 @@ var _FileManagerDirectory = _interopRequireDefault(require("./com.ultracart.admi
 var _FileManagerFile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerFile"));
 
 var _FileManagerPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerPage"));
+
+var _FileManagerPageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerPageResponse"));
 
 var _FileManagerUploadRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerUploadRequest"));
 

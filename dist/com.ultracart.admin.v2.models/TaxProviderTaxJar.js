@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxProviderTaxJar model module.
  * @module com.ultracart.admin.v2.models/TaxProviderTaxJar
- * @version 4.0.68-RC
+ * @version 4.0.69-RC
  */
 var TaxProviderTaxJar = /*#__PURE__*/function () {
   /**
