@@ -66,6 +66,8 @@ Name | Type | Description | Notes
 
 * `Pre-ordered` (value: `"Pre-ordered"`)
 
+* `Advanced Order Routing` (value: `"Advanced Order Routing"`)
+
 
 
 

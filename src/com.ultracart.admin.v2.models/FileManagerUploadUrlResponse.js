@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The FileManagerUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/FileManagerUploadUrlResponse
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 class FileManagerUploadUrlResponse {
     /**
@@ -62,6 +62,9 @@ class FileManagerUploadUrlResponse {
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('warning')) {
                 obj['warning'] = Warning.constructFromObject(data['warning']);
             }
@@ -92,6 +95,11 @@ FileManagerUploadUrlResponse.prototype['metadata'] = undefined;
  * @member {Boolean} success
  */
 FileManagerUploadUrlResponse.prototype['success'] = undefined;
+
+/**
+ * @member {String} url
+ */
+FileManagerUploadUrlResponse.prototype['url'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/Warning} warning

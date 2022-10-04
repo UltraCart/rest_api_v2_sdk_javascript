@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemShippingDistributionCenter model module.
  * @module com.ultracart.admin.v2.models/ItemShippingDistributionCenter
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 class ItemShippingDistributionCenter {
     /**

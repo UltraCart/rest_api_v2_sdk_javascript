@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailCommseqWebhookSendTestResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqWebhookSendTestResponse
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 class EmailCommseqWebhookSendTestResponse {
     /**

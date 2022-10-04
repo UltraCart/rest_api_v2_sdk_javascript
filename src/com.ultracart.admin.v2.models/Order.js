@@ -41,7 +41,7 @@ import OrderTaxes from './OrderTaxes';
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 class Order {
     /**
@@ -440,7 +440,13 @@ Order['CurrentStageEnum'] = {
      * value: "Pre-ordered"
      * @const
      */
-    "Pre-ordered": "Pre-ordered"
+    "Pre-ordered": "Pre-ordered",
+
+    /**
+     * value: "Advanced Order Routing"
+     * @const
+     */
+    "Advanced Order Routing": "Advanced Order Routing"
 };
 
 
