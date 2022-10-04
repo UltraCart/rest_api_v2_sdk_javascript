@@ -34,7 +34,7 @@
   /**
    * The FileManagerUploadUrlResponse model module.
    * @module com.ultracart.admin.v2.models/FileManagerUploadUrlResponse
-   * @version 3.10.53
+   * @version 3.10.54
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      if (data.hasOwnProperty('url'))
+        obj.url = ApiClient.convertToType(data['url'], 'String');
       if (data.hasOwnProperty('warning'))
         obj.warning = Warning.constructFromObject(data['warning']);
     }
@@ -89,6 +91,11 @@
    * @member {Boolean} success
    */
   exports.prototype.success = undefined;
+
+  /**
+   * @member {String} url
+   */
+  exports.prototype.url = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Warning} warning

@@ -34,7 +34,7 @@
   /**
    * The CartBilling model module.
    * @module com.ultracart.admin.v2.models/CartBilling
-   * @version 3.10.53
+   * @version 3.10.54
    */
 
   /**
@@ -61,6 +61,10 @@
         obj.address2 = ApiClient.convertToType(data['address2'], 'String');
       if (data.hasOwnProperty('cc_emails'))
         obj.cc_emails = ApiClient.convertToType(data['cc_emails'], ['String']);
+      if (data.hasOwnProperty('cell_phone'))
+        obj.cell_phone = ApiClient.convertToType(data['cell_phone'], 'String');
+      if (data.hasOwnProperty('cell_phone_e164'))
+        obj.cell_phone_e164 = ApiClient.convertToType(data['cell_phone_e164'], 'String');
       if (data.hasOwnProperty('city'))
         obj.city = ApiClient.convertToType(data['city'], 'String');
       if (data.hasOwnProperty('company'))
@@ -106,6 +110,18 @@
    * @member {Array.<String>} cc_emails
    */
   exports.prototype.cc_emails = undefined;
+
+  /**
+   * Cell phone
+   * @member {String} cell_phone
+   */
+  exports.prototype.cell_phone = undefined;
+
+  /**
+   * Cell phone (E164 format)
+   * @member {String} cell_phone_e164
+   */
+  exports.prototype.cell_phone_e164 = undefined;
 
   /**
    * City

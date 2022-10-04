@@ -34,7 +34,7 @@
   /**
    * The Order model module.
    * @module com.ultracart.admin.v2.models/Order
-   * @version 3.10.53
+   * @version 3.10.54
    */
 
   /**
@@ -382,7 +382,13 @@
      * value: "Pre-ordered"
      * @const
      */
-    Pre_ordered: "Pre-ordered"
+    Pre_ordered: "Pre-ordered",
+
+    /**
+     * value: "Advanced Order Routing"
+     * @const
+     */
+    Advanced_Order_Routing: "Advanced Order Routing"
   };
 
   return exports;
