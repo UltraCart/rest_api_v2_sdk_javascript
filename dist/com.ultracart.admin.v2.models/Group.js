@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Group model module.
  * @module com.ultracart.admin.v2.models/Group
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var Group = /*#__PURE__*/function () {
   /**

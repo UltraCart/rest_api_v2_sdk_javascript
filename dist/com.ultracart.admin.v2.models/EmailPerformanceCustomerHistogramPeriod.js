@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailPerformanceCustomerHistogramPeriod model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogramPeriod
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var EmailPerformanceCustomerHistogramPeriod = /*#__PURE__*/function () {
   /**

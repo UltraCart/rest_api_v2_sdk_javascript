@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AutoOrderManagement model module.
  * @module com.ultracart.admin.v2.models/AutoOrderManagement
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var AutoOrderManagement = /*#__PURE__*/function () {
   /**

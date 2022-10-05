@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FileManagerFile model module.
  * @module com.ultracart.admin.v2.models/FileManagerFile
- * @version 4.0.71-RC
+ * @version 4.0.72-RC
  */
 class FileManagerFile {
     /**
@@ -97,6 +97,15 @@ class FileManagerFile {
             }
             if (data.hasOwnProperty('storefront_oid')) {
                 obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('thumbnail_16_url')) {
+                obj['thumbnail_16_url'] = ApiClient.convertToType(data['thumbnail_16_url'], 'String');
+            }
+            if (data.hasOwnProperty('thumbnail_32_url')) {
+                obj['thumbnail_32_url'] = ApiClient.convertToType(data['thumbnail_32_url'], 'String');
+            }
+            if (data.hasOwnProperty('thumbnail_64_url')) {
+                obj['thumbnail_64_url'] = ApiClient.convertToType(data['thumbnail_64_url'], 'String');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -195,6 +204,24 @@ FileManagerFile.prototype['storefront_fs_file_oid'] = undefined;
  * @member {Number} storefront_oid
  */
 FileManagerFile.prototype['storefront_oid'] = undefined;
+
+/**
+ * CDN thumbnail 16x16 size
+ * @member {String} thumbnail_16_url
+ */
+FileManagerFile.prototype['thumbnail_16_url'] = undefined;
+
+/**
+ * CDN thumbnail 32x32 size
+ * @member {String} thumbnail_32_url
+ */
+FileManagerFile.prototype['thumbnail_32_url'] = undefined;
+
+/**
+ * CDN thumbnail 64x64 size
+ * @member {String} thumbnail_64_url
+ */
+FileManagerFile.prototype['thumbnail_64_url'] = undefined;
 
 /**
  * @member {String} type

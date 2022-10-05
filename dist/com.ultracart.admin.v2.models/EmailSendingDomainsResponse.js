@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailSendingDomainsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSendingDomainsResponse
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var EmailSendingDomainsResponse = /*#__PURE__*/function () {
   /**

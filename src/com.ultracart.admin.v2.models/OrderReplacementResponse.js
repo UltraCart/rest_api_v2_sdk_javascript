@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderReplacementResponse model module.
  * @module com.ultracart.admin.v2.models/OrderReplacementResponse
- * @version 4.0.71-RC
+ * @version 4.0.72-RC
  */
 class OrderReplacementResponse {
     /**

@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The FileManagerUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/FileManagerUploadUrlResponse
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var FileManagerUploadUrlResponse = /*#__PURE__*/function () {
   /**
@@ -76,6 +76,10 @@ var FileManagerUploadUrlResponse = /*#__PURE__*/function () {
           obj['success'] = _ApiClient["default"].convertToType(data['success'], 'Boolean');
         }
 
+        if (data.hasOwnProperty('url')) {
+          obj['url'] = _ApiClient["default"].convertToType(data['url'], 'String');
+        }
+
         if (data.hasOwnProperty('warning')) {
           obj['warning'] = _Warning["default"].constructFromObject(data['warning']);
         }
@@ -109,6 +113,11 @@ FileManagerUploadUrlResponse.prototype['metadata'] = undefined;
  */
 
 FileManagerUploadUrlResponse.prototype['success'] = undefined;
+/**
+ * @member {String} url
+ */
+
+FileManagerUploadUrlResponse.prototype['url'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/Warning} warning
  */

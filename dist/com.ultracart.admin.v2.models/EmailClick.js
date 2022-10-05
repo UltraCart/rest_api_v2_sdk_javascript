@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailClick model module.
  * @module com.ultracart.admin.v2.models/EmailClick
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var EmailClick = /*#__PURE__*/function () {
   /**

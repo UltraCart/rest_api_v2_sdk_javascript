@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailPerformanceCustomerHistogram model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogram
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var EmailPerformanceCustomerHistogram = /*#__PURE__*/function () {
   /**

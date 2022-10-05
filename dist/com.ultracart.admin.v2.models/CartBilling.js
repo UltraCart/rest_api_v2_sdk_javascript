@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartBilling model module.
  * @module com.ultracart.admin.v2.models/CartBilling
- * @version 4.0.70-RC
+ * @version 4.0.71-RC
  */
 var CartBilling = /*#__PURE__*/function () {
   /**
@@ -64,6 +64,14 @@ var CartBilling = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('cc_emails')) {
           obj['cc_emails'] = _ApiClient["default"].convertToType(data['cc_emails'], ['String']);
+        }
+
+        if (data.hasOwnProperty('cell_phone')) {
+          obj['cell_phone'] = _ApiClient["default"].convertToType(data['cell_phone'], 'String');
+        }
+
+        if (data.hasOwnProperty('cell_phone_e164')) {
+          obj['cell_phone_e164'] = _ApiClient["default"].convertToType(data['cell_phone_e164'], 'String');
         }
 
         if (data.hasOwnProperty('city')) {
@@ -140,6 +148,18 @@ CartBilling.prototype['address2'] = undefined;
  */
 
 CartBilling.prototype['cc_emails'] = undefined;
+/**
+ * Cell phone
+ * @member {String} cell_phone
+ */
+
+CartBilling.prototype['cell_phone'] = undefined;
+/**
+ * Cell phone (E164 format)
+ * @member {String} cell_phone_e164
+ */
+
+CartBilling.prototype['cell_phone_e164'] = undefined;
 /**
  * City
  * @member {String} city
