@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingHeatmapIndexResponse model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapIndexResponse
-   * @version 3.10.55
+   * @version 3.10.56
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The EmailDashboardStatsResponse model module.
    * @module com.ultracart.admin.v2.models/EmailDashboardStatsResponse
-   * @version 3.10.55
+   * @version 3.10.56
    */
 
   /**

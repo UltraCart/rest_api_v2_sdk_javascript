@@ -34,7 +34,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 3.10.55
+   * @version 3.10.56
    */
 
   /**
@@ -111,6 +111,8 @@
         obj.loyalty = CustomerLoyalty.constructFromObject(data['loyalty']);
       if (data.hasOwnProperty('maximum_item_count'))
         obj.maximum_item_count = ApiClient.convertToType(data['maximum_item_count'], 'Number');
+      if (data.hasOwnProperty('merchant_id'))
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('minimum_item_count'))
         obj.minimum_item_count = ApiClient.convertToType(data['minimum_item_count'], 'Number');
       if (data.hasOwnProperty('minimum_subtotal'))
@@ -342,6 +344,12 @@
    * @member {Number} maximum_item_count
    */
   exports.prototype.maximum_item_count = undefined;
+
+  /**
+   * Merchant ID
+   * @member {String} merchant_id
+   */
+  exports.prototype.merchant_id = undefined;
 
   /**
    * Minimum item count

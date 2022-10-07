@@ -34,7 +34,7 @@
   /**
    * The ItemDigitalItemsResponse model module.
    * @module com.ultracart.admin.v2.models/ItemDigitalItemsResponse
-   * @version 3.10.55
+   * @version 3.10.56
    */
 
   /**
@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('digitalItems'))
-        obj.digitalItems = ApiClient.convertToType(data['digitalItems'], [ItemDigitalItem]);
+      if (data.hasOwnProperty('digital_items'))
+        obj.digital_items = ApiClient.convertToType(data['digital_items'], [ItemDigitalItem]);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -71,9 +71,9 @@
 
   /**
    * digital_items
-   * @member {Array.<module:com.ultracart.admin.v2.models/ItemDigitalItem>} digitalItems
+   * @member {Array.<module:com.ultracart.admin.v2.models/ItemDigitalItem>} digital_items
    */
-  exports.prototype.digitalItems = undefined;
+  exports.prototype.digital_items = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
