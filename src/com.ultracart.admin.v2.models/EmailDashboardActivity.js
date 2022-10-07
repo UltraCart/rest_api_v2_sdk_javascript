@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailDashboardActivity model module.
  * @module com.ultracart.admin.v2.models/EmailDashboardActivity
- * @version 4.0.72-RC
+ * @version 4.0.73-RC
  */
 class EmailDashboardActivity {
     /**

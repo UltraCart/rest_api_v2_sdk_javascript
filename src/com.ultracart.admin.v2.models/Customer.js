@@ -32,7 +32,7 @@ import Order from './Order';
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.72-RC
+ * @version 4.0.73-RC
  */
 class Customer {
     /**
@@ -146,6 +146,9 @@ class Customer {
             }
             if (data.hasOwnProperty('maximum_item_count')) {
                 obj['maximum_item_count'] = ApiClient.convertToType(data['maximum_item_count'], 'Number');
+            }
+            if (data.hasOwnProperty('merchant_id')) {
+                obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
             }
             if (data.hasOwnProperty('minimum_item_count')) {
                 obj['minimum_item_count'] = ApiClient.convertToType(data['minimum_item_count'], 'Number');
@@ -412,6 +415,12 @@ Customer.prototype['loyalty'] = undefined;
  * @member {Number} maximum_item_count
  */
 Customer.prototype['maximum_item_count'] = undefined;
+
+/**
+ * Merchant ID
+ * @member {String} merchant_id
+ */
+Customer.prototype['merchant_id'] = undefined;
 
 /**
  * Minimum item count

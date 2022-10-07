@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RulerValidationRequest model module.
  * @module com.ultracart.admin.v2.models/RulerValidationRequest
- * @version 4.0.72-RC
+ * @version 4.0.73-RC
  */
 class RulerValidationRequest {
     /**

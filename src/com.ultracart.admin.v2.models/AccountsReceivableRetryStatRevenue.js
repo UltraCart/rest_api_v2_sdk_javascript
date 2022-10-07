@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AccountsReceivableRetryStatRevenue model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryStatRevenue
- * @version 4.0.72-RC
+ * @version 4.0.73-RC
  */
 class AccountsReceivableRetryStatRevenue {
     /**

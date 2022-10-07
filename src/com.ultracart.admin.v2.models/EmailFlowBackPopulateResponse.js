@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailFlowBackPopulateResponse model module.
  * @module com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse
- * @version 4.0.72-RC
+ * @version 4.0.73-RC
  */
 class EmailFlowBackPopulateResponse {
     /**
