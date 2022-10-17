@@ -34,7 +34,7 @@
   /**
    * The ConversationSummary model module.
    * @module com.ultracart.admin.v2.models/ConversationSummary
-   * @version 3.10.56
+   * @version 3.10.57
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.last_conversation_participant_arn = ApiClient.convertToType(data['last_conversation_participant_arn'], 'String');
       if (data.hasOwnProperty('last_conversation_participant_name'))
         obj.last_conversation_participant_name = ApiClient.convertToType(data['last_conversation_participant_name'], 'String');
+      if (data.hasOwnProperty('last_interactive_message_dts'))
+        obj.last_interactive_message_dts = ApiClient.convertToType(data['last_interactive_message_dts'], 'String');
       if (data.hasOwnProperty('last_message_dts'))
         obj.last_message_dts = ApiClient.convertToType(data['last_message_dts'], 'String');
       if (data.hasOwnProperty('medium'))
@@ -116,6 +118,12 @@
    * @member {String} last_conversation_participant_name
    */
   exports.prototype.last_conversation_participant_name = undefined;
+
+  /**
+   * Last interactive message date/time
+   * @member {String} last_interactive_message_dts
+   */
+  exports.prototype.last_interactive_message_dts = undefined;
 
   /**
    * Last message date/time
