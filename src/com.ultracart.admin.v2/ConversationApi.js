@@ -27,7 +27,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.73-RC
+* @version 4.0.74-RC
 */
 export default class ConversationApi {
 
@@ -309,6 +309,7 @@ export default class ConversationApi {
      * Retrieve a list of conversation summaries that are ordered newest to oldest, include the most recent message and whether its been read. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.medium 
+     * @param {String} opts.before 
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -322,6 +323,7 @@ export default class ConversationApi {
       };
       let queryParams = {
         'medium': opts['medium'],
+        'before': opts['before'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset']
       };

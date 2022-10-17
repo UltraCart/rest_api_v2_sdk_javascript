@@ -17,7 +17,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.73-RC
+ * @version 4.0.74-RC
  */
 class ConversationSummary {
     /**
@@ -65,6 +65,9 @@ class ConversationSummary {
             }
             if (data.hasOwnProperty('last_conversation_participant_name')) {
                 obj['last_conversation_participant_name'] = ApiClient.convertToType(data['last_conversation_participant_name'], 'String');
+            }
+            if (data.hasOwnProperty('last_interactive_message_dts')) {
+                obj['last_interactive_message_dts'] = ApiClient.convertToType(data['last_interactive_message_dts'], 'String');
             }
             if (data.hasOwnProperty('last_message_dts')) {
                 obj['last_message_dts'] = ApiClient.convertToType(data['last_message_dts'], 'String');
@@ -126,6 +129,12 @@ ConversationSummary.prototype['last_conversation_participant_arn'] = undefined;
  * @member {String} last_conversation_participant_name
  */
 ConversationSummary.prototype['last_conversation_participant_name'] = undefined;
+
+/**
+ * Last interactive message date/time
+ * @member {String} last_interactive_message_dts
+ */
+ConversationSummary.prototype['last_interactive_message_dts'] = undefined;
 
 /**
  * Last message date/time

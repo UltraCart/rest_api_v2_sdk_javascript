@@ -337,6 +337,7 @@ let apiInstance = new ucApi.ConversationApi(apiClient);
 
 let opts = {
   'medium': "medium_example", // String | 
+  'before': "before_example", // String | 
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
   '_offset': 0 // Number | Pagination of the record set.  Offset is a zero based index.
 };
@@ -355,6 +356,7 @@ apiInstance.getConversations(opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **medium** | **String**|  | [optional] 
+ **before** | **String**|  | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
 

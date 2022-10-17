@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemDigitalItemsResponse model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalItemsResponse
- * @version 4.0.72-RC
+ * @version 4.0.73-RC
  */
 var ItemDigitalItemsResponse = /*#__PURE__*/function () {
   /**
@@ -62,8 +62,8 @@ var ItemDigitalItemsResponse = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ItemDigitalItemsResponse();
 
-        if (data.hasOwnProperty('digitalItems')) {
-          obj['digitalItems'] = _ApiClient["default"].convertToType(data['digitalItems'], [_ItemDigitalItem["default"]]);
+        if (data.hasOwnProperty('digital_items')) {
+          obj['digital_items'] = _ApiClient["default"].convertToType(data['digital_items'], [_ItemDigitalItem["default"]]);
         }
 
         if (data.hasOwnProperty('error')) {
@@ -91,11 +91,11 @@ var ItemDigitalItemsResponse = /*#__PURE__*/function () {
 }();
 /**
  * digital_items
- * @member {Array.<module:com.ultracart.admin.v2.models/ItemDigitalItem>} digitalItems
+ * @member {Array.<module:com.ultracart.admin.v2.models/ItemDigitalItem>} digital_items
  */
 
 
-ItemDigitalItemsResponse.prototype['digitalItems'] = undefined;
+ItemDigitalItemsResponse.prototype['digital_items'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/Error} error
  */
