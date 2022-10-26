@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqSequenceTestRequest model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest
-   * @version 3.10.57
+   * @version 3.10.58
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.please_review = ApiClient.convertToType(data['please_review'], 'Boolean');
       if (data.hasOwnProperty('postal_code'))
         obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
+      if (data.hasOwnProperty('send_to_cellphone_e164'))
+        obj.send_to_cellphone_e164 = ApiClient.convertToType(data['send_to_cellphone_e164'], 'String');
       if (data.hasOwnProperty('send_to_email'))
         obj.send_to_email = ApiClient.convertToType(data['send_to_email'], 'String');
       if (data.hasOwnProperty('send_to_logged_in_user'))
@@ -141,6 +143,11 @@
    * @member {String} postal_code
    */
   exports.prototype.postal_code = undefined;
+
+  /**
+   * @member {String} send_to_cellphone_e164
+   */
+  exports.prototype.send_to_cellphone_e164 = undefined;
 
   /**
    * @member {String} send_to_email

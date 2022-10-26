@@ -34,7 +34,7 @@
   /**
    * The AccountsReceivableRetryStatRevenue model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryStatRevenue
-   * @version 3.10.57
+   * @version 3.10.58
    */
 
   /**
