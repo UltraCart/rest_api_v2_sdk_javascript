@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemChargebackAddendum model module.
  * @module com.ultracart.admin.v2.models/ItemChargebackAddendum
- * @version 4.0.73-RC
+ * @version 4.0.74-RC
  */
 var ItemChargebackAddendum = /*#__PURE__*/function () {
   /**

@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.73-RC
+ * @version 4.0.74-RC
  */
 var Conversation = /*#__PURE__*/function () {
   /**
@@ -80,6 +80,10 @@ var Conversation = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('last_conversation_participant_name')) {
           obj['last_conversation_participant_name'] = _ApiClient["default"].convertToType(data['last_conversation_participant_name'], 'String');
+        }
+
+        if (data.hasOwnProperty('last_interactive_message_dts')) {
+          obj['last_interactive_message_dts'] = _ApiClient["default"].convertToType(data['last_interactive_message_dts'], 'String');
         }
 
         if (data.hasOwnProperty('last_message_dts')) {
@@ -156,6 +160,12 @@ Conversation.prototype['last_conversation_participant_arn'] = undefined;
  */
 
 Conversation.prototype['last_conversation_participant_name'] = undefined;
+/**
+ * Last interactive message date/time
+ * @member {String} last_interactive_message_dts
+ */
+
+Conversation.prototype['last_interactive_message_dts'] = undefined;
 /**
  * Last message date/time
  * @member {String} last_message_dts

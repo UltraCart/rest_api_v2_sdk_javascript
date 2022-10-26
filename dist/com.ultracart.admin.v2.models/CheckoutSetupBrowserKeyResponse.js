@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CheckoutSetupBrowserKeyResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse
- * @version 4.0.73-RC
+ * @version 4.0.74-RC
  */
 var CheckoutSetupBrowserKeyResponse = /*#__PURE__*/function () {
   /**

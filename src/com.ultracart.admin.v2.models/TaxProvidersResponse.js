@@ -24,7 +24,7 @@ import Warning from './Warning';
 /**
  * The TaxProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProvidersResponse
- * @version 4.0.74-RC
+ * @version 4.0.75-RC
  */
 class TaxProvidersResponse {
     /**

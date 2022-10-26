@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderInternal model module.
  * @module com.ultracart.admin.v2.models/OrderInternal
- * @version 4.0.74-RC
+ * @version 4.0.75-RC
  */
 class OrderInternal {
     /**

@@ -42,6 +42,8 @@ import EmailCommseqPostcardsResponse from '../com.ultracart.admin.v2.models/Emai
 import EmailCommseqResponse from '../com.ultracart.admin.v2.models/EmailCommseqResponse';
 import EmailCommseqSequenceTestRequest from '../com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest';
 import EmailCommseqSequenceTestResponse from '../com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse';
+import EmailCommseqSmsSendTestRequest from '../com.ultracart.admin.v2.models/EmailCommseqSmsSendTestRequest';
+import EmailCommseqSmsSendTestResponse from '../com.ultracart.admin.v2.models/EmailCommseqSmsSendTestResponse';
 import EmailCommseqStatResponse from '../com.ultracart.admin.v2.models/EmailCommseqStatResponse';
 import EmailCommseqStepLogsResponse from '../com.ultracart.admin.v2.models/EmailCommseqStepLogsResponse';
 import EmailCommseqWebhookSendTestRequest from '../com.ultracart.admin.v2.models/EmailCommseqWebhookSendTestRequest';
@@ -156,7 +158,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.74-RC
+* @version 4.0.75-RC
 */
 export default class StorefrontApi {
 
@@ -6789,6 +6791,65 @@ export default class StorefrontApi {
       let returnType = EmailCommseqPostcardSendTestResponse;
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/postcards/{commseq_postcard_uuid}/test', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sendSmsTest operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~sendSmsTestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqSmsSendTestResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Send SMS test
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {String} commseq_step_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqSmsSendTestRequest} email_commseq_sms_test_request Email commseq sms test request
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~sendSmsTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqSmsSendTestResponse}
+     */
+    sendSmsTest(storefront_oid, commseq_uuid, commseq_step_uuid, email_commseq_sms_test_request, callback) {
+      let postBody = email_commseq_sms_test_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling sendSmsTest");
+      }
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling sendSmsTest");
+      }
+      // verify the required parameter 'commseq_step_uuid' is set
+      if (commseq_step_uuid === undefined || commseq_step_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_step_uuid' when calling sendSmsTest");
+      }
+      // verify the required parameter 'email_commseq_sms_test_request' is set
+      if (email_commseq_sms_test_request === undefined || email_commseq_sms_test_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_sms_test_request' when calling sendSmsTest");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid,
+        'commseq_step_uuid': commseq_step_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EmailCommseqSmsSendTestResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/sms/{commseq_uuid}/{commseq_step_uuid}/test', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

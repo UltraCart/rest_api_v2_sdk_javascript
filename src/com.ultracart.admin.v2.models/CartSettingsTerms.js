@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartSettingsTerms model module.
  * @module com.ultracart.admin.v2.models/CartSettingsTerms
- * @version 4.0.74-RC
+ * @version 4.0.75-RC
  */
 class CartSettingsTerms {
     /**

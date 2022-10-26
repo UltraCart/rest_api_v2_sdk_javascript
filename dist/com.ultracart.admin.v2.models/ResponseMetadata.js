@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ResponseMetadata model module.
  * @module com.ultracart.admin.v2.models/ResponseMetadata
- * @version 4.0.73-RC
+ * @version 4.0.74-RC
  */
 var ResponseMetadata = /*#__PURE__*/function () {
   /**

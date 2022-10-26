@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemEbayCategorySpecific model module.
  * @module com.ultracart.admin.v2.models/ItemEbayCategorySpecific
- * @version 4.0.74-RC
+ * @version 4.0.75-RC
  */
 class ItemEbayCategorySpecific {
     /**

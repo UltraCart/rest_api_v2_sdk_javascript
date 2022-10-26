@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqSequenceTestRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest
- * @version 4.0.74-RC
+ * @version 4.0.75-RC
  */
 class EmailCommseqSequenceTestRequest {
     /**
@@ -79,6 +79,9 @@ class EmailCommseqSequenceTestRequest {
             }
             if (data.hasOwnProperty('postal_code')) {
                 obj['postal_code'] = ApiClient.convertToType(data['postal_code'], 'String');
+            }
+            if (data.hasOwnProperty('send_to_cellphone_e164')) {
+                obj['send_to_cellphone_e164'] = ApiClient.convertToType(data['send_to_cellphone_e164'], 'String');
             }
             if (data.hasOwnProperty('send_to_email')) {
                 obj['send_to_email'] = ApiClient.convertToType(data['send_to_email'], 'String');
@@ -150,6 +153,11 @@ EmailCommseqSequenceTestRequest.prototype['please_review'] = undefined;
  * @member {String} postal_code
  */
 EmailCommseqSequenceTestRequest.prototype['postal_code'] = undefined;
+
+/**
+ * @member {String} send_to_cellphone_e164
+ */
+EmailCommseqSequenceTestRequest.prototype['send_to_cellphone_e164'] = undefined;
 
 /**
  * @member {String} send_to_email
