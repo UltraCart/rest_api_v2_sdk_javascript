@@ -17,7 +17,7 @@ import StepWaiting from './StepWaiting';
 /**
  * The EmailStepWaitingResponse model module.
  * @module com.ultracart.admin.v2.models/EmailStepWaitingResponse
- * @version 4.0.76-RC
+ * @version 4.0.77-RC
  */
 class EmailStepWaitingResponse {
     /**

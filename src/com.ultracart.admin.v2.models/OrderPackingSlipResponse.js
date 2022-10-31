@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The OrderPackingSlipResponse model module.
  * @module com.ultracart.admin.v2.models/OrderPackingSlipResponse
- * @version 4.0.76-RC
+ * @version 4.0.77-RC
  */
 class OrderPackingSlipResponse {
     /**

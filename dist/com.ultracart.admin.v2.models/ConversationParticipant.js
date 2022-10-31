@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.75-RC
+ * @version 4.0.76-RC
  */
 var ConversationParticipant = /*#__PURE__*/function () {
   /**
@@ -86,6 +86,10 @@ var ConversationParticipant = /*#__PURE__*/function () {
           obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
         }
 
+        if (data.hasOwnProperty('timezone')) {
+          obj['timezone'] = _ApiClient["default"].convertToType(data['timezone'], 'String');
+        }
+
         if (data.hasOwnProperty('unread_messages')) {
           obj['unread_messages'] = _ApiClient["default"].convertToType(data['unread_messages'], 'Number');
         }
@@ -141,6 +145,11 @@ ConversationParticipant.prototype['profile_image_url'] = undefined;
  */
 
 ConversationParticipant.prototype['status'] = undefined;
+/**
+ * @member {String} timezone
+ */
+
+ConversationParticipant.prototype['timezone'] = undefined;
 /**
  * @member {Number} unread_messages
  */

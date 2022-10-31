@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemContentMultimediaThumbnail model module.
  * @module com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail
- * @version 4.0.76-RC
+ * @version 4.0.77-RC
  */
 class ItemContentMultimediaThumbnail {
     /**

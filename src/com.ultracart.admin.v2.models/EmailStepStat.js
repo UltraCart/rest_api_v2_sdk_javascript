@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailStepStat model module.
  * @module com.ultracart.admin.v2.models/EmailStepStat
- * @version 4.0.76-RC
+ * @version 4.0.77-RC
  */
 class EmailStepStat {
     /**
@@ -47,6 +47,9 @@ class EmailStepStat {
         if (data) {
             obj = obj || new EmailStepStat();
 
+            if (data.hasOwnProperty('left_click_count')) {
+                obj['left_click_count'] = ApiClient.convertToType(data['left_click_count'], 'Number');
+            }
             if (data.hasOwnProperty('left_click_count_formatted')) {
                 obj['left_click_count_formatted'] = ApiClient.convertToType(data['left_click_count_formatted'], 'String');
             }
@@ -142,13 +145,19 @@ class EmailStepStat {
 }
 
 /**
+ * click count (left side)
+ * @member {Number} left_click_count
+ */
+EmailStepStat.prototype['left_click_count'] = undefined;
+
+/**
  * click count formatted (left side)
  * @member {String} left_click_count_formatted
  */
 EmailStepStat.prototype['left_click_count_formatted'] = undefined;
 
 /**
- * click count (left side)
+ * conversion count (left/default side)
  * @member {Number} left_conversion_count
  */
 EmailStepStat.prototype['left_conversion_count'] = undefined;

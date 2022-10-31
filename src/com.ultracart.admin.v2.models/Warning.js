@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Warning model module.
  * @module com.ultracart.admin.v2.models/Warning
- * @version 4.0.76-RC
+ * @version 4.0.77-RC
  */
 class Warning {
     /**

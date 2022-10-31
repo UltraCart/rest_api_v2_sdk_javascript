@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ScreenshotsResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenshotsResponse
- * @version 4.0.76-RC
+ * @version 4.0.77-RC
  */
 class ScreenshotsResponse {
     /**

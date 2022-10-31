@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailStepStat model module.
  * @module com.ultracart.admin.v2.models/EmailStepStat
- * @version 4.0.75-RC
+ * @version 4.0.76-RC
  */
 var EmailStepStat = /*#__PURE__*/function () {
   /**
@@ -54,6 +54,10 @@ var EmailStepStat = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new EmailStepStat();
 
+        if (data.hasOwnProperty('left_click_count_formatted')) {
+          obj['left_click_count_formatted'] = _ApiClient["default"].convertToType(data['left_click_count_formatted'], 'String');
+        }
+
         if (data.hasOwnProperty('left_conversion_count')) {
           obj['left_conversion_count'] = _ApiClient["default"].convertToType(data['left_conversion_count'], 'Number');
         }
@@ -68,6 +72,14 @@ var EmailStepStat = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('left_customer_count_formatted')) {
           obj['left_customer_count_formatted'] = _ApiClient["default"].convertToType(data['left_customer_count_formatted'], 'String');
+        }
+
+        if (data.hasOwnProperty('left_delivered_count')) {
+          obj['left_delivered_count'] = _ApiClient["default"].convertToType(data['left_delivered_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('left_delivered_count_formatted')) {
+          obj['left_delivered_count_formatted'] = _ApiClient["default"].convertToType(data['left_delivered_count_formatted'], 'String');
         }
 
         if (data.hasOwnProperty('left_order_count')) {
@@ -92,6 +104,30 @@ var EmailStepStat = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('left_revenue_formatted')) {
           obj['left_revenue_formatted'] = _ApiClient["default"].convertToType(data['left_revenue_formatted'], 'String');
+        }
+
+        if (data.hasOwnProperty('left_send_count')) {
+          obj['left_send_count'] = _ApiClient["default"].convertToType(data['left_send_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('left_send_count_formatted')) {
+          obj['left_send_count_formatted'] = _ApiClient["default"].convertToType(data['left_send_count_formatted'], 'String');
+        }
+
+        if (data.hasOwnProperty('left_skipped_count')) {
+          obj['left_skipped_count'] = _ApiClient["default"].convertToType(data['left_skipped_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('left_skipped_count_formatted')) {
+          obj['left_skipped_count_formatted'] = _ApiClient["default"].convertToType(data['left_skipped_count_formatted'], 'String');
+        }
+
+        if (data.hasOwnProperty('left_unsubscribe_count')) {
+          obj['left_unsubscribe_count'] = _ApiClient["default"].convertToType(data['left_unsubscribe_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('left_unsubscribe_count_formatted')) {
+          obj['left_unsubscribe_count_formatted'] = _ApiClient["default"].convertToType(data['left_unsubscribe_count_formatted'], 'String');
         }
 
         if (data.hasOwnProperty('right_conversion_count')) {
@@ -142,10 +178,16 @@ var EmailStepStat = /*#__PURE__*/function () {
   return EmailStepStat;
 }();
 /**
- * conversion count (left/default side)
- * @member {Number} left_conversion_count
+ * click count formatted (left side)
+ * @member {String} left_click_count_formatted
  */
 
+
+EmailStepStat.prototype['left_click_count_formatted'] = undefined;
+/**
+ * click count (left side)
+ * @member {Number} left_conversion_count
+ */
 
 EmailStepStat.prototype['left_conversion_count'] = undefined;
 /**
@@ -166,6 +208,18 @@ EmailStepStat.prototype['left_customer_count'] = undefined;
  */
 
 EmailStepStat.prototype['left_customer_count_formatted'] = undefined;
+/**
+ * delivered count (left side)
+ * @member {Number} left_delivered_count
+ */
+
+EmailStepStat.prototype['left_delivered_count'] = undefined;
+/**
+ * delivered count formatted (left side)
+ * @member {String} left_delivered_count_formatted
+ */
+
+EmailStepStat.prototype['left_delivered_count_formatted'] = undefined;
 /**
  * order count (left/default side)
  * @member {Number} left_order_count
@@ -202,6 +256,42 @@ EmailStepStat.prototype['left_revenue'] = undefined;
  */
 
 EmailStepStat.prototype['left_revenue_formatted'] = undefined;
+/**
+ * send count (left side)
+ * @member {Number} left_send_count
+ */
+
+EmailStepStat.prototype['left_send_count'] = undefined;
+/**
+ * send count formatted (left side)
+ * @member {String} left_send_count_formatted
+ */
+
+EmailStepStat.prototype['left_send_count_formatted'] = undefined;
+/**
+ * conversion count (left side)
+ * @member {Number} left_skipped_count
+ */
+
+EmailStepStat.prototype['left_skipped_count'] = undefined;
+/**
+ * skipped count formatted (left side)
+ * @member {String} left_skipped_count_formatted
+ */
+
+EmailStepStat.prototype['left_skipped_count_formatted'] = undefined;
+/**
+ * unsubscribe count (left side)
+ * @member {Number} left_unsubscribe_count
+ */
+
+EmailStepStat.prototype['left_unsubscribe_count'] = undefined;
+/**
+ * unsubscribe count formatted (left side)
+ * @member {String} left_unsubscribe_count_formatted
+ */
+
+EmailStepStat.prototype['left_unsubscribe_count_formatted'] = undefined;
 /**
  * conversion count (right side)
  * @member {Number} right_conversion_count
