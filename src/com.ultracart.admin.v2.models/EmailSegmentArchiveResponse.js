@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailSegmentArchiveResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSegmentArchiveResponse
- * @version 4.0.75-RC
+ * @version 4.0.76-RC
  */
 class EmailSegmentArchiveResponse {
     /**

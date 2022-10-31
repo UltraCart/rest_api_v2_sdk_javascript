@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The CouponCodesRequest model module.
  * @module com.ultracart.admin.v2.models/CouponCodesRequest
- * @version 4.0.75-RC
+ * @version 4.0.76-RC
  */
 class CouponCodesRequest {
     /**

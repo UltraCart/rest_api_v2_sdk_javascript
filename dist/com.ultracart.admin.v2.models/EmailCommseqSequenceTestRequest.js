@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseqSequenceTestRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest
- * @version 4.0.74-RC
+ * @version 4.0.75-RC
  */
 var EmailCommseqSequenceTestRequest = /*#__PURE__*/function () {
   /**
@@ -98,6 +98,10 @@ var EmailCommseqSequenceTestRequest = /*#__PURE__*/function () {
           obj['postal_code'] = _ApiClient["default"].convertToType(data['postal_code'], 'String');
         }
 
+        if (data.hasOwnProperty('send_to_cellphone_e164')) {
+          obj['send_to_cellphone_e164'] = _ApiClient["default"].convertToType(data['send_to_cellphone_e164'], 'String');
+        }
+
         if (data.hasOwnProperty('send_to_email')) {
           obj['send_to_email'] = _ApiClient["default"].convertToType(data['send_to_email'], 'String');
         }
@@ -173,6 +177,11 @@ EmailCommseqSequenceTestRequest.prototype['please_review'] = undefined;
  */
 
 EmailCommseqSequenceTestRequest.prototype['postal_code'] = undefined;
+/**
+ * @member {String} send_to_cellphone_e164
+ */
+
+EmailCommseqSequenceTestRequest.prototype['send_to_cellphone_e164'] = undefined;
 /**
  * @member {String} send_to_email
  */

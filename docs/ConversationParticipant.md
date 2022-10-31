@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **left_dts** | **String** | Left conversation date/time | [optional] 
 **profile_image_url** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
+**timezone** | **String** |  | [optional] 
 **unread_messages** | **Number** |  | [optional] 
 
 

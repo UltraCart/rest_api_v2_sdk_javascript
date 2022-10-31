@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseqStepLogsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqStepLogsResponse
- * @version 4.0.74-RC
+ * @version 4.0.75-RC
  */
 var EmailCommseqStepLogsResponse = /*#__PURE__*/function () {
   /**
