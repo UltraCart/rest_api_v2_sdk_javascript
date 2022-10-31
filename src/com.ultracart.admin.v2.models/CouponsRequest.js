@@ -34,7 +34,7 @@
   /**
    * The CouponsRequest model module.
    * @module com.ultracart.admin.v2.models/CouponsRequest
-   * @version 3.10.58
+   * @version 3.10.59
    */
 
   /**

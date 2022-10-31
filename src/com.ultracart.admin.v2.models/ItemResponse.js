@@ -34,7 +34,7 @@
   /**
    * The ItemResponse model module.
    * @module com.ultracart.admin.v2.models/ItemResponse
-   * @version 3.10.58
+   * @version 3.10.59
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ConversationParticipant model module.
    * @module com.ultracart.admin.v2.models/ConversationParticipant
-   * @version 3.10.58
+   * @version 3.10.59
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.profile_image_url = ApiClient.convertToType(data['profile_image_url'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('timezone'))
+        obj.timezone = ApiClient.convertToType(data['timezone'], 'String');
       if (data.hasOwnProperty('unread_messages'))
         obj.unread_messages = ApiClient.convertToType(data['unread_messages'], 'Number');
     }
@@ -119,6 +121,11 @@
    * @member {String} status
    */
   exports.prototype.status = undefined;
+
+  /**
+   * @member {String} timezone
+   */
+  exports.prototype.timezone = undefined;
 
   /**
    * @member {Number} unread_messages

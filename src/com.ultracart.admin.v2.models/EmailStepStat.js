@@ -34,7 +34,7 @@
   /**
    * The EmailStepStat model module.
    * @module com.ultracart.admin.v2.models/EmailStepStat
-   * @version 3.10.58
+   * @version 3.10.59
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('left_click_count_formatted'))
+        obj.left_click_count_formatted = ApiClient.convertToType(data['left_click_count_formatted'], 'String');
       if (data.hasOwnProperty('left_conversion_count'))
         obj.left_conversion_count = ApiClient.convertToType(data['left_conversion_count'], 'Number');
       if (data.hasOwnProperty('left_conversion_count_formatted'))
@@ -63,6 +65,10 @@
         obj.left_customer_count = ApiClient.convertToType(data['left_customer_count'], 'Number');
       if (data.hasOwnProperty('left_customer_count_formatted'))
         obj.left_customer_count_formatted = ApiClient.convertToType(data['left_customer_count_formatted'], 'String');
+      if (data.hasOwnProperty('left_delivered_count'))
+        obj.left_delivered_count = ApiClient.convertToType(data['left_delivered_count'], 'Number');
+      if (data.hasOwnProperty('left_delivered_count_formatted'))
+        obj.left_delivered_count_formatted = ApiClient.convertToType(data['left_delivered_count_formatted'], 'String');
       if (data.hasOwnProperty('left_order_count'))
         obj.left_order_count = ApiClient.convertToType(data['left_order_count'], 'Number');
       if (data.hasOwnProperty('left_order_count_formatted'))
@@ -75,6 +81,18 @@
         obj.left_revenue = ApiClient.convertToType(data['left_revenue'], 'Number');
       if (data.hasOwnProperty('left_revenue_formatted'))
         obj.left_revenue_formatted = ApiClient.convertToType(data['left_revenue_formatted'], 'String');
+      if (data.hasOwnProperty('left_send_count'))
+        obj.left_send_count = ApiClient.convertToType(data['left_send_count'], 'Number');
+      if (data.hasOwnProperty('left_send_count_formatted'))
+        obj.left_send_count_formatted = ApiClient.convertToType(data['left_send_count_formatted'], 'String');
+      if (data.hasOwnProperty('left_skipped_count'))
+        obj.left_skipped_count = ApiClient.convertToType(data['left_skipped_count'], 'Number');
+      if (data.hasOwnProperty('left_skipped_count_formatted'))
+        obj.left_skipped_count_formatted = ApiClient.convertToType(data['left_skipped_count_formatted'], 'String');
+      if (data.hasOwnProperty('left_unsubscribe_count'))
+        obj.left_unsubscribe_count = ApiClient.convertToType(data['left_unsubscribe_count'], 'Number');
+      if (data.hasOwnProperty('left_unsubscribe_count_formatted'))
+        obj.left_unsubscribe_count_formatted = ApiClient.convertToType(data['left_unsubscribe_count_formatted'], 'String');
       if (data.hasOwnProperty('right_conversion_count'))
         obj.right_conversion_count = ApiClient.convertToType(data['right_conversion_count'], 'Number');
       if (data.hasOwnProperty('right_conversion_count_formatted'))
@@ -100,7 +118,13 @@
   }
 
   /**
-   * conversion count (left/default side)
+   * click count formatted (left side)
+   * @member {String} left_click_count_formatted
+   */
+  exports.prototype.left_click_count_formatted = undefined;
+
+  /**
+   * click count (left side)
    * @member {Number} left_conversion_count
    */
   exports.prototype.left_conversion_count = undefined;
@@ -122,6 +146,18 @@
    * @member {String} left_customer_count_formatted
    */
   exports.prototype.left_customer_count_formatted = undefined;
+
+  /**
+   * delivered count (left side)
+   * @member {Number} left_delivered_count
+   */
+  exports.prototype.left_delivered_count = undefined;
+
+  /**
+   * delivered count formatted (left side)
+   * @member {String} left_delivered_count_formatted
+   */
+  exports.prototype.left_delivered_count_formatted = undefined;
 
   /**
    * order count (left/default side)
@@ -158,6 +194,42 @@
    * @member {String} left_revenue_formatted
    */
   exports.prototype.left_revenue_formatted = undefined;
+
+  /**
+   * send count (left side)
+   * @member {Number} left_send_count
+   */
+  exports.prototype.left_send_count = undefined;
+
+  /**
+   * send count formatted (left side)
+   * @member {String} left_send_count_formatted
+   */
+  exports.prototype.left_send_count_formatted = undefined;
+
+  /**
+   * conversion count (left side)
+   * @member {Number} left_skipped_count
+   */
+  exports.prototype.left_skipped_count = undefined;
+
+  /**
+   * skipped count formatted (left side)
+   * @member {String} left_skipped_count_formatted
+   */
+  exports.prototype.left_skipped_count_formatted = undefined;
+
+  /**
+   * unsubscribe count (left side)
+   * @member {Number} left_unsubscribe_count
+   */
+  exports.prototype.left_unsubscribe_count = undefined;
+
+  /**
+   * unsubscribe count formatted (left side)
+   * @member {String} left_unsubscribe_count_formatted
+   */
+  exports.prototype.left_unsubscribe_count_formatted = undefined;
 
   /**
    * conversion count (right side)

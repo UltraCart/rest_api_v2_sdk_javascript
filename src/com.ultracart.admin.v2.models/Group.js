@@ -34,7 +34,7 @@
   /**
    * The Group model module.
    * @module com.ultracart.admin.v2.models/Group
-   * @version 3.10.58
+   * @version 3.10.59
    */
 
   /**
