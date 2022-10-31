@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingQueryRequest model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingQueryRequest
-   * @version 3.10.59
+   * @version 3.10.60
    */
 
   /**

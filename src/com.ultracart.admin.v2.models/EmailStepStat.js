@@ -34,7 +34,7 @@
   /**
    * The EmailStepStat model module.
    * @module com.ultracart.admin.v2.models/EmailStepStat
-   * @version 3.10.59
+   * @version 3.10.60
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('left_click_count'))
+        obj.left_click_count = ApiClient.convertToType(data['left_click_count'], 'Number');
       if (data.hasOwnProperty('left_click_count_formatted'))
         obj.left_click_count_formatted = ApiClient.convertToType(data['left_click_count_formatted'], 'String');
       if (data.hasOwnProperty('left_conversion_count'))
@@ -118,13 +120,19 @@
   }
 
   /**
+   * click count (left side)
+   * @member {Number} left_click_count
+   */
+  exports.prototype.left_click_count = undefined;
+
+  /**
    * click count formatted (left side)
    * @member {String} left_click_count_formatted
    */
   exports.prototype.left_click_count_formatted = undefined;
 
   /**
-   * click count (left side)
+   * conversion count (left/default side)
    * @member {Number} left_conversion_count
    */
   exports.prototype.left_conversion_count = undefined;
