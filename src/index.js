@@ -217,6 +217,7 @@ import CouponTieredAmountOffSubtotal from './com.ultracart.admin.v2.models/Coupo
 import CouponTieredPercentOffItems from './com.ultracart.admin.v2.models/CouponTieredPercentOffItems';
 import CouponTieredPercentOffShipping from './com.ultracart.admin.v2.models/CouponTieredPercentOffShipping';
 import CouponTieredPercentOffSubtotal from './com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotal';
+import CouponTieredPercentOffSubtotalBasedOnMSRP from './com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP';
 import CouponType from './com.ultracart.admin.v2.models/CouponType';
 import CouponsRequest from './com.ultracart.admin.v2.models/CouponsRequest';
 import CouponsResponse from './com.ultracart.admin.v2.models/CouponsResponse';
@@ -744,7 +745,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.77-RC
+* @version 4.0.78-RC
 */
 export {
     /**
@@ -1976,6 +1977,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotal}
      */
     CouponTieredPercentOffSubtotal,
+
+    /**
+     * The CouponTieredPercentOffSubtotalBasedOnMSRP model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP}
+     */
+    CouponTieredPercentOffSubtotalBasedOnMSRP,
 
     /**
      * The CouponType model constructor.

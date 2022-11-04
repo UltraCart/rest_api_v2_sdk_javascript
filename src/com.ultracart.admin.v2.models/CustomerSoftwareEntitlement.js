@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerSoftwareEntitlement model module.
  * @module com.ultracart.admin.v2.models/CustomerSoftwareEntitlement
- * @version 4.0.77-RC
+ * @version 4.0.78-RC
  */
 class CustomerSoftwareEntitlement {
     /**

@@ -39,7 +39,7 @@ import RegisterAffiliateClickResponse from '../com.ultracart.admin.v2.models/Reg
 /**
 * Checkout service.
 * @module com.ultracart.admin.v2/CheckoutApi
-* @version 4.0.77-RC
+* @version 4.0.78-RC
 */
 export default class CheckoutApi {
 

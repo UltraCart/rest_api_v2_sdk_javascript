@@ -55,11 +55,12 @@ import CouponTieredAmountOffSubtotal from './CouponTieredAmountOffSubtotal';
 import CouponTieredPercentOffItems from './CouponTieredPercentOffItems';
 import CouponTieredPercentOffShipping from './CouponTieredPercentOffShipping';
 import CouponTieredPercentOffSubtotal from './CouponTieredPercentOffSubtotal';
+import CouponTieredPercentOffSubtotalBasedOnMSRP from './CouponTieredPercentOffSubtotalBasedOnMSRP';
 
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.77-RC
+ * @version 4.0.78-RC
  */
 class Coupon {
     /**
@@ -266,6 +267,9 @@ class Coupon {
             }
             if (data.hasOwnProperty('tiered_percent_off_subtotal')) {
                 obj['tiered_percent_off_subtotal'] = CouponTieredPercentOffSubtotal.constructFromObject(data['tiered_percent_off_subtotal']);
+            }
+            if (data.hasOwnProperty('tiered_percent_off_subtotal_based_on_msrp')) {
+                obj['tiered_percent_off_subtotal_based_on_msrp'] = CouponTieredPercentOffSubtotalBasedOnMSRP.constructFromObject(data['tiered_percent_off_subtotal_based_on_msrp']);
             }
             if (data.hasOwnProperty('usable_by')) {
                 obj['usable_by'] = ApiClient.convertToType(data['usable_by'], 'String');
@@ -588,6 +592,11 @@ Coupon.prototype['tiered_percent_off_shipping'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotal} tiered_percent_off_subtotal
  */
 Coupon.prototype['tiered_percent_off_subtotal'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP} tiered_percent_off_subtotal_based_on_msrp
+ */
+Coupon.prototype['tiered_percent_off_subtotal_based_on_msrp'] = undefined;
 
 /**
  * Who may use this coupon.

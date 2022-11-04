@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailStepStat model module.
  * @module com.ultracart.admin.v2.models/EmailStepStat
- * @version 4.0.76-RC
+ * @version 4.0.77-RC
  */
 var EmailStepStat = /*#__PURE__*/function () {
   /**
@@ -53,6 +53,10 @@ var EmailStepStat = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new EmailStepStat();
+
+        if (data.hasOwnProperty('left_click_count')) {
+          obj['left_click_count'] = _ApiClient["default"].convertToType(data['left_click_count'], 'Number');
+        }
 
         if (data.hasOwnProperty('left_click_count_formatted')) {
           obj['left_click_count_formatted'] = _ApiClient["default"].convertToType(data['left_click_count_formatted'], 'String');
@@ -178,14 +182,20 @@ var EmailStepStat = /*#__PURE__*/function () {
   return EmailStepStat;
 }();
 /**
+ * click count (left side)
+ * @member {Number} left_click_count
+ */
+
+
+EmailStepStat.prototype['left_click_count'] = undefined;
+/**
  * click count formatted (left side)
  * @member {String} left_click_count_formatted
  */
 
-
 EmailStepStat.prototype['left_click_count_formatted'] = undefined;
 /**
- * click count (left side)
+ * conversion count (left/default side)
  * @member {Number} left_conversion_count
  */
 

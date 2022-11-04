@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderFormatResponse model module.
  * @module com.ultracart.admin.v2.models/OrderFormatResponse
- * @version 4.0.77-RC
+ * @version 4.0.78-RC
  */
 class OrderFormatResponse {
     /**
