@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BrowserDevice model module.
  * @module com.ultracart.admin.v2.models/BrowserDevice
- * @version 4.0.78-RC
+ * @version 4.0.79-RC
  */
 class BrowserDevice {
     /**

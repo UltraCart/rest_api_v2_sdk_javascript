@@ -1275,6 +1275,12 @@ Object.defineProperty(exports, "CouponTieredPercentOffSubtotal", {
     return _CouponTieredPercentOffSubtotal["default"];
   }
 });
+Object.defineProperty(exports, "CouponTieredPercentOffSubtotalBasedOnMSRP", {
+  enumerable: true,
+  get: function get() {
+    return _CouponTieredPercentOffSubtotalBasedOnMSRP["default"];
+  }
+});
 Object.defineProperty(exports, "CouponType", {
   enumerable: true,
   get: function get() {
@@ -4619,6 +4625,8 @@ var _CouponTieredPercentOffItems = _interopRequireDefault(require("./com.ultraca
 var _CouponTieredPercentOffShipping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponTieredPercentOffShipping"));
 
 var _CouponTieredPercentOffSubtotal = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotal"));
+
+var _CouponTieredPercentOffSubtotalBasedOnMSRP = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP"));
 
 var _CouponType = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponType"));
 

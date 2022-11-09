@@ -17,7 +17,7 @@ import Conversation from './Conversation';
 /**
  * The ConversationStartResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationStartResponse
- * @version 4.0.78-RC
+ * @version 4.0.79-RC
  */
 class ConversationStartResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CityStateZip model module.
  * @module com.ultracart.admin.v2.models/CityStateZip
- * @version 4.0.78-RC
+ * @version 4.0.79-RC
  */
 class CityStateZip {
     /**

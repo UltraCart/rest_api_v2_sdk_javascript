@@ -93,6 +93,8 @@ var _CouponTieredPercentOffShipping = _interopRequireDefault(require("./CouponTi
 
 var _CouponTieredPercentOffSubtotal = _interopRequireDefault(require("./CouponTieredPercentOffSubtotal"));
 
+var _CouponTieredPercentOffSubtotalBasedOnMSRP = _interopRequireDefault(require("./CouponTieredPercentOffSubtotalBasedOnMSRP"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -104,7 +106,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.77-RC
+ * @version 4.0.78-RC
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -374,6 +376,10 @@ var Coupon = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('tiered_percent_off_subtotal')) {
           obj['tiered_percent_off_subtotal'] = _CouponTieredPercentOffSubtotal["default"].constructFromObject(data['tiered_percent_off_subtotal']);
+        }
+
+        if (data.hasOwnProperty('tiered_percent_off_subtotal_based_on_msrp')) {
+          obj['tiered_percent_off_subtotal_based_on_msrp'] = _CouponTieredPercentOffSubtotalBasedOnMSRP["default"].constructFromObject(data['tiered_percent_off_subtotal_based_on_msrp']);
         }
 
         if (data.hasOwnProperty('usable_by')) {
@@ -700,6 +706,11 @@ Coupon.prototype['tiered_percent_off_shipping'] = undefined;
  */
 
 Coupon.prototype['tiered_percent_off_subtotal'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP} tiered_percent_off_subtotal_based_on_msrp
+ */
+
+Coupon.prototype['tiered_percent_off_subtotal_based_on_msrp'] = undefined;
 /**
  * Who may use this coupon.
  * @member {String} usable_by

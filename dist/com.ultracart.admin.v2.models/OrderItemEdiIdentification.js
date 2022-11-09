@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItemEdiIdentification model module.
  * @module com.ultracart.admin.v2.models/OrderItemEdiIdentification
- * @version 4.0.77-RC
+ * @version 4.0.78-RC
  */
 var OrderItemEdiIdentification = /*#__PURE__*/function () {
   /**
