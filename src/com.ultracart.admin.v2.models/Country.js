@@ -34,7 +34,7 @@
   /**
    * The Country model module.
    * @module com.ultracart.admin.v2.models/Country
-   * @version 3.10.61
+   * @version 3.10.62
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The EmailSettingsResponse model module.
    * @module com.ultracart.admin.v2.models/EmailSettingsResponse
-   * @version 3.10.61
+   * @version 3.10.62
    */
 
   /**

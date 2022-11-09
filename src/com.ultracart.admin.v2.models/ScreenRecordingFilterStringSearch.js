@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterStringSearch model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch
-   * @version 3.10.61
+   * @version 3.10.62
    */
 
   /**

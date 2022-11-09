@@ -34,7 +34,7 @@
   /**
    * The EmailPlanAdditional model module.
    * @module com.ultracart.admin.v2.models/EmailPlanAdditional
-   * @version 3.10.61
+   * @version 3.10.62
    */
 
   /**

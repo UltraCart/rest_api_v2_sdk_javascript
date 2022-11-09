@@ -34,7 +34,7 @@
   /**
    * The ConversationEventTyping model module.
    * @module com.ultracart.admin.v2.models/ConversationEventTyping
-   * @version 3.10.61
+   * @version 3.10.62
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ItemFulfillmentAddon model module.
    * @module com.ultracart.admin.v2.models/ItemFulfillmentAddon
-   * @version 3.10.61
+   * @version 3.10.62
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.add_item_id = ApiClient.convertToType(data['add_item_id'], 'String');
       if (data.hasOwnProperty('add_item_oid'))
         obj.add_item_oid = ApiClient.convertToType(data['add_item_oid'], 'Number');
+      if (data.hasOwnProperty('initial_order_only'))
+        obj.initial_order_only = ApiClient.convertToType(data['initial_order_only'], 'Boolean');
       if (data.hasOwnProperty('once_per_order'))
         obj.once_per_order = ApiClient.convertToType(data['once_per_order'], 'Boolean');
       if (data.hasOwnProperty('quantity'))
@@ -80,7 +82,13 @@
   exports.prototype.add_item_oid = undefined;
 
   /**
-   * Quantity
+   * Initial Order Only
+   * @member {Boolean} initial_order_only
+   */
+  exports.prototype.initial_order_only = undefined;
+
+  /**
+   * Once Per Order
    * @member {Boolean} once_per_order
    */
   exports.prototype.once_per_order = undefined;

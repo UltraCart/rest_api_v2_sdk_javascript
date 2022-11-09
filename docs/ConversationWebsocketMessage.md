@@ -43,6 +43,8 @@ Name | Type | Description | Notes
 
 * `read_message` (value: `"read message"`)
 
+* `typing` (value: `"typing"`)
+
 
 
 

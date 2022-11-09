@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.61
+   * @version 3.10.62
    */
 
   /**
@@ -225,7 +225,13 @@
      * value: "read message"
      * @const
      */
-    read_message: "read message"
+    read_message: "read message",
+
+    /**
+     * value: "typing"
+     * @const
+     */
+    typing: "typing"
   };
 
 
