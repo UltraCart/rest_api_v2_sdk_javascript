@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingSettings model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingSettings
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 class ScreenRecordingSettings {
     /**

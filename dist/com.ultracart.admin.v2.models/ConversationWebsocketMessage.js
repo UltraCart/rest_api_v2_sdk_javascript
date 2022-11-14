@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.78-RC
+ * @version 4.0.79-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -270,7 +270,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
    * value: "read message"
    * @const
    */
-  "read message": "read message"
+  "read message": "read message",
+
+  /**
+   * value: "typing"
+   * @const
+   */
+  "typing": "typing"
 };
 /**
  * Allowed values for the <code>type</code> property.

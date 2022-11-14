@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxProviderUltraCartState model module.
  * @module com.ultracart.admin.v2.models/TaxProviderUltraCartState
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 class TaxProviderUltraCartState {
     /**

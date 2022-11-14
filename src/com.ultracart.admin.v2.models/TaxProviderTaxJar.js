@@ -17,7 +17,7 @@ import TaxJarConfig from './TaxJarConfig';
 /**
  * The TaxProviderTaxJar model module.
  * @module com.ultracart.admin.v2.models/TaxProviderTaxJar
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 class TaxProviderTaxJar {
     /**

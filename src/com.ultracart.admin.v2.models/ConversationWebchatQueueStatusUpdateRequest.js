@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationWebchatQueueStatusUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 class ConversationWebchatQueueStatusUpdateRequest {
     /**
@@ -58,12 +58,40 @@ class ConversationWebchatQueueStatusUpdateRequest {
 }
 
 /**
- * @member {String} agent_status
+ * Status of the agent
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest.AgentStatusEnum} agent_status
  */
 ConversationWebchatQueueStatusUpdateRequest.prototype['agent_status'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>agent_status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationWebchatQueueStatusUpdateRequest['AgentStatusEnum'] = {
+
+    /**
+     * value: "available"
+     * @const
+     */
+    "available": "available",
+
+    /**
+     * value: "busy"
+     * @const
+     */
+    "busy": "busy",
+
+    /**
+     * value: "unavailable"
+     * @const
+     */
+    "unavailable": "unavailable"
+};
 
 
 

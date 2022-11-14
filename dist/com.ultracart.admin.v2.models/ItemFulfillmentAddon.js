@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemFulfillmentAddon model module.
  * @module com.ultracart.admin.v2.models/ItemFulfillmentAddon
- * @version 4.0.78-RC
+ * @version 4.0.79-RC
  */
 var ItemFulfillmentAddon = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,10 @@ var ItemFulfillmentAddon = /*#__PURE__*/function () {
           obj['add_item_oid'] = _ApiClient["default"].convertToType(data['add_item_oid'], 'Number');
         }
 
+        if (data.hasOwnProperty('initial_order_only')) {
+          obj['initial_order_only'] = _ApiClient["default"].convertToType(data['initial_order_only'], 'Boolean');
+        }
+
         if (data.hasOwnProperty('once_per_order')) {
           obj['once_per_order'] = _ApiClient["default"].convertToType(data['once_per_order'], 'Boolean');
         }
@@ -91,7 +95,13 @@ ItemFulfillmentAddon.prototype['add_item_id'] = undefined;
 
 ItemFulfillmentAddon.prototype['add_item_oid'] = undefined;
 /**
- * Quantity
+ * Initial Order Only
+ * @member {Boolean} initial_order_only
+ */
+
+ItemFulfillmentAddon.prototype['initial_order_only'] = undefined;
+/**
+ * Once Per Order
  * @member {Boolean} once_per_order
  */
 

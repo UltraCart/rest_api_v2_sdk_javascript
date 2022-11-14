@@ -18,7 +18,7 @@ import TaxCountry from './TaxCountry';
 /**
  * The TaxProviderSelf model module.
  * @module com.ultracart.admin.v2.models/TaxProviderSelf
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 class TaxProviderSelf {
     /**

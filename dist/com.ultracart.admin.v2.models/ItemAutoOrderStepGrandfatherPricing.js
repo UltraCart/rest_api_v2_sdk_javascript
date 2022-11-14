@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemAutoOrderStepGrandfatherPricing model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing
- * @version 4.0.78-RC
+ * @version 4.0.79-RC
  */
 var ItemAutoOrderStepGrandfatherPricing = /*#__PURE__*/function () {
   /**

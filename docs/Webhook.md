@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **authentication_type** | **String** | The type of authentication this webhook will use when communicating with your server | [optional] 
 **basic_password** | **String** | Basic authentication password | [optional] 
 **basic_username** | **String** | Basic authentication user name | [optional] 
+**compress_events** | **Boolean** | Compress events with GZIP then base 64 encode them as a string | [optional] 
 **consecutive_failures** | **Number** | The number of consecutive failures that have occurred trying to deliver notifications to the target server | [optional] 
 **disabled** | **Boolean** | True if the webhook has been disabled | [optional] 
 **event_categories** | [**[WebhookEventCategory]**](WebhookEventCategory.md) | The categories of events.  Individual events and subscriptions are handled in the child objects.  _placeholders parameter effects the population of this on a retrieval. | [optional] 

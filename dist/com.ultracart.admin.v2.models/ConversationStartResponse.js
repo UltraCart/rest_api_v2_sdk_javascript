@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationStartResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationStartResponse
- * @version 4.0.78-RC
+ * @version 4.0.79-RC
  */
 var ConversationStartResponse = /*#__PURE__*/function () {
   /**
