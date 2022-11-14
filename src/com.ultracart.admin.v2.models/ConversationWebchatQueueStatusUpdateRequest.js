@@ -34,7 +34,7 @@
   /**
    * The ConversationWebchatQueueStatusUpdateRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest
-   * @version 3.10.62
+   * @version 3.10.63
    */
 
   /**
@@ -62,9 +62,36 @@
   }
 
   /**
-   * @member {String} agent_status
+   * Status of the agent
+   * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest.AgentStatusEnum} agent_status
    */
   exports.prototype.agent_status = undefined;
+
+
+  /**
+   * Allowed values for the <code>agent_status</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.AgentStatusEnum = {
+    /**
+     * value: "available"
+     * @const
+     */
+    available: "available",
+
+    /**
+     * value: "busy"
+     * @const
+     */
+    busy: "busy",
+
+    /**
+     * value: "unavailable"
+     * @const
+     */
+    unavailable: "unavailable"
+  };
 
   return exports;
 

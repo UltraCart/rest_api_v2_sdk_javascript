@@ -34,7 +34,7 @@
   /**
    * The CouponRestriction model module.
    * @module com.ultracart.admin.v2.models/CouponRestriction
-   * @version 3.10.62
+   * @version 3.10.63
    */
 
   /**

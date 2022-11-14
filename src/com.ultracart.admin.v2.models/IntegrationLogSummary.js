@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogSummary model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogSummary
-   * @version 3.10.62
+   * @version 3.10.63
    */
 
   /**

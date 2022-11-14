@@ -34,7 +34,7 @@
   /**
    * The Webhook model module.
    * @module com.ultracart.admin.v2.models/Webhook
-   * @version 3.10.62
+   * @version 3.10.63
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.basic_password = ApiClient.convertToType(data['basic_password'], 'String');
       if (data.hasOwnProperty('basic_username'))
         obj.basic_username = ApiClient.convertToType(data['basic_username'], 'String');
+      if (data.hasOwnProperty('compress_events'))
+        obj.compress_events = ApiClient.convertToType(data['compress_events'], 'Boolean');
       if (data.hasOwnProperty('consecutive_failures'))
         obj.consecutive_failures = ApiClient.convertToType(data['consecutive_failures'], 'Number');
       if (data.hasOwnProperty('disabled'))
@@ -129,6 +131,12 @@
    * @member {String} basic_username
    */
   exports.prototype.basic_username = undefined;
+
+  /**
+   * Compress events with GZIP then base 64 encode them as a string
+   * @member {Boolean} compress_events
+   */
+  exports.prototype.compress_events = undefined;
 
   /**
    * The number of consecutive failures that have occurred trying to deliver notifications to the target server
