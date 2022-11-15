@@ -34,7 +34,7 @@
   /**
    * The OrderRefundableResponse model module.
    * @module com.ultracart.admin.v2.models/OrderRefundableResponse
-   * @version 3.10.65
+   * @version 3.10.66
    */
 
   /**
@@ -80,7 +80,7 @@
   exports.prototype.metadata = undefined;
 
   /**
-   * Whether the order is refundable or not.
+   * Whether the order is refundable or not.  Null should be interpreted as false.
    * @member {Boolean} refundable
    */
   exports.prototype.refundable = undefined;

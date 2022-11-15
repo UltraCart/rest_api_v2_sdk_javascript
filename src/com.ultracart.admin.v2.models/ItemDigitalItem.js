@@ -34,7 +34,7 @@
   /**
    * The ItemDigitalItem model module.
    * @module com.ultracart.admin.v2.models/ItemDigitalItem
-   * @version 3.10.65
+   * @version 3.10.66
    */
 
   /**

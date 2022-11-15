@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conversation_uuid** | **String** | Conversation UUID if the websocket message is tied to a specific conversation | [optional] 
+**event_add_coupon** | [**ConversationEventAddCoupon**](ConversationEventAddCoupon.md) |  | [optional] 
+**event_add_item** | [**ConversationEventAddItem**](ConversationEventAddItem.md) |  | [optional] 
 **event_conversation_closed** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_new_conversation** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_new_message** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
@@ -44,6 +46,10 @@ Name | Type | Description | Notes
 * `read_message` (value: `"read message"`)
 
 * `typing` (value: `"typing"`)
+
+* `add_coupon` (value: `"add coupon"`)
+
+* `add_item` (value: `"add item"`)
 
 
 
