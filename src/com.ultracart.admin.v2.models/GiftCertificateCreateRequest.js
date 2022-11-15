@@ -34,7 +34,7 @@
   /**
    * The GiftCertificateCreateRequest model module.
    * @module com.ultracart.admin.v2.models/GiftCertificateCreateRequest
-   * @version 3.10.66
+   * @version 3.10.67
    */
 
   /**

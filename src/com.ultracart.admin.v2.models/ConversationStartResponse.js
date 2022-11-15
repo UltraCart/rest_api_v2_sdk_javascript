@@ -34,7 +34,7 @@
   /**
    * The ConversationStartResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationStartResponse
-   * @version 3.10.66
+   * @version 3.10.67
    */
 
   /**
