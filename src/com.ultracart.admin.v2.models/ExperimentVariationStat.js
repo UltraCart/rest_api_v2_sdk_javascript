@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExperimentVariationStat model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariationStat
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 class ExperimentVariationStat {
     /**

@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationEventAddCoupon from './ConversationEventAddCoupon';
+import ConversationEventAddItem from './ConversationEventAddItem';
 import ConversationEventQueuePosition from './ConversationEventQueuePosition';
 import ConversationEventRRWeb from './ConversationEventRRWeb';
 import ConversationEventReadMessage from './ConversationEventReadMessage';
@@ -23,7 +25,7 @@ import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -56,6 +58,12 @@ class ConversationWebsocketMessage {
 
             if (data.hasOwnProperty('conversation_uuid')) {
                 obj['conversation_uuid'] = ApiClient.convertToType(data['conversation_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('event_add_coupon')) {
+                obj['event_add_coupon'] = ConversationEventAddCoupon.constructFromObject(data['event_add_coupon']);
+            }
+            if (data.hasOwnProperty('event_add_item')) {
+                obj['event_add_item'] = ConversationEventAddItem.constructFromObject(data['event_add_item']);
             }
             if (data.hasOwnProperty('event_conversation_closed')) {
                 obj['event_conversation_closed'] = ConversationSummary.constructFromObject(data['event_conversation_closed']);
@@ -108,6 +116,16 @@ class ConversationWebsocketMessage {
  * @member {String} conversation_uuid
  */
 ConversationWebsocketMessage.prototype['conversation_uuid'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventAddCoupon} event_add_coupon
+ */
+ConversationWebsocketMessage.prototype['event_add_coupon'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventAddItem} event_add_item
+ */
+ConversationWebsocketMessage.prototype['event_add_item'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_conversation_closed
@@ -251,7 +269,19 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
      * value: "typing"
      * @const
      */
-    "typing": "typing"
+    "typing": "typing",
+
+    /**
+     * value: "add coupon"
+     * @const
+     */
+    "add coupon": "add coupon",
+
+    /**
+     * value: "add item"
+     * @const
+     */
+    "add item": "add item"
 };
 
 

@@ -21,7 +21,7 @@ import UserLogin from './UserLogin';
 /**
  * The User model module.
  * @module com.ultracart.admin.v2.models/User
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 class User {
     /**

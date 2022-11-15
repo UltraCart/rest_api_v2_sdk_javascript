@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderPaymentCreditCard model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCreditCard
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 class OrderPaymentCreditCard {
     /**

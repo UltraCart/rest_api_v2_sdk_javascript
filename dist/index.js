@@ -3345,6 +3345,12 @@ Object.defineProperty(exports, "OrderQuote", {
     return _OrderQuote["default"];
   }
 });
+Object.defineProperty(exports, "OrderRefundableResponse", {
+  enumerable: true,
+  get: function get() {
+    return _OrderRefundableResponse["default"];
+  }
+});
 Object.defineProperty(exports, "OrderReplacement", {
   enumerable: true,
   get: function get() {
@@ -5301,6 +5307,8 @@ var _OrderQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.model
 var _OrderQueryBatch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderQueryBatch"));
 
 var _OrderQuote = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderQuote"));
+
+var _OrderRefundableResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderRefundableResponse"));
 
 var _OrderReplacement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderReplacement"));
 

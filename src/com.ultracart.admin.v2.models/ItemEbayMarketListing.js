@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemEbayMarketListing model module.
  * @module com.ultracart.admin.v2.models/ItemEbayMarketListing
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 class ItemEbayMarketListing {
     /**

@@ -133,6 +133,8 @@ import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
 import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationAgentAuth';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationEventAddCoupon from './com.ultracart.admin.v2.models/ConversationEventAddCoupon';
+import ConversationEventAddItem from './com.ultracart.admin.v2.models/ConversationEventAddItem';
 import ConversationEventQueuePosition from './com.ultracart.admin.v2.models/ConversationEventQueuePosition';
 import ConversationEventRRWeb from './com.ultracart.admin.v2.models/ConversationEventRRWeb';
 import ConversationEventReadMessage from './com.ultracart.admin.v2.models/ConversationEventReadMessage';
@@ -746,7 +748,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.82-RC
+* @version 4.0.83-RC
 */
 export {
     /**
@@ -1474,6 +1476,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse}
      */
     ConversationAgentAuthResponse,
+
+    /**
+     * The ConversationEventAddCoupon model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEventAddCoupon}
+     */
+    ConversationEventAddCoupon,
+
+    /**
+     * The ConversationEventAddItem model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEventAddItem}
+     */
+    ConversationEventAddItem,
 
     /**
      * The ConversationEventQueuePosition model constructor.

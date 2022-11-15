@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The OrderRefundableResponse model module.
  * @module com.ultracart.admin.v2.models/OrderRefundableResponse
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 class OrderRefundableResponse {
     /**
@@ -83,7 +83,7 @@ OrderRefundableResponse.prototype['error'] = undefined;
 OrderRefundableResponse.prototype['metadata'] = undefined;
 
 /**
- * Whether the order is refundable or not.
+ * Whether the order is refundable or not.  Null should be interpreted as false.
  * @member {Boolean} refundable
  */
 OrderRefundableResponse.prototype['refundable'] = undefined;

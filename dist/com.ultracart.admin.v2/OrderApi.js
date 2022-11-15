@@ -35,6 +35,8 @@ var _OrderQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.mode
 
 var _OrderQueryBatch = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderQueryBatch"));
 
+var _OrderRefundableResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderRefundableResponse"));
+
 var _OrderReplacement = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderReplacement"));
 
 var _OrderReplacementResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderReplacementResponse"));
@@ -56,7 +58,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.81-RC
+* @version 4.0.82-RC
 */
 var OrderApi = /*#__PURE__*/function () {
   /**
@@ -758,6 +760,43 @@ var OrderApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrderResponse["default"];
       return this.apiClient.callApi('/order/orders', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the isRefundableOrder operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~isRefundableOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderRefundableResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Determine if an order can be refunded
+     * Determine if an order can be refunded based upon payment method and age 
+     * @param {String} order_id The order id to check for refundable order.
+     * @param {module:com.ultracart.admin.v2/OrderApi~isRefundableOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderRefundableResponse}
+     */
+
+  }, {
+    key: "isRefundableOrder",
+    value: function isRefundableOrder(order_id, callback) {
+      var postBody = null; // verify the required parameter 'order_id' is set
+
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling isRefundableOrder");
+      }
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _OrderRefundableResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/refundable', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the processPayment operation.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartAffirmCheckoutResponse model module.
  * @module com.ultracart.admin.v2.models/CartAffirmCheckoutResponse
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 class CartAffirmCheckoutResponse {
     /**

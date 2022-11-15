@@ -128,6 +128,8 @@ docs/Conversation.md
 docs/ConversationAgentAuth.md
 docs/ConversationAgentAuthResponse.md
 docs/ConversationApi.md
+docs/ConversationEventAddCoupon.md
+docs/ConversationEventAddItem.md
 docs/ConversationEventQueuePosition.md
 docs/ConversationEventRRWeb.md
 docs/ConversationEventReadMessage.md
@@ -828,6 +830,8 @@ src/com.ultracart.admin.v2.models/CityStateZip.js
 src/com.ultracart.admin.v2.models/Conversation.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
+src/com.ultracart.admin.v2.models/ConversationEventAddCoupon.js
+src/com.ultracart.admin.v2.models/ConversationEventAddItem.js
 src/com.ultracart.admin.v2.models/ConversationEventQueuePosition.js
 src/com.ultracart.admin.v2.models/ConversationEventRRWeb.js
 src/com.ultracart.admin.v2.models/ConversationEventReadMessage.js
