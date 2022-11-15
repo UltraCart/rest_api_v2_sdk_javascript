@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GiftCertificateLedgerEntry model module.
  * @module com.ultracart.admin.v2.models/GiftCertificateLedgerEntry
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 var GiftCertificateLedgerEntry = /*#__PURE__*/function () {
   /**

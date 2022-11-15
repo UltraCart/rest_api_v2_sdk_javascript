@@ -17,7 +17,7 @@ import Country from './Country';
 /**
  * The CountriesResponse model module.
  * @module com.ultracart.admin.v2.models/CountriesResponse
- * @version 4.0.80-RC
+ * @version 4.0.81-RC
  */
 class CountriesResponse {
     /**

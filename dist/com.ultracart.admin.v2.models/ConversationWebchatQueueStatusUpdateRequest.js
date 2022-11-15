@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatusUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 var ConversationWebchatQueueStatusUpdateRequest = /*#__PURE__*/function () {
   /**
@@ -66,10 +66,36 @@ var ConversationWebchatQueueStatusUpdateRequest = /*#__PURE__*/function () {
   return ConversationWebchatQueueStatusUpdateRequest;
 }();
 /**
- * @member {String} agent_status
+ * Status of the agent
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest.AgentStatusEnum} agent_status
  */
 
 
 ConversationWebchatQueueStatusUpdateRequest.prototype['agent_status'] = undefined;
+/**
+ * Allowed values for the <code>agent_status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+ConversationWebchatQueueStatusUpdateRequest['AgentStatusEnum'] = {
+  /**
+   * value: "available"
+   * @const
+   */
+  "available": "available",
+
+  /**
+   * value: "busy"
+   * @const
+   */
+  "busy": "busy",
+
+  /**
+   * value: "unavailable"
+   * @const
+   */
+  "unavailable": "unavailable"
+};
 var _default = ConversationWebchatQueueStatusUpdateRequest;
 exports["default"] = _default;

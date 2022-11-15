@@ -18,7 +18,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.80-RC
+ * @version 4.0.81-RC
  */
 class Conversation {
     /**
@@ -49,6 +49,9 @@ class Conversation {
         if (data) {
             obj = obj || new Conversation();
 
+            if (data.hasOwnProperty('base_language_iso_code')) {
+                obj['base_language_iso_code'] = ApiClient.convertToType(data['base_language_iso_code'], 'String');
+            }
             if (data.hasOwnProperty('closed')) {
                 obj['closed'] = ApiClient.convertToType(data['closed'], 'Boolean');
             }
@@ -103,6 +106,12 @@ class Conversation {
 
 
 }
+
+/**
+ * The base language iso code for the StoreFront that everything is translated into
+ * @member {String} base_language_iso_code
+ */
+Conversation.prototype['base_language_iso_code'] = undefined;
 
 /**
  * @member {Boolean} closed

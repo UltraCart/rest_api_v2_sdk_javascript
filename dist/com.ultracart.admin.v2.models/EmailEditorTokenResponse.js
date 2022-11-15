@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailEditorTokenResponse model module.
  * @module com.ultracart.admin.v2.models/EmailEditorTokenResponse
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 var EmailEditorTokenResponse = /*#__PURE__*/function () {
   /**

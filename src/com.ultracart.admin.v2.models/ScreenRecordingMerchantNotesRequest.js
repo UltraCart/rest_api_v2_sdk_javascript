@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingMerchantNotesRequest model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingMerchantNotesRequest
- * @version 4.0.80-RC
+ * @version 4.0.81-RC
  */
 class ScreenRecordingMerchantNotesRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailThirdPartyList model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyList
- * @version 4.0.80-RC
+ * @version 4.0.81-RC
  */
 class EmailThirdPartyList {
     /**

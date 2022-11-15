@@ -17,7 +17,7 @@ import ItemReview from './ItemReview';
 /**
  * The ItemReviews model module.
  * @module com.ultracart.admin.v2.models/ItemReviews
- * @version 4.0.80-RC
+ * @version 4.0.81-RC
  */
 class ItemReviews {
     /**

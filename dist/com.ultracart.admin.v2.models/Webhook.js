@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Webhook model module.
  * @module com.ultracart.admin.v2.models/Webhook
- * @version 4.0.79-RC
+ * @version 4.0.80-RC
  */
 var Webhook = /*#__PURE__*/function () {
   /**
@@ -80,6 +80,10 @@ var Webhook = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('basic_username')) {
           obj['basic_username'] = _ApiClient["default"].convertToType(data['basic_username'], 'String');
+        }
+
+        if (data.hasOwnProperty('compress_events')) {
+          obj['compress_events'] = _ApiClient["default"].convertToType(data['compress_events'], 'Boolean');
         }
 
         if (data.hasOwnProperty('consecutive_failures')) {
@@ -173,6 +177,12 @@ Webhook.prototype['basic_password'] = undefined;
  */
 
 Webhook.prototype['basic_username'] = undefined;
+/**
+ * Compress events with GZIP then base 64 encode them as a string
+ * @member {Boolean} compress_events
+ */
+
+Webhook.prototype['compress_events'] = undefined;
 /**
  * The number of consecutive failures that have occurred trying to deliver notifications to the target server
  * @member {Number} consecutive_failures
