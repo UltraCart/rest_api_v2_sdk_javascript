@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingHeatmapUrl model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapUrl
- * @version 4.0.81-RC
+ * @version 4.0.82-RC
  */
 class ScreenRecordingHeatmapUrl {
     /**

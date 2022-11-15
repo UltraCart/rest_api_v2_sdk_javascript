@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.80-RC
+ * @version 4.0.81-RC
  */
 var Conversation = /*#__PURE__*/function () {
   /**
@@ -57,6 +57,10 @@ var Conversation = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new Conversation();
+
+        if (data.hasOwnProperty('base_language_iso_code')) {
+          obj['base_language_iso_code'] = _ApiClient["default"].convertToType(data['base_language_iso_code'], 'String');
+        }
 
         if (data.hasOwnProperty('closed')) {
           obj['closed'] = _ApiClient["default"].convertToType(data['closed'], 'Boolean');
@@ -130,9 +134,15 @@ var Conversation = /*#__PURE__*/function () {
   return Conversation;
 }();
 /**
- * @member {Boolean} closed
+ * The base language iso code for the StoreFront that everything is translated into
+ * @member {String} base_language_iso_code
  */
 
+
+Conversation.prototype['base_language_iso_code'] = undefined;
+/**
+ * @member {Boolean} closed
+ */
 
 Conversation.prototype['closed'] = undefined;
 /**

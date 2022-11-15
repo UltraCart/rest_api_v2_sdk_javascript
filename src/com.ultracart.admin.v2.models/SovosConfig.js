@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SovosConfig model module.
  * @module com.ultracart.admin.v2.models/SovosConfig
- * @version 4.0.81-RC
+ * @version 4.0.82-RC
  */
 class SovosConfig {
     /**

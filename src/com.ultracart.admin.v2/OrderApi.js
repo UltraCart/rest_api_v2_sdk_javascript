@@ -27,6 +27,7 @@ import OrderProcessPaymentRequest from '../com.ultracart.admin.v2.models/OrderPr
 import OrderProcessPaymentResponse from '../com.ultracart.admin.v2.models/OrderProcessPaymentResponse';
 import OrderQuery from '../com.ultracart.admin.v2.models/OrderQuery';
 import OrderQueryBatch from '../com.ultracart.admin.v2.models/OrderQueryBatch';
+import OrderRefundableResponse from '../com.ultracart.admin.v2.models/OrderRefundableResponse';
 import OrderReplacement from '../com.ultracart.admin.v2.models/OrderReplacement';
 import OrderReplacementResponse from '../com.ultracart.admin.v2.models/OrderReplacementResponse';
 import OrderResponse from '../com.ultracart.admin.v2.models/OrderResponse';
@@ -36,7 +37,7 @@ import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.81-RC
+* @version 4.0.82-RC
 */
 export default class OrderApi {
 
@@ -829,6 +830,49 @@ export default class OrderApi {
       let returnType = OrderResponse;
       return this.apiClient.callApi(
         '/order/orders', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the isRefundableOrder operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~isRefundableOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderRefundableResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Determine if an order can be refunded
+     * Determine if an order can be refunded based upon payment method and age 
+     * @param {String} order_id The order id to check for refundable order.
+     * @param {module:com.ultracart.admin.v2/OrderApi~isRefundableOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderRefundableResponse}
+     */
+    isRefundableOrder(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling isRefundableOrder");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderRefundableResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/refundable', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

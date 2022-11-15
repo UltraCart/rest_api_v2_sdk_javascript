@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AffiliateClick model module.
  * @module com.ultracart.admin.v2.models/AffiliateClick
- * @version 4.0.80-RC
+ * @version 4.0.81-RC
  */
 var AffiliateClick = /*#__PURE__*/function () {
   /**
@@ -96,8 +96,16 @@ var AffiliateClick = /*#__PURE__*/function () {
           obj['referrer_query_string'] = _ApiClient["default"].convertToType(data['referrer_query_string'], 'String');
         }
 
+        if (data.hasOwnProperty('screen_recording_uuid')) {
+          obj['screen_recording_uuid'] = _ApiClient["default"].convertToType(data['screen_recording_uuid'], 'String');
+        }
+
         if (data.hasOwnProperty('sub_id')) {
           obj['sub_id'] = _ApiClient["default"].convertToType(data['sub_id'], 'String');
+        }
+
+        if (data.hasOwnProperty('ucacid')) {
+          obj['ucacid'] = _ApiClient["default"].convertToType(data['ucacid'], 'String');
         }
       }
 
@@ -168,10 +176,22 @@ AffiliateClick.prototype['referrer'] = undefined;
 
 AffiliateClick.prototype['referrer_query_string'] = undefined;
 /**
+ * Screen recording UUID
+ * @member {String} screen_recording_uuid
+ */
+
+AffiliateClick.prototype['screen_recording_uuid'] = undefined;
+/**
  * Sub ID value passed on the click
  * @member {String} sub_id
  */
 
 AffiliateClick.prototype['sub_id'] = undefined;
+/**
+ * UC Analytics Identifier
+ * @member {String} ucacid
+ */
+
+AffiliateClick.prototype['ucacid'] = undefined;
 var _default = AffiliateClick;
 exports["default"] = _default;
