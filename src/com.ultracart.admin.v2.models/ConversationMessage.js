@@ -17,7 +17,7 @@ import ConversationMessageTransportStatus from './ConversationMessageTransportSt
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.83-RC
+ * @version 4.0.84-RC
  */
 class ConversationMessage {
     /**

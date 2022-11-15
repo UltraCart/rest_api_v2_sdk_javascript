@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailDashboardStatsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailDashboardStatsResponse
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 var EmailDashboardStatsResponse = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WebhookEventCategory model module.
  * @module com.ultracart.admin.v2.models/WebhookEventCategory
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 var WebhookEventCategory = /*#__PURE__*/function () {
   /**

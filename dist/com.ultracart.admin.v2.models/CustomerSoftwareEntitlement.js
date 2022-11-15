@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerSoftwareEntitlement model module.
  * @module com.ultracart.admin.v2.models/CustomerSoftwareEntitlement
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 var CustomerSoftwareEntitlement = /*#__PURE__*/function () {
   /**

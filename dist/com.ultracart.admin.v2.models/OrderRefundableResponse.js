@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderRefundableResponse model module.
  * @module com.ultracart.admin.v2.models/OrderRefundableResponse
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 var OrderRefundableResponse = /*#__PURE__*/function () {
   /**
@@ -99,7 +99,7 @@ OrderRefundableResponse.prototype['error'] = undefined;
 
 OrderRefundableResponse.prototype['metadata'] = undefined;
 /**
- * Whether the order is refundable or not.
+ * Whether the order is refundable or not.  Null should be interpreted as false.
  * @member {Boolean} refundable
  */
 

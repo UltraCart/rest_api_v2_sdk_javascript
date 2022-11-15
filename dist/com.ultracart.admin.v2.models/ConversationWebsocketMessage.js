@@ -7,6 +7,10 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationEventAddCoupon = _interopRequireDefault(require("./ConversationEventAddCoupon"));
+
+var _ConversationEventAddItem = _interopRequireDefault(require("./ConversationEventAddItem"));
+
 var _ConversationEventQueuePosition = _interopRequireDefault(require("./ConversationEventQueuePosition"));
 
 var _ConversationEventRRWeb = _interopRequireDefault(require("./ConversationEventRRWeb"));
@@ -32,7 +36,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.82-RC
+ * @version 4.0.83-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -70,6 +74,14 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('conversation_uuid')) {
           obj['conversation_uuid'] = _ApiClient["default"].convertToType(data['conversation_uuid'], 'String');
+        }
+
+        if (data.hasOwnProperty('event_add_coupon')) {
+          obj['event_add_coupon'] = _ConversationEventAddCoupon["default"].constructFromObject(data['event_add_coupon']);
+        }
+
+        if (data.hasOwnProperty('event_add_item')) {
+          obj['event_add_item'] = _ConversationEventAddItem["default"].constructFromObject(data['event_add_item']);
         }
 
         if (data.hasOwnProperty('event_conversation_closed')) {
@@ -138,6 +150,16 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
 
 
 ConversationWebsocketMessage.prototype['conversation_uuid'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventAddCoupon} event_add_coupon
+ */
+
+ConversationWebsocketMessage.prototype['event_add_coupon'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventAddItem} event_add_item
+ */
+
+ConversationWebsocketMessage.prototype['event_add_item'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_conversation_closed
  */
@@ -276,7 +298,19 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
    * value: "typing"
    * @const
    */
-  "typing": "typing"
+  "typing": "typing",
+
+  /**
+   * value: "add coupon"
+   * @const
+   */
+  "add coupon": "add coupon",
+
+  /**
+   * value: "add item"
+   * @const
+   */
+  "add item": "add item"
 };
 /**
  * Allowed values for the <code>type</code> property.

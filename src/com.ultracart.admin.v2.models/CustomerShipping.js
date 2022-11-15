@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerShipping model module.
  * @module com.ultracart.admin.v2.models/CustomerShipping
- * @version 4.0.83-RC
+ * @version 4.0.84-RC
  */
 class CustomerShipping {
     /**

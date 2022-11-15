@@ -18,7 +18,7 @@ import Weight from './Weight';
 /**
  * The OrderShipping model module.
  * @module com.ultracart.admin.v2.models/OrderShipping
- * @version 4.0.83-RC
+ * @version 4.0.84-RC
  */
 class OrderShipping {
     /**
