@@ -34,7 +34,7 @@
   /**
    * The AffiliateClick model module.
    * @module com.ultracart.admin.v2.models/AffiliateClick
-   * @version 3.10.63
+   * @version 3.10.64
    */
 
   /**
@@ -75,8 +75,12 @@
         obj.referrer = ApiClient.convertToType(data['referrer'], 'String');
       if (data.hasOwnProperty('referrer_query_string'))
         obj.referrer_query_string = ApiClient.convertToType(data['referrer_query_string'], 'String');
+      if (data.hasOwnProperty('screen_recording_uuid'))
+        obj.screen_recording_uuid = ApiClient.convertToType(data['screen_recording_uuid'], 'String');
       if (data.hasOwnProperty('sub_id'))
         obj.sub_id = ApiClient.convertToType(data['sub_id'], 'String');
+      if (data.hasOwnProperty('ucacid'))
+        obj.ucacid = ApiClient.convertToType(data['ucacid'], 'String');
     }
     return obj;
   }
@@ -141,10 +145,22 @@
   exports.prototype.referrer_query_string = undefined;
 
   /**
+   * Screen recording UUID
+   * @member {String} screen_recording_uuid
+   */
+  exports.prototype.screen_recording_uuid = undefined;
+
+  /**
    * Sub ID value passed on the click
    * @member {String} sub_id
    */
   exports.prototype.sub_id = undefined;
+
+  /**
+   * UC Analytics Identifier
+   * @member {String} ucacid
+   */
+  exports.prototype.ucacid = undefined;
 
   return exports;
 

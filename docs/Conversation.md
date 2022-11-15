@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**base_language_iso_code** | **String** | The base language iso code for the StoreFront that everything is translated into | [optional] 
 **closed** | **Boolean** |  | [optional] 
 **conversation_arn** | **String** |  | [optional] 
 **conversation_uuid** | **String** |  | [optional] 

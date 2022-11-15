@@ -34,7 +34,7 @@
   /**
    * The Conversation model module.
    * @module com.ultracart.admin.v2.models/Conversation
-   * @version 3.10.63
+   * @version 3.10.64
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('base_language_iso_code'))
+        obj.base_language_iso_code = ApiClient.convertToType(data['base_language_iso_code'], 'String');
       if (data.hasOwnProperty('closed'))
         obj.closed = ApiClient.convertToType(data['closed'], 'Boolean');
       if (data.hasOwnProperty('conversation_arn'))
@@ -90,6 +92,12 @@
     }
     return obj;
   }
+
+  /**
+   * The base language iso code for the StoreFront that everything is translated into
+   * @member {String} base_language_iso_code
+   */
+  exports.prototype.base_language_iso_code = undefined;
 
   /**
    * @member {Boolean} closed
