@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CartItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./CartItem'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationEventAddItem = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ConversationEventAddItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartItem);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, CartItem) {
   'use strict';
 
   /**
    * The ConversationEventAddItem model module.
    * @module com.ultracart.admin.v2.models/ConversationEventAddItem
-   * @version 3.10.67
+   * @version 3.10.68
    */
 
   /**
@@ -55,16 +55,30 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('item_id'))
-        obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
+      if (data.hasOwnProperty('agent_arn'))
+        obj.agent_arn = ApiClient.convertToType(data['agent_arn'], 'String');
+      if (data.hasOwnProperty('agent_name'))
+        obj.agent_name = ApiClient.convertToType(data['agent_name'], 'String');
+      if (data.hasOwnProperty('items'))
+        obj.items = ApiClient.convertToType(data['items'], [CartItem]);
     }
     return obj;
   }
 
   /**
-   * @member {String} item_id
+   * @member {String} agent_arn
    */
-  exports.prototype.item_id = undefined;
+  exports.prototype.agent_arn = undefined;
+
+  /**
+   * @member {String} agent_name
+   */
+  exports.prototype.agent_name = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartItem>} items
+   */
+  exports.prototype.items = undefined;
 
   return exports;
 

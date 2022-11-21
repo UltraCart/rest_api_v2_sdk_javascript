@@ -34,7 +34,7 @@
   /**
    * The Item model module.
    * @module com.ultracart.admin.v2.models/Item
-   * @version 3.10.67
+   * @version 3.10.68
    */
 
   /**

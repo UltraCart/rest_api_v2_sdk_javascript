@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 
 * `KG` (value: `"KG"`)
 
+* `G` (value: `"G"`)
+
 * `LB` (value: `"LB"`)
 
 * `OZ` (value: `"OZ"`)

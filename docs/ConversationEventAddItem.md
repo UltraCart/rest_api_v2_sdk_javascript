@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_id** | **String** |  | [optional] 
+**agent_arn** | **String** |  | [optional] 
+**agent_name** | **String** |  | [optional] 
+**items** | [**[CartItem]**](CartItem.md) |  | [optional] 
 
 

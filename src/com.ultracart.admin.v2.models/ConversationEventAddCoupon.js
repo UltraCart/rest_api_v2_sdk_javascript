@@ -34,7 +34,7 @@
   /**
    * The ConversationEventAddCoupon model module.
    * @module com.ultracart.admin.v2.models/ConversationEventAddCoupon
-   * @version 3.10.67
+   * @version 3.10.68
    */
 
   /**
@@ -55,11 +55,25 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('agent_arn'))
+        obj.agent_arn = ApiClient.convertToType(data['agent_arn'], 'String');
+      if (data.hasOwnProperty('agent_name'))
+        obj.agent_name = ApiClient.convertToType(data['agent_name'], 'String');
       if (data.hasOwnProperty('coupon_code'))
         obj.coupon_code = ApiClient.convertToType(data['coupon_code'], 'String');
     }
     return obj;
   }
+
+  /**
+   * @member {String} agent_arn
+   */
+  exports.prototype.agent_arn = undefined;
+
+  /**
+   * @member {String} agent_name
+   */
+  exports.prototype.agent_name = undefined;
 
   /**
    * @member {String} coupon_code

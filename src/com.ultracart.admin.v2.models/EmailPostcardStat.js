@@ -34,7 +34,7 @@
   /**
    * The EmailPostcardStat model module.
    * @module com.ultracart.admin.v2.models/EmailPostcardStat
-   * @version 3.10.67
+   * @version 3.10.68
    */
 
   /**
