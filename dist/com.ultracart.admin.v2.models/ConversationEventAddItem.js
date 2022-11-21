@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _CartItem = _interopRequireDefault(require("./CartItem"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventAddItem model module.
  * @module com.ultracart.admin.v2.models/ConversationEventAddItem
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 var ConversationEventAddItem = /*#__PURE__*/function () {
   /**
@@ -54,8 +56,16 @@ var ConversationEventAddItem = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ConversationEventAddItem();
 
-        if (data.hasOwnProperty('item_id')) {
-          obj['item_id'] = _ApiClient["default"].convertToType(data['item_id'], 'String');
+        if (data.hasOwnProperty('agent_arn')) {
+          obj['agent_arn'] = _ApiClient["default"].convertToType(data['agent_arn'], 'String');
+        }
+
+        if (data.hasOwnProperty('agent_name')) {
+          obj['agent_name'] = _ApiClient["default"].convertToType(data['agent_name'], 'String');
+        }
+
+        if (data.hasOwnProperty('items')) {
+          obj['items'] = _ApiClient["default"].convertToType(data['items'], [_CartItem["default"]]);
         }
       }
 
@@ -66,10 +76,20 @@ var ConversationEventAddItem = /*#__PURE__*/function () {
   return ConversationEventAddItem;
 }();
 /**
- * @member {String} item_id
+ * @member {String} agent_arn
  */
 
 
-ConversationEventAddItem.prototype['item_id'] = undefined;
+ConversationEventAddItem.prototype['agent_arn'] = undefined;
+/**
+ * @member {String} agent_name
+ */
+
+ConversationEventAddItem.prototype['agent_name'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/CartItem>} items
+ */
+
+ConversationEventAddItem.prototype['items'] = undefined;
 var _default = ConversationEventAddItem;
 exports["default"] = _default;

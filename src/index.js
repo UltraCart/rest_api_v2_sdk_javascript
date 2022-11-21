@@ -151,6 +151,7 @@ import ConversationStartRequest from './com.ultracart.admin.v2.models/Conversati
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
 import ConversationTwilioAccount from './com.ultracart.admin.v2.models/ConversationTwilioAccount';
+import ConversationWebchatContext from './com.ultracart.admin.v2.models/ConversationWebchatContext';
 import ConversationWebchatQueueStatus from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatus';
 import ConversationWebchatQueueStatusAgent from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent';
 import ConversationWebchatQueueStatusQueueEntry from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry';
@@ -403,6 +404,10 @@ import GroupResponse from './com.ultracart.admin.v2.models/GroupResponse';
 import GroupUserMembership from './com.ultracart.admin.v2.models/GroupUserMembership';
 import GroupsResponse from './com.ultracart.admin.v2.models/GroupsResponse';
 import HTTPHeader from './com.ultracart.admin.v2.models/HTTPHeader';
+import HitPageView from './com.ultracart.admin.v2.models/HitPageView';
+import HitPageViewMetaData from './com.ultracart.admin.v2.models/HitPageViewMetaData';
+import HitSessionStart from './com.ultracart.admin.v2.models/HitSessionStart';
+import HitSessionUtm from './com.ultracart.admin.v2.models/HitSessionUtm';
 import IntegrationLog from './com.ultracart.admin.v2.models/IntegrationLog';
 import IntegrationLogFile from './com.ultracart.admin.v2.models/IntegrationLogFile';
 import IntegrationLogLog from './com.ultracart.admin.v2.models/IntegrationLogLog';
@@ -749,7 +754,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.85-RC
+* @version 4.0.86-RC
 */
 export {
     /**
@@ -1585,6 +1590,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationTwilioAccount}
      */
     ConversationTwilioAccount,
+
+    /**
+     * The ConversationWebchatContext model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationWebchatContext}
+     */
+    ConversationWebchatContext,
 
     /**
      * The ConversationWebchatQueueStatus model constructor.
@@ -3097,6 +3108,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/HTTPHeader}
      */
     HTTPHeader,
+
+    /**
+     * The HitPageView model constructor.
+     * @property {module:com.ultracart.admin.v2.models/HitPageView}
+     */
+    HitPageView,
+
+    /**
+     * The HitPageViewMetaData model constructor.
+     * @property {module:com.ultracart.admin.v2.models/HitPageViewMetaData}
+     */
+    HitPageViewMetaData,
+
+    /**
+     * The HitSessionStart model constructor.
+     * @property {module:com.ultracart.admin.v2.models/HitSessionStart}
+     */
+    HitSessionStart,
+
+    /**
+     * The HitSessionUtm model constructor.
+     * @property {module:com.ultracart.admin.v2.models/HitSessionUtm}
+     */
+    HitSessionUtm,
 
     /**
      * The IntegrationLog model constructor.

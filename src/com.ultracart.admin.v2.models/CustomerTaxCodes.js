@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerTaxCodes model module.
  * @module com.ultracart.admin.v2.models/CustomerTaxCodes
- * @version 4.0.85-RC
+ * @version 4.0.86-RC
  */
 class CustomerTaxCodes {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventAddCoupon model module.
  * @module com.ultracart.admin.v2.models/ConversationEventAddCoupon
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 var ConversationEventAddCoupon = /*#__PURE__*/function () {
   /**
@@ -54,6 +54,14 @@ var ConversationEventAddCoupon = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ConversationEventAddCoupon();
 
+        if (data.hasOwnProperty('agent_arn')) {
+          obj['agent_arn'] = _ApiClient["default"].convertToType(data['agent_arn'], 'String');
+        }
+
+        if (data.hasOwnProperty('agent_name')) {
+          obj['agent_name'] = _ApiClient["default"].convertToType(data['agent_name'], 'String');
+        }
+
         if (data.hasOwnProperty('coupon_code')) {
           obj['coupon_code'] = _ApiClient["default"].convertToType(data['coupon_code'], 'String');
         }
@@ -66,9 +74,19 @@ var ConversationEventAddCoupon = /*#__PURE__*/function () {
   return ConversationEventAddCoupon;
 }();
 /**
- * @member {String} coupon_code
+ * @member {String} agent_arn
  */
 
+
+ConversationEventAddCoupon.prototype['agent_arn'] = undefined;
+/**
+ * @member {String} agent_name
+ */
+
+ConversationEventAddCoupon.prototype['agent_name'] = undefined;
+/**
+ * @member {String} coupon_code
+ */
 
 ConversationEventAddCoupon.prototype['coupon_code'] = undefined;
 var _default = ConversationEventAddCoupon;

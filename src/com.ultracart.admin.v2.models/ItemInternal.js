@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemInternal model module.
  * @module com.ultracart.admin.v2.models/ItemInternal
- * @version 4.0.85-RC
+ * @version 4.0.86-RC
  */
 class ItemInternal {
     /**

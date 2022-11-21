@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Weight model module.
  * @module com.ultracart.admin.v2.models/Weight
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 var Weight = /*#__PURE__*/function () {
   /**
@@ -94,6 +94,12 @@ Weight['UomEnum'] = {
    * @const
    */
   "KG": "KG",
+
+  /**
+   * value: "G"
+   * @const
+   */
+  "G": "G",
 
   /**
    * value: "LB"

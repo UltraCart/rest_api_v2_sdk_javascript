@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartSettingsPaymentAmazon model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentAmazon
- * @version 4.0.85-RC
+ * @version 4.0.86-RC
  */
 class CartSettingsPaymentAmazon {
     /**

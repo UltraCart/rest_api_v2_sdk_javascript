@@ -19,6 +19,8 @@ var _ConversationEventReadMessage = _interopRequireDefault(require("./Conversati
 
 var _ConversationEventTyping = _interopRequireDefault(require("./ConversationEventTyping"));
 
+var _ConversationEventWebchatContext = _interopRequireDefault(require("./ConversationEventWebchatContext"));
+
 var _ConversationMessage = _interopRequireDefault(require("./ConversationMessage"));
 
 var _ConversationSummary = _interopRequireDefault(require("./ConversationSummary"));
@@ -36,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -128,6 +130,10 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
           obj['event_updated_message'] = _ConversationMessage["default"].constructFromObject(data['event_updated_message']);
         }
 
+        if (data.hasOwnProperty('event_webchat_context')) {
+          obj['event_webchat_context'] = _ConversationEventWebchatContext["default"].constructFromObject(data['event_webchat_context']);
+        }
+
         if (data.hasOwnProperty('message')) {
           obj['message'] = _ConversationMessage["default"].constructFromObject(data['message']);
         }
@@ -216,6 +222,11 @@ ConversationWebsocketMessage.prototype['event_typing'] = undefined;
  */
 
 ConversationWebsocketMessage.prototype['event_updated_message'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventWebchatContext} event_webchat_context
+ */
+
+ConversationWebsocketMessage.prototype['event_webchat_context'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationMessage} message
  */

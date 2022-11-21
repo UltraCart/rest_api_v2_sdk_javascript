@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GroupUserMembership model module.
  * @module com.ultracart.admin.v2.models/GroupUserMembership
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 var GroupUserMembership = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxCounty model module.
  * @module com.ultracart.admin.v2.models/TaxCounty
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 var TaxCounty = /*#__PURE__*/function () {
   /**

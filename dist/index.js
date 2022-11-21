@@ -801,6 +801,12 @@ Object.defineProperty(exports, "ConversationEventTyping", {
     return _ConversationEventTyping["default"];
   }
 });
+Object.defineProperty(exports, "ConversationEventWebchatContext", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEventWebchatContext["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationMessage", {
   enumerable: true,
   get: function get() {
@@ -4487,6 +4493,8 @@ var _ConversationEventRRWeb = _interopRequireDefault(require("./com.ultracart.ad
 var _ConversationEventReadMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventReadMessage"));
 
 var _ConversationEventTyping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventTyping"));
+
+var _ConversationEventWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventWebchatContext"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
 

@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The CouponItemSearchResultsResponse model module.
  * @module com.ultracart.admin.v2.models/CouponItemSearchResultsResponse
- * @version 4.0.85-RC
+ * @version 4.0.86-RC
  */
 class CouponItemSearchResultsResponse {
     /**

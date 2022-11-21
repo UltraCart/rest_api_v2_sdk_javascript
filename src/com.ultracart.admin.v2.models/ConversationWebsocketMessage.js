@@ -26,7 +26,7 @@ import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.85-RC
+ * @version 4.0.86-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -290,7 +290,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
      * value: "add item"
      * @const
      */
-    "add item": "add item"
+    "add item": "add item",
+
+    /**
+     * value: "webchat context"
+     * @const
+     */
+    "webchat context": "webchat context"
 };
 
 
