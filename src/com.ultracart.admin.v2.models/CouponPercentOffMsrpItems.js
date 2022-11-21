@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponPercentOffMsrpItems model module.
  * @module com.ultracart.admin.v2.models/CouponPercentOffMsrpItems
- * @version 4.0.86-RC
+ * @version 4.0.87-RC
  */
 class CouponPercentOffMsrpItems {
     /**
@@ -59,6 +59,12 @@ class CouponPercentOffMsrpItems {
             if (data.hasOwnProperty('limit')) {
                 obj['limit'] = ApiClient.convertToType(data['limit'], 'Number');
             }
+            if (data.hasOwnProperty('minimum_cumulative_msrp')) {
+                obj['minimum_cumulative_msrp'] = ApiClient.convertToType(data['minimum_cumulative_msrp'], 'Number');
+            }
+            if (data.hasOwnProperty('minimum_subtotal')) {
+                obj['minimum_subtotal'] = ApiClient.convertToType(data['minimum_subtotal'], 'Number');
+            }
         }
         return obj;
     }
@@ -89,6 +95,18 @@ CouponPercentOffMsrpItems.prototype['items'] = undefined;
  * @member {Number} limit
  */
 CouponPercentOffMsrpItems.prototype['limit'] = undefined;
+
+/**
+ * The (optional) minimum cumulative msrp of qualifying items.
+ * @member {Number} minimum_cumulative_msrp
+ */
+CouponPercentOffMsrpItems.prototype['minimum_cumulative_msrp'] = undefined;
+
+/**
+ * The (optional) minimum subtotal of qualifying items.
+ * @member {Number} minimum_subtotal
+ */
+CouponPercentOffMsrpItems.prototype['minimum_subtotal'] = undefined;
 
 
 

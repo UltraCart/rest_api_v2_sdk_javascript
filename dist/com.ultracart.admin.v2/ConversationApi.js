@@ -19,6 +19,8 @@ var _ConversationStartRequest = _interopRequireDefault(require("../com.ultracart
 
 var _ConversationStartResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationStartResponse"));
 
+var _ConversationWebchatContext = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatContext"));
+
 var _ConversationWebchatQueueStatusUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest"));
 
 var _ConversationWebchatQueueStatusesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse"));
@@ -38,7 +40,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.85-RC
+* @version 4.0.86-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -152,6 +154,43 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationResponse["default"];
       return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getConversationContext operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationContextCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationWebchatContext} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a webchat conversation context
+     * Get a webchat conversation context 
+     * @param {String} conversation_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationContextCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationWebchatContext}
+     */
+
+  }, {
+    key: "getConversationContext",
+    value: function getConversationContext(conversation_uuid, callback) {
+      var postBody = null; // verify the required parameter 'conversation_uuid' is set
+
+      if (conversation_uuid === undefined || conversation_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_uuid' when calling getConversationContext");
+      }
+
+      var pathParams = {
+        'conversation_uuid': conversation_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationWebchatContext["default"];
+      return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}/context', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getConversationMessages operation.

@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerEditorValues model module.
  * @module com.ultracart.admin.v2.models/CustomerEditorValues
- * @version 4.0.85-RC
+ * @version 4.0.86-RC
  */
 var CustomerEditorValues = /*#__PURE__*/function () {
   /**

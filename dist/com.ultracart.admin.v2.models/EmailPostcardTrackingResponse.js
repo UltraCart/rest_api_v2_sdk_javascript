@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailPostcardTrackingResponse model module.
  * @module com.ultracart.admin.v2.models/EmailPostcardTrackingResponse
- * @version 4.0.85-RC
+ * @version 4.0.86-RC
  */
 var EmailPostcardTrackingResponse = /*#__PURE__*/function () {
   /**

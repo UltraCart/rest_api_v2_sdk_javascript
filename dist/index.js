@@ -873,6 +873,12 @@ Object.defineProperty(exports, "ConversationTwilioAccount", {
     return _ConversationTwilioAccount["default"];
   }
 });
+Object.defineProperty(exports, "ConversationWebchatContext", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationWebchatContext["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationWebchatQueueStatus", {
   enumerable: true,
   get: function get() {
@@ -2407,6 +2413,30 @@ Object.defineProperty(exports, "HTTPHeader", {
   enumerable: true,
   get: function get() {
     return _HTTPHeader["default"];
+  }
+});
+Object.defineProperty(exports, "HitPageView", {
+  enumerable: true,
+  get: function get() {
+    return _HitPageView["default"];
+  }
+});
+Object.defineProperty(exports, "HitPageViewMetaData", {
+  enumerable: true,
+  get: function get() {
+    return _HitPageViewMetaData["default"];
+  }
+});
+Object.defineProperty(exports, "HitSessionStart", {
+  enumerable: true,
+  get: function get() {
+    return _HitSessionStart["default"];
+  }
+});
+Object.defineProperty(exports, "HitSessionUtm", {
+  enumerable: true,
+  get: function get() {
+    return _HitSessionUtm["default"];
   }
 });
 Object.defineProperty(exports, "IntegrationLog", {
@@ -4518,6 +4548,8 @@ var _ConversationSummary = _interopRequireDefault(require("./com.ultracart.admin
 
 var _ConversationTwilioAccount = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationTwilioAccount"));
 
+var _ConversationWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatContext"));
+
 var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatus"));
 
 var _ConversationWebchatQueueStatusAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent"));
@@ -5021,6 +5053,14 @@ var _GroupUserMembership = _interopRequireDefault(require("./com.ultracart.admin
 var _GroupsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/GroupsResponse"));
 
 var _HTTPHeader = _interopRequireDefault(require("./com.ultracart.admin.v2.models/HTTPHeader"));
+
+var _HitPageView = _interopRequireDefault(require("./com.ultracart.admin.v2.models/HitPageView"));
+
+var _HitPageViewMetaData = _interopRequireDefault(require("./com.ultracart.admin.v2.models/HitPageViewMetaData"));
+
+var _HitSessionStart = _interopRequireDefault(require("./com.ultracart.admin.v2.models/HitSessionStart"));
+
+var _HitSessionUtm = _interopRequireDefault(require("./com.ultracart.admin.v2.models/HitSessionUtm"));
 
 var _IntegrationLog = _interopRequireDefault(require("./com.ultracart.admin.v2.models/IntegrationLog"));
 
