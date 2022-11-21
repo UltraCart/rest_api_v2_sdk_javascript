@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.68
+   * @version 3.10.69
    */
 
   /**
@@ -264,7 +264,13 @@
      * value: "add item"
      * @const
      */
-    add_item: "add item"
+    add_item: "add item",
+
+    /**
+     * value: "webchat context"
+     * @const
+     */
+    webchat_context: "webchat context"
   };
 
 

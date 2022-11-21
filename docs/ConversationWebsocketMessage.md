@@ -52,6 +52,8 @@ Name | Type | Description | Notes
 
 * `add_item` (value: `"add item"`)
 
+* `webchat_context` (value: `"webchat context"`)
+
 
 
 
