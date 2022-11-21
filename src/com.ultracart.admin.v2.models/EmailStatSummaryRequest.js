@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailStatSummaryRequest model module.
  * @module com.ultracart.admin.v2.models/EmailStatSummaryRequest
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 class EmailStatSummaryRequest {
     /**

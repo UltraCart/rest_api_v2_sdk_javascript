@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WebhookLog model module.
  * @module com.ultracart.admin.v2.models/WebhookLog
- * @version 4.0.83-RC
+ * @version 4.0.84-RC
  */
 var WebhookLog = /*#__PURE__*/function () {
   /**

@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import CartItem from './CartItem';
 
 /**
  * The ConversationEventAddItem model module.
  * @module com.ultracart.admin.v2.models/ConversationEventAddItem
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 class ConversationEventAddItem {
     /**
@@ -47,8 +48,14 @@ class ConversationEventAddItem {
         if (data) {
             obj = obj || new ConversationEventAddItem();
 
-            if (data.hasOwnProperty('item_id')) {
-                obj['item_id'] = ApiClient.convertToType(data['item_id'], 'String');
+            if (data.hasOwnProperty('agent_arn')) {
+                obj['agent_arn'] = ApiClient.convertToType(data['agent_arn'], 'String');
+            }
+            if (data.hasOwnProperty('agent_name')) {
+                obj['agent_name'] = ApiClient.convertToType(data['agent_name'], 'String');
+            }
+            if (data.hasOwnProperty('items')) {
+                obj['items'] = ApiClient.convertToType(data['items'], [CartItem]);
             }
         }
         return obj;
@@ -58,9 +65,19 @@ class ConversationEventAddItem {
 }
 
 /**
- * @member {String} item_id
+ * @member {String} agent_arn
  */
-ConversationEventAddItem.prototype['item_id'] = undefined;
+ConversationEventAddItem.prototype['agent_arn'] = undefined;
+
+/**
+ * @member {String} agent_name
+ */
+ConversationEventAddItem.prototype['agent_name'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/CartItem>} items
+ */
+ConversationEventAddItem.prototype['items'] = undefined;
 
 
 

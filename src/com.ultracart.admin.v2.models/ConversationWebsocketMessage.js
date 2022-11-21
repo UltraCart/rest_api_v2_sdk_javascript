@@ -18,6 +18,7 @@ import ConversationEventQueuePosition from './ConversationEventQueuePosition';
 import ConversationEventRRWeb from './ConversationEventRRWeb';
 import ConversationEventReadMessage from './ConversationEventReadMessage';
 import ConversationEventTyping from './ConversationEventTyping';
+import ConversationEventWebchatContext from './ConversationEventWebchatContext';
 import ConversationMessage from './ConversationMessage';
 import ConversationSummary from './ConversationSummary';
 import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
@@ -25,7 +26,7 @@ import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -97,6 +98,9 @@ class ConversationWebsocketMessage {
             }
             if (data.hasOwnProperty('event_updated_message')) {
                 obj['event_updated_message'] = ConversationMessage.constructFromObject(data['event_updated_message']);
+            }
+            if (data.hasOwnProperty('event_webchat_context')) {
+                obj['event_webchat_context'] = ConversationEventWebchatContext.constructFromObject(data['event_webchat_context']);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ConversationMessage.constructFromObject(data['message']);
@@ -182,6 +186,11 @@ ConversationWebsocketMessage.prototype['event_typing'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ConversationMessage} event_updated_message
  */
 ConversationWebsocketMessage.prototype['event_updated_message'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationEventWebchatContext} event_webchat_context
+ */
+ConversationWebsocketMessage.prototype['event_webchat_context'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationMessage} message

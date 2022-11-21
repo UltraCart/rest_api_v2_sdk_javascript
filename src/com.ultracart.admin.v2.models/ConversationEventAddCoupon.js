@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationEventAddCoupon model module.
  * @module com.ultracart.admin.v2.models/ConversationEventAddCoupon
- * @version 4.0.84-RC
+ * @version 4.0.85-RC
  */
 class ConversationEventAddCoupon {
     /**
@@ -47,6 +47,12 @@ class ConversationEventAddCoupon {
         if (data) {
             obj = obj || new ConversationEventAddCoupon();
 
+            if (data.hasOwnProperty('agent_arn')) {
+                obj['agent_arn'] = ApiClient.convertToType(data['agent_arn'], 'String');
+            }
+            if (data.hasOwnProperty('agent_name')) {
+                obj['agent_name'] = ApiClient.convertToType(data['agent_name'], 'String');
+            }
             if (data.hasOwnProperty('coupon_code')) {
                 obj['coupon_code'] = ApiClient.convertToType(data['coupon_code'], 'String');
             }
@@ -56,6 +62,16 @@ class ConversationEventAddCoupon {
 
 
 }
+
+/**
+ * @member {String} agent_arn
+ */
+ConversationEventAddCoupon.prototype['agent_arn'] = undefined;
+
+/**
+ * @member {String} agent_name
+ */
+ConversationEventAddCoupon.prototype['agent_name'] = undefined;
 
 /**
  * @member {String} coupon_code
