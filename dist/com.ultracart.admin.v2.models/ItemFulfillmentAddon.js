@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemFulfillmentAddon model module.
  * @module com.ultracart.admin.v2.models/ItemFulfillmentAddon
- * @version 4.0.86-RC
+ * @version 4.0.87-RC
  */
 var ItemFulfillmentAddon = /*#__PURE__*/function () {
   /**

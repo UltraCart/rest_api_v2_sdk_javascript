@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LibraryItemScreenshot model module.
  * @module com.ultracart.admin.v2.models/LibraryItemScreenshot
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 class LibraryItemScreenshot {
     /**

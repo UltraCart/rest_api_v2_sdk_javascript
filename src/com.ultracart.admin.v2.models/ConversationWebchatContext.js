@@ -20,7 +20,7 @@ import HitSessionUtm from './HitSessionUtm';
 /**
  * The ConversationWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatContext
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 class ConversationWebchatContext {
     /**

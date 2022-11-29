@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseqWebhookSendTestRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqWebhookSendTestRequest
- * @version 4.0.86-RC
+ * @version 4.0.87-RC
  */
 var EmailCommseqWebhookSendTestRequest = /*#__PURE__*/function () {
   /**

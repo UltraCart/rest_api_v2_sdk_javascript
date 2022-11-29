@@ -28,7 +28,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.87-RC
+* @version 4.0.88-RC
 */
 export default class ConversationApi {
 
@@ -466,6 +466,48 @@ export default class ConversationApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}/leave', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the markReadConversation operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~markReadConversationCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Mark a conversation as read
+     * Mark a conversation as read 
+     * @param {String} conversation_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~markReadConversationCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    markReadConversation(conversation_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'conversation_uuid' is set
+      if (conversation_uuid === undefined || conversation_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_uuid' when calling markReadConversation");
+      }
+
+      let pathParams = {
+        'conversation_uuid': conversation_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/conversation/conversations/{conversation_uuid}/markread', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

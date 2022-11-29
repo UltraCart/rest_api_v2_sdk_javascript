@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**getConversations**](ConversationApi.md#getConversations) | **GET** /conversation/conversations | Retrieve a list of conversation summaries newest to oldest
 [**joinConversation**](ConversationApi.md#joinConversation) | **PUT** /conversation/conversations/{conversation_uuid}/join | Join a conversation
 [**leaveConversation**](ConversationApi.md#leaveConversation) | **DELETE** /conversation/conversations/{conversation_uuid}/leave | Leave a conversation
+[**markReadConversation**](ConversationApi.md#markReadConversation) | **PUT** /conversation/conversations/{conversation_uuid}/markread | Mark a conversation as read
 [**startConversation**](ConversationApi.md#startConversation) | **PUT** /conversation/conversations | Start a conversation
 [**updateConversationWebchatQueueStatus**](ConversationApi.md#updateConversationWebchatQueueStatus) | **PUT** /conversation/conversations/queues/{queue_name}/status | Update status within the queue
 
@@ -496,6 +497,56 @@ let apiInstance = new ucApi.ConversationApi(apiClient);
 
 let conversation_uuid = "conversation_uuid_example"; // String | 
 apiInstance.leaveConversation(conversation_uuid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversation_uuid** | **String**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## markReadConversation
+
+> markReadConversation(conversation_uuid)
+
+Mark a conversation as read
+
+Mark a conversation as read 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let conversation_uuid = "conversation_uuid_example"; // String | 
+apiInstance.markReadConversation(conversation_uuid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

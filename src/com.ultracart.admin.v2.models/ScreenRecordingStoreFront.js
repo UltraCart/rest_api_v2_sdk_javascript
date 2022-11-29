@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingStoreFront model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingStoreFront
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 class ScreenRecordingStoreFront {
     /**

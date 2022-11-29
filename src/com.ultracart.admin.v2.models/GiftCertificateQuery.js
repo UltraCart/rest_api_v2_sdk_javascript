@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GiftCertificateQuery model module.
  * @module com.ultracart.admin.v2.models/GiftCertificateQuery
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 class GiftCertificateQuery {
     /**
