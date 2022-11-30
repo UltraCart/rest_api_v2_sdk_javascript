@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Cart', 'com.ultracart.admin.v2.models/HitPageView', 'com.ultracart.admin.v2.models/HitSessionStart', 'com.ultracart.admin.v2.models/HitSessionUtm'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrder', 'com.ultracart.admin.v2.models/Cart', 'com.ultracart.admin.v2.models/HitPageView', 'com.ultracart.admin.v2.models/HitSessionStart', 'com.ultracart.admin.v2.models/HitSessionUtm', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Cart'), require('./HitPageView'), require('./HitSessionStart'), require('./HitSessionUtm'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrder'), require('./Cart'), require('./HitPageView'), require('./HitSessionStart'), require('./HitSessionUtm'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationWebchatContext = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Cart, root.UltraCartRestApiV2.HitPageView, root.UltraCartRestApiV2.HitSessionStart, root.UltraCartRestApiV2.HitSessionUtm);
+    root.UltraCartRestApiV2.ConversationWebchatContext = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrder, root.UltraCartRestApiV2.Cart, root.UltraCartRestApiV2.HitPageView, root.UltraCartRestApiV2.HitSessionStart, root.UltraCartRestApiV2.HitSessionUtm, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, Cart, HitPageView, HitSessionStart, HitSessionUtm) {
+}(this, function(ApiClient, AutoOrder, Cart, HitPageView, HitSessionStart, HitSessionUtm, Order) {
   'use strict';
 
   /**
    * The ConversationWebchatContext model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatContext
-   * @version 3.10.72
+   * @version 3.10.73
    */
 
   /**
@@ -55,10 +55,14 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('auto_orders'))
+        obj.auto_orders = ApiClient.convertToType(data['auto_orders'], [AutoOrder]);
       if (data.hasOwnProperty('cart'))
         obj.cart = Cart.constructFromObject(data['cart']);
       if (data.hasOwnProperty('current_url'))
         obj.current_url = ApiClient.convertToType(data['current_url'], 'String');
+      if (data.hasOwnProperty('orders'))
+        obj.orders = ApiClient.convertToType(data['orders'], [Order]);
       if (data.hasOwnProperty('page_view'))
         obj.page_view = ApiClient.convertToType(data['page_view'], [HitPageView]);
       if (data.hasOwnProperty('session_start'))
@@ -70,6 +74,11 @@
   }
 
   /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrder>} auto_orders
+   */
+  exports.prototype.auto_orders = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/Cart} cart
    */
   exports.prototype.cart = undefined;
@@ -78,6 +87,11 @@
    * @member {String} current_url
    */
   exports.prototype.current_url = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/Order>} orders
+   */
+  exports.prototype.orders = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/HitPageView>} page_view

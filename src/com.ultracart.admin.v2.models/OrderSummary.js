@@ -34,7 +34,7 @@
   /**
    * The OrderSummary model module.
    * @module com.ultracart.admin.v2.models/OrderSummary
-   * @version 3.10.72
+   * @version 3.10.73
    */
 
   /**
