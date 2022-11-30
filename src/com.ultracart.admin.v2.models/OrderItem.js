@@ -34,7 +34,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 3.10.71
+   * @version 3.10.72
    */
 
   /**
@@ -99,6 +99,8 @@
         obj.hazmat = ApiClient.convertToType(data['hazmat'], 'Boolean');
       if (data.hasOwnProperty('height'))
         obj.height = Distance.constructFromObject(data['height']);
+      if (data.hasOwnProperty('item_index'))
+        obj.item_index = ApiClient.convertToType(data['item_index'], 'Number');
       if (data.hasOwnProperty('item_reference_oid'))
         obj.item_reference_oid = ApiClient.convertToType(data['item_reference_oid'], 'Number');
       if (data.hasOwnProperty('kit'))
@@ -123,6 +125,10 @@
         obj.options = ApiClient.convertToType(data['options'], [OrderItemOption]);
       if (data.hasOwnProperty('packed_by_user'))
         obj.packed_by_user = ApiClient.convertToType(data['packed_by_user'], 'String');
+      if (data.hasOwnProperty('parent_item_index'))
+        obj.parent_item_index = ApiClient.convertToType(data['parent_item_index'], 'Number');
+      if (data.hasOwnProperty('parent_merchant_item_id'))
+        obj.parent_merchant_item_id = ApiClient.convertToType(data['parent_merchant_item_id'], 'String');
       if (data.hasOwnProperty('perishable_class'))
         obj.perishable_class = ApiClient.convertToType(data['perishable_class'], 'String');
       if (data.hasOwnProperty('pricing_tier_name'))
@@ -298,6 +304,12 @@
   exports.prototype.height = undefined;
 
   /**
+   * Index of the item on the order (one based index)
+   * @member {Number} item_index
+   */
+  exports.prototype.item_index = undefined;
+
+  /**
    * Item reference object identifier used to linked to auto order item record
    * @member {Number} item_reference_oid
    */
@@ -367,6 +379,18 @@
    * @member {String} packed_by_user
    */
   exports.prototype.packed_by_user = undefined;
+
+  /**
+   * If this item is a kit component, this is the item index of the parent item (kit)
+   * @member {Number} parent_item_index
+   */
+  exports.prototype.parent_item_index = undefined;
+
+  /**
+   * If this item is a kit component, this is the item id of the parent item (kit)
+   * @member {String} parent_merchant_item_id
+   */
+  exports.prototype.parent_merchant_item_id = undefined;
 
   /**
    * Perishable class of the item
