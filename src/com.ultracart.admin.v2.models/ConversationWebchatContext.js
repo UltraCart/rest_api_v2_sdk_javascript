@@ -12,15 +12,17 @@
  */
 
 import ApiClient from '../ApiClient';
+import AutoOrder from './AutoOrder';
 import Cart from './Cart';
 import HitPageView from './HitPageView';
 import HitSessionStart from './HitSessionStart';
 import HitSessionUtm from './HitSessionUtm';
+import Order from './Order';
 
 /**
  * The ConversationWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatContext
- * @version 4.0.89-RC
+ * @version 4.0.90-RC
  */
 class ConversationWebchatContext {
     /**
@@ -51,11 +53,17 @@ class ConversationWebchatContext {
         if (data) {
             obj = obj || new ConversationWebchatContext();
 
+            if (data.hasOwnProperty('auto_orders')) {
+                obj['auto_orders'] = ApiClient.convertToType(data['auto_orders'], [AutoOrder]);
+            }
             if (data.hasOwnProperty('cart')) {
                 obj['cart'] = Cart.constructFromObject(data['cart']);
             }
             if (data.hasOwnProperty('current_url')) {
                 obj['current_url'] = ApiClient.convertToType(data['current_url'], 'String');
+            }
+            if (data.hasOwnProperty('orders')) {
+                obj['orders'] = ApiClient.convertToType(data['orders'], [Order]);
             }
             if (data.hasOwnProperty('page_view')) {
                 obj['page_view'] = ApiClient.convertToType(data['page_view'], [HitPageView]);
@@ -74,6 +82,11 @@ class ConversationWebchatContext {
 }
 
 /**
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrder>} auto_orders
+ */
+ConversationWebchatContext.prototype['auto_orders'] = undefined;
+
+/**
  * @member {module:com.ultracart.admin.v2.models/Cart} cart
  */
 ConversationWebchatContext.prototype['cart'] = undefined;
@@ -82,6 +95,11 @@ ConversationWebchatContext.prototype['cart'] = undefined;
  * @member {String} current_url
  */
 ConversationWebchatContext.prototype['current_url'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/Order>} orders
+ */
+ConversationWebchatContext.prototype['orders'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/HitPageView>} page_view

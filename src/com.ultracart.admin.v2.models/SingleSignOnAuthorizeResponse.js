@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SingleSignOnAuthorizeResponse model module.
  * @module com.ultracart.admin.v2.models/SingleSignOnAuthorizeResponse
- * @version 4.0.89-RC
+ * @version 4.0.90-RC
  */
 class SingleSignOnAuthorizeResponse {
     /**

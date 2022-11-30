@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemShippingDistributionCenter model module.
  * @module com.ultracart.admin.v2.models/ItemShippingDistributionCenter
- * @version 4.0.88-RC
+ * @version 4.0.89-RC
  */
 var ItemShippingDistributionCenter = /*#__PURE__*/function () {
   /**

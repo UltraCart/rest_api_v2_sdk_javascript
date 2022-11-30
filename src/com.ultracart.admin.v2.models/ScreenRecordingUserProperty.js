@@ -17,7 +17,7 @@ import ScreenRecordingMultifield from './ScreenRecordingMultifield';
 /**
  * The ScreenRecordingUserProperty model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingUserProperty
- * @version 4.0.89-RC
+ * @version 4.0.90-RC
  */
 class ScreenRecordingUserProperty {
     /**

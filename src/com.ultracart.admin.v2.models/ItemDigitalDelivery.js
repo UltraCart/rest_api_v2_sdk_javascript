@@ -17,7 +17,7 @@ import ItemDigitalItem from './ItemDigitalItem';
 /**
  * The ItemDigitalDelivery model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalDelivery
- * @version 4.0.89-RC
+ * @version 4.0.90-RC
  */
 class ItemDigitalDelivery {
     /**

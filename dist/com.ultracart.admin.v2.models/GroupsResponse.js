@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GroupsResponse model module.
  * @module com.ultracart.admin.v2.models/GroupsResponse
- * @version 4.0.88-RC
+ * @version 4.0.89-RC
  */
 var GroupsResponse = /*#__PURE__*/function () {
   /**

@@ -17,7 +17,7 @@ import EmailCommseqStep from './EmailCommseqStep';
 /**
  * The EmailCommseq model module.
  * @module com.ultracart.admin.v2.models/EmailCommseq
- * @version 4.0.89-RC
+ * @version 4.0.90-RC
  */
 class EmailCommseq {
     /**

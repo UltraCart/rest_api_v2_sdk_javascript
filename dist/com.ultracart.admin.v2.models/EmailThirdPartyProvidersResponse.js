@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailThirdPartyProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyProvidersResponse
- * @version 4.0.88-RC
+ * @version 4.0.89-RC
  */
 var EmailThirdPartyProvidersResponse = /*#__PURE__*/function () {
   /**

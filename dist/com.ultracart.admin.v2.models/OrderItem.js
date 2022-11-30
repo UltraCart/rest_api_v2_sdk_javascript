@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItem model module.
  * @module com.ultracart.admin.v2.models/OrderItem
- * @version 4.0.88-RC
+ * @version 4.0.89-RC
  */
 var OrderItem = /*#__PURE__*/function () {
   /**
@@ -156,6 +156,10 @@ var OrderItem = /*#__PURE__*/function () {
           obj['height'] = _Distance["default"].constructFromObject(data['height']);
         }
 
+        if (data.hasOwnProperty('item_index')) {
+          obj['item_index'] = _ApiClient["default"].convertToType(data['item_index'], 'Number');
+        }
+
         if (data.hasOwnProperty('item_reference_oid')) {
           obj['item_reference_oid'] = _ApiClient["default"].convertToType(data['item_reference_oid'], 'Number');
         }
@@ -202,6 +206,14 @@ var OrderItem = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('packed_by_user')) {
           obj['packed_by_user'] = _ApiClient["default"].convertToType(data['packed_by_user'], 'String');
+        }
+
+        if (data.hasOwnProperty('parent_item_index')) {
+          obj['parent_item_index'] = _ApiClient["default"].convertToType(data['parent_item_index'], 'Number');
+        }
+
+        if (data.hasOwnProperty('parent_merchant_item_id')) {
+          obj['parent_merchant_item_id'] = _ApiClient["default"].convertToType(data['parent_merchant_item_id'], 'String');
         }
 
         if (data.hasOwnProperty('perishable_class')) {
@@ -427,6 +439,12 @@ OrderItem.prototype['hazmat'] = undefined;
 
 OrderItem.prototype['height'] = undefined;
 /**
+ * Index of the item on the order (one based index)
+ * @member {Number} item_index
+ */
+
+OrderItem.prototype['item_index'] = undefined;
+/**
  * Item reference object identifier used to linked to auto order item record
  * @member {Number} item_reference_oid
  */
@@ -497,6 +515,18 @@ OrderItem.prototype['options'] = undefined;
  */
 
 OrderItem.prototype['packed_by_user'] = undefined;
+/**
+ * If this item is a kit component, this is the item index of the parent item (kit)
+ * @member {Number} parent_item_index
+ */
+
+OrderItem.prototype['parent_item_index'] = undefined;
+/**
+ * If this item is a kit component, this is the item id of the parent item (kit)
+ * @member {String} parent_merchant_item_id
+ */
+
+OrderItem.prototype['parent_merchant_item_id'] = undefined;
 /**
  * Perishable class of the item
  * @member {String} perishable_class
