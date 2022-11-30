@@ -40,7 +40,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.87-RC
+* @version 4.0.88-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -418,6 +418,42 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = null;
       return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}/leave', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the markReadConversation operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~markReadConversationCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Mark a conversation as read
+     * Mark a conversation as read 
+     * @param {String} conversation_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~markReadConversationCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
+    key: "markReadConversation",
+    value: function markReadConversation(conversation_uuid, callback) {
+      var postBody = null; // verify the required parameter 'conversation_uuid' is set
+
+      if (conversation_uuid === undefined || conversation_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_uuid' when calling markReadConversation");
+      }
+
+      var pathParams = {
+        'conversation_uuid': conversation_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}/markread', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the startConversation operation.

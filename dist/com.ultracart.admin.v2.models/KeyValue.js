@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The KeyValue model module.
  * @module com.ultracart.admin.v2.models/KeyValue
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 var KeyValue = /*#__PURE__*/function () {
   /**

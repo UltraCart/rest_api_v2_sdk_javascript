@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LibraryItemQuery model module.
  * @module com.ultracart.admin.v2.models/LibraryItemQuery
- * @version 4.0.88-RC
+ * @version 4.0.89-RC
  */
 class LibraryItemQuery {
     /**

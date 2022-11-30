@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartResponse model module.
  * @module com.ultracart.admin.v2.models/CartResponse
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 var CartResponse = /*#__PURE__*/function () {
   /**

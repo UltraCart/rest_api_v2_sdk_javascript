@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettingsShippingCalendar model module.
  * @module com.ultracart.admin.v2.models/CartSettingsShippingCalendar
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 var CartSettingsShippingCalendar = /*#__PURE__*/function () {
   /**

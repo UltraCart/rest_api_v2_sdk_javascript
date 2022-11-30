@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.87-RC
+ * @version 4.0.88-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -74,6 +74,10 @@ var ConversationMessage = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('conversation_message_uuid')) {
           obj['conversation_message_uuid'] = _ApiClient["default"].convertToType(data['conversation_message_uuid'], 'String');
+        }
+
+        if (data.hasOwnProperty('delay_until_dts')) {
+          obj['delay_until_dts'] = _ApiClient["default"].convertToType(data['delay_until_dts'], 'String');
         }
 
         if (data.hasOwnProperty('media_urls')) {
@@ -137,6 +141,12 @@ ConversationMessage.prototype['client_message_id'] = undefined;
  */
 
 ConversationMessage.prototype['conversation_message_uuid'] = undefined;
+/**
+ * Delay message transmission until date/time
+ * @member {String} delay_until_dts
+ */
+
+ConversationMessage.prototype['delay_until_dts'] = undefined;
 /**
  * @member {Array.<String>} media_urls
  */
