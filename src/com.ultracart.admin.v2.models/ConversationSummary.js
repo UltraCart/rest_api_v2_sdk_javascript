@@ -17,7 +17,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.90-RC
+ * @version 4.0.91-RC
  */
 class ConversationSummary {
     /**
@@ -56,6 +56,9 @@ class ConversationSummary {
             }
             if (data.hasOwnProperty('conversation_uuid')) {
                 obj['conversation_uuid'] = ApiClient.convertToType(data['conversation_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('customer_first_message_unresponded_to_dts')) {
+                obj['customer_first_message_unresponded_to_dts'] = ApiClient.convertToType(data['customer_first_message_unresponded_to_dts'], 'String');
             }
             if (data.hasOwnProperty('last_conversation_message_body')) {
                 obj['last_conversation_message_body'] = ApiClient.convertToType(data['last_conversation_message_body'], 'String');
@@ -114,6 +117,12 @@ ConversationSummary.prototype['conversation_arn'] = undefined;
  * @member {String} conversation_uuid
  */
 ConversationSummary.prototype['conversation_uuid'] = undefined;
+
+/**
+ * Date/time of the first customer message that is unresponded to.
+ * @member {String} customer_first_message_unresponded_to_dts
+ */
+ConversationSummary.prototype['customer_first_message_unresponded_to_dts'] = undefined;
 
 /**
  * @member {String} last_conversation_message_body

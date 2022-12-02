@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxProviderActivateResult model module.
  * @module com.ultracart.admin.v2.models/TaxProviderActivateResult
- * @version 4.0.90-RC
+ * @version 4.0.91-RC
  */
 class TaxProviderActivateResult {
     /**

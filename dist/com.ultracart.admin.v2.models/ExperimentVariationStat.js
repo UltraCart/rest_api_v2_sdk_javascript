@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ExperimentVariationStat model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariationStat
- * @version 4.0.89-RC
+ * @version 4.0.90-RC
  */
 var ExperimentVariationStat = /*#__PURE__*/function () {
   /**

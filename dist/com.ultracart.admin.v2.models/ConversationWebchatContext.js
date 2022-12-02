@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _AutoOrder = _interopRequireDefault(require("./AutoOrder"));
+
 var _Cart = _interopRequireDefault(require("./Cart"));
 
 var _HitPageView = _interopRequireDefault(require("./HitPageView"));
@@ -14,6 +16,8 @@ var _HitPageView = _interopRequireDefault(require("./HitPageView"));
 var _HitSessionStart = _interopRequireDefault(require("./HitSessionStart"));
 
 var _HitSessionUtm = _interopRequireDefault(require("./HitSessionUtm"));
+
+var _Order = _interopRequireDefault(require("./Order"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -26,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatContext
- * @version 4.0.89-RC
+ * @version 4.0.90-RC
  */
 var ConversationWebchatContext = /*#__PURE__*/function () {
   /**
@@ -62,12 +66,20 @@ var ConversationWebchatContext = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ConversationWebchatContext();
 
+        if (data.hasOwnProperty('auto_orders')) {
+          obj['auto_orders'] = _ApiClient["default"].convertToType(data['auto_orders'], [_AutoOrder["default"]]);
+        }
+
         if (data.hasOwnProperty('cart')) {
           obj['cart'] = _Cart["default"].constructFromObject(data['cart']);
         }
 
         if (data.hasOwnProperty('current_url')) {
           obj['current_url'] = _ApiClient["default"].convertToType(data['current_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('orders')) {
+          obj['orders'] = _ApiClient["default"].convertToType(data['orders'], [_Order["default"]]);
         }
 
         if (data.hasOwnProperty('page_view')) {
@@ -90,9 +102,14 @@ var ConversationWebchatContext = /*#__PURE__*/function () {
   return ConversationWebchatContext;
 }();
 /**
- * @member {module:com.ultracart.admin.v2.models/Cart} cart
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrder>} auto_orders
  */
 
+
+ConversationWebchatContext.prototype['auto_orders'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/Cart} cart
+ */
 
 ConversationWebchatContext.prototype['cart'] = undefined;
 /**
@@ -100,6 +117,11 @@ ConversationWebchatContext.prototype['cart'] = undefined;
  */
 
 ConversationWebchatContext.prototype['current_url'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/Order>} orders
+ */
+
+ConversationWebchatContext.prototype['orders'] = undefined;
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/HitPageView>} page_view
  */

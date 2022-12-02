@@ -18,7 +18,7 @@ import ScreenRecordingUserAgentOS from './ScreenRecordingUserAgentOS';
 /**
  * The ScreenRecordingUserAgent model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingUserAgent
- * @version 4.0.90-RC
+ * @version 4.0.91-RC
  */
 class ScreenRecordingUserAgent {
     /**

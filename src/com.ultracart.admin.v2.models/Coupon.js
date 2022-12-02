@@ -60,7 +60,7 @@ import CouponTieredPercentOffSubtotalBasedOnMSRP from './CouponTieredPercentOffS
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.90-RC
+ * @version 4.0.91-RC
  */
 class Coupon {
     /**
