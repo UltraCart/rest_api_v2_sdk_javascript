@@ -34,7 +34,7 @@
   /**
    * The ChargebackDisputeResponse model module.
    * @module com.ultracart.admin.v2.models/ChargebackDisputeResponse
-   * @version 3.10.73
+   * @version 3.10.74
    */
 
   /**
