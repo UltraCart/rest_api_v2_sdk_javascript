@@ -34,7 +34,7 @@
   /**
    * The ConversationWebchatContext model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatContext
-   * @version 3.10.75
+   * @version 3.10.76
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.page_view = ApiClient.convertToType(data['page_view'], [HitPageView]);
       if (data.hasOwnProperty('session_start'))
         obj.session_start = HitSessionStart.constructFromObject(data['session_start']);
+      if (data.hasOwnProperty('session_start_dts'))
+        obj.session_start_dts = ApiClient.convertToType(data['session_start_dts'], 'String');
       if (data.hasOwnProperty('session_utm'))
         obj.session_utm = HitSessionUtm.constructFromObject(data['session_utm']);
     }
@@ -102,6 +104,12 @@
    * @member {module:com.ultracart.admin.v2.models/HitSessionStart} session_start
    */
   exports.prototype.session_start = undefined;
+
+  /**
+   * Date/time that the session was started (if known)
+   * @member {String} session_start_dts
+   */
+  exports.prototype.session_start_dts = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/HitSessionUtm} session_utm

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **orders** | [**[Order]**](Order.md) |  | [optional] 
 **page_view** | [**[HitPageView]**](HitPageView.md) |  | [optional] 
 **session_start** | [**HitSessionStart**](HitSessionStart.md) |  | [optional] 
+**session_start_dts** | **String** | Date/time that the session was started (if known) | [optional] 
 **session_utm** | [**HitSessionUtm**](HitSessionUtm.md) |  | [optional] 
 
 

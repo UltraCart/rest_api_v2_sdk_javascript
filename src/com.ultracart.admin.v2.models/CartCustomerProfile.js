@@ -34,7 +34,7 @@
   /**
    * The CartCustomerProfile model module.
    * @module com.ultracart.admin.v2.models/CartCustomerProfile
-   * @version 3.10.75
+   * @version 3.10.76
    */
 
   /**
@@ -95,6 +95,8 @@
         obj.pricing_tiers = ApiClient.convertToType(data['pricing_tiers'], ['String']);
       if (data.hasOwnProperty('shipping_addresses'))
         obj.shipping_addresses = ApiClient.convertToType(data['shipping_addresses'], [CartCustomerProfileAddress]);
+      if (data.hasOwnProperty('signup_dts'))
+        obj.signup_dts = ApiClient.convertToType(data['signup_dts'], 'String');
       if (data.hasOwnProperty('tax_exempt'))
         obj.tax_exempt = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
       if (data.hasOwnProperty('ups_account_number'))
@@ -170,7 +172,7 @@
   exports.prototype.free_shipping = undefined;
 
   /**
-   * The minimum aount that this profile has to purchase to qualify for free shipping
+   * The minimum amount that this profile has to purchase to qualify for free shipping
    * @member {Number} free_shipping_minimum
    */
   exports.prototype.free_shipping_minimum = undefined;
@@ -222,6 +224,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileAddress>} shipping_addresses
    */
   exports.prototype.shipping_addresses = undefined;
+
+  /**
+   * Signup date
+   * @member {String} signup_dts
+   */
+  exports.prototype.signup_dts = undefined;
 
   /**
    * True if this profile is exempt from sales tax
