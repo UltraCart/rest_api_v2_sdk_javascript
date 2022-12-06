@@ -34,7 +34,7 @@
   /**
    * The EmailCampaignResponse model module.
    * @module com.ultracart.admin.v2.models/EmailCampaignResponse
-   * @version 3.10.74
+   * @version 3.10.75
    */
 
   /**
