@@ -603,6 +603,12 @@ Object.defineProperty(exports, "CartValidationResponse", {
     return _CartValidationResponse["default"];
   }
 });
+Object.defineProperty(exports, "ChannelPartner", {
+  enumerable: true,
+  get: function get() {
+    return _ChannelPartner["default"];
+  }
+});
 Object.defineProperty(exports, "ChannelPartnerApi", {
   enumerable: true,
   get: function get() {
@@ -1369,6 +1375,12 @@ Object.defineProperty(exports, "CustomerCard", {
   enumerable: true,
   get: function get() {
     return _CustomerCard["default"];
+  }
+});
+Object.defineProperty(exports, "CustomerEDI", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerEDI["default"];
   }
 });
 Object.defineProperty(exports, "CustomerEditorValues", {
@@ -4466,6 +4478,8 @@ var _CartValidationRequest = _interopRequireDefault(require("./com.ultracart.adm
 
 var _CartValidationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartValidationResponse"));
 
+var _ChannelPartner = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartner"));
+
 var _ChannelPartnerCancelResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerCancelResponse"));
 
 var _ChannelPartnerEstimateShippingResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse"));
@@ -4709,6 +4723,8 @@ var _CustomerAttachment = _interopRequireDefault(require("./com.ultracart.admin.
 var _CustomerBilling = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerBilling"));
 
 var _CustomerCard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerCard"));
+
+var _CustomerEDI = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEDI"));
 
 var _CustomerEditorValues = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEditorValues"));
 

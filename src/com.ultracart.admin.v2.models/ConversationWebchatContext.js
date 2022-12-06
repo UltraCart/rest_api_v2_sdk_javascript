@@ -22,7 +22,7 @@ import Order from './Order';
 /**
  * The ConversationWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatContext
- * @version 4.0.92-RC
+ * @version 4.0.93-RC
  */
 class ConversationWebchatContext {
     /**
@@ -71,6 +71,9 @@ class ConversationWebchatContext {
             if (data.hasOwnProperty('session_start')) {
                 obj['session_start'] = HitSessionStart.constructFromObject(data['session_start']);
             }
+            if (data.hasOwnProperty('session_start_dts')) {
+                obj['session_start_dts'] = ApiClient.convertToType(data['session_start_dts'], 'String');
+            }
             if (data.hasOwnProperty('session_utm')) {
                 obj['session_utm'] = HitSessionUtm.constructFromObject(data['session_utm']);
             }
@@ -110,6 +113,12 @@ ConversationWebchatContext.prototype['page_view'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/HitSessionStart} session_start
  */
 ConversationWebchatContext.prototype['session_start'] = undefined;
+
+/**
+ * Date/time that the session was started (if known)
+ * @member {String} session_start_dts
+ */
+ConversationWebchatContext.prototype['session_start_dts'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/HitSessionUtm} session_utm

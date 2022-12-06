@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemIdentifiers model module.
  * @module com.ultracart.admin.v2.models/ItemIdentifiers
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 var ItemIdentifiers = /*#__PURE__*/function () {
   /**

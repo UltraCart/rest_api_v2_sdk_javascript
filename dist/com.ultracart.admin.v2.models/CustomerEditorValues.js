@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ChannelPartner = _interopRequireDefault(require("./ChannelPartner"));
+
 var _Country = _interopRequireDefault(require("./Country"));
 
 var _CustomerAffiliate = _interopRequireDefault(require("./CustomerAffiliate"));
@@ -22,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerEditorValues model module.
  * @module com.ultracart.admin.v2.models/CustomerEditorValues
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 var CustomerEditorValues = /*#__PURE__*/function () {
   /**
@@ -76,6 +78,10 @@ var CustomerEditorValues = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('countries')) {
           obj['countries'] = _ApiClient["default"].convertToType(data['countries'], [_Country["default"]]);
+        }
+
+        if (data.hasOwnProperty('edi_channel_partners')) {
+          obj['edi_channel_partners'] = _ApiClient["default"].convertToType(data['edi_channel_partners'], [_ChannelPartner["default"]]);
         }
 
         if (data.hasOwnProperty('loyalty_ledger_descriptions')) {
@@ -140,6 +146,12 @@ CustomerEditorValues.prototype['card_types'] = undefined;
  */
 
 CustomerEditorValues.prototype['countries'] = undefined;
+/**
+ * EDI channel partners
+ * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartner>} edi_channel_partners
+ */
+
+CustomerEditorValues.prototype['edi_channel_partners'] = undefined;
 /**
  * loyalty_ledger_descriptions
  * @member {Array.<String>} loyalty_ledger_descriptions

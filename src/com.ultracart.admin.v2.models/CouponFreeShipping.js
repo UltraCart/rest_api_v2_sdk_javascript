@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponFreeShipping model module.
  * @module com.ultracart.admin.v2.models/CouponFreeShipping
- * @version 4.0.92-RC
+ * @version 4.0.93-RC
  */
 class CouponFreeShipping {
     /**

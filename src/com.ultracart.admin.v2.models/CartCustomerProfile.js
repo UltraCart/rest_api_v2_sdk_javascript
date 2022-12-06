@@ -18,7 +18,7 @@ import CartCustomerProfileCreditCard from './CartCustomerProfileCreditCard';
 /**
  * The CartCustomerProfile model module.
  * @module com.ultracart.admin.v2.models/CartCustomerProfile
- * @version 4.0.92-RC
+ * @version 4.0.93-RC
  */
 class CartCustomerProfile {
     /**
@@ -109,6 +109,9 @@ class CartCustomerProfile {
             if (data.hasOwnProperty('shipping_addresses')) {
                 obj['shipping_addresses'] = ApiClient.convertToType(data['shipping_addresses'], [CartCustomerProfileAddress]);
             }
+            if (data.hasOwnProperty('signup_dts')) {
+                obj['signup_dts'] = ApiClient.convertToType(data['signup_dts'], 'String');
+            }
             if (data.hasOwnProperty('tax_exempt')) {
                 obj['tax_exempt'] = ApiClient.convertToType(data['tax_exempt'], 'Boolean');
             }
@@ -189,7 +192,7 @@ CartCustomerProfile.prototype['fedex_account_number'] = undefined;
 CartCustomerProfile.prototype['free_shipping'] = undefined;
 
 /**
- * The minimum aount that this profile has to purchase to qualify for free shipping
+ * The minimum amount that this profile has to purchase to qualify for free shipping
  * @member {Number} free_shipping_minimum
  */
 CartCustomerProfile.prototype['free_shipping_minimum'] = undefined;
@@ -241,6 +244,12 @@ CartCustomerProfile.prototype['pricing_tiers'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/CartCustomerProfileAddress>} shipping_addresses
  */
 CartCustomerProfile.prototype['shipping_addresses'] = undefined;
+
+/**
+ * Signup date
+ * @member {String} signup_dts
+ */
+CartCustomerProfile.prototype['signup_dts'] = undefined;
 
 /**
  * True if this profile is exempt from sales tax

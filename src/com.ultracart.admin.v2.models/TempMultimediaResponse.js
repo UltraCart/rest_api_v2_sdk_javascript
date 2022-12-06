@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The TempMultimediaResponse model module.
  * @module com.ultracart.admin.v2.models/TempMultimediaResponse
- * @version 4.0.92-RC
+ * @version 4.0.93-RC
  */
 class TempMultimediaResponse {
     /**

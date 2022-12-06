@@ -15,6 +15,8 @@ var _CustomerBilling = _interopRequireDefault(require("./CustomerBilling"));
 
 var _CustomerCard = _interopRequireDefault(require("./CustomerCard"));
 
+var _CustomerEDI = _interopRequireDefault(require("./CustomerEDI"));
+
 var _CustomerEmail = _interopRequireDefault(require("./CustomerEmail"));
 
 var _CustomerLoyalty = _interopRequireDefault(require("./CustomerLoyalty"));
@@ -50,7 +52,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 var Customer = /*#__PURE__*/function () {
   /**
@@ -160,6 +162,10 @@ var Customer = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('dhl_duty_account_number')) {
           obj['dhl_duty_account_number'] = _ApiClient["default"].convertToType(data['dhl_duty_account_number'], 'String');
+        }
+
+        if (data.hasOwnProperty('edi')) {
+          obj['edi'] = _CustomerEDI["default"].constructFromObject(data['edi']);
         }
 
         if (data.hasOwnProperty('email')) {
@@ -447,6 +453,11 @@ Customer.prototype['dhl_account_number'] = undefined;
  */
 
 Customer.prototype['dhl_duty_account_number'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/CustomerEDI} edi
+ */
+
+Customer.prototype['edi'] = undefined;
 /**
  * Email address of this customer profile
  * @member {String} email
