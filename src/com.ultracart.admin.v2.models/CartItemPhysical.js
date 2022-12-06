@@ -18,7 +18,7 @@ import Weight from './Weight';
 /**
  * The CartItemPhysical model module.
  * @module com.ultracart.admin.v2.models/CartItemPhysical
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 class CartItemPhysical {
     /**

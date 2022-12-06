@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderMarketing model module.
  * @module com.ultracart.admin.v2.models/OrderMarketing
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 class OrderMarketing {
     /**

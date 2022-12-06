@@ -12,13 +12,14 @@
  */
 
 import ApiClient from '../ApiClient';
+import ChannelPartner from './ChannelPartner';
 import Country from './Country';
 import CustomerAffiliate from './CustomerAffiliate';
 
 /**
  * The CustomerEditorValues model module.
  * @module com.ultracart.admin.v2.models/CustomerEditorValues
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 class CustomerEditorValues {
     /**
@@ -63,6 +64,9 @@ class CustomerEditorValues {
             }
             if (data.hasOwnProperty('countries')) {
                 obj['countries'] = ApiClient.convertToType(data['countries'], [Country]);
+            }
+            if (data.hasOwnProperty('edi_channel_partners')) {
+                obj['edi_channel_partners'] = ApiClient.convertToType(data['edi_channel_partners'], [ChannelPartner]);
             }
             if (data.hasOwnProperty('loyalty_ledger_descriptions')) {
                 obj['loyalty_ledger_descriptions'] = ApiClient.convertToType(data['loyalty_ledger_descriptions'], ['String']);
@@ -118,6 +122,12 @@ CustomerEditorValues.prototype['card_types'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/Country>} countries
  */
 CustomerEditorValues.prototype['countries'] = undefined;
+
+/**
+ * EDI channel partners
+ * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartner>} edi_channel_partners
+ */
+CustomerEditorValues.prototype['edi_channel_partners'] = undefined;
 
 /**
  * loyalty_ledger_descriptions

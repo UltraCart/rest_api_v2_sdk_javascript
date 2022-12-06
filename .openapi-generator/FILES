@@ -101,6 +101,7 @@ docs/CartTaxes.md
 docs/CartUpsellAfter.md
 docs/CartValidationRequest.md
 docs/CartValidationResponse.md
+docs/ChannelPartner.md
 docs/ChannelPartnerApi.md
 docs/ChannelPartnerCancelResponse.md
 docs/ChannelPartnerEstimateShippingResponse.md
@@ -229,6 +230,7 @@ docs/CustomerApi.md
 docs/CustomerAttachment.md
 docs/CustomerBilling.md
 docs/CustomerCard.md
+docs/CustomerEDI.md
 docs/CustomerEditorValues.md
 docs/CustomerEmail.md
 docs/CustomerEmailListChanges.md
@@ -813,6 +815,7 @@ src/com.ultracart.admin.v2.models/CartTaxes.js
 src/com.ultracart.admin.v2.models/CartUpsellAfter.js
 src/com.ultracart.admin.v2.models/CartValidationRequest.js
 src/com.ultracart.admin.v2.models/CartValidationResponse.js
+src/com.ultracart.admin.v2.models/ChannelPartner.js
 src/com.ultracart.admin.v2.models/ChannelPartnerCancelResponse.js
 src/com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse.js
 src/com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse.js
@@ -935,6 +938,7 @@ src/com.ultracart.admin.v2.models/CustomerAffiliate.js
 src/com.ultracart.admin.v2.models/CustomerAttachment.js
 src/com.ultracart.admin.v2.models/CustomerBilling.js
 src/com.ultracart.admin.v2.models/CustomerCard.js
+src/com.ultracart.admin.v2.models/CustomerEDI.js
 src/com.ultracart.admin.v2.models/CustomerEditorValues.js
 src/com.ultracart.admin.v2.models/CustomerEmail.js
 src/com.ultracart.admin.v2.models/CustomerEmailListChanges.js

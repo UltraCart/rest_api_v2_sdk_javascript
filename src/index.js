@@ -110,6 +110,7 @@ import CartTaxes from './com.ultracart.admin.v2.models/CartTaxes';
 import CartUpsellAfter from './com.ultracart.admin.v2.models/CartUpsellAfter';
 import CartValidationRequest from './com.ultracart.admin.v2.models/CartValidationRequest';
 import CartValidationResponse from './com.ultracart.admin.v2.models/CartValidationResponse';
+import ChannelPartner from './com.ultracart.admin.v2.models/ChannelPartner';
 import ChannelPartnerCancelResponse from './com.ultracart.admin.v2.models/ChannelPartnerCancelResponse';
 import ChannelPartnerEstimateShippingResponse from './com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse';
 import ChannelPartnerEstimateTaxResponse from './com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse';
@@ -232,6 +233,7 @@ import CustomerAffiliate from './com.ultracart.admin.v2.models/CustomerAffiliate
 import CustomerAttachment from './com.ultracart.admin.v2.models/CustomerAttachment';
 import CustomerBilling from './com.ultracart.admin.v2.models/CustomerBilling';
 import CustomerCard from './com.ultracart.admin.v2.models/CustomerCard';
+import CustomerEDI from './com.ultracart.admin.v2.models/CustomerEDI';
 import CustomerEditorValues from './com.ultracart.admin.v2.models/CustomerEditorValues';
 import CustomerEmail from './com.ultracart.admin.v2.models/CustomerEmail';
 import CustomerEmailListChanges from './com.ultracart.admin.v2.models/CustomerEmailListChanges';
@@ -754,7 +756,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.91-RC
+* @version 4.0.92-RC
 */
 export {
     /**
@@ -1344,6 +1346,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CartValidationResponse}
      */
     CartValidationResponse,
+
+    /**
+     * The ChannelPartner model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ChannelPartner}
+     */
+    ChannelPartner,
 
     /**
      * The ChannelPartnerCancelResponse model constructor.
@@ -2076,6 +2084,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomerCard}
      */
     CustomerCard,
+
+    /**
+     * The CustomerEDI model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerEDI}
+     */
+    CustomerEDI,
 
     /**
      * The CustomerEditorValues model constructor.

@@ -16,6 +16,7 @@ import CustomerActivity from './CustomerActivity';
 import CustomerAttachment from './CustomerAttachment';
 import CustomerBilling from './CustomerBilling';
 import CustomerCard from './CustomerCard';
+import CustomerEDI from './CustomerEDI';
 import CustomerEmail from './CustomerEmail';
 import CustomerLoyalty from './CustomerLoyalty';
 import CustomerOrdersSummary from './CustomerOrdersSummary';
@@ -32,7 +33,7 @@ import Order from './Order';
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 class Customer {
     /**
@@ -119,6 +120,9 @@ class Customer {
             }
             if (data.hasOwnProperty('dhl_duty_account_number')) {
                 obj['dhl_duty_account_number'] = ApiClient.convertToType(data['dhl_duty_account_number'], 'String');
+            }
+            if (data.hasOwnProperty('edi')) {
+                obj['edi'] = CustomerEDI.constructFromObject(data['edi']);
             }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -362,6 +366,11 @@ Customer.prototype['dhl_account_number'] = undefined;
  * @member {String} dhl_duty_account_number
  */
 Customer.prototype['dhl_duty_account_number'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CustomerEDI} edi
+ */
+Customer.prototype['edi'] = undefined;
 
 /**
  * Email address of this customer profile

@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AccountsReceivableRetryConfigResponse model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse
- * @version 4.0.90-RC
+ * @version 4.0.91-RC
  */
 var AccountsReceivableRetryConfigResponse = /*#__PURE__*/function () {
   /**

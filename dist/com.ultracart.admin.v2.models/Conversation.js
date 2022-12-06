@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.90-RC
+ * @version 4.0.91-RC
  */
 var Conversation = /*#__PURE__*/function () {
   /**
@@ -72,6 +72,10 @@ var Conversation = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('conversation_uuid')) {
           obj['conversation_uuid'] = _ApiClient["default"].convertToType(data['conversation_uuid'], 'String');
+        }
+
+        if (data.hasOwnProperty('customer_first_message_unresponded_to_dts')) {
+          obj['customer_first_message_unresponded_to_dts'] = _ApiClient["default"].convertToType(data['customer_first_message_unresponded_to_dts'], 'String');
         }
 
         if (data.hasOwnProperty('last_conversation_message_body')) {
@@ -155,6 +159,12 @@ Conversation.prototype['conversation_arn'] = undefined;
  */
 
 Conversation.prototype['conversation_uuid'] = undefined;
+/**
+ * Date/time of the first customer message that is unresponded to.
+ * @member {String} customer_first_message_unresponded_to_dts
+ */
+
+Conversation.prototype['customer_first_message_unresponded_to_dts'] = undefined;
 /**
  * @member {String} last_conversation_message_body
  */

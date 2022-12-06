@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.90-RC
+ * @version 4.0.91-RC
  */
 var ConversationSummary = /*#__PURE__*/function () {
   /**
@@ -66,6 +66,10 @@ var ConversationSummary = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('conversation_uuid')) {
           obj['conversation_uuid'] = _ApiClient["default"].convertToType(data['conversation_uuid'], 'String');
+        }
+
+        if (data.hasOwnProperty('customer_first_message_unresponded_to_dts')) {
+          obj['customer_first_message_unresponded_to_dts'] = _ApiClient["default"].convertToType(data['customer_first_message_unresponded_to_dts'], 'String');
         }
 
         if (data.hasOwnProperty('last_conversation_message_body')) {
@@ -139,6 +143,12 @@ ConversationSummary.prototype['conversation_arn'] = undefined;
  */
 
 ConversationSummary.prototype['conversation_uuid'] = undefined;
+/**
+ * Date/time of the first customer message that is unresponded to.
+ * @member {String} customer_first_message_unresponded_to_dts
+ */
+
+ConversationSummary.prototype['customer_first_message_unresponded_to_dts'] = undefined;
 /**
  * @member {String} last_conversation_message_body
  */

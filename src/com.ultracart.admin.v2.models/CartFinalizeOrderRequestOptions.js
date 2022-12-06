@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartFinalizeOrderRequestOptions model module.
  * @module com.ultracart.admin.v2.models/CartFinalizeOrderRequestOptions
- * @version 4.0.91-RC
+ * @version 4.0.92-RC
  */
 class CartFinalizeOrderRequestOptions {
     /**
