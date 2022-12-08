@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The HTTPHeader model module.
  * @module com.ultracart.admin.v2.models/HTTPHeader
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 var HTTPHeader = /*#__PURE__*/function () {
   /**

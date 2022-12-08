@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingMerchantNotesRequest model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingMerchantNotesRequest
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 var ScreenRecordingMerchantNotesRequest = /*#__PURE__*/function () {
   /**

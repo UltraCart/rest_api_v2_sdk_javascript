@@ -21,7 +21,7 @@ import Warning from './Warning';
 /**
  * The IntegrationLogQueryResponse model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogQueryResponse
- * @version 4.0.94-RC
+ * @version 4.0.95-RC
  */
 class IntegrationLogQueryResponse {
     /**

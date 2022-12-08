@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SingleSignOnTokenRequest model module.
  * @module com.ultracart.admin.v2.models/SingleSignOnTokenRequest
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 var SingleSignOnTokenRequest = /*#__PURE__*/function () {
   /**

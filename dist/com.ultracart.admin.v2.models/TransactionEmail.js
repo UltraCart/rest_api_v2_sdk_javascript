@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TransactionEmail model module.
  * @module com.ultracart.admin.v2.models/TransactionEmail
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 var TransactionEmail = /*#__PURE__*/function () {
   /**

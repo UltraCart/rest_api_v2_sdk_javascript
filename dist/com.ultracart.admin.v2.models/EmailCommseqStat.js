@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseqStat model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqStat
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 var EmailCommseqStat = /*#__PURE__*/function () {
   /**

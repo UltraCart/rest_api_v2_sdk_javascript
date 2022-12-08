@@ -134,6 +134,10 @@ import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
 import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationAgentAuth';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationCannedMessage from './com.ultracart.admin.v2.models/ConversationCannedMessage';
+import ConversationCannedMessageResponse from './com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
+import ConversationCannedMessagesResponse from './com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
+import ConversationCannedMessagesSearch from './com.ultracart.admin.v2.models/ConversationCannedMessagesSearch';
 import ConversationEventAddCoupon from './com.ultracart.admin.v2.models/ConversationEventAddCoupon';
 import ConversationEventAddItem from './com.ultracart.admin.v2.models/ConversationEventAddItem';
 import ConversationEventQueuePosition from './com.ultracart.admin.v2.models/ConversationEventQueuePosition';
@@ -756,7 +760,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.94-RC
+* @version 4.0.95-RC
 */
 export {
     /**
@@ -1490,6 +1494,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse}
      */
     ConversationAgentAuthResponse,
+
+    /**
+     * The ConversationCannedMessage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationCannedMessage}
+     */
+    ConversationCannedMessage,
+
+    /**
+     * The ConversationCannedMessageResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationCannedMessageResponse}
+     */
+    ConversationCannedMessageResponse,
+
+    /**
+     * The ConversationCannedMessagesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationCannedMessagesResponse}
+     */
+    ConversationCannedMessagesResponse,
+
+    /**
+     * The ConversationCannedMessagesSearch model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationCannedMessagesSearch}
+     */
+    ConversationCannedMessagesSearch,
 
     /**
      * The ConversationEventAddCoupon model constructor.
