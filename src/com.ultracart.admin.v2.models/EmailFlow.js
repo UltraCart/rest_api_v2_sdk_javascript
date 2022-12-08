@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailFlow model module.
  * @module com.ultracart.admin.v2.models/EmailFlow
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 class EmailFlow {
     /**

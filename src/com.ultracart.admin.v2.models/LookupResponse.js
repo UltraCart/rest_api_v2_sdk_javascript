@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The LookupResponse model module.
  * @module com.ultracart.admin.v2.models/LookupResponse
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 class LookupResponse {
     /**

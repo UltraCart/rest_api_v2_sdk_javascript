@@ -17,7 +17,7 @@ import EmailListSegmentUsedBy from './EmailListSegmentUsedBy';
 /**
  * The EmailSegment model module.
  * @module com.ultracart.admin.v2.models/EmailSegment
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 class EmailSegment {
     /**
@@ -83,6 +83,9 @@ class EmailSegment {
             }
             if (data.hasOwnProperty('rank_json')) {
                 obj['rank_json'] = ApiClient.convertToType(data['rank_json'], 'String');
+            }
+            if (data.hasOwnProperty('rebuild_percentage')) {
+                obj['rebuild_percentage'] = ApiClient.convertToType(data['rebuild_percentage'], 'Number');
             }
             if (data.hasOwnProperty('rebuild_required')) {
                 obj['rebuild_required'] = ApiClient.convertToType(data['rebuild_required'], 'Boolean');
@@ -189,6 +192,12 @@ EmailSegment.prototype['name'] = undefined;
  * @member {String} rank_json
  */
 EmailSegment.prototype['rank_json'] = undefined;
+
+/**
+ * Percentage of completion for a rebuild.  The value range will be 0-1.  Multiply by 100 to format for display.
+ * @member {Number} rebuild_percentage
+ */
+EmailSegment.prototype['rebuild_percentage'] = undefined;
 
 /**
  * True if a rebuild is required because some part of the segment has changed

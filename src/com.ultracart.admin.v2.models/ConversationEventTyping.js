@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationEventTyping model module.
  * @module com.ultracart.admin.v2.models/ConversationEventTyping
- * @version 4.0.93-RC
+ * @version 4.0.94-RC
  */
 class ConversationEventTyping {
     /**
