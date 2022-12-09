@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationMessageTransportStatus'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationMessageTranslation', 'com.ultracart.admin.v2.models/ConversationMessageTransportStatus'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ConversationMessageTransportStatus'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationMessageTranslation'), require('./ConversationMessageTransportStatus'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationMessageTransportStatus);
+    root.UltraCartRestApiV2.ConversationMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationMessageTranslation, root.UltraCartRestApiV2.ConversationMessageTransportStatus);
   }
-}(this, function(ApiClient, ConversationMessageTransportStatus) {
+}(this, function(ApiClient, ConversationMessageTranslation, ConversationMessageTransportStatus) {
   'use strict';
 
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.10.78
+   * @version 3.10.79
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.conversation_message_uuid = ApiClient.convertToType(data['conversation_message_uuid'], 'String');
       if (data.hasOwnProperty('delay_until_dts'))
         obj.delay_until_dts = ApiClient.convertToType(data['delay_until_dts'], 'String');
+      if (data.hasOwnProperty('language_iso_code'))
+        obj.language_iso_code = ApiClient.convertToType(data['language_iso_code'], 'String');
       if (data.hasOwnProperty('media_urls'))
         obj.media_urls = ApiClient.convertToType(data['media_urls'], ['String']);
       if (data.hasOwnProperty('merchant_id'))
@@ -75,6 +77,8 @@
         obj.message_dts = ApiClient.convertToType(data['message_dts'], 'String');
       if (data.hasOwnProperty('message_epoch'))
         obj.message_epoch = ApiClient.convertToType(data['message_epoch'], 'Number');
+      if (data.hasOwnProperty('translations'))
+        obj.translations = ApiClient.convertToType(data['translations'], [ConversationMessageTranslation]);
       if (data.hasOwnProperty('transport_statuses'))
         obj.transport_statuses = ApiClient.convertToType(data['transport_statuses'], [ConversationMessageTransportStatus]);
       if (data.hasOwnProperty('type'))
@@ -117,6 +121,11 @@
   exports.prototype.delay_until_dts = undefined;
 
   /**
+   * @member {String} language_iso_code
+   */
+  exports.prototype.language_iso_code = undefined;
+
+  /**
    * @member {Array.<String>} media_urls
    */
   exports.prototype.media_urls = undefined;
@@ -137,6 +146,11 @@
    * @member {Number} message_epoch
    */
   exports.prototype.message_epoch = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTranslation>} translations
+   */
+  exports.prototype.translations = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses

@@ -34,7 +34,7 @@
   /**
    * The ConversationEventRRWeb model module.
    * @module com.ultracart.admin.v2.models/ConversationEventRRWeb
-   * @version 3.10.78
+   * @version 3.10.79
    */
 
   /**

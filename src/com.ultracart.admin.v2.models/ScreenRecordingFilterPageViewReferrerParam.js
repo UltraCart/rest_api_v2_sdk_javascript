@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingFilterPageViewReferrerParam model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewReferrerParam
-   * @version 3.10.78
+   * @version 3.10.79
    */
 
   /**

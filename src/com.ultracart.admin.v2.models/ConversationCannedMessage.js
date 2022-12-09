@@ -34,7 +34,7 @@
   /**
    * The ConversationCannedMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationCannedMessage
-   * @version 3.10.78
+   * @version 3.10.79
    */
 
   /**
@@ -59,8 +59,8 @@
         obj.canned_message = ApiClient.convertToType(data['canned_message'], 'String');
       if (data.hasOwnProperty('conversation_canned_message_oid'))
         obj.conversation_canned_message_oid = ApiClient.convertToType(data['conversation_canned_message_oid'], 'Number');
-      if (data.hasOwnProperty('conversation_webchat_queue_uuids'))
-        obj.conversation_webchat_queue_uuids = ApiClient.convertToType(data['conversation_webchat_queue_uuids'], ['String']);
+      if (data.hasOwnProperty('conversation_department_oids'))
+        obj.conversation_department_oids = ApiClient.convertToType(data['conversation_department_oids'], ['String']);
       if (data.hasOwnProperty('short_code'))
         obj.short_code = ApiClient.convertToType(data['short_code'], 'String');
     }
@@ -78,9 +78,9 @@
   exports.prototype.conversation_canned_message_oid = undefined;
 
   /**
-   * @member {Array.<String>} conversation_webchat_queue_uuids
+   * @member {Array.<String>} conversation_department_oids
    */
-  exports.prototype.conversation_webchat_queue_uuids = undefined;
+  exports.prototype.conversation_department_oids = undefined;
 
   /**
    * @member {String} short_code
