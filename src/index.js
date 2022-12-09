@@ -146,6 +146,7 @@ import ConversationEventReadMessage from './com.ultracart.admin.v2.models/Conver
 import ConversationEventTyping from './com.ultracart.admin.v2.models/ConversationEventTyping';
 import ConversationEventWebchatContext from './com.ultracart.admin.v2.models/ConversationEventWebchatContext';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
+import ConversationMessageTranslation from './com.ultracart.admin.v2.models/ConversationMessageTranslation';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
 import ConversationMessagesResponse from './com.ultracart.admin.v2.models/ConversationMessagesResponse';
 import ConversationMultimediaUploadUrl from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl';
@@ -760,7 +761,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.95-RC
+* @version 4.0.96-RC
 */
 export {
     /**
@@ -1566,6 +1567,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationMessage}
      */
     ConversationMessage,
+
+    /**
+     * The ConversationMessageTranslation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMessageTranslation}
+     */
+    ConversationMessageTranslation,
 
     /**
      * The ConversationMessageTransportStatus model constructor.

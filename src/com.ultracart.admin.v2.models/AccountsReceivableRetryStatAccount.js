@@ -18,7 +18,7 @@ import AccountsReceivableRetryStatRevenue from './AccountsReceivableRetryStatRev
 /**
  * The AccountsReceivableRetryStatAccount model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryStatAccount
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class AccountsReceivableRetryStatAccount {
     /**

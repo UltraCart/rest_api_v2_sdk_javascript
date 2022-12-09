@@ -771,6 +771,30 @@ Object.defineProperty(exports, "ConversationApi", {
     return _ConversationApi["default"];
   }
 });
+Object.defineProperty(exports, "ConversationCannedMessage", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationCannedMessage["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationCannedMessageResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationCannedMessageResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationCannedMessagesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationCannedMessagesResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationCannedMessagesSearch", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationCannedMessagesSearch["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationEventAddCoupon", {
   enumerable: true,
   get: function get() {
@@ -4525,6 +4549,14 @@ var _Conversation = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ConversationAgentAuth = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuth"));
 
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
+
+var _ConversationCannedMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessage"));
+
+var _ConversationCannedMessageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessageResponse"));
+
+var _ConversationCannedMessagesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessagesResponse"));
+
+var _ConversationCannedMessagesSearch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessagesSearch"));
 
 var _ConversationEventAddCoupon = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventAddCoupon"));
 

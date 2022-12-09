@@ -17,7 +17,7 @@ import ScreenRecordingMultifield from './ScreenRecordingMultifield';
 /**
  * The ScreenRecordingPageViewEventParameter model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewEventParameter
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class ScreenRecordingPageViewEventParameter {
     /**

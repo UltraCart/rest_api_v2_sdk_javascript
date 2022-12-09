@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailPerformance model module.
  * @module com.ultracart.admin.v2.models/EmailPerformance
- * @version 4.0.94-RC
+ * @version 4.0.95-RC
  */
 var EmailPerformance = /*#__PURE__*/function () {
   /**

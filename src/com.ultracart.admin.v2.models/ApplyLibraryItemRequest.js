@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApplyLibraryItemRequest model module.
  * @module com.ultracart.admin.v2.models/ApplyLibraryItemRequest
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class ApplyLibraryItemRequest {
     /**

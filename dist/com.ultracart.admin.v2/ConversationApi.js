@@ -9,6 +9,14 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
+var _ConversationCannedMessage = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessage"));
+
+var _ConversationCannedMessageResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessageResponse"));
+
+var _ConversationCannedMessagesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessagesResponse"));
+
+var _ConversationCannedMessagesSearch = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessagesSearch"));
+
 var _ConversationMessagesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMessagesResponse"));
 
 var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
@@ -40,7 +48,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.94-RC
+* @version 4.0.95-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -154,6 +162,35 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationResponse["default"];
       return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getConversationCannedMessages operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationCannedMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationCannedMessagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a list of canned messages ordered by short_code
+     * Retrieve a list of canned messages ordered by short_code 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationCannedMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationCannedMessagesResponse}
+     */
+
+  }, {
+    key: "getConversationCannedMessages",
+    value: function getConversationCannedMessages(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationCannedMessagesResponse["default"];
+      return this.apiClient.callApi('/conversation/canned_messages', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getConversationContext operation.
@@ -348,6 +385,41 @@ var ConversationApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/conversation/conversations', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the insertConversationCannedMessage operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertConversationCannedMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationCannedMessageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a canned message
+     * Insert a canned message 
+     * @param {module:com.ultracart.admin.v2.models/ConversationCannedMessage} canned_message Canned message
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertConversationCannedMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationCannedMessageResponse}
+     */
+
+  }, {
+    key: "insertConversationCannedMessage",
+    value: function insertConversationCannedMessage(canned_message, callback) {
+      var postBody = canned_message; // verify the required parameter 'canned_message' is set
+
+      if (canned_message === undefined || canned_message === null) {
+        throw new Error("Missing the required parameter 'canned_message' when calling insertConversationCannedMessage");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationCannedMessageResponse["default"];
+      return this.apiClient.callApi('/conversation/canned_messages', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the joinConversation operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~joinConversationCallback
      * @param {String} error Error message, if any.
@@ -456,6 +528,41 @@ var ConversationApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}/markread', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the searchConversationCannedMessages operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~searchConversationCannedMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationCannedMessagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search for canned messages by short_code
+     * Search for canned messages by short_code 
+     * @param {module:com.ultracart.admin.v2.models/ConversationCannedMessagesSearch} search_request Search request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~searchConversationCannedMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationCannedMessagesResponse}
+     */
+
+  }, {
+    key: "searchConversationCannedMessages",
+    value: function searchConversationCannedMessages(search_request, callback) {
+      var postBody = search_request; // verify the required parameter 'search_request' is set
+
+      if (search_request === undefined || search_request === null) {
+        throw new Error("Missing the required parameter 'search_request' when calling searchConversationCannedMessages");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationCannedMessagesResponse["default"];
+      return this.apiClient.callApi('/conversation/canned_messages/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the startConversation operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~startConversationCallback
      * @param {String} error Error message, if any.
@@ -489,6 +596,49 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationStartResponse["default"];
       return this.apiClient.callApi('/conversation/conversations', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the updateConversationCannedMessage operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateConversationCannedMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationCannedMessageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a canned message
+     * Update a canned message 
+     * @param {Number} conversation_canned_message_oid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationCannedMessage} canned_message Canned message
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateConversationCannedMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationCannedMessageResponse}
+     */
+
+  }, {
+    key: "updateConversationCannedMessage",
+    value: function updateConversationCannedMessage(conversation_canned_message_oid, canned_message, callback) {
+      var postBody = canned_message; // verify the required parameter 'conversation_canned_message_oid' is set
+
+      if (conversation_canned_message_oid === undefined || conversation_canned_message_oid === null) {
+        throw new Error("Missing the required parameter 'conversation_canned_message_oid' when calling updateConversationCannedMessage");
+      } // verify the required parameter 'canned_message' is set
+
+
+      if (canned_message === undefined || canned_message === null) {
+        throw new Error("Missing the required parameter 'canned_message' when calling updateConversationCannedMessage");
+      }
+
+      var pathParams = {
+        'conversation_canned_message_oid': conversation_canned_message_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationCannedMessageResponse["default"];
+      return this.apiClient.callApi('/conversation/canned_messages/{conversation_canned_message_oid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the updateConversationWebchatQueueStatus operation.

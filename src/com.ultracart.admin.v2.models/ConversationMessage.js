@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationMessageTranslation from './ConversationMessageTranslation';
 import ConversationMessageTransportStatus from './ConversationMessageTransportStatus';
 
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class ConversationMessage {
     /**
@@ -66,6 +67,9 @@ class ConversationMessage {
             if (data.hasOwnProperty('delay_until_dts')) {
                 obj['delay_until_dts'] = ApiClient.convertToType(data['delay_until_dts'], 'String');
             }
+            if (data.hasOwnProperty('language_iso_code')) {
+                obj['language_iso_code'] = ApiClient.convertToType(data['language_iso_code'], 'String');
+            }
             if (data.hasOwnProperty('media_urls')) {
                 obj['media_urls'] = ApiClient.convertToType(data['media_urls'], ['String']);
             }
@@ -77,6 +81,9 @@ class ConversationMessage {
             }
             if (data.hasOwnProperty('message_epoch')) {
                 obj['message_epoch'] = ApiClient.convertToType(data['message_epoch'], 'Number');
+            }
+            if (data.hasOwnProperty('translations')) {
+                obj['translations'] = ApiClient.convertToType(data['translations'], [ConversationMessageTranslation]);
             }
             if (data.hasOwnProperty('transport_statuses')) {
                 obj['transport_statuses'] = ApiClient.convertToType(data['transport_statuses'], [ConversationMessageTransportStatus]);
@@ -126,6 +133,11 @@ ConversationMessage.prototype['conversation_message_uuid'] = undefined;
 ConversationMessage.prototype['delay_until_dts'] = undefined;
 
 /**
+ * @member {String} language_iso_code
+ */
+ConversationMessage.prototype['language_iso_code'] = undefined;
+
+/**
  * @member {Array.<String>} media_urls
  */
 ConversationMessage.prototype['media_urls'] = undefined;
@@ -146,6 +158,11 @@ ConversationMessage.prototype['message_dts'] = undefined;
  * @member {Number} message_epoch
  */
 ConversationMessage.prototype['message_epoch'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTranslation>} translations
+ */
+ConversationMessage.prototype['translations'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses

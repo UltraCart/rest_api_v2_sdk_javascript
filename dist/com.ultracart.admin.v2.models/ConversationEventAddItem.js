@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventAddItem model module.
  * @module com.ultracart.admin.v2.models/ConversationEventAddItem
- * @version 4.0.94-RC
+ * @version 4.0.95-RC
  */
 var ConversationEventAddItem = /*#__PURE__*/function () {
   /**

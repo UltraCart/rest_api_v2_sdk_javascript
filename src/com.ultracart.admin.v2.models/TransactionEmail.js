@@ -17,7 +17,7 @@ import TransactionEmailOption from './TransactionEmailOption';
 /**
  * The TransactionEmail model module.
  * @module com.ultracart.admin.v2.models/TransactionEmail
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class TransactionEmail {
     /**

@@ -17,7 +17,7 @@ import PricingTierNotification from './PricingTierNotification';
 /**
  * The PricingTier model module.
  * @module com.ultracart.admin.v2.models/PricingTier
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class PricingTier {
     /**

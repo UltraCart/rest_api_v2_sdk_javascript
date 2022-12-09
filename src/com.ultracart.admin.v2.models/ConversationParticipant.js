@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class ConversationParticipant {
     /**
@@ -58,6 +58,9 @@ class ConversationParticipant {
             }
             if (data.hasOwnProperty('joined_dts')) {
                 obj['joined_dts'] = ApiClient.convertToType(data['joined_dts'], 'String');
+            }
+            if (data.hasOwnProperty('language_iso_code')) {
+                obj['language_iso_code'] = ApiClient.convertToType(data['language_iso_code'], 'String');
             }
             if (data.hasOwnProperty('last_message_dts')) {
                 obj['last_message_dts'] = ApiClient.convertToType(data['last_message_dts'], 'String');
@@ -104,6 +107,11 @@ ConversationParticipant.prototype['conversation_participant_uuid'] = undefined;
  * @member {String} joined_dts
  */
 ConversationParticipant.prototype['joined_dts'] = undefined;
+
+/**
+ * @member {String} language_iso_code
+ */
+ConversationParticipant.prototype['language_iso_code'] = undefined;
 
 /**
  * Last message date/time

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PricingTier model module.
  * @module com.ultracart.admin.v2.models/PricingTier
- * @version 4.0.94-RC
+ * @version 4.0.95-RC
  */
 var PricingTier = /*#__PURE__*/function () {
   /**

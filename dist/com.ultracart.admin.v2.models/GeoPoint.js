@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GeoPoint model module.
  * @module com.ultracart.admin.v2.models/GeoPoint
- * @version 4.0.94-RC
+ * @version 4.0.95-RC
  */
 var GeoPoint = /*#__PURE__*/function () {
   /**

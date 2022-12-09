@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemAccounting model module.
  * @module com.ultracart.admin.v2.models/ItemAccounting
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class ItemAccounting {
     /**

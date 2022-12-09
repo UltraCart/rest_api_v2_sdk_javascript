@@ -17,7 +17,7 @@ import ItemOptionValue from './ItemOptionValue';
 /**
  * The ItemOption model module.
  * @module com.ultracart.admin.v2.models/ItemOption
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class ItemOption {
     /**

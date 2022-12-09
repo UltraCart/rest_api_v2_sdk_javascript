@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ChargebackDisputesResponse model module.
  * @module com.ultracart.admin.v2.models/ChargebackDisputesResponse
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 class ChargebackDisputesResponse {
     /**

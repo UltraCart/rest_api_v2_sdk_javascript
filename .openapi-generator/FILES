@@ -141,6 +141,7 @@ docs/ConversationEventReadMessage.md
 docs/ConversationEventTyping.md
 docs/ConversationEventWebchatContext.md
 docs/ConversationMessage.md
+docs/ConversationMessageTranslation.md
 docs/ConversationMessageTransportStatus.md
 docs/ConversationMessagesResponse.md
 docs/ConversationMultimediaUploadUrl.md
@@ -855,6 +856,7 @@ src/com.ultracart.admin.v2.models/ConversationEventReadMessage.js
 src/com.ultracart.admin.v2.models/ConversationEventTyping.js
 src/com.ultracart.admin.v2.models/ConversationEventWebchatContext.js
 src/com.ultracart.admin.v2.models/ConversationMessage.js
+src/com.ultracart.admin.v2.models/ConversationMessageTranslation.js
 src/com.ultracart.admin.v2.models/ConversationMessageTransportStatus.js
 src/com.ultracart.admin.v2.models/ConversationMessagesResponse.js
 src/com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl.js
