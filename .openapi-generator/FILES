@@ -133,6 +133,12 @@ docs/ConversationCannedMessage.md
 docs/ConversationCannedMessageResponse.md
 docs/ConversationCannedMessagesResponse.md
 docs/ConversationCannedMessagesSearch.md
+docs/ConversationDepartment.md
+docs/ConversationDepartmentResponse.md
+docs/ConversationDepartmentsResponse.md
+docs/ConversationEngagement.md
+docs/ConversationEngagementResponse.md
+docs/ConversationEngagementsResponse.md
 docs/ConversationEventAddCoupon.md
 docs/ConversationEventAddItem.md
 docs/ConversationEventQueuePosition.md
@@ -140,6 +146,7 @@ docs/ConversationEventRRWeb.md
 docs/ConversationEventReadMessage.md
 docs/ConversationEventTyping.md
 docs/ConversationEventWebchatContext.md
+docs/ConversationJoinRequest.md
 docs/ConversationMessage.md
 docs/ConversationMessageTranslation.md
 docs/ConversationMessageTransportStatus.md
@@ -848,6 +855,12 @@ src/com.ultracart.admin.v2.models/ConversationCannedMessage.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessageResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesSearch.js
+src/com.ultracart.admin.v2.models/ConversationDepartment.js
+src/com.ultracart.admin.v2.models/ConversationDepartmentResponse.js
+src/com.ultracart.admin.v2.models/ConversationDepartmentsResponse.js
+src/com.ultracart.admin.v2.models/ConversationEngagement.js
+src/com.ultracart.admin.v2.models/ConversationEngagementResponse.js
+src/com.ultracart.admin.v2.models/ConversationEngagementsResponse.js
 src/com.ultracart.admin.v2.models/ConversationEventAddCoupon.js
 src/com.ultracart.admin.v2.models/ConversationEventAddItem.js
 src/com.ultracart.admin.v2.models/ConversationEventQueuePosition.js
@@ -855,6 +868,7 @@ src/com.ultracart.admin.v2.models/ConversationEventRRWeb.js
 src/com.ultracart.admin.v2.models/ConversationEventReadMessage.js
 src/com.ultracart.admin.v2.models/ConversationEventTyping.js
 src/com.ultracart.admin.v2.models/ConversationEventWebchatContext.js
+src/com.ultracart.admin.v2.models/ConversationJoinRequest.js
 src/com.ultracart.admin.v2.models/ConversationMessage.js
 src/com.ultracart.admin.v2.models/ConversationMessageTranslation.js
 src/com.ultracart.admin.v2.models/ConversationMessageTransportStatus.js

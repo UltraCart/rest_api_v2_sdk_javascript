@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemGoogleProductSearch model module.
  * @module com.ultracart.admin.v2.models/ItemGoogleProductSearch
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 var ItemGoogleProductSearch = /*#__PURE__*/function () {
   /**

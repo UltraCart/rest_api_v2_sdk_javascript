@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationMessageTranslation = _interopRequireDefault(require("./ConversationMessageTranslation"));
+
 var _ConversationMessageTransportStatus = _interopRequireDefault(require("./ConversationMessageTransportStatus"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -20,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -80,6 +82,10 @@ var ConversationMessage = /*#__PURE__*/function () {
           obj['delay_until_dts'] = _ApiClient["default"].convertToType(data['delay_until_dts'], 'String');
         }
 
+        if (data.hasOwnProperty('language_iso_code')) {
+          obj['language_iso_code'] = _ApiClient["default"].convertToType(data['language_iso_code'], 'String');
+        }
+
         if (data.hasOwnProperty('media_urls')) {
           obj['media_urls'] = _ApiClient["default"].convertToType(data['media_urls'], ['String']);
         }
@@ -94,6 +100,10 @@ var ConversationMessage = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('message_epoch')) {
           obj['message_epoch'] = _ApiClient["default"].convertToType(data['message_epoch'], 'Number');
+        }
+
+        if (data.hasOwnProperty('translations')) {
+          obj['translations'] = _ApiClient["default"].convertToType(data['translations'], [_ConversationMessageTranslation["default"]]);
         }
 
         if (data.hasOwnProperty('transport_statuses')) {
@@ -148,6 +158,11 @@ ConversationMessage.prototype['conversation_message_uuid'] = undefined;
 
 ConversationMessage.prototype['delay_until_dts'] = undefined;
 /**
+ * @member {String} language_iso_code
+ */
+
+ConversationMessage.prototype['language_iso_code'] = undefined;
+/**
  * @member {Array.<String>} media_urls
  */
 
@@ -169,6 +184,11 @@ ConversationMessage.prototype['message_dts'] = undefined;
  */
 
 ConversationMessage.prototype['message_epoch'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTranslation>} translations
+ */
+
+ConversationMessage.prototype['translations'] = undefined;
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTransportStatus>} transport_statuses
  */

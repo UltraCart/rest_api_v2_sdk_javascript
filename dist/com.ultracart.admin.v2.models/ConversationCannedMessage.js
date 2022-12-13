@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationCannedMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationCannedMessage
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 var ConversationCannedMessage = /*#__PURE__*/function () {
   /**
@@ -62,8 +62,8 @@ var ConversationCannedMessage = /*#__PURE__*/function () {
           obj['conversation_canned_message_oid'] = _ApiClient["default"].convertToType(data['conversation_canned_message_oid'], 'Number');
         }
 
-        if (data.hasOwnProperty('conversation_webchat_queue_uuids')) {
-          obj['conversation_webchat_queue_uuids'] = _ApiClient["default"].convertToType(data['conversation_webchat_queue_uuids'], ['String']);
+        if (data.hasOwnProperty('conversation_department_oids')) {
+          obj['conversation_department_oids'] = _ApiClient["default"].convertToType(data['conversation_department_oids'], ['String']);
         }
 
         if (data.hasOwnProperty('short_code')) {
@@ -89,10 +89,10 @@ ConversationCannedMessage.prototype['canned_message'] = undefined;
 
 ConversationCannedMessage.prototype['conversation_canned_message_oid'] = undefined;
 /**
- * @member {Array.<String>} conversation_webchat_queue_uuids
+ * @member {Array.<String>} conversation_department_oids
  */
 
-ConversationCannedMessage.prototype['conversation_webchat_queue_uuids'] = undefined;
+ConversationCannedMessage.prototype['conversation_department_oids'] = undefined;
 /**
  * @member {String} short_code
  */

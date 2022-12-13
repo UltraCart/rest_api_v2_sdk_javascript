@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationTwilioAccount model module.
  * @module com.ultracart.admin.v2.models/ConversationTwilioAccount
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 var ConversationTwilioAccount = /*#__PURE__*/function () {
   /**

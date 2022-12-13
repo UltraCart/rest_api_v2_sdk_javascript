@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WebhookLogSummary model module.
  * @module com.ultracart.admin.v2.models/WebhookLogSummary
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 var WebhookLogSummary = /*#__PURE__*/function () {
   /**

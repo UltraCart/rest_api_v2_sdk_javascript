@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.96-RC
+ * @version 4.0.97-RC
  */
 class ConversationParticipant {
     /**
@@ -56,6 +56,9 @@ class ConversationParticipant {
             if (data.hasOwnProperty('conversation_participant_uuid')) {
                 obj['conversation_participant_uuid'] = ApiClient.convertToType(data['conversation_participant_uuid'], 'String');
             }
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            }
             if (data.hasOwnProperty('joined_dts')) {
                 obj['joined_dts'] = ApiClient.convertToType(data['joined_dts'], 'String');
             }
@@ -70,6 +73,9 @@ class ConversationParticipant {
             }
             if (data.hasOwnProperty('profile_image_url')) {
                 obj['profile_image_url'] = ApiClient.convertToType(data['profile_image_url'], 'String');
+            }
+            if (data.hasOwnProperty('sms_phone_number')) {
+                obj['sms_phone_number'] = ApiClient.convertToType(data['sms_phone_number'], 'String');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -103,6 +109,11 @@ ConversationParticipant.prototype['conversation_participant_name'] = undefined;
 ConversationParticipant.prototype['conversation_participant_uuid'] = undefined;
 
 /**
+ * @member {String} email
+ */
+ConversationParticipant.prototype['email'] = undefined;
+
+/**
  * Joined conversation date/time
  * @member {String} joined_dts
  */
@@ -129,6 +140,11 @@ ConversationParticipant.prototype['left_dts'] = undefined;
  * @member {String} profile_image_url
  */
 ConversationParticipant.prototype['profile_image_url'] = undefined;
+
+/**
+ * @member {String} sms_phone_number
+ */
+ConversationParticipant.prototype['sms_phone_number'] = undefined;
 
 /**
  * @member {String} status

@@ -138,6 +138,12 @@ import ConversationCannedMessage from './com.ultracart.admin.v2.models/Conversat
 import ConversationCannedMessageResponse from './com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
 import ConversationCannedMessagesResponse from './com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
 import ConversationCannedMessagesSearch from './com.ultracart.admin.v2.models/ConversationCannedMessagesSearch';
+import ConversationDepartment from './com.ultracart.admin.v2.models/ConversationDepartment';
+import ConversationDepartmentResponse from './com.ultracart.admin.v2.models/ConversationDepartmentResponse';
+import ConversationDepartmentsResponse from './com.ultracart.admin.v2.models/ConversationDepartmentsResponse';
+import ConversationEngagement from './com.ultracart.admin.v2.models/ConversationEngagement';
+import ConversationEngagementResponse from './com.ultracart.admin.v2.models/ConversationEngagementResponse';
+import ConversationEngagementsResponse from './com.ultracart.admin.v2.models/ConversationEngagementsResponse';
 import ConversationEventAddCoupon from './com.ultracart.admin.v2.models/ConversationEventAddCoupon';
 import ConversationEventAddItem from './com.ultracart.admin.v2.models/ConversationEventAddItem';
 import ConversationEventQueuePosition from './com.ultracart.admin.v2.models/ConversationEventQueuePosition';
@@ -145,6 +151,7 @@ import ConversationEventRRWeb from './com.ultracart.admin.v2.models/Conversation
 import ConversationEventReadMessage from './com.ultracart.admin.v2.models/ConversationEventReadMessage';
 import ConversationEventTyping from './com.ultracart.admin.v2.models/ConversationEventTyping';
 import ConversationEventWebchatContext from './com.ultracart.admin.v2.models/ConversationEventWebchatContext';
+import ConversationJoinRequest from './com.ultracart.admin.v2.models/ConversationJoinRequest';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTranslation from './com.ultracart.admin.v2.models/ConversationMessageTranslation';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
@@ -761,7 +768,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.96-RC
+* @version 4.0.97-RC
 */
 export {
     /**
@@ -1521,6 +1528,42 @@ export {
     ConversationCannedMessagesSearch,
 
     /**
+     * The ConversationDepartment model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationDepartment}
+     */
+    ConversationDepartment,
+
+    /**
+     * The ConversationDepartmentResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationDepartmentResponse}
+     */
+    ConversationDepartmentResponse,
+
+    /**
+     * The ConversationDepartmentsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationDepartmentsResponse}
+     */
+    ConversationDepartmentsResponse,
+
+    /**
+     * The ConversationEngagement model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEngagement}
+     */
+    ConversationEngagement,
+
+    /**
+     * The ConversationEngagementResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEngagementResponse}
+     */
+    ConversationEngagementResponse,
+
+    /**
+     * The ConversationEngagementsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEngagementsResponse}
+     */
+    ConversationEngagementsResponse,
+
+    /**
      * The ConversationEventAddCoupon model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationEventAddCoupon}
      */
@@ -1561,6 +1604,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationEventWebchatContext}
      */
     ConversationEventWebchatContext,
+
+    /**
+     * The ConversationJoinRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationJoinRequest}
+     */
+    ConversationJoinRequest,
 
     /**
      * The ConversationMessage model constructor.

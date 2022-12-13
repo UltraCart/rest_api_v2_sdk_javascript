@@ -843,6 +843,12 @@ Object.defineProperty(exports, "ConversationMessage", {
     return _ConversationMessage["default"];
   }
 });
+Object.defineProperty(exports, "ConversationMessageTranslation", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMessageTranslation["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationMessageTransportStatus", {
   enumerable: true,
   get: function get() {
@@ -4573,6 +4579,8 @@ var _ConversationEventTyping = _interopRequireDefault(require("./com.ultracart.a
 var _ConversationEventWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventWebchatContext"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
+
+var _ConversationMessageTranslation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTranslation"));
 
 var _ConversationMessageTransportStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTransportStatus"));
 

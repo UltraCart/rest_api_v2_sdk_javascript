@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationWebchatQueueStatusQueueEntry model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
- * @version 4.0.96-RC
+ * @version 4.0.97-RC
  */
 class ConversationWebchatQueueStatusQueueEntry {
     /**
@@ -62,6 +62,9 @@ class ConversationWebchatQueueStatusQueueEntry {
             if (data.hasOwnProperty('join_dts')) {
                 obj['join_dts'] = ApiClient.convertToType(data['join_dts'], 'String');
             }
+            if (data.hasOwnProperty('participant_language_iso_code')) {
+                obj['participant_language_iso_code'] = ApiClient.convertToType(data['participant_language_iso_code'], 'String');
+            }
             if (data.hasOwnProperty('question')) {
                 obj['question'] = ApiClient.convertToType(data['question'], 'String');
             }
@@ -97,6 +100,11 @@ ConversationWebchatQueueStatusQueueEntry.prototype['email'] = undefined;
  * @member {String} join_dts
  */
 ConversationWebchatQueueStatusQueueEntry.prototype['join_dts'] = undefined;
+
+/**
+ * @member {String} participant_language_iso_code
+ */
+ConversationWebchatQueueStatusQueueEntry.prototype['participant_language_iso_code'] = undefined;
 
 /**
  * @member {String} question

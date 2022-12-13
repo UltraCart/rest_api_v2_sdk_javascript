@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.95-RC
+ * @version 4.0.96-RC
  */
 var ConversationParticipant = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,10 @@ var ConversationParticipant = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('joined_dts')) {
           obj['joined_dts'] = _ApiClient["default"].convertToType(data['joined_dts'], 'String');
+        }
+
+        if (data.hasOwnProperty('language_iso_code')) {
+          obj['language_iso_code'] = _ApiClient["default"].convertToType(data['language_iso_code'], 'String');
         }
 
         if (data.hasOwnProperty('last_message_dts')) {
@@ -123,6 +127,11 @@ ConversationParticipant.prototype['conversation_participant_uuid'] = undefined;
  */
 
 ConversationParticipant.prototype['joined_dts'] = undefined;
+/**
+ * @member {String} language_iso_code
+ */
+
+ConversationParticipant.prototype['language_iso_code'] = undefined;
 /**
  * Last message date/time
  * @member {String} last_message_dts

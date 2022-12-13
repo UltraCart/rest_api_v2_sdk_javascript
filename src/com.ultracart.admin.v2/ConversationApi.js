@@ -18,6 +18,13 @@ import ConversationCannedMessage from '../com.ultracart.admin.v2.models/Conversa
 import ConversationCannedMessageResponse from '../com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
 import ConversationCannedMessagesResponse from '../com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
 import ConversationCannedMessagesSearch from '../com.ultracart.admin.v2.models/ConversationCannedMessagesSearch';
+import ConversationDepartment from '../com.ultracart.admin.v2.models/ConversationDepartment';
+import ConversationDepartmentResponse from '../com.ultracart.admin.v2.models/ConversationDepartmentResponse';
+import ConversationDepartmentsResponse from '../com.ultracart.admin.v2.models/ConversationDepartmentsResponse';
+import ConversationEngagement from '../com.ultracart.admin.v2.models/ConversationEngagement';
+import ConversationEngagementResponse from '../com.ultracart.admin.v2.models/ConversationEngagementResponse';
+import ConversationEngagementsResponse from '../com.ultracart.admin.v2.models/ConversationEngagementsResponse';
+import ConversationJoinRequest from '../com.ultracart.admin.v2.models/ConversationJoinRequest';
 import ConversationMessagesResponse from '../com.ultracart.admin.v2.models/ConversationMessagesResponse';
 import ConversationMultimediaUploadUrlResponse from '../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationResponse from '../com.ultracart.admin.v2.models/ConversationResponse';
@@ -32,7 +39,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.96-RC
+* @version 4.0.97-RC
 */
 export default class ConversationApi {
 
@@ -243,6 +250,80 @@ export default class ConversationApi {
       let returnType = ConversationWebchatContext;
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}/context', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationDepartments operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationDepartmentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationDepartmentsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a list of departments ordered by name
+     * Retrieve a list of departments ordered by name 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationDepartmentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationDepartmentsResponse}
+     */
+    getConversationDepartments(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationDepartmentsResponse;
+      return this.apiClient.callApi(
+        '/conversation/departments', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationEngagements operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationEngagementsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationEngagementsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a list of engagements ordered by name
+     * Retrieve a list of engagements ordered by name 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationEngagementsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationEngagementsResponse}
+     */
+    getConversationEngagements(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationEngagementsResponse;
+      return this.apiClient.callApi(
+        '/conversation/engagements', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -471,6 +552,90 @@ export default class ConversationApi {
     }
 
     /**
+     * Callback function to receive the result of the insertConversationDepartment operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertConversationDepartmentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationDepartmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a department
+     * Insert a department 
+     * @param {module:com.ultracart.admin.v2.models/ConversationDepartment} department Department
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertConversationDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationDepartmentResponse}
+     */
+    insertConversationDepartment(department, callback) {
+      let postBody = department;
+      // verify the required parameter 'department' is set
+      if (department === undefined || department === null) {
+        throw new Error("Missing the required parameter 'department' when calling insertConversationDepartment");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationDepartmentResponse;
+      return this.apiClient.callApi(
+        '/conversation/departments', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertConversationEngagement operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertConversationEngagementCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationEngagementResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a engagement
+     * Insert a engagement 
+     * @param {module:com.ultracart.admin.v2.models/ConversationEngagement} engagement Engagement
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertConversationEngagementCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationEngagementResponse}
+     */
+    insertConversationEngagement(engagement, callback) {
+      let postBody = engagement;
+      // verify the required parameter 'engagement' is set
+      if (engagement === undefined || engagement === null) {
+        throw new Error("Missing the required parameter 'engagement' when calling insertConversationEngagement");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationEngagementResponse;
+      return this.apiClient.callApi(
+        '/conversation/engagements', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the joinConversation operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~joinConversationCallback
      * @param {String} error Error message, if any.
@@ -482,10 +647,13 @@ export default class ConversationApi {
      * Join a conversation
      * Join a conversation 
      * @param {String} conversation_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {module:com.ultracart.admin.v2.models/ConversationJoinRequest} opts.join_request Join request
      * @param {module:com.ultracart.admin.v2/ConversationApi~joinConversationCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    joinConversation(conversation_uuid, callback) {
-      let postBody = null;
+    joinConversation(conversation_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['join_request'];
       // verify the required parameter 'conversation_uuid' is set
       if (conversation_uuid === undefined || conversation_uuid === null) {
         throw new Error("Missing the required parameter 'conversation_uuid' when calling joinConversation");
@@ -502,7 +670,7 @@ export default class ConversationApi {
       };
 
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      let contentTypes = [];
+      let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
       return this.apiClient.callApi(
@@ -723,6 +891,102 @@ export default class ConversationApi {
       let returnType = ConversationCannedMessageResponse;
       return this.apiClient.callApi(
         '/conversation/canned_messages/{conversation_canned_message_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateConversationDepartment operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateConversationDepartmentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationDepartmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a department
+     * Update a department 
+     * @param {Number} conversation_department_oid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationDepartment} department Department
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateConversationDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationDepartmentResponse}
+     */
+    updateConversationDepartment(conversation_department_oid, department, callback) {
+      let postBody = department;
+      // verify the required parameter 'conversation_department_oid' is set
+      if (conversation_department_oid === undefined || conversation_department_oid === null) {
+        throw new Error("Missing the required parameter 'conversation_department_oid' when calling updateConversationDepartment");
+      }
+      // verify the required parameter 'department' is set
+      if (department === undefined || department === null) {
+        throw new Error("Missing the required parameter 'department' when calling updateConversationDepartment");
+      }
+
+      let pathParams = {
+        'conversation_department_oid': conversation_department_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationDepartmentResponse;
+      return this.apiClient.callApi(
+        '/conversation/departments/{conversation_department_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateConversationEngagement operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateConversationEngagementCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationEngagementResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a engagement
+     * Update a engagement 
+     * @param {Number} conversation_engagement_oid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationEngagement} engagement Engagement
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateConversationEngagementCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationEngagementResponse}
+     */
+    updateConversationEngagement(conversation_engagement_oid, engagement, callback) {
+      let postBody = engagement;
+      // verify the required parameter 'conversation_engagement_oid' is set
+      if (conversation_engagement_oid === undefined || conversation_engagement_oid === null) {
+        throw new Error("Missing the required parameter 'conversation_engagement_oid' when calling updateConversationEngagement");
+      }
+      // verify the required parameter 'engagement' is set
+      if (engagement === undefined || engagement === null) {
+        throw new Error("Missing the required parameter 'engagement' when calling updateConversationEngagement");
+      }
+
+      let pathParams = {
+        'conversation_engagement_oid': conversation_engagement_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationEngagementResponse;
+      return this.apiClient.callApi(
+        '/conversation/engagements/{conversation_engagement_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
