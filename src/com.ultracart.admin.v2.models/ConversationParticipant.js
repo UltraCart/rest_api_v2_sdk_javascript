@@ -34,7 +34,7 @@
   /**
    * The ConversationParticipant model module.
    * @module com.ultracart.admin.v2.models/ConversationParticipant
-   * @version 3.10.79
+   * @version 3.10.80
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.conversation_participant_name = ApiClient.convertToType(data['conversation_participant_name'], 'String');
       if (data.hasOwnProperty('conversation_participant_uuid'))
         obj.conversation_participant_uuid = ApiClient.convertToType(data['conversation_participant_uuid'], 'String');
+      if (data.hasOwnProperty('email'))
+        obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('joined_dts'))
         obj.joined_dts = ApiClient.convertToType(data['joined_dts'], 'String');
       if (data.hasOwnProperty('language_iso_code'))
@@ -71,6 +73,8 @@
         obj.left_dts = ApiClient.convertToType(data['left_dts'], 'String');
       if (data.hasOwnProperty('profile_image_url'))
         obj.profile_image_url = ApiClient.convertToType(data['profile_image_url'], 'String');
+      if (data.hasOwnProperty('sms_phone_number'))
+        obj.sms_phone_number = ApiClient.convertToType(data['sms_phone_number'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
       if (data.hasOwnProperty('timezone'))
@@ -95,6 +99,11 @@
    * @member {String} conversation_participant_uuid
    */
   exports.prototype.conversation_participant_uuid = undefined;
+
+  /**
+   * @member {String} email
+   */
+  exports.prototype.email = undefined;
 
   /**
    * Joined conversation date/time
@@ -123,6 +132,11 @@
    * @member {String} profile_image_url
    */
   exports.prototype.profile_image_url = undefined;
+
+  /**
+   * @member {String} sms_phone_number
+   */
+  exports.prototype.sms_phone_number = undefined;
 
   /**
    * @member {String} status

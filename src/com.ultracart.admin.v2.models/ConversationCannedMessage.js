@@ -34,7 +34,7 @@
   /**
    * The ConversationCannedMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationCannedMessage
-   * @version 3.10.79
+   * @version 3.10.80
    */
 
   /**
@@ -60,7 +60,7 @@
       if (data.hasOwnProperty('conversation_canned_message_oid'))
         obj.conversation_canned_message_oid = ApiClient.convertToType(data['conversation_canned_message_oid'], 'Number');
       if (data.hasOwnProperty('conversation_department_oids'))
-        obj.conversation_department_oids = ApiClient.convertToType(data['conversation_department_oids'], ['String']);
+        obj.conversation_department_oids = ApiClient.convertToType(data['conversation_department_oids'], ['Number']);
       if (data.hasOwnProperty('short_code'))
         obj.short_code = ApiClient.convertToType(data['short_code'], 'String');
     }
@@ -78,7 +78,7 @@
   exports.prototype.conversation_canned_message_oid = undefined;
 
   /**
-   * @member {Array.<String>} conversation_department_oids
+   * @member {Array.<Number>} conversation_department_oids
    */
   exports.prototype.conversation_department_oids = undefined;
 
