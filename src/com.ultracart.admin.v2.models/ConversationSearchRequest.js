@@ -34,7 +34,7 @@
   /**
    * The ConversationSearchRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationSearchRequest
-   * @version 3.10.81
+   * @version 3.10.82
    */
 
   /**
@@ -55,6 +55,10 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('date_end'))
+        obj.date_end = ApiClient.convertToType(data['date_end'], 'String');
+      if (data.hasOwnProperty('date_start'))
+        obj.date_start = ApiClient.convertToType(data['date_start'], 'String');
       if (data.hasOwnProperty('email_filter'))
         obj.email_filter = ApiClient.convertToType(data['email_filter'], 'String');
       if (data.hasOwnProperty('language_filter'))
@@ -78,6 +82,18 @@
     }
     return obj;
   }
+
+  /**
+   * End of the range
+   * @member {String} date_end
+   */
+  exports.prototype.date_end = undefined;
+
+  /**
+   * Start of the range
+   * @member {String} date_start
+   */
+  exports.prototype.date_start = undefined;
 
   /**
    * @member {String} email_filter
