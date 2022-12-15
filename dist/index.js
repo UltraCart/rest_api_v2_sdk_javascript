@@ -771,6 +771,18 @@ Object.defineProperty(exports, "ConversationApi", {
     return _ConversationApi["default"];
   }
 });
+Object.defineProperty(exports, "ConversationAutocompleteRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAutocompleteRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAutocompleteResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAutocompleteResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationCannedMessage", {
   enumerable: true,
   get: function get() {
@@ -925,6 +937,18 @@ Object.defineProperty(exports, "ConversationResponse", {
   enumerable: true,
   get: function get() {
     return _ConversationResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationSearchRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationSearchRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationSearchResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationSearchResponse["default"];
   }
 });
 Object.defineProperty(exports, "ConversationStartRequest", {
@@ -4598,6 +4622,10 @@ var _ConversationAgentAuth = _interopRequireDefault(require("./com.ultracart.adm
 
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
+var _ConversationAutocompleteRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
+
+var _ConversationAutocompleteResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
+
 var _ConversationCannedMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessage"));
 
 var _ConversationCannedMessageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessageResponse"));
@@ -4649,6 +4677,10 @@ var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require(".
 var _ConversationParticipant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationParticipant"));
 
 var _ConversationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationResponse"));
+
+var _ConversationSearchRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSearchRequest"));
+
+var _ConversationSearchResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSearchResponse"));
 
 var _ConversationStartRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartRequest"));
 

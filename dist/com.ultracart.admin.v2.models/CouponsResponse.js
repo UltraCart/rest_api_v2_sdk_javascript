@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponsResponse model module.
  * @module com.ultracart.admin.v2.models/CouponsResponse
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 var CouponsResponse = /*#__PURE__*/function () {
   /**

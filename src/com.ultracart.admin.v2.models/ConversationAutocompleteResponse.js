@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationAutocompleteValue from './ConversationAutocompleteValue';
 import Error from './Error';
 import ResponseMetadata from './ResponseMetadata';
 import Warning from './Warning';
@@ -19,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationAutocompleteResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAutocompleteResponse
- * @version 4.0.98-RC
+ * @version 4.0.99-RC
  */
 class ConversationAutocompleteResponse {
     /**
@@ -60,7 +61,7 @@ class ConversationAutocompleteResponse {
                 obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], ['String']);
+                obj['results'] = ApiClient.convertToType(data['results'], [ConversationAutocompleteValue]);
             }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
@@ -94,7 +95,7 @@ ConversationAutocompleteResponse.prototype['field'] = undefined;
 ConversationAutocompleteResponse.prototype['metadata'] = undefined;
 
 /**
- * @member {Array.<String>} results
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationAutocompleteValue>} results
  */
 ConversationAutocompleteResponse.prototype['results'] = undefined;
 

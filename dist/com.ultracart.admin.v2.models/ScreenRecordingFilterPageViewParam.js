@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilterPageViewParam model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewParam
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 var ScreenRecordingFilterPageViewParam = /*#__PURE__*/function () {
   /**

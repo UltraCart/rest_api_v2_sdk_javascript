@@ -136,6 +136,7 @@ import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationA
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationAutocompleteRequest from './com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
 import ConversationAutocompleteResponse from './com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
+import ConversationAutocompleteValue from './com.ultracart.admin.v2.models/ConversationAutocompleteValue';
 import ConversationCannedMessage from './com.ultracart.admin.v2.models/ConversationCannedMessage';
 import ConversationCannedMessageResponse from './com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
 import ConversationCannedMessagesResponse from './com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
@@ -772,7 +773,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.98-RC
+* @version 4.0.99-RC
 */
 export {
     /**
@@ -1518,6 +1519,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationAutocompleteResponse}
      */
     ConversationAutocompleteResponse,
+
+    /**
+     * The ConversationAutocompleteValue model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAutocompleteValue}
+     */
+    ConversationAutocompleteValue,
 
     /**
      * The ConversationCannedMessage model constructor.

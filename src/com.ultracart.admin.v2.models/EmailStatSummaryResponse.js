@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailStatSummaryResponse model module.
  * @module com.ultracart.admin.v2.models/EmailStatSummaryResponse
- * @version 4.0.98-RC
+ * @version 4.0.99-RC
  */
 class EmailStatSummaryResponse {
     /**

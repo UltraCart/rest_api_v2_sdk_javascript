@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemOptionValueDigitalItem model module.
  * @module com.ultracart.admin.v2.models/ItemOptionValueDigitalItem
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 var ItemOptionValueDigitalItem = /*#__PURE__*/function () {
   /**

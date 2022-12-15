@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationCannedMessagesSearch model module.
  * @module com.ultracart.admin.v2.models/ConversationCannedMessagesSearch
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 var ConversationCannedMessagesSearch = /*#__PURE__*/function () {
   /**

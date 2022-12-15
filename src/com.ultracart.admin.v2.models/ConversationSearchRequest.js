@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationSearchRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationSearchRequest
- * @version 4.0.98-RC
+ * @version 4.0.99-RC
  */
 class ConversationSearchRequest {
     /**
@@ -47,6 +47,12 @@ class ConversationSearchRequest {
         if (data) {
             obj = obj || new ConversationSearchRequest();
 
+            if (data.hasOwnProperty('date_end')) {
+                obj['date_end'] = ApiClient.convertToType(data['date_end'], 'String');
+            }
+            if (data.hasOwnProperty('date_start')) {
+                obj['date_start'] = ApiClient.convertToType(data['date_start'], 'String');
+            }
             if (data.hasOwnProperty('email_filter')) {
                 obj['email_filter'] = ApiClient.convertToType(data['email_filter'], 'String');
             }
@@ -83,6 +89,18 @@ class ConversationSearchRequest {
 
 
 }
+
+/**
+ * End of the range
+ * @member {String} date_end
+ */
+ConversationSearchRequest.prototype['date_end'] = undefined;
+
+/**
+ * Start of the range
+ * @member {String} date_start
+ */
+ConversationSearchRequest.prototype['date_start'] = undefined;
 
 /**
  * @member {String} email_filter

@@ -131,6 +131,7 @@ docs/ConversationAgentAuthResponse.md
 docs/ConversationApi.md
 docs/ConversationAutocompleteRequest.md
 docs/ConversationAutocompleteResponse.md
+docs/ConversationAutocompleteValue.md
 docs/ConversationCannedMessage.md
 docs/ConversationCannedMessageResponse.md
 docs/ConversationCannedMessagesResponse.md
@@ -857,6 +858,7 @@ src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteRequest.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteResponse.js
+src/com.ultracart.admin.v2.models/ConversationAutocompleteValue.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessage.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessageResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesResponse.js

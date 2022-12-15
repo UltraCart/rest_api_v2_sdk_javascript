@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatus model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatus
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 var ConversationWebchatQueueStatus = /*#__PURE__*/function () {
   /**

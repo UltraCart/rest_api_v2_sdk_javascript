@@ -9,6 +9,10 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 
+var _ConversationAutocompleteRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
+
+var _ConversationAutocompleteResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
+
 var _ConversationCannedMessage = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessage"));
 
 var _ConversationCannedMessageResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessageResponse"));
@@ -37,6 +41,10 @@ var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require(".
 
 var _ConversationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationResponse"));
 
+var _ConversationSearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationSearchRequest"));
+
+var _ConversationSearchResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationSearchResponse"));
+
 var _ConversationStartRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationStartRequest"));
 
 var _ConversationStartResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationStartResponse"));
@@ -62,7 +70,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.97-RC
+* @version 4.0.98-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -455,6 +463,76 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationsResponse["default"];
       return this.apiClient.callApi('/conversation/conversations', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getConversationsAutocomplete operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationsAutocompleteCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAutocompleteResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a list of matching terms for a search field
+     * Retrieve a list of matching terms for a search field 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAutocompleteRequest} autocomplete_request Autocomplete Request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationsAutocompleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAutocompleteResponse}
+     */
+
+  }, {
+    key: "getConversationsAutocomplete",
+    value: function getConversationsAutocomplete(autocomplete_request, callback) {
+      var postBody = autocomplete_request; // verify the required parameter 'autocomplete_request' is set
+
+      if (autocomplete_request === undefined || autocomplete_request === null) {
+        throw new Error("Missing the required parameter 'autocomplete_request' when calling getConversationsAutocomplete");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAutocompleteResponse["default"];
+      return this.apiClient.callApi('/conversation/conversations/autocomplete', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getConversationsSearch operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationsSearchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationSearchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search conversations
+     * Search conversations 
+     * @param {module:com.ultracart.admin.v2.models/ConversationSearchRequest} search_request Search Request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationsSearchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationSearchResponse}
+     */
+
+  }, {
+    key: "getConversationsSearch",
+    value: function getConversationsSearch(search_request, callback) {
+      var postBody = search_request; // verify the required parameter 'search_request' is set
+
+      if (search_request === undefined || search_request === null) {
+        throw new Error("Missing the required parameter 'search_request' when calling getConversationsSearch");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationSearchResponse["default"];
+      return this.apiClient.callApi('/conversation/conversations/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the insertConversationCannedMessage operation.

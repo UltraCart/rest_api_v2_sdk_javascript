@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailPerformanceCustomerHistogramPeriod model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogramPeriod
- * @version 4.0.98-RC
+ * @version 4.0.99-RC
  */
 class EmailPerformanceCustomerHistogramPeriod {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AccountsReceivableRetryStatRevenue model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryStatRevenue
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 var AccountsReceivableRetryStatRevenue = /*#__PURE__*/function () {
   /**
