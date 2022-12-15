@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationParticipant model module.
  * @module com.ultracart.admin.v2.models/ConversationParticipant
- * @version 4.0.96-RC
+ * @version 4.0.97-RC
  */
 var ConversationParticipant = /*#__PURE__*/function () {
   /**
@@ -66,6 +66,10 @@ var ConversationParticipant = /*#__PURE__*/function () {
           obj['conversation_participant_uuid'] = _ApiClient["default"].convertToType(data['conversation_participant_uuid'], 'String');
         }
 
+        if (data.hasOwnProperty('email')) {
+          obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
+        }
+
         if (data.hasOwnProperty('joined_dts')) {
           obj['joined_dts'] = _ApiClient["default"].convertToType(data['joined_dts'], 'String');
         }
@@ -84,6 +88,10 @@ var ConversationParticipant = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('profile_image_url')) {
           obj['profile_image_url'] = _ApiClient["default"].convertToType(data['profile_image_url'], 'String');
+        }
+
+        if (data.hasOwnProperty('sms_phone_number')) {
+          obj['sms_phone_number'] = _ApiClient["default"].convertToType(data['sms_phone_number'], 'String');
         }
 
         if (data.hasOwnProperty('status')) {
@@ -122,6 +130,11 @@ ConversationParticipant.prototype['conversation_participant_name'] = undefined;
 
 ConversationParticipant.prototype['conversation_participant_uuid'] = undefined;
 /**
+ * @member {String} email
+ */
+
+ConversationParticipant.prototype['email'] = undefined;
+/**
  * Joined conversation date/time
  * @member {String} joined_dts
  */
@@ -149,6 +162,11 @@ ConversationParticipant.prototype['left_dts'] = undefined;
  */
 
 ConversationParticipant.prototype['profile_image_url'] = undefined;
+/**
+ * @member {String} sms_phone_number
+ */
+
+ConversationParticipant.prototype['sms_phone_number'] = undefined;
 /**
  * @member {String} status
  */

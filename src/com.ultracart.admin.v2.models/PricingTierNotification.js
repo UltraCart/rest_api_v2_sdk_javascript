@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PricingTierNotification model module.
  * @module com.ultracart.admin.v2.models/PricingTierNotification
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 class PricingTierNotification {
     /**

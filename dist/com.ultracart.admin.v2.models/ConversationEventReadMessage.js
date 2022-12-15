@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventReadMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationEventReadMessage
- * @version 4.0.96-RC
+ * @version 4.0.97-RC
  */
 var ConversationEventReadMessage = /*#__PURE__*/function () {
   /**

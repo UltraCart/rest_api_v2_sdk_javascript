@@ -14,6 +14,8 @@
 
 import ApiClient from "../ApiClient";
 import ConversationAgentAuthResponse from '../com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationAutocompleteRequest from '../com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
+import ConversationAutocompleteResponse from '../com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
 import ConversationCannedMessage from '../com.ultracart.admin.v2.models/ConversationCannedMessage';
 import ConversationCannedMessageResponse from '../com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
 import ConversationCannedMessagesResponse from '../com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
@@ -28,6 +30,8 @@ import ConversationJoinRequest from '../com.ultracart.admin.v2.models/Conversati
 import ConversationMessagesResponse from '../com.ultracart.admin.v2.models/ConversationMessagesResponse';
 import ConversationMultimediaUploadUrlResponse from '../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationResponse from '../com.ultracart.admin.v2.models/ConversationResponse';
+import ConversationSearchRequest from '../com.ultracart.admin.v2.models/ConversationSearchRequest';
+import ConversationSearchResponse from '../com.ultracart.admin.v2.models/ConversationSearchResponse';
 import ConversationStartRequest from '../com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from '../com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationWebchatContext from '../com.ultracart.admin.v2.models/ConversationWebchatContext';
@@ -39,7 +43,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.97-RC
+* @version 4.0.98-RC
 */
 export default class ConversationApi {
 
@@ -504,6 +508,90 @@ export default class ConversationApi {
       let returnType = ConversationsResponse;
       return this.apiClient.callApi(
         '/conversation/conversations', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationsAutocomplete operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationsAutocompleteCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAutocompleteResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a list of matching terms for a search field
+     * Retrieve a list of matching terms for a search field 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAutocompleteRequest} autocomplete_request Autocomplete Request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationsAutocompleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAutocompleteResponse}
+     */
+    getConversationsAutocomplete(autocomplete_request, callback) {
+      let postBody = autocomplete_request;
+      // verify the required parameter 'autocomplete_request' is set
+      if (autocomplete_request === undefined || autocomplete_request === null) {
+        throw new Error("Missing the required parameter 'autocomplete_request' when calling getConversationsAutocomplete");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationAutocompleteResponse;
+      return this.apiClient.callApi(
+        '/conversation/conversations/autocomplete', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationsSearch operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationsSearchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationSearchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search conversations
+     * Search conversations 
+     * @param {module:com.ultracart.admin.v2.models/ConversationSearchRequest} search_request Search Request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationsSearchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationSearchResponse}
+     */
+    getConversationsSearch(search_request, callback) {
+      let postBody = search_request;
+      // verify the required parameter 'search_request' is set
+      if (search_request === undefined || search_request === null) {
+        throw new Error("Missing the required parameter 'search_request' when calling getConversationsSearch");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationSearchResponse;
+      return this.apiClient.callApi(
+        '/conversation/conversations/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

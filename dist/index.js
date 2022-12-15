@@ -795,6 +795,42 @@ Object.defineProperty(exports, "ConversationCannedMessagesSearch", {
     return _ConversationCannedMessagesSearch["default"];
   }
 });
+Object.defineProperty(exports, "ConversationDepartment", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationDepartment["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationDepartmentResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationDepartmentResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationDepartmentsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationDepartmentsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationEngagement", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEngagement["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationEngagementResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEngagementResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationEngagementsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEngagementsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationEventAddCoupon", {
   enumerable: true,
   get: function get() {
@@ -835,6 +871,12 @@ Object.defineProperty(exports, "ConversationEventWebchatContext", {
   enumerable: true,
   get: function get() {
     return _ConversationEventWebchatContext["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationJoinRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationJoinRequest["default"];
   }
 });
 Object.defineProperty(exports, "ConversationMessage", {
@@ -4564,6 +4606,18 @@ var _ConversationCannedMessagesResponse = _interopRequireDefault(require("./com.
 
 var _ConversationCannedMessagesSearch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessagesSearch"));
 
+var _ConversationDepartment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartment"));
+
+var _ConversationDepartmentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentResponse"));
+
+var _ConversationDepartmentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentsResponse"));
+
+var _ConversationEngagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagement"));
+
+var _ConversationEngagementResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementResponse"));
+
+var _ConversationEngagementsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementsResponse"));
+
 var _ConversationEventAddCoupon = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventAddCoupon"));
 
 var _ConversationEventAddItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventAddItem"));
@@ -4577,6 +4631,8 @@ var _ConversationEventReadMessage = _interopRequireDefault(require("./com.ultrac
 var _ConversationEventTyping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventTyping"));
 
 var _ConversationEventWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventWebchatContext"));
+
+var _ConversationJoinRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationJoinRequest"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
 

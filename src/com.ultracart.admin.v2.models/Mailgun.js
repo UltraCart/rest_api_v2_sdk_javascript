@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Mailgun model module.
  * @module com.ultracart.admin.v2.models/Mailgun
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 class Mailgun {
     /**

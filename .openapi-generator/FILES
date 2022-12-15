@@ -129,6 +129,8 @@ docs/Conversation.md
 docs/ConversationAgentAuth.md
 docs/ConversationAgentAuthResponse.md
 docs/ConversationApi.md
+docs/ConversationAutocompleteRequest.md
+docs/ConversationAutocompleteResponse.md
 docs/ConversationCannedMessage.md
 docs/ConversationCannedMessageResponse.md
 docs/ConversationCannedMessagesResponse.md
@@ -155,6 +157,8 @@ docs/ConversationMultimediaUploadUrl.md
 docs/ConversationMultimediaUploadUrlResponse.md
 docs/ConversationParticipant.md
 docs/ConversationResponse.md
+docs/ConversationSearchRequest.md
+docs/ConversationSearchResponse.md
 docs/ConversationStartRequest.md
 docs/ConversationStartResponse.md
 docs/ConversationSummary.md
@@ -851,6 +855,8 @@ src/com.ultracart.admin.v2.models/CityStateZip.js
 src/com.ultracart.admin.v2.models/Conversation.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
+src/com.ultracart.admin.v2.models/ConversationAutocompleteRequest.js
+src/com.ultracart.admin.v2.models/ConversationAutocompleteResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessage.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessageResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesResponse.js
@@ -877,6 +883,8 @@ src/com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl.js
 src/com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/ConversationParticipant.js
 src/com.ultracart.admin.v2.models/ConversationResponse.js
+src/com.ultracart.admin.v2.models/ConversationSearchRequest.js
+src/com.ultracart.admin.v2.models/ConversationSearchResponse.js
 src/com.ultracart.admin.v2.models/ConversationStartRequest.js
 src/com.ultracart.admin.v2.models/ConversationStartResponse.js
 src/com.ultracart.admin.v2.models/ConversationSummary.js

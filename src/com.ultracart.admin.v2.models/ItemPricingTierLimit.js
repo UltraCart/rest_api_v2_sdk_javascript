@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemPricingTierLimit model module.
  * @module com.ultracart.admin.v2.models/ItemPricingTierLimit
- * @version 4.0.97-RC
+ * @version 4.0.98-RC
  */
 class ItemPricingTierLimit {
     /**

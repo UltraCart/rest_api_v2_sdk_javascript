@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatusQueueEntry model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
- * @version 4.0.96-RC
+ * @version 4.0.97-RC
  */
 var ConversationWebchatQueueStatusQueueEntry = /*#__PURE__*/function () {
   /**
@@ -74,6 +74,10 @@ var ConversationWebchatQueueStatusQueueEntry = /*#__PURE__*/function () {
           obj['join_dts'] = _ApiClient["default"].convertToType(data['join_dts'], 'String');
         }
 
+        if (data.hasOwnProperty('participant_language_iso_code')) {
+          obj['participant_language_iso_code'] = _ApiClient["default"].convertToType(data['participant_language_iso_code'], 'String');
+        }
+
         if (data.hasOwnProperty('question')) {
           obj['question'] = _ApiClient["default"].convertToType(data['question'], 'String');
         }
@@ -112,6 +116,11 @@ ConversationWebchatQueueStatusQueueEntry.prototype['email'] = undefined;
  */
 
 ConversationWebchatQueueStatusQueueEntry.prototype['join_dts'] = undefined;
+/**
+ * @member {String} participant_language_iso_code
+ */
+
+ConversationWebchatQueueStatusQueueEntry.prototype['participant_language_iso_code'] = undefined;
 /**
  * @member {String} question
  */

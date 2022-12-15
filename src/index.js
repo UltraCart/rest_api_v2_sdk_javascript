@@ -134,6 +134,8 @@ import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
 import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationAgentAuth';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationAutocompleteRequest from './com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
+import ConversationAutocompleteResponse from './com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
 import ConversationCannedMessage from './com.ultracart.admin.v2.models/ConversationCannedMessage';
 import ConversationCannedMessageResponse from './com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
 import ConversationCannedMessagesResponse from './com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
@@ -160,6 +162,8 @@ import ConversationMultimediaUploadUrl from './com.ultracart.admin.v2.models/Con
 import ConversationMultimediaUploadUrlResponse from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationParticipant from './com.ultracart.admin.v2.models/ConversationParticipant';
 import ConversationResponse from './com.ultracart.admin.v2.models/ConversationResponse';
+import ConversationSearchRequest from './com.ultracart.admin.v2.models/ConversationSearchRequest';
+import ConversationSearchResponse from './com.ultracart.admin.v2.models/ConversationSearchResponse';
 import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
@@ -768,7 +772,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.97-RC
+* @version 4.0.98-RC
 */
 export {
     /**
@@ -1504,6 +1508,18 @@ export {
     ConversationAgentAuthResponse,
 
     /**
+     * The ConversationAutocompleteRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAutocompleteRequest}
+     */
+    ConversationAutocompleteRequest,
+
+    /**
+     * The ConversationAutocompleteResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAutocompleteResponse}
+     */
+    ConversationAutocompleteResponse,
+
+    /**
      * The ConversationCannedMessage model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationCannedMessage}
      */
@@ -1658,6 +1674,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationResponse}
      */
     ConversationResponse,
+
+    /**
+     * The ConversationSearchRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationSearchRequest}
+     */
+    ConversationSearchRequest,
+
+    /**
+     * The ConversationSearchResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationSearchResponse}
+     */
+    ConversationSearchResponse,
 
     /**
      * The ConversationStartRequest model constructor.
