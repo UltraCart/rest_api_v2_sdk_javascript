@@ -34,7 +34,7 @@
   /**
    * The Permission model module.
    * @module com.ultracart.admin.v2.models/Permission
-   * @version 3.10.80
+   * @version 3.10.81
    */
 
   /**
