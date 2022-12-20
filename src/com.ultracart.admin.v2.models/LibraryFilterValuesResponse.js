@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The LibraryFilterValuesResponse model module.
  * @module com.ultracart.admin.v2.models/LibraryFilterValuesResponse
- * @version 4.0.100-RC
+ * @version 4.0.101-RC
  */
 class LibraryFilterValuesResponse {
     /**

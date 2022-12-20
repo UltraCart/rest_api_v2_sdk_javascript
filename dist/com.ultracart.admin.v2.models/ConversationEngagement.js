@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationEngagementEquation = _interopRequireDefault(require("./ConversationEngagementEquation"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagement
- * @version 4.0.99-RC
+ * @version 4.0.100-RC
  */
 var ConversationEngagement = /*#__PURE__*/function () {
   /**
@@ -71,7 +73,7 @@ var ConversationEngagement = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('equation')) {
-          obj['equation'] = _ApiClient["default"].convertToType(data['equation'], Object);
+          obj['equation'] = _ConversationEngagementEquation["default"].constructFromObject(data['equation']);
         }
 
         if (data.hasOwnProperty('time_on_page')) {
@@ -111,7 +113,7 @@ ConversationEngagement.prototype['department_oids'] = undefined;
 
 ConversationEngagement.prototype['engagement_name'] = undefined;
 /**
- * @member {Object} equation
+ * @member {module:com.ultracart.admin.v2.models/ConversationEngagementEquation} equation
  */
 
 ConversationEngagement.prototype['equation'] = undefined;
@@ -121,9 +123,35 @@ ConversationEngagement.prototype['equation'] = undefined;
 
 ConversationEngagement.prototype['time_on_page'] = undefined;
 /**
- * @member {String} visitor_type
+ * The type of visitor
+ * @member {module:com.ultracart.admin.v2.models/ConversationEngagement.VisitorTypeEnum} visitor_type
  */
 
 ConversationEngagement.prototype['visitor_type'] = undefined;
+/**
+ * Allowed values for the <code>visitor_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+ConversationEngagement['VisitorTypeEnum'] = {
+  /**
+   * value: "all"
+   * @const
+   */
+  "all": "all",
+
+  /**
+   * value: "first time"
+   * @const
+   */
+  "first time": "first time",
+
+  /**
+   * value: "returning"
+   * @const
+   */
+  "returning": "returning"
+};
 var _default = ConversationEngagement;
 exports["default"] = _default;

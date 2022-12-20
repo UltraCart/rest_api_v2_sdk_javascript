@@ -837,6 +837,24 @@ Object.defineProperty(exports, "ConversationEngagement", {
     return _ConversationEngagement["default"];
   }
 });
+Object.defineProperty(exports, "ConversationEngagementEquation", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEngagementEquation["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationEngagementEquationFunction", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEngagementEquationFunction["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationEngagementEquationGroup", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEngagementEquationGroup["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationEngagementResponse", {
   enumerable: true,
   get: function get() {
@@ -4649,6 +4667,12 @@ var _ConversationDepartmentResponse = _interopRequireDefault(require("./com.ultr
 var _ConversationDepartmentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentsResponse"));
 
 var _ConversationEngagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagement"));
+
+var _ConversationEngagementEquation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementEquation"));
+
+var _ConversationEngagementEquationFunction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementEquationFunction"));
+
+var _ConversationEngagementEquationGroup = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementEquationGroup"));
 
 var _ConversationEngagementResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementResponse"));
 
