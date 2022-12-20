@@ -34,7 +34,7 @@
   /**
    * The OrderProcessPaymentResponse model module.
    * @module com.ultracart.admin.v2.models/OrderProcessPaymentResponse
-   * @version 3.10.83
+   * @version 3.10.84
    */
 
   /**

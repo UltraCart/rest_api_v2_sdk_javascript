@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerCancelResponse model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerCancelResponse
-   * @version 3.10.83
+   * @version 3.10.84
    */
 
   /**
