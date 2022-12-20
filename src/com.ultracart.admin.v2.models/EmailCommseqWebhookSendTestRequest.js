@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqWebhookSendTestRequest model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqWebhookSendTestRequest
-   * @version 3.10.82
+   * @version 3.10.83
    */
 
   /**

@@ -3,5 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**groups** | [**[ConversationEngagementEquationGroup]**](ConversationEngagementEquationGroup.md) |  | [optional] 
 
 

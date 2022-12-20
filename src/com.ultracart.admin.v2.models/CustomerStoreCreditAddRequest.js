@@ -34,7 +34,7 @@
   /**
    * The CustomerStoreCreditAddRequest model module.
    * @module com.ultracart.admin.v2.models/CustomerStoreCreditAddRequest
-   * @version 3.10.82
+   * @version 3.10.83
    */
 
   /**

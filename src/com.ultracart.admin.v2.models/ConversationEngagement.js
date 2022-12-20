@@ -34,7 +34,7 @@
   /**
    * The ConversationEngagement model module.
    * @module com.ultracart.admin.v2.models/ConversationEngagement
-   * @version 3.10.82
+   * @version 3.10.83
    */
 
   /**
@@ -104,9 +104,36 @@
   exports.prototype.time_on_page = undefined;
 
   /**
-   * @member {String} visitor_type
+   * The type of visitor
+   * @member {module:com.ultracart.admin.v2.models/ConversationEngagement.VisitorTypeEnum} visitor_type
    */
   exports.prototype.visitor_type = undefined;
+
+
+  /**
+   * Allowed values for the <code>visitor_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.VisitorTypeEnum = {
+    /**
+     * value: "all"
+     * @const
+     */
+    all: "all",
+
+    /**
+     * value: "first time"
+     * @const
+     */
+    first_time: "first time",
+
+    /**
+     * value: "returning"
+     * @const
+     */
+    returning: "returning"
+  };
 
   return exports;
 
