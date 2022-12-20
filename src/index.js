@@ -145,6 +145,9 @@ import ConversationDepartment from './com.ultracart.admin.v2.models/Conversation
 import ConversationDepartmentResponse from './com.ultracart.admin.v2.models/ConversationDepartmentResponse';
 import ConversationDepartmentsResponse from './com.ultracart.admin.v2.models/ConversationDepartmentsResponse';
 import ConversationEngagement from './com.ultracart.admin.v2.models/ConversationEngagement';
+import ConversationEngagementEquation from './com.ultracart.admin.v2.models/ConversationEngagementEquation';
+import ConversationEngagementEquationFunction from './com.ultracart.admin.v2.models/ConversationEngagementEquationFunction';
+import ConversationEngagementEquationGroup from './com.ultracart.admin.v2.models/ConversationEngagementEquationGroup';
 import ConversationEngagementResponse from './com.ultracart.admin.v2.models/ConversationEngagementResponse';
 import ConversationEngagementsResponse from './com.ultracart.admin.v2.models/ConversationEngagementsResponse';
 import ConversationEventAddCoupon from './com.ultracart.admin.v2.models/ConversationEventAddCoupon';
@@ -773,7 +776,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.99-RC
+* @version 4.0.100-RC
 */
 export {
     /**
@@ -1573,6 +1576,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationEngagement}
      */
     ConversationEngagement,
+
+    /**
+     * The ConversationEngagementEquation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEngagementEquation}
+     */
+    ConversationEngagementEquation,
+
+    /**
+     * The ConversationEngagementEquationFunction model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEngagementEquationFunction}
+     */
+    ConversationEngagementEquationFunction,
+
+    /**
+     * The ConversationEngagementEquationGroup model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationEngagementEquationGroup}
+     */
+    ConversationEngagementEquationGroup,
 
     /**
      * The ConversationEngagementResponse model constructor.

@@ -783,6 +783,12 @@ Object.defineProperty(exports, "ConversationAutocompleteResponse", {
     return _ConversationAutocompleteResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationAutocompleteValue", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAutocompleteValue["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationCannedMessage", {
   enumerable: true,
   get: function get() {
@@ -4625,6 +4631,8 @@ var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultra
 var _ConversationAutocompleteRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
 
 var _ConversationAutocompleteResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
+
+var _ConversationAutocompleteValue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteValue"));
 
 var _ConversationCannedMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessage"));
 

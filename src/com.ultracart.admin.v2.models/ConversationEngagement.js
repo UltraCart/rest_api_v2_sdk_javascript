@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationEngagementEquation from './ConversationEngagementEquation';
 
 /**
  * The ConversationEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagement
- * @version 4.0.99-RC
+ * @version 4.0.100-RC
  */
 class ConversationEngagement {
     /**
@@ -60,7 +61,7 @@ class ConversationEngagement {
                 obj['engagement_name'] = ApiClient.convertToType(data['engagement_name'], 'String');
             }
             if (data.hasOwnProperty('equation')) {
-                obj['equation'] = ApiClient.convertToType(data['equation'], Object);
+                obj['equation'] = ConversationEngagementEquation.constructFromObject(data['equation']);
             }
             if (data.hasOwnProperty('time_on_page')) {
                 obj['time_on_page'] = ApiClient.convertToType(data['time_on_page'], 'Number');
@@ -96,7 +97,7 @@ ConversationEngagement.prototype['department_oids'] = undefined;
 ConversationEngagement.prototype['engagement_name'] = undefined;
 
 /**
- * @member {Object} equation
+ * @member {module:com.ultracart.admin.v2.models/ConversationEngagementEquation} equation
  */
 ConversationEngagement.prototype['equation'] = undefined;
 
@@ -106,12 +107,40 @@ ConversationEngagement.prototype['equation'] = undefined;
 ConversationEngagement.prototype['time_on_page'] = undefined;
 
 /**
- * @member {String} visitor_type
+ * The type of visitor
+ * @member {module:com.ultracart.admin.v2.models/ConversationEngagement.VisitorTypeEnum} visitor_type
  */
 ConversationEngagement.prototype['visitor_type'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>visitor_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationEngagement['VisitorTypeEnum'] = {
+
+    /**
+     * value: "all"
+     * @const
+     */
+    "all": "all",
+
+    /**
+     * value: "first time"
+     * @const
+     */
+    "first time": "first time",
+
+    /**
+     * value: "returning"
+     * @const
+     */
+    "returning": "returning"
+};
 
 
 

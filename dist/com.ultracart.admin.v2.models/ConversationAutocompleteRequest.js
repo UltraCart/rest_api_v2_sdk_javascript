@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationAutocompleteRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAutocompleteRequest
- * @version 4.0.98-RC
+ * @version 4.0.99-RC
  */
 var ConversationAutocompleteRequest = /*#__PURE__*/function () {
   /**

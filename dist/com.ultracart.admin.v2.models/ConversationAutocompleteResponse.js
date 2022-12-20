@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationAutocompleteValue = _interopRequireDefault(require("./ConversationAutocompleteValue"));
+
 var _Error = _interopRequireDefault(require("./Error"));
 
 var _ResponseMetadata = _interopRequireDefault(require("./ResponseMetadata"));
@@ -24,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationAutocompleteResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAutocompleteResponse
- * @version 4.0.98-RC
+ * @version 4.0.99-RC
  */
 var ConversationAutocompleteResponse = /*#__PURE__*/function () {
   /**
@@ -73,7 +75,7 @@ var ConversationAutocompleteResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('results')) {
-          obj['results'] = _ApiClient["default"].convertToType(data['results'], ['String']);
+          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_ConversationAutocompleteValue["default"]]);
         }
 
         if (data.hasOwnProperty('success')) {
@@ -112,7 +114,7 @@ ConversationAutocompleteResponse.prototype['field'] = undefined;
 
 ConversationAutocompleteResponse.prototype['metadata'] = undefined;
 /**
- * @member {Array.<String>} results
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationAutocompleteValue>} results
  */
 
 ConversationAutocompleteResponse.prototype['results'] = undefined;

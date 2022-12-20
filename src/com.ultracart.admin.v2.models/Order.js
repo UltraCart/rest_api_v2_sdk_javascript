@@ -41,7 +41,7 @@ import OrderTaxes from './OrderTaxes';
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.99-RC
+ * @version 4.0.100-RC
  */
 class Order {
     /**

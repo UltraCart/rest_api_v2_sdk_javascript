@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSearchRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationSearchRequest
- * @version 4.0.98-RC
+ * @version 4.0.99-RC
  */
 var ConversationSearchRequest = /*#__PURE__*/function () {
   /**
@@ -53,6 +53,14 @@ var ConversationSearchRequest = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationSearchRequest();
+
+        if (data.hasOwnProperty('date_end')) {
+          obj['date_end'] = _ApiClient["default"].convertToType(data['date_end'], 'String');
+        }
+
+        if (data.hasOwnProperty('date_start')) {
+          obj['date_start'] = _ApiClient["default"].convertToType(data['date_start'], 'String');
+        }
 
         if (data.hasOwnProperty('email_filter')) {
           obj['email_filter'] = _ApiClient["default"].convertToType(data['email_filter'], 'String');
@@ -102,9 +110,21 @@ var ConversationSearchRequest = /*#__PURE__*/function () {
   return ConversationSearchRequest;
 }();
 /**
- * @member {String} email_filter
+ * End of the range
+ * @member {String} date_end
  */
 
+
+ConversationSearchRequest.prototype['date_end'] = undefined;
+/**
+ * Start of the range
+ * @member {String} date_start
+ */
+
+ConversationSearchRequest.prototype['date_start'] = undefined;
+/**
+ * @member {String} email_filter
+ */
 
 ConversationSearchRequest.prototype['email_filter'] = undefined;
 /**

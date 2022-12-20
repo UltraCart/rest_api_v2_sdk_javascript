@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqPostcardSendTestRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest
- * @version 4.0.99-RC
+ * @version 4.0.100-RC
  */
 class EmailCommseqPostcardSendTestRequest {
     /**
