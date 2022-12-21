@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingStoreFront model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingStoreFront
- * @version 4.0.100-RC
+ * @version 4.0.101-RC
  */
 var ScreenRecordingStoreFront = /*#__PURE__*/function () {
   /**

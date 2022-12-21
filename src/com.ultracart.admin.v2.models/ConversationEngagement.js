@@ -17,7 +17,7 @@ import ConversationEngagementEquation from './ConversationEngagementEquation';
 /**
  * The ConversationEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagement
- * @version 4.0.101-RC
+ * @version 4.0.102-RC
  */
 class ConversationEngagement {
     /**
@@ -48,6 +48,9 @@ class ConversationEngagement {
         if (data) {
             obj = obj || new ConversationEngagement();
 
+            if (data.hasOwnProperty('active')) {
+                obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
+            }
             if (data.hasOwnProperty('conversation_engagement_oid')) {
                 obj['conversation_engagement_oid'] = ApiClient.convertToType(data['conversation_engagement_oid'], 'Number');
             }
@@ -75,6 +78,11 @@ class ConversationEngagement {
 
 
 }
+
+/**
+ * @member {Boolean} active
+ */
+ConversationEngagement.prototype['active'] = undefined;
 
 /**
  * @member {Number} conversation_engagement_oid

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**active** | **Boolean** |  | [optional] 
 **conversation_engagement_oid** | **Number** |  | [optional] 
 **customer_greeting** | **String** |  | [optional] 
 **department_oids** | **[Number]** |  | [optional] 

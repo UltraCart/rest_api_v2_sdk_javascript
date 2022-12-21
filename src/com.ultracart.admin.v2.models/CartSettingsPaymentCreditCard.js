@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartSettingsPaymentCreditCard model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard
- * @version 4.0.101-RC
+ * @version 4.0.102-RC
  */
 class CartSettingsPaymentCreditCard {
     /**

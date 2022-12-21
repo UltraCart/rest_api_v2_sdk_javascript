@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemVariation model module.
  * @module com.ultracart.admin.v2.models/ItemVariation
- * @version 4.0.100-RC
+ * @version 4.0.101-RC
  */
 var ItemVariation = /*#__PURE__*/function () {
   /**

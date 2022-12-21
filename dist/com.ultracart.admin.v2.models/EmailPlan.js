@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailPlan model module.
  * @module com.ultracart.admin.v2.models/EmailPlan
- * @version 4.0.100-RC
+ * @version 4.0.101-RC
  */
 var EmailPlan = /*#__PURE__*/function () {
   /**
