@@ -34,7 +34,7 @@
   /**
    * The ConversationDepartment model module.
    * @module com.ultracart.admin.v2.models/ConversationDepartment
-   * @version 3.10.84
+   * @version 3.10.85
    */
 
   /**
@@ -57,8 +57,6 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('conversation_department_oid'))
         obj.conversation_department_oid = ApiClient.convertToType(data['conversation_department_oid'], 'Number');
-      if (data.hasOwnProperty('delete_me'))
-        obj.delete_me = ApiClient.convertToType(data['delete_me'], 'Boolean');
       if (data.hasOwnProperty('department_name'))
         obj.department_name = ApiClient.convertToType(data['department_name'], 'String');
       if (data.hasOwnProperty('merchant_id'))
@@ -73,11 +71,6 @@
    * @member {Number} conversation_department_oid
    */
   exports.prototype.conversation_department_oid = undefined;
-
-  /**
-   * @member {Boolean} delete_me
-   */
-  exports.prototype.delete_me = undefined;
 
   /**
    * @member {String} department_name

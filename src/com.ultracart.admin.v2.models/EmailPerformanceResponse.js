@@ -34,7 +34,7 @@
   /**
    * The EmailPerformanceResponse model module.
    * @module com.ultracart.admin.v2.models/EmailPerformanceResponse
-   * @version 3.10.84
+   * @version 3.10.85
    */
 
   /**

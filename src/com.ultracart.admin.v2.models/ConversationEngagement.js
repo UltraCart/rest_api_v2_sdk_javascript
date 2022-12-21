@@ -34,7 +34,7 @@
   /**
    * The ConversationEngagement model module.
    * @module com.ultracart.admin.v2.models/ConversationEngagement
-   * @version 3.10.84
+   * @version 3.10.85
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('active'))
+        obj.active = ApiClient.convertToType(data['active'], 'Boolean');
       if (data.hasOwnProperty('conversation_engagement_oid'))
         obj.conversation_engagement_oid = ApiClient.convertToType(data['conversation_engagement_oid'], 'Number');
       if (data.hasOwnProperty('customer_greeting'))
@@ -72,6 +74,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} active
+   */
+  exports.prototype.active = undefined;
 
   /**
    * @member {Number} conversation_engagement_oid
