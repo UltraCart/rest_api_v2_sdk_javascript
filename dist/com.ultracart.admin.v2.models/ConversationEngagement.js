@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagement
- * @version 4.0.101-RC
+ * @version 4.0.102-RC
  */
 var ConversationEngagement = /*#__PURE__*/function () {
   /**
@@ -55,6 +55,10 @@ var ConversationEngagement = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationEngagement();
+
+        if (data.hasOwnProperty('active')) {
+          obj['active'] = _ApiClient["default"].convertToType(data['active'], 'Boolean');
+        }
 
         if (data.hasOwnProperty('conversation_engagement_oid')) {
           obj['conversation_engagement_oid'] = _ApiClient["default"].convertToType(data['conversation_engagement_oid'], 'Number');
@@ -92,9 +96,14 @@ var ConversationEngagement = /*#__PURE__*/function () {
   return ConversationEngagement;
 }();
 /**
- * @member {Number} conversation_engagement_oid
+ * @member {Boolean} active
  */
 
+
+ConversationEngagement.prototype['active'] = undefined;
+/**
+ * @member {Number} conversation_engagement_oid
+ */
 
 ConversationEngagement.prototype['conversation_engagement_oid'] = undefined;
 /**

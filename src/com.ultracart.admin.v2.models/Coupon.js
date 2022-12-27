@@ -35,8 +35,12 @@ import CouponFreeShipping from './CouponFreeShipping';
 import CouponFreeShippingSpecificItems from './CouponFreeShippingSpecificItems';
 import CouponFreeShippingWithItemsPurchase from './CouponFreeShippingWithItemsPurchase';
 import CouponFreeShippingWithSubtotal from './CouponFreeShippingWithSubtotal';
+import CouponMoreLoyaltyCashback from './CouponMoreLoyaltyCashback';
+import CouponMoreLoyaltyPoints from './CouponMoreLoyaltyPoints';
 import CouponMultipleAmountsOffItems from './CouponMultipleAmountsOffItems';
 import CouponNoDiscount from './CouponNoDiscount';
+import CouponPercentMoreLoyaltyCashback from './CouponPercentMoreLoyaltyCashback';
+import CouponPercentMoreLoyaltyPoints from './CouponPercentMoreLoyaltyPoints';
 import CouponPercentOffItemWithItemsQuantityPurchase from './CouponPercentOffItemWithItemsQuantityPurchase';
 import CouponPercentOffItems from './CouponPercentOffItems';
 import CouponPercentOffItemsAndFreeShipping from './CouponPercentOffItemsAndFreeShipping';
@@ -60,7 +64,7 @@ import CouponTieredPercentOffSubtotalBasedOnMSRP from './CouponTieredPercentOffS
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.102-RC
+ * @version 4.0.103-RC
  */
 class Coupon {
     /**
@@ -193,11 +197,23 @@ class Coupon {
             if (data.hasOwnProperty('merchant_notes')) {
                 obj['merchant_notes'] = ApiClient.convertToType(data['merchant_notes'], 'String');
             }
+            if (data.hasOwnProperty('more_loyalty_cashback')) {
+                obj['more_loyalty_cashback'] = CouponMoreLoyaltyCashback.constructFromObject(data['more_loyalty_cashback']);
+            }
+            if (data.hasOwnProperty('more_loyalty_points')) {
+                obj['more_loyalty_points'] = CouponMoreLoyaltyPoints.constructFromObject(data['more_loyalty_points']);
+            }
             if (data.hasOwnProperty('multiple_amounts_off_items')) {
                 obj['multiple_amounts_off_items'] = CouponMultipleAmountsOffItems.constructFromObject(data['multiple_amounts_off_items']);
             }
             if (data.hasOwnProperty('no_discount')) {
                 obj['no_discount'] = CouponNoDiscount.constructFromObject(data['no_discount']);
+            }
+            if (data.hasOwnProperty('percent_more_loyalty_cashback')) {
+                obj['percent_more_loyalty_cashback'] = CouponPercentMoreLoyaltyCashback.constructFromObject(data['percent_more_loyalty_cashback']);
+            }
+            if (data.hasOwnProperty('percent_more_loyalty_points')) {
+                obj['percent_more_loyalty_points'] = CouponPercentMoreLoyaltyPoints.constructFromObject(data['percent_more_loyalty_points']);
             }
             if (data.hasOwnProperty('percent_off_item_with_items_quantity_purchase')) {
                 obj['percent_off_item_with_items_quantity_purchase'] = CouponPercentOffItemWithItemsQuantityPurchase.constructFromObject(data['percent_off_item_with_items_quantity_purchase']);
@@ -463,6 +479,16 @@ Coupon.prototype['merchant_code'] = undefined;
 Coupon.prototype['merchant_notes'] = undefined;
 
 /**
+ * @member {module:com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback} more_loyalty_cashback
+ */
+Coupon.prototype['more_loyalty_cashback'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints} more_loyalty_points
+ */
+Coupon.prototype['more_loyalty_points'] = undefined;
+
+/**
  * @member {module:com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems} multiple_amounts_off_items
  */
 Coupon.prototype['multiple_amounts_off_items'] = undefined;
@@ -471,6 +497,16 @@ Coupon.prototype['multiple_amounts_off_items'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CouponNoDiscount} no_discount
  */
 Coupon.prototype['no_discount'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyCashback} percent_more_loyalty_cashback
+ */
+Coupon.prototype['percent_more_loyalty_cashback'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyPoints} percent_more_loyalty_points
+ */
+Coupon.prototype['percent_more_loyalty_points'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase} percent_off_item_with_items_quantity_purchase

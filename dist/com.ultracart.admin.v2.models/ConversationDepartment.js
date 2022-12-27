@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationDepartment model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartment
- * @version 4.0.101-RC
+ * @version 4.0.102-RC
  */
 var ConversationDepartment = /*#__PURE__*/function () {
   /**
@@ -58,10 +58,6 @@ var ConversationDepartment = /*#__PURE__*/function () {
           obj['conversation_department_oid'] = _ApiClient["default"].convertToType(data['conversation_department_oid'], 'Number');
         }
 
-        if (data.hasOwnProperty('delete_me')) {
-          obj['delete_me'] = _ApiClient["default"].convertToType(data['delete_me'], 'Boolean');
-        }
-
         if (data.hasOwnProperty('department_name')) {
           obj['department_name'] = _ApiClient["default"].convertToType(data['department_name'], 'String');
         }
@@ -87,11 +83,6 @@ var ConversationDepartment = /*#__PURE__*/function () {
 
 
 ConversationDepartment.prototype['conversation_department_oid'] = undefined;
-/**
- * @member {Boolean} delete_me
- */
-
-ConversationDepartment.prototype['delete_me'] = undefined;
 /**
  * @member {String} department_name
  */

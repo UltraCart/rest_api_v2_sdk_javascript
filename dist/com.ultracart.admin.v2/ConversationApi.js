@@ -70,7 +70,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.101-RC
+* @version 4.0.102-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -86,21 +86,129 @@ var ConversationApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Callback function to receive the result of the getAgentKeepAlive operation.
-   * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback
+   * Callback function to receive the result of the deleteConversationCannedMessage operation.
+   * @callback module:com.ultracart.admin.v2/ConversationApi~deleteConversationCannedMessageCallback
    * @param {String} error Error message, if any.
    * @param data This operation does not return a value.
    * @param {String} response The complete HTTP response.
    */
 
   /**
-   * Agent keep alive
-   * Called periodically by the conversation API to keep the session alive. 
-   * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback} callback The callback function, accepting three arguments: error, data, response
+   * Delete a conversation canned message
+   * Delete a conversation canned message 
+   * @param {Number} conversation_canned_message_oid 
+   * @param {module:com.ultracart.admin.v2/ConversationApi~deleteConversationCannedMessageCallback} callback The callback function, accepting three arguments: error, data, response
    */
 
 
   _createClass(ConversationApi, [{
+    key: "deleteConversationCannedMessage",
+    value: function deleteConversationCannedMessage(conversation_canned_message_oid, callback) {
+      var postBody = null; // verify the required parameter 'conversation_canned_message_oid' is set
+
+      if (conversation_canned_message_oid === undefined || conversation_canned_message_oid === null) {
+        throw new Error("Missing the required parameter 'conversation_canned_message_oid' when calling deleteConversationCannedMessage");
+      }
+
+      var pathParams = {
+        'conversation_canned_message_oid': conversation_canned_message_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/canned_messages/{conversation_canned_message_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the deleteDepartment operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deleteDepartmentCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a conversation department
+     * Delete a conversation department 
+     * @param {Number} conversation_department_oid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deleteDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
+    key: "deleteDepartment",
+    value: function deleteDepartment(conversation_department_oid, callback) {
+      var postBody = null; // verify the required parameter 'conversation_department_oid' is set
+
+      if (conversation_department_oid === undefined || conversation_department_oid === null) {
+        throw new Error("Missing the required parameter 'conversation_department_oid' when calling deleteDepartment");
+      }
+
+      var pathParams = {
+        'conversation_department_oid': conversation_department_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/departments/{conversation_department_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the deleteEngagement operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deleteEngagementCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a conversation engagement
+     * Delete a conversation engagement 
+     * @param {Number} conversation_engagement_oid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deleteEngagementCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
+    key: "deleteEngagement",
+    value: function deleteEngagement(conversation_engagement_oid, callback) {
+      var postBody = null; // verify the required parameter 'conversation_engagement_oid' is set
+
+      if (conversation_engagement_oid === undefined || conversation_engagement_oid === null) {
+        throw new Error("Missing the required parameter 'conversation_engagement_oid' when calling deleteEngagement");
+      }
+
+      var pathParams = {
+        'conversation_engagement_oid': conversation_engagement_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/engagements/{conversation_engagement_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getAgentKeepAlive operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Agent keep alive
+     * Called periodically by the conversation API to keep the session alive. 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentKeepAliveCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
     key: "getAgentKeepAlive",
     value: function getAgentKeepAlive(callback) {
       var postBody = null;

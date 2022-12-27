@@ -215,8 +215,12 @@ import CouponFreeShippingWithItemsPurchase from './com.ultracart.admin.v2.models
 import CouponFreeShippingWithSubtotal from './com.ultracart.admin.v2.models/CouponFreeShippingWithSubtotal';
 import CouponItemSearchResult from './com.ultracart.admin.v2.models/CouponItemSearchResult';
 import CouponItemSearchResultsResponse from './com.ultracart.admin.v2.models/CouponItemSearchResultsResponse';
+import CouponMoreLoyaltyCashback from './com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback';
+import CouponMoreLoyaltyPoints from './com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints';
 import CouponMultipleAmountsOffItems from './com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems';
 import CouponNoDiscount from './com.ultracart.admin.v2.models/CouponNoDiscount';
+import CouponPercentMoreLoyaltyCashback from './com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyCashback';
+import CouponPercentMoreLoyaltyPoints from './com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyPoints';
 import CouponPercentOffItemWithItemsQuantityPurchase from './com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase';
 import CouponPercentOffItems from './com.ultracart.admin.v2.models/CouponPercentOffItems';
 import CouponPercentOffItemsAndFreeShipping from './com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping';
@@ -776,7 +780,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.102-RC
+* @version 4.0.103-RC
 */
 export {
     /**
@@ -1998,6 +2002,18 @@ export {
     CouponItemSearchResultsResponse,
 
     /**
+     * The CouponMoreLoyaltyCashback model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback}
+     */
+    CouponMoreLoyaltyCashback,
+
+    /**
+     * The CouponMoreLoyaltyPoints model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints}
+     */
+    CouponMoreLoyaltyPoints,
+
+    /**
      * The CouponMultipleAmountsOffItems model constructor.
      * @property {module:com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems}
      */
@@ -2008,6 +2024,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CouponNoDiscount}
      */
     CouponNoDiscount,
+
+    /**
+     * The CouponPercentMoreLoyaltyCashback model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyCashback}
+     */
+    CouponPercentMoreLoyaltyCashback,
+
+    /**
+     * The CouponPercentMoreLoyaltyPoints model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyPoints}
+     */
+    CouponPercentMoreLoyaltyPoints,
 
     /**
      * The CouponPercentOffItemWithItemsQuantityPurchase model constructor.

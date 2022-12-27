@@ -211,8 +211,12 @@ docs/CouponFreeShippingWithItemsPurchase.md
 docs/CouponFreeShippingWithSubtotal.md
 docs/CouponItemSearchResult.md
 docs/CouponItemSearchResultsResponse.md
+docs/CouponMoreLoyaltyCashback.md
+docs/CouponMoreLoyaltyPoints.md
 docs/CouponMultipleAmountsOffItems.md
 docs/CouponNoDiscount.md
+docs/CouponPercentMoreLoyaltyCashback.md
+docs/CouponPercentMoreLoyaltyPoints.md
 docs/CouponPercentOffItemWithItemsQuantityPurchase.md
 docs/CouponPercentOffItems.md
 docs/CouponPercentOffItemsAndFreeShipping.md
@@ -940,8 +944,12 @@ src/com.ultracart.admin.v2.models/CouponFreeShippingWithItemsPurchase.js
 src/com.ultracart.admin.v2.models/CouponFreeShippingWithSubtotal.js
 src/com.ultracart.admin.v2.models/CouponItemSearchResult.js
 src/com.ultracart.admin.v2.models/CouponItemSearchResultsResponse.js
+src/com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback.js
+src/com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints.js
 src/com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems.js
 src/com.ultracart.admin.v2.models/CouponNoDiscount.js
+src/com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyCashback.js
+src/com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyPoints.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItems.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping.js

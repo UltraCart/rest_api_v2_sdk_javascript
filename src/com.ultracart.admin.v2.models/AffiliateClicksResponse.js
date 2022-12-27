@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The AffiliateClicksResponse model module.
  * @module com.ultracart.admin.v2.models/AffiliateClicksResponse
- * @version 4.0.102-RC
+ * @version 4.0.103-RC
  */
 class AffiliateClicksResponse {
     /**
