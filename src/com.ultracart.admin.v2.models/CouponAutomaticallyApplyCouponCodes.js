@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponAutomaticallyApplyCouponCodes model module.
  * @module com.ultracart.admin.v2.models/CouponAutomaticallyApplyCouponCodes
- * @version 4.0.104-RC
+ * @version 4.0.105-RC
  */
 class CouponAutomaticallyApplyCouponCodes {
     /**

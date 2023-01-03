@@ -43,6 +43,8 @@ var _OrderMarketing = _interopRequireDefault(require("./OrderMarketing"));
 
 var _OrderPayment = _interopRequireDefault(require("./OrderPayment"));
 
+var _OrderPointOfSale = _interopRequireDefault(require("./OrderPointOfSale"));
+
 var _OrderProperty = _interopRequireDefault(require("./OrderProperty"));
 
 var _OrderQuote = _interopRequireDefault(require("./OrderQuote"));
@@ -68,7 +70,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.103-RC
+ * @version 4.0.104-RC
  */
 var Order = /*#__PURE__*/function () {
   /**
@@ -202,6 +204,10 @@ var Order = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('payment')) {
           obj['payment'] = _OrderPayment["default"].constructFromObject(data['payment']);
+        }
+
+        if (data.hasOwnProperty('point_of_sale')) {
+          obj['point_of_sale'] = _OrderPointOfSale["default"].constructFromObject(data['point_of_sale']);
         }
 
         if (data.hasOwnProperty('properties')) {
@@ -383,6 +389,11 @@ Order.prototype['order_id'] = undefined;
  */
 
 Order.prototype['payment'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPointOfSale} point_of_sale
+ */
+
+Order.prototype['point_of_sale'] = undefined;
 /**
  * Properties, available only through update, not through insert due to the nature of how properties are handled internally
  * @member {Array.<module:com.ultracart.admin.v2.models/OrderProperty>} properties

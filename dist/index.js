@@ -3513,6 +3513,12 @@ Object.defineProperty(exports, "OrderPaymentTransactionDetail", {
     return _OrderPaymentTransactionDetail["default"];
   }
 });
+Object.defineProperty(exports, "OrderPointOfSale", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPointOfSale["default"];
+  }
+});
 Object.defineProperty(exports, "OrderProcessPaymentRequest", {
   enumerable: true,
   get: function get() {
@@ -3637,6 +3643,24 @@ Object.defineProperty(exports, "Permission", {
   enumerable: true,
   get: function get() {
     return _Permission["default"];
+  }
+});
+Object.defineProperty(exports, "PointOfSaleLocation", {
+  enumerable: true,
+  get: function get() {
+    return _PointOfSaleLocation["default"];
+  }
+});
+Object.defineProperty(exports, "PointOfSaleReader", {
+  enumerable: true,
+  get: function get() {
+    return _PointOfSaleReader["default"];
+  }
+});
+Object.defineProperty(exports, "PointOfSaleRegister", {
+  enumerable: true,
+  get: function get() {
+    return _PointOfSaleRegister["default"];
   }
 });
 Object.defineProperty(exports, "PricingTier", {
@@ -5568,6 +5592,8 @@ var _OrderPaymentTransaction = _interopRequireDefault(require("./com.ultracart.a
 
 var _OrderPaymentTransactionDetail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentTransactionDetail"));
 
+var _OrderPointOfSale = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPointOfSale"));
+
 var _OrderProcessPaymentRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderProcessPaymentRequest"));
 
 var _OrderProcessPaymentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderProcessPaymentResponse"));
@@ -5609,6 +5635,12 @@ var _OrderTrackingNumberDetails = _interopRequireDefault(require("./com.ultracar
 var _OrdersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrdersResponse"));
 
 var _Permission = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Permission"));
+
+var _PointOfSaleLocation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/PointOfSaleLocation"));
+
+var _PointOfSaleReader = _interopRequireDefault(require("./com.ultracart.admin.v2.models/PointOfSaleReader"));
+
+var _PointOfSaleRegister = _interopRequireDefault(require("./com.ultracart.admin.v2.models/PointOfSaleRegister"));
 
 var _PricingTier = _interopRequireDefault(require("./com.ultracart.admin.v2.models/PricingTier"));
 

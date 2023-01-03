@@ -38,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.103-RC
+ * @version 4.0.104-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**

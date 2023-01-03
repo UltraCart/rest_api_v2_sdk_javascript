@@ -20,13 +20,14 @@ import ConversationEventReadMessage from './ConversationEventReadMessage';
 import ConversationEventTyping from './ConversationEventTyping';
 import ConversationEventWebchatContext from './ConversationEventWebchatContext';
 import ConversationMessage from './ConversationMessage';
+import ConversationParticipant from './ConversationParticipant';
 import ConversationSummary from './ConversationSummary';
 import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.104-RC
+ * @version 4.0.105-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -74,6 +75,18 @@ class ConversationWebsocketMessage {
             }
             if (data.hasOwnProperty('event_new_message')) {
                 obj['event_new_message'] = ConversationSummary.constructFromObject(data['event_new_message']);
+            }
+            if (data.hasOwnProperty('event_participant_join')) {
+                obj['event_participant_join'] = ConversationSummary.constructFromObject(data['event_participant_join']);
+            }
+            if (data.hasOwnProperty('event_participant_join_participant')) {
+                obj['event_participant_join_participant'] = ConversationParticipant.constructFromObject(data['event_participant_join_participant']);
+            }
+            if (data.hasOwnProperty('event_participant_left')) {
+                obj['event_participant_left'] = ConversationSummary.constructFromObject(data['event_participant_left']);
+            }
+            if (data.hasOwnProperty('event_participant_left_participant')) {
+                obj['event_participant_left_participant'] = ConversationParticipant.constructFromObject(data['event_participant_left_participant']);
             }
             if (data.hasOwnProperty('event_participant_update')) {
                 obj['event_participant_update'] = ConversationSummary.constructFromObject(data['event_participant_update']);
@@ -145,6 +158,26 @@ ConversationWebsocketMessage.prototype['event_new_conversation'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_message
  */
 ConversationWebsocketMessage.prototype['event_new_message'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_join
+ */
+ConversationWebsocketMessage.prototype['event_participant_join'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationParticipant} event_participant_join_participant
+ */
+ConversationWebsocketMessage.prototype['event_participant_join_participant'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_left
+ */
+ConversationWebsocketMessage.prototype['event_participant_left'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationParticipant} event_participant_left_participant
+ */
+ConversationWebsocketMessage.prototype['event_participant_left_participant'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_update
@@ -267,6 +300,18 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
      * @const
      */
     "participant update": "participant update",
+
+    /**
+     * value: "participant join"
+     * @const
+     */
+    "participant join": "participant join",
+
+    /**
+     * value: "participant leave"
+     * @const
+     */
+    "participant leave": "participant leave",
 
     /**
      * value: "read message"
