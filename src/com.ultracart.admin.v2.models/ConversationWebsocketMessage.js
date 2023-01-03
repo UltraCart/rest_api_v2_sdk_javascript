@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventAddCoupon', 'com.ultracart.admin.v2.models/ConversationEventAddItem', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationEventRRWeb', 'com.ultracart.admin.v2.models/ConversationEventReadMessage', 'com.ultracart.admin.v2.models/ConversationEventTyping', 'com.ultracart.admin.v2.models/ConversationEventWebchatContext', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventAddCoupon', 'com.ultracart.admin.v2.models/ConversationEventAddItem', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationEventRRWeb', 'com.ultracart.admin.v2.models/ConversationEventReadMessage', 'com.ultracart.admin.v2.models/ConversationEventTyping', 'com.ultracart.admin.v2.models/ConversationEventWebchatContext', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationParticipant', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ConversationEventAddCoupon'), require('./ConversationEventAddItem'), require('./ConversationEventQueuePosition'), require('./ConversationEventRRWeb'), require('./ConversationEventReadMessage'), require('./ConversationEventTyping'), require('./ConversationEventWebchatContext'), require('./ConversationMessage'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationEventAddCoupon'), require('./ConversationEventAddItem'), require('./ConversationEventQueuePosition'), require('./ConversationEventRRWeb'), require('./ConversationEventReadMessage'), require('./ConversationEventTyping'), require('./ConversationEventWebchatContext'), require('./ConversationMessage'), require('./ConversationParticipant'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventAddCoupon, root.UltraCartRestApiV2.ConversationEventAddItem, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationEventRRWeb, root.UltraCartRestApiV2.ConversationEventReadMessage, root.UltraCartRestApiV2.ConversationEventTyping, root.UltraCartRestApiV2.ConversationEventWebchatContext, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus);
+    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventAddCoupon, root.UltraCartRestApiV2.ConversationEventAddItem, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationEventRRWeb, root.UltraCartRestApiV2.ConversationEventReadMessage, root.UltraCartRestApiV2.ConversationEventTyping, root.UltraCartRestApiV2.ConversationEventWebchatContext, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationParticipant, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus);
   }
-}(this, function(ApiClient, ConversationEventAddCoupon, ConversationEventAddItem, ConversationEventQueuePosition, ConversationEventRRWeb, ConversationEventReadMessage, ConversationEventTyping, ConversationEventWebchatContext, ConversationMessage, ConversationSummary, ConversationWebchatQueueStatus) {
+}(this, function(ApiClient, ConversationEventAddCoupon, ConversationEventAddItem, ConversationEventQueuePosition, ConversationEventRRWeb, ConversationEventReadMessage, ConversationEventTyping, ConversationEventWebchatContext, ConversationMessage, ConversationParticipant, ConversationSummary, ConversationWebchatQueueStatus) {
   'use strict';
 
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.87
+   * @version 3.10.88
    */
 
   /**
@@ -67,6 +67,14 @@
         obj.event_new_conversation = ConversationSummary.constructFromObject(data['event_new_conversation']);
       if (data.hasOwnProperty('event_new_message'))
         obj.event_new_message = ConversationSummary.constructFromObject(data['event_new_message']);
+      if (data.hasOwnProperty('event_participant_join'))
+        obj.event_participant_join = ConversationSummary.constructFromObject(data['event_participant_join']);
+      if (data.hasOwnProperty('event_participant_join_participant'))
+        obj.event_participant_join_participant = ConversationParticipant.constructFromObject(data['event_participant_join_participant']);
+      if (data.hasOwnProperty('event_participant_left'))
+        obj.event_participant_left = ConversationSummary.constructFromObject(data['event_participant_left']);
+      if (data.hasOwnProperty('event_participant_left_participant'))
+        obj.event_participant_left_participant = ConversationParticipant.constructFromObject(data['event_participant_left_participant']);
       if (data.hasOwnProperty('event_participant_update'))
         obj.event_participant_update = ConversationSummary.constructFromObject(data['event_participant_update']);
       if (data.hasOwnProperty('event_queue_position'))
@@ -123,6 +131,26 @@
    * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_message
    */
   exports.prototype.event_new_message = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_join
+   */
+  exports.prototype.event_participant_join = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationParticipant} event_participant_join_participant
+   */
+  exports.prototype.event_participant_join_participant = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_left
+   */
+  exports.prototype.event_participant_left = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationParticipant} event_participant_left_participant
+   */
+  exports.prototype.event_participant_left_participant = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_update
@@ -241,6 +269,18 @@
      * @const
      */
     participant_update: "participant update",
+
+    /**
+     * value: "participant join"
+     * @const
+     */
+    participant_join: "participant join",
+
+    /**
+     * value: "participant leave"
+     * @const
+     */
+    participant_leave: "participant leave",
 
     /**
      * value: "read message"

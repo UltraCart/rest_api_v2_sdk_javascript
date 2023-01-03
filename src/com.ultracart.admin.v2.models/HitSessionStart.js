@@ -34,7 +34,7 @@
   /**
    * The HitSessionStart model module.
    * @module com.ultracart.admin.v2.models/HitSessionStart
-   * @version 3.10.87
+   * @version 3.10.88
    */
 
   /**

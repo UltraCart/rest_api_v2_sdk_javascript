@@ -9,6 +9,10 @@ Name | Type | Description | Notes
 **event_conversation_closed** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_new_conversation** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_new_message** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
+**event_participant_join** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
+**event_participant_join_participant** | [**ConversationParticipant**](ConversationParticipant.md) |  | [optional] 
+**event_participant_left** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
+**event_participant_left_participant** | [**ConversationParticipant**](ConversationParticipant.md) |  | [optional] 
 **event_participant_update** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_queue_position** | [**ConversationEventQueuePosition**](ConversationEventQueuePosition.md) |  | [optional] 
 **event_queue_status_update** | [**ConversationWebchatQueueStatus**](ConversationWebchatQueueStatus.md) |  | [optional] 
@@ -43,6 +47,10 @@ Name | Type | Description | Notes
 * `rrweb` (value: `"rrweb"`)
 
 * `participant_update` (value: `"participant update"`)
+
+* `participant_join` (value: `"participant join"`)
+
+* `participant_leave` (value: `"participant leave"`)
 
 * `read_message` (value: `"read message"`)
 

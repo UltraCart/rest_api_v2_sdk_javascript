@@ -34,7 +34,7 @@
   /**
    * The OrderItemEdiLot model module.
    * @module com.ultracart.admin.v2.models/OrderItemEdiLot
-   * @version 3.10.87
+   * @version 3.10.88
    */
 
   /**
