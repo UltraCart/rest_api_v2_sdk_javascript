@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerEmail model module.
  * @module com.ultracart.admin.v2.models/CustomerEmail
- * @version 4.0.103-RC
+ * @version 4.0.104-RC
  */
 class CustomerEmail {
     /**

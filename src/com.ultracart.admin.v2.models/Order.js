@@ -30,6 +30,7 @@ import OrderItem from './OrderItem';
 import OrderLinkedShipment from './OrderLinkedShipment';
 import OrderMarketing from './OrderMarketing';
 import OrderPayment from './OrderPayment';
+import OrderPointOfSale from './OrderPointOfSale';
 import OrderProperty from './OrderProperty';
 import OrderQuote from './OrderQuote';
 import OrderSalesforce from './OrderSalesforce';
@@ -41,7 +42,7 @@ import OrderTaxes from './OrderTaxes';
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.103-RC
+ * @version 4.0.104-RC
  */
 class Order {
     /**
@@ -146,6 +147,9 @@ class Order {
             }
             if (data.hasOwnProperty('payment')) {
                 obj['payment'] = OrderPayment.constructFromObject(data['payment']);
+            }
+            if (data.hasOwnProperty('point_of_sale')) {
+                obj['point_of_sale'] = OrderPointOfSale.constructFromObject(data['point_of_sale']);
             }
             if (data.hasOwnProperty('properties')) {
                 obj['properties'] = ApiClient.convertToType(data['properties'], [OrderProperty]);
@@ -315,6 +319,11 @@ Order.prototype['order_id'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderPayment} payment
  */
 Order.prototype['payment'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPointOfSale} point_of_sale
+ */
+Order.prototype['point_of_sale'] = undefined;
 
 /**
  * Properties, available only through update, not through insert due to the nature of how properties are handled internally

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The OrderRefundableResponse model module.
  * @module com.ultracart.admin.v2.models/OrderRefundableResponse
- * @version 4.0.103-RC
+ * @version 4.0.104-RC
  */
 class OrderRefundableResponse {
     /**

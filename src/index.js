@@ -583,6 +583,7 @@ import OrderPaymentInsurance from './com.ultracart.admin.v2.models/OrderPaymentI
 import OrderPaymentPurchaseOrder from './com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder';
 import OrderPaymentTransaction from './com.ultracart.admin.v2.models/OrderPaymentTransaction';
 import OrderPaymentTransactionDetail from './com.ultracart.admin.v2.models/OrderPaymentTransactionDetail';
+import OrderPointOfSale from './com.ultracart.admin.v2.models/OrderPointOfSale';
 import OrderProcessPaymentRequest from './com.ultracart.admin.v2.models/OrderProcessPaymentRequest';
 import OrderProcessPaymentResponse from './com.ultracart.admin.v2.models/OrderProcessPaymentResponse';
 import OrderProperty from './com.ultracart.admin.v2.models/OrderProperty';
@@ -604,6 +605,9 @@ import OrderTrackingNumberDetail from './com.ultracart.admin.v2.models/OrderTrac
 import OrderTrackingNumberDetails from './com.ultracart.admin.v2.models/OrderTrackingNumberDetails';
 import OrdersResponse from './com.ultracart.admin.v2.models/OrdersResponse';
 import Permission from './com.ultracart.admin.v2.models/Permission';
+import PointOfSaleLocation from './com.ultracart.admin.v2.models/PointOfSaleLocation';
+import PointOfSaleReader from './com.ultracart.admin.v2.models/PointOfSaleReader';
+import PointOfSaleRegister from './com.ultracart.admin.v2.models/PointOfSaleRegister';
 import PricingTier from './com.ultracart.admin.v2.models/PricingTier';
 import PricingTierNotification from './com.ultracart.admin.v2.models/PricingTierNotification';
 import PricingTiersResponse from './com.ultracart.admin.v2.models/PricingTiersResponse';
@@ -780,7 +784,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.103-RC
+* @version 4.0.104-RC
 */
 export {
     /**
@@ -4210,6 +4214,12 @@ export {
     OrderPaymentTransactionDetail,
 
     /**
+     * The OrderPointOfSale model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPointOfSale}
+     */
+    OrderPointOfSale,
+
+    /**
      * The OrderProcessPaymentRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/OrderProcessPaymentRequest}
      */
@@ -4334,6 +4344,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/Permission}
      */
     Permission,
+
+    /**
+     * The PointOfSaleLocation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/PointOfSaleLocation}
+     */
+    PointOfSaleLocation,
+
+    /**
+     * The PointOfSaleReader model constructor.
+     * @property {module:com.ultracart.admin.v2.models/PointOfSaleReader}
+     */
+    PointOfSaleReader,
+
+    /**
+     * The PointOfSaleRegister model constructor.
+     * @property {module:com.ultracart.admin.v2.models/PointOfSaleRegister}
+     */
+    PointOfSaleRegister,
 
     /**
      * The PricingTier model constructor.

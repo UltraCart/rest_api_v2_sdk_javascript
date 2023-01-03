@@ -53,9 +53,17 @@ var _CouponFreeShippingWithItemsPurchase = _interopRequireDefault(require("./Cou
 
 var _CouponFreeShippingWithSubtotal = _interopRequireDefault(require("./CouponFreeShippingWithSubtotal"));
 
+var _CouponMoreLoyaltyCashback = _interopRequireDefault(require("./CouponMoreLoyaltyCashback"));
+
+var _CouponMoreLoyaltyPoints = _interopRequireDefault(require("./CouponMoreLoyaltyPoints"));
+
 var _CouponMultipleAmountsOffItems = _interopRequireDefault(require("./CouponMultipleAmountsOffItems"));
 
 var _CouponNoDiscount = _interopRequireDefault(require("./CouponNoDiscount"));
+
+var _CouponPercentMoreLoyaltyCashback = _interopRequireDefault(require("./CouponPercentMoreLoyaltyCashback"));
+
+var _CouponPercentMoreLoyaltyPoints = _interopRequireDefault(require("./CouponPercentMoreLoyaltyPoints"));
 
 var _CouponPercentOffItemWithItemsQuantityPurchase = _interopRequireDefault(require("./CouponPercentOffItemWithItemsQuantityPurchase"));
 
@@ -106,7 +114,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.102-RC
+ * @version 4.0.103-RC
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -278,12 +286,28 @@ var Coupon = /*#__PURE__*/function () {
           obj['merchant_notes'] = _ApiClient["default"].convertToType(data['merchant_notes'], 'String');
         }
 
+        if (data.hasOwnProperty('more_loyalty_cashback')) {
+          obj['more_loyalty_cashback'] = _CouponMoreLoyaltyCashback["default"].constructFromObject(data['more_loyalty_cashback']);
+        }
+
+        if (data.hasOwnProperty('more_loyalty_points')) {
+          obj['more_loyalty_points'] = _CouponMoreLoyaltyPoints["default"].constructFromObject(data['more_loyalty_points']);
+        }
+
         if (data.hasOwnProperty('multiple_amounts_off_items')) {
           obj['multiple_amounts_off_items'] = _CouponMultipleAmountsOffItems["default"].constructFromObject(data['multiple_amounts_off_items']);
         }
 
         if (data.hasOwnProperty('no_discount')) {
           obj['no_discount'] = _CouponNoDiscount["default"].constructFromObject(data['no_discount']);
+        }
+
+        if (data.hasOwnProperty('percent_more_loyalty_cashback')) {
+          obj['percent_more_loyalty_cashback'] = _CouponPercentMoreLoyaltyCashback["default"].constructFromObject(data['percent_more_loyalty_cashback']);
+        }
+
+        if (data.hasOwnProperty('percent_more_loyalty_points')) {
+          obj['percent_more_loyalty_points'] = _CouponPercentMoreLoyaltyPoints["default"].constructFromObject(data['percent_more_loyalty_points']);
         }
 
         if (data.hasOwnProperty('percent_off_item_with_items_quantity_purchase')) {
@@ -576,6 +600,16 @@ Coupon.prototype['merchant_code'] = undefined;
 
 Coupon.prototype['merchant_notes'] = undefined;
 /**
+ * @member {module:com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback} more_loyalty_cashback
+ */
+
+Coupon.prototype['more_loyalty_cashback'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints} more_loyalty_points
+ */
+
+Coupon.prototype['more_loyalty_points'] = undefined;
+/**
  * @member {module:com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems} multiple_amounts_off_items
  */
 
@@ -585,6 +619,16 @@ Coupon.prototype['multiple_amounts_off_items'] = undefined;
  */
 
 Coupon.prototype['no_discount'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyCashback} percent_more_loyalty_cashback
+ */
+
+Coupon.prototype['percent_more_loyalty_cashback'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyPoints} percent_more_loyalty_points
+ */
+
+Coupon.prototype['percent_more_loyalty_points'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase} percent_off_item_with_items_quantity_purchase
  */

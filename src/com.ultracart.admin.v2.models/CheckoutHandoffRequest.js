@@ -17,7 +17,7 @@ import Cart from './Cart';
 /**
  * The CheckoutHandoffRequest model module.
  * @module com.ultracart.admin.v2.models/CheckoutHandoffRequest
- * @version 4.0.103-RC
+ * @version 4.0.104-RC
  */
 class CheckoutHandoffRequest {
     /**

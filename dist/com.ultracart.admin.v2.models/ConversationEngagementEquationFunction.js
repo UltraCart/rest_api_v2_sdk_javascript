@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEngagementEquationFunction model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagementEquationFunction
- * @version 4.0.102-RC
+ * @version 4.0.103-RC
  */
 var ConversationEngagementEquationFunction = /*#__PURE__*/function () {
   /**

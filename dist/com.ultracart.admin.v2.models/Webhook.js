@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Webhook model module.
  * @module com.ultracart.admin.v2.models/Webhook
- * @version 4.0.102-RC
+ * @version 4.0.103-RC
  */
 var Webhook = /*#__PURE__*/function () {
   /**

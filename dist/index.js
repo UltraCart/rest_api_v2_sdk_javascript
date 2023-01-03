@@ -1263,6 +1263,18 @@ Object.defineProperty(exports, "CouponItemSearchResultsResponse", {
     return _CouponItemSearchResultsResponse["default"];
   }
 });
+Object.defineProperty(exports, "CouponMoreLoyaltyCashback", {
+  enumerable: true,
+  get: function get() {
+    return _CouponMoreLoyaltyCashback["default"];
+  }
+});
+Object.defineProperty(exports, "CouponMoreLoyaltyPoints", {
+  enumerable: true,
+  get: function get() {
+    return _CouponMoreLoyaltyPoints["default"];
+  }
+});
 Object.defineProperty(exports, "CouponMultipleAmountsOffItems", {
   enumerable: true,
   get: function get() {
@@ -1273,6 +1285,18 @@ Object.defineProperty(exports, "CouponNoDiscount", {
   enumerable: true,
   get: function get() {
     return _CouponNoDiscount["default"];
+  }
+});
+Object.defineProperty(exports, "CouponPercentMoreLoyaltyCashback", {
+  enumerable: true,
+  get: function get() {
+    return _CouponPercentMoreLoyaltyCashback["default"];
+  }
+});
+Object.defineProperty(exports, "CouponPercentMoreLoyaltyPoints", {
+  enumerable: true,
+  get: function get() {
+    return _CouponPercentMoreLoyaltyPoints["default"];
   }
 });
 Object.defineProperty(exports, "CouponPercentOffItemWithItemsQuantityPurchase", {
@@ -4808,9 +4832,17 @@ var _CouponItemSearchResult = _interopRequireDefault(require("./com.ultracart.ad
 
 var _CouponItemSearchResultsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponItemSearchResultsResponse"));
 
+var _CouponMoreLoyaltyCashback = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback"));
+
+var _CouponMoreLoyaltyPoints = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints"));
+
 var _CouponMultipleAmountsOffItems = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponMultipleAmountsOffItems"));
 
 var _CouponNoDiscount = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponNoDiscount"));
+
+var _CouponPercentMoreLoyaltyCashback = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyCashback"));
+
+var _CouponPercentMoreLoyaltyPoints = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyPoints"));
 
 var _CouponPercentOffItemWithItemsQuantityPurchase = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase"));
 

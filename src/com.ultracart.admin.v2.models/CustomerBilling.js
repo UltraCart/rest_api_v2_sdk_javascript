@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerBilling model module.
  * @module com.ultracart.admin.v2.models/CustomerBilling
- * @version 4.0.103-RC
+ * @version 4.0.104-RC
  */
 class CustomerBilling {
     /**
