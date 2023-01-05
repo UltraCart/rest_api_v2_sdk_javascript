@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemDigitalItemsResponse model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalItemsResponse
- * @version 4.0.104-RC
+ * @version 4.0.105-RC
  */
 var ItemDigitalItemsResponse = /*#__PURE__*/function () {
   /**

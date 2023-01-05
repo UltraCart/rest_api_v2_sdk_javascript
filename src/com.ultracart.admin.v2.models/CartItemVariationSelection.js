@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartItemVariationSelection model module.
  * @module com.ultracart.admin.v2.models/CartItemVariationSelection
- * @version 4.0.105-RC
+ * @version 4.0.106-RC
  */
 class CartItemVariationSelection {
     /**

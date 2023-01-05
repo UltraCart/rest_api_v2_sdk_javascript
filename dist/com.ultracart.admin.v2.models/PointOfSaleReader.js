@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PointOfSaleReader model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleReader
- * @version 4.0.104-RC
+ * @version 4.0.105-RC
  */
 var PointOfSaleReader = /*#__PURE__*/function () {
   /**

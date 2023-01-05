@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailListArchiveResponse model module.
  * @module com.ultracart.admin.v2.models/EmailListArchiveResponse
- * @version 4.0.105-RC
+ * @version 4.0.106-RC
  */
 class EmailListArchiveResponse {
     /**

@@ -70,7 +70,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.104-RC
+ * @version 4.0.105-RC
  */
 var Order = /*#__PURE__*/function () {
   /**
