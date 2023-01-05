@@ -34,7 +34,7 @@
   /**
    * The EmailFlow model module.
    * @module com.ultracart.admin.v2.models/EmailFlow
-   * @version 3.10.88
+   * @version 3.10.89
    */
 
   /**
@@ -87,6 +87,8 @@
         obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('library_item_oid'))
         obj.library_item_oid = ApiClient.convertToType(data['library_item_oid'], 'Number');
+      if (data.hasOwnProperty('maximum_enrolled'))
+        obj.maximum_enrolled = ApiClient.convertToType(data['maximum_enrolled'], 'Boolean');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('name'))
@@ -214,6 +216,12 @@
    * @member {Number} library_item_oid
    */
   exports.prototype.library_item_oid = undefined;
+
+  /**
+   * The number of maximum customers for the plan are currently enrolled in this flow.
+   * @member {Boolean} maximum_enrolled
+   */
+  exports.prototype.maximum_enrolled = undefined;
 
   /**
    * Merchant ID

@@ -34,7 +34,7 @@
   /**
    * The HitPageViewMetaData model module.
    * @module com.ultracart.admin.v2.models/HitPageViewMetaData
-   * @version 3.10.88
+   * @version 3.10.89
    */
 
   /**
