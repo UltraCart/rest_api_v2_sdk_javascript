@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LibraryItemPurchasedMeta model module.
  * @module com.ultracart.admin.v2.models/LibraryItemPurchasedMeta
- * @version 4.0.106-RC
+ * @version 4.0.107-RC
  */
 class LibraryItemPurchasedMeta {
     /**

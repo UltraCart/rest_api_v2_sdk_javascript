@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemEmailNotifications model module.
  * @module com.ultracart.admin.v2.models/ItemEmailNotifications
- * @version 4.0.106-RC
+ * @version 4.0.107-RC
  */
 class ItemEmailNotifications {
     /**

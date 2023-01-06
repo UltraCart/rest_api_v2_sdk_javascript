@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailFlow model module.
  * @module com.ultracart.admin.v2.models/EmailFlow
- * @version 4.0.105-RC
+ * @version 4.0.106-RC
  */
 var EmailFlow = /*#__PURE__*/function () {
   /**
@@ -116,6 +116,10 @@ var EmailFlow = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('library_item_oid')) {
           obj['library_item_oid'] = _ApiClient["default"].convertToType(data['library_item_oid'], 'Number');
+        }
+
+        if (data.hasOwnProperty('maximum_enrolled')) {
+          obj['maximum_enrolled'] = _ApiClient["default"].convertToType(data['maximum_enrolled'], 'Boolean');
         }
 
         if (data.hasOwnProperty('merchant_id')) {
@@ -278,6 +282,12 @@ EmailFlow.prototype['filter_profile_equation_json'] = undefined;
  */
 
 EmailFlow.prototype['library_item_oid'] = undefined;
+/**
+ * The number of maximum customers for the plan are currently enrolled in this flow.
+ * @member {Boolean} maximum_enrolled
+ */
+
+EmailFlow.prototype['maximum_enrolled'] = undefined;
 /**
  * Merchant ID
  * @member {String} merchant_id

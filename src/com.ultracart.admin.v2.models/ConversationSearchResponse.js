@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import Conversation from './Conversation';
 
 /**
  * The ConversationSearchResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationSearchResponse
- * @version 4.0.106-RC
+ * @version 4.0.107-RC
  */
 class ConversationSearchResponse {
     /**
@@ -53,6 +54,9 @@ class ConversationSearchResponse {
             if (data.hasOwnProperty('range_end')) {
                 obj['range_end'] = ApiClient.convertToType(data['range_end'], 'Number');
             }
+            if (data.hasOwnProperty('records')) {
+                obj['records'] = ApiClient.convertToType(data['records'], [Conversation]);
+            }
             if (data.hasOwnProperty('total')) {
                 obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
@@ -72,6 +76,11 @@ ConversationSearchResponse.prototype['range_begin'] = undefined;
  * @member {Number} range_end
  */
 ConversationSearchResponse.prototype['range_end'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/Conversation>} records
+ */
+ConversationSearchResponse.prototype['records'] = undefined;
 
 /**
  * @member {Number} total

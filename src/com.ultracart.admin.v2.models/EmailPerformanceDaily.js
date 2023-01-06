@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailPerformanceDaily model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceDaily
- * @version 4.0.106-RC
+ * @version 4.0.107-RC
  */
 class EmailPerformanceDaily {
     /**

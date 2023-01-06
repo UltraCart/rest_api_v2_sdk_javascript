@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailTemplatesResponse model module.
  * @module com.ultracart.admin.v2.models/EmailTemplatesResponse
- * @version 4.0.105-RC
+ * @version 4.0.106-RC
  */
 var EmailTemplatesResponse = /*#__PURE__*/function () {
   /**

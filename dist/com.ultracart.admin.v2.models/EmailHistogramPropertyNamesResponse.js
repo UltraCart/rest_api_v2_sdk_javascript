@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailHistogramPropertyNamesResponse model module.
  * @module com.ultracart.admin.v2.models/EmailHistogramPropertyNamesResponse
- * @version 4.0.105-RC
+ * @version 4.0.106-RC
  */
 var EmailHistogramPropertyNamesResponse = /*#__PURE__*/function () {
   /**
