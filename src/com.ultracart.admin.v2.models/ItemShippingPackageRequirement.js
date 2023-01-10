@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemShippingPackageRequirement model module.
  * @module com.ultracart.admin.v2.models/ItemShippingPackageRequirement
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class ItemShippingPackageRequirement {
     /**

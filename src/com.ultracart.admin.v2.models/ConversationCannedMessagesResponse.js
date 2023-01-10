@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationCannedMessagesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationCannedMessagesResponse
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class ConversationCannedMessagesResponse {
     /**

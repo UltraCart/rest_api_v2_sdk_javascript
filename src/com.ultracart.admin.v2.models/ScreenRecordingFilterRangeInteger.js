@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingFilterRangeInteger model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeInteger
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class ScreenRecordingFilterRangeInteger {
     /**

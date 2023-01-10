@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The CouponsResponse model module.
  * @module com.ultracart.admin.v2.models/CouponsResponse
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class CouponsResponse {
     /**

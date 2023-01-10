@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderSummary model module.
  * @module com.ultracart.admin.v2.models/OrderSummary
- * @version 4.0.106-RC
+ * @version 4.0.107-RC
  */
 var OrderSummary = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemShippingDestinationRestriction model module.
  * @module com.ultracart.admin.v2.models/ItemShippingDestinationRestriction
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class ItemShippingDestinationRestriction {
     /**

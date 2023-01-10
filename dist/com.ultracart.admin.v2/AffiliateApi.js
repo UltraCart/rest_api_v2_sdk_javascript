@@ -28,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Affiliate service.
 * @module com.ultracart.admin.v2/AffiliateApi
-* @version 4.0.106-RC
+* @version 4.0.107-RC
 */
 var AffiliateApi = /*#__PURE__*/function () {
   /**

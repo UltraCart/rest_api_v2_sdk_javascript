@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAutocompleteRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAutocompleteRequest
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class ConversationAutocompleteRequest {
     /**

@@ -18,7 +18,7 @@ import IntegrationLogLog from './IntegrationLogLog';
 /**
  * The IntegrationLog model module.
  * @module com.ultracart.admin.v2.models/IntegrationLog
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class IntegrationLog {
     /**
@@ -51,6 +51,9 @@ class IntegrationLog {
 
             if (data.hasOwnProperty('action')) {
                 obj['action'] = ApiClient.convertToType(data['action'], 'String');
+            }
+            if (data.hasOwnProperty('auto_order_oids')) {
+                obj['auto_order_oids'] = ApiClient.convertToType(data['auto_order_oids'], ['Number']);
             }
             if (data.hasOwnProperty('direction')) {
                 obj['direction'] = ApiClient.convertToType(data['direction'], 'String');
@@ -114,6 +117,11 @@ class IntegrationLog {
  * @member {String} action
  */
 IntegrationLog.prototype['action'] = undefined;
+
+/**
+ * @member {Array.<Number>} auto_order_oids
+ */
+IntegrationLog.prototype['auto_order_oids'] = undefined;
 
 /**
  * @member {String} direction

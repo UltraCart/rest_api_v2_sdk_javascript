@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IntegrationLogQueryRequest model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogQueryRequest
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 class IntegrationLogQueryRequest {
     /**
@@ -49,6 +49,12 @@ class IntegrationLogQueryRequest {
 
             if (data.hasOwnProperty('action')) {
                 obj['action'] = ApiClient.convertToType(data['action'], 'String');
+            }
+            if (data.hasOwnProperty('auto_order_ids')) {
+                obj['auto_order_ids'] = ApiClient.convertToType(data['auto_order_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('auto_order_oids')) {
+                obj['auto_order_oids'] = ApiClient.convertToType(data['auto_order_oids'], ['Number']);
             }
             if (data.hasOwnProperty('direction')) {
                 obj['direction'] = ApiClient.convertToType(data['direction'], 'String');
@@ -97,6 +103,16 @@ class IntegrationLogQueryRequest {
  * @member {String} action
  */
 IntegrationLogQueryRequest.prototype['action'] = undefined;
+
+/**
+ * @member {Array.<String>} auto_order_ids
+ */
+IntegrationLogQueryRequest.prototype['auto_order_ids'] = undefined;
+
+/**
+ * @member {Array.<Number>} auto_order_oids
+ */
+IntegrationLogQueryRequest.prototype['auto_order_oids'] = undefined;
 
 /**
  * @member {String} direction
