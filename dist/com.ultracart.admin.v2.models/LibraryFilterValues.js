@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LibraryFilterValues model module.
  * @module com.ultracart.admin.v2.models/LibraryFilterValues
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var LibraryFilterValues = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailThirdPartyTag model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyTag
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var EmailThirdPartyTag = /*#__PURE__*/function () {
   /**

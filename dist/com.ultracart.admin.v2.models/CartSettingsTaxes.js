@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettingsTaxes model module.
  * @module com.ultracart.admin.v2.models/CartSettingsTaxes
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var CartSettingsTaxes = /*#__PURE__*/function () {
   /**

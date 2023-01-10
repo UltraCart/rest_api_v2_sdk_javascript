@@ -18,7 +18,7 @@ import UltraCartConfig from './UltraCartConfig';
 /**
  * The TaxProviderUltraCart model module.
  * @module com.ultracart.admin.v2.models/TaxProviderUltraCart
- * @version 4.0.108-RC
+ * @version 4.0.109-RC
  */
 class TaxProviderUltraCart {
     /**

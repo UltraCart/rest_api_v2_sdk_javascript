@@ -38,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.0.107-RC
+* @version 4.0.108-RC
 */
 var ItemApi = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemDigitalItemPdfMeta model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalItemPdfMeta
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var ItemDigitalItemPdfMeta = /*#__PURE__*/function () {
   /**

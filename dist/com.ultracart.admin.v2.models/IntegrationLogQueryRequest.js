@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLogQueryRequest model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogQueryRequest
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var IntegrationLogQueryRequest = /*#__PURE__*/function () {
   /**
@@ -56,6 +56,14 @@ var IntegrationLogQueryRequest = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('action')) {
           obj['action'] = _ApiClient["default"].convertToType(data['action'], 'String');
+        }
+
+        if (data.hasOwnProperty('auto_order_ids')) {
+          obj['auto_order_ids'] = _ApiClient["default"].convertToType(data['auto_order_ids'], ['String']);
+        }
+
+        if (data.hasOwnProperty('auto_order_oids')) {
+          obj['auto_order_oids'] = _ApiClient["default"].convertToType(data['auto_order_oids'], ['Number']);
         }
 
         if (data.hasOwnProperty('direction')) {
@@ -119,6 +127,16 @@ var IntegrationLogQueryRequest = /*#__PURE__*/function () {
 
 
 IntegrationLogQueryRequest.prototype['action'] = undefined;
+/**
+ * @member {Array.<String>} auto_order_ids
+ */
+
+IntegrationLogQueryRequest.prototype['auto_order_ids'] = undefined;
+/**
+ * @member {Array.<Number>} auto_order_oids
+ */
+
+IntegrationLogQueryRequest.prototype['auto_order_oids'] = undefined;
 /**
  * @member {String} direction
  */

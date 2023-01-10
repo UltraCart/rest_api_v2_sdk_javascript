@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationEngagementEquationFunction model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagementEquationFunction
- * @version 4.0.108-RC
+ * @version 4.0.109-RC
  */
 class ConversationEngagementEquationFunction {
     /**
@@ -377,16 +377,16 @@ ConversationEngagementEquationFunction['TypeEnum'] = {
     "current page url": "current page url",
 
     /**
-     * value: "customer's location"
+     * value: "customers location"
      * @const
      */
-    "customer&#39;s location": "customer's location",
+    "customers location": "customers location",
 
     /**
-     * value: "customer's browsing time"
+     * value: "customers browsing time"
      * @const
      */
-    "customer&#39;s browsing time": "customer's browsing time",
+    "customers browsing time": "customers browsing time",
 
     /**
      * value: "number of viewed pages"

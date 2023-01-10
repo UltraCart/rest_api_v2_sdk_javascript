@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLog model module.
  * @module com.ultracart.admin.v2.models/IntegrationLog
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var IntegrationLog = /*#__PURE__*/function () {
   /**
@@ -60,6 +60,10 @@ var IntegrationLog = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('action')) {
           obj['action'] = _ApiClient["default"].convertToType(data['action'], 'String');
+        }
+
+        if (data.hasOwnProperty('auto_order_oids')) {
+          obj['auto_order_oids'] = _ApiClient["default"].convertToType(data['auto_order_oids'], ['Number']);
         }
 
         if (data.hasOwnProperty('direction')) {
@@ -143,6 +147,11 @@ var IntegrationLog = /*#__PURE__*/function () {
 
 
 IntegrationLog.prototype['action'] = undefined;
+/**
+ * @member {Array.<Number>} auto_order_oids
+ */
+
+IntegrationLog.prototype['auto_order_oids'] = undefined;
 /**
  * @member {String} direction
  */

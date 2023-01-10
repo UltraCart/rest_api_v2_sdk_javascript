@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemReview model module.
  * @module com.ultracart.admin.v2.models/ItemReview
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var ItemReview = /*#__PURE__*/function () {
   /**

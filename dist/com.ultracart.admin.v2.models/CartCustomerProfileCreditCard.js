@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartCustomerProfileCreditCard model module.
  * @module com.ultracart.admin.v2.models/CartCustomerProfileCreditCard
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var CartCustomerProfileCreditCard = /*#__PURE__*/function () {
   /**

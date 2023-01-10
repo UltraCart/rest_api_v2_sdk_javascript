@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The FileManagerDirectory model module.
  * @module com.ultracart.admin.v2.models/FileManagerDirectory
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var FileManagerDirectory = /*#__PURE__*/function () {
   /**

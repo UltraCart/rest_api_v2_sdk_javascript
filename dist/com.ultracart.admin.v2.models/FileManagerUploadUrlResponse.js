@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The FileManagerUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/FileManagerUploadUrlResponse
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var FileManagerUploadUrlResponse = /*#__PURE__*/function () {
   /**

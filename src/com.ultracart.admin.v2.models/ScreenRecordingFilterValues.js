@@ -17,7 +17,7 @@ import ScreenRecordingFilterValuesPageView from './ScreenRecordingFilterValuesPa
 /**
  * The ScreenRecordingFilterValues model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValues
- * @version 4.0.108-RC
+ * @version 4.0.109-RC
  */
 class ScreenRecordingFilterValues {
     /**

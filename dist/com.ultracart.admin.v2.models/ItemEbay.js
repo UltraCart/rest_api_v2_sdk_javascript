@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemEbay model module.
  * @module com.ultracart.admin.v2.models/ItemEbay
- * @version 4.0.107-RC
+ * @version 4.0.108-RC
  */
 var ItemEbay = /*#__PURE__*/function () {
   /**
