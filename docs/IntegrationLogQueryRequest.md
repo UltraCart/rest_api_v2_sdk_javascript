@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **direction** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **file_names** | **[String]** |  | [optional] 
+**integration_log_oid** | **Number** |  | [optional] 
 **item_id** | **String** |  | [optional] 
 **item_ipn_oid** | **Number** |  | [optional] 
 **log_dts_begin** | **String** | Log date/time begin | [optional] 

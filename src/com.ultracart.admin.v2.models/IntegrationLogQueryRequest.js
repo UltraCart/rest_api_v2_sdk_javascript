@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogQueryRequest model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogQueryRequest
-   * @version 3.10.92
+   * @version 3.10.93
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('file_names'))
         obj.file_names = ApiClient.convertToType(data['file_names'], ['String']);
+      if (data.hasOwnProperty('integration_log_oid'))
+        obj.integration_log_oid = ApiClient.convertToType(data['integration_log_oid'], 'Number');
       if (data.hasOwnProperty('item_id'))
         obj.item_id = ApiClient.convertToType(data['item_id'], 'String');
       if (data.hasOwnProperty('item_ipn_oid'))
@@ -118,6 +120,11 @@
    * @member {Array.<String>} file_names
    */
   exports.prototype.file_names = undefined;
+
+  /**
+   * @member {Number} integration_log_oid
+   */
+  exports.prototype.integration_log_oid = undefined;
 
   /**
    * @member {String} item_id
