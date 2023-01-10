@@ -34,7 +34,7 @@
   /**
    * The ConversationMessageTranslation model module.
    * @module com.ultracart.admin.v2.models/ConversationMessageTranslation
-   * @version 3.10.90
+   * @version 3.10.91
    */
 
   /**
