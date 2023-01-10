@@ -111,9 +111,9 @@ Name | Type | Description | Notes
 
 * `current_page_url` (value: `"current page url"`)
 
-* `customers_location` (value: `"customer's location"`)
+* `customers_location` (value: `"customers location"`)
 
-* `customers_browsing_time` (value: `"customer's browsing time"`)
+* `customers_browsing_time` (value: `"customers browsing time"`)
 
 * `number_of_viewed_pages` (value: `"number of viewed pages"`)
 

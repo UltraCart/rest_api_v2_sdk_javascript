@@ -34,7 +34,7 @@
   /**
    * The GiftCertificateLedgerEntry model module.
    * @module com.ultracart.admin.v2.models/GiftCertificateLedgerEntry
-   * @version 3.10.91
+   * @version 3.10.92
    */
 
   /**

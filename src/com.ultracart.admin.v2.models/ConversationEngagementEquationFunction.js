@@ -34,7 +34,7 @@
   /**
    * The ConversationEngagementEquationFunction model module.
    * @module com.ultracart.admin.v2.models/ConversationEngagementEquationFunction
-   * @version 3.10.91
+   * @version 3.10.92
    */
 
   /**
@@ -358,16 +358,16 @@
     current_page_url: "current page url",
 
     /**
-     * value: "customer's location"
+     * value: "customers location"
      * @const
      */
-    customers_location: "customer's location",
+    customers_location: "customers location",
 
     /**
-     * value: "customer's browsing time"
+     * value: "customers browsing time"
      * @const
      */
-    customers_browsing_time: "customer's browsing time",
+    customers_browsing_time: "customers browsing time",
 
     /**
      * value: "number of viewed pages"
