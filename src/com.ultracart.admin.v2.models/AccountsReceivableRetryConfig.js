@@ -17,7 +17,7 @@ import AccountsReceivableRetryDayActivity from './AccountsReceivableRetryDayActi
 /**
  * The AccountsReceivableRetryConfig model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 class AccountsReceivableRetryConfig {
     /**

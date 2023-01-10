@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CartSettingsGiftWrap model module.
  * @module com.ultracart.admin.v2.models/CartSettingsGiftWrap
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 class CartSettingsGiftWrap {
     /**

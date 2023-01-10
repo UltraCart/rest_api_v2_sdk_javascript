@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IntegrationLogQueryRequest model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogQueryRequest
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 class IntegrationLogQueryRequest {
     /**
@@ -64,6 +64,9 @@ class IntegrationLogQueryRequest {
             }
             if (data.hasOwnProperty('file_names')) {
                 obj['file_names'] = ApiClient.convertToType(data['file_names'], ['String']);
+            }
+            if (data.hasOwnProperty('integration_log_oid')) {
+                obj['integration_log_oid'] = ApiClient.convertToType(data['integration_log_oid'], 'Number');
             }
             if (data.hasOwnProperty('item_id')) {
                 obj['item_id'] = ApiClient.convertToType(data['item_id'], 'String');
@@ -128,6 +131,11 @@ IntegrationLogQueryRequest.prototype['email'] = undefined;
  * @member {Array.<String>} file_names
  */
 IntegrationLogQueryRequest.prototype['file_names'] = undefined;
+
+/**
+ * @member {Number} integration_log_oid
+ */
+IntegrationLogQueryRequest.prototype['integration_log_oid'] = undefined;
 
 /**
  * @member {String} item_id

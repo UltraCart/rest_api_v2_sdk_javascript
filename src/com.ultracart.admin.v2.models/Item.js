@@ -54,7 +54,7 @@ import ItemWishlistMember from './ItemWishlistMember';
 /**
  * The Item model module.
  * @module com.ultracart.admin.v2.models/Item
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 class Item {
     /**
