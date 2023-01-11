@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemContentMultimediaThumbnail model module.
  * @module com.ultracart.admin.v2.models/ItemContentMultimediaThumbnail
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 var ItemContentMultimediaThumbnail = /*#__PURE__*/function () {
   /**

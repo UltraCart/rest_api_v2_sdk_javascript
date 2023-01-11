@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLogQueryRequest model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogQueryRequest
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 var IntegrationLogQueryRequest = /*#__PURE__*/function () {
   /**
@@ -76,6 +76,10 @@ var IntegrationLogQueryRequest = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('file_names')) {
           obj['file_names'] = _ApiClient["default"].convertToType(data['file_names'], ['String']);
+        }
+
+        if (data.hasOwnProperty('integration_log_oid')) {
+          obj['integration_log_oid'] = _ApiClient["default"].convertToType(data['integration_log_oid'], 'Number');
         }
 
         if (data.hasOwnProperty('item_id')) {
@@ -152,6 +156,11 @@ IntegrationLogQueryRequest.prototype['email'] = undefined;
  */
 
 IntegrationLogQueryRequest.prototype['file_names'] = undefined;
+/**
+ * @member {Number} integration_log_oid
+ */
+
+IntegrationLogQueryRequest.prototype['integration_log_oid'] = undefined;
 /**
  * @member {String} item_id
  */

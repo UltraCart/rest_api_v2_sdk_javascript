@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The OrderGiftCertificate model module.
  * @module com.ultracart.admin.v2.models/OrderGiftCertificate
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 class OrderGiftCertificate {
     /**

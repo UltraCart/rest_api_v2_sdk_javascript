@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChannelPartnerEstimateTaxResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 var ChannelPartnerEstimateTaxResponse = /*#__PURE__*/function () {
   /**

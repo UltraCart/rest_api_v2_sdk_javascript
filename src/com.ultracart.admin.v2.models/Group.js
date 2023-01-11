@@ -19,7 +19,7 @@ import Permission from './Permission';
 /**
  * The Group model module.
  * @module com.ultracart.admin.v2.models/Group
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 class Group {
     /**

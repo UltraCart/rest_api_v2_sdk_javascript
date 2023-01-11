@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Distance model module.
  * @module com.ultracart.admin.v2.models/Distance
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 var Distance = /*#__PURE__*/function () {
   /**

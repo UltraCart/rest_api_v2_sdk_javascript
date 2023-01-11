@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LibraryItemPublishedMeta model module.
  * @module com.ultracart.admin.v2.models/LibraryItemPublishedMeta
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 var LibraryItemPublishedMeta = /*#__PURE__*/function () {
   /**

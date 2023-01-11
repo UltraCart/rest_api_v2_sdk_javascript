@@ -19,7 +19,7 @@ import CartSettingsShippingEstimate from './CartSettingsShippingEstimate';
 /**
  * The CartSettingsShipping model module.
  * @module com.ultracart.admin.v2.models/CartSettingsShipping
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 class CartSettingsShipping {
     /**

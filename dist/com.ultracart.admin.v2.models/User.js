@@ -28,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The User model module.
  * @module com.ultracart.admin.v2.models/User
- * @version 4.0.109-RC
+ * @version 4.0.110-RC
  */
 var User = /*#__PURE__*/function () {
   /**

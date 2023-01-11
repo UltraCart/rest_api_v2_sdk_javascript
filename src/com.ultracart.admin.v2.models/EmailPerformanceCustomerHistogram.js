@@ -17,7 +17,7 @@ import EmailPerformanceCustomerHistogramPeriod from './EmailPerformanceCustomerH
 /**
  * The EmailPerformanceCustomerHistogram model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogram
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 class EmailPerformanceCustomerHistogram {
     /**
