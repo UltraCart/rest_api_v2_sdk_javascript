@@ -65,6 +65,8 @@ Name | Type | Description | Notes
 
 * `Walmart` (value: `"Walmart"`)
 
+* `Shop_com` (value: `"Shop.com"`)
+
 
 
 

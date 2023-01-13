@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.10.94
+   * @version 3.10.95
    */
 
   /**
@@ -316,7 +316,13 @@
      * value: "Walmart"
      * @const
      */
-    Walmart: "Walmart"
+    Walmart: "Walmart",
+
+    /**
+     * value: "Shop.com"
+     * @const
+     */
+    Shop_com: "Shop.com"
   };
 
 

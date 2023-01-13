@@ -34,7 +34,7 @@
   /**
    * The OrderPackingSlipResponse model module.
    * @module com.ultracart.admin.v2.models/OrderPackingSlipResponse
-   * @version 3.10.94
+   * @version 3.10.95
    */
 
   /**

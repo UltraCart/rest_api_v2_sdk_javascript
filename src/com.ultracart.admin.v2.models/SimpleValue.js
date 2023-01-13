@@ -34,7 +34,7 @@
   /**
    * The SimpleValue model module.
    * @module com.ultracart.admin.v2.models/SimpleValue
-   * @version 3.10.94
+   * @version 3.10.95
    */
 
   /**
