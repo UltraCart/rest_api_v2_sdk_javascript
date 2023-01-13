@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponRestriction model module.
  * @module com.ultracart.admin.v2.models/CouponRestriction
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 var CouponRestriction = /*#__PURE__*/function () {
   /**

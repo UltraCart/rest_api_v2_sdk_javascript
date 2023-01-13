@@ -120,7 +120,11 @@ import ChannelPartnerOrderItem from './com.ultracart.admin.v2.models/ChannelPart
 import ChannelPartnerOrderItemOption from './com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption';
 import ChannelPartnerOrderTransaction from './com.ultracart.admin.v2.models/ChannelPartnerOrderTransaction';
 import ChannelPartnerOrderTransactionDetail from './com.ultracart.admin.v2.models/ChannelPartnerOrderTransactionDetail';
+import ChannelPartnerShipToPreference from './com.ultracart.admin.v2.models/ChannelPartnerShipToPreference';
+import ChannelPartnerShipToPreferenceResponse from './com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse';
+import ChannelPartnerShipToPreferencesResponse from './com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse';
 import ChannelPartnerShippingEstimate from './com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate';
+import ChannelPartnersResponse from './com.ultracart.admin.v2.models/ChannelPartnersResponse';
 import ChargebackDispute from './com.ultracart.admin.v2.models/ChargebackDispute';
 import ChargebackDisputeResponse from './com.ultracart.admin.v2.models/ChargebackDisputeResponse';
 import ChargebackDisputesResponse from './com.ultracart.admin.v2.models/ChargebackDisputesResponse';
@@ -784,7 +788,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.111-RC
+* @version 4.0.112-RC
 */
 export {
     /**
@@ -1436,10 +1440,34 @@ export {
     ChannelPartnerOrderTransactionDetail,
 
     /**
+     * The ChannelPartnerShipToPreference model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreference}
+     */
+    ChannelPartnerShipToPreference,
+
+    /**
+     * The ChannelPartnerShipToPreferenceResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse}
+     */
+    ChannelPartnerShipToPreferenceResponse,
+
+    /**
+     * The ChannelPartnerShipToPreferencesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse}
+     */
+    ChannelPartnerShipToPreferencesResponse,
+
+    /**
      * The ChannelPartnerShippingEstimate model constructor.
      * @property {module:com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate}
      */
     ChannelPartnerShippingEstimate,
+
+    /**
+     * The ChannelPartnersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ChannelPartnersResponse}
+     */
+    ChannelPartnersResponse,
 
     /**
      * The ChargebackDispute model constructor.

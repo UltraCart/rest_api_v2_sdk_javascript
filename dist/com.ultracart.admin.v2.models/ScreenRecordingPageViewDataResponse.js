@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingPageViewDataResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewDataResponse
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 var ScreenRecordingPageViewDataResponse = /*#__PURE__*/function () {
   /**

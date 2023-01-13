@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemChargebackAddendum model module.
  * @module com.ultracart.admin.v2.models/ItemChargebackAddendum
- * @version 4.0.111-RC
+ * @version 4.0.112-RC
  */
 class ItemChargebackAddendum {
     /**

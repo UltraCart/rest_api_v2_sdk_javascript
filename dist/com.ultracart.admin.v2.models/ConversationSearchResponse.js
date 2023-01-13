@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Conversation = _interopRequireDefault(require("./Conversation"));
+var _ConversationSummary = _interopRequireDefault(require("./ConversationSummary"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSearchResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationSearchResponse
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 var ConversationSearchResponse = /*#__PURE__*/function () {
   /**
@@ -65,7 +65,7 @@ var ConversationSearchResponse = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('records')) {
-          obj['records'] = _ApiClient["default"].convertToType(data['records'], [_Conversation["default"]]);
+          obj['records'] = _ApiClient["default"].convertToType(data['records'], [_ConversationSummary["default"]]);
         }
 
         if (data.hasOwnProperty('total')) {
@@ -91,7 +91,7 @@ ConversationSearchResponse.prototype['range_begin'] = undefined;
 
 ConversationSearchResponse.prototype['range_end'] = undefined;
 /**
- * @member {Array.<module:com.ultracart.admin.v2.models/Conversation>} records
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationSummary>} records
  */
 
 ConversationSearchResponse.prototype['records'] = undefined;

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationEventWebchatContext
- * @version 4.0.110-RC
+ * @version 4.0.111-RC
  */
 var ConversationEventWebchatContext = /*#__PURE__*/function () {
   /**

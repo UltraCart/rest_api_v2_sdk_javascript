@@ -112,7 +112,11 @@ docs/ChannelPartnerOrderItem.md
 docs/ChannelPartnerOrderItemOption.md
 docs/ChannelPartnerOrderTransaction.md
 docs/ChannelPartnerOrderTransactionDetail.md
+docs/ChannelPartnerShipToPreference.md
+docs/ChannelPartnerShipToPreferenceResponse.md
+docs/ChannelPartnerShipToPreferencesResponse.md
 docs/ChannelPartnerShippingEstimate.md
+docs/ChannelPartnersResponse.md
 docs/ChargebackApi.md
 docs/ChargebackDispute.md
 docs/ChargebackDisputeResponse.md
@@ -853,7 +857,11 @@ src/com.ultracart.admin.v2.models/ChannelPartnerOrderItem.js
 src/com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption.js
 src/com.ultracart.admin.v2.models/ChannelPartnerOrderTransaction.js
 src/com.ultracart.admin.v2.models/ChannelPartnerOrderTransactionDetail.js
+src/com.ultracart.admin.v2.models/ChannelPartnerShipToPreference.js
+src/com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse.js
+src/com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse.js
 src/com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate.js
+src/com.ultracart.admin.v2.models/ChannelPartnersResponse.js
 src/com.ultracart.admin.v2.models/ChargebackDispute.js
 src/com.ultracart.admin.v2.models/ChargebackDisputeResponse.js
 src/com.ultracart.admin.v2.models/ChargebackDisputesResponse.js
