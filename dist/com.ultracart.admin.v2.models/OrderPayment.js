@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.111-RC
+ * @version 4.0.112-RC
  */
 var OrderPayment = /*#__PURE__*/function () {
   /**
@@ -369,7 +369,13 @@ OrderPayment['PaymentMethodEnum'] = {
    * value: "Walmart"
    * @const
    */
-  "Walmart": "Walmart"
+  "Walmart": "Walmart",
+
+  /**
+   * value: "Shop.com"
+   * @const
+   */
+  "Shop.com": "Shop.com"
 };
 /**
  * Allowed values for the <code>payment_status</code> property.

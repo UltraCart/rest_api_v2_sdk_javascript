@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DistributionCenter model module.
  * @module com.ultracart.admin.v2.models/DistributionCenter
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 class DistributionCenter {
     /**

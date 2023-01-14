@@ -17,7 +17,7 @@ import ConversationSummary from './ConversationSummary';
 /**
  * The ConversationSearchResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationSearchResponse
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 class ConversationSearchResponse {
     /**

@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPointOfSale model module.
  * @module com.ultracart.admin.v2.models/OrderPointOfSale
- * @version 4.0.111-RC
+ * @version 4.0.112-RC
  */
 var OrderPointOfSale = /*#__PURE__*/function () {
   /**

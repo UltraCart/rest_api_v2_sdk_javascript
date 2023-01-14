@@ -18,7 +18,7 @@ import CartCustomerProfileCreditCard from './CartCustomerProfileCreditCard';
 /**
  * The CartCustomerProfile model module.
  * @module com.ultracart.admin.v2.models/CartCustomerProfile
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 class CartCustomerProfile {
     /**

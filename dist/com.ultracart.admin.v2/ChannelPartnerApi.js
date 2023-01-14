@@ -17,6 +17,14 @@ var _ChannelPartnerImportResponse = _interopRequireDefault(require("../com.ultra
 
 var _ChannelPartnerOrder = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnerOrder"));
 
+var _ChannelPartnerShipToPreference = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnerShipToPreference"));
+
+var _ChannelPartnerShipToPreferenceResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse"));
+
+var _ChannelPartnerShipToPreferencesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse"));
+
+var _ChannelPartnersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnersResponse"));
+
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -30,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * ChannelPartner service.
 * @module com.ultracart.admin.v2/ChannelPartnerApi
-* @version 4.0.111-RC
+* @version 4.0.112-RC
 */
 var ChannelPartnerApi = /*#__PURE__*/function () {
   /**
@@ -121,6 +129,49 @@ var ChannelPartnerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/channel_partner/cancel/by_ultracart_order_id/{order_id}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the deleteChannelPartnerShipToPreference operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~deleteChannelPartnerShipToPreferenceCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a ship to preference record for the channel partner.
+     * Delete a ship to preference record for the channel partner. 
+     * @param {Number} channel_partner_oid 
+     * @param {Number} channel_partner_ship_to_preference_oid 
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~deleteChannelPartnerShipToPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+
+  }, {
+    key: "deleteChannelPartnerShipToPreference",
+    value: function deleteChannelPartnerShipToPreference(channel_partner_oid, channel_partner_ship_to_preference_oid, callback) {
+      var postBody = null; // verify the required parameter 'channel_partner_oid' is set
+
+      if (channel_partner_oid === undefined || channel_partner_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_oid' when calling deleteChannelPartnerShipToPreference");
+      } // verify the required parameter 'channel_partner_ship_to_preference_oid' is set
+
+
+      if (channel_partner_ship_to_preference_oid === undefined || channel_partner_ship_to_preference_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_ship_to_preference_oid' when calling deleteChannelPartnerShipToPreference");
+      }
+
+      var pathParams = {
+        'channel_partner_oid': channel_partner_oid,
+        'channel_partner_ship_to_preference_oid': channel_partner_ship_to_preference_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/channel_partner/channel_partners/{channel_partner_oid}/ship_to_preferences/{channel_partner_ship_to_preference_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the estimateShippingForChannelPartnerOrder operation.
      * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~estimateShippingForChannelPartnerOrderCallback
      * @param {String} error Error message, if any.
@@ -191,6 +242,116 @@ var ChannelPartnerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/channel_partner/estimate_tax', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the getChannelPartnerShipToPreference operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerShipToPreferenceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the ship to preference associated with the channel partner and the specific id.
+     * Retrieve the ship to preference associated with the channel partner and the specific id. 
+     * @param {Number} channel_partner_oid 
+     * @param {Number} channel_partner_ship_to_preference_oid 
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerShipToPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse}
+     */
+
+  }, {
+    key: "getChannelPartnerShipToPreference",
+    value: function getChannelPartnerShipToPreference(channel_partner_oid, channel_partner_ship_to_preference_oid, callback) {
+      var postBody = null; // verify the required parameter 'channel_partner_oid' is set
+
+      if (channel_partner_oid === undefined || channel_partner_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_oid' when calling getChannelPartnerShipToPreference");
+      } // verify the required parameter 'channel_partner_ship_to_preference_oid' is set
+
+
+      if (channel_partner_ship_to_preference_oid === undefined || channel_partner_ship_to_preference_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_ship_to_preference_oid' when calling getChannelPartnerShipToPreference");
+      }
+
+      var pathParams = {
+        'channel_partner_oid': channel_partner_oid,
+        'channel_partner_ship_to_preference_oid': channel_partner_ship_to_preference_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ChannelPartnerShipToPreferenceResponse["default"];
+      return this.apiClient.callApi('/channel_partner/channel_partners/{channel_partner_oid}/ship_to_preferences/{channel_partner_ship_to_preference_oid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getChannelPartnerShipToPreferences operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerShipToPreferencesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the ship to preferences associated with the channel partner.
+     * Retrieve the ship to preferences associated with the channel partner. 
+     * @param {Number} channel_partner_oid 
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerShipToPreferencesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse}
+     */
+
+  }, {
+    key: "getChannelPartnerShipToPreferences",
+    value: function getChannelPartnerShipToPreferences(channel_partner_oid, callback) {
+      var postBody = null; // verify the required parameter 'channel_partner_oid' is set
+
+      if (channel_partner_oid === undefined || channel_partner_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_oid' when calling getChannelPartnerShipToPreferences");
+      }
+
+      var pathParams = {
+        'channel_partner_oid': channel_partner_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ChannelPartnerShipToPreferencesResponse["default"];
+      return this.apiClient.callApi('/channel_partner/channel_partners/{channel_partner_oid}/ship_to_preferences', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getChannelPartners operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the channel partners configured on the account.
+     * Retrieve the channel partners configured on the account. 
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChannelPartnersResponse}
+     */
+
+  }, {
+    key: "getChannelPartners",
+    value: function getChannelPartners(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ChannelPartnersResponse["default"];
+      return this.apiClient.callApi('/channel_partner/channel_partners', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the importChannelPartnerOrder operation.
      * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~importChannelPartnerOrderCallback
      * @param {String} error Error message, if any.
@@ -224,6 +385,99 @@ var ChannelPartnerApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ChannelPartnerImportResponse["default"];
       return this.apiClient.callApi('/channel_partner/import', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the insertChannelPartnerShipToPreference operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~insertChannelPartnerShipToPreferenceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a ship to preference record for the channel partner.
+     * Insert a ship to preference record for the channel partner. 
+     * @param {Number} channel_partner_oid 
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreference} ship_to_preference Ship to preference to create
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~insertChannelPartnerShipToPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse}
+     */
+
+  }, {
+    key: "insertChannelPartnerShipToPreference",
+    value: function insertChannelPartnerShipToPreference(channel_partner_oid, ship_to_preference, callback) {
+      var postBody = ship_to_preference; // verify the required parameter 'channel_partner_oid' is set
+
+      if (channel_partner_oid === undefined || channel_partner_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_oid' when calling insertChannelPartnerShipToPreference");
+      } // verify the required parameter 'ship_to_preference' is set
+
+
+      if (ship_to_preference === undefined || ship_to_preference === null) {
+        throw new Error("Missing the required parameter 'ship_to_preference' when calling insertChannelPartnerShipToPreference");
+      }
+
+      var pathParams = {
+        'channel_partner_oid': channel_partner_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ChannelPartnerShipToPreferenceResponse["default"];
+      return this.apiClient.callApi('/channel_partner/channel_partners/{channel_partner_oid}/ship_to_preferences', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the updateChannelPartnerShipToPreference operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~updateChannelPartnerShipToPreferenceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a ship to preference record for the channel partner.
+     * Update a ship to preference record for the channel partner. 
+     * @param {Number} channel_partner_oid 
+     * @param {Number} channel_partner_ship_to_preference_oid 
+     * @param {module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreference} ship_to_preference Ship to preference to create
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~updateChannelPartnerShipToPreferenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse}
+     */
+
+  }, {
+    key: "updateChannelPartnerShipToPreference",
+    value: function updateChannelPartnerShipToPreference(channel_partner_oid, channel_partner_ship_to_preference_oid, ship_to_preference, callback) {
+      var postBody = ship_to_preference; // verify the required parameter 'channel_partner_oid' is set
+
+      if (channel_partner_oid === undefined || channel_partner_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_oid' when calling updateChannelPartnerShipToPreference");
+      } // verify the required parameter 'channel_partner_ship_to_preference_oid' is set
+
+
+      if (channel_partner_ship_to_preference_oid === undefined || channel_partner_ship_to_preference_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_ship_to_preference_oid' when calling updateChannelPartnerShipToPreference");
+      } // verify the required parameter 'ship_to_preference' is set
+
+
+      if (ship_to_preference === undefined || ship_to_preference === null) {
+        throw new Error("Missing the required parameter 'ship_to_preference' when calling updateChannelPartnerShipToPreference");
+      }
+
+      var pathParams = {
+        'channel_partner_oid': channel_partner_oid,
+        'channel_partner_ship_to_preference_oid': channel_partner_ship_to_preference_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ChannelPartnerShipToPreferenceResponse["default"];
+      return this.apiClient.callApi('/channel_partner/channel_partners/{channel_partner_oid}/ship_to_preferences/{channel_partner_ship_to_preference_oid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
   }]);
 

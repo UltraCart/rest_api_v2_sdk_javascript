@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettingsGiftWrap model module.
  * @module com.ultracart.admin.v2.models/CartSettingsGiftWrap
- * @version 4.0.111-RC
+ * @version 4.0.112-RC
  */
 var CartSettingsGiftWrap = /*#__PURE__*/function () {
   /**

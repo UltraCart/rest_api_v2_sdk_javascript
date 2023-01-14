@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettings model module.
  * @module com.ultracart.admin.v2.models/CartSettings
- * @version 4.0.111-RC
+ * @version 4.0.112-RC
  */
 var CartSettings = /*#__PURE__*/function () {
   /**

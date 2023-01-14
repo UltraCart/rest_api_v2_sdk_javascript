@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ErrorResponse model module.
  * @module com.ultracart.admin.v2.models/ErrorResponse
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 class ErrorResponse {
     /**

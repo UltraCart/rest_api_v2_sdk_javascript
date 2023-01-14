@@ -669,10 +669,34 @@ Object.defineProperty(exports, "ChannelPartnerOrderTransactionDetail", {
     return _ChannelPartnerOrderTransactionDetail["default"];
   }
 });
+Object.defineProperty(exports, "ChannelPartnerShipToPreference", {
+  enumerable: true,
+  get: function get() {
+    return _ChannelPartnerShipToPreference["default"];
+  }
+});
+Object.defineProperty(exports, "ChannelPartnerShipToPreferenceResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ChannelPartnerShipToPreferenceResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ChannelPartnerShipToPreferencesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ChannelPartnerShipToPreferencesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ChannelPartnerShippingEstimate", {
   enumerable: true,
   get: function get() {
     return _ChannelPartnerShippingEstimate["default"];
+  }
+});
+Object.defineProperty(exports, "ChannelPartnersResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ChannelPartnersResponse["default"];
   }
 });
 Object.defineProperty(exports, "ChargebackApi", {
@@ -4666,7 +4690,15 @@ var _ChannelPartnerOrderTransaction = _interopRequireDefault(require("./com.ultr
 
 var _ChannelPartnerOrderTransactionDetail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerOrderTransactionDetail"));
 
+var _ChannelPartnerShipToPreference = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerShipToPreference"));
+
+var _ChannelPartnerShipToPreferenceResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse"));
+
+var _ChannelPartnerShipToPreferencesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse"));
+
 var _ChannelPartnerShippingEstimate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate"));
+
+var _ChannelPartnersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnersResponse"));
 
 var _ChargebackDispute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChargebackDispute"));
 
