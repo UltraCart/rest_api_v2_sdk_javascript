@@ -34,7 +34,7 @@
   /**
    * The PointOfSaleLocation model module.
    * @module com.ultracart.admin.v2.models/PointOfSaleLocation
-   * @version 3.10.95
+   * @version 3.10.96
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.country = ApiClient.convertToType(data['country'], 'String');
       if (data.hasOwnProperty('distribution_center_code'))
         obj.distribution_center_code = ApiClient.convertToType(data['distribution_center_code'], 'String');
+      if (data.hasOwnProperty('external_id'))
+        obj.external_id = ApiClient.convertToType(data['external_id'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('pos_location_oid'))
@@ -106,6 +108,12 @@
    * @member {String} distribution_center_code
    */
   exports.prototype.distribution_center_code = undefined;
+
+  /**
+   * External Id useful for syncing with a remote filesystem, this may be an MD5 hash or whatever suits your needs.
+   * @member {String} external_id
+   */
+  exports.prototype.external_id = undefined;
 
   /**
    * Merchant ID that owns this location
