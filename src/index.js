@@ -75,6 +75,7 @@ import CartItemMultimediaThumbnail from './com.ultracart.admin.v2.models/CartIte
 import CartItemOption from './com.ultracart.admin.v2.models/CartItemOption';
 import CartItemOptionValue from './com.ultracart.admin.v2.models/CartItemOptionValue';
 import CartItemPhysical from './com.ultracart.admin.v2.models/CartItemPhysical';
+import CartItemProperty from './com.ultracart.admin.v2.models/CartItemProperty';
 import CartItemVariationSelection from './com.ultracart.admin.v2.models/CartItemVariationSelection';
 import CartKitComponentOption from './com.ultracart.admin.v2.models/CartKitComponentOption';
 import CartMarketing from './com.ultracart.admin.v2.models/CartMarketing';
@@ -788,7 +789,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.113-RC
+* @version 4.0.114-RC
 */
 export {
     /**
@@ -1168,6 +1169,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CartItemPhysical}
      */
     CartItemPhysical,
+
+    /**
+     * The CartItemProperty model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CartItemProperty}
+     */
+    CartItemProperty,
 
     /**
      * The CartItemVariationSelection model constructor.

@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailGlobalSettingsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailGlobalSettingsResponse
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 var EmailGlobalSettingsResponse = /*#__PURE__*/function () {
   /**

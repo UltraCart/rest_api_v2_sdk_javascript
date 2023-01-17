@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PointOfSaleLocation model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleLocation
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 var PointOfSaleLocation = /*#__PURE__*/function () {
   /**
@@ -72,6 +72,10 @@ var PointOfSaleLocation = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('distribution_center_code')) {
           obj['distribution_center_code'] = _ApiClient["default"].convertToType(data['distribution_center_code'], 'String');
+        }
+
+        if (data.hasOwnProperty('external_id')) {
+          obj['external_id'] = _ApiClient["default"].convertToType(data['external_id'], 'String');
         }
 
         if (data.hasOwnProperty('merchant_id')) {
@@ -128,6 +132,12 @@ PointOfSaleLocation.prototype['country'] = undefined;
  */
 
 PointOfSaleLocation.prototype['distribution_center_code'] = undefined;
+/**
+ * External Id useful for syncing with a remote filesystem, this may be an MD5 hash or whatever suits your needs.
+ * @member {String} external_id
+ */
+
+PointOfSaleLocation.prototype['external_id'] = undefined;
 /**
  * Merchant ID that owns this location
  * @member {String} merchant_id

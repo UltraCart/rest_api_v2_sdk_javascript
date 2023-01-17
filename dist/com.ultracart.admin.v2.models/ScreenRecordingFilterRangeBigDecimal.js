@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilterRangeBigDecimal model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeBigDecimal
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 var ScreenRecordingFilterRangeBigDecimal = /*#__PURE__*/function () {
   /**

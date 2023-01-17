@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TransactionEmailResponse model module.
  * @module com.ultracart.admin.v2.models/TransactionEmailResponse
- * @version 4.0.112-RC
+ * @version 4.0.113-RC
  */
 var TransactionEmailResponse = /*#__PURE__*/function () {
   /**

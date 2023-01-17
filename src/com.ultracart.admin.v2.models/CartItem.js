@@ -16,6 +16,7 @@ import CartItemAttribute from './CartItemAttribute';
 import CartItemMultimedia from './CartItemMultimedia';
 import CartItemOption from './CartItemOption';
 import CartItemPhysical from './CartItemPhysical';
+import CartItemProperty from './CartItemProperty';
 import CartItemVariationSelection from './CartItemVariationSelection';
 import CartKitComponentOption from './CartKitComponentOption';
 import Currency from './Currency';
@@ -23,7 +24,7 @@ import Currency from './Currency';
 /**
  * The CartItem model module.
  * @module com.ultracart.admin.v2.models/CartItem
- * @version 4.0.113-RC
+ * @version 4.0.114-RC
  */
 class CartItem {
     /**
@@ -113,6 +114,9 @@ class CartItem {
             }
             if (data.hasOwnProperty('preorder')) {
                 obj['preorder'] = ApiClient.convertToType(data['preorder'], 'Boolean');
+            }
+            if (data.hasOwnProperty('properties')) {
+                obj['properties'] = ApiClient.convertToType(data['properties'], [CartItemProperty]);
             }
             if (data.hasOwnProperty('quantity')) {
                 obj['quantity'] = ApiClient.convertToType(data['quantity'], 'Number');
@@ -263,6 +267,12 @@ CartItem.prototype['position'] = undefined;
  * @member {Boolean} preorder
  */
 CartItem.prototype['preorder'] = undefined;
+
+/**
+ * Properties associated with the item
+ * @member {Array.<module:com.ultracart.admin.v2.models/CartItemProperty>} properties
+ */
+CartItem.prototype['properties'] = undefined;
 
 /**
  * quantity

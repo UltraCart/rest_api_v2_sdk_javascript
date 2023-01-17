@@ -17,7 +17,7 @@ import TaxCity from './TaxCity';
 /**
  * The TaxCounty model module.
  * @module com.ultracart.admin.v2.models/TaxCounty
- * @version 4.0.113-RC
+ * @version 4.0.114-RC
  */
 class TaxCounty {
     /**
