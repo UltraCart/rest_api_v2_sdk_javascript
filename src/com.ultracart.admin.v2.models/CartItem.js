@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CartItemAttribute', 'com.ultracart.admin.v2.models/CartItemMultimedia', 'com.ultracart.admin.v2.models/CartItemOption', 'com.ultracart.admin.v2.models/CartItemPhysical', 'com.ultracart.admin.v2.models/CartItemVariationSelection', 'com.ultracart.admin.v2.models/CartKitComponentOption', 'com.ultracart.admin.v2.models/Currency'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CartItemAttribute', 'com.ultracart.admin.v2.models/CartItemMultimedia', 'com.ultracart.admin.v2.models/CartItemOption', 'com.ultracart.admin.v2.models/CartItemPhysical', 'com.ultracart.admin.v2.models/CartItemProperty', 'com.ultracart.admin.v2.models/CartItemVariationSelection', 'com.ultracart.admin.v2.models/CartKitComponentOption', 'com.ultracart.admin.v2.models/Currency'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CartItemAttribute'), require('./CartItemMultimedia'), require('./CartItemOption'), require('./CartItemPhysical'), require('./CartItemVariationSelection'), require('./CartKitComponentOption'), require('./Currency'));
+    module.exports = factory(require('../ApiClient'), require('./CartItemAttribute'), require('./CartItemMultimedia'), require('./CartItemOption'), require('./CartItemPhysical'), require('./CartItemProperty'), require('./CartItemVariationSelection'), require('./CartKitComponentOption'), require('./Currency'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CartItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartItemAttribute, root.UltraCartRestApiV2.CartItemMultimedia, root.UltraCartRestApiV2.CartItemOption, root.UltraCartRestApiV2.CartItemPhysical, root.UltraCartRestApiV2.CartItemVariationSelection, root.UltraCartRestApiV2.CartKitComponentOption, root.UltraCartRestApiV2.Currency);
+    root.UltraCartRestApiV2.CartItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartItemAttribute, root.UltraCartRestApiV2.CartItemMultimedia, root.UltraCartRestApiV2.CartItemOption, root.UltraCartRestApiV2.CartItemPhysical, root.UltraCartRestApiV2.CartItemProperty, root.UltraCartRestApiV2.CartItemVariationSelection, root.UltraCartRestApiV2.CartKitComponentOption, root.UltraCartRestApiV2.Currency);
   }
-}(this, function(ApiClient, CartItemAttribute, CartItemMultimedia, CartItemOption, CartItemPhysical, CartItemVariationSelection, CartKitComponentOption, Currency) {
+}(this, function(ApiClient, CartItemAttribute, CartItemMultimedia, CartItemOption, CartItemPhysical, CartItemProperty, CartItemVariationSelection, CartKitComponentOption, Currency) {
   'use strict';
 
   /**
    * The CartItem model module.
    * @module com.ultracart.admin.v2.models/CartItem
-   * @version 3.10.96
+   * @version 3.10.97
    */
 
   /**
@@ -95,6 +95,8 @@
         obj.position = ApiClient.convertToType(data['position'], 'Number');
       if (data.hasOwnProperty('preorder'))
         obj.preorder = ApiClient.convertToType(data['preorder'], 'Boolean');
+      if (data.hasOwnProperty('properties'))
+        obj.properties = ApiClient.convertToType(data['properties'], [CartItemProperty]);
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
       if (data.hasOwnProperty('schedules'))
@@ -232,6 +234,12 @@
    * @member {Boolean} preorder
    */
   exports.prototype.preorder = undefined;
+
+  /**
+   * Properties associated with the item
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartItemProperty>} properties
+   */
+  exports.prototype.properties = undefined;
 
   /**
    * quantity
