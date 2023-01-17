@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AutoOrderItemFutureSchedule model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule
- * @version 4.0.113-RC
+ * @version 4.0.114-RC
  */
 var AutoOrderItemFutureSchedule = /*#__PURE__*/function () {
   /**

@@ -15,6 +15,8 @@ var _CartItemOption = _interopRequireDefault(require("./CartItemOption"));
 
 var _CartItemPhysical = _interopRequireDefault(require("./CartItemPhysical"));
 
+var _CartItemProperty = _interopRequireDefault(require("./CartItemProperty"));
+
 var _CartItemVariationSelection = _interopRequireDefault(require("./CartItemVariationSelection"));
 
 var _CartKitComponentOption = _interopRequireDefault(require("./CartKitComponentOption"));
@@ -32,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartItem model module.
  * @module com.ultracart.admin.v2.models/CartItem
- * @version 4.0.113-RC
+ * @version 4.0.114-RC
  */
 var CartItem = /*#__PURE__*/function () {
   /**
@@ -146,6 +148,10 @@ var CartItem = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('preorder')) {
           obj['preorder'] = _ApiClient["default"].convertToType(data['preorder'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('properties')) {
+          obj['properties'] = _ApiClient["default"].convertToType(data['properties'], [_CartItemProperty["default"]]);
         }
 
         if (data.hasOwnProperty('quantity')) {
@@ -308,6 +314,12 @@ CartItem.prototype['position'] = undefined;
  */
 
 CartItem.prototype['preorder'] = undefined;
+/**
+ * Properties associated with the item
+ * @member {Array.<module:com.ultracart.admin.v2.models/CartItemProperty>} properties
+ */
+
+CartItem.prototype['properties'] = undefined;
 /**
  * quantity
  * @member {Number} quantity

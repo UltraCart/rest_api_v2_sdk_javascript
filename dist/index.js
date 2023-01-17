@@ -393,6 +393,12 @@ Object.defineProperty(exports, "CartItemPhysical", {
     return _CartItemPhysical["default"];
   }
 });
+Object.defineProperty(exports, "CartItemProperty", {
+  enumerable: true,
+  get: function get() {
+    return _CartItemProperty["default"];
+  }
+});
 Object.defineProperty(exports, "CartItemVariationSelection", {
   enumerable: true,
   get: function get() {
@@ -4599,6 +4605,8 @@ var _CartItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.m
 var _CartItemOptionValue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartItemOptionValue"));
 
 var _CartItemPhysical = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartItemPhysical"));
+
+var _CartItemProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartItemProperty"));
 
 var _CartItemVariationSelection = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartItemVariationSelection"));
 

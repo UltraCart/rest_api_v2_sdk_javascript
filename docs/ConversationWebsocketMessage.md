@@ -51,7 +51,7 @@ Name | Type | Description | Notes
 
 * `participant join` (value: `"participant join"`)
 
-* `participant leave` (value: `"participant leave"`)
+* `participant left` (value: `"participant left"`)
 
 * `read message` (value: `"read message"`)
 

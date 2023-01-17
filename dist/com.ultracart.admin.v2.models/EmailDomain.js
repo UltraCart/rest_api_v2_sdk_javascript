@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailDomain model module.
  * @module com.ultracart.admin.v2.models/EmailDomain
- * @version 4.0.113-RC
+ * @version 4.0.114-RC
  */
 var EmailDomain = /*#__PURE__*/function () {
   /**

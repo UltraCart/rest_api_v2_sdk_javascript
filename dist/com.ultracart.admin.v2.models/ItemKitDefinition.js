@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemKitDefinition model module.
  * @module com.ultracart.admin.v2.models/ItemKitDefinition
- * @version 4.0.113-RC
+ * @version 4.0.114-RC
  */
 var ItemKitDefinition = /*#__PURE__*/function () {
   /**

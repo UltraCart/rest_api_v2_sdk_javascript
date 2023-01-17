@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderAffiliateLedger model module.
  * @module com.ultracart.admin.v2.models/OrderAffiliateLedger
- * @version 4.0.114-RC
+ * @version 4.0.115-RC
  */
 class OrderAffiliateLedger {
     /**

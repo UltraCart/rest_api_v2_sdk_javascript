@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StoreFront model module.
  * @module com.ultracart.admin.v2.models/StoreFront
- * @version 4.0.114-RC
+ * @version 4.0.115-RC
  */
 class StoreFront {
     /**

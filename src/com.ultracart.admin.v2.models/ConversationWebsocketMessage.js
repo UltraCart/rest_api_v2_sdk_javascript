@@ -27,7 +27,7 @@ import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.114-RC
+ * @version 4.0.115-RC
  */
 class ConversationWebsocketMessage {
     /**
@@ -308,10 +308,10 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
     "participant join": "participant join",
 
     /**
-     * value: "participant leave"
+     * value: "participant left"
      * @const
      */
-    "participant leave": "participant leave",
+    "participant left": "participant left",
 
     /**
      * value: "read message"
