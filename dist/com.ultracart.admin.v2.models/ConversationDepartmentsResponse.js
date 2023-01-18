@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationDepartmentsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartmentsResponse
- * @version 4.0.116-RC
+ * @version 4.0.117-RC
  */
 var ConversationDepartmentsResponse = /*#__PURE__*/function () {
   /**
@@ -74,6 +74,10 @@ var ConversationDepartmentsResponse = /*#__PURE__*/function () {
           obj['metadata'] = _ResponseMetadata["default"].constructFromObject(data['metadata']);
         }
 
+        if (data.hasOwnProperty('read_only')) {
+          obj['read_only'] = _ApiClient["default"].convertToType(data['read_only'], 'Boolean');
+        }
+
         if (data.hasOwnProperty('success')) {
           obj['success'] = _ApiClient["default"].convertToType(data['success'], 'Boolean');
         }
@@ -105,6 +109,11 @@ ConversationDepartmentsResponse.prototype['error'] = undefined;
  */
 
 ConversationDepartmentsResponse.prototype['metadata'] = undefined;
+/**
+ * @member {Boolean} read_only
+ */
+
+ConversationDepartmentsResponse.prototype['read_only'] = undefined;
 /**
  * Indicates if API call was successful
  * @member {Boolean} success

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderLinkedShipment model module.
  * @module com.ultracart.admin.v2.models/OrderLinkedShipment
- * @version 4.0.116-RC
+ * @version 4.0.117-RC
  */
 var OrderLinkedShipment = /*#__PURE__*/function () {
   /**

@@ -148,6 +148,7 @@ import ConversationCannedMessagesResponse from './com.ultracart.admin.v2.models/
 import ConversationCannedMessagesSearch from './com.ultracart.admin.v2.models/ConversationCannedMessagesSearch';
 import ConversationDepartment from './com.ultracart.admin.v2.models/ConversationDepartment';
 import ConversationDepartmentMember from './com.ultracart.admin.v2.models/ConversationDepartmentMember';
+import ConversationDepartmentMembersResponse from './com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse';
 import ConversationDepartmentResponse from './com.ultracart.admin.v2.models/ConversationDepartmentResponse';
 import ConversationDepartmentsResponse from './com.ultracart.admin.v2.models/ConversationDepartmentsResponse';
 import ConversationEngagement from './com.ultracart.admin.v2.models/ConversationEngagement';
@@ -790,7 +791,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.117-RC
+* @version 4.0.118-RC
 */
 export {
     /**
@@ -1608,6 +1609,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationDepartmentMember}
      */
     ConversationDepartmentMember,
+
+    /**
+     * The ConversationDepartmentMembersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse}
+     */
+    ConversationDepartmentMembersResponse,
 
     /**
      * The ConversationDepartmentResponse model constructor.

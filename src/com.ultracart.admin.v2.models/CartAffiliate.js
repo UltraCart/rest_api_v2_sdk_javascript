@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartAffiliate model module.
  * @module com.ultracart.admin.v2.models/CartAffiliate
- * @version 4.0.117-RC
+ * @version 4.0.118-RC
  */
 class CartAffiliate {
     /**

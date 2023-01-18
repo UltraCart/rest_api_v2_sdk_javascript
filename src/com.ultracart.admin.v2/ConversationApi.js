@@ -21,6 +21,7 @@ import ConversationCannedMessageResponse from '../com.ultracart.admin.v2.models/
 import ConversationCannedMessagesResponse from '../com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
 import ConversationCannedMessagesSearch from '../com.ultracart.admin.v2.models/ConversationCannedMessagesSearch';
 import ConversationDepartment from '../com.ultracart.admin.v2.models/ConversationDepartment';
+import ConversationDepartmentMembersResponse from '../com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse';
 import ConversationDepartmentResponse from '../com.ultracart.admin.v2.models/ConversationDepartmentResponse';
 import ConversationDepartmentsResponse from '../com.ultracart.admin.v2.models/ConversationDepartmentsResponse';
 import ConversationEngagement from '../com.ultracart.admin.v2.models/ConversationEngagement';
@@ -43,7 +44,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.117-RC
+* @version 4.0.118-RC
 */
 export default class ConversationApi {
 
@@ -380,6 +381,43 @@ export default class ConversationApi {
       let returnType = ConversationWebchatContext;
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}/context', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationDepartmentMemberList operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationDepartmentMemberListCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a list of possible department members
+     * Retrieve a list of possible department members 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationDepartmentMemberListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse}
+     */
+    getConversationDepartmentMemberList(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationDepartmentMembersResponse;
+      return this.apiClient.callApi(
+        '/conversation/department_members', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

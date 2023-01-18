@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ConversationDepartmentMember = _interopRequireDefault(require("./ConversationDepartmentMember"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationDepartment model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartment
- * @version 4.0.116-RC
+ * @version 4.0.117-RC
  */
 var ConversationDepartment = /*#__PURE__*/function () {
   /**
@@ -62,6 +64,10 @@ var ConversationDepartment = /*#__PURE__*/function () {
           obj['department_name'] = _ApiClient["default"].convertToType(data['department_name'], 'String');
         }
 
+        if (data.hasOwnProperty('members')) {
+          obj['members'] = _ApiClient["default"].convertToType(data['members'], [_ConversationDepartmentMember["default"]]);
+        }
+
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
@@ -88,6 +94,11 @@ ConversationDepartment.prototype['conversation_department_oid'] = undefined;
  */
 
 ConversationDepartment.prototype['department_name'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationDepartmentMember>} members
+ */
+
+ConversationDepartment.prototype['members'] = undefined;
 /**
  * @member {String} merchant_id
  */
