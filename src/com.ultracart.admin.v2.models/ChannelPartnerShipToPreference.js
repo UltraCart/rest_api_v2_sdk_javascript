@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerShipToPreference model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerShipToPreference
-   * @version 3.10.98
+   * @version 3.10.99
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.channel_partner_oid = ApiClient.convertToType(data['channel_partner_oid'], 'Number');
       if (data.hasOwnProperty('channel_partner_ship_to_preference_oid'))
         obj.channel_partner_ship_to_preference_oid = ApiClient.convertToType(data['channel_partner_ship_to_preference_oid'], 'Number');
+      if (data.hasOwnProperty('description'))
+        obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('return_policy'))
@@ -88,6 +90,12 @@
    * @member {Number} channel_partner_ship_to_preference_oid
    */
   exports.prototype.channel_partner_ship_to_preference_oid = undefined;
+
+  /**
+   * A description that is meaningful to the merchant.
+   * @member {String} description
+   */
+  exports.prototype.description = undefined;
 
   /**
    * The merchant id that owns the channel partner
