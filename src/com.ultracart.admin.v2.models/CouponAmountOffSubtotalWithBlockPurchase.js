@@ -34,7 +34,7 @@
   /**
    * The CouponAmountOffSubtotalWithBlockPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponAmountOffSubtotalWithBlockPurchase
-   * @version 3.10.99
+   * @version 3.10.100
    */
 
   /**
