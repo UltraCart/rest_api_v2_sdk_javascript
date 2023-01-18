@@ -34,7 +34,7 @@
   /**
    * The LibraryItemQuery model module.
    * @module com.ultracart.admin.v2.models/LibraryItemQuery
-   * @version 3.10.100
+   * @version 3.10.101
    */
 
   /**
