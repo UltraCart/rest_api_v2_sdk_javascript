@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderByTokenQuery model module.
  * @module com.ultracart.admin.v2.models/OrderByTokenQuery
- * @version 4.0.115-RC
+ * @version 4.0.116-RC
  */
 class OrderByTokenQuery {
     /**

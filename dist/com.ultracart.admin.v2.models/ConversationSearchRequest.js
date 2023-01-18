@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSearchRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationSearchRequest
- * @version 4.0.114-RC
+ * @version 4.0.115-RC
  */
 var ConversationSearchRequest = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemFulfillmentAddon model module.
  * @module com.ultracart.admin.v2.models/ItemFulfillmentAddon
- * @version 4.0.115-RC
+ * @version 4.0.116-RC
  */
 class ItemFulfillmentAddon {
     /**

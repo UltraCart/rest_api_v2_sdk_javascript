@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponTieredPercentOffSubtotalBasedOnMSRP model module.
  * @module com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP
- * @version 4.0.114-RC
+ * @version 4.0.115-RC
  */
 var CouponTieredPercentOffSubtotalBasedOnMSRP = /*#__PURE__*/function () {
   /**

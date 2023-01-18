@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailHistogramPropertyNamesResponse model module.
  * @module com.ultracart.admin.v2.models/EmailHistogramPropertyNamesResponse
- * @version 4.0.115-RC
+ * @version 4.0.116-RC
  */
 class EmailHistogramPropertyNamesResponse {
     /**
