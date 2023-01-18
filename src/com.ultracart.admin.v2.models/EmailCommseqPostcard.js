@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqPostcard model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqPostcard
- * @version 4.0.116-RC
+ * @version 4.0.117-RC
  */
 class EmailCommseqPostcard {
     /**

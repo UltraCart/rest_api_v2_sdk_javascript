@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderQueryBatch model module.
  * @module com.ultracart.admin.v2.models/OrderQueryBatch
- * @version 4.0.115-RC
+ * @version 4.0.116-RC
  */
 var OrderQueryBatch = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The HitPageViewMetaData model module.
  * @module com.ultracart.admin.v2.models/HitPageViewMetaData
- * @version 4.0.115-RC
+ * @version 4.0.116-RC
  */
 var HitPageViewMetaData = /*#__PURE__*/function () {
   /**

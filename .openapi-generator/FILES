@@ -142,6 +142,7 @@ docs/ConversationCannedMessageResponse.md
 docs/ConversationCannedMessagesResponse.md
 docs/ConversationCannedMessagesSearch.md
 docs/ConversationDepartment.md
+docs/ConversationDepartmentMember.md
 docs/ConversationDepartmentResponse.md
 docs/ConversationDepartmentsResponse.md
 docs/ConversationEngagement.md
@@ -885,6 +886,7 @@ src/com.ultracart.admin.v2.models/ConversationCannedMessageResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesSearch.js
 src/com.ultracart.admin.v2.models/ConversationDepartment.js
+src/com.ultracart.admin.v2.models/ConversationDepartmentMember.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentResponse.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentsResponse.js
 src/com.ultracart.admin.v2.models/ConversationEngagement.js

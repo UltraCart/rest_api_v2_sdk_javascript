@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderProperty model module.
  * @module com.ultracart.admin.v2.models/OrderProperty
- * @version 4.0.116-RC
+ * @version 4.0.117-RC
  */
 class OrderProperty {
     /**

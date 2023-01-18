@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationDepartmentMember from './ConversationDepartmentMember';
 
 /**
  * The ConversationDepartment model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartment
- * @version 4.0.116-RC
+ * @version 4.0.117-RC
  */
 class ConversationDepartment {
     /**
@@ -53,6 +54,9 @@ class ConversationDepartment {
             if (data.hasOwnProperty('department_name')) {
                 obj['department_name'] = ApiClient.convertToType(data['department_name'], 'String');
             }
+            if (data.hasOwnProperty('members')) {
+                obj['members'] = ApiClient.convertToType(data['members'], [ConversationDepartmentMember]);
+            }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
             }
@@ -75,6 +79,11 @@ ConversationDepartment.prototype['conversation_department_oid'] = undefined;
  * @member {String} department_name
  */
 ConversationDepartment.prototype['department_name'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationDepartmentMember>} members
+ */
+ConversationDepartment.prototype['members'] = undefined;
 
 /**
  * @member {String} merchant_id

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChannelPartnerShipToPreference model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerShipToPreference
- * @version 4.0.115-RC
+ * @version 4.0.116-RC
  */
 var ChannelPartnerShipToPreference = /*#__PURE__*/function () {
   /**
@@ -66,6 +66,10 @@ var ChannelPartnerShipToPreference = /*#__PURE__*/function () {
           obj['channel_partner_ship_to_preference_oid'] = _ApiClient["default"].convertToType(data['channel_partner_ship_to_preference_oid'], 'Number');
         }
 
+        if (data.hasOwnProperty('description')) {
+          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
+        }
+
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
@@ -104,6 +108,12 @@ ChannelPartnerShipToPreference.prototype['channel_partner_oid'] = undefined;
  */
 
 ChannelPartnerShipToPreference.prototype['channel_partner_ship_to_preference_oid'] = undefined;
+/**
+ * A description that is meaningful to the merchant.
+ * @member {String} description
+ */
+
+ChannelPartnerShipToPreference.prototype['description'] = undefined;
 /**
  * The merchant id that owns the channel partner
  * @member {String} merchant_id
