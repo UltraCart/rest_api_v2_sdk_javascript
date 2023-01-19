@@ -34,7 +34,7 @@
   /**
    * The Coupon model module.
    * @module com.ultracart.admin.v2.models/Coupon
-   * @version 3.10.102
+   * @version 3.10.103
    */
 
   /**
@@ -167,6 +167,8 @@
         obj.restrict_by_screen_branding_theme_codes = ApiClient.convertToType(data['restrict_by_screen_branding_theme_codes'], [CouponRestriction]);
       if (data.hasOwnProperty('restrict_by_storefronts'))
         obj.restrict_by_storefronts = ApiClient.convertToType(data['restrict_by_storefronts'], [CouponRestriction]);
+      if (data.hasOwnProperty('skip_on_rebill'))
+        obj.skip_on_rebill = ApiClient.convertToType(data['skip_on_rebill'], 'Boolean');
       if (data.hasOwnProperty('start_dts'))
         obj.start_dts = ApiClient.convertToType(data['start_dts'], 'String');
       if (data.hasOwnProperty('super_coupon'))
@@ -483,6 +485,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/CouponRestriction>} restrict_by_storefronts
    */
   exports.prototype.restrict_by_storefronts = undefined;
+
+  /**
+   * Skip this coupon when it is on a rebill of an auto order.
+   * @member {Boolean} skip_on_rebill
+   */
+  exports.prototype.skip_on_rebill = undefined;
 
   /**
    * Date/time when coupon is valid

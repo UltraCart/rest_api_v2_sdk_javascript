@@ -34,7 +34,7 @@
   /**
    * The EmailStatPostcardSummaryResponse model module.
    * @module com.ultracart.admin.v2.models/EmailStatPostcardSummaryResponse
-   * @version 3.10.102
+   * @version 3.10.103
    */
 
   /**
