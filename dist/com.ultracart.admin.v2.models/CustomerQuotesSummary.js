@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerQuotesSummary model module.
  * @module com.ultracart.admin.v2.models/CustomerQuotesSummary
- * @version 4.0.118-RC
+ * @version 4.0.119-RC
  */
 var CustomerQuotesSummary = /*#__PURE__*/function () {
   /**

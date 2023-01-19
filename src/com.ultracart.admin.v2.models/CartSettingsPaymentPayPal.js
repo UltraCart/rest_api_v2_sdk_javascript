@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartSettingsPaymentPayPal model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentPayPal
- * @version 4.0.119-RC
+ * @version 4.0.120-RC
  */
 class CartSettingsPaymentPayPal {
     /**

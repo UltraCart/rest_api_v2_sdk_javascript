@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The FileManagerPageResponse model module.
  * @module com.ultracart.admin.v2.models/FileManagerPageResponse
- * @version 4.0.119-RC
+ * @version 4.0.120-RC
  */
 class FileManagerPageResponse {
     /**

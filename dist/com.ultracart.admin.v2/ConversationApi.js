@@ -41,6 +41,8 @@ var _ConversationMessagesResponse = _interopRequireDefault(require("../com.ultra
 
 var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
 
+var _ConversationPermissionsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPermissionsResponse"));
+
 var _ConversationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationResponse"));
 
 var _ConversationSearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationSearchRequest"));
@@ -72,7 +74,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.118-RC
+* @version 4.0.119-RC
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -533,6 +535,35 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationMultimediaUploadUrlResponse["default"];
       return this.apiClient.callApi('/conversation/upload_url/{extension}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getConversationPermissions operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationPermissionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPermissionsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve conversation permissions
+     * Retrieve conversation permissions 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationPermissionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPermissionsResponse}
+     */
+
+  }, {
+    key: "getConversationPermissions",
+    value: function getConversationPermissions(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPermissionsResponse["default"];
+      return this.apiClient.callApi('/conversation/permissions', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getConversationWebchatQueueStatuses operation.

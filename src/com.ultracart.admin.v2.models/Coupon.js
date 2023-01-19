@@ -64,7 +64,7 @@ import CouponTieredPercentOffSubtotalBasedOnMSRP from './CouponTieredPercentOffS
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.119-RC
+ * @version 4.0.120-RC
  */
 class Coupon {
     /**
@@ -262,6 +262,9 @@ class Coupon {
             }
             if (data.hasOwnProperty('restrict_by_storefronts')) {
                 obj['restrict_by_storefronts'] = ApiClient.convertToType(data['restrict_by_storefronts'], [CouponRestriction]);
+            }
+            if (data.hasOwnProperty('skip_on_rebill')) {
+                obj['skip_on_rebill'] = ApiClient.convertToType(data['skip_on_rebill'], 'Boolean');
             }
             if (data.hasOwnProperty('start_dts')) {
                 obj['start_dts'] = ApiClient.convertToType(data['start_dts'], 'String');
@@ -591,6 +594,12 @@ Coupon.prototype['restrict_by_screen_branding_theme_codes'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/CouponRestriction>} restrict_by_storefronts
  */
 Coupon.prototype['restrict_by_storefronts'] = undefined;
+
+/**
+ * Skip this coupon when it is on a rebill of an auto order.
+ * @member {Boolean} skip_on_rebill
+ */
+Coupon.prototype['skip_on_rebill'] = undefined;
 
 /**
  * Date/time when coupon is valid

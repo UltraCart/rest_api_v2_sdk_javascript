@@ -999,6 +999,18 @@ Object.defineProperty(exports, "ConversationParticipant", {
     return _ConversationParticipant["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPermissions", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPermissions["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPermissionsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPermissionsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationResponse", {
   enumerable: true,
   get: function get() {
@@ -4811,6 +4823,10 @@ var _ConversationMultimediaUploadUrl = _interopRequireDefault(require("./com.ult
 var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
 
 var _ConversationParticipant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationParticipant"));
+
+var _ConversationPermissions = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPermissions"));
+
+var _ConversationPermissionsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPermissionsResponse"));
 
 var _ConversationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationResponse"));
 

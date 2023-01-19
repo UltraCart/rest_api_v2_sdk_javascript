@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The FileManagerUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/FileManagerUploadUrlResponse
- * @version 4.0.119-RC
+ * @version 4.0.120-RC
  */
 class FileManagerUploadUrlResponse {
     /**

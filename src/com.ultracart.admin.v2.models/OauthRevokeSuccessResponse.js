@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OauthRevokeSuccessResponse model module.
  * @module com.ultracart.admin.v2.models/OauthRevokeSuccessResponse
- * @version 4.0.119-RC
+ * @version 4.0.120-RC
  */
 class OauthRevokeSuccessResponse {
     /**
