@@ -34,7 +34,7 @@
   /**
    * The ConversationDepartmentsResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationDepartmentsResponse
-   * @version 3.10.101
+   * @version 3.10.102
    */
 
   /**
@@ -61,8 +61,6 @@
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
-      if (data.hasOwnProperty('read_only'))
-        obj.read_only = ApiClient.convertToType(data['read_only'], 'Boolean');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('warning'))
@@ -85,11 +83,6 @@
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype.metadata = undefined;
-
-  /**
-   * @member {Boolean} read_only
-   */
-  exports.prototype.read_only = undefined;
 
   /**
    * Indicates if API call was successful
