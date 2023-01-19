@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationEventWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationEventWebchatContext
- * @version 4.0.118-RC
+ * @version 4.0.119-RC
  */
 class ConversationEventWebchatContext {
     /**

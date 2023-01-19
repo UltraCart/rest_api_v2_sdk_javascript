@@ -855,6 +855,12 @@ Object.defineProperty(exports, "ConversationDepartmentMember", {
     return _ConversationDepartmentMember["default"];
   }
 });
+Object.defineProperty(exports, "ConversationDepartmentMembersResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationDepartmentMembersResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationDepartmentResponse", {
   enumerable: true,
   get: function get() {
@@ -4757,6 +4763,8 @@ var _ConversationCannedMessagesSearch = _interopRequireDefault(require("./com.ul
 var _ConversationDepartment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartment"));
 
 var _ConversationDepartmentMember = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentMember"));
+
+var _ConversationDepartmentMembersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse"));
 
 var _ConversationDepartmentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentResponse"));
 

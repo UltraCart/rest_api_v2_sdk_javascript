@@ -30,6 +30,7 @@ import ConversationEngagementsResponse from '../com.ultracart.admin.v2.models/Co
 import ConversationJoinRequest from '../com.ultracart.admin.v2.models/ConversationJoinRequest';
 import ConversationMessagesResponse from '../com.ultracart.admin.v2.models/ConversationMessagesResponse';
 import ConversationMultimediaUploadUrlResponse from '../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
+import ConversationPermissionsResponse from '../com.ultracart.admin.v2.models/ConversationPermissionsResponse';
 import ConversationResponse from '../com.ultracart.admin.v2.models/ConversationResponse';
 import ConversationSearchRequest from '../com.ultracart.admin.v2.models/ConversationSearchRequest';
 import ConversationSearchResponse from '../com.ultracart.admin.v2.models/ConversationSearchResponse';
@@ -44,7 +45,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.118-RC
+* @version 4.0.119-RC
 */
 export default class ConversationApi {
 
@@ -588,6 +589,43 @@ export default class ConversationApi {
       let returnType = ConversationMultimediaUploadUrlResponse;
       return this.apiClient.callApi(
         '/conversation/upload_url/{extension}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationPermissions operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationPermissionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPermissionsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve conversation permissions
+     * Retrieve conversation permissions 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationPermissionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPermissionsResponse}
+     */
+    getConversationPermissions(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationPermissionsResponse;
+      return this.apiClient.callApi(
+        '/conversation/permissions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

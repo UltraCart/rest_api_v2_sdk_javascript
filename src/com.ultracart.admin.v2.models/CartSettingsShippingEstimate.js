@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CartSettingsShippingEstimate model module.
  * @module com.ultracart.admin.v2.models/CartSettingsShippingEstimate
- * @version 4.0.118-RC
+ * @version 4.0.119-RC
  */
 class CartSettingsShippingEstimate {
     /**

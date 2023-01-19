@@ -172,6 +172,8 @@ import ConversationMessagesResponse from './com.ultracart.admin.v2.models/Conver
 import ConversationMultimediaUploadUrl from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl';
 import ConversationMultimediaUploadUrlResponse from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationParticipant from './com.ultracart.admin.v2.models/ConversationParticipant';
+import ConversationPermissions from './com.ultracart.admin.v2.models/ConversationPermissions';
+import ConversationPermissionsResponse from './com.ultracart.admin.v2.models/ConversationPermissionsResponse';
 import ConversationResponse from './com.ultracart.admin.v2.models/ConversationResponse';
 import ConversationSearchRequest from './com.ultracart.admin.v2.models/ConversationSearchRequest';
 import ConversationSearchResponse from './com.ultracart.admin.v2.models/ConversationSearchResponse';
@@ -791,7 +793,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.118-RC
+* @version 4.0.119-RC
 */
 export {
     /**
@@ -1753,6 +1755,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationParticipant}
      */
     ConversationParticipant,
+
+    /**
+     * The ConversationPermissions model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPermissions}
+     */
+    ConversationPermissions,
+
+    /**
+     * The ConversationPermissionsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPermissionsResponse}
+     */
+    ConversationPermissionsResponse,
 
     /**
      * The ConversationResponse model constructor.

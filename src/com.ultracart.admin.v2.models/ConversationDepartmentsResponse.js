@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationDepartmentsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartmentsResponse
- * @version 4.0.118-RC
+ * @version 4.0.119-RC
  */
 class ConversationDepartmentsResponse {
     /**
@@ -60,9 +60,6 @@ class ConversationDepartmentsResponse {
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
             }
-            if (data.hasOwnProperty('read_only')) {
-                obj['read_only'] = ApiClient.convertToType(data['read_only'], 'Boolean');
-            }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
@@ -90,11 +87,6 @@ ConversationDepartmentsResponse.prototype['error'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
 ConversationDepartmentsResponse.prototype['metadata'] = undefined;
-
-/**
- * @member {Boolean} read_only
- */
-ConversationDepartmentsResponse.prototype['read_only'] = undefined;
 
 /**
  * Indicates if API call was successful

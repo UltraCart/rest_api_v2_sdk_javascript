@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PointOfSaleLocation model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleLocation
- * @version 4.0.118-RC
+ * @version 4.0.119-RC
  */
 class PointOfSaleLocation {
     /**

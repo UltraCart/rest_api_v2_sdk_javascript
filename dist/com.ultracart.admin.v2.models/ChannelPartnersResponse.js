@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChannelPartnersResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnersResponse
- * @version 4.0.117-RC
+ * @version 4.0.118-RC
  */
 var ChannelPartnersResponse = /*#__PURE__*/function () {
   /**

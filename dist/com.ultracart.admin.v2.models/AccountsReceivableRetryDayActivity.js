@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AccountsReceivableRetryDayActivity model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity
- * @version 4.0.117-RC
+ * @version 4.0.118-RC
  */
 var AccountsReceivableRetryDayActivity = /*#__PURE__*/function () {
   /**
