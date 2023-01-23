@@ -114,7 +114,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.119-RC
+ * @version 4.0.120-RC
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -372,6 +372,10 @@ var Coupon = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('restrict_by_storefronts')) {
           obj['restrict_by_storefronts'] = _ApiClient["default"].convertToType(data['restrict_by_storefronts'], [_CouponRestriction["default"]]);
+        }
+
+        if (data.hasOwnProperty('skip_on_rebill')) {
+          obj['skip_on_rebill'] = _ApiClient["default"].convertToType(data['skip_on_rebill'], 'Boolean');
         }
 
         if (data.hasOwnProperty('start_dts')) {
@@ -713,6 +717,12 @@ Coupon.prototype['restrict_by_screen_branding_theme_codes'] = undefined;
  */
 
 Coupon.prototype['restrict_by_storefronts'] = undefined;
+/**
+ * Skip this coupon when it is on a rebill of an auto order.
+ * @member {Boolean} skip_on_rebill
+ */
+
+Coupon.prototype['skip_on_rebill'] = undefined;
 /**
  * Date/time when coupon is valid
  * @member {String} start_dts

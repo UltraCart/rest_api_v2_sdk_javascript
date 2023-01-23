@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The EmailOrder model module.
  * @module com.ultracart.admin.v2.models/EmailOrder
- * @version 4.0.120-RC
+ * @version 4.0.121-RC
  */
 class EmailOrder {
     /**

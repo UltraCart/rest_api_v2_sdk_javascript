@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderTrackingNumberDetail model module.
  * @module com.ultracart.admin.v2.models/OrderTrackingNumberDetail
- * @version 4.0.120-RC
+ * @version 4.0.121-RC
  */
 class OrderTrackingNumberDetail {
     /**

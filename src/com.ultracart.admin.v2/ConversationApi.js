@@ -45,7 +45,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.120-RC
+* @version 4.0.121-RC
 */
 export default class ConversationApi {
 
@@ -456,6 +456,49 @@ export default class ConversationApi {
       let returnType = ConversationDepartmentsResponse;
       return this.apiClient.callApi(
         '/conversation/departments', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationEngagement operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationEngagementCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationEngagementResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an engagement
+     * Retrieve an engagement 
+     * @param {Number} conversation_engagement_oid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationEngagementCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationEngagementResponse}
+     */
+    getConversationEngagement(conversation_engagement_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'conversation_engagement_oid' is set
+      if (conversation_engagement_oid === undefined || conversation_engagement_oid === null) {
+        throw new Error("Missing the required parameter 'conversation_engagement_oid' when calling getConversationEngagement");
+      }
+
+      let pathParams = {
+        'conversation_engagement_oid': conversation_engagement_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationEngagementResponse;
+      return this.apiClient.callApi(
+        '/conversation/engagements/{conversation_engagement_oid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

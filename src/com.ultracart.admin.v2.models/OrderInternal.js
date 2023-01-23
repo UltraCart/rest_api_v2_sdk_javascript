@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import OrderTransactionalMerchantNote from './OrderTransactionalMerchantNote';
 
 /**
  * The OrderInternal model module.
  * @module com.ultracart.admin.v2.models/OrderInternal
- * @version 4.0.120-RC
+ * @version 4.0.121-RC
  */
 class OrderInternal {
     /**
@@ -62,6 +63,9 @@ class OrderInternal {
             if (data.hasOwnProperty('sales_rep_code')) {
                 obj['sales_rep_code'] = ApiClient.convertToType(data['sales_rep_code'], 'String');
             }
+            if (data.hasOwnProperty('transactional_merchant_notes')) {
+                obj['transactional_merchant_notes'] = ApiClient.convertToType(data['transactional_merchant_notes'], [OrderTransactionalMerchantNote]);
+            }
         }
         return obj;
     }
@@ -76,7 +80,7 @@ class OrderInternal {
 OrderInternal.prototype['exported_to_accounting'] = undefined;
 
 /**
- * Merchant notes
+ * Merchant notes.  Full notes in non-transactional mode.  Just used to write a new merchant note when transaction merchant notes enabled.
  * @member {String} merchant_notes
  */
 OrderInternal.prototype['merchant_notes'] = undefined;
@@ -98,6 +102,12 @@ OrderInternal.prototype['refund_by_user'] = undefined;
  * @member {String} sales_rep_code
  */
 OrderInternal.prototype['sales_rep_code'] = undefined;
+
+/**
+ * Transactional merchant notes
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderTransactionalMerchantNote>} transactional_merchant_notes
+ */
+OrderInternal.prototype['transactional_merchant_notes'] = undefined;
 
 
 
