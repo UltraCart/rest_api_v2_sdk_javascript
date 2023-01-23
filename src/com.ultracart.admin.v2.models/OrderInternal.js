@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/OrderTransactionalMerchantNote'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./OrderTransactionalMerchantNote'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderInternal = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.OrderInternal = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.OrderTransactionalMerchantNote);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, OrderTransactionalMerchantNote) {
   'use strict';
 
   /**
    * The OrderInternal model module.
    * @module com.ultracart.admin.v2.models/OrderInternal
-   * @version 3.10.103
+   * @version 3.10.104
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.refund_by_user = ApiClient.convertToType(data['refund_by_user'], 'String');
       if (data.hasOwnProperty('sales_rep_code'))
         obj.sales_rep_code = ApiClient.convertToType(data['sales_rep_code'], 'String');
+      if (data.hasOwnProperty('transactional_merchant_notes'))
+        obj.transactional_merchant_notes = ApiClient.convertToType(data['transactional_merchant_notes'], [OrderTransactionalMerchantNote]);
     }
     return obj;
   }
@@ -76,7 +78,7 @@
   exports.prototype.exported_to_accounting = undefined;
 
   /**
-   * Merchant notes
+   * Merchant notes.  Full notes in non-transactional mode.  Just used to write a new merchant note when transaction merchant notes enabled.
    * @member {String} merchant_notes
    */
   exports.prototype.merchant_notes = undefined;
@@ -98,6 +100,12 @@
    * @member {String} sales_rep_code
    */
   exports.prototype.sales_rep_code = undefined;
+
+  /**
+   * Transactional merchant notes
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderTransactionalMerchantNote>} transactional_merchant_notes
+   */
+  exports.prototype.transactional_merchant_notes = undefined;
 
   return exports;
 
