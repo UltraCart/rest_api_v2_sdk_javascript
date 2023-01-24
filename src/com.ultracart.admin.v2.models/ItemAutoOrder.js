@@ -34,7 +34,7 @@
   /**
    * The ItemAutoOrder model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrder
-   * @version 3.10.104
+   * @version 3.10.105
    */
 
   /**
@@ -59,10 +59,16 @@
         obj.auth_future_amount = ApiClient.convertToType(data['auth_future_amount'], 'Number');
       if (data.hasOwnProperty('auth_test_amount'))
         obj.auth_test_amount = ApiClient.convertToType(data['auth_test_amount'], 'Number');
+      if (data.hasOwnProperty('auto_order_cancel_charge_minimum_balance'))
+        obj.auto_order_cancel_charge_minimum_balance = ApiClient.convertToType(data['auto_order_cancel_charge_minimum_balance'], 'Boolean');
       if (data.hasOwnProperty('auto_order_cancel_item_id'))
         obj.auto_order_cancel_item_id = ApiClient.convertToType(data['auto_order_cancel_item_id'], 'String');
       if (data.hasOwnProperty('auto_order_cancel_item_oid'))
         obj.auto_order_cancel_item_oid = ApiClient.convertToType(data['auto_order_cancel_item_oid'], 'Number');
+      if (data.hasOwnProperty('auto_order_cancel_minimum_life_time_value'))
+        obj.auto_order_cancel_minimum_life_time_value = ApiClient.convertToType(data['auto_order_cancel_minimum_life_time_value'], 'Number');
+      if (data.hasOwnProperty('auto_order_cancel_minimum_rebill_value'))
+        obj.auto_order_cancel_minimum_rebill_value = ApiClient.convertToType(data['auto_order_cancel_minimum_rebill_value'], 'Number');
       if (data.hasOwnProperty('auto_order_downgrade_items'))
         obj.auto_order_downgrade_items = ApiClient.convertToType(data['auto_order_downgrade_items'], ['String']);
       if (data.hasOwnProperty('auto_order_paused'))
@@ -106,6 +112,12 @@
   exports.prototype.auth_test_amount = undefined;
 
   /**
+   * If true, the cost of the cancel item will be the remaining balance of the minimum rebill or lifetime value
+   * @member {Boolean} auto_order_cancel_charge_minimum_balance
+   */
+  exports.prototype.auto_order_cancel_charge_minimum_balance = undefined;
+
+  /**
    * Item id to attempt charging the customer for if they cancel
    * @member {String} auto_order_cancel_item_id
    */
@@ -116,6 +128,18 @@
    * @member {Number} auto_order_cancel_item_oid
    */
   exports.prototype.auto_order_cancel_item_oid = undefined;
+
+  /**
+   * The minimum life time value that must be paid in order to not be charged the cancellation item.
+   * @member {Number} auto_order_cancel_minimum_life_time_value
+   */
+  exports.prototype.auto_order_cancel_minimum_life_time_value = undefined;
+
+  /**
+   * The minimum rebill value that must be paid in order to not be charged the cancellation item.
+   * @member {Number} auto_order_cancel_minimum_rebill_value
+   */
+  exports.prototype.auto_order_cancel_minimum_rebill_value = undefined;
 
   /**
    * List of downgrade items presented to customer service representatives
