@@ -17,7 +17,7 @@ import AffiliateLink from './AffiliateLink';
 /**
  * The AffiliateClick model module.
  * @module com.ultracart.admin.v2.models/AffiliateClick
- * @version 4.0.121-RC
+ * @version 4.0.122-RC
  */
 class AffiliateClick {
     /**

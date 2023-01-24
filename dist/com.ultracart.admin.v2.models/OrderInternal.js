@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _OrderTransactionalMerchantNote = _interopRequireDefault(require("./OrderTransactionalMerchantNote"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderInternal model module.
  * @module com.ultracart.admin.v2.models/OrderInternal
- * @version 4.0.120-RC
+ * @version 4.0.121-RC
  */
 var OrderInternal = /*#__PURE__*/function () {
   /**
@@ -73,6 +75,10 @@ var OrderInternal = /*#__PURE__*/function () {
         if (data.hasOwnProperty('sales_rep_code')) {
           obj['sales_rep_code'] = _ApiClient["default"].convertToType(data['sales_rep_code'], 'String');
         }
+
+        if (data.hasOwnProperty('transactional_merchant_notes')) {
+          obj['transactional_merchant_notes'] = _ApiClient["default"].convertToType(data['transactional_merchant_notes'], [_OrderTransactionalMerchantNote["default"]]);
+        }
       }
 
       return obj;
@@ -89,7 +95,7 @@ var OrderInternal = /*#__PURE__*/function () {
 
 OrderInternal.prototype['exported_to_accounting'] = undefined;
 /**
- * Merchant notes
+ * Merchant notes.  Full notes in non-transactional mode.  Just used to write a new merchant note when transaction merchant notes enabled.
  * @member {String} merchant_notes
  */
 
@@ -112,5 +118,11 @@ OrderInternal.prototype['refund_by_user'] = undefined;
  */
 
 OrderInternal.prototype['sales_rep_code'] = undefined;
+/**
+ * Transactional merchant notes
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderTransactionalMerchantNote>} transactional_merchant_notes
+ */
+
+OrderInternal.prototype['transactional_merchant_notes'] = undefined;
 var _default = OrderInternal;
 exports["default"] = _default;

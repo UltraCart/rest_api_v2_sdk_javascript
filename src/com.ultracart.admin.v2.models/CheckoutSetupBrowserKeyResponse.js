@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CheckoutSetupBrowserKeyResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse
- * @version 4.0.121-RC
+ * @version 4.0.122-RC
  */
 class CheckoutSetupBrowserKeyResponse {
     /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagement
- * @version 4.0.120-RC
+ * @version 4.0.121-RC
  */
 var ConversationEngagement = /*#__PURE__*/function () {
   /**
