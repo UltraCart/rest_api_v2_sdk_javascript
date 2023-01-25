@@ -34,7 +34,7 @@
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.10.107
+   * @version 3.10.108
    */
 
   /**
@@ -185,7 +185,13 @@
      * value: "notice"
      * @const
      */
-    notice: "notice"
+    notice: "notice",
+
+    /**
+     * value: "engagement prompt"
+     * @const
+     */
+    engagement_prompt: "engagement prompt"
   };
 
   return exports;

@@ -34,7 +34,7 @@
   /**
    * The ItemChargeback model module.
    * @module com.ultracart.admin.v2.models/ItemChargeback
-   * @version 3.10.107
+   * @version 3.10.108
    */
 
   /**

@@ -28,6 +28,8 @@ Name | Type | Description | Notes
 
 * `notice` (value: `"notice"`)
 
+* `engagement_prompt` (value: `"engagement prompt"`)
+
 
 
 

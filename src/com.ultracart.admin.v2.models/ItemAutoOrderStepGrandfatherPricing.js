@@ -34,7 +34,7 @@
   /**
    * The ItemAutoOrderStepGrandfatherPricing model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrderStepGrandfatherPricing
-   * @version 3.10.107
+   * @version 3.10.108
    */
 
   /**

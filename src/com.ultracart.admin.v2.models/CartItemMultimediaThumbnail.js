@@ -34,7 +34,7 @@
   /**
    * The CartItemMultimediaThumbnail model module.
    * @module com.ultracart.admin.v2.models/CartItemMultimediaThumbnail
-   * @version 3.10.107
+   * @version 3.10.108
    */
 
   /**
