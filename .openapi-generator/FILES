@@ -576,6 +576,7 @@ docs/OrderFraudScore.md
 docs/OrderGift.md
 docs/OrderGiftCertificate.md
 docs/OrderInternal.md
+docs/OrderInvoiceResponse.md
 docs/OrderItem.md
 docs/OrderItemEdi.md
 docs/OrderItemEdiIdentification.md
@@ -1316,6 +1317,7 @@ src/com.ultracart.admin.v2.models/OrderFraudScore.js
 src/com.ultracart.admin.v2.models/OrderGift.js
 src/com.ultracart.admin.v2.models/OrderGiftCertificate.js
 src/com.ultracart.admin.v2.models/OrderInternal.js
+src/com.ultracart.admin.v2.models/OrderInvoiceResponse.js
 src/com.ultracart.admin.v2.models/OrderItem.js
 src/com.ultracart.admin.v2.models/OrderItemEdi.js
 src/com.ultracart.admin.v2.models/OrderItemEdiIdentification.js

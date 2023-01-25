@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemAutoOrder model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrder
- * @version 4.0.121-RC
+ * @version 4.0.122-RC
  */
 var ItemAutoOrder = /*#__PURE__*/function () {
   /**
@@ -64,12 +64,24 @@ var ItemAutoOrder = /*#__PURE__*/function () {
           obj['auth_test_amount'] = _ApiClient["default"].convertToType(data['auth_test_amount'], 'Number');
         }
 
+        if (data.hasOwnProperty('auto_order_cancel_charge_minimum_balance')) {
+          obj['auto_order_cancel_charge_minimum_balance'] = _ApiClient["default"].convertToType(data['auto_order_cancel_charge_minimum_balance'], 'Boolean');
+        }
+
         if (data.hasOwnProperty('auto_order_cancel_item_id')) {
           obj['auto_order_cancel_item_id'] = _ApiClient["default"].convertToType(data['auto_order_cancel_item_id'], 'String');
         }
 
         if (data.hasOwnProperty('auto_order_cancel_item_oid')) {
           obj['auto_order_cancel_item_oid'] = _ApiClient["default"].convertToType(data['auto_order_cancel_item_oid'], 'Number');
+        }
+
+        if (data.hasOwnProperty('auto_order_cancel_minimum_life_time_value')) {
+          obj['auto_order_cancel_minimum_life_time_value'] = _ApiClient["default"].convertToType(data['auto_order_cancel_minimum_life_time_value'], 'Number');
+        }
+
+        if (data.hasOwnProperty('auto_order_cancel_minimum_rebill_value')) {
+          obj['auto_order_cancel_minimum_rebill_value'] = _ApiClient["default"].convertToType(data['auto_order_cancel_minimum_rebill_value'], 'Number');
         }
 
         if (data.hasOwnProperty('auto_order_downgrade_items')) {
@@ -145,6 +157,12 @@ ItemAutoOrder.prototype['auth_future_amount'] = undefined;
 
 ItemAutoOrder.prototype['auth_test_amount'] = undefined;
 /**
+ * If true, the cost of the cancel item will be the remaining balance of the minimum rebill or lifetime value
+ * @member {Boolean} auto_order_cancel_charge_minimum_balance
+ */
+
+ItemAutoOrder.prototype['auto_order_cancel_charge_minimum_balance'] = undefined;
+/**
  * Item id to attempt charging the customer for if they cancel
  * @member {String} auto_order_cancel_item_id
  */
@@ -156,6 +174,18 @@ ItemAutoOrder.prototype['auto_order_cancel_item_id'] = undefined;
  */
 
 ItemAutoOrder.prototype['auto_order_cancel_item_oid'] = undefined;
+/**
+ * The minimum life time value that must be paid in order to not be charged the cancellation item.
+ * @member {Number} auto_order_cancel_minimum_life_time_value
+ */
+
+ItemAutoOrder.prototype['auto_order_cancel_minimum_life_time_value'] = undefined;
+/**
+ * The minimum rebill value that must be paid in order to not be charged the cancellation item.
+ * @member {Number} auto_order_cancel_minimum_rebill_value
+ */
+
+ItemAutoOrder.prototype['auto_order_cancel_minimum_rebill_value'] = undefined;
 /**
  * List of downgrade items presented to customer service representatives
  * @member {Array.<String>} auto_order_downgrade_items

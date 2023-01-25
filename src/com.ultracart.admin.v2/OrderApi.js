@@ -22,6 +22,7 @@ import Order from '../com.ultracart.admin.v2.models/Order';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
 import OrderFormat from '../com.ultracart.admin.v2.models/OrderFormat';
 import OrderFormatResponse from '../com.ultracart.admin.v2.models/OrderFormatResponse';
+import OrderInvoiceResponse from '../com.ultracart.admin.v2.models/OrderInvoiceResponse';
 import OrderPackingSlipResponse from '../com.ultracart.admin.v2.models/OrderPackingSlipResponse';
 import OrderProcessPaymentRequest from '../com.ultracart.admin.v2.models/OrderProcessPaymentRequest';
 import OrderProcessPaymentResponse from '../com.ultracart.admin.v2.models/OrderProcessPaymentResponse';
@@ -37,7 +38,7 @@ import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.122-RC
+* @version 4.0.123-RC
 */
 export default class OrderApi {
 
@@ -277,6 +278,49 @@ export default class OrderApi {
       let returnType = OrderFormatResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/format', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the generateInvoice operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~generateInvoiceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderInvoiceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Generate an invoice for this order.
+     * The invoice PDF that is returned is base 64 encoded 
+     * @param {String} order_id Order ID
+     * @param {module:com.ultracart.admin.v2/OrderApi~generateInvoiceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderInvoiceResponse}
+     */
+    generateInvoice(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling generateInvoice");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderInvoiceResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/invoice', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

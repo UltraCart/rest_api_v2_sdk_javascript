@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartPaymentCheck model module.
  * @module com.ultracart.admin.v2.models/CartPaymentCheck
- * @version 4.0.122-RC
+ * @version 4.0.123-RC
  */
 class CartPaymentCheck {
     /**

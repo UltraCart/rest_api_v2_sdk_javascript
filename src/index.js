@@ -573,6 +573,7 @@ import OrderFraudScore from './com.ultracart.admin.v2.models/OrderFraudScore';
 import OrderGift from './com.ultracart.admin.v2.models/OrderGift';
 import OrderGiftCertificate from './com.ultracart.admin.v2.models/OrderGiftCertificate';
 import OrderInternal from './com.ultracart.admin.v2.models/OrderInternal';
+import OrderInvoiceResponse from './com.ultracart.admin.v2.models/OrderInvoiceResponse';
 import OrderItem from './com.ultracart.admin.v2.models/OrderItem';
 import OrderItemEdi from './com.ultracart.admin.v2.models/OrderItemEdi';
 import OrderItemEdiIdentification from './com.ultracart.admin.v2.models/OrderItemEdiIdentification';
@@ -794,7 +795,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.122-RC
+* @version 4.0.123-RC
 */
 export {
     /**
@@ -4162,6 +4163,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderInternal}
      */
     OrderInternal,
+
+    /**
+     * The OrderInvoiceResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderInvoiceResponse}
+     */
+    OrderInvoiceResponse,
 
     /**
      * The OrderItem model constructor.

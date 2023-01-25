@@ -17,7 +17,7 @@ import HTTPHeader from './HTTPHeader';
 /**
  * The WebhookSampleRequest model module.
  * @module com.ultracart.admin.v2.models/WebhookSampleRequest
- * @version 4.0.122-RC
+ * @version 4.0.123-RC
  */
 class WebhookSampleRequest {
     /**

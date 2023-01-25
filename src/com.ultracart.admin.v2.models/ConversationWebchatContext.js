@@ -22,7 +22,7 @@ import Order from './Order';
 /**
  * The ConversationWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatContext
- * @version 4.0.122-RC
+ * @version 4.0.123-RC
  */
 class ConversationWebchatContext {
     /**

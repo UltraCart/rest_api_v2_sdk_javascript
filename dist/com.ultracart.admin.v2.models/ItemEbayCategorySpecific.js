@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemEbayCategorySpecific model module.
  * @module com.ultracart.admin.v2.models/ItemEbayCategorySpecific
- * @version 4.0.121-RC
+ * @version 4.0.122-RC
  */
 var ItemEbayCategorySpecific = /*#__PURE__*/function () {
   /**
