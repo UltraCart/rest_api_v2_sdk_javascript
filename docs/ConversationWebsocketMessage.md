@@ -50,7 +50,7 @@ Name | Type | Description | Notes
 
 * `participant_join` (value: `"participant join"`)
 
-* `participant_left` (value: `"participant left"`)
+* `participant_leave` (value: `"participant leave"`)
 
 * `read_message` (value: `"read message"`)
 
@@ -61,6 +61,8 @@ Name | Type | Description | Notes
 * `add_item` (value: `"add item"`)
 
 * `webchat_context` (value: `"webchat context"`)
+
+* `engage_customer` (value: `"engage customer"`)
 
 
 

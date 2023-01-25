@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.106
+   * @version 3.10.107
    */
 
   /**
@@ -277,10 +277,10 @@
     participant_join: "participant join",
 
     /**
-     * value: "participant left"
+     * value: "participant leave"
      * @const
      */
-    participant_left: "participant left",
+    participant_leave: "participant leave",
 
     /**
      * value: "read message"
@@ -310,7 +310,13 @@
      * value: "webchat context"
      * @const
      */
-    webchat_context: "webchat context"
+    webchat_context: "webchat context",
+
+    /**
+     * value: "engage customer"
+     * @const
+     */
+    engage_customer: "engage customer"
   };
 
 

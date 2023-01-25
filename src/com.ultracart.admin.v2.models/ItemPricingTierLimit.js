@@ -34,7 +34,7 @@
   /**
    * The ItemPricingTierLimit model module.
    * @module com.ultracart.admin.v2.models/ItemPricingTierLimit
-   * @version 3.10.106
+   * @version 3.10.107
    */
 
   /**
