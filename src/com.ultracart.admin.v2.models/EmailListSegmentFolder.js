@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailListSegmentFolder model module.
  * @module com.ultracart.admin.v2.models/EmailListSegmentFolder
- * @version 4.0.123-RC
+ * @version 4.0.124-RC
  */
 class EmailListSegmentFolder {
     /**

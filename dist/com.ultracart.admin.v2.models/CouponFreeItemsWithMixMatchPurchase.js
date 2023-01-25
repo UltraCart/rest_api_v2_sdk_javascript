@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponFreeItemsWithMixMatchPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponFreeItemsWithMixMatchPurchase
- * @version 4.0.122-RC
+ * @version 4.0.123-RC
  */
 var CouponFreeItemsWithMixMatchPurchase = /*#__PURE__*/function () {
   /**

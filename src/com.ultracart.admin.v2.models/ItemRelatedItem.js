@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemRelatedItem model module.
  * @module com.ultracart.admin.v2.models/ItemRelatedItem
- * @version 4.0.123-RC
+ * @version 4.0.124-RC
  */
 class ItemRelatedItem {
     /**

@@ -17,7 +17,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.123-RC
+ * @version 4.0.124-RC
  */
 class ConversationSummary {
     /**

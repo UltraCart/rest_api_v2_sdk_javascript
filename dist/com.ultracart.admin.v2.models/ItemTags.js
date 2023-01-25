@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemTags model module.
  * @module com.ultracart.admin.v2.models/ItemTags
- * @version 4.0.122-RC
+ * @version 4.0.123-RC
  */
 var ItemTags = /*#__PURE__*/function () {
   /**

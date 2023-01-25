@@ -3453,6 +3453,12 @@ Object.defineProperty(exports, "OrderInternal", {
     return _OrderInternal["default"];
   }
 });
+Object.defineProperty(exports, "OrderInvoiceResponse", {
+  enumerable: true,
+  get: function get() {
+    return _OrderInvoiceResponse["default"];
+  }
+});
 Object.defineProperty(exports, "OrderItem", {
   enumerable: true,
   get: function get() {
@@ -5631,6 +5637,8 @@ var _OrderGift = _interopRequireDefault(require("./com.ultracart.admin.v2.models
 var _OrderGiftCertificate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderGiftCertificate"));
 
 var _OrderInternal = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderInternal"));
+
+var _OrderInvoiceResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderInvoiceResponse"));
 
 var _OrderItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderItem"));
 

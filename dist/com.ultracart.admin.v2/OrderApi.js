@@ -25,6 +25,8 @@ var _OrderFormat = _interopRequireDefault(require("../com.ultracart.admin.v2.mod
 
 var _OrderFormatResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderFormatResponse"));
 
+var _OrderInvoiceResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderInvoiceResponse"));
+
 var _OrderPackingSlipResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderPackingSlipResponse"));
 
 var _OrderProcessPaymentRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderProcessPaymentRequest"));
@@ -58,7 +60,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.122-RC
+* @version 4.0.123-RC
 */
 var OrderApi = /*#__PURE__*/function () {
   /**
@@ -275,6 +277,43 @@ var OrderApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrderFormatResponse["default"];
       return this.apiClient.callApi('/order/orders/{order_id}/format', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the generateInvoice operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~generateInvoiceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderInvoiceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Generate an invoice for this order.
+     * The invoice PDF that is returned is base 64 encoded 
+     * @param {String} order_id Order ID
+     * @param {module:com.ultracart.admin.v2/OrderApi~generateInvoiceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderInvoiceResponse}
+     */
+
+  }, {
+    key: "generateInvoice",
+    value: function generateInvoice(order_id, callback) {
+      var postBody = null; // verify the required parameter 'order_id' is set
+
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling generateInvoice");
+      }
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _OrderInvoiceResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/invoice', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the generateOrderToken operation.

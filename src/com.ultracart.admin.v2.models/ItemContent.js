@@ -19,7 +19,7 @@ import ItemContentMultimedia from './ItemContentMultimedia';
 /**
  * The ItemContent model module.
  * @module com.ultracart.admin.v2.models/ItemContent
- * @version 4.0.123-RC
+ * @version 4.0.124-RC
  */
 class ItemContent {
     /**
