@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.108
+   * @version 3.10.109
    */
 
   /**
@@ -277,10 +277,10 @@
     participant_join: "participant join",
 
     /**
-     * value: "participant leave"
+     * value: "participant left"
      * @const
      */
-    participant_leave: "participant leave",
+    participant_left: "participant left",
 
     /**
      * value: "read message"

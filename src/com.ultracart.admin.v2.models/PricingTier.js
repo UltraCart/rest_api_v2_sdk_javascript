@@ -34,7 +34,7 @@
   /**
    * The PricingTier model module.
    * @module com.ultracart.admin.v2.models/PricingTier
-   * @version 3.10.108
+   * @version 3.10.109
    */
 
   /**
@@ -81,6 +81,8 @@
         obj.display_on_wholesale_signup = ApiClient.convertToType(data['display_on_wholesale_signup'], 'Boolean');
       if (data.hasOwnProperty('exclude_from_free_promotion'))
         obj.exclude_from_free_promotion = ApiClient.convertToType(data['exclude_from_free_promotion'], 'Boolean');
+      if (data.hasOwnProperty('exempt_loyalty_rewards'))
+        obj.exempt_loyalty_rewards = ApiClient.convertToType(data['exempt_loyalty_rewards'], 'Boolean');
       if (data.hasOwnProperty('exempt_shipping_handling_charge'))
         obj.exempt_shipping_handling_charge = ApiClient.convertToType(data['exempt_shipping_handling_charge'], 'Boolean');
       if (data.hasOwnProperty('free_shipping'))
@@ -197,6 +199,12 @@
    * @member {Boolean} exclude_from_free_promotion
    */
   exports.prototype.exclude_from_free_promotion = undefined;
+
+  /**
+   * Exempt from Loyalty Rewards
+   * @member {Boolean} exempt_loyalty_rewards
+   */
+  exports.prototype.exempt_loyalty_rewards = undefined;
 
   /**
    * Exempt shipping handling charge

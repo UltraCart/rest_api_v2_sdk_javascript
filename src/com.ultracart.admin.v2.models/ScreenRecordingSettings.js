@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingSettings model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingSettings
-   * @version 3.10.108
+   * @version 3.10.109
    */
 
   /**
