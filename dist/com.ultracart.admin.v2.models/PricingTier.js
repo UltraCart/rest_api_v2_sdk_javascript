@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PricingTier model module.
  * @module com.ultracart.admin.v2.models/PricingTier
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 var PricingTier = /*#__PURE__*/function () {
   /**
@@ -106,6 +106,10 @@ var PricingTier = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('exclude_from_free_promotion')) {
           obj['exclude_from_free_promotion'] = _ApiClient["default"].convertToType(data['exclude_from_free_promotion'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('exempt_loyalty_rewards')) {
+          obj['exempt_loyalty_rewards'] = _ApiClient["default"].convertToType(data['exempt_loyalty_rewards'], 'Boolean');
         }
 
         if (data.hasOwnProperty('exempt_shipping_handling_charge')) {
@@ -265,6 +269,12 @@ PricingTier.prototype['display_on_wholesale_signup'] = undefined;
  */
 
 PricingTier.prototype['exclude_from_free_promotion'] = undefined;
+/**
+ * Exempt from Loyalty Rewards
+ * @member {Boolean} exempt_loyalty_rewards
+ */
+
+PricingTier.prototype['exempt_loyalty_rewards'] = undefined;
 /**
  * Exempt shipping handling charge
  * @member {Boolean} exempt_shipping_handling_charge

@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationWebchatQueueStatusesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse
- * @version 4.0.125-RC
+ * @version 4.0.126-RC
  */
 class ConversationWebchatQueueStatusesResponse {
     /**

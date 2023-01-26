@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LibraryItemEmail model module.
  * @module com.ultracart.admin.v2.models/LibraryItemEmail
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 var LibraryItemEmail = /*#__PURE__*/function () {
   /**

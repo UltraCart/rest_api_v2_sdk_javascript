@@ -40,7 +40,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -344,10 +344,10 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
   "participant join": "participant join",
 
   /**
-   * value: "participant leave"
+   * value: "participant left"
    * @const
    */
-  "participant leave": "participant leave",
+  "participant left": "participant left",
 
   /**
    * value: "read message"

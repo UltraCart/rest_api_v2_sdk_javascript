@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerTag model module.
  * @module com.ultracart.admin.v2.models/CustomerTag
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 var CustomerTag = /*#__PURE__*/function () {
   /**

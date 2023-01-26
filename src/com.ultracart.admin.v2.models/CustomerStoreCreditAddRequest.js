@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerStoreCreditAddRequest model module.
  * @module com.ultracart.admin.v2.models/CustomerStoreCreditAddRequest
- * @version 4.0.125-RC
+ * @version 4.0.126-RC
  */
 class CustomerStoreCreditAddRequest {
     /**

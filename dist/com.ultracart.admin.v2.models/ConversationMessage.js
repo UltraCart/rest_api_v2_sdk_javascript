@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -222,7 +222,13 @@ ConversationMessage['TypeEnum'] = {
    * value: "notice"
    * @const
    */
-  "notice": "notice"
+  "notice": "notice",
+
+  /**
+   * value: "engagement prompt"
+   * @const
+   */
+  "engagement prompt": "engagement prompt"
 };
 var _default = ConversationMessage;
 exports["default"] = _default;
