@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PointOfSaleRegister model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleRegister
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 class PointOfSaleRegister {
     /**

@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * IntegrationLog service.
 * @module com.ultracart.admin.v2/IntegrationLogApi
-* @version 4.0.123-RC
+* @version 4.0.124-RC
 */
 var IntegrationLogApi = /*#__PURE__*/function () {
   /**

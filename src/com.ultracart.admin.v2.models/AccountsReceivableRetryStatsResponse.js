@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The AccountsReceivableRetryStatsResponse model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 class AccountsReceivableRetryStatsResponse {
     /**

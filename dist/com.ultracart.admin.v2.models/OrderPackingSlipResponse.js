@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPackingSlipResponse model module.
  * @module com.ultracart.admin.v2.models/OrderPackingSlipResponse
- * @version 4.0.123-RC
+ * @version 4.0.124-RC
  */
 var OrderPackingSlipResponse = /*#__PURE__*/function () {
   /**

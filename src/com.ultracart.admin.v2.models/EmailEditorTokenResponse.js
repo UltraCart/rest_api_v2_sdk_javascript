@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailEditorTokenResponse model module.
  * @module com.ultracart.admin.v2.models/EmailEditorTokenResponse
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 class EmailEditorTokenResponse {
     /**

@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The StoreFrontsResponse model module.
  * @module com.ultracart.admin.v2.models/StoreFrontsResponse
- * @version 4.0.124-RC
+ * @version 4.0.125-RC
  */
 class StoreFrontsResponse {
     /**

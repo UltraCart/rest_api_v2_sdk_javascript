@@ -40,7 +40,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.123-RC
+ * @version 4.0.124-RC
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -344,10 +344,10 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
   "participant join": "participant join",
 
   /**
-   * value: "participant left"
+   * value: "participant leave"
    * @const
    */
-  "participant left": "participant left",
+  "participant leave": "participant leave",
 
   /**
    * value: "read message"
@@ -377,7 +377,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
    * value: "webchat context"
    * @const
    */
-  "webchat context": "webchat context"
+  "webchat context": "webchat context",
+
+  /**
+   * value: "engage customer"
+   * @const
+   */
+  "engage customer": "engage customer"
 };
 /**
  * Allowed values for the <code>type</code> property.
