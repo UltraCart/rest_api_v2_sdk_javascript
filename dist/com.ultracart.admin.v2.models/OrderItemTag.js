@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItemTag model module.
  * @module com.ultracart.admin.v2.models/OrderItemTag
- * @version 4.0.126-RC
+ * @version 4.0.127
  */
 var OrderItemTag = /*#__PURE__*/function () {
   /**

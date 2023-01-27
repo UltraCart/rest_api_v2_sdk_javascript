@@ -37,6 +37,8 @@ var _ConversationEngagementsResponse = _interopRequireDefault(require("../com.ul
 
 var _ConversationJoinRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationJoinRequest"));
 
+var _ConversationLocationsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationLocationsResponse"));
+
 var _ConversationMessagesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMessagesResponse"));
 
 var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
@@ -74,7 +76,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.126-RC
+* @version 4.0.127
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**
@@ -740,6 +742,35 @@ var ConversationApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationSearchResponse["default"];
       return this.apiClient.callApi('/conversation/conversations/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getLocationsForEngagement operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getLocationsForEngagementCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationLocationsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get location data for engagement configuration
+     * Get location data for engagement configuration 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getLocationsForEngagementCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationLocationsResponse}
+     */
+
+  }, {
+    key: "getLocationsForEngagement",
+    value: function getLocationsForEngagement(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationLocationsResponse["default"];
+      return this.apiClient.callApi('/conversation/locations', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the insertConversationCannedMessage operation.

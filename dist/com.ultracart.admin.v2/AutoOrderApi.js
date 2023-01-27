@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.0.126-RC
+* @version 4.0.127
 */
 var AutoOrderApi = /*#__PURE__*/function () {
   /**

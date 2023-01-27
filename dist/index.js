@@ -957,6 +957,24 @@ Object.defineProperty(exports, "ConversationJoinRequest", {
     return _ConversationJoinRequest["default"];
   }
 });
+Object.defineProperty(exports, "ConversationLocationCountry", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationLocationCountry["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationLocationStateProvince", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationLocationStateProvince["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationLocationsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationLocationsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationMessage", {
   enumerable: true,
   get: function get() {
@@ -4821,6 +4839,12 @@ var _ConversationEventTyping = _interopRequireDefault(require("./com.ultracart.a
 var _ConversationEventWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventWebchatContext"));
 
 var _ConversationJoinRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationJoinRequest"));
+
+var _ConversationLocationCountry = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationCountry"));
+
+var _ConversationLocationStateProvince = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationStateProvince"));
+
+var _ConversationLocationsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationsResponse"));
 
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
 

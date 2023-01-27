@@ -23,11 +23,12 @@ import ConversationMessage from './ConversationMessage';
 import ConversationParticipant from './ConversationParticipant';
 import ConversationSummary from './ConversationSummary';
 import ConversationWebchatQueueStatus from './ConversationWebchatQueueStatus';
+import ConversationWebchatQueueStatusQueueEntry from './ConversationWebchatQueueStatusQueueEntry';
 
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.127
+ * @version 4.0.128
  */
 class ConversationWebsocketMessage {
     /**
@@ -69,6 +70,9 @@ class ConversationWebsocketMessage {
             }
             if (data.hasOwnProperty('event_conversation_closed')) {
                 obj['event_conversation_closed'] = ConversationSummary.constructFromObject(data['event_conversation_closed']);
+            }
+            if (data.hasOwnProperty('event_engage_customer')) {
+                obj['event_engage_customer'] = ConversationWebchatQueueStatusQueueEntry.constructFromObject(data['event_engage_customer']);
             }
             if (data.hasOwnProperty('event_new_conversation')) {
                 obj['event_new_conversation'] = ConversationSummary.constructFromObject(data['event_new_conversation']);
@@ -148,6 +152,11 @@ ConversationWebsocketMessage.prototype['event_add_item'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_conversation_closed
  */
 ConversationWebsocketMessage.prototype['event_conversation_closed'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry} event_engage_customer
+ */
+ConversationWebsocketMessage.prototype['event_engage_customer'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_conversation
