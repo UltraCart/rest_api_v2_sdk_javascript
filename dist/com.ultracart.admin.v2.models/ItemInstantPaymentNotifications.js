@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemInstantPaymentNotifications model module.
  * @module com.ultracart.admin.v2.models/ItemInstantPaymentNotifications
- * @version 4.0.125-RC
+ * @version 4.0.126-RC
  */
 var ItemInstantPaymentNotifications = /*#__PURE__*/function () {
   /**

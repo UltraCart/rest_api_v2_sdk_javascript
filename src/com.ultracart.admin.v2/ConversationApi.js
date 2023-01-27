@@ -28,6 +28,7 @@ import ConversationEngagement from '../com.ultracart.admin.v2.models/Conversatio
 import ConversationEngagementResponse from '../com.ultracart.admin.v2.models/ConversationEngagementResponse';
 import ConversationEngagementsResponse from '../com.ultracart.admin.v2.models/ConversationEngagementsResponse';
 import ConversationJoinRequest from '../com.ultracart.admin.v2.models/ConversationJoinRequest';
+import ConversationLocationsResponse from '../com.ultracart.admin.v2.models/ConversationLocationsResponse';
 import ConversationMessagesResponse from '../com.ultracart.admin.v2.models/ConversationMessagesResponse';
 import ConversationMultimediaUploadUrlResponse from '../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationPermissionsResponse from '../com.ultracart.admin.v2.models/ConversationPermissionsResponse';
@@ -45,7 +46,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.126-RC
+* @version 4.0.127
 */
 export default class ConversationApi {
 
@@ -837,6 +838,43 @@ export default class ConversationApi {
       let returnType = ConversationSearchResponse;
       return this.apiClient.callApi(
         '/conversation/conversations/search', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getLocationsForEngagement operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getLocationsForEngagementCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationLocationsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get location data for engagement configuration
+     * Get location data for engagement configuration 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getLocationsForEngagementCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationLocationsResponse}
+     */
+    getLocationsForEngagement(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationLocationsResponse;
+      return this.apiClient.callApi(
+        '/conversation/locations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSummary model module.
  * @module com.ultracart.admin.v2.models/CartSummary
- * @version 4.0.125-RC
+ * @version 4.0.126-RC
  */
 var CartSummary = /*#__PURE__*/function () {
   /**

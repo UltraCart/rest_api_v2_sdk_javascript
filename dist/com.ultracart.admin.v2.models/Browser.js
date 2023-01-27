@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Browser model module.
  * @module com.ultracart.admin.v2.models/Browser
- * @version 4.0.125-RC
+ * @version 4.0.126-RC
  */
 var Browser = /*#__PURE__*/function () {
   /**

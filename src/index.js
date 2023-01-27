@@ -165,6 +165,9 @@ import ConversationEventReadMessage from './com.ultracart.admin.v2.models/Conver
 import ConversationEventTyping from './com.ultracart.admin.v2.models/ConversationEventTyping';
 import ConversationEventWebchatContext from './com.ultracart.admin.v2.models/ConversationEventWebchatContext';
 import ConversationJoinRequest from './com.ultracart.admin.v2.models/ConversationJoinRequest';
+import ConversationLocationCountry from './com.ultracart.admin.v2.models/ConversationLocationCountry';
+import ConversationLocationStateProvince from './com.ultracart.admin.v2.models/ConversationLocationStateProvince';
+import ConversationLocationsResponse from './com.ultracart.admin.v2.models/ConversationLocationsResponse';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTranslation from './com.ultracart.admin.v2.models/ConversationMessageTranslation';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
@@ -795,7 +798,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.126-RC
+* @version 4.0.127
 */
 export {
     /**
@@ -1715,6 +1718,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationJoinRequest}
      */
     ConversationJoinRequest,
+
+    /**
+     * The ConversationLocationCountry model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationLocationCountry}
+     */
+    ConversationLocationCountry,
+
+    /**
+     * The ConversationLocationStateProvince model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationLocationStateProvince}
+     */
+    ConversationLocationStateProvince,
+
+    /**
+     * The ConversationLocationsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationLocationsResponse}
+     */
+    ConversationLocationsResponse,
 
     /**
      * The ConversationMessage model constructor.

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChannelPartnerOrderItem model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItem
- * @version 4.0.125-RC
+ * @version 4.0.126-RC
  */
 var ChannelPartnerOrderItem = /*#__PURE__*/function () {
   /**
