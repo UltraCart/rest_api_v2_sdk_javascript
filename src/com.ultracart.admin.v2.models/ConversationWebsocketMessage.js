@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventAddCoupon', 'com.ultracart.admin.v2.models/ConversationEventAddItem', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationEventRRWeb', 'com.ultracart.admin.v2.models/ConversationEventReadMessage', 'com.ultracart.admin.v2.models/ConversationEventTyping', 'com.ultracart.admin.v2.models/ConversationEventWebchatContext', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationParticipant', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationEventAddCoupon', 'com.ultracart.admin.v2.models/ConversationEventAddItem', 'com.ultracart.admin.v2.models/ConversationEventQueuePosition', 'com.ultracart.admin.v2.models/ConversationEventRRWeb', 'com.ultracart.admin.v2.models/ConversationEventReadMessage', 'com.ultracart.admin.v2.models/ConversationEventTyping', 'com.ultracart.admin.v2.models/ConversationEventWebchatContext', 'com.ultracart.admin.v2.models/ConversationMessage', 'com.ultracart.admin.v2.models/ConversationParticipant', 'com.ultracart.admin.v2.models/ConversationSummary', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatus', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ConversationEventAddCoupon'), require('./ConversationEventAddItem'), require('./ConversationEventQueuePosition'), require('./ConversationEventRRWeb'), require('./ConversationEventReadMessage'), require('./ConversationEventTyping'), require('./ConversationEventWebchatContext'), require('./ConversationMessage'), require('./ConversationParticipant'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationEventAddCoupon'), require('./ConversationEventAddItem'), require('./ConversationEventQueuePosition'), require('./ConversationEventRRWeb'), require('./ConversationEventReadMessage'), require('./ConversationEventTyping'), require('./ConversationEventWebchatContext'), require('./ConversationMessage'), require('./ConversationParticipant'), require('./ConversationSummary'), require('./ConversationWebchatQueueStatus'), require('./ConversationWebchatQueueStatusQueueEntry'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventAddCoupon, root.UltraCartRestApiV2.ConversationEventAddItem, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationEventRRWeb, root.UltraCartRestApiV2.ConversationEventReadMessage, root.UltraCartRestApiV2.ConversationEventTyping, root.UltraCartRestApiV2.ConversationEventWebchatContext, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationParticipant, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus);
+    root.UltraCartRestApiV2.ConversationWebsocketMessage = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationEventAddCoupon, root.UltraCartRestApiV2.ConversationEventAddItem, root.UltraCartRestApiV2.ConversationEventQueuePosition, root.UltraCartRestApiV2.ConversationEventRRWeb, root.UltraCartRestApiV2.ConversationEventReadMessage, root.UltraCartRestApiV2.ConversationEventTyping, root.UltraCartRestApiV2.ConversationEventWebchatContext, root.UltraCartRestApiV2.ConversationMessage, root.UltraCartRestApiV2.ConversationParticipant, root.UltraCartRestApiV2.ConversationSummary, root.UltraCartRestApiV2.ConversationWebchatQueueStatus, root.UltraCartRestApiV2.ConversationWebchatQueueStatusQueueEntry);
   }
-}(this, function(ApiClient, ConversationEventAddCoupon, ConversationEventAddItem, ConversationEventQueuePosition, ConversationEventRRWeb, ConversationEventReadMessage, ConversationEventTyping, ConversationEventWebchatContext, ConversationMessage, ConversationParticipant, ConversationSummary, ConversationWebchatQueueStatus) {
+}(this, function(ApiClient, ConversationEventAddCoupon, ConversationEventAddItem, ConversationEventQueuePosition, ConversationEventRRWeb, ConversationEventReadMessage, ConversationEventTyping, ConversationEventWebchatContext, ConversationMessage, ConversationParticipant, ConversationSummary, ConversationWebchatQueueStatus, ConversationWebchatQueueStatusQueueEntry) {
   'use strict';
 
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.110
+   * @version 3.10.111
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.event_add_item = ConversationEventAddItem.constructFromObject(data['event_add_item']);
       if (data.hasOwnProperty('event_conversation_closed'))
         obj.event_conversation_closed = ConversationSummary.constructFromObject(data['event_conversation_closed']);
+      if (data.hasOwnProperty('event_engage_customer'))
+        obj.event_engage_customer = ConversationWebchatQueueStatusQueueEntry.constructFromObject(data['event_engage_customer']);
       if (data.hasOwnProperty('event_new_conversation'))
         obj.event_new_conversation = ConversationSummary.constructFromObject(data['event_new_conversation']);
       if (data.hasOwnProperty('event_new_message'))
@@ -121,6 +123,11 @@
    * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_conversation_closed
    */
   exports.prototype.event_conversation_closed = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry} event_engage_customer
+   */
+  exports.prototype.event_engage_customer = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_conversation
