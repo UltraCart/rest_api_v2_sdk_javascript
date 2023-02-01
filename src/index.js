@@ -139,6 +139,8 @@ import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
 import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationAgentAuth';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationAgentProfile from './com.ultracart.admin.v2.models/ConversationAgentProfile';
+import ConversationAgentProfileResponse from './com.ultracart.admin.v2.models/ConversationAgentProfileResponse';
 import ConversationAutocompleteRequest from './com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
 import ConversationAutocompleteResponse from './com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
 import ConversationAutocompleteValue from './com.ultracart.admin.v2.models/ConversationAutocompleteValue';
@@ -798,7 +800,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.128
+* @version 4.0.129
 */
 export {
     /**
@@ -1562,6 +1564,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationAgentAuthResponse}
      */
     ConversationAgentAuthResponse,
+
+    /**
+     * The ConversationAgentProfile model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentProfile}
+     */
+    ConversationAgentProfile,
+
+    /**
+     * The ConversationAgentProfileResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentProfileResponse}
+     */
+    ConversationAgentProfileResponse,
 
     /**
      * The ConversationAutocompleteRequest model constructor.

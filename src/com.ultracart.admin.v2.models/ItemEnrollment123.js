@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemEnrollment123 model module.
  * @module com.ultracart.admin.v2.models/ItemEnrollment123
- * @version 4.0.128
+ * @version 4.0.129
  */
 class ItemEnrollment123 {
     /**

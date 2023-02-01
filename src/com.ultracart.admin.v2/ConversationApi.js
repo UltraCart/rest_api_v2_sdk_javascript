@@ -14,6 +14,8 @@
 
 import ApiClient from "../ApiClient";
 import ConversationAgentAuthResponse from '../com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
+import ConversationAgentProfile from '../com.ultracart.admin.v2.models/ConversationAgentProfile';
+import ConversationAgentProfileResponse from '../com.ultracart.admin.v2.models/ConversationAgentProfileResponse';
 import ConversationAutocompleteRequest from '../com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
 import ConversationAutocompleteResponse from '../com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
 import ConversationCannedMessage from '../com.ultracart.admin.v2.models/ConversationCannedMessage';
@@ -46,7 +48,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.128
+* @version 4.0.129
 */
 export default class ConversationApi {
 
@@ -219,6 +221,43 @@ export default class ConversationApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/conversation/agent/keepalive', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentProfile operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfileCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentProfileResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get agent profile
+     * Retrieve the agents profile 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentProfileCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentProfileResponse}
+     */
+    getAgentProfile(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationAgentProfileResponse;
+      return this.apiClient.callApi(
+        '/conversation/agent/profile', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1214,6 +1253,48 @@ export default class ConversationApi {
       let returnType = ConversationStartResponse;
       return this.apiClient.callApi(
         '/conversation/conversations', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateAgentProfile operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateAgentProfileCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentProfileResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update agent profile
+     * Update agent profile 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentProfile} profile_request Profile request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateAgentProfileCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentProfileResponse}
+     */
+    updateAgentProfile(profile_request, callback) {
+      let postBody = profile_request;
+      // verify the required parameter 'profile_request' is set
+      if (profile_request === undefined || profile_request === null) {
+        throw new Error("Missing the required parameter 'profile_request' when calling updateAgentProfile");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationAgentProfileResponse;
+      return this.apiClient.callApi(
+        '/conversation/agent/profile', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

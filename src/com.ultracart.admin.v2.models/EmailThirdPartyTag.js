@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailThirdPartyTag model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyTag
- * @version 4.0.128
+ * @version 4.0.129
  */
 class EmailThirdPartyTag {
     /**

@@ -24,7 +24,7 @@ import GiftCertificatesResponse from '../com.ultracart.admin.v2.models/GiftCerti
 /**
 * GiftCertificate service.
 * @module com.ultracart.admin.v2/GiftCertificateApi
-* @version 4.0.128
+* @version 4.0.129
 */
 export default class GiftCertificateApi {
 

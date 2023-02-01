@@ -21,7 +21,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Chargeback service.
 * @module com.ultracart.admin.v2/ChargebackApi
-* @version 4.0.128
+* @version 4.0.129
 */
 export default class ChargebackApi {
 

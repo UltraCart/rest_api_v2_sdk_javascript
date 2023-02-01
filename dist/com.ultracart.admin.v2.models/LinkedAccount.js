@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LinkedAccount model module.
  * @module com.ultracart.admin.v2.models/LinkedAccount
- * @version 4.0.127
+ * @version 4.0.128
  */
 var LinkedAccount = /*#__PURE__*/function () {
   /**

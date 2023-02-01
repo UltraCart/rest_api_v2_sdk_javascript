@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderInternal model module.
  * @module com.ultracart.admin.v2.models/OrderInternal
- * @version 4.0.127
+ * @version 4.0.128
  */
 var OrderInternal = /*#__PURE__*/function () {
   /**

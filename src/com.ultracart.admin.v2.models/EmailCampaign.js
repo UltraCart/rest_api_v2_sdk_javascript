@@ -17,7 +17,7 @@ import EmailListSegmentMembership from './EmailListSegmentMembership';
 /**
  * The EmailCampaign model module.
  * @module com.ultracart.admin.v2.models/EmailCampaign
- * @version 4.0.128
+ * @version 4.0.129
  */
 class EmailCampaign {
     /**

@@ -29,6 +29,8 @@ var _ConversationSummary = _interopRequireDefault(require("./ConversationSummary
 
 var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./ConversationWebchatQueueStatus"));
 
+var _ConversationWebchatQueueStatusQueueEntry = _interopRequireDefault(require("./ConversationWebchatQueueStatusQueueEntry"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,7 +42,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.127
+ * @version 4.0.128
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -90,6 +92,10 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('event_conversation_closed')) {
           obj['event_conversation_closed'] = _ConversationSummary["default"].constructFromObject(data['event_conversation_closed']);
+        }
+
+        if (data.hasOwnProperty('event_engage_customer')) {
+          obj['event_engage_customer'] = _ConversationWebchatQueueStatusQueueEntry["default"].constructFromObject(data['event_engage_customer']);
         }
 
         if (data.hasOwnProperty('event_new_conversation')) {
@@ -189,6 +195,11 @@ ConversationWebsocketMessage.prototype['event_add_item'] = undefined;
  */
 
 ConversationWebsocketMessage.prototype['event_conversation_closed'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry} event_engage_customer
+ */
+
+ConversationWebsocketMessage.prototype['event_engage_customer'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_new_conversation
  */

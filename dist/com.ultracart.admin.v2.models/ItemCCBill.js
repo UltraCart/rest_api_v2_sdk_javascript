@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemCCBill model module.
  * @module com.ultracart.admin.v2.models/ItemCCBill
- * @version 4.0.127
+ * @version 4.0.128
  */
 var ItemCCBill = /*#__PURE__*/function () {
   /**

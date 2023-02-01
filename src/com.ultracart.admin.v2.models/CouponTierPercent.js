@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponTierPercent model module.
  * @module com.ultracart.admin.v2.models/CouponTierPercent
- * @version 4.0.128
+ * @version 4.0.129
  */
 class CouponTierPercent {
     /**
