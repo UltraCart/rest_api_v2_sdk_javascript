@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AccountsReceivableRetryDayActivity model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity
- * @version 4.0.129
+ * @version 4.0.130
  */
 class AccountsReceivableRetryDayActivity {
     /**

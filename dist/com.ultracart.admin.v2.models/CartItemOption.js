@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartItemOption model module.
  * @module com.ultracart.admin.v2.models/CartItemOption
- * @version 4.0.128
+ * @version 4.0.129
  */
 var CartItemOption = /*#__PURE__*/function () {
   /**

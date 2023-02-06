@@ -18,7 +18,7 @@ import ConversationParticipant from './ConversationParticipant';
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.129
+ * @version 4.0.130
  */
 class Conversation {
     /**

@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemAutoOrderStep model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStep
- * @version 4.0.128
+ * @version 4.0.129
  */
 var ItemAutoOrderStep = /*#__PURE__*/function () {
   /**

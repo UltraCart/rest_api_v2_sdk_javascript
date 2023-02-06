@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The FileManagerPageResponse model module.
  * @module com.ultracart.admin.v2.models/FileManagerPageResponse
- * @version 4.0.128
+ * @version 4.0.129
  */
 var FileManagerPageResponse = /*#__PURE__*/function () {
   /**

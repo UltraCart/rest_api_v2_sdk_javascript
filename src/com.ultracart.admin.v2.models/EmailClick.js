@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailClick model module.
  * @module com.ultracart.admin.v2.models/EmailClick
- * @version 4.0.129
+ * @version 4.0.130
  */
 class EmailClick {
     /**

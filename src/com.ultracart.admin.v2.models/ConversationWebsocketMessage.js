@@ -28,7 +28,7 @@ import ConversationWebchatQueueStatusQueueEntry from './ConversationWebchatQueue
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.129
+ * @version 4.0.130
  */
 class ConversationWebsocketMessage {
     /**
@@ -59,6 +59,9 @@ class ConversationWebsocketMessage {
         if (data) {
             obj = obj || new ConversationWebsocketMessage();
 
+            if (data.hasOwnProperty('conversation_arn')) {
+                obj['conversation_arn'] = ApiClient.convertToType(data['conversation_arn'], 'String');
+            }
             if (data.hasOwnProperty('conversation_uuid')) {
                 obj['conversation_uuid'] = ApiClient.convertToType(data['conversation_uuid'], 'String');
             }
@@ -131,6 +134,12 @@ class ConversationWebsocketMessage {
 
 
 }
+
+/**
+ * Conversation ARN
+ * @member {String} conversation_arn
+ */
+ConversationWebsocketMessage.prototype['conversation_arn'] = undefined;
 
 /**
  * Conversation UUID if the websocket message is tied to a specific conversation

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerEmail model module.
  * @module com.ultracart.admin.v2.models/CustomerEmail
- * @version 4.0.128
+ * @version 4.0.129
  */
 var CustomerEmail = /*#__PURE__*/function () {
   /**
