@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.112
+   * @version 3.10.113
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('conversation_arn'))
+        obj.conversation_arn = ApiClient.convertToType(data['conversation_arn'], 'String');
       if (data.hasOwnProperty('conversation_uuid'))
         obj.conversation_uuid = ApiClient.convertToType(data['conversation_uuid'], 'String');
       if (data.hasOwnProperty('event_add_coupon'))
@@ -102,6 +104,12 @@
     }
     return obj;
   }
+
+  /**
+   * Conversation ARN
+   * @member {String} conversation_arn
+   */
+  exports.prototype.conversation_arn = undefined;
 
   /**
    * Conversation UUID if the websocket message is tied to a specific conversation
