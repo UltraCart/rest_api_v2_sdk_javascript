@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **event_participant_left** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
 **event_participant_left_participant** | [**ConversationParticipant**](ConversationParticipant.md) |  | [optional] 
 **event_participant_update** | [**ConversationSummary**](ConversationSummary.md) |  | [optional] 
+**event_queue_new_member** | [**ConversationWebchatQueueStatusQueueEntry**](ConversationWebchatQueueStatusQueueEntry.md) |  | [optional] 
 **event_queue_position** | [**ConversationEventQueuePosition**](ConversationEventQueuePosition.md) |  | [optional] 
 **event_queue_status_update** | [**ConversationWebchatQueueStatus**](ConversationWebchatQueueStatus.md) |  | [optional] 
 **event_read_message** | [**ConversationEventReadMessage**](ConversationEventReadMessage.md) |  | [optional] 
@@ -65,6 +66,8 @@ Name | Type | Description | Notes
 * `webchat_context` (value: `"webchat context"`)
 
 * `engage_customer` (value: `"engage customer"`)
+
+* `queue_new_member` (value: `"queue new member"`)
 
 
 

@@ -34,7 +34,7 @@
   /**
    * The ConversationWebchatQueueStatusQueueEntry model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
-   * @version 3.10.114
+   * @version 3.10.115
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.participant_language_iso_code = ApiClient.convertToType(data['participant_language_iso_code'], 'String');
       if (data.hasOwnProperty('question'))
         obj.question = ApiClient.convertToType(data['question'], 'String');
+      if (data.hasOwnProperty('queue_name'))
+        obj.queue_name = ApiClient.convertToType(data['queue_name'], 'String');
     }
     return obj;
   }
@@ -108,6 +110,11 @@
    * @member {String} question
    */
   exports.prototype.question = undefined;
+
+  /**
+   * @member {String} queue_name
+   */
+  exports.prototype.queue_name = undefined;
 
   return exports;
 

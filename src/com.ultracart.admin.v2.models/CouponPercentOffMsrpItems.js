@@ -34,7 +34,7 @@
   /**
    * The CouponPercentOffMsrpItems model module.
    * @module com.ultracart.admin.v2.models/CouponPercentOffMsrpItems
-   * @version 3.10.114
+   * @version 3.10.115
    */
 
   /**

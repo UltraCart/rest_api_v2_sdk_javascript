@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **join_dts** | **String** | Date/time the customer joined the queue | [optional] 
 **participant_language_iso_code** | **String** |  | [optional] 
 **question** | **String** |  | [optional] 
+**queue_name** | **String** |  | [optional] 
 
 
