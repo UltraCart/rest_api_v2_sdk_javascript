@@ -42,7 +42,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.129
+ * @version 4.0.130
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**
@@ -77,6 +77,10 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationWebsocketMessage();
+
+        if (data.hasOwnProperty('conversation_arn')) {
+          obj['conversation_arn'] = _ApiClient["default"].convertToType(data['conversation_arn'], 'String');
+        }
 
         if (data.hasOwnProperty('conversation_uuid')) {
           obj['conversation_uuid'] = _ApiClient["default"].convertToType(data['conversation_uuid'], 'String');
@@ -174,10 +178,16 @@ var ConversationWebsocketMessage = /*#__PURE__*/function () {
   return ConversationWebsocketMessage;
 }();
 /**
+ * Conversation ARN
+ * @member {String} conversation_arn
+ */
+
+
+ConversationWebsocketMessage.prototype['conversation_arn'] = undefined;
+/**
  * Conversation UUID if the websocket message is tied to a specific conversation
  * @member {String} conversation_uuid
  */
-
 
 ConversationWebsocketMessage.prototype['conversation_uuid'] = undefined;
 /**

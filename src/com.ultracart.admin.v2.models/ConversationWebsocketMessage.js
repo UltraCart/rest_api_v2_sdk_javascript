@@ -28,7 +28,7 @@ import ConversationWebchatQueueStatusQueueEntry from './ConversationWebchatQueue
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.0.130
+ * @version 4.0.131
  */
 class ConversationWebsocketMessage {
     /**
@@ -97,6 +97,9 @@ class ConversationWebsocketMessage {
             }
             if (data.hasOwnProperty('event_participant_update')) {
                 obj['event_participant_update'] = ConversationSummary.constructFromObject(data['event_participant_update']);
+            }
+            if (data.hasOwnProperty('event_queue_new_member')) {
+                obj['event_queue_new_member'] = ConversationWebchatQueueStatusQueueEntry.constructFromObject(data['event_queue_new_member']);
             }
             if (data.hasOwnProperty('event_queue_position')) {
                 obj['event_queue_position'] = ConversationEventQueuePosition.constructFromObject(data['event_queue_position']);
@@ -201,6 +204,11 @@ ConversationWebsocketMessage.prototype['event_participant_left_participant'] = u
  * @member {module:com.ultracart.admin.v2.models/ConversationSummary} event_participant_update
  */
 ConversationWebsocketMessage.prototype['event_participant_update'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry} event_queue_new_member
+ */
+ConversationWebsocketMessage.prototype['event_queue_new_member'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ConversationEventQueuePosition} event_queue_position
@@ -365,7 +373,13 @@ ConversationWebsocketMessage['EventTypeEnum'] = {
      * value: "engage customer"
      * @const
      */
-    "engage customer": "engage customer"
+    "engage customer": "engage customer",
+
+    /**
+     * value: "queue new member"
+     * @const
+     */
+    "queue new member": "queue new member"
 };
 
 

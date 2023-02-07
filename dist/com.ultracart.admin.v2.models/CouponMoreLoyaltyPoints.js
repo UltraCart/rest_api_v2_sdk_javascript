@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponMoreLoyaltyPoints model module.
  * @module com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints
- * @version 4.0.129
+ * @version 4.0.130
  */
 var CouponMoreLoyaltyPoints = /*#__PURE__*/function () {
   /**

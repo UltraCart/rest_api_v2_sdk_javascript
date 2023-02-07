@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLog model module.
  * @module com.ultracart.admin.v2.models/IntegrationLog
- * @version 4.0.129
+ * @version 4.0.130
  */
 var IntegrationLog = /*#__PURE__*/function () {
   /**
