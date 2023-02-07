@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GeocodeResponse model module.
  * @module com.ultracart.admin.v2.models/GeocodeResponse
- * @version 4.0.130
+ * @version 4.0.131
  */
 var GeocodeResponse = /*#__PURE__*/function () {
   /**

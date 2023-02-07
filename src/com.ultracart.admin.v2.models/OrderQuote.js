@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderQuote model module.
  * @module com.ultracart.admin.v2.models/OrderQuote
- * @version 4.0.131
+ * @version 4.0.132
  */
 class OrderQuote {
     /**

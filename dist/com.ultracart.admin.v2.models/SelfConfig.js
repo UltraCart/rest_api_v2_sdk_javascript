@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SelfConfig model module.
  * @module com.ultracart.admin.v2.models/SelfConfig
- * @version 4.0.130
+ * @version 4.0.131
  */
 var SelfConfig = /*#__PURE__*/function () {
   /**

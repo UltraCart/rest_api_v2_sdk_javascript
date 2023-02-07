@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponCodesRequest model module.
  * @module com.ultracart.admin.v2.models/CouponCodesRequest
- * @version 4.0.130
+ * @version 4.0.131
  */
 var CouponCodesRequest = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemOptionValueDigitalItem model module.
  * @module com.ultracart.admin.v2.models/ItemOptionValueDigitalItem
- * @version 4.0.131
+ * @version 4.0.132
  */
 class ItemOptionValueDigitalItem {
     /**

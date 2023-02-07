@@ -20,7 +20,7 @@ import WebhookLogSummary from './WebhookLogSummary';
 /**
  * The WebhookLogSummariesResponse model module.
  * @module com.ultracart.admin.v2.models/WebhookLogSummariesResponse
- * @version 4.0.131
+ * @version 4.0.132
  */
 class WebhookLogSummariesResponse {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatusQueueEntry model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
- * @version 4.0.130
+ * @version 4.0.131
  */
 var ConversationWebchatQueueStatusQueueEntry = /*#__PURE__*/function () {
   /**
@@ -81,6 +81,10 @@ var ConversationWebchatQueueStatusQueueEntry = /*#__PURE__*/function () {
         if (data.hasOwnProperty('question')) {
           obj['question'] = _ApiClient["default"].convertToType(data['question'], 'String');
         }
+
+        if (data.hasOwnProperty('queue_name')) {
+          obj['queue_name'] = _ApiClient["default"].convertToType(data['queue_name'], 'String');
+        }
       }
 
       return obj;
@@ -126,5 +130,10 @@ ConversationWebchatQueueStatusQueueEntry.prototype['participant_language_iso_cod
  */
 
 ConversationWebchatQueueStatusQueueEntry.prototype['question'] = undefined;
+/**
+ * @member {String} queue_name
+ */
+
+ConversationWebchatQueueStatusQueueEntry.prototype['queue_name'] = undefined;
 var _default = ConversationWebchatQueueStatusQueueEntry;
 exports["default"] = _default;

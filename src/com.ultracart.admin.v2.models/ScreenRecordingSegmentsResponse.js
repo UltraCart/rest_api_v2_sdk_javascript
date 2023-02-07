@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ScreenRecordingSegmentsResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingSegmentsResponse
- * @version 4.0.131
+ * @version 4.0.132
  */
 class ScreenRecordingSegmentsResponse {
     /**

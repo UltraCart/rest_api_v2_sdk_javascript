@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemTaxExemption model module.
  * @module com.ultracart.admin.v2.models/ItemTaxExemption
- * @version 4.0.131
+ * @version 4.0.132
  */
 class ItemTaxExemption {
     /**
