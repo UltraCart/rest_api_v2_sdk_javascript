@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StoreFront model module.
  * @module com.ultracart.admin.v2.models/StoreFront
- * @version 4.0.131
+ * @version 4.0.132
  */
 var StoreFront = /*#__PURE__*/function () {
   /**

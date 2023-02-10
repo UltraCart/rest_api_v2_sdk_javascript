@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderFraudScore model module.
  * @module com.ultracart.admin.v2.models/OrderFraudScore
- * @version 4.0.132
+ * @version 4.0.133
  */
 class OrderFraudScore {
     /**

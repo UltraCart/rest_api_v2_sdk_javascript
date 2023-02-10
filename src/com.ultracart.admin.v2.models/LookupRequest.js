@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LookupRequest model module.
  * @module com.ultracart.admin.v2.models/LookupRequest
- * @version 4.0.132
+ * @version 4.0.133
  */
 class LookupRequest {
     /**
@@ -56,6 +56,9 @@ class LookupRequest {
             if (data.hasOwnProperty('max_hits')) {
                 obj['max_hits'] = ApiClient.convertToType(data['max_hits'], 'Number');
             }
+            if (data.hasOwnProperty('storefront_host_name')) {
+                obj['storefront_host_name'] = ApiClient.convertToType(data['storefront_host_name'], 'String');
+            }
             if (data.hasOwnProperty('storefront_oid')) {
                 obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
             }
@@ -83,6 +86,11 @@ LookupRequest.prototype['matches'] = undefined;
  * @member {Number} max_hits
  */
 LookupRequest.prototype['max_hits'] = undefined;
+
+/**
+ * @member {String} storefront_host_name
+ */
+LookupRequest.prototype['storefront_host_name'] = undefined;
 
 /**
  * @member {Number} storefront_oid
