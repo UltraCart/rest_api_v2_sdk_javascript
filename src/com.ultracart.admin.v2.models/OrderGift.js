@@ -34,7 +34,7 @@
   /**
    * The OrderGift model module.
    * @module com.ultracart.admin.v2.models/OrderGift
-   * @version 3.10.115
+   * @version 3.10.116
    */
 
   /**

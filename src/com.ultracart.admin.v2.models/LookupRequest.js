@@ -34,7 +34,7 @@
   /**
    * The LookupRequest model module.
    * @module com.ultracart.admin.v2.models/LookupRequest
-   * @version 3.10.115
+   * @version 3.10.116
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.matches = ApiClient.convertToType(data['matches'], 'String');
       if (data.hasOwnProperty('max_hits'))
         obj.max_hits = ApiClient.convertToType(data['max_hits'], 'Number');
+      if (data.hasOwnProperty('storefront_host_name'))
+        obj.storefront_host_name = ApiClient.convertToType(data['storefront_host_name'], 'String');
       if (data.hasOwnProperty('storefront_oid'))
         obj.storefront_oid = ApiClient.convertToType(data['storefront_oid'], 'Number');
       if (data.hasOwnProperty('subcategory'))
@@ -83,6 +85,11 @@
    * @member {Number} max_hits
    */
   exports.prototype.max_hits = undefined;
+
+  /**
+   * @member {String} storefront_host_name
+   */
+  exports.prototype.storefront_host_name = undefined;
 
   /**
    * @member {Number} storefront_oid
