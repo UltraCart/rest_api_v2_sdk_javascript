@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartFinalizeOrderRequest model module.
  * @module com.ultracart.admin.v2.models/CartFinalizeOrderRequest
- * @version 4.0.132
+ * @version 4.0.133
  */
 var CartFinalizeOrderRequest = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LookupRequest model module.
  * @module com.ultracart.admin.v2.models/LookupRequest
- * @version 4.0.132
+ * @version 4.0.133
  */
 var LookupRequest = /*#__PURE__*/function () {
   /**
@@ -66,6 +66,10 @@ var LookupRequest = /*#__PURE__*/function () {
           obj['max_hits'] = _ApiClient["default"].convertToType(data['max_hits'], 'Number');
         }
 
+        if (data.hasOwnProperty('storefront_host_name')) {
+          obj['storefront_host_name'] = _ApiClient["default"].convertToType(data['storefront_host_name'], 'String');
+        }
+
         if (data.hasOwnProperty('storefront_oid')) {
           obj['storefront_oid'] = _ApiClient["default"].convertToType(data['storefront_oid'], 'Number');
         }
@@ -97,6 +101,11 @@ LookupRequest.prototype['matches'] = undefined;
  */
 
 LookupRequest.prototype['max_hits'] = undefined;
+/**
+ * @member {String} storefront_host_name
+ */
+
+LookupRequest.prototype['storefront_host_name'] = undefined;
 /**
  * @member {Number} storefront_oid
  */

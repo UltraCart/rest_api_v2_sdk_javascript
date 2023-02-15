@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartAffiliate model module.
  * @module com.ultracart.admin.v2.models/CartAffiliate
- * @version 4.0.132
+ * @version 4.0.133
  */
 var CartAffiliate = /*#__PURE__*/function () {
   /**

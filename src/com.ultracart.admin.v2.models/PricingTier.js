@@ -17,7 +17,7 @@ import PricingTierNotification from './PricingTierNotification';
 /**
  * The PricingTier model module.
  * @module com.ultracart.admin.v2.models/PricingTier
- * @version 4.0.133
+ * @version 4.0.134
  */
 class PricingTier {
     /**
@@ -128,6 +128,9 @@ class PricingTier {
             }
             if (data.hasOwnProperty('realtime_percentage_discount')) {
                 obj['realtime_percentage_discount'] = ApiClient.convertToType(data['realtime_percentage_discount'], 'Number');
+            }
+            if (data.hasOwnProperty('restrict_to_distribution_center_oid')) {
+                obj['restrict_to_distribution_center_oid'] = ApiClient.convertToType(data['restrict_to_distribution_center_oid'], 'Number');
             }
             if (data.hasOwnProperty('signup_notification')) {
                 obj['signup_notification'] = PricingTierNotification.constructFromObject(data['signup_notification']);
@@ -311,6 +314,12 @@ PricingTier.prototype['pricing_tier_oid'] = undefined;
  * @member {Number} realtime_percentage_discount
  */
 PricingTier.prototype['realtime_percentage_discount'] = undefined;
+
+/**
+ * Restrict inventory to this distribution center oid
+ * @member {Number} restrict_to_distribution_center_oid
+ */
+PricingTier.prototype['restrict_to_distribution_center_oid'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/PricingTierNotification} signup_notification

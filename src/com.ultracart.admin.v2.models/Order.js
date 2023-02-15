@@ -38,11 +38,12 @@ import OrderShipping from './OrderShipping';
 import OrderSummary from './OrderSummary';
 import OrderTag from './OrderTag';
 import OrderTaxes from './OrderTaxes';
+import OrderUtm from './OrderUtm';
 
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.133
+ * @version 4.0.134
  */
 class Order {
     /**
@@ -177,6 +178,9 @@ class Order {
             }
             if (data.hasOwnProperty('taxes')) {
                 obj['taxes'] = OrderTaxes.constructFromObject(data['taxes']);
+            }
+            if (data.hasOwnProperty('utms')) {
+                obj['utms'] = ApiClient.convertToType(data['utms'], [OrderUtm]);
             }
         }
         return obj;
@@ -373,6 +377,12 @@ Order.prototype['Tags'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderTaxes} taxes
  */
 Order.prototype['taxes'] = undefined;
+
+/**
+ * UTM clicks.  The zero index is the most recent (last) UTM click
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderUtm>} utms
+ */
+Order.prototype['utms'] = undefined;
 
 
 
