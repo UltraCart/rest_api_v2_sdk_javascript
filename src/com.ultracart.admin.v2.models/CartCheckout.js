@@ -34,7 +34,7 @@
   /**
    * The CartCheckout model module.
    * @module com.ultracart.admin.v2.models/CartCheckout
-   * @version 3.10.116
+   * @version 3.10.117
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.comments = ApiClient.convertToType(data['comments'], 'String');
       if (data.hasOwnProperty('custom_field1'))
         obj.custom_field1 = ApiClient.convertToType(data['custom_field1'], 'String');
+      if (data.hasOwnProperty('custom_field10'))
+        obj.custom_field10 = ApiClient.convertToType(data['custom_field10'], 'String');
       if (data.hasOwnProperty('custom_field2'))
         obj.custom_field2 = ApiClient.convertToType(data['custom_field2'], 'String');
       if (data.hasOwnProperty('custom_field3'))
@@ -71,6 +73,10 @@
         obj.custom_field6 = ApiClient.convertToType(data['custom_field6'], 'String');
       if (data.hasOwnProperty('custom_field7'))
         obj.custom_field7 = ApiClient.convertToType(data['custom_field7'], 'String');
+      if (data.hasOwnProperty('custom_field8'))
+        obj.custom_field8 = ApiClient.convertToType(data['custom_field8'], 'String');
+      if (data.hasOwnProperty('custom_field9'))
+        obj.custom_field9 = ApiClient.convertToType(data['custom_field9'], 'String');
       if (data.hasOwnProperty('ip_address'))
         obj.ip_address = ApiClient.convertToType(data['ip_address'], 'String');
       if (data.hasOwnProperty('return_code'))
@@ -98,6 +104,12 @@
    * @member {String} custom_field1
    */
   exports.prototype.custom_field1 = undefined;
+
+  /**
+   * Custom field 10
+   * @member {String} custom_field10
+   */
+  exports.prototype.custom_field10 = undefined;
 
   /**
    * Custom field 2
@@ -134,6 +146,18 @@
    * @member {String} custom_field7
    */
   exports.prototype.custom_field7 = undefined;
+
+  /**
+   * Custom field 8
+   * @member {String} custom_field8
+   */
+  exports.prototype.custom_field8 = undefined;
+
+  /**
+   * Custom field 9
+   * @member {String} custom_field9
+   */
+  exports.prototype.custom_field9 = undefined;
 
   /**
    * IP Address (read only unless non-browser key authenticated)

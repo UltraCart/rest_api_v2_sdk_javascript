@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/OrderAffiliate', 'com.ultracart.admin.v2.models/OrderAutoOrder', 'com.ultracart.admin.v2.models/OrderBilling', 'com.ultracart.admin.v2.models/OrderBuysafe', 'com.ultracart.admin.v2.models/OrderChannelPartner', 'com.ultracart.admin.v2.models/OrderCheckout', 'com.ultracart.admin.v2.models/OrderCoupon', 'com.ultracart.admin.v2.models/OrderDigitalOrder', 'com.ultracart.admin.v2.models/OrderEdi', 'com.ultracart.admin.v2.models/OrderFraudScore', 'com.ultracart.admin.v2.models/OrderGift', 'com.ultracart.admin.v2.models/OrderGiftCertificate', 'com.ultracart.admin.v2.models/OrderInternal', 'com.ultracart.admin.v2.models/OrderItem', 'com.ultracart.admin.v2.models/OrderLinkedShipment', 'com.ultracart.admin.v2.models/OrderMarketing', 'com.ultracart.admin.v2.models/OrderPayment', 'com.ultracart.admin.v2.models/OrderPointOfSale', 'com.ultracart.admin.v2.models/OrderProperty', 'com.ultracart.admin.v2.models/OrderQuote', 'com.ultracart.admin.v2.models/OrderSalesforce', 'com.ultracart.admin.v2.models/OrderShipping', 'com.ultracart.admin.v2.models/OrderSummary', 'com.ultracart.admin.v2.models/OrderTag', 'com.ultracart.admin.v2.models/OrderTaxes'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Customer', 'com.ultracart.admin.v2.models/OrderAffiliate', 'com.ultracart.admin.v2.models/OrderAutoOrder', 'com.ultracart.admin.v2.models/OrderBilling', 'com.ultracart.admin.v2.models/OrderBuysafe', 'com.ultracart.admin.v2.models/OrderChannelPartner', 'com.ultracart.admin.v2.models/OrderCheckout', 'com.ultracart.admin.v2.models/OrderCoupon', 'com.ultracart.admin.v2.models/OrderDigitalOrder', 'com.ultracart.admin.v2.models/OrderEdi', 'com.ultracart.admin.v2.models/OrderFraudScore', 'com.ultracart.admin.v2.models/OrderGift', 'com.ultracart.admin.v2.models/OrderGiftCertificate', 'com.ultracart.admin.v2.models/OrderInternal', 'com.ultracart.admin.v2.models/OrderItem', 'com.ultracart.admin.v2.models/OrderLinkedShipment', 'com.ultracart.admin.v2.models/OrderMarketing', 'com.ultracart.admin.v2.models/OrderPayment', 'com.ultracart.admin.v2.models/OrderPointOfSale', 'com.ultracart.admin.v2.models/OrderProperty', 'com.ultracart.admin.v2.models/OrderQuote', 'com.ultracart.admin.v2.models/OrderSalesforce', 'com.ultracart.admin.v2.models/OrderShipping', 'com.ultracart.admin.v2.models/OrderSummary', 'com.ultracart.admin.v2.models/OrderTag', 'com.ultracart.admin.v2.models/OrderTaxes', 'com.ultracart.admin.v2.models/OrderUtm'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Customer'), require('./OrderAffiliate'), require('./OrderAutoOrder'), require('./OrderBilling'), require('./OrderBuysafe'), require('./OrderChannelPartner'), require('./OrderCheckout'), require('./OrderCoupon'), require('./OrderDigitalOrder'), require('./OrderEdi'), require('./OrderFraudScore'), require('./OrderGift'), require('./OrderGiftCertificate'), require('./OrderInternal'), require('./OrderItem'), require('./OrderLinkedShipment'), require('./OrderMarketing'), require('./OrderPayment'), require('./OrderPointOfSale'), require('./OrderProperty'), require('./OrderQuote'), require('./OrderSalesforce'), require('./OrderShipping'), require('./OrderSummary'), require('./OrderTag'), require('./OrderTaxes'));
+    module.exports = factory(require('../ApiClient'), require('./Customer'), require('./OrderAffiliate'), require('./OrderAutoOrder'), require('./OrderBilling'), require('./OrderBuysafe'), require('./OrderChannelPartner'), require('./OrderCheckout'), require('./OrderCoupon'), require('./OrderDigitalOrder'), require('./OrderEdi'), require('./OrderFraudScore'), require('./OrderGift'), require('./OrderGiftCertificate'), require('./OrderInternal'), require('./OrderItem'), require('./OrderLinkedShipment'), require('./OrderMarketing'), require('./OrderPayment'), require('./OrderPointOfSale'), require('./OrderProperty'), require('./OrderQuote'), require('./OrderSalesforce'), require('./OrderShipping'), require('./OrderSummary'), require('./OrderTag'), require('./OrderTaxes'), require('./OrderUtm'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Order = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.OrderAffiliate, root.UltraCartRestApiV2.OrderAutoOrder, root.UltraCartRestApiV2.OrderBilling, root.UltraCartRestApiV2.OrderBuysafe, root.UltraCartRestApiV2.OrderChannelPartner, root.UltraCartRestApiV2.OrderCheckout, root.UltraCartRestApiV2.OrderCoupon, root.UltraCartRestApiV2.OrderDigitalOrder, root.UltraCartRestApiV2.OrderEdi, root.UltraCartRestApiV2.OrderFraudScore, root.UltraCartRestApiV2.OrderGift, root.UltraCartRestApiV2.OrderGiftCertificate, root.UltraCartRestApiV2.OrderInternal, root.UltraCartRestApiV2.OrderItem, root.UltraCartRestApiV2.OrderLinkedShipment, root.UltraCartRestApiV2.OrderMarketing, root.UltraCartRestApiV2.OrderPayment, root.UltraCartRestApiV2.OrderPointOfSale, root.UltraCartRestApiV2.OrderProperty, root.UltraCartRestApiV2.OrderQuote, root.UltraCartRestApiV2.OrderSalesforce, root.UltraCartRestApiV2.OrderShipping, root.UltraCartRestApiV2.OrderSummary, root.UltraCartRestApiV2.OrderTag, root.UltraCartRestApiV2.OrderTaxes);
+    root.UltraCartRestApiV2.Order = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Customer, root.UltraCartRestApiV2.OrderAffiliate, root.UltraCartRestApiV2.OrderAutoOrder, root.UltraCartRestApiV2.OrderBilling, root.UltraCartRestApiV2.OrderBuysafe, root.UltraCartRestApiV2.OrderChannelPartner, root.UltraCartRestApiV2.OrderCheckout, root.UltraCartRestApiV2.OrderCoupon, root.UltraCartRestApiV2.OrderDigitalOrder, root.UltraCartRestApiV2.OrderEdi, root.UltraCartRestApiV2.OrderFraudScore, root.UltraCartRestApiV2.OrderGift, root.UltraCartRestApiV2.OrderGiftCertificate, root.UltraCartRestApiV2.OrderInternal, root.UltraCartRestApiV2.OrderItem, root.UltraCartRestApiV2.OrderLinkedShipment, root.UltraCartRestApiV2.OrderMarketing, root.UltraCartRestApiV2.OrderPayment, root.UltraCartRestApiV2.OrderPointOfSale, root.UltraCartRestApiV2.OrderProperty, root.UltraCartRestApiV2.OrderQuote, root.UltraCartRestApiV2.OrderSalesforce, root.UltraCartRestApiV2.OrderShipping, root.UltraCartRestApiV2.OrderSummary, root.UltraCartRestApiV2.OrderTag, root.UltraCartRestApiV2.OrderTaxes, root.UltraCartRestApiV2.OrderUtm);
   }
-}(this, function(ApiClient, Customer, OrderAffiliate, OrderAutoOrder, OrderBilling, OrderBuysafe, OrderChannelPartner, OrderCheckout, OrderCoupon, OrderDigitalOrder, OrderEdi, OrderFraudScore, OrderGift, OrderGiftCertificate, OrderInternal, OrderItem, OrderLinkedShipment, OrderMarketing, OrderPayment, OrderPointOfSale, OrderProperty, OrderQuote, OrderSalesforce, OrderShipping, OrderSummary, OrderTag, OrderTaxes) {
+}(this, function(ApiClient, Customer, OrderAffiliate, OrderAutoOrder, OrderBilling, OrderBuysafe, OrderChannelPartner, OrderCheckout, OrderCoupon, OrderDigitalOrder, OrderEdi, OrderFraudScore, OrderGift, OrderGiftCertificate, OrderInternal, OrderItem, OrderLinkedShipment, OrderMarketing, OrderPayment, OrderPointOfSale, OrderProperty, OrderQuote, OrderSalesforce, OrderShipping, OrderSummary, OrderTag, OrderTaxes, OrderUtm) {
   'use strict';
 
   /**
    * The Order model module.
    * @module com.ultracart.admin.v2.models/Order
-   * @version 3.10.116
+   * @version 3.10.117
    */
 
   /**
@@ -125,6 +125,8 @@
         obj.Tags = ApiClient.convertToType(data['Tags'], [OrderTag]);
       if (data.hasOwnProperty('taxes'))
         obj.taxes = OrderTaxes.constructFromObject(data['taxes']);
+      if (data.hasOwnProperty('utms'))
+        obj.utms = ApiClient.convertToType(data['utms'], [OrderUtm]);
     }
     return obj;
   }
@@ -317,6 +319,12 @@
    * @member {module:com.ultracart.admin.v2.models/OrderTaxes} taxes
    */
   exports.prototype.taxes = undefined;
+
+  /**
+   * UTM clicks.  The zero index is the most recent (last) UTM click
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderUtm>} utms
+   */
+  exports.prototype.utms = undefined;
 
 
   /**
