@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationJoinRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationJoinRequest
- * @version 4.0.134
+ * @version 4.0.135
  */
 class ConversationJoinRequest {
     /**

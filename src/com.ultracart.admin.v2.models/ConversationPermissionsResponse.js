@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationPermissionsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPermissionsResponse
- * @version 4.0.134
+ * @version 4.0.135
  */
 class ConversationPermissionsResponse {
     /**

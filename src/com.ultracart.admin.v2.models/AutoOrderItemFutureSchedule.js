@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderItemFutureSchedule model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule
- * @version 4.0.134
+ * @version 4.0.135
  */
 class AutoOrderItemFutureSchedule {
     /**

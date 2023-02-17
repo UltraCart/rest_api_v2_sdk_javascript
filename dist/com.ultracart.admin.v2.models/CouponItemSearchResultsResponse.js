@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponItemSearchResultsResponse model module.
  * @module com.ultracart.admin.v2.models/CouponItemSearchResultsResponse
- * @version 4.0.133
+ * @version 4.0.134
  */
 var CouponItemSearchResultsResponse = /*#__PURE__*/function () {
   /**

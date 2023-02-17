@@ -48,7 +48,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.134
+* @version 4.0.135
 */
 export default class ConversationApi {
 
@@ -1211,6 +1211,48 @@ export default class ConversationApi {
       let returnType = ConversationCannedMessagesResponse;
       return this.apiClient.callApi(
         '/conversation/canned_messages/search', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the smsUnsubscribeConversation operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~smsUnsubscribeConversationCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Unsubscribe any SMS participants in this conversation
+     * Unsubscribe any SMS participants in this conversation 
+     * @param {String} conversation_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~smsUnsubscribeConversationCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    smsUnsubscribeConversation(conversation_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'conversation_uuid' is set
+      if (conversation_uuid === undefined || conversation_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_uuid' when calling smsUnsubscribeConversation");
+      }
+
+      let pathParams = {
+        'conversation_uuid': conversation_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/conversation/conversations/{conversation_uuid}/sms_unsubscribe', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

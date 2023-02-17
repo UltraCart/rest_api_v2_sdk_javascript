@@ -59,6 +59,8 @@ var _OrderTag = _interopRequireDefault(require("./OrderTag"));
 
 var _OrderTaxes = _interopRequireDefault(require("./OrderTaxes"));
 
+var _OrderUtm = _interopRequireDefault(require("./OrderUtm"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70,7 +72,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.133
+ * @version 4.0.134
  */
 var Order = /*#__PURE__*/function () {
   /**
@@ -244,6 +246,10 @@ var Order = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('taxes')) {
           obj['taxes'] = _OrderTaxes["default"].constructFromObject(data['taxes']);
+        }
+
+        if (data.hasOwnProperty('utms')) {
+          obj['utms'] = _ApiClient["default"].convertToType(data['utms'], [_OrderUtm["default"]]);
         }
       }
 
@@ -443,6 +449,12 @@ Order.prototype['Tags'] = undefined;
  */
 
 Order.prototype['taxes'] = undefined;
+/**
+ * UTM clicks.  The zero index is the most recent (last) UTM click
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderUtm>} utms
+ */
+
+Order.prototype['utms'] = undefined;
 /**
  * Allowed values for the <code>current_stage</code> property.
  * @enum {String}

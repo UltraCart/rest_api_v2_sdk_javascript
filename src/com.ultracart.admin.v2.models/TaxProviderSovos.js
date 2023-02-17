@@ -17,7 +17,7 @@ import SovosConfig from './SovosConfig';
 /**
  * The TaxProviderSovos model module.
  * @module com.ultracart.admin.v2.models/TaxProviderSovos
- * @version 4.0.134
+ * @version 4.0.135
  */
 class TaxProviderSovos {
     /**

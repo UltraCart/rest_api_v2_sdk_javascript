@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LibraryItemEmail model module.
  * @module com.ultracart.admin.v2.models/LibraryItemEmail
- * @version 4.0.134
+ * @version 4.0.135
  */
 class LibraryItemEmail {
     /**

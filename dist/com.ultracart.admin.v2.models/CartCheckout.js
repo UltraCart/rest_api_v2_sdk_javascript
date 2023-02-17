@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartCheckout model module.
  * @module com.ultracart.admin.v2.models/CartCheckout
- * @version 4.0.133
+ * @version 4.0.134
  */
 var CartCheckout = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,10 @@ var CartCheckout = /*#__PURE__*/function () {
           obj['custom_field1'] = _ApiClient["default"].convertToType(data['custom_field1'], 'String');
         }
 
+        if (data.hasOwnProperty('custom_field10')) {
+          obj['custom_field10'] = _ApiClient["default"].convertToType(data['custom_field10'], 'String');
+        }
+
         if (data.hasOwnProperty('custom_field2')) {
           obj['custom_field2'] = _ApiClient["default"].convertToType(data['custom_field2'], 'String');
         }
@@ -84,6 +88,14 @@ var CartCheckout = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('custom_field7')) {
           obj['custom_field7'] = _ApiClient["default"].convertToType(data['custom_field7'], 'String');
+        }
+
+        if (data.hasOwnProperty('custom_field8')) {
+          obj['custom_field8'] = _ApiClient["default"].convertToType(data['custom_field8'], 'String');
+        }
+
+        if (data.hasOwnProperty('custom_field9')) {
+          obj['custom_field9'] = _ApiClient["default"].convertToType(data['custom_field9'], 'String');
         }
 
         if (data.hasOwnProperty('ip_address')) {
@@ -131,6 +143,12 @@ CartCheckout.prototype['comments'] = undefined;
 
 CartCheckout.prototype['custom_field1'] = undefined;
 /**
+ * Custom field 10
+ * @member {String} custom_field10
+ */
+
+CartCheckout.prototype['custom_field10'] = undefined;
+/**
  * Custom field 2
  * @member {String} custom_field2
  */
@@ -166,6 +184,18 @@ CartCheckout.prototype['custom_field6'] = undefined;
  */
 
 CartCheckout.prototype['custom_field7'] = undefined;
+/**
+ * Custom field 8
+ * @member {String} custom_field8
+ */
+
+CartCheckout.prototype['custom_field8'] = undefined;
+/**
+ * Custom field 9
+ * @member {String} custom_field9
+ */
+
+CartCheckout.prototype['custom_field9'] = undefined;
 /**
  * IP Address (read only unless non-browser key authenticated)
  * @member {String} ip_address

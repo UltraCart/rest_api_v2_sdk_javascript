@@ -3729,6 +3729,12 @@ Object.defineProperty(exports, "OrderTransactionalMerchantNote", {
     return _OrderTransactionalMerchantNote["default"];
   }
 });
+Object.defineProperty(exports, "OrderUtm", {
+  enumerable: true,
+  get: function get() {
+    return _OrderUtm["default"];
+  }
+});
 Object.defineProperty(exports, "OrdersResponse", {
   enumerable: true,
   get: function get() {
@@ -5759,6 +5765,8 @@ var _OrderTrackingNumberDetail = _interopRequireDefault(require("./com.ultracart
 var _OrderTrackingNumberDetails = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderTrackingNumberDetails"));
 
 var _OrderTransactionalMerchantNote = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderTransactionalMerchantNote"));
+
+var _OrderUtm = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderUtm"));
 
 var _OrdersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrdersResponse"));
 

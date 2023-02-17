@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponFreeItemWithSubtotal model module.
  * @module com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal
- * @version 4.0.134
+ * @version 4.0.135
  */
 class CouponFreeItemWithSubtotal {
     /**

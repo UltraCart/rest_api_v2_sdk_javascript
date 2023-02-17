@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderCheckout model module.
  * @module com.ultracart.admin.v2.models/OrderCheckout
- * @version 4.0.133
+ * @version 4.0.134
  */
 var OrderCheckout = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,10 @@ var OrderCheckout = /*#__PURE__*/function () {
           obj['custom_field1'] = _ApiClient["default"].convertToType(data['custom_field1'], 'String');
         }
 
+        if (data.hasOwnProperty('custom_field10')) {
+          obj['custom_field10'] = _ApiClient["default"].convertToType(data['custom_field10'], 'String');
+        }
+
         if (data.hasOwnProperty('custom_field2')) {
           obj['custom_field2'] = _ApiClient["default"].convertToType(data['custom_field2'], 'String');
         }
@@ -90,6 +94,14 @@ var OrderCheckout = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('custom_field7')) {
           obj['custom_field7'] = _ApiClient["default"].convertToType(data['custom_field7'], 'String');
+        }
+
+        if (data.hasOwnProperty('custom_field8')) {
+          obj['custom_field8'] = _ApiClient["default"].convertToType(data['custom_field8'], 'String');
+        }
+
+        if (data.hasOwnProperty('custom_field9')) {
+          obj['custom_field9'] = _ApiClient["default"].convertToType(data['custom_field9'], 'String');
         }
 
         if (data.hasOwnProperty('customer_ip_address')) {
@@ -138,6 +150,12 @@ OrderCheckout.prototype['comments'] = undefined;
 
 OrderCheckout.prototype['custom_field1'] = undefined;
 /**
+ * Custom field 10
+ * @member {String} custom_field10
+ */
+
+OrderCheckout.prototype['custom_field10'] = undefined;
+/**
  * Custom field 2
  * @member {String} custom_field2
  */
@@ -173,6 +191,18 @@ OrderCheckout.prototype['custom_field6'] = undefined;
  */
 
 OrderCheckout.prototype['custom_field7'] = undefined;
+/**
+ * Custom field 8
+ * @member {String} custom_field8
+ */
+
+OrderCheckout.prototype['custom_field8'] = undefined;
+/**
+ * Custom field 9
+ * @member {String} custom_field9
+ */
+
+OrderCheckout.prototype['custom_field9'] = undefined;
 /**
  * IP address of the customer when placing the order
  * @member {String} customer_ip_address
