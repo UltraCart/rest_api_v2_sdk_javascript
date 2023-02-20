@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponAutoApplyCondition model module.
  * @module com.ultracart.admin.v2.models/CouponAutoApplyCondition
- * @version 4.0.135
+ * @version 4.0.136
  */
 class CouponAutoApplyCondition {
     /**

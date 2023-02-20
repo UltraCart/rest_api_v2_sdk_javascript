@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderAffiliateLedger model module.
  * @module com.ultracart.admin.v2.models/OrderAffiliateLedger
- * @version 4.0.134
+ * @version 4.0.135
  */
 var OrderAffiliateLedger = /*#__PURE__*/function () {
   /**

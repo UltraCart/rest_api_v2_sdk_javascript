@@ -21,7 +21,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
 * @module ApiClient
-* @version 4.0.134
+* @version 4.0.135
 */
 
 /**
@@ -75,7 +75,7 @@ var ApiClient = /*#__PURE__*/function () {
      */
 
     this.defaultHeaders = {
-      'User-Agent': 'OpenAPI-Generator/4.0.134/Javascript'
+      'User-Agent': 'OpenAPI-Generator/4.0.135/Javascript'
     };
     /**
      * The default HTTP timeout for all API calls.

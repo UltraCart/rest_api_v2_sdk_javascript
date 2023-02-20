@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ScreenRecordingPageViewDataResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewDataResponse
- * @version 4.0.135
+ * @version 4.0.136
  */
 class ScreenRecordingPageViewDataResponse {
     /**

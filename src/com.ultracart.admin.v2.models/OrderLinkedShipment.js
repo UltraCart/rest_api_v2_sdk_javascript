@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderLinkedShipment model module.
  * @module com.ultracart.admin.v2.models/OrderLinkedShipment
- * @version 4.0.135
+ * @version 4.0.136
  */
 class OrderLinkedShipment {
     /**

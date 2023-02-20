@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationWebchatQueueStatusAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent
- * @version 4.0.134
+ * @version 4.0.135
  */
 var ConversationWebchatQueueStatusAgent = /*#__PURE__*/function () {
   /**

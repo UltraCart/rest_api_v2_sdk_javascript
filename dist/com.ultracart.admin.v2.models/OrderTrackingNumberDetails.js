@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderTrackingNumberDetails model module.
  * @module com.ultracart.admin.v2.models/OrderTrackingNumberDetails
- * @version 4.0.134
+ * @version 4.0.135
  */
 var OrderTrackingNumberDetails = /*#__PURE__*/function () {
   /**

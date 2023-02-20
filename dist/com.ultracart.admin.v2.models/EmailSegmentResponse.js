@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailSegmentResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSegmentResponse
- * @version 4.0.134
+ * @version 4.0.135
  */
 var EmailSegmentResponse = /*#__PURE__*/function () {
   /**

@@ -23,7 +23,7 @@ import Weight from './Weight';
 /**
  * The OrderItem model module.
  * @module com.ultracart.admin.v2.models/OrderItem
- * @version 4.0.135
+ * @version 4.0.136
  */
 class OrderItem {
     /**
@@ -182,6 +182,12 @@ class OrderItem {
             }
             if (data.hasOwnProperty('quickbooks_class')) {
                 obj['quickbooks_class'] = ApiClient.convertToType(data['quickbooks_class'], 'String');
+            }
+            if (data.hasOwnProperty('refund_reason')) {
+                obj['refund_reason'] = ApiClient.convertToType(data['refund_reason'], 'String');
+            }
+            if (data.hasOwnProperty('return_reason')) {
+                obj['return_reason'] = ApiClient.convertToType(data['return_reason'], 'String');
             }
             if (data.hasOwnProperty('ship_separately')) {
                 obj['ship_separately'] = ApiClient.convertToType(data['ship_separately'], 'Boolean');
@@ -488,6 +494,18 @@ OrderItem.prototype['quantity_refunded'] = undefined;
  * @member {String} quickbooks_class
  */
 OrderItem.prototype['quickbooks_class'] = undefined;
+
+/**
+ * Refund reason code.  This can only be written during a refund operation otherwise this field is read only.
+ * @member {String} refund_reason
+ */
+OrderItem.prototype['refund_reason'] = undefined;
+
+/**
+ * Return reason code.  This can only be written during a refund operation otherwise this field is read only.
+ * @member {String} return_reason
+ */
+OrderItem.prototype['return_reason'] = undefined;
 
 /**
  * True if this item ships in a separate box

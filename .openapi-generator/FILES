@@ -608,6 +608,7 @@ docs/OrderProperty.md
 docs/OrderQuery.md
 docs/OrderQueryBatch.md
 docs/OrderQuote.md
+docs/OrderReason.md
 docs/OrderRefundableResponse.md
 docs/OrderReplacement.md
 docs/OrderReplacementItem.md
@@ -1355,6 +1356,7 @@ src/com.ultracart.admin.v2.models/OrderProperty.js
 src/com.ultracart.admin.v2.models/OrderQuery.js
 src/com.ultracart.admin.v2.models/OrderQueryBatch.js
 src/com.ultracart.admin.v2.models/OrderQuote.js
+src/com.ultracart.admin.v2.models/OrderReason.js
 src/com.ultracart.admin.v2.models/OrderRefundableResponse.js
 src/com.ultracart.admin.v2.models/OrderReplacement.js
 src/com.ultracart.admin.v2.models/OrderReplacementItem.js

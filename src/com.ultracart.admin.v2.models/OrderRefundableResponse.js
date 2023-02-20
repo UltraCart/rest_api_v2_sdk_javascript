@@ -13,13 +13,14 @@
 
 import ApiClient from '../ApiClient';
 import Error from './Error';
+import OrderReason from './OrderReason';
 import ResponseMetadata from './ResponseMetadata';
 import Warning from './Warning';
 
 /**
  * The OrderRefundableResponse model module.
  * @module com.ultracart.admin.v2.models/OrderRefundableResponse
- * @version 4.0.135
+ * @version 4.0.136
  */
 class OrderRefundableResponse {
     /**
@@ -53,8 +54,26 @@ class OrderRefundableResponse {
             if (data.hasOwnProperty('error')) {
                 obj['error'] = Error.constructFromObject(data['error']);
             }
+            if (data.hasOwnProperty('item_level_refund_reason_required')) {
+                obj['item_level_refund_reason_required'] = ApiClient.convertToType(data['item_level_refund_reason_required'], 'Boolean');
+            }
+            if (data.hasOwnProperty('item_level_refund_reasons')) {
+                obj['item_level_refund_reasons'] = ApiClient.convertToType(data['item_level_refund_reasons'], [OrderReason]);
+            }
+            if (data.hasOwnProperty('item_level_return_reasons')) {
+                obj['item_level_return_reasons'] = ApiClient.convertToType(data['item_level_return_reasons'], [OrderReason]);
+            }
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
+            }
+            if (data.hasOwnProperty('order_level_refund_reason_required')) {
+                obj['order_level_refund_reason_required'] = ApiClient.convertToType(data['order_level_refund_reason_required'], 'Boolean');
+            }
+            if (data.hasOwnProperty('order_level_refund_reasons')) {
+                obj['order_level_refund_reasons'] = ApiClient.convertToType(data['order_level_refund_reasons'], [OrderReason]);
+            }
+            if (data.hasOwnProperty('order_level_reject_reasons')) {
+                obj['order_level_reject_reasons'] = ApiClient.convertToType(data['order_level_reject_reasons'], [OrderReason]);
             }
             if (data.hasOwnProperty('refundable')) {
                 obj['refundable'] = ApiClient.convertToType(data['refundable'], 'Boolean');
@@ -78,9 +97,45 @@ class OrderRefundableResponse {
 OrderRefundableResponse.prototype['error'] = undefined;
 
 /**
+ * True if the item level refund reason is required
+ * @member {Boolean} item_level_refund_reason_required
+ */
+OrderRefundableResponse.prototype['item_level_refund_reason_required'] = undefined;
+
+/**
+ * Reason codes available at the item level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} item_level_refund_reasons
+ */
+OrderRefundableResponse.prototype['item_level_refund_reasons'] = undefined;
+
+/**
+ * Return codes available at the item level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} item_level_return_reasons
+ */
+OrderRefundableResponse.prototype['item_level_return_reasons'] = undefined;
+
+/**
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
 OrderRefundableResponse.prototype['metadata'] = undefined;
+
+/**
+ * True if the order level refund reason is required
+ * @member {Boolean} order_level_refund_reason_required
+ */
+OrderRefundableResponse.prototype['order_level_refund_reason_required'] = undefined;
+
+/**
+ * Reason codes available at the order level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} order_level_refund_reasons
+ */
+OrderRefundableResponse.prototype['order_level_refund_reasons'] = undefined;
+
+/**
+ * Reject codes available at the order level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} order_level_reject_reasons
+ */
+OrderRefundableResponse.prototype['order_level_reject_reasons'] = undefined;
 
 /**
  * Whether the order is refundable or not.  Null should be interpreted as false.

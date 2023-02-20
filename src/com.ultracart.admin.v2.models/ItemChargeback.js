@@ -18,7 +18,7 @@ import ItemChargebackAdjustmentRequest from './ItemChargebackAdjustmentRequest';
 /**
  * The ItemChargeback model module.
  * @module com.ultracart.admin.v2.models/ItemChargeback
- * @version 4.0.135
+ * @version 4.0.136
  */
 class ItemChargeback {
     /**

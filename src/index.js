@@ -605,6 +605,7 @@ import OrderProperty from './com.ultracart.admin.v2.models/OrderProperty';
 import OrderQuery from './com.ultracart.admin.v2.models/OrderQuery';
 import OrderQueryBatch from './com.ultracart.admin.v2.models/OrderQueryBatch';
 import OrderQuote from './com.ultracart.admin.v2.models/OrderQuote';
+import OrderReason from './com.ultracart.admin.v2.models/OrderReason';
 import OrderRefundableResponse from './com.ultracart.admin.v2.models/OrderRefundableResponse';
 import OrderReplacement from './com.ultracart.admin.v2.models/OrderReplacement';
 import OrderReplacementItem from './com.ultracart.admin.v2.models/OrderReplacementItem';
@@ -801,7 +802,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.135
+* @version 4.0.136
 */
 export {
     /**
@@ -4361,6 +4362,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderQuote}
      */
     OrderQuote,
+
+    /**
+     * The OrderReason model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderReason}
+     */
+    OrderReason,
 
     /**
      * The OrderRefundableResponse model constructor.
