@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/OrderReason', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./Warning'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./OrderReason'), require('./ResponseMetadata'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderRefundableResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
+    root.UltraCartRestApiV2.OrderRefundableResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.OrderReason, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient, Error, ResponseMetadata, Warning) {
+}(this, function(ApiClient, Error, OrderReason, ResponseMetadata, Warning) {
   'use strict';
 
   /**
    * The OrderRefundableResponse model module.
    * @module com.ultracart.admin.v2.models/OrderRefundableResponse
-   * @version 3.10.118
+   * @version 3.10.119
    */
 
   /**
@@ -57,8 +57,20 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
+      if (data.hasOwnProperty('item_level_refund_reason_required'))
+        obj.item_level_refund_reason_required = ApiClient.convertToType(data['item_level_refund_reason_required'], 'Boolean');
+      if (data.hasOwnProperty('item_level_refund_reasons'))
+        obj.item_level_refund_reasons = ApiClient.convertToType(data['item_level_refund_reasons'], [OrderReason]);
+      if (data.hasOwnProperty('item_level_return_reasons'))
+        obj.item_level_return_reasons = ApiClient.convertToType(data['item_level_return_reasons'], [OrderReason]);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('order_level_refund_reason_required'))
+        obj.order_level_refund_reason_required = ApiClient.convertToType(data['order_level_refund_reason_required'], 'Boolean');
+      if (data.hasOwnProperty('order_level_refund_reasons'))
+        obj.order_level_refund_reasons = ApiClient.convertToType(data['order_level_refund_reasons'], [OrderReason]);
+      if (data.hasOwnProperty('order_level_reject_reasons'))
+        obj.order_level_reject_reasons = ApiClient.convertToType(data['order_level_reject_reasons'], [OrderReason]);
       if (data.hasOwnProperty('refundable'))
         obj.refundable = ApiClient.convertToType(data['refundable'], 'Boolean');
       if (data.hasOwnProperty('success'))
@@ -75,9 +87,45 @@
   exports.prototype.error = undefined;
 
   /**
+   * True if the item level refund reason is required
+   * @member {Boolean} item_level_refund_reason_required
+   */
+  exports.prototype.item_level_refund_reason_required = undefined;
+
+  /**
+   * Reason codes available at the item level.
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} item_level_refund_reasons
+   */
+  exports.prototype.item_level_refund_reasons = undefined;
+
+  /**
+   * Return codes available at the item level.
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} item_level_return_reasons
+   */
+  exports.prototype.item_level_return_reasons = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype.metadata = undefined;
+
+  /**
+   * True if the order level refund reason is required
+   * @member {Boolean} order_level_refund_reason_required
+   */
+  exports.prototype.order_level_refund_reason_required = undefined;
+
+  /**
+   * Reason codes available at the order level.
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} order_level_refund_reasons
+   */
+  exports.prototype.order_level_refund_reasons = undefined;
+
+  /**
+   * Reject codes available at the order level.
+   * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} order_level_reject_reasons
+   */
+  exports.prototype.order_level_reject_reasons = undefined;
 
   /**
    * Whether the order is refundable or not.  Null should be interpreted as false.

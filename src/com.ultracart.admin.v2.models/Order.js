@@ -34,7 +34,7 @@
   /**
    * The Order model module.
    * @module com.ultracart.admin.v2.models/Order
-   * @version 3.10.118
+   * @version 3.10.119
    */
 
   /**
@@ -113,8 +113,12 @@
         obj.quote = OrderQuote.constructFromObject(data['quote']);
       if (data.hasOwnProperty('refund_dts'))
         obj.refund_dts = ApiClient.convertToType(data['refund_dts'], 'String');
+      if (data.hasOwnProperty('refund_reason'))
+        obj.refund_reason = ApiClient.convertToType(data['refund_reason'], 'String');
       if (data.hasOwnProperty('reject_dts'))
         obj.reject_dts = ApiClient.convertToType(data['reject_dts'], 'String');
+      if (data.hasOwnProperty('reject_reason'))
+        obj.reject_reason = ApiClient.convertToType(data['reject_reason'], 'String');
       if (data.hasOwnProperty('salesforce'))
         obj.salesforce = OrderSalesforce.constructFromObject(data['salesforce']);
       if (data.hasOwnProperty('shipping'))
@@ -289,10 +293,22 @@
   exports.prototype.refund_dts = undefined;
 
   /**
+   * Refund reason code.  This can only be written during a refund operation otherwise this field is read only.
+   * @member {String} refund_reason
+   */
+  exports.prototype.refund_reason = undefined;
+
+  /**
    * If the order was rejected, the date/time that the rejection occurred
    * @member {String} reject_dts
    */
   exports.prototype.reject_dts = undefined;
+
+  /**
+   * Reject reason code.  This can only be written during a reject operation otherwise this field is read only.
+   * @member {String} reject_reason
+   */
+  exports.prototype.reject_reason = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderSalesforce} salesforce

@@ -34,7 +34,7 @@
   /**
    * The Currency model module.
    * @module com.ultracart.admin.v2.models/Currency
-   * @version 3.10.118
+   * @version 3.10.119
    */
 
   /**
