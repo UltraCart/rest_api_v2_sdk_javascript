@@ -34,7 +34,7 @@
   /**
    * The ConversationEngagement model module.
    * @module com.ultracart.admin.v2.models/ConversationEngagement
-   * @version 3.10.119
+   * @version 3.10.120
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.conversation_engagement_oid = ApiClient.convertToType(data['conversation_engagement_oid'], 'Number');
       if (data.hasOwnProperty('customer_greeting'))
         obj.customer_greeting = ApiClient.convertToType(data['customer_greeting'], 'String');
+      if (data.hasOwnProperty('customer_initiated'))
+        obj.customer_initiated = ApiClient.convertToType(data['customer_initiated'], 'Boolean');
       if (data.hasOwnProperty('department_oids'))
         obj.department_oids = ApiClient.convertToType(data['department_oids'], ['Number']);
       if (data.hasOwnProperty('engagement_name'))
@@ -89,6 +91,11 @@
    * @member {String} customer_greeting
    */
   exports.prototype.customer_greeting = undefined;
+
+  /**
+   * @member {Boolean} customer_initiated
+   */
+  exports.prototype.customer_initiated = undefined;
 
   /**
    * @member {Array.<Number>} department_oids
