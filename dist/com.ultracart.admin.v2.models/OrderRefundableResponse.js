@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _Error = _interopRequireDefault(require("./Error"));
 
+var _OrderReason = _interopRequireDefault(require("./OrderReason"));
+
 var _ResponseMetadata = _interopRequireDefault(require("./ResponseMetadata"));
 
 var _Warning = _interopRequireDefault(require("./Warning"));
@@ -24,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderRefundableResponse model module.
  * @module com.ultracart.admin.v2.models/OrderRefundableResponse
- * @version 4.0.135
+ * @version 4.0.136
  */
 var OrderRefundableResponse = /*#__PURE__*/function () {
   /**
@@ -64,8 +66,32 @@ var OrderRefundableResponse = /*#__PURE__*/function () {
           obj['error'] = _Error["default"].constructFromObject(data['error']);
         }
 
+        if (data.hasOwnProperty('item_level_refund_reason_required')) {
+          obj['item_level_refund_reason_required'] = _ApiClient["default"].convertToType(data['item_level_refund_reason_required'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('item_level_refund_reasons')) {
+          obj['item_level_refund_reasons'] = _ApiClient["default"].convertToType(data['item_level_refund_reasons'], [_OrderReason["default"]]);
+        }
+
+        if (data.hasOwnProperty('item_level_return_reasons')) {
+          obj['item_level_return_reasons'] = _ApiClient["default"].convertToType(data['item_level_return_reasons'], [_OrderReason["default"]]);
+        }
+
         if (data.hasOwnProperty('metadata')) {
           obj['metadata'] = _ResponseMetadata["default"].constructFromObject(data['metadata']);
+        }
+
+        if (data.hasOwnProperty('order_level_refund_reason_required')) {
+          obj['order_level_refund_reason_required'] = _ApiClient["default"].convertToType(data['order_level_refund_reason_required'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('order_level_refund_reasons')) {
+          obj['order_level_refund_reasons'] = _ApiClient["default"].convertToType(data['order_level_refund_reasons'], [_OrderReason["default"]]);
+        }
+
+        if (data.hasOwnProperty('order_level_reject_reasons')) {
+          obj['order_level_reject_reasons'] = _ApiClient["default"].convertToType(data['order_level_reject_reasons'], [_OrderReason["default"]]);
         }
 
         if (data.hasOwnProperty('refundable')) {
@@ -94,10 +120,46 @@ var OrderRefundableResponse = /*#__PURE__*/function () {
 
 OrderRefundableResponse.prototype['error'] = undefined;
 /**
+ * True if the item level refund reason is required
+ * @member {Boolean} item_level_refund_reason_required
+ */
+
+OrderRefundableResponse.prototype['item_level_refund_reason_required'] = undefined;
+/**
+ * Reason codes available at the item level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} item_level_refund_reasons
+ */
+
+OrderRefundableResponse.prototype['item_level_refund_reasons'] = undefined;
+/**
+ * Return codes available at the item level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} item_level_return_reasons
+ */
+
+OrderRefundableResponse.prototype['item_level_return_reasons'] = undefined;
+/**
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
 
 OrderRefundableResponse.prototype['metadata'] = undefined;
+/**
+ * True if the order level refund reason is required
+ * @member {Boolean} order_level_refund_reason_required
+ */
+
+OrderRefundableResponse.prototype['order_level_refund_reason_required'] = undefined;
+/**
+ * Reason codes available at the order level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} order_level_refund_reasons
+ */
+
+OrderRefundableResponse.prototype['order_level_refund_reasons'] = undefined;
+/**
+ * Reject codes available at the order level.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} order_level_reject_reasons
+ */
+
+OrderRefundableResponse.prototype['order_level_reject_reasons'] = undefined;
 /**
  * Whether the order is refundable or not.  Null should be interpreted as false.
  * @member {Boolean} refundable

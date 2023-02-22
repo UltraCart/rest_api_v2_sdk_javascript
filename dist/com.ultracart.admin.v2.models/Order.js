@@ -72,7 +72,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.135
+ * @version 4.0.136
  */
 var Order = /*#__PURE__*/function () {
   /**
@@ -224,8 +224,16 @@ var Order = /*#__PURE__*/function () {
           obj['refund_dts'] = _ApiClient["default"].convertToType(data['refund_dts'], 'String');
         }
 
+        if (data.hasOwnProperty('refund_reason')) {
+          obj['refund_reason'] = _ApiClient["default"].convertToType(data['refund_reason'], 'String');
+        }
+
         if (data.hasOwnProperty('reject_dts')) {
           obj['reject_dts'] = _ApiClient["default"].convertToType(data['reject_dts'], 'String');
+        }
+
+        if (data.hasOwnProperty('reject_reason')) {
+          obj['reject_reason'] = _ApiClient["default"].convertToType(data['reject_reason'], 'String');
         }
 
         if (data.hasOwnProperty('salesforce')) {
@@ -418,11 +426,23 @@ Order.prototype['quote'] = undefined;
 
 Order.prototype['refund_dts'] = undefined;
 /**
+ * Refund reason code.  This can only be written during a refund operation otherwise this field is read only.
+ * @member {String} refund_reason
+ */
+
+Order.prototype['refund_reason'] = undefined;
+/**
  * If the order was rejected, the date/time that the rejection occurred
  * @member {String} reject_dts
  */
 
 Order.prototype['reject_dts'] = undefined;
+/**
+ * Reject reason code.  This can only be written during a reject operation otherwise this field is read only.
+ * @member {String} reject_reason
+ */
+
+Order.prototype['reject_reason'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/OrderSalesforce} salesforce
  */

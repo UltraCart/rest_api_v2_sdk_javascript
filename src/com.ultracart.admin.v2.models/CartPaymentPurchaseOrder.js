@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartPaymentPurchaseOrder model module.
  * @module com.ultracart.admin.v2.models/CartPaymentPurchaseOrder
- * @version 4.0.136
+ * @version 4.0.137
  */
 class CartPaymentPurchaseOrder {
     /**

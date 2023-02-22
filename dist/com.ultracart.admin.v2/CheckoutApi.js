@@ -62,7 +62,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Checkout service.
 * @module com.ultracart.admin.v2/CheckoutApi
-* @version 4.0.135
+* @version 4.0.136
 */
 var CheckoutApi = /*#__PURE__*/function () {
   /**

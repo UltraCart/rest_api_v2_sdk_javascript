@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemContentAssignment model module.
  * @module com.ultracart.admin.v2.models/ItemContentAssignment
- * @version 4.0.135
+ * @version 4.0.136
  */
 var ItemContentAssignment = /*#__PURE__*/function () {
   /**

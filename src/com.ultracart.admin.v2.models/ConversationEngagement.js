@@ -17,7 +17,7 @@ import ConversationEngagementEquation from './ConversationEngagementEquation';
 /**
  * The ConversationEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagement
- * @version 4.0.136
+ * @version 4.0.137
  */
 class ConversationEngagement {
     /**
@@ -57,6 +57,9 @@ class ConversationEngagement {
             if (data.hasOwnProperty('customer_greeting')) {
                 obj['customer_greeting'] = ApiClient.convertToType(data['customer_greeting'], 'String');
             }
+            if (data.hasOwnProperty('customer_initiated')) {
+                obj['customer_initiated'] = ApiClient.convertToType(data['customer_initiated'], 'Boolean');
+            }
             if (data.hasOwnProperty('department_oids')) {
                 obj['department_oids'] = ApiClient.convertToType(data['department_oids'], ['Number']);
             }
@@ -93,6 +96,11 @@ ConversationEngagement.prototype['conversation_engagement_oid'] = undefined;
  * @member {String} customer_greeting
  */
 ConversationEngagement.prototype['customer_greeting'] = undefined;
+
+/**
+ * @member {Boolean} customer_initiated
+ */
+ConversationEngagement.prototype['customer_initiated'] = undefined;
 
 /**
  * @member {Array.<Number>} department_oids

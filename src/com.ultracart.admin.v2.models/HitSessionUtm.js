@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The HitSessionUtm model module.
  * @module com.ultracart.admin.v2.models/HitSessionUtm
- * @version 4.0.136
+ * @version 4.0.137
  */
 class HitSessionUtm {
     /**
