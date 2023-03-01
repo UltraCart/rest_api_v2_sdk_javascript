@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationParticipant'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationParticipant', 'com.ultracart.admin.v2.models/ConversationSentiment'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ConversationParticipant'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationParticipant'), require('./ConversationSentiment'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationSummary = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationParticipant);
+    root.UltraCartRestApiV2.ConversationSummary = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationParticipant, root.UltraCartRestApiV2.ConversationSentiment);
   }
-}(this, function(ApiClient, ConversationParticipant) {
+}(this, function(ApiClient, ConversationParticipant, ConversationSentiment) {
   'use strict';
 
   /**
    * The ConversationSummary model module.
    * @module com.ultracart.admin.v2.models/ConversationSummary
-   * @version 3.10.120
+   * @version 3.10.121
    */
 
   /**
@@ -81,6 +81,8 @@
         obj.message_count = ApiClient.convertToType(data['message_count'], 'Number');
       if (data.hasOwnProperty('participants'))
         obj.participants = ApiClient.convertToType(data['participants'], [ConversationParticipant]);
+      if (data.hasOwnProperty('sentiment'))
+        obj.sentiment = ConversationSentiment.constructFromObject(data['sentiment']);
       if (data.hasOwnProperty('start_dts'))
         obj.start_dts = ApiClient.convertToType(data['start_dts'], 'String');
       if (data.hasOwnProperty('unread_messages'))
@@ -159,6 +161,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationParticipant>} participants
    */
   exports.prototype.participants = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationSentiment} sentiment
+   */
+  exports.prototype.sentiment = undefined;
 
   /**
    * Start of the conversation date/time
