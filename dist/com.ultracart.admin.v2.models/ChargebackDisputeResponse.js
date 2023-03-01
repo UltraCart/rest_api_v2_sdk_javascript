@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChargebackDisputeResponse model module.
  * @module com.ultracart.admin.v2.models/ChargebackDisputeResponse
- * @version 4.0.136
+ * @version 4.0.137
  */
 var ChargebackDisputeResponse = /*#__PURE__*/function () {
   /**

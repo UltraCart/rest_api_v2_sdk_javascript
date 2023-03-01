@@ -177,6 +177,7 @@ docs/ConversationPermissionsResponse.md
 docs/ConversationResponse.md
 docs/ConversationSearchRequest.md
 docs/ConversationSearchResponse.md
+docs/ConversationSentiment.md
 docs/ConversationStartRequest.md
 docs/ConversationStartResponse.md
 docs/ConversationSummary.md
@@ -933,6 +934,7 @@ src/com.ultracart.admin.v2.models/ConversationPermissionsResponse.js
 src/com.ultracart.admin.v2.models/ConversationResponse.js
 src/com.ultracart.admin.v2.models/ConversationSearchRequest.js
 src/com.ultracart.admin.v2.models/ConversationSearchResponse.js
+src/com.ultracart.admin.v2.models/ConversationSentiment.js
 src/com.ultracart.admin.v2.models/ConversationStartRequest.js
 src/com.ultracart.admin.v2.models/ConversationStartResponse.js
 src/com.ultracart.admin.v2.models/ConversationSummary.js

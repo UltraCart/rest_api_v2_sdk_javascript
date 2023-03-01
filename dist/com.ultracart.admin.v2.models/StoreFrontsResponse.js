@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StoreFrontsResponse model module.
  * @module com.ultracart.admin.v2.models/StoreFrontsResponse
- * @version 4.0.136
+ * @version 4.0.137
  */
 var StoreFrontsResponse = /*#__PURE__*/function () {
   /**

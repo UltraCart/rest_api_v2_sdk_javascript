@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerLoyaltyRedemption model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyaltyRedemption
- * @version 4.0.136
+ * @version 4.0.137
  */
 var CustomerLoyaltyRedemption = /*#__PURE__*/function () {
   /**

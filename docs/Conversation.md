@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **message_count** | **Number** |  | [optional] 
 **messages** | [**[ConversationMessage]**](ConversationMessage.md) |  | [optional] 
 **participants** | [**[ConversationParticipant]**](ConversationParticipant.md) |  | [optional] 
+**sentiment** | [**ConversationSentiment**](ConversationSentiment.md) |  | [optional] 
 **start_dts** | **String** | Start of the conversation date/time | [optional] 
 **unread_messages** | **Boolean** |  | [optional] 
 **visible** | **Boolean** |  | [optional] 

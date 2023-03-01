@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import ConversationParticipant from './ConversationParticipant';
+import ConversationSentiment from './ConversationSentiment';
 
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.0.137
+ * @version 4.0.138
  */
 class ConversationSummary {
     /**
@@ -86,6 +87,9 @@ class ConversationSummary {
             }
             if (data.hasOwnProperty('participants')) {
                 obj['participants'] = ApiClient.convertToType(data['participants'], [ConversationParticipant]);
+            }
+            if (data.hasOwnProperty('sentiment')) {
+                obj['sentiment'] = ConversationSentiment.constructFromObject(data['sentiment']);
             }
             if (data.hasOwnProperty('start_dts')) {
                 obj['start_dts'] = ApiClient.convertToType(data['start_dts'], 'String');
@@ -171,6 +175,11 @@ ConversationSummary.prototype['message_count'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationParticipant>} participants
  */
 ConversationSummary.prototype['participants'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationSentiment} sentiment
+ */
+ConversationSummary.prototype['sentiment'] = undefined;
 
 /**
  * Start of the conversation date/time

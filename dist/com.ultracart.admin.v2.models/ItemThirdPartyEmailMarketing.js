@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemThirdPartyEmailMarketing model module.
  * @module com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing
- * @version 4.0.136
+ * @version 4.0.137
  */
 var ItemThirdPartyEmailMarketing = /*#__PURE__*/function () {
   /**

@@ -182,6 +182,7 @@ import ConversationPermissionsResponse from './com.ultracart.admin.v2.models/Con
 import ConversationResponse from './com.ultracart.admin.v2.models/ConversationResponse';
 import ConversationSearchRequest from './com.ultracart.admin.v2.models/ConversationSearchRequest';
 import ConversationSearchResponse from './com.ultracart.admin.v2.models/ConversationSearchResponse';
+import ConversationSentiment from './com.ultracart.admin.v2.models/ConversationSentiment';
 import ConversationStartRequest from './com.ultracart.admin.v2.models/ConversationStartRequest';
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
@@ -802,7 +803,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.137
+* @version 4.0.138
 */
 export {
     /**
@@ -1824,6 +1825,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationSearchResponse}
      */
     ConversationSearchResponse,
+
+    /**
+     * The ConversationSentiment model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationSentiment}
+     */
+    ConversationSentiment,
 
     /**
      * The ConversationStartRequest model constructor.
