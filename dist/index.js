@@ -1059,6 +1059,12 @@ Object.defineProperty(exports, "ConversationSearchResponse", {
     return _ConversationSearchResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationSentiment", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationSentiment["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationStartRequest", {
   enumerable: true,
   get: function get() {
@@ -4897,6 +4903,8 @@ var _ConversationResponse = _interopRequireDefault(require("./com.ultracart.admi
 var _ConversationSearchRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSearchRequest"));
 
 var _ConversationSearchResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSearchResponse"));
+
+var _ConversationSentiment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationSentiment"));
 
 var _ConversationStartRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationStartRequest"));
 

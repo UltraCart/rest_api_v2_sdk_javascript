@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderShipping model module.
  * @module com.ultracart.admin.v2.models/OrderShipping
- * @version 4.0.137
+ * @version 4.0.138
  */
 var OrderShipping = /*#__PURE__*/function () {
   /**

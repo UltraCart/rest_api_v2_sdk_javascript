@@ -19,7 +19,7 @@ import GiftCertificate from './GiftCertificate';
 /**
  * The CustomerLoyalty model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyalty
- * @version 4.0.138
+ * @version 4.0.139
  */
 class CustomerLoyalty {
     /**

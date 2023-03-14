@@ -11,6 +11,8 @@ var _ConversationMessage = _interopRequireDefault(require("./ConversationMessage
 
 var _ConversationParticipant = _interopRequireDefault(require("./ConversationParticipant"));
 
+var _ConversationSentiment = _interopRequireDefault(require("./ConversationSentiment"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.137
+ * @version 4.0.138
  */
 var Conversation = /*#__PURE__*/function () {
   /**
@@ -116,6 +118,10 @@ var Conversation = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('participants')) {
           obj['participants'] = _ApiClient["default"].convertToType(data['participants'], [_ConversationParticipant["default"]]);
+        }
+
+        if (data.hasOwnProperty('sentiment')) {
+          obj['sentiment'] = _ConversationSentiment["default"].constructFromObject(data['sentiment']);
         }
 
         if (data.hasOwnProperty('start_dts')) {
@@ -218,6 +224,11 @@ Conversation.prototype['messages'] = undefined;
  */
 
 Conversation.prototype['participants'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationSentiment} sentiment
+ */
+
+Conversation.prototype['sentiment'] = undefined;
 /**
  * Start of the conversation date/time
  * @member {String} start_dts

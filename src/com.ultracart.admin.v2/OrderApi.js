@@ -20,6 +20,7 @@ import BaseResponse from '../com.ultracart.admin.v2.models/BaseResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Order from '../com.ultracart.admin.v2.models/Order';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
+import OrderEdiDocumentsResponse from '../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
 import OrderFormat from '../com.ultracart.admin.v2.models/OrderFormat';
 import OrderFormatResponse from '../com.ultracart.admin.v2.models/OrderFormatResponse';
 import OrderInvoiceResponse from '../com.ultracart.admin.v2.models/OrderInvoiceResponse';
@@ -38,7 +39,7 @@ import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.138
+* @version 4.0.139
 */
 export default class OrderApi {
 
@@ -629,6 +630,49 @@ export default class OrderApi {
       let returnType = OrderResponse;
       return this.apiClient.callApi(
         '/order/orders/token', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrderEdiDocuments operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderEdiDocumentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderEdiDocumentsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve EDI documents associated with this order.
+     * Retrieve EDI documents associated with this order. 
+     * @param {String} order_id The order id to retrieve EDI documents for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderEdiDocumentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderEdiDocumentsResponse}
+     */
+    getOrderEdiDocuments(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderEdiDocuments");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderEdiDocumentsResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/edi', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

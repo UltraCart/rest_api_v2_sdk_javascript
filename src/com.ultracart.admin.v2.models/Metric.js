@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Metric model module.
  * @module com.ultracart.admin.v2.models/Metric
- * @version 4.0.138
+ * @version 4.0.139
  */
 class Metric {
     /**

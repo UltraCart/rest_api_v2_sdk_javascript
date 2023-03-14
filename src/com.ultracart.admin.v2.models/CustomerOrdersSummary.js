@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerOrdersSummary model module.
  * @module com.ultracart.admin.v2.models/CustomerOrdersSummary
- * @version 4.0.138
+ * @version 4.0.139
  */
 class CustomerOrdersSummary {
     /**

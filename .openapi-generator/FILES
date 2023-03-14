@@ -576,6 +576,8 @@ docs/OrderCoupon.md
 docs/OrderDigitalItem.md
 docs/OrderDigitalOrder.md
 docs/OrderEdi.md
+docs/OrderEdiDocument.md
+docs/OrderEdiDocumentsResponse.md
 docs/OrderFormat.md
 docs/OrderFormatResponse.md
 docs/OrderFraudScore.md
@@ -1325,6 +1327,8 @@ src/com.ultracart.admin.v2.models/OrderCoupon.js
 src/com.ultracart.admin.v2.models/OrderDigitalItem.js
 src/com.ultracart.admin.v2.models/OrderDigitalOrder.js
 src/com.ultracart.admin.v2.models/OrderEdi.js
+src/com.ultracart.admin.v2.models/OrderEdiDocument.js
+src/com.ultracart.admin.v2.models/OrderEdiDocumentsResponse.js
 src/com.ultracart.admin.v2.models/OrderFormat.js
 src/com.ultracart.admin.v2.models/OrderFormatResponse.js
 src/com.ultracart.admin.v2.models/OrderFraudScore.js

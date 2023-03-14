@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderUtm model module.
  * @module com.ultracart.admin.v2.models/OrderUtm
- * @version 4.0.138
+ * @version 4.0.139
  */
 class OrderUtm {
     /**

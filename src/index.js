@@ -573,6 +573,8 @@ import OrderCoupon from './com.ultracart.admin.v2.models/OrderCoupon';
 import OrderDigitalItem from './com.ultracart.admin.v2.models/OrderDigitalItem';
 import OrderDigitalOrder from './com.ultracart.admin.v2.models/OrderDigitalOrder';
 import OrderEdi from './com.ultracart.admin.v2.models/OrderEdi';
+import OrderEdiDocument from './com.ultracart.admin.v2.models/OrderEdiDocument';
+import OrderEdiDocumentsResponse from './com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
 import OrderFormat from './com.ultracart.admin.v2.models/OrderFormat';
 import OrderFormatResponse from './com.ultracart.admin.v2.models/OrderFormatResponse';
 import OrderFraudScore from './com.ultracart.admin.v2.models/OrderFraudScore';
@@ -803,7 +805,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.138
+* @version 4.0.139
 */
 export {
     /**
@@ -4171,6 +4173,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderEdi}
      */
     OrderEdi,
+
+    /**
+     * The OrderEdiDocument model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderEdiDocument}
+     */
+    OrderEdiDocument,
+
+    /**
+     * The OrderEdiDocumentsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderEdiDocumentsResponse}
+     */
+    OrderEdiDocumentsResponse,
 
     /**
      * The OrderFormat model constructor.
