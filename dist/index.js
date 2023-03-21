@@ -3453,6 +3453,18 @@ Object.defineProperty(exports, "OrderEdi", {
     return _OrderEdi["default"];
   }
 });
+Object.defineProperty(exports, "OrderEdiDocument", {
+  enumerable: true,
+  get: function get() {
+    return _OrderEdiDocument["default"];
+  }
+});
+Object.defineProperty(exports, "OrderEdiDocumentsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _OrderEdiDocumentsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "OrderFormat", {
   enumerable: true,
   get: function get() {
@@ -5685,6 +5697,10 @@ var _OrderDigitalItem = _interopRequireDefault(require("./com.ultracart.admin.v2
 var _OrderDigitalOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderDigitalOrder"));
 
 var _OrderEdi = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEdi"));
+
+var _OrderEdiDocument = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEdiDocument"));
+
+var _OrderEdiDocumentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEdiDocumentsResponse"));
 
 var _OrderFormat = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderFormat"));
 

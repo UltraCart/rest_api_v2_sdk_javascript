@@ -72,6 +72,8 @@ Name | Type | Description | Notes
 
 * `Advanced Order Routing` (value: `"Advanced Order Routing"`)
 
+* `Hold` (value: `"Hold"`)
+
 
 
 

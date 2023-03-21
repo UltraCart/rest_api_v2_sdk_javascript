@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderRefundableResponse model module.
  * @module com.ultracart.admin.v2.models/OrderRefundableResponse
- * @version 4.0.138
+ * @version 4.0.139
  */
 var OrderRefundableResponse = /*#__PURE__*/function () {
   /**

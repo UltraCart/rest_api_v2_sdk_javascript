@@ -43,7 +43,7 @@ import OrderUtm from './OrderUtm';
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.139
+ * @version 4.0.140
  */
 class Order {
     /**
@@ -483,7 +483,13 @@ Order['CurrentStageEnum'] = {
      * value: "Advanced Order Routing"
      * @const
      */
-    "Advanced Order Routing": "Advanced Order Routing"
+    "Advanced Order Routing": "Advanced Order Routing",
+
+    /**
+     * value: "Hold"
+     * @const
+     */
+    "Hold": "Hold"
 };
 
 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingUserAgentDevice model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingUserAgentDevice
- * @version 4.0.138
+ * @version 4.0.139
  */
 var ScreenRecordingUserAgentDevice = /*#__PURE__*/function () {
   /**

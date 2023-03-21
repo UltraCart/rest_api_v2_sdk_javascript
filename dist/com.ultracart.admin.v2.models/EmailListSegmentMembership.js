@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailListSegmentMembership model module.
  * @module com.ultracart.admin.v2.models/EmailListSegmentMembership
- * @version 4.0.138
+ * @version 4.0.139
  */
 var EmailListSegmentMembership = /*#__PURE__*/function () {
   /**

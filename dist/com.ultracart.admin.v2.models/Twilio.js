@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Twilio model module.
  * @module com.ultracart.admin.v2.models/Twilio
- * @version 4.0.138
+ * @version 4.0.139
  */
 var Twilio = /*#__PURE__*/function () {
   /**

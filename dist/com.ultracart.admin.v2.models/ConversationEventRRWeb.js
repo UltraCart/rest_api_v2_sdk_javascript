@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventRRWeb model module.
  * @module com.ultracart.admin.v2.models/ConversationEventRRWeb
- * @version 4.0.138
+ * @version 4.0.139
  */
 var ConversationEventRRWeb = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailPlanResponse model module.
  * @module com.ultracart.admin.v2.models/EmailPlanResponse
- * @version 4.0.138
+ * @version 4.0.139
  */
 var EmailPlanResponse = /*#__PURE__*/function () {
   /**

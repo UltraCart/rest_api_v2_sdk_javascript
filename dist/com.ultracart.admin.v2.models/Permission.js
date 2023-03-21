@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Permission model module.
  * @module com.ultracart.admin.v2.models/Permission
- * @version 4.0.138
+ * @version 4.0.139
  */
 var Permission = /*#__PURE__*/function () {
   /**

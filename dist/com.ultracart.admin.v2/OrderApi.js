@@ -21,6 +21,8 @@ var _Order = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Or
 
 var _OrderByTokenQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderByTokenQuery"));
 
+var _OrderEdiDocumentsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse"));
+
 var _OrderFormat = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderFormat"));
 
 var _OrderFormatResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderFormatResponse"));
@@ -60,7 +62,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.138
+* @version 4.0.139
 */
 var OrderApi = /*#__PURE__*/function () {
   /**
@@ -579,6 +581,43 @@ var OrderApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrderResponse["default"];
       return this.apiClient.callApi('/order/orders/token', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getOrderEdiDocuments operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderEdiDocumentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderEdiDocumentsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve EDI documents associated with this order.
+     * Retrieve EDI documents associated with this order. 
+     * @param {String} order_id The order id to retrieve EDI documents for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderEdiDocumentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderEdiDocumentsResponse}
+     */
+
+  }, {
+    key: "getOrderEdiDocuments",
+    value: function getOrderEdiDocuments(order_id, callback) {
+      var postBody = null; // verify the required parameter 'order_id' is set
+
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderEdiDocuments");
+      }
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _OrderEdiDocumentsResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/edi', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getOrders operation.
