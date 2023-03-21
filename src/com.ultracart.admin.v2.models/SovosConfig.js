@@ -34,7 +34,7 @@
   /**
    * The SovosConfig model module.
    * @module com.ultracart.admin.v2.models/SovosConfig
-   * @version 3.10.122
+   * @version 3.10.123
    */
 
   /**

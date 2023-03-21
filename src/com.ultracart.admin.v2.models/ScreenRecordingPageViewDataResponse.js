@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingPageViewDataResponse model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewDataResponse
-   * @version 3.10.122
+   * @version 3.10.123
    */
 
   /**
