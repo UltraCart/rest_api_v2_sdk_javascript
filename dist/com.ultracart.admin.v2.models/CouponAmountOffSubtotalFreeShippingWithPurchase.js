@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponAmountOffSubtotalFreeShippingWithPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponAmountOffSubtotalFreeShippingWithPurchase
- * @version 4.0.140
+ * @version 4.0.141
  */
 var CouponAmountOffSubtotalFreeShippingWithPurchase = /*#__PURE__*/function () {
   /**

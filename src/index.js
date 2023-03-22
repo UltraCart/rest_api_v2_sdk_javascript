@@ -636,6 +636,28 @@ import Property from './com.ultracart.admin.v2.models/Property';
 import PublishLibraryItemRequest from './com.ultracart.admin.v2.models/PublishLibraryItemRequest';
 import RegisterAffiliateClickRequest from './com.ultracart.admin.v2.models/RegisterAffiliateClickRequest';
 import RegisterAffiliateClickResponse from './com.ultracart.admin.v2.models/RegisterAffiliateClickResponse';
+import Report from './com.ultracart.admin.v2.models/Report';
+import ReportAuth from './com.ultracart.admin.v2.models/ReportAuth';
+import ReportAuthResponse from './com.ultracart.admin.v2.models/ReportAuthResponse';
+import ReportDataSet from './com.ultracart.admin.v2.models/ReportDataSet';
+import ReportDataSetColumn from './com.ultracart.admin.v2.models/ReportDataSetColumn';
+import ReportDataSetPage from './com.ultracart.admin.v2.models/ReportDataSetPage';
+import ReportDataSetPageResponse from './com.ultracart.admin.v2.models/ReportDataSetPageResponse';
+import ReportDataSetQuery from './com.ultracart.admin.v2.models/ReportDataSetQuery';
+import ReportDataSetResponse from './com.ultracart.admin.v2.models/ReportDataSetResponse';
+import ReportDataSetRow from './com.ultracart.admin.v2.models/ReportDataSetRow';
+import ReportDataSetSchema from './com.ultracart.admin.v2.models/ReportDataSetSchema';
+import ReportDataSource from './com.ultracart.admin.v2.models/ReportDataSource';
+import ReportDataSourceSchema from './com.ultracart.admin.v2.models/ReportDataSourceSchema';
+import ReportExecuteQueriesRequest from './com.ultracart.admin.v2.models/ReportExecuteQueriesRequest';
+import ReportFilter from './com.ultracart.admin.v2.models/ReportFilter';
+import ReportFilterConnection from './com.ultracart.admin.v2.models/ReportFilterConnection';
+import ReportPage from './com.ultracart.admin.v2.models/ReportPage';
+import ReportPageVisualization from './com.ultracart.admin.v2.models/ReportPageVisualization';
+import ReportPageVisualizationDimension from './com.ultracart.admin.v2.models/ReportPageVisualizationDimension';
+import ReportPageVisualizationMetric from './com.ultracart.admin.v2.models/ReportPageVisualizationMetric';
+import ReportResponse from './com.ultracart.admin.v2.models/ReportResponse';
+import ReportsResponse from './com.ultracart.admin.v2.models/ReportsResponse';
 import ResponseMetadata from './com.ultracart.admin.v2.models/ResponseMetadata';
 import ResultSet from './com.ultracart.admin.v2.models/ResultSet';
 import RulerValidationRequest from './com.ultracart.admin.v2.models/RulerValidationRequest';
@@ -763,6 +785,7 @@ import CheckoutApi from './com.ultracart.admin.v2/CheckoutApi';
 import ConversationApi from './com.ultracart.admin.v2/ConversationApi';
 import CouponApi from './com.ultracart.admin.v2/CouponApi';
 import CustomerApi from './com.ultracart.admin.v2/CustomerApi';
+import DatawarehouseApi from './com.ultracart.admin.v2/DatawarehouseApi';
 import FulfillmentApi from './com.ultracart.admin.v2/FulfillmentApi';
 import GiftCertificateApi from './com.ultracart.admin.v2/GiftCertificateApi';
 import IntegrationLogApi from './com.ultracart.admin.v2/IntegrationLogApi';
@@ -805,7 +828,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.141
+* @version 4.0.142
 */
 export {
     /**
@@ -4553,6 +4576,138 @@ export {
     RegisterAffiliateClickResponse,
 
     /**
+     * The Report model constructor.
+     * @property {module:com.ultracart.admin.v2.models/Report}
+     */
+    Report,
+
+    /**
+     * The ReportAuth model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportAuth}
+     */
+    ReportAuth,
+
+    /**
+     * The ReportAuthResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportAuthResponse}
+     */
+    ReportAuthResponse,
+
+    /**
+     * The ReportDataSet model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSet}
+     */
+    ReportDataSet,
+
+    /**
+     * The ReportDataSetColumn model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetColumn}
+     */
+    ReportDataSetColumn,
+
+    /**
+     * The ReportDataSetPage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetPage}
+     */
+    ReportDataSetPage,
+
+    /**
+     * The ReportDataSetPageResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetPageResponse}
+     */
+    ReportDataSetPageResponse,
+
+    /**
+     * The ReportDataSetQuery model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetQuery}
+     */
+    ReportDataSetQuery,
+
+    /**
+     * The ReportDataSetResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetResponse}
+     */
+    ReportDataSetResponse,
+
+    /**
+     * The ReportDataSetRow model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetRow}
+     */
+    ReportDataSetRow,
+
+    /**
+     * The ReportDataSetSchema model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetSchema}
+     */
+    ReportDataSetSchema,
+
+    /**
+     * The ReportDataSource model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSource}
+     */
+    ReportDataSource,
+
+    /**
+     * The ReportDataSourceSchema model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSourceSchema}
+     */
+    ReportDataSourceSchema,
+
+    /**
+     * The ReportExecuteQueriesRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportExecuteQueriesRequest}
+     */
+    ReportExecuteQueriesRequest,
+
+    /**
+     * The ReportFilter model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportFilter}
+     */
+    ReportFilter,
+
+    /**
+     * The ReportFilterConnection model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportFilterConnection}
+     */
+    ReportFilterConnection,
+
+    /**
+     * The ReportPage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportPage}
+     */
+    ReportPage,
+
+    /**
+     * The ReportPageVisualization model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportPageVisualization}
+     */
+    ReportPageVisualization,
+
+    /**
+     * The ReportPageVisualizationDimension model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportPageVisualizationDimension}
+     */
+    ReportPageVisualizationDimension,
+
+    /**
+     * The ReportPageVisualizationMetric model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportPageVisualizationMetric}
+     */
+    ReportPageVisualizationMetric,
+
+    /**
+     * The ReportResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportResponse}
+     */
+    ReportResponse,
+
+    /**
+     * The ReportsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportsResponse}
+     */
+    ReportsResponse,
+
+    /**
      * The ResponseMetadata model constructor.
      * @property {module:com.ultracart.admin.v2.models/ResponseMetadata}
      */
@@ -5313,6 +5468,12 @@ export {
     * @property {module:com.ultracart.admin.v2/CustomerApi}
     */
     CustomerApi,
+
+    /**
+    * The DatawarehouseApi service constructor.
+    * @property {module:com.ultracart.admin.v2/DatawarehouseApi}
+    */
+    DatawarehouseApi,
 
     /**
     * The FulfillmentApi service constructor.
