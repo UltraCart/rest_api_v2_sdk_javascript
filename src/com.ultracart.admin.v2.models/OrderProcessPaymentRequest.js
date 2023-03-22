@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderProcessPaymentRequest model module.
  * @module com.ultracart.admin.v2.models/OrderProcessPaymentRequest
- * @version 4.0.140
+ * @version 4.0.141
  */
 class OrderProcessPaymentRequest {
     /**

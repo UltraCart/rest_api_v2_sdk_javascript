@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationLocationStateProvince model module.
  * @module com.ultracart.admin.v2.models/ConversationLocationStateProvince
- * @version 4.0.140
+ * @version 4.0.141
  */
 class ConversationLocationStateProvince {
     /**

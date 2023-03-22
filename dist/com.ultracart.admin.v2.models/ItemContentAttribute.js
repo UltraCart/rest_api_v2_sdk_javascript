@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemContentAttribute model module.
  * @module com.ultracart.admin.v2.models/ItemContentAttribute
- * @version 4.0.139
+ * @version 4.0.140
  */
 var ItemContentAttribute = /*#__PURE__*/function () {
   /**

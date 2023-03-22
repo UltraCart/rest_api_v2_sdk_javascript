@@ -18,7 +18,7 @@ import ItemEbayMarketPlaceAnalysis from './ItemEbayMarketPlaceAnalysis';
 /**
  * The ItemEbay model module.
  * @module com.ultracart.admin.v2.models/ItemEbay
- * @version 4.0.140
+ * @version 4.0.141
  */
 class ItemEbay {
     /**

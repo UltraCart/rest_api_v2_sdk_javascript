@@ -72,7 +72,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.0.139
+ * @version 4.0.140
  */
 var Order = /*#__PURE__*/function () {
   /**
@@ -552,7 +552,13 @@ Order['CurrentStageEnum'] = {
    * value: "Advanced Order Routing"
    * @const
    */
-  "Advanced Order Routing": "Advanced Order Routing"
+  "Advanced Order Routing": "Advanced Order Routing",
+
+  /**
+   * value: "Hold"
+   * @const
+   */
+  "Hold": "Hold"
 };
 var _default = Order;
 exports["default"] = _default;
