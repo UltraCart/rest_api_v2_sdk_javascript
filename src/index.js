@@ -647,6 +647,7 @@ import ReportDataSetQuery from './com.ultracart.admin.v2.models/ReportDataSetQue
 import ReportDataSetResponse from './com.ultracart.admin.v2.models/ReportDataSetResponse';
 import ReportDataSetRow from './com.ultracart.admin.v2.models/ReportDataSetRow';
 import ReportDataSetSchema from './com.ultracart.admin.v2.models/ReportDataSetSchema';
+import ReportDataSetSummary from './com.ultracart.admin.v2.models/ReportDataSetSummary';
 import ReportDataSource from './com.ultracart.admin.v2.models/ReportDataSource';
 import ReportDataSourceSchema from './com.ultracart.admin.v2.models/ReportDataSourceSchema';
 import ReportExecuteQueriesRequest from './com.ultracart.admin.v2.models/ReportExecuteQueriesRequest';
@@ -657,6 +658,7 @@ import ReportPageVisualization from './com.ultracart.admin.v2.models/ReportPageV
 import ReportPageVisualizationDimension from './com.ultracart.admin.v2.models/ReportPageVisualizationDimension';
 import ReportPageVisualizationMetric from './com.ultracart.admin.v2.models/ReportPageVisualizationMetric';
 import ReportResponse from './com.ultracart.admin.v2.models/ReportResponse';
+import ReportWebsocketEvent from './com.ultracart.admin.v2.models/ReportWebsocketEvent';
 import ReportsResponse from './com.ultracart.admin.v2.models/ReportsResponse';
 import ResponseMetadata from './com.ultracart.admin.v2.models/ResponseMetadata';
 import ResultSet from './com.ultracart.admin.v2.models/ResultSet';
@@ -828,7 +830,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.142
+* @version 4.0.143
 */
 export {
     /**
@@ -4642,6 +4644,12 @@ export {
     ReportDataSetSchema,
 
     /**
+     * The ReportDataSetSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetSummary}
+     */
+    ReportDataSetSummary,
+
+    /**
      * The ReportDataSource model constructor.
      * @property {module:com.ultracart.admin.v2.models/ReportDataSource}
      */
@@ -4700,6 +4708,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ReportResponse}
      */
     ReportResponse,
+
+    /**
+     * The ReportWebsocketEvent model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportWebsocketEvent}
+     */
+    ReportWebsocketEvent,
 
     /**
      * The ReportsResponse model constructor.

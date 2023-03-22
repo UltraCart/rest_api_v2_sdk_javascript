@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponType model module.
  * @module com.ultracart.admin.v2.models/CouponType
- * @version 4.0.141
+ * @version 4.0.142
  */
 var CouponType = /*#__PURE__*/function () {
   /**

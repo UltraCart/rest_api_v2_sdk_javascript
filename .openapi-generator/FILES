@@ -651,6 +651,7 @@ docs/ReportDataSetQuery.md
 docs/ReportDataSetResponse.md
 docs/ReportDataSetRow.md
 docs/ReportDataSetSchema.md
+docs/ReportDataSetSummary.md
 docs/ReportDataSource.md
 docs/ReportDataSourceSchema.md
 docs/ReportExecuteQueriesRequest.md
@@ -661,6 +662,7 @@ docs/ReportPageVisualization.md
 docs/ReportPageVisualizationDimension.md
 docs/ReportPageVisualizationMetric.md
 docs/ReportResponse.md
+docs/ReportWebsocketEvent.md
 docs/ReportsResponse.md
 docs/ResponseMetadata.md
 docs/ResultSet.md
@@ -1424,6 +1426,7 @@ src/com.ultracart.admin.v2.models/ReportDataSetQuery.js
 src/com.ultracart.admin.v2.models/ReportDataSetResponse.js
 src/com.ultracart.admin.v2.models/ReportDataSetRow.js
 src/com.ultracart.admin.v2.models/ReportDataSetSchema.js
+src/com.ultracart.admin.v2.models/ReportDataSetSummary.js
 src/com.ultracart.admin.v2.models/ReportDataSource.js
 src/com.ultracart.admin.v2.models/ReportDataSourceSchema.js
 src/com.ultracart.admin.v2.models/ReportExecuteQueriesRequest.js
@@ -1434,6 +1437,7 @@ src/com.ultracart.admin.v2.models/ReportPageVisualization.js
 src/com.ultracart.admin.v2.models/ReportPageVisualizationDimension.js
 src/com.ultracart.admin.v2.models/ReportPageVisualizationMetric.js
 src/com.ultracart.admin.v2.models/ReportResponse.js
+src/com.ultracart.admin.v2.models/ReportWebsocketEvent.js
 src/com.ultracart.admin.v2.models/ReportsResponse.js
 src/com.ultracart.admin.v2.models/ResponseMetadata.js
 src/com.ultracart.admin.v2.models/ResultSet.js

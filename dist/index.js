@@ -1767,6 +1767,12 @@ Object.defineProperty(exports, "DataTablesServerSideResponse", {
     return _DataTablesServerSideResponse["default"];
   }
 });
+Object.defineProperty(exports, "DatawarehouseApi", {
+  enumerable: true,
+  get: function get() {
+    return _DatawarehouseApi["default"];
+  }
+});
 Object.defineProperty(exports, "Distance", {
   enumerable: true,
   get: function get() {
@@ -3831,6 +3837,138 @@ Object.defineProperty(exports, "RegisterAffiliateClickResponse", {
     return _RegisterAffiliateClickResponse["default"];
   }
 });
+Object.defineProperty(exports, "Report", {
+  enumerable: true,
+  get: function get() {
+    return _Report["default"];
+  }
+});
+Object.defineProperty(exports, "ReportAuth", {
+  enumerable: true,
+  get: function get() {
+    return _ReportAuth["default"];
+  }
+});
+Object.defineProperty(exports, "ReportAuthResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ReportAuthResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSet", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSet["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSetColumn", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetColumn["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSetPage", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetPage["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSetPageResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetPageResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSetQuery", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetQuery["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSetResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSetRow", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetRow["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSetSchema", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetSchema["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSource", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSource["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDataSourceSchema", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSourceSchema["default"];
+  }
+});
+Object.defineProperty(exports, "ReportExecuteQueriesRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ReportExecuteQueriesRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ReportFilter", {
+  enumerable: true,
+  get: function get() {
+    return _ReportFilter["default"];
+  }
+});
+Object.defineProperty(exports, "ReportFilterConnection", {
+  enumerable: true,
+  get: function get() {
+    return _ReportFilterConnection["default"];
+  }
+});
+Object.defineProperty(exports, "ReportPage", {
+  enumerable: true,
+  get: function get() {
+    return _ReportPage["default"];
+  }
+});
+Object.defineProperty(exports, "ReportPageVisualization", {
+  enumerable: true,
+  get: function get() {
+    return _ReportPageVisualization["default"];
+  }
+});
+Object.defineProperty(exports, "ReportPageVisualizationDimension", {
+  enumerable: true,
+  get: function get() {
+    return _ReportPageVisualizationDimension["default"];
+  }
+});
+Object.defineProperty(exports, "ReportPageVisualizationMetric", {
+  enumerable: true,
+  get: function get() {
+    return _ReportPageVisualizationMetric["default"];
+  }
+});
+Object.defineProperty(exports, "ReportResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ReportResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ReportsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ReportsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ResponseMetadata", {
   enumerable: true,
   get: function get() {
@@ -5824,6 +5962,50 @@ var _RegisterAffiliateClickRequest = _interopRequireDefault(require("./com.ultra
 
 var _RegisterAffiliateClickResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/RegisterAffiliateClickResponse"));
 
+var _Report = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Report"));
+
+var _ReportAuth = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportAuth"));
+
+var _ReportAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportAuthResponse"));
+
+var _ReportDataSet = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSet"));
+
+var _ReportDataSetColumn = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetColumn"));
+
+var _ReportDataSetPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetPage"));
+
+var _ReportDataSetPageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetPageResponse"));
+
+var _ReportDataSetQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetQuery"));
+
+var _ReportDataSetResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetResponse"));
+
+var _ReportDataSetRow = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetRow"));
+
+var _ReportDataSetSchema = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetSchema"));
+
+var _ReportDataSource = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSource"));
+
+var _ReportDataSourceSchema = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSourceSchema"));
+
+var _ReportExecuteQueriesRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportExecuteQueriesRequest"));
+
+var _ReportFilter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportFilter"));
+
+var _ReportFilterConnection = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportFilterConnection"));
+
+var _ReportPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPage"));
+
+var _ReportPageVisualization = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPageVisualization"));
+
+var _ReportPageVisualizationDimension = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPageVisualizationDimension"));
+
+var _ReportPageVisualizationMetric = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPageVisualizationMetric"));
+
+var _ReportResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportResponse"));
+
+var _ReportsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportsResponse"));
+
 var _ResponseMetadata = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ResponseMetadata"));
 
 var _ResultSet = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ResultSet"));
@@ -6077,6 +6259,8 @@ var _ConversationApi = _interopRequireDefault(require("./com.ultracart.admin.v2/
 var _CouponApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CouponApi"));
 
 var _CustomerApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CustomerApi"));
+
+var _DatawarehouseApi = _interopRequireDefault(require("./com.ultracart.admin.v2/DatawarehouseApi"));
 
 var _FulfillmentApi = _interopRequireDefault(require("./com.ultracart.admin.v2/FulfillmentApi"));
 
