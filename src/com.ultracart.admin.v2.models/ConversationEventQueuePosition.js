@@ -34,7 +34,7 @@
   /**
    * The ConversationEventQueuePosition model module.
    * @module com.ultracart.admin.v2.models/ConversationEventQueuePosition
-   * @version 3.10.123
+   * @version 3.10.124
    */
 
   /**

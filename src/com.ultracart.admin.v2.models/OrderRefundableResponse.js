@@ -34,7 +34,7 @@
   /**
    * The OrderRefundableResponse model module.
    * @module com.ultracart.admin.v2.models/OrderRefundableResponse
-   * @version 3.10.123
+   * @version 3.10.124
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.item_level_refund_reasons = ApiClient.convertToType(data['item_level_refund_reasons'], [OrderReason]);
       if (data.hasOwnProperty('item_level_return_reasons'))
         obj.item_level_return_reasons = ApiClient.convertToType(data['item_level_return_reasons'], [OrderReason]);
+      if (data.hasOwnProperty('manual_because_multiple_charges'))
+        obj.manual_because_multiple_charges = ApiClient.convertToType(data['manual_because_multiple_charges'], 'Boolean');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('order_level_refund_reason_required'))
@@ -103,6 +105,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} item_level_return_reasons
    */
   exports.prototype.item_level_return_reasons = undefined;
+
+  /**
+   * If true, this refund will have to be manually done because of additional charges with the virtual terminal were made
+   * @member {Boolean} manual_because_multiple_charges
+   */
+  exports.prototype.manual_because_multiple_charges = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
