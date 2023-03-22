@@ -34,7 +34,7 @@
   /**
    * The ConversationDepartmentMember model module.
    * @module com.ultracart.admin.v2.models/ConversationDepartmentMember
-   * @version 3.10.125
+   * @version 3.10.126
    */
 
   /**
