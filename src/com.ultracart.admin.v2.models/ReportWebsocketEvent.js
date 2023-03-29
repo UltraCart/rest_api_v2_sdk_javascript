@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ReportDataSetSummary from './ReportDataSetSummary';
+import ReportDataSet from './ReportDataSet';
 
 /**
  * The ReportWebsocketEvent model module.
  * @module com.ultracart.admin.v2.models/ReportWebsocketEvent
- * @version 4.0.143
+ * @version 4.0.144
  */
 class ReportWebsocketEvent {
     /**
@@ -52,7 +52,7 @@ class ReportWebsocketEvent {
                 obj['event_type'] = ApiClient.convertToType(data['event_type'], 'String');
             }
             if (data.hasOwnProperty('query_completion')) {
-                obj['query_completion'] = ReportDataSetSummary.constructFromObject(data['query_completion']);
+                obj['query_completion'] = ReportDataSet.constructFromObject(data['query_completion']);
             }
         }
         return obj;
@@ -68,7 +68,7 @@ class ReportWebsocketEvent {
 ReportWebsocketEvent.prototype['event_type'] = undefined;
 
 /**
- * @member {module:com.ultracart.admin.v2.models/ReportDataSetSummary} query_completion
+ * @member {module:com.ultracart.admin.v2.models/ReportDataSet} query_completion
  */
 ReportWebsocketEvent.prototype['query_completion'] = undefined;
 

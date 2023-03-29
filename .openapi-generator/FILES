@@ -651,7 +651,6 @@ docs/ReportDataSetQuery.md
 docs/ReportDataSetResponse.md
 docs/ReportDataSetRow.md
 docs/ReportDataSetSchema.md
-docs/ReportDataSetSummary.md
 docs/ReportDataSource.md
 docs/ReportDataSourceSchema.md
 docs/ReportExecuteQueriesRequest.md
@@ -1426,7 +1425,6 @@ src/com.ultracart.admin.v2.models/ReportDataSetQuery.js
 src/com.ultracart.admin.v2.models/ReportDataSetResponse.js
 src/com.ultracart.admin.v2.models/ReportDataSetRow.js
 src/com.ultracart.admin.v2.models/ReportDataSetSchema.js
-src/com.ultracart.admin.v2.models/ReportDataSetSummary.js
 src/com.ultracart.admin.v2.models/ReportDataSource.js
 src/com.ultracart.admin.v2.models/ReportDataSourceSchema.js
 src/com.ultracart.admin.v2.models/ReportExecuteQueriesRequest.js

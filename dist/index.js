@@ -3903,6 +3903,12 @@ Object.defineProperty(exports, "ReportDataSetSchema", {
     return _ReportDataSetSchema["default"];
   }
 });
+Object.defineProperty(exports, "ReportDataSetSummary", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetSummary["default"];
+  }
+});
 Object.defineProperty(exports, "ReportDataSource", {
   enumerable: true,
   get: function get() {
@@ -3961,6 +3967,12 @@ Object.defineProperty(exports, "ReportResponse", {
   enumerable: true,
   get: function get() {
     return _ReportResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ReportWebsocketEvent", {
+  enumerable: true,
+  get: function get() {
+    return _ReportWebsocketEvent["default"];
   }
 });
 Object.defineProperty(exports, "ReportsResponse", {
@@ -5984,6 +5996,8 @@ var _ReportDataSetRow = _interopRequireDefault(require("./com.ultracart.admin.v2
 
 var _ReportDataSetSchema = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetSchema"));
 
+var _ReportDataSetSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetSummary"));
+
 var _ReportDataSource = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSource"));
 
 var _ReportDataSourceSchema = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSourceSchema"));
@@ -6003,6 +6017,8 @@ var _ReportPageVisualizationDimension = _interopRequireDefault(require("./com.ul
 var _ReportPageVisualizationMetric = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPageVisualizationMetric"));
 
 var _ReportResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportResponse"));
+
+var _ReportWebsocketEvent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportWebsocketEvent"));
 
 var _ReportsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportsResponse"));
 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponPercentOffRetailPriceItems model module.
  * @module com.ultracart.admin.v2.models/CouponPercentOffRetailPriceItems
- * @version 4.0.142
+ * @version 4.0.143
  */
 var CouponPercentOffRetailPriceItems = /*#__PURE__*/function () {
   /**

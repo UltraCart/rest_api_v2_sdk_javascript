@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponQuery model module.
  * @module com.ultracart.admin.v2.models/CouponQuery
- * @version 4.0.143
+ * @version 4.0.144
  */
 class CouponQuery {
     /**

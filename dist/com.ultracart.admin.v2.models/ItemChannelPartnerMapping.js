@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemChannelPartnerMapping model module.
  * @module com.ultracart.admin.v2.models/ItemChannelPartnerMapping
- * @version 4.0.142
+ * @version 4.0.143
  */
 var ItemChannelPartnerMapping = /*#__PURE__*/function () {
   /**

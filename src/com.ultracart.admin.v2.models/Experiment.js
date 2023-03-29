@@ -17,7 +17,7 @@ import ExperimentVariation from './ExperimentVariation';
 /**
  * The Experiment model module.
  * @module com.ultracart.admin.v2.models/Experiment
- * @version 4.0.143
+ * @version 4.0.144
  */
 class Experiment {
     /**
@@ -78,8 +78,23 @@ class Experiment {
             if (data.hasOwnProperty('objective_parameter')) {
                 obj['objective_parameter'] = ApiClient.convertToType(data['objective_parameter'], 'String');
             }
+            if (data.hasOwnProperty('openai_current_iteration')) {
+                obj['openai_current_iteration'] = ApiClient.convertToType(data['openai_current_iteration'], 'Number');
+            }
+            if (data.hasOwnProperty('openai_element_type')) {
+                obj['openai_element_type'] = ApiClient.convertToType(data['openai_element_type'], 'String');
+            }
+            if (data.hasOwnProperty('openai_model')) {
+                obj['openai_model'] = ApiClient.convertToType(data['openai_model'], 'String');
+            }
+            if (data.hasOwnProperty('openai_total_iterations')) {
+                obj['openai_total_iterations'] = ApiClient.convertToType(data['openai_total_iterations'], 'Number');
+            }
             if (data.hasOwnProperty('optimization_type')) {
                 obj['optimization_type'] = ApiClient.convertToType(data['optimization_type'], 'String');
+            }
+            if (data.hasOwnProperty('p_value')) {
+                obj['p_value'] = ApiClient.convertToType(data['p_value'], 'Number');
             }
             if (data.hasOwnProperty('session_count')) {
                 obj['session_count'] = ApiClient.convertToType(data['session_count'], 'Number');
@@ -170,10 +185,40 @@ Experiment.prototype['objective'] = undefined;
 Experiment.prototype['objective_parameter'] = undefined;
 
 /**
+ * The current iteration of the OpenAI related experiment
+ * @member {Number} openai_current_iteration
+ */
+Experiment.prototype['openai_current_iteration'] = undefined;
+
+/**
+ * The type of OpenAI element being experimented on
+ * @member {module:com.ultracart.admin.v2.models/Experiment.OpenaiElementTypeEnum} openai_element_type
+ */
+Experiment.prototype['openai_element_type'] = undefined;
+
+/**
+ * The type of OpenAI model used
+ * @member {String} openai_model
+ */
+Experiment.prototype['openai_model'] = undefined;
+
+/**
+ * The total number of iterations to perform on the experiment
+ * @member {Number} openai_total_iterations
+ */
+Experiment.prototype['openai_total_iterations'] = undefined;
+
+/**
  * Type of optimization
  * @member {String} optimization_type
  */
 Experiment.prototype['optimization_type'] = undefined;
+
+/**
+ * Statistics p-value for the experiment
+ * @member {Number} p_value
+ */
+Experiment.prototype['p_value'] = undefined;
 
 /**
  * Total number of sessions in the experiment
@@ -219,6 +264,33 @@ Experiment.prototype['variations'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>openai_element_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+Experiment['OpenaiElementTypeEnum'] = {
+
+    /**
+     * value: "headline"
+     * @const
+     */
+    "headline": "headline",
+
+    /**
+     * value: "text"
+     * @const
+     */
+    "text": "text",
+
+    /**
+     * value: "textblock"
+     * @const
+     */
+    "textblock": "textblock"
+};
 
 
 /**
