@@ -34,7 +34,7 @@
   /**
    * The ReportAuth model module.
    * @module com.ultracart.admin.v2.models/ReportAuth
-   * @version 3.10.126
+   * @version 3.10.127
    */
 
   /**

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ReportDataSetSummary'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ReportDataSet'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ReportDataSetSummary'));
+    module.exports = factory(require('../ApiClient'), require('./ReportDataSet'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ReportWebsocketEvent = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ReportDataSetSummary);
+    root.UltraCartRestApiV2.ReportWebsocketEvent = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ReportDataSet);
   }
-}(this, function(ApiClient, ReportDataSetSummary) {
+}(this, function(ApiClient, ReportDataSet) {
   'use strict';
 
   /**
    * The ReportWebsocketEvent model module.
    * @module com.ultracart.admin.v2.models/ReportWebsocketEvent
-   * @version 3.10.126
+   * @version 3.10.127
    */
 
   /**
@@ -58,7 +58,7 @@
       if (data.hasOwnProperty('event_type'))
         obj.event_type = ApiClient.convertToType(data['event_type'], 'String');
       if (data.hasOwnProperty('query_completion'))
-        obj.query_completion = ReportDataSetSummary.constructFromObject(data['query_completion']);
+        obj.query_completion = ReportDataSet.constructFromObject(data['query_completion']);
     }
     return obj;
   }
@@ -70,7 +70,7 @@
   exports.prototype.event_type = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ReportDataSetSummary} query_completion
+   * @member {module:com.ultracart.admin.v2.models/ReportDataSet} query_completion
    */
   exports.prototype.query_completion = undefined;
 
