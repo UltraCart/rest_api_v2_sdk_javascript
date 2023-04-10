@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerQuery model module.
  * @module com.ultracart.admin.v2.models/CustomerQuery
- * @version 4.0.143
+ * @version 4.0.144
  */
 var CustomerQuery = /*#__PURE__*/function () {
   /**

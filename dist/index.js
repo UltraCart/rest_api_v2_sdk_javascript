@@ -3903,12 +3903,6 @@ Object.defineProperty(exports, "ReportDataSetSchema", {
     return _ReportDataSetSchema["default"];
   }
 });
-Object.defineProperty(exports, "ReportDataSetSummary", {
-  enumerable: true,
-  get: function get() {
-    return _ReportDataSetSummary["default"];
-  }
-});
 Object.defineProperty(exports, "ReportDataSource", {
   enumerable: true,
   get: function get() {
@@ -5995,8 +5989,6 @@ var _ReportDataSetResponse = _interopRequireDefault(require("./com.ultracart.adm
 var _ReportDataSetRow = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetRow"));
 
 var _ReportDataSetSchema = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetSchema"));
-
-var _ReportDataSetSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetSummary"));
 
 var _ReportDataSource = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSource"));
 

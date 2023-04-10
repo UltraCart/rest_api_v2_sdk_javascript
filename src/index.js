@@ -20,6 +20,7 @@ import AccountsReceivableRetryStatAccount from './com.ultracart.admin.v2.models/
 import AccountsReceivableRetryStatMetrics from './com.ultracart.admin.v2.models/AccountsReceivableRetryStatMetrics';
 import AccountsReceivableRetryStatRevenue from './com.ultracart.admin.v2.models/AccountsReceivableRetryStatRevenue';
 import AccountsReceivableRetryStatsResponse from './com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse';
+import AccountsReceivableRetryTransactionReject from './com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject';
 import Activity from './com.ultracart.admin.v2.models/Activity';
 import AddLibraryItemRequest from './com.ultracart.admin.v2.models/AddLibraryItemRequest';
 import AdjustInternalCertificateRequest from './com.ultracart.admin.v2.models/AdjustInternalCertificateRequest';
@@ -649,6 +650,9 @@ import ReportDataSetRow from './com.ultracart.admin.v2.models/ReportDataSetRow';
 import ReportDataSetSchema from './com.ultracart.admin.v2.models/ReportDataSetSchema';
 import ReportDataSource from './com.ultracart.admin.v2.models/ReportDataSource';
 import ReportDataSourceSchema from './com.ultracart.admin.v2.models/ReportDataSourceSchema';
+import ReportDryRunQueriesRequest from './com.ultracart.admin.v2.models/ReportDryRunQueriesRequest';
+import ReportDryRunQueriesResponse from './com.ultracart.admin.v2.models/ReportDryRunQueriesResponse';
+import ReportDryRunQueryResult from './com.ultracart.admin.v2.models/ReportDryRunQueryResult';
 import ReportExecuteQueriesRequest from './com.ultracart.admin.v2.models/ReportExecuteQueriesRequest';
 import ReportFilter from './com.ultracart.admin.v2.models/ReportFilter';
 import ReportFilterConnection from './com.ultracart.admin.v2.models/ReportFilterConnection';
@@ -829,7 +833,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.144
+* @version 4.0.145
 */
 export {
     /**
@@ -879,6 +883,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse}
      */
     AccountsReceivableRetryStatsResponse,
+
+    /**
+     * The AccountsReceivableRetryTransactionReject model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject}
+     */
+    AccountsReceivableRetryTransactionReject,
 
     /**
      * The Activity model constructor.
@@ -4653,6 +4663,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ReportDataSourceSchema}
      */
     ReportDataSourceSchema,
+
+    /**
+     * The ReportDryRunQueriesRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDryRunQueriesRequest}
+     */
+    ReportDryRunQueriesRequest,
+
+    /**
+     * The ReportDryRunQueriesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDryRunQueriesResponse}
+     */
+    ReportDryRunQueriesResponse,
+
+    /**
+     * The ReportDryRunQueryResult model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDryRunQueryResult}
+     */
+    ReportDryRunQueryResult,
 
     /**
      * The ReportExecuteQueriesRequest model constructor.

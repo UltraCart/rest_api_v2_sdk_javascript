@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ReportDataSetSummary = _interopRequireDefault(require("./ReportDataSetSummary"));
+var _ReportDataSet = _interopRequireDefault(require("./ReportDataSet"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportWebsocketEvent model module.
  * @module com.ultracart.admin.v2.models/ReportWebsocketEvent
- * @version 4.0.143
+ * @version 4.0.144
  */
 var ReportWebsocketEvent = /*#__PURE__*/function () {
   /**
@@ -61,7 +61,7 @@ var ReportWebsocketEvent = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('query_completion')) {
-          obj['query_completion'] = _ReportDataSetSummary["default"].constructFromObject(data['query_completion']);
+          obj['query_completion'] = _ReportDataSet["default"].constructFromObject(data['query_completion']);
         }
       }
 
@@ -79,7 +79,7 @@ var ReportWebsocketEvent = /*#__PURE__*/function () {
 
 ReportWebsocketEvent.prototype['event_type'] = undefined;
 /**
- * @member {module:com.ultracart.admin.v2.models/ReportDataSetSummary} query_completion
+ * @member {module:com.ultracart.admin.v2.models/ReportDataSet} query_completion
  */
 
 ReportWebsocketEvent.prototype['query_completion'] = undefined;

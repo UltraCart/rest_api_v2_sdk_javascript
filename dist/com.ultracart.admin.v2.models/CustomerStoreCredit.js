@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerStoreCredit model module.
  * @module com.ultracart.admin.v2.models/CustomerStoreCredit
- * @version 4.0.143
+ * @version 4.0.144
  */
 var CustomerStoreCredit = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CheckoutHandoffRequest model module.
  * @module com.ultracart.admin.v2.models/CheckoutHandoffRequest
- * @version 4.0.143
+ * @version 4.0.144
  */
 var CheckoutHandoffRequest = /*#__PURE__*/function () {
   /**

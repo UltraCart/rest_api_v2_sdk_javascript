@@ -21,7 +21,7 @@ import CartPaymentPurchaseOrder from './CartPaymentPurchaseOrder';
 /**
  * The CartPayment model module.
  * @module com.ultracart.admin.v2.models/CartPayment
- * @version 4.0.144
+ * @version 4.0.145
  */
 class CartPayment {
     /**

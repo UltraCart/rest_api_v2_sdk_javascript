@@ -300,7 +300,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.0.143
+* @version 4.0.144
 */
 var StorefrontApi = /*#__PURE__*/function () {
   /**

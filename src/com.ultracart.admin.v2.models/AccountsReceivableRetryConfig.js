@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import AccountsReceivableRetryDayActivity from './AccountsReceivableRetryDayActivity';
+import AccountsReceivableRetryTransactionReject from './AccountsReceivableRetryTransactionReject';
 
 /**
  * The AccountsReceivableRetryConfig model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
- * @version 4.0.144
+ * @version 4.0.145
  */
 class AccountsReceivableRetryConfig {
     /**
@@ -86,6 +87,9 @@ class AccountsReceivableRetryConfig {
             }
             if (data.hasOwnProperty('reject_at_end')) {
                 obj['reject_at_end'] = ApiClient.convertToType(data['reject_at_end'], 'Boolean');
+            }
+            if (data.hasOwnProperty('transaction_rejects')) {
+                obj['transaction_rejects'] = ApiClient.convertToType(data['transaction_rejects'], [AccountsReceivableRetryTransactionReject]);
             }
             if (data.hasOwnProperty('trial_mode')) {
                 obj['trial_mode'] = ApiClient.convertToType(data['trial_mode'], 'Boolean');
@@ -177,6 +181,12 @@ AccountsReceivableRetryConfig.prototype['processing_percentage'] = undefined;
  * @member {Boolean} reject_at_end
  */
 AccountsReceivableRetryConfig.prototype['reject_at_end'] = undefined;
+
+/**
+ * Array of key/value pairs that when found in the response cause the rejection of the transaction.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject>} transaction_rejects
+ */
+AccountsReceivableRetryConfig.prototype['transaction_rejects'] = undefined;
 
 /**
  * True if the account is currently in trial mode.  Set to false to exit trial mode.
