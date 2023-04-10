@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity', 'com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AccountsReceivableRetryDayActivity'));
+    module.exports = factory(require('../ApiClient'), require('./AccountsReceivableRetryDayActivity'), require('./AccountsReceivableRetryTransactionReject'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AccountsReceivableRetryConfig = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AccountsReceivableRetryDayActivity);
+    root.UltraCartRestApiV2.AccountsReceivableRetryConfig = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AccountsReceivableRetryDayActivity, root.UltraCartRestApiV2.AccountsReceivableRetryTransactionReject);
   }
-}(this, function(ApiClient, AccountsReceivableRetryDayActivity) {
+}(this, function(ApiClient, AccountsReceivableRetryDayActivity, AccountsReceivableRetryTransactionReject) {
   'use strict';
 
   /**
    * The AccountsReceivableRetryConfig model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
-   * @version 3.10.127
+   * @version 3.10.128
    */
 
   /**
@@ -81,6 +81,8 @@
         obj.processing_percentage = ApiClient.convertToType(data['processing_percentage'], 'String');
       if (data.hasOwnProperty('reject_at_end'))
         obj.reject_at_end = ApiClient.convertToType(data['reject_at_end'], 'Boolean');
+      if (data.hasOwnProperty('transaction_rejects'))
+        obj.transaction_rejects = ApiClient.convertToType(data['transaction_rejects'], [AccountsReceivableRetryTransactionReject]);
       if (data.hasOwnProperty('trial_mode'))
         obj.trial_mode = ApiClient.convertToType(data['trial_mode'], 'Boolean');
       if (data.hasOwnProperty('trial_mode_expiration_dts'))
@@ -166,6 +168,12 @@
    * @member {Boolean} reject_at_end
    */
   exports.prototype.reject_at_end = undefined;
+
+  /**
+   * Array of key/value pairs that when found in the response cause the rejection of the transaction.
+   * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject>} transaction_rejects
+   */
+  exports.prototype.transaction_rejects = undefined;
 
   /**
    * True if the account is currently in trial mode.  Set to false to exit trial mode.
