@@ -34,7 +34,7 @@
   /**
    * The Experiment model module.
    * @module com.ultracart.admin.v2.models/Experiment
-   * @version 3.10.128
+   * @version 3.10.129
    */
 
   /**
@@ -85,6 +85,8 @@
         obj.openai_total_iterations = ApiClient.convertToType(data['openai_total_iterations'], 'Number');
       if (data.hasOwnProperty('optimization_type'))
         obj.optimization_type = ApiClient.convertToType(data['optimization_type'], 'String');
+      if (data.hasOwnProperty('p95_sessions_needed'))
+        obj.p95_sessions_needed = ApiClient.convertToType(data['p95_sessions_needed'], 'Number');
       if (data.hasOwnProperty('p_value'))
         obj.p_value = ApiClient.convertToType(data['p_value'], 'Number');
       if (data.hasOwnProperty('session_count'))
@@ -194,6 +196,12 @@
    * @member {String} optimization_type
    */
   exports.prototype.optimization_type = undefined;
+
+  /**
+   * Estimated sessions needed to achieve P95
+   * @member {Number} p95_sessions_needed
+   */
+  exports.prototype.p95_sessions_needed = undefined;
 
   /**
    * Statistics p-value for the experiment

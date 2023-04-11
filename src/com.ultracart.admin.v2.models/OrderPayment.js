@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.10.128
+   * @version 3.10.129
    */
 
   /**
@@ -322,7 +322,13 @@
      * value: "Shop.com"
      * @const
      */
-    Shop_com: "Shop.com"
+    Shop_com: "Shop.com",
+
+    /**
+     * value: "Sezzle"
+     * @const
+     */
+    Sezzle: "Sezzle"
   };
 
 

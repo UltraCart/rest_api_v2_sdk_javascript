@@ -67,6 +67,8 @@ Name | Type | Description | Notes
 
 * `Shop_com` (value: `"Shop.com"`)
 
+* `Sezzle` (value: `"Sezzle"`)
+
 
 
 
