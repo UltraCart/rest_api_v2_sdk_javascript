@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationTwilioAccount model module.
  * @module com.ultracart.admin.v2.models/ConversationTwilioAccount
- * @version 4.0.145
+ * @version 4.0.146
  */
 class ConversationTwilioAccount {
     /**

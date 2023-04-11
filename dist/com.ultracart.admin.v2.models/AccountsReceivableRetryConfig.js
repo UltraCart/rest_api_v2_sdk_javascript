@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _AccountsReceivableRetryDayActivity = _interopRequireDefault(require("./AccountsReceivableRetryDayActivity"));
 
+var _AccountsReceivableRetryTransactionReject = _interopRequireDefault(require("./AccountsReceivableRetryTransactionReject"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AccountsReceivableRetryConfig model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
- * @version 4.0.144
+ * @version 4.0.145
  */
 var AccountsReceivableRetryConfig = /*#__PURE__*/function () {
   /**
@@ -106,6 +108,10 @@ var AccountsReceivableRetryConfig = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('reject_at_end')) {
           obj['reject_at_end'] = _ApiClient["default"].convertToType(data['reject_at_end'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('transaction_rejects')) {
+          obj['transaction_rejects'] = _ApiClient["default"].convertToType(data['transaction_rejects'], [_AccountsReceivableRetryTransactionReject["default"]]);
         }
 
         if (data.hasOwnProperty('trial_mode')) {
@@ -202,6 +208,12 @@ AccountsReceivableRetryConfig.prototype['processing_percentage'] = undefined;
  */
 
 AccountsReceivableRetryConfig.prototype['reject_at_end'] = undefined;
+/**
+ * Array of key/value pairs that when found in the response cause the rejection of the transaction.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject>} transaction_rejects
+ */
+
+AccountsReceivableRetryConfig.prototype['transaction_rejects'] = undefined;
 /**
  * True if the account is currently in trial mode.  Set to false to exit trial mode.
  * @member {Boolean} trial_mode

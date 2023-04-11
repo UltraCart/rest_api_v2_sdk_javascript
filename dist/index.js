@@ -45,6 +45,12 @@ Object.defineProperty(exports, "AccountsReceivableRetryStatsResponse", {
     return _AccountsReceivableRetryStatsResponse["default"];
   }
 });
+Object.defineProperty(exports, "AccountsReceivableRetryTransactionReject", {
+  enumerable: true,
+  get: function get() {
+    return _AccountsReceivableRetryTransactionReject["default"];
+  }
+});
 Object.defineProperty(exports, "Activity", {
   enumerable: true,
   get: function get() {
@@ -3915,6 +3921,24 @@ Object.defineProperty(exports, "ReportDataSourceSchema", {
     return _ReportDataSourceSchema["default"];
   }
 });
+Object.defineProperty(exports, "ReportDryRunQueriesRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDryRunQueriesRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDryRunQueriesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDryRunQueriesResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ReportDryRunQueryResult", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDryRunQueryResult["default"];
+  }
+});
 Object.defineProperty(exports, "ReportExecuteQueriesRequest", {
   enumerable: true,
   get: function get() {
@@ -4735,6 +4759,8 @@ var _AccountsReceivableRetryStatMetrics = _interopRequireDefault(require("./com.
 var _AccountsReceivableRetryStatRevenue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AccountsReceivableRetryStatRevenue"));
 
 var _AccountsReceivableRetryStatsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse"));
+
+var _AccountsReceivableRetryTransactionReject = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject"));
 
 var _Activity = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Activity"));
 
@@ -5993,6 +6019,12 @@ var _ReportDataSetSchema = _interopRequireDefault(require("./com.ultracart.admin
 var _ReportDataSource = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSource"));
 
 var _ReportDataSourceSchema = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSourceSchema"));
+
+var _ReportDryRunQueriesRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDryRunQueriesRequest"));
+
+var _ReportDryRunQueriesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDryRunQueriesResponse"));
+
+var _ReportDryRunQueryResult = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDryRunQueryResult"));
 
 var _ReportExecuteQueriesRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportExecuteQueriesRequest"));
 

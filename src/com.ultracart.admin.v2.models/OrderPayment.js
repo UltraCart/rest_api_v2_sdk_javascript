@@ -23,7 +23,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.145
+ * @version 4.0.146
  */
 class OrderPayment {
     /**
@@ -346,7 +346,13 @@ OrderPayment['PaymentMethodEnum'] = {
      * value: "Shop.com"
      * @const
      */
-    "Shop.com": "Shop.com"
+    "Shop.com": "Shop.com",
+
+    /**
+     * value: "Sezzle"
+     * @const
+     */
+    "Sezzle": "Sezzle"
 };
 
 

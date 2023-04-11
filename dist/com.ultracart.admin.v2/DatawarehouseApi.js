@@ -17,6 +17,10 @@ var _ReportDataSetPageResponse = _interopRequireDefault(require("../com.ultracar
 
 var _ReportDataSetResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ReportDataSetResponse"));
 
+var _ReportDryRunQueriesRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ReportDryRunQueriesRequest"));
+
+var _ReportDryRunQueriesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ReportDryRunQueriesResponse"));
+
 var _ReportExecuteQueriesRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ReportExecuteQueriesRequest"));
 
 var _ReportResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ReportResponse"));
@@ -34,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.0.144
+* @version 4.0.145
 */
 var DatawarehouseApi = /*#__PURE__*/function () {
   /**
@@ -85,6 +89,41 @@ var DatawarehouseApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = null;
       return this.apiClient.callApi('/datawarehouse/reports/{report_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the dryRunReportQueries operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~dryRunReportQueriesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ReportDryRunQueriesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Dry run the report queries
+     * Dry run the report queries 
+     * @param {module:com.ultracart.admin.v2.models/ReportDryRunQueriesRequest} query_request Dry run request
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~dryRunReportQueriesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ReportDryRunQueriesResponse}
+     */
+
+  }, {
+    key: "dryRunReportQueries",
+    value: function dryRunReportQueries(query_request, callback) {
+      var postBody = query_request; // verify the required parameter 'query_request' is set
+
+      if (query_request === undefined || query_request === null) {
+        throw new Error("Missing the required parameter 'query_request' when calling dryRunReportQueries");
+      }
+
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ReportDryRunQueriesResponse["default"];
+      return this.apiClient.callApi('/datawarehouse/reports/dryrun', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the executeReportQueries operation.

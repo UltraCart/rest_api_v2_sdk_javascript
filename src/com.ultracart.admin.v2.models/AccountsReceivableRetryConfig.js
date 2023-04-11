@@ -18,7 +18,7 @@ import AccountsReceivableRetryTransactionReject from './AccountsReceivableRetryT
 /**
  * The AccountsReceivableRetryConfig model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
- * @version 4.0.145
+ * @version 4.0.146
  */
 class AccountsReceivableRetryConfig {
     /**
