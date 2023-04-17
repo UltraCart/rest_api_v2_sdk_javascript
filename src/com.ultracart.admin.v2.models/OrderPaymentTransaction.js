@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentTransaction model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentTransaction
-   * @version 3.10.129
+   * @version 3.10.130
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.successful = ApiClient.convertToType(data['successful'], 'Boolean');
       if (data.hasOwnProperty('transaction_gateway'))
         obj.transaction_gateway = ApiClient.convertToType(data['transaction_gateway'], 'String');
+      if (data.hasOwnProperty('transaction_id'))
+        obj.transaction_id = ApiClient.convertToType(data['transaction_id'], 'Number');
       if (data.hasOwnProperty('transaction_timestamp'))
         obj.transaction_timestamp = ApiClient.convertToType(data['transaction_timestamp'], 'String');
     }
@@ -84,6 +86,12 @@
    * @member {String} transaction_gateway
    */
   exports.prototype.transaction_gateway = undefined;
+
+  /**
+   * Transaction ID
+   * @member {Number} transaction_id
+   */
+  exports.prototype.transaction_id = undefined;
 
   /**
    * Transaction date/time
