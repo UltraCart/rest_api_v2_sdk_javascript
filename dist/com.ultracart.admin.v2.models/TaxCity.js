@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxCity model module.
  * @module com.ultracart.admin.v2.models/TaxCity
- * @version 4.0.145
+ * @version 4.0.146
  */
 var TaxCity = /*#__PURE__*/function () {
   /**

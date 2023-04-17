@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailTemplate model module.
  * @module com.ultracart.admin.v2.models/EmailTemplate
- * @version 4.0.146
+ * @version 4.0.147
  */
 class EmailTemplate {
     /**

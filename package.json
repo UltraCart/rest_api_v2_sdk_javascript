@@ -1,6 +1,6 @@
 {
   "name": "ultra_cart_rest_api_v2",
-  "version": "4.0.146",
+  "version": "4.0.147",
   "description": "UltraCart REST SDK",
   "license": "Unlicense",
   "main": "dist/index.js",

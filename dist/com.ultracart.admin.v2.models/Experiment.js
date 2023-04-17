@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Experiment model module.
  * @module com.ultracart.admin.v2.models/Experiment
- * @version 4.0.145
+ * @version 4.0.146
  */
 var Experiment = /*#__PURE__*/function () {
   /**
@@ -114,6 +114,10 @@ var Experiment = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('optimization_type')) {
           obj['optimization_type'] = _ApiClient["default"].convertToType(data['optimization_type'], 'String');
+        }
+
+        if (data.hasOwnProperty('p95_sessions_needed')) {
+          obj['p95_sessions_needed'] = _ApiClient["default"].convertToType(data['p95_sessions_needed'], 'Number');
         }
 
         if (data.hasOwnProperty('p_value')) {
@@ -246,6 +250,12 @@ Experiment.prototype['openai_total_iterations'] = undefined;
  */
 
 Experiment.prototype['optimization_type'] = undefined;
+/**
+ * Estimated sessions needed to achieve P95
+ * @member {Number} p95_sessions_needed
+ */
+
+Experiment.prototype['p95_sessions_needed'] = undefined;
 /**
  * Statistics p-value for the experiment
  * @member {Number} p_value
