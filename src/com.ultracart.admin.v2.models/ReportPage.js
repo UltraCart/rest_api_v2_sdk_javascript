@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import ReportFilter from './ReportFilter';
 import ReportPageVisualization from './ReportPageVisualization';
 
 /**
  * The ReportPage model module.
  * @module com.ultracart.admin.v2.models/ReportPage
- * @version 4.0.147
+ * @version 4.0.148
  */
 class ReportPage {
     /**
@@ -48,6 +49,9 @@ class ReportPage {
         if (data) {
             obj = obj || new ReportPage();
 
+            if (data.hasOwnProperty('filters')) {
+                obj['filters'] = ApiClient.convertToType(data['filters'], [ReportFilter]);
+            }
             if (data.hasOwnProperty('height')) {
                 obj['height'] = ApiClient.convertToType(data['height'], 'Number');
             }
@@ -66,6 +70,11 @@ class ReportPage {
 
 
 }
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilter>} filters
+ */
+ReportPage.prototype['filters'] = undefined;
 
 /**
  * Height of the report page in inches

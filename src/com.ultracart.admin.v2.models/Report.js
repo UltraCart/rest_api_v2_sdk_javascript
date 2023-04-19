@@ -13,13 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import ReportDataSource from './ReportDataSource';
-import ReportFilter from './ReportFilter';
 import ReportPage from './ReportPage';
 
 /**
  * The Report model module.
  * @module com.ultracart.admin.v2.models/Report
- * @version 4.0.147
+ * @version 4.0.148
  */
 class Report {
     /**
@@ -62,9 +61,6 @@ class Report {
             if (data.hasOwnProperty('default_project_id')) {
                 obj['default_project_id'] = ApiClient.convertToType(data['default_project_id'], 'String');
             }
-            if (data.hasOwnProperty('filters')) {
-                obj['filters'] = ApiClient.convertToType(data['filters'], [ReportFilter]);
-            }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
             }
@@ -106,11 +102,6 @@ Report.prototype['default_dataset_id'] = undefined;
  * @member {String} default_project_id
  */
 Report.prototype['default_project_id'] = undefined;
-
-/**
- * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilter>} filters
- */
-Report.prototype['filters'] = undefined;
 
 /**
  * @member {String} merchant_id

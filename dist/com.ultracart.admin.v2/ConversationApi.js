@@ -80,7 +80,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.146
+* @version 4.0.147
 */
 var ConversationApi = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPaymentTransaction model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentTransaction
- * @version 4.0.146
+ * @version 4.0.147
  */
 var OrderPaymentTransaction = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,10 @@ var OrderPaymentTransaction = /*#__PURE__*/function () {
           obj['transaction_gateway'] = _ApiClient["default"].convertToType(data['transaction_gateway'], 'String');
         }
 
+        if (data.hasOwnProperty('transaction_id')) {
+          obj['transaction_id'] = _ApiClient["default"].convertToType(data['transaction_id'], 'Number');
+        }
+
         if (data.hasOwnProperty('transaction_timestamp')) {
           obj['transaction_timestamp'] = _ApiClient["default"].convertToType(data['transaction_timestamp'], 'String');
         }
@@ -98,6 +102,12 @@ OrderPaymentTransaction.prototype['successful'] = undefined;
  */
 
 OrderPaymentTransaction.prototype['transaction_gateway'] = undefined;
+/**
+ * Transaction ID
+ * @member {Number} transaction_id
+ */
+
+OrderPaymentTransaction.prototype['transaction_id'] = undefined;
 /**
  * Transaction date/time
  * @member {String} transaction_timestamp
