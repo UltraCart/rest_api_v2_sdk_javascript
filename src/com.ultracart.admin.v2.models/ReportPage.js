@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import ReportFilter from './ReportFilter';
+import ReportPageFilter from './ReportPageFilter';
 import ReportPageVisualization from './ReportPageVisualization';
 
 /**
  * The ReportPage model module.
  * @module com.ultracart.admin.v2.models/ReportPage
- * @version 4.0.148
+ * @version 4.0.149
  */
 class ReportPage {
     /**
@@ -50,7 +50,7 @@ class ReportPage {
             obj = obj || new ReportPage();
 
             if (data.hasOwnProperty('filters')) {
-                obj['filters'] = ApiClient.convertToType(data['filters'], [ReportFilter]);
+                obj['filters'] = ApiClient.convertToType(data['filters'], [ReportPageFilter]);
             }
             if (data.hasOwnProperty('height')) {
                 obj['height'] = ApiClient.convertToType(data['height'], 'Number');
@@ -72,7 +72,7 @@ class ReportPage {
 }
 
 /**
- * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilter>} filters
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportPageFilter>} filters
  */
 ReportPage.prototype['filters'] = undefined;
 

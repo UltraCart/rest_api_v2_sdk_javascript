@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ReportFilter = _interopRequireDefault(require("./ReportFilter"));
+
 var _ReportPageVisualization = _interopRequireDefault(require("./ReportPageVisualization"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -20,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPage model module.
  * @module com.ultracart.admin.v2.models/ReportPage
- * @version 4.0.147
+ * @version 4.0.148
  */
 var ReportPage = /*#__PURE__*/function () {
   /**
@@ -56,6 +58,10 @@ var ReportPage = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ReportPage();
 
+        if (data.hasOwnProperty('filters')) {
+          obj['filters'] = _ApiClient["default"].convertToType(data['filters'], [_ReportFilter["default"]]);
+        }
+
         if (data.hasOwnProperty('height')) {
           obj['height'] = _ApiClient["default"].convertToType(data['height'], 'Number');
         }
@@ -80,10 +86,15 @@ var ReportPage = /*#__PURE__*/function () {
   return ReportPage;
 }();
 /**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilter>} filters
+ */
+
+
+ReportPage.prototype['filters'] = undefined;
+/**
  * Height of the report page in inches
  * @member {Number} height
  */
-
 
 ReportPage.prototype['height'] = undefined;
 /**

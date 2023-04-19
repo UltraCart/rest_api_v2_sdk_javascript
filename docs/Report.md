@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **data_sources** | [**[ReportDataSource]**](ReportDataSource.md) |  | [optional] 
 **default_dataset_id** | **String** |  | [optional] 
 **default_project_id** | **String** |  | [optional] 
+**filters** | [**[ReportFilter]**](ReportFilter.md) |  | [optional] 
 **merchant_id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **pages** | [**[ReportPage]**](ReportPage.md) |  | [optional] 

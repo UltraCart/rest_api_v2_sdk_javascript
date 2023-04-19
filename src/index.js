@@ -657,6 +657,7 @@ import ReportExecuteQueriesRequest from './com.ultracart.admin.v2.models/ReportE
 import ReportFilter from './com.ultracart.admin.v2.models/ReportFilter';
 import ReportFilterConnection from './com.ultracart.admin.v2.models/ReportFilterConnection';
 import ReportPage from './com.ultracart.admin.v2.models/ReportPage';
+import ReportPageFilter from './com.ultracart.admin.v2.models/ReportPageFilter';
 import ReportPageVisualization from './com.ultracart.admin.v2.models/ReportPageVisualization';
 import ReportPageVisualizationDimension from './com.ultracart.admin.v2.models/ReportPageVisualizationDimension';
 import ReportPageVisualizationMetric from './com.ultracart.admin.v2.models/ReportPageVisualizationMetric';
@@ -833,7 +834,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.148
+* @version 4.0.149
 */
 export {
     /**
@@ -4705,6 +4706,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ReportPage}
      */
     ReportPage,
+
+    /**
+     * The ReportPageFilter model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportPageFilter}
+     */
+    ReportPageFilter,
 
     /**
      * The ReportPageVisualization model constructor.

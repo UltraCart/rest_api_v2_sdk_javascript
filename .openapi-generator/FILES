@@ -661,6 +661,7 @@ docs/ReportExecuteQueriesRequest.md
 docs/ReportFilter.md
 docs/ReportFilterConnection.md
 docs/ReportPage.md
+docs/ReportPageFilter.md
 docs/ReportPageVisualization.md
 docs/ReportPageVisualizationDimension.md
 docs/ReportPageVisualizationMetric.md
@@ -1439,6 +1440,7 @@ src/com.ultracart.admin.v2.models/ReportExecuteQueriesRequest.js
 src/com.ultracart.admin.v2.models/ReportFilter.js
 src/com.ultracart.admin.v2.models/ReportFilterConnection.js
 src/com.ultracart.admin.v2.models/ReportPage.js
+src/com.ultracart.admin.v2.models/ReportPageFilter.js
 src/com.ultracart.admin.v2.models/ReportPageVisualization.js
 src/com.ultracart.admin.v2.models/ReportPageVisualizationDimension.js
 src/com.ultracart.admin.v2.models/ReportPageVisualizationMetric.js

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BrowserDevice model module.
  * @module com.ultracart.admin.v2.models/BrowserDevice
- * @version 4.0.147
+ * @version 4.0.148
  */
 var BrowserDevice = /*#__PURE__*/function () {
   /**

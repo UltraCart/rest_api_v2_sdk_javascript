@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.0.147
+ * @version 4.0.148
  */
 var OrderQuery = /*#__PURE__*/function () {
   /**
