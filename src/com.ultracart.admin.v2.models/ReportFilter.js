@@ -34,7 +34,7 @@
   /**
    * The ReportFilter model module.
    * @module com.ultracart.admin.v2.models/ReportFilter
-   * @version 3.10.130
+   * @version 3.10.131
    */
 
   /**
@@ -55,10 +55,14 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('config'))
+        obj.config = ApiClient.convertToType(data['config'], 'String');
       if (data.hasOwnProperty('connections'))
         obj.connections = ApiClient.convertToType(data['connections'], [ReportFilterConnection]);
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('styles'))
+        obj.styles = ApiClient.convertToType(data['styles'], 'String');
       if (data.hasOwnProperty('timezone'))
         obj.timezone = ApiClient.convertToType(data['timezone'], 'String');
       if (data.hasOwnProperty('type'))
@@ -72,6 +76,12 @@
   }
 
   /**
+   * A JSON representation of the configuration for this visualization
+   * @member {String} config
+   */
+  exports.prototype.config = undefined;
+
+  /**
    * How this filter connects to the data sources and columns
    * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilterConnection>} connections
    */
@@ -81,6 +91,12 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * A JSON representation of the style configuration for this visualization
+   * @member {String} styles
+   */
+  exports.prototype.styles = undefined;
 
   /**
    * The timezone that the date range is querying on.
