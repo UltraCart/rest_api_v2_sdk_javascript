@@ -34,7 +34,7 @@
   /**
    * The CustomerStoreCreditResponse model module.
    * @module com.ultracart.admin.v2.models/CustomerStoreCreditResponse
-   * @version 3.10.131
+   * @version 3.10.132
    */
 
   /**

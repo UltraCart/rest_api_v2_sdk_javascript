@@ -34,7 +34,7 @@
   /**
    * The ConversationMessagesResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationMessagesResponse
-   * @version 3.10.131
+   * @version 3.10.132
    */
 
   /**
