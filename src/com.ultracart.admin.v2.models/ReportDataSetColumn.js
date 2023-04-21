@@ -34,7 +34,7 @@
   /**
    * The ReportDataSetColumn model module.
    * @module com.ultracart.admin.v2.models/ReportDataSetColumn
-   * @version 3.10.132
+   * @version 3.10.133
    */
 
   /**
@@ -55,16 +55,51 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('in'))
+        obj._in = ApiClient.convertToType(data['in'], 'Boolean');
+      if (data.hasOwnProperty('n'))
+        obj.n = ApiClient.convertToType(data['n'], 'String');
+      if (data.hasOwnProperty('vd'))
+        obj.vd = ApiClient.convertToType(data['vd'], 'String');
+      if (data.hasOwnProperty('vdt'))
+        obj.vdt = ApiClient.convertToType(data['vdt'], 'String');
+      if (data.hasOwnProperty('vn'))
+        obj.vn = ApiClient.convertToType(data['vn'], 'Number');
+      if (data.hasOwnProperty('vs'))
+        obj.vs = ApiClient.convertToType(data['vs'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} name
+   * @member {Boolean} _in
    */
-  exports.prototype.name = undefined;
+  exports.prototype._in = undefined;
+
+  /**
+   * @member {String} n
+   */
+  exports.prototype.n = undefined;
+
+  /**
+   * @member {String} vd
+   */
+  exports.prototype.vd = undefined;
+
+  /**
+   * @member {String} vdt
+   */
+  exports.prototype.vdt = undefined;
+
+  /**
+   * @member {Number} vn
+   */
+  exports.prototype.vn = undefined;
+
+  /**
+   * @member {String} vs
+   */
+  exports.prototype.vs = undefined;
 
   return exports;
 

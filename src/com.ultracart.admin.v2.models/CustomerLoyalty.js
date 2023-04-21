@@ -34,7 +34,7 @@
   /**
    * The CustomerLoyalty model module.
    * @module com.ultracart.admin.v2.models/CustomerLoyalty
-   * @version 3.10.132
+   * @version 3.10.133
    */
 
   /**
