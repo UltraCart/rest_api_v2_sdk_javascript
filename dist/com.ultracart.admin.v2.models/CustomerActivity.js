@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerActivity model module.
  * @module com.ultracart.admin.v2.models/CustomerActivity
- * @version 4.0.148
+ * @version 4.0.149
  */
 var CustomerActivity = /*#__PURE__*/function () {
   /**

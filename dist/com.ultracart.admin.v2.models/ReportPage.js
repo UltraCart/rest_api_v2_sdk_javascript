@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _ReportFilter = _interopRequireDefault(require("./ReportFilter"));
+var _ReportPageFilter = _interopRequireDefault(require("./ReportPageFilter"));
 
 var _ReportPageVisualization = _interopRequireDefault(require("./ReportPageVisualization"));
 
@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPage model module.
  * @module com.ultracart.admin.v2.models/ReportPage
- * @version 4.0.148
+ * @version 4.0.149
  */
 var ReportPage = /*#__PURE__*/function () {
   /**
@@ -59,7 +59,7 @@ var ReportPage = /*#__PURE__*/function () {
         obj = obj || new ReportPage();
 
         if (data.hasOwnProperty('filters')) {
-          obj['filters'] = _ApiClient["default"].convertToType(data['filters'], [_ReportFilter["default"]]);
+          obj['filters'] = _ApiClient["default"].convertToType(data['filters'], [_ReportPageFilter["default"]]);
         }
 
         if (data.hasOwnProperty('height')) {
@@ -86,7 +86,7 @@ var ReportPage = /*#__PURE__*/function () {
   return ReportPage;
 }();
 /**
- * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilter>} filters
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportPageFilter>} filters
  */
 
 

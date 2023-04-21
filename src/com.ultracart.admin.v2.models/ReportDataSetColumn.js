@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportDataSetColumn model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetColumn
- * @version 4.0.149
+ * @version 4.0.150
  */
 class ReportDataSetColumn {
     /**
@@ -47,8 +47,23 @@ class ReportDataSetColumn {
         if (data) {
             obj = obj || new ReportDataSetColumn();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('in')) {
+                obj['in'] = ApiClient.convertToType(data['in'], 'Boolean');
+            }
+            if (data.hasOwnProperty('n')) {
+                obj['n'] = ApiClient.convertToType(data['n'], 'String');
+            }
+            if (data.hasOwnProperty('vd')) {
+                obj['vd'] = ApiClient.convertToType(data['vd'], 'String');
+            }
+            if (data.hasOwnProperty('vdt')) {
+                obj['vdt'] = ApiClient.convertToType(data['vdt'], 'String');
+            }
+            if (data.hasOwnProperty('vn')) {
+                obj['vn'] = ApiClient.convertToType(data['vn'], 'Number');
+            }
+            if (data.hasOwnProperty('vs')) {
+                obj['vs'] = ApiClient.convertToType(data['vs'], 'String');
             }
         }
         return obj;
@@ -58,9 +73,34 @@ class ReportDataSetColumn {
 }
 
 /**
- * @member {String} name
+ * @member {Boolean} in
  */
-ReportDataSetColumn.prototype['name'] = undefined;
+ReportDataSetColumn.prototype['in'] = undefined;
+
+/**
+ * @member {String} n
+ */
+ReportDataSetColumn.prototype['n'] = undefined;
+
+/**
+ * @member {String} vd
+ */
+ReportDataSetColumn.prototype['vd'] = undefined;
+
+/**
+ * @member {String} vdt
+ */
+ReportDataSetColumn.prototype['vdt'] = undefined;
+
+/**
+ * @member {Number} vn
+ */
+ReportDataSetColumn.prototype['vn'] = undefined;
+
+/**
+ * @member {String} vs
+ */
+ReportDataSetColumn.prototype['vs'] = undefined;
 
 
 

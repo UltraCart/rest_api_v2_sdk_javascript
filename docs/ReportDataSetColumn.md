@@ -4,6 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
+**_in** | **Boolean** |  | [optional] 
+**n** | **String** |  | [optional] 
+**vd** | **String** |  | [optional] 
+**vdt** | **String** |  | [optional] 
+**vn** | **Number** |  | [optional] 
+**vs** | **String** |  | [optional] 
 
 

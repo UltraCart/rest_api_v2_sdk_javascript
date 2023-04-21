@@ -9,6 +9,8 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _ReportDataSource = _interopRequireDefault(require("./ReportDataSource"));
 
+var _ReportFilter = _interopRequireDefault(require("./ReportFilter"));
+
 var _ReportPage = _interopRequireDefault(require("./ReportPage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -22,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Report model module.
  * @module com.ultracart.admin.v2.models/Report
- * @version 4.0.148
+ * @version 4.0.149
  */
 var Report = /*#__PURE__*/function () {
   /**
@@ -74,6 +76,10 @@ var Report = /*#__PURE__*/function () {
           obj['default_project_id'] = _ApiClient["default"].convertToType(data['default_project_id'], 'String');
         }
 
+        if (data.hasOwnProperty('filters')) {
+          obj['filters'] = _ApiClient["default"].convertToType(data['filters'], [_ReportFilter["default"]]);
+        }
+
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
@@ -122,6 +128,11 @@ Report.prototype['default_dataset_id'] = undefined;
  */
 
 Report.prototype['default_project_id'] = undefined;
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilter>} filters
+ */
+
+Report.prototype['filters'] = undefined;
 /**
  * @member {String} merchant_id
  */

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**columns** | [**[ReportDataSetColumn]**](ReportDataSetColumn.md) |  | [optional] 
+**c** | [**[ReportDataSetColumn]**](ReportDataSetColumn.md) |  | [optional] 
 
 

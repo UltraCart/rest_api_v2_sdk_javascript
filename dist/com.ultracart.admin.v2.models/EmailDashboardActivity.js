@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailDashboardActivity model module.
  * @module com.ultracart.admin.v2.models/EmailDashboardActivity
- * @version 4.0.148
+ * @version 4.0.149
  */
 var EmailDashboardActivity = /*#__PURE__*/function () {
   /**

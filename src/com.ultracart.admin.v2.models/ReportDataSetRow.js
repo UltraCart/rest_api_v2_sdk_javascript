@@ -17,7 +17,7 @@ import ReportDataSetColumn from './ReportDataSetColumn';
 /**
  * The ReportDataSetRow model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetRow
- * @version 4.0.149
+ * @version 4.0.150
  */
 class ReportDataSetRow {
     /**
@@ -48,8 +48,8 @@ class ReportDataSetRow {
         if (data) {
             obj = obj || new ReportDataSetRow();
 
-            if (data.hasOwnProperty('columns')) {
-                obj['columns'] = ApiClient.convertToType(data['columns'], [ReportDataSetColumn]);
+            if (data.hasOwnProperty('c')) {
+                obj['c'] = ApiClient.convertToType(data['c'], [ReportDataSetColumn]);
             }
         }
         return obj;
@@ -59,9 +59,9 @@ class ReportDataSetRow {
 }
 
 /**
- * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetColumn>} columns
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetColumn>} c
  */
-ReportDataSetRow.prototype['columns'] = undefined;
+ReportDataSetRow.prototype['c'] = undefined;
 
 
 

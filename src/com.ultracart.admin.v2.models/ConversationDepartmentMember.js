@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationDepartmentMember model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartmentMember
- * @version 4.0.149
+ * @version 4.0.150
  */
 class ConversationDepartmentMember {
     /**

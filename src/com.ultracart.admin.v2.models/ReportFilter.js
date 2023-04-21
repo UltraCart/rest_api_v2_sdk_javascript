@@ -17,7 +17,7 @@ import ReportFilterConnection from './ReportFilterConnection';
 /**
  * The ReportFilter model module.
  * @module com.ultracart.admin.v2.models/ReportFilter
- * @version 4.0.149
+ * @version 4.0.150
  */
 class ReportFilter {
     /**
@@ -48,17 +48,11 @@ class ReportFilter {
         if (data) {
             obj = obj || new ReportFilter();
 
-            if (data.hasOwnProperty('config')) {
-                obj['config'] = ApiClient.convertToType(data['config'], 'String');
-            }
             if (data.hasOwnProperty('connections')) {
                 obj['connections'] = ApiClient.convertToType(data['connections'], [ReportFilterConnection]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('styles')) {
-                obj['styles'] = ApiClient.convertToType(data['styles'], 'String');
             }
             if (data.hasOwnProperty('timezone')) {
                 obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
@@ -80,12 +74,6 @@ class ReportFilter {
 }
 
 /**
- * A JSON representation of the configuration for this visualization
- * @member {String} config
- */
-ReportFilter.prototype['config'] = undefined;
-
-/**
  * How this filter connects to the data sources and columns
  * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilterConnection>} connections
  */
@@ -95,12 +83,6 @@ ReportFilter.prototype['connections'] = undefined;
  * @member {String} name
  */
 ReportFilter.prototype['name'] = undefined;
-
-/**
- * A JSON representation of the style configuration for this visualization
- * @member {String} styles
- */
-ReportFilter.prototype['styles'] = undefined;
 
 /**
  * The timezone that the date range is querying on.

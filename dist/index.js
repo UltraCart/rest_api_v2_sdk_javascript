@@ -3963,6 +3963,12 @@ Object.defineProperty(exports, "ReportPage", {
     return _ReportPage["default"];
   }
 });
+Object.defineProperty(exports, "ReportPageFilter", {
+  enumerable: true,
+  get: function get() {
+    return _ReportPageFilter["default"];
+  }
+});
 Object.defineProperty(exports, "ReportPageVisualization", {
   enumerable: true,
   get: function get() {
@@ -6033,6 +6039,8 @@ var _ReportFilter = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ReportFilterConnection = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportFilterConnection"));
 
 var _ReportPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPage"));
+
+var _ReportPageFilter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPageFilter"));
 
 var _ReportPageVisualization = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportPageVisualization"));
 
