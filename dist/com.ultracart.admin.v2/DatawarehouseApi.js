@@ -38,7 +38,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.0.149
+* @version 4.0.150
 */
 var DatawarehouseApi = /*#__PURE__*/function () {
   /**

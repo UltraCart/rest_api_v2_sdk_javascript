@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderCoupon model module.
  * @module com.ultracart.admin.v2.models/OrderCoupon
- * @version 4.0.150
+ * @version 4.0.151
  */
 class OrderCoupon {
     /**

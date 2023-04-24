@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSetRow model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetRow
- * @version 4.0.149
+ * @version 4.0.150
  */
 var ReportDataSetRow = /*#__PURE__*/function () {
   /**
@@ -56,8 +56,8 @@ var ReportDataSetRow = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ReportDataSetRow();
 
-        if (data.hasOwnProperty('columns')) {
-          obj['columns'] = _ApiClient["default"].convertToType(data['columns'], [_ReportDataSetColumn["default"]]);
+        if (data.hasOwnProperty('c')) {
+          obj['c'] = _ApiClient["default"].convertToType(data['c'], [_ReportDataSetColumn["default"]]);
         }
       }
 
@@ -68,10 +68,10 @@ var ReportDataSetRow = /*#__PURE__*/function () {
   return ReportDataSetRow;
 }();
 /**
- * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetColumn>} columns
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetColumn>} c
  */
 
 
-ReportDataSetRow.prototype['columns'] = undefined;
+ReportDataSetRow.prototype['c'] = undefined;
 var _default = ReportDataSetRow;
 exports["default"] = _default;

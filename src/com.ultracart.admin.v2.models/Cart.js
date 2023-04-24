@@ -34,7 +34,7 @@ import CartUpsellAfter from './CartUpsellAfter';
 /**
  * The Cart model module.
  * @module com.ultracart.admin.v2.models/Cart
- * @version 4.0.150
+ * @version 4.0.151
  */
 class Cart {
     /**

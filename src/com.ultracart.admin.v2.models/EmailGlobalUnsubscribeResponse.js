@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailGlobalUnsubscribeResponse model module.
  * @module com.ultracart.admin.v2.models/EmailGlobalUnsubscribeResponse
- * @version 4.0.150
+ * @version 4.0.151
  */
 class EmailGlobalUnsubscribeResponse {
     /**

@@ -17,7 +17,7 @@ import ItemVariationOption from './ItemVariationOption';
 /**
  * The ItemVariation model module.
  * @module com.ultracart.admin.v2.models/ItemVariation
- * @version 4.0.150
+ * @version 4.0.151
  */
 class ItemVariation {
     /**

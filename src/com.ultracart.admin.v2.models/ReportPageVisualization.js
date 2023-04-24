@@ -18,7 +18,7 @@ import ReportPageVisualizationMetric from './ReportPageVisualizationMetric';
 /**
  * The ReportPageVisualization model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualization
- * @version 4.0.150
+ * @version 4.0.151
  */
 class ReportPageVisualization {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSetColumn model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetColumn
- * @version 4.0.149
+ * @version 4.0.150
  */
 var ReportDataSetColumn = /*#__PURE__*/function () {
   /**
@@ -54,8 +54,28 @@ var ReportDataSetColumn = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ReportDataSetColumn();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('in')) {
+          obj['in'] = _ApiClient["default"].convertToType(data['in'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('n')) {
+          obj['n'] = _ApiClient["default"].convertToType(data['n'], 'String');
+        }
+
+        if (data.hasOwnProperty('vd')) {
+          obj['vd'] = _ApiClient["default"].convertToType(data['vd'], 'String');
+        }
+
+        if (data.hasOwnProperty('vdt')) {
+          obj['vdt'] = _ApiClient["default"].convertToType(data['vdt'], 'String');
+        }
+
+        if (data.hasOwnProperty('vn')) {
+          obj['vn'] = _ApiClient["default"].convertToType(data['vn'], 'Number');
+        }
+
+        if (data.hasOwnProperty('vs')) {
+          obj['vs'] = _ApiClient["default"].convertToType(data['vs'], 'String');
         }
       }
 
@@ -66,10 +86,35 @@ var ReportDataSetColumn = /*#__PURE__*/function () {
   return ReportDataSetColumn;
 }();
 /**
- * @member {String} name
+ * @member {Boolean} in
  */
 
 
-ReportDataSetColumn.prototype['name'] = undefined;
+ReportDataSetColumn.prototype['in'] = undefined;
+/**
+ * @member {String} n
+ */
+
+ReportDataSetColumn.prototype['n'] = undefined;
+/**
+ * @member {String} vd
+ */
+
+ReportDataSetColumn.prototype['vd'] = undefined;
+/**
+ * @member {String} vdt
+ */
+
+ReportDataSetColumn.prototype['vdt'] = undefined;
+/**
+ * @member {Number} vn
+ */
+
+ReportDataSetColumn.prototype['vn'] = undefined;
+/**
+ * @member {String} vs
+ */
+
+ReportDataSetColumn.prototype['vs'] = undefined;
 var _default = ReportDataSetColumn;
 exports["default"] = _default;

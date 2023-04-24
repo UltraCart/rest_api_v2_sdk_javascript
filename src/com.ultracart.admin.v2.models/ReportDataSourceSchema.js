@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportDataSourceSchema model module.
  * @module com.ultracart.admin.v2.models/ReportDataSourceSchema
- * @version 4.0.150
+ * @version 4.0.151
  */
 class ReportDataSourceSchema {
     /**
@@ -47,6 +47,9 @@ class ReportDataSourceSchema {
         if (data) {
             obj = obj || new ReportDataSourceSchema();
 
+            if (data.hasOwnProperty('config')) {
+                obj['config'] = ApiClient.convertToType(data['config'], 'String');
+            }
             if (data.hasOwnProperty('dimension')) {
                 obj['dimension'] = ApiClient.convertToType(data['dimension'], 'Boolean');
             }
@@ -62,6 +65,12 @@ class ReportDataSourceSchema {
 
 
 }
+
+/**
+ * A JSON representation of the configuration for this visualization
+ * @member {String} config
+ */
+ReportDataSourceSchema.prototype['config'] = undefined;
 
 /**
  * Whether or not this column can be used as a dimension within a visualization

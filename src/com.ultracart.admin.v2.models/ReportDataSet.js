@@ -18,7 +18,7 @@ import ReportDataSetSchema from './ReportDataSetSchema';
 /**
  * The ReportDataSet model module.
  * @module com.ultracart.admin.v2.models/ReportDataSet
- * @version 4.0.150
+ * @version 4.0.151
  */
 class ReportDataSet {
     /**
@@ -156,7 +156,7 @@ ReportDataSet.prototype['max_results'] = undefined;
 ReportDataSet.prototype['merchant_id'] = undefined;
 
 /**
- * The size of the pages
+ * The total number of pages in the result set
  * @member {Number} page_count
  */
 ReportDataSet.prototype['page_count'] = undefined;

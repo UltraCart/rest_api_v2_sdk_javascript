@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderFormat model module.
  * @module com.ultracart.admin.v2.models/OrderFormat
- * @version 4.0.149
+ * @version 4.0.150
  */
 var OrderFormat = /*#__PURE__*/function () {
   /**

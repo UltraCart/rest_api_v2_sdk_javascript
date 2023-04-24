@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportDataSetSchema model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetSchema
- * @version 4.0.150
+ * @version 4.0.151
  */
 class ReportDataSetSchema {
     /**
@@ -47,6 +47,9 @@ class ReportDataSetSchema {
         if (data) {
             obj = obj || new ReportDataSetSchema();
 
+            if (data.hasOwnProperty('config')) {
+                obj['config'] = ApiClient.convertToType(data['config'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -59,6 +62,12 @@ class ReportDataSetSchema {
 
 
 }
+
+/**
+ * A JSON representation of the configuration for this visualization
+ * @member {String} config
+ */
+ReportDataSetSchema.prototype['config'] = undefined;
 
 /**
  * @member {String} name

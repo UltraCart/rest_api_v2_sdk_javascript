@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportFilter model module.
  * @module com.ultracart.admin.v2.models/ReportFilter
- * @version 4.0.149
+ * @version 4.0.150
  */
 var ReportFilter = /*#__PURE__*/function () {
   /**
@@ -56,20 +56,12 @@ var ReportFilter = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ReportFilter();
 
-        if (data.hasOwnProperty('config')) {
-          obj['config'] = _ApiClient["default"].convertToType(data['config'], 'String');
-        }
-
         if (data.hasOwnProperty('connections')) {
           obj['connections'] = _ApiClient["default"].convertToType(data['connections'], [_ReportFilterConnection["default"]]);
         }
 
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
-        }
-
-        if (data.hasOwnProperty('styles')) {
-          obj['styles'] = _ApiClient["default"].convertToType(data['styles'], 'String');
         }
 
         if (data.hasOwnProperty('timezone')) {
@@ -96,16 +88,10 @@ var ReportFilter = /*#__PURE__*/function () {
   return ReportFilter;
 }();
 /**
- * A JSON representation of the configuration for this visualization
- * @member {String} config
- */
-
-
-ReportFilter.prototype['config'] = undefined;
-/**
  * How this filter connects to the data sources and columns
  * @member {Array.<module:com.ultracart.admin.v2.models/ReportFilterConnection>} connections
  */
+
 
 ReportFilter.prototype['connections'] = undefined;
 /**
@@ -113,12 +99,6 @@ ReportFilter.prototype['connections'] = undefined;
  */
 
 ReportFilter.prototype['name'] = undefined;
-/**
- * A JSON representation of the style configuration for this visualization
- * @member {String} styles
- */
-
-ReportFilter.prototype['styles'] = undefined;
 /**
  * The timezone that the date range is querying on.
  * @member {String} timezone

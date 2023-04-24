@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **initial_pages** | [**[ReportDataSetPage]**](ReportDataSetPage.md) | Initial pages returned in the dataset | [optional] 
 **max_results** | **Number** | The total number of results | [optional] 
 **merchant_id** | **String** | Merchant that owns this data set | [optional] 
-**page_count** | **Number** | The size of the pages | [optional] 
+**page_count** | **Number** | The total number of pages in the result set | [optional] 
 **page_size** | **Number** | The size of the pages | [optional] 
 **schema** | [**[ReportDataSetSchema]**](ReportDataSetSchema.md) | The schema associated with the data set. | [optional] 
 **security_level** | **String** | Security level this dataset was read from. | [optional] 

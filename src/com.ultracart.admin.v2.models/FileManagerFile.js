@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FileManagerFile model module.
  * @module com.ultracart.admin.v2.models/FileManagerFile
- * @version 4.0.150
+ * @version 4.0.151
  */
 class FileManagerFile {
     /**
