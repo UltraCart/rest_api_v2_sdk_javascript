@@ -34,7 +34,7 @@
   /**
    * The ReportDataSet model module.
    * @module com.ultracart.admin.v2.models/ReportDataSet
-   * @version 3.10.133
+   * @version 3.10.134
    */
 
   /**
@@ -144,7 +144,7 @@
   exports.prototype.merchant_id = undefined;
 
   /**
-   * The size of the pages
+   * The total number of pages in the result set
    * @member {Number} page_count
    */
   exports.prototype.page_count = undefined;

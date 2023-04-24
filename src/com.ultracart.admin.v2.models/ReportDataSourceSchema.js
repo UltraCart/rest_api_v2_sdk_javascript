@@ -34,7 +34,7 @@
   /**
    * The ReportDataSourceSchema model module.
    * @module com.ultracart.admin.v2.models/ReportDataSourceSchema
-   * @version 3.10.133
+   * @version 3.10.134
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('config'))
+        obj.config = ApiClient.convertToType(data['config'], 'String');
       if (data.hasOwnProperty('dimension'))
         obj.dimension = ApiClient.convertToType(data['dimension'], 'Boolean');
       if (data.hasOwnProperty('name'))
@@ -64,6 +66,12 @@
     }
     return obj;
   }
+
+  /**
+   * A JSON representation of the configuration for this visualization
+   * @member {String} config
+   */
+  exports.prototype.config = undefined;
 
   /**
    * Whether or not this column can be used as a dimension within a visualization

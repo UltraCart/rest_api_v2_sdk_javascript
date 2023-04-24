@@ -34,7 +34,7 @@
   /**
    * The ReportDataSetSchema model module.
    * @module com.ultracart.admin.v2.models/ReportDataSetSchema
-   * @version 3.10.133
+   * @version 3.10.134
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('config'))
+        obj.config = ApiClient.convertToType(data['config'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('type'))
@@ -62,6 +64,12 @@
     }
     return obj;
   }
+
+  /**
+   * A JSON representation of the configuration for this visualization
+   * @member {String} config
+   */
+  exports.prototype.config = undefined;
 
   /**
    * @member {String} name
