@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxState model module.
  * @module com.ultracart.admin.v2.models/TaxState
- * @version 4.0.150
+ * @version 4.0.151
  */
 var TaxState = /*#__PURE__*/function () {
   /**

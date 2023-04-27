@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSet model module.
  * @module com.ultracart.admin.v2.models/ReportDataSet
- * @version 4.0.150
+ * @version 4.0.151
  */
 var ReportDataSet = /*#__PURE__*/function () {
   /**
@@ -181,7 +181,7 @@ ReportDataSet.prototype['max_results'] = undefined;
 
 ReportDataSet.prototype['merchant_id'] = undefined;
 /**
- * The size of the pages
+ * The total number of pages in the result set
  * @member {Number} page_count
  */
 

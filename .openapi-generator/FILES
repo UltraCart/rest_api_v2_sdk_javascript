@@ -601,6 +601,8 @@ docs/OrderPackingSlipResponse.md
 docs/OrderPayment.md
 docs/OrderPaymentCheck.md
 docs/OrderPaymentCreditCard.md
+docs/OrderPaymentCreditCardDualVaulted.md
+docs/OrderPaymentCreditCardDualVaultedProperty.md
 docs/OrderPaymentECheck.md
 docs/OrderPaymentInsurance.md
 docs/OrderPaymentPurchaseOrder.md
@@ -1380,6 +1382,8 @@ src/com.ultracart.admin.v2.models/OrderPackingSlipResponse.js
 src/com.ultracart.admin.v2.models/OrderPayment.js
 src/com.ultracart.admin.v2.models/OrderPaymentCheck.js
 src/com.ultracart.admin.v2.models/OrderPaymentCreditCard.js
+src/com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted.js
+src/com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty.js
 src/com.ultracart.admin.v2.models/OrderPaymentECheck.js
 src/com.ultracart.admin.v2.models/OrderPaymentInsurance.js
 src/com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder.js

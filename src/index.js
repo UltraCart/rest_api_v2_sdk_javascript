@@ -597,6 +597,8 @@ import OrderPackingSlipResponse from './com.ultracart.admin.v2.models/OrderPacki
 import OrderPayment from './com.ultracart.admin.v2.models/OrderPayment';
 import OrderPaymentCheck from './com.ultracart.admin.v2.models/OrderPaymentCheck';
 import OrderPaymentCreditCard from './com.ultracart.admin.v2.models/OrderPaymentCreditCard';
+import OrderPaymentCreditCardDualVaulted from './com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted';
+import OrderPaymentCreditCardDualVaultedProperty from './com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty';
 import OrderPaymentECheck from './com.ultracart.admin.v2.models/OrderPaymentECheck';
 import OrderPaymentInsurance from './com.ultracart.admin.v2.models/OrderPaymentInsurance';
 import OrderPaymentPurchaseOrder from './com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder';
@@ -834,7 +836,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.151
+* @version 4.0.152
 */
 export {
     /**
@@ -4346,6 +4348,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderPaymentCreditCard}
      */
     OrderPaymentCreditCard,
+
+    /**
+     * The OrderPaymentCreditCardDualVaulted model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted}
+     */
+    OrderPaymentCreditCardDualVaulted,
+
+    /**
+     * The OrderPaymentCreditCardDualVaultedProperty model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty}
+     */
+    OrderPaymentCreditCardDualVaultedProperty,
 
     /**
      * The OrderPaymentECheck model constructor.

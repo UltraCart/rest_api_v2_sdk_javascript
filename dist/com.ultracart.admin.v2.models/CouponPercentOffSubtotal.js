@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponPercentOffSubtotal model module.
  * @module com.ultracart.admin.v2.models/CouponPercentOffSubtotal
- * @version 4.0.150
+ * @version 4.0.151
  */
 var CouponPercentOffSubtotal = /*#__PURE__*/function () {
   /**

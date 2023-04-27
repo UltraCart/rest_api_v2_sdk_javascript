@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSourceSchema model module.
  * @module com.ultracart.admin.v2.models/ReportDataSourceSchema
- * @version 4.0.150
+ * @version 4.0.151
  */
 var ReportDataSourceSchema = /*#__PURE__*/function () {
   /**
@@ -54,6 +54,10 @@ var ReportDataSourceSchema = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ReportDataSourceSchema();
 
+        if (data.hasOwnProperty('config')) {
+          obj['config'] = _ApiClient["default"].convertToType(data['config'], 'String');
+        }
+
         if (data.hasOwnProperty('dimension')) {
           obj['dimension'] = _ApiClient["default"].convertToType(data['dimension'], 'Boolean');
         }
@@ -74,10 +78,16 @@ var ReportDataSourceSchema = /*#__PURE__*/function () {
   return ReportDataSourceSchema;
 }();
 /**
+ * A JSON representation of the configuration for this visualization
+ * @member {String} config
+ */
+
+
+ReportDataSourceSchema.prototype['config'] = undefined;
+/**
  * Whether or not this column can be used as a dimension within a visualization
  * @member {Boolean} dimension
  */
-
 
 ReportDataSourceSchema.prototype['dimension'] = undefined;
 /**

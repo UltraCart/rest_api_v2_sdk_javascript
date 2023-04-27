@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLogQueryFilterValues model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogQueryFilterValues
- * @version 4.0.150
+ * @version 4.0.151
  */
 var IntegrationLogQueryFilterValues = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSetSchema model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetSchema
- * @version 4.0.150
+ * @version 4.0.151
  */
 var ReportDataSetSchema = /*#__PURE__*/function () {
   /**
@@ -54,6 +54,10 @@ var ReportDataSetSchema = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ReportDataSetSchema();
 
+        if (data.hasOwnProperty('config')) {
+          obj['config'] = _ApiClient["default"].convertToType(data['config'], 'String');
+        }
+
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
@@ -70,9 +74,15 @@ var ReportDataSetSchema = /*#__PURE__*/function () {
   return ReportDataSetSchema;
 }();
 /**
- * @member {String} name
+ * A JSON representation of the configuration for this visualization
+ * @member {String} config
  */
 
+
+ReportDataSetSchema.prototype['config'] = undefined;
+/**
+ * @member {String} name
+ */
 
 ReportDataSetSchema.prototype['name'] = undefined;
 /**

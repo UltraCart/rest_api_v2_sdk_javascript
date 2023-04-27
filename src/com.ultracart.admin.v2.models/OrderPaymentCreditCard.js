@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import OrderPaymentCreditCardDualVaulted from './OrderPaymentCreditCardDualVaulted';
 
 /**
  * The OrderPaymentCreditCard model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCreditCard
- * @version 4.0.151
+ * @version 4.0.152
  */
 class OrderPaymentCreditCard {
     /**
@@ -79,6 +80,9 @@ class OrderPaymentCreditCard {
             }
             if (data.hasOwnProperty('card_verification_number_token')) {
                 obj['card_verification_number_token'] = ApiClient.convertToType(data['card_verification_number_token'], 'String');
+            }
+            if (data.hasOwnProperty('dual_vaulted')) {
+                obj['dual_vaulted'] = OrderPaymentCreditCardDualVaulted.constructFromObject(data['dual_vaulted']);
             }
         }
         return obj;
@@ -152,6 +156,11 @@ OrderPaymentCreditCard.prototype['card_type'] = undefined;
  * @member {String} card_verification_number_token
  */
 OrderPaymentCreditCard.prototype['card_verification_number_token'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted} dual_vaulted
+ */
+OrderPaymentCreditCard.prototype['dual_vaulted'] = undefined;
 
 
 
