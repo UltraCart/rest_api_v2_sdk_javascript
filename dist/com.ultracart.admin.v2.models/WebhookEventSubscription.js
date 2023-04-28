@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WebhookEventSubscription model module.
  * @module com.ultracart.admin.v2.models/WebhookEventSubscription
- * @version 4.0.151
+ * @version 4.0.152
  */
 var WebhookEventSubscription = /*#__PURE__*/function () {
   /**

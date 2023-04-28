@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The AdjustInternalCertificateResponse model module.
  * @module com.ultracart.admin.v2.models/AdjustInternalCertificateResponse
- * @version 4.0.152
+ * @version 4.0.153
  */
 class AdjustInternalCertificateResponse {
     /**

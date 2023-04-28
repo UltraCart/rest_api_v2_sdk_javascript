@@ -3603,6 +3603,18 @@ Object.defineProperty(exports, "OrderPaymentCreditCard", {
     return _OrderPaymentCreditCard["default"];
   }
 });
+Object.defineProperty(exports, "OrderPaymentCreditCardDualVaulted", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPaymentCreditCardDualVaulted["default"];
+  }
+});
+Object.defineProperty(exports, "OrderPaymentCreditCardDualVaultedProperty", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPaymentCreditCardDualVaultedProperty["default"];
+  }
+});
 Object.defineProperty(exports, "OrderPaymentECheck", {
   enumerable: true,
   get: function get() {
@@ -5919,6 +5931,10 @@ var _OrderPayment = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _OrderPaymentCheck = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentCheck"));
 
 var _OrderPaymentCreditCard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentCreditCard"));
+
+var _OrderPaymentCreditCardDualVaulted = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted"));
+
+var _OrderPaymentCreditCardDualVaultedProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty"));
 
 var _OrderPaymentECheck = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentECheck"));
 

@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _OrderPaymentCreditCardDualVaulted = _interopRequireDefault(require("./OrderPaymentCreditCardDualVaulted"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPaymentCreditCard model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCreditCard
- * @version 4.0.151
+ * @version 4.0.152
  */
 var OrderPaymentCreditCard = /*#__PURE__*/function () {
   /**
@@ -97,6 +99,10 @@ var OrderPaymentCreditCard = /*#__PURE__*/function () {
         if (data.hasOwnProperty('card_verification_number_token')) {
           obj['card_verification_number_token'] = _ApiClient["default"].convertToType(data['card_verification_number_token'], 'String');
         }
+
+        if (data.hasOwnProperty('dual_vaulted')) {
+          obj['dual_vaulted'] = _OrderPaymentCreditCardDualVaulted["default"].constructFromObject(data['dual_vaulted']);
+        }
       }
 
       return obj;
@@ -172,6 +178,11 @@ OrderPaymentCreditCard.prototype['card_type'] = undefined;
  */
 
 OrderPaymentCreditCard.prototype['card_verification_number_token'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted} dual_vaulted
+ */
+
+OrderPaymentCreditCard.prototype['dual_vaulted'] = undefined;
 /**
  * Allowed values for the <code>card_type</code> property.
  * @enum {String}

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportDryRunQueryResult model module.
  * @module com.ultracart.admin.v2.models/ReportDryRunQueryResult
- * @version 4.0.152
+ * @version 4.0.153
  */
 class ReportDryRunQueryResult {
     /**

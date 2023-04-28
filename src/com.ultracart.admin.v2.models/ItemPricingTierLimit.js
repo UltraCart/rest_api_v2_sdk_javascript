@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemPricingTierLimit model module.
  * @module com.ultracart.admin.v2.models/ItemPricingTierLimit
- * @version 4.0.152
+ * @version 4.0.153
  */
 class ItemPricingTierLimit {
     /**
@@ -50,6 +50,9 @@ class ItemPricingTierLimit {
             if (data.hasOwnProperty('cumulative_order_limit')) {
                 obj['cumulative_order_limit'] = ApiClient.convertToType(data['cumulative_order_limit'], 'Number');
             }
+            if (data.hasOwnProperty('exempt_from_minimum_item_count')) {
+                obj['exempt_from_minimum_item_count'] = ApiClient.convertToType(data['exempt_from_minimum_item_count'], 'Boolean');
+            }
             if (data.hasOwnProperty('individual_order_limit')) {
                 obj['individual_order_limit'] = ApiClient.convertToType(data['individual_order_limit'], 'Number');
             }
@@ -68,6 +71,12 @@ class ItemPricingTierLimit {
  * @member {Number} cumulative_order_limit
  */
 ItemPricingTierLimit.prototype['cumulative_order_limit'] = undefined;
+
+/**
+ * Exempt from Minimum Item Count
+ * @member {Boolean} exempt_from_minimum_item_count
+ */
+ItemPricingTierLimit.prototype['exempt_from_minimum_item_count'] = undefined;
 
 /**
  * Individual order limit

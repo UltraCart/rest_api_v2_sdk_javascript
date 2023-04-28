@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemTax model module.
  * @module com.ultracart.admin.v2.models/ItemTax
- * @version 4.0.151
+ * @version 4.0.152
  */
 var ItemTax = /*#__PURE__*/function () {
   /**
