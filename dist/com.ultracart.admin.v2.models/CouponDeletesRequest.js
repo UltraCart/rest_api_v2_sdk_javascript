@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponDeletesRequest model module.
  * @module com.ultracart.admin.v2.models/CouponDeletesRequest
- * @version 4.0.152
+ * @version 4.0.153
  */
 var CouponDeletesRequest = /*#__PURE__*/function () {
   /**

@@ -518,7 +518,9 @@ import ItemRestriction from './com.ultracart.admin.v2.models/ItemRestriction';
 import ItemRestrictionItem from './com.ultracart.admin.v2.models/ItemRestrictionItem';
 import ItemRevguard from './com.ultracart.admin.v2.models/ItemRevguard';
 import ItemReview from './com.ultracart.admin.v2.models/ItemReview';
+import ItemReviewResponse from './com.ultracart.admin.v2.models/ItemReviewResponse';
 import ItemReviews from './com.ultracart.admin.v2.models/ItemReviews';
+import ItemReviewsResponse from './com.ultracart.admin.v2.models/ItemReviewsResponse';
 import ItemSalesforce from './com.ultracart.admin.v2.models/ItemSalesforce';
 import ItemShipping from './com.ultracart.admin.v2.models/ItemShipping';
 import ItemShippingCase from './com.ultracart.admin.v2.models/ItemShippingCase';
@@ -836,7 +838,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.153
+* @version 4.0.154
 */
 export {
     /**
@@ -3876,10 +3878,22 @@ export {
     ItemReview,
 
     /**
+     * The ItemReviewResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemReviewResponse}
+     */
+    ItemReviewResponse,
+
+    /**
      * The ItemReviews model constructor.
      * @property {module:com.ultracart.admin.v2.models/ItemReviews}
      */
     ItemReviews,
+
+    /**
+     * The ItemReviewsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemReviewsResponse}
+     */
+    ItemReviewsResponse,
 
     /**
      * The ItemSalesforce model constructor.

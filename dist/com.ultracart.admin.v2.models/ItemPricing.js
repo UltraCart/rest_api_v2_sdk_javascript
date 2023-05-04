@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemPricing model module.
  * @module com.ultracart.admin.v2.models/ItemPricing
- * @version 4.0.152
+ * @version 4.0.153
  */
 var ItemPricing = /*#__PURE__*/function () {
   /**

@@ -19,7 +19,7 @@ import ConversationSentiment from './ConversationSentiment';
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.0.153
+ * @version 4.0.154
  */
 class Conversation {
     /**

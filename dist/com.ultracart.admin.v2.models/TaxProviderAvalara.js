@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxProviderAvalara model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAvalara
- * @version 4.0.152
+ * @version 4.0.153
  */
 var TaxProviderAvalara = /*#__PURE__*/function () {
   /**

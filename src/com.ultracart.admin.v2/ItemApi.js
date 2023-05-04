@@ -19,6 +19,9 @@ import ItemDigitalItem from '../com.ultracart.admin.v2.models/ItemDigitalItem';
 import ItemDigitalItemResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemResponse';
 import ItemDigitalItemsResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemsResponse';
 import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
+import ItemReview from '../com.ultracart.admin.v2.models/ItemReview';
+import ItemReviewResponse from '../com.ultracart.admin.v2.models/ItemReviewResponse';
+import ItemReviewsResponse from '../com.ultracart.admin.v2.models/ItemReviewsResponse';
 import ItemsRequest from '../com.ultracart.admin.v2.models/ItemsRequest';
 import ItemsResponse from '../com.ultracart.admin.v2.models/ItemsResponse';
 import PricingTiersResponse from '../com.ultracart.admin.v2.models/PricingTiersResponse';
@@ -27,7 +30,7 @@ import TempMultimediaResponse from '../com.ultracart.admin.v2.models/TempMultime
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.0.153
+* @version 4.0.154
 */
 export default class ItemApi {
 
@@ -122,6 +125,54 @@ export default class ItemApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteReview operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~deleteReviewCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a review
+     * Delete an item review. 
+     * @param {Number} review_oid The review oid to delete.
+     * @param {Number} merchant_item_oid The item oid the review is associated with.
+     * @param {module:com.ultracart.admin.v2/ItemApi~deleteReviewCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteReview(review_oid, merchant_item_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'review_oid' is set
+      if (review_oid === undefined || review_oid === null) {
+        throw new Error("Missing the required parameter 'review_oid' when calling deleteReview");
+      }
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling deleteReview");
+      }
+
+      let pathParams = {
+        'review_oid': review_oid,
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/reviews/{review_oid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -459,6 +510,98 @@ export default class ItemApi {
     }
 
     /**
+     * Callback function to receive the result of the getReview operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getReviewCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemReviewResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get a review
+     * Retrieve an item review. 
+     * @param {Number} review_oid The review oid to retrieve.
+     * @param {Number} merchant_item_oid The item oid the review is associated with.
+     * @param {module:com.ultracart.admin.v2/ItemApi~getReviewCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemReviewResponse}
+     */
+    getReview(review_oid, merchant_item_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'review_oid' is set
+      if (review_oid === undefined || review_oid === null) {
+        throw new Error("Missing the required parameter 'review_oid' when calling getReview");
+      }
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling getReview");
+      }
+
+      let pathParams = {
+        'review_oid': review_oid,
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ItemReviewResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/reviews/{review_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getReviews operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getReviewsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemReviewsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get reviews for an item
+     * Retrieve item reviews. 
+     * @param {Number} merchant_item_oid The item oid the review is associated with.
+     * @param {module:com.ultracart.admin.v2/ItemApi~getReviewsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemReviewsResponse}
+     */
+    getReviews(merchant_item_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling getReviews");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ItemReviewsResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/reviews', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getUnassociatedDigitalItems operation.
      * @callback module:com.ultracart.admin.v2/ItemApi~getUnassociatedDigitalItemsCallback
      * @param {String} error Error message, if any.
@@ -594,6 +737,54 @@ export default class ItemApi {
       let returnType = ItemResponse;
       return this.apiClient.callApi(
         '/item/items', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertReview operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~insertReviewCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemReviewResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a review
+     * Insert a item review. 
+     * @param {Number} merchant_item_oid The item oid the review is associated with.
+     * @param {module:com.ultracart.admin.v2.models/ItemReview} review Review to insert
+     * @param {module:com.ultracart.admin.v2/ItemApi~insertReviewCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemReviewResponse}
+     */
+    insertReview(merchant_item_oid, review, callback) {
+      let postBody = review;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling insertReview");
+      }
+      // verify the required parameter 'review' is set
+      if (review === undefined || review === null) {
+        throw new Error("Missing the required parameter 'review' when calling insertReview");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = ItemReviewResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/reviews', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -746,6 +937,60 @@ export default class ItemApi {
       let returnType = ItemsResponse;
       return this.apiClient.callApi(
         '/item/items/batch', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateReview operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~updateReviewCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemReviewResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a review
+     * Update an item review. 
+     * @param {Number} review_oid The review oid to update.
+     * @param {Number} merchant_item_oid The item oid the review is associated with.
+     * @param {module:com.ultracart.admin.v2.models/ItemReview} review Review to update
+     * @param {module:com.ultracart.admin.v2/ItemApi~updateReviewCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemReviewResponse}
+     */
+    updateReview(review_oid, merchant_item_oid, review, callback) {
+      let postBody = review;
+      // verify the required parameter 'review_oid' is set
+      if (review_oid === undefined || review_oid === null) {
+        throw new Error("Missing the required parameter 'review_oid' when calling updateReview");
+      }
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling updateReview");
+      }
+      // verify the required parameter 'review' is set
+      if (review === undefined || review === null) {
+        throw new Error("Missing the required parameter 'review' when calling updateReview");
+      }
+
+      let pathParams = {
+        'review_oid': review_oid,
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = ItemReviewResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/reviews/{review_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

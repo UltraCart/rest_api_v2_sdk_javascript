@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AffiliateLink model module.
  * @module com.ultracart.admin.v2.models/AffiliateLink
- * @version 4.0.152
+ * @version 4.0.153
  */
 var AffiliateLink = /*#__PURE__*/function () {
   /**

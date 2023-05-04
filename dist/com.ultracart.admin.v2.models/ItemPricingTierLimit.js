@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemPricingTierLimit model module.
  * @module com.ultracart.admin.v2.models/ItemPricingTierLimit
- * @version 4.0.152
+ * @version 4.0.153
  */
 var ItemPricingTierLimit = /*#__PURE__*/function () {
   /**
@@ -58,6 +58,10 @@ var ItemPricingTierLimit = /*#__PURE__*/function () {
           obj['cumulative_order_limit'] = _ApiClient["default"].convertToType(data['cumulative_order_limit'], 'Number');
         }
 
+        if (data.hasOwnProperty('exempt_from_minimum_item_count')) {
+          obj['exempt_from_minimum_item_count'] = _ApiClient["default"].convertToType(data['exempt_from_minimum_item_count'], 'Boolean');
+        }
+
         if (data.hasOwnProperty('individual_order_limit')) {
           obj['individual_order_limit'] = _ApiClient["default"].convertToType(data['individual_order_limit'], 'Number');
         }
@@ -80,6 +84,12 @@ var ItemPricingTierLimit = /*#__PURE__*/function () {
 
 
 ItemPricingTierLimit.prototype['cumulative_order_limit'] = undefined;
+/**
+ * Exempt from Minimum Item Count
+ * @member {Boolean} exempt_from_minimum_item_count
+ */
+
+ItemPricingTierLimit.prototype['exempt_from_minimum_item_count'] = undefined;
 /**
  * Individual order limit
  * @member {Number} individual_order_limit

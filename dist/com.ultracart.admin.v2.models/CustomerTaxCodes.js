@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerTaxCodes model module.
  * @module com.ultracart.admin.v2.models/CustomerTaxCodes
- * @version 4.0.152
+ * @version 4.0.153
  */
 var CustomerTaxCodes = /*#__PURE__*/function () {
   /**

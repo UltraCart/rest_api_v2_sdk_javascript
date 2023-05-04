@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportAuth model module.
  * @module com.ultracart.admin.v2.models/ReportAuth
- * @version 4.0.153
+ * @version 4.0.154
  */
 class ReportAuth {
     /**

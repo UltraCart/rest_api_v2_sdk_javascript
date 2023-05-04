@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AffiliateLedger model module.
  * @module com.ultracart.admin.v2.models/AffiliateLedger
- * @version 4.0.152
+ * @version 4.0.153
  */
 var AffiliateLedger = /*#__PURE__*/function () {
   /**

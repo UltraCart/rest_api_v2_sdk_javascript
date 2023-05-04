@@ -94,7 +94,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Item model module.
  * @module com.ultracart.admin.v2.models/Item
- * @version 4.0.152
+ * @version 4.0.153
  */
 var Item = /*#__PURE__*/function () {
   /**

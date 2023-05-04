@@ -20,7 +20,7 @@ import ReportPageVisualizationMetric from './ReportPageVisualizationMetric';
 /**
  * The ReportDataSetQuery model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetQuery
- * @version 4.0.153
+ * @version 4.0.154
  */
 class ReportDataSetQuery {
     /**
