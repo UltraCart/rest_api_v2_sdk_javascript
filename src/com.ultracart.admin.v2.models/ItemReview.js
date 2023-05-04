@@ -34,7 +34,7 @@
   /**
    * The ItemReview model module.
    * @module com.ultracart.admin.v2.models/ItemReview
-   * @version 3.10.136
+   * @version 3.10.137
    */
 
   /**
@@ -165,51 +165,61 @@
   exports.prototype.overall = undefined;
 
   /**
+   * Rating Name 1
    * @member {String} rating_name1
    */
   exports.prototype.rating_name1 = undefined;
 
   /**
+   * Rating Name 10
    * @member {String} rating_name10
    */
   exports.prototype.rating_name10 = undefined;
 
   /**
+   * Rating Name 2
    * @member {String} rating_name2
    */
   exports.prototype.rating_name2 = undefined;
 
   /**
+   * Rating Name 3
    * @member {String} rating_name3
    */
   exports.prototype.rating_name3 = undefined;
 
   /**
+   * Rating Name 4
    * @member {String} rating_name4
    */
   exports.prototype.rating_name4 = undefined;
 
   /**
+   * Rating Name 5
    * @member {String} rating_name5
    */
   exports.prototype.rating_name5 = undefined;
 
   /**
+   * Rating Name 6
    * @member {String} rating_name6
    */
   exports.prototype.rating_name6 = undefined;
 
   /**
+   * Rating Name 7
    * @member {String} rating_name7
    */
   exports.prototype.rating_name7 = undefined;
 
   /**
+   * Rating Name 8
    * @member {String} rating_name8
    */
   exports.prototype.rating_name8 = undefined;
 
   /**
+   * Rating Name 9
    * @member {String} rating_name9
    */
   exports.prototype.rating_name9 = undefined;
@@ -275,6 +285,7 @@
   exports.prototype.recommend_to_friend = undefined;
 
   /**
+   * Review
    * @member {String} review
    */
   exports.prototype.review = undefined;
@@ -285,26 +296,31 @@
   exports.prototype.review_oid = undefined;
 
   /**
+   * Nickname
    * @member {String} reviewed_nickname
    */
   exports.prototype.reviewed_nickname = undefined;
 
   /**
+   * Reviewer Email
    * @member {String} reviewer_email
    */
   exports.prototype.reviewer_email = undefined;
 
   /**
+   * Location
    * @member {String} reviewer_location
    */
   exports.prototype.reviewer_location = undefined;
 
   /**
-   * @member {String} status
+   * Status of the review
+   * @member {module:com.ultracart.admin.v2.models/ItemReview.StatusEnum} status
    */
   exports.prototype.status = undefined;
 
   /**
+   * Store Feedback
    * @member {String} store_feedback
    */
   exports.prototype.store_feedback = undefined;
@@ -316,9 +332,42 @@
   exports.prototype.submitted_dts = undefined;
 
   /**
+   * Title
    * @member {String} title
    */
   exports.prototype.title = undefined;
+
+
+  /**
+   * Allowed values for the <code>status</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.StatusEnum = {
+    /**
+     * value: "approved"
+     * @const
+     */
+    approved: "approved",
+
+    /**
+     * value: "unapproved"
+     * @const
+     */
+    unapproved: "unapproved",
+
+    /**
+     * value: "rejected"
+     * @const
+     */
+    rejected: "rejected",
+
+    /**
+     * value: "multimedia processing"
+     * @const
+     */
+    multimedia_processing: "multimedia processing"
+  };
 
   return exports;
 
