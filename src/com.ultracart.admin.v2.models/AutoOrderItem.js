@@ -19,7 +19,7 @@ import AutoOrderItemSimpleSchedule from './AutoOrderItemSimpleSchedule';
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.0.154
+ * @version 4.0.155
  */
 class AutoOrderItem {
     /**
@@ -71,6 +71,9 @@ class AutoOrderItem {
             if (data.hasOwnProperty('auto_order_item_oid')) {
                 obj['auto_order_item_oid'] = ApiClient.convertToType(data['auto_order_item_oid'], 'Number');
             }
+            if (data.hasOwnProperty('first_order_dts')) {
+                obj['first_order_dts'] = ApiClient.convertToType(data['first_order_dts'], 'String');
+            }
             if (data.hasOwnProperty('frequency')) {
                 obj['frequency'] = ApiClient.convertToType(data['frequency'], 'String');
             }
@@ -103,6 +106,9 @@ class AutoOrderItem {
             }
             if (data.hasOwnProperty('original_quantity')) {
                 obj['original_quantity'] = ApiClient.convertToType(data['original_quantity'], 'Number');
+            }
+            if (data.hasOwnProperty('paused')) {
+                obj['paused'] = ApiClient.convertToType(data['paused'], 'Boolean');
             }
             if (data.hasOwnProperty('paypal_payer_id')) {
                 obj['paypal_payer_id'] = ApiClient.convertToType(data['paypal_payer_id'], 'String');
@@ -172,6 +178,12 @@ AutoOrderItem.prototype['arbitrary_unit_cost_remaining_orders'] = undefined;
 AutoOrderItem.prototype['auto_order_item_oid'] = undefined;
 
 /**
+ * Date/time of the first order of this item.  Null if item added to auto order and has not been rebilled yet.
+ * @member {String} first_order_dts
+ */
+AutoOrderItem.prototype['first_order_dts'] = undefined;
+
+/**
  * Frequency of the rebill if not a fixed schedule
  * @member {module:com.ultracart.admin.v2.models/AutoOrderItem.FrequencyEnum} frequency
  */
@@ -236,6 +248,12 @@ AutoOrderItem.prototype['original_item_id'] = undefined;
  * @member {Number} original_quantity
  */
 AutoOrderItem.prototype['original_quantity'] = undefined;
+
+/**
+ * True if paused.  This field is an object instead of a primitive for backwards compatibility.
+ * @member {Boolean} paused
+ */
+AutoOrderItem.prototype['paused'] = undefined;
 
 /**
  * The PayPal Payer ID tied to this item

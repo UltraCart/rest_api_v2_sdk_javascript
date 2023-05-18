@@ -3117,10 +3117,22 @@ Object.defineProperty(exports, "ItemReview", {
     return _ItemReview["default"];
   }
 });
+Object.defineProperty(exports, "ItemReviewResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemReviewResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ItemReviews", {
   enumerable: true,
   get: function get() {
     return _ItemReviews["default"];
+  }
+});
+Object.defineProperty(exports, "ItemReviewsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemReviewsResponse["default"];
   }
 });
 Object.defineProperty(exports, "ItemSalesforce", {
@@ -5774,7 +5786,11 @@ var _ItemRevguard = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 
 var _ItemReview = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemReview"));
 
+var _ItemReviewResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemReviewResponse"));
+
 var _ItemReviews = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemReviews"));
+
+var _ItemReviewsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemReviewsResponse"));
 
 var _ItemSalesforce = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemSalesforce"));
 

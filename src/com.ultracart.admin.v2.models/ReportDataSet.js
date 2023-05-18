@@ -18,7 +18,7 @@ import ReportDataSetSchema from './ReportDataSetSchema';
 /**
  * The ReportDataSet model module.
  * @module com.ultracart.admin.v2.models/ReportDataSet
- * @version 4.0.154
+ * @version 4.0.155
  */
 class ReportDataSet {
     /**
@@ -60,6 +60,9 @@ class ReportDataSet {
             }
             if (data.hasOwnProperty('error_message')) {
                 obj['error_message'] = ApiClient.convertToType(data['error_message'], 'String');
+            }
+            if (data.hasOwnProperty('executed_sql')) {
+                obj['executed_sql'] = ApiClient.convertToType(data['executed_sql'], 'String');
             }
             if (data.hasOwnProperty('for_object_id')) {
                 obj['for_object_id'] = ApiClient.convertToType(data['for_object_id'], 'String');
@@ -124,6 +127,11 @@ ReportDataSet.prototype['destination_table_id'] = undefined;
  * @member {String} error_message
  */
 ReportDataSet.prototype['error_message'] = undefined;
+
+/**
+ * @member {String} executed_sql
+ */
+ReportDataSet.prototype['executed_sql'] = undefined;
 
 /**
  * An identifier that can be used to help match up the returned data set

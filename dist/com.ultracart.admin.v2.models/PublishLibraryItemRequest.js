@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PublishLibraryItemRequest model module.
  * @module com.ultracart.admin.v2.models/PublishLibraryItemRequest
- * @version 4.0.153
+ * @version 4.0.154
  */
 var PublishLibraryItemRequest = /*#__PURE__*/function () {
   /**

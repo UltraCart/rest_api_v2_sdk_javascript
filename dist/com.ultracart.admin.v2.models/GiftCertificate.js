@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The GiftCertificate model module.
  * @module com.ultracart.admin.v2.models/GiftCertificate
- * @version 4.0.153
+ * @version 4.0.154
  */
 var GiftCertificate = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemEbayMarketPlaceAnalysis model module.
  * @module com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis
- * @version 4.0.153
+ * @version 4.0.154
  */
 var ItemEbayMarketPlaceAnalysis = /*#__PURE__*/function () {
   /**

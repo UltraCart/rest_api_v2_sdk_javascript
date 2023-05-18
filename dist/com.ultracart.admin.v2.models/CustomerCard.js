@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerCard model module.
  * @module com.ultracart.admin.v2.models/CustomerCard
- * @version 4.0.153
+ * @version 4.0.154
  */
 var CustomerCard = /*#__PURE__*/function () {
   /**

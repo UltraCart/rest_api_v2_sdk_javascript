@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMessageTranslation model module.
  * @module com.ultracart.admin.v2.models/ConversationMessageTranslation
- * @version 4.0.153
+ * @version 4.0.154
  */
 var ConversationMessageTranslation = /*#__PURE__*/function () {
   /**

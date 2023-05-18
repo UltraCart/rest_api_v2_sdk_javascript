@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailPerformanceDaily model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceDaily
- * @version 4.0.153
+ * @version 4.0.154
  */
 var EmailPerformanceDaily = /*#__PURE__*/function () {
   /**

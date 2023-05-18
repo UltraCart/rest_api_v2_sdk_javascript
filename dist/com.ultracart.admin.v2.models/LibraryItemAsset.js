@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LibraryItemAsset model module.
  * @module com.ultracart.admin.v2.models/LibraryItemAsset
- * @version 4.0.153
+ * @version 4.0.154
  */
 var LibraryItemAsset = /*#__PURE__*/function () {
   /**

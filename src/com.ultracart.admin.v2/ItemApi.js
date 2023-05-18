@@ -30,7 +30,7 @@ import TempMultimediaResponse from '../com.ultracart.admin.v2.models/TempMultime
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.0.154
+* @version 4.0.155
 */
 export default class ItemApi {
 
@@ -518,7 +518,7 @@ export default class ItemApi {
      */
 
     /**
-     * get a review
+     * Get a review
      * Retrieve an item review. 
      * @param {Number} review_oid The review oid to retrieve.
      * @param {Number} merchant_item_oid The item oid the review is associated with.
@@ -567,7 +567,7 @@ export default class ItemApi {
      */
 
     /**
-     * get reviews for an item
+     * Get reviews for an item
      * Retrieve item reviews. 
      * @param {Number} merchant_item_oid The item oid the review is associated with.
      * @param {module:com.ultracart.admin.v2/ItemApi~getReviewsCallback} callback The callback function, accepting three arguments: error, data, response

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingHeatmapIndexRequest model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapIndexRequest
- * @version 4.0.153
+ * @version 4.0.154
  */
 var ScreenRecordingHeatmapIndexRequest = /*#__PURE__*/function () {
   /**

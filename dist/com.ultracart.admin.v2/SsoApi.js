@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Sso service.
 * @module com.ultracart.admin.v2/SsoApi
-* @version 4.0.153
+* @version 4.0.154
 */
 var SsoApi = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemPricingTierLimit model module.
  * @module com.ultracart.admin.v2.models/ItemPricingTierLimit
- * @version 4.0.154
+ * @version 4.0.155
  */
 class ItemPricingTierLimit {
     /**
@@ -59,6 +59,9 @@ class ItemPricingTierLimit {
             if (data.hasOwnProperty('multiple_quantity')) {
                 obj['multiple_quantity'] = ApiClient.convertToType(data['multiple_quantity'], 'Number');
             }
+            if (data.hasOwnProperty('payment_method_validity')) {
+                obj['payment_method_validity'] = ApiClient.convertToType(data['payment_method_validity'], ['String']);
+            }
         }
         return obj;
     }
@@ -89,6 +92,12 @@ ItemPricingTierLimit.prototype['individual_order_limit'] = undefined;
  * @member {Number} multiple_quantity
  */
 ItemPricingTierLimit.prototype['multiple_quantity'] = undefined;
+
+/**
+ * Payment method validity
+ * @member {Array.<String>} payment_method_validity
+ */
+ItemPricingTierLimit.prototype['payment_method_validity'] = undefined;
 
 
 

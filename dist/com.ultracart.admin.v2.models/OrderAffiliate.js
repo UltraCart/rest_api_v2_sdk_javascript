@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderAffiliate model module.
  * @module com.ultracart.admin.v2.models/OrderAffiliate
- * @version 4.0.153
+ * @version 4.0.154
  */
 var OrderAffiliate = /*#__PURE__*/function () {
   /**

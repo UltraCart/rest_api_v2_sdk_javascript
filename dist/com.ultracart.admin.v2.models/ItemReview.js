@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemReview model module.
  * @module com.ultracart.admin.v2.models/ItemReview
- * @version 4.0.153
+ * @version 4.0.154
  */
 var ItemReview = /*#__PURE__*/function () {
   /**
@@ -242,51 +242,61 @@ ItemReview.prototype['order_id'] = undefined;
 
 ItemReview.prototype['overall'] = undefined;
 /**
+ * Rating Name 1
  * @member {String} rating_name1
  */
 
 ItemReview.prototype['rating_name1'] = undefined;
 /**
+ * Rating Name 10
  * @member {String} rating_name10
  */
 
 ItemReview.prototype['rating_name10'] = undefined;
 /**
+ * Rating Name 2
  * @member {String} rating_name2
  */
 
 ItemReview.prototype['rating_name2'] = undefined;
 /**
+ * Rating Name 3
  * @member {String} rating_name3
  */
 
 ItemReview.prototype['rating_name3'] = undefined;
 /**
+ * Rating Name 4
  * @member {String} rating_name4
  */
 
 ItemReview.prototype['rating_name4'] = undefined;
 /**
+ * Rating Name 5
  * @member {String} rating_name5
  */
 
 ItemReview.prototype['rating_name5'] = undefined;
 /**
+ * Rating Name 6
  * @member {String} rating_name6
  */
 
 ItemReview.prototype['rating_name6'] = undefined;
 /**
+ * Rating Name 7
  * @member {String} rating_name7
  */
 
 ItemReview.prototype['rating_name7'] = undefined;
 /**
+ * Rating Name 8
  * @member {String} rating_name8
  */
 
 ItemReview.prototype['rating_name8'] = undefined;
 /**
+ * Rating Name 9
  * @member {String} rating_name9
  */
 
@@ -352,6 +362,7 @@ ItemReview.prototype['recommend_store_to_friend'] = undefined;
 
 ItemReview.prototype['recommend_to_friend'] = undefined;
 /**
+ * Review
  * @member {String} review
  */
 
@@ -362,26 +373,31 @@ ItemReview.prototype['review'] = undefined;
 
 ItemReview.prototype['review_oid'] = undefined;
 /**
+ * Nickname
  * @member {String} reviewed_nickname
  */
 
 ItemReview.prototype['reviewed_nickname'] = undefined;
 /**
+ * Reviewer Email
  * @member {String} reviewer_email
  */
 
 ItemReview.prototype['reviewer_email'] = undefined;
 /**
+ * Location
  * @member {String} reviewer_location
  */
 
 ItemReview.prototype['reviewer_location'] = undefined;
 /**
- * @member {String} status
+ * Status of the review
+ * @member {module:com.ultracart.admin.v2.models/ItemReview.StatusEnum} status
  */
 
 ItemReview.prototype['status'] = undefined;
 /**
+ * Store Feedback
  * @member {String} store_feedback
  */
 
@@ -393,9 +409,41 @@ ItemReview.prototype['store_feedback'] = undefined;
 
 ItemReview.prototype['submitted_dts'] = undefined;
 /**
+ * Title
  * @member {String} title
  */
 
 ItemReview.prototype['title'] = undefined;
+/**
+ * Allowed values for the <code>status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+ItemReview['StatusEnum'] = {
+  /**
+   * value: "approved"
+   * @const
+   */
+  "approved": "approved",
+
+  /**
+   * value: "unapproved"
+   * @const
+   */
+  "unapproved": "unapproved",
+
+  /**
+   * value: "rejected"
+   * @const
+   */
+  "rejected": "rejected",
+
+  /**
+   * value: "multimedia processing"
+   * @const
+   */
+  "multimedia processing": "multimedia processing"
+};
 var _default = ItemReview;
 exports["default"] = _default;
