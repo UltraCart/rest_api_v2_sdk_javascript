@@ -34,7 +34,7 @@
   /**
    * The ReportDataSet model module.
    * @module com.ultracart.admin.v2.models/ReportDataSet
-   * @version 3.10.137
+   * @version 3.10.138
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.destination_table_id = ApiClient.convertToType(data['destination_table_id'], 'String');
       if (data.hasOwnProperty('error_message'))
         obj.error_message = ApiClient.convertToType(data['error_message'], 'String');
+      if (data.hasOwnProperty('executed_sql'))
+        obj.executed_sql = ApiClient.convertToType(data['executed_sql'], 'String');
       if (data.hasOwnProperty('for_object_id'))
         obj.for_object_id = ApiClient.convertToType(data['for_object_id'], 'String');
       if (data.hasOwnProperty('for_object_type'))
@@ -112,6 +114,11 @@
    * @member {String} error_message
    */
   exports.prototype.error_message = undefined;
+
+  /**
+   * @member {String} executed_sql
+   */
+  exports.prototype.executed_sql = undefined;
 
   /**
    * An identifier that can be used to help match up the returned data set

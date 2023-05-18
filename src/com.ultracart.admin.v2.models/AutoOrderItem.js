@@ -34,7 +34,7 @@
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 3.10.137
+   * @version 3.10.138
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.arbitrary_unit_cost_remaining_orders = ApiClient.convertToType(data['arbitrary_unit_cost_remaining_orders'], 'Number');
       if (data.hasOwnProperty('auto_order_item_oid'))
         obj.auto_order_item_oid = ApiClient.convertToType(data['auto_order_item_oid'], 'Number');
+      if (data.hasOwnProperty('first_order_dts'))
+        obj.first_order_dts = ApiClient.convertToType(data['first_order_dts'], 'String');
       if (data.hasOwnProperty('frequency'))
         obj.frequency = ApiClient.convertToType(data['frequency'], 'String');
       if (data.hasOwnProperty('future_schedules'))
@@ -91,6 +93,8 @@
         obj.original_item_id = ApiClient.convertToType(data['original_item_id'], 'String');
       if (data.hasOwnProperty('original_quantity'))
         obj.original_quantity = ApiClient.convertToType(data['original_quantity'], 'Number');
+      if (data.hasOwnProperty('paused'))
+        obj.paused = ApiClient.convertToType(data['paused'], 'Boolean');
       if (data.hasOwnProperty('paypal_payer_id'))
         obj.paypal_payer_id = ApiClient.convertToType(data['paypal_payer_id'], 'String');
       if (data.hasOwnProperty('paypal_recurring_payment_profile_id'))
@@ -148,6 +152,12 @@
    * @member {Number} auto_order_item_oid
    */
   exports.prototype.auto_order_item_oid = undefined;
+
+  /**
+   * Date/time of the first order of this item.  Null if item added to auto order and has not been rebilled yet.
+   * @member {String} first_order_dts
+   */
+  exports.prototype.first_order_dts = undefined;
 
   /**
    * Frequency of the rebill if not a fixed schedule
@@ -214,6 +224,12 @@
    * @member {Number} original_quantity
    */
   exports.prototype.original_quantity = undefined;
+
+  /**
+   * True if paused.  This field is an object instead of a primitive for backwards compatibility.
+   * @member {Boolean} paused
+   */
+  exports.prototype.paused = undefined;
 
   /**
    * The PayPal Payer ID tied to this item

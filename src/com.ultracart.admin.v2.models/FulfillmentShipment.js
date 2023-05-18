@@ -34,7 +34,7 @@
   /**
    * The FulfillmentShipment model module.
    * @module com.ultracart.admin.v2.models/FulfillmentShipment
-   * @version 3.10.137
+   * @version 3.10.138
    */
 
   /**
