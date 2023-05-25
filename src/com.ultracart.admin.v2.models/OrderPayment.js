@@ -23,7 +23,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.155
+ * @version 4.0.156
  */
 class OrderPayment {
     /**
@@ -352,7 +352,13 @@ OrderPayment['PaymentMethodEnum'] = {
      * value: "Sezzle"
      * @const
      */
-    "Sezzle": "Sezzle"
+    "Sezzle": "Sezzle",
+
+    /**
+     * value: "Venmo"
+     * @const
+     */
+    "Venmo": "Venmo"
 };
 
 

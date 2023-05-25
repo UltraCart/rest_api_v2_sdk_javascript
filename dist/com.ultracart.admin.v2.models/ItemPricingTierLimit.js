@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemPricingTierLimit model module.
  * @module com.ultracart.admin.v2.models/ItemPricingTierLimit
- * @version 4.0.154
+ * @version 4.0.155
  */
 var ItemPricingTierLimit = /*#__PURE__*/function () {
   /**
@@ -69,6 +69,10 @@ var ItemPricingTierLimit = /*#__PURE__*/function () {
         if (data.hasOwnProperty('multiple_quantity')) {
           obj['multiple_quantity'] = _ApiClient["default"].convertToType(data['multiple_quantity'], 'Number');
         }
+
+        if (data.hasOwnProperty('payment_method_validity')) {
+          obj['payment_method_validity'] = _ApiClient["default"].convertToType(data['payment_method_validity'], ['String']);
+        }
       }
 
       return obj;
@@ -102,5 +106,11 @@ ItemPricingTierLimit.prototype['individual_order_limit'] = undefined;
  */
 
 ItemPricingTierLimit.prototype['multiple_quantity'] = undefined;
+/**
+ * Payment method validity
+ * @member {Array.<String>} payment_method_validity
+ */
+
+ItemPricingTierLimit.prototype['payment_method_validity'] = undefined;
 var _default = ItemPricingTierLimit;
 exports["default"] = _default;

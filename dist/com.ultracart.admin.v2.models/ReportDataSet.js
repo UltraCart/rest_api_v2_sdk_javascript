@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSet model module.
  * @module com.ultracart.admin.v2.models/ReportDataSet
- * @version 4.0.154
+ * @version 4.0.155
  */
 var ReportDataSet = /*#__PURE__*/function () {
   /**
@@ -72,6 +72,10 @@ var ReportDataSet = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('error_message')) {
           obj['error_message'] = _ApiClient["default"].convertToType(data['error_message'], 'String');
+        }
+
+        if (data.hasOwnProperty('executed_sql')) {
+          obj['executed_sql'] = _ApiClient["default"].convertToType(data['executed_sql'], 'String');
         }
 
         if (data.hasOwnProperty('for_object_id')) {
@@ -150,6 +154,11 @@ ReportDataSet.prototype['destination_table_id'] = undefined;
  */
 
 ReportDataSet.prototype['error_message'] = undefined;
+/**
+ * @member {String} executed_sql
+ */
+
+ReportDataSet.prototype['executed_sql'] = undefined;
 /**
  * An identifier that can be used to help match up the returned data set
  * @member {String} for_object_id

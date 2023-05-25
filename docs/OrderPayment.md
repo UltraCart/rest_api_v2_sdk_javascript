@@ -70,6 +70,8 @@ Name | Type | Description | Notes
 
 * `Sezzle` (value: `"Sezzle"`)
 
+* `Venmo` (value: `"Venmo"`)
+
 
 
 

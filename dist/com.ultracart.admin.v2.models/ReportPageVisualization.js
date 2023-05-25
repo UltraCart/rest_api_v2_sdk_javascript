@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPageVisualization model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualization
- * @version 4.0.154
+ * @version 4.0.155
  */
 var ReportPageVisualization = /*#__PURE__*/function () {
   /**
