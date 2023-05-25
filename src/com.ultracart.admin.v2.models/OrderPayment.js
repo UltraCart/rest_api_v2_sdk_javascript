@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.10.138
+   * @version 3.10.139
    */
 
   /**
@@ -328,7 +328,13 @@
      * value: "Sezzle"
      * @const
      */
-    Sezzle: "Sezzle"
+    Sezzle: "Sezzle",
+
+    /**
+     * value: "Venmo"
+     * @const
+     */
+    Venmo: "Venmo"
   };
 
 
