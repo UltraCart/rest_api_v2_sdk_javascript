@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemEmailNotifications model module.
  * @module com.ultracart.admin.v2.models/ItemEmailNotifications
- * @version 4.0.155
+ * @version 4.0.156
  */
 var ItemEmailNotifications = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportWebsocketEvent model module.
  * @module com.ultracart.admin.v2.models/ReportWebsocketEvent
- * @version 4.0.155
+ * @version 4.0.156
  */
 var ReportWebsocketEvent = /*#__PURE__*/function () {
   /**

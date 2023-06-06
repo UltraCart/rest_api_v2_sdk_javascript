@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**add_ons** | [**[AutoOrderAddonItem]**](AutoOrderAddonItem.md) | Array of addon objects instructing which items to add to auto order and how many times they should be added. | [optional] 
 **auto_order_code** | **String** | Unique code assigned to this auto order | [optional] 
 **auto_order_oid** | **Number** | Auto order object identifier | [optional] 
 **cancel_after_next_x_orders** | **Number** | Cancel this auto order after X additional rebills | [optional] 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderDigitalItem model module.
  * @module com.ultracart.admin.v2.models/OrderDigitalItem
- * @version 4.0.155
+ * @version 4.0.156
  */
 var OrderDigitalItem = /*#__PURE__*/function () {
   /**

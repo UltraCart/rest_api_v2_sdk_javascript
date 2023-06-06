@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ChannelPartnerShipToPreferencesResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse
- * @version 4.0.156
+ * @version 4.0.157
  */
 class ChannelPartnerShipToPreferencesResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailSegmentCustomer model module.
  * @module com.ultracart.admin.v2.models/EmailSegmentCustomer
- * @version 4.0.156
+ * @version 4.0.157
  */
 class EmailSegmentCustomer {
     /**

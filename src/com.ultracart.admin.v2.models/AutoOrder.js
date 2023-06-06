@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import AutoOrderAddonItem from './AutoOrderAddonItem';
 import AutoOrderItem from './AutoOrderItem';
 import AutoOrderLog from './AutoOrderLog';
 import AutoOrderManagement from './AutoOrderManagement';
@@ -20,7 +21,7 @@ import Order from './Order';
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.0.156
+ * @version 4.0.157
  */
 class AutoOrder {
     /**
@@ -51,6 +52,9 @@ class AutoOrder {
         if (data) {
             obj = obj || new AutoOrder();
 
+            if (data.hasOwnProperty('add_ons')) {
+                obj['add_ons'] = ApiClient.convertToType(data['add_ons'], [AutoOrderAddonItem]);
+            }
             if (data.hasOwnProperty('auto_order_code')) {
                 obj['auto_order_code'] = ApiClient.convertToType(data['auto_order_code'], 'String');
             }
@@ -126,6 +130,12 @@ class AutoOrder {
 
 
 }
+
+/**
+ * Array of addon objects instructing which items to add to auto order and how many times they should be added.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderAddonItem>} add_ons
+ */
+AutoOrder.prototype['add_ons'] = undefined;
 
 /**
  * Unique code assigned to this auto order

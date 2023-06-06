@@ -17,7 +17,7 @@ import ItemAutoOrderStep from './ItemAutoOrderStep';
 /**
  * The ItemAutoOrder model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrder
- * @version 4.0.156
+ * @version 4.0.157
  */
 class ItemAutoOrder {
     /**
@@ -63,8 +63,14 @@ class ItemAutoOrder {
             if (data.hasOwnProperty('auto_order_cancel_item_oid')) {
                 obj['auto_order_cancel_item_oid'] = ApiClient.convertToType(data['auto_order_cancel_item_oid'], 'Number');
             }
+            if (data.hasOwnProperty('auto_order_cancel_minimum_life_time_count')) {
+                obj['auto_order_cancel_minimum_life_time_count'] = ApiClient.convertToType(data['auto_order_cancel_minimum_life_time_count'], 'Number');
+            }
             if (data.hasOwnProperty('auto_order_cancel_minimum_life_time_value')) {
                 obj['auto_order_cancel_minimum_life_time_value'] = ApiClient.convertToType(data['auto_order_cancel_minimum_life_time_value'], 'Number');
+            }
+            if (data.hasOwnProperty('auto_order_cancel_minimum_rebill_count')) {
+                obj['auto_order_cancel_minimum_rebill_count'] = ApiClient.convertToType(data['auto_order_cancel_minimum_rebill_count'], 'Number');
             }
             if (data.hasOwnProperty('auto_order_cancel_minimum_rebill_value')) {
                 obj['auto_order_cancel_minimum_rebill_value'] = ApiClient.convertToType(data['auto_order_cancel_minimum_rebill_value'], 'Number');
@@ -146,10 +152,22 @@ ItemAutoOrder.prototype['auto_order_cancel_item_id'] = undefined;
 ItemAutoOrder.prototype['auto_order_cancel_item_oid'] = undefined;
 
 /**
+ * The minimum life time count that must be billed in order to not be charged the cancellation item.
+ * @member {Number} auto_order_cancel_minimum_life_time_count
+ */
+ItemAutoOrder.prototype['auto_order_cancel_minimum_life_time_count'] = undefined;
+
+/**
  * The minimum life time value that must be paid in order to not be charged the cancellation item.
  * @member {Number} auto_order_cancel_minimum_life_time_value
  */
 ItemAutoOrder.prototype['auto_order_cancel_minimum_life_time_value'] = undefined;
+
+/**
+ * The minimum rebill count that must be billed in order to not be charged the cancellation item.
+ * @member {Number} auto_order_cancel_minimum_rebill_count
+ */
+ItemAutoOrder.prototype['auto_order_cancel_minimum_rebill_count'] = undefined;
 
 /**
  * The minimum rebill value that must be paid in order to not be charged the cancellation item.

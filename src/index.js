@@ -36,6 +36,8 @@ import ApiUserApplicationProfile from './com.ultracart.admin.v2.models/ApiUserAp
 import ApplyLibraryItemRequest from './com.ultracart.admin.v2.models/ApplyLibraryItemRequest';
 import ApplyLibraryItemResponse from './com.ultracart.admin.v2.models/ApplyLibraryItemResponse';
 import AutoOrder from './com.ultracart.admin.v2.models/AutoOrder';
+import AutoOrderAddonItem from './com.ultracart.admin.v2.models/AutoOrderAddonItem';
+import AutoOrderAddonItemOption from './com.ultracart.admin.v2.models/AutoOrderAddonItemOption';
 import AutoOrderItem from './com.ultracart.admin.v2.models/AutoOrderItem';
 import AutoOrderItemFutureSchedule from './com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule';
 import AutoOrderItemOption from './com.ultracart.admin.v2.models/AutoOrderItemOption';
@@ -838,7 +840,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.156
+* @version 4.0.157
 */
 export {
     /**
@@ -984,6 +986,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AutoOrder}
      */
     AutoOrder,
+
+    /**
+     * The AutoOrderAddonItem model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderAddonItem}
+     */
+    AutoOrderAddonItem,
+
+    /**
+     * The AutoOrderAddonItemOption model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderAddonItemOption}
+     */
+    AutoOrderAddonItemOption,
 
     /**
      * The AutoOrderItem model constructor.

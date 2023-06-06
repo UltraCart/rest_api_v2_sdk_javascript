@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderByTokenQuery model module.
  * @module com.ultracart.admin.v2.models/OrderByTokenQuery
- * @version 4.0.155
+ * @version 4.0.156
  */
 var OrderByTokenQuery = /*#__PURE__*/function () {
   /**

@@ -26,6 +26,8 @@ docs/ApiUserApplicationProfile.md
 docs/ApplyLibraryItemRequest.md
 docs/ApplyLibraryItemResponse.md
 docs/AutoOrder.md
+docs/AutoOrderAddonItem.md
+docs/AutoOrderAddonItemOption.md
 docs/AutoOrderApi.md
 docs/AutoOrderItem.md
 docs/AutoOrderItemFutureSchedule.md
@@ -823,6 +825,8 @@ src/com.ultracart.admin.v2.models/ApiUserApplicationProfile.js
 src/com.ultracart.admin.v2.models/ApplyLibraryItemRequest.js
 src/com.ultracart.admin.v2.models/ApplyLibraryItemResponse.js
 src/com.ultracart.admin.v2.models/AutoOrder.js
+src/com.ultracart.admin.v2.models/AutoOrderAddonItem.js
+src/com.ultracart.admin.v2.models/AutoOrderAddonItemOption.js
 src/com.ultracart.admin.v2.models/AutoOrderItem.js
 src/com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule.js
 src/com.ultracart.admin.v2.models/AutoOrderItemOption.js
