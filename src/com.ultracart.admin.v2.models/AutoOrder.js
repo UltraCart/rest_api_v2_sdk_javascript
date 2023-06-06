@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/AutoOrderLog', 'com.ultracart.admin.v2.models/AutoOrderManagement', 'com.ultracart.admin.v2.models/Order'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderAddonItem', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/AutoOrderLog', 'com.ultracart.admin.v2.models/AutoOrderManagement', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AutoOrderItem'), require('./AutoOrderLog'), require('./AutoOrderManagement'), require('./Order'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrderAddonItem'), require('./AutoOrderItem'), require('./AutoOrderLog'), require('./AutoOrderManagement'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.AutoOrderLog, root.UltraCartRestApiV2.AutoOrderManagement, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderAddonItem, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.AutoOrderLog, root.UltraCartRestApiV2.AutoOrderManagement, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, AutoOrderItem, AutoOrderLog, AutoOrderManagement, Order) {
+}(this, function(ApiClient, AutoOrderAddonItem, AutoOrderItem, AutoOrderLog, AutoOrderManagement, Order) {
   'use strict';
 
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 3.10.139
+   * @version 3.10.140
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('add_ons'))
+        obj.add_ons = ApiClient.convertToType(data['add_ons'], [AutoOrderAddonItem]);
       if (data.hasOwnProperty('auto_order_code'))
         obj.auto_order_code = ApiClient.convertToType(data['auto_order_code'], 'String');
       if (data.hasOwnProperty('auto_order_oid'))
@@ -104,6 +106,12 @@
     }
     return obj;
   }
+
+  /**
+   * Array of addon objects instructing which items to add to auto order and how many times they should be added.
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderAddonItem>} add_ons
+   */
+  exports.prototype.add_ons = undefined;
 
   /**
    * Unique code assigned to this auto order
