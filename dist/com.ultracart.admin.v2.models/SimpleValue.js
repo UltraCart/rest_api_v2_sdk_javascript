@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The SimpleValue model module.
  * @module com.ultracart.admin.v2.models/SimpleValue
- * @version 4.0.156
+ * @version 4.0.157
  */
 var SimpleValue = /*#__PURE__*/function () {
   /**

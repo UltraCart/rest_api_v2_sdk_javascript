@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The DistributionCentersResponse model module.
  * @module com.ultracart.admin.v2.models/DistributionCentersResponse
- * @version 4.0.156
+ * @version 4.0.157
  */
 var DistributionCentersResponse = /*#__PURE__*/function () {
   /**

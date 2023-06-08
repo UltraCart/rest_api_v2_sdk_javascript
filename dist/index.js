@@ -153,6 +153,18 @@ Object.defineProperty(exports, "AutoOrder", {
     return _AutoOrder["default"];
   }
 });
+Object.defineProperty(exports, "AutoOrderAddonItem", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderAddonItem["default"];
+  }
+});
+Object.defineProperty(exports, "AutoOrderAddonItemOption", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderAddonItemOption["default"];
+  }
+});
 Object.defineProperty(exports, "AutoOrderApi", {
   enumerable: true,
   get: function get() {
@@ -4821,6 +4833,10 @@ var _ApplyLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.a
 var _ApplyLibraryItemResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApplyLibraryItemResponse"));
 
 var _AutoOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrder"));
+
+var _AutoOrderAddonItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItem"));
+
+var _AutoOrderAddonItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemOption"));
 
 var _AutoOrderItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItem"));
 

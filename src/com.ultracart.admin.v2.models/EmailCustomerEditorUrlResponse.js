@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailCustomerEditorUrlResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse
- * @version 4.0.157
+ * @version 4.0.158
  */
 class EmailCustomerEditorUrlResponse {
     /**

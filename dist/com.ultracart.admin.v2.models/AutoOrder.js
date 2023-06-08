@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _AutoOrderAddonItem = _interopRequireDefault(require("./AutoOrderAddonItem"));
+
 var _AutoOrderItem = _interopRequireDefault(require("./AutoOrderItem"));
 
 var _AutoOrderLog = _interopRequireDefault(require("./AutoOrderLog"));
@@ -26,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.0.156
+ * @version 4.0.157
  */
 var AutoOrder = /*#__PURE__*/function () {
   /**
@@ -61,6 +63,10 @@ var AutoOrder = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new AutoOrder();
+
+        if (data.hasOwnProperty('add_ons')) {
+          obj['add_ons'] = _ApiClient["default"].convertToType(data['add_ons'], [_AutoOrderAddonItem["default"]]);
+        }
 
         if (data.hasOwnProperty('auto_order_code')) {
           obj['auto_order_code'] = _ApiClient["default"].convertToType(data['auto_order_code'], 'String');
@@ -162,10 +168,16 @@ var AutoOrder = /*#__PURE__*/function () {
   return AutoOrder;
 }();
 /**
+ * Array of addon objects instructing which items to add to auto order and how many times they should be added.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderAddonItem>} add_ons
+ */
+
+
+AutoOrder.prototype['add_ons'] = undefined;
+/**
  * Unique code assigned to this auto order
  * @member {String} auto_order_code
  */
-
 
 AutoOrder.prototype['auto_order_code'] = undefined;
 /**

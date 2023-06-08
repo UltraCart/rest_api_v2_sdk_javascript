@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResultSet model module.
  * @module com.ultracart.admin.v2.models/ResultSet
- * @version 4.0.157
+ * @version 4.0.158
  */
 class ResultSet {
     /**

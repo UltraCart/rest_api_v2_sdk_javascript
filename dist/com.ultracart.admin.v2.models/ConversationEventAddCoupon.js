@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventAddCoupon model module.
  * @module com.ultracart.admin.v2.models/ConversationEventAddCoupon
- * @version 4.0.156
+ * @version 4.0.157
  */
 var ConversationEventAddCoupon = /*#__PURE__*/function () {
   /**
