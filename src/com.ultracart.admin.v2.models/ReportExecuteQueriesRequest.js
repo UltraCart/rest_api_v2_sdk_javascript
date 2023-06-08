@@ -34,7 +34,7 @@
   /**
    * The ReportExecuteQueriesRequest model module.
    * @module com.ultracart.admin.v2.models/ReportExecuteQueriesRequest
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**

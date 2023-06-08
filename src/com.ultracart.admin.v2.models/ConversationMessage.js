@@ -34,7 +34,7 @@
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**

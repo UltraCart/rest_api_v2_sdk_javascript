@@ -34,7 +34,7 @@
   /**
    * The FileManagerPageResponse model module.
    * @module com.ultracart.admin.v2.models/FileManagerPageResponse
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**

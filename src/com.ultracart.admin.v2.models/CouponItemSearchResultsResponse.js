@@ -34,7 +34,7 @@
   /**
    * The CouponItemSearchResultsResponse model module.
    * @module com.ultracart.admin.v2.models/CouponItemSearchResultsResponse
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**

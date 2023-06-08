@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingUserAgentOS model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingUserAgentOS
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**

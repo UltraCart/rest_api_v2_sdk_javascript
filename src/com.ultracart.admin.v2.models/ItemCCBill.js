@@ -34,7 +34,7 @@
   /**
    * The ItemCCBill model module.
    * @module com.ultracart.admin.v2.models/ItemCCBill
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**

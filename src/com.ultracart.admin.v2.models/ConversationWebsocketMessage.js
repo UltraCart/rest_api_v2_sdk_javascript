@@ -34,7 +34,7 @@
   /**
    * The ConversationWebsocketMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**

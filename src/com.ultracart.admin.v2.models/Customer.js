@@ -34,7 +34,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 3.10.140
+   * @version 3.10.141
    */
 
   /**
@@ -139,6 +139,8 @@
         obj.qb_class = ApiClient.convertToType(data['qb_class'], 'String');
       if (data.hasOwnProperty('qb_code'))
         obj.qb_code = ApiClient.convertToType(data['qb_code'], 'String');
+      if (data.hasOwnProperty('qb_tax_exemption_reason_code'))
+        obj.qb_tax_exemption_reason_code = ApiClient.convertToType(data['qb_tax_exemption_reason_code'], 'Number');
       if (data.hasOwnProperty('quotes'))
         obj.quotes = ApiClient.convertToType(data['quotes'], [Order]);
       if (data.hasOwnProperty('quotes_summary'))
@@ -427,6 +429,12 @@
    * @member {String} qb_code
    */
   exports.prototype.qb_code = undefined;
+
+  /**
+   * QuickBooks tax exemption reason code
+   * @member {Number} qb_tax_exemption_reason_code
+   */
+  exports.prototype.qb_tax_exemption_reason_code = undefined;
 
   /**
    * Quotes associated with this customer profile
