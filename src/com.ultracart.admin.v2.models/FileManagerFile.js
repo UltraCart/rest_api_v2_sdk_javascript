@@ -34,7 +34,7 @@
   /**
    * The FileManagerFile model module.
    * @module com.ultracart.admin.v2.models/FileManagerFile
-   * @version 3.10.141
+   * @version 3.10.142
    */
 
   /**

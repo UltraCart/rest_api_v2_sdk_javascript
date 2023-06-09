@@ -34,7 +34,7 @@
   /**
    * The DistributionCenter model module.
    * @module com.ultracart.admin.v2.models/DistributionCenter
-   * @version 3.10.141
+   * @version 3.10.142
    */
 
   /**
@@ -93,6 +93,36 @@
         obj.no_customer_direct_shipments = ApiClient.convertToType(data['no_customer_direct_shipments'], 'Boolean');
       if (data.hasOwnProperty('no_split_shipment'))
         obj.no_split_shipment = ApiClient.convertToType(data['no_split_shipment'], 'Boolean');
+      if (data.hasOwnProperty('pickup_cutoff_time_friday'))
+        obj.pickup_cutoff_time_friday = ApiClient.convertToType(data['pickup_cutoff_time_friday'], 'String');
+      if (data.hasOwnProperty('pickup_cutoff_time_monday'))
+        obj.pickup_cutoff_time_monday = ApiClient.convertToType(data['pickup_cutoff_time_monday'], 'String');
+      if (data.hasOwnProperty('pickup_cutoff_time_saturday'))
+        obj.pickup_cutoff_time_saturday = ApiClient.convertToType(data['pickup_cutoff_time_saturday'], 'String');
+      if (data.hasOwnProperty('pickup_cutoff_time_sunday'))
+        obj.pickup_cutoff_time_sunday = ApiClient.convertToType(data['pickup_cutoff_time_sunday'], 'String');
+      if (data.hasOwnProperty('pickup_cutoff_time_thursday'))
+        obj.pickup_cutoff_time_thursday = ApiClient.convertToType(data['pickup_cutoff_time_thursday'], 'String');
+      if (data.hasOwnProperty('pickup_cutoff_time_tuesday'))
+        obj.pickup_cutoff_time_tuesday = ApiClient.convertToType(data['pickup_cutoff_time_tuesday'], 'String');
+      if (data.hasOwnProperty('pickup_cutoff_time_wednesday'))
+        obj.pickup_cutoff_time_wednesday = ApiClient.convertToType(data['pickup_cutoff_time_wednesday'], 'String');
+      if (data.hasOwnProperty('pickup_start_time_friday'))
+        obj.pickup_start_time_friday = ApiClient.convertToType(data['pickup_start_time_friday'], 'String');
+      if (data.hasOwnProperty('pickup_start_time_monday'))
+        obj.pickup_start_time_monday = ApiClient.convertToType(data['pickup_start_time_monday'], 'String');
+      if (data.hasOwnProperty('pickup_start_time_saturday'))
+        obj.pickup_start_time_saturday = ApiClient.convertToType(data['pickup_start_time_saturday'], 'String');
+      if (data.hasOwnProperty('pickup_start_time_sunday'))
+        obj.pickup_start_time_sunday = ApiClient.convertToType(data['pickup_start_time_sunday'], 'String');
+      if (data.hasOwnProperty('pickup_start_time_thursday'))
+        obj.pickup_start_time_thursday = ApiClient.convertToType(data['pickup_start_time_thursday'], 'String');
+      if (data.hasOwnProperty('pickup_start_time_tuesday'))
+        obj.pickup_start_time_tuesday = ApiClient.convertToType(data['pickup_start_time_tuesday'], 'String');
+      if (data.hasOwnProperty('pickup_start_time_wednesday'))
+        obj.pickup_start_time_wednesday = ApiClient.convertToType(data['pickup_start_time_wednesday'], 'String');
+      if (data.hasOwnProperty('pickup_tz'))
+        obj.pickup_tz = ApiClient.convertToType(data['pickup_tz'], 'String');
       if (data.hasOwnProperty('postal_code'))
         obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('process_days'))
@@ -241,6 +271,96 @@
    * @member {Boolean} no_split_shipment
    */
   exports.prototype.no_split_shipment = undefined;
+
+  /**
+   * The time (EST) after which pickups will not be available on Friday
+   * @member {String} pickup_cutoff_time_friday
+   */
+  exports.prototype.pickup_cutoff_time_friday = undefined;
+
+  /**
+   * The time (EST) after which pickups will not be available on Monday
+   * @member {String} pickup_cutoff_time_monday
+   */
+  exports.prototype.pickup_cutoff_time_monday = undefined;
+
+  /**
+   * The time (EST) after which pickups will not be available on Saturday
+   * @member {String} pickup_cutoff_time_saturday
+   */
+  exports.prototype.pickup_cutoff_time_saturday = undefined;
+
+  /**
+   * The time (EST) after which pickups will not be available on Sunday
+   * @member {String} pickup_cutoff_time_sunday
+   */
+  exports.prototype.pickup_cutoff_time_sunday = undefined;
+
+  /**
+   * The time (EST) after which pickups will not be available on Thursday
+   * @member {String} pickup_cutoff_time_thursday
+   */
+  exports.prototype.pickup_cutoff_time_thursday = undefined;
+
+  /**
+   * The time (EST) after which pickups will not be available on Tuesday
+   * @member {String} pickup_cutoff_time_tuesday
+   */
+  exports.prototype.pickup_cutoff_time_tuesday = undefined;
+
+  /**
+   * The time (EST) after which pickups will not be available on Wednesday
+   * @member {String} pickup_cutoff_time_wednesday
+   */
+  exports.prototype.pickup_cutoff_time_wednesday = undefined;
+
+  /**
+   * The time (EST) after which pickups are available on Friday
+   * @member {String} pickup_start_time_friday
+   */
+  exports.prototype.pickup_start_time_friday = undefined;
+
+  /**
+   * The time (EST) after which pickups are available on Monday
+   * @member {String} pickup_start_time_monday
+   */
+  exports.prototype.pickup_start_time_monday = undefined;
+
+  /**
+   * The time (EST) after which pickups are available on Saturday
+   * @member {String} pickup_start_time_saturday
+   */
+  exports.prototype.pickup_start_time_saturday = undefined;
+
+  /**
+   * The time (EST) after which pickups are available on Sunday
+   * @member {String} pickup_start_time_sunday
+   */
+  exports.prototype.pickup_start_time_sunday = undefined;
+
+  /**
+   * The time (EST) after which pickups are available on Thursday
+   * @member {String} pickup_start_time_thursday
+   */
+  exports.prototype.pickup_start_time_thursday = undefined;
+
+  /**
+   * The time (EST) after which pickups are available on Tuesday
+   * @member {String} pickup_start_time_tuesday
+   */
+  exports.prototype.pickup_start_time_tuesday = undefined;
+
+  /**
+   * The time (EST) after which pickups are available on Wednesday
+   * @member {String} pickup_start_time_wednesday
+   */
+  exports.prototype.pickup_start_time_wednesday = undefined;
+
+  /**
+   * The IANA timezone for all pickup times
+   * @member {String} pickup_tz
+   */
+  exports.prototype.pickup_tz = undefined;
 
   /**
    * Postal code of the distribution center

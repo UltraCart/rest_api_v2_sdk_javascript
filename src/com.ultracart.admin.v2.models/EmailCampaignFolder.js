@@ -34,7 +34,7 @@
   /**
    * The EmailCampaignFolder model module.
    * @module com.ultracart.admin.v2.models/EmailCampaignFolder
-   * @version 3.10.141
+   * @version 3.10.142
    */
 
   /**
