@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingUserProperty model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingUserProperty
- * @version 4.0.157
+ * @version 4.0.158
  */
 var ScreenRecordingUserProperty = /*#__PURE__*/function () {
   /**

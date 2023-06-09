@@ -52,7 +52,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.157
+ * @version 4.0.158
  */
 var Customer = /*#__PURE__*/function () {
   /**
@@ -254,6 +254,10 @@ var Customer = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('qb_code')) {
           obj['qb_code'] = _ApiClient["default"].convertToType(data['qb_code'], 'String');
+        }
+
+        if (data.hasOwnProperty('qb_tax_exemption_reason_code')) {
+          obj['qb_tax_exemption_reason_code'] = _ApiClient["default"].convertToType(data['qb_tax_exemption_reason_code'], 'Number');
         }
 
         if (data.hasOwnProperty('quotes')) {
@@ -587,6 +591,12 @@ Customer.prototype['qb_class'] = undefined;
  */
 
 Customer.prototype['qb_code'] = undefined;
+/**
+ * QuickBooks tax exemption reason code
+ * @member {Number} qb_tax_exemption_reason_code
+ */
+
+Customer.prototype['qb_tax_exemption_reason_code'] = undefined;
 /**
  * Quotes associated with this customer profile
  * @member {Array.<module:com.ultracart.admin.v2.models/Order>} quotes
