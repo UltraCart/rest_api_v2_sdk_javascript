@@ -17,7 +17,7 @@ import ReportDataSetQuery from './ReportDataSetQuery';
 /**
  * The ReportExecuteQueriesRequest model module.
  * @module com.ultracart.admin.v2.models/ReportExecuteQueriesRequest
- * @version 4.0.159
+ * @version 4.0.160
  */
 class ReportExecuteQueriesRequest {
     /**
@@ -66,6 +66,9 @@ class ReportExecuteQueriesRequest {
             if (data.hasOwnProperty('queries')) {
                 obj['queries'] = ApiClient.convertToType(data['queries'], [ReportDataSetQuery]);
             }
+            if (data.hasOwnProperty('request_dts')) {
+                obj['request_dts'] = ApiClient.convertToType(data['request_dts'], 'String');
+            }
             if (data.hasOwnProperty('security_level')) {
                 obj['security_level'] = ApiClient.convertToType(data['security_level'], 'String');
             }
@@ -108,6 +111,12 @@ ReportExecuteQueriesRequest.prototype['merchant_id'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetQuery>} queries
  */
 ReportExecuteQueriesRequest.prototype['queries'] = undefined;
+
+/**
+ * Date/Time of the client submitted the request.  Can be used to resolve out of order query completion results
+ * @member {String} request_dts
+ */
+ReportExecuteQueriesRequest.prototype['request_dts'] = undefined;
 
 /**
  * Security level to execute report under

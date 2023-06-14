@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The DistributionCenter model module.
  * @module com.ultracart.admin.v2.models/DistributionCenter
- * @version 4.0.158
+ * @version 4.0.159
  */
 var DistributionCenter = /*#__PURE__*/function () {
   /**
@@ -128,6 +128,66 @@ var DistributionCenter = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('no_split_shipment')) {
           obj['no_split_shipment'] = _ApiClient["default"].convertToType(data['no_split_shipment'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('pickup_cutoff_time_friday')) {
+          obj['pickup_cutoff_time_friday'] = _ApiClient["default"].convertToType(data['pickup_cutoff_time_friday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_cutoff_time_monday')) {
+          obj['pickup_cutoff_time_monday'] = _ApiClient["default"].convertToType(data['pickup_cutoff_time_monday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_cutoff_time_saturday')) {
+          obj['pickup_cutoff_time_saturday'] = _ApiClient["default"].convertToType(data['pickup_cutoff_time_saturday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_cutoff_time_sunday')) {
+          obj['pickup_cutoff_time_sunday'] = _ApiClient["default"].convertToType(data['pickup_cutoff_time_sunday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_cutoff_time_thursday')) {
+          obj['pickup_cutoff_time_thursday'] = _ApiClient["default"].convertToType(data['pickup_cutoff_time_thursday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_cutoff_time_tuesday')) {
+          obj['pickup_cutoff_time_tuesday'] = _ApiClient["default"].convertToType(data['pickup_cutoff_time_tuesday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_cutoff_time_wednesday')) {
+          obj['pickup_cutoff_time_wednesday'] = _ApiClient["default"].convertToType(data['pickup_cutoff_time_wednesday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_start_time_friday')) {
+          obj['pickup_start_time_friday'] = _ApiClient["default"].convertToType(data['pickup_start_time_friday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_start_time_monday')) {
+          obj['pickup_start_time_monday'] = _ApiClient["default"].convertToType(data['pickup_start_time_monday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_start_time_saturday')) {
+          obj['pickup_start_time_saturday'] = _ApiClient["default"].convertToType(data['pickup_start_time_saturday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_start_time_sunday')) {
+          obj['pickup_start_time_sunday'] = _ApiClient["default"].convertToType(data['pickup_start_time_sunday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_start_time_thursday')) {
+          obj['pickup_start_time_thursday'] = _ApiClient["default"].convertToType(data['pickup_start_time_thursday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_start_time_tuesday')) {
+          obj['pickup_start_time_tuesday'] = _ApiClient["default"].convertToType(data['pickup_start_time_tuesday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_start_time_wednesday')) {
+          obj['pickup_start_time_wednesday'] = _ApiClient["default"].convertToType(data['pickup_start_time_wednesday'], 'String');
+        }
+
+        if (data.hasOwnProperty('pickup_tz')) {
+          obj['pickup_tz'] = _ApiClient["default"].convertToType(data['pickup_tz'], 'String');
         }
 
         if (data.hasOwnProperty('postal_code')) {
@@ -315,6 +375,96 @@ DistributionCenter.prototype['no_customer_direct_shipments'] = undefined;
  */
 
 DistributionCenter.prototype['no_split_shipment'] = undefined;
+/**
+ * The time (EST) after which pickups will not be available on Friday
+ * @member {String} pickup_cutoff_time_friday
+ */
+
+DistributionCenter.prototype['pickup_cutoff_time_friday'] = undefined;
+/**
+ * The time (EST) after which pickups will not be available on Monday
+ * @member {String} pickup_cutoff_time_monday
+ */
+
+DistributionCenter.prototype['pickup_cutoff_time_monday'] = undefined;
+/**
+ * The time (EST) after which pickups will not be available on Saturday
+ * @member {String} pickup_cutoff_time_saturday
+ */
+
+DistributionCenter.prototype['pickup_cutoff_time_saturday'] = undefined;
+/**
+ * The time (EST) after which pickups will not be available on Sunday
+ * @member {String} pickup_cutoff_time_sunday
+ */
+
+DistributionCenter.prototype['pickup_cutoff_time_sunday'] = undefined;
+/**
+ * The time (EST) after which pickups will not be available on Thursday
+ * @member {String} pickup_cutoff_time_thursday
+ */
+
+DistributionCenter.prototype['pickup_cutoff_time_thursday'] = undefined;
+/**
+ * The time (EST) after which pickups will not be available on Tuesday
+ * @member {String} pickup_cutoff_time_tuesday
+ */
+
+DistributionCenter.prototype['pickup_cutoff_time_tuesday'] = undefined;
+/**
+ * The time (EST) after which pickups will not be available on Wednesday
+ * @member {String} pickup_cutoff_time_wednesday
+ */
+
+DistributionCenter.prototype['pickup_cutoff_time_wednesday'] = undefined;
+/**
+ * The time (EST) after which pickups are available on Friday
+ * @member {String} pickup_start_time_friday
+ */
+
+DistributionCenter.prototype['pickup_start_time_friday'] = undefined;
+/**
+ * The time (EST) after which pickups are available on Monday
+ * @member {String} pickup_start_time_monday
+ */
+
+DistributionCenter.prototype['pickup_start_time_monday'] = undefined;
+/**
+ * The time (EST) after which pickups are available on Saturday
+ * @member {String} pickup_start_time_saturday
+ */
+
+DistributionCenter.prototype['pickup_start_time_saturday'] = undefined;
+/**
+ * The time (EST) after which pickups are available on Sunday
+ * @member {String} pickup_start_time_sunday
+ */
+
+DistributionCenter.prototype['pickup_start_time_sunday'] = undefined;
+/**
+ * The time (EST) after which pickups are available on Thursday
+ * @member {String} pickup_start_time_thursday
+ */
+
+DistributionCenter.prototype['pickup_start_time_thursday'] = undefined;
+/**
+ * The time (EST) after which pickups are available on Tuesday
+ * @member {String} pickup_start_time_tuesday
+ */
+
+DistributionCenter.prototype['pickup_start_time_tuesday'] = undefined;
+/**
+ * The time (EST) after which pickups are available on Wednesday
+ * @member {String} pickup_start_time_wednesday
+ */
+
+DistributionCenter.prototype['pickup_start_time_wednesday'] = undefined;
+/**
+ * The IANA timezone for all pickup times
+ * @member {String} pickup_tz
+ */
+
+DistributionCenter.prototype['pickup_tz'] = undefined;
 /**
  * Postal code of the distribution center
  * @member {String} postal_code

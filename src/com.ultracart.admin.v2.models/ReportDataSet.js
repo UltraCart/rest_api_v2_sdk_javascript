@@ -18,7 +18,7 @@ import ReportDataSetSchema from './ReportDataSetSchema';
 /**
  * The ReportDataSet model module.
  * @module com.ultracart.admin.v2.models/ReportDataSet
- * @version 4.0.159
+ * @version 4.0.160
  */
 class ReportDataSet {
     /**
@@ -84,6 +84,9 @@ class ReportDataSet {
             }
             if (data.hasOwnProperty('page_size')) {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
+            }
+            if (data.hasOwnProperty('request_dts')) {
+                obj['request_dts'] = ApiClient.convertToType(data['request_dts'], 'String');
             }
             if (data.hasOwnProperty('schema')) {
                 obj['schema'] = ApiClient.convertToType(data['schema'], [ReportDataSetSchema]);
@@ -174,6 +177,12 @@ ReportDataSet.prototype['page_count'] = undefined;
  * @member {Number} page_size
  */
 ReportDataSet.prototype['page_size'] = undefined;
+
+/**
+ * Date/Time of the client submitted the request.  Can be used to resolve out of order query completion results
+ * @member {String} request_dts
+ */
+ReportDataSet.prototype['request_dts'] = undefined;
 
 /**
  * The schema associated with the data set.

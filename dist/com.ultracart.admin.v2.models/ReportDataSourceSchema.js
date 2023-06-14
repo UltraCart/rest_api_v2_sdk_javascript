@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSourceSchema model module.
  * @module com.ultracart.admin.v2.models/ReportDataSourceSchema
- * @version 4.0.158
+ * @version 4.0.159
  */
 var ReportDataSourceSchema = /*#__PURE__*/function () {
   /**

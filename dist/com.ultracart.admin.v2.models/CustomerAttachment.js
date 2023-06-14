@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerAttachment model module.
  * @module com.ultracart.admin.v2.models/CustomerAttachment
- * @version 4.0.158
+ * @version 4.0.159
  */
 var CustomerAttachment = /*#__PURE__*/function () {
   /**
