@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **merchant_id** | **String** | Merchant that owns this data set | [optional] 
 **page_count** | **Number** | The total number of pages in the result set | [optional] 
 **page_size** | **Number** | The size of the pages | [optional] 
+**request_dts** | **String** | Date/Time of the client submitted the request.  Can be used to resolve out of order query completion results | [optional] 
 **schema** | [**[ReportDataSetSchema]**](ReportDataSetSchema.md) | The schema associated with the data set. | [optional] 
 **security_level** | **String** | Security level this dataset was read from. | [optional] 
 **timezone** | **String** |  | [optional] 

@@ -34,7 +34,7 @@
   /**
    * The ReportDataSet model module.
    * @module com.ultracart.admin.v2.models/ReportDataSet
-   * @version 3.10.142
+   * @version 3.10.143
    */
 
   /**
@@ -79,6 +79,8 @@
         obj.page_count = ApiClient.convertToType(data['page_count'], 'Number');
       if (data.hasOwnProperty('page_size'))
         obj.page_size = ApiClient.convertToType(data['page_size'], 'Number');
+      if (data.hasOwnProperty('request_dts'))
+        obj.request_dts = ApiClient.convertToType(data['request_dts'], 'String');
       if (data.hasOwnProperty('schema'))
         obj.schema = ApiClient.convertToType(data['schema'], [ReportDataSetSchema]);
       if (data.hasOwnProperty('security_level'))
@@ -161,6 +163,12 @@
    * @member {Number} page_size
    */
   exports.prototype.page_size = undefined;
+
+  /**
+   * Date/Time of the client submitted the request.  Can be used to resolve out of order query completion results
+   * @member {String} request_dts
+   */
+  exports.prototype.request_dts = undefined;
 
   /**
    * The schema associated with the data set.
