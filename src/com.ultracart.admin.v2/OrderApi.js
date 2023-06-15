@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.10.143
+   * @version 3.10.144
    */
 
   /**
@@ -115,10 +115,14 @@
      * Cancel an order
      * Cancel an order on the UltraCart account.  If the success flag is false, then consult the error message for why it failed. 
      * @param {String} order_id The order id to cancel.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.lock_self_ship_orders Flag to prevent a order shipping during a refund process
+     * @param {Boolean} opts.skip_refund_and_hold Skip refund and move order to Held Orders department
      * @param {module:com.ultracart.admin.v2/OrderApi~cancelOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
      */
-    this.cancelOrder = function(order_id, callback) {
+    this.cancelOrder = function(order_id, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'order_id' is set
@@ -131,6 +135,8 @@
         'order_id': order_id
       };
       var queryParams = {
+        'lock_self_ship_orders': opts['lock_self_ship_orders'],
+        'skip_refund_and_hold': opts['skip_refund_and_hold'],
       };
       var collectionQueryParams = {
       };

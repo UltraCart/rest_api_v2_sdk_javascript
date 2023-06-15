@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 <a name="cancelOrder"></a>
 # **cancelOrder**
-> BaseResponse cancelOrder(order_id)
+> BaseResponse cancelOrder(order_id, opts)
 
 Cancel an order
 
@@ -105,6 +105,10 @@ var apiInstance = new UltraCartRestApiV2.OrderApi();
 
 var order_id = "order_id_example"; // String | The order id to cancel.
 
+var opts = { 
+  'lock_self_ship_orders': true, // Boolean | Flag to prevent a order shipping during a refund process
+  'skip_refund_and_hold': true // Boolean | Skip refund and move order to Held Orders department
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -113,7 +117,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cancelOrder(order_id, callback);
+apiInstance.cancelOrder(order_id, opts, callback);
 ```
 
 ### Parameters
@@ -121,6 +125,8 @@ apiInstance.cancelOrder(order_id, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **String**| The order id to cancel. | 
+ **lock_self_ship_orders** | **Boolean**| Flag to prevent a order shipping during a refund process | [optional] 
+ **skip_refund_and_hold** | **Boolean**| Skip refund and move order to Held Orders department | [optional] 
 
 ### Return type
 

@@ -34,7 +34,7 @@
   /**
    * The OrderInvoiceResponse model module.
    * @module com.ultracart.admin.v2.models/OrderInvoiceResponse
-   * @version 3.10.143
+   * @version 3.10.144
    */
 
   /**
