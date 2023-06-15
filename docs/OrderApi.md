@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## cancelOrder
 
-> BaseResponse cancelOrder(order_id)
+> BaseResponse cancelOrder(order_id, opts)
 
 Cancel an order
 
@@ -105,7 +105,11 @@ let apiInstance = new ucApi.OrderApi(apiClient);
 // Please see https://github.com/UltraCart/sdk_samples for working examples.
 
 let order_id = "order_id_example"; // String | The order id to cancel.
-apiInstance.cancelOrder(order_id, (error, data, response) => {
+let opts = {
+  'lock_self_ship_orders': true, // Boolean | Flag to prevent a order shipping during a refund process
+  'skip_refund_and_hold': true // Boolean | Skip refund and move order to Held Orders department
+};
+apiInstance.cancelOrder(order_id, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -120,6 +124,8 @@ apiInstance.cancelOrder(order_id, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **String**| The order id to cancel. | 
+ **lock_self_ship_orders** | **Boolean**| Flag to prevent a order shipping during a refund process | [optional] 
+ **skip_refund_and_hold** | **Boolean**| Skip refund and move order to Held Orders department | [optional] 
 
 ### Return type
 

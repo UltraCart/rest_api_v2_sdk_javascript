@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportExecuteQueriesRequest model module.
  * @module com.ultracart.admin.v2.models/ReportExecuteQueriesRequest
- * @version 4.0.159
+ * @version 4.0.160
  */
 var ReportExecuteQueriesRequest = /*#__PURE__*/function () {
   /**
@@ -80,6 +80,10 @@ var ReportExecuteQueriesRequest = /*#__PURE__*/function () {
           obj['queries'] = _ApiClient["default"].convertToType(data['queries'], [_ReportDataSetQuery["default"]]);
         }
 
+        if (data.hasOwnProperty('request_dts')) {
+          obj['request_dts'] = _ApiClient["default"].convertToType(data['request_dts'], 'String');
+        }
+
         if (data.hasOwnProperty('security_level')) {
           obj['security_level'] = _ApiClient["default"].convertToType(data['security_level'], 'String');
         }
@@ -125,6 +129,12 @@ ReportExecuteQueriesRequest.prototype['merchant_id'] = undefined;
  */
 
 ReportExecuteQueriesRequest.prototype['queries'] = undefined;
+/**
+ * Date/Time of the client submitted the request.  Can be used to resolve out of order query completion results
+ * @member {String} request_dts
+ */
+
+ReportExecuteQueriesRequest.prototype['request_dts'] = undefined;
 /**
  * Security level to execute report under
  * @member {module:com.ultracart.admin.v2.models/ReportExecuteQueriesRequest.SecurityLevelEnum} security_level

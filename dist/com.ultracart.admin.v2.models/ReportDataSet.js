@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSet model module.
  * @module com.ultracart.admin.v2.models/ReportDataSet
- * @version 4.0.159
+ * @version 4.0.160
  */
 var ReportDataSet = /*#__PURE__*/function () {
   /**
@@ -104,6 +104,10 @@ var ReportDataSet = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('page_size')) {
           obj['page_size'] = _ApiClient["default"].convertToType(data['page_size'], 'Number');
+        }
+
+        if (data.hasOwnProperty('request_dts')) {
+          obj['request_dts'] = _ApiClient["default"].convertToType(data['request_dts'], 'String');
         }
 
         if (data.hasOwnProperty('schema')) {
@@ -201,6 +205,12 @@ ReportDataSet.prototype['page_count'] = undefined;
  */
 
 ReportDataSet.prototype['page_size'] = undefined;
+/**
+ * Date/Time of the client submitted the request.  Can be used to resolve out of order query completion results
+ * @member {String} request_dts
+ */
+
+ReportDataSet.prototype['request_dts'] = undefined;
 /**
  * The schema associated with the data set.
  * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetSchema>} schema

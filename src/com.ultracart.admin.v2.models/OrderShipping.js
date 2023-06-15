@@ -18,7 +18,7 @@ import Weight from './Weight';
 /**
  * The OrderShipping model module.
  * @module com.ultracart.admin.v2.models/OrderShipping
- * @version 4.0.160
+ * @version 4.0.161
  */
 class OrderShipping {
     /**
@@ -93,6 +93,9 @@ class OrderShipping {
             }
             if (data.hasOwnProperty('lift_gate')) {
                 obj['lift_gate'] = ApiClient.convertToType(data['lift_gate'], 'Boolean');
+            }
+            if (data.hasOwnProperty('pickup_dts')) {
+                obj['pickup_dts'] = ApiClient.convertToType(data['pickup_dts'], 'String');
             }
             if (data.hasOwnProperty('postal_code')) {
                 obj['postal_code'] = ApiClient.convertToType(data['postal_code'], 'String');
@@ -235,6 +238,12 @@ OrderShipping.prototype['least_cost_route_shipping_methods'] = undefined;
  * @member {Boolean} lift_gate
  */
 OrderShipping.prototype['lift_gate'] = undefined;
+
+/**
+ * Date/time the order should be picked up locally.
+ * @member {String} pickup_dts
+ */
+OrderShipping.prototype['pickup_dts'] = undefined;
 
 /**
  * Postal code

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemEbayMarketListing model module.
  * @module com.ultracart.admin.v2.models/ItemEbayMarketListing
- * @version 4.0.159
+ * @version 4.0.160
  */
 var ItemEbayMarketListing = /*#__PURE__*/function () {
   /**

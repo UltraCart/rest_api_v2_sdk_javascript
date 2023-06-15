@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Metric model module.
  * @module com.ultracart.admin.v2.models/Metric
- * @version 4.0.159
+ * @version 4.0.160
  */
 var Metric = /*#__PURE__*/function () {
   /**

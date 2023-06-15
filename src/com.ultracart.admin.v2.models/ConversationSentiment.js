@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationSentiment model module.
  * @module com.ultracart.admin.v2.models/ConversationSentiment
- * @version 4.0.160
+ * @version 4.0.161
  */
 class ConversationSentiment {
     /**
