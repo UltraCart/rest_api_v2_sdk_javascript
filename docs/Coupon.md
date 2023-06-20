@@ -71,3 +71,20 @@ Name | Type | Description | Notes
 **usable_by** | **String** | Who may use this coupon. | [optional] 
 
 
+<a name="UsableByEnum"></a>
+## Enum: UsableByEnum
+
+
+* `Anyone` (value: `"Anyone"`)
+
+* `UniqueCode` (value: `"UniqueCode"`)
+
+* `OncePerCustomer` (value: `"OncePerCustomer"`)
+
+* `OncePerNewCustomer` (value: `"OncePerNewCustomer"`)
+
+* `OncePerNewCustomerForItem` (value: `"OncePerNewCustomerForItem"`)
+
+
+
+

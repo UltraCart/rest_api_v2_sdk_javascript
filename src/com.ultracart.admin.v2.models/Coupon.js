@@ -34,7 +34,7 @@
   /**
    * The Coupon model module.
    * @module com.ultracart.admin.v2.models/Coupon
-   * @version 3.10.144
+   * @version 3.10.145
    */
 
   /**
@@ -536,9 +536,47 @@
 
   /**
    * Who may use this coupon.
-   * @member {String} usable_by
+   * @member {module:com.ultracart.admin.v2.models/Coupon.UsableByEnum} usable_by
    */
   exports.prototype.usable_by = undefined;
+
+
+  /**
+   * Allowed values for the <code>usable_by</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.UsableByEnum = {
+    /**
+     * value: "Anyone"
+     * @const
+     */
+    Anyone: "Anyone",
+
+    /**
+     * value: "UniqueCode"
+     * @const
+     */
+    UniqueCode: "UniqueCode",
+
+    /**
+     * value: "OncePerCustomer"
+     * @const
+     */
+    OncePerCustomer: "OncePerCustomer",
+
+    /**
+     * value: "OncePerNewCustomer"
+     * @const
+     */
+    OncePerNewCustomer: "OncePerNewCustomer",
+
+    /**
+     * value: "OncePerNewCustomerForItem"
+     * @const
+     */
+    OncePerNewCustomerForItem: "OncePerNewCustomerForItem"
+  };
 
   return exports;
 
