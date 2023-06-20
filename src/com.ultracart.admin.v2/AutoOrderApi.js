@@ -34,7 +34,7 @@
   /**
    * AutoOrder service.
    * @module com.ultracart.admin.v2/AutoOrderApi
-   * @version 3.10.145
+   * @version 3.10.146
    */
 
   /**
@@ -47,6 +47,58 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the establishAutoOrderByReferenceOrderId operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~establishAutoOrderByReferenceOrderIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Establish an auto order by referencing a regular order id
+     * Establish an auto order by referencing a regular order id.  The result will be an auto order without any items.  You should add the items and perform an update call.  Orders must be less than 60 days old and use a credit card payment. 
+     * @param {String} reference_order_id The order id to attach this auto order to
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~establishAutoOrderByReferenceOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    this.establishAutoOrderByReferenceOrderId = function(reference_order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'reference_order_id' is set
+      if (reference_order_id === undefined || reference_order_id === null) {
+        throw new Error("Missing the required parameter 'reference_order_id' when calling establishAutoOrderByReferenceOrderId");
+      }
+
+
+      var pathParams = {
+        'reference_order_id': reference_order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = AutoOrderResponse;
+
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/reference_order_id/{reference_order_id}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the getAutoOrder operation.
