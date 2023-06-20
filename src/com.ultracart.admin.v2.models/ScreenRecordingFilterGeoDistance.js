@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingFilterGeoDistance model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterGeoDistance
- * @version 4.0.162
+ * @version 4.0.163
  */
 class ScreenRecordingFilterGeoDistance {
     /**

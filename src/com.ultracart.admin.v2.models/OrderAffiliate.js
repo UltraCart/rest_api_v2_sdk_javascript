@@ -17,7 +17,7 @@ import OrderAffiliateLedger from './OrderAffiliateLedger';
 /**
  * The OrderAffiliate model module.
  * @module com.ultracart.admin.v2.models/OrderAffiliate
- * @version 4.0.162
+ * @version 4.0.163
  */
 class OrderAffiliate {
     /**

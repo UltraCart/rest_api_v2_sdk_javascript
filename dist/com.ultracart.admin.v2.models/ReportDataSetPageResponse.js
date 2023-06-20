@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSetPageResponse model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetPageResponse
- * @version 4.0.161
+ * @version 4.0.162
  */
 var ReportDataSetPageResponse = /*#__PURE__*/function () {
   /**

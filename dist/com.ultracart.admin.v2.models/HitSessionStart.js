@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The HitSessionStart model module.
  * @module com.ultracart.admin.v2.models/HitSessionStart
- * @version 4.0.161
+ * @version 4.0.162
  */
 var HitSessionStart = /*#__PURE__*/function () {
   /**

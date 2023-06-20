@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CartBuysafe model module.
  * @module com.ultracart.admin.v2.models/CartBuysafe
- * @version 4.0.162
+ * @version 4.0.163
  */
 class CartBuysafe {
     /**

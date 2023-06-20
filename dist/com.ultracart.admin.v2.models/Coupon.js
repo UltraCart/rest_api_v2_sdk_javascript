@@ -114,7 +114,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.161
+ * @version 4.0.162
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -767,9 +767,46 @@ Coupon.prototype['tiered_percent_off_subtotal'] = undefined;
 Coupon.prototype['tiered_percent_off_subtotal_based_on_msrp'] = undefined;
 /**
  * Who may use this coupon.
- * @member {String} usable_by
+ * @member {module:com.ultracart.admin.v2.models/Coupon.UsableByEnum} usable_by
  */
 
 Coupon.prototype['usable_by'] = undefined;
+/**
+ * Allowed values for the <code>usable_by</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+Coupon['UsableByEnum'] = {
+  /**
+   * value: "Anyone"
+   * @const
+   */
+  "Anyone": "Anyone",
+
+  /**
+   * value: "UniqueCode"
+   * @const
+   */
+  "UniqueCode": "UniqueCode",
+
+  /**
+   * value: "OncePerCustomer"
+   * @const
+   */
+  "OncePerCustomer": "OncePerCustomer",
+
+  /**
+   * value: "OncePerNewCustomer"
+   * @const
+   */
+  "OncePerNewCustomer": "OncePerNewCustomer",
+
+  /**
+   * value: "OncePerNewCustomerForItem"
+   * @const
+   */
+  "OncePerNewCustomerForItem": "OncePerNewCustomerForItem"
+};
 var _default = Coupon;
 exports["default"] = _default;

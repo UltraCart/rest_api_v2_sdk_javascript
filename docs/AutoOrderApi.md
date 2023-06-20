@@ -4,6 +4,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**establishAutoOrderByReferenceOrderId**](AutoOrderApi.md#establishAutoOrderByReferenceOrderId) | **POST** /auto_order/auto_orders/reference_order_id/{reference_order_id} | Establish an auto order by referencing a regular order id
 [**getAutoOrder**](AutoOrderApi.md#getAutoOrder) | **GET** /auto_order/auto_orders/{auto_order_oid} | Retrieve an auto order by oid
 [**getAutoOrderByCode**](AutoOrderApi.md#getAutoOrderByCode) | **GET** /auto_order/auto_orders/code/{auto_order_code} | Retrieve an auto order by code
 [**getAutoOrderByReferenceOrderId**](AutoOrderApi.md#getAutoOrderByReferenceOrderId) | **GET** /auto_order/auto_orders/reference_order_id/{reference_order_id} | Retrieve an auto order by order id
@@ -13,6 +14,60 @@ Method | HTTP request | Description
 [**updateAutoOrder**](AutoOrderApi.md#updateAutoOrder) | **PUT** /auto_order/auto_orders/{auto_order_oid} | Update an auto order
 [**updateAutoOrdersBatch**](AutoOrderApi.md#updateAutoOrdersBatch) | **PUT** /auto_order/auto_orders/batch | Update multiple auto orders
 
+
+
+## establishAutoOrderByReferenceOrderId
+
+> AutoOrderResponse establishAutoOrderByReferenceOrderId(reference_order_id, opts)
+
+Establish an auto order by referencing a regular order id
+
+Establish an auto order by referencing a regular order id.  The result will be an auto order without any items.  You should add the items and perform an update call.  Orders must be less than 60 days old and use a credit card payment. 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.AutoOrderApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let reference_order_id = "reference_order_id_example"; // String | The order id to attach this auto order to
+let opts = {
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+apiInstance.establishAutoOrderByReferenceOrderId(reference_order_id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reference_order_id** | **String**| The order id to attach this auto order to | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## getAutoOrder

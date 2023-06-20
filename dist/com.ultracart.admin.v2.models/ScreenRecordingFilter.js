@@ -30,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilter model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
- * @version 4.0.161
+ * @version 4.0.162
  */
 var ScreenRecordingFilter = /*#__PURE__*/function () {
   /**
