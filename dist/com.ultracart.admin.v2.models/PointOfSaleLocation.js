@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PointOfSaleLocation model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleLocation
- * @version 4.0.160
+ * @version 4.0.161
  */
 var PointOfSaleLocation = /*#__PURE__*/function () {
   /**

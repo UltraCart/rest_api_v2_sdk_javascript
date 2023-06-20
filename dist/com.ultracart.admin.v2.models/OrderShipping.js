@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderShipping model module.
  * @module com.ultracart.admin.v2.models/OrderShipping
- * @version 4.0.160
+ * @version 4.0.161
  */
 var OrderShipping = /*#__PURE__*/function () {
   /**
@@ -116,6 +116,10 @@ var OrderShipping = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('lift_gate')) {
           obj['lift_gate'] = _ApiClient["default"].convertToType(data['lift_gate'], 'Boolean');
+        }
+
+        if (data.hasOwnProperty('pickup_dts')) {
+          obj['pickup_dts'] = _ApiClient["default"].convertToType(data['pickup_dts'], 'String');
         }
 
         if (data.hasOwnProperty('postal_code')) {
@@ -276,6 +280,12 @@ OrderShipping.prototype['least_cost_route_shipping_methods'] = undefined;
  */
 
 OrderShipping.prototype['lift_gate'] = undefined;
+/**
+ * Date/time the order should be picked up locally.
+ * @member {String} pickup_dts
+ */
+
+OrderShipping.prototype['pickup_dts'] = undefined;
 /**
  * Postal code
  * @member {String} postal_code

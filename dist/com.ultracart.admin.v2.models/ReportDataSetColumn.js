@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSetColumn model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetColumn
- * @version 4.0.160
+ * @version 4.0.161
  */
 var ReportDataSetColumn = /*#__PURE__*/function () {
   /**
