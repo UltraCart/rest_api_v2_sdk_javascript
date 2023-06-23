@@ -34,7 +34,7 @@
   /**
    * IntegrationLog service.
    * @module com.ultracart.admin.v2/IntegrationLogApi
-   * @version 3.10.146
+   * @version 3.10.147
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ReportPageVisualization model module.
    * @module com.ultracart.admin.v2.models/ReportPageVisualization
-   * @version 3.10.146
+   * @version 3.10.147
    */
 
   /**
@@ -162,7 +162,13 @@
      * value: "table"
      * @const
      */
-    table: "table"
+    table: "table",
+
+    /**
+     * value: "gauge"
+     * @const
+     */
+    gauge: "gauge"
   };
 
   return exports;

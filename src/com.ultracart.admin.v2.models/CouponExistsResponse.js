@@ -34,7 +34,7 @@
   /**
    * The CouponExistsResponse model module.
    * @module com.ultracart.admin.v2.models/CouponExistsResponse
-   * @version 3.10.146
+   * @version 3.10.147
    */
 
   /**

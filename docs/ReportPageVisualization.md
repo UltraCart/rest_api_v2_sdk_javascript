@@ -28,6 +28,8 @@ Name | Type | Description | Notes
 
 * `table` (value: `"table"`)
 
+* `gauge` (value: `"gauge"`)
+
 
 
 

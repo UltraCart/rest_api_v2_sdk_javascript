@@ -34,7 +34,7 @@
   /**
    * The HitPageView model module.
    * @module com.ultracart.admin.v2.models/HitPageView
-   * @version 3.10.146
+   * @version 3.10.147
    */
 
   /**

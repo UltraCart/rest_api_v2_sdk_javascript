@@ -34,7 +34,7 @@
   /**
    * The DataTablesServerSideResponse model module.
    * @module com.ultracart.admin.v2.models/DataTablesServerSideResponse
-   * @version 3.10.146
+   * @version 3.10.147
    */
 
   /**

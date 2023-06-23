@@ -34,7 +34,7 @@
   /**
    * The ReportPage model module.
    * @module com.ultracart.admin.v2.models/ReportPage
-   * @version 3.10.146
+   * @version 3.10.147
    */
 
   /**
