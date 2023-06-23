@@ -19,7 +19,7 @@ import BrowserUserAgent from './BrowserUserAgent';
 /**
  * The Browser model module.
  * @module com.ultracart.admin.v2.models/Browser
- * @version 4.0.163
+ * @version 4.0.164
  */
 class Browser {
     /**

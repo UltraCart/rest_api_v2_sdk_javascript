@@ -17,7 +17,7 @@ import AvalaraConfig from './AvalaraConfig';
 /**
  * The TaxProviderAvalara model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAvalara
- * @version 4.0.163
+ * @version 4.0.164
  */
 class TaxProviderAvalara {
     /**

@@ -17,7 +17,7 @@ import AutoOrderAddonItemOption from './AutoOrderAddonItemOption';
 /**
  * The AutoOrderAddonItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderAddonItem
- * @version 4.0.163
+ * @version 4.0.164
  */
 class AutoOrderAddonItem {
     /**

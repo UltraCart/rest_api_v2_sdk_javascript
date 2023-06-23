@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionEmailOption model module.
  * @module com.ultracart.admin.v2.models/TransactionEmailOption
- * @version 4.0.163
+ * @version 4.0.164
  */
 class TransactionEmailOption {
     /**

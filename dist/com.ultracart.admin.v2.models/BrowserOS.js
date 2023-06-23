@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BrowserOS model module.
  * @module com.ultracart.admin.v2.models/BrowserOS
- * @version 4.0.162
+ * @version 4.0.163
  */
 var BrowserOS = /*#__PURE__*/function () {
   /**

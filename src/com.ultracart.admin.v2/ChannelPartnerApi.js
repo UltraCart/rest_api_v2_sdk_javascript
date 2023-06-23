@@ -27,7 +27,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * ChannelPartner service.
 * @module com.ultracart.admin.v2/ChannelPartnerApi
-* @version 4.0.163
+* @version 4.0.164
 */
 export default class ChannelPartnerApi {
 

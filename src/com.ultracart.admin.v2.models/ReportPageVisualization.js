@@ -18,7 +18,7 @@ import ReportPageVisualizationMetric from './ReportPageVisualizationMetric';
 /**
  * The ReportPageVisualization model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualization
- * @version 4.0.163
+ * @version 4.0.164
  */
 class ReportPageVisualization {
     /**
@@ -172,7 +172,13 @@ ReportPageVisualization['TypeEnum'] = {
      * value: "table"
      * @const
      */
-    "table": "table"
+    "table": "table",
+
+    /**
+     * value: "gauge"
+     * @const
+     */
+    "gauge": "gauge"
 };
 
 
