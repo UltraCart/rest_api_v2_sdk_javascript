@@ -30,6 +30,8 @@ Name | Type | Description | Notes
 
 * `gauge` (value: `"gauge"`)
 
+* `pie_chart` (value: `"pie chart"`)
+
 
 
 

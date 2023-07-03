@@ -34,7 +34,7 @@
   /**
    * The ReportPageVisualization model module.
    * @module com.ultracart.admin.v2.models/ReportPageVisualization
-   * @version 3.10.147
+   * @version 3.10.148
    */
 
   /**
@@ -168,7 +168,13 @@
      * value: "gauge"
      * @const
      */
-    gauge: "gauge"
+    gauge: "gauge",
+
+    /**
+     * value: "pie chart"
+     * @const
+     */
+    pie_chart: "pie chart"
   };
 
   return exports;
