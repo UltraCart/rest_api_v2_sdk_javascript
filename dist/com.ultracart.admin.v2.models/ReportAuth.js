@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportAuth model module.
  * @module com.ultracart.admin.v2.models/ReportAuth
- * @version 4.0.163
+ * @version 4.0.164
  */
 var ReportAuth = /*#__PURE__*/function () {
   /**

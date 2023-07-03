@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationMessageTranslation model module.
  * @module com.ultracart.admin.v2.models/ConversationMessageTranslation
- * @version 4.0.164
+ * @version 4.0.165
  */
 class ConversationMessageTranslation {
     /**

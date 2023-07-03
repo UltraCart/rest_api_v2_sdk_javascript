@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Country model module.
  * @module com.ultracart.admin.v2.models/Country
- * @version 4.0.163
+ * @version 4.0.164
  */
 var Country = /*#__PURE__*/function () {
   /**

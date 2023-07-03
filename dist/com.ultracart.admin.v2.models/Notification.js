@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Notification model module.
  * @module com.ultracart.admin.v2.models/Notification
- * @version 4.0.163
+ * @version 4.0.164
  */
 var Notification = /*#__PURE__*/function () {
   /**

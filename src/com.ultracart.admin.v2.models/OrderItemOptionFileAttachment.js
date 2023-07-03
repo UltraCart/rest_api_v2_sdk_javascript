@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderItemOptionFileAttachment model module.
  * @module com.ultracart.admin.v2.models/OrderItemOptionFileAttachment
- * @version 4.0.164
+ * @version 4.0.165
  */
 class OrderItemOptionFileAttachment {
     /**

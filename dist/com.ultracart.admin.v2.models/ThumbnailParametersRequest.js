@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ThumbnailParametersRequest model module.
  * @module com.ultracart.admin.v2.models/ThumbnailParametersRequest
- * @version 4.0.163
+ * @version 4.0.164
  */
 var ThumbnailParametersRequest = /*#__PURE__*/function () {
   /**
