@@ -34,7 +34,7 @@
   /**
    * The ReportFilterConnection model module.
    * @module com.ultracart.admin.v2.models/ReportFilterConnection
-   * @version 3.10.150
+   * @version 3.10.151
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.column = ApiClient.convertToType(data['column'], 'String');
       if (data.hasOwnProperty('data_source_name'))
         obj.data_source_name = ApiClient.convertToType(data['data_source_name'], 'String');
+      if (data.hasOwnProperty('data_source_uuid'))
+        obj.data_source_uuid = ApiClient.convertToType(data['data_source_uuid'], 'String');
     }
     return obj;
   }
@@ -72,6 +74,12 @@
    * @member {String} data_source_name
    */
   exports.prototype.data_source_name = undefined;
+
+  /**
+   * A unique identifier assigned to the data source.
+   * @member {String} data_source_uuid
+   */
+  exports.prototype.data_source_uuid = undefined;
 
   return exports;
 

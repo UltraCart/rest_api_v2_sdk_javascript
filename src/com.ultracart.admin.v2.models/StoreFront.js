@@ -34,7 +34,7 @@
   /**
    * The StoreFront model module.
    * @module com.ultracart.admin.v2.models/StoreFront
-   * @version 3.10.150
+   * @version 3.10.151
    */
 
   /**

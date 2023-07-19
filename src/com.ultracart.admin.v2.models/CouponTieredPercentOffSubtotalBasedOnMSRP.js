@@ -34,7 +34,7 @@
   /**
    * The CouponTieredPercentOffSubtotalBasedOnMSRP model module.
    * @module com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP
-   * @version 3.10.150
+   * @version 3.10.151
    */
 
   /**

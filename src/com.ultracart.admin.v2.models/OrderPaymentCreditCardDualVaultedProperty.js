@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentCreditCardDualVaultedProperty model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty
-   * @version 3.10.150
+   * @version 3.10.151
    */
 
   /**
