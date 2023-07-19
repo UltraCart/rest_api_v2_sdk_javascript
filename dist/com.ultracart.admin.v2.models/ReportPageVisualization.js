@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPageVisualization model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualization
- * @version 4.0.166
+ * @version 4.0.167
  */
 var ReportPageVisualization = /*#__PURE__*/function () {
   /**
@@ -64,6 +64,10 @@ var ReportPageVisualization = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('data_source_name')) {
           obj['data_source_name'] = _ApiClient["default"].convertToType(data['data_source_name'], 'String');
+        }
+
+        if (data.hasOwnProperty('data_source_uuid')) {
+          obj['data_source_uuid'] = _ApiClient["default"].convertToType(data['data_source_uuid'], 'String');
         }
 
         if (data.hasOwnProperty('dimensions')) {
@@ -113,6 +117,12 @@ ReportPageVisualization.prototype['config'] = undefined;
  */
 
 ReportPageVisualization.prototype['data_source_name'] = undefined;
+/**
+ * A unique identifier assigned to the data source.
+ * @member {String} data_source_uuid
+ */
+
+ReportPageVisualization.prototype['data_source_uuid'] = undefined;
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ReportPageVisualizationDimension>} dimensions
  */

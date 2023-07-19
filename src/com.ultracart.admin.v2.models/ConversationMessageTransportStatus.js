@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationMessageTransportStatus model module.
  * @module com.ultracart.admin.v2.models/ConversationMessageTransportStatus
- * @version 4.0.167
+ * @version 4.0.168
  */
 class ConversationMessageTransportStatus {
     /**

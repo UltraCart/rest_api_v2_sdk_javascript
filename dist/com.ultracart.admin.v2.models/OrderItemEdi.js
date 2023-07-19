@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItemEdi model module.
  * @module com.ultracart.admin.v2.models/OrderItemEdi
- * @version 4.0.166
+ * @version 4.0.167
  */
 var OrderItemEdi = /*#__PURE__*/function () {
   /**

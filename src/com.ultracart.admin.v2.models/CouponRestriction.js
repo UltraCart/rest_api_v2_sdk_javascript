@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponRestriction model module.
  * @module com.ultracart.admin.v2.models/CouponRestriction
- * @version 4.0.167
+ * @version 4.0.168
  */
 class CouponRestriction {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponDiscountItemWithItemPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponDiscountItemWithItemPurchase
- * @version 4.0.167
+ * @version 4.0.168
  */
 class CouponDiscountItemWithItemPurchase {
     /**

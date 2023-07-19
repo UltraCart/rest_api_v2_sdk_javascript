@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailPostcardStat model module.
  * @module com.ultracart.admin.v2.models/EmailPostcardStat
- * @version 4.0.167
+ * @version 4.0.168
  */
 class EmailPostcardStat {
     /**

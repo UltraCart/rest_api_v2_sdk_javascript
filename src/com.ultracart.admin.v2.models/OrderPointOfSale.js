@@ -19,7 +19,7 @@ import PointOfSaleRegister from './PointOfSaleRegister';
 /**
  * The OrderPointOfSale model module.
  * @module com.ultracart.admin.v2.models/OrderPointOfSale
- * @version 4.0.167
+ * @version 4.0.168
  */
 class OrderPointOfSale {
     /**
