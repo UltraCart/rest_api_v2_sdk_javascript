@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LibraryItemAsset model module.
  * @module com.ultracart.admin.v2.models/LibraryItemAsset
- * @version 4.0.166
+ * @version 4.0.167
  */
 class LibraryItemAsset {
     /**

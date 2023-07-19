@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCustomerEditorUrlResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse
- * @version 4.0.165
+ * @version 4.0.166
  */
 var EmailCustomerEditorUrlResponse = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItemEdiLot model module.
  * @module com.ultracart.admin.v2.models/OrderItemEdiLot
- * @version 4.0.165
+ * @version 4.0.166
  */
 var OrderItemEdiLot = /*#__PURE__*/function () {
   /**

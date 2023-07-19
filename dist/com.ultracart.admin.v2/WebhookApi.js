@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Webhook service.
 * @module com.ultracart.admin.v2/WebhookApi
-* @version 4.0.165
+* @version 4.0.166
 */
 var WebhookApi = /*#__PURE__*/function () {
   /**

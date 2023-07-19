@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSource model module.
  * @module com.ultracart.admin.v2.models/ReportDataSource
- * @version 4.0.165
+ * @version 4.0.166
  */
 var ReportDataSource = /*#__PURE__*/function () {
   /**
@@ -56,6 +56,10 @@ var ReportDataSource = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new ReportDataSource();
 
+        if (data.hasOwnProperty('data_source_uuid')) {
+          obj['data_source_uuid'] = _ApiClient["default"].convertToType(data['data_source_uuid'], 'String');
+        }
+
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
@@ -88,9 +92,15 @@ var ReportDataSource = /*#__PURE__*/function () {
   return ReportDataSource;
 }();
 /**
- * @member {String} name
+ * A unique identifier assigned to the data source.
+ * @member {String} data_source_uuid
  */
 
+
+ReportDataSource.prototype['data_source_uuid'] = undefined;
+/**
+ * @member {String} name
+ */
 
 ReportDataSource.prototype['name'] = undefined;
 /**

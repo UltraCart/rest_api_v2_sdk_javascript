@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The HitSessionUtm model module.
  * @module com.ultracart.admin.v2.models/HitSessionUtm
- * @version 4.0.165
+ * @version 4.0.166
  */
 var HitSessionUtm = /*#__PURE__*/function () {
   /**

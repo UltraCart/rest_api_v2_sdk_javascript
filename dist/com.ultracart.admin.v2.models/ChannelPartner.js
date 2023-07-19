@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ChannelPartner model module.
  * @module com.ultracart.admin.v2.models/ChannelPartner
- * @version 4.0.165
+ * @version 4.0.166
  */
 var ChannelPartner = /*#__PURE__*/function () {
   /**
@@ -66,6 +66,10 @@ var ChannelPartner = /*#__PURE__*/function () {
           obj['communication_method'] = _ApiClient["default"].convertToType(data['communication_method'], 'String');
         }
 
+        if (data.hasOwnProperty('dont_hold_shipment')) {
+          obj['dont_hold_shipment'] = _ApiClient["default"].convertToType(data['dont_hold_shipment'], 'Boolean');
+        }
+
         if (data.hasOwnProperty('inactive')) {
           obj['inactive'] = _ApiClient["default"].convertToType(data['inactive'], 'Boolean');
         }
@@ -108,6 +112,12 @@ ChannelPartner.prototype['code'] = undefined;
  */
 
 ChannelPartner.prototype['communication_method'] = undefined;
+/**
+ * True if shipments should immediately process for this channel partner.
+ * @member {Boolean} dont_hold_shipment
+ */
+
+ChannelPartner.prototype['dont_hold_shipment'] = undefined;
 /**
  * True if the channel partner is inactive
  * @member {Boolean} inactive

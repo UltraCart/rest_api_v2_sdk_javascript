@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemShippingDestinationMarkup model module.
  * @module com.ultracart.admin.v2.models/ItemShippingDestinationMarkup
- * @version 4.0.166
+ * @version 4.0.167
  */
 class ItemShippingDestinationMarkup {
     /**

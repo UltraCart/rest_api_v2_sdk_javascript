@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemRevguard model module.
  * @module com.ultracart.admin.v2.models/ItemRevguard
- * @version 4.0.165
+ * @version 4.0.166
  */
 var ItemRevguard = /*#__PURE__*/function () {
   /**

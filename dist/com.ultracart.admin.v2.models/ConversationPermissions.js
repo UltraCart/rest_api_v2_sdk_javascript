@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationPermissions model module.
  * @module com.ultracart.admin.v2.models/ConversationPermissions
- * @version 4.0.165
+ * @version 4.0.166
  */
 var ConversationPermissions = /*#__PURE__*/function () {
   /**
