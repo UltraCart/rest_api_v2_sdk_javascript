@@ -34,7 +34,7 @@
   /**
    * The CartSettingsPaymentPayPal model module.
    * @module com.ultracart.admin.v2.models/CartSettingsPaymentPayPal
-   * @version 3.10.149
+   * @version 3.10.150
    */
 
   /**

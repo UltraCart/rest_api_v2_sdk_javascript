@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **config** | **String** | A JSON representation of the configuration for this visualization | [optional] 
 **data_source_name** | **String** |  | [optional] 
+**data_source_uuid** | **String** | A unique identifier assigned to the data source. | [optional] 
 **dimensions** | [**[ReportPageVisualizationDimension]**](ReportPageVisualizationDimension.md) |  | [optional] 
 **metrics** | [**[ReportPageVisualizationMetric]**](ReportPageVisualizationMetric.md) |  | [optional] 
 **name** | **String** |  | [optional] 

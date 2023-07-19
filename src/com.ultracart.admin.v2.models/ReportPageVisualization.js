@@ -34,7 +34,7 @@
   /**
    * The ReportPageVisualization model module.
    * @module com.ultracart.admin.v2.models/ReportPageVisualization
-   * @version 3.10.149
+   * @version 3.10.150
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.config = ApiClient.convertToType(data['config'], 'String');
       if (data.hasOwnProperty('data_source_name'))
         obj.data_source_name = ApiClient.convertToType(data['data_source_name'], 'String');
+      if (data.hasOwnProperty('data_source_uuid'))
+        obj.data_source_uuid = ApiClient.convertToType(data['data_source_uuid'], 'String');
       if (data.hasOwnProperty('dimensions'))
         obj.dimensions = ApiClient.convertToType(data['dimensions'], [ReportPageVisualizationDimension]);
       if (data.hasOwnProperty('metrics'))
@@ -87,6 +89,12 @@
    * @member {String} data_source_name
    */
   exports.prototype.data_source_name = undefined;
+
+  /**
+   * A unique identifier assigned to the data source.
+   * @member {String} data_source_uuid
+   */
+  exports.prototype.data_source_uuid = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ReportPageVisualizationDimension>} dimensions
