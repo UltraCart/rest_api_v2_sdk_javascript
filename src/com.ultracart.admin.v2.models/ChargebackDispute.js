@@ -17,7 +17,7 @@ import Order from './Order';
 /**
  * The ChargebackDispute model module.
  * @module com.ultracart.admin.v2.models/ChargebackDispute
- * @version 4.0.165
+ * @version 4.0.166
  */
 class ChargebackDispute {
     /**

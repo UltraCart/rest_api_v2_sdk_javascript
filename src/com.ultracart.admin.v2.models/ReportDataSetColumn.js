@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportDataSetColumn model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetColumn
- * @version 4.0.165
+ * @version 4.0.166
  */
 class ReportDataSetColumn {
     /**

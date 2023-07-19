@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPageVisualization model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualization
- * @version 4.0.164
+ * @version 4.0.165
  */
 var ReportPageVisualization = /*#__PURE__*/function () {
   /**
@@ -193,7 +193,13 @@ ReportPageVisualization['TypeEnum'] = {
    * value: "gauge"
    * @const
    */
-  "gauge": "gauge"
+  "gauge": "gauge",
+
+  /**
+   * value: "pie chart"
+   * @const
+   */
+  "pie chart": "pie chart"
 };
 var _default = ReportPageVisualization;
 exports["default"] = _default;

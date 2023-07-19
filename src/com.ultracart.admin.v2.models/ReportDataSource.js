@@ -17,7 +17,7 @@ import ReportDataSourceSchema from './ReportDataSourceSchema';
 /**
  * The ReportDataSource model module.
  * @module com.ultracart.admin.v2.models/ReportDataSource
- * @version 4.0.165
+ * @version 4.0.166
  */
 class ReportDataSource {
     /**
@@ -48,6 +48,9 @@ class ReportDataSource {
         if (data) {
             obj = obj || new ReportDataSource();
 
+            if (data.hasOwnProperty('data_source_uuid')) {
+                obj['data_source_uuid'] = ApiClient.convertToType(data['data_source_uuid'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -72,6 +75,12 @@ class ReportDataSource {
 
 
 }
+
+/**
+ * A unique identifier assigned to the data source.
+ * @member {String} data_source_uuid
+ */
+ReportDataSource.prototype['data_source_uuid'] = undefined;
 
 /**
  * @member {String} name

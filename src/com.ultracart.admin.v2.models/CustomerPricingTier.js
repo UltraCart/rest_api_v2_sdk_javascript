@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerPricingTier model module.
  * @module com.ultracart.admin.v2.models/CustomerPricingTier
- * @version 4.0.165
+ * @version 4.0.166
  */
 class CustomerPricingTier {
     /**

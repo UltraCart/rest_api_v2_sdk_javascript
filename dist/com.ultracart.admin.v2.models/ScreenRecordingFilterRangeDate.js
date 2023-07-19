@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilterRangeDate model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeDate
- * @version 4.0.164
+ * @version 4.0.165
  */
 var ScreenRecordingFilterRangeDate = /*#__PURE__*/function () {
   /**

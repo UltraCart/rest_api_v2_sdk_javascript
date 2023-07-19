@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponFreeItemsWithMixMatchPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponFreeItemsWithMixMatchPurchase
- * @version 4.0.165
+ * @version 4.0.166
  */
 class CouponFreeItemsWithMixMatchPurchase {
     /**

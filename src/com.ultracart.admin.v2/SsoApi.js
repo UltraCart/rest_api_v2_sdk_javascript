@@ -23,7 +23,7 @@ import User from '../com.ultracart.admin.v2.models/User';
 /**
 * Sso service.
 * @module com.ultracart.admin.v2/SsoApi
-* @version 4.0.165
+* @version 4.0.166
 */
 export default class SsoApi {
 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderChannelPartner model module.
  * @module com.ultracart.admin.v2.models/OrderChannelPartner
- * @version 4.0.164
+ * @version 4.0.165
  */
 var OrderChannelPartner = /*#__PURE__*/function () {
   /**
