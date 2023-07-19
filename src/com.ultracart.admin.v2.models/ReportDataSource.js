@@ -34,7 +34,7 @@
   /**
    * The ReportDataSource model module.
    * @module com.ultracart.admin.v2.models/ReportDataSource
-   * @version 3.10.148
+   * @version 3.10.149
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('data_source_uuid'))
+        obj.data_source_uuid = ApiClient.convertToType(data['data_source_uuid'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('partition_date_column'))
@@ -70,6 +72,12 @@
     }
     return obj;
   }
+
+  /**
+   * A unique identifier assigned to the data source.
+   * @member {String} data_source_uuid
+   */
+  exports.prototype.data_source_uuid = undefined;
 
   /**
    * @member {String} name

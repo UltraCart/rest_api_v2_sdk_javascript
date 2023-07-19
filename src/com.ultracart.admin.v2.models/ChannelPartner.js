@@ -34,7 +34,7 @@
   /**
    * The ChannelPartner model module.
    * @module com.ultracart.admin.v2.models/ChannelPartner
-   * @version 3.10.148
+   * @version 3.10.149
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.code = ApiClient.convertToType(data['code'], 'String');
       if (data.hasOwnProperty('communication_method'))
         obj.communication_method = ApiClient.convertToType(data['communication_method'], 'String');
+      if (data.hasOwnProperty('dont_hold_shipment'))
+        obj.dont_hold_shipment = ApiClient.convertToType(data['dont_hold_shipment'], 'Boolean');
       if (data.hasOwnProperty('inactive'))
         obj.inactive = ApiClient.convertToType(data['inactive'], 'Boolean');
       if (data.hasOwnProperty('merchant_id'))
@@ -90,6 +92,12 @@
    * @member {String} communication_method
    */
   exports.prototype.communication_method = undefined;
+
+  /**
+   * True if shipments should immediately process for this channel partner.
+   * @member {Boolean} dont_hold_shipment
+   */
+  exports.prototype.dont_hold_shipment = undefined;
 
   /**
    * True if the channel partner is inactive
