@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.10.151
+   * @version 3.10.152
    */
 
   /**
@@ -334,7 +334,19 @@
      * value: "Venmo"
      * @const
      */
-    Venmo: "Venmo"
+    Venmo: "Venmo",
+
+    /**
+     * value: "Apple Pay"
+     * @const
+     */
+    Apple_Pay: "Apple Pay",
+
+    /**
+     * value: "Google Pay"
+     * @const
+     */
+    Google_Pay: "Google Pay"
   };
 
 

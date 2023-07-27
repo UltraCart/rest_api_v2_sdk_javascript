@@ -34,7 +34,7 @@
   /**
    * The ReportPage model module.
    * @module com.ultracart.admin.v2.models/ReportPage
-   * @version 3.10.151
+   * @version 3.10.152
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.filters = ApiClient.convertToType(data['filters'], [ReportPageFilter]);
       if (data.hasOwnProperty('height'))
         obj.height = ApiClient.convertToType(data['height'], 'Number');
+      if (data.hasOwnProperty('settings'))
+        obj.settings = ApiClient.convertToType(data['settings'], 'String');
       if (data.hasOwnProperty('title'))
         obj.title = ApiClient.convertToType(data['title'], 'String');
       if (data.hasOwnProperty('visualizations'))
@@ -79,6 +81,12 @@
    * @member {Number} height
    */
   exports.prototype.height = undefined;
+
+  /**
+   * A JSON representation of the settings for this report
+   * @member {String} settings
+   */
+  exports.prototype.settings = undefined;
 
   /**
    * @member {String} title

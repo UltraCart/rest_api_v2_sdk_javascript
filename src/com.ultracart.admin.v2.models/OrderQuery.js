@@ -34,7 +34,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 3.10.151
+   * @version 3.10.152
    */
 
   /**
@@ -534,7 +534,25 @@
      * value: "Wire Transfer"
      * @const
      */
-    Wire_Transfer: "Wire Transfer"
+    Wire_Transfer: "Wire Transfer",
+
+    /**
+     * value: "Venmo"
+     * @const
+     */
+    Venmo: "Venmo",
+
+    /**
+     * value: "Apple Pay"
+     * @const
+     */
+    Apple_Pay: "Apple Pay",
+
+    /**
+     * value: " Google Pay"
+     * @const
+     */
+    _Google_Pay: " Google Pay"
   };
 
   return exports;

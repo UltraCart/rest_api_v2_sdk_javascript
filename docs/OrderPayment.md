@@ -71,6 +71,10 @@ Name | Type | Description | Notes
 
 * `Venmo` (value: `"Venmo"`)
 
+* `Apple_Pay` (value: `"Apple Pay"`)
+
+* `Google_Pay` (value: `"Google Pay"`)
+
 
 
 

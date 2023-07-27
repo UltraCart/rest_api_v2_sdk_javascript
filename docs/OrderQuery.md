@@ -105,6 +105,12 @@ Name | Type | Description | Notes
 
 * `Wire_Transfer` (value: `"Wire Transfer"`)
 
+* `Venmo` (value: `"Venmo"`)
+
+* `Apple_Pay` (value: `"Apple Pay"`)
+
+* `_Google_Pay` (value: `" Google Pay"`)
+
 
 
 

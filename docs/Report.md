@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **pages** | [**[ReportPage]**](ReportPage.md) |  | [optional] 
 **report_oid** | **Number** | Object identifier for this report. | [optional] 
 **security_level** | **String** | Security level to execute report under | [optional] 
+**settings** | **String** | A JSON representation of the settings for this report | [optional] 
 
 
 <a name="SecurityLevelEnum"></a>

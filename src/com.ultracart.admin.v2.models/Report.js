@@ -34,7 +34,7 @@
   /**
    * The Report model module.
    * @module com.ultracart.admin.v2.models/Report
-   * @version 3.10.151
+   * @version 3.10.152
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.report_oid = ApiClient.convertToType(data['report_oid'], 'Number');
       if (data.hasOwnProperty('security_level'))
         obj.security_level = ApiClient.convertToType(data['security_level'], 'String');
+      if (data.hasOwnProperty('settings'))
+        obj.settings = ApiClient.convertToType(data['settings'], 'String');
     }
     return obj;
   }
@@ -130,6 +132,12 @@
    * @member {module:com.ultracart.admin.v2.models/Report.SecurityLevelEnum} security_level
    */
   exports.prototype.security_level = undefined;
+
+  /**
+   * A JSON representation of the settings for this report
+   * @member {String} settings
+   */
+  exports.prototype.settings = undefined;
 
 
   /**
