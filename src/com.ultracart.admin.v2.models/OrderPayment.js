@@ -23,7 +23,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.168
+ * @version 4.0.169
  */
 class OrderPayment {
     /**
@@ -358,7 +358,19 @@ OrderPayment['PaymentMethodEnum'] = {
      * value: "Venmo"
      * @const
      */
-    "Venmo": "Venmo"
+    "Venmo": "Venmo",
+
+    /**
+     * value: "Apple Pay"
+     * @const
+     */
+    "Apple Pay": "Apple Pay",
+
+    /**
+     * value: "Google Pay"
+     * @const
+     */
+    "Google Pay": "Google Pay"
 };
 
 

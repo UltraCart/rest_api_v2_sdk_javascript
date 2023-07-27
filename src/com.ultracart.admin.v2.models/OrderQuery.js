@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.0.168
+ * @version 4.0.169
  */
 class OrderQuery {
     /**
@@ -573,7 +573,25 @@ OrderQuery['PaymentMethodEnum'] = {
      * value: "Wire Transfer"
      * @const
      */
-    "Wire Transfer": "Wire Transfer"
+    "Wire Transfer": "Wire Transfer",
+
+    /**
+     * value: "Venmo"
+     * @const
+     */
+    "Venmo": "Venmo",
+
+    /**
+     * value: "Apple Pay"
+     * @const
+     */
+    "Apple Pay": "Apple Pay",
+
+    /**
+     * value: " Google Pay"
+     * @const
+     */
+    " Google Pay": " Google Pay"
 };
 
 

@@ -19,7 +19,7 @@ import ReportPage from './ReportPage';
 /**
  * The Report model module.
  * @module com.ultracart.admin.v2.models/Report
- * @version 4.0.168
+ * @version 4.0.169
  */
 class Report {
     /**
@@ -80,6 +80,9 @@ class Report {
             if (data.hasOwnProperty('security_level')) {
                 obj['security_level'] = ApiClient.convertToType(data['security_level'], 'String');
             }
+            if (data.hasOwnProperty('settings')) {
+                obj['settings'] = ApiClient.convertToType(data['settings'], 'String');
+            }
         }
         return obj;
     }
@@ -138,6 +141,12 @@ Report.prototype['report_oid'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/Report.SecurityLevelEnum} security_level
  */
 Report.prototype['security_level'] = undefined;
+
+/**
+ * A JSON representation of the settings for this report
+ * @member {String} settings
+ */
+Report.prototype['settings'] = undefined;
 
 
 

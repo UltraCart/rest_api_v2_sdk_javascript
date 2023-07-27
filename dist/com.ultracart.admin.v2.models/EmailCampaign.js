@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCampaign model module.
  * @module com.ultracart.admin.v2.models/EmailCampaign
- * @version 4.0.167
+ * @version 4.0.168
  */
 var EmailCampaign = /*#__PURE__*/function () {
   /**

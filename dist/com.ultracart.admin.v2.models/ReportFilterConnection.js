@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportFilterConnection model module.
  * @module com.ultracart.admin.v2.models/ReportFilterConnection
- * @version 4.0.167
+ * @version 4.0.168
  */
 var ReportFilterConnection = /*#__PURE__*/function () {
   /**
@@ -61,6 +61,10 @@ var ReportFilterConnection = /*#__PURE__*/function () {
         if (data.hasOwnProperty('data_source_name')) {
           obj['data_source_name'] = _ApiClient["default"].convertToType(data['data_source_name'], 'String');
         }
+
+        if (data.hasOwnProperty('data_source_uuid')) {
+          obj['data_source_uuid'] = _ApiClient["default"].convertToType(data['data_source_uuid'], 'String');
+        }
       }
 
       return obj;
@@ -80,5 +84,11 @@ ReportFilterConnection.prototype['column'] = undefined;
  */
 
 ReportFilterConnection.prototype['data_source_name'] = undefined;
+/**
+ * A unique identifier assigned to the data source.
+ * @member {String} data_source_uuid
+ */
+
+ReportFilterConnection.prototype['data_source_uuid'] = undefined;
 var _default = ReportFilterConnection;
 exports["default"] = _default;

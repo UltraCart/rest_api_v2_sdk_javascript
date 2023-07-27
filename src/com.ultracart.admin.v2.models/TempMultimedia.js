@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TempMultimedia model module.
  * @module com.ultracart.admin.v2.models/TempMultimedia
- * @version 4.0.168
+ * @version 4.0.169
  */
 class TempMultimedia {
     /**

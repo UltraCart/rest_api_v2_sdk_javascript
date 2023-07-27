@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderTokenResponse model module.
  * @module com.ultracart.admin.v2.models/OrderTokenResponse
- * @version 4.0.167
+ * @version 4.0.168
  */
 var OrderTokenResponse = /*#__PURE__*/function () {
   /**

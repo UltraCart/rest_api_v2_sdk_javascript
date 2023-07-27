@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailFlowBackPopulateResponse model module.
  * @module com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse
- * @version 4.0.167
+ * @version 4.0.168
  */
 var EmailFlowBackPopulateResponse = /*#__PURE__*/function () {
   /**

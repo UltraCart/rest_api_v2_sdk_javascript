@@ -18,7 +18,7 @@ import ReportPageVisualization from './ReportPageVisualization';
 /**
  * The ReportPage model module.
  * @module com.ultracart.admin.v2.models/ReportPage
- * @version 4.0.168
+ * @version 4.0.169
  */
 class ReportPage {
     /**
@@ -55,6 +55,9 @@ class ReportPage {
             if (data.hasOwnProperty('height')) {
                 obj['height'] = ApiClient.convertToType(data['height'], 'Number');
             }
+            if (data.hasOwnProperty('settings')) {
+                obj['settings'] = ApiClient.convertToType(data['settings'], 'String');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -81,6 +84,12 @@ ReportPage.prototype['filters'] = undefined;
  * @member {Number} height
  */
 ReportPage.prototype['height'] = undefined;
+
+/**
+ * A JSON representation of the settings for this report
+ * @member {String} settings
+ */
+ReportPage.prototype['settings'] = undefined;
 
 /**
  * @member {String} title
