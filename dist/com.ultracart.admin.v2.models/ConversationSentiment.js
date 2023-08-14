@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationSentiment model module.
  * @module com.ultracart.admin.v2.models/ConversationSentiment
- * @version 4.0.169
+ * @version 4.0.170
  */
 var ConversationSentiment = /*#__PURE__*/function () {
   /**

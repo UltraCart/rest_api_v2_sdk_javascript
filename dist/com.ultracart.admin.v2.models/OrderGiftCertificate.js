@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderGiftCertificate model module.
  * @module com.ultracart.admin.v2.models/OrderGiftCertificate
- * @version 4.0.169
+ * @version 4.0.170
  */
 var OrderGiftCertificate = /*#__PURE__*/function () {
   /**

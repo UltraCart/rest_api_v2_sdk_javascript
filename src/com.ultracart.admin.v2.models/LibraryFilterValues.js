@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LibraryFilterValues model module.
  * @module com.ultracart.admin.v2.models/LibraryFilterValues
- * @version 4.0.170
+ * @version 4.0.171
  */
 class LibraryFilterValues {
     /**

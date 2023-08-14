@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AutoOrderAddonItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderAddonItem
- * @version 4.0.169
+ * @version 4.0.170
  */
 var AutoOrderAddonItem = /*#__PURE__*/function () {
   /**

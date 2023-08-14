@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailSettings model module.
  * @module com.ultracart.admin.v2.models/EmailSettings
- * @version 4.0.169
+ * @version 4.0.170
  */
 var EmailSettings = /*#__PURE__*/function () {
   /**
@@ -53,6 +53,18 @@ var EmailSettings = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new EmailSettings();
+
+        if (data.hasOwnProperty('emails_per_day')) {
+          obj['emails_per_day'] = _ApiClient["default"].convertToType(data['emails_per_day'], 'Number');
+        }
+
+        if (data.hasOwnProperty('emails_per_hour')) {
+          obj['emails_per_hour'] = _ApiClient["default"].convertToType(data['emails_per_hour'], 'Number');
+        }
+
+        if (data.hasOwnProperty('emails_per_month')) {
+          obj['emails_per_month'] = _ApiClient["default"].convertToType(data['emails_per_month'], 'Number');
+        }
 
         if (data.hasOwnProperty('marketing_esp_domain_user')) {
           obj['marketing_esp_domain_user'] = _ApiClient["default"].convertToType(data['marketing_esp_domain_user'], 'String');
@@ -122,9 +134,27 @@ var EmailSettings = /*#__PURE__*/function () {
   return EmailSettings;
 }();
 /**
- * @member {String} marketing_esp_domain_user
+ * Emails per day allowed
+ * @member {Number} emails_per_day
  */
 
+
+EmailSettings.prototype['emails_per_day'] = undefined;
+/**
+ * Emails per hour allowed
+ * @member {Number} emails_per_hour
+ */
+
+EmailSettings.prototype['emails_per_hour'] = undefined;
+/**
+ * Emails per month allowed
+ * @member {Number} emails_per_month
+ */
+
+EmailSettings.prototype['emails_per_month'] = undefined;
+/**
+ * @member {String} marketing_esp_domain_user
+ */
 
 EmailSettings.prototype['marketing_esp_domain_user'] = undefined;
 /**
