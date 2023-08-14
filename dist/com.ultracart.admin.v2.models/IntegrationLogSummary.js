@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLogSummary model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogSummary
- * @version 4.0.168
+ * @version 4.0.169
  */
 var IntegrationLogSummary = /*#__PURE__*/function () {
   /**

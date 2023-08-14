@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.168
+ * @version 4.0.169
  */
 var OrderPayment = /*#__PURE__*/function () {
   /**
@@ -387,7 +387,19 @@ OrderPayment['PaymentMethodEnum'] = {
    * value: "Venmo"
    * @const
    */
-  "Venmo": "Venmo"
+  "Venmo": "Venmo",
+
+  /**
+   * value: "Apple Pay"
+   * @const
+   */
+  "Apple Pay": "Apple Pay",
+
+  /**
+   * value: "Google Pay"
+   * @const
+   */
+  "Google Pay": "Google Pay"
 };
 /**
  * Allowed values for the <code>payment_status</code> property.

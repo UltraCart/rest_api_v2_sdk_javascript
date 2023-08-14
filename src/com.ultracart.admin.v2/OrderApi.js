@@ -34,12 +34,14 @@ import OrderReplacement from '../com.ultracart.admin.v2.models/OrderReplacement'
 import OrderReplacementResponse from '../com.ultracart.admin.v2.models/OrderReplacementResponse';
 import OrderResponse from '../com.ultracart.admin.v2.models/OrderResponse';
 import OrderTokenResponse from '../com.ultracart.admin.v2.models/OrderTokenResponse';
+import OrderValidationRequest from '../com.ultracart.admin.v2.models/OrderValidationRequest';
+import OrderValidationResponse from '../com.ultracart.admin.v2.models/OrderValidationResponse';
 import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
 
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.169
+* @version 4.0.170
 */
 export default class OrderApi {
 
@@ -1307,6 +1309,48 @@ export default class OrderApi {
       let returnType = OrderResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateOrder operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~validateOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderValidationResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate
+     * Validate the order for errors.  Specific checks can be passed to fine tune what is validated. Read and write permissions are required because the validate method may fix obvious address issues automatically which require update permission.This rest call makes use of the built-in translation of rest objects to UltraCart internal objects which also contains a multitude of validation checks that cannot be trapped.  Therefore any time this call is made, you should also trap api exceptions and examine their content because it may contain validation issues.  So check the response object and trap any exceptions. 
+     * @param {module:com.ultracart.admin.v2.models/OrderValidationRequest} validation_request Validation request
+     * @param {module:com.ultracart.admin.v2/OrderApi~validateOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderValidationResponse}
+     */
+    validateOrder(validation_request, callback) {
+      let postBody = validation_request;
+      // verify the required parameter 'validation_request' is set
+      if (validation_request === undefined || validation_request === null) {
+        throw new Error("Missing the required parameter 'validation_request' when calling validateOrder");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = OrderValidationResponse;
+      return this.apiClient.callApi(
+        '/order/validate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.0.168
+ * @version 4.0.169
  */
 var OrderQuery = /*#__PURE__*/function () {
   /**
@@ -614,7 +614,25 @@ OrderQuery['PaymentMethodEnum'] = {
    * value: "Wire Transfer"
    * @const
    */
-  "Wire Transfer": "Wire Transfer"
+  "Wire Transfer": "Wire Transfer",
+
+  /**
+   * value: "Venmo"
+   * @const
+   */
+  "Venmo": "Venmo",
+
+  /**
+   * value: "Apple Pay"
+   * @const
+   */
+  "Apple Pay": "Apple Pay",
+
+  /**
+   * value: " Google Pay"
+   * @const
+   */
+  " Google Pay": " Google Pay"
 };
 var _default = OrderQuery;
 exports["default"] = _default;

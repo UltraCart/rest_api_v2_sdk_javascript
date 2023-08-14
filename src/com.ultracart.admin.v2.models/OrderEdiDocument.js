@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderEdiDocument model module.
  * @module com.ultracart.admin.v2.models/OrderEdiDocument
- * @version 4.0.169
+ * @version 4.0.170
  */
 class OrderEdiDocument {
     /**

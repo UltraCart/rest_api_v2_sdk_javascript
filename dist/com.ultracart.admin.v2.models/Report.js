@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Report model module.
  * @module com.ultracart.admin.v2.models/Report
- * @version 4.0.168
+ * @version 4.0.169
  */
 var Report = /*#__PURE__*/function () {
   /**
@@ -99,6 +99,10 @@ var Report = /*#__PURE__*/function () {
         if (data.hasOwnProperty('security_level')) {
           obj['security_level'] = _ApiClient["default"].convertToType(data['security_level'], 'String');
         }
+
+        if (data.hasOwnProperty('settings')) {
+          obj['settings'] = _ApiClient["default"].convertToType(data['settings'], 'String');
+        }
       }
 
       return obj;
@@ -160,6 +164,12 @@ Report.prototype['report_oid'] = undefined;
  */
 
 Report.prototype['security_level'] = undefined;
+/**
+ * A JSON representation of the settings for this report
+ * @member {String} settings
+ */
+
+Report.prototype['settings'] = undefined;
 /**
  * Allowed values for the <code>security_level</code> property.
  * @enum {String}

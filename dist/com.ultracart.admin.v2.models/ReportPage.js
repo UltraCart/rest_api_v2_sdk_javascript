@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPage model module.
  * @module com.ultracart.admin.v2.models/ReportPage
- * @version 4.0.168
+ * @version 4.0.169
  */
 var ReportPage = /*#__PURE__*/function () {
   /**
@@ -66,6 +66,10 @@ var ReportPage = /*#__PURE__*/function () {
           obj['height'] = _ApiClient["default"].convertToType(data['height'], 'Number');
         }
 
+        if (data.hasOwnProperty('settings')) {
+          obj['settings'] = _ApiClient["default"].convertToType(data['settings'], 'String');
+        }
+
         if (data.hasOwnProperty('title')) {
           obj['title'] = _ApiClient["default"].convertToType(data['title'], 'String');
         }
@@ -97,6 +101,12 @@ ReportPage.prototype['filters'] = undefined;
  */
 
 ReportPage.prototype['height'] = undefined;
+/**
+ * A JSON representation of the settings for this report
+ * @member {String} settings
+ */
+
+ReportPage.prototype['settings'] = undefined;
 /**
  * @member {String} title
  */

@@ -4,6 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**emails_per_day** | **Number** | Emails per day allowed | [optional] 
+**emails_per_hour** | **Number** | Emails per hour allowed | [optional] 
+**emails_per_month** | **Number** | Emails per month allowed | [optional] 
 **marketing_esp_domain_user** | **String** |  | [optional] 
 **marketing_esp_domain_uuid** | **String** |  | [optional] 
 **marketing_esp_friendly_name** | **String** |  | [optional] 

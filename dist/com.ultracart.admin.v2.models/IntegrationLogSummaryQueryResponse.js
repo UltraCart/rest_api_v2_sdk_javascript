@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The IntegrationLogSummaryQueryResponse model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogSummaryQueryResponse
- * @version 4.0.168
+ * @version 4.0.169
  */
 var IntegrationLogSummaryQueryResponse = /*#__PURE__*/function () {
   /**

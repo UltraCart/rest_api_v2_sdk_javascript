@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemPricingTierDiscount model module.
  * @module com.ultracart.admin.v2.models/ItemPricingTierDiscount
- * @version 4.0.168
+ * @version 4.0.169
  */
 var ItemPricingTierDiscount = /*#__PURE__*/function () {
   /**

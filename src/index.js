@@ -631,6 +631,8 @@ import OrderTrackingNumberDetail from './com.ultracart.admin.v2.models/OrderTrac
 import OrderTrackingNumberDetails from './com.ultracart.admin.v2.models/OrderTrackingNumberDetails';
 import OrderTransactionalMerchantNote from './com.ultracart.admin.v2.models/OrderTransactionalMerchantNote';
 import OrderUtm from './com.ultracart.admin.v2.models/OrderUtm';
+import OrderValidationRequest from './com.ultracart.admin.v2.models/OrderValidationRequest';
+import OrderValidationResponse from './com.ultracart.admin.v2.models/OrderValidationResponse';
 import OrdersResponse from './com.ultracart.admin.v2.models/OrdersResponse';
 import Permission from './com.ultracart.admin.v2.models/Permission';
 import PointOfSaleLocation from './com.ultracart.admin.v2.models/PointOfSaleLocation';
@@ -840,7 +842,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.169
+* @version 4.0.170
 */
 export {
     /**
@@ -4556,6 +4558,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderUtm}
      */
     OrderUtm,
+
+    /**
+     * The OrderValidationRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderValidationRequest}
+     */
+    OrderValidationRequest,
+
+    /**
+     * The OrderValidationResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderValidationResponse}
+     */
+    OrderValidationResponse,
 
     /**
      * The OrdersResponse model constructor.
