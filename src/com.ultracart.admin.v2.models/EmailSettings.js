@@ -34,7 +34,7 @@
   /**
    * The EmailSettings model module.
    * @module com.ultracart.admin.v2.models/EmailSettings
-   * @version 3.10.153
+   * @version 3.10.154
    */
 
   /**
@@ -79,6 +79,8 @@
         obj.postcard_from_postal_code = ApiClient.convertToType(data['postcard_from_postal_code'], 'String');
       if (data.hasOwnProperty('postcard_from_state'))
         obj.postcard_from_state = ApiClient.convertToType(data['postcard_from_state'], 'String');
+      if (data.hasOwnProperty('require_order_within_last'))
+        obj.require_order_within_last = ApiClient.convertToType(data['require_order_within_last'], 'Number');
       if (data.hasOwnProperty('reviews_io_configured'))
         obj.reviews_io_configured = ApiClient.convertToType(data['reviews_io_configured'], 'Boolean');
       if (data.hasOwnProperty('sms_esp_twilio_uuid'))
@@ -157,6 +159,12 @@
    * @member {String} postcard_from_state
    */
   exports.prototype.postcard_from_state = undefined;
+
+  /**
+   * Require order within last
+   * @member {Number} require_order_within_last
+   */
+  exports.prototype.require_order_within_last = undefined;
 
   /**
    * True if the Reviews.io integration is configured
