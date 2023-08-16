@@ -34,7 +34,7 @@
   /**
    * AutoOrder service.
    * @module com.ultracart.admin.v2/AutoOrderApi
-   * @version 3.10.154
+   * @version 3.10.155
    */
 
   /**
@@ -467,6 +467,7 @@
      * @param {module:com.ultracart.admin.v2.models/AutoOrder} auto_order Auto order to update
      * @param {Number} auto_order_oid The auto order oid to update.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.validate_original_order Validate original order before updating
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
@@ -490,6 +491,7 @@
         'auto_order_oid': auto_order_oid
       };
       var queryParams = {
+        'validate_original_order': opts['validate_original_order'],
         '_expand': opts['_expand'],
       };
       var collectionQueryParams = {
