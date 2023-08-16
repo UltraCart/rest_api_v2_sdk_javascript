@@ -17,7 +17,7 @@ import EmailCustomer from './EmailCustomer';
 /**
  * The EmailCustomersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCustomersResponse
- * @version 4.0.171
+ * @version 4.0.172
  */
 class EmailCustomersResponse {
     /**

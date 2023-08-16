@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailSettings model module.
  * @module com.ultracart.admin.v2.models/EmailSettings
- * @version 4.0.170
+ * @version 4.0.171
  */
 var EmailSettings = /*#__PURE__*/function () {
   /**
@@ -100,6 +100,10 @@ var EmailSettings = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('postcard_from_state')) {
           obj['postcard_from_state'] = _ApiClient["default"].convertToType(data['postcard_from_state'], 'String');
+        }
+
+        if (data.hasOwnProperty('require_order_within_last')) {
+          obj['require_order_within_last'] = _ApiClient["default"].convertToType(data['require_order_within_last'], 'Number');
         }
 
         if (data.hasOwnProperty('reviews_io_configured')) {
@@ -197,6 +201,12 @@ EmailSettings.prototype['postcard_from_postal_code'] = undefined;
  */
 
 EmailSettings.prototype['postcard_from_state'] = undefined;
+/**
+ * Require order within last
+ * @member {Number} require_order_within_last
+ */
+
+EmailSettings.prototype['require_order_within_last'] = undefined;
 /**
  * True if the Reviews.io integration is configured
  * @member {Boolean} reviews_io_configured

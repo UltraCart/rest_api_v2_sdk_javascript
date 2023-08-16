@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailPostcardTracking model module.
  * @module com.ultracart.admin.v2.models/EmailPostcardTracking
- * @version 4.0.171
+ * @version 4.0.172
  */
 class EmailPostcardTracking {
     /**

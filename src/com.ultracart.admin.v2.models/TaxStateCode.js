@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxStateCode model module.
  * @module com.ultracart.admin.v2.models/TaxStateCode
- * @version 4.0.171
+ * @version 4.0.172
  */
 class TaxStateCode {
     /**

@@ -41,7 +41,7 @@ import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.0.171
+* @version 4.0.172
 */
 export default class OrderApi {
 

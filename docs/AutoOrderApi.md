@@ -464,6 +464,7 @@ let apiInstance = new ucApi.AutoOrderApi(apiClient);
 let auto_order_oid = 56; // Number | The auto order oid to update.
 let auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
 let opts = {
+  'validate_original_order': "validate_original_order_example", // String | Validate original order before updating
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 apiInstance.updateAutoOrder(auto_order_oid, auto_order, opts, (error, data, response) => {
@@ -482,6 +483,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_order_oid** | **Number**| The auto order oid to update. | 
  **auto_order** | [**AutoOrder**](AutoOrder.md)| Auto order to update | 
+ **validate_original_order** | **String**| Validate original order before updating | [optional] 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

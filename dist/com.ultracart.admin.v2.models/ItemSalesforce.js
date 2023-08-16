@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemSalesforce model module.
  * @module com.ultracart.admin.v2.models/ItemSalesforce
- * @version 4.0.170
+ * @version 4.0.171
  */
 var ItemSalesforce = /*#__PURE__*/function () {
   /**

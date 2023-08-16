@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingFilterStringSearch model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterStringSearch
- * @version 4.0.170
+ * @version 4.0.171
  */
 var ScreenRecordingFilterStringSearch = /*#__PURE__*/function () {
   /**
