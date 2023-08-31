@@ -34,7 +34,7 @@
   /**
    * The ConversationDepartmentsResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationDepartmentsResponse
-   * @version 3.10.155
+   * @version 3.10.156
    */
 
   /**

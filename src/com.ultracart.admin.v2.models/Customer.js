@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerActivity', 'com.ultracart.admin.v2.models/CustomerAttachment', 'com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.models/CustomerEDI', 'com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.models/CustomerLoyalty', 'com.ultracart.admin.v2.models/CustomerOrdersSummary', 'com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.models/CustomerPrivacy', 'com.ultracart.admin.v2.models/CustomerQuotesSummary', 'com.ultracart.admin.v2.models/CustomerReviewer', 'com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.models/CustomerSoftwareEntitlement', 'com.ultracart.admin.v2.models/CustomerTag', 'com.ultracart.admin.v2.models/CustomerTaxCodes', 'com.ultracart.admin.v2.models/Order'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomerActivity', 'com.ultracart.admin.v2.models/CustomerAttachment', 'com.ultracart.admin.v2.models/CustomerBilling', 'com.ultracart.admin.v2.models/CustomerCard', 'com.ultracart.admin.v2.models/CustomerEDI', 'com.ultracart.admin.v2.models/CustomerEmail', 'com.ultracart.admin.v2.models/CustomerLoyalty', 'com.ultracart.admin.v2.models/CustomerOrdersSummary', 'com.ultracart.admin.v2.models/CustomerPricingTier', 'com.ultracart.admin.v2.models/CustomerPrivacy', 'com.ultracart.admin.v2.models/CustomerProperty', 'com.ultracart.admin.v2.models/CustomerQuotesSummary', 'com.ultracart.admin.v2.models/CustomerReviewer', 'com.ultracart.admin.v2.models/CustomerShipping', 'com.ultracart.admin.v2.models/CustomerSoftwareEntitlement', 'com.ultracart.admin.v2.models/CustomerTag', 'com.ultracart.admin.v2.models/CustomerTaxCodes', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomerActivity'), require('./CustomerAttachment'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEDI'), require('./CustomerEmail'), require('./CustomerLoyalty'), require('./CustomerOrdersSummary'), require('./CustomerPricingTier'), require('./CustomerPrivacy'), require('./CustomerQuotesSummary'), require('./CustomerReviewer'), require('./CustomerShipping'), require('./CustomerSoftwareEntitlement'), require('./CustomerTag'), require('./CustomerTaxCodes'), require('./Order'));
+    module.exports = factory(require('../ApiClient'), require('./CustomerActivity'), require('./CustomerAttachment'), require('./CustomerBilling'), require('./CustomerCard'), require('./CustomerEDI'), require('./CustomerEmail'), require('./CustomerLoyalty'), require('./CustomerOrdersSummary'), require('./CustomerPricingTier'), require('./CustomerPrivacy'), require('./CustomerProperty'), require('./CustomerQuotesSummary'), require('./CustomerReviewer'), require('./CustomerShipping'), require('./CustomerSoftwareEntitlement'), require('./CustomerTag'), require('./CustomerTaxCodes'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerActivity, root.UltraCartRestApiV2.CustomerAttachment, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEDI, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerLoyalty, root.UltraCartRestApiV2.CustomerOrdersSummary, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerPrivacy, root.UltraCartRestApiV2.CustomerQuotesSummary, root.UltraCartRestApiV2.CustomerReviewer, root.UltraCartRestApiV2.CustomerShipping, root.UltraCartRestApiV2.CustomerSoftwareEntitlement, root.UltraCartRestApiV2.CustomerTag, root.UltraCartRestApiV2.CustomerTaxCodes, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.Customer = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomerActivity, root.UltraCartRestApiV2.CustomerAttachment, root.UltraCartRestApiV2.CustomerBilling, root.UltraCartRestApiV2.CustomerCard, root.UltraCartRestApiV2.CustomerEDI, root.UltraCartRestApiV2.CustomerEmail, root.UltraCartRestApiV2.CustomerLoyalty, root.UltraCartRestApiV2.CustomerOrdersSummary, root.UltraCartRestApiV2.CustomerPricingTier, root.UltraCartRestApiV2.CustomerPrivacy, root.UltraCartRestApiV2.CustomerProperty, root.UltraCartRestApiV2.CustomerQuotesSummary, root.UltraCartRestApiV2.CustomerReviewer, root.UltraCartRestApiV2.CustomerShipping, root.UltraCartRestApiV2.CustomerSoftwareEntitlement, root.UltraCartRestApiV2.CustomerTag, root.UltraCartRestApiV2.CustomerTaxCodes, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, CustomerActivity, CustomerAttachment, CustomerBilling, CustomerCard, CustomerEDI, CustomerEmail, CustomerLoyalty, CustomerOrdersSummary, CustomerPricingTier, CustomerPrivacy, CustomerQuotesSummary, CustomerReviewer, CustomerShipping, CustomerSoftwareEntitlement, CustomerTag, CustomerTaxCodes, Order) {
+}(this, function(ApiClient, CustomerActivity, CustomerAttachment, CustomerBilling, CustomerCard, CustomerEDI, CustomerEmail, CustomerLoyalty, CustomerOrdersSummary, CustomerPricingTier, CustomerPrivacy, CustomerProperty, CustomerQuotesSummary, CustomerReviewer, CustomerShipping, CustomerSoftwareEntitlement, CustomerTag, CustomerTaxCodes, Order) {
   'use strict';
 
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 3.10.155
+   * @version 3.10.156
    */
 
   /**
@@ -135,6 +135,8 @@
         obj.pricing_tiers = ApiClient.convertToType(data['pricing_tiers'], [CustomerPricingTier]);
       if (data.hasOwnProperty('privacy'))
         obj.privacy = CustomerPrivacy.constructFromObject(data['privacy']);
+      if (data.hasOwnProperty('properties'))
+        obj.properties = ApiClient.convertToType(data['properties'], [CustomerProperty]);
       if (data.hasOwnProperty('qb_class'))
         obj.qb_class = ApiClient.convertToType(data['qb_class'], 'String');
       if (data.hasOwnProperty('qb_code'))
@@ -417,6 +419,12 @@
    * @member {module:com.ultracart.admin.v2.models/CustomerPrivacy} privacy
    */
   exports.prototype.privacy = undefined;
+
+  /**
+   * Properties for this customer
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomerProperty>} properties
+   */
+  exports.prototype.properties = undefined;
 
   /**
    * QuickBooks class to import this customer as
