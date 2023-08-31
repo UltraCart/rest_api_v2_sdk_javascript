@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.0.171
+* @version 4.0.172
 */
 var AutoOrderApi = /*#__PURE__*/function () {
   /**
@@ -394,6 +394,7 @@ var AutoOrderApi = /*#__PURE__*/function () {
      * @param {Number} auto_order_oid The auto order oid to update.
      * @param {module:com.ultracart.admin.v2.models/AutoOrder} auto_order Auto order to update
      * @param {Object} opts Optional parameters
+     * @param {String} opts.validate_original_order Validate original order before updating
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
@@ -418,6 +419,7 @@ var AutoOrderApi = /*#__PURE__*/function () {
         'auto_order_oid': auto_order_oid
       };
       var queryParams = {
+        'validate_original_order': opts['validate_original_order'],
         '_expand': opts['_expand']
       };
       var headerParams = {};

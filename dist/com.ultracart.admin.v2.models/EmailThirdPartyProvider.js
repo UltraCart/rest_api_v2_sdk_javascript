@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailThirdPartyProvider model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyProvider
- * @version 4.0.171
+ * @version 4.0.172
  */
 var EmailThirdPartyProvider = /*#__PURE__*/function () {
   /**

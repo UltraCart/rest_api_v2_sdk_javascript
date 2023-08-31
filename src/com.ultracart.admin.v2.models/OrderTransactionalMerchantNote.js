@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderTransactionalMerchantNote model module.
  * @module com.ultracart.admin.v2.models/OrderTransactionalMerchantNote
- * @version 4.0.172
+ * @version 4.0.173
  */
 class OrderTransactionalMerchantNote {
     /**

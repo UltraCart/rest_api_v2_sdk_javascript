@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartItemPhysical model module.
  * @module com.ultracart.admin.v2.models/CartItemPhysical
- * @version 4.0.171
+ * @version 4.0.172
  */
 var CartItemPhysical = /*#__PURE__*/function () {
   /**

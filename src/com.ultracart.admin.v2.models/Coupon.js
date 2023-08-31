@@ -28,6 +28,7 @@ import CouponDiscountItemWithItemPurchase from './CouponDiscountItemWithItemPurc
 import CouponDiscountItems from './CouponDiscountItems';
 import CouponFreeItemAndShippingWithSubtotal from './CouponFreeItemAndShippingWithSubtotal';
 import CouponFreeItemWithItemPurchase from './CouponFreeItemWithItemPurchase';
+import CouponFreeItemWithItemPurchaseAndFreeShipping from './CouponFreeItemWithItemPurchaseAndFreeShipping';
 import CouponFreeItemWithSubtotal from './CouponFreeItemWithSubtotal';
 import CouponFreeItemsWithItemPurchase from './CouponFreeItemsWithItemPurchase';
 import CouponFreeItemsWithMixMatchPurchase from './CouponFreeItemsWithMixMatchPurchase';
@@ -64,7 +65,7 @@ import CouponTieredPercentOffSubtotalBasedOnMSRP from './CouponTieredPercentOffS
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.172
+ * @version 4.0.173
  */
 class Coupon {
     /**
@@ -166,6 +167,9 @@ class Coupon {
             }
             if (data.hasOwnProperty('free_item_with_item_purchase')) {
                 obj['free_item_with_item_purchase'] = CouponFreeItemWithItemPurchase.constructFromObject(data['free_item_with_item_purchase']);
+            }
+            if (data.hasOwnProperty('free_item_with_item_purchase_and_free_shipping')) {
+                obj['free_item_with_item_purchase_and_free_shipping'] = CouponFreeItemWithItemPurchaseAndFreeShipping.constructFromObject(data['free_item_with_item_purchase_and_free_shipping']);
             }
             if (data.hasOwnProperty('free_item_with_subtotal')) {
                 obj['free_item_with_subtotal'] = CouponFreeItemWithSubtotal.constructFromObject(data['free_item_with_subtotal']);
@@ -427,6 +431,11 @@ Coupon.prototype['free_item_and_shipping_with_subtotal'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchase} free_item_with_item_purchase
  */
 Coupon.prototype['free_item_with_item_purchase'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchaseAndFreeShipping} free_item_with_item_purchase_and_free_shipping
+ */
+Coupon.prototype['free_item_with_item_purchase_and_free_shipping'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal} free_item_with_subtotal

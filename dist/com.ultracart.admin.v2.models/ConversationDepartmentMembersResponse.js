@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationDepartmentMembersResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse
- * @version 4.0.171
+ * @version 4.0.172
  */
 var ConversationDepartmentMembersResponse = /*#__PURE__*/function () {
   /**

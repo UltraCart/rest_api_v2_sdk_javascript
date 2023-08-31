@@ -224,6 +224,7 @@ import CouponEditorValues from './com.ultracart.admin.v2.models/CouponEditorValu
 import CouponExistsResponse from './com.ultracart.admin.v2.models/CouponExistsResponse';
 import CouponFreeItemAndShippingWithSubtotal from './com.ultracart.admin.v2.models/CouponFreeItemAndShippingWithSubtotal';
 import CouponFreeItemWithItemPurchase from './com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchase';
+import CouponFreeItemWithItemPurchaseAndFreeShipping from './com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchaseAndFreeShipping';
 import CouponFreeItemWithSubtotal from './com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal';
 import CouponFreeItemsWithItemPurchase from './com.ultracart.admin.v2.models/CouponFreeItemsWithItemPurchase';
 import CouponFreeItemsWithMixMatchPurchase from './com.ultracart.admin.v2.models/CouponFreeItemsWithMixMatchPurchase';
@@ -287,6 +288,7 @@ import CustomerMergeRequest from './com.ultracart.admin.v2.models/CustomerMergeR
 import CustomerOrdersSummary from './com.ultracart.admin.v2.models/CustomerOrdersSummary';
 import CustomerPricingTier from './com.ultracart.admin.v2.models/CustomerPricingTier';
 import CustomerPrivacy from './com.ultracart.admin.v2.models/CustomerPrivacy';
+import CustomerProperty from './com.ultracart.admin.v2.models/CustomerProperty';
 import CustomerQuery from './com.ultracart.admin.v2.models/CustomerQuery';
 import CustomerQuotesSummary from './com.ultracart.admin.v2.models/CustomerQuotesSummary';
 import CustomerResponse from './com.ultracart.admin.v2.models/CustomerResponse';
@@ -842,7 +844,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.172
+* @version 4.0.173
 */
 export {
     /**
@@ -2118,6 +2120,12 @@ export {
     CouponFreeItemWithItemPurchase,
 
     /**
+     * The CouponFreeItemWithItemPurchaseAndFreeShipping model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchaseAndFreeShipping}
+     */
+    CouponFreeItemWithItemPurchaseAndFreeShipping,
+
+    /**
      * The CouponFreeItemWithSubtotal model constructor.
      * @property {module:com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal}
      */
@@ -2494,6 +2502,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomerPrivacy}
      */
     CustomerPrivacy,
+
+    /**
+     * The CustomerProperty model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerProperty}
+     */
+    CustomerProperty,
 
     /**
      * The CustomerQuery model constructor.

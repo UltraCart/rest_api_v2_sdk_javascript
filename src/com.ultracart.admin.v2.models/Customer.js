@@ -22,6 +22,7 @@ import CustomerLoyalty from './CustomerLoyalty';
 import CustomerOrdersSummary from './CustomerOrdersSummary';
 import CustomerPricingTier from './CustomerPricingTier';
 import CustomerPrivacy from './CustomerPrivacy';
+import CustomerProperty from './CustomerProperty';
 import CustomerQuotesSummary from './CustomerQuotesSummary';
 import CustomerReviewer from './CustomerReviewer';
 import CustomerShipping from './CustomerShipping';
@@ -33,7 +34,7 @@ import Order from './Order';
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.172
+ * @version 4.0.173
  */
 class Customer {
     /**
@@ -183,6 +184,9 @@ class Customer {
             }
             if (data.hasOwnProperty('privacy')) {
                 obj['privacy'] = CustomerPrivacy.constructFromObject(data['privacy']);
+            }
+            if (data.hasOwnProperty('properties')) {
+                obj['properties'] = ApiClient.convertToType(data['properties'], [CustomerProperty]);
             }
             if (data.hasOwnProperty('qb_class')) {
                 obj['qb_class'] = ApiClient.convertToType(data['qb_class'], 'String');
@@ -491,6 +495,12 @@ Customer.prototype['pricing_tiers'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CustomerPrivacy} privacy
  */
 Customer.prototype['privacy'] = undefined;
+
+/**
+ * Properties for this customer
+ * @member {Array.<module:com.ultracart.admin.v2.models/CustomerProperty>} properties
+ */
+Customer.prototype['properties'] = undefined;
 
 /**
  * QuickBooks class to import this customer as
