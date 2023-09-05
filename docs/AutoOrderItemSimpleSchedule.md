@@ -38,6 +38,12 @@ Name | Type | Description | Notes
 
 * `Yearly` (value: `"Yearly"`)
 
+* `Every_4_Weeks` (value: `"Every 4 Weeks"`)
+
+* `Every_6_Weeks` (value: `"Every 6 Weeks"`)
+
+* `Every_8_Weeks` (value: `"Every 8 Weeks"`)
+
 
 
 

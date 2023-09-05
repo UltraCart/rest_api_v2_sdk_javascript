@@ -34,7 +34,7 @@
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 3.10.156
+   * @version 3.10.157
    */
 
   /**
@@ -349,7 +349,25 @@
      * value: "Yearly"
      * @const
      */
-    Yearly: "Yearly"
+    Yearly: "Yearly",
+
+    /**
+     * value: "Every 4 Weeks"
+     * @const
+     */
+    Every_4_Weeks: "Every 4 Weeks",
+
+    /**
+     * value: "Every 6 Weeks"
+     * @const
+     */
+    Every_6_Weeks: "Every 6 Weeks",
+
+    /**
+     * value: "Every 8 Weeks"
+     * @const
+     */
+    Every_8_Weeks: "Every 8 Weeks"
   };
 
   return exports;
