@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingSettings model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingSettings
- * @version 4.0.172
+ * @version 4.0.173
  */
 var ScreenRecordingSettings = /*#__PURE__*/function () {
   /**

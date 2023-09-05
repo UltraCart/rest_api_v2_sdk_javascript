@@ -1317,6 +1317,12 @@ Object.defineProperty(exports, "CouponFreeItemWithItemPurchase", {
     return _CouponFreeItemWithItemPurchase["default"];
   }
 });
+Object.defineProperty(exports, "CouponFreeItemWithItemPurchaseAndFreeShipping", {
+  enumerable: true,
+  get: function get() {
+    return _CouponFreeItemWithItemPurchaseAndFreeShipping["default"];
+  }
+});
 Object.defineProperty(exports, "CouponFreeItemWithSubtotal", {
   enumerable: true,
   get: function get() {
@@ -1699,6 +1705,12 @@ Object.defineProperty(exports, "CustomerPrivacy", {
   enumerable: true,
   get: function get() {
     return _CustomerPrivacy["default"];
+  }
+});
+Object.defineProperty(exports, "CustomerProperty", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerProperty["default"];
   }
 });
 Object.defineProperty(exports, "CustomerQuery", {
@@ -5222,6 +5234,8 @@ var _CouponFreeItemAndShippingWithSubtotal = _interopRequireDefault(require("./c
 
 var _CouponFreeItemWithItemPurchase = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchase"));
 
+var _CouponFreeItemWithItemPurchaseAndFreeShipping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchaseAndFreeShipping"));
+
 var _CouponFreeItemWithSubtotal = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal"));
 
 var _CouponFreeItemsWithItemPurchase = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponFreeItemsWithItemPurchase"));
@@ -5347,6 +5361,8 @@ var _CustomerOrdersSummary = _interopRequireDefault(require("./com.ultracart.adm
 var _CustomerPricingTier = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerPricingTier"));
 
 var _CustomerPrivacy = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerPrivacy"));
+
+var _CustomerProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerProperty"));
 
 var _CustomerQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerQuery"));
 

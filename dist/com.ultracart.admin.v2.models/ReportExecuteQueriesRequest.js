@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportExecuteQueriesRequest model module.
  * @module com.ultracart.admin.v2.models/ReportExecuteQueriesRequest
- * @version 4.0.172
+ * @version 4.0.173
  */
 var ReportExecuteQueriesRequest = /*#__PURE__*/function () {
   /**

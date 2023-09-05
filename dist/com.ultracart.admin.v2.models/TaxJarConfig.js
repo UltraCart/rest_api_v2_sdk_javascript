@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxJarConfig model module.
  * @module com.ultracart.admin.v2.models/TaxJarConfig
- * @version 4.0.172
+ * @version 4.0.173
  */
 var TaxJarConfig = /*#__PURE__*/function () {
   /**

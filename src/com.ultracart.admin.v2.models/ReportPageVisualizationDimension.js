@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportPageVisualizationDimension model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualizationDimension
- * @version 4.0.173
+ * @version 4.0.174
  */
 class ReportPageVisualizationDimension {
     /**

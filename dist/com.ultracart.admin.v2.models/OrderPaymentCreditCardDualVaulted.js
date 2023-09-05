@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPaymentCreditCardDualVaulted model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted
- * @version 4.0.172
+ * @version 4.0.173
  */
 var OrderPaymentCreditCardDualVaulted = /*#__PURE__*/function () {
   /**

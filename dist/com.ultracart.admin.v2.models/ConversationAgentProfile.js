@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.0.172
+ * @version 4.0.173
  */
 var ConversationAgentProfile = /*#__PURE__*/function () {
   /**

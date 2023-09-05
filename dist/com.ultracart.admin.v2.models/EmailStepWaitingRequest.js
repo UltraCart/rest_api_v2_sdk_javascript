@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailStepWaitingRequest model module.
  * @module com.ultracart.admin.v2.models/EmailStepWaitingRequest
- * @version 4.0.172
+ * @version 4.0.173
  */
 var EmailStepWaitingRequest = /*#__PURE__*/function () {
   /**

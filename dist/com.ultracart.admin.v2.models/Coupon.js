@@ -39,6 +39,8 @@ var _CouponFreeItemAndShippingWithSubtotal = _interopRequireDefault(require("./C
 
 var _CouponFreeItemWithItemPurchase = _interopRequireDefault(require("./CouponFreeItemWithItemPurchase"));
 
+var _CouponFreeItemWithItemPurchaseAndFreeShipping = _interopRequireDefault(require("./CouponFreeItemWithItemPurchaseAndFreeShipping"));
+
 var _CouponFreeItemWithSubtotal = _interopRequireDefault(require("./CouponFreeItemWithSubtotal"));
 
 var _CouponFreeItemsWithItemPurchase = _interopRequireDefault(require("./CouponFreeItemsWithItemPurchase"));
@@ -114,7 +116,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.0.172
+ * @version 4.0.173
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -244,6 +246,10 @@ var Coupon = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('free_item_with_item_purchase')) {
           obj['free_item_with_item_purchase'] = _CouponFreeItemWithItemPurchase["default"].constructFromObject(data['free_item_with_item_purchase']);
+        }
+
+        if (data.hasOwnProperty('free_item_with_item_purchase_and_free_shipping')) {
+          obj['free_item_with_item_purchase_and_free_shipping'] = _CouponFreeItemWithItemPurchaseAndFreeShipping["default"].constructFromObject(data['free_item_with_item_purchase_and_free_shipping']);
         }
 
         if (data.hasOwnProperty('free_item_with_subtotal')) {
@@ -550,6 +556,11 @@ Coupon.prototype['free_item_and_shipping_with_subtotal'] = undefined;
  */
 
 Coupon.prototype['free_item_with_item_purchase'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchaseAndFreeShipping} free_item_with_item_purchase_and_free_shipping
+ */
+
+Coupon.prototype['free_item_with_item_purchase_and_free_shipping'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponFreeItemWithSubtotal} free_item_with_subtotal
  */

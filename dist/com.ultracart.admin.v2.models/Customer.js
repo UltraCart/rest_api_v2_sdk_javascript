@@ -27,6 +27,8 @@ var _CustomerPricingTier = _interopRequireDefault(require("./CustomerPricingTier
 
 var _CustomerPrivacy = _interopRequireDefault(require("./CustomerPrivacy"));
 
+var _CustomerProperty = _interopRequireDefault(require("./CustomerProperty"));
+
 var _CustomerQuotesSummary = _interopRequireDefault(require("./CustomerQuotesSummary"));
 
 var _CustomerReviewer = _interopRequireDefault(require("./CustomerReviewer"));
@@ -52,7 +54,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.172
+ * @version 4.0.173
  */
 var Customer = /*#__PURE__*/function () {
   /**
@@ -246,6 +248,10 @@ var Customer = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('privacy')) {
           obj['privacy'] = _CustomerPrivacy["default"].constructFromObject(data['privacy']);
+        }
+
+        if (data.hasOwnProperty('properties')) {
+          obj['properties'] = _ApiClient["default"].convertToType(data['properties'], [_CustomerProperty["default"]]);
         }
 
         if (data.hasOwnProperty('qb_class')) {
@@ -579,6 +585,12 @@ Customer.prototype['pricing_tiers'] = undefined;
  */
 
 Customer.prototype['privacy'] = undefined;
+/**
+ * Properties for this customer
+ * @member {Array.<module:com.ultracart.admin.v2.models/CustomerProperty>} properties
+ */
+
+Customer.prototype['properties'] = undefined;
 /**
  * QuickBooks class to import this customer as
  * @member {String} qb_class

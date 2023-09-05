@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ApiUserApplicationProfile model module.
  * @module com.ultracart.admin.v2.models/ApiUserApplicationProfile
- * @version 4.0.172
+ * @version 4.0.173
  */
 var ApiUserApplicationProfile = /*#__PURE__*/function () {
   /**
