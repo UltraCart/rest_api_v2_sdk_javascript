@@ -34,7 +34,7 @@
   /**
    * The ConversationDepartmentSettings model module.
    * @module com.ultracart.admin.v2.models/ConversationDepartmentSettings
-   * @version 3.10.157
+   * @version 3.10.158
    */
 
   /**

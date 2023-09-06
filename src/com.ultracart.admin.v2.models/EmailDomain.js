@@ -34,7 +34,7 @@
   /**
    * The EmailDomain model module.
    * @module com.ultracart.admin.v2.models/EmailDomain
-   * @version 3.10.157
+   * @version 3.10.158
    */
 
   /**
