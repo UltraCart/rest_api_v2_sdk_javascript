@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemAutoOrderStepArbitraryUnitCostSchedule model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule
- * @version 4.0.174
+ * @version 4.0.175
  */
 class ItemAutoOrderStepArbitraryUnitCostSchedule {
     /**

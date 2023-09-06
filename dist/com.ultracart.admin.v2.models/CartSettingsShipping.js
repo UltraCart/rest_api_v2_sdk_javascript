@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettingsShipping model module.
  * @module com.ultracart.admin.v2.models/CartSettingsShipping
- * @version 4.0.173
+ * @version 4.0.174
  */
 var CartSettingsShipping = /*#__PURE__*/function () {
   /**

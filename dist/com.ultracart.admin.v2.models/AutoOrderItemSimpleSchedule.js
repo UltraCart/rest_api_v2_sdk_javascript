@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AutoOrderItemSimpleSchedule model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule
- * @version 4.0.173
+ * @version 4.0.174
  */
 var AutoOrderItemSimpleSchedule = /*#__PURE__*/function () {
   /**
@@ -175,7 +175,25 @@ AutoOrderItemSimpleSchedule['FrequencyEnum'] = {
    * value: "Yearly"
    * @const
    */
-  "Yearly": "Yearly"
+  "Yearly": "Yearly",
+
+  /**
+   * value: "Every 4 Weeks"
+   * @const
+   */
+  "Every 4 Weeks": "Every 4 Weeks",
+
+  /**
+   * value: "Every 6 Weeks"
+   * @const
+   */
+  "Every 6 Weeks": "Every 6 Weeks",
+
+  /**
+   * value: "Every 8 Weeks"
+   * @const
+   */
+  "Every 8 Weeks": "Every 8 Weeks"
 };
 var _default = AutoOrderItemSimpleSchedule;
 exports["default"] = _default;

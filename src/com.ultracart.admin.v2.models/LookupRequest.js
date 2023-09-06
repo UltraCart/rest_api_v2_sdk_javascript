@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LookupRequest model module.
  * @module com.ultracart.admin.v2.models/LookupRequest
- * @version 4.0.174
+ * @version 4.0.175
  */
 class LookupRequest {
     /**

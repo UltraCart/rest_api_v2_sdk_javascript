@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The BrowserUserAgent model module.
  * @module com.ultracart.admin.v2.models/BrowserUserAgent
- * @version 4.0.173
+ * @version 4.0.174
  */
 var BrowserUserAgent = /*#__PURE__*/function () {
   /**

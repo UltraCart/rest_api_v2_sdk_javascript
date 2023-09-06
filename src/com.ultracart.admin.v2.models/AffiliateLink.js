@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateLink model module.
  * @module com.ultracart.admin.v2.models/AffiliateLink
- * @version 4.0.174
+ * @version 4.0.175
  */
 class AffiliateLink {
     /**
