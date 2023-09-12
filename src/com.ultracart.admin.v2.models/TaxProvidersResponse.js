@@ -34,7 +34,7 @@
   /**
    * The TaxProvidersResponse model module.
    * @module com.ultracart.admin.v2.models/TaxProvidersResponse
-   * @version 3.10.158
+   * @version 3.10.159
    */
 
   /**
