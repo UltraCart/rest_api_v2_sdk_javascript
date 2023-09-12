@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportDataSourceSchema model module.
  * @module com.ultracart.admin.v2.models/ReportDataSourceSchema
- * @version 4.0.175
+ * @version 4.0.176
  */
 class ReportDataSourceSchema {
     /**

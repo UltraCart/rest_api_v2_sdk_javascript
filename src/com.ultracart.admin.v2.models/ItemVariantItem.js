@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemVariantItem model module.
  * @module com.ultracart.admin.v2.models/ItemVariantItem
- * @version 4.0.175
+ * @version 4.0.176
  */
 class ItemVariantItem {
     /**

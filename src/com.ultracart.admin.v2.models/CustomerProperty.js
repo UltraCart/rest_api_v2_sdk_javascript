@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerProperty model module.
  * @module com.ultracart.admin.v2.models/CustomerProperty
- * @version 4.0.175
+ * @version 4.0.176
  */
 class CustomerProperty {
     /**
@@ -47,6 +47,9 @@ class CustomerProperty {
         if (data) {
             obj = obj || new CustomerProperty();
 
+            if (data.hasOwnProperty('customer_profile_property_oid')) {
+                obj['customer_profile_property_oid'] = ApiClient.convertToType(data['customer_profile_property_oid'], 'Number');
+            }
             if (data.hasOwnProperty('expiration_dts')) {
                 obj['expiration_dts'] = ApiClient.convertToType(data['expiration_dts'], 'String');
             }
@@ -62,6 +65,12 @@ class CustomerProperty {
 
 
 }
+
+/**
+ * Customer profile property oid
+ * @member {Number} customer_profile_property_oid
+ */
+CustomerProperty.prototype['customer_profile_property_oid'] = undefined;
 
 /**
  * The date/time that the property expires and is deleted
