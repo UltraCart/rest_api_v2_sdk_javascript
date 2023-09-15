@@ -34,7 +34,7 @@
   /**
    * The CustomerLoyaltyRedemption model module.
    * @module com.ultracart.admin.v2.models/CustomerLoyaltyRedemption
-   * @version 3.10.159
+   * @version 3.10.160
    */
 
   /**

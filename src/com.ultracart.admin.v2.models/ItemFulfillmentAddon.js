@@ -34,7 +34,7 @@
   /**
    * The ItemFulfillmentAddon model module.
    * @module com.ultracart.admin.v2.models/ItemFulfillmentAddon
-   * @version 3.10.159
+   * @version 3.10.160
    */
 
   /**

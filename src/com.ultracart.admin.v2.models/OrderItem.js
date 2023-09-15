@@ -34,7 +34,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 3.10.159
+   * @version 3.10.160
    */
 
   /**
@@ -67,6 +67,14 @@
         obj.auto_order_schedule = ApiClient.convertToType(data['auto_order_schedule'], 'String');
       if (data.hasOwnProperty('barcode'))
         obj.barcode = ApiClient.convertToType(data['barcode'], 'String');
+      if (data.hasOwnProperty('barcode_gtin12'))
+        obj.barcode_gtin12 = ApiClient.convertToType(data['barcode_gtin12'], 'String');
+      if (data.hasOwnProperty('barcode_gtin14'))
+        obj.barcode_gtin14 = ApiClient.convertToType(data['barcode_gtin14'], 'String');
+      if (data.hasOwnProperty('barcode_upc11'))
+        obj.barcode_upc11 = ApiClient.convertToType(data['barcode_upc11'], 'String');
+      if (data.hasOwnProperty('barcode_upc12'))
+        obj.barcode_upc12 = ApiClient.convertToType(data['barcode_upc12'], 'String');
       if (data.hasOwnProperty('channel_partner_item_id'))
         obj.channel_partner_item_id = ApiClient.convertToType(data['channel_partner_item_id'], 'String');
       if (data.hasOwnProperty('cogs'))
@@ -215,6 +223,30 @@
    * @member {String} barcode
    */
   exports.prototype.barcode = undefined;
+
+  /**
+   * Barcode - GTIN 12
+   * @member {String} barcode_gtin12
+   */
+  exports.prototype.barcode_gtin12 = undefined;
+
+  /**
+   * Barcode - GTIN 14
+   * @member {String} barcode_gtin14
+   */
+  exports.prototype.barcode_gtin14 = undefined;
+
+  /**
+   * Barcode - UPC 11
+   * @member {String} barcode_upc11
+   */
+  exports.prototype.barcode_upc11 = undefined;
+
+  /**
+   * Barcode - UPC 12
+   * @member {String} barcode_upc12
+   */
+  exports.prototype.barcode_upc12 = undefined;
 
   /**
    * Channel partner item id if this order came through a channel partner and the channel partner item id was mapped to an internal item id
