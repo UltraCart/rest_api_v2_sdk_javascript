@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingAdPlatform model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingAdPlatform
- * @version 4.0.176
+ * @version 4.0.177
  */
 class ScreenRecordingAdPlatform {
     /**

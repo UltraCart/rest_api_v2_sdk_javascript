@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FulfillmentShipment model module.
  * @module com.ultracart.admin.v2.models/FulfillmentShipment
- * @version 4.0.176
+ * @version 4.0.177
  */
 class FulfillmentShipment {
     /**

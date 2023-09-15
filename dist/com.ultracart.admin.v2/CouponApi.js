@@ -48,7 +48,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Coupon service.
 * @module com.ultracart.admin.v2/CouponApi
-* @version 4.0.175
+* @version 4.0.176
 */
 var CouponApi = /*#__PURE__*/function () {
   /**

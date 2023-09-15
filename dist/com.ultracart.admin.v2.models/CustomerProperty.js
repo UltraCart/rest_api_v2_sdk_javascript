@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerProperty model module.
  * @module com.ultracart.admin.v2.models/CustomerProperty
- * @version 4.0.175
+ * @version 4.0.176
  */
 var CustomerProperty = /*#__PURE__*/function () {
   /**
@@ -54,6 +54,10 @@ var CustomerProperty = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new CustomerProperty();
 
+        if (data.hasOwnProperty('customer_profile_property_oid')) {
+          obj['customer_profile_property_oid'] = _ApiClient["default"].convertToType(data['customer_profile_property_oid'], 'Number');
+        }
+
         if (data.hasOwnProperty('expiration_dts')) {
           obj['expiration_dts'] = _ApiClient["default"].convertToType(data['expiration_dts'], 'String');
         }
@@ -74,10 +78,16 @@ var CustomerProperty = /*#__PURE__*/function () {
   return CustomerProperty;
 }();
 /**
+ * Customer profile property oid
+ * @member {Number} customer_profile_property_oid
+ */
+
+
+CustomerProperty.prototype['customer_profile_property_oid'] = undefined;
+/**
  * The date/time that the property expires and is deleted
  * @member {String} expiration_dts
  */
-
 
 CustomerProperty.prototype['expiration_dts'] = undefined;
 /**

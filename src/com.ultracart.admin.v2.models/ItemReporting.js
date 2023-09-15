@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemReporting model module.
  * @module com.ultracart.admin.v2.models/ItemReporting
- * @version 4.0.176
+ * @version 4.0.177
  */
 class ItemReporting {
     /**

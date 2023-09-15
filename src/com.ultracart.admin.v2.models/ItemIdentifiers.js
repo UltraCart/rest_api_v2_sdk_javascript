@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemIdentifiers model module.
  * @module com.ultracart.admin.v2.models/ItemIdentifiers
- * @version 4.0.176
+ * @version 4.0.177
  */
 class ItemIdentifiers {
     /**
@@ -50,6 +50,18 @@ class ItemIdentifiers {
             if (data.hasOwnProperty('barcode')) {
                 obj['barcode'] = ApiClient.convertToType(data['barcode'], 'String');
             }
+            if (data.hasOwnProperty('barcode_gtin12')) {
+                obj['barcode_gtin12'] = ApiClient.convertToType(data['barcode_gtin12'], 'String');
+            }
+            if (data.hasOwnProperty('barcode_gtin14')) {
+                obj['barcode_gtin14'] = ApiClient.convertToType(data['barcode_gtin14'], 'String');
+            }
+            if (data.hasOwnProperty('barcode_upc11')) {
+                obj['barcode_upc11'] = ApiClient.convertToType(data['barcode_upc11'], 'String');
+            }
+            if (data.hasOwnProperty('barcode_upc12')) {
+                obj['barcode_upc12'] = ApiClient.convertToType(data['barcode_upc12'], 'String');
+            }
             if (data.hasOwnProperty('manufacturer_name')) {
                 obj['manufacturer_name'] = ApiClient.convertToType(data['manufacturer_name'], 'String');
             }
@@ -71,6 +83,30 @@ class ItemIdentifiers {
  * @member {String} barcode
  */
 ItemIdentifiers.prototype['barcode'] = undefined;
+
+/**
+ * Barcode - GTIN 12
+ * @member {String} barcode_gtin12
+ */
+ItemIdentifiers.prototype['barcode_gtin12'] = undefined;
+
+/**
+ * Barcode - GTIN 14
+ * @member {String} barcode_gtin14
+ */
+ItemIdentifiers.prototype['barcode_gtin14'] = undefined;
+
+/**
+ * Barcode - UPC 11
+ * @member {String} barcode_upc11
+ */
+ItemIdentifiers.prototype['barcode_upc11'] = undefined;
+
+/**
+ * Barcode - UPC 12
+ * @member {String} barcode_upc12
+ */
+ItemIdentifiers.prototype['barcode_upc12'] = undefined;
 
 /**
  * Manufacturer Name

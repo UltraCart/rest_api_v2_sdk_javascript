@@ -17,7 +17,7 @@ import OrderReplacementItem from './OrderReplacementItem';
 /**
  * The OrderReplacement model module.
  * @module com.ultracart.admin.v2.models/OrderReplacement
- * @version 4.0.176
+ * @version 4.0.177
  */
 class OrderReplacement {
     /**

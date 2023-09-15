@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingTagsRequest model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingTagsRequest
- * @version 4.0.176
+ * @version 4.0.177
  */
 class ScreenRecordingTagsRequest {
     /**
