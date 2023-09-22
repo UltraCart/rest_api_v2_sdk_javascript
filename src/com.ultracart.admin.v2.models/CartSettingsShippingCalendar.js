@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartSettingsShippingCalendar model module.
  * @module com.ultracart.admin.v2.models/CartSettingsShippingCalendar
- * @version 4.0.177
+ * @version 4.0.178
  */
 class CartSettingsShippingCalendar {
     /**

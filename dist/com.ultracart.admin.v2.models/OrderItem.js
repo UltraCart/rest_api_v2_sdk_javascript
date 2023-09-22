@@ -32,7 +32,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderItem model module.
  * @module com.ultracart.admin.v2.models/OrderItem
- * @version 4.0.176
+ * @version 4.0.177
  */
 var OrderItem = /*#__PURE__*/function () {
   /**
@@ -90,6 +90,22 @@ var OrderItem = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('barcode')) {
           obj['barcode'] = _ApiClient["default"].convertToType(data['barcode'], 'String');
+        }
+
+        if (data.hasOwnProperty('barcode_gtin12')) {
+          obj['barcode_gtin12'] = _ApiClient["default"].convertToType(data['barcode_gtin12'], 'String');
+        }
+
+        if (data.hasOwnProperty('barcode_gtin14')) {
+          obj['barcode_gtin14'] = _ApiClient["default"].convertToType(data['barcode_gtin14'], 'String');
+        }
+
+        if (data.hasOwnProperty('barcode_upc11')) {
+          obj['barcode_upc11'] = _ApiClient["default"].convertToType(data['barcode_upc11'], 'String');
+        }
+
+        if (data.hasOwnProperty('barcode_upc12')) {
+          obj['barcode_upc12'] = _ApiClient["default"].convertToType(data['barcode_upc12'], 'String');
         }
 
         if (data.hasOwnProperty('channel_partner_item_id')) {
@@ -355,6 +371,30 @@ OrderItem.prototype['auto_order_schedule'] = undefined;
  */
 
 OrderItem.prototype['barcode'] = undefined;
+/**
+ * Barcode - GTIN 12
+ * @member {String} barcode_gtin12
+ */
+
+OrderItem.prototype['barcode_gtin12'] = undefined;
+/**
+ * Barcode - GTIN 14
+ * @member {String} barcode_gtin14
+ */
+
+OrderItem.prototype['barcode_gtin14'] = undefined;
+/**
+ * Barcode - UPC 11
+ * @member {String} barcode_upc11
+ */
+
+OrderItem.prototype['barcode_upc11'] = undefined;
+/**
+ * Barcode - UPC 12
+ * @member {String} barcode_upc12
+ */
+
+OrderItem.prototype['barcode_upc12'] = undefined;
 /**
  * Channel partner item id if this order came through a channel partner and the channel partner item id was mapped to an internal item id
  * @member {String} channel_partner_item_id

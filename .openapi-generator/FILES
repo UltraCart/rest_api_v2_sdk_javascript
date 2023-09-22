@@ -659,6 +659,7 @@ docs/ReportDataSetColumn.md
 docs/ReportDataSetPage.md
 docs/ReportDataSetPageResponse.md
 docs/ReportDataSetQuery.md
+docs/ReportDataSetQueryOrderByColumn.md
 docs/ReportDataSetResponse.md
 docs/ReportDataSetRow.md
 docs/ReportDataSetSchema.md
@@ -1448,6 +1449,7 @@ src/com.ultracart.admin.v2.models/ReportDataSetColumn.js
 src/com.ultracart.admin.v2.models/ReportDataSetPage.js
 src/com.ultracart.admin.v2.models/ReportDataSetPageResponse.js
 src/com.ultracart.admin.v2.models/ReportDataSetQuery.js
+src/com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn.js
 src/com.ultracart.admin.v2.models/ReportDataSetResponse.js
 src/com.ultracart.admin.v2.models/ReportDataSetRow.js
 src/com.ultracart.admin.v2.models/ReportDataSetSchema.js

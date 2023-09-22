@@ -655,6 +655,7 @@ import ReportDataSetColumn from './com.ultracart.admin.v2.models/ReportDataSetCo
 import ReportDataSetPage from './com.ultracart.admin.v2.models/ReportDataSetPage';
 import ReportDataSetPageResponse from './com.ultracart.admin.v2.models/ReportDataSetPageResponse';
 import ReportDataSetQuery from './com.ultracart.admin.v2.models/ReportDataSetQuery';
+import ReportDataSetQueryOrderByColumn from './com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn';
 import ReportDataSetResponse from './com.ultracart.admin.v2.models/ReportDataSetResponse';
 import ReportDataSetRow from './com.ultracart.admin.v2.models/ReportDataSetRow';
 import ReportDataSetSchema from './com.ultracart.admin.v2.models/ReportDataSetSchema';
@@ -844,7 +845,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.177
+* @version 4.0.178
 */
 export {
     /**
@@ -4704,6 +4705,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ReportDataSetQuery}
      */
     ReportDataSetQuery,
+
+    /**
+     * The ReportDataSetQueryOrderByColumn model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn}
+     */
+    ReportDataSetQueryOrderByColumn,
 
     /**
      * The ReportDataSetResponse model constructor.

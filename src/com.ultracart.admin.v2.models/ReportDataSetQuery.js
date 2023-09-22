@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ReportDataSetQueryOrderByColumn from './ReportDataSetQueryOrderByColumn';
 import ReportDataSource from './ReportDataSource';
 import ReportFilter from './ReportFilter';
 import ReportPageVisualizationDimension from './ReportPageVisualizationDimension';
@@ -20,7 +21,7 @@ import ReportPageVisualizationMetric from './ReportPageVisualizationMetric';
 /**
  * The ReportDataSetQuery model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetQuery
- * @version 4.0.177
+ * @version 4.0.178
  */
 class ReportDataSetQuery {
     /**
@@ -74,6 +75,9 @@ class ReportDataSetQuery {
             }
             if (data.hasOwnProperty('metrics')) {
                 obj['metrics'] = ApiClient.convertToType(data['metrics'], [ReportPageVisualizationMetric]);
+            }
+            if (data.hasOwnProperty('order_by_columns')) {
+                obj['order_by_columns'] = ApiClient.convertToType(data['order_by_columns'], [ReportDataSetQueryOrderByColumn]);
             }
             if (data.hasOwnProperty('page_size')) {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
@@ -137,6 +141,12 @@ ReportDataSetQuery.prototype['for_object_type'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ReportPageVisualizationMetric>} metrics
  */
 ReportDataSetQuery.prototype['metrics'] = undefined;
+
+/**
+ * The columns to order by in the final result.  If not specified the dimensions will be used
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn>} order_by_columns
+ */
+ReportDataSetQuery.prototype['order_by_columns'] = undefined;
 
 /**
  * Result set page size.  The default value is 200 records.  Max is 10000.
