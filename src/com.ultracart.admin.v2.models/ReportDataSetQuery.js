@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ReportDataSource', 'com.ultracart.admin.v2.models/ReportFilter', 'com.ultracart.admin.v2.models/ReportPageVisualizationDimension', 'com.ultracart.admin.v2.models/ReportPageVisualizationMetric'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn', 'com.ultracart.admin.v2.models/ReportDataSource', 'com.ultracart.admin.v2.models/ReportFilter', 'com.ultracart.admin.v2.models/ReportPageVisualizationDimension', 'com.ultracart.admin.v2.models/ReportPageVisualizationMetric'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ReportDataSource'), require('./ReportFilter'), require('./ReportPageVisualizationDimension'), require('./ReportPageVisualizationMetric'));
+    module.exports = factory(require('../ApiClient'), require('./ReportDataSetQueryOrderByColumn'), require('./ReportDataSource'), require('./ReportFilter'), require('./ReportPageVisualizationDimension'), require('./ReportPageVisualizationMetric'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ReportDataSetQuery = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ReportDataSource, root.UltraCartRestApiV2.ReportFilter, root.UltraCartRestApiV2.ReportPageVisualizationDimension, root.UltraCartRestApiV2.ReportPageVisualizationMetric);
+    root.UltraCartRestApiV2.ReportDataSetQuery = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ReportDataSetQueryOrderByColumn, root.UltraCartRestApiV2.ReportDataSource, root.UltraCartRestApiV2.ReportFilter, root.UltraCartRestApiV2.ReportPageVisualizationDimension, root.UltraCartRestApiV2.ReportPageVisualizationMetric);
   }
-}(this, function(ApiClient, ReportDataSource, ReportFilter, ReportPageVisualizationDimension, ReportPageVisualizationMetric) {
+}(this, function(ApiClient, ReportDataSetQueryOrderByColumn, ReportDataSource, ReportFilter, ReportPageVisualizationDimension, ReportPageVisualizationMetric) {
   'use strict';
 
   /**
    * The ReportDataSetQuery model module.
    * @module com.ultracart.admin.v2.models/ReportDataSetQuery
-   * @version 3.10.160
+   * @version 3.10.161
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.for_object_type = ApiClient.convertToType(data['for_object_type'], 'String');
       if (data.hasOwnProperty('metrics'))
         obj.metrics = ApiClient.convertToType(data['metrics'], [ReportPageVisualizationMetric]);
+      if (data.hasOwnProperty('order_by_columns'))
+        obj.order_by_columns = ApiClient.convertToType(data['order_by_columns'], [ReportDataSetQueryOrderByColumn]);
       if (data.hasOwnProperty('page_size'))
         obj.page_size = ApiClient.convertToType(data['page_size'], 'Number');
       if (data.hasOwnProperty('selected_filters'))
@@ -126,6 +128,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ReportPageVisualizationMetric>} metrics
    */
   exports.prototype.metrics = undefined;
+
+  /**
+   * The columns to order by in the final result.  If not specified the dimensions will be used
+   * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn>} order_by_columns
+   */
+  exports.prototype.order_by_columns = undefined;
 
   /**
    * Result set page size.  The default value is 200 records.  Max is 10000.
