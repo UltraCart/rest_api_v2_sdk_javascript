@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExperimentVariationStat model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariationStat
- * @version 4.0.178
+ * @version 4.0.179
  */
 class ExperimentVariationStat {
     /**
@@ -64,6 +64,9 @@ class ExperimentVariationStat {
             }
             if (data.hasOwnProperty('order_count')) {
                 obj['order_count'] = ApiClient.convertToType(data['order_count'], 'Number');
+            }
+            if (data.hasOwnProperty('order_ids')) {
+                obj['order_ids'] = ApiClient.convertToType(data['order_ids'], ['String']);
             }
             if (data.hasOwnProperty('order_item_count')) {
                 obj['order_item_count'] = ApiClient.convertToType(data['order_item_count'], 'Number');
@@ -125,6 +128,12 @@ ExperimentVariationStat.prototype['initiate_checkout_count'] = undefined;
  * @member {Number} order_count
  */
 ExperimentVariationStat.prototype['order_count'] = undefined;
+
+/**
+ * Order ID thats converted on this variation
+ * @member {Array.<String>} order_ids
+ */
+ExperimentVariationStat.prototype['order_ids'] = undefined;
 
 /**
  * Total order item count for this variation

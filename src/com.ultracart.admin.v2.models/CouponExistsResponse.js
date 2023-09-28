@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The CouponExistsResponse model module.
  * @module com.ultracart.admin.v2.models/CouponExistsResponse
- * @version 4.0.178
+ * @version 4.0.179
  */
 class CouponExistsResponse {
     /**

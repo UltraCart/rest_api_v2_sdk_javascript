@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportsResponse model module.
  * @module com.ultracart.admin.v2.models/ReportsResponse
- * @version 4.0.177
+ * @version 4.0.178
  */
 var ReportsResponse = /*#__PURE__*/function () {
   /**

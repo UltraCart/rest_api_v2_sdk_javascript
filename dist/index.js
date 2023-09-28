@@ -3951,6 +3951,12 @@ Object.defineProperty(exports, "ReportDataSetQuery", {
     return _ReportDataSetQuery["default"];
   }
 });
+Object.defineProperty(exports, "ReportDataSetQueryOrderByColumn", {
+  enumerable: true,
+  get: function get() {
+    return _ReportDataSetQueryOrderByColumn["default"];
+  }
+});
 Object.defineProperty(exports, "ReportDataSetResponse", {
   enumerable: true,
   get: function get() {
@@ -6095,6 +6101,8 @@ var _ReportDataSetPage = _interopRequireDefault(require("./com.ultracart.admin.v
 var _ReportDataSetPageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetPageResponse"));
 
 var _ReportDataSetQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetQuery"));
+
+var _ReportDataSetQueryOrderByColumn = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn"));
 
 var _ReportDataSetResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportDataSetResponse"));
 

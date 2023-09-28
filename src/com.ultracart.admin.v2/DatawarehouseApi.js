@@ -27,7 +27,7 @@ import ReportsResponse from '../com.ultracart.admin.v2.models/ReportsResponse';
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.0.178
+* @version 4.0.179
 */
 export default class DatawarehouseApi {
 

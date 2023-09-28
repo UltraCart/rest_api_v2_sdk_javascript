@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDryRunQueriesResponse model module.
  * @module com.ultracart.admin.v2.models/ReportDryRunQueriesResponse
- * @version 4.0.177
+ * @version 4.0.178
  */
 var ReportDryRunQueriesResponse = /*#__PURE__*/function () {
   /**

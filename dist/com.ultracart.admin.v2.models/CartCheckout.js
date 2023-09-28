@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartCheckout model module.
  * @module com.ultracart.admin.v2.models/CartCheckout
- * @version 4.0.177
+ * @version 4.0.178
  */
 var CartCheckout = /*#__PURE__*/function () {
   /**

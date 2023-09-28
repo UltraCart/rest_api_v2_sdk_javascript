@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _ReportDataSetQueryOrderByColumn = _interopRequireDefault(require("./ReportDataSetQueryOrderByColumn"));
+
 var _ReportDataSource = _interopRequireDefault(require("./ReportDataSource"));
 
 var _ReportFilter = _interopRequireDefault(require("./ReportFilter"));
@@ -26,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSetQuery model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetQuery
- * @version 4.0.177
+ * @version 4.0.178
  */
 var ReportDataSetQuery = /*#__PURE__*/function () {
   /**
@@ -92,6 +94,10 @@ var ReportDataSetQuery = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('metrics')) {
           obj['metrics'] = _ApiClient["default"].convertToType(data['metrics'], [_ReportPageVisualizationMetric["default"]]);
+        }
+
+        if (data.hasOwnProperty('order_by_columns')) {
+          obj['order_by_columns'] = _ApiClient["default"].convertToType(data['order_by_columns'], [_ReportDataSetQueryOrderByColumn["default"]]);
         }
 
         if (data.hasOwnProperty('page_size')) {
@@ -162,6 +168,12 @@ ReportDataSetQuery.prototype['for_object_type'] = undefined;
  */
 
 ReportDataSetQuery.prototype['metrics'] = undefined;
+/**
+ * The columns to order by in the final result.  If not specified the dimensions will be used
+ * @member {Array.<module:com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn>} order_by_columns
+ */
+
+ReportDataSetQuery.prototype['order_by_columns'] = undefined;
 /**
  * Result set page size.  The default value is 200 records.  Max is 10000.
  * @member {Number} page_size

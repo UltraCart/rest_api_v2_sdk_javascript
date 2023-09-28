@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxCountryCode model module.
  * @module com.ultracart.admin.v2.models/TaxCountryCode
- * @version 4.0.177
+ * @version 4.0.178
  */
 var TaxCountryCode = /*#__PURE__*/function () {
   /**

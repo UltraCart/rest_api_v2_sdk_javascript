@@ -17,7 +17,7 @@ import ChannelPartnerOrderItemOption from './ChannelPartnerOrderItemOption';
 /**
  * The ChannelPartnerOrderItem model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItem
- * @version 4.0.178
+ * @version 4.0.179
  */
 class ChannelPartnerOrderItem {
     /**

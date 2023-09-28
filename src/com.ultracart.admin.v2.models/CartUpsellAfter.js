@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartUpsellAfter model module.
  * @module com.ultracart.admin.v2.models/CartUpsellAfter
- * @version 4.0.178
+ * @version 4.0.179
  */
 class CartUpsellAfter {
     /**

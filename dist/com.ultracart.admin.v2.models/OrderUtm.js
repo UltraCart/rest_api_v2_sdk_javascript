@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderUtm model module.
  * @module com.ultracart.admin.v2.models/OrderUtm
- * @version 4.0.177
+ * @version 4.0.178
  */
 var OrderUtm = /*#__PURE__*/function () {
   /**

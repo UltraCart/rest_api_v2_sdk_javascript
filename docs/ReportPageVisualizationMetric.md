@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 
 * `avg` (value: `"avg"`)
 
+* `none` (value: `"none"`)
+
 
 
 

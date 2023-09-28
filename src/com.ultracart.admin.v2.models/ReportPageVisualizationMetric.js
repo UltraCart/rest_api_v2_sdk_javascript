@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportPageVisualizationMetric model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualizationMetric
- * @version 4.0.178
+ * @version 4.0.179
  */
 class ReportPageVisualizationMetric {
     /**
@@ -128,7 +128,13 @@ ReportPageVisualizationMetric['AggregationEnum'] = {
      * value: "avg"
      * @const
      */
-    "avg": "avg"
+    "avg": "avg",
+
+    /**
+     * value: "none"
+     * @const
+     */
+    "none": "none"
 };
 
 

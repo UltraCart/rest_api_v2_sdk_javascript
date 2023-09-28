@@ -54,7 +54,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.177
+ * @version 4.0.178
  */
 var Customer = /*#__PURE__*/function () {
   /**
