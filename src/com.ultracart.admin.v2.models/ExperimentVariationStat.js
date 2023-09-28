@@ -34,7 +34,7 @@
   /**
    * The ExperimentVariationStat model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariationStat
-   * @version 3.10.161
+   * @version 3.10.162
    */
 
   /**
@@ -67,6 +67,8 @@
         obj.initiate_checkout_count = ApiClient.convertToType(data['initiate_checkout_count'], 'Number');
       if (data.hasOwnProperty('order_count'))
         obj.order_count = ApiClient.convertToType(data['order_count'], 'Number');
+      if (data.hasOwnProperty('order_ids'))
+        obj.order_ids = ApiClient.convertToType(data['order_ids'], ['String']);
       if (data.hasOwnProperty('order_item_count'))
         obj.order_item_count = ApiClient.convertToType(data['order_item_count'], 'Number');
       if (data.hasOwnProperty('page_view_count'))
@@ -118,6 +120,12 @@
    * @member {Number} order_count
    */
   exports.prototype.order_count = undefined;
+
+  /**
+   * Order ID thats converted on this variation
+   * @member {Array.<String>} order_ids
+   */
+  exports.prototype.order_ids = undefined;
 
   /**
    * Total order item count for this variation

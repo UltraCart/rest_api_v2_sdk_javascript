@@ -34,7 +34,7 @@
   /**
    * The ReportPageVisualizationMetric model module.
    * @module com.ultracart.admin.v2.models/ReportPageVisualizationMetric
-   * @version 3.10.161
+   * @version 3.10.162
    */
 
   /**
@@ -125,7 +125,13 @@
      * value: "avg"
      * @const
      */
-    avg: "avg"
+    avg: "avg",
+
+    /**
+     * value: "none"
+     * @const
+     */
+    none: "none"
   };
 
   return exports;
