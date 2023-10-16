@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventQueuePosition model module.
  * @module com.ultracart.admin.v2.models/ConversationEventQueuePosition
- * @version 4.0.178
+ * @version 4.0.179
  */
 var ConversationEventQueuePosition = /*#__PURE__*/function () {
   /**

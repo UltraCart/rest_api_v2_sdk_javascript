@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartSettingsPaymentCreditCard model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard
- * @version 4.0.179
+ * @version 4.0.180
  */
 class CartSettingsPaymentCreditCard {
     /**
@@ -50,6 +50,9 @@ class CartSettingsPaymentCreditCard {
             if (data.hasOwnProperty('collect_credit_card_verification_number')) {
                 obj['collect_credit_card_verification_number'] = ApiClient.convertToType(data['collect_credit_card_verification_number'], 'Boolean');
             }
+            if (data.hasOwnProperty('collect_credit_card_verification_number_minimum')) {
+                obj['collect_credit_card_verification_number_minimum'] = ApiClient.convertToType(data['collect_credit_card_verification_number_minimum'], 'Number');
+            }
             if (data.hasOwnProperty('credit_card_types')) {
                 obj['credit_card_types'] = ApiClient.convertToType(data['credit_card_types'], ['String']);
             }
@@ -68,6 +71,12 @@ class CartSettingsPaymentCreditCard {
  * @member {Boolean} collect_credit_card_verification_number
  */
 CartSettingsPaymentCreditCard.prototype['collect_credit_card_verification_number'] = undefined;
+
+/**
+ * If this field is null or the total is greater than or equal to this value then collect the CVV2.
+ * @member {Number} collect_credit_card_verification_number_minimum
+ */
+CartSettingsPaymentCreditCard.prototype['collect_credit_card_verification_number_minimum'] = undefined;
 
 /**
  * Available credit card types

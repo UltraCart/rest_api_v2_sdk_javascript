@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponEditorValues model module.
  * @module com.ultracart.admin.v2.models/CouponEditorValues
- * @version 4.0.178
+ * @version 4.0.179
  */
 var CouponEditorValues = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPageVisualizationMetric model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualizationMetric
- * @version 4.0.178
+ * @version 4.0.179
  */
 var ReportPageVisualizationMetric = /*#__PURE__*/function () {
   /**
@@ -136,7 +136,13 @@ ReportPageVisualizationMetric['AggregationEnum'] = {
    * value: "avg"
    * @const
    */
-  "avg": "avg"
+  "avg": "avg",
+
+  /**
+   * value: "none"
+   * @const
+   */
+  "none": "none"
 };
 var _default = ReportPageVisualizationMetric;
 exports["default"] = _default;

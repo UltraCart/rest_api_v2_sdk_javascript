@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ExperimentVariationStat model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariationStat
- * @version 4.0.178
+ * @version 4.0.179
  */
 var ExperimentVariationStat = /*#__PURE__*/function () {
   /**
@@ -76,6 +76,10 @@ var ExperimentVariationStat = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('order_count')) {
           obj['order_count'] = _ApiClient["default"].convertToType(data['order_count'], 'Number');
+        }
+
+        if (data.hasOwnProperty('order_ids')) {
+          obj['order_ids'] = _ApiClient["default"].convertToType(data['order_ids'], ['String']);
         }
 
         if (data.hasOwnProperty('order_item_count')) {
@@ -146,6 +150,12 @@ ExperimentVariationStat.prototype['initiate_checkout_count'] = undefined;
  */
 
 ExperimentVariationStat.prototype['order_count'] = undefined;
+/**
+ * Order ID thats converted on this variation
+ * @member {Array.<String>} order_ids
+ */
+
+ExperimentVariationStat.prototype['order_ids'] = undefined;
 /**
  * Total order item count for this variation
  * @member {Number} order_item_count
