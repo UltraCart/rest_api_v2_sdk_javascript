@@ -34,7 +34,7 @@
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.10.163
+   * @version 3.10.164
    */
 
   /**
@@ -691,8 +691,8 @@
      */
 
     /**
-     * Get a presigned conersation multimedia upload URL
-     * Get a presigned conersation multimedia upload URL 
+     * Get a presigned conversation multimedia upload URL
+     * Get a presigned conversation multimedia upload URL 
      * @param {String} extension 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse}

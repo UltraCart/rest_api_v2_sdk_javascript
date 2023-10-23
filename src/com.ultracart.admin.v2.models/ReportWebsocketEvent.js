@@ -34,7 +34,7 @@
   /**
    * The ReportWebsocketEvent model module.
    * @module com.ultracart.admin.v2.models/ReportWebsocketEvent
-   * @version 3.10.163
+   * @version 3.10.164
    */
 
   /**
