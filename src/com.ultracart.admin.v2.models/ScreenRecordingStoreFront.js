@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingStoreFront model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingStoreFront
-   * @version 3.10.164
+   * @version 3.10.165
    */
 
   /**
