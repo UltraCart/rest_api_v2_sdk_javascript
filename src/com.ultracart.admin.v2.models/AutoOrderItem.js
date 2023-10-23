@@ -19,7 +19,7 @@ import AutoOrderItemSimpleSchedule from './AutoOrderItemSimpleSchedule';
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.0.181
+ * @version 4.0.182
  */
 class AutoOrderItem {
     /**

@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailCommseqPostcardsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqPostcardsResponse
- * @version 4.0.180
+ * @version 4.0.181
  */
 var EmailCommseqPostcardsResponse = /*#__PURE__*/function () {
   /**

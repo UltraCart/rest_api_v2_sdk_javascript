@@ -794,6 +794,19 @@ import WebhookSampleRequest from './com.ultracart.admin.v2.models/WebhookSampleR
 import WebhookSampleRequestResponse from './com.ultracart.admin.v2.models/WebhookSampleRequestResponse';
 import WebhooksResponse from './com.ultracart.admin.v2.models/WebhooksResponse';
 import Weight from './com.ultracart.admin.v2.models/Weight';
+import WorkflowAttachment from './com.ultracart.admin.v2.models/WorkflowAttachment';
+import WorkflowAttachmentUploadUrl from './com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrl';
+import WorkflowAttachmentUploadUrlResponse from './com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse';
+import WorkflowGroup from './com.ultracart.admin.v2.models/WorkflowGroup';
+import WorkflowGroupsResponse from './com.ultracart.admin.v2.models/WorkflowGroupsResponse';
+import WorkflowNote from './com.ultracart.admin.v2.models/WorkflowNote';
+import WorkflowTask from './com.ultracart.admin.v2.models/WorkflowTask';
+import WorkflowTaskHistory from './com.ultracart.admin.v2.models/WorkflowTaskHistory';
+import WorkflowTaskResponse from './com.ultracart.admin.v2.models/WorkflowTaskResponse';
+import WorkflowTasksRequest from './com.ultracart.admin.v2.models/WorkflowTasksRequest';
+import WorkflowTasksResponse from './com.ultracart.admin.v2.models/WorkflowTasksResponse';
+import WorkflowUser from './com.ultracart.admin.v2.models/WorkflowUser';
+import WorkflowUsersResponse from './com.ultracart.admin.v2.models/WorkflowUsersResponse';
 import AffiliateApi from './com.ultracart.admin.v2/AffiliateApi';
 import AutoOrderApi from './com.ultracart.admin.v2/AutoOrderApi';
 import ChannelPartnerApi from './com.ultracart.admin.v2/ChannelPartnerApi';
@@ -814,6 +827,7 @@ import StorefrontApi from './com.ultracart.admin.v2/StorefrontApi';
 import TaxApi from './com.ultracart.admin.v2/TaxApi';
 import UserApi from './com.ultracart.admin.v2/UserApi';
 import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
+import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 
 
 /**
@@ -845,7 +859,7 @@ import WebhookApi from './com.ultracart.admin.v2/WebhookApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.181
+* @version 4.0.182
 */
 export {
     /**
@@ -5541,6 +5555,84 @@ export {
     Weight,
 
     /**
+     * The WorkflowAttachment model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowAttachment}
+     */
+    WorkflowAttachment,
+
+    /**
+     * The WorkflowAttachmentUploadUrl model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrl}
+     */
+    WorkflowAttachmentUploadUrl,
+
+    /**
+     * The WorkflowAttachmentUploadUrlResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse}
+     */
+    WorkflowAttachmentUploadUrlResponse,
+
+    /**
+     * The WorkflowGroup model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowGroup}
+     */
+    WorkflowGroup,
+
+    /**
+     * The WorkflowGroupsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowGroupsResponse}
+     */
+    WorkflowGroupsResponse,
+
+    /**
+     * The WorkflowNote model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowNote}
+     */
+    WorkflowNote,
+
+    /**
+     * The WorkflowTask model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowTask}
+     */
+    WorkflowTask,
+
+    /**
+     * The WorkflowTaskHistory model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowTaskHistory}
+     */
+    WorkflowTaskHistory,
+
+    /**
+     * The WorkflowTaskResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowTaskResponse}
+     */
+    WorkflowTaskResponse,
+
+    /**
+     * The WorkflowTasksRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowTasksRequest}
+     */
+    WorkflowTasksRequest,
+
+    /**
+     * The WorkflowTasksResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowTasksResponse}
+     */
+    WorkflowTasksResponse,
+
+    /**
+     * The WorkflowUser model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowUser}
+     */
+    WorkflowUser,
+
+    /**
+     * The WorkflowUsersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WorkflowUsersResponse}
+     */
+    WorkflowUsersResponse,
+
+    /**
     * The AffiliateApi service constructor.
     * @property {module:com.ultracart.admin.v2/AffiliateApi}
     */
@@ -5658,5 +5750,11 @@ export {
     * The WebhookApi service constructor.
     * @property {module:com.ultracart.admin.v2/WebhookApi}
     */
-    WebhookApi
+    WebhookApi,
+
+    /**
+    * The WorkflowApi service constructor.
+    * @property {module:com.ultracart.admin.v2/WorkflowApi}
+    */
+    WorkflowApi
 };

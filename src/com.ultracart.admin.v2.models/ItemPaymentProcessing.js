@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemPaymentProcessing model module.
  * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
- * @version 4.0.181
+ * @version 4.0.182
  */
 class ItemPaymentProcessing {
     /**

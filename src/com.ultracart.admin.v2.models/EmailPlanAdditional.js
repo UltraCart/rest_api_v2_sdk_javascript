@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailPlanAdditional model module.
  * @module com.ultracart.admin.v2.models/EmailPlanAdditional
- * @version 4.0.181
+ * @version 4.0.182
  */
 class EmailPlanAdditional {
     /**

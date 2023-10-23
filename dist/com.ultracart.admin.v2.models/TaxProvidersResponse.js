@@ -34,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TaxProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProvidersResponse
- * @version 4.0.180
+ * @version 4.0.181
  */
 var TaxProvidersResponse = /*#__PURE__*/function () {
   /**
