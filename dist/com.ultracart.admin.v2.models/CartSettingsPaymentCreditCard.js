@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartSettingsPaymentCreditCard model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentCreditCard
- * @version 4.0.179
+ * @version 4.0.180
  */
 var CartSettingsPaymentCreditCard = /*#__PURE__*/function () {
   /**
@@ -58,6 +58,10 @@ var CartSettingsPaymentCreditCard = /*#__PURE__*/function () {
           obj['collect_credit_card_verification_number'] = _ApiClient["default"].convertToType(data['collect_credit_card_verification_number'], 'Boolean');
         }
 
+        if (data.hasOwnProperty('collect_credit_card_verification_number_minimum')) {
+          obj['collect_credit_card_verification_number_minimum'] = _ApiClient["default"].convertToType(data['collect_credit_card_verification_number_minimum'], 'Number');
+        }
+
         if (data.hasOwnProperty('credit_card_types')) {
           obj['credit_card_types'] = _ApiClient["default"].convertToType(data['credit_card_types'], ['String']);
         }
@@ -80,6 +84,12 @@ var CartSettingsPaymentCreditCard = /*#__PURE__*/function () {
 
 
 CartSettingsPaymentCreditCard.prototype['collect_credit_card_verification_number'] = undefined;
+/**
+ * If this field is null or the total is greater than or equal to this value then collect the CVV2.
+ * @member {Number} collect_credit_card_verification_number_minimum
+ */
+
+CartSettingsPaymentCreditCard.prototype['collect_credit_card_verification_number_minimum'] = undefined;
 /**
  * Available credit card types
  * @member {Array.<String>} credit_card_types

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderMarketing model module.
  * @module com.ultracart.admin.v2.models/OrderMarketing
- * @version 4.0.179
+ * @version 4.0.180
  */
 var OrderMarketing = /*#__PURE__*/function () {
   /**

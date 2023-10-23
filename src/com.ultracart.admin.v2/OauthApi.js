@@ -20,7 +20,7 @@ import OauthTokenResponse from '../com.ultracart.admin.v2.models/OauthTokenRespo
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.0.180
+* @version 4.0.181
 */
 export default class OauthApi {
 

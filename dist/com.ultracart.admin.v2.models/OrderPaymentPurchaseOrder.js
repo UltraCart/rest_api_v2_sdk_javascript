@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPaymentPurchaseOrder model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder
- * @version 4.0.179
+ * @version 4.0.180
  */
 var OrderPaymentPurchaseOrder = /*#__PURE__*/function () {
   /**

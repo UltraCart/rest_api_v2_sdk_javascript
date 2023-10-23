@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GeocodeRequest model module.
  * @module com.ultracart.admin.v2.models/GeocodeRequest
- * @version 4.0.180
+ * @version 4.0.181
  */
 class GeocodeRequest {
     /**

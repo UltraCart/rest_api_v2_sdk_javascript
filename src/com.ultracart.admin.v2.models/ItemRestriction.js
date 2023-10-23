@@ -17,7 +17,7 @@ import ItemRestrictionItem from './ItemRestrictionItem';
 /**
  * The ItemRestriction model module.
  * @module com.ultracart.admin.v2.models/ItemRestriction
- * @version 4.0.180
+ * @version 4.0.181
  */
 class ItemRestriction {
     /**

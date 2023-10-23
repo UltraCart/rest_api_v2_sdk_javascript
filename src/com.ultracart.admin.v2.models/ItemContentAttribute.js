@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemContentAttribute model module.
  * @module com.ultracart.admin.v2.models/ItemContentAttribute
- * @version 4.0.180
+ * @version 4.0.181
  */
 class ItemContentAttribute {
     /**

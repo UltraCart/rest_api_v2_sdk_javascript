@@ -48,7 +48,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.0.180
+* @version 4.0.181
 */
 export default class ConversationApi {
 
@@ -643,8 +643,8 @@ export default class ConversationApi {
      */
 
     /**
-     * Get a presigned conersation multimedia upload URL
-     * Get a presigned conersation multimedia upload URL 
+     * Get a presigned conversation multimedia upload URL
+     * Get a presigned conversation multimedia upload URL 
      * @param {String} extension 
      * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationMultimediaUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse}

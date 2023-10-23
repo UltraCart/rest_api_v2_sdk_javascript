@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailDashboardActivityResponse model module.
  * @module com.ultracart.admin.v2.models/EmailDashboardActivityResponse
- * @version 4.0.180
+ * @version 4.0.181
  */
 class EmailDashboardActivityResponse {
     /**
