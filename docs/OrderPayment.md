@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **check** | [**OrderPaymentCheck**](OrderPaymentCheck.md) |  | [optional] 
 **credit_card** | [**OrderPaymentCreditCard**](OrderPaymentCreditCard.md) |  | [optional] 
 **echeck** | [**OrderPaymentECheck**](OrderPaymentECheck.md) |  | [optional] 
+**health_benefit_card** | [**OrderPaymentHealthBenefitCard**](OrderPaymentHealthBenefitCard.md) |  | [optional] 
 **hold_for_fraud_review** | **Boolean** | True if order has been held for fraud review | [optional] 
 **insurance** | [**OrderPaymentInsurance**](OrderPaymentInsurance.md) |  | [optional] 
 **payment_dts** | **String** | Date/time that the payment was successfully processed, for new orders, this field is only considered if channel_partner.skip_payment_processing is true | [optional] 
@@ -75,6 +76,8 @@ Name | Type | Description | Notes
 * `Apple Pay` (value: `"Apple Pay"`)
 
 * `Google Pay` (value: `"Google Pay"`)
+
+* `Health Benefit Card` (value: `"Health Benefit Card"`)
 
 
 

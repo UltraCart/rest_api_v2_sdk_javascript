@@ -87,6 +87,7 @@ import CartPaymentAffirm from './com.ultracart.admin.v2.models/CartPaymentAffirm
 import CartPaymentAmazon from './com.ultracart.admin.v2.models/CartPaymentAmazon';
 import CartPaymentCheck from './com.ultracart.admin.v2.models/CartPaymentCheck';
 import CartPaymentCreditCard from './com.ultracart.admin.v2.models/CartPaymentCreditCard';
+import CartPaymentHealthBenefitCard from './com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard';
 import CartPaymentPurchaseOrder from './com.ultracart.admin.v2.models/CartPaymentPurchaseOrder';
 import CartProfileLoginRequest from './com.ultracart.admin.v2.models/CartProfileLoginRequest';
 import CartProfileLoginResponse from './com.ultracart.admin.v2.models/CartProfileLoginResponse';
@@ -606,6 +607,7 @@ import OrderPaymentCreditCard from './com.ultracart.admin.v2.models/OrderPayment
 import OrderPaymentCreditCardDualVaulted from './com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted';
 import OrderPaymentCreditCardDualVaultedProperty from './com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty';
 import OrderPaymentECheck from './com.ultracart.admin.v2.models/OrderPaymentECheck';
+import OrderPaymentHealthBenefitCard from './com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard';
 import OrderPaymentInsurance from './com.ultracart.admin.v2.models/OrderPaymentInsurance';
 import OrderPaymentPurchaseOrder from './com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder';
 import OrderPaymentTransaction from './com.ultracart.admin.v2.models/OrderPaymentTransaction';
@@ -859,7 +861,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.182
+* @version 4.0.183
 */
 export {
     /**
@@ -1311,6 +1313,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CartPaymentCreditCard}
      */
     CartPaymentCreditCard,
+
+    /**
+     * The CartPaymentHealthBenefitCard model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard}
+     */
+    CartPaymentHealthBenefitCard,
 
     /**
      * The CartPaymentPurchaseOrder model constructor.
@@ -4425,6 +4433,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderPaymentECheck}
      */
     OrderPaymentECheck,
+
+    /**
+     * The OrderPaymentHealthBenefitCard model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard}
+     */
+    OrderPaymentHealthBenefitCard,
 
     /**
      * The OrderPaymentInsurance model constructor.

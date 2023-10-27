@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportDataSetQueryOrderByColumn model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn
- * @version 4.0.181
+ * @version 4.0.182
  */
 var ReportDataSetQueryOrderByColumn = /*#__PURE__*/function () {
   /**

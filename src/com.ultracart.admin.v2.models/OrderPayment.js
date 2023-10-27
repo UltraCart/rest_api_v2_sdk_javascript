@@ -16,6 +16,7 @@ import Currency from './Currency';
 import OrderPaymentCheck from './OrderPaymentCheck';
 import OrderPaymentCreditCard from './OrderPaymentCreditCard';
 import OrderPaymentECheck from './OrderPaymentECheck';
+import OrderPaymentHealthBenefitCard from './OrderPaymentHealthBenefitCard';
 import OrderPaymentInsurance from './OrderPaymentInsurance';
 import OrderPaymentPurchaseOrder from './OrderPaymentPurchaseOrder';
 import OrderPaymentTransaction from './OrderPaymentTransaction';
@@ -23,7 +24,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.182
+ * @version 4.0.183
  */
 class OrderPayment {
     /**
@@ -62,6 +63,9 @@ class OrderPayment {
             }
             if (data.hasOwnProperty('echeck')) {
                 obj['echeck'] = OrderPaymentECheck.constructFromObject(data['echeck']);
+            }
+            if (data.hasOwnProperty('health_benefit_card')) {
+                obj['health_benefit_card'] = OrderPaymentHealthBenefitCard.constructFromObject(data['health_benefit_card']);
             }
             if (data.hasOwnProperty('hold_for_fraud_review')) {
                 obj['hold_for_fraud_review'] = ApiClient.convertToType(data['hold_for_fraud_review'], 'Boolean');
@@ -129,6 +133,11 @@ OrderPayment.prototype['credit_card'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderPaymentECheck} echeck
  */
 OrderPayment.prototype['echeck'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard} health_benefit_card
+ */
+OrderPayment.prototype['health_benefit_card'] = undefined;
 
 /**
  * True if order has been held for fraud review
@@ -370,7 +379,13 @@ OrderPayment['PaymentMethodEnum'] = {
      * value: "Google Pay"
      * @const
      */
-    "Google Pay": "Google Pay"
+    "Google Pay": "Google Pay",
+
+    /**
+     * value: "Health Benefit Card"
+     * @const
+     */
+    "Health Benefit Card": "Health Benefit Card"
 };
 
 

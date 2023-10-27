@@ -16,12 +16,13 @@ import CartPaymentAffirm from './CartPaymentAffirm';
 import CartPaymentAmazon from './CartPaymentAmazon';
 import CartPaymentCheck from './CartPaymentCheck';
 import CartPaymentCreditCard from './CartPaymentCreditCard';
+import CartPaymentHealthBenefitCard from './CartPaymentHealthBenefitCard';
 import CartPaymentPurchaseOrder from './CartPaymentPurchaseOrder';
 
 /**
  * The CartPayment model module.
  * @module com.ultracart.admin.v2.models/CartPayment
- * @version 4.0.182
+ * @version 4.0.183
  */
 class CartPayment {
     /**
@@ -64,6 +65,9 @@ class CartPayment {
             if (data.hasOwnProperty('credit_card')) {
                 obj['credit_card'] = CartPaymentCreditCard.constructFromObject(data['credit_card']);
             }
+            if (data.hasOwnProperty('health_benefit_card')) {
+                obj['health_benefit_card'] = CartPaymentHealthBenefitCard.constructFromObject(data['health_benefit_card']);
+            }
             if (data.hasOwnProperty('payment_method')) {
                 obj['payment_method'] = ApiClient.convertToType(data['payment_method'], 'String');
             }
@@ -99,6 +103,11 @@ CartPayment.prototype['check'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CartPaymentCreditCard} credit_card
  */
 CartPayment.prototype['credit_card'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard} health_benefit_card
+ */
+CartPayment.prototype['health_benefit_card'] = undefined;
 
 /**
  * Payment method

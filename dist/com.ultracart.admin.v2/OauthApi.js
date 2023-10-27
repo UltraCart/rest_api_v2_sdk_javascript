@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.0.181
+* @version 4.0.182
 */
 var OauthApi = /*#__PURE__*/function () {
   /**

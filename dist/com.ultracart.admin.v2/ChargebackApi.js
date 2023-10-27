@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Chargeback service.
 * @module com.ultracart.admin.v2/ChargebackApi
-* @version 4.0.181
+* @version 4.0.182
 */
 var ChargebackApi = /*#__PURE__*/function () {
   /**

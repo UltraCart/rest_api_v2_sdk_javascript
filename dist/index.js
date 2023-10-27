@@ -4815,6 +4815,90 @@ Object.defineProperty(exports, "Weight", {
     return _Weight["default"];
   }
 });
+Object.defineProperty(exports, "WorkflowApi", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowApi["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowAttachment", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowAttachment["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowAttachmentUploadUrl", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowAttachmentUploadUrl["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowAttachmentUploadUrlResponse", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowAttachmentUploadUrlResponse["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowGroup", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowGroup["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowGroupsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowGroupsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowNote", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowNote["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowTask", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowTask["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowTaskHistory", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowTaskHistory["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowTaskResponse", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowTaskResponse["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowTasksRequest", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowTasksRequest["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowTasksResponse", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowTasksResponse["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowUser", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowUser["default"];
+  }
+});
+Object.defineProperty(exports, "WorkflowUsersResponse", {
+  enumerable: true,
+  get: function get() {
+    return _WorkflowUsersResponse["default"];
+  }
+});
 
 var _ApiClient = _interopRequireDefault(require("./ApiClient"));
 
@@ -6380,6 +6464,32 @@ var _WebhooksResponse = _interopRequireDefault(require("./com.ultracart.admin.v2
 
 var _Weight = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Weight"));
 
+var _WorkflowAttachment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowAttachment"));
+
+var _WorkflowAttachmentUploadUrl = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrl"));
+
+var _WorkflowAttachmentUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse"));
+
+var _WorkflowGroup = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowGroup"));
+
+var _WorkflowGroupsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowGroupsResponse"));
+
+var _WorkflowNote = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowNote"));
+
+var _WorkflowTask = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowTask"));
+
+var _WorkflowTaskHistory = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowTaskHistory"));
+
+var _WorkflowTaskResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowTaskResponse"));
+
+var _WorkflowTasksRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowTasksRequest"));
+
+var _WorkflowTasksResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowTasksResponse"));
+
+var _WorkflowUser = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowUser"));
+
+var _WorkflowUsersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowUsersResponse"));
+
 var _AffiliateApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AffiliateApi"));
 
 var _AutoOrderApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AutoOrderApi"));
@@ -6419,5 +6529,7 @@ var _TaxApi = _interopRequireDefault(require("./com.ultracart.admin.v2/TaxApi"))
 var _UserApi = _interopRequireDefault(require("./com.ultracart.admin.v2/UserApi"));
 
 var _WebhookApi = _interopRequireDefault(require("./com.ultracart.admin.v2/WebhookApi"));
+
+var _WorkflowApi = _interopRequireDefault(require("./com.ultracart.admin.v2/WorkflowApi"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
