@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/OrderPaymentCheck', 'com.ultracart.admin.v2.models/OrderPaymentCreditCard', 'com.ultracart.admin.v2.models/OrderPaymentECheck', 'com.ultracart.admin.v2.models/OrderPaymentInsurance', 'com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder', 'com.ultracart.admin.v2.models/OrderPaymentTransaction'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/OrderPaymentCheck', 'com.ultracart.admin.v2.models/OrderPaymentCreditCard', 'com.ultracart.admin.v2.models/OrderPaymentECheck', 'com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard', 'com.ultracart.admin.v2.models/OrderPaymentInsurance', 'com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder', 'com.ultracart.admin.v2.models/OrderPaymentTransaction'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./OrderPaymentCheck'), require('./OrderPaymentCreditCard'), require('./OrderPaymentECheck'), require('./OrderPaymentInsurance'), require('./OrderPaymentPurchaseOrder'), require('./OrderPaymentTransaction'));
+    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./OrderPaymentCheck'), require('./OrderPaymentCreditCard'), require('./OrderPaymentECheck'), require('./OrderPaymentHealthBenefitCard'), require('./OrderPaymentInsurance'), require('./OrderPaymentPurchaseOrder'), require('./OrderPaymentTransaction'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.OrderPaymentCheck, root.UltraCartRestApiV2.OrderPaymentCreditCard, root.UltraCartRestApiV2.OrderPaymentECheck, root.UltraCartRestApiV2.OrderPaymentInsurance, root.UltraCartRestApiV2.OrderPaymentPurchaseOrder, root.UltraCartRestApiV2.OrderPaymentTransaction);
+    root.UltraCartRestApiV2.OrderPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.OrderPaymentCheck, root.UltraCartRestApiV2.OrderPaymentCreditCard, root.UltraCartRestApiV2.OrderPaymentECheck, root.UltraCartRestApiV2.OrderPaymentHealthBenefitCard, root.UltraCartRestApiV2.OrderPaymentInsurance, root.UltraCartRestApiV2.OrderPaymentPurchaseOrder, root.UltraCartRestApiV2.OrderPaymentTransaction);
   }
-}(this, function(ApiClient, Currency, OrderPaymentCheck, OrderPaymentCreditCard, OrderPaymentECheck, OrderPaymentInsurance, OrderPaymentPurchaseOrder, OrderPaymentTransaction) {
+}(this, function(ApiClient, Currency, OrderPaymentCheck, OrderPaymentCreditCard, OrderPaymentECheck, OrderPaymentHealthBenefitCard, OrderPaymentInsurance, OrderPaymentPurchaseOrder, OrderPaymentTransaction) {
   'use strict';
 
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.10.165
+   * @version 3.10.166
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.credit_card = OrderPaymentCreditCard.constructFromObject(data['credit_card']);
       if (data.hasOwnProperty('echeck'))
         obj.echeck = OrderPaymentECheck.constructFromObject(data['echeck']);
+      if (data.hasOwnProperty('health_benefit_card'))
+        obj.health_benefit_card = OrderPaymentHealthBenefitCard.constructFromObject(data['health_benefit_card']);
       if (data.hasOwnProperty('hold_for_fraud_review'))
         obj.hold_for_fraud_review = ApiClient.convertToType(data['hold_for_fraud_review'], 'Boolean');
       if (data.hasOwnProperty('insurance'))
@@ -109,6 +111,11 @@
    * @member {module:com.ultracart.admin.v2.models/OrderPaymentECheck} echeck
    */
   exports.prototype.echeck = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard} health_benefit_card
+   */
+  exports.prototype.health_benefit_card = undefined;
 
   /**
    * True if order has been held for fraud review
@@ -346,7 +353,13 @@
      * value: "Google Pay"
      * @const
      */
-    Google_Pay: "Google Pay"
+    Google_Pay: "Google Pay",
+
+    /**
+     * value: "Health Benefit Card"
+     * @const
+     */
+    Health_Benefit_Card: "Health Benefit Card"
   };
 
 

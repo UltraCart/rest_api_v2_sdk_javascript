@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CartPaymentAffirm', 'com.ultracart.admin.v2.models/CartPaymentAmazon', 'com.ultracart.admin.v2.models/CartPaymentCheck', 'com.ultracart.admin.v2.models/CartPaymentCreditCard', 'com.ultracart.admin.v2.models/CartPaymentPurchaseOrder'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CartPaymentAffirm', 'com.ultracart.admin.v2.models/CartPaymentAmazon', 'com.ultracart.admin.v2.models/CartPaymentCheck', 'com.ultracart.admin.v2.models/CartPaymentCreditCard', 'com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard', 'com.ultracart.admin.v2.models/CartPaymentPurchaseOrder'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CartPaymentAffirm'), require('./CartPaymentAmazon'), require('./CartPaymentCheck'), require('./CartPaymentCreditCard'), require('./CartPaymentPurchaseOrder'));
+    module.exports = factory(require('../ApiClient'), require('./CartPaymentAffirm'), require('./CartPaymentAmazon'), require('./CartPaymentCheck'), require('./CartPaymentCreditCard'), require('./CartPaymentHealthBenefitCard'), require('./CartPaymentPurchaseOrder'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CartPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartPaymentAffirm, root.UltraCartRestApiV2.CartPaymentAmazon, root.UltraCartRestApiV2.CartPaymentCheck, root.UltraCartRestApiV2.CartPaymentCreditCard, root.UltraCartRestApiV2.CartPaymentPurchaseOrder);
+    root.UltraCartRestApiV2.CartPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartPaymentAffirm, root.UltraCartRestApiV2.CartPaymentAmazon, root.UltraCartRestApiV2.CartPaymentCheck, root.UltraCartRestApiV2.CartPaymentCreditCard, root.UltraCartRestApiV2.CartPaymentHealthBenefitCard, root.UltraCartRestApiV2.CartPaymentPurchaseOrder);
   }
-}(this, function(ApiClient, CartPaymentAffirm, CartPaymentAmazon, CartPaymentCheck, CartPaymentCreditCard, CartPaymentPurchaseOrder) {
+}(this, function(ApiClient, CartPaymentAffirm, CartPaymentAmazon, CartPaymentCheck, CartPaymentCreditCard, CartPaymentHealthBenefitCard, CartPaymentPurchaseOrder) {
   'use strict';
 
   /**
    * The CartPayment model module.
    * @module com.ultracart.admin.v2.models/CartPayment
-   * @version 3.10.165
+   * @version 3.10.166
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.check = CartPaymentCheck.constructFromObject(data['check']);
       if (data.hasOwnProperty('credit_card'))
         obj.credit_card = CartPaymentCreditCard.constructFromObject(data['credit_card']);
+      if (data.hasOwnProperty('health_benefit_card'))
+        obj.health_benefit_card = CartPaymentHealthBenefitCard.constructFromObject(data['health_benefit_card']);
       if (data.hasOwnProperty('payment_method'))
         obj.payment_method = ApiClient.convertToType(data['payment_method'], 'String');
       if (data.hasOwnProperty('purchase_order'))
@@ -92,6 +94,11 @@
    * @member {module:com.ultracart.admin.v2.models/CartPaymentCreditCard} credit_card
    */
   exports.prototype.credit_card = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard} health_benefit_card
+   */
+  exports.prototype.health_benefit_card = undefined;
 
   /**
    * Payment method

@@ -34,7 +34,7 @@
   /**
    * The WorkflowTasksRequest model module.
    * @module com.ultracart.admin.v2.models/WorkflowTasksRequest
-   * @version 3.10.165
+   * @version 3.10.166
    */
 
   /**
@@ -67,8 +67,10 @@
         obj.created_dts_begin = ApiClient.convertToType(data['created_dts_begin'], 'String');
       if (data.hasOwnProperty('created_dts_end'))
         obj.created_dts_end = ApiClient.convertToType(data['created_dts_end'], 'String');
-      if (data.hasOwnProperty('delay_until_dts'))
-        obj.delay_until_dts = ApiClient.convertToType(data['delay_until_dts'], 'String');
+      if (data.hasOwnProperty('delay_until_dts_begin'))
+        obj.delay_until_dts_begin = ApiClient.convertToType(data['delay_until_dts_begin'], 'String');
+      if (data.hasOwnProperty('delay_until_dts_end'))
+        obj.delay_until_dts_end = ApiClient.convertToType(data['delay_until_dts_end'], 'String');
       if (data.hasOwnProperty('due_dts_begin'))
         obj.due_dts_begin = ApiClient.convertToType(data['due_dts_begin'], 'String');
       if (data.hasOwnProperty('due_dts_end'))
@@ -128,9 +130,15 @@
 
   /**
    * Date/time that the workflow task should delay until
-   * @member {String} delay_until_dts
+   * @member {String} delay_until_dts_begin
    */
-  exports.prototype.delay_until_dts = undefined;
+  exports.prototype.delay_until_dts_begin = undefined;
+
+  /**
+   * Date/time that the workflow task should delay until
+   * @member {String} delay_until_dts_end
+   */
+  exports.prototype.delay_until_dts_end = undefined;
 
   /**
    * Date/time that the workflow task is due
