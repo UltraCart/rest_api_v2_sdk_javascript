@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemAutoOrderStepArbitraryUnitCostSchedule model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStepArbitraryUnitCostSchedule
- * @version 4.0.182
+ * @version 4.0.183
  */
 var ItemAutoOrderStepArbitraryUnitCostSchedule = /*#__PURE__*/function () {
   /**

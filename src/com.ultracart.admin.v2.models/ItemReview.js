@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemReview model module.
  * @module com.ultracart.admin.v2.models/ItemReview
- * @version 4.0.183
+ * @version 4.0.184
  */
 class ItemReview {
     /**

@@ -15,6 +15,8 @@ var _CartPaymentCheck = _interopRequireDefault(require("./CartPaymentCheck"));
 
 var _CartPaymentCreditCard = _interopRequireDefault(require("./CartPaymentCreditCard"));
 
+var _CartPaymentHealthBenefitCard = _interopRequireDefault(require("./CartPaymentHealthBenefitCard"));
+
 var _CartPaymentPurchaseOrder = _interopRequireDefault(require("./CartPaymentPurchaseOrder"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -28,7 +30,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CartPayment model module.
  * @module com.ultracart.admin.v2.models/CartPayment
- * @version 4.0.182
+ * @version 4.0.183
  */
 var CartPayment = /*#__PURE__*/function () {
   /**
@@ -80,6 +82,10 @@ var CartPayment = /*#__PURE__*/function () {
           obj['credit_card'] = _CartPaymentCreditCard["default"].constructFromObject(data['credit_card']);
         }
 
+        if (data.hasOwnProperty('health_benefit_card')) {
+          obj['health_benefit_card'] = _CartPaymentHealthBenefitCard["default"].constructFromObject(data['health_benefit_card']);
+        }
+
         if (data.hasOwnProperty('payment_method')) {
           obj['payment_method'] = _ApiClient["default"].convertToType(data['payment_method'], 'String');
         }
@@ -120,6 +126,11 @@ CartPayment.prototype['check'] = undefined;
  */
 
 CartPayment.prototype['credit_card'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard} health_benefit_card
+ */
+
+CartPayment.prototype['health_benefit_card'] = undefined;
 /**
  * Payment method
  * @member {String} payment_method

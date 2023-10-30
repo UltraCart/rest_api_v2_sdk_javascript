@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CartSummary model module.
  * @module com.ultracart.admin.v2.models/CartSummary
- * @version 4.0.183
+ * @version 4.0.184
  */
 class CartSummary {
     /**
@@ -59,6 +59,12 @@ class CartSummary {
             }
             if (data.hasOwnProperty('arbitrary_taxable_subtotal')) {
                 obj['arbitrary_taxable_subtotal'] = Currency.constructFromObject(data['arbitrary_taxable_subtotal']);
+            }
+            if (data.hasOwnProperty('health_benefit_card_amount')) {
+                obj['health_benefit_card_amount'] = Currency.constructFromObject(data['health_benefit_card_amount']);
+            }
+            if (data.hasOwnProperty('internal_gift_certificate_amount')) {
+                obj['internal_gift_certificate_amount'] = Currency.constructFromObject(data['internal_gift_certificate_amount']);
             }
             if (data.hasOwnProperty('shipping_handling')) {
                 obj['shipping_handling'] = Currency.constructFromObject(data['shipping_handling']);
@@ -122,6 +128,16 @@ CartSummary.prototype['arbitrary_tax_rate'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_taxable_subtotal
  */
 CartSummary.prototype['arbitrary_taxable_subtotal'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/Currency} health_benefit_card_amount
+ */
+CartSummary.prototype['health_benefit_card_amount'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/Currency} internal_gift_certificate_amount
+ */
+CartSummary.prototype['internal_gift_certificate_amount'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/Currency} shipping_handling

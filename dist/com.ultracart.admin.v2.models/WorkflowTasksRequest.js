@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WorkflowTasksRequest model module.
  * @module com.ultracart.admin.v2.models/WorkflowTasksRequest
- * @version 4.0.182
+ * @version 4.0.183
  */
 var WorkflowTasksRequest = /*#__PURE__*/function () {
   /**
@@ -80,8 +80,12 @@ var WorkflowTasksRequest = /*#__PURE__*/function () {
           obj['created_dts_end'] = _ApiClient["default"].convertToType(data['created_dts_end'], 'String');
         }
 
-        if (data.hasOwnProperty('delay_until_dts')) {
-          obj['delay_until_dts'] = _ApiClient["default"].convertToType(data['delay_until_dts'], 'String');
+        if (data.hasOwnProperty('delay_until_dts_begin')) {
+          obj['delay_until_dts_begin'] = _ApiClient["default"].convertToType(data['delay_until_dts_begin'], 'String');
+        }
+
+        if (data.hasOwnProperty('delay_until_dts_end')) {
+          obj['delay_until_dts_end'] = _ApiClient["default"].convertToType(data['delay_until_dts_end'], 'String');
         }
 
         if (data.hasOwnProperty('due_dts_begin')) {
@@ -165,10 +169,16 @@ WorkflowTasksRequest.prototype['created_dts_begin'] = undefined;
 WorkflowTasksRequest.prototype['created_dts_end'] = undefined;
 /**
  * Date/time that the workflow task should delay until
- * @member {String} delay_until_dts
+ * @member {String} delay_until_dts_begin
  */
 
-WorkflowTasksRequest.prototype['delay_until_dts'] = undefined;
+WorkflowTasksRequest.prototype['delay_until_dts_begin'] = undefined;
+/**
+ * Date/time that the workflow task should delay until
+ * @member {String} delay_until_dts_end
+ */
+
+WorkflowTasksRequest.prototype['delay_until_dts_end'] = undefined;
 /**
  * Date/time that the workflow task is due
  * @member {String} due_dts_begin

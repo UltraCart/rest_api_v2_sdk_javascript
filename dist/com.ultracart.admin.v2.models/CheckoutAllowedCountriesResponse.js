@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CheckoutAllowedCountriesResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse
- * @version 4.0.182
+ * @version 4.0.183
  */
 var CheckoutAllowedCountriesResponse = /*#__PURE__*/function () {
   /**

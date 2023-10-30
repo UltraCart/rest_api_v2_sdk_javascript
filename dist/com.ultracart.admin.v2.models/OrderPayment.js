@@ -15,6 +15,8 @@ var _OrderPaymentCreditCard = _interopRequireDefault(require("./OrderPaymentCred
 
 var _OrderPaymentECheck = _interopRequireDefault(require("./OrderPaymentECheck"));
 
+var _OrderPaymentHealthBenefitCard = _interopRequireDefault(require("./OrderPaymentHealthBenefitCard"));
+
 var _OrderPaymentInsurance = _interopRequireDefault(require("./OrderPaymentInsurance"));
 
 var _OrderPaymentPurchaseOrder = _interopRequireDefault(require("./OrderPaymentPurchaseOrder"));
@@ -32,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.182
+ * @version 4.0.183
  */
 var OrderPayment = /*#__PURE__*/function () {
   /**
@@ -78,6 +80,10 @@ var OrderPayment = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('echeck')) {
           obj['echeck'] = _OrderPaymentECheck["default"].constructFromObject(data['echeck']);
+        }
+
+        if (data.hasOwnProperty('health_benefit_card')) {
+          obj['health_benefit_card'] = _OrderPaymentHealthBenefitCard["default"].constructFromObject(data['health_benefit_card']);
         }
 
         if (data.hasOwnProperty('hold_for_fraud_review')) {
@@ -163,6 +169,11 @@ OrderPayment.prototype['credit_card'] = undefined;
  */
 
 OrderPayment.prototype['echeck'] = undefined;
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard} health_benefit_card
+ */
+
+OrderPayment.prototype['health_benefit_card'] = undefined;
 /**
  * True if order has been held for fraud review
  * @member {Boolean} hold_for_fraud_review
@@ -399,7 +410,13 @@ OrderPayment['PaymentMethodEnum'] = {
    * value: "Google Pay"
    * @const
    */
-  "Google Pay": "Google Pay"
+  "Google Pay": "Google Pay",
+
+  /**
+   * value: "Health Benefit Card"
+   * @const
+   */
+  "Health Benefit Card": "Health Benefit Card"
 };
 /**
  * Allowed values for the <code>payment_status</code> property.

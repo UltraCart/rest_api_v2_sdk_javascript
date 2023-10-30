@@ -465,6 +465,12 @@ Object.defineProperty(exports, "CartPaymentCreditCard", {
     return _CartPaymentCreditCard["default"];
   }
 });
+Object.defineProperty(exports, "CartPaymentHealthBenefitCard", {
+  enumerable: true,
+  get: function get() {
+    return _CartPaymentHealthBenefitCard["default"];
+  }
+});
 Object.defineProperty(exports, "CartPaymentPurchaseOrder", {
   enumerable: true,
   get: function get() {
@@ -3657,6 +3663,12 @@ Object.defineProperty(exports, "OrderPaymentECheck", {
     return _OrderPaymentECheck["default"];
   }
 });
+Object.defineProperty(exports, "OrderPaymentHealthBenefitCard", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPaymentHealthBenefitCard["default"];
+  }
+});
 Object.defineProperty(exports, "OrderPaymentInsurance", {
   enumerable: true,
   get: function get() {
@@ -5050,6 +5062,8 @@ var _CartPaymentCheck = _interopRequireDefault(require("./com.ultracart.admin.v2
 
 var _CartPaymentCreditCard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartPaymentCreditCard"));
 
+var _CartPaymentHealthBenefitCard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard"));
+
 var _CartPaymentPurchaseOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartPaymentPurchaseOrder"));
 
 var _CartProfileLoginRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartProfileLoginRequest"));
@@ -6087,6 +6101,8 @@ var _OrderPaymentCreditCardDualVaulted = _interopRequireDefault(require("./com.u
 var _OrderPaymentCreditCardDualVaultedProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty"));
 
 var _OrderPaymentECheck = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentECheck"));
+
+var _OrderPaymentHealthBenefitCard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard"));
 
 var _OrderPaymentInsurance = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentInsurance"));
 
