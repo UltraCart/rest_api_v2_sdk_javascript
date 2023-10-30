@@ -34,7 +34,7 @@
   /**
    * The OrderSummary model module.
    * @module com.ultracart.admin.v2.models/OrderSummary
-   * @version 3.10.166
+   * @version 3.10.167
    */
 
   /**
@@ -63,6 +63,10 @@
         obj.actual_shipping = Currency.constructFromObject(data['actual_shipping']);
       if (data.hasOwnProperty('arbitrary_shipping_handling_total'))
         obj.arbitrary_shipping_handling_total = Currency.constructFromObject(data['arbitrary_shipping_handling_total']);
+      if (data.hasOwnProperty('health_benefit_card_amount'))
+        obj.health_benefit_card_amount = Currency.constructFromObject(data['health_benefit_card_amount']);
+      if (data.hasOwnProperty('health_benefit_card_refunded'))
+        obj.health_benefit_card_refunded = Currency.constructFromObject(data['health_benefit_card_refunded']);
       if (data.hasOwnProperty('internal_gift_certificate_amount'))
         obj.internal_gift_certificate_amount = Currency.constructFromObject(data['internal_gift_certificate_amount']);
       if (data.hasOwnProperty('internal_gift_certificate_refunded'))
@@ -118,6 +122,16 @@
    * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_shipping_handling_total
    */
   exports.prototype.arbitrary_shipping_handling_total = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} health_benefit_card_amount
+   */
+  exports.prototype.health_benefit_card_amount = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} health_benefit_card_refunded
+   */
+  exports.prototype.health_benefit_card_refunded = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} internal_gift_certificate_amount

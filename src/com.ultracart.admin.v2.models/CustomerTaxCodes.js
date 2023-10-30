@@ -34,7 +34,7 @@
   /**
    * The CustomerTaxCodes model module.
    * @module com.ultracart.admin.v2.models/CustomerTaxCodes
-   * @version 3.10.166
+   * @version 3.10.167
    */
 
   /**
