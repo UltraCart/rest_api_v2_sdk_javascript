@@ -20,7 +20,7 @@ import WebhookSampleRequest from './WebhookSampleRequest';
 /**
  * The WebhookSampleRequestResponse model module.
  * @module com.ultracart.admin.v2.models/WebhookSampleRequestResponse
- * @version 4.0.184
+ * @version 4.0.185
  */
 class WebhookSampleRequestResponse {
     /**
