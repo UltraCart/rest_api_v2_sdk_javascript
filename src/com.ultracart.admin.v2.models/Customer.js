@@ -34,7 +34,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 3.10.167
+   * @version 3.10.168
    */
 
   /**
@@ -93,6 +93,8 @@
         obj.dhl_account_number = ApiClient.convertToType(data['dhl_account_number'], 'String');
       if (data.hasOwnProperty('dhl_duty_account_number'))
         obj.dhl_duty_account_number = ApiClient.convertToType(data['dhl_duty_account_number'], 'String');
+      if (data.hasOwnProperty('do_not_send_mail'))
+        obj.do_not_send_mail = ApiClient.convertToType(data['do_not_send_mail'], 'Boolean');
       if (data.hasOwnProperty('edi'))
         obj.edi = CustomerEDI.constructFromObject(data['edi']);
       if (data.hasOwnProperty('email'))
@@ -297,6 +299,12 @@
    * @member {String} dhl_duty_account_number
    */
   exports.prototype.dhl_duty_account_number = undefined;
+
+  /**
+   * Do not send mail (null will not update)
+   * @member {Boolean} do_not_send_mail
+   */
+  exports.prototype.do_not_send_mail = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/CustomerEDI} edi
