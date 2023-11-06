@@ -34,7 +34,7 @@
   /**
    * The EmailPostcardTrackingResponse model module.
    * @module com.ultracart.admin.v2.models/EmailPostcardTrackingResponse
-   * @version 3.10.168
+   * @version 3.10.169
    */
 
   /**

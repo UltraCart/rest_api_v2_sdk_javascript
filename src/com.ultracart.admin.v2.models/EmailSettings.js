@@ -34,7 +34,7 @@
   /**
    * The EmailSettings model module.
    * @module com.ultracart.admin.v2.models/EmailSettings
-   * @version 3.10.168
+   * @version 3.10.169
    */
 
   /**
