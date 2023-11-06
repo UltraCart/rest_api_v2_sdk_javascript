@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WorkflowTask model module.
  * @module com.ultracart.admin.v2.models/WorkflowTask
- * @version 4.0.184
+ * @version 4.0.185
  */
 var WorkflowTask = /*#__PURE__*/function () {
   /**

@@ -7,21 +7,26 @@ Method | HTTP request | Description
 [**addCustomerStoreCredit**](CustomerApi.md#addCustomerStoreCredit) | **POST** /customer/customers/{customer_profile_oid}/store_credit | Adds store credit to a customer
 [**adjustInternalCertificate**](CustomerApi.md#adjustInternalCertificate) | **POST** /customer/customers/{customer_profile_oid}/adjust_cashback_balance | Updates the cashback balance for a customer by updating the internal gift certificate used, creating the gift certificate if needed.
 [**deleteCustomer**](CustomerApi.md#deleteCustomer) | **DELETE** /customer/customers/{customer_profile_oid} | Delete a customer
+[**deleteWishListItem**](CustomerApi.md#deleteWishListItem) | **DELETE** /customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid} | Delete a customer wishlist item
 [**getCustomer**](CustomerApi.md#getCustomer) | **GET** /customer/customers/{customer_profile_oid} | Retrieve a customer
 [**getCustomerByEmail**](CustomerApi.md#getCustomerByEmail) | **GET** /customer/customers/by_email/{email} | Retrieve a customer by Email
 [**getCustomerEditorValues**](CustomerApi.md#getCustomerEditorValues) | **GET** /customer/editor_values | Retrieve values needed for a customer profile editor
 [**getCustomerEmailLists**](CustomerApi.md#getCustomerEmailLists) | **GET** /customer/email_lists | Retrieve all email lists across all storefronts
 [**getCustomerStoreCredit**](CustomerApi.md#getCustomerStoreCredit) | **GET** /customer/customers/{customer_profile_oid}/store_credit | Retrieve the customer store credit accumulated through loyalty programs
+[**getCustomerWishList**](CustomerApi.md#getCustomerWishList) | **GET** /customer/customers/{customer_profile_oid}/wishlist | Retrieve wishlist items for customer
+[**getCustomerWishListItem**](CustomerApi.md#getCustomerWishListItem) | **GET** /customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid} | Retrieve wishlist item for customer
 [**getCustomers**](CustomerApi.md#getCustomers) | **GET** /customer/customers | Retrieve customers
 [**getCustomersByQuery**](CustomerApi.md#getCustomersByQuery) | **POST** /customer/customers/query | Retrieve customers by query
 [**getCustomersForDataTables**](CustomerApi.md#getCustomersForDataTables) | **POST** /customer/customers/dataTables | Retrieve customers for DataTables plugin
 [**getEmailVerificationToken**](CustomerApi.md#getEmailVerificationToken) | **POST** /customer/customers/email_verify/get_token | Create a token that can be used to verify a customer email address
 [**getMagicLink**](CustomerApi.md#getMagicLink) | **PUT** /customer/customers/{customer_profile_oid}/magic_link/{storefront_host_name} | getMagicLink
 [**insertCustomer**](CustomerApi.md#insertCustomer) | **POST** /customer/customers | Insert a customer
+[**insertWishListItem**](CustomerApi.md#insertWishListItem) | **POST** /customer/customers/{customer_profile_oid}/wishlist | Insert a customer wishlist item
 [**mergeCustomer**](CustomerApi.md#mergeCustomer) | **PUT** /customer/customers/{customer_profile_oid}/merge | Merge customer into this customer
 [**searchCustomerProfileValues**](CustomerApi.md#searchCustomerProfileValues) | **POST** /customer/search | Searches for all matching values (using POST)
 [**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /customer/customers/{customer_profile_oid} | Update a customer
 [**updateCustomerEmailLists**](CustomerApi.md#updateCustomerEmailLists) | **POST** /customer/customers/{customer_profile_oid}/email_lists | Update email list subscriptions for a customer
+[**updateWishListItem**](CustomerApi.md#updateWishListItem) | **PUT** /customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid} | Update a customer wishlist item
 [**validateEmailVerificationToken**](CustomerApi.md#validateEmailVerificationToken) | **POST** /customer/customers/email_verify/validate_token | Validate a token that can be used to verify a customer email address
 
 
@@ -169,6 +174,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteWishListItem
+
+> CustomerWishListItem deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid)
+
+Delete a customer wishlist item
+
+Delete a customer wishlist item 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CustomerApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
+let customer_wishlist_item_oid = 56; // Number | The wishlist oid for this wishlist item to delete.
+apiInstance.deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_profile_oid** | **Number**| The customer oid for this wishlist. | 
+ **customer_wishlist_item_oid** | **Number**| The wishlist oid for this wishlist item to delete. | 
+
+### Return type
+
+[**CustomerWishListItem**](CustomerWishListItem.md)
 
 ### Authorization
 
@@ -419,6 +476,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomerStoreCreditResponse**](CustomerStoreCreditResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getCustomerWishList
+
+> CustomerWishListItemsResponse getCustomerWishList(customer_profile_oid)
+
+Retrieve wishlist items for customer
+
+Retrieve wishlist items for customer. 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CustomerApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
+apiInstance.getCustomerWishList(customer_profile_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_profile_oid** | **Number**| The customer oid for this wishlist. | 
+
+### Return type
+
+[**CustomerWishListItemsResponse**](CustomerWishListItemsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getCustomerWishListItem
+
+> CustomerWishListItemResponse getCustomerWishListItem(customer_profile_oid, customer_wishlist_item_oid)
+
+Retrieve wishlist item for customer
+
+Retrieve wishlist item for customer. 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CustomerApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
+let customer_wishlist_item_oid = 56; // Number | The wishlist oid for this wishlist item.
+apiInstance.getCustomerWishListItem(customer_profile_oid, customer_wishlist_item_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_profile_oid** | **Number**| The customer oid for this wishlist. | 
+ **customer_wishlist_item_oid** | **Number**| The wishlist oid for this wishlist item. | 
+
+### Return type
+
+[**CustomerWishListItemResponse**](CustomerWishListItemResponse.md)
 
 ### Authorization
 
@@ -814,6 +973,58 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## insertWishListItem
+
+> CustomerWishListItem insertWishListItem(customer_profile_oid, wishlist_item)
+
+Insert a customer wishlist item
+
+Insert a customer wishlist item 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CustomerApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
+let wishlist_item = new UltraCartRestApiV2.CustomerWishListItem(); // CustomerWishListItem | Wishlist item to insert
+apiInstance.insertWishListItem(customer_profile_oid, wishlist_item, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_profile_oid** | **Number**| The customer oid for this wishlist. | 
+ **wishlist_item** | [**CustomerWishListItem**](CustomerWishListItem.md)| Wishlist item to insert | 
+
+### Return type
+
+[**CustomerWishListItem**](CustomerWishListItem.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
 ## mergeCustomer
 
 > mergeCustomer(customer_profile_oid, customer, opts)
@@ -1015,6 +1226,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomerEmailListChanges**](CustomerEmailListChanges.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## updateWishListItem
+
+> CustomerWishListItem updateWishListItem(customer_profile_oid, customer_wishlist_item_oid, wishlist_item)
+
+Update a customer wishlist item
+
+Update a customer wishlist item 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CustomerApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
+let customer_wishlist_item_oid = 56; // Number | The wishlist oid for this wishlist item.
+let wishlist_item = new UltraCartRestApiV2.CustomerWishListItem(); // CustomerWishListItem | Wishlist item to update
+apiInstance.updateWishListItem(customer_profile_oid, customer_wishlist_item_oid, wishlist_item, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_profile_oid** | **Number**| The customer oid for this wishlist. | 
+ **customer_wishlist_item_oid** | **Number**| The wishlist oid for this wishlist item. | 
+ **wishlist_item** | [**CustomerWishListItem**](CustomerWishListItem.md)| Wishlist item to update | 
+
+### Return type
+
+[**CustomerWishListItem**](CustomerWishListItem.md)
 
 ### Authorization
 

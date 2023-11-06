@@ -299,6 +299,9 @@ docs/CustomerStoreCreditLedgerEntry.md
 docs/CustomerStoreCreditResponse.md
 docs/CustomerTag.md
 docs/CustomerTaxCodes.md
+docs/CustomerWishListItem.md
+docs/CustomerWishListItemResponse.md
+docs/CustomerWishListItemsResponse.md
 docs/CustomersResponse.md
 docs/DataTablesServerSideResponse.md
 docs/DatawarehouseApi.md
@@ -1112,6 +1115,9 @@ src/com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry.js
 src/com.ultracart.admin.v2.models/CustomerStoreCreditResponse.js
 src/com.ultracart.admin.v2.models/CustomerTag.js
 src/com.ultracart.admin.v2.models/CustomerTaxCodes.js
+src/com.ultracart.admin.v2.models/CustomerWishListItem.js
+src/com.ultracart.admin.v2.models/CustomerWishListItemResponse.js
+src/com.ultracart.admin.v2.models/CustomerWishListItemsResponse.js
 src/com.ultracart.admin.v2.models/CustomersResponse.js
 src/com.ultracart.admin.v2.models/DataTablesServerSideResponse.js
 src/com.ultracart.admin.v2.models/Distance.js

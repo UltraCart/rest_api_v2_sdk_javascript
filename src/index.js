@@ -302,6 +302,9 @@ import CustomerStoreCreditLedgerEntry from './com.ultracart.admin.v2.models/Cust
 import CustomerStoreCreditResponse from './com.ultracart.admin.v2.models/CustomerStoreCreditResponse';
 import CustomerTag from './com.ultracart.admin.v2.models/CustomerTag';
 import CustomerTaxCodes from './com.ultracart.admin.v2.models/CustomerTaxCodes';
+import CustomerWishListItem from './com.ultracart.admin.v2.models/CustomerWishListItem';
+import CustomerWishListItemResponse from './com.ultracart.admin.v2.models/CustomerWishListItemResponse';
+import CustomerWishListItemsResponse from './com.ultracart.admin.v2.models/CustomerWishListItemsResponse';
 import CustomersResponse from './com.ultracart.admin.v2.models/CustomersResponse';
 import DataTablesServerSideResponse from './com.ultracart.admin.v2.models/DataTablesServerSideResponse';
 import Distance from './com.ultracart.admin.v2.models/Distance';
@@ -861,7 +864,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.185
+* @version 4.0.186
 */
 export {
     /**
@@ -2603,6 +2606,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomerTaxCodes}
      */
     CustomerTaxCodes,
+
+    /**
+     * The CustomerWishListItem model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerWishListItem}
+     */
+    CustomerWishListItem,
+
+    /**
+     * The CustomerWishListItemResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerWishListItemResponse}
+     */
+    CustomerWishListItemResponse,
+
+    /**
+     * The CustomerWishListItemsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerWishListItemsResponse}
+     */
+    CustomerWishListItemsResponse,
 
     /**
      * The CustomersResponse model constructor.

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The PointOfSaleRegister model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleRegister
- * @version 4.0.184
+ * @version 4.0.185
  */
 var PointOfSaleRegister = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ReportPageFilter model module.
  * @module com.ultracart.admin.v2.models/ReportPageFilter
- * @version 4.0.184
+ * @version 4.0.185
  */
 var ReportPageFilter = /*#__PURE__*/function () {
   /**

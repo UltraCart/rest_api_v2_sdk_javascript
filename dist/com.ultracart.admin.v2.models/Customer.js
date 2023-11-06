@@ -54,7 +54,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.0.184
+ * @version 4.0.185
  */
 var Customer = /*#__PURE__*/function () {
   /**
@@ -164,6 +164,10 @@ var Customer = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('dhl_duty_account_number')) {
           obj['dhl_duty_account_number'] = _ApiClient["default"].convertToType(data['dhl_duty_account_number'], 'String');
+        }
+
+        if (data.hasOwnProperty('do_not_send_mail')) {
+          obj['do_not_send_mail'] = _ApiClient["default"].convertToType(data['do_not_send_mail'], 'Boolean');
         }
 
         if (data.hasOwnProperty('edi')) {
@@ -463,6 +467,12 @@ Customer.prototype['dhl_account_number'] = undefined;
  */
 
 Customer.prototype['dhl_duty_account_number'] = undefined;
+/**
+ * Do not send mail (null will not update)
+ * @member {Boolean} do_not_send_mail
+ */
+
+Customer.prototype['do_not_send_mail'] = undefined;
 /**
  * @member {module:com.ultracart.admin.v2.models/CustomerEDI} edi
  */
