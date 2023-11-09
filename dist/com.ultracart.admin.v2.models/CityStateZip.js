@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CityStateZip model module.
  * @module com.ultracart.admin.v2.models/CityStateZip
- * @version 4.0.185
+ * @version 4.0.186
  */
 var CityStateZip = /*#__PURE__*/function () {
   /**

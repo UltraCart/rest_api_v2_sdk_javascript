@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **managed_by** | **String** | Managed by (defaults to UltraCart) | [optional] 
 **pause_days** | **Number** | Number of days to pause | [optional] 
 **pause_until_date** | **String** | Wait for this step to happen until the specified date | [optional] 
+**pause_until_day_of_month** | **Number** | Pause until a specific day of the month | [optional] 
+**pause_until_minimum_delay_days** | **Number** | Pause at least this many days between the last order and the calculated next day of month | [optional] 
 **preshipment_notice_days** | **Number** | If set, a pre-shipment notice is sent to the customer this many days in advance | [optional] 
 **recurring_merchant_item_id** | **String** | Item id to rebill | [optional] 
 **recurring_merchant_item_oid** | **Number** | Item object identifier to rebill | [optional] 
@@ -32,6 +34,8 @@ Name | Type | Description | Notes
 * `loop` (value: `"loop"`)
 
 * `kit only` (value: `"kit only"`)
+
+* `pause until` (value: `"pause until"`)
 
 
 

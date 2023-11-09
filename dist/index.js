@@ -1791,6 +1791,24 @@ Object.defineProperty(exports, "CustomerTaxCodes", {
     return _CustomerTaxCodes["default"];
   }
 });
+Object.defineProperty(exports, "CustomerWishListItem", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerWishListItem["default"];
+  }
+});
+Object.defineProperty(exports, "CustomerWishListItemResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerWishListItemResponse["default"];
+  }
+});
+Object.defineProperty(exports, "CustomerWishListItemsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerWishListItemsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "CustomersResponse", {
   enumerable: true,
   get: function get() {
@@ -5491,6 +5509,12 @@ var _CustomerStoreCreditResponse = _interopRequireDefault(require("./com.ultraca
 var _CustomerTag = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerTag"));
 
 var _CustomerTaxCodes = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerTaxCodes"));
+
+var _CustomerWishListItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerWishListItem"));
+
+var _CustomerWishListItemResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerWishListItemResponse"));
+
+var _CustomerWishListItemsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerWishListItemsResponse"));
 
 var _CustomersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomersResponse"));
 

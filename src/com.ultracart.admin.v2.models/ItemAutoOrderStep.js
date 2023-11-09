@@ -18,7 +18,7 @@ import ItemAutoOrderStepGrandfatherPricing from './ItemAutoOrderStepGrandfatherP
 /**
  * The ItemAutoOrderStep model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStep
- * @version 4.0.186
+ * @version 4.0.187
  */
 class ItemAutoOrderStep {
     /**
@@ -69,6 +69,12 @@ class ItemAutoOrderStep {
             }
             if (data.hasOwnProperty('pause_until_date')) {
                 obj['pause_until_date'] = ApiClient.convertToType(data['pause_until_date'], 'String');
+            }
+            if (data.hasOwnProperty('pause_until_day_of_month')) {
+                obj['pause_until_day_of_month'] = ApiClient.convertToType(data['pause_until_day_of_month'], 'Number');
+            }
+            if (data.hasOwnProperty('pause_until_minimum_delay_days')) {
+                obj['pause_until_minimum_delay_days'] = ApiClient.convertToType(data['pause_until_minimum_delay_days'], 'Number');
             }
             if (data.hasOwnProperty('preshipment_notice_days')) {
                 obj['preshipment_notice_days'] = ApiClient.convertToType(data['preshipment_notice_days'], 'Number');
@@ -142,6 +148,18 @@ ItemAutoOrderStep.prototype['pause_days'] = undefined;
  * @member {String} pause_until_date
  */
 ItemAutoOrderStep.prototype['pause_until_date'] = undefined;
+
+/**
+ * Pause until a specific day of the month
+ * @member {Number} pause_until_day_of_month
+ */
+ItemAutoOrderStep.prototype['pause_until_day_of_month'] = undefined;
+
+/**
+ * Pause at least this many days between the last order and the calculated next day of month
+ * @member {Number} pause_until_minimum_delay_days
+ */
+ItemAutoOrderStep.prototype['pause_until_minimum_delay_days'] = undefined;
 
 /**
  * If set, a pre-shipment notice is sent to the customer this many days in advance
@@ -224,7 +242,13 @@ ItemAutoOrderStep['TypeEnum'] = {
      * value: "kit only"
      * @const
      */
-    "kit only": "kit only"
+    "kit only": "kit only",
+
+    /**
+     * value: "pause until"
+     * @const
+     */
+    "pause until": "pause until"
 };
 
 

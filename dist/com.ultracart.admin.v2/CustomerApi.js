@@ -31,6 +31,12 @@ var _CustomerStoreCreditAddRequest = _interopRequireDefault(require("../com.ultr
 
 var _CustomerStoreCreditResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerStoreCreditResponse"));
 
+var _CustomerWishListItem = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerWishListItem"));
+
+var _CustomerWishListItemResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerWishListItemResponse"));
+
+var _CustomerWishListItemsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerWishListItemsResponse"));
+
 var _CustomersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomersResponse"));
 
 var _DataTablesServerSideResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/DataTablesServerSideResponse"));
@@ -62,7 +68,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.0.185
+* @version 4.0.186
 */
 var CustomerApi = /*#__PURE__*/function () {
   /**
@@ -199,6 +205,50 @@ var CustomerApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = null;
       return this.apiClient.callApi('/customer/customers/{customer_profile_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the deleteWishListItem operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~deleteWishListItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItem} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a customer wishlist item
+     * Delete a customer wishlist item 
+     * @param {Number} customer_profile_oid The customer oid for this wishlist.
+     * @param {Number} customer_wishlist_item_oid The wishlist oid for this wishlist item to delete.
+     * @param {module:com.ultracart.admin.v2/CustomerApi~deleteWishListItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerWishListItem}
+     */
+
+  }, {
+    key: "deleteWishListItem",
+    value: function deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid, callback) {
+      var postBody = null; // verify the required parameter 'customer_profile_oid' is set
+
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling deleteWishListItem");
+      } // verify the required parameter 'customer_wishlist_item_oid' is set
+
+
+      if (customer_wishlist_item_oid === undefined || customer_wishlist_item_oid === null) {
+        throw new Error("Missing the required parameter 'customer_wishlist_item_oid' when calling deleteWishListItem");
+      }
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid,
+        'customer_wishlist_item_oid': customer_wishlist_item_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _CustomerWishListItem["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getCustomer operation.
@@ -378,6 +428,87 @@ var CustomerApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _CustomerStoreCreditResponse["default"];
       return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/store_credit', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getCustomerWishList operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerWishListCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve wishlist items for customer
+     * Retrieve wishlist items for customer. 
+     * @param {Number} customer_profile_oid The customer oid for this wishlist.
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerWishListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerWishListItemsResponse}
+     */
+
+  }, {
+    key: "getCustomerWishList",
+    value: function getCustomerWishList(customer_profile_oid, callback) {
+      var postBody = null; // verify the required parameter 'customer_profile_oid' is set
+
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling getCustomerWishList");
+      }
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _CustomerWishListItemsResponse["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/wishlist', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the getCustomerWishListItem operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerWishListItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve wishlist item for customer
+     * Retrieve wishlist item for customer. 
+     * @param {Number} customer_profile_oid The customer oid for this wishlist.
+     * @param {Number} customer_wishlist_item_oid The wishlist oid for this wishlist item.
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerWishListItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerWishListItemResponse}
+     */
+
+  }, {
+    key: "getCustomerWishListItem",
+    value: function getCustomerWishListItem(customer_profile_oid, customer_wishlist_item_oid, callback) {
+      var postBody = null; // verify the required parameter 'customer_profile_oid' is set
+
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling getCustomerWishListItem");
+      } // verify the required parameter 'customer_wishlist_item_oid' is set
+
+
+      if (customer_wishlist_item_oid === undefined || customer_wishlist_item_oid === null) {
+        throw new Error("Missing the required parameter 'customer_wishlist_item_oid' when calling getCustomerWishListItem");
+      }
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid,
+        'customer_wishlist_item_oid': customer_wishlist_item_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _CustomerWishListItemResponse["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the getCustomers operation.
@@ -677,6 +808,49 @@ var CustomerApi = /*#__PURE__*/function () {
       return this.apiClient.callApi('/customer/customers', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
+     * Callback function to receive the result of the insertWishListItem operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~insertWishListItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItem} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a customer wishlist item
+     * Insert a customer wishlist item 
+     * @param {Number} customer_profile_oid The customer oid for this wishlist.
+     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItem} wishlist_item Wishlist item to insert
+     * @param {module:com.ultracart.admin.v2/CustomerApi~insertWishListItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerWishListItem}
+     */
+
+  }, {
+    key: "insertWishListItem",
+    value: function insertWishListItem(customer_profile_oid, wishlist_item, callback) {
+      var postBody = wishlist_item; // verify the required parameter 'customer_profile_oid' is set
+
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling insertWishListItem");
+      } // verify the required parameter 'wishlist_item' is set
+
+
+      if (wishlist_item === undefined || wishlist_item === null) {
+        throw new Error("Missing the required parameter 'wishlist_item' when calling insertWishListItem");
+      }
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _CustomerWishListItem["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/wishlist', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
      * Callback function to receive the result of the mergeCustomer operation.
      * @callback module:com.ultracart.admin.v2/CustomerApi~mergeCustomerCallback
      * @param {String} error Error message, if any.
@@ -847,6 +1021,56 @@ var CustomerApi = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _CustomerEmailListChanges["default"];
       return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/email_lists', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+    /**
+     * Callback function to receive the result of the updateWishListItem operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~updateWishListItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItem} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a customer wishlist item
+     * Update a customer wishlist item 
+     * @param {Number} customer_profile_oid The customer oid for this wishlist.
+     * @param {Number} customer_wishlist_item_oid The wishlist oid for this wishlist item.
+     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItem} wishlist_item Wishlist item to update
+     * @param {module:com.ultracart.admin.v2/CustomerApi~updateWishListItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerWishListItem}
+     */
+
+  }, {
+    key: "updateWishListItem",
+    value: function updateWishListItem(customer_profile_oid, customer_wishlist_item_oid, wishlist_item, callback) {
+      var postBody = wishlist_item; // verify the required parameter 'customer_profile_oid' is set
+
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling updateWishListItem");
+      } // verify the required parameter 'customer_wishlist_item_oid' is set
+
+
+      if (customer_wishlist_item_oid === undefined || customer_wishlist_item_oid === null) {
+        throw new Error("Missing the required parameter 'customer_wishlist_item_oid' when calling updateWishListItem");
+      } // verify the required parameter 'wishlist_item' is set
+
+
+      if (wishlist_item === undefined || wishlist_item === null) {
+        throw new Error("Missing the required parameter 'wishlist_item' when calling updateWishListItem");
+      }
+
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid,
+        'customer_wishlist_item_oid': customer_wishlist_item_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _CustomerWishListItem["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
     /**
      * Callback function to receive the result of the validateEmailVerificationToken operation.
