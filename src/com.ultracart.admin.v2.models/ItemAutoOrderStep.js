@@ -34,7 +34,7 @@
   /**
    * The ItemAutoOrderStep model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrderStep
-   * @version 3.10.169
+   * @version 3.10.170
    */
 
   /**
@@ -69,6 +69,10 @@
         obj.pause_days = ApiClient.convertToType(data['pause_days'], 'Number');
       if (data.hasOwnProperty('pause_until_date'))
         obj.pause_until_date = ApiClient.convertToType(data['pause_until_date'], 'String');
+      if (data.hasOwnProperty('pause_until_day_of_month'))
+        obj.pause_until_day_of_month = ApiClient.convertToType(data['pause_until_day_of_month'], 'Number');
+      if (data.hasOwnProperty('pause_until_minimum_delay_days'))
+        obj.pause_until_minimum_delay_days = ApiClient.convertToType(data['pause_until_minimum_delay_days'], 'Number');
       if (data.hasOwnProperty('preshipment_notice_days'))
         obj.preshipment_notice_days = ApiClient.convertToType(data['preshipment_notice_days'], 'Number');
       if (data.hasOwnProperty('recurring_merchant_item_id'))
@@ -130,6 +134,18 @@
    * @member {String} pause_until_date
    */
   exports.prototype.pause_until_date = undefined;
+
+  /**
+   * Pause until a specific day of the month
+   * @member {Number} pause_until_day_of_month
+   */
+  exports.prototype.pause_until_day_of_month = undefined;
+
+  /**
+   * Pause at least this many days between the last order and the calculated next day of month
+   * @member {Number} pause_until_minimum_delay_days
+   */
+  exports.prototype.pause_until_minimum_delay_days = undefined;
 
   /**
    * If set, a pre-shipment notice is sent to the customer this many days in advance
@@ -208,7 +224,13 @@
      * value: "kit only"
      * @const
      */
-    kit_only: "kit only"
+    kit_only: "kit only",
+
+    /**
+     * value: "pause until"
+     * @const
+     */
+    pause_until: "pause until"
   };
 
   return exports;
