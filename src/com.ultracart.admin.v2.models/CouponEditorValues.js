@@ -34,7 +34,7 @@
   /**
    * The CouponEditorValues model module.
    * @module com.ultracart.admin.v2.models/CouponEditorValues
-   * @version 3.10.171
+   * @version 3.10.172
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.currency_codes = ApiClient.convertToType(data['currency_codes'], ['String']);
       if (data.hasOwnProperty('deprecated_themes'))
         obj.deprecated_themes = ApiClient.convertToType(data['deprecated_themes'], [SimpleValue]);
+      if (data.hasOwnProperty('item_tags'))
+        obj.item_tags = ApiClient.convertToType(data['item_tags'], ['String']);
       if (data.hasOwnProperty('mix_and_match_names'))
         obj.mix_and_match_names = ApiClient.convertToType(data['mix_and_match_names'], ['String']);
       if (data.hasOwnProperty('shipping_methods'))
@@ -108,6 +110,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/SimpleValue>} deprecated_themes
    */
   exports.prototype.deprecated_themes = undefined;
+
+  /**
+   * Item tags
+   * @member {Array.<String>} item_tags
+   */
+  exports.prototype.item_tags = undefined;
 
   /**
    * mix_and_match_names

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **coupon_types_for_display** | [**[CouponType]**](CouponType.md) | coupon_types_for_display | [optional] 
 **currency_codes** | **[String]** | currency_codes | [optional] 
 **deprecated_themes** | [**[SimpleValue]**](SimpleValue.md) | deprecated_themes | [optional] 
+**item_tags** | **[String]** | Item tags | [optional] 
 **mix_and_match_names** | **[String]** | mix_and_match_names | [optional] 
 **shipping_methods** | **[String]** | shipping_methods | [optional] 
 **storefronts** | [**[SimpleValue]**](SimpleValue.md) | storefronts | [optional] 
