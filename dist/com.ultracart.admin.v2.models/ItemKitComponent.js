@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemKitComponent model module.
  * @module com.ultracart.admin.v2.models/ItemKitComponent
- * @version 4.0.187
+ * @version 4.0.188
  */
 var ItemKitComponent = /*#__PURE__*/function () {
   /**

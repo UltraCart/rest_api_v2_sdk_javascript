@@ -34,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Workflow service.
 * @module com.ultracart.admin.v2/WorkflowApi
-* @version 4.0.187
+* @version 4.0.188
 */
 var WorkflowApi = /*#__PURE__*/function () {
   /**

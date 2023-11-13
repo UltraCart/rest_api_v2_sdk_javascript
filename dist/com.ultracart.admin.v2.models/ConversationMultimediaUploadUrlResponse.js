@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationMultimediaUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse
- * @version 4.0.187
+ * @version 4.0.188
  */
 var ConversationMultimediaUploadUrlResponse = /*#__PURE__*/function () {
   /**

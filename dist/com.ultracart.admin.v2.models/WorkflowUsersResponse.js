@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WorkflowUsersResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowUsersResponse
- * @version 4.0.187
+ * @version 4.0.188
  */
 var WorkflowUsersResponse = /*#__PURE__*/function () {
   /**

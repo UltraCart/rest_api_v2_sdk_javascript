@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LookupResponse model module.
  * @module com.ultracart.admin.v2.models/LookupResponse
- * @version 4.0.187
+ * @version 4.0.188
  */
 var LookupResponse = /*#__PURE__*/function () {
   /**

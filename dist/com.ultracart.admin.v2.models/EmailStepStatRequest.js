@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailStepStatRequest model module.
  * @module com.ultracart.admin.v2.models/EmailStepStatRequest
- * @version 4.0.187
+ * @version 4.0.188
  */
 var EmailStepStatRequest = /*#__PURE__*/function () {
   /**

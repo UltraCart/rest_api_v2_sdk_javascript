@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WorkflowTasksRequest model module.
  * @module com.ultracart.admin.v2.models/WorkflowTasksRequest
- * @version 4.0.187
+ * @version 4.0.188
  */
 var WorkflowTasksRequest = /*#__PURE__*/function () {
   /**

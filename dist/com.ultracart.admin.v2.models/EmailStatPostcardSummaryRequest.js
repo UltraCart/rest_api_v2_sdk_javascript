@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailStatPostcardSummaryRequest model module.
  * @module com.ultracart.admin.v2.models/EmailStatPostcardSummaryRequest
- * @version 4.0.187
+ * @version 4.0.188
  */
 var EmailStatPostcardSummaryRequest = /*#__PURE__*/function () {
   /**

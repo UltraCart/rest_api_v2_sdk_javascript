@@ -18,7 +18,7 @@ import SimpleValue from './SimpleValue';
 /**
  * The CouponEditorValues model module.
  * @module com.ultracart.admin.v2.models/CouponEditorValues
- * @version 4.0.188
+ * @version 4.0.189
  */
 class CouponEditorValues {
     /**
@@ -63,6 +63,9 @@ class CouponEditorValues {
             }
             if (data.hasOwnProperty('deprecated_themes')) {
                 obj['deprecated_themes'] = ApiClient.convertToType(data['deprecated_themes'], [SimpleValue]);
+            }
+            if (data.hasOwnProperty('item_tags')) {
+                obj['item_tags'] = ApiClient.convertToType(data['item_tags'], ['String']);
             }
             if (data.hasOwnProperty('mix_and_match_names')) {
                 obj['mix_and_match_names'] = ApiClient.convertToType(data['mix_and_match_names'], ['String']);
@@ -115,6 +118,12 @@ CouponEditorValues.prototype['currency_codes'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/SimpleValue>} deprecated_themes
  */
 CouponEditorValues.prototype['deprecated_themes'] = undefined;
+
+/**
+ * Item tags
+ * @member {Array.<String>} item_tags
+ */
+CouponEditorValues.prototype['item_tags'] = undefined;
 
 /**
  * mix_and_match_names
