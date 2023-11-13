@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailStat model module.
  * @module com.ultracart.admin.v2.models/EmailStat
- * @version 4.0.186
+ * @version 4.0.187
  */
 var EmailStat = /*#__PURE__*/function () {
   /**

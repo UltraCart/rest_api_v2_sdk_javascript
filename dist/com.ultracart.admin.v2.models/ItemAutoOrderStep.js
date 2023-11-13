@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemAutoOrderStep model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStep
- * @version 4.0.186
+ * @version 4.0.187
  */
 var ItemAutoOrderStep = /*#__PURE__*/function () {
   /**
@@ -84,6 +84,14 @@ var ItemAutoOrderStep = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('pause_until_date')) {
           obj['pause_until_date'] = _ApiClient["default"].convertToType(data['pause_until_date'], 'String');
+        }
+
+        if (data.hasOwnProperty('pause_until_day_of_month')) {
+          obj['pause_until_day_of_month'] = _ApiClient["default"].convertToType(data['pause_until_day_of_month'], 'Number');
+        }
+
+        if (data.hasOwnProperty('pause_until_minimum_delay_days')) {
+          obj['pause_until_minimum_delay_days'] = _ApiClient["default"].convertToType(data['pause_until_minimum_delay_days'], 'Number');
         }
 
         if (data.hasOwnProperty('preshipment_notice_days')) {
@@ -169,6 +177,18 @@ ItemAutoOrderStep.prototype['pause_days'] = undefined;
 
 ItemAutoOrderStep.prototype['pause_until_date'] = undefined;
 /**
+ * Pause until a specific day of the month
+ * @member {Number} pause_until_day_of_month
+ */
+
+ItemAutoOrderStep.prototype['pause_until_day_of_month'] = undefined;
+/**
+ * Pause at least this many days between the last order and the calculated next day of month
+ * @member {Number} pause_until_minimum_delay_days
+ */
+
+ItemAutoOrderStep.prototype['pause_until_minimum_delay_days'] = undefined;
+/**
  * If set, a pre-shipment notice is sent to the customer this many days in advance
  * @member {Number} preshipment_notice_days
  */
@@ -245,7 +265,13 @@ ItemAutoOrderStep['TypeEnum'] = {
    * value: "kit only"
    * @const
    */
-  "kit only": "kit only"
+  "kit only": "kit only",
+
+  /**
+   * value: "pause until"
+   * @const
+   */
+  "pause until": "pause until"
 };
 var _default = ItemAutoOrderStep;
 exports["default"] = _default;

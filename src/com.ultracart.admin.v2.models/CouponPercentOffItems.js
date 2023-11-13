@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponPercentOffItems model module.
  * @module com.ultracart.admin.v2.models/CouponPercentOffItems
- * @version 4.0.187
+ * @version 4.0.188
  */
 class CouponPercentOffItems {
     /**
@@ -50,8 +50,14 @@ class CouponPercentOffItems {
             if (data.hasOwnProperty('discount_percent')) {
                 obj['discount_percent'] = ApiClient.convertToType(data['discount_percent'], 'Number');
             }
+            if (data.hasOwnProperty('excluded_item_tags')) {
+                obj['excluded_item_tags'] = ApiClient.convertToType(data['excluded_item_tags'], ['String']);
+            }
             if (data.hasOwnProperty('excluded_items')) {
                 obj['excluded_items'] = ApiClient.convertToType(data['excluded_items'], ['String']);
+            }
+            if (data.hasOwnProperty('item_tags')) {
+                obj['item_tags'] = ApiClient.convertToType(data['item_tags'], ['String']);
             }
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], ['String']);
@@ -73,10 +79,22 @@ class CouponPercentOffItems {
 CouponPercentOffItems.prototype['discount_percent'] = undefined;
 
 /**
+ * A list of item tags which cannot be discounted.
+ * @member {Array.<String>} excluded_item_tags
+ */
+CouponPercentOffItems.prototype['excluded_item_tags'] = undefined;
+
+/**
  * A list of items which cannot be discounted.
  * @member {Array.<String>} excluded_items
  */
 CouponPercentOffItems.prototype['excluded_items'] = undefined;
+
+/**
+ * An optional list of item tags which will receive a discount.  If blank, discount applies to all items except excluded items.
+ * @member {Array.<String>} item_tags
+ */
+CouponPercentOffItems.prototype['item_tags'] = undefined;
 
 /**
  * An optional list of items which will receive a discount.  If blank, discount applies to all items except excluded items.

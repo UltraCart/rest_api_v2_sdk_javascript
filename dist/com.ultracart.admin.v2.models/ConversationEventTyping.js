@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ConversationEventTyping model module.
  * @module com.ultracart.admin.v2.models/ConversationEventTyping
- * @version 4.0.186
+ * @version 4.0.187
  */
 var ConversationEventTyping = /*#__PURE__*/function () {
   /**

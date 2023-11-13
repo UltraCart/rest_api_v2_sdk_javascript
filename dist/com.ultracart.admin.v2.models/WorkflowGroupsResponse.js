@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WorkflowGroupsResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowGroupsResponse
- * @version 4.0.186
+ * @version 4.0.187
  */
 var WorkflowGroupsResponse = /*#__PURE__*/function () {
   /**

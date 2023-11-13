@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerWishListItemResponse model module.
  * @module com.ultracart.admin.v2.models/CustomerWishListItemResponse
- * @version 4.0.186
+ * @version 4.0.187
  */
 var CustomerWishListItemResponse = /*#__PURE__*/function () {
   /**
