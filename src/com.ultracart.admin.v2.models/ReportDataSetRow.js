@@ -34,7 +34,7 @@
   /**
    * The ReportDataSetRow model module.
    * @module com.ultracart.admin.v2.models/ReportDataSetRow
-   * @version 3.10.172
+   * @version 3.10.173
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ItemCheckout model module.
    * @module com.ultracart.admin.v2.models/ItemCheckout
-   * @version 3.10.172
+   * @version 3.10.173
    */
 
   /**

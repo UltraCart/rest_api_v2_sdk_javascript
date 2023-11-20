@@ -34,7 +34,7 @@
   /**
    * The LookupRequest model module.
    * @module com.ultracart.admin.v2.models/LookupRequest
-   * @version 3.10.172
+   * @version 3.10.173
    */
 
   /**

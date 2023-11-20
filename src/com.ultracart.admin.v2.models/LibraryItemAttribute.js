@@ -34,7 +34,7 @@
   /**
    * The LibraryItemAttribute model module.
    * @module com.ultracart.admin.v2.models/LibraryItemAttribute
-   * @version 3.10.172
+   * @version 3.10.173
    */
 
   /**

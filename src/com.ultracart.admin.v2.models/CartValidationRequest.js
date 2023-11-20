@@ -34,7 +34,7 @@
   /**
    * The CartValidationRequest model module.
    * @module com.ultracart.admin.v2.models/CartValidationRequest
-   * @version 3.10.172
+   * @version 3.10.173
    */
 
   /**
