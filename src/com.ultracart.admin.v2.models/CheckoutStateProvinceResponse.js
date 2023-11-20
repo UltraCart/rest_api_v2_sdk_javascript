@@ -17,7 +17,7 @@ import StateProvince from './StateProvince';
 /**
  * The CheckoutStateProvinceResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutStateProvinceResponse
- * @version 4.0.190
+ * @version 4.0.191
  */
 class CheckoutStateProvinceResponse {
     /**

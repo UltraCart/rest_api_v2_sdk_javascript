@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerReviewer model module.
  * @module com.ultracart.admin.v2.models/CustomerReviewer
- * @version 4.0.189
+ * @version 4.0.190
  */
 var CustomerReviewer = /*#__PURE__*/function () {
   /**

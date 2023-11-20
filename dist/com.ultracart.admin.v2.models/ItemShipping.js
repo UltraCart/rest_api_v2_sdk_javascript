@@ -34,7 +34,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ItemShipping model module.
  * @module com.ultracart.admin.v2.models/ItemShipping
- * @version 4.0.189
+ * @version 4.0.190
  */
 var ItemShipping = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ import ScreenRecordingPageViewParameter from './ScreenRecordingPageViewParameter
 /**
  * The ScreenRecordingPageView model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageView
- * @version 4.0.190
+ * @version 4.0.191
  */
 class ScreenRecordingPageView {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CustomerProperty model module.
  * @module com.ultracart.admin.v2.models/CustomerProperty
- * @version 4.0.189
+ * @version 4.0.190
  */
 var CustomerProperty = /*#__PURE__*/function () {
   /**

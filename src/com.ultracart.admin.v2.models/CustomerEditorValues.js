@@ -19,7 +19,7 @@ import CustomerAffiliate from './CustomerAffiliate';
 /**
  * The CustomerEditorValues model module.
  * @module com.ultracart.admin.v2.models/CustomerEditorValues
- * @version 4.0.190
+ * @version 4.0.191
  */
 class CustomerEditorValues {
     /**

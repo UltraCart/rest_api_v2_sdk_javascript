@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderPaymentHealthBenefitCard model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard
- * @version 4.0.190
+ * @version 4.0.191
  */
 class OrderPaymentHealthBenefitCard {
     /**

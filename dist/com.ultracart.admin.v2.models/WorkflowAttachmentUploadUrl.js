@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WorkflowAttachmentUploadUrl model module.
  * @module com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrl
- * @version 4.0.189
+ * @version 4.0.190
  */
 var WorkflowAttachmentUploadUrl = /*#__PURE__*/function () {
   /**
