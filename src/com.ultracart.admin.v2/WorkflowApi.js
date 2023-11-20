@@ -25,7 +25,7 @@ import WorkflowUsersResponse from '../com.ultracart.admin.v2.models/WorkflowUser
 /**
 * Workflow service.
 * @module com.ultracart.admin.v2/WorkflowApi
-* @version 4.0.189
+* @version 4.0.190
 */
 export default class WorkflowApi {
 
@@ -217,7 +217,7 @@ export default class WorkflowApi {
      * Callback function to receive the result of the getWorkflowTaskByObjectType operation.
      * @callback module:com.ultracart.admin.v2/WorkflowApi~getWorkflowTaskByObjectTypeCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/WorkflowTaskResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/WorkflowTasksResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -227,7 +227,7 @@ export default class WorkflowApi {
      * @param {String} object_type 
      * @param {String} object_id 
      * @param {module:com.ultracart.admin.v2/WorkflowApi~getWorkflowTaskByObjectTypeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/WorkflowTaskResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/WorkflowTasksResponse}
      */
     getWorkflowTaskByObjectType(object_type, object_id, callback) {
       let postBody = null;
@@ -254,7 +254,7 @@ export default class WorkflowApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = WorkflowTaskResponse;
+      let returnType = WorkflowTasksResponse;
       return this.apiClient.callApi(
         '/workflow/tasks/by/{object_type}/{object_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponEditorValues model module.
  * @module com.ultracart.admin.v2.models/CouponEditorValues
- * @version 4.0.188
+ * @version 4.0.189
  */
 var CouponEditorValues = /*#__PURE__*/function () {
   /**
@@ -76,6 +76,10 @@ var CouponEditorValues = /*#__PURE__*/function () {
 
         if (data.hasOwnProperty('deprecated_themes')) {
           obj['deprecated_themes'] = _ApiClient["default"].convertToType(data['deprecated_themes'], [_SimpleValue["default"]]);
+        }
+
+        if (data.hasOwnProperty('item_tags')) {
+          obj['item_tags'] = _ApiClient["default"].convertToType(data['item_tags'], ['String']);
         }
 
         if (data.hasOwnProperty('mix_and_match_names')) {
@@ -136,6 +140,12 @@ CouponEditorValues.prototype['currency_codes'] = undefined;
  */
 
 CouponEditorValues.prototype['deprecated_themes'] = undefined;
+/**
+ * Item tags
+ * @member {Array.<String>} item_tags
+ */
+
+CouponEditorValues.prototype['item_tags'] = undefined;
 /**
  * mix_and_match_names
  * @member {Array.<String>} mix_and_match_names

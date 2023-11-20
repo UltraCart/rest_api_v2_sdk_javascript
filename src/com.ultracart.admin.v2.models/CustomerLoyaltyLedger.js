@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerLoyaltyLedger model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyaltyLedger
- * @version 4.0.189
+ * @version 4.0.190
  */
 class CustomerLoyaltyLedger {
     /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LibraryItemQuery model module.
  * @module com.ultracart.admin.v2.models/LibraryItemQuery
- * @version 4.0.188
+ * @version 4.0.189
  */
 var LibraryItemQuery = /*#__PURE__*/function () {
   /**

@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## getWorkflowTaskByObjectType
 
-> WorkflowTaskResponse getWorkflowTaskByObjectType(object_type, object_id)
+> WorkflowTasksResponse getWorkflowTaskByObjectType(object_type, object_id)
 
 Retrieve a workflow task by object type and id
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WorkflowTaskResponse**](WorkflowTaskResponse.md)
+[**WorkflowTasksResponse**](WorkflowTasksResponse.md)
 
 ### Authorization
 

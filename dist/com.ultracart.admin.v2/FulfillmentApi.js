@@ -28,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Fulfillment service.
 * @module com.ultracart.admin.v2/FulfillmentApi
-* @version 4.0.188
+* @version 4.0.189
 */
 var FulfillmentApi = /*#__PURE__*/function () {
   /**

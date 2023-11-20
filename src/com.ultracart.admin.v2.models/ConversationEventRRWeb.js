@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationEventRRWeb model module.
  * @module com.ultracart.admin.v2.models/ConversationEventRRWeb
- * @version 4.0.189
+ * @version 4.0.190
  */
 class ConversationEventRRWeb {
     /**
