@@ -34,7 +34,7 @@
   /**
    * Workflow service.
    * @module com.ultracart.admin.v2/WorkflowApi
-   * @version 3.10.173
+   * @version 3.10.174
    */
 
   /**
