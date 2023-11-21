@@ -17,7 +17,7 @@ import CouponTierQuantityPercent from './CouponTierQuantityPercent';
 /**
  * The CouponTieredPercentOffItems model module.
  * @module com.ultracart.admin.v2.models/CouponTieredPercentOffItems
- * @version 4.0.191
+ * @version 4.0.192
  */
 class CouponTieredPercentOffItems {
     /**
@@ -48,6 +48,9 @@ class CouponTieredPercentOffItems {
         if (data) {
             obj = obj || new CouponTieredPercentOffItems();
 
+            if (data.hasOwnProperty('item_tags')) {
+                obj['item_tags'] = ApiClient.convertToType(data['item_tags'], ['String']);
+            }
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], ['String']);
             }
@@ -63,6 +66,12 @@ class CouponTieredPercentOffItems {
 
 
 }
+
+/**
+ * An optional list of item tags which will receive a discount.  If blank, discount applies to all items except excluded items.
+ * @member {Array.<String>} item_tags
+ */
+CouponTieredPercentOffItems.prototype['item_tags'] = undefined;
 
 /**
  * A list of items of which at least one must be purchased for coupon to be valid.

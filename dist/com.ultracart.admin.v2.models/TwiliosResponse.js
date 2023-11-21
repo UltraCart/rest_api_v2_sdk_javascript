@@ -26,7 +26,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The TwiliosResponse model module.
  * @module com.ultracart.admin.v2.models/TwiliosResponse
- * @version 4.0.190
+ * @version 4.0.191
  */
 var TwiliosResponse = /*#__PURE__*/function () {
   /**

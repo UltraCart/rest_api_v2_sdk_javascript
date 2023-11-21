@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ThumbnailParametersRequest model module.
  * @module com.ultracart.admin.v2.models/ThumbnailParametersRequest
- * @version 4.0.191
+ * @version 4.0.192
  */
 class ThumbnailParametersRequest {
     /**

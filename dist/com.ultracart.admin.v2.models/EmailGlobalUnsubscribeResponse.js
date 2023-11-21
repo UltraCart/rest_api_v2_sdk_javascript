@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The EmailGlobalUnsubscribeResponse model module.
  * @module com.ultracart.admin.v2.models/EmailGlobalUnsubscribeResponse
- * @version 4.0.190
+ * @version 4.0.191
  */
 var EmailGlobalUnsubscribeResponse = /*#__PURE__*/function () {
   /**

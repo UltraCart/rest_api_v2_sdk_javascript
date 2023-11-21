@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponPercentOffItemsAndFreeShipping model module.
  * @module com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping
- * @version 4.0.190
+ * @version 4.0.191
  */
 var CouponPercentOffItemsAndFreeShipping = /*#__PURE__*/function () {
   /**
@@ -58,8 +58,16 @@ var CouponPercentOffItemsAndFreeShipping = /*#__PURE__*/function () {
           obj['discount_percent'] = _ApiClient["default"].convertToType(data['discount_percent'], 'Number');
         }
 
+        if (data.hasOwnProperty('excluded_item_tags')) {
+          obj['excluded_item_tags'] = _ApiClient["default"].convertToType(data['excluded_item_tags'], ['String']);
+        }
+
         if (data.hasOwnProperty('excluded_items')) {
           obj['excluded_items'] = _ApiClient["default"].convertToType(data['excluded_items'], ['String']);
+        }
+
+        if (data.hasOwnProperty('item_tags')) {
+          obj['item_tags'] = _ApiClient["default"].convertToType(data['item_tags'], ['String']);
         }
 
         if (data.hasOwnProperty('items')) {
@@ -81,11 +89,23 @@ var CouponPercentOffItemsAndFreeShipping = /*#__PURE__*/function () {
 
 CouponPercentOffItemsAndFreeShipping.prototype['discount_percent'] = undefined;
 /**
+ * A list of item tags which cannot be discounted.
+ * @member {Array.<String>} excluded_item_tags
+ */
+
+CouponPercentOffItemsAndFreeShipping.prototype['excluded_item_tags'] = undefined;
+/**
  * A list of items which cannot be discounted.
  * @member {Array.<String>} excluded_items
  */
 
 CouponPercentOffItemsAndFreeShipping.prototype['excluded_items'] = undefined;
+/**
+ * An optional list of item tags which will receive a discount.  If blank, discount applies to all items except excluded items.
+ * @member {Array.<String>} item_tags
+ */
+
+CouponPercentOffItemsAndFreeShipping.prototype['item_tags'] = undefined;
 /**
  * An optional list of items which will receive a discount.  If blank, discount applies to all items except excluded items.
  * @member {Array.<String>} items
