@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The WorkflowNote model module.
  * @module com.ultracart.admin.v2.models/WorkflowNote
- * @version 4.0.191
+ * @version 4.0.192
  */
 var WorkflowNote = /*#__PURE__*/function () {
   /**

@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CouponTieredPercentOffItems model module.
  * @module com.ultracart.admin.v2.models/CouponTieredPercentOffItems
- * @version 4.0.191
+ * @version 4.0.192
  */
 var CouponTieredPercentOffItems = /*#__PURE__*/function () {
   /**
@@ -56,6 +56,10 @@ var CouponTieredPercentOffItems = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new CouponTieredPercentOffItems();
 
+        if (data.hasOwnProperty('item_tags')) {
+          obj['item_tags'] = _ApiClient["default"].convertToType(data['item_tags'], ['String']);
+        }
+
         if (data.hasOwnProperty('items')) {
           obj['items'] = _ApiClient["default"].convertToType(data['items'], ['String']);
         }
@@ -76,10 +80,16 @@ var CouponTieredPercentOffItems = /*#__PURE__*/function () {
   return CouponTieredPercentOffItems;
 }();
 /**
+ * An optional list of item tags which will receive a discount.  If blank, discount applies to all items except excluded items.
+ * @member {Array.<String>} item_tags
+ */
+
+
+CouponTieredPercentOffItems.prototype['item_tags'] = undefined;
+/**
  * A list of items of which at least one must be purchased for coupon to be valid.
  * @member {Array.<String>} items
  */
-
 
 CouponTieredPercentOffItems.prototype['items'] = undefined;
 /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The ScreenRecordingMultifield model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingMultifield
- * @version 4.0.191
+ * @version 4.0.192
  */
 var ScreenRecordingMultifield = /*#__PURE__*/function () {
   /**

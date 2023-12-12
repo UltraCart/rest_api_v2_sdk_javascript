@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The AccountsReceivableRetryTransactionReject model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject
- * @version 4.0.191
+ * @version 4.0.192
  */
 var AccountsReceivableRetryTransactionReject = /*#__PURE__*/function () {
   /**
