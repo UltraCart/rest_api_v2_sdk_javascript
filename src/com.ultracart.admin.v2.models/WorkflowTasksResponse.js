@@ -34,7 +34,7 @@
   /**
    * The WorkflowTasksResponse model module.
    * @module com.ultracart.admin.v2.models/WorkflowTasksResponse
-   * @version 3.10.177
+   * @version 3.10.178
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
+      if (data.hasOwnProperty('task_context'))
+        obj.task_context = ApiClient.convertToType(data['task_context'], 'String');
       if (data.hasOwnProperty('tasks'))
         obj.tasks = ApiClient.convertToType(data['tasks'], [WorkflowTask]);
       if (data.hasOwnProperty('warning'))
@@ -84,6 +86,12 @@
    * @member {Boolean} success
    */
   exports.prototype.success = undefined;
+
+  /**
+   * User friendly string of the task context if querying for a specific object type/id
+   * @member {String} task_context
+   */
+  exports.prototype.task_context = undefined;
 
   /**
    * tasks

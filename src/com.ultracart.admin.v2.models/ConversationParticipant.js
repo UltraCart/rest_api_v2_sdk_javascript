@@ -34,7 +34,7 @@
   /**
    * The ConversationParticipant model module.
    * @module com.ultracart.admin.v2.models/ConversationParticipant
-   * @version 3.10.177
+   * @version 3.10.178
    */
 
   /**

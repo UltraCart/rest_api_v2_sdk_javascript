@@ -34,7 +34,7 @@
   /**
    * The WorkflowTask model module.
    * @module com.ultracart.admin.v2.models/WorkflowTask
-   * @version 3.10.177
+   * @version 3.10.178
    */
 
   /**
@@ -93,6 +93,8 @@
         obj.priority = ApiClient.convertToType(data['priority'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('task_context'))
+        obj.task_context = ApiClient.convertToType(data['task_context'], 'String');
       if (data.hasOwnProperty('task_details'))
         obj.task_details = ApiClient.convertToType(data['task_details'], 'String');
       if (data.hasOwnProperty('task_name'))
@@ -217,6 +219,12 @@
   exports.prototype.status = undefined;
 
   /**
+   * User friendly string of the task context
+   * @member {String} task_context
+   */
+  exports.prototype.task_context = undefined;
+
+  /**
    * Task Details
    * @member {String} task_details
    */
@@ -263,7 +271,13 @@
      * value: "customer profile"
      * @const
      */
-    customer_profile: "customer profile"
+    customer_profile: "customer profile",
+
+    /**
+     * value: "storefront"
+     * @const
+     */
+    storefront: "storefront"
   };
 
 
