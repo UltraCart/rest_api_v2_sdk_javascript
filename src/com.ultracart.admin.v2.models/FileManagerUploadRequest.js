@@ -34,7 +34,7 @@
   /**
    * The FileManagerUploadRequest model module.
    * @module com.ultracart.admin.v2.models/FileManagerUploadRequest
-   * @version 3.10.179
+   * @version 3.10.180
    */
 
   /**

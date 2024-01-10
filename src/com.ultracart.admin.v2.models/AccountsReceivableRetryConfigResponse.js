@@ -34,7 +34,7 @@
   /**
    * The AccountsReceivableRetryConfigResponse model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse
-   * @version 3.10.179
+   * @version 3.10.180
    */
 
   /**

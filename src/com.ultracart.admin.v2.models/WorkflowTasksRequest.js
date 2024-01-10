@@ -34,7 +34,7 @@
   /**
    * The WorkflowTasksRequest model module.
    * @module com.ultracart.admin.v2.models/WorkflowTasksRequest
-   * @version 3.10.179
+   * @version 3.10.180
    */
 
   /**
@@ -87,6 +87,8 @@
         obj.priority = ApiClient.convertToType(data['priority'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('tags'))
+        obj.tags = ApiClient.convertToType(data['tags'], ['String']);
       if (data.hasOwnProperty('unassigned'))
         obj.unassigned = ApiClient.convertToType(data['unassigned'], 'Boolean');
     }
@@ -187,6 +189,12 @@
    * @member {module:com.ultracart.admin.v2.models/WorkflowTasksRequest.StatusEnum} status
    */
   exports.prototype.status = undefined;
+
+  /**
+   * Tasks that are tagged with the specified tags
+   * @member {Array.<String>} tags
+   */
+  exports.prototype.tags = undefined;
 
   /**
    * Tasks that are unassigned to a user or group
