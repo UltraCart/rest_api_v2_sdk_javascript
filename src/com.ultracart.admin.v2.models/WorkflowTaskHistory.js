@@ -34,7 +34,7 @@
   /**
    * The WorkflowTaskHistory model module.
    * @module com.ultracart.admin.v2.models/WorkflowTaskHistory
-   * @version 3.10.178
+   * @version 3.10.179
    */
 
   /**

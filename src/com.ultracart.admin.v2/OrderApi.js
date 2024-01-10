@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.10.178
+   * @version 3.10.179
    */
 
   /**
@@ -1124,7 +1124,7 @@
 
     /**
      * Refund an order
-     * Perform a refund operation on an order and then update the order if successful 
+     * Perform a refund operation on an order and then update the order if successful.  All of the object properties ending in _refunded should be the TOTAL amount that should end up being refunded.  UltraCart will calculate the actual amount to refund based upon the prior refunds. 
      * @param {module:com.ultracart.admin.v2.models/Order} order Order to refund
      * @param {String} order_id The order id to refund.
      * @param {Object} opts Optional parameters

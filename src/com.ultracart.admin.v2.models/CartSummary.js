@@ -34,7 +34,7 @@
   /**
    * The CartSummary model module.
    * @module com.ultracart.admin.v2.models/CartSummary
-   * @version 3.10.178
+   * @version 3.10.179
    */
 
   /**
@@ -65,6 +65,10 @@
         obj.arbitrary_taxable_subtotal = Currency.constructFromObject(data['arbitrary_taxable_subtotal']);
       if (data.hasOwnProperty('health_benefit_card_amount'))
         obj.health_benefit_card_amount = Currency.constructFromObject(data['health_benefit_card_amount']);
+      if (data.hasOwnProperty('health_benefit_card_balance'))
+        obj.health_benefit_card_balance = Currency.constructFromObject(data['health_benefit_card_balance']);
+      if (data.hasOwnProperty('health_benefit_card_requirements'))
+        obj.health_benefit_card_requirements = ApiClient.convertToType(data['health_benefit_card_requirements'], 'String');
       if (data.hasOwnProperty('internal_gift_certificate_amount'))
         obj.internal_gift_certificate_amount = Currency.constructFromObject(data['internal_gift_certificate_amount']);
       if (data.hasOwnProperty('shipping_handling'))
@@ -119,6 +123,17 @@
    * @member {module:com.ultracart.admin.v2.models/Currency} health_benefit_card_amount
    */
   exports.prototype.health_benefit_card_amount = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} health_benefit_card_balance
+   */
+  exports.prototype.health_benefit_card_balance = undefined;
+
+  /**
+   * Health benefit card requirements
+   * @member {String} health_benefit_card_requirements
+   */
+  exports.prototype.health_benefit_card_requirements = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} internal_gift_certificate_amount

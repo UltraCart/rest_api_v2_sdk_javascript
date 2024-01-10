@@ -34,7 +34,7 @@
   /**
    * The WorkflowTask model module.
    * @module com.ultracart.admin.v2.models/WorkflowTask
-   * @version 3.10.178
+   * @version 3.10.179
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.created_dts = ApiClient.convertToType(data['created_dts'], 'String');
       if (data.hasOwnProperty('delay_until_dts'))
         obj.delay_until_dts = ApiClient.convertToType(data['delay_until_dts'], 'String');
+      if (data.hasOwnProperty('dependant_workflow_task_uuid'))
+        obj.dependant_workflow_task_uuid = ApiClient.convertToType(data['dependant_workflow_task_uuid'], 'String');
       if (data.hasOwnProperty('due_dts'))
         obj.due_dts = ApiClient.convertToType(data['due_dts'], 'String');
       if (data.hasOwnProperty('histories'))
@@ -91,8 +93,12 @@
         obj.object_url = ApiClient.convertToType(data['object_url'], 'String');
       if (data.hasOwnProperty('priority'))
         obj.priority = ApiClient.convertToType(data['priority'], 'String');
+      if (data.hasOwnProperty('related_workflow_task_uuid'))
+        obj.related_workflow_task_uuid = ApiClient.convertToType(data['related_workflow_task_uuid'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('tags'))
+        obj.tags = ApiClient.convertToType(data['tags'], ['String']);
       if (data.hasOwnProperty('task_context'))
         obj.task_context = ApiClient.convertToType(data['task_context'], 'String');
       if (data.hasOwnProperty('task_details'))
@@ -151,6 +157,12 @@
    * @member {String} delay_until_dts
    */
   exports.prototype.delay_until_dts = undefined;
+
+  /**
+   * Dependant Workflow Task UUID (must be completed before this task can be completed)
+   * @member {String} dependant_workflow_task_uuid
+   */
+  exports.prototype.dependant_workflow_task_uuid = undefined;
 
   /**
    * Date/time that the workflow task is due
@@ -213,10 +225,22 @@
   exports.prototype.priority = undefined;
 
   /**
+   * Related Workflow Task UUID
+   * @member {String} related_workflow_task_uuid
+   */
+  exports.prototype.related_workflow_task_uuid = undefined;
+
+  /**
    * Status of the workflow task
    * @member {module:com.ultracart.admin.v2.models/WorkflowTask.StatusEnum} status
    */
   exports.prototype.status = undefined;
+
+  /**
+   * Tags
+   * @member {Array.<String>} tags
+   */
+  exports.prototype.tags = undefined;
 
   /**
    * User friendly string of the task context
