@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **object_type** | **String** | Object Type | [optional] 
 **object_url** | **String** | Object URL | [optional] 
 **priority** | **String** | Priority | [optional] 
+**properties** | [**[Property]**](Property.md) | Properties | [optional] 
 **related_workflow_task_uuid** | **String** | Related Workflow Task UUID | [optional] 
 **status** | **String** | Status of the workflow task | [optional] 
 **tags** | **[String]** | Tags | [optional] 
