@@ -34,7 +34,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 3.10.181
+   * @version 3.10.182
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.current_stage = ApiClient.convertToType(data['current_stage'], 'String');
       if (data.hasOwnProperty('custom_field_1'))
         obj.custom_field_1 = ApiClient.convertToType(data['custom_field_1'], 'String');
+      if (data.hasOwnProperty('custom_field_10'))
+        obj.custom_field_10 = ApiClient.convertToType(data['custom_field_10'], 'String');
       if (data.hasOwnProperty('custom_field_2'))
         obj.custom_field_2 = ApiClient.convertToType(data['custom_field_2'], 'String');
       if (data.hasOwnProperty('custom_field_3'))
@@ -87,6 +89,10 @@
         obj.custom_field_6 = ApiClient.convertToType(data['custom_field_6'], 'String');
       if (data.hasOwnProperty('custom_field_7'))
         obj.custom_field_7 = ApiClient.convertToType(data['custom_field_7'], 'String');
+      if (data.hasOwnProperty('custom_field_8'))
+        obj.custom_field_8 = ApiClient.convertToType(data['custom_field_8'], 'String');
+      if (data.hasOwnProperty('custom_field_9'))
+        obj.custom_field_9 = ApiClient.convertToType(data['custom_field_9'], 'String');
       if (data.hasOwnProperty('customer_profile_oid'))
         obj.customer_profile_oid = ApiClient.convertToType(data['customer_profile_oid'], 'Number');
       if (data.hasOwnProperty('email'))
@@ -198,6 +204,12 @@
   exports.prototype.custom_field_1 = undefined;
 
   /**
+   * Custom field 10
+   * @member {String} custom_field_10
+   */
+  exports.prototype.custom_field_10 = undefined;
+
+  /**
    * Custom field 2
    * @member {String} custom_field_2
    */
@@ -232,6 +244,18 @@
    * @member {String} custom_field_7
    */
   exports.prototype.custom_field_7 = undefined;
+
+  /**
+   * Custom field 8
+   * @member {String} custom_field_8
+   */
+  exports.prototype.custom_field_8 = undefined;
+
+  /**
+   * Custom field 9
+   * @member {String} custom_field_9
+   */
+  exports.prototype.custom_field_9 = undefined;
 
   /**
    * The customer profile to find associated orders for
