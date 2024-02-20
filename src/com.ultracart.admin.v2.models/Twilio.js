@@ -34,7 +34,7 @@
   /**
    * The Twilio model module.
    * @module com.ultracart.admin.v2.models/Twilio
-   * @version 3.10.182
+   * @version 3.10.183
    */
 
   /**
@@ -57,12 +57,30 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('account_sid'))
         obj.account_sid = ApiClient.convertToType(data['account_sid'], 'String');
+      if (data.hasOwnProperty('api_key_id'))
+        obj.api_key_id = ApiClient.convertToType(data['api_key_id'], 'String');
+      if (data.hasOwnProperty('api_key_name'))
+        obj.api_key_name = ApiClient.convertToType(data['api_key_name'], 'String');
+      if (data.hasOwnProperty('api_key_secret'))
+        obj.api_key_secret = ApiClient.convertToType(data['api_key_secret'], 'String');
       if (data.hasOwnProperty('auth_token'))
         obj.auth_token = ApiClient.convertToType(data['auth_token'], 'String');
       if (data.hasOwnProperty('esp_twilio_uuid'))
         obj.esp_twilio_uuid = ApiClient.convertToType(data['esp_twilio_uuid'], 'String');
+      if (data.hasOwnProperty('inbound_twiml_app_sid'))
+        obj.inbound_twiml_app_sid = ApiClient.convertToType(data['inbound_twiml_app_sid'], 'String');
+      if (data.hasOwnProperty('outbound_twiml_app_sid'))
+        obj.outbound_twiml_app_sid = ApiClient.convertToType(data['outbound_twiml_app_sid'], 'String');
       if (data.hasOwnProperty('phone_numbers'))
         obj.phone_numbers = ApiClient.convertToType(data['phone_numbers'], ['String']);
+      if (data.hasOwnProperty('private_key_pem'))
+        obj.private_key_pem = ApiClient.convertToType(data['private_key_pem'], 'String');
+      if (data.hasOwnProperty('public_key_pem'))
+        obj.public_key_pem = ApiClient.convertToType(data['public_key_pem'], 'String');
+      if (data.hasOwnProperty('public_key_sid'))
+        obj.public_key_sid = ApiClient.convertToType(data['public_key_sid'], 'String');
+      if (data.hasOwnProperty('twilio_workspace_sid'))
+        obj.twilio_workspace_sid = ApiClient.convertToType(data['twilio_workspace_sid'], 'String');
     }
     return obj;
   }
@@ -71,6 +89,21 @@
    * @member {String} account_sid
    */
   exports.prototype.account_sid = undefined;
+
+  /**
+   * @member {String} api_key_id
+   */
+  exports.prototype.api_key_id = undefined;
+
+  /**
+   * @member {String} api_key_name
+   */
+  exports.prototype.api_key_name = undefined;
+
+  /**
+   * @member {String} api_key_secret
+   */
+  exports.prototype.api_key_secret = undefined;
 
   /**
    * @member {String} auth_token
@@ -83,9 +116,39 @@
   exports.prototype.esp_twilio_uuid = undefined;
 
   /**
+   * @member {String} inbound_twiml_app_sid
+   */
+  exports.prototype.inbound_twiml_app_sid = undefined;
+
+  /**
+   * @member {String} outbound_twiml_app_sid
+   */
+  exports.prototype.outbound_twiml_app_sid = undefined;
+
+  /**
    * @member {Array.<String>} phone_numbers
    */
   exports.prototype.phone_numbers = undefined;
+
+  /**
+   * @member {String} private_key_pem
+   */
+  exports.prototype.private_key_pem = undefined;
+
+  /**
+   * @member {String} public_key_pem
+   */
+  exports.prototype.public_key_pem = undefined;
+
+  /**
+   * @member {String} public_key_sid
+   */
+  exports.prototype.public_key_sid = undefined;
+
+  /**
+   * @member {String} twilio_workspace_sid
+   */
+  exports.prototype.twilio_workspace_sid = undefined;
 
   return exports;
 

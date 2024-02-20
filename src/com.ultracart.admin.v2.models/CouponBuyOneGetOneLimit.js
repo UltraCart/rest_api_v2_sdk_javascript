@@ -34,7 +34,7 @@
   /**
    * The CouponBuyOneGetOneLimit model module.
    * @module com.ultracart.admin.v2.models/CouponBuyOneGetOneLimit
-   * @version 3.10.182
+   * @version 3.10.183
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('item_tags'))
+        obj.item_tags = ApiClient.convertToType(data['item_tags'], ['String']);
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
       if (data.hasOwnProperty('limit'))
@@ -62,6 +64,12 @@
     }
     return obj;
   }
+
+  /**
+   * An optional list of item tags which will receive a discount.
+   * @member {Array.<String>} item_tags
+   */
+  exports.prototype.item_tags = undefined;
 
   /**
    * An optional list of items of which one must be purchased to receive free quantity of the same item.

@@ -34,7 +34,7 @@
   /**
    * The CouponPercentOffItemsWithItemsPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase
-   * @version 3.10.182
+   * @version 3.10.183
    */
 
   /**
@@ -57,12 +57,16 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('discount_percent'))
         obj.discount_percent = ApiClient.convertToType(data['discount_percent'], 'Number');
+      if (data.hasOwnProperty('item_tags'))
+        obj.item_tags = ApiClient.convertToType(data['item_tags'], ['String']);
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], ['String']);
       if (data.hasOwnProperty('limit'))
         obj.limit = ApiClient.convertToType(data['limit'], 'Number');
       if (data.hasOwnProperty('required_purchase_items'))
         obj.required_purchase_items = ApiClient.convertToType(data['required_purchase_items'], ['String']);
+      if (data.hasOwnProperty('required_purchase_items_tags'))
+        obj.required_purchase_items_tags = ApiClient.convertToType(data['required_purchase_items_tags'], ['String']);
     }
     return obj;
   }
@@ -72,6 +76,12 @@
    * @member {Number} discount_percent
    */
   exports.prototype.discount_percent = undefined;
+
+  /**
+   * An optional list of item tags which will receive a discount of one of the required purchased items is purchased.
+   * @member {Array.<String>} item_tags
+   */
+  exports.prototype.item_tags = undefined;
 
   /**
    * A list of items which will receive a discount if one of the required purchase items is purchased.
@@ -90,6 +100,12 @@
    * @member {Array.<String>} required_purchase_items
    */
   exports.prototype.required_purchase_items = undefined;
+
+  /**
+   * An optional list of item tags which are required to be purchased.
+   * @member {Array.<String>} required_purchase_items_tags
+   */
+  exports.prototype.required_purchase_items_tags = undefined;
 
   return exports;
 

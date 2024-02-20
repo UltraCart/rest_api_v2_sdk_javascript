@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentAuth model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuth
-   * @version 3.10.182
+   * @version 3.10.183
    */
 
   /**
@@ -63,6 +63,14 @@
         obj.jwt = ApiClient.convertToType(data['jwt'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('pbx_jwt'))
+        obj.pbx_jwt = ApiClient.convertToType(data['pbx_jwt'], 'String');
+      if (data.hasOwnProperty('pbx_voice_identity'))
+        obj.pbx_voice_identity = ApiClient.convertToType(data['pbx_voice_identity'], 'String');
+      if (data.hasOwnProperty('pbx_voice_token'))
+        obj.pbx_voice_token = ApiClient.convertToType(data['pbx_voice_token'], 'String');
+      if (data.hasOwnProperty('pbx_worker_token'))
+        obj.pbx_worker_token = ApiClient.convertToType(data['pbx_worker_token'], 'String');
       if (data.hasOwnProperty('twilio_accounts'))
         obj.twilio_accounts = ApiClient.convertToType(data['twilio_accounts'], [ConversationTwilioAccount]);
       if (data.hasOwnProperty('websocket_url'))
@@ -90,6 +98,26 @@
    * @member {String} merchant_id
    */
   exports.prototype.merchant_id = undefined;
+
+  /**
+   * @member {String} pbx_jwt
+   */
+  exports.prototype.pbx_jwt = undefined;
+
+  /**
+   * @member {String} pbx_voice_identity
+   */
+  exports.prototype.pbx_voice_identity = undefined;
+
+  /**
+   * @member {String} pbx_voice_token
+   */
+  exports.prototype.pbx_voice_token = undefined;
+
+  /**
+   * @member {String} pbx_worker_token
+   */
+  exports.prototype.pbx_worker_token = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationTwilioAccount>} twilio_accounts
