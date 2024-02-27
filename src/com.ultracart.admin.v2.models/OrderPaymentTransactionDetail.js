@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentTransactionDetail model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentTransactionDetail
-   * @version 3.10.183
+   * @version 3.10.184
    */
 
   /**

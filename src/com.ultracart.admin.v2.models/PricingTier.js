@@ -34,7 +34,7 @@
   /**
    * The PricingTier model module.
    * @module com.ultracart.admin.v2.models/PricingTier
-   * @version 3.10.183
+   * @version 3.10.184
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.auto_approve_cod = ApiClient.convertToType(data['auto_approve_cod'], 'Boolean');
       if (data.hasOwnProperty('auto_approve_purchase_order'))
         obj.auto_approve_purchase_order = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
+      if (data.hasOwnProperty('currency_code'))
+        obj.currency_code = ApiClient.convertToType(data['currency_code'], 'String');
       if (data.hasOwnProperty('default_on_wholesale_signup'))
         obj.default_on_wholesale_signup = ApiClient.convertToType(data['default_on_wholesale_signup'], 'Boolean');
       if (data.hasOwnProperty('default_percentage_discount'))
@@ -165,6 +167,12 @@
    * @member {Boolean} auto_approve_purchase_order
    */
   exports.prototype.auto_approve_purchase_order = undefined;
+
+  /**
+   * Any currency code specified on this pricing tier will force a shopping cart into that currency
+   * @member {String} currency_code
+   */
+  exports.prototype.currency_code = undefined;
 
   /**
    * Default on wholesale signup
