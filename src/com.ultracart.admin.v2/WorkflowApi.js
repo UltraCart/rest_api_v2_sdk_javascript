@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse', 'com.ultracart.admin.v2.models/WorkflowGroupsResponse', 'com.ultracart.admin.v2.models/WorkflowTask', 'com.ultracart.admin.v2.models/WorkflowTaskResponse', 'com.ultracart.admin.v2.models/WorkflowTasksRequest', 'com.ultracart.admin.v2.models/WorkflowTasksResponse', 'com.ultracart.admin.v2.models/WorkflowUserResponse', 'com.ultracart.admin.v2.models/WorkflowUsersResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse', 'com.ultracart.admin.v2.models/WorkflowGroupsResponse', 'com.ultracart.admin.v2.models/WorkflowTask', 'com.ultracart.admin.v2.models/WorkflowTaskResponse', 'com.ultracart.admin.v2.models/WorkflowTaskTagsResponse', 'com.ultracart.admin.v2.models/WorkflowTasksRequest', 'com.ultracart.admin.v2.models/WorkflowTasksResponse', 'com.ultracart.admin.v2.models/WorkflowUserResponse', 'com.ultracart.admin.v2.models/WorkflowUsersResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse'), require('../com.ultracart.admin.v2.models/WorkflowGroupsResponse'), require('../com.ultracart.admin.v2.models/WorkflowTask'), require('../com.ultracart.admin.v2.models/WorkflowTaskResponse'), require('../com.ultracart.admin.v2.models/WorkflowTasksRequest'), require('../com.ultracart.admin.v2.models/WorkflowTasksResponse'), require('../com.ultracart.admin.v2.models/WorkflowUserResponse'), require('../com.ultracart.admin.v2.models/WorkflowUsersResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse'), require('../com.ultracart.admin.v2.models/WorkflowGroupsResponse'), require('../com.ultracart.admin.v2.models/WorkflowTask'), require('../com.ultracart.admin.v2.models/WorkflowTaskResponse'), require('../com.ultracart.admin.v2.models/WorkflowTaskTagsResponse'), require('../com.ultracart.admin.v2.models/WorkflowTasksRequest'), require('../com.ultracart.admin.v2.models/WorkflowTasksResponse'), require('../com.ultracart.admin.v2.models/WorkflowUserResponse'), require('../com.ultracart.admin.v2.models/WorkflowUsersResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.WorkflowApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.WorkflowAttachmentUploadUrlResponse, root.UltraCartRestApiV2.WorkflowGroupsResponse, root.UltraCartRestApiV2.WorkflowTask, root.UltraCartRestApiV2.WorkflowTaskResponse, root.UltraCartRestApiV2.WorkflowTasksRequest, root.UltraCartRestApiV2.WorkflowTasksResponse, root.UltraCartRestApiV2.WorkflowUserResponse, root.UltraCartRestApiV2.WorkflowUsersResponse);
+    root.UltraCartRestApiV2.WorkflowApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.WorkflowAttachmentUploadUrlResponse, root.UltraCartRestApiV2.WorkflowGroupsResponse, root.UltraCartRestApiV2.WorkflowTask, root.UltraCartRestApiV2.WorkflowTaskResponse, root.UltraCartRestApiV2.WorkflowTaskTagsResponse, root.UltraCartRestApiV2.WorkflowTasksRequest, root.UltraCartRestApiV2.WorkflowTasksResponse, root.UltraCartRestApiV2.WorkflowUserResponse, root.UltraCartRestApiV2.WorkflowUsersResponse);
   }
-}(this, function(ApiClient, ErrorResponse, WorkflowAttachmentUploadUrlResponse, WorkflowGroupsResponse, WorkflowTask, WorkflowTaskResponse, WorkflowTasksRequest, WorkflowTasksResponse, WorkflowUserResponse, WorkflowUsersResponse) {
+}(this, function(ApiClient, ErrorResponse, WorkflowAttachmentUploadUrlResponse, WorkflowGroupsResponse, WorkflowTask, WorkflowTaskResponse, WorkflowTaskTagsResponse, WorkflowTasksRequest, WorkflowTasksResponse, WorkflowUserResponse, WorkflowUsersResponse) {
   'use strict';
 
   /**
    * Workflow service.
    * @module com.ultracart.admin.v2/WorkflowApi
-   * @version 3.10.184
+   * @version 3.10.185
    */
 
   /**
@@ -329,6 +329,47 @@
 
       return this.apiClient.callApi(
         '/workflow/tasks/by/{object_type}/{object_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getWorkflowTaskTags operation.
+     * @callback module:com.ultracart.admin.v2/WorkflowApi~getWorkflowTaskTagsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/WorkflowTaskTagsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a list of existing workflow task tags
+     * Retrieves a unique list of all the existing workflow task tags. 
+     * @param {module:com.ultracart.admin.v2/WorkflowApi~getWorkflowTaskTagsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/WorkflowTaskTagsResponse}
+     */
+    this.getWorkflowTaskTags = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = WorkflowTaskTagsResponse;
+
+      return this.apiClient.callApi(
+        '/workflow/tasks/tags', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
