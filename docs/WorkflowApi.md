@@ -4,6 +4,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getWorkflowAgentWebsocketAuthorization**](WorkflowApi.md#getWorkflowAgentWebsocketAuthorization) | **PUT** /workflow/agent/auth | Get agent websocket authorization
 [**getWorkflowAssignmentGroups**](WorkflowApi.md#getWorkflowAssignmentGroups) | **GET** /workflow/assignment_groups | Retrieve a list of groups that workflow tasks can be assigned to
 [**getWorkflowAssignmentUsers**](WorkflowApi.md#getWorkflowAssignmentUsers) | **GET** /workflow/assignment_users | Retrieve a list of users that workflow tasks can be assigned to
 [**getWorkflowMe**](WorkflowApi.md#getWorkflowMe) | **GET** /workflow/me | Retrieve a user object for myself
@@ -15,6 +16,51 @@ Method | HTTP request | Description
 [**insertWorkflowTask**](WorkflowApi.md#insertWorkflowTask) | **POST** /workflow/tasks | Insert a workflow task
 [**updateWorkflowTask**](WorkflowApi.md#updateWorkflowTask) | **PUT** /workflow/tasks/{task_uuid} | Update a workflow task
 
+
+<a name="getWorkflowAgentWebsocketAuthorization"></a>
+# **getWorkflowAgentWebsocketAuthorization**
+> WorkflowAgentAuthResponse getWorkflowAgentWebsocketAuthorization()
+
+Get agent websocket authorization
+
+Retrieve a JWT to authorize an agent to make a websocket connection. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.WorkflowApi();
+
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getWorkflowAgentWebsocketAuthorization(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**WorkflowAgentAuthResponse**](WorkflowAgentAuthResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="getWorkflowAssignmentGroups"></a>
 # **getWorkflowAssignmentGroups**

@@ -34,7 +34,7 @@
   /**
    * The Order model module.
    * @module com.ultracart.admin.v2.models/Order
-   * @version 3.10.185
+   * @version 3.10.186
    */
 
   /**

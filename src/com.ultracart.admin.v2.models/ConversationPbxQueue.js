@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxQueue model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxQueue
-   * @version 3.10.185
+   * @version 3.10.186
    */
 
   /**
@@ -91,6 +91,10 @@
         obj.twilio_workspace_queue_sid = ApiClient.convertToType(data['twilio_workspace_queue_sid'], 'String');
       if (data.hasOwnProperty('voicemail'))
         obj.voicemail = ApiClient.convertToType(data['voicemail'], 'Boolean');
+      if (data.hasOwnProperty('wait_critical_seconds'))
+        obj.wait_critical_seconds = ApiClient.convertToType(data['wait_critical_seconds'], 'Number');
+      if (data.hasOwnProperty('wait_warning_seconds'))
+        obj.wait_warning_seconds = ApiClient.convertToType(data['wait_warning_seconds'], 'Number');
     }
     return obj;
   }
@@ -201,6 +205,18 @@
    * @member {Boolean} voicemail
    */
   exports.prototype.voicemail = undefined;
+
+  /**
+   * Wait time in seconds before critical
+   * @member {Number} wait_critical_seconds
+   */
+  exports.prototype.wait_critical_seconds = undefined;
+
+  /**
+   * Wait time in seconds before warning
+   * @member {Number} wait_warning_seconds
+   */
+  exports.prototype.wait_warning_seconds = undefined;
 
   return exports;
 
