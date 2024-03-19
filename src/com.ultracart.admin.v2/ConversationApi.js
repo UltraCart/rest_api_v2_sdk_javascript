@@ -34,7 +34,7 @@
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.10.186
+   * @version 3.10.187
    */
 
   /**
@@ -2845,6 +2845,53 @@
 
       return this.apiClient.callApi(
         '/conversation/conversations/{conversation_uuid}/markread', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the resetConversationPbxQueueStatistics operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~resetConversationPbxQueueStatisticsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * reset statistics within the queue
+     * reset statistics within the queue 
+     * @param {String} queue_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~resetConversationPbxQueueStatisticsCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.resetConversationPbxQueueStatistics = function(queue_uuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'queue_uuid' is set
+      if (queue_uuid === undefined || queue_uuid === null) {
+        throw new Error("Missing the required parameter 'queue_uuid' when calling resetConversationPbxQueueStatistics");
+      }
+
+
+      var pathParams = {
+        'queue_uuid': queue_uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/conversation/pbx/queues/{queue_uuid}/reset_statistics', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

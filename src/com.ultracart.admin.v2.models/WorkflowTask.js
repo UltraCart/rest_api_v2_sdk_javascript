@@ -34,7 +34,7 @@
   /**
    * The WorkflowTask model module.
    * @module com.ultracart.admin.v2.models/WorkflowTask
-   * @version 3.10.186
+   * @version 3.10.187
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.dependant_workflow_task_uuid = ApiClient.convertToType(data['dependant_workflow_task_uuid'], 'String');
       if (data.hasOwnProperty('due_dts'))
         obj.due_dts = ApiClient.convertToType(data['due_dts'], 'String');
+      if (data.hasOwnProperty('expiration_dts'))
+        obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
       if (data.hasOwnProperty('histories'))
         obj.histories = ApiClient.convertToType(data['histories'], [WorkflowTaskHistory]);
       if (data.hasOwnProperty('last_update_dts'))
@@ -99,6 +101,8 @@
         obj.related_workflow_task_uuid = ApiClient.convertToType(data['related_workflow_task_uuid'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('system_task_type'))
+        obj.system_task_type = ApiClient.convertToType(data['system_task_type'], 'String');
       if (data.hasOwnProperty('tags'))
         obj.tags = ApiClient.convertToType(data['tags'], ['String']);
       if (data.hasOwnProperty('task_context'))
@@ -173,6 +177,12 @@
   exports.prototype.due_dts = undefined;
 
   /**
+   * Date/time that the workflow task will expire and be closed.  This is set by system generated tasks.
+   * @member {String} expiration_dts
+   */
+  exports.prototype.expiration_dts = undefined;
+
+  /**
    * Array of history records for the task
    * @member {Array.<module:com.ultracart.admin.v2.models/WorkflowTaskHistory>} histories
    */
@@ -243,6 +253,12 @@
    * @member {module:com.ultracart.admin.v2.models/WorkflowTask.StatusEnum} status
    */
   exports.prototype.status = undefined;
+
+  /**
+   * Constant for the type of system generated task
+   * @member {module:com.ultracart.admin.v2.models/WorkflowTask.SystemTaskTypeEnum} system_task_type
+   */
+  exports.prototype.system_task_type = undefined;
 
   /**
    * Tags
@@ -373,7 +389,69 @@
      * value: "awaiting customer feedback"
      * @const
      */
-    awaiting_customer_feedback: "awaiting customer feedback"
+    awaiting_customer_feedback: "awaiting customer feedback",
+
+    /**
+     * value: "closed - system"
+     * @const
+     */
+    closed___system: "closed - system",
+
+    /**
+     * value: "closed - customer"
+     * @const
+     */
+    closed___customer: "closed - customer",
+
+    /**
+     * value: "closed - expiration"
+     * @const
+     */
+    closed___expiration: "closed - expiration"
+  };
+
+
+  /**
+   * Allowed values for the <code>system_task_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.SystemTaskTypeEnum = {
+    /**
+     * value: "order_accounts_receivable"
+     * @const
+     */
+    order_accounts_receivable: "order_accounts_receivable",
+
+    /**
+     * value: "order_fraud_review"
+     * @const
+     */
+    order_fraud_review: "order_fraud_review",
+
+    /**
+     * value: "auto_order_card_update_issue"
+     * @const
+     */
+    auto_order_card_update_issue: "auto_order_card_update_issue",
+
+    /**
+     * value: "auto_order_canceled_payment"
+     * @const
+     */
+    auto_order_canceled_payment: "auto_order_canceled_payment",
+
+    /**
+     * value: "item_low_stock"
+     * @const
+     */
+    item_low_stock: "item_low_stock",
+
+    /**
+     * value: "item_out_of_stock"
+     * @const
+     */
+    item_out_of_stock: "item_out_of_stock"
   };
 
   return exports;

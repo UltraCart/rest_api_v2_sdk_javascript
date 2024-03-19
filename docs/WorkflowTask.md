@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **delay_until_dts** | **String** | Date/time that the workflow task should delay until | [optional] 
 **dependant_workflow_task_uuid** | **String** | Dependant Workflow Task UUID (must be completed before this task can be completed) | [optional] 
 **due_dts** | **String** | Date/time that the workflow task is due | [optional] 
+**expiration_dts** | **String** | Date/time that the workflow task will expire and be closed.  This is set by system generated tasks. | [optional] 
 **histories** | [**[WorkflowTaskHistory]**](WorkflowTaskHistory.md) | Array of history records for the task | [optional] 
 **last_update_dts** | **String** | Date/time that the workflow task was last updated | [optional] 
 **merchant_id** | **String** | Merchant ID | [optional] 
@@ -25,6 +26,7 @@ Name | Type | Description | Notes
 **properties** | [**[Property]**](Property.md) | Properties | [optional] 
 **related_workflow_task_uuid** | **String** | Related Workflow Task UUID | [optional] 
 **status** | **String** | Status of the workflow task | [optional] 
+**system_task_type** | **String** | Constant for the type of system generated task | [optional] 
 **tags** | **[String]** | Tags | [optional] 
 **task_context** | **String** | User friendly string of the task context | [optional] 
 **task_details** | **String** | Task Details | [optional] 
@@ -75,6 +77,31 @@ Name | Type | Description | Notes
 * `delayed` (value: `"delayed"`)
 
 * `awaiting_customer_feedback` (value: `"awaiting customer feedback"`)
+
+* `closed___system` (value: `"closed - system"`)
+
+* `closed___customer` (value: `"closed - customer"`)
+
+* `closed___expiration` (value: `"closed - expiration"`)
+
+
+
+
+<a name="SystemTaskTypeEnum"></a>
+## Enum: SystemTaskTypeEnum
+
+
+* `order_accounts_receivable` (value: `"order_accounts_receivable"`)
+
+* `order_fraud_review` (value: `"order_fraud_review"`)
+
+* `auto_order_card_update_issue` (value: `"auto_order_card_update_issue"`)
+
+* `auto_order_canceled_payment` (value: `"auto_order_canceled_payment"`)
+
+* `item_low_stock` (value: `"item_low_stock"`)
+
+* `item_out_of_stock` (value: `"item_out_of_stock"`)
 
 
 
