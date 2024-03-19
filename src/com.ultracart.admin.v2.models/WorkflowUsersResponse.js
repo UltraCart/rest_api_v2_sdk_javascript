@@ -34,7 +34,7 @@
   /**
    * The WorkflowUsersResponse model module.
    * @module com.ultracart.admin.v2.models/WorkflowUsersResponse
-   * @version 3.10.187
+   * @version 3.10.188
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('my_user_id'))
+        obj.my_user_id = ApiClient.convertToType(data['my_user_id'], 'Number');
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('users'))
@@ -78,6 +80,12 @@
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype.metadata = undefined;
+
+  /**
+   * User ID of myself
+   * @member {Number} my_user_id
+   */
+  exports.prototype.my_user_id = undefined;
 
   /**
    * Indicates if API call was successful
