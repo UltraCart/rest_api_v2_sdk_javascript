@@ -59,6 +59,7 @@ Name | Type | Description | Notes
 **payment_method** | **String** | Payment method | [optional] 
 **purchase_order_number** | **String** | Purchase order number | [optional] 
 **rotating_transaction_gateway_code** | **String** | The rotating transaction gateway code for the gateway used to charge this order | [optional] 
+**sales_rep_code** | **String** | Sales rep code | [optional] 
 **screen_branding_theme_code** | **String** | Screen branding theme code | [optional] 
 **ship_on_date** | **String** | Date the customer is requesting that the order ship on.  Typically used for perishable product delivery. | [optional] 
 **ship_to_residential** | **Boolean** | True if the shipping adress is residential.  Effects the methods that are available to the customer as well as the price of the shipping method. | [optional] 

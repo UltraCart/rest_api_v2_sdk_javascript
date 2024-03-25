@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrder model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
-   * @version 3.10.188
+   * @version 3.10.189
    */
 
   /**
@@ -167,6 +167,8 @@
         obj.purchase_order_number = ApiClient.convertToType(data['purchase_order_number'], 'String');
       if (data.hasOwnProperty('rotating_transaction_gateway_code'))
         obj.rotating_transaction_gateway_code = ApiClient.convertToType(data['rotating_transaction_gateway_code'], 'String');
+      if (data.hasOwnProperty('sales_rep_code'))
+        obj.sales_rep_code = ApiClient.convertToType(data['sales_rep_code'], 'String');
       if (data.hasOwnProperty('screen_branding_theme_code'))
         obj.screen_branding_theme_code = ApiClient.convertToType(data['screen_branding_theme_code'], 'String');
       if (data.hasOwnProperty('ship_on_date'))
@@ -554,6 +556,12 @@
    * @member {String} rotating_transaction_gateway_code
    */
   exports.prototype.rotating_transaction_gateway_code = undefined;
+
+  /**
+   * Sales rep code
+   * @member {String} sales_rep_code
+   */
+  exports.prototype.sales_rep_code = undefined;
 
   /**
    * Screen branding theme code
