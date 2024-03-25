@@ -34,7 +34,7 @@
   /**
    * The WorkflowTask model module.
    * @module com.ultracart.admin.v2.models/WorkflowTask
-   * @version 3.10.189
+   * @version 3.10.190
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.due_dts = ApiClient.convertToType(data['due_dts'], 'String');
       if (data.hasOwnProperty('expiration_dts'))
         obj.expiration_dts = ApiClient.convertToType(data['expiration_dts'], 'String');
+      if (data.hasOwnProperty('global_task_number'))
+        obj.global_task_number = ApiClient.convertToType(data['global_task_number'], 'Number');
       if (data.hasOwnProperty('histories'))
         obj.histories = ApiClient.convertToType(data['histories'], [WorkflowTaskHistory]);
       if (data.hasOwnProperty('last_update_dts'))
@@ -89,6 +91,8 @@
         obj.object_email = ApiClient.convertToType(data['object_email'], 'String');
       if (data.hasOwnProperty('object_id'))
         obj.object_id = ApiClient.convertToType(data['object_id'], 'String');
+      if (data.hasOwnProperty('object_task_number'))
+        obj.object_task_number = ApiClient.convertToType(data['object_task_number'], 'Number');
       if (data.hasOwnProperty('object_type'))
         obj.object_type = ApiClient.convertToType(data['object_type'], 'String');
       if (data.hasOwnProperty('object_url'))
@@ -183,6 +187,12 @@
   exports.prototype.expiration_dts = undefined;
 
   /**
+   * Global task numer
+   * @member {Number} global_task_number
+   */
+  exports.prototype.global_task_number = undefined;
+
+  /**
    * Array of history records for the task
    * @member {Array.<module:com.ultracart.admin.v2.models/WorkflowTaskHistory>} histories
    */
@@ -217,6 +227,12 @@
    * @member {String} object_id
    */
   exports.prototype.object_id = undefined;
+
+  /**
+   * Object specific task numer
+   * @member {Number} object_task_number
+   */
+  exports.prototype.object_task_number = undefined;
 
   /**
    * Object Type

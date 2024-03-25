@@ -34,7 +34,7 @@
   /**
    * The ConversationTwilioAccount model module.
    * @module com.ultracart.admin.v2.models/ConversationTwilioAccount
-   * @version 3.10.189
+   * @version 3.10.190
    */
 
   /**
