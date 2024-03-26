@@ -34,7 +34,7 @@
   /**
    * The WorkflowTask model module.
    * @module com.ultracart.admin.v2.models/WorkflowTask
-   * @version 3.10.190
+   * @version 3.10.191
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.assigned_to_user = ApiClient.convertToType(data['assigned_to_user'], 'String');
       if (data.hasOwnProperty('assigned_to_user_id'))
         obj.assigned_to_user_id = ApiClient.convertToType(data['assigned_to_user_id'], 'Number');
+      if (data.hasOwnProperty('assigned_to_user_or_group'))
+        obj.assigned_to_user_or_group = ApiClient.convertToType(data['assigned_to_user_or_group'], 'String');
       if (data.hasOwnProperty('attachments'))
         obj.attachments = ApiClient.convertToType(data['attachments'], [WorkflowAttachment]);
       if (data.hasOwnProperty('created_by'))
@@ -144,6 +146,12 @@
    * @member {Number} assigned_to_user_id
    */
   exports.prototype.assigned_to_user_id = undefined;
+
+  /**
+   * Assigned to user or group (used for sorting)
+   * @member {String} assigned_to_user_or_group
+   */
+  exports.prototype.assigned_to_user_or_group = undefined;
 
   /**
    * Attachments to the Workflow Task
