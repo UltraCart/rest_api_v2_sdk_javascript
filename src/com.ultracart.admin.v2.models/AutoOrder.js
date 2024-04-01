@@ -34,7 +34,7 @@
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -89,6 +89,8 @@
         obj.logs = ApiClient.convertToType(data['logs'], [AutoOrderLog]);
       if (data.hasOwnProperty('management'))
         obj.management = AutoOrderManagement.constructFromObject(data['management']);
+      if (data.hasOwnProperty('merchant_id'))
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('next_attempt'))
         obj.next_attempt = ApiClient.convertToType(data['next_attempt'], 'String');
       if (data.hasOwnProperty('original_order'))
@@ -207,6 +209,12 @@
    * @member {module:com.ultracart.admin.v2.models/AutoOrderManagement} management
    */
   exports.prototype.management = undefined;
+
+  /**
+   * UltraCart merchant ID owning this order
+   * @member {String} merchant_id
+   */
+  exports.prototype.merchant_id = undefined;
 
   /**
    * The next time that the auto order will be attempted for processing

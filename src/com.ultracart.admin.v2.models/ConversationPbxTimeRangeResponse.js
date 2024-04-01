@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeRangeResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -61,8 +61,8 @@
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
-      if (data.hasOwnProperty('timeRange'))
-        obj.timeRange = ConversationPbxTimeRange.constructFromObject(data['timeRange']);
+      if (data.hasOwnProperty('time_range'))
+        obj.time_range = ConversationPbxTimeRange.constructFromObject(data['time_range']);
       if (data.hasOwnProperty('warning'))
         obj.warning = Warning.constructFromObject(data['warning']);
     }
@@ -86,9 +86,9 @@
   exports.prototype.success = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeRange} timeRange
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeRange} time_range
    */
-  exports.prototype.timeRange = undefined;
+  exports.prototype.time_range = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Warning} warning

@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeBasedResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeBasedResponse
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -61,8 +61,8 @@
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
-      if (data.hasOwnProperty('timeBased'))
-        obj.timeBased = ConversationPbxTimeBased.constructFromObject(data['timeBased']);
+      if (data.hasOwnProperty('time_based'))
+        obj.time_based = ConversationPbxTimeBased.constructFromObject(data['time_based']);
       if (data.hasOwnProperty('warning'))
         obj.warning = Warning.constructFromObject(data['warning']);
     }
@@ -86,9 +86,9 @@
   exports.prototype.success = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeBased} timeBased
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeBased} time_based
    */
-  exports.prototype.timeBased = undefined;
+  exports.prototype.time_based = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Warning} warning

@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeRangesResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -61,8 +61,8 @@
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
-      if (data.hasOwnProperty('timeRanges'))
-        obj.timeRanges = ApiClient.convertToType(data['timeRanges'], [ConversationPbxTimeRange]);
+      if (data.hasOwnProperty('time_ranges'))
+        obj.time_ranges = ApiClient.convertToType(data['time_ranges'], [ConversationPbxTimeRange]);
       if (data.hasOwnProperty('warning'))
         obj.warning = Warning.constructFromObject(data['warning']);
     }
@@ -86,9 +86,9 @@
   exports.prototype.success = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/ConversationPbxTimeRange>} timeRanges
+   * @member {Array.<module:com.ultracart.admin.v2.models/ConversationPbxTimeRange>} time_ranges
    */
-  exports.prototype.timeRanges = undefined;
+  exports.prototype.time_ranges = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Warning} warning

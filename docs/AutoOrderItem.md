@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **future_schedules** | [**[AutoOrderItemFutureSchedule]**](AutoOrderItemFutureSchedule.md) | The future rebill schedule for this item up to the next ten rebills | [optional] 
 **last_order_dts** | **String** | Date/time of the last order of this item | [optional] 
 **life_time_value** | **Number** | The life time value of this item including the original purchase | [optional] 
+**next_item_id** | **String** | Calculated next item id | [optional] 
 **next_preshipment_notice_dts** | **String** | The date/time of when the next pre-shipment notice should be sent | [optional] 
 **next_shipment_dts** | **String** | Date/time that this item is scheduled to rebill | [optional] 
 **no_order_after_dts** | **String** | Date/time after which no additional rebills of this item should occur | [optional] 

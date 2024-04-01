@@ -16,3 +16,14 @@ Name | Type | Description | Notes
 **voicemail_say_voice** | **String** | Voicemail say voice | [optional] 
 
 
+<a name="VoicemailMailboxTypeEnum"></a>
+## Enum: VoicemailMailboxTypeEnum
+
+
+* `agent` (value: `"agent"`)
+
+* `shared` (value: `"shared"`)
+
+
+
+

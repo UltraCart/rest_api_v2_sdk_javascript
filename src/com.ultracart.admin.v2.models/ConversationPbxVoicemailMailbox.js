@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxVoicemailMailbox model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -125,7 +125,7 @@
 
   /**
    * Voicemail mailbox type
-   * @member {String} voicemail_mailbox_type
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox.VoicemailMailboxTypeEnum} voicemail_mailbox_type
    */
   exports.prototype.voicemail_mailbox_type = undefined;
 
@@ -146,6 +146,26 @@
    * @member {String} voicemail_say_voice
    */
   exports.prototype.voicemail_say_voice = undefined;
+
+
+  /**
+   * Allowed values for the <code>voicemail_mailbox_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.VoicemailMailboxTypeEnum = {
+    /**
+     * value: "agent"
+     * @const
+     */
+    agent: "agent",
+
+    /**
+     * value: "shared"
+     * @const
+     */
+    shared: "shared"
+  };
 
   return exports;
 

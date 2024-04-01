@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxVoicemailMailboxResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -61,8 +61,8 @@
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
-      if (data.hasOwnProperty('voicemailMailbox'))
-        obj.voicemailMailbox = ConversationPbxVoicemailMailbox.constructFromObject(data['voicemailMailbox']);
+      if (data.hasOwnProperty('voicemail_mailbox'))
+        obj.voicemail_mailbox = ConversationPbxVoicemailMailbox.constructFromObject(data['voicemail_mailbox']);
       if (data.hasOwnProperty('warning'))
         obj.warning = Warning.constructFromObject(data['warning']);
     }
@@ -86,9 +86,9 @@
   exports.prototype.success = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox} voicemailMailbox
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox} voicemail_mailbox
    */
-  exports.prototype.voicemailMailbox = undefined;
+  exports.prototype.voicemail_mailbox = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Warning} warning

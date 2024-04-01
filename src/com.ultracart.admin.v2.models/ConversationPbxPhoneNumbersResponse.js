@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxPhoneNumbersResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -59,8 +59,8 @@
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
-      if (data.hasOwnProperty('phoneNumbers'))
-        obj.phoneNumbers = ApiClient.convertToType(data['phoneNumbers'], [ConversationPbxPhoneNumber]);
+      if (data.hasOwnProperty('phone_numbers'))
+        obj.phone_numbers = ApiClient.convertToType(data['phone_numbers'], [ConversationPbxPhoneNumber]);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('warning'))
@@ -80,9 +80,9 @@
   exports.prototype.metadata = undefined;
 
   /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/ConversationPbxPhoneNumber>} phoneNumbers
+   * @member {Array.<module:com.ultracart.admin.v2.models/ConversationPbxPhoneNumber>} phone_numbers
    */
-  exports.prototype.phoneNumbers = undefined;
+  exports.prototype.phone_numbers = undefined;
 
   /**
    * Indicates if API call was successful

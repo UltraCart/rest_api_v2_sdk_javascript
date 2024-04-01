@@ -34,7 +34,7 @@
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 3.10.191
+   * @version 3.10.192
    */
 
   /**
@@ -79,6 +79,8 @@
         obj.last_order_dts = ApiClient.convertToType(data['last_order_dts'], 'String');
       if (data.hasOwnProperty('life_time_value'))
         obj.life_time_value = ApiClient.convertToType(data['life_time_value'], 'Number');
+      if (data.hasOwnProperty('next_item_id'))
+        obj.next_item_id = ApiClient.convertToType(data['next_item_id'], 'String');
       if (data.hasOwnProperty('next_preshipment_notice_dts'))
         obj.next_preshipment_notice_dts = ApiClient.convertToType(data['next_preshipment_notice_dts'], 'String');
       if (data.hasOwnProperty('next_shipment_dts'))
@@ -182,6 +184,12 @@
    * @member {Number} life_time_value
    */
   exports.prototype.life_time_value = undefined;
+
+  /**
+   * Calculated next item id
+   * @member {String} next_item_id
+   */
+  exports.prototype.next_item_id = undefined;
 
   /**
    * The date/time of when the next pre-shipment notice should be sent
