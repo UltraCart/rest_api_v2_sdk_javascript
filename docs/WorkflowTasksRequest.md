@@ -3,8 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**assigned_to_group** | **String** | Assigned to group | [optional] 
 **assigned_to_group_id** | **Number** | Assigned to group ID | [optional] 
 **assigned_to_me** | **Boolean** | Tasks are assigned to me either by direct user id or a group that the user is a member of | [optional] 
+**assigned_to_user** | **String** | Assigned to user | [optional] 
 **assigned_to_user_id** | **Number** | Assigned to user ID | [optional] 
 **created_by** | [**WorkflowUser**](WorkflowUser.md) |  | [optional] 
 **created_dts_begin** | **String** | Date/time that the workflow task was created | [optional] 

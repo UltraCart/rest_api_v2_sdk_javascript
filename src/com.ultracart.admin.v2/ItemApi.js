@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.models/ItemDigitalItem', 'com.ultracart.admin.v2.models/ItemDigitalItemResponse', 'com.ultracart.admin.v2.models/ItemDigitalItemsResponse', 'com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.models/ItemReview', 'com.ultracart.admin.v2.models/ItemReviewResponse', 'com.ultracart.admin.v2.models/ItemReviewsResponse', 'com.ultracart.admin.v2.models/ItemsRequest', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/PricingTiersResponse', 'com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.models/ItemContentAttribute', 'com.ultracart.admin.v2.models/ItemDigitalItem', 'com.ultracart.admin.v2.models/ItemDigitalItemResponse', 'com.ultracart.admin.v2.models/ItemDigitalItemsResponse', 'com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.models/ItemReview', 'com.ultracart.admin.v2.models/ItemReviewResponse', 'com.ultracart.admin.v2.models/ItemReviewsResponse', 'com.ultracart.admin.v2.models/ItemsRequest', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/PricingTiersResponse', 'com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/ItemDigitalItem'), require('../com.ultracart.admin.v2.models/ItemDigitalItemResponse'), require('../com.ultracart.admin.v2.models/ItemDigitalItemsResponse'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemReview'), require('../com.ultracart.admin.v2.models/ItemReviewResponse'), require('../com.ultracart.admin.v2.models/ItemReviewsResponse'), require('../com.ultracart.admin.v2.models/ItemsRequest'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/PricingTiersResponse'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/ItemContentAttribute'), require('../com.ultracart.admin.v2.models/ItemDigitalItem'), require('../com.ultracart.admin.v2.models/ItemDigitalItemResponse'), require('../com.ultracart.admin.v2.models/ItemDigitalItemsResponse'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemReview'), require('../com.ultracart.admin.v2.models/ItemReviewResponse'), require('../com.ultracart.admin.v2.models/ItemReviewsResponse'), require('../com.ultracart.admin.v2.models/ItemsRequest'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/PricingTiersResponse'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ItemDigitalItem, root.UltraCartRestApiV2.ItemDigitalItemResponse, root.UltraCartRestApiV2.ItemDigitalItemsResponse, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemReview, root.UltraCartRestApiV2.ItemReviewResponse, root.UltraCartRestApiV2.ItemReviewsResponse, root.UltraCartRestApiV2.ItemsRequest, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.PricingTiersResponse, root.UltraCartRestApiV2.TempMultimediaResponse);
+    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ItemContentAttribute, root.UltraCartRestApiV2.ItemDigitalItem, root.UltraCartRestApiV2.ItemDigitalItemResponse, root.UltraCartRestApiV2.ItemDigitalItemsResponse, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemReview, root.UltraCartRestApiV2.ItemReviewResponse, root.UltraCartRestApiV2.ItemReviewsResponse, root.UltraCartRestApiV2.ItemsRequest, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.PricingTiersResponse, root.UltraCartRestApiV2.TempMultimediaResponse);
   }
-}(this, function(ApiClient, ErrorResponse, Item, ItemDigitalItem, ItemDigitalItemResponse, ItemDigitalItemsResponse, ItemResponse, ItemReview, ItemReviewResponse, ItemReviewsResponse, ItemsRequest, ItemsResponse, PricingTiersResponse, TempMultimediaResponse) {
+}(this, function(ApiClient, ErrorResponse, Item, ItemContentAttribute, ItemDigitalItem, ItemDigitalItemResponse, ItemDigitalItemsResponse, ItemResponse, ItemReview, ItemReviewResponse, ItemReviewsResponse, ItemsRequest, ItemsResponse, PricingTiersResponse, TempMultimediaResponse) {
   'use strict';
 
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.10.192
+   * @version 3.10.193
    */
 
   /**
@@ -866,6 +866,59 @@
 
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}/reviews', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertUpdateItemContentAttribute operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~insertUpdateItemContentAttributeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Upsert an item content attribute
+     * Update an item content attribute, creating it new if it does not yet exist. 
+     * @param {module:com.ultracart.admin.v2.models/ItemContentAttribute} item_attribute Item content attribute to upsert
+     * @param {Number} merchant_item_oid The item oid to modify.
+     * @param {module:com.ultracart.admin.v2/ItemApi~insertUpdateItemContentAttributeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.insertUpdateItemContentAttribute = function(item_attribute, merchant_item_oid, callback) {
+      var postBody = item_attribute;
+
+      // verify the required parameter 'item_attribute' is set
+      if (item_attribute === undefined || item_attribute === null) {
+        throw new Error("Missing the required parameter 'item_attribute' when calling insertUpdateItemContentAttribute");
+      }
+
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling insertUpdateItemContentAttribute");
+      }
+
+
+      var pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/content/attributes', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

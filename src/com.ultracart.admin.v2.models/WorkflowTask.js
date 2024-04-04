@@ -34,7 +34,7 @@
   /**
    * The WorkflowTask model module.
    * @module com.ultracart.admin.v2.models/WorkflowTask
-   * @version 3.10.192
+   * @version 3.10.193
    */
 
   /**
@@ -195,7 +195,7 @@
   exports.prototype.expiration_dts = undefined;
 
   /**
-   * Global task numer
+   * Global task number
    * @member {Number} global_task_number
    */
   exports.prototype.global_task_number = undefined;
@@ -237,7 +237,7 @@
   exports.prototype.object_id = undefined;
 
   /**
-   * Object specific task numer
+   * Object specific task number
    * @member {Number} object_task_number
    */
   exports.prototype.object_task_number = undefined;

@@ -34,7 +34,7 @@
   /**
    * The WorkflowTasksRequest model module.
    * @module com.ultracart.admin.v2.models/WorkflowTasksRequest
-   * @version 3.10.192
+   * @version 3.10.193
    */
 
   /**
@@ -55,10 +55,14 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('assigned_to_group'))
+        obj.assigned_to_group = ApiClient.convertToType(data['assigned_to_group'], 'String');
       if (data.hasOwnProperty('assigned_to_group_id'))
         obj.assigned_to_group_id = ApiClient.convertToType(data['assigned_to_group_id'], 'Number');
       if (data.hasOwnProperty('assigned_to_me'))
         obj.assigned_to_me = ApiClient.convertToType(data['assigned_to_me'], 'Boolean');
+      if (data.hasOwnProperty('assigned_to_user'))
+        obj.assigned_to_user = ApiClient.convertToType(data['assigned_to_user'], 'String');
       if (data.hasOwnProperty('assigned_to_user_id'))
         obj.assigned_to_user_id = ApiClient.convertToType(data['assigned_to_user_id'], 'Number');
       if (data.hasOwnProperty('created_by'))
@@ -96,6 +100,12 @@
   }
 
   /**
+   * Assigned to group
+   * @member {String} assigned_to_group
+   */
+  exports.prototype.assigned_to_group = undefined;
+
+  /**
    * Assigned to group ID
    * @member {Number} assigned_to_group_id
    */
@@ -106,6 +116,12 @@
    * @member {Boolean} assigned_to_me
    */
   exports.prototype.assigned_to_me = undefined;
+
+  /**
+   * Assigned to user
+   * @member {String} assigned_to_user
+   */
+  exports.prototype.assigned_to_user = undefined;
 
   /**
    * Assigned to user ID

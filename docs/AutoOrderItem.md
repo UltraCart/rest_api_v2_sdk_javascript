@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **arbitrary_unit_cost** | **Number** | Arbitrary unit cost that rebills of this item should occur at | [optional] 
 **arbitrary_unit_cost_remaining_orders** | **Number** | The number of rebills to give the arbitrary unit cost on before reverting to normal pricing. | [optional] 
 **auto_order_item_oid** | **Number** | Primary key of AutoOrderItem | [optional] 
+**calculated_next_shipment_dts** | **String** | Calculated Date/time that this item is scheduled to rebill.  Will be null if no more shipments are going to occur on this item | [optional] 
 **first_order_dts** | **String** | Date/time of the first order of this item.  Null if item added to auto order and has not been rebilled yet. | [optional] 
 **frequency** | **String** | Frequency of the rebill if not a fixed schedule | [optional] 
 **future_schedules** | [**[AutoOrderItemFutureSchedule]**](AutoOrderItemFutureSchedule.md) | The future rebill schedule for this item up to the next ten rebills | [optional] 

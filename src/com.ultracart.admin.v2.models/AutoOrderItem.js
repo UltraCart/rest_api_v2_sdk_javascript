@@ -34,7 +34,7 @@
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 3.10.192
+   * @version 3.10.193
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.arbitrary_unit_cost_remaining_orders = ApiClient.convertToType(data['arbitrary_unit_cost_remaining_orders'], 'Number');
       if (data.hasOwnProperty('auto_order_item_oid'))
         obj.auto_order_item_oid = ApiClient.convertToType(data['auto_order_item_oid'], 'Number');
+      if (data.hasOwnProperty('calculated_next_shipment_dts'))
+        obj.calculated_next_shipment_dts = ApiClient.convertToType(data['calculated_next_shipment_dts'], 'String');
       if (data.hasOwnProperty('first_order_dts'))
         obj.first_order_dts = ApiClient.convertToType(data['first_order_dts'], 'String');
       if (data.hasOwnProperty('frequency'))
@@ -154,6 +156,12 @@
    * @member {Number} auto_order_item_oid
    */
   exports.prototype.auto_order_item_oid = undefined;
+
+  /**
+   * Calculated Date/time that this item is scheduled to rebill.  Will be null if no more shipments are going to occur on this item
+   * @member {String} calculated_next_shipment_dts
+   */
+  exports.prototype.calculated_next_shipment_dts = undefined;
 
   /**
    * Date/time of the first order of this item.  Null if item added to auto order and has not been rebilled yet.

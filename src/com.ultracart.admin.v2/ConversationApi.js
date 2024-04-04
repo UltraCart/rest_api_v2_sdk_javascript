@@ -34,7 +34,7 @@
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.10.192
+   * @version 3.10.193
    */
 
   /**
@@ -471,6 +471,60 @@
 
       return this.apiClient.callApi(
         '/conversation/pbx/queue/{conversationPbxQueueUuid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deletePbxQueueVoicemail operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deletePbxQueueVoicemailCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete Queue Voicemail
+     * Delete pbx queue Voicemail 
+     * @param {String} queue_uuid 
+     * @param {String} recording_sid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deletePbxQueueVoicemailCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deletePbxQueueVoicemail = function(queue_uuid, recording_sid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'queue_uuid' is set
+      if (queue_uuid === undefined || queue_uuid === null) {
+        throw new Error("Missing the required parameter 'queue_uuid' when calling deletePbxQueueVoicemail");
+      }
+
+      // verify the required parameter 'recording_sid' is set
+      if (recording_sid === undefined || recording_sid === null) {
+        throw new Error("Missing the required parameter 'recording_sid' when calling deletePbxQueueVoicemail");
+      }
+
+
+      var pathParams = {
+        'queue_uuid': queue_uuid,
+        'recording_sid': recording_sid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/conversation/pbx/queues/{queue_uuid}/voicemails/{recording_sid}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3084,6 +3138,60 @@
 
       return this.apiClient.callApi(
         '/conversation/pbx/agent/voicemails/{recording_sid}/listened', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listenedPbxQueueVoicemail operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~listenedPbxQueueVoicemailCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Listened Queue Voicemail
+     * Listened pbx queue Voicemail 
+     * @param {String} queue_uuid 
+     * @param {String} recording_sid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~listenedPbxQueueVoicemailCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.listenedPbxQueueVoicemail = function(queue_uuid, recording_sid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'queue_uuid' is set
+      if (queue_uuid === undefined || queue_uuid === null) {
+        throw new Error("Missing the required parameter 'queue_uuid' when calling listenedPbxQueueVoicemail");
+      }
+
+      // verify the required parameter 'recording_sid' is set
+      if (recording_sid === undefined || recording_sid === null) {
+        throw new Error("Missing the required parameter 'recording_sid' when calling listenedPbxQueueVoicemail");
+      }
+
+
+      var pathParams = {
+        'queue_uuid': queue_uuid,
+        'recording_sid': recording_sid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/conversation/pbx/{queue_uuid}/voicemails/voicemails/{recording_sid}/listened', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
