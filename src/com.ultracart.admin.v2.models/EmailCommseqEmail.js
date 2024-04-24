@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 3.10.193
+   * @version 3.10.194
    */
 
   /**
@@ -69,6 +69,22 @@
         obj.email_container_cjson_last_modified_dts = ApiClient.convertToType(data['email_container_cjson_last_modified_dts'], 'String');
       if (data.hasOwnProperty('email_template_vm_path'))
         obj.email_template_vm_path = ApiClient.convertToType(data['email_template_vm_path'], 'String');
+      if (data.hasOwnProperty('external_generation'))
+        obj.external_generation = ApiClient.convertToType(data['external_generation'], 'Boolean');
+      if (data.hasOwnProperty('external_generation_authentication'))
+        obj.external_generation_authentication = ApiClient.convertToType(data['external_generation_authentication'], 'String');
+      if (data.hasOwnProperty('external_generation_basic_password'))
+        obj.external_generation_basic_password = ApiClient.convertToType(data['external_generation_basic_password'], 'String');
+      if (data.hasOwnProperty('external_generation_basic_username'))
+        obj.external_generation_basic_username = ApiClient.convertToType(data['external_generation_basic_username'], 'String');
+      if (data.hasOwnProperty('external_generation_header_name'))
+        obj.external_generation_header_name = ApiClient.convertToType(data['external_generation_header_name'], 'String');
+      if (data.hasOwnProperty('external_generation_header_value'))
+        obj.external_generation_header_value = ApiClient.convertToType(data['external_generation_header_value'], 'String');
+      if (data.hasOwnProperty('external_generation_id'))
+        obj.external_generation_id = ApiClient.convertToType(data['external_generation_id'], 'String');
+      if (data.hasOwnProperty('external_generation_url'))
+        obj.external_generation_url = ApiClient.convertToType(data['external_generation_url'], 'String');
       if (data.hasOwnProperty('filter_profile_equation_json'))
         obj.filter_profile_equation_json = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
       if (data.hasOwnProperty('individually_render'))
@@ -152,6 +168,46 @@
    * @member {String} email_template_vm_path
    */
   exports.prototype.email_template_vm_path = undefined;
+
+  /**
+   * @member {Boolean} external_generation
+   */
+  exports.prototype.external_generation = undefined;
+
+  /**
+   * @member {String} external_generation_authentication
+   */
+  exports.prototype.external_generation_authentication = undefined;
+
+  /**
+   * @member {String} external_generation_basic_password
+   */
+  exports.prototype.external_generation_basic_password = undefined;
+
+  /**
+   * @member {String} external_generation_basic_username
+   */
+  exports.prototype.external_generation_basic_username = undefined;
+
+  /**
+   * @member {String} external_generation_header_name
+   */
+  exports.prototype.external_generation_header_name = undefined;
+
+  /**
+   * @member {String} external_generation_header_value
+   */
+  exports.prototype.external_generation_header_value = undefined;
+
+  /**
+   * @member {String} external_generation_id
+   */
+  exports.prototype.external_generation_id = undefined;
+
+  /**
+   * @member {String} external_generation_url
+   */
+  exports.prototype.external_generation_url = undefined;
 
   /**
    * Filter profile equation json

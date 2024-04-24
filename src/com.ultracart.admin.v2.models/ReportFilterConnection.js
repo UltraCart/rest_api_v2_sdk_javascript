@@ -34,7 +34,7 @@
   /**
    * The ReportFilterConnection model module.
    * @module com.ultracart.admin.v2.models/ReportFilterConnection
-   * @version 3.10.193
+   * @version 3.10.194
    */
 
   /**

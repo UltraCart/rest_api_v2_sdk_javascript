@@ -34,7 +34,7 @@
   /**
    * The ItemChargeback model module.
    * @module com.ultracart.admin.v2.models/ItemChargeback
-   * @version 3.10.193
+   * @version 3.10.194
    */
 
   /**
@@ -64,13 +64,13 @@
   }
 
   /**
-   * Addendums
+   * Addendums (deprecated)
    * @member {Array.<module:com.ultracart.admin.v2.models/ItemChargebackAddendum>} addendums
    */
   exports.prototype.addendums = undefined;
 
   /**
-   * Adjustment requests
+   * Adjustment requests (deprecated)
    * @member {Array.<module:com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest>} adjustment_requests
    */
   exports.prototype.adjustment_requests = undefined;

@@ -23,5 +23,6 @@ Name | Type | Description | Notes
 **voicemail** | **Boolean** | If true, this queue has a voicemail associated with it | [optional] 
 **wait_critical_seconds** | **Number** | Wait time in seconds before critical | [optional] 
 **wait_warning_seconds** | **Number** | Wait time in seconds before warning | [optional] 
+**wrap_up_seconds** | **Number** | Wrap up time in seconds | [optional] 
 
 

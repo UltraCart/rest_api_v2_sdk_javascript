@@ -34,7 +34,7 @@
   /**
    * The OrderRefundableResponse model module.
    * @module com.ultracart.admin.v2.models/OrderRefundableResponse
-   * @version 3.10.193
+   * @version 3.10.194
    */
 
   /**
@@ -71,6 +71,8 @@
         obj.order_level_refund_reason_required = ApiClient.convertToType(data['order_level_refund_reason_required'], 'Boolean');
       if (data.hasOwnProperty('order_level_refund_reasons'))
         obj.order_level_refund_reasons = ApiClient.convertToType(data['order_level_refund_reasons'], [OrderReason]);
+      if (data.hasOwnProperty('order_level_reject_reason_required'))
+        obj.order_level_reject_reason_required = ApiClient.convertToType(data['order_level_reject_reason_required'], 'Boolean');
       if (data.hasOwnProperty('order_level_reject_reasons'))
         obj.order_level_reject_reasons = ApiClient.convertToType(data['order_level_reject_reasons'], [OrderReason]);
       if (data.hasOwnProperty('refundable'))
@@ -128,6 +130,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/OrderReason>} order_level_refund_reasons
    */
   exports.prototype.order_level_refund_reasons = undefined;
+
+  /**
+   * True if the order level reject reason is required
+   * @member {Boolean} order_level_reject_reason_required
+   */
+  exports.prototype.order_level_reject_reason_required = undefined;
 
   /**
    * Reject codes available at the order level.

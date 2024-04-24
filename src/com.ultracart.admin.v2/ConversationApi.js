@@ -34,7 +34,7 @@
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.10.193
+   * @version 3.10.194
    */
 
   /**
@@ -3191,7 +3191,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/conversation/pbx/{queue_uuid}/voicemails/voicemails/{recording_sid}/listened', 'GET',
+        '/conversation/pbx/queues/{queue_uuid}/voicemails/{recording_sid}/listened', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

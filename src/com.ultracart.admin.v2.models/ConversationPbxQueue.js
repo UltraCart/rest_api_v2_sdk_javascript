@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxQueue model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxQueue
-   * @version 3.10.193
+   * @version 3.10.194
    */
 
   /**
@@ -95,6 +95,8 @@
         obj.wait_critical_seconds = ApiClient.convertToType(data['wait_critical_seconds'], 'Number');
       if (data.hasOwnProperty('wait_warning_seconds'))
         obj.wait_warning_seconds = ApiClient.convertToType(data['wait_warning_seconds'], 'Number');
+      if (data.hasOwnProperty('wrap_up_seconds'))
+        obj.wrap_up_seconds = ApiClient.convertToType(data['wrap_up_seconds'], 'Number');
     }
     return obj;
   }
@@ -217,6 +219,12 @@
    * @member {Number} wait_warning_seconds
    */
   exports.prototype.wait_warning_seconds = undefined;
+
+  /**
+   * Wrap up time in seconds
+   * @member {Number} wrap_up_seconds
+   */
+  exports.prototype.wrap_up_seconds = undefined;
 
   return exports;
 

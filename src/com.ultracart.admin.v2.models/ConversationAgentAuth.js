@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentAuth model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuth
-   * @version 3.10.193
+   * @version 3.10.194
    */
 
   /**
@@ -63,8 +63,14 @@
         obj.jwt = ApiClient.convertToType(data['jwt'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('pbx_admin'))
+        obj.pbx_admin = ApiClient.convertToType(data['pbx_admin'], 'Boolean');
       if (data.hasOwnProperty('pbx_jwt'))
         obj.pbx_jwt = ApiClient.convertToType(data['pbx_jwt'], 'String');
+      if (data.hasOwnProperty('pbx_supervisor'))
+        obj.pbx_supervisor = ApiClient.convertToType(data['pbx_supervisor'], 'Boolean');
+      if (data.hasOwnProperty('pbx_user'))
+        obj.pbx_user = ApiClient.convertToType(data['pbx_user'], 'Boolean');
       if (data.hasOwnProperty('pbx_voice_identity'))
         obj.pbx_voice_identity = ApiClient.convertToType(data['pbx_voice_identity'], 'String');
       if (data.hasOwnProperty('pbx_voice_token'))
@@ -100,9 +106,24 @@
   exports.prototype.merchant_id = undefined;
 
   /**
+   * @member {Boolean} pbx_admin
+   */
+  exports.prototype.pbx_admin = undefined;
+
+  /**
    * @member {String} pbx_jwt
    */
   exports.prototype.pbx_jwt = undefined;
+
+  /**
+   * @member {Boolean} pbx_supervisor
+   */
+  exports.prototype.pbx_supervisor = undefined;
+
+  /**
+   * @member {Boolean} pbx_user
+   */
+  exports.prototype.pbx_user = undefined;
 
   /**
    * @member {String} pbx_voice_identity
