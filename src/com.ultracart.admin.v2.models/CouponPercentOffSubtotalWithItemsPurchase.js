@@ -34,7 +34,7 @@
   /**
    * The CouponPercentOffSubtotalWithItemsPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponPercentOffSubtotalWithItemsPurchase
-   * @version 3.10.194
+   * @version 3.10.195
    */
 
   /**

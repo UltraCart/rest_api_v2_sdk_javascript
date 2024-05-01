@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrder', 'com.ultracart.admin.v2.models/AutoOrderQuery', 'com.ultracart.admin.v2.models/AutoOrderQueryBatch', 'com.ultracart.admin.v2.models/AutoOrderResponse', 'com.ultracart.admin.v2.models/AutoOrdersRequest', 'com.ultracart.admin.v2.models/AutoOrdersResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrder', 'com.ultracart.admin.v2.models/AutoOrderConsolidate', 'com.ultracart.admin.v2.models/AutoOrderQuery', 'com.ultracart.admin.v2.models/AutoOrderQueryBatch', 'com.ultracart.admin.v2.models/AutoOrderResponse', 'com.ultracart.admin.v2.models/AutoOrdersRequest', 'com.ultracart.admin.v2.models/AutoOrdersResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AutoOrder'), require('../com.ultracart.admin.v2.models/AutoOrderQuery'), require('../com.ultracart.admin.v2.models/AutoOrderQueryBatch'), require('../com.ultracart.admin.v2.models/AutoOrderResponse'), require('../com.ultracart.admin.v2.models/AutoOrdersRequest'), require('../com.ultracart.admin.v2.models/AutoOrdersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AutoOrder'), require('../com.ultracart.admin.v2.models/AutoOrderConsolidate'), require('../com.ultracart.admin.v2.models/AutoOrderQuery'), require('../com.ultracart.admin.v2.models/AutoOrderQueryBatch'), require('../com.ultracart.admin.v2.models/AutoOrderResponse'), require('../com.ultracart.admin.v2.models/AutoOrdersRequest'), require('../com.ultracart.admin.v2.models/AutoOrdersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrder, root.UltraCartRestApiV2.AutoOrderQuery, root.UltraCartRestApiV2.AutoOrderQueryBatch, root.UltraCartRestApiV2.AutoOrderResponse, root.UltraCartRestApiV2.AutoOrdersRequest, root.UltraCartRestApiV2.AutoOrdersResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.AutoOrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrder, root.UltraCartRestApiV2.AutoOrderConsolidate, root.UltraCartRestApiV2.AutoOrderQuery, root.UltraCartRestApiV2.AutoOrderQueryBatch, root.UltraCartRestApiV2.AutoOrderResponse, root.UltraCartRestApiV2.AutoOrdersRequest, root.UltraCartRestApiV2.AutoOrdersResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, AutoOrder, AutoOrderQuery, AutoOrderQueryBatch, AutoOrderResponse, AutoOrdersRequest, AutoOrdersResponse, ErrorResponse) {
+}(this, function(ApiClient, AutoOrder, AutoOrderConsolidate, AutoOrderQuery, AutoOrderQueryBatch, AutoOrderResponse, AutoOrdersRequest, AutoOrdersResponse, ErrorResponse) {
   'use strict';
 
   /**
    * AutoOrder service.
    * @module com.ultracart.admin.v2/AutoOrderApi
-   * @version 3.10.194
+   * @version 3.10.195
    */
 
   /**
@@ -47,6 +47,64 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the consolidateAutoOrders operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~consolidateAutoOrdersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consolidates multiple auto orders
+     * Consolidates mutliple auto orders on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderConsolidate} auto_order_consolidate Auto orders to consolidate
+     * @param {Number} auto_order_oid The auto order oid to consolidate into.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~consolidateAutoOrdersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    this.consolidateAutoOrders = function(auto_order_consolidate, auto_order_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = auto_order_consolidate;
+
+      // verify the required parameter 'auto_order_consolidate' is set
+      if (auto_order_consolidate === undefined || auto_order_consolidate === null) {
+        throw new Error("Missing the required parameter 'auto_order_consolidate' when calling consolidateAutoOrders");
+      }
+
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling consolidateAutoOrders");
+      }
+
+
+      var pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = AutoOrderResponse;
+
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/{auto_order_oid}/consolidate', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the establishAutoOrderByReferenceOrderId operation.

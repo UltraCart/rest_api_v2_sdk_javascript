@@ -34,7 +34,7 @@
   /**
    * The OrderRefundableResponse model module.
    * @module com.ultracart.admin.v2.models/OrderRefundableResponse
-   * @version 3.10.194
+   * @version 3.10.195
    */
 
   /**

@@ -1323,7 +1323,7 @@ Name | Type | Description  | Notes
 
 <a name="getConversationPbxAudioUploadUrl"></a>
 # **getConversationPbxAudioUploadUrl**
-> ConversationMultimediaUploadUrlResponse getConversationPbxAudioUploadUrl(extension)
+> ConversationPbxAudioUploadUrlResponse getConversationPbxAudioUploadUrl(extension)
 
 Get a pre-signed conversation multimedia upload URL
 
@@ -1360,7 +1360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ConversationMultimediaUploadUrlResponse**](ConversationMultimediaUploadUrlResponse.md)
+[**ConversationPbxAudioUploadUrlResponse**](ConversationPbxAudioUploadUrlResponse.md)
 
 ### Authorization
 

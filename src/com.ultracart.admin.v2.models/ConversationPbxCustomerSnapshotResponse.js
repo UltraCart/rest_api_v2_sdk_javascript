@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCustomerSnapshotResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse
-   * @version 3.10.194
+   * @version 3.10.195
    */
 
   /**
@@ -57,8 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('auto_orders'))
         obj.auto_orders = ApiClient.convertToType(data['auto_orders'], [AutoOrder]);
-      if (data.hasOwnProperty('customer'))
-        obj.customer = Customer.constructFromObject(data['customer']);
+      if (data.hasOwnProperty('customers'))
+        obj.customers = ApiClient.convertToType(data['customers'], [Customer]);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -79,9 +79,9 @@
   exports.prototype.auto_orders = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/Customer} customer
+   * @member {Array.<module:com.ultracart.admin.v2.models/Customer>} customers
    */
-  exports.prototype.customer = undefined;
+  exports.prototype.customers = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

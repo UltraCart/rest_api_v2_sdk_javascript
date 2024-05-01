@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_orders** | [**[AutoOrder]**](AutoOrder.md) |  | [optional] 
-**customer** | [**Customer**](Customer.md) |  | [optional] 
+**customers** | [**[Customer]**](Customer.md) |  | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
 **metadata** | [**ResponseMetadata**](ResponseMetadata.md) |  | [optional] 
 **orders** | [**[Order]**](Order.md) |  | [optional] 
