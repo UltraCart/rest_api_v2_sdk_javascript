@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAgent model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAgent
-   * @version 3.10.195
+   * @version 3.10.196
    */
 
   /**

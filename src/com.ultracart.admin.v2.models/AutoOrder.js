@@ -34,7 +34,7 @@
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 3.10.195
+   * @version 3.10.196
    */
 
   /**
@@ -91,6 +91,10 @@
         obj.management = AutoOrderManagement.constructFromObject(data['management']);
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('merged_dts'))
+        obj.merged_dts = ApiClient.convertToType(data['merged_dts'], 'String');
+      if (data.hasOwnProperty('merged_into_auto_order_oid'))
+        obj.merged_into_auto_order_oid = ApiClient.convertToType(data['merged_into_auto_order_oid'], 'Number');
       if (data.hasOwnProperty('next_attempt'))
         obj.next_attempt = ApiClient.convertToType(data['next_attempt'], 'String');
       if (data.hasOwnProperty('original_order'))
@@ -217,6 +221,18 @@
   exports.prototype.merchant_id = undefined;
 
   /**
+   * The date/time the auto order was merged into another auto order
+   * @member {String} merged_dts
+   */
+  exports.prototype.merged_dts = undefined;
+
+  /**
+   * The auto order that this auto order was merged into
+   * @member {Number} merged_into_auto_order_oid
+   */
+  exports.prototype.merged_into_auto_order_oid = undefined;
+
+  /**
    * The next time that the auto order will be attempted for processing
    * @member {String} next_attempt
    */
@@ -280,7 +296,13 @@
      * value: "disabled"
      * @const
      */
-    disabled: "disabled"
+    disabled: "disabled",
+
+    /**
+     * value: "merged"
+     * @const
+     */
+    merged: "merged"
   };
 
   return exports;

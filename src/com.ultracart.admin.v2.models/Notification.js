@@ -34,7 +34,7 @@
   /**
    * The Notification model module.
    * @module com.ultracart.admin.v2.models/Notification
-   * @version 3.10.195
+   * @version 3.10.196
    */
 
   /**
