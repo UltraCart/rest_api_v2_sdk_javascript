@@ -34,7 +34,7 @@
   /**
    * The EmailVerifyTokenRequest model module.
    * @module com.ultracart.admin.v2.models/EmailVerifyTokenRequest
-   * @version 3.10.196
+   * @version 3.10.197
    */
 
   /**
