@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAudio model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAudio
-   * @version 3.10.197
+   * @version 3.10.198
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('mime_type'))
         obj.mime_type = ApiClient.convertToType(data['mime_type'], 'String');
+      if (data.hasOwnProperty('url'))
+        obj.url = ApiClient.convertToType(data['url'], 'String');
       if (data.hasOwnProperty('user_id'))
         obj.user_id = ApiClient.convertToType(data['user_id'], 'Number');
       if (data.hasOwnProperty('version'))
@@ -118,6 +120,12 @@
    * @member {String} mime_type
    */
   exports.prototype.mime_type = undefined;
+
+  /**
+   * URL
+   * @member {String} url
+   */
+  exports.prototype.url = undefined;
 
   /**
    * User Id

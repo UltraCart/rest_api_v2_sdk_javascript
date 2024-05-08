@@ -42,6 +42,16 @@ Name | Type | Description | Notes
 **custom_field6** | **String** | Custom field 6 | [optional] 
 **custom_field7** | **String** | Custom field 7 | [optional] 
 **delivery_date** | **String** | Date the customer is requesting delivery on. Typically used for perishable product delivery. | [optional] 
+**echeck_bank_aba_code** | **String** | eCheck bank ABA code | [optional] 
+**echeck_bank_account_name** | **String** | eCheck bank account name | [optional] 
+**echeck_bank_account_number** | **String** | eCheck bank account number | [optional] 
+**echeck_bank_account_type** | **String** | eCheck bank account type | [optional] 
+**echeck_bank_name** | **String** | eCheck bank name | [optional] 
+**echeck_bank_owner_type** | **String** | eCheck bank owner type | [optional] 
+**echeck_customer_tax_id** | **String** | eCheck customer tax id | [optional] 
+**echeck_drivers_license_dob** | **String** | eCheck drivers license dob | [optional] 
+**echeck_drivers_license_number** | **String** | eCheck drivers license number | [optional] 
+**echeck_drivers_license_state** | **String** | eCheck drivers license state | [optional] 
 **email** | **String** | Email | [optional] 
 **gift** | **Boolean** | True if this order is a gift | [optional] 
 **gift_email** | **String** | Email address of the gift recipient | [optional] 
@@ -86,6 +96,28 @@ Name | Type | Description | Notes
 **treat_warnings_as_errors** | **Boolean** | If true all warnings are considered errors, this is true by default | [optional] 
 
 
+<a name="EcheckBankAccountTypeEnum"></a>
+## Enum: EcheckBankAccountTypeEnum
+
+
+* `Checking` (value: `"Checking"`)
+
+* `Savings` (value: `"Savings"`)
+
+
+
+
+<a name="EcheckBankOwnerTypeEnum"></a>
+## Enum: EcheckBankOwnerTypeEnum
+
+
+* `Business` (value: `"Business"`)
+
+* `Personal` (value: `"Personal"`)
+
+
+
+
 <a name="PaymentMethodEnum"></a>
 ## Enum: PaymentMethodEnum
 
@@ -99,6 +131,8 @@ Name | Type | Description | Notes
 * `COD` (value: `"COD"`)
 
 * `Credit_Card` (value: `"Credit Card"`)
+
+* `eCheck` (value: `"eCheck"`)
 
 * `LoanHero` (value: `"LoanHero"`)
 

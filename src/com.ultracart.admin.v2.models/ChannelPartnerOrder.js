@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrder model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
-   * @version 3.10.197
+   * @version 3.10.198
    */
 
   /**
@@ -133,6 +133,26 @@
         obj.custom_field7 = ApiClient.convertToType(data['custom_field7'], 'String');
       if (data.hasOwnProperty('delivery_date'))
         obj.delivery_date = ApiClient.convertToType(data['delivery_date'], 'String');
+      if (data.hasOwnProperty('echeck_bank_aba_code'))
+        obj.echeck_bank_aba_code = ApiClient.convertToType(data['echeck_bank_aba_code'], 'String');
+      if (data.hasOwnProperty('echeck_bank_account_name'))
+        obj.echeck_bank_account_name = ApiClient.convertToType(data['echeck_bank_account_name'], 'String');
+      if (data.hasOwnProperty('echeck_bank_account_number'))
+        obj.echeck_bank_account_number = ApiClient.convertToType(data['echeck_bank_account_number'], 'String');
+      if (data.hasOwnProperty('echeck_bank_account_type'))
+        obj.echeck_bank_account_type = ApiClient.convertToType(data['echeck_bank_account_type'], 'String');
+      if (data.hasOwnProperty('echeck_bank_name'))
+        obj.echeck_bank_name = ApiClient.convertToType(data['echeck_bank_name'], 'String');
+      if (data.hasOwnProperty('echeck_bank_owner_type'))
+        obj.echeck_bank_owner_type = ApiClient.convertToType(data['echeck_bank_owner_type'], 'String');
+      if (data.hasOwnProperty('echeck_customer_tax_id'))
+        obj.echeck_customer_tax_id = ApiClient.convertToType(data['echeck_customer_tax_id'], 'String');
+      if (data.hasOwnProperty('echeck_drivers_license_dob'))
+        obj.echeck_drivers_license_dob = ApiClient.convertToType(data['echeck_drivers_license_dob'], 'String');
+      if (data.hasOwnProperty('echeck_drivers_license_number'))
+        obj.echeck_drivers_license_number = ApiClient.convertToType(data['echeck_drivers_license_number'], 'String');
+      if (data.hasOwnProperty('echeck_drivers_license_state'))
+        obj.echeck_drivers_license_state = ApiClient.convertToType(data['echeck_drivers_license_state'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
       if (data.hasOwnProperty('gift'))
@@ -456,6 +476,66 @@
   exports.prototype.delivery_date = undefined;
 
   /**
+   * eCheck bank ABA code
+   * @member {String} echeck_bank_aba_code
+   */
+  exports.prototype.echeck_bank_aba_code = undefined;
+
+  /**
+   * eCheck bank account name
+   * @member {String} echeck_bank_account_name
+   */
+  exports.prototype.echeck_bank_account_name = undefined;
+
+  /**
+   * eCheck bank account number
+   * @member {String} echeck_bank_account_number
+   */
+  exports.prototype.echeck_bank_account_number = undefined;
+
+  /**
+   * eCheck bank account type
+   * @member {module:com.ultracart.admin.v2.models/ChannelPartnerOrder.EcheckBankAccountTypeEnum} echeck_bank_account_type
+   */
+  exports.prototype.echeck_bank_account_type = undefined;
+
+  /**
+   * eCheck bank name
+   * @member {String} echeck_bank_name
+   */
+  exports.prototype.echeck_bank_name = undefined;
+
+  /**
+   * eCheck bank owner type
+   * @member {module:com.ultracart.admin.v2.models/ChannelPartnerOrder.EcheckBankOwnerTypeEnum} echeck_bank_owner_type
+   */
+  exports.prototype.echeck_bank_owner_type = undefined;
+
+  /**
+   * eCheck customer tax id
+   * @member {String} echeck_customer_tax_id
+   */
+  exports.prototype.echeck_customer_tax_id = undefined;
+
+  /**
+   * eCheck drivers license dob
+   * @member {String} echeck_drivers_license_dob
+   */
+  exports.prototype.echeck_drivers_license_dob = undefined;
+
+  /**
+   * eCheck drivers license number
+   * @member {String} echeck_drivers_license_number
+   */
+  exports.prototype.echeck_drivers_license_number = undefined;
+
+  /**
+   * eCheck drivers license state
+   * @member {String} echeck_drivers_license_state
+   */
+  exports.prototype.echeck_drivers_license_state = undefined;
+
+  /**
    * Email
    * @member {String} email
    */
@@ -708,6 +788,46 @@
 
 
   /**
+   * Allowed values for the <code>echeck_bank_account_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.EcheckBankAccountTypeEnum = {
+    /**
+     * value: "Checking"
+     * @const
+     */
+    Checking: "Checking",
+
+    /**
+     * value: "Savings"
+     * @const
+     */
+    Savings: "Savings"
+  };
+
+
+  /**
+   * Allowed values for the <code>echeck_bank_owner_type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.EcheckBankOwnerTypeEnum = {
+    /**
+     * value: "Business"
+     * @const
+     */
+    Business: "Business",
+
+    /**
+     * value: "Personal"
+     * @const
+     */
+    Personal: "Personal"
+  };
+
+
+  /**
    * Allowed values for the <code>payment_method</code> property.
    * @enum {String}
    * @readonly
@@ -742,6 +862,12 @@
      * @const
      */
     Credit_Card: "Credit Card",
+
+    /**
+     * value: "eCheck"
+     * @const
+     */
+    eCheck: "eCheck",
 
     /**
      * value: "LoanHero"

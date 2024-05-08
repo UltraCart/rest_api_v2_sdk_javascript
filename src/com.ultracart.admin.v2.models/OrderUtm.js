@@ -34,7 +34,7 @@
   /**
    * The OrderUtm model module.
    * @module com.ultracart.admin.v2.models/OrderUtm
-   * @version 3.10.197
+   * @version 3.10.198
    */
 
   /**
@@ -81,6 +81,18 @@
         obj.gbraid = ApiClient.convertToType(data['gbraid'], 'String');
       if (data.hasOwnProperty('glcid'))
         obj.glcid = ApiClient.convertToType(data['glcid'], 'String');
+      if (data.hasOwnProperty('itm_campaign'))
+        obj.itm_campaign = ApiClient.convertToType(data['itm_campaign'], 'String');
+      if (data.hasOwnProperty('itm_content'))
+        obj.itm_content = ApiClient.convertToType(data['itm_content'], 'String');
+      if (data.hasOwnProperty('itm_id'))
+        obj.itm_id = ApiClient.convertToType(data['itm_id'], 'String');
+      if (data.hasOwnProperty('itm_medium'))
+        obj.itm_medium = ApiClient.convertToType(data['itm_medium'], 'String');
+      if (data.hasOwnProperty('itm_source'))
+        obj.itm_source = ApiClient.convertToType(data['itm_source'], 'String');
+      if (data.hasOwnProperty('itm_term'))
+        obj.itm_term = ApiClient.convertToType(data['itm_term'], 'String');
       if (data.hasOwnProperty('msclkid'))
         obj.msclkid = ApiClient.convertToType(data['msclkid'], 'String');
       if (data.hasOwnProperty('ttclid'))
@@ -172,6 +184,36 @@
    * @member {String} glcid
    */
   exports.prototype.glcid = undefined;
+
+  /**
+   * @member {String} itm_campaign
+   */
+  exports.prototype.itm_campaign = undefined;
+
+  /**
+   * @member {String} itm_content
+   */
+  exports.prototype.itm_content = undefined;
+
+  /**
+   * @member {String} itm_id
+   */
+  exports.prototype.itm_id = undefined;
+
+  /**
+   * @member {String} itm_medium
+   */
+  exports.prototype.itm_medium = undefined;
+
+  /**
+   * @member {String} itm_source
+   */
+  exports.prototype.itm_source = undefined;
+
+  /**
+   * @member {String} itm_term
+   */
+  exports.prototype.itm_term = undefined;
 
   /**
    * @member {String} msclkid

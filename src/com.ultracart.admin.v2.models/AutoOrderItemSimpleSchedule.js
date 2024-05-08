@@ -34,7 +34,7 @@
   /**
    * The AutoOrderItemSimpleSchedule model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule
-   * @version 3.10.197
+   * @version 3.10.198
    */
 
   /**

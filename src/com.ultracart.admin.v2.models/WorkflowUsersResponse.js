@@ -34,7 +34,7 @@
   /**
    * The WorkflowUsersResponse model module.
    * @module com.ultracart.admin.v2.models/WorkflowUsersResponse
-   * @version 3.10.197
+   * @version 3.10.198
    */
 
   /**

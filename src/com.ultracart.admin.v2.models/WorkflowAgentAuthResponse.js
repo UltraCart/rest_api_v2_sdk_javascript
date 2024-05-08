@@ -34,7 +34,7 @@
   /**
    * The WorkflowAgentAuthResponse model module.
    * @module com.ultracart.admin.v2.models/WorkflowAgentAuthResponse
-   * @version 3.10.197
+   * @version 3.10.198
    */
 
   /**
