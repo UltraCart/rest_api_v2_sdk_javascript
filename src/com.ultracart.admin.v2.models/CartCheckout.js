@@ -34,7 +34,7 @@
   /**
    * The CartCheckout model module.
    * @module com.ultracart.admin.v2.models/CartCheckout
-   * @version 3.10.198
+   * @version 3.10.199
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('comments'))
         obj.comments = ApiClient.convertToType(data['comments'], 'String');
+      if (data.hasOwnProperty('current_step'))
+        obj.current_step = ApiClient.convertToType(data['current_step'], 'String');
       if (data.hasOwnProperty('custom_field1'))
         obj.custom_field1 = ApiClient.convertToType(data['custom_field1'], 'String');
       if (data.hasOwnProperty('custom_field10'))
@@ -98,6 +100,12 @@
    * @member {String} comments
    */
   exports.prototype.comments = undefined;
+
+  /**
+   * Current step of the checkout (read only)
+   * @member {String} current_step
+   */
+  exports.prototype.current_step = undefined;
 
   /**
    * Custom field 1
