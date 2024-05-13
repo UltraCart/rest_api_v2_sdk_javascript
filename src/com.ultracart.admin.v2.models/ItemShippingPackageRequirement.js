@@ -34,7 +34,7 @@
   /**
    * The ItemShippingPackageRequirement model module.
    * @module com.ultracart.admin.v2.models/ItemShippingPackageRequirement
-   * @version 3.10.199
+   * @version 3.10.200
    */
 
   /**

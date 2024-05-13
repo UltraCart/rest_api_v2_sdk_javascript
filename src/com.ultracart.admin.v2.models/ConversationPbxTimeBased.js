@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeBased model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeBased
-   * @version 3.10.199
+   * @version 3.10.200
    */
 
   /**
@@ -55,37 +55,37 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('conversationPbxTimeBasedUuid'))
-        obj.conversationPbxTimeBasedUuid = ApiClient.convertToType(data['conversationPbxTimeBasedUuid'], 'String');
-      if (data.hasOwnProperty('mappingConfig'))
-        obj.mappingConfig = ConversationPbxTimeBasedMappingConfig.constructFromObject(data['mappingConfig']);
-      if (data.hasOwnProperty('merchantId'))
-        obj.merchantId = ApiClient.convertToType(data['merchantId'], 'String');
-      if (data.hasOwnProperty('timeBasedName'))
-        obj.timeBasedName = ApiClient.convertToType(data['timeBasedName'], 'String');
+      if (data.hasOwnProperty('conversation_pbx_time_based_uuid'))
+        obj.conversation_pbx_time_based_uuid = ApiClient.convertToType(data['conversation_pbx_time_based_uuid'], 'String');
+      if (data.hasOwnProperty('mapping_config'))
+        obj.mapping_config = ConversationPbxTimeBasedMappingConfig.constructFromObject(data['mapping_config']);
+      if (data.hasOwnProperty('merchant_id'))
+        obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('time_based_name'))
+        obj.time_based_name = ApiClient.convertToType(data['time_based_name'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} conversationPbxTimeBasedUuid
+   * @member {String} conversation_pbx_time_based_uuid
    */
-  exports.prototype.conversationPbxTimeBasedUuid = undefined;
+  exports.prototype.conversation_pbx_time_based_uuid = undefined;
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeBasedMappingConfig} mappingConfig
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeBasedMappingConfig} mapping_config
    */
-  exports.prototype.mappingConfig = undefined;
+  exports.prototype.mapping_config = undefined;
 
   /**
-   * @member {String} merchantId
+   * @member {String} merchant_id
    */
-  exports.prototype.merchantId = undefined;
+  exports.prototype.merchant_id = undefined;
 
   /**
-   * @member {String} timeBasedName
+   * @member {String} time_based_name
    */
-  exports.prototype.timeBasedName = undefined;
+  exports.prototype.time_based_name = undefined;
 
   return exports;
 

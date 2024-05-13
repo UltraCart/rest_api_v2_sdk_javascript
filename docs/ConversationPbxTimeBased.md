@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conversationPbxTimeBasedUuid** | **String** |  | [optional] 
-**mappingConfig** | [**ConversationPbxTimeBasedMappingConfig**](ConversationPbxTimeBasedMappingConfig.md) |  | [optional] 
-**merchantId** | **String** |  | [optional] 
-**timeBasedName** | **String** |  | [optional] 
+**conversation_pbx_time_based_uuid** | **String** |  | [optional] 
+**mapping_config** | [**ConversationPbxTimeBasedMappingConfig**](ConversationPbxTimeBasedMappingConfig.md) |  | [optional] 
+**merchant_id** | **String** |  | [optional] 
+**time_based_name** | **String** |  | [optional] 
 
 
