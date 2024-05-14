@@ -4,8 +4,25 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | **String** | Action | [optional] 
-**action_target** | **String** | Action target | [optional] 
+**action_target** | **String** | Action target.  This is the UUID associated with the configuration object of that particular type. | [optional] 
 **digits** | **Number** | Digits | [optional] 
 **speech** | **String** | Speech | [optional] 
+
+
+<a name="ActionEnum"></a>
+## Enum: ActionEnum
+
+
+* `time_based` (value: `"time based"`)
+
+* `menu` (value: `"menu"`)
+
+* `queue` (value: `"queue"`)
+
+* `voicemail` (value: `"voicemail"`)
+
+* `agent` (value: `"agent"`)
+
+
 
 

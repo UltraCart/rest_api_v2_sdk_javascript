@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeBasedMapping model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeBasedMapping
-   * @version 3.10.200
+   * @version 3.10.201
    */
 
   /**
@@ -69,12 +69,12 @@
 
   /**
    * Action
-   * @member {String} action
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeBasedMapping.ActionEnum} action
    */
   exports.prototype.action = undefined;
 
   /**
-   * Action target
+   * Action target.  This is the UUID associated with the configuration object of that particular type.
    * @member {String} action_target
    */
   exports.prototype.action_target = undefined;
@@ -90,6 +90,44 @@
    * @member {String} time_range_uuid
    */
   exports.prototype.time_range_uuid = undefined;
+
+
+  /**
+   * Allowed values for the <code>action</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ActionEnum = {
+    /**
+     * value: "time based"
+     * @const
+     */
+    time_based: "time based",
+
+    /**
+     * value: "menu"
+     * @const
+     */
+    menu: "menu",
+
+    /**
+     * value: "queue"
+     * @const
+     */
+    queue: "queue",
+
+    /**
+     * value: "voicemail"
+     * @const
+     */
+    voicemail: "voicemail",
+
+    /**
+     * value: "agent"
+     * @const
+     */
+    agent: "agent"
+  };
 
   return exports;
 

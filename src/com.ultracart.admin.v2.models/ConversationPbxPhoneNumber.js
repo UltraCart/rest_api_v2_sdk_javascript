@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxPhoneNumber model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
-   * @version 3.10.200
+   * @version 3.10.201
    */
 
   /**
@@ -71,12 +71,12 @@
 
   /**
    * Action
-   * @member {String} action
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxPhoneNumber.ActionEnum} action
    */
   exports.prototype.action = undefined;
 
   /**
-   * Action target
+   * Action target.  This is the UUID associated with the configuration object of that particular type.
    * @member {String} action_target
    */
   exports.prototype.action_target = undefined;
@@ -98,6 +98,44 @@
    * @member {String} phone_number
    */
   exports.prototype.phone_number = undefined;
+
+
+  /**
+   * Allowed values for the <code>action</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ActionEnum = {
+    /**
+     * value: "time based"
+     * @const
+     */
+    time_based: "time based",
+
+    /**
+     * value: "menu"
+     * @const
+     */
+    menu: "menu",
+
+    /**
+     * value: "queue"
+     * @const
+     */
+    queue: "queue",
+
+    /**
+     * value: "voicemail"
+     * @const
+     */
+    voicemail: "voicemail",
+
+    /**
+     * value: "agent"
+     * @const
+     */
+    agent: "agent"
+  };
 
   return exports;
 
