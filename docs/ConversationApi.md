@@ -7,11 +7,9 @@ Method | HTTP request | Description
 [**deleteConversationCannedMessage**](ConversationApi.md#deleteConversationCannedMessage) | **DELETE** /conversation/canned_messages/{conversation_canned_message_oid} | Delete a conversation canned message
 [**deleteDepartment**](ConversationApi.md#deleteDepartment) | **DELETE** /conversation/departments/{conversation_department_oid} | Delete a conversation department
 [**deleteEngagement**](ConversationApi.md#deleteEngagement) | **DELETE** /conversation/engagements/{conversation_engagement_oid} | Delete a conversation engagement
-[**deletePbxAgent**](ConversationApi.md#deletePbxAgent) | **DELETE** /conversation/pbx/agent/{conversationPbxAgentUuid} | Delete pbx agent
 [**deletePbxAgentVoicemail**](ConversationApi.md#deletePbxAgentVoicemail) | **DELETE** /conversation/pbx/agent/voicemails/{recording_sid} | Delete Agent Voicemail
 [**deletePbxAudio**](ConversationApi.md#deletePbxAudio) | **DELETE** /conversation/pbx/audio/{conversationPbxAudioUuid} | Delete pbx audio
 [**deletePbxMenu**](ConversationApi.md#deletePbxMenu) | **DELETE** /conversation/pbx/menu/{conversationPbxMenuUuid} | Delete pbx menu
-[**deletePbxPhoneNumber**](ConversationApi.md#deletePbxPhoneNumber) | **DELETE** /conversation/pbx/phone_number/{conversationPbxPhoneNumberUuid} | Delete pbx phoneNumber
 [**deletePbxQueue**](ConversationApi.md#deletePbxQueue) | **DELETE** /conversation/pbx/queue/{conversationPbxQueueUuid} | Delete pbx queue
 [**deletePbxQueueVoicemail**](ConversationApi.md#deletePbxQueueVoicemail) | **DELETE** /conversation/pbx/queues/{queue_uuid}/voicemails/{recording_sid} | Delete Queue Voicemail
 [**deletePbxTimeBased**](ConversationApi.md#deletePbxTimeBased) | **DELETE** /conversation/pbx/time_based/{conversationPbxTimeBasedUuid} | Delete pbx timeBased
@@ -61,10 +59,8 @@ Method | HTTP request | Description
 [**insertConversationCannedMessage**](ConversationApi.md#insertConversationCannedMessage) | **POST** /conversation/canned_messages | Insert a canned message
 [**insertConversationDepartment**](ConversationApi.md#insertConversationDepartment) | **POST** /conversation/departments | Insert a department
 [**insertConversationEngagement**](ConversationApi.md#insertConversationEngagement) | **POST** /conversation/engagements | Insert a engagement
-[**insertPbxAgent**](ConversationApi.md#insertPbxAgent) | **POST** /conversation/pbx/agent | Insert pbx agent
 [**insertPbxAudio**](ConversationApi.md#insertPbxAudio) | **POST** /conversation/pbx/audio | Insert pbx audio
 [**insertPbxMenu**](ConversationApi.md#insertPbxMenu) | **POST** /conversation/pbx/menu | Insert pbx menu
-[**insertPbxPhoneNumber**](ConversationApi.md#insertPbxPhoneNumber) | **POST** /conversation/pbx/phone_number | Insert pbx phoneNumber
 [**insertPbxQueue**](ConversationApi.md#insertPbxQueue) | **POST** /conversation/pbx/queue | Insert pbx queue
 [**insertPbxTimeBased**](ConversationApi.md#insertPbxTimeBased) | **POST** /conversation/pbx/time_based | Insert pbx timeBased
 [**insertPbxTimeRange**](ConversationApi.md#insertPbxTimeRange) | **POST** /conversation/pbx/time_range | Insert pbx timeRange
@@ -243,56 +239,6 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="deletePbxAgent"></a>
-# **deletePbxAgent**
-> ConversationPbxAgentResponse deletePbxAgent(conversationPbxAgentUuid)
-
-Delete pbx agent
-
-Delete a pbx agent 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ConversationApi();
-
-
-var conversationPbxAgentUuid = "conversationPbxAgentUuid_example"; // String | 
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.deletePbxAgent(conversationPbxAgentUuid, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **conversationPbxAgentUuid** | **String**|  | 
-
-### Return type
-
-[**ConversationPbxAgentResponse**](ConversationPbxAgentResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="deletePbxAgentVoicemail"></a>
 # **deletePbxAgentVoicemail**
 > deletePbxAgentVoicemail(recording_sid)
@@ -433,56 +379,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationPbxMenuResponse**](ConversationPbxMenuResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="deletePbxPhoneNumber"></a>
-# **deletePbxPhoneNumber**
-> ConversationPbxPhoneNumberResponse deletePbxPhoneNumber(conversationPbxPhoneNumberUuid)
-
-Delete pbx phoneNumber
-
-Delete a pbx phoneNumber 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ConversationApi();
-
-
-var conversationPbxPhoneNumberUuid = "conversationPbxPhoneNumberUuid_example"; // String | 
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.deletePbxPhoneNumber(conversationPbxPhoneNumberUuid, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **conversationPbxPhoneNumberUuid** | **String**|  | 
-
-### Return type
-
-[**ConversationPbxPhoneNumberResponse**](ConversationPbxPhoneNumberResponse.md)
 
 ### Authorization
 
@@ -2872,56 +2768,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="insertPbxAgent"></a>
-# **insertPbxAgent**
-> ConversationPbxAgentResponse insertPbxAgent(pbx_agent)
-
-Insert pbx agent
-
-Insert a pbx agent 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ConversationApi();
-
-
-var pbx_agent = new UltraCartRestApiV2.ConversationPbxAgent(); // ConversationPbxAgent | Pbx Agent
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.insertPbxAgent(pbx_agent, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pbx_agent** | [**ConversationPbxAgent**](ConversationPbxAgent.md)| Pbx Agent | 
-
-### Return type
-
-[**ConversationPbxAgentResponse**](ConversationPbxAgentResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="insertPbxAudio"></a>
 # **insertPbxAudio**
 > ConversationPbxAudioResponse insertPbxAudio(pbx_audio)
@@ -3012,56 +2858,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationPbxMenuResponse**](ConversationPbxMenuResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="insertPbxPhoneNumber"></a>
-# **insertPbxPhoneNumber**
-> ConversationPbxPhoneNumberResponse insertPbxPhoneNumber(pbx_phoneNumber)
-
-Insert pbx phoneNumber
-
-Insert a pbx phoneNumber 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ConversationApi();
-
-
-var pbx_phoneNumber = new UltraCartRestApiV2.ConversationPbxPhoneNumber(); // ConversationPbxPhoneNumber | Pbx PhoneNumber
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.insertPbxPhoneNumber(pbx_phoneNumber, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pbx_phoneNumber** | [**ConversationPbxPhoneNumber**](ConversationPbxPhoneNumber.md)| Pbx PhoneNumber | 
-
-### Return type
-
-[**ConversationPbxPhoneNumberResponse**](ConversationPbxPhoneNumberResponse.md)
 
 ### Authorization
 

@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAgent model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAgent
-   * @version 3.10.201
+   * @version 3.10.202
    */
 
   /**
@@ -61,14 +61,26 @@
         obj.conversation_pbx_agent_uuid = ApiClient.convertToType(data['conversation_pbx_agent_uuid'], 'String');
       if (data.hasOwnProperty('conversation_pbx_voicemail_mailbox_uuid'))
         obj.conversation_pbx_voicemail_mailbox_uuid = ApiClient.convertToType(data['conversation_pbx_voicemail_mailbox_uuid'], 'String');
+      if (data.hasOwnProperty('extension'))
+        obj.extension = ApiClient.convertToType(data['extension'], 'Number');
       if (data.hasOwnProperty('forward_calls_to_cellphone'))
         obj.forward_calls_to_cellphone = ApiClient.convertToType(data['forward_calls_to_cellphone'], 'Boolean');
+      if (data.hasOwnProperty('full_name'))
+        obj.full_name = ApiClient.convertToType(data['full_name'], 'String');
+      if (data.hasOwnProperty('login'))
+        obj.login = ApiClient.convertToType(data['login'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('record_outgoing_automatically'))
         obj.record_outgoing_automatically = ApiClient.convertToType(data['record_outgoing_automatically'], 'Boolean');
       if (data.hasOwnProperty('twilio_taskrouter_worker_id'))
         obj.twilio_taskrouter_worker_id = ApiClient.convertToType(data['twilio_taskrouter_worker_id'], 'String');
+      if (data.hasOwnProperty('unavailable_play_audio_uuid'))
+        obj.unavailable_play_audio_uuid = ApiClient.convertToType(data['unavailable_play_audio_uuid'], 'String');
+      if (data.hasOwnProperty('unavailable_say'))
+        obj.unavailable_say = ApiClient.convertToType(data['unavailable_say'], 'String');
+      if (data.hasOwnProperty('unavailable_say_voice'))
+        obj.unavailable_say_voice = ApiClient.convertToType(data['unavailable_say_voice'], 'String');
       if (data.hasOwnProperty('user_id'))
         obj.user_id = ApiClient.convertToType(data['user_id'], 'Number');
       if (data.hasOwnProperty('voicemail'))
@@ -96,10 +108,28 @@
   exports.prototype.conversation_pbx_voicemail_mailbox_uuid = undefined;
 
   /**
+   * Extension
+   * @member {Number} extension
+   */
+  exports.prototype.extension = undefined;
+
+  /**
    * True if calls to this agent should be forwarded to their cellphone
    * @member {Boolean} forward_calls_to_cellphone
    */
   exports.prototype.forward_calls_to_cellphone = undefined;
+
+  /**
+   * Full name
+   * @member {String} full_name
+   */
+  exports.prototype.full_name = undefined;
+
+  /**
+   * Agent login
+   * @member {String} login
+   */
+  exports.prototype.login = undefined;
 
   /**
    * Merchant Id
@@ -118,6 +148,24 @@
    * @member {String} twilio_taskrouter_worker_id
    */
   exports.prototype.twilio_taskrouter_worker_id = undefined;
+
+  /**
+   * Unavailable play audio UUID
+   * @member {String} unavailable_play_audio_uuid
+   */
+  exports.prototype.unavailable_play_audio_uuid = undefined;
+
+  /**
+   * Unavailable say
+   * @member {String} unavailable_say
+   */
+  exports.prototype.unavailable_say = undefined;
+
+  /**
+   * Unavailable say voice
+   * @member {String} unavailable_say_voice
+   */
+  exports.prototype.unavailable_say_voice = undefined;
 
   /**
    * User Id
