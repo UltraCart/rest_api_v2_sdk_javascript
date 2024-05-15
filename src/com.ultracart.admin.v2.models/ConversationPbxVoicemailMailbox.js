@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxVoicemailMailbox model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox
-   * @version 3.10.202
+   * @version 3.10.203
    */
 
   /**
@@ -63,10 +63,12 @@
         obj.send_notices_to_email = ApiClient.convertToType(data['send_notices_to_email'], 'String');
       if (data.hasOwnProperty('user_id'))
         obj.user_id = ApiClient.convertToType(data['user_id'], 'Number');
-      if (data.hasOwnProperty('voicemail_follow_play_audio_uuid'))
-        obj.voicemail_follow_play_audio_uuid = ApiClient.convertToType(data['voicemail_follow_play_audio_uuid'], 'String');
+      if (data.hasOwnProperty('voicemail_followup_play_audio_uuid'))
+        obj.voicemail_followup_play_audio_uuid = ApiClient.convertToType(data['voicemail_followup_play_audio_uuid'], 'String');
       if (data.hasOwnProperty('voicemail_followup_say'))
         obj.voicemail_followup_say = ApiClient.convertToType(data['voicemail_followup_say'], 'String');
+      if (data.hasOwnProperty('voicemail_followup_say_voice'))
+        obj.voicemail_followup_say_voice = ApiClient.convertToType(data['voicemail_followup_say_voice'], 'String');
       if (data.hasOwnProperty('voicemail_mailbox_id'))
         obj.voicemail_mailbox_id = ApiClient.convertToType(data['voicemail_mailbox_id'], 'String');
       if (data.hasOwnProperty('voicemail_mailbox_type'))
@@ -75,8 +77,8 @@
         obj.voicemail_prompt_play_audio_uuid = ApiClient.convertToType(data['voicemail_prompt_play_audio_uuid'], 'String');
       if (data.hasOwnProperty('voicemail_prompt_say'))
         obj.voicemail_prompt_say = ApiClient.convertToType(data['voicemail_prompt_say'], 'String');
-      if (data.hasOwnProperty('voicemail_say_voice'))
-        obj.voicemail_say_voice = ApiClient.convertToType(data['voicemail_say_voice'], 'String');
+      if (data.hasOwnProperty('voicemail_prompt_say_voice'))
+        obj.voicemail_prompt_say_voice = ApiClient.convertToType(data['voicemail_prompt_say_voice'], 'String');
     }
     return obj;
   }
@@ -107,15 +109,21 @@
 
   /**
    * Voicemail follow play audio UUID
-   * @member {String} voicemail_follow_play_audio_uuid
+   * @member {String} voicemail_followup_play_audio_uuid
    */
-  exports.prototype.voicemail_follow_play_audio_uuid = undefined;
+  exports.prototype.voicemail_followup_play_audio_uuid = undefined;
 
   /**
    * Voicemail followup say
    * @member {String} voicemail_followup_say
    */
   exports.prototype.voicemail_followup_say = undefined;
+
+  /**
+   * Voicemail followup say voice
+   * @member {String} voicemail_followup_say_voice
+   */
+  exports.prototype.voicemail_followup_say_voice = undefined;
 
   /**
    * Voicemail mailbox id
@@ -142,10 +150,10 @@
   exports.prototype.voicemail_prompt_say = undefined;
 
   /**
-   * Voicemail say voice
-   * @member {String} voicemail_say_voice
+   * Voicemail prompt say voice
+   * @member {String} voicemail_prompt_say_voice
    */
-  exports.prototype.voicemail_say_voice = undefined;
+  exports.prototype.voicemail_prompt_say_voice = undefined;
 
 
   /**
