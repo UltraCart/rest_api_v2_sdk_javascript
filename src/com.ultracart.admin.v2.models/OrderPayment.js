@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.10.203
+   * @version 3.10.204
    */
 
   /**
@@ -224,6 +224,12 @@
     Amazon: "Amazon",
 
     /**
+     * value: "Amazon Pay"
+     * @const
+     */
+    Amazon_Pay: "Amazon Pay",
+
+    /**
      * value: "Amazon SC"
      * @const
      */
@@ -276,6 +282,12 @@
      * @const
      */
     Insurance: "Insurance",
+
+    /**
+     * value: "Link"
+     * @const
+     */
+    Link: "Link",
 
     /**
      * value: "LoanHero"

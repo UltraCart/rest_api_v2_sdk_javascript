@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrderTransactionDetail model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrderTransactionDetail
-   * @version 3.10.203
+   * @version 3.10.204
    */
 
   /**

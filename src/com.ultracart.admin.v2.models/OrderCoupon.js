@@ -34,7 +34,7 @@
   /**
    * The OrderCoupon model module.
    * @module com.ultracart.admin.v2.models/OrderCoupon
-   * @version 3.10.203
+   * @version 3.10.204
    */
 
   /**

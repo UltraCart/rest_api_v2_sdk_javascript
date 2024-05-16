@@ -34,7 +34,7 @@
   /**
    * ChannelPartner service.
    * @module com.ultracart.admin.v2/ChannelPartnerApi
-   * @version 3.10.203
+   * @version 3.10.204
    */
 
   /**

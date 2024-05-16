@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 
 * `Amazon` (value: `"Amazon"`)
 
+* `Amazon_Pay` (value: `"Amazon Pay"`)
+
 * `Amazon_SC` (value: `"Amazon SC"`)
 
 * `Cash` (value: `"Cash"`)
@@ -49,6 +51,8 @@ Name | Type | Description | Notes
 * `Google_Shopping` (value: `"Google Shopping"`)
 
 * `Insurance` (value: `"Insurance"`)
+
+* `Link` (value: `"Link"`)
 
 * `LoanHero` (value: `"LoanHero"`)
 
