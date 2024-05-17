@@ -34,7 +34,7 @@
   /**
    * The PointOfSaleLocation model module.
    * @module com.ultracart.admin.v2.models/PointOfSaleLocation
-   * @version 3.10.204
+   * @version 3.10.205
    */
 
   /**

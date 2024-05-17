@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeBasedMappingConfig model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeBasedMappingConfig
-   * @version 3.10.204
+   * @version 3.10.205
    */
 
   /**
@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('default'))
-        obj._default = ConversationPbxTimeBasedMapping.constructFromObject(data['default']);
+      if (data.hasOwnProperty('default_mapping'))
+        obj.default_mapping = ConversationPbxTimeBasedMapping.constructFromObject(data['default_mapping']);
       if (data.hasOwnProperty('mappings'))
         obj.mappings = ApiClient.convertToType(data['mappings'], [ConversationPbxTimeBasedMapping]);
     }
@@ -64,9 +64,9 @@
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeBasedMapping} _default
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxTimeBasedMapping} default_mapping
    */
-  exports.prototype._default = undefined;
+  exports.prototype.default_mapping = undefined;
 
   /**
    * Mappings

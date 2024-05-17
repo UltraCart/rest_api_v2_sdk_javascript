@@ -34,7 +34,7 @@
   /**
    * The ItemReview model module.
    * @module com.ultracart.admin.v2.models/ItemReview
-   * @version 3.10.204
+   * @version 3.10.205
    */
 
   /**
