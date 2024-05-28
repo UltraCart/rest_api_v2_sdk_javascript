@@ -34,7 +34,7 @@
   /**
    * The ConversationEventAddCoupon model module.
    * @module com.ultracart.admin.v2.models/ConversationEventAddCoupon
-   * @version 3.10.205
+   * @version 3.10.206
    */
 
   /**

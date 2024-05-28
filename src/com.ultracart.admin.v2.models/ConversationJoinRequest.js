@@ -34,7 +34,7 @@
   /**
    * The ConversationJoinRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationJoinRequest
-   * @version 3.10.205
+   * @version 3.10.206
    */
 
   /**

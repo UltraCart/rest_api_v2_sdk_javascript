@@ -34,7 +34,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 3.10.205
+   * @version 3.10.206
    */
 
   /**
@@ -117,6 +117,8 @@
         obj.postal_code = ApiClient.convertToType(data['postal_code'], 'String');
       if (data.hasOwnProperty('purchase_order_number'))
         obj.purchase_order_number = ApiClient.convertToType(data['purchase_order_number'], 'String');
+      if (data.hasOwnProperty('query_target'))
+        obj.query_target = ApiClient.convertToType(data['query_target'], 'String');
       if (data.hasOwnProperty('refund_date_begin'))
         obj.refund_date_begin = ApiClient.convertToType(data['refund_date_begin'], 'String');
       if (data.hasOwnProperty('refund_date_end'))
@@ -328,6 +330,12 @@
    * @member {String} purchase_order_number
    */
   exports.prototype.purchase_order_number = undefined;
+
+  /**
+   * Query Target
+   * @member {module:com.ultracart.admin.v2.models/OrderQuery.QueryTargetEnum} query_target
+   */
+  exports.prototype.query_target = undefined;
 
   /**
    * Date/time that the order was refunded
@@ -577,6 +585,26 @@
      * @const
      */
     _Google_Pay: " Google Pay"
+  };
+
+
+  /**
+   * Allowed values for the <code>query_target</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.QueryTargetEnum = {
+    /**
+     * value: "origin"
+     * @const
+     */
+    origin: "origin",
+
+    /**
+     * value: "cache"
+     * @const
+     */
+    cache: "cache"
   };
 
   return exports;

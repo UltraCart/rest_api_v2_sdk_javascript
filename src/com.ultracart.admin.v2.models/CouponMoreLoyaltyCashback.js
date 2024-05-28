@@ -34,7 +34,7 @@
   /**
    * The CouponMoreLoyaltyCashback model module.
    * @module com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback
-   * @version 3.10.205
+   * @version 3.10.206
    */
 
   /**
