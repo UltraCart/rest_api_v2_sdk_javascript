@@ -34,7 +34,7 @@
   /**
    * The ItemShippingDestinationMarkup model module.
    * @module com.ultracart.admin.v2.models/ItemShippingDestinationMarkup
-   * @version 3.10.207
+   * @version 3.10.208
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('adult_signature_required'))
+        obj.adult_signature_required = ApiClient.convertToType(data['adult_signature_required'], 'Boolean');
       if (data.hasOwnProperty('country_code'))
         obj.country_code = ApiClient.convertToType(data['country_code'], 'String');
       if (data.hasOwnProperty('flat_fee'))
@@ -70,6 +72,12 @@
     }
     return obj;
   }
+
+  /**
+   * Adult Signature Required (only updated if not-null value provided)
+   * @member {Boolean} adult_signature_required
+   */
+  exports.prototype.adult_signature_required = undefined;
 
   /**
    * Country code (ISO-3166 two letter)
