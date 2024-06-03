@@ -34,7 +34,7 @@
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.10.209
+   * @version 3.10.210
    */
 
   /**
@@ -933,8 +933,8 @@
      */
 
     /**
-     * Retrieve a list of item inventories
-     * Retrieves a list of item inventories. 
+     * Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
+     * Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response. 
      * @param {module:com.ultracart.admin.v2/ItemApi~restItemInventorySnapshotResponseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ItemInventorySnapshotResponse}
      */

@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxPhoneNumber model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
-   * @version 3.10.209
+   * @version 3.10.210
    */
 
   /**
@@ -59,8 +59,8 @@
         obj.action = ApiClient.convertToType(data['action'], 'String');
       if (data.hasOwnProperty('action_target'))
         obj.action_target = ApiClient.convertToType(data['action_target'], 'String');
-      if (data.hasOwnProperty('conversation_pbx_time_range_uuid'))
-        obj.conversation_pbx_time_range_uuid = ApiClient.convertToType(data['conversation_pbx_time_range_uuid'], 'String');
+      if (data.hasOwnProperty('conversation_pbx_phone_number_uuid'))
+        obj.conversation_pbx_phone_number_uuid = ApiClient.convertToType(data['conversation_pbx_phone_number_uuid'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('phone_number'))
@@ -83,9 +83,9 @@
 
   /**
    * Conversation Pbx Phone Number UUID
-   * @member {String} conversation_pbx_time_range_uuid
+   * @member {String} conversation_pbx_phone_number_uuid
    */
-  exports.prototype.conversation_pbx_time_range_uuid = undefined;
+  exports.prototype.conversation_pbx_phone_number_uuid = undefined;
 
   /**
    * Merchant Id

@@ -34,7 +34,7 @@
   /**
    * The ItemAutoOrderStep model module.
    * @module com.ultracart.admin.v2.models/ItemAutoOrderStep
-   * @version 3.10.209
+   * @version 3.10.210
    */
 
   /**
@@ -178,13 +178,13 @@
   exports.prototype.schedule = undefined;
 
   /**
-   * Email list name to subscribe the customer to when the rebill occurs
+   * Email list name to subscribe the customer to when the rebill occurs (decommissioned email engine)
    * @member {String} subscribe_email_list_name
    */
   exports.prototype.subscribe_email_list_name = undefined;
 
   /**
-   * Email list identifier to subscribe the customer to when this rebill occurs
+   * Email list identifier to subscribe the customer to when this rebill occurs (decommissioned email engine)
    * @member {Number} subscribe_email_list_oid
    */
   exports.prototype.subscribe_email_list_oid = undefined;
