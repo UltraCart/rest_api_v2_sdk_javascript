@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAgent model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAgent
-   * @version 3.10.210
+   * @version 3.10.211
    */
 
   /**
@@ -59,8 +59,6 @@
         obj.cellphone = ApiClient.convertToType(data['cellphone'], 'String');
       if (data.hasOwnProperty('conversation_pbx_agent_uuid'))
         obj.conversation_pbx_agent_uuid = ApiClient.convertToType(data['conversation_pbx_agent_uuid'], 'String');
-      if (data.hasOwnProperty('conversation_pbx_voicemail_mailbox_uuid'))
-        obj.conversation_pbx_voicemail_mailbox_uuid = ApiClient.convertToType(data['conversation_pbx_voicemail_mailbox_uuid'], 'String');
       if (data.hasOwnProperty('extension'))
         obj.extension = ApiClient.convertToType(data['extension'], 'Number');
       if (data.hasOwnProperty('forward_calls_to_cellphone'))
@@ -71,8 +69,12 @@
         obj.login = ApiClient.convertToType(data['login'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
+      if (data.hasOwnProperty('personal_conversation_pbx_voicemail_mailbox_uuid'))
+        obj.personal_conversation_pbx_voicemail_mailbox_uuid = ApiClient.convertToType(data['personal_conversation_pbx_voicemail_mailbox_uuid'], 'String');
       if (data.hasOwnProperty('record_outgoing_automatically'))
         obj.record_outgoing_automatically = ApiClient.convertToType(data['record_outgoing_automatically'], 'Boolean');
+      if (data.hasOwnProperty('shared_conversation_pbx_voicemail_mailbox_uuid'))
+        obj.shared_conversation_pbx_voicemail_mailbox_uuid = ApiClient.convertToType(data['shared_conversation_pbx_voicemail_mailbox_uuid'], 'String');
       if (data.hasOwnProperty('twilio_taskrouter_worker_id'))
         obj.twilio_taskrouter_worker_id = ApiClient.convertToType(data['twilio_taskrouter_worker_id'], 'String');
       if (data.hasOwnProperty('unavailable_play_audio_uuid'))
@@ -100,12 +102,6 @@
    * @member {String} conversation_pbx_agent_uuid
    */
   exports.prototype.conversation_pbx_agent_uuid = undefined;
-
-  /**
-   * Conversation Pbx Voicemail Mailbox UUID
-   * @member {String} conversation_pbx_voicemail_mailbox_uuid
-   */
-  exports.prototype.conversation_pbx_voicemail_mailbox_uuid = undefined;
 
   /**
    * Extension
@@ -138,10 +134,22 @@
   exports.prototype.merchant_id = undefined;
 
   /**
+   * Personal Conversation Pbx Voicemail Mailbox UUID
+   * @member {String} personal_conversation_pbx_voicemail_mailbox_uuid
+   */
+  exports.prototype.personal_conversation_pbx_voicemail_mailbox_uuid = undefined;
+
+  /**
    * True if outgoing calls should be automatically recorded
    * @member {Boolean} record_outgoing_automatically
    */
   exports.prototype.record_outgoing_automatically = undefined;
+
+  /**
+   * Shared Conversation Pbx Voicemail Mailbox UUID
+   * @member {String} shared_conversation_pbx_voicemail_mailbox_uuid
+   */
+  exports.prototype.shared_conversation_pbx_voicemail_mailbox_uuid = undefined;
 
   /**
    * Twilio taskrouter worker Id

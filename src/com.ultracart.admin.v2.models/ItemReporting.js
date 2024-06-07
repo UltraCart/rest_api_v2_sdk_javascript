@@ -34,7 +34,7 @@
   /**
    * The ItemReporting model module.
    * @module com.ultracart.admin.v2.models/ItemReporting
-   * @version 3.10.210
+   * @version 3.10.211
    */
 
   /**
@@ -70,7 +70,7 @@
   exports.prototype.report_as_upsell = undefined;
 
   /**
-   * Report pickable quantities
+   * Report pickable quantities (deprecated)
    * @member {Array.<Number>} report_pickable_quantities
    */
   exports.prototype.report_pickable_quantities = undefined;
