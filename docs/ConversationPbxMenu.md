@@ -12,6 +12,18 @@ Name | Type | Description | Notes
 **name** | **String** | Menu name | [optional] 
 **play_audio_uuid** | **String** | An optional audio clip that plays when a customer enters this menu | [optional] 
 **say** | **String** | An optional saying that plays when a customer enters this menu | [optional] 
+**say_voice** | **String** | say voice | [optional] 
 **timeout** | **Number** | The idle seconds before this menu times out | [optional] 
+
+
+<a name="SayVoiceEnum"></a>
+## Enum: SayVoiceEnum
+
+
+* `man` (value: `"man"`)
+
+* `woman` (value: `"woman"`)
+
+
 
 

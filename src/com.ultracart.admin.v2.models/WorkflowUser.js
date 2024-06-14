@@ -34,7 +34,7 @@
   /**
    * The WorkflowUser model module.
    * @module com.ultracart.admin.v2.models/WorkflowUser
-   * @version 3.10.211
+   * @version 3.10.212
    */
 
   /**

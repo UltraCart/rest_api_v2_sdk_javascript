@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxMenu model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxMenu
-   * @version 3.10.211
+   * @version 3.10.212
    */
 
   /**
@@ -73,6 +73,8 @@
         obj.play_audio_uuid = ApiClient.convertToType(data['play_audio_uuid'], 'String');
       if (data.hasOwnProperty('say'))
         obj.say = ApiClient.convertToType(data['say'], 'String');
+      if (data.hasOwnProperty('say_voice'))
+        obj.say_voice = ApiClient.convertToType(data['say_voice'], 'String');
       if (data.hasOwnProperty('timeout'))
         obj.timeout = ApiClient.convertToType(data['timeout'], 'Number');
     }
@@ -134,10 +136,36 @@
   exports.prototype.say = undefined;
 
   /**
+   * say voice
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxMenu.SayVoiceEnum} say_voice
+   */
+  exports.prototype.say_voice = undefined;
+
+  /**
    * The idle seconds before this menu times out
    * @member {Number} timeout
    */
   exports.prototype.timeout = undefined;
+
+
+  /**
+   * Allowed values for the <code>say_voice</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.SayVoiceEnum = {
+    /**
+     * value: "man"
+     * @const
+     */
+    man: "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    woman: "woman"
+  };
 
   return exports;
 

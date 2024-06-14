@@ -17,6 +17,17 @@ Name | Type | Description | Notes
 **voicemail_prompt_say_voice** | **String** | Voicemail prompt say voice | [optional] 
 
 
+<a name="VoicemailFollowupSayVoiceEnum"></a>
+## Enum: VoicemailFollowupSayVoiceEnum
+
+
+* `man` (value: `"man"`)
+
+* `woman` (value: `"woman"`)
+
+
+
+
 <a name="VoicemailMailboxTypeEnum"></a>
 ## Enum: VoicemailMailboxTypeEnum
 
@@ -24,6 +35,17 @@ Name | Type | Description | Notes
 * `agent` (value: `"agent"`)
 
 * `shared` (value: `"shared"`)
+
+
+
+
+<a name="VoicemailPromptSayVoiceEnum"></a>
+## Enum: VoicemailPromptSayVoiceEnum
+
+
+* `man` (value: `"man"`)
+
+* `woman` (value: `"woman"`)
 
 
 

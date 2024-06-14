@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxVoicemailMailbox model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox
-   * @version 3.10.211
+   * @version 3.10.212
    */
 
   /**
@@ -121,7 +121,7 @@
 
   /**
    * Voicemail followup say voice
-   * @member {String} voicemail_followup_say_voice
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox.VoicemailFollowupSayVoiceEnum} voicemail_followup_say_voice
    */
   exports.prototype.voicemail_followup_say_voice = undefined;
 
@@ -151,9 +151,29 @@
 
   /**
    * Voicemail prompt say voice
-   * @member {String} voicemail_prompt_say_voice
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox.VoicemailPromptSayVoiceEnum} voicemail_prompt_say_voice
    */
   exports.prototype.voicemail_prompt_say_voice = undefined;
+
+
+  /**
+   * Allowed values for the <code>voicemail_followup_say_voice</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.VoicemailFollowupSayVoiceEnum = {
+    /**
+     * value: "man"
+     * @const
+     */
+    man: "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    woman: "woman"
+  };
 
 
   /**
@@ -173,6 +193,26 @@
      * @const
      */
     shared: "shared"
+  };
+
+
+  /**
+   * Allowed values for the <code>voicemail_prompt_say_voice</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.VoicemailPromptSayVoiceEnum = {
+    /**
+     * value: "man"
+     * @const
+     */
+    man: "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    woman: "woman"
   };
 
   return exports;
