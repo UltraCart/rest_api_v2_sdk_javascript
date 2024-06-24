@@ -34,7 +34,7 @@
   /**
    * Storefront service.
    * @module com.ultracart.admin.v2/StorefrontApi
-   * @version 3.10.212
+   * @version 3.10.213
    */
 
   /**
@@ -7990,6 +7990,59 @@
 
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/lists/{email_list_uuid}/subscribe', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sunsetEmailSegment operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~sunsetEmailSegmentCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sunset email segment
+     * @param {Number} storefront_oid 
+     * @param {String} email_segment_uuid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~sunsetEmailSegmentCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.sunsetEmailSegment = function(storefront_oid, email_segment_uuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling sunsetEmailSegment");
+      }
+
+      // verify the required parameter 'email_segment_uuid' is set
+      if (email_segment_uuid === undefined || email_segment_uuid === null) {
+        throw new Error("Missing the required parameter 'email_segment_uuid' when calling sunsetEmailSegment");
+      }
+
+
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'email_segment_uuid': email_segment_uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/segments/{email_segment_uuid}/sunset', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
