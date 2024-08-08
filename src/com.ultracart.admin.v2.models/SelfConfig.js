@@ -34,7 +34,7 @@
   /**
    * The SelfConfig model module.
    * @module com.ultracart.admin.v2.models/SelfConfig
-   * @version 3.10.213
+   * @version 3.10.214
    */
 
   /**
@@ -55,11 +55,27 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('exempt_from_colorado_retail_delivery_fee'))
+        obj.exempt_from_colorado_retail_delivery_fee = ApiClient.convertToType(data['exempt_from_colorado_retail_delivery_fee'], 'Boolean');
+      if (data.hasOwnProperty('exempt_from_minnesota_retail_delivery_fee'))
+        obj.exempt_from_minnesota_retail_delivery_fee = ApiClient.convertToType(data['exempt_from_minnesota_retail_delivery_fee'], 'Boolean');
       if (data.hasOwnProperty('tax_billing'))
         obj.tax_billing = ApiClient.convertToType(data['tax_billing'], 'Boolean');
     }
     return obj;
   }
+
+  /**
+   * True if the Colorado Retail Delivery Fee should not be collected
+   * @member {Boolean} exempt_from_colorado_retail_delivery_fee
+   */
+  exports.prototype.exempt_from_colorado_retail_delivery_fee = undefined;
+
+  /**
+   * True if the Minnesota Retail Delivery Fee should not be collected
+   * @member {Boolean} exempt_from_minnesota_retail_delivery_fee
+   */
+  exports.prototype.exempt_from_minnesota_retail_delivery_fee = undefined;
 
   /**
    * True if sales tax should be collected based on billing address instead of shipping address

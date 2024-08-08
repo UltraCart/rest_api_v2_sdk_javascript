@@ -34,7 +34,7 @@
   /**
    * The OrderQueryBatch model module.
    * @module com.ultracart.admin.v2.models/OrderQueryBatch
-   * @version 3.10.213
+   * @version 3.10.214
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('order_ids'))
         obj.order_ids = ApiClient.convertToType(data['order_ids'], ['String']);
+      if (data.hasOwnProperty('query_target'))
+        obj.query_target = ApiClient.convertToType(data['query_target'], 'String');
     }
     return obj;
   }
@@ -66,6 +68,32 @@
    * @member {Array.<String>} order_ids
    */
   exports.prototype.order_ids = undefined;
+
+  /**
+   * Query Target
+   * @member {module:com.ultracart.admin.v2.models/OrderQueryBatch.QueryTargetEnum} query_target
+   */
+  exports.prototype.query_target = undefined;
+
+
+  /**
+   * Allowed values for the <code>query_target</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.QueryTargetEnum = {
+    /**
+     * value: "origin"
+     * @const
+     */
+    origin: "origin",
+
+    /**
+     * value: "cache"
+     * @const
+     */
+    cache: "cache"
+  };
 
   return exports;
 

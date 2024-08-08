@@ -1169,6 +1169,7 @@ var opts = {
   'manual_refund': false, // Boolean | Consider a manual refund done externally
   'reverse_affiliate_transactions': true, // Boolean | Reverse affiliate transactions
   'issue_store_credit': false, // Boolean | Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account
+  'auto_order_cancel_reason': "auto_order_cancel_reason_example", // String | Reason for auto orders cancellation
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 
@@ -1194,6 +1195,7 @@ Name | Type | Description  | Notes
  **manual_refund** | **Boolean**| Consider a manual refund done externally | [optional] [default to false]
  **reverse_affiliate_transactions** | **Boolean**| Reverse affiliate transactions | [optional] [default to true]
  **issue_store_credit** | **Boolean**| Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account | [optional] [default to false]
+ **auto_order_cancel_reason** | **String**| Reason for auto orders cancellation | [optional] 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
