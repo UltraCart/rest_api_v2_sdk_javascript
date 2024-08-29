@@ -34,7 +34,7 @@
   /**
    * The ItemShipping model module.
    * @module com.ultracart.admin.v2.models/ItemShipping
-   * @version 3.10.214
+   * @version 3.10.215
    */
 
   /**
@@ -101,6 +101,8 @@
         obj.freight_class = ApiClient.convertToType(data['freight_class'], 'String');
       if (data.hasOwnProperty('hazmat'))
         obj.hazmat = ApiClient.convertToType(data['hazmat'], 'Boolean');
+      if (data.hasOwnProperty('hold_for_transmission'))
+        obj.hold_for_transmission = ApiClient.convertToType(data['hold_for_transmission'], 'Boolean');
       if (data.hasOwnProperty('made_to_order'))
         obj.made_to_order = ApiClient.convertToType(data['made_to_order'], 'Boolean');
       if (data.hasOwnProperty('made_to_order_lead_time'))
@@ -292,6 +294,12 @@
    * @member {Boolean} hazmat
    */
   exports.prototype.hazmat = undefined;
+
+  /**
+   * Hold for transmission
+   * @member {Boolean} hold_for_transmission
+   */
+  exports.prototype.hold_for_transmission = undefined;
 
   /**
    * True if this item is made to order

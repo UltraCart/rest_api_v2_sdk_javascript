@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerShipToPreferencesResponse model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse
-   * @version 3.10.214
+   * @version 3.10.215
    */
 
   /**
