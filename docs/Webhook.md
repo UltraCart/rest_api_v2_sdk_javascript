@@ -41,6 +41,10 @@ Name | Type | Description | Notes
 
 * `basic` (value: `"basic"`)
 
+* `api_user` (value: `"api user"`)
+
+* `aws_iam` (value: `"aws iam"`)
+
 
 
 

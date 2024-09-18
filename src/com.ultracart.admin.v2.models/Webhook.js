@@ -34,7 +34,7 @@
   /**
    * The Webhook model module.
    * @module com.ultracart.admin.v2.models/Webhook
-   * @version 3.10.215
+   * @version 3.10.216
    */
 
   /**
@@ -241,7 +241,19 @@
      * value: "basic"
      * @const
      */
-    basic: "basic"
+    basic: "basic",
+
+    /**
+     * value: "api user"
+     * @const
+     */
+    api_user: "api user",
+
+    /**
+     * value: "aws iam"
+     * @const
+     */
+    aws_iam: "aws iam"
   };
 
   return exports;
