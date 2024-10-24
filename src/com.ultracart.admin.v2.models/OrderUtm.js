@@ -34,7 +34,7 @@
   /**
    * The OrderUtm model module.
    * @module com.ultracart.admin.v2.models/OrderUtm
-   * @version 3.10.216
+   * @version 3.10.217
    */
 
   /**
@@ -95,6 +95,10 @@
         obj.itm_term = ApiClient.convertToType(data['itm_term'], 'String');
       if (data.hasOwnProperty('msclkid'))
         obj.msclkid = ApiClient.convertToType(data['msclkid'], 'String');
+      if (data.hasOwnProperty('short_code'))
+        obj.short_code = ApiClient.convertToType(data['short_code'], 'String');
+      if (data.hasOwnProperty('short_code_backup'))
+        obj.short_code_backup = ApiClient.convertToType(data['short_code_backup'], 'Boolean');
       if (data.hasOwnProperty('ttclid'))
         obj.ttclid = ApiClient.convertToType(data['ttclid'], 'String');
       if (data.hasOwnProperty('uc_message_id'))
@@ -219,6 +223,16 @@
    * @member {String} msclkid
    */
   exports.prototype.msclkid = undefined;
+
+  /**
+   * @member {String} short_code
+   */
+  exports.prototype.short_code = undefined;
+
+  /**
+   * @member {Boolean} short_code_backup
+   */
+  exports.prototype.short_code_backup = undefined;
 
   /**
    * @member {String} ttclid

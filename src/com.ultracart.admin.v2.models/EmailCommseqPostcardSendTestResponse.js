@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqPostcardSendTestResponse model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestResponse
-   * @version 3.10.216
+   * @version 3.10.217
    */
 
   /**
