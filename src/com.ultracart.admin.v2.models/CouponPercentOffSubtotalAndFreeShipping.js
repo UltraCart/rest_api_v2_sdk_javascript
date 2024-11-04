@@ -34,7 +34,7 @@
   /**
    * The CouponPercentOffSubtotalAndFreeShipping model module.
    * @module com.ultracart.admin.v2.models/CouponPercentOffSubtotalAndFreeShipping
-   * @version 3.10.217
+   * @version 3.10.218
    */
 
   /**

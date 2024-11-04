@@ -34,7 +34,7 @@
   /**
    * The ConversationPermissionsResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPermissionsResponse
-   * @version 3.10.217
+   * @version 3.10.218
    */
 
   /**

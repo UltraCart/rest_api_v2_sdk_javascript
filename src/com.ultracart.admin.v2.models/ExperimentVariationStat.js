@@ -34,7 +34,7 @@
   /**
    * The ExperimentVariationStat model module.
    * @module com.ultracart.admin.v2.models/ExperimentVariationStat
-   * @version 3.10.217
+   * @version 3.10.218
    */
 
   /**

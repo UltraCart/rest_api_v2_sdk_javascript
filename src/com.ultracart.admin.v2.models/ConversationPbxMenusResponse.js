@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxMenusResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxMenusResponse
-   * @version 3.10.217
+   * @version 3.10.218
    */
 
   /**

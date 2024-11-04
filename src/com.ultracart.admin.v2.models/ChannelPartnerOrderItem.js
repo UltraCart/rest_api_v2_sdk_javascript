@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrderItem model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItem
-   * @version 3.10.217
+   * @version 3.10.218
    */
 
   /**
@@ -181,6 +181,12 @@
      * @const
      */
     Every_4_Months: "Every 4 Months",
+
+    /**
+     * value: "Every 5 Months"
+     * @const
+     */
+    Every_5_Months: "Every 5 Months",
 
     /**
      * value: "Every 6 Months"

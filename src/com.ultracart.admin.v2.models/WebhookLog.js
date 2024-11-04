@@ -34,7 +34,7 @@
   /**
    * The WebhookLog model module.
    * @module com.ultracart.admin.v2.models/WebhookLog
-   * @version 3.10.217
+   * @version 3.10.218
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('uri'))
         obj.uri = ApiClient.convertToType(data['uri'], 'String');
+      if (data.hasOwnProperty('webhook_oid'))
+        obj.webhook_oid = ApiClient.convertToType(data['webhook_oid'], 'Number');
     }
     return obj;
   }
@@ -146,6 +148,12 @@
    * @member {String} uri
    */
   exports.prototype.uri = undefined;
+
+  /**
+   * webhook oid
+   * @member {Number} webhook_oid
+   */
+  exports.prototype.webhook_oid = undefined;
 
   return exports;
 

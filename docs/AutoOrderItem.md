@@ -59,6 +59,8 @@ Name | Type | Description | Notes
 
 * `Every_4_Months` (value: `"Every 4 Months"`)
 
+* `Every_5_Months` (value: `"Every 5 Months"`)
+
 * `Every_6_Months` (value: `"Every 6 Months"`)
 
 * `Yearly` (value: `"Yearly"`)
