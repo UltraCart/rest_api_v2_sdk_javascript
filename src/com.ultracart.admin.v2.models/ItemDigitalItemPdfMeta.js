@@ -34,7 +34,7 @@
   /**
    * The ItemDigitalItemPdfMeta model module.
    * @module com.ultracart.admin.v2.models/ItemDigitalItemPdfMeta
-   * @version 3.10.218
+   * @version 3.10.219
    */
 
   /**

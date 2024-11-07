@@ -34,7 +34,7 @@
   /**
    * The BrowserUserAgent model module.
    * @module com.ultracart.admin.v2.models/BrowserUserAgent
-   * @version 3.10.218
+   * @version 3.10.219
    */
 
   /**
