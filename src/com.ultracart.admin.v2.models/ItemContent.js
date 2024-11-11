@@ -34,7 +34,7 @@
   /**
    * The ItemContent model module.
    * @module com.ultracart.admin.v2.models/ItemContent
-   * @version 3.10.219
+   * @version 3.10.220
    */
 
   /**
@@ -71,6 +71,12 @@
         obj.extended_description = ApiClient.convertToType(data['extended_description'], 'String');
       if (data.hasOwnProperty('extended_description_translated_text_instance_oid'))
         obj.extended_description_translated_text_instance_oid = ApiClient.convertToType(data['extended_description_translated_text_instance_oid'], 'Number');
+      if (data.hasOwnProperty('meta_description'))
+        obj.meta_description = ApiClient.convertToType(data['meta_description'], 'String');
+      if (data.hasOwnProperty('meta_keywords'))
+        obj.meta_keywords = ApiClient.convertToType(data['meta_keywords'], 'String');
+      if (data.hasOwnProperty('meta_title'))
+        obj.meta_title = ApiClient.convertToType(data['meta_title'], 'String');
       if (data.hasOwnProperty('multimedia'))
         obj.multimedia = ApiClient.convertToType(data['multimedia'], [ItemContentMultimedia]);
       if (data.hasOwnProperty('new_item'))
@@ -128,10 +134,28 @@
   exports.prototype.extended_description = undefined;
 
   /**
-   * Extneded description text translation instance identifier
+   * Extended description text translation instance identifier
    * @member {Number} extended_description_translated_text_instance_oid
    */
   exports.prototype.extended_description_translated_text_instance_oid = undefined;
+
+  /**
+   * SEO meta description used by Storefronts
+   * @member {String} meta_description
+   */
+  exports.prototype.meta_description = undefined;
+
+  /**
+   * SEO meta keywords used by Storefronts
+   * @member {String} meta_keywords
+   */
+  exports.prototype.meta_keywords = undefined;
+
+  /**
+   * SEO meta title used by Storefronts
+   * @member {String} meta_title
+   */
+  exports.prototype.meta_title = undefined;
 
   /**
    * Multimedia
