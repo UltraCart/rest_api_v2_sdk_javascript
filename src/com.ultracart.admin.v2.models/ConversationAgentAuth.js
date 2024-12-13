@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentAuth model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuth
-   * @version 3.10.220
+   * @version 3.10.221
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.conversation_participant_arn = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
       if (data.hasOwnProperty('conversation_participant_name'))
         obj.conversation_participant_name = ApiClient.convertToType(data['conversation_participant_name'], 'String');
+      if (data.hasOwnProperty('group_ids'))
+        obj.group_ids = ApiClient.convertToType(data['group_ids'], ['Number']);
       if (data.hasOwnProperty('jwt'))
         obj.jwt = ApiClient.convertToType(data['jwt'], 'String');
       if (data.hasOwnProperty('merchant_id'))
@@ -79,6 +81,8 @@
         obj.pbx_worker_token = ApiClient.convertToType(data['pbx_worker_token'], 'String');
       if (data.hasOwnProperty('twilio_accounts'))
         obj.twilio_accounts = ApiClient.convertToType(data['twilio_accounts'], [ConversationTwilioAccount]);
+      if (data.hasOwnProperty('user_id'))
+        obj.user_id = ApiClient.convertToType(data['user_id'], 'Number');
       if (data.hasOwnProperty('websocket_url'))
         obj.websocket_url = ApiClient.convertToType(data['websocket_url'], 'String');
     }
@@ -94,6 +98,12 @@
    * @member {String} conversation_participant_name
    */
   exports.prototype.conversation_participant_name = undefined;
+
+  /**
+   * UltraCart Groups this user belongs to
+   * @member {Array.<Number>} group_ids
+   */
+  exports.prototype.group_ids = undefined;
 
   /**
    * @member {String} jwt
@@ -144,6 +154,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationTwilioAccount>} twilio_accounts
    */
   exports.prototype.twilio_accounts = undefined;
+
+  /**
+   * UltraCart User ID
+   * @member {Number} user_id
+   */
+  exports.prototype.user_id = undefined;
 
   /**
    * @member {String} websocket_url
