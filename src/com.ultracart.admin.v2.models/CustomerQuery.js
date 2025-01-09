@@ -34,7 +34,7 @@
   /**
    * The CustomerQuery model module.
    * @module com.ultracart.admin.v2.models/CustomerQuery
-   * @version 3.10.221
+   * @version 3.10.222
    */
 
   /**
@@ -79,6 +79,8 @@
         obj.billing_state = ApiClient.convertToType(data['billing_state'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('emails'))
+        obj.emails = ApiClient.convertToType(data['emails'], ['String']);
       if (data.hasOwnProperty('last_modified_dts_end'))
         obj.last_modified_dts_end = ApiClient.convertToType(data['last_modified_dts_end'], 'String');
       if (data.hasOwnProperty('last_modified_dts_start'))
@@ -188,6 +190,12 @@
    * @member {String} email
    */
   exports.prototype.email = undefined;
+
+  /**
+   * Emails allows for searching on multiple email addresses and work with our without the single email variable.  You may specify a single email address here or use the email property.
+   * @member {Array.<String>} emails
+   */
+  exports.prototype.emails = undefined;
 
   /**
    * Last modified date end

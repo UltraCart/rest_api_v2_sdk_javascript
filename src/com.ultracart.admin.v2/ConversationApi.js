@@ -34,7 +34,7 @@
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.10.221
+   * @version 3.10.222
    */
 
   /**

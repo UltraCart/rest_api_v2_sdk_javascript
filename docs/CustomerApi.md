@@ -636,6 +636,7 @@ var opts = {
   'shipping_evening_phone': "shipping_evening_phone_example", // String | Shipping evening phone
   'pricing_tier_oid': 56, // Number | Pricing tier oid
   'pricing_tier_name': "pricing_tier_name_example", // String | Pricing tier name
+  'emails': null, // Object | Emails
   '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
@@ -684,6 +685,7 @@ Name | Type | Description  | Notes
  **shipping_evening_phone** | **String**| Shipping evening phone | [optional] 
  **pricing_tier_oid** | **Number**| Pricing tier oid | [optional] 
  **pricing_tier_name** | **String**| Pricing tier name | [optional] 
+ **emails** | [**Object**](.md)| Emails | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **_since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 

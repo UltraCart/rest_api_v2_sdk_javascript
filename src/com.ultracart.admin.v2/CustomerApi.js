@@ -34,7 +34,7 @@
   /**
    * Customer service.
    * @module com.ultracart.admin.v2/CustomerApi
-   * @version 3.10.221
+   * @version 3.10.222
    */
 
   /**
@@ -634,6 +634,7 @@
      * @param {String} opts.shipping_evening_phone Shipping evening phone
      * @param {Number} opts.pricing_tier_oid Pricing tier oid
      * @param {String} opts.pricing_tier_name Pricing tier name
+     * @param {Object} opts.emails Emails
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (Max 200) (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts._since Fetch customers that have been created/modified since this date/time.
@@ -677,6 +678,7 @@
         'shipping_evening_phone': opts['shipping_evening_phone'],
         'pricing_tier_oid': opts['pricing_tier_oid'],
         'pricing_tier_name': opts['pricing_tier_name'],
+        'emails': opts['emails'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset'],
         '_since': opts['_since'],

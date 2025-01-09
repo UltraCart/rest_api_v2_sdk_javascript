@@ -34,7 +34,7 @@
   /**
    * The ConversationSummary model module.
    * @module com.ultracart.admin.v2.models/ConversationSummary
-   * @version 3.10.221
+   * @version 3.10.222
    */
 
   /**

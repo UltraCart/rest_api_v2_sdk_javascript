@@ -34,7 +34,7 @@
   /**
    * The SingleSignOnTokenResponse model module.
    * @module com.ultracart.admin.v2.models/SingleSignOnTokenResponse
-   * @version 3.10.221
+   * @version 3.10.222
    */
 
   /**

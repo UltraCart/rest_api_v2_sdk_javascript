@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ChannelPartnerCancelResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse', 'com.ultracart.admin.v2.models/ChannelPartnerImportResponse', 'com.ultracart.admin.v2.models/ChannelPartnerOrder', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreference', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse', 'com.ultracart.admin.v2.models/ChannelPartnersResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ChannelPartnerCancelResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse', 'com.ultracart.admin.v2.models/ChannelPartnerImportResponse', 'com.ultracart.admin.v2.models/ChannelPartnerOrder', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreference', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse', 'com.ultracart.admin.v2.models/ChannelPartnersResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.models/OrderResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChannelPartnerCancelResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerImportResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerOrder'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreference'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChannelPartnerCancelResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerImportResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerOrder'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreference'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Order'), require('../com.ultracart.admin.v2.models/OrderResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ChannelPartnerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChannelPartnerCancelResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateShippingResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateTaxResponse, root.UltraCartRestApiV2.ChannelPartnerImportResponse, root.UltraCartRestApiV2.ChannelPartnerOrder, root.UltraCartRestApiV2.ChannelPartnerShipToPreference, root.UltraCartRestApiV2.ChannelPartnerShipToPreferenceResponse, root.UltraCartRestApiV2.ChannelPartnerShipToPreferencesResponse, root.UltraCartRestApiV2.ChannelPartnersResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.ChannelPartnerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChannelPartnerCancelResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateShippingResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateTaxResponse, root.UltraCartRestApiV2.ChannelPartnerImportResponse, root.UltraCartRestApiV2.ChannelPartnerOrder, root.UltraCartRestApiV2.ChannelPartnerShipToPreference, root.UltraCartRestApiV2.ChannelPartnerShipToPreferenceResponse, root.UltraCartRestApiV2.ChannelPartnerShipToPreferencesResponse, root.UltraCartRestApiV2.ChannelPartnersResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Order, root.UltraCartRestApiV2.OrderResponse);
   }
-}(this, function(ApiClient, ChannelPartnerCancelResponse, ChannelPartnerEstimateShippingResponse, ChannelPartnerEstimateTaxResponse, ChannelPartnerImportResponse, ChannelPartnerOrder, ChannelPartnerShipToPreference, ChannelPartnerShipToPreferenceResponse, ChannelPartnerShipToPreferencesResponse, ChannelPartnersResponse, ErrorResponse) {
+}(this, function(ApiClient, ChannelPartnerCancelResponse, ChannelPartnerEstimateShippingResponse, ChannelPartnerEstimateTaxResponse, ChannelPartnerImportResponse, ChannelPartnerOrder, ChannelPartnerShipToPreference, ChannelPartnerShipToPreferenceResponse, ChannelPartnerShipToPreferencesResponse, ChannelPartnersResponse, ErrorResponse, Order, OrderResponse) {
   'use strict';
 
   /**
    * ChannelPartner service.
    * @module com.ultracart.admin.v2/ChannelPartnerApi
-   * @version 3.10.221
+   * @version 3.10.222
    */
 
   /**
@@ -293,6 +293,110 @@
     }
 
     /**
+     * Callback function to receive the result of the getChannelPartnerOrder operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a channel partner order
+     * Retrieves a single order using the specified order id.  Only orders belonging to this channel partner may be retrieved. 
+     * @param {String} order_id The order id to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See OrderApi.getOrder documentation for examples
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.getChannelPartnerOrder = function(order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getChannelPartnerOrder");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/channel_partner/orders/{order_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getChannelPartnerOrderByChannelPartnerOrderId operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerOrderByChannelPartnerOrderIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a channel partner order by the channel partner order id
+     * Retrieves a single order using the channel partner order id, not the ultracart order id.  Only orders belonging to this channel partner may be retrieved. 
+     * @param {String} order_id The channel partner order id to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See OrderApi.getOrder documentation for examples
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerOrderByChannelPartnerOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.getChannelPartnerOrderByChannelPartnerOrderId = function(order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getChannelPartnerOrderByChannelPartnerOrderId");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/channel_partner/orders/by_channel_partner_order_id/{order_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getChannelPartnerShipToPreference operation.
      * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerShipToPreferenceCallback
      * @param {String} error Error message, if any.
@@ -532,6 +636,78 @@
 
       return this.apiClient.callApi(
         '/channel_partner/channel_partners/{channel_partner_oid}/ship_to_preferences', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the refundChannelPartnerOrder operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~refundChannelPartnerOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Refund a channel partner order
+     * Perform a refund operation on a channel partner order and then update the order if successful.  All of the object properties ending in _refunded should be the TOTAL amount that should end up being refunded.  UltraCart will calculate the actual amount to refund based upon the prior refunds. 
+     * @param {module:com.ultracart.admin.v2.models/Order} order Order to refund
+     * @param {String} order_id The order id to refund.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.reject_after_refund Reject order after refund (default to false)
+     * @param {Boolean} opts.skip_customer_notification Skip customer email notification (default to false)
+     * @param {Boolean} opts.auto_order_cancel Cancel associated auto orders (default to false)
+     * @param {Boolean} opts.manual_refund Consider a manual refund done externally (default to false)
+     * @param {Boolean} opts.reverse_affiliate_transactions Reverse affiliate transactions (default to true)
+     * @param {Boolean} opts.issue_store_credit Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account (default to false)
+     * @param {String} opts.auto_order_cancel_reason Reason for auto orders cancellation
+     * @param {String} opts._expand The object expansion to perform on the result.  See OrderApi.refundOrder documentation for examples
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~refundChannelPartnerOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.refundChannelPartnerOrder = function(order, order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = order;
+
+      // verify the required parameter 'order' is set
+      if (order === undefined || order === null) {
+        throw new Error("Missing the required parameter 'order' when calling refundChannelPartnerOrder");
+      }
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling refundChannelPartnerOrder");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        'reject_after_refund': opts['reject_after_refund'],
+        'skip_customer_notification': opts['skip_customer_notification'],
+        'auto_order_cancel': opts['auto_order_cancel'],
+        'manual_refund': opts['manual_refund'],
+        'reverse_affiliate_transactions': opts['reverse_affiliate_transactions'],
+        'issue_store_credit': opts['issue_store_credit'],
+        'auto_order_cancel_reason': opts['auto_order_cancel_reason'],
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/channel_partner/orders/{order_id}/refund', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
