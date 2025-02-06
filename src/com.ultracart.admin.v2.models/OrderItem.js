@@ -34,7 +34,7 @@
   /**
    * The OrderItem model module.
    * @module com.ultracart.admin.v2.models/OrderItem
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.accounting_code = ApiClient.convertToType(data['accounting_code'], 'String');
       if (data.hasOwnProperty('activation_codes'))
         obj.activation_codes = ApiClient.convertToType(data['activation_codes'], ['String']);
+      if (data.hasOwnProperty('actual_cogs'))
+        obj.actual_cogs = Currency.constructFromObject(data['actual_cogs']);
       if (data.hasOwnProperty('arbitrary_unit_cost'))
         obj.arbitrary_unit_cost = Currency.constructFromObject(data['arbitrary_unit_cost']);
       if (data.hasOwnProperty('auto_order_last_rebill_dts'))
@@ -200,6 +202,11 @@
    * @member {Array.<String>} activation_codes
    */
   exports.prototype.activation_codes = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} actual_cogs
+   */
+  exports.prototype.actual_cogs = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_unit_cost

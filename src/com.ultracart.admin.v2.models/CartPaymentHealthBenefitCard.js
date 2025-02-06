@@ -34,7 +34,7 @@
   /**
    * The CartPaymentHealthBenefitCard model module.
    * @module com.ultracart.admin.v2.models/CartPaymentHealthBenefitCard
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**

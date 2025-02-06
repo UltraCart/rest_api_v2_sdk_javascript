@@ -34,7 +34,7 @@
   /**
    * The OrderSummary model module.
    * @module com.ultracart.admin.v2.models/OrderSummary
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**
@@ -57,8 +57,16 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('actual_fulfillment'))
         obj.actual_fulfillment = Currency.constructFromObject(data['actual_fulfillment']);
+      if (data.hasOwnProperty('actual_other_cost'))
+        obj.actual_other_cost = Currency.constructFromObject(data['actual_other_cost']);
       if (data.hasOwnProperty('actual_payment_processing'))
         obj.actual_payment_processing = Currency.constructFromObject(data['actual_payment_processing']);
+      if (data.hasOwnProperty('actual_profit'))
+        obj.actual_profit = Currency.constructFromObject(data['actual_profit']);
+      if (data.hasOwnProperty('actual_profit_analyzed'))
+        obj.actual_profit_analyzed = ApiClient.convertToType(data['actual_profit_analyzed'], 'Boolean');
+      if (data.hasOwnProperty('actual_profit_review'))
+        obj.actual_profit_review = ApiClient.convertToType(data['actual_profit_review'], 'Boolean');
       if (data.hasOwnProperty('actual_shipping'))
         obj.actual_shipping = Currency.constructFromObject(data['actual_shipping']);
       if (data.hasOwnProperty('arbitrary_shipping_handling_total'))
@@ -109,9 +117,31 @@
   exports.prototype.actual_fulfillment = undefined;
 
   /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} actual_other_cost
+   */
+  exports.prototype.actual_other_cost = undefined;
+
+  /**
    * @member {module:com.ultracart.admin.v2.models/Currency} actual_payment_processing
    */
   exports.prototype.actual_payment_processing = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/Currency} actual_profit
+   */
+  exports.prototype.actual_profit = undefined;
+
+  /**
+   * Actual profit has been analyzed
+   * @member {Boolean} actual_profit_analyzed
+   */
+  exports.prototype.actual_profit_analyzed = undefined;
+
+  /**
+   * Actual profit needs review
+   * @member {Boolean} actual_profit_review
+   */
+  exports.prototype.actual_profit_review = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Currency} actual_shipping

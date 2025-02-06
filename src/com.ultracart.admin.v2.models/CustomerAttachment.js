@@ -34,7 +34,7 @@
   /**
    * The CustomerAttachment model module.
    * @module com.ultracart.admin.v2.models/CustomerAttachment
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**
@@ -88,7 +88,7 @@
   exports.prototype.file_name = undefined;
 
   /**
-   * Mime typoe
+   * Mime type
    * @member {String} mime_type
    */
   exports.prototype.mime_type = undefined;

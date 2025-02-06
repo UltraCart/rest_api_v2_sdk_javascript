@@ -34,7 +34,7 @@
   /**
    * GiftCertificate service.
    * @module com.ultracart.admin.v2/GiftCertificateApi
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**

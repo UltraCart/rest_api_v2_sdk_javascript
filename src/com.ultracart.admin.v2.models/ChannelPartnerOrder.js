@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrder model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**
@@ -229,6 +229,8 @@
         obj.store_completed = ApiClient.convertToType(data['store_completed'], 'Boolean');
       if (data.hasOwnProperty('store_if_payment_declines'))
         obj.store_if_payment_declines = ApiClient.convertToType(data['store_if_payment_declines'], 'Boolean');
+      if (data.hasOwnProperty('storefront_host_name'))
+        obj.storefront_host_name = ApiClient.convertToType(data['storefront_host_name'], 'String');
       if (data.hasOwnProperty('tax_county'))
         obj.tax_county = ApiClient.convertToType(data['tax_county'], 'String');
       if (data.hasOwnProperty('tax_exempt'))
@@ -762,6 +764,12 @@
    * @member {Boolean} store_if_payment_declines
    */
   exports.prototype.store_if_payment_declines = undefined;
+
+  /**
+   * StoreFront host name associated with the order
+   * @member {String} storefront_host_name
+   */
+  exports.prototype.storefront_host_name = undefined;
 
   /**
    * The optional shipping county used to determine exact taxes

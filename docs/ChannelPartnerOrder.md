@@ -90,6 +90,7 @@ Name | Type | Description | Notes
 **special_instructions** | **String** | Special instructions from the customer regarding shipping | [optional] 
 **store_completed** | **Boolean** | If true the order bypasses shipping and is marked completed | [optional] 
 **store_if_payment_declines** | **Boolean** | If true any failed payments are placed into Accounts Receivable.  If false any failed payments result in a rejected order resulting in errors thrown during the insert routine | [optional] 
+**storefront_host_name** | **String** | StoreFront host name associated with the order | [optional] 
 **tax_county** | **String** | The optional shipping county used to determine exact taxes | [optional] 
 **tax_exempt** | **Boolean** | If true this order is marked as being tax exempt | [optional] 
 **transaction** | [**ChannelPartnerOrderTransaction**](ChannelPartnerOrderTransaction.md) |  | [optional] 

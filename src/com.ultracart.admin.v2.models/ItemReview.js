@@ -34,7 +34,7 @@
   /**
    * The ItemReview model module.
    * @module com.ultracart.admin.v2.models/ItemReview
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.helperful_no_votes = ApiClient.convertToType(data['helperful_no_votes'], 'Number');
       if (data.hasOwnProperty('helpful_yes_votes'))
         obj.helpful_yes_votes = ApiClient.convertToType(data['helpful_yes_votes'], 'Number');
+      if (data.hasOwnProperty('merchant_reply'))
+        obj.merchant_reply = ApiClient.convertToType(data['merchant_reply'], 'String');
       if (data.hasOwnProperty('order_id'))
         obj.order_id = ApiClient.convertToType(data['order_id'], 'String');
       if (data.hasOwnProperty('overall'))
@@ -153,6 +155,12 @@
    * @member {Number} helpful_yes_votes
    */
   exports.prototype.helpful_yes_votes = undefined;
+
+  /**
+   * Merchant Reply (set to an empty string to remove)
+   * @member {String} merchant_reply
+   */
+  exports.prototype.merchant_reply = undefined;
 
   /**
    * @member {String} order_id

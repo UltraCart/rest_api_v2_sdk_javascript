@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **creation_dts** | **String** | Date/time that the order was created | [optional] 
 **currency_code** | **String** | Currency code that the customer used if different than the merchant's base currency code | [optional] 
 **current_stage** | **String** | Current stage that the order is in. | [optional] 
+**current_stage_histories** | [**[OrderCurrentStageHistory]**](OrderCurrentStageHistory.md) | History of the changes to the current_stage field | [optional] 
 **customer_profile** | [**Customer**](Customer.md) |  | [optional] 
 **digital_order** | [**OrderDigitalOrder**](OrderDigitalOrder.md) |  | [optional] 
 **edi** | [**OrderEdi**](OrderEdi.md) |  | [optional] 

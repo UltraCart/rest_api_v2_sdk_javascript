@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxVoicemailMessageSummariesResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageSummariesResponse
-   * @version 3.10.223
+   * @version 3.10.224
    */
 
   /**
