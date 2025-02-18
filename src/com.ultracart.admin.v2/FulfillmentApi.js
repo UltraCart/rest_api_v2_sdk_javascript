@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/DistributionCentersResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/FulfillmentInventory', 'com.ultracart.admin.v2.models/FulfillmentShipment', 'com.ultracart.admin.v2.models/OrdersResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/DistributionCentersResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/FulfillmentInventory', 'com.ultracart.admin.v2.models/FulfillmentShipment', 'com.ultracart.admin.v2.models/OrderPackingSlipResponse', 'com.ultracart.admin.v2.models/OrdersResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/DistributionCentersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/FulfillmentInventory'), require('../com.ultracart.admin.v2.models/FulfillmentShipment'), require('../com.ultracart.admin.v2.models/OrdersResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/DistributionCentersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/FulfillmentInventory'), require('../com.ultracart.admin.v2.models/FulfillmentShipment'), require('../com.ultracart.admin.v2.models/OrderPackingSlipResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.FulfillmentApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.DistributionCentersResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.FulfillmentInventory, root.UltraCartRestApiV2.FulfillmentShipment, root.UltraCartRestApiV2.OrdersResponse);
+    root.UltraCartRestApiV2.FulfillmentApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.DistributionCentersResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.FulfillmentInventory, root.UltraCartRestApiV2.FulfillmentShipment, root.UltraCartRestApiV2.OrderPackingSlipResponse, root.UltraCartRestApiV2.OrdersResponse);
   }
-}(this, function(ApiClient, DistributionCentersResponse, ErrorResponse, FulfillmentInventory, FulfillmentShipment, OrdersResponse) {
+}(this, function(ApiClient, DistributionCentersResponse, ErrorResponse, FulfillmentInventory, FulfillmentShipment, OrderPackingSlipResponse, OrdersResponse) {
   'use strict';
 
   /**
    * Fulfillment service.
    * @module com.ultracart.admin.v2/FulfillmentApi
-   * @version 3.10.224
+   * @version 3.10.225
    */
 
   /**
@@ -105,7 +105,7 @@
      * Callback function to receive the result of the generatePackingSlip operation.
      * @callback module:com.ultracart.admin.v2/FulfillmentApi~generatePackingSlipCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/OrdersResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/OrderPackingSlipResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -115,7 +115,7 @@
      * @param {String} distribution_center_code Distribution center code
      * @param {String} order_id Order ID
      * @param {module:com.ultracart.admin.v2/FulfillmentApi~generatePackingSlipCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderPackingSlipResponse}
      */
     this.generatePackingSlip = function(distribution_center_code, order_id, callback) {
       var postBody = null;
@@ -147,7 +147,7 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = OrdersResponse;
+      var returnType = OrderPackingSlipResponse;
 
       return this.apiClient.callApi(
         '/fulfillment/distribution_centers/{distribution_center_code}/orders/{order_id}', 'GET',
@@ -166,7 +166,7 @@
 
     /**
      * Retrieve orders queued up for this distribution center.
-     * Retrieves up to 100 orders that are queued up in this distribution center.  You must acknowledge them before additional new orders will be returned.  There is NO record chunking.  You'll get the same 100 records again and again until you acknowledge orders.  The orders that are returned contain only items for this distribution center and are by default completely expanded with billing, buysafe, channel_partner, checkout, coupons, customer_profile, edi, gift, gift_certificate, internal, items, payment, shipping, summary, taxes. 
+     * Retrieves up to 100 orders that are queued up in this distribution center.  You must acknowledge them before additional new orders will be returned.  There is NO record chunking.  You'll get the same 100 records again and again until you acknowledge orders.  The orders that are returned contain only items for this distribution center and are by default completely expanded with billing, channel_partner, checkout, coupons, customer_profile, edi, gift, gift_certificate, internal, items, payment, shipping, summary, taxes. 
      * @param {String} distribution_center_code Distribution center code
      * @param {module:com.ultracart.admin.v2/FulfillmentApi~getDistributionCenterOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}

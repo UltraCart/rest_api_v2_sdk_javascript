@@ -34,7 +34,7 @@
   /**
    * The ItemPaymentProcessing model module.
    * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
-   * @version 3.10.224
+   * @version 3.10.225
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('block_prepaid'))
         obj.block_prepaid = ApiClient.convertToType(data['block_prepaid'], 'Boolean');
+      if (data.hasOwnProperty('block_refunds'))
+        obj.block_refunds = ApiClient.convertToType(data['block_refunds'], 'Boolean');
       if (data.hasOwnProperty('credit_card_transaction_type'))
         obj.credit_card_transaction_type = ApiClient.convertToType(data['credit_card_transaction_type'], 'String');
       if (data.hasOwnProperty('no_realtime_charge'))
@@ -74,6 +76,12 @@
    * @member {Boolean} block_prepaid
    */
   exports.prototype.block_prepaid = undefined;
+
+  /**
+   * True if this item should block any refund attempts
+   * @member {Boolean} block_refunds
+   */
+  exports.prototype.block_refunds = undefined;
 
   /**
    * Credit card transaction type

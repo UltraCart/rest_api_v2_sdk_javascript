@@ -17,40 +17,40 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning', 'com.ultracart.admin.v2.models/WebhookSampleRequest'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning', 'com.ultracart.admin.v2.models/WebhookReflow'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./Warning'), require('./WebhookSampleRequest'));
+    module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseMetadata'), require('./Warning'), require('./WebhookReflow'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.WebhookSampleRequestResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning, root.UltraCartRestApiV2.WebhookSampleRequest);
+    root.UltraCartRestApiV2.WebhookReflowResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning, root.UltraCartRestApiV2.WebhookReflow);
   }
-}(this, function(ApiClient, Error, ResponseMetadata, Warning, WebhookSampleRequest) {
+}(this, function(ApiClient, Error, ResponseMetadata, Warning, WebhookReflow) {
   'use strict';
 
   /**
-   * The WebhookSampleRequestResponse model module.
-   * @module com.ultracart.admin.v2.models/WebhookSampleRequestResponse
-   * @version 3.10.224
+   * The WebhookReflowResponse model module.
+   * @module com.ultracart.admin.v2.models/WebhookReflowResponse
+   * @version 3.10.225
    */
 
   /**
-   * Constructs a new <code>WebhookSampleRequestResponse</code>.
-   * @alias module:com.ultracart.admin.v2.models/WebhookSampleRequestResponse
+   * Constructs a new <code>WebhookReflowResponse</code>.
+   * @alias module:com.ultracart.admin.v2.models/WebhookReflowResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>WebhookSampleRequestResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WebhookReflowResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/WebhookSampleRequestResponse} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/WebhookSampleRequestResponse} The populated <code>WebhookSampleRequestResponse</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/WebhookReflowResponse} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/WebhookReflowResponse} The populated <code>WebhookReflowResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -59,12 +59,12 @@
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('reflow'))
+        obj.reflow = WebhookReflow.constructFromObject(data['reflow']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('warning'))
         obj.warning = Warning.constructFromObject(data['warning']);
-      if (data.hasOwnProperty('webhook_sample_request'))
-        obj.webhook_sample_request = WebhookSampleRequest.constructFromObject(data['webhook_sample_request']);
     }
     return obj;
   }
@@ -80,6 +80,11 @@
   exports.prototype.metadata = undefined;
 
   /**
+   * @member {module:com.ultracart.admin.v2.models/WebhookReflow} reflow
+   */
+  exports.prototype.reflow = undefined;
+
+  /**
    * Indicates if API call was successful
    * @member {Boolean} success
    */
@@ -89,11 +94,6 @@
    * @member {module:com.ultracart.admin.v2.models/Warning} warning
    */
   exports.prototype.warning = undefined;
-
-  /**
-   * @member {module:com.ultracart.admin.v2.models/WebhookSampleRequest} webhook_sample_request
-   */
-  exports.prototype.webhook_sample_request = undefined;
 
   return exports;
 

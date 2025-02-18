@@ -32,7 +32,7 @@ var grant_type = "grant_type_example"; // String | Type of grant
 
 var opts = { 
   'code': "code_example", // String | Authorization code received back from the browser redirect
-  'redirect_uri': "redirect_uri_example", // String | The URI that you redirect the browser to to start the authorization process
+  'redirect_uri': "redirect_uri_example", // String | The URI that you redirect the browser to start the authorization process
   'refresh_token': "refresh_token_example" // String | The refresh token received during the original grant_type=authorization_code that can be used to return a new access token
 };
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
  **client_id** | **String**| The OAuth application client_id. | 
  **grant_type** | **String**| Type of grant | 
  **code** | **String**| Authorization code received back from the browser redirect | [optional] 
- **redirect_uri** | **String**| The URI that you redirect the browser to to start the authorization process | [optional] 
+ **redirect_uri** | **String**| The URI that you redirect the browser to start the authorization process | [optional] 
  **refresh_token** | **String**| The refresh token received during the original grant_type=authorization_code that can be used to return a new access token | [optional] 
 
 ### Return type

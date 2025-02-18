@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 <a name="resendEvent"></a>
 # **resendEvent**
-> WebhookSampleRequestResponse resendEvent(webhookOid, eventName)
+> WebhookReflowResponse resendEvent(webhookOid, eventName)
 
 Resend events to the webhook endpoint.
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WebhookSampleRequestResponse**](WebhookSampleRequestResponse.md)
+[**WebhookReflowResponse**](WebhookReflowResponse.md)
 
 ### Authorization
 

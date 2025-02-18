@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Webhook', 'com.ultracart.admin.v2.models/WebhookLogResponse', 'com.ultracart.admin.v2.models/WebhookLogSummariesResponse', 'com.ultracart.admin.v2.models/WebhookResponse', 'com.ultracart.admin.v2.models/WebhookSampleRequestResponse', 'com.ultracart.admin.v2.models/WebhooksResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Webhook', 'com.ultracart.admin.v2.models/WebhookLogResponse', 'com.ultracart.admin.v2.models/WebhookLogSummariesResponse', 'com.ultracart.admin.v2.models/WebhookReflowResponse', 'com.ultracart.admin.v2.models/WebhookResponse', 'com.ultracart.admin.v2.models/WebhooksResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Webhook'), require('../com.ultracart.admin.v2.models/WebhookLogResponse'), require('../com.ultracart.admin.v2.models/WebhookLogSummariesResponse'), require('../com.ultracart.admin.v2.models/WebhookResponse'), require('../com.ultracart.admin.v2.models/WebhookSampleRequestResponse'), require('../com.ultracart.admin.v2.models/WebhooksResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Webhook'), require('../com.ultracart.admin.v2.models/WebhookLogResponse'), require('../com.ultracart.admin.v2.models/WebhookLogSummariesResponse'), require('../com.ultracart.admin.v2.models/WebhookReflowResponse'), require('../com.ultracart.admin.v2.models/WebhookResponse'), require('../com.ultracart.admin.v2.models/WebhooksResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.WebhookApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Webhook, root.UltraCartRestApiV2.WebhookLogResponse, root.UltraCartRestApiV2.WebhookLogSummariesResponse, root.UltraCartRestApiV2.WebhookResponse, root.UltraCartRestApiV2.WebhookSampleRequestResponse, root.UltraCartRestApiV2.WebhooksResponse);
+    root.UltraCartRestApiV2.WebhookApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Webhook, root.UltraCartRestApiV2.WebhookLogResponse, root.UltraCartRestApiV2.WebhookLogSummariesResponse, root.UltraCartRestApiV2.WebhookReflowResponse, root.UltraCartRestApiV2.WebhookResponse, root.UltraCartRestApiV2.WebhooksResponse);
   }
-}(this, function(ApiClient, ErrorResponse, Webhook, WebhookLogResponse, WebhookLogSummariesResponse, WebhookResponse, WebhookSampleRequestResponse, WebhooksResponse) {
+}(this, function(ApiClient, ErrorResponse, Webhook, WebhookLogResponse, WebhookLogSummariesResponse, WebhookReflowResponse, WebhookResponse, WebhooksResponse) {
   'use strict';
 
   /**
    * Webhook service.
    * @module com.ultracart.admin.v2/WebhookApi
-   * @version 3.10.224
+   * @version 3.10.225
    */
 
   /**
@@ -359,7 +359,7 @@
      * Callback function to receive the result of the resendEvent operation.
      * @callback module:com.ultracart.admin.v2/WebhookApi~resendEventCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/WebhookSampleRequestResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/WebhookReflowResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -369,7 +369,7 @@
      * @param {Number} webhookOid The webhook oid that is receiving the reflowed events.
      * @param {String} eventName The event to reflow.
      * @param {module:com.ultracart.admin.v2/WebhookApi~resendEventCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookSampleRequestResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookReflowResponse}
      */
     this.resendEvent = function(webhookOid, eventName, callback) {
       var postBody = null;
@@ -401,7 +401,7 @@
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = WebhookSampleRequestResponse;
+      var returnType = WebhookReflowResponse;
 
       return this.apiClient.callApi(
         '/webhook/webhooks/{webhookOid}/reflow/{eventName}', 'POST',

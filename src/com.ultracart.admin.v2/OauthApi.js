@@ -34,7 +34,7 @@
   /**
    * Oauth service.
    * @module com.ultracart.admin.v2/OauthApi
-   * @version 3.10.224
+   * @version 3.10.225
    */
 
   /**
@@ -63,7 +63,7 @@
      * @param {String} grant_type Type of grant
      * @param {Object} opts Optional parameters
      * @param {String} opts.code Authorization code received back from the browser redirect
-     * @param {String} opts.redirect_uri The URI that you redirect the browser to to start the authorization process
+     * @param {String} opts.redirect_uri The URI that you redirect the browser to start the authorization process
      * @param {String} opts.refresh_token The refresh token received during the original grant_type=authorization_code that can be used to return a new access token
      * @param {module:com.ultracart.admin.v2/OauthApi~oauthAccessTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OauthTokenResponse}
