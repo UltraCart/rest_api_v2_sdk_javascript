@@ -17,7 +17,7 @@ import ConversationPbxQueueMembers from './ConversationPbxQueueMembers';
 /**
  * The ConversationPbxQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxQueue
- * @version 4.0.244
+ * @version 4.0.245
  */
 class ConversationPbxQueue {
     /**

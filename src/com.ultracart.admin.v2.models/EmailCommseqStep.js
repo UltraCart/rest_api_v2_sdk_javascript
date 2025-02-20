@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqStep model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqStep
- * @version 4.0.244
+ * @version 4.0.245
  */
 class EmailCommseqStep {
     /**

@@ -666,6 +666,7 @@ docs/OrderPaymentCreditCardDualVaultedProperty.md
 docs/OrderPaymentECheck.md
 docs/OrderPaymentHealthBenefitCard.md
 docs/OrderPaymentInsurance.md
+docs/OrderPaymentPayPal.md
 docs/OrderPaymentPurchaseOrder.md
 docs/OrderPaymentTransaction.md
 docs/OrderPaymentTransactionDetail.md
@@ -1531,6 +1532,7 @@ src/com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty.js
 src/com.ultracart.admin.v2.models/OrderPaymentECheck.js
 src/com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard.js
 src/com.ultracart.admin.v2.models/OrderPaymentInsurance.js
+src/com.ultracart.admin.v2.models/OrderPaymentPayPal.js
 src/com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder.js
 src/com.ultracart.admin.v2.models/OrderPaymentTransaction.js
 src/com.ultracart.admin.v2.models/OrderPaymentTransactionDetail.js

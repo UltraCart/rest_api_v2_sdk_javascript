@@ -18,13 +18,14 @@ import OrderPaymentCreditCard from './OrderPaymentCreditCard';
 import OrderPaymentECheck from './OrderPaymentECheck';
 import OrderPaymentHealthBenefitCard from './OrderPaymentHealthBenefitCard';
 import OrderPaymentInsurance from './OrderPaymentInsurance';
+import OrderPaymentPayPal from './OrderPaymentPayPal';
 import OrderPaymentPurchaseOrder from './OrderPaymentPurchaseOrder';
 import OrderPaymentTransaction from './OrderPaymentTransaction';
 
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.244
+ * @version 4.0.245
  */
 class OrderPayment {
     /**
@@ -87,6 +88,9 @@ class OrderPayment {
             }
             if (data.hasOwnProperty('payment_status')) {
                 obj['payment_status'] = ApiClient.convertToType(data['payment_status'], 'String');
+            }
+            if (data.hasOwnProperty('paypal')) {
+                obj['paypal'] = OrderPaymentPayPal.constructFromObject(data['paypal']);
             }
             if (data.hasOwnProperty('purchase_order')) {
                 obj['purchase_order'] = OrderPaymentPurchaseOrder.constructFromObject(data['purchase_order']);
@@ -179,6 +183,11 @@ OrderPayment.prototype['payment_method_deposit_to_account'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderPayment.PaymentStatusEnum} payment_status
  */
 OrderPayment.prototype['payment_status'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPaymentPayPal} paypal
+ */
+OrderPayment.prototype['paypal'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder} purchase_order

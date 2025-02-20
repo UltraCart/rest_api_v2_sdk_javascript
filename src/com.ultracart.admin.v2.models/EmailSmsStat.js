@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailSmsStat model module.
  * @module com.ultracart.admin.v2.models/EmailSmsStat
- * @version 4.0.244
+ * @version 4.0.245
  */
 class EmailSmsStat {
     /**

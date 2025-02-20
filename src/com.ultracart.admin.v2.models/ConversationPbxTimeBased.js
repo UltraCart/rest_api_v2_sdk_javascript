@@ -17,7 +17,7 @@ import ConversationPbxTimeBasedMappingConfig from './ConversationPbxTimeBasedMap
 /**
  * The ConversationPbxTimeBased model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeBased
- * @version 4.0.244
+ * @version 4.0.245
  */
 class ConversationPbxTimeBased {
     /**

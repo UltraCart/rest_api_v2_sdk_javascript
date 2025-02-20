@@ -17,7 +17,7 @@ import ConversationEngagementEquationFunction from './ConversationEngagementEqua
 /**
  * The ConversationEngagementEquationGroup model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagementEquationGroup
- * @version 4.0.244
+ * @version 4.0.245
  */
 class ConversationEngagementEquationGroup {
     /**

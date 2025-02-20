@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxCustomerSnapshotRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest
- * @version 4.0.244
+ * @version 4.0.245
  */
 class ConversationPbxCustomerSnapshotRequest {
     /**

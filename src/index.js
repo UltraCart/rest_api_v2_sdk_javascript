@@ -662,6 +662,7 @@ import OrderPaymentCreditCardDualVaultedProperty from './com.ultracart.admin.v2.
 import OrderPaymentECheck from './com.ultracart.admin.v2.models/OrderPaymentECheck';
 import OrderPaymentHealthBenefitCard from './com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard';
 import OrderPaymentInsurance from './com.ultracart.admin.v2.models/OrderPaymentInsurance';
+import OrderPaymentPayPal from './com.ultracart.admin.v2.models/OrderPaymentPayPal';
 import OrderPaymentPurchaseOrder from './com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder';
 import OrderPaymentTransaction from './com.ultracart.admin.v2.models/OrderPaymentTransaction';
 import OrderPaymentTransactionDetail from './com.ultracart.admin.v2.models/OrderPaymentTransactionDetail';
@@ -920,7 +921,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.0.244
+* @version 4.0.245
 */
 export {
     /**
@@ -4822,6 +4823,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderPaymentInsurance}
      */
     OrderPaymentInsurance,
+
+    /**
+     * The OrderPaymentPayPal model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPaymentPayPal}
+     */
+    OrderPaymentPayPal,
 
     /**
      * The OrderPaymentPurchaseOrder model constructor.

@@ -17,7 +17,7 @@ import ItemRelatedItem from './ItemRelatedItem';
 /**
  * The ItemRelated model module.
  * @module com.ultracart.admin.v2.models/ItemRelated
- * @version 4.0.244
+ * @version 4.0.245
  */
 class ItemRelated {
     /**
