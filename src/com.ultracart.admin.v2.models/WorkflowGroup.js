@@ -34,7 +34,7 @@
   /**
    * The WorkflowGroup model module.
    * @module com.ultracart.admin.v2.models/WorkflowGroup
-   * @version 3.10.226
+   * @version 3.10.228
    */
 
   /**

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/OrderPaymentCheck', 'com.ultracart.admin.v2.models/OrderPaymentCreditCard', 'com.ultracart.admin.v2.models/OrderPaymentECheck', 'com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard', 'com.ultracart.admin.v2.models/OrderPaymentInsurance', 'com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder', 'com.ultracart.admin.v2.models/OrderPaymentTransaction'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/Currency', 'com.ultracart.admin.v2.models/OrderPaymentCheck', 'com.ultracart.admin.v2.models/OrderPaymentCreditCard', 'com.ultracart.admin.v2.models/OrderPaymentECheck', 'com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard', 'com.ultracart.admin.v2.models/OrderPaymentInsurance', 'com.ultracart.admin.v2.models/OrderPaymentPayPal', 'com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder', 'com.ultracart.admin.v2.models/OrderPaymentTransaction'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./OrderPaymentCheck'), require('./OrderPaymentCreditCard'), require('./OrderPaymentECheck'), require('./OrderPaymentHealthBenefitCard'), require('./OrderPaymentInsurance'), require('./OrderPaymentPurchaseOrder'), require('./OrderPaymentTransaction'));
+    module.exports = factory(require('../ApiClient'), require('./Currency'), require('./OrderPaymentCheck'), require('./OrderPaymentCreditCard'), require('./OrderPaymentECheck'), require('./OrderPaymentHealthBenefitCard'), require('./OrderPaymentInsurance'), require('./OrderPaymentPayPal'), require('./OrderPaymentPurchaseOrder'), require('./OrderPaymentTransaction'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.OrderPaymentCheck, root.UltraCartRestApiV2.OrderPaymentCreditCard, root.UltraCartRestApiV2.OrderPaymentECheck, root.UltraCartRestApiV2.OrderPaymentHealthBenefitCard, root.UltraCartRestApiV2.OrderPaymentInsurance, root.UltraCartRestApiV2.OrderPaymentPurchaseOrder, root.UltraCartRestApiV2.OrderPaymentTransaction);
+    root.UltraCartRestApiV2.OrderPayment = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.Currency, root.UltraCartRestApiV2.OrderPaymentCheck, root.UltraCartRestApiV2.OrderPaymentCreditCard, root.UltraCartRestApiV2.OrderPaymentECheck, root.UltraCartRestApiV2.OrderPaymentHealthBenefitCard, root.UltraCartRestApiV2.OrderPaymentInsurance, root.UltraCartRestApiV2.OrderPaymentPayPal, root.UltraCartRestApiV2.OrderPaymentPurchaseOrder, root.UltraCartRestApiV2.OrderPaymentTransaction);
   }
-}(this, function(ApiClient, Currency, OrderPaymentCheck, OrderPaymentCreditCard, OrderPaymentECheck, OrderPaymentHealthBenefitCard, OrderPaymentInsurance, OrderPaymentPurchaseOrder, OrderPaymentTransaction) {
+}(this, function(ApiClient, Currency, OrderPaymentCheck, OrderPaymentCreditCard, OrderPaymentECheck, OrderPaymentHealthBenefitCard, OrderPaymentInsurance, OrderPaymentPayPal, OrderPaymentPurchaseOrder, OrderPaymentTransaction) {
   'use strict';
 
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.10.226
+   * @version 3.10.228
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.payment_method_deposit_to_account = ApiClient.convertToType(data['payment_method_deposit_to_account'], 'String');
       if (data.hasOwnProperty('payment_status'))
         obj.payment_status = ApiClient.convertToType(data['payment_status'], 'String');
+      if (data.hasOwnProperty('paypal'))
+        obj.paypal = OrderPaymentPayPal.constructFromObject(data['paypal']);
       if (data.hasOwnProperty('purchase_order'))
         obj.purchase_order = OrderPaymentPurchaseOrder.constructFromObject(data['purchase_order']);
       if (data.hasOwnProperty('rotating_transaction_gateway_code'))
@@ -157,6 +159,11 @@
    * @member {module:com.ultracart.admin.v2.models/OrderPayment.PaymentStatusEnum} payment_status
    */
   exports.prototype.payment_status = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/OrderPaymentPayPal} paypal
+   */
+  exports.prototype.paypal = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder} purchase_order
