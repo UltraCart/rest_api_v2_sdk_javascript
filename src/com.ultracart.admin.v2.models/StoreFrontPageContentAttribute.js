@@ -34,7 +34,7 @@
   /**
    * The StoreFrontPageContentAttribute model module.
    * @module com.ultracart.admin.v2.models/StoreFrontPageContentAttribute
-   * @version 3.10.225
+   * @version 3.10.226
    */
 
   /**
