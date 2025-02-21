@@ -34,7 +34,7 @@
   /**
    * The Activity model module.
    * @module com.ultracart.admin.v2.models/Activity
-   * @version 3.10.228
+   * @version 3.11.0
    */
 
   /**

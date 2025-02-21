@@ -34,7 +34,7 @@
   /**
    * The WorkflowTask model module.
    * @module com.ultracart.admin.v2.models/WorkflowTask
-   * @version 3.10.228
+   * @version 3.11.0
    */
 
   /**

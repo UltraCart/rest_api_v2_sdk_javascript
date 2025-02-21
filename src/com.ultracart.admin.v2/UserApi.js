@@ -34,7 +34,7 @@
   /**
    * User service.
    * @module com.ultracart.admin.v2/UserApi
-   * @version 3.10.228
+   * @version 3.11.0
    */
 
   /**

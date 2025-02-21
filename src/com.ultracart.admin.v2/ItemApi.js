@@ -34,7 +34,7 @@
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.10.228
+   * @version 3.11.0
    */
 
   /**
@@ -342,6 +342,47 @@
 
       return this.apiClient.callApi(
         '/item/digital_library/by_external/{external_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getInventorySnapshot operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getInventorySnapshotCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemInventorySnapshotResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
+     * Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response. 
+     * @param {module:com.ultracart.admin.v2/ItemApi~getInventorySnapshotCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemInventorySnapshotResponse}
+     */
+    this.getInventorySnapshot = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ItemInventorySnapshotResponse;
+
+      return this.apiClient.callApi(
+        '/item/items/inventory_snapshot', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -919,47 +960,6 @@
 
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}/content/attributes', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the restItemInventorySnapshotResponse operation.
-     * @callback module:com.ultracart.admin.v2/ItemApi~restItemInventorySnapshotResponseCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/ItemInventorySnapshotResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
-     * Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response. 
-     * @param {module:com.ultracart.admin.v2/ItemApi~restItemInventorySnapshotResponseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemInventorySnapshotResponse}
-     */
-    this.restItemInventorySnapshotResponse = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = ItemInventorySnapshotResponse;
-
-      return this.apiClient.callApi(
-        '/item/items/inventory_snapshot', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
