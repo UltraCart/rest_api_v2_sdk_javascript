@@ -11,6 +11,7 @@ var _OrderPaymentCreditCard = _interopRequireDefault(require("./OrderPaymentCred
 var _OrderPaymentECheck = _interopRequireDefault(require("./OrderPaymentECheck"));
 var _OrderPaymentHealthBenefitCard = _interopRequireDefault(require("./OrderPaymentHealthBenefitCard"));
 var _OrderPaymentInsurance = _interopRequireDefault(require("./OrderPaymentInsurance"));
+var _OrderPaymentPayPal = _interopRequireDefault(require("./OrderPaymentPayPal"));
 var _OrderPaymentPurchaseOrder = _interopRequireDefault(require("./OrderPaymentPurchaseOrder"));
 var _OrderPaymentTransaction = _interopRequireDefault(require("./OrderPaymentTransaction"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
@@ -34,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.0.244
+ * @version 4.0.245
  */
 var OrderPayment = /*#__PURE__*/function () {
   /**
@@ -99,6 +100,9 @@ var OrderPayment = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('payment_status')) {
           obj['payment_status'] = _ApiClient["default"].convertToType(data['payment_status'], 'String');
+        }
+        if (data.hasOwnProperty('paypal')) {
+          obj['paypal'] = _OrderPaymentPayPal["default"].constructFromObject(data['paypal']);
         }
         if (data.hasOwnProperty('purchase_order')) {
           obj['purchase_order'] = _OrderPaymentPurchaseOrder["default"].constructFromObject(data['purchase_order']);
@@ -189,6 +193,11 @@ OrderPayment.prototype['payment_method_deposit_to_account'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderPayment.PaymentStatusEnum} payment_status
  */
 OrderPayment.prototype['payment_status'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/OrderPaymentPayPal} paypal
+ */
+OrderPayment.prototype['paypal'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder} purchase_order

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PointOfSaleReader model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleReader
- * @version 4.0.244
+ * @version 4.0.245
  */
 var PointOfSaleReader = /*#__PURE__*/function () {
   /**

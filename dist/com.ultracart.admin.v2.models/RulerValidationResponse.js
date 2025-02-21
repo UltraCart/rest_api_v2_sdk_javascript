@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The RulerValidationResponse model module.
  * @module com.ultracart.admin.v2.models/RulerValidationResponse
- * @version 4.0.244
+ * @version 4.0.245
  */
 var RulerValidationResponse = /*#__PURE__*/function () {
   /**

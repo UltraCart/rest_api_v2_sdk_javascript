@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChargebackDispute model module.
  * @module com.ultracart.admin.v2.models/ChargebackDispute
- * @version 4.0.244
+ * @version 4.0.245
  */
 var ChargebackDispute = /*#__PURE__*/function () {
   /**

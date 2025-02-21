@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCommseqStat model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqStat
- * @version 4.0.244
+ * @version 4.0.245
  */
 var EmailCommseqStat = /*#__PURE__*/function () {
   /**

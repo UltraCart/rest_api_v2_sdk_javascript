@@ -3993,6 +3993,12 @@ Object.defineProperty(exports, "OrderPaymentInsurance", {
     return _OrderPaymentInsurance["default"];
   }
 });
+Object.defineProperty(exports, "OrderPaymentPayPal", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPaymentPayPal["default"];
+  }
+});
 Object.defineProperty(exports, "OrderPaymentPurchaseOrder", {
   enumerable: true,
   get: function get() {
@@ -5915,6 +5921,7 @@ var _OrderPaymentCreditCardDualVaultedProperty = _interopRequireDefault(require(
 var _OrderPaymentECheck = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentECheck"));
 var _OrderPaymentHealthBenefitCard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard"));
 var _OrderPaymentInsurance = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentInsurance"));
+var _OrderPaymentPayPal = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentPayPal"));
 var _OrderPaymentPurchaseOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentPurchaseOrder"));
 var _OrderPaymentTransaction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentTransaction"));
 var _OrderPaymentTransactionDetail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentTransactionDetail"));

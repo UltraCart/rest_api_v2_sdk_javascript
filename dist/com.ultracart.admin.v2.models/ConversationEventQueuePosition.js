@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationEventQueuePosition model module.
  * @module com.ultracart.admin.v2.models/ConversationEventQueuePosition
- * @version 4.0.244
+ * @version 4.0.245
  */
 var ConversationEventQueuePosition = /*#__PURE__*/function () {
   /**

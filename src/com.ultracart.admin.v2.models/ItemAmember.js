@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemAmember model module.
  * @module com.ultracart.admin.v2.models/ItemAmember
- * @version 4.0.245
+ * @version 4.1.0
  */
 class ItemAmember {
     /**

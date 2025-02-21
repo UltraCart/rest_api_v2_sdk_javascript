@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxProviderSelf model module.
  * @module com.ultracart.admin.v2.models/TaxProviderSelf
- * @version 4.0.244
+ * @version 4.0.245
  */
 var TaxProviderSelf = /*#__PURE__*/function () {
   /**

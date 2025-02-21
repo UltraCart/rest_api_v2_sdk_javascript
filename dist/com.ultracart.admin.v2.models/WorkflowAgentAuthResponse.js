@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WorkflowAgentAuthResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowAgentAuthResponse
- * @version 4.0.244
+ * @version 4.0.245
  */
 var WorkflowAgentAuthResponse = /*#__PURE__*/function () {
   /**

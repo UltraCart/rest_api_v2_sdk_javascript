@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getDigitalItem**](ItemApi.md#getDigitalItem) | **GET** /item/digital_library/{digital_item_oid} | Retrieve a digital item from the digital library, which are digital files that may be attached to normal items
 [**getDigitalItems**](ItemApi.md#getDigitalItems) | **GET** /item/digital_library | Retrieve digital items from the digital library which are digital files that may be attached to normal items
 [**getDigitalItemsByExternalId**](ItemApi.md#getDigitalItemsByExternalId) | **GET** /item/digital_library/by_external/{external_id} | Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id
+[**getInventorySnapshot**](ItemApi.md#getInventorySnapshot) | **GET** /item/items/inventory_snapshot | Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
 [**getItem**](ItemApi.md#getItem) | **GET** /item/items/{merchant_item_oid} | Retrieve an item
 [**getItemByMerchantItemId**](ItemApi.md#getItemByMerchantItemId) | **GET** /item/items/merchant_item_id/{merchant_item_id} | Retrieve an item by item id
 [**getItems**](ItemApi.md#getItems) | **GET** /item/items | Retrieve items
@@ -21,7 +22,6 @@ Method | HTTP request | Description
 [**insertItem**](ItemApi.md#insertItem) | **POST** /item/items | Create an item
 [**insertReview**](ItemApi.md#insertReview) | **POST** /item/items/{merchant_item_oid}/reviews | Insert a review
 [**insertUpdateItemContentAttribute**](ItemApi.md#insertUpdateItemContentAttribute) | **POST** /item/items/{merchant_item_oid}/content/attributes | Upsert an item content attribute
-[**restItemInventorySnapshotResponse**](ItemApi.md#restItemInventorySnapshotResponse) | **GET** /item/items/inventory_snapshot | Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
 [**updateDigitalItem**](ItemApi.md#updateDigitalItem) | **PUT** /item/digital_library/{digital_item_oid} | Updates a file within the digital library
 [**updateItem**](ItemApi.md#updateItem) | **PUT** /item/items/{merchant_item_oid} | Update an item
 [**updateItems**](ItemApi.md#updateItems) | **PUT** /item/items/batch | Update multiple items
@@ -333,6 +333,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ItemDigitalItemsResponse**](ItemDigitalItemsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getInventorySnapshot
+
+> ItemInventorySnapshotResponse getInventorySnapshot()
+
+Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
+
+Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response. 
+
+### Example
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getInventorySnapshot((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ItemInventorySnapshotResponse**](ItemInventorySnapshotResponse.md)
 
 ### Authorization
 
@@ -945,52 +991,6 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
-- **Accept**: application/json
-
-
-## restItemInventorySnapshotResponse
-
-> ItemInventorySnapshotResponse restItemInventorySnapshotResponse()
-
-Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
-
-Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response. 
-
-### Example
-
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.restItemInventorySnapshotResponse((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ItemInventorySnapshotResponse**](ItemInventorySnapshotResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

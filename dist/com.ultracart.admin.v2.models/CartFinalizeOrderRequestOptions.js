@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartFinalizeOrderRequestOptions model module.
  * @module com.ultracart.admin.v2.models/CartFinalizeOrderRequestOptions
- * @version 4.0.244
+ * @version 4.0.245
  */
 var CartFinalizeOrderRequestOptions = /*#__PURE__*/function () {
   /**
