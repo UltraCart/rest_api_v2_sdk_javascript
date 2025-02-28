@@ -34,7 +34,7 @@
   /**
    * The ItemPaymentProcessing model module.
    * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
-   * @version 3.11.0
+   * @version 3.11.1
    */
 
   /**
@@ -78,7 +78,7 @@
   exports.prototype.block_prepaid = undefined;
 
   /**
-   * True if this item should block any refund attempts
+   * True if this item should block any refund attempts, set to false otherwise, null value will not update the field
    * @member {Boolean} block_refunds
    */
   exports.prototype.block_refunds = undefined;

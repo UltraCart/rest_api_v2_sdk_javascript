@@ -34,7 +34,7 @@
   /**
    * The PointOfSaleReader model module.
    * @module com.ultracart.admin.v2.models/PointOfSaleReader
-   * @version 3.11.0
+   * @version 3.11.1
    */
 
   /**
