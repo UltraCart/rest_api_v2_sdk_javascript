@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailSegment model module.
  * @module com.ultracart.admin.v2.models/EmailSegment
- * @version 4.0.245
+ * @version 4.1.0
  */
 var EmailSegment = /*#__PURE__*/function () {
   /**

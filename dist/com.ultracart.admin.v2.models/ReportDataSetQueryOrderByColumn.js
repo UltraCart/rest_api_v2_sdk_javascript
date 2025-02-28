@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportDataSetQueryOrderByColumn model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn
- * @version 4.0.245
+ * @version 4.1.0
  */
 var ReportDataSetQueryOrderByColumn = /*#__PURE__*/function () {
   /**

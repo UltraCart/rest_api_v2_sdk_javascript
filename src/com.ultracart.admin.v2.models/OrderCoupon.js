@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderCoupon model module.
  * @module com.ultracart.admin.v2.models/OrderCoupon
- * @version 4.1.0
+ * @version 4.1.1
  */
 class OrderCoupon {
     /**
@@ -94,7 +94,7 @@ OrderCoupon.prototype['base_coupon_code'] = undefined;
 OrderCoupon.prototype['coupon_code'] = undefined;
 
 /**
- * True if this coupon is hidde from the customer
+ * True if this coupon is hide from the customer
  * @member {Boolean} hdie_from_customer
  */
 OrderCoupon.prototype['hdie_from_customer'] = undefined;

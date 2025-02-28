@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GeocodeResponse model module.
  * @module com.ultracart.admin.v2.models/GeocodeResponse
- * @version 4.0.245
+ * @version 4.1.0
  */
 var GeocodeResponse = /*#__PURE__*/function () {
   /**

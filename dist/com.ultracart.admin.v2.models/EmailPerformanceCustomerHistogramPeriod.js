@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailPerformanceCustomerHistogramPeriod model module.
  * @module com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogramPeriod
- * @version 4.0.245
+ * @version 4.1.0
  */
 var EmailPerformanceCustomerHistogramPeriod = /*#__PURE__*/function () {
   /**

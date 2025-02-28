@@ -25,7 +25,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.0
+* @version 4.1.1
 */
 export default class AutoOrderApi {
 
@@ -459,6 +459,58 @@ export default class AutoOrderApi {
       let returnType = AutoOrdersResponse;
       return this.apiClient.callApi(
         '/auto_order/auto_orders/query', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the pauseAutoOrder operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~pauseAutoOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Pause auto order
+     * Completely pause an auto order 
+     * @param {Number} auto_order_oid The auto order oid to pause.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrder} auto_order Auto orders to pause
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~pauseAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    pauseAutoOrder(auto_order_oid, auto_order, opts, callback) {
+      opts = opts || {};
+      let postBody = auto_order;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling pauseAutoOrder");
+      }
+      // verify the required parameter 'auto_order' is set
+      if (auto_order === undefined || auto_order === null) {
+        throw new Error("Missing the required parameter 'auto_order' when calling pauseAutoOrder");
+      }
+
+      let pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = AutoOrderResponse;
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/{auto_order_oid}/pause', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingFilterRangeInteger model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeInteger
- * @version 4.0.245
+ * @version 4.1.0
  */
 var ScreenRecordingFilterRangeInteger = /*#__PURE__*/function () {
   /**

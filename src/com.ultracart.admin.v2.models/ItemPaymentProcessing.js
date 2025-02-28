@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemPaymentProcessing model module.
  * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
- * @version 4.1.0
+ * @version 4.1.1
  */
 class ItemPaymentProcessing {
     /**
@@ -79,7 +79,7 @@ class ItemPaymentProcessing {
 ItemPaymentProcessing.prototype['block_prepaid'] = undefined;
 
 /**
- * True if this item should block any refund attempts
+ * True if this item should block any refund attempts, set to false otherwise, null value will not update the field
  * @member {Boolean} block_refunds
  */
 ItemPaymentProcessing.prototype['block_refunds'] = undefined;

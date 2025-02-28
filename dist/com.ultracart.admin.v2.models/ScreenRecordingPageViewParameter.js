@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingPageViewParameter model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewParameter
- * @version 4.0.245
+ * @version 4.1.0
  */
 var ScreenRecordingPageViewParameter = /*#__PURE__*/function () {
   /**
