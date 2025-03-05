@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ThumbnailParametersResponse model module.
  * @module com.ultracart.admin.v2.models/ThumbnailParametersResponse
- * @version 4.1.0
+ * @version 4.1.1
  */
 var ThumbnailParametersResponse = /*#__PURE__*/function () {
   /**

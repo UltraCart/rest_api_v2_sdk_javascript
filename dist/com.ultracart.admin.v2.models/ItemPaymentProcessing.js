@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemPaymentProcessing model module.
  * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
- * @version 4.1.0
+ * @version 4.1.1
  */
 var ItemPaymentProcessing = /*#__PURE__*/function () {
   /**
@@ -89,7 +89,7 @@ var ItemPaymentProcessing = /*#__PURE__*/function () {
 ItemPaymentProcessing.prototype['block_prepaid'] = undefined;
 
 /**
- * True if this item should block any refund attempts
+ * True if this item should block any refund attempts, set to false otherwise, null value will not update the field
  * @member {Boolean} block_refunds
  */
 ItemPaymentProcessing.prototype['block_refunds'] = undefined;

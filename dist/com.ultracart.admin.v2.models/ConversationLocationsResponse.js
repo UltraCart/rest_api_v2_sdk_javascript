@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationLocationsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationLocationsResponse
- * @version 4.1.0
+ * @version 4.1.1
  */
 var ConversationLocationsResponse = /*#__PURE__*/function () {
   /**

@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Chargeback service.
 * @module com.ultracart.admin.v2/ChargebackApi
-* @version 4.1.0
+* @version 4.1.1
 */
 var ChargebackApi = exports["default"] = /*#__PURE__*/function () {
   /**

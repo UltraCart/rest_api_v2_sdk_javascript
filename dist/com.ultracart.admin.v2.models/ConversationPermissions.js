@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPermissions model module.
  * @module com.ultracart.admin.v2.models/ConversationPermissions
- * @version 4.1.0
+ * @version 4.1.1
  */
 var ConversationPermissions = /*#__PURE__*/function () {
   /**
