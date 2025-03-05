@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrder model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
-   * @version 3.11.1
+   * @version 3.11.2
    */
 
   /**
@@ -239,6 +239,8 @@
         obj.transaction = ChannelPartnerOrderTransaction.constructFromObject(data['transaction']);
       if (data.hasOwnProperty('treat_warnings_as_errors'))
         obj.treat_warnings_as_errors = ApiClient.convertToType(data['treat_warnings_as_errors'], 'Boolean');
+      if (data.hasOwnProperty('use_prior_payment_information_from_order_id'))
+        obj.use_prior_payment_information_from_order_id = ApiClient.convertToType(data['use_prior_payment_information_from_order_id'], 'String');
     }
     return obj;
   }
@@ -793,6 +795,12 @@
    * @member {Boolean} treat_warnings_as_errors
    */
   exports.prototype.treat_warnings_as_errors = undefined;
+
+  /**
+   * An Order Id from a prior purchase of this customer which is used to retrieve vaulted payment information in order to pay for this current order.
+   * @member {String} use_prior_payment_information_from_order_id
+   */
+  exports.prototype.use_prior_payment_information_from_order_id = undefined;
 
 
   /**

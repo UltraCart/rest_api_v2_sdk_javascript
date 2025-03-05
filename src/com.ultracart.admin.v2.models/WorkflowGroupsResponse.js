@@ -34,7 +34,7 @@
   /**
    * The WorkflowGroupsResponse model module.
    * @module com.ultracart.admin.v2.models/WorkflowGroupsResponse
-   * @version 3.11.1
+   * @version 3.11.2
    */
 
   /**

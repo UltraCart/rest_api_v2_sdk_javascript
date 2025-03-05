@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeBasedsResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeBasedsResponse
-   * @version 3.11.1
+   * @version 3.11.2
    */
 
   /**

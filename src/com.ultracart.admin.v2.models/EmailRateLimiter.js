@@ -34,7 +34,7 @@
   /**
    * The EmailRateLimiter model module.
    * @module com.ultracart.admin.v2.models/EmailRateLimiter
-   * @version 3.11.1
+   * @version 3.11.2
    */
 
   /**

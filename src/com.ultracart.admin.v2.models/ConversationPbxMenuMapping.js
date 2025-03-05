@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxMenuMapping model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxMenuMapping
-   * @version 3.11.1
+   * @version 3.11.2
    */
 
   /**
