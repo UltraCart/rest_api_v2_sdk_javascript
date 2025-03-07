@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailClick model module.
  * @module com.ultracart.admin.v2.models/EmailClick
- * @version 4.1.1
+ * @version 4.1.2
  */
 var EmailClick = /*#__PURE__*/function () {
   /**

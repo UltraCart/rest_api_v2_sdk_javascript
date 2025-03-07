@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WorkflowTaskOpenCountResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowTaskOpenCountResponse
- * @version 4.1.1
+ * @version 4.1.2
  */
 var WorkflowTaskOpenCountResponse = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartCoupon model module.
  * @module com.ultracart.admin.v2.models/CartCoupon
- * @version 4.1.1
+ * @version 4.1.2
  */
 var CartCoupon = /*#__PURE__*/function () {
   /**

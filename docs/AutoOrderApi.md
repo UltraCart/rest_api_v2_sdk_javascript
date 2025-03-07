@@ -520,7 +520,7 @@ let apiInstance = new ucApi.AutoOrderApi(apiClient);
 // Please see https://github.com/UltraCart/sdk_samples for working examples.
 
 let auto_order_oid = 56; // Number | The auto order oid to pause.
-let auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto orders to pause
+let auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to pause
 let opts = {
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
@@ -539,7 +539,7 @@ apiInstance.pauseAutoOrder(auto_order_oid, auto_order, opts, (error, data, respo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_order_oid** | **Number**| The auto order oid to pause. | 
- **auto_order** | [**AutoOrder**](AutoOrder.md)| Auto orders to pause | 
+ **auto_order** | [**AutoOrder**](AutoOrder.md)| Auto order to pause | 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
