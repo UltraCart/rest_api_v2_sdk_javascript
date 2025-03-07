@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.2
+* @version 4.1.3
 */
 var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -433,7 +433,7 @@ var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
      * Pause auto order
      * Completely pause an auto order 
      * @param {Number} auto_order_oid The auto order oid to pause.
-     * @param {module:com.ultracart.admin.v2.models/AutoOrder} auto_order Auto orders to pause
+     * @param {module:com.ultracart.admin.v2.models/AutoOrder} auto_order Auto order to pause
      * @param {Object} opts Optional parameters
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AutoOrderApi~pauseAutoOrderCallback} callback The callback function, accepting three arguments: error, data, response

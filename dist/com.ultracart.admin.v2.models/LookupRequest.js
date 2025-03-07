@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LookupRequest model module.
  * @module com.ultracart.admin.v2.models/LookupRequest
- * @version 4.1.2
+ * @version 4.1.3
  */
 var LookupRequest = /*#__PURE__*/function () {
   /**
