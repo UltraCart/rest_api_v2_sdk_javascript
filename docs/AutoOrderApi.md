@@ -517,7 +517,7 @@ UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
 var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
 
 
-var auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto orders to pause
+var auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to pause
 
 var auto_order_oid = 56; // Number | The auto order oid to pause.
 
@@ -539,7 +539,7 @@ apiInstance.pauseAutoOrder(auto_order, auto_order_oid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auto_order** | [**AutoOrder**](AutoOrder.md)| Auto orders to pause | 
+ **auto_order** | [**AutoOrder**](AutoOrder.md)| Auto order to pause | 
  **auto_order_oid** | **Number**| The auto order oid to pause. | 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 

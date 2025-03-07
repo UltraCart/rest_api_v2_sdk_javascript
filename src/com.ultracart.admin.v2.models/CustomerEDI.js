@@ -34,7 +34,7 @@
   /**
    * The CustomerEDI model module.
    * @module com.ultracart.admin.v2.models/CustomerEDI
-   * @version 3.11.2
+   * @version 3.11.3
    */
 
   /**

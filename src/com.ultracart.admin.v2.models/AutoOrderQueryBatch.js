@@ -34,7 +34,7 @@
   /**
    * The AutoOrderQueryBatch model module.
    * @module com.ultracart.admin.v2.models/AutoOrderQueryBatch
-   * @version 3.11.2
+   * @version 3.11.3
    */
 
   /**
