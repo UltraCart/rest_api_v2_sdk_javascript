@@ -34,7 +34,7 @@
   /**
    * The ReportDryRunQueryResult model module.
    * @module com.ultracart.admin.v2.models/ReportDryRunQueryResult
-   * @version 3.11.3
+   * @version 3.11.4
    */
 
   /**

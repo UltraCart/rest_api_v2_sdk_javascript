@@ -34,7 +34,7 @@
   /**
    * The WorkflowTaskResponse model module.
    * @module com.ultracart.admin.v2.models/WorkflowTaskResponse
-   * @version 3.11.3
+   * @version 3.11.4
    */
 
   /**

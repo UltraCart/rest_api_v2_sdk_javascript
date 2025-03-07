@@ -34,7 +34,7 @@
   /**
    * The ConversationLocationStateProvince model module.
    * @module com.ultracart.admin.v2.models/ConversationLocationStateProvince
-   * @version 3.11.3
+   * @version 3.11.4
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The TaxProviderTestResult model module.
    * @module com.ultracart.admin.v2.models/TaxProviderTestResult
-   * @version 3.11.3
+   * @version 3.11.4
    */
 
   /**
