@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.4
+ * @version 4.1.5
  */
 class OrderQuery {
     /**
@@ -627,7 +627,13 @@ OrderQuery['PaymentMethodEnum'] = {
      * value: " Google Pay"
      * @const
      */
-    " Google Pay": " Google Pay"
+    " Google Pay": " Google Pay",
+
+    /**
+     * value: "PayPal Fastlane"
+     * @const
+     */
+    "PayPal Fastlane": "PayPal Fastlane"
 };
 
 

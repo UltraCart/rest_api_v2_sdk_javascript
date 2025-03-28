@@ -18,7 +18,7 @@ import ChannelPartnerOrderTransaction from './ChannelPartnerOrderTransaction';
 /**
  * The ChannelPartnerOrder model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
- * @version 4.1.4
+ * @version 4.1.5
  */
 class ChannelPartnerOrder {
     /**
@@ -1015,7 +1015,13 @@ ChannelPartnerOrder['PaymentMethodEnum'] = {
      * value: "Wire Transfer"
      * @const
      */
-    "Wire Transfer": "Wire Transfer"
+    "Wire Transfer": "Wire Transfer",
+
+    /**
+     * value: "PayPal Fastlane"
+     * @const
+     */
+    "PayPal Fastlane": "PayPal Fastlane"
 };
 
 

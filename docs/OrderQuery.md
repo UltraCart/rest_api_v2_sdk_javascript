@@ -116,6 +116,8 @@ Name | Type | Description | Notes
 
 * ` Google Pay` (value: `" Google Pay"`)
 
+* `PayPal Fastlane` (value: `"PayPal Fastlane"`)
+
 
 
 

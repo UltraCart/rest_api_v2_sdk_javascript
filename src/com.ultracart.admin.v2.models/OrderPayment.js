@@ -25,7 +25,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.4
+ * @version 4.1.5
  */
 class OrderPayment {
     /**
@@ -406,7 +406,13 @@ OrderPayment['PaymentMethodEnum'] = {
      * value: "Health Benefit Card"
      * @const
      */
-    "Health Benefit Card": "Health Benefit Card"
+    "Health Benefit Card": "Health Benefit Card",
+
+    /**
+     * value: "PayPal Fastlane"
+     * @const
+     */
+    "PayPal Fastlane": "PayPal Fastlane"
 };
 
 

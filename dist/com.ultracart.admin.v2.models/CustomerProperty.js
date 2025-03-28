@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerProperty model module.
  * @module com.ultracart.admin.v2.models/CustomerProperty
- * @version 4.1.3
+ * @version 4.1.4
  */
 var CustomerProperty = /*#__PURE__*/function () {
   /**
