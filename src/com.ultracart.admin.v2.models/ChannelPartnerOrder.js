@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrder model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
-   * @version 3.11.4
+   * @version 3.11.5
    */
 
   /**
@@ -919,7 +919,13 @@
      * value: "Wire Transfer"
      * @const
      */
-    Wire_Transfer: "Wire Transfer"
+    Wire_Transfer: "Wire Transfer",
+
+    /**
+     * value: "PayPal Fastlane"
+     * @const
+     */
+    PayPal_Fastlane: "PayPal Fastlane"
   };
 
   return exports;

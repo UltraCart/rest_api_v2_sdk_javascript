@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.11.4
+   * @version 3.11.5
    */
 
   /**
@@ -378,7 +378,13 @@
      * value: "Health Benefit Card"
      * @const
      */
-    Health_Benefit_Card: "Health Benefit Card"
+    Health_Benefit_Card: "Health Benefit Card",
+
+    /**
+     * value: "PayPal Fastlane"
+     * @const
+     */
+    PayPal_Fastlane: "PayPal Fastlane"
   };
 
 

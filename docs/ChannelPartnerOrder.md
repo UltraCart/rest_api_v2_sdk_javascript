@@ -148,6 +148,8 @@ Name | Type | Description | Notes
 
 * `Wire_Transfer` (value: `"Wire Transfer"`)
 
+* `PayPal_Fastlane` (value: `"PayPal Fastlane"`)
+
 
 
 

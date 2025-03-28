@@ -34,7 +34,7 @@
   /**
    * The ReportDataSetQueryOrderByColumn model module.
    * @module com.ultracart.admin.v2.models/ReportDataSetQueryOrderByColumn
-   * @version 3.11.4
+   * @version 3.11.5
    */
 
   /**

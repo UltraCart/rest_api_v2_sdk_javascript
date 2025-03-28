@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeRangeResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse
-   * @version 3.11.4
+   * @version 3.11.5
    */
 
   /**

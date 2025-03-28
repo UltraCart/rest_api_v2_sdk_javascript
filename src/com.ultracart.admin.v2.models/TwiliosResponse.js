@@ -34,7 +34,7 @@
   /**
    * The TwiliosResponse model module.
    * @module com.ultracart.admin.v2.models/TwiliosResponse
-   * @version 3.11.4
+   * @version 3.11.5
    */
 
   /**

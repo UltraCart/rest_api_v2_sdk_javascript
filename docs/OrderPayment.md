@@ -83,6 +83,8 @@ Name | Type | Description | Notes
 
 * `Health_Benefit_Card` (value: `"Health Benefit Card"`)
 
+* `PayPal_Fastlane` (value: `"PayPal Fastlane"`)
+
 
 
 

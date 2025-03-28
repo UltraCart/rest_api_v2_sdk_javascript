@@ -34,7 +34,7 @@
   /**
    * The OrderQuery model module.
    * @module com.ultracart.admin.v2.models/OrderQuery
-   * @version 3.11.4
+   * @version 3.11.5
    */
 
   /**
@@ -584,7 +584,13 @@
      * value: " Google Pay"
      * @const
      */
-    _Google_Pay: " Google Pay"
+    _Google_Pay: " Google Pay",
+
+    /**
+     * value: "PayPal Fastlane"
+     * @const
+     */
+    PayPal_Fastlane: "PayPal Fastlane"
   };
 
 
