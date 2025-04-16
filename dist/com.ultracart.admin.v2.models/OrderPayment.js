@@ -35,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.4
+ * @version 4.1.5
  */
 var OrderPayment = /*#__PURE__*/function () {
   /**
@@ -385,7 +385,12 @@ OrderPayment['PaymentMethodEnum'] = {
    * value: "Health Benefit Card"
    * @const
    */
-  "Health Benefit Card": "Health Benefit Card"
+  "Health Benefit Card": "Health Benefit Card",
+  /**
+   * value: "PayPal Fastlane"
+   * @const
+   */
+  "PayPal Fastlane": "PayPal Fastlane"
 };
 
 /**

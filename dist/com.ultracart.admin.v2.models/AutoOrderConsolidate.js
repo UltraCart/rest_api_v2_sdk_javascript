@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderConsolidate model module.
  * @module com.ultracart.admin.v2.models/AutoOrderConsolidate
- * @version 4.1.4
+ * @version 4.1.5
  */
 var AutoOrderConsolidate = /*#__PURE__*/function () {
   /**

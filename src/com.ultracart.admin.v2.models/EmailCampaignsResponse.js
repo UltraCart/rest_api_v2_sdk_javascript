@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailCampaignsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCampaignsResponse
- * @version 4.1.5
+ * @version 4.1.6
  */
 class EmailCampaignsResponse {
     /**

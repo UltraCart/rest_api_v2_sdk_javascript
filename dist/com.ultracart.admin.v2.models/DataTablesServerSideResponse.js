@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The DataTablesServerSideResponse model module.
  * @module com.ultracart.admin.v2.models/DataTablesServerSideResponse
- * @version 4.1.4
+ * @version 4.1.5
  */
 var DataTablesServerSideResponse = /*#__PURE__*/function () {
   /**

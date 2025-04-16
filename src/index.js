@@ -124,6 +124,7 @@ import ChannelPartnerImportResponse from './com.ultracart.admin.v2.models/Channe
 import ChannelPartnerOrder from './com.ultracart.admin.v2.models/ChannelPartnerOrder';
 import ChannelPartnerOrderItem from './com.ultracart.admin.v2.models/ChannelPartnerOrderItem';
 import ChannelPartnerOrderItemOption from './com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption';
+import ChannelPartnerOrderItemProperty from './com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty';
 import ChannelPartnerOrderTransaction from './com.ultracart.admin.v2.models/ChannelPartnerOrderTransaction';
 import ChannelPartnerOrderTransactionDetail from './com.ultracart.admin.v2.models/ChannelPartnerOrderTransactionDetail';
 import ChannelPartnerShipToPreference from './com.ultracart.admin.v2.models/ChannelPartnerShipToPreference';
@@ -921,7 +922,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.5
+* @version 4.1.6
 */
 export {
     /**
@@ -1595,6 +1596,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption}
      */
     ChannelPartnerOrderItemOption,
+
+    /**
+     * The ChannelPartnerOrderItemProperty model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty}
+     */
+    ChannelPartnerOrderItemProperty,
 
     /**
      * The ChannelPartnerOrderTransaction model constructor.

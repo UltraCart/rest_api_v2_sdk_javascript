@@ -18,7 +18,7 @@ import ReportPageVisualization from './ReportPageVisualization';
 /**
  * The ReportPage model module.
  * @module com.ultracart.admin.v2.models/ReportPage
- * @version 4.1.5
+ * @version 4.1.6
  */
 class ReportPage {
     /**

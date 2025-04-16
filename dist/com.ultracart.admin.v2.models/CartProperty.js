@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartProperty model module.
  * @module com.ultracart.admin.v2.models/CartProperty
- * @version 4.1.4
+ * @version 4.1.5
  */
 var CartProperty = /*#__PURE__*/function () {
   /**

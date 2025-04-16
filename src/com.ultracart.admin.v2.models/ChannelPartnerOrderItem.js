@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import ChannelPartnerOrderItemOption from './ChannelPartnerOrderItemOption';
+import ChannelPartnerOrderItemProperty from './ChannelPartnerOrderItemProperty';
 
 /**
  * The ChannelPartnerOrderItem model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItem
- * @version 4.1.5
+ * @version 4.1.6
  */
 class ChannelPartnerOrderItem {
     /**
@@ -63,6 +64,9 @@ class ChannelPartnerOrderItem {
             if (data.hasOwnProperty('options')) {
                 obj['options'] = ApiClient.convertToType(data['options'], [ChannelPartnerOrderItemOption]);
             }
+            if (data.hasOwnProperty('properties')) {
+                obj['properties'] = ApiClient.convertToType(data['properties'], [ChannelPartnerOrderItemProperty]);
+            }
             if (data.hasOwnProperty('quantity')) {
                 obj['quantity'] = ApiClient.convertToType(data['quantity'], 'Number');
             }
@@ -105,6 +109,12 @@ ChannelPartnerOrderItem.prototype['merchant_item_id'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption>} options
  */
 ChannelPartnerOrderItem.prototype['options'] = undefined;
+
+/**
+ * Properties
+ * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty>} properties
+ */
+ChannelPartnerOrderItem.prototype['properties'] = undefined;
 
 /**
  * Quantity

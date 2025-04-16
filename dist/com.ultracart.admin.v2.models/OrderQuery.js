@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.4
+ * @version 4.1.5
  */
 var OrderQuery = /*#__PURE__*/function () {
   /**
@@ -604,7 +604,12 @@ OrderQuery['PaymentMethodEnum'] = {
    * value: " Google Pay"
    * @const
    */
-  " Google Pay": " Google Pay"
+  " Google Pay": " Google Pay",
+  /**
+   * value: "PayPal Fastlane"
+   * @const
+   */
+  "PayPal Fastlane": "PayPal Fastlane"
 };
 
 /**

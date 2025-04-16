@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerOrder model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
- * @version 4.1.4
+ * @version 4.1.5
  */
 var ChannelPartnerOrder = /*#__PURE__*/function () {
   /**
@@ -1003,6 +1003,11 @@ ChannelPartnerOrder['PaymentMethodEnum'] = {
    * value: "Wire Transfer"
    * @const
    */
-  "Wire Transfer": "Wire Transfer"
+  "Wire Transfer": "Wire Transfer",
+  /**
+   * value: "PayPal Fastlane"
+   * @const
+   */
+  "PayPal Fastlane": "PayPal Fastlane"
 };
 var _default = exports["default"] = ChannelPartnerOrder;

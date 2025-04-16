@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderDigitalOrder model module.
  * @module com.ultracart.admin.v2.models/OrderDigitalOrder
- * @version 4.1.4
+ * @version 4.1.5
  */
 var OrderDigitalOrder = /*#__PURE__*/function () {
   /**
