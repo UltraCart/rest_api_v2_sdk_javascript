@@ -34,7 +34,7 @@
   /**
    * The LibraryItem model module.
    * @module com.ultracart.admin.v2.models/LibraryItem
-   * @version 3.11.5
+   * @version 3.11.6
    */
 
   /**

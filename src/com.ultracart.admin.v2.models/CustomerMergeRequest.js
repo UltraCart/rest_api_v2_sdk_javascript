@@ -34,7 +34,7 @@
   /**
    * The CustomerMergeRequest model module.
    * @module com.ultracart.admin.v2.models/CustomerMergeRequest
-   * @version 3.11.5
+   * @version 3.11.6
    */
 
   /**

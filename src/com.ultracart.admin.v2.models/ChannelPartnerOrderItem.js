@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption', 'com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ChannelPartnerOrderItemOption'));
+    module.exports = factory(require('../ApiClient'), require('./ChannelPartnerOrderItemOption'), require('./ChannelPartnerOrderItemProperty'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ChannelPartnerOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChannelPartnerOrderItemOption);
+    root.UltraCartRestApiV2.ChannelPartnerOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChannelPartnerOrderItemOption, root.UltraCartRestApiV2.ChannelPartnerOrderItemProperty);
   }
-}(this, function(ApiClient, ChannelPartnerOrderItemOption) {
+}(this, function(ApiClient, ChannelPartnerOrderItemOption, ChannelPartnerOrderItemProperty) {
   'use strict';
 
   /**
    * The ChannelPartnerOrderItem model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItem
-   * @version 3.11.5
+   * @version 3.11.6
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.merchant_item_id = ApiClient.convertToType(data['merchant_item_id'], 'String');
       if (data.hasOwnProperty('options'))
         obj.options = ApiClient.convertToType(data['options'], [ChannelPartnerOrderItemOption]);
+      if (data.hasOwnProperty('properties'))
+        obj.properties = ApiClient.convertToType(data['properties'], [ChannelPartnerOrderItemProperty]);
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
       if (data.hasOwnProperty('upsell'))
@@ -102,6 +104,12 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption>} options
    */
   exports.prototype.options = undefined;
+
+  /**
+   * Properties
+   * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty>} properties
+   */
+  exports.prototype.properties = undefined;
 
   /**
    * Quantity

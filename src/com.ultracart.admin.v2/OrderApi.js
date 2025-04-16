@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.11.5
+   * @version 3.11.6
    */
 
   /**
@@ -1181,6 +1181,74 @@
 
       return this.apiClient.callApi(
         '/order/orders/{order_id}/refund', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the refundOrderCompletely operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~refundOrderCompletelyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Refund an order completely
+     * Perform a refund operation on an order and then update the order if successful. 
+     * @param {String} order_id The order id to refund.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.reject_after_refund Reject order after refund (default to false)
+     * @param {Boolean} opts.skip_customer_notification Skip customer email notification (default to false)
+     * @param {Boolean} opts.auto_order_cancel Cancel associated auto orders (default to false)
+     * @param {Boolean} opts.manual_refund Consider a manual refund done externally (default to false)
+     * @param {Boolean} opts.reverse_affiliate_transactions Reverse affiliate transactions (default to true)
+     * @param {Boolean} opts.issue_store_credit Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account (default to false)
+     * @param {String} opts.auto_order_cancel_reason Reason for auto orders cancellation
+     * @param {String} opts.refund_reason Reason for refund
+     * @param {String} opts.reject_reason Reason for reject
+     * @param {module:com.ultracart.admin.v2/OrderApi~refundOrderCompletelyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.refundOrderCompletely = function(order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling refundOrderCompletely");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        'reject_after_refund': opts['reject_after_refund'],
+        'skip_customer_notification': opts['skip_customer_notification'],
+        'auto_order_cancel': opts['auto_order_cancel'],
+        'manual_refund': opts['manual_refund'],
+        'reverse_affiliate_transactions': opts['reverse_affiliate_transactions'],
+        'issue_store_credit': opts['issue_store_credit'],
+        'auto_order_cancel_reason': opts['auto_order_cancel_reason'],
+        'refund_reason': opts['refund_reason'],
+        'reject_reason': opts['reject_reason'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/refund_completely', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

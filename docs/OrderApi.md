@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**isRefundableOrder**](OrderApi.md#isRefundableOrder) | **GET** /order/orders/{order_id}/refundable | Determine if an order can be refunded
 [**processPayment**](OrderApi.md#processPayment) | **POST** /order/orders/{order_id}/process_payment | Process payment
 [**refundOrder**](OrderApi.md#refundOrder) | **PUT** /order/orders/{order_id}/refund | Refund an order
+[**refundOrderCompletely**](OrderApi.md#refundOrderCompletely) | **PUT** /order/orders/{order_id}/refund_completely | Refund an order completely
 [**replacement**](OrderApi.md#replacement) | **POST** /order/orders/{order_id}/replacement | Replacement order
 [**resendReceipt**](OrderApi.md#resendReceipt) | **POST** /order/orders/{order_id}/resend_receipt | Resend receipt
 [**resendShipmentConfirmation**](OrderApi.md#resendShipmentConfirmation) | **POST** /order/orders/{order_id}/resend_shipment_confirmation | Resend shipment confirmation
@@ -1197,6 +1198,76 @@ Name | Type | Description  | Notes
  **issue_store_credit** | **Boolean**| Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account | [optional] [default to false]
  **auto_order_cancel_reason** | **String**| Reason for auto orders cancellation | [optional] 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**OrderResponse**](OrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="refundOrderCompletely"></a>
+# **refundOrderCompletely**
+> OrderResponse refundOrderCompletely(order_id, opts)
+
+Refund an order completely
+
+Perform a refund operation on an order and then update the order if successful. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+
+var order_id = "order_id_example"; // String | The order id to refund.
+
+var opts = { 
+  'reject_after_refund': false, // Boolean | Reject order after refund
+  'skip_customer_notification': false, // Boolean | Skip customer email notification
+  'auto_order_cancel': false, // Boolean | Cancel associated auto orders
+  'manual_refund': false, // Boolean | Consider a manual refund done externally
+  'reverse_affiliate_transactions': true, // Boolean | Reverse affiliate transactions
+  'issue_store_credit': false, // Boolean | Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account
+  'auto_order_cancel_reason': "auto_order_cancel_reason_example", // String | Reason for auto orders cancellation
+  'refund_reason': "refund_reason_example", // String | Reason for refund
+  'reject_reason': "reject_reason_example" // String | Reason for reject
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.refundOrderCompletely(order_id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **String**| The order id to refund. | 
+ **reject_after_refund** | **Boolean**| Reject order after refund | [optional] [default to false]
+ **skip_customer_notification** | **Boolean**| Skip customer email notification | [optional] [default to false]
+ **auto_order_cancel** | **Boolean**| Cancel associated auto orders | [optional] [default to false]
+ **manual_refund** | **Boolean**| Consider a manual refund done externally | [optional] [default to false]
+ **reverse_affiliate_transactions** | **Boolean**| Reverse affiliate transactions | [optional] [default to true]
+ **issue_store_credit** | **Boolean**| Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account | [optional] [default to false]
+ **auto_order_cancel_reason** | **String**| Reason for auto orders cancellation | [optional] 
+ **refund_reason** | **String**| Reason for refund | [optional] 
+ **reject_reason** | **String**| Reason for reject | [optional] 
 
 ### Return type
 
