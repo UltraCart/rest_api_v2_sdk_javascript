@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPackingSlipResponse model module.
  * @module com.ultracart.admin.v2.models/OrderPackingSlipResponse
- * @version 4.1.5
+ * @version 4.1.6
  */
 var OrderPackingSlipResponse = /*#__PURE__*/function () {
   /**

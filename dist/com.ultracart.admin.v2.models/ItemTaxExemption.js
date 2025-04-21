@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemTaxExemption model module.
  * @module com.ultracart.admin.v2.models/ItemTaxExemption
- * @version 4.1.5
+ * @version 4.1.6
  */
 var ItemTaxExemption = /*#__PURE__*/function () {
   /**

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _ChannelPartnerOrderItemOption = _interopRequireDefault(require("./ChannelPartnerOrderItemOption"));
+var _ChannelPartnerOrderItemProperty = _interopRequireDefault(require("./ChannelPartnerOrderItemProperty"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -27,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerOrderItem model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItem
- * @version 4.1.5
+ * @version 4.1.6
  */
 var ChannelPartnerOrderItem = /*#__PURE__*/function () {
   /**
@@ -75,6 +76,9 @@ var ChannelPartnerOrderItem = /*#__PURE__*/function () {
         if (data.hasOwnProperty('options')) {
           obj['options'] = _ApiClient["default"].convertToType(data['options'], [_ChannelPartnerOrderItemOption["default"]]);
         }
+        if (data.hasOwnProperty('properties')) {
+          obj['properties'] = _ApiClient["default"].convertToType(data['properties'], [_ChannelPartnerOrderItemProperty["default"]]);
+        }
         if (data.hasOwnProperty('quantity')) {
           obj['quantity'] = _ApiClient["default"].convertToType(data['quantity'], 'Number');
         }
@@ -115,6 +119,12 @@ ChannelPartnerOrderItem.prototype['merchant_item_id'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption>} options
  */
 ChannelPartnerOrderItem.prototype['options'] = undefined;
+
+/**
+ * Properties
+ * @member {Array.<module:com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty>} properties
+ */
+ChannelPartnerOrderItem.prototype['properties'] = undefined;
 
 /**
  * Quantity

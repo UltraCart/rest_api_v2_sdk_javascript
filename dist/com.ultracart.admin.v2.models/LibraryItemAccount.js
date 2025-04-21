@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LibraryItemAccount model module.
  * @module com.ultracart.admin.v2.models/LibraryItemAccount
- * @version 4.1.5
+ * @version 4.1.6
  */
 var LibraryItemAccount = /*#__PURE__*/function () {
   /**

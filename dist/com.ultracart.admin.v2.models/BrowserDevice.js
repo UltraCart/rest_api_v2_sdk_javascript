@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BrowserDevice model module.
  * @module com.ultracart.admin.v2.models/BrowserDevice
- * @version 4.1.5
+ * @version 4.1.6
  */
 var BrowserDevice = /*#__PURE__*/function () {
   /**

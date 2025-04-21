@@ -4,6 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ai** | **Boolean** | AI powered chat bot | [optional] 
+**ai_chat_instructions** | **String** | Additional instructions for this AI when handle web chats | [optional] 
+**ai_persona** | **String** | Persona of this AI agent | [optional] 
+**ai_sms_instructions** | **String** | Additional instructions for this AI when handle SMS messages | [optional] 
 **chat_limit** | **Number** | The number of engagement chats that can be pushed on them at any given time. | [optional] 
 **default_language_iso_code** | **String** | The default language the agent is chatting in | [optional] 
 **default_status** | **String** | Default status when the agent loads conversations app. | [optional] 

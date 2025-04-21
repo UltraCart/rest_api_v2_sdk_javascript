@@ -44,7 +44,7 @@ import OrderUtm from './OrderUtm';
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.1.6
+ * @version 4.1.7
  */
 class Order {
     /**

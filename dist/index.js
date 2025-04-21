@@ -693,6 +693,12 @@ Object.defineProperty(exports, "ChannelPartnerOrderItemOption", {
     return _ChannelPartnerOrderItemOption["default"];
   }
 });
+Object.defineProperty(exports, "ChannelPartnerOrderItemProperty", {
+  enumerable: true,
+  get: function get() {
+    return _ChannelPartnerOrderItemProperty["default"];
+  }
+});
 Object.defineProperty(exports, "ChannelPartnerOrderTransaction", {
   enumerable: true,
   get: function get() {
@@ -5383,6 +5389,7 @@ var _ChannelPartnerImportResponse = _interopRequireDefault(require("./com.ultrac
 var _ChannelPartnerOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerOrder"));
 var _ChannelPartnerOrderItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerOrderItem"));
 var _ChannelPartnerOrderItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption"));
+var _ChannelPartnerOrderItemProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty"));
 var _ChannelPartnerOrderTransaction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerOrderTransaction"));
 var _ChannelPartnerOrderTransactionDetail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerOrderTransactionDetail"));
 var _ChannelPartnerShipToPreference = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerShipToPreference"));

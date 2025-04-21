@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationMultimediaUploadUrl model module.
  * @module com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl
- * @version 4.1.5
+ * @version 4.1.6
  */
 var ConversationMultimediaUploadUrl = /*#__PURE__*/function () {
   /**
