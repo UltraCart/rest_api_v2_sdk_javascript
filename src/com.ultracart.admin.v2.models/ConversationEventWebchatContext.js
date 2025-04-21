@@ -34,7 +34,7 @@
   /**
    * The ConversationEventWebchatContext model module.
    * @module com.ultracart.admin.v2.models/ConversationEventWebchatContext
-   * @version 3.11.6
+   * @version 3.11.7
    */
 
   /**

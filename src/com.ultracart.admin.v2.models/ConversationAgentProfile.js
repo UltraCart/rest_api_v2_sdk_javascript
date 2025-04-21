@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentProfile model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentProfile
-   * @version 3.11.6
+   * @version 3.11.7
    */
 
   /**
@@ -55,6 +55,14 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ai'))
+        obj.ai = ApiClient.convertToType(data['ai'], 'Boolean');
+      if (data.hasOwnProperty('ai_chat_instructions'))
+        obj.ai_chat_instructions = ApiClient.convertToType(data['ai_chat_instructions'], 'String');
+      if (data.hasOwnProperty('ai_persona'))
+        obj.ai_persona = ApiClient.convertToType(data['ai_persona'], 'String');
+      if (data.hasOwnProperty('ai_sms_instructions'))
+        obj.ai_sms_instructions = ApiClient.convertToType(data['ai_sms_instructions'], 'String');
       if (data.hasOwnProperty('chat_limit'))
         obj.chat_limit = ApiClient.convertToType(data['chat_limit'], 'Number');
       if (data.hasOwnProperty('default_language_iso_code'))
@@ -72,6 +80,30 @@
     }
     return obj;
   }
+
+  /**
+   * AI powered chat bot
+   * @member {Boolean} ai
+   */
+  exports.prototype.ai = undefined;
+
+  /**
+   * Additional instructions for this AI when handle web chats
+   * @member {String} ai_chat_instructions
+   */
+  exports.prototype.ai_chat_instructions = undefined;
+
+  /**
+   * Persona of this AI agent
+   * @member {String} ai_persona
+   */
+  exports.prototype.ai_persona = undefined;
+
+  /**
+   * Additional instructions for this AI when handle SMS messages
+   * @member {String} ai_sms_instructions
+   */
+  exports.prototype.ai_sms_instructions = undefined;
 
   /**
    * The number of engagement chats that can be pushed on them at any given time.

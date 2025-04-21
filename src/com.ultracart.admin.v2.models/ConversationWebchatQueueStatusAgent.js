@@ -34,7 +34,7 @@
   /**
    * The ConversationWebchatQueueStatusAgent model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent
-   * @version 3.11.6
+   * @version 3.11.7
    */
 
   /**
