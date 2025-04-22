@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ChannelPartnerCancelResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse', 'com.ultracart.admin.v2.models/ChannelPartnerImportResponse', 'com.ultracart.admin.v2.models/ChannelPartnerOrder', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreference', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse', 'com.ultracart.admin.v2.models/ChannelPartnersResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.models/OrderResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse', 'com.ultracart.admin.v2.models/ChannelPartnerCancelResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse', 'com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse', 'com.ultracart.admin.v2.models/ChannelPartnerImportResponse', 'com.ultracart.admin.v2.models/ChannelPartnerOrder', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreference', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse', 'com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse', 'com.ultracart.admin.v2.models/ChannelPartnersResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.models/OrderResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChannelPartnerCancelResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerImportResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerOrder'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreference'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Order'), require('../com.ultracart.admin.v2.models/OrderResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerCancelResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerImportResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerOrder'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreference'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse'), require('../com.ultracart.admin.v2.models/ChannelPartnersResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Order'), require('../com.ultracart.admin.v2.models/OrderResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ChannelPartnerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChannelPartnerCancelResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateShippingResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateTaxResponse, root.UltraCartRestApiV2.ChannelPartnerImportResponse, root.UltraCartRestApiV2.ChannelPartnerOrder, root.UltraCartRestApiV2.ChannelPartnerShipToPreference, root.UltraCartRestApiV2.ChannelPartnerShipToPreferenceResponse, root.UltraCartRestApiV2.ChannelPartnerShipToPreferencesResponse, root.UltraCartRestApiV2.ChannelPartnersResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Order, root.UltraCartRestApiV2.OrderResponse);
+    root.UltraCartRestApiV2.ChannelPartnerApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChanelPartnerReasonCodesResponse, root.UltraCartRestApiV2.ChannelPartnerCancelResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateShippingResponse, root.UltraCartRestApiV2.ChannelPartnerEstimateTaxResponse, root.UltraCartRestApiV2.ChannelPartnerImportResponse, root.UltraCartRestApiV2.ChannelPartnerOrder, root.UltraCartRestApiV2.ChannelPartnerShipToPreference, root.UltraCartRestApiV2.ChannelPartnerShipToPreferenceResponse, root.UltraCartRestApiV2.ChannelPartnerShipToPreferencesResponse, root.UltraCartRestApiV2.ChannelPartnersResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Order, root.UltraCartRestApiV2.OrderResponse);
   }
-}(this, function(ApiClient, ChannelPartnerCancelResponse, ChannelPartnerEstimateShippingResponse, ChannelPartnerEstimateTaxResponse, ChannelPartnerImportResponse, ChannelPartnerOrder, ChannelPartnerShipToPreference, ChannelPartnerShipToPreferenceResponse, ChannelPartnerShipToPreferencesResponse, ChannelPartnersResponse, ErrorResponse, Order, OrderResponse) {
+}(this, function(ApiClient, ChanelPartnerReasonCodesResponse, ChannelPartnerCancelResponse, ChannelPartnerEstimateShippingResponse, ChannelPartnerEstimateTaxResponse, ChannelPartnerImportResponse, ChannelPartnerOrder, ChannelPartnerShipToPreference, ChannelPartnerShipToPreferenceResponse, ChannelPartnerShipToPreferencesResponse, ChannelPartnersResponse, ErrorResponse, Order, OrderResponse) {
   'use strict';
 
   /**
    * ChannelPartner service.
    * @module com.ultracart.admin.v2/ChannelPartnerApi
-   * @version 3.11.7
+   * @version 3.11.8
    */
 
   /**
@@ -391,6 +391,54 @@
 
       return this.apiClient.callApi(
         '/channel_partner/orders/by_channel_partner_order_id/{order_id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getChannelPartnerReasonCodes operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerReasonCodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve reject and refund reason codes.
+     * Retrieve reject and refund reason codes. 
+     * @param {Number} channel_partner_oid 
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerReasonCodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse}
+     */
+    this.getChannelPartnerReasonCodes = function(channel_partner_oid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'channel_partner_oid' is set
+      if (channel_partner_oid === undefined || channel_partner_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_oid' when calling getChannelPartnerReasonCodes");
+      }
+
+
+      var pathParams = {
+        'channel_partner_oid': channel_partner_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ChanelPartnerReasonCodesResponse;
+
+      return this.apiClient.callApi(
+        '/channel_partner/channel_partners/{channel_partner_oid}/reason_codes', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

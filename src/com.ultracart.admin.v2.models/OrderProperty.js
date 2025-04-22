@@ -34,7 +34,7 @@
   /**
    * The OrderProperty model module.
    * @module com.ultracart.admin.v2.models/OrderProperty
-   * @version 3.11.7
+   * @version 3.11.8
    */
 
   /**
@@ -55,6 +55,10 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('created_by'))
+        obj.created_by = ApiClient.convertToType(data['created_by'], 'String');
+      if (data.hasOwnProperty('created_dts'))
+        obj.created_dts = ApiClient.convertToType(data['created_dts'], 'String');
       if (data.hasOwnProperty('display'))
         obj.display = ApiClient.convertToType(data['display'], 'Boolean');
       if (data.hasOwnProperty('expiration_dts'))
@@ -66,6 +70,18 @@
     }
     return obj;
   }
+
+  /**
+   * Created by user
+   * @member {String} created_by
+   */
+  exports.prototype.created_by = undefined;
+
+  /**
+   * The date/time that the property was created by the user
+   * @member {String} created_dts
+   */
+  exports.prototype.created_dts = undefined;
 
   /**
    * True if this property is displayed to the customer

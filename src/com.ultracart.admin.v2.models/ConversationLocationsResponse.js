@@ -34,7 +34,7 @@
   /**
    * The ConversationLocationsResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationLocationsResponse
-   * @version 3.11.7
+   * @version 3.11.8
    */
 
   /**
