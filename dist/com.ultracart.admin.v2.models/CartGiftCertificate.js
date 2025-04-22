@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartGiftCertificate model module.
  * @module com.ultracart.admin.v2.models/CartGiftCertificate
- * @version 4.1.6
+ * @version 4.1.7
  */
 var CartGiftCertificate = /*#__PURE__*/function () {
   /**

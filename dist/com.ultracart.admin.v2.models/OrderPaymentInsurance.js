@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPaymentInsurance model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentInsurance
- * @version 4.1.6
+ * @version 4.1.7
  */
 var OrderPaymentInsurance = /*#__PURE__*/function () {
   /**

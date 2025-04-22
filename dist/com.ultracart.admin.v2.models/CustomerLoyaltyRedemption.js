@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerLoyaltyRedemption model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyaltyRedemption
- * @version 4.1.6
+ * @version 4.1.7
  */
 var CustomerLoyaltyRedemption = /*#__PURE__*/function () {
   /**

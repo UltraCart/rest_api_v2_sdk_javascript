@@ -107,6 +107,7 @@ docs/CartTaxes.md
 docs/CartUpsellAfter.md
 docs/CartValidationRequest.md
 docs/CartValidationResponse.md
+docs/ChanelPartnerReasonCodesResponse.md
 docs/ChannelPartner.md
 docs/ChannelPartnerApi.md
 docs/ChannelPartnerCancelResponse.md
@@ -987,6 +988,7 @@ src/com.ultracart.admin.v2.models/CartTaxes.js
 src/com.ultracart.admin.v2.models/CartUpsellAfter.js
 src/com.ultracart.admin.v2.models/CartValidationRequest.js
 src/com.ultracart.admin.v2.models/CartValidationResponse.js
+src/com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse.js
 src/com.ultracart.admin.v2.models/ChannelPartner.js
 src/com.ultracart.admin.v2.models/ChannelPartnerCancelResponse.js
 src/com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse.js

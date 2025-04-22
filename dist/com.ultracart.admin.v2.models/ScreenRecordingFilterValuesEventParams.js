@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingFilterValuesEventParams model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterValuesEventParams
- * @version 4.1.6
+ * @version 4.1.7
  */
 var ScreenRecordingFilterValuesEventParams = /*#__PURE__*/function () {
   /**

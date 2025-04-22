@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PublishLibraryItemRequest model module.
  * @module com.ultracart.admin.v2.models/PublishLibraryItemRequest
- * @version 4.1.7
+ * @version 4.1.8
  */
 class PublishLibraryItemRequest {
     /**

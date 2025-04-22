@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemAmember model module.
  * @module com.ultracart.admin.v2.models/ItemAmember
- * @version 4.1.6
+ * @version 4.1.7
  */
 var ItemAmember = /*#__PURE__*/function () {
   /**

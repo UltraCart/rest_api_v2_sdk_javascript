@@ -23,7 +23,7 @@ import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
 /**
 * Fulfillment service.
 * @module com.ultracart.admin.v2/FulfillmentApi
-* @version 4.1.7
+* @version 4.1.8
 */
 export default class FulfillmentApi {
 

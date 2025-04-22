@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.1.6
+ * @version 4.1.7
  */
 var ConversationAgentProfile = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,18 @@ var ConversationAgentProfile = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationAgentProfile();
+        if (data.hasOwnProperty('ai')) {
+          obj['ai'] = _ApiClient["default"].convertToType(data['ai'], 'Boolean');
+        }
+        if (data.hasOwnProperty('ai_chat_instructions')) {
+          obj['ai_chat_instructions'] = _ApiClient["default"].convertToType(data['ai_chat_instructions'], 'String');
+        }
+        if (data.hasOwnProperty('ai_persona')) {
+          obj['ai_persona'] = _ApiClient["default"].convertToType(data['ai_persona'], 'String');
+        }
+        if (data.hasOwnProperty('ai_sms_instructions')) {
+          obj['ai_sms_instructions'] = _ApiClient["default"].convertToType(data['ai_sms_instructions'], 'String');
+        }
         if (data.hasOwnProperty('chat_limit')) {
           obj['chat_limit'] = _ApiClient["default"].convertToType(data['chat_limit'], 'Number');
         }
@@ -85,6 +97,30 @@ var ConversationAgentProfile = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * AI powered chat bot
+ * @member {Boolean} ai
+ */
+ConversationAgentProfile.prototype['ai'] = undefined;
+
+/**
+ * Additional instructions for this AI when handle web chats
+ * @member {String} ai_chat_instructions
+ */
+ConversationAgentProfile.prototype['ai_chat_instructions'] = undefined;
+
+/**
+ * Persona of this AI agent
+ * @member {String} ai_persona
+ */
+ConversationAgentProfile.prototype['ai_persona'] = undefined;
+
+/**
+ * Additional instructions for this AI when handle SMS messages
+ * @member {String} ai_sms_instructions
+ */
+ConversationAgentProfile.prototype['ai_sms_instructions'] = undefined;
+
 /**
  * The number of engagement chats that can be pushed on them at any given time.
  * @member {Number} chat_limit

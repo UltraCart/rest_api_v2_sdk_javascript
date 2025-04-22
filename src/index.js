@@ -116,6 +116,7 @@ import CartTaxes from './com.ultracart.admin.v2.models/CartTaxes';
 import CartUpsellAfter from './com.ultracart.admin.v2.models/CartUpsellAfter';
 import CartValidationRequest from './com.ultracart.admin.v2.models/CartValidationRequest';
 import CartValidationResponse from './com.ultracart.admin.v2.models/CartValidationResponse';
+import ChanelPartnerReasonCodesResponse from './com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse';
 import ChannelPartner from './com.ultracart.admin.v2.models/ChannelPartner';
 import ChannelPartnerCancelResponse from './com.ultracart.admin.v2.models/ChannelPartnerCancelResponse';
 import ChannelPartnerEstimateShippingResponse from './com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse';
@@ -922,7 +923,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.7
+* @version 4.1.8
 */
 export {
     /**
@@ -1548,6 +1549,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CartValidationResponse}
      */
     CartValidationResponse,
+
+    /**
+     * The ChanelPartnerReasonCodesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse}
+     */
+    ChanelPartnerReasonCodesResponse,
 
     /**
      * The ChannelPartner model constructor.

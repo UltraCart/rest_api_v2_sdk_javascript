@@ -17,7 +17,7 @@ import EmailListSegmentUsedBy from './EmailListSegmentUsedBy';
 /**
  * The EmailList model module.
  * @module com.ultracart.admin.v2.models/EmailList
- * @version 4.1.7
+ * @version 4.1.8
  */
 class EmailList {
     /**

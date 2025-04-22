@@ -18,7 +18,7 @@ import ChannelPartnerOrderTransaction from './ChannelPartnerOrderTransaction';
 /**
  * The ChannelPartnerOrder model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
- * @version 4.1.7
+ * @version 4.1.8
  */
 class ChannelPartnerOrder {
     /**

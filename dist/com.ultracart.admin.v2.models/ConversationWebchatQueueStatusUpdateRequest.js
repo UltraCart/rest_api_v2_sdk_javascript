@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationWebchatQueueStatusUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest
- * @version 4.1.6
+ * @version 4.1.7
  */
 var ConversationWebchatQueueStatusUpdateRequest = /*#__PURE__*/function () {
   /**
