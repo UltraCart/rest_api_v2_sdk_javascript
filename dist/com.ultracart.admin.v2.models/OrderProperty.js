@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderProperty model module.
  * @module com.ultracart.admin.v2.models/OrderProperty
- * @version 4.1.7
+ * @version 4.1.8
  */
 var OrderProperty = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,12 @@ var OrderProperty = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new OrderProperty();
+        if (data.hasOwnProperty('created_by')) {
+          obj['created_by'] = _ApiClient["default"].convertToType(data['created_by'], 'String');
+        }
+        if (data.hasOwnProperty('created_dts')) {
+          obj['created_dts'] = _ApiClient["default"].convertToType(data['created_dts'], 'String');
+        }
         if (data.hasOwnProperty('display')) {
           obj['display'] = _ApiClient["default"].convertToType(data['display'], 'Boolean');
         }
@@ -76,6 +82,18 @@ var OrderProperty = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Created by user
+ * @member {String} created_by
+ */
+OrderProperty.prototype['created_by'] = undefined;
+
+/**
+ * The date/time that the property was created by the user
+ * @member {String} created_dts
+ */
+OrderProperty.prototype['created_dts'] = undefined;
+
 /**
  * True if this property is displayed to the customer
  * @member {Boolean} display

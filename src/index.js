@@ -148,6 +148,7 @@ import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationA
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationAgentProfile from './com.ultracart.admin.v2.models/ConversationAgentProfile';
 import ConversationAgentProfileResponse from './com.ultracart.admin.v2.models/ConversationAgentProfileResponse';
+import ConversationAgentProfilesResponse from './com.ultracart.admin.v2.models/ConversationAgentProfilesResponse';
 import ConversationAutocompleteRequest from './com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
 import ConversationAutocompleteResponse from './com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
 import ConversationAutocompleteValue from './com.ultracart.admin.v2.models/ConversationAutocompleteValue';
@@ -923,7 +924,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.8
+* @version 4.1.9
 */
 export {
     /**
@@ -1741,6 +1742,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationAgentProfileResponse}
      */
     ConversationAgentProfileResponse,
+
+    /**
+     * The ConversationAgentProfilesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentProfilesResponse}
+     */
+    ConversationAgentProfilesResponse,
 
     /**
      * The ConversationAutocompleteRequest model constructor.

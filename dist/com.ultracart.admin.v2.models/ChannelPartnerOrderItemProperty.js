@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerOrderItemProperty model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItemProperty
- * @version 4.1.7
+ * @version 4.1.8
  */
 var ChannelPartnerOrderItemProperty = /*#__PURE__*/function () {
   /**

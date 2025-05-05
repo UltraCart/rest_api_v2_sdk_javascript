@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The KeyValue model module.
  * @module com.ultracart.admin.v2.models/KeyValue
- * @version 4.1.8
+ * @version 4.1.9
  */
 class KeyValue {
     /**

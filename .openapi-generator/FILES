@@ -142,6 +142,7 @@ docs/ConversationAgentAuth.md
 docs/ConversationAgentAuthResponse.md
 docs/ConversationAgentProfile.md
 docs/ConversationAgentProfileResponse.md
+docs/ConversationAgentProfilesResponse.md
 docs/ConversationApi.md
 docs/ConversationAutocompleteRequest.md
 docs/ConversationAutocompleteResponse.md
@@ -1020,6 +1021,7 @@ src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
 src/com.ultracart.admin.v2.models/ConversationAgentProfile.js
 src/com.ultracart.admin.v2.models/ConversationAgentProfileResponse.js
+src/com.ultracart.admin.v2.models/ConversationAgentProfilesResponse.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteRequest.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteResponse.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteValue.js

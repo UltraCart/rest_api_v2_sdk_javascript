@@ -639,6 +639,12 @@ Object.defineProperty(exports, "CartValidationResponse", {
     return _CartValidationResponse["default"];
   }
 });
+Object.defineProperty(exports, "ChanelPartnerReasonCodesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ChanelPartnerReasonCodesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ChannelPartner", {
   enumerable: true,
   get: function get() {
@@ -5381,6 +5387,7 @@ var _CartTaxes = _interopRequireDefault(require("./com.ultracart.admin.v2.models
 var _CartUpsellAfter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartUpsellAfter"));
 var _CartValidationRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartValidationRequest"));
 var _CartValidationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartValidationResponse"));
+var _ChanelPartnerReasonCodesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse"));
 var _ChannelPartner = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartner"));
 var _ChannelPartnerCancelResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerCancelResponse"));
 var _ChannelPartnerEstimateShippingResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse"));

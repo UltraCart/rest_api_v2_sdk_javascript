@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _ChanelPartnerReasonCodesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse"));
 var _ChannelPartnerCancelResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnerCancelResponse"));
 var _ChannelPartnerEstimateShippingResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse"));
 var _ChannelPartnerEstimateTaxResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse"));
@@ -38,7 +39,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * ChannelPartner service.
 * @module com.ultracart.admin.v2/ChannelPartnerApi
-* @version 4.1.7
+* @version 4.1.8
 */
 var ChannelPartnerApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -314,6 +315,42 @@ var ChannelPartnerApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrderResponse["default"];
       return this.apiClient.callApi('/channel_partner/orders/by_channel_partner_order_id/{order_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getChannelPartnerReasonCodes operation.
+     * @callback module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerReasonCodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve reject and refund reason codes.
+     * Retrieve reject and refund reason codes. 
+     * @param {Number} channel_partner_oid 
+     * @param {module:com.ultracart.admin.v2/ChannelPartnerApi~getChannelPartnerReasonCodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse}
+     */
+  }, {
+    key: "getChannelPartnerReasonCodes",
+    value: function getChannelPartnerReasonCodes(channel_partner_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'channel_partner_oid' is set
+      if (channel_partner_oid === undefined || channel_partner_oid === null) {
+        throw new Error("Missing the required parameter 'channel_partner_oid' when calling getChannelPartnerReasonCodes");
+      }
+      var pathParams = {
+        'channel_partner_oid': channel_partner_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ChanelPartnerReasonCodesResponse["default"];
+      return this.apiClient.callApi('/channel_partner/channel_partners/{channel_partner_oid}/reason_codes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

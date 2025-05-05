@@ -22,7 +22,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Affiliate service.
 * @module com.ultracart.admin.v2/AffiliateApi
-* @version 4.1.8
+* @version 4.1.9
 */
 export default class AffiliateApi {
 

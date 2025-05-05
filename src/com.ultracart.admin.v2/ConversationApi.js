@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import ConversationAgentAuthResponse from '../com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationAgentProfile from '../com.ultracart.admin.v2.models/ConversationAgentProfile';
 import ConversationAgentProfileResponse from '../com.ultracart.admin.v2.models/ConversationAgentProfileResponse';
+import ConversationAgentProfilesResponse from '../com.ultracart.admin.v2.models/ConversationAgentProfilesResponse';
 import ConversationAutocompleteRequest from '../com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
 import ConversationAutocompleteResponse from '../com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
 import ConversationCannedMessage from '../com.ultracart.admin.v2.models/ConversationCannedMessage';
@@ -78,7 +79,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.8
+* @version 4.1.9
 */
 export default class ConversationApi {
 
@@ -636,6 +637,43 @@ export default class ConversationApi {
       let returnType = ConversationAgentProfileResponse;
       return this.apiClient.callApi(
         '/conversation/agent/profile', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentProfiles operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfilesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentProfilesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get agent profiles
+     * Retrieve the agents profile 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentProfilesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentProfilesResponse}
+     */
+    getAgentProfiles(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationAgentProfilesResponse;
+      return this.apiClient.callApi(
+        '/conversation/agent/profiles', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
