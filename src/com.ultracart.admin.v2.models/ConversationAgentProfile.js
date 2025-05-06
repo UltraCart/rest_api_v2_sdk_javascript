@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentProfile model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentProfile
-   * @version 3.11.9
+   * @version 3.11.10
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.profile_image_upload_key = ApiClient.convertToType(data['profile_image_upload_key'], 'String');
       if (data.hasOwnProperty('profile_image_url'))
         obj.profile_image_url = ApiClient.convertToType(data['profile_image_url'], 'String');
+      if (data.hasOwnProperty('user_id'))
+        obj.user_id = ApiClient.convertToType(data['user_id'], 'Number');
     }
     return obj;
   }
@@ -146,6 +148,12 @@
    * @member {String} profile_image_url
    */
   exports.prototype.profile_image_url = undefined;
+
+  /**
+   * User ID associated with the agent.  Populated by getAgentProfiles call only.
+   * @member {Number} user_id
+   */
+  exports.prototype.user_id = undefined;
 
 
   /**
