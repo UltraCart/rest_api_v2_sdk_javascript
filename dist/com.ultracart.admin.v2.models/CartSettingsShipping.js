@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartSettingsShipping model module.
  * @module com.ultracart.admin.v2.models/CartSettingsShipping
- * @version 4.1.8
+ * @version 4.1.9
  */
 var CartSettingsShipping = /*#__PURE__*/function () {
   /**

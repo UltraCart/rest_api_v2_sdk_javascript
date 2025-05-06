@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.1.9
+ * @version 4.1.10
  */
 class ConversationAgentProfile {
     /**
@@ -79,6 +79,9 @@ class ConversationAgentProfile {
             }
             if (data.hasOwnProperty('profile_image_url')) {
                 obj['profile_image_url'] = ApiClient.convertToType(data['profile_image_url'], 'String');
+            }
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'Number');
             }
         }
         return obj;
@@ -152,6 +155,12 @@ ConversationAgentProfile.prototype['profile_image_upload_key'] = undefined;
  * @member {String} profile_image_url
  */
 ConversationAgentProfile.prototype['profile_image_url'] = undefined;
+
+/**
+ * User ID associated with the agent.  Populated by getAgentProfiles call only.
+ * @member {Number} user_id
+ */
+ConversationAgentProfile.prototype['user_id'] = undefined;
 
 
 

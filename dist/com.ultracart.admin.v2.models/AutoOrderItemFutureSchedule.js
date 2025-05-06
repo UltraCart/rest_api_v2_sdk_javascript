@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderItemFutureSchedule model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule
- * @version 4.1.8
+ * @version 4.1.9
  */
 var AutoOrderItemFutureSchedule = /*#__PURE__*/function () {
   /**

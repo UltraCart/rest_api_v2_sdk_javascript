@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerAttachment model module.
  * @module com.ultracart.admin.v2.models/CustomerAttachment
- * @version 4.1.8
+ * @version 4.1.9
  */
 var CustomerAttachment = /*#__PURE__*/function () {
   /**

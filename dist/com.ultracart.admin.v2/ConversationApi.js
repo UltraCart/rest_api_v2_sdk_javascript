@@ -8,6 +8,7 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 var _ConversationAgentProfile = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfile"));
 var _ConversationAgentProfileResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfileResponse"));
+var _ConversationAgentProfilesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfilesResponse"));
 var _ConversationAutocompleteRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
 var _ConversationAutocompleteResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
 var _ConversationCannedMessage = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessage"));
@@ -87,7 +88,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.8
+* @version 4.1.9
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -554,6 +555,35 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationAgentProfileResponse["default"];
       return this.apiClient.callApi('/conversation/agent/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentProfiles operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfilesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentProfilesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get agent profiles
+     * Retrieve the agents profile 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentProfilesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentProfilesResponse}
+     */
+  }, {
+    key: "getAgentProfiles",
+    value: function getAgentProfiles(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentProfilesResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/profiles', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

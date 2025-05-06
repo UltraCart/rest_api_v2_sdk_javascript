@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **name** | **String** | Their actual user name for profile settings display as placeholder test | [optional] 
 **profile_image_upload_key** | **String** | An upload key used to update the profile image. | [optional] 
 **profile_image_url** | **String** | Their current profile image URL | [optional] 
+**user_id** | **Number** | User ID associated with the agent.  Populated by getAgentProfiles call only. | [optional] 
 
 
 

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemRelated model module.
  * @module com.ultracart.admin.v2.models/ItemRelated
- * @version 4.1.8
+ * @version 4.1.9
  */
 var ItemRelated = /*#__PURE__*/function () {
   /**

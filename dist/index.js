@@ -849,6 +849,12 @@ Object.defineProperty(exports, "ConversationAgentProfileResponse", {
     return _ConversationAgentProfileResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationAgentProfilesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentProfilesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationApi", {
   enumerable: true,
   get: function get() {
@@ -5419,6 +5425,7 @@ var _ConversationAgentAuth = _interopRequireDefault(require("./com.ultracart.adm
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 var _ConversationAgentProfile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfile"));
 var _ConversationAgentProfileResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfileResponse"));
+var _ConversationAgentProfilesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfilesResponse"));
 var _ConversationAutocompleteRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
 var _ConversationAutocompleteResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
 var _ConversationAutocompleteValue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteValue"));

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxCountryCode model module.
  * @module com.ultracart.admin.v2.models/TaxCountryCode
- * @version 4.1.8
+ * @version 4.1.9
  */
 var TaxCountryCode = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderPaymentCreditCardDualVaultedProperty model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty
- * @version 4.1.9
+ * @version 4.1.10
  */
 class OrderPaymentCreditCardDualVaultedProperty {
     /**
