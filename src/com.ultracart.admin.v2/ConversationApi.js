@@ -72,6 +72,8 @@ import ConversationStartRequest from '../com.ultracart.admin.v2.models/Conversat
 import ConversationStartResponse from '../com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationVirtualAgentBudget from '../com.ultracart.admin.v2.models/ConversationVirtualAgentBudget';
 import ConversationVirtualAgentBudgetResponse from '../com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse';
+import ConversationVirtualAgentCapabilities from '../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities';
+import ConversationVirtualAgentCapabilitiesResponse from '../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse';
 import ConversationWebchatContext from '../com.ultracart.admin.v2.models/ConversationWebchatContext';
 import ConversationWebchatQueueStatusUpdateRequest from '../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest';
 import ConversationWebchatQueueStatusesResponse from '../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse';
@@ -81,7 +83,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.11
+* @version 4.1.12
 */
 export default class ConversationApi {
 
@@ -2315,6 +2317,43 @@ export default class ConversationApi {
     }
 
     /**
+     * Callback function to receive the result of the getVirtualAgentCapabilities operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getVirtualAgentCapabilitiesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get virtual agent capabilities
+     * Retrieve virtual agent capabilities 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getVirtualAgentCapabilitiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse}
+     */
+    getVirtualAgentCapabilities(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationVirtualAgentCapabilitiesResponse;
+      return this.apiClient.callApi(
+        '/conversation/virtualagent/capabilities', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertConversationCannedMessage operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~insertConversationCannedMessageCallback
      * @param {String} error Error message, if any.
@@ -3733,6 +3772,48 @@ export default class ConversationApi {
       let returnType = ConversationVirtualAgentBudgetResponse;
       return this.apiClient.callApi(
         '/conversation/virtualagent/budget', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateVirtualAgentCapabilities operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateVirtualAgentCapabilitiesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update virtual agent capabilities
+     * Update virtual agent capabilities 
+     * @param {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities} virtual_agent_capabilities Virtual Agent Capabilities
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateVirtualAgentCapabilitiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse}
+     */
+    updateVirtualAgentCapabilities(virtual_agent_capabilities, callback) {
+      let postBody = virtual_agent_capabilities;
+      // verify the required parameter 'virtual_agent_capabilities' is set
+      if (virtual_agent_capabilities === undefined || virtual_agent_capabilities === null) {
+        throw new Error("Missing the required parameter 'virtual_agent_capabilities' when calling updateVirtualAgentCapabilities");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationVirtualAgentCapabilitiesResponse;
+      return this.apiClient.callApi(
+        '/conversation/virtualagent/capabilities', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

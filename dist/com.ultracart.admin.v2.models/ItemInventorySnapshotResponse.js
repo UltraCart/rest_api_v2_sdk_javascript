@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemInventorySnapshotResponse model module.
  * @module com.ultracart.admin.v2.models/ItemInventorySnapshotResponse
- * @version 4.1.10
+ * @version 4.1.11
  */
 var ItemInventorySnapshotResponse = /*#__PURE__*/function () {
   /**

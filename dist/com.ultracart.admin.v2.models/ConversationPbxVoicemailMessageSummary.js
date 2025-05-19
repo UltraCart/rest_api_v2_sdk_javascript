@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxVoicemailMessageSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageSummary
- * @version 4.1.10
+ * @version 4.1.11
  */
 var ConversationPbxVoicemailMessageSummary = /*#__PURE__*/function () {
   /**

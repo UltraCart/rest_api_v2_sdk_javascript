@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingSegment model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingSegment
- * @version 4.1.10
+ * @version 4.1.11
  */
 var ScreenRecordingSegment = /*#__PURE__*/function () {
   /**

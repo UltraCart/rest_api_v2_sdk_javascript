@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailListSegmentMembership model module.
  * @module com.ultracart.admin.v2.models/EmailListSegmentMembership
- * @version 4.1.11
+ * @version 4.1.12
  */
 class EmailListSegmentMembership {
     /**

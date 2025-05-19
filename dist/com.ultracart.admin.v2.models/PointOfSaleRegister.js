@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PointOfSaleRegister model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleRegister
- * @version 4.1.10
+ * @version 4.1.11
  */
 var PointOfSaleRegister = /*#__PURE__*/function () {
   /**

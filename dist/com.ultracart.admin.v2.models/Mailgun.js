@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Mailgun model module.
  * @module com.ultracart.admin.v2.models/Mailgun
- * @version 4.1.10
+ * @version 4.1.11
  */
 var Mailgun = /*#__PURE__*/function () {
   /**
