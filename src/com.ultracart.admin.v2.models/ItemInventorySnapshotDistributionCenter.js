@@ -34,7 +34,7 @@
   /**
    * The ItemInventorySnapshotDistributionCenter model module.
    * @module com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter
-   * @version 3.11.10
+   * @version 3.11.11
    */
 
   /**

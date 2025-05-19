@@ -34,7 +34,7 @@
   /**
    * The CustomerStoreCreditLedgerEntry model module.
    * @module com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry
-   * @version 3.11.10
+   * @version 3.11.11
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ItemInventorySnapshot model module.
    * @module com.ultracart.admin.v2.models/ItemInventorySnapshot
-   * @version 3.11.10
+   * @version 3.11.11
    */
 
   /**

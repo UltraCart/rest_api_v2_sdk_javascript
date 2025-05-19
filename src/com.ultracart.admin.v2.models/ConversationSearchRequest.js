@@ -34,7 +34,7 @@
   /**
    * The ConversationSearchRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationSearchRequest
-   * @version 3.11.10
+   * @version 3.11.11
    */
 
   /**
