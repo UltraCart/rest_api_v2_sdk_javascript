@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationAutocompleteResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAutocompleteResponse
- * @version 4.1.10
+ * @version 4.1.11
  */
 class ConversationAutocompleteResponse {
     /**

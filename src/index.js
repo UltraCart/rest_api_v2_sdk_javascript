@@ -233,6 +233,8 @@ import ConversationStartRequest from './com.ultracart.admin.v2.models/Conversati
 import ConversationStartResponse from './com.ultracart.admin.v2.models/ConversationStartResponse';
 import ConversationSummary from './com.ultracart.admin.v2.models/ConversationSummary';
 import ConversationTwilioAccount from './com.ultracart.admin.v2.models/ConversationTwilioAccount';
+import ConversationVirtualAgentBudget from './com.ultracart.admin.v2.models/ConversationVirtualAgentBudget';
+import ConversationVirtualAgentBudgetResponse from './com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse';
 import ConversationWebchatContext from './com.ultracart.admin.v2.models/ConversationWebchatContext';
 import ConversationWebchatQueueStatus from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatus';
 import ConversationWebchatQueueStatusAgent from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent';
@@ -924,7 +926,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.10
+* @version 4.1.11
 */
 export {
     /**
@@ -2252,6 +2254,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationTwilioAccount}
      */
     ConversationTwilioAccount,
+
+    /**
+     * The ConversationVirtualAgentBudget model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationVirtualAgentBudget}
+     */
+    ConversationVirtualAgentBudget,
+
+    /**
+     * The ConversationVirtualAgentBudgetResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse}
+     */
+    ConversationVirtualAgentBudgetResponse,
 
     /**
      * The ConversationWebchatContext model constructor.
