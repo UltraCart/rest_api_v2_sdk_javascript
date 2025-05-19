@@ -34,7 +34,7 @@
   /**
    * The EmailListSegmentFolderResponse model module.
    * @module com.ultracart.admin.v2.models/EmailListSegmentFolderResponse
-   * @version 3.11.11
+   * @version 3.11.12
    */
 
   /**

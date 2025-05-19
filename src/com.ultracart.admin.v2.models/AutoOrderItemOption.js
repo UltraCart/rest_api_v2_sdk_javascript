@@ -34,7 +34,7 @@
   /**
    * The AutoOrderItemOption model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItemOption
-   * @version 3.11.11
+   * @version 3.11.12
    */
 
   /**

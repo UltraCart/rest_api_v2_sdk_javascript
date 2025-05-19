@@ -34,7 +34,7 @@
   /**
    * The SingleSignOnAuthorizeRequest model module.
    * @module com.ultracart.admin.v2.models/SingleSignOnAuthorizeRequest
-   * @version 3.11.11
+   * @version 3.11.12
    */
 
   /**
