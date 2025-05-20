@@ -64,6 +64,8 @@ var _ConversationStartRequest = _interopRequireDefault(require("../com.ultracart
 var _ConversationStartResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationStartResponse"));
 var _ConversationVirtualAgentBudget = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationVirtualAgentBudget"));
 var _ConversationVirtualAgentBudgetResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse"));
+var _ConversationVirtualAgentCapabilities = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities"));
+var _ConversationVirtualAgentCapabilitiesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse"));
 var _ConversationWebchatContext = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatContext"));
 var _ConversationWebchatQueueStatusUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest"));
 var _ConversationWebchatQueueStatusesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse"));
@@ -90,7 +92,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.11
+* @version 4.1.12
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -1923,6 +1925,35 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getVirtualAgentCapabilities operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getVirtualAgentCapabilitiesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get virtual agent capabilities
+     * Retrieve virtual agent capabilities 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getVirtualAgentCapabilitiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse}
+     */
+  }, {
+    key: "getVirtualAgentCapabilities",
+    value: function getVirtualAgentCapabilities(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationVirtualAgentCapabilitiesResponse["default"];
+      return this.apiClient.callApi('/conversation/virtualagent/capabilities', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the insertConversationCannedMessage operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~insertConversationCannedMessageCallback
      * @param {String} error Error message, if any.
@@ -3107,6 +3138,40 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationVirtualAgentBudgetResponse["default"];
       return this.apiClient.callApi('/conversation/virtualagent/budget', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updateVirtualAgentCapabilities operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateVirtualAgentCapabilitiesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update virtual agent capabilities
+     * Update virtual agent capabilities 
+     * @param {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities} virtual_agent_capabilities Virtual Agent Capabilities
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateVirtualAgentCapabilitiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse}
+     */
+  }, {
+    key: "updateVirtualAgentCapabilities",
+    value: function updateVirtualAgentCapabilities(virtual_agent_capabilities, callback) {
+      var postBody = virtual_agent_capabilities;
+      // verify the required parameter 'virtual_agent_capabilities' is set
+      if (virtual_agent_capabilities === undefined || virtual_agent_capabilities === null) {
+        throw new Error("Missing the required parameter 'virtual_agent_capabilities' when calling updateVirtualAgentCapabilities");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationVirtualAgentCapabilitiesResponse["default"];
+      return this.apiClient.callApi('/conversation/virtualagent/capabilities', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
   }]);
 }();

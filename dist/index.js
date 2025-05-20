@@ -1377,6 +1377,18 @@ Object.defineProperty(exports, "ConversationVirtualAgentBudgetResponse", {
     return _ConversationVirtualAgentBudgetResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationVirtualAgentCapabilities", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationVirtualAgentCapabilities["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationVirtualAgentCapabilitiesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationVirtualAgentCapabilitiesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationWebchatContext", {
   enumerable: true,
   get: function get() {
@@ -5524,6 +5536,8 @@ var _ConversationSummary = _interopRequireDefault(require("./com.ultracart.admin
 var _ConversationTwilioAccount = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationTwilioAccount"));
 var _ConversationVirtualAgentBudget = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentBudget"));
 var _ConversationVirtualAgentBudgetResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse"));
+var _ConversationVirtualAgentCapabilities = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities"));
+var _ConversationVirtualAgentCapabilitiesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse"));
 var _ConversationWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatContext"));
 var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatus"));
 var _ConversationWebchatQueueStatusAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent"));

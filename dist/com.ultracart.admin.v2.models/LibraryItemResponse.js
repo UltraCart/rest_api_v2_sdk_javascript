@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LibraryItemResponse model module.
  * @module com.ultracart.admin.v2.models/LibraryItemResponse
- * @version 4.1.11
+ * @version 4.1.12
  */
 var LibraryItemResponse = /*#__PURE__*/function () {
   /**

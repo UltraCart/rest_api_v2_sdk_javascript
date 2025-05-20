@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderProcessPaymentResponse model module.
  * @module com.ultracart.admin.v2.models/OrderProcessPaymentResponse
- * @version 4.1.11
+ * @version 4.1.12
  */
 var OrderProcessPaymentResponse = /*#__PURE__*/function () {
   /**

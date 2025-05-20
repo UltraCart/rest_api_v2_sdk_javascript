@@ -19,7 +19,7 @@ import ConversationSentiment from './ConversationSentiment';
 /**
  * The Conversation model module.
  * @module com.ultracart.admin.v2.models/Conversation
- * @version 4.1.12
+ * @version 4.1.13
  */
 class Conversation {
     /**
@@ -103,6 +103,12 @@ class Conversation {
             }
             if (data.hasOwnProperty('unread_messages')) {
                 obj['unread_messages'] = ApiClient.convertToType(data['unread_messages'], 'Boolean');
+            }
+            if (data.hasOwnProperty('virtual_agent')) {
+                obj['virtual_agent'] = ApiClient.convertToType(data['virtual_agent'], 'Boolean');
+            }
+            if (data.hasOwnProperty('virtual_agent_cost')) {
+                obj['virtual_agent_cost'] = ApiClient.convertToType(data['virtual_agent_cost'], 'Number');
             }
             if (data.hasOwnProperty('visible')) {
                 obj['visible'] = ApiClient.convertToType(data['visible'], 'Boolean');
@@ -209,6 +215,18 @@ Conversation.prototype['start_dts'] = undefined;
  * @member {Boolean} unread_messages
  */
 Conversation.prototype['unread_messages'] = undefined;
+
+/**
+ * True if a virtual agent answered the conversation
+ * @member {Boolean} virtual_agent
+ */
+Conversation.prototype['virtual_agent'] = undefined;
+
+/**
+ * The cost of this conversation performed by the virtual agent
+ * @member {Number} virtual_agent_cost
+ */
+Conversation.prototype['virtual_agent_cost'] = undefined;
 
 /**
  * @member {Boolean} visible

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The WorkflowTaskOpenCountResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowTaskOpenCountResponse
- * @version 4.1.12
+ * @version 4.1.13
  */
 class WorkflowTaskOpenCountResponse {
     /**

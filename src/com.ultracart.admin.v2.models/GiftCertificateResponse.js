@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The GiftCertificateResponse model module.
  * @module com.ultracart.admin.v2.models/GiftCertificateResponse
- * @version 4.1.12
+ * @version 4.1.13
  */
 class GiftCertificateResponse {
     /**

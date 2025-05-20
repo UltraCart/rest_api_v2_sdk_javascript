@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Error model module.
  * @module com.ultracart.admin.v2.models/Error
- * @version 4.1.12
+ * @version 4.1.13
  */
 class Error {
     /**
