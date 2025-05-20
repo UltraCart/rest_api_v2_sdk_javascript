@@ -34,7 +34,7 @@
   /**
    * The Conversation model module.
    * @module com.ultracart.admin.v2.models/Conversation
-   * @version 3.11.12
+   * @version 3.11.13
    */
 
   /**
@@ -91,6 +91,10 @@
         obj.start_dts = ApiClient.convertToType(data['start_dts'], 'String');
       if (data.hasOwnProperty('unread_messages'))
         obj.unread_messages = ApiClient.convertToType(data['unread_messages'], 'Boolean');
+      if (data.hasOwnProperty('virtual_agent'))
+        obj.virtual_agent = ApiClient.convertToType(data['virtual_agent'], 'Boolean');
+      if (data.hasOwnProperty('virtual_agent_cost'))
+        obj.virtual_agent_cost = ApiClient.convertToType(data['virtual_agent_cost'], 'Number');
       if (data.hasOwnProperty('visible'))
         obj.visible = ApiClient.convertToType(data['visible'], 'Boolean');
     }
@@ -192,6 +196,18 @@
    * @member {Boolean} unread_messages
    */
   exports.prototype.unread_messages = undefined;
+
+  /**
+   * True if a virtual agent answered the conversation
+   * @member {Boolean} virtual_agent
+   */
+  exports.prototype.virtual_agent = undefined;
+
+  /**
+   * The cost of this conversation performed by the virtual agent
+   * @member {Number} virtual_agent_cost
+   */
+  exports.prototype.virtual_agent_cost = undefined;
 
   /**
    * @member {Boolean} visible

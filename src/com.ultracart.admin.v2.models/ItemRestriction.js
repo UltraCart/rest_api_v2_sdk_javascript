@@ -34,7 +34,7 @@
   /**
    * The ItemRestriction model module.
    * @module com.ultracart.admin.v2.models/ItemRestriction
-   * @version 3.11.12
+   * @version 3.11.13
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.exclude_coupon = ApiClient.convertToType(data['exclude_coupon'], 'Boolean');
       if (data.hasOwnProperty('exclude_from_free_promotion'))
         obj.exclude_from_free_promotion = ApiClient.convertToType(data['exclude_from_free_promotion'], 'Boolean');
+      if (data.hasOwnProperty('exclude_from_loyalty'))
+        obj.exclude_from_loyalty = ApiClient.convertToType(data['exclude_from_loyalty'], 'Boolean');
       if (data.hasOwnProperty('items'))
         obj.items = ApiClient.convertToType(data['items'], [ItemRestrictionItem]);
       if (data.hasOwnProperty('maximum_quantity'))
@@ -86,6 +88,12 @@
    * @member {Boolean} exclude_from_free_promotion
    */
   exports.prototype.exclude_from_free_promotion = undefined;
+
+  /**
+   * Exclude from loyalty.  Must be set to true or false to save.  Null is ignored for backwards SDK compatibility
+   * @member {Boolean} exclude_from_loyalty
+   */
+  exports.prototype.exclude_from_loyalty = undefined;
 
   /**
    * Items

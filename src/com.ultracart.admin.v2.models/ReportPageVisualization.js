@@ -34,7 +34,7 @@
   /**
    * The ReportPageVisualization model module.
    * @module com.ultracart.admin.v2.models/ReportPageVisualization
-   * @version 3.11.12
+   * @version 3.11.13
    */
 
   /**
