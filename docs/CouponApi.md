@@ -34,7 +34,10 @@ Delete a coupon
 
 Delete a coupon on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteCoupon -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -54,6 +57,8 @@ apiInstance.deleteCoupon(coupon_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteCoupon -->
 
 ### Parameters
 
@@ -84,7 +89,10 @@ Deletes multiple coupons
 
 Delete coupons on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteCouponsByCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -104,6 +112,8 @@ apiInstance.deleteCouponsByCode(coupon_delete_request, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteCouponsByCode -->
 
 ### Parameters
 
@@ -134,7 +144,10 @@ Deletes multiple coupons
 
 Delete coupons on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteCouponsByOid -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -154,6 +167,8 @@ apiInstance.deleteCouponsByOid(coupon_delete_request, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteCouponsByOid -->
 
 ### Parameters
 
@@ -184,7 +199,10 @@ Determines if a coupon merchant code already exists
 
 Determines if a coupon merchant code already exists. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE doesCouponCodeExist -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -204,6 +222,8 @@ apiInstance.doesCouponCodeExist(merchant_code, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE doesCouponCodeExist -->
 
 ### Parameters
 
@@ -234,7 +254,10 @@ Generates one time codes for a coupon
 
 Generate one time codes for a coupon 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE generateCouponCodes -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -255,6 +278,8 @@ apiInstance.generateCouponCodes(coupon_oid, coupon_codes_request, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE generateCouponCodes -->
 
 ### Parameters
 
@@ -286,7 +311,10 @@ Generates one time codes by merchant code
 
 Generate one time codes by merchant code 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE generateOneTimeCodesByMerchantCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -307,6 +335,8 @@ apiInstance.generateOneTimeCodesByMerchantCode(merchant_code, coupon_codes_reque
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE generateOneTimeCodesByMerchantCode -->
 
 ### Parameters
 
@@ -338,7 +368,10 @@ Retrieve auto apply rules and conditions
 
 Retrieve auto apply rules and conditions 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAutoApply -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -357,6 +390,8 @@ apiInstance.getAutoApply((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAutoApply -->
 
 ### Parameters
 
@@ -384,7 +419,10 @@ Retrieve a coupon
 
 Retrieves a single coupon using the specified coupon profile oid. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCoupon -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -407,6 +445,8 @@ apiInstance.getCoupon(coupon_oid, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCoupon -->
 
 ### Parameters
 
@@ -438,7 +478,10 @@ Retrieve a coupon by merchant code
 
 Retrieves a single coupon using the specified merchant code. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCouponByMerchantCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -461,6 +504,8 @@ apiInstance.getCouponByMerchantCode(merchant_code, opts, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCouponByMerchantCode -->
 
 ### Parameters
 
@@ -492,7 +537,10 @@ Retrieve coupons
 
 Retrieves coupons for this account.  If no parameters are specified, all coupons will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCoupons -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -526,6 +574,8 @@ apiInstance.getCoupons(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCoupons -->
 
 ### Parameters
 
@@ -568,7 +618,10 @@ Retrieve coupons by query
 
 Retrieves coupons from the account.  If no parameters are specified, all coupons will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCouponsByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -594,6 +647,8 @@ apiInstance.getCouponsByQuery(coupon_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCouponsByQuery -->
 
 ### Parameters
 
@@ -628,7 +683,10 @@ Retrieve values needed for a coupon editor
 
 Retrieve values needed for a coupon editor 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEditorValues -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -647,6 +705,8 @@ apiInstance.getEditorValues((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEditorValues -->
 
 ### Parameters
 
@@ -674,7 +734,10 @@ Insert a coupon
 
 Insert a coupon on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertCoupon -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -697,6 +760,8 @@ apiInstance.insertCoupon(coupon, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertCoupon -->
 
 ### Parameters
 
@@ -728,7 +793,10 @@ Insert multiple coupons
 
 Insert multiple coupon on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertCoupons -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -752,6 +820,8 @@ apiInstance.insertCoupons(coupons_request, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertCoupons -->
 
 ### Parameters
 
@@ -784,7 +854,10 @@ Searches for items to display within a coupon editor and assign to coupons
 
 Searches for items to display within a coupon editor and assign to coupons 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -807,6 +880,8 @@ apiInstance.searchItems(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchItems -->
 
 ### Parameters
 
@@ -838,7 +913,10 @@ Update auto apply rules and conditions
 
 Update auto apply rules and conditions 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateAutoApply -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -858,6 +936,8 @@ apiInstance.updateAutoApply(conditions, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateAutoApply -->
 
 ### Parameters
 
@@ -888,7 +968,10 @@ Update a coupon
 
 Update a coupon on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateCoupon -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -912,6 +995,8 @@ apiInstance.updateCoupon(coupon_oid, coupon, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateCoupon -->
 
 ### Parameters
 
@@ -944,7 +1029,10 @@ Update multiple coupons
 
 Update multiple coupon on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateCoupons -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -969,6 +1057,8 @@ apiInstance.updateCoupons(coupons_request, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateCoupons -->
 
 ### Parameters
 
@@ -1002,7 +1092,10 @@ Upload one-time codes for a coupon
 
 Upload one-time codes for a coupon 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE uploadCouponCodes -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1023,6 +1116,8 @@ apiInstance.uploadCouponCodes(coupon_oid, upload_coupon_codes_request, (error, d
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE uploadCouponCodes -->
 
 ### Parameters
 

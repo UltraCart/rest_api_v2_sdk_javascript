@@ -30,7 +30,10 @@ Cancel channel partner order by channel partner order id
 
 Cancel channel partner order by channel partner order id 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE cancelOrderByChannelPartnerOrderId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -50,6 +53,8 @@ apiInstance.cancelOrderByChannelPartnerOrderId(order_id, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE cancelOrderByChannelPartnerOrderId -->
 
 ### Parameters
 
@@ -80,7 +85,10 @@ Cancel channel partner order by UltraCart order id
 
 Cancel channel partner order by UltraCart order id 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE cancelOrderByUltraCartOrderId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -100,6 +108,8 @@ apiInstance.cancelOrderByUltraCartOrderId(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE cancelOrderByUltraCartOrderId -->
 
 ### Parameters
 
@@ -130,7 +140,10 @@ Delete a ship to preference record for the channel partner.
 
 Delete a ship to preference record for the channel partner. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteChannelPartnerShipToPreference -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -151,6 +164,8 @@ apiInstance.deleteChannelPartnerShipToPreference(channel_partner_oid, channel_pa
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteChannelPartnerShipToPreference -->
 
 ### Parameters
 
@@ -182,7 +197,10 @@ Estimate shipping for channel partner order
 
 Estimate shipping for order from a channel partner. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE estimateShippingForChannelPartnerOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -202,6 +220,8 @@ apiInstance.estimateShippingForChannelPartnerOrder(channel_partner_order, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE estimateShippingForChannelPartnerOrder -->
 
 ### Parameters
 
@@ -232,7 +252,10 @@ Estimate tax for channel partner order
 
 Estimate tax for order from a channel partner. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE estimateTaxForChannelPartnerOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -252,6 +275,8 @@ apiInstance.estimateTaxForChannelPartnerOrder(channel_partner_order, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE estimateTaxForChannelPartnerOrder -->
 
 ### Parameters
 
@@ -282,7 +307,10 @@ Retrieve a channel partner order
 
 Retrieves a single order using the specified order id.  Only orders belonging to this channel partner may be retrieved. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChannelPartnerOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -305,6 +333,8 @@ apiInstance.getChannelPartnerOrder(order_id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChannelPartnerOrder -->
 
 ### Parameters
 
@@ -336,7 +366,10 @@ Retrieve a channel partner order by the channel partner order id
 
 Retrieves a single order using the channel partner order id, not the ultracart order id.  Only orders belonging to this channel partner may be retrieved. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChannelPartnerOrderByChannelPartnerOrderId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -359,6 +392,8 @@ apiInstance.getChannelPartnerOrderByChannelPartnerOrderId(order_id, opts, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChannelPartnerOrderByChannelPartnerOrderId -->
 
 ### Parameters
 
@@ -390,7 +425,10 @@ Retrieve reject and refund reason codes.
 
 Retrieve reject and refund reason codes. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChannelPartnerReasonCodes -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -410,6 +448,8 @@ apiInstance.getChannelPartnerReasonCodes(channel_partner_oid, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChannelPartnerReasonCodes -->
 
 ### Parameters
 
@@ -440,7 +480,10 @@ Retrieve the ship to preference associated with the channel partner and the spec
 
 Retrieve the ship to preference associated with the channel partner and the specific id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChannelPartnerShipToPreference -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -461,6 +504,8 @@ apiInstance.getChannelPartnerShipToPreference(channel_partner_oid, channel_partn
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChannelPartnerShipToPreference -->
 
 ### Parameters
 
@@ -492,7 +537,10 @@ Retrieve the ship to preferences associated with the channel partner.
 
 Retrieve the ship to preferences associated with the channel partner. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChannelPartnerShipToPreferences -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -512,6 +560,8 @@ apiInstance.getChannelPartnerShipToPreferences(channel_partner_oid, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChannelPartnerShipToPreferences -->
 
 ### Parameters
 
@@ -542,7 +592,10 @@ Retrieve the channel partners configured on the account.
 
 Retrieve the channel partners configured on the account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChannelPartners -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -561,6 +614,8 @@ apiInstance.getChannelPartners((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChannelPartners -->
 
 ### Parameters
 
@@ -588,7 +643,10 @@ Insert channel partner order
 
 Insert order from a channel partner. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE importChannelPartnerOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -608,6 +666,8 @@ apiInstance.importChannelPartnerOrder(channel_partner_order, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE importChannelPartnerOrder -->
 
 ### Parameters
 
@@ -638,7 +698,10 @@ Insert a ship to preference record for the channel partner.
 
 Insert a ship to preference record for the channel partner. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertChannelPartnerShipToPreference -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -659,6 +722,8 @@ apiInstance.insertChannelPartnerShipToPreference(channel_partner_oid, ship_to_pr
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertChannelPartnerShipToPreference -->
 
 ### Parameters
 
@@ -690,7 +755,10 @@ Refund a channel partner order
 
 Perform a refund operation on a channel partner order and then update the order if successful.  All of the object properties ending in _refunded should be the TOTAL amount that should end up being refunded.  UltraCart will calculate the actual amount to refund based upon the prior refunds. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE refundChannelPartnerOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -721,6 +789,8 @@ apiInstance.refundChannelPartnerOrder(order_id, order, opts, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE refundChannelPartnerOrder -->
 
 ### Parameters
 
@@ -760,7 +830,10 @@ Update a ship to preference record for the channel partner.
 
 Update a ship to preference record for the channel partner. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateChannelPartnerShipToPreference -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -782,6 +855,8 @@ apiInstance.updateChannelPartnerShipToPreference(channel_partner_oid, channel_pa
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateChannelPartnerShipToPreference -->
 
 ### Parameters
 

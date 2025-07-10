@@ -17,7 +17,10 @@ Exchange authorization code for access token.
 
 The final leg in the OAuth process which exchanges the specified access token for the access code needed to make API calls. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE oauthAccessToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -43,6 +46,8 @@ apiInstance.oauthAccessToken(client_id, grant_type, opts, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE oauthAccessToken -->
 
 ### Parameters
 
@@ -77,7 +82,10 @@ Revoke this OAuth application.
 
 Revokes the OAuth application associated with the specified client_id and token. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE oauthRevoke -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -98,6 +106,8 @@ apiInstance.oauthRevoke(client_id, token, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE oauthRevoke -->
 
 ### Parameters
 

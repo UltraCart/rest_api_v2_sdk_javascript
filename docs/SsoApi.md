@@ -19,7 +19,10 @@ Get single sign on session user
 
 This is the equivalent of logging out of the single sign on session 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getSsoSessionUser -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -38,6 +41,8 @@ apiInstance.getSsoSessionUser((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getSsoSessionUser -->
 
 ### Parameters
 
@@ -65,7 +70,10 @@ Authorize a single sign on session
 
 Starts the process of authorizing a single sign on session. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE ssoAuthorize -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -85,6 +93,8 @@ apiInstance.ssoAuthorize(authorization_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE ssoAuthorize -->
 
 ### Parameters
 
@@ -115,7 +125,10 @@ Revoke single sign on session
 
 This is the equivalent of logging out of the single sign on session 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE ssoSessionRevoke -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -134,6 +147,8 @@ apiInstance.ssoSessionRevoke((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE ssoSessionRevoke -->
 
 ### Parameters
 
@@ -161,7 +176,10 @@ Exchange a single sign on code for a simple key token
 
 Called by your application after receiving the code back on the redirect URI to obtain a simple key token to make API calls with 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE ssoToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -181,6 +199,8 @@ apiInstance.ssoToken(token_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE ssoToken -->
 
 ### Parameters
 

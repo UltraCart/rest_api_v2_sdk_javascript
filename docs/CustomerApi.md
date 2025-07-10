@@ -39,7 +39,10 @@ Adds store credit to a customer
 
 Adds store credit to a customer 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE addCustomerStoreCredit -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -60,6 +63,8 @@ apiInstance.addCustomerStoreCredit(customer_profile_oid, store_credit_request, (
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE addCustomerStoreCredit -->
 
 ### Parameters
 
@@ -91,7 +96,10 @@ Updates the cashback balance for a customer by updating the internal gift certif
 
 Updates the cashback balance for a customer by updating the internal gift certificate used, creating the gift certificate if needed. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE adjustInternalCertificate -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -112,6 +120,8 @@ apiInstance.adjustInternalCertificate(customer_profile_oid, adjust_internal_cert
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE adjustInternalCertificate -->
 
 ### Parameters
 
@@ -143,7 +153,10 @@ Delete a customer
 
 Delete a customer on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteCustomer -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -163,6 +176,8 @@ apiInstance.deleteCustomer(customer_profile_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteCustomer -->
 
 ### Parameters
 
@@ -193,7 +208,10 @@ Delete a customer wishlist item
 
 Delete a customer wishlist item 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteWishListItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -214,6 +232,8 @@ apiInstance.deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteWishListItem -->
 
 ### Parameters
 
@@ -245,7 +265,10 @@ Retrieve a customer
 
 Retrieves a single customer using the specified customer profile oid. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomer -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -268,6 +291,8 @@ apiInstance.getCustomer(customer_profile_oid, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomer -->
 
 ### Parameters
 
@@ -299,7 +324,10 @@ Retrieve a customer by Email
 
 Retrieves a single customer using the specified customer email address. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomerByEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -322,6 +350,8 @@ apiInstance.getCustomerByEmail(email, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomerByEmail -->
 
 ### Parameters
 
@@ -353,7 +383,10 @@ Retrieve values needed for a customer profile editor
 
 Retrieve values needed for a customer profile editor. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomerEditorValues -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -372,6 +405,8 @@ apiInstance.getCustomerEditorValues((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomerEditorValues -->
 
 ### Parameters
 
@@ -399,7 +434,10 @@ Retrieve all email lists across all storefronts
 
 Retrieve all email lists across all storefronts 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomerEmailLists -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -418,6 +456,8 @@ apiInstance.getCustomerEmailLists((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomerEmailLists -->
 
 ### Parameters
 
@@ -445,7 +485,10 @@ Retrieve the customer store credit accumulated through loyalty programs
 
 Retrieve the customer store credit accumulated through loyalty programs 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomerStoreCredit -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -465,6 +508,8 @@ apiInstance.getCustomerStoreCredit(customer_profile_oid, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomerStoreCredit -->
 
 ### Parameters
 
@@ -495,7 +540,10 @@ Retrieve wishlist items for customer
 
 Retrieve wishlist items for customer. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomerWishList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -515,6 +563,8 @@ apiInstance.getCustomerWishList(customer_profile_oid, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomerWishList -->
 
 ### Parameters
 
@@ -545,7 +595,10 @@ Retrieve wishlist item for customer
 
 Retrieve wishlist item for customer. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomerWishListItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -566,6 +619,8 @@ apiInstance.getCustomerWishListItem(customer_profile_oid, customer_wishlist_item
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomerWishListItem -->
 
 ### Parameters
 
@@ -597,7 +652,10 @@ Retrieve customers
 
 Retrieves customers from the account.  If no parameters are specified, all customers will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -650,6 +708,8 @@ apiInstance.getCustomers(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomers -->
 
 ### Parameters
 
@@ -711,7 +771,10 @@ Retrieve customers by query
 
 Retrieves customers from the account.  If no parameters are specified, all customers will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomersByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -738,6 +801,8 @@ apiInstance.getCustomersByQuery(customer_query, opts, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomersByQuery -->
 
 ### Parameters
 
@@ -773,7 +838,10 @@ Retrieve customers for DataTables plugin
 
 Retrieves customers from the account.  If no searches are specified, all customers will be returned. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCustomersForDataTables -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -795,6 +863,8 @@ apiInstance.getCustomersForDataTables(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCustomersForDataTables -->
 
 ### Parameters
 
@@ -825,7 +895,10 @@ Create a token that can be used to verify a customer email address
 
 Create a token that can be used to verify a customer email address.  The implementation of how a customer interacts with this token is left to the merchant. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailVerificationToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -845,6 +918,8 @@ apiInstance.getEmailVerificationToken(token_request, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailVerificationToken -->
 
 ### Parameters
 
@@ -875,7 +950,10 @@ getMagicLink
 
 Retrieves a magic link to allow a merchant to login as a customer.  This method is a PUT call intentionally. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getMagicLink -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -896,6 +974,8 @@ apiInstance.getMagicLink(customer_profile_oid, storefront_host_name, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getMagicLink -->
 
 ### Parameters
 
@@ -927,7 +1007,10 @@ Insert a customer
 
 Insert a customer on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertCustomer -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -950,6 +1033,8 @@ apiInstance.insertCustomer(customer, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertCustomer -->
 
 ### Parameters
 
@@ -981,7 +1066,10 @@ Insert a customer wishlist item
 
 Insert a customer wishlist item 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertWishListItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1002,6 +1090,8 @@ apiInstance.insertWishListItem(customer_profile_oid, wishlist_item, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertWishListItem -->
 
 ### Parameters
 
@@ -1033,7 +1123,10 @@ Merge customer into this customer
 
 Merge customer into this customer. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE mergeCustomer -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1057,6 +1150,8 @@ apiInstance.mergeCustomer(customer_profile_oid, customer, opts, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE mergeCustomer -->
 
 ### Parameters
 
@@ -1087,7 +1182,10 @@ null (empty response body)
 
 Searches for all matching values (using POST)
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchCustomerProfileValues -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1107,6 +1205,8 @@ apiInstance.searchCustomerProfileValues(lookup_request, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchCustomerProfileValues -->
 
 ### Parameters
 
@@ -1137,7 +1237,10 @@ Update a customer
 
 Update a customer on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateCustomer -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1161,6 +1264,8 @@ apiInstance.updateCustomer(customer_profile_oid, customer, opts, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateCustomer -->
 
 ### Parameters
 
@@ -1193,7 +1298,10 @@ Update email list subscriptions for a customer
 
 Update email list subscriptions for a customer 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateCustomerEmailLists -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1214,6 +1322,8 @@ apiInstance.updateCustomerEmailLists(customer_profile_oid, list_changes, (error,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateCustomerEmailLists -->
 
 ### Parameters
 
@@ -1245,7 +1355,10 @@ Update a customer wishlist item
 
 Update a customer wishlist item 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateWishListItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1267,6 +1380,8 @@ apiInstance.updateWishListItem(customer_profile_oid, customer_wishlist_item_oid,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateWishListItem -->
 
 ### Parameters
 
@@ -1299,7 +1414,10 @@ Validate a token that can be used to verify a customer email address
 
 Validate a token that can be used to verify a customer email address.  The implementation of how a customer interacts with this token is left to the merchant. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE validateEmailVerificationToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1319,6 +1437,8 @@ apiInstance.validateEmailVerificationToken(validation_request, (error, data, res
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE validateEmailVerificationToken -->
 
 ### Parameters
 

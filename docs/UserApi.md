@@ -26,7 +26,10 @@ Delete a group
 
 Delete a group on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteGroup -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -46,6 +49,8 @@ apiInstance.deleteGroup(group_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteGroup -->
 
 ### Parameters
 
@@ -76,7 +81,10 @@ Delete a user
 
 Delete a user on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteUser -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -96,6 +104,8 @@ apiInstance.deleteUser(user_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteUser -->
 
 ### Parameters
 
@@ -126,7 +136,10 @@ Retrieve a group
 
 Retrieves a single group using the specified group id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getGroup -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -146,6 +159,8 @@ apiInstance.getGroup(group_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getGroup -->
 
 ### Parameters
 
@@ -174,7 +189,10 @@ null (empty response body)
 
 Get groups
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getGroups -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -193,6 +211,8 @@ apiInstance.getGroups((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getGroups -->
 
 ### Parameters
 
@@ -220,7 +240,10 @@ Retrieve a user
 
 Retrieves a single user using the specified user id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getUser -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -240,6 +263,8 @@ apiInstance.getUser(user_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getUser -->
 
 ### Parameters
 
@@ -270,7 +295,10 @@ Retrieve a user&#39;s login history
 
 Retrieves logins for a single user using the specified user id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getUserLogins -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -290,6 +318,8 @@ apiInstance.getUserLogins(user_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getUserLogins -->
 
 ### Parameters
 
@@ -318,7 +348,10 @@ Name | Type | Description  | Notes
 
 Get users
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getUsers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -337,6 +370,8 @@ apiInstance.getUsers((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getUsers -->
 
 ### Parameters
 
@@ -364,7 +399,10 @@ Insert a group
 
 Insert a group on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertGroup -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -384,6 +422,8 @@ apiInstance.insertGroup(group, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertGroup -->
 
 ### Parameters
 
@@ -414,7 +454,10 @@ Insert a user
 
 Insert a user on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertUser -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -434,6 +477,8 @@ apiInstance.insertUser(user, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertUser -->
 
 ### Parameters
 
@@ -464,7 +509,10 @@ Update a group
 
 Update a group on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateGroup -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -485,6 +533,8 @@ apiInstance.updateGroup(group_oid, group, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateGroup -->
 
 ### Parameters
 
@@ -516,7 +566,10 @@ Update a user
 
 Update a user on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateUser -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -537,6 +590,8 @@ apiInstance.updateUser(user_id, user, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateUser -->
 
 ### Parameters
 

@@ -21,7 +21,10 @@ Acknowledge receipt of orders.
 
 Acknowledge receipt of orders so that they are removed from the fulfillment queue.  This method must be called after receiving and order (via webhook) or retrieving (via retrieve orders method). 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE acknowledgeOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -42,6 +45,8 @@ apiInstance.acknowledgeOrders(distribution_center_code, orderIds, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE acknowledgeOrders -->
 
 ### Parameters
 
@@ -73,7 +78,10 @@ Generate a packing slip for this order for the given distribution center.
 
 The packing slip PDF that is returned is base 64 encoded 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE generatePackingSlip -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -94,6 +102,8 @@ apiInstance.generatePackingSlip(distribution_center_code, order_id, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE generatePackingSlip -->
 
 ### Parameters
 
@@ -125,7 +135,10 @@ Retrieve orders queued up for this distribution center.
 
 Retrieves up to 100 orders that are queued up in this distribution center.  You must acknowledge them before additional new orders will be returned.  There is NO record chunking.  You&#39;ll get the same 100 records again and again until you acknowledge orders.  The orders that are returned contain only items for this distribution center and are by default completely expanded with billing, channel_partner, checkout, coupons, customer_profile, edi, gift, gift_certificate, internal, items, payment, shipping, summary, taxes. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getDistributionCenterOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -145,6 +158,8 @@ apiInstance.getDistributionCenterOrders(distribution_center_code, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getDistributionCenterOrders -->
 
 ### Parameters
 
@@ -175,7 +190,10 @@ Retrieve distribution centers
 
 Retrieves the distribution centers that this user has access to. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getDistributionCenters -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -194,6 +212,8 @@ apiInstance.getDistributionCenters((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getDistributionCenters -->
 
 ### Parameters
 
@@ -221,7 +241,10 @@ Mark orders as shipped
 
 Store the tracking information and mark the order shipped for this distribution center. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE shipOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -242,6 +265,8 @@ apiInstance.shipOrders(distribution_center_code, shipments, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE shipOrders -->
 
 ### Parameters
 
@@ -273,7 +298,10 @@ Update inventory
 
 Update the inventory for items associated with this distribution center 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateInventory -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -294,6 +322,8 @@ apiInstance.updateInventory(distribution_center_code, inventories, (error, data,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateInventory -->
 
 ### Parameters
 

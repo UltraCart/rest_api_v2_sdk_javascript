@@ -38,7 +38,10 @@ Delete a digital item, which is a file within the digital library, not an actual
 
 Delete a digital item on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteDigitalItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -58,6 +61,8 @@ apiInstance.deleteDigitalItem(digital_item_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteDigitalItem -->
 
 ### Parameters
 
@@ -88,7 +93,10 @@ Delete an item
 
 Delete an item on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -108,6 +116,8 @@ apiInstance.deleteItem(merchant_item_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteItem -->
 
 ### Parameters
 
@@ -138,7 +148,10 @@ Delete a review
 
 Delete an item review. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteReview -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -159,6 +172,8 @@ apiInstance.deleteReview(review_oid, merchant_item_oid, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteReview -->
 
 ### Parameters
 
@@ -190,7 +205,10 @@ Retrieve a digital item from the digital library, which are digital files that m
 
 Retrieves a digital item (file information) from the account.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getDigitalItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -210,6 +228,8 @@ apiInstance.getDigitalItem(digital_item_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getDigitalItem -->
 
 ### Parameters
 
@@ -240,7 +260,10 @@ Retrieve digital items from the digital library which are digital files that may
 
 Retrieves a group of digital items (file information) from the account.  If no parameters are specified, all digital items will be returned.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getDigitalItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -267,6 +290,8 @@ apiInstance.getDigitalItems(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getDigitalItems -->
 
 ### Parameters
 
@@ -302,7 +327,10 @@ Retrieves digital items from the digital library (which are digital files that m
 
 Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getDigitalItemsByExternalId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -322,6 +350,8 @@ apiInstance.getDigitalItemsByExternalId(external_id, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getDigitalItemsByExternalId -->
 
 ### Parameters
 
@@ -352,7 +382,10 @@ Retrieve a list of item inventories.  This method may be called once every 15 mi
 
 Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getInventorySnapshot -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -371,6 +404,8 @@ apiInstance.getInventorySnapshot((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getInventorySnapshot -->
 
 ### Parameters
 
@@ -398,7 +433,10 @@ Retrieve an item
 
 Retrieves a single item using the specified item oid. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -422,6 +460,8 @@ apiInstance.getItem(merchant_item_oid, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getItem -->
 
 ### Parameters
 
@@ -454,7 +494,10 @@ Retrieve an item by item id
 
 Retrieves a single item using the specified item id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getItemByMerchantItemId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -478,6 +521,8 @@ apiInstance.getItemByMerchantItemId(merchant_item_id, opts, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getItemByMerchantItemId -->
 
 ### Parameters
 
@@ -510,7 +555,10 @@ Retrieve items
 
 Retrieves a group of items from the account.  If no parameters are specified, all items will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -539,6 +587,8 @@ apiInstance.getItems(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getItems -->
 
 ### Parameters
 
@@ -576,7 +626,10 @@ Retrieve pricing tiers
 
 Retrieves the pricing tiers 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPricingTiers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -598,6 +651,8 @@ apiInstance.getPricingTiers(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPricingTiers -->
 
 ### Parameters
 
@@ -628,7 +683,10 @@ Get a review
 
 Retrieve an item review. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getReview -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -649,6 +707,8 @@ apiInstance.getReview(review_oid, merchant_item_oid, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getReview -->
 
 ### Parameters
 
@@ -680,7 +740,10 @@ Get reviews for an item
 
 Retrieve item reviews. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getReviews -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -700,6 +763,8 @@ apiInstance.getReviews(merchant_item_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getReviews -->
 
 ### Parameters
 
@@ -730,7 +795,10 @@ Retrieve digital items from the digital library (which are digital files that ma
 
 Retrieves a group of digital items (file information) from the account that are not yet associated with any actual items.  If no parameters are specified, all digital items will be returned.  Be aware that these are not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated with normal items.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getUnassociatedDigitalItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -757,6 +825,8 @@ apiInstance.getUnassociatedDigitalItems(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getUnassociatedDigitalItems -->
 
 ### Parameters
 
@@ -792,7 +862,10 @@ Create a file within the digital library
 
 Create a file within the digital library.  This does not create an item, but makes this digital file available and selectable as part (or all) of an item. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertDigitalItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -812,6 +885,8 @@ apiInstance.insertDigitalItem(digital_item, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertDigitalItem -->
 
 ### Parameters
 
@@ -842,7 +917,10 @@ Create an item
 
 Create a new item on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -866,6 +944,8 @@ apiInstance.insertItem(item, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertItem -->
 
 ### Parameters
 
@@ -898,7 +978,10 @@ Insert a review
 
 Insert a item review. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertReview -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -919,6 +1002,8 @@ apiInstance.insertReview(merchant_item_oid, review, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertReview -->
 
 ### Parameters
 
@@ -950,7 +1035,10 @@ Upsert an item content attribute
 
 Update an item content attribute, creating it new if it does not yet exist. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertUpdateItemContentAttribute -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -971,6 +1059,8 @@ apiInstance.insertUpdateItemContentAttribute(merchant_item_oid, item_attribute, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertUpdateItemContentAttribute -->
 
 ### Parameters
 
@@ -1002,7 +1092,10 @@ Updates a file within the digital library
 
 Updates a file within the digital library.  This does not update an item, but updates a digital file available and selectable as part (or all) of an item. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateDigitalItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1023,6 +1116,8 @@ apiInstance.updateDigitalItem(digital_item_oid, digital_item, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateDigitalItem -->
 
 ### Parameters
 
@@ -1054,7 +1149,10 @@ Update an item
 
 Update a new item on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1079,6 +1177,8 @@ apiInstance.updateItem(merchant_item_oid, item, opts, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateItem -->
 
 ### Parameters
 
@@ -1112,7 +1212,10 @@ Update multiple items
 
 Update multiple item on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1137,6 +1240,8 @@ apiInstance.updateItems(items_request, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateItems -->
 
 ### Parameters
 
@@ -1170,7 +1275,10 @@ Update a review
 
 Update an item review. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateReview -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1192,6 +1300,8 @@ apiInstance.updateReview(review_oid, merchant_item_oid, review, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateReview -->
 
 ### Parameters
 
@@ -1224,7 +1334,10 @@ Upload an image to the temporary multimedia.
 
 Uploads an image and returns back meta information about the image as well as the identifier needed for the item update. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE uploadTemporaryMultimedia -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1244,6 +1357,8 @@ apiInstance.uploadTemporaryMultimedia(file, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE uploadTemporaryMultimedia -->
 
 ### Parameters
 

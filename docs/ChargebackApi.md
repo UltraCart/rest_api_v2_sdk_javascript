@@ -20,7 +20,10 @@ Delete a chargeback
 
 Delete a chargeback on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteChargeback -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -40,6 +43,8 @@ apiInstance.deleteChargeback(chargeback_dispute_oid, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteChargeback -->
 
 ### Parameters
 
@@ -70,7 +75,10 @@ Retrieve a chargeback
 
 Retrieves a single chargeback using the specified chargeback dispute oid. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChargebackDispute -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -93,6 +101,8 @@ apiInstance.getChargebackDispute(chargeback_dispute_oid, opts, (error, data, res
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChargebackDispute -->
 
 ### Parameters
 
@@ -124,7 +134,10 @@ Retrieve chargebacks
 
 Retrieves chargebacks from the account.  If no parameters are specified, all chargebacks will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getChargebackDisputes -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -157,6 +170,8 @@ apiInstance.getChargebackDisputes(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getChargebackDisputes -->
 
 ### Parameters
 
@@ -198,7 +213,10 @@ Insert a chargeback
 
 Insert a chargeback on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertChargeback -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -221,6 +239,8 @@ apiInstance.insertChargeback(chargeback, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertChargeback -->
 
 ### Parameters
 
@@ -252,7 +272,10 @@ Update a chargeback
 
 Update a chargeback on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateChargeback -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -276,6 +299,8 @@ apiInstance.updateChargeback(chargeback_dispute_oid, chargeback, opts, (error, d
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateChargeback -->
 
 ### Parameters
 

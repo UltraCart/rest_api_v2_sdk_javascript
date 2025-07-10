@@ -20,7 +20,10 @@ Retrieve an integration log
 
 Retrieve an integration logs from the account based identifiers 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getIntegrationLog -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -41,6 +44,8 @@ apiInstance.getIntegrationLog(pk, sk, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getIntegrationLog -->
 
 ### Parameters
 
@@ -72,7 +77,10 @@ Retrieve an integration log file
 
 Retrieve an integration log file from the account based identifiers 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getIntegrationLogFile -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -94,6 +102,8 @@ apiInstance.getIntegrationLogFile(pk, sk, uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getIntegrationLogFile -->
 
 ### Parameters
 
@@ -126,7 +136,10 @@ Retrieve an integration log file converted to PDF
 
 Retrieve an integration log file from the account based identifiers 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getIntegrationLogFilePdf -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -148,6 +161,8 @@ apiInstance.getIntegrationLogFilePdf(pk, sk, uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getIntegrationLogFilePdf -->
 
 ### Parameters
 
@@ -180,7 +195,10 @@ Retrieve integration log summaries
 
 Retrieves a set of integration log summaries from the account based on a query object. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getIntegrationLogSummariesQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -200,6 +218,8 @@ apiInstance.getIntegrationLogSummariesQuery(integration_log_summaries_query, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getIntegrationLogSummariesQuery -->
 
 ### Parameters
 
@@ -230,7 +250,10 @@ Retrieve integration logs
 
 Retrieves a set of integration logs from the account based on a query object. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getIntegrationLogsQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -255,6 +278,8 @@ apiInstance.getIntegrationLogsQuery(integration_log_query, opts, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getIntegrationLogsQuery -->
 
 ### Parameters
 

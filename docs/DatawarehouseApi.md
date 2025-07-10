@@ -25,7 +25,10 @@ Delete a report
 
 Delete a report on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteReport -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -45,6 +48,8 @@ apiInstance.deleteReport(report_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteReport -->
 
 ### Parameters
 
@@ -75,7 +80,10 @@ Dry run the report queries
 
 Dry run the report queries 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE dryRunReportQueries -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -95,6 +103,8 @@ apiInstance.dryRunReportQueries(query_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE dryRunReportQueries -->
 
 ### Parameters
 
@@ -125,7 +135,10 @@ Execute the report queries
 
 Execute the report queries 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE executeReportQueries -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -145,6 +158,8 @@ apiInstance.executeReportQueries(query_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE executeReportQueries -->
 
 ### Parameters
 
@@ -175,7 +190,10 @@ Get a report
 
 Retrieve a report 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getReport -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -195,6 +213,8 @@ apiInstance.getReport(report_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getReport -->
 
 ### Parameters
 
@@ -225,7 +245,10 @@ Get a report data set
 
 Retrieve a report data set 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getReportDataSet -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -245,6 +268,8 @@ apiInstance.getReportDataSet(dataset_uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getReportDataSet -->
 
 ### Parameters
 
@@ -275,7 +300,10 @@ Get a report data set page
 
 Retrieve a report data set page 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getReportDataSetPage -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -296,6 +324,8 @@ apiInstance.getReportDataSetPage(dataset_uuid, page_number, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getReportDataSetPage -->
 
 ### Parameters
 
@@ -327,7 +357,10 @@ Get report websocket authorization
 
 Retrieve a JWT to authorize a report to make a websocket connection. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getReportWebsocketAuthorization -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -346,6 +379,8 @@ apiInstance.getReportWebsocketAuthorization((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getReportWebsocketAuthorization -->
 
 ### Parameters
 
@@ -373,7 +408,10 @@ Get list of reports available
 
 Retrieve a list of reports available 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getReports -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -392,6 +430,8 @@ apiInstance.getReports((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getReports -->
 
 ### Parameters
 
@@ -419,7 +459,10 @@ Create a report
 
 Create a new report on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertReport -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -439,6 +482,8 @@ apiInstance.insertReport(report, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertReport -->
 
 ### Parameters
 
@@ -469,7 +514,10 @@ Update a report
 
 Update a report on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateReport -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -490,6 +538,8 @@ apiInstance.updateReport(report_oid, report, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateReport -->
 
 ### Parameters
 

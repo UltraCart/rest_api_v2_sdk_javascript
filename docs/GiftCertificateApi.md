@@ -23,7 +23,10 @@ Add a gift certificate ledger entry
 
 Adds a ledger entry for this gift certificate. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE addGiftCertificateLedgerEntry -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -44,6 +47,8 @@ apiInstance.addGiftCertificateLedgerEntry(gift_certificate_oid, gift_certificate
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE addGiftCertificateLedgerEntry -->
 
 ### Parameters
 
@@ -75,7 +80,10 @@ Create a gift certificate
 
 Creates a gift certificate for this merchant account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE createGiftCertificate -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -95,6 +103,8 @@ apiInstance.createGiftCertificate(gift_certificate_create_request, (error, data,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE createGiftCertificate -->
 
 ### Parameters
 
@@ -125,7 +135,10 @@ Delete a gift certificate
 
 Deletes a gift certificate for this merchant account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteGiftCertificate -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -145,6 +158,8 @@ apiInstance.deleteGiftCertificate(gift_certificate_oid, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteGiftCertificate -->
 
 ### Parameters
 
@@ -175,7 +190,10 @@ Retrieve gift certificate by code
 
 Retrieves a gift certificate from the account based on the code (the value the customer enters at checkout time). 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getGiftCertificateByCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -195,6 +213,8 @@ apiInstance.getGiftCertificateByCode(code, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getGiftCertificateByCode -->
 
 ### Parameters
 
@@ -225,7 +245,10 @@ Retrieve gift certificate by oid
 
 Retrieves a gift certificate from the account based on the internal primary key. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getGiftCertificateByOid -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -245,6 +268,8 @@ apiInstance.getGiftCertificateByOid(gift_certificate_oid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getGiftCertificateByOid -->
 
 ### Parameters
 
@@ -275,7 +300,10 @@ Retrieve gift certificate by email
 
 Retrieves all gift certificates from the account based on customer email. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getGiftCertificatesByEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -295,6 +323,8 @@ apiInstance.getGiftCertificatesByEmail(email, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getGiftCertificatesByEmail -->
 
 ### Parameters
 
@@ -325,7 +355,10 @@ Retrieve gift certificates by query
 
 Retrieves gift certificates from the account.  If no parameters are specified, all gift certificates will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getGiftCertificatesByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -352,6 +385,8 @@ apiInstance.getGiftCertificatesByQuery(gift_certificate_query, opts, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getGiftCertificatesByQuery -->
 
 ### Parameters
 
@@ -387,7 +422,10 @@ Update a gift certificate
 
 Update a gift certificate for this merchant account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateGiftCertificate -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -408,6 +446,8 @@ apiInstance.updateGiftCertificate(gift_certificate_oid, gift_certificate, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateGiftCertificate -->
 
 ### Parameters
 

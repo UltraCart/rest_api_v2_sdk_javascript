@@ -23,7 +23,10 @@ Delete a webhook
 
 Delete a webhook on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteWebhook -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -43,6 +46,8 @@ apiInstance.deleteWebhook(webhookOid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteWebhook -->
 
 ### Parameters
 
@@ -73,7 +78,10 @@ Delete a webhook by URL
 
 Delete a webhook based upon the URL on the webhook_url matching an existing webhook. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteWebhookByUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -93,6 +101,8 @@ apiInstance.deleteWebhookByUrl(webhook, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteWebhookByUrl -->
 
 ### Parameters
 
@@ -123,7 +133,10 @@ Retrieve an individual log
 
 Retrieves an individual log for a webhook given the webhook oid the request id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWebhookLog -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -144,6 +157,8 @@ apiInstance.getWebhookLog(webhookOid, requestId, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWebhookLog -->
 
 ### Parameters
 
@@ -175,7 +190,10 @@ Retrieve the log summaries
 
 Retrieves the log summary information for a given webhook.  This is useful for displaying all the various logs that can be viewed. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWebhookLogSummaries -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -208,6 +226,8 @@ apiInstance.getWebhookLogSummaries(webhookOid, opts, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWebhookLogSummaries -->
 
 ### Parameters
 
@@ -249,7 +269,10 @@ Retrieve webhooks
 
 Retrieves the webhooks associated with this application. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWebhooks -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -274,6 +297,8 @@ apiInstance.getWebhooks(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWebhooks -->
 
 ### Parameters
 
@@ -307,7 +332,10 @@ Add a webhook
 
 Adds a new webhook on the account.  If you add a new webhook with the authentication_type set to basic, but do not specify the basic_username and basic_password, UltraCart will automatically generate random ones and return them.  This allows your application to have simpler logic on the setup of a secure webhook. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertWebhook -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -330,6 +358,8 @@ apiInstance.insertWebhook(webhook, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertWebhook -->
 
 ### Parameters
 
@@ -361,7 +391,10 @@ Resend events to the webhook endpoint.
 
 This method will resend events to the webhook endpoint.  This method can be used for example to send all the existing items on an account to a webhook. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE resendEvent -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -382,6 +415,8 @@ apiInstance.resendEvent(webhookOid, eventName, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE resendEvent -->
 
 ### Parameters
 
@@ -413,7 +448,10 @@ Update a webhook
 
 Update a webhook on the account 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateWebhook -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -437,6 +475,8 @@ apiInstance.updateWebhook(webhookOid, webhook, opts, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateWebhook -->
 
 ### Parameters
 

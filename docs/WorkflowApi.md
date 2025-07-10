@@ -27,7 +27,10 @@ Get agent websocket authorization
 
 Retrieve a JWT to authorize an agent to make a websocket connection. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowAgentWebsocketAuthorization -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -46,6 +49,8 @@ apiInstance.getWorkflowAgentWebsocketAuthorization((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowAgentWebsocketAuthorization -->
 
 ### Parameters
 
@@ -73,7 +78,10 @@ Retrieve a list of groups that workflow tasks can be assigned to
 
 Retrieve a list of groups that workflow tasks can be assigned to 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowAssignmentGroups -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -96,6 +104,8 @@ apiInstance.getWorkflowAssignmentGroups(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowAssignmentGroups -->
 
 ### Parameters
 
@@ -127,7 +137,10 @@ Retrieve a list of users that workflow tasks can be assigned to
 
 Retrieve a list of users that workflow tasks can be assigned to 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowAssignmentUsers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -150,6 +163,8 @@ apiInstance.getWorkflowAssignmentUsers(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowAssignmentUsers -->
 
 ### Parameters
 
@@ -181,7 +196,10 @@ Retrieve a user object for myself
 
 Retrieve a user object for myself 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowMe -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -200,6 +218,8 @@ apiInstance.getWorkflowMe((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowMe -->
 
 ### Parameters
 
@@ -227,7 +247,10 @@ Retrieve a workflow task
 
 Retrieve a workflow task 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowTask -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -247,6 +270,8 @@ apiInstance.getWorkflowTask(task_uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowTask -->
 
 ### Parameters
 
@@ -277,7 +302,10 @@ Get a presigned workflow task attachment upload URL
 
 Get a presigned workflow task attachment upload URL 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowTaskAttachmentUploadUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -297,6 +325,8 @@ apiInstance.getWorkflowTaskAttachmentUploadUrl(extension, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowTaskAttachmentUploadUrl -->
 
 ### Parameters
 
@@ -327,7 +357,10 @@ Retrieve a workflow task by object type and id
 
 Retrieve a workflow task by object type and id 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowTaskByObjectType -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -348,6 +381,8 @@ apiInstance.getWorkflowTaskByObjectType(object_type, object_id, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowTaskByObjectType -->
 
 ### Parameters
 
@@ -379,7 +414,10 @@ Retrieve workflow task open count
 
 Retrieve workflow task open count 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowTaskOpenCount -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -398,6 +436,8 @@ apiInstance.getWorkflowTaskOpenCount((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowTaskOpenCount -->
 
 ### Parameters
 
@@ -425,7 +465,10 @@ Get a list of existing workflow task tags
 
 Retrieves a unique list of all the existing workflow task tags. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowTaskTags -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -444,6 +487,8 @@ apiInstance.getWorkflowTaskTags((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowTaskTags -->
 
 ### Parameters
 
@@ -471,7 +516,10 @@ Search workflow tasks
 
 Retrieves a set of workflow tasks from the account based on a query object. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getWorkflowTasks -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -496,6 +544,8 @@ apiInstance.getWorkflowTasks(workflow_tasks_query, opts, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getWorkflowTasks -->
 
 ### Parameters
 
@@ -529,7 +579,10 @@ Insert a workflow task
 
 Insert a workflow task 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertWorkflowTask -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -549,6 +602,8 @@ apiInstance.insertWorkflowTask(workflow_task, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertWorkflowTask -->
 
 ### Parameters
 
@@ -579,7 +634,10 @@ Update a workflow task
 
 Update a workflow task 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateWorkflowTask -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -600,6 +658,8 @@ apiInstance.updateWorkflowTask(task_uuid, workflow_task, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateWorkflowTask -->
 
 ### Parameters
 

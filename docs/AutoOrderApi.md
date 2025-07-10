@@ -26,7 +26,10 @@ Consolidates multiple auto orders
 
 Consolidates mutliple auto orders on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE consolidateAutoOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -50,6 +53,8 @@ apiInstance.consolidateAutoOrders(auto_order_oid, auto_order_consolidate, opts, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE consolidateAutoOrders -->
 
 ### Parameters
 
@@ -82,7 +87,10 @@ Establish an auto order by referencing a regular order id
 
 Establish an auto order by referencing a regular order id.  The result will be an auto order without any items.  You should add the items and perform an update call.  Orders must be less than 60 days old and use a credit card payment. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE establishAutoOrderByReferenceOrderId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -105,6 +113,8 @@ apiInstance.establishAutoOrderByReferenceOrderId(reference_order_id, opts, (erro
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE establishAutoOrderByReferenceOrderId -->
 
 ### Parameters
 
@@ -136,7 +146,10 @@ Retrieve an auto order by oid
 
 Retrieves a single auto order using the specified auto order oid. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAutoOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -159,6 +172,8 @@ apiInstance.getAutoOrder(auto_order_oid, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAutoOrder -->
 
 ### Parameters
 
@@ -190,7 +205,10 @@ Retrieve an auto order by code
 
 Retrieves a single auto order using the specified reference (original) order id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAutoOrderByCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -213,6 +231,8 @@ apiInstance.getAutoOrderByCode(auto_order_code, opts, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAutoOrderByCode -->
 
 ### Parameters
 
@@ -244,7 +264,10 @@ Retrieve an auto order by order id
 
 Retrieves a single auto order using the specified reference (original) order id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAutoOrderByReferenceOrderId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -267,6 +290,8 @@ apiInstance.getAutoOrderByReferenceOrderId(reference_order_id, opts, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAutoOrderByReferenceOrderId -->
 
 ### Parameters
 
@@ -298,7 +323,10 @@ Retrieve auto orders
 
 Retrieves auto orders from the account.  If no parameters are specified, all auto orders will be returned.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAutoOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -342,6 +370,8 @@ apiInstance.getAutoOrders(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAutoOrders -->
 
 ### Parameters
 
@@ -394,7 +424,10 @@ Retrieve auto order batch
 
 Retrieves a group of auto orders from the account based on an array of auto order oids.  If more than 200 auto order ids are specified, the API call will fail with a bad request error. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAutoOrdersBatch -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -417,6 +450,8 @@ apiInstance.getAutoOrdersBatch(auto_order_batch, opts, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAutoOrdersBatch -->
 
 ### Parameters
 
@@ -448,7 +483,10 @@ Retrieve auto orders by query
 
 Retrieves a group of auto orders from the account based on a query object.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAutoOrdersByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -474,6 +512,8 @@ apiInstance.getAutoOrdersByQuery(auto_order_query, opts, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAutoOrdersByQuery -->
 
 ### Parameters
 
@@ -508,7 +548,10 @@ Pause auto order
 
 Completely pause an auto order 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE pauseAutoOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -532,6 +575,8 @@ apiInstance.pauseAutoOrder(auto_order_oid, auto_order, opts, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE pauseAutoOrder -->
 
 ### Parameters
 
@@ -564,7 +609,10 @@ Update an auto order
 
 Update an auto order on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateAutoOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -589,6 +637,8 @@ apiInstance.updateAutoOrder(auto_order_oid, auto_order, opts, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateAutoOrder -->
 
 ### Parameters
 
@@ -622,7 +672,10 @@ Update multiple auto orders
 
 Update multiple auto orders on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateAutoOrdersBatch -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -647,6 +700,8 @@ apiInstance.updateAutoOrdersBatch(auto_orders_request, opts, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateAutoOrdersBatch -->
 
 ### Parameters
 

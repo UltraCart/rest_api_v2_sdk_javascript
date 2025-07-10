@@ -43,7 +43,10 @@ Adjusts an order total
 
 Adjusts an order total.  Adjusts individual items appropriately and considers taxes.  Desired total should be provided in the same currency as the order and must be less than the current total and greater than zero.  This call will change the order total.  It returns true if the desired total is achieved.  If the goal seeking algorithm falls short (usually by pennies), this method returns back false.  View the merchant notes for the order for further details. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE adjustOrderTotal -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -64,6 +67,8 @@ apiInstance.adjustOrderTotal(order_id, desired_total, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE adjustOrderTotal -->
 
 ### Parameters
 
@@ -95,7 +100,10 @@ Cancel an order
 
 Cancel an order on the UltraCart account.  If the success flag is false, then consult the error message for why it failed. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE cancelOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -119,6 +127,8 @@ apiInstance.cancelOrder(order_id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE cancelOrder -->
 
 ### Parameters
 
@@ -151,7 +161,10 @@ Delete an order
 
 Delete an order on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -171,6 +184,8 @@ apiInstance.deleteOrder(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteOrder -->
 
 ### Parameters
 
@@ -201,7 +216,10 @@ Duplicate an order
 
 Perform a duplicate of the specified order_id and return a new order located in Accounts Receivable. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE duplicateOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -224,6 +242,8 @@ apiInstance.duplicateOrder(order_id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE duplicateOrder -->
 
 ### Parameters
 
@@ -255,7 +275,10 @@ Format order
 
 Format the order for display at text or html 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE format -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -276,6 +299,8 @@ apiInstance.format(order_id, format_options, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE format -->
 
 ### Parameters
 
@@ -307,7 +332,10 @@ Generate an invoice for this order.
 
 The invoice PDF that is returned is base 64 encoded 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE generateInvoice -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -327,6 +355,8 @@ apiInstance.generateInvoice(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE generateInvoice -->
 
 ### Parameters
 
@@ -357,7 +387,10 @@ Generate an order token for a given order id
 
 Retrieves a single order token for a given order id.  The token can be used with the getOrderByToken API. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE generateOrderToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -377,6 +410,8 @@ apiInstance.generateOrderToken(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE generateOrderToken -->
 
 ### Parameters
 
@@ -407,7 +442,10 @@ Generate a packing slip for this order across all distribution centers.
 
 The packing slip PDF that is returned is base 64 encoded 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE generatePackingSlipAllDC -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -427,6 +465,8 @@ apiInstance.generatePackingSlipAllDC(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE generatePackingSlipAllDC -->
 
 ### Parameters
 
@@ -457,7 +497,10 @@ Generate a packing slip for this order for the given distribution center.
 
 The packing slip PDF that is returned is base 64 encoded 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE generatePackingSlipSpecificDC -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -478,6 +521,8 @@ apiInstance.generatePackingSlipSpecificDC(distribution_center_code, order_id, (e
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE generatePackingSlipSpecificDC -->
 
 ### Parameters
 
@@ -509,7 +554,10 @@ Retrieve A/R Retry Configuration
 
 Retrieve A/R Retry Configuration. This is primarily an internal API call.  It is doubtful you would ever need to use it. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAccountsReceivableRetryConfig -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -528,6 +576,8 @@ apiInstance.getAccountsReceivableRetryConfig((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAccountsReceivableRetryConfig -->
 
 ### Parameters
 
@@ -555,7 +605,10 @@ Retrieve A/R Retry Statistics
 
 Retrieve A/R Retry Statistics. This is primarily an internal API call.  It is doubtful you would ever need to use it. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAccountsReceivableRetryStats -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -578,6 +631,8 @@ apiInstance.getAccountsReceivableRetryStats(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAccountsReceivableRetryStats -->
 
 ### Parameters
 
@@ -609,7 +664,10 @@ Retrieve an order
 
 Retrieves a single order using the specified order id. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -632,6 +690,8 @@ apiInstance.getOrder(order_id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getOrder -->
 
 ### Parameters
 
@@ -663,7 +723,10 @@ Retrieve an order using a token
 
 Retrieves a single order using the specified order token. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getOrderByToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -686,6 +749,8 @@ apiInstance.getOrderByToken(order_by_token_query, opts, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getOrderByToken -->
 
 ### Parameters
 
@@ -717,7 +782,10 @@ Retrieve EDI documents associated with this order.
 
 Retrieve EDI documents associated with this order. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getOrderEdiDocuments -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -737,6 +805,8 @@ apiInstance.getOrderEdiDocuments(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getOrderEdiDocuments -->
 
 ### Parameters
 
@@ -767,7 +837,10 @@ Retrieve orders
 
 Retrieves a group of orders from the account.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the orders returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -819,6 +892,8 @@ apiInstance.getOrders(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getOrders -->
 
 ### Parameters
 
@@ -879,7 +954,10 @@ Retrieve order batch
 
 Retrieves a group of orders from the account based on an array of order ids.  If more than 500 order ids are specified, the API call will fail with a bad request error. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getOrdersBatch -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -902,6 +980,8 @@ apiInstance.getOrdersBatch(order_batch, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getOrdersBatch -->
 
 ### Parameters
 
@@ -933,7 +1013,10 @@ Retrieve orders by query
 
 Retrieves a group of orders from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the orders returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getOrdersByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -959,6 +1042,8 @@ apiInstance.getOrdersByQuery(order_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getOrdersByQuery -->
 
 ### Parameters
 
@@ -993,7 +1078,10 @@ Insert an order
 
 Inserts a new order on the UltraCart account.  This is probably NOT the method you want.  This is for channel orders.  For regular orders the customer is entering, use the CheckoutApi.  It has many, many more features, checks, and validations. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1016,6 +1104,8 @@ apiInstance.insertOrder(order, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertOrder -->
 
 ### Parameters
 
@@ -1047,7 +1137,10 @@ Determine if an order can be refunded
 
 Determine if an order can be refunded based upon payment method and age 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE isRefundableOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1067,6 +1160,8 @@ apiInstance.isRefundableOrder(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE isRefundableOrder -->
 
 ### Parameters
 
@@ -1097,7 +1192,10 @@ Process payment
 
 Process payment on order 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE processPayment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1118,6 +1216,8 @@ apiInstance.processPayment(order_id, process_payment_request, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE processPayment -->
 
 ### Parameters
 
@@ -1149,7 +1249,10 @@ Refund an order
 
 Perform a refund operation on an order and then update the order if successful.  All of the object properties ending in _refunded should be the TOTAL amount that should end up being refunded.  UltraCart will calculate the actual amount to refund based upon the prior refunds. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE refundOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1180,6 +1283,8 @@ apiInstance.refundOrder(order_id, order, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE refundOrder -->
 
 ### Parameters
 
@@ -1219,7 +1324,10 @@ Refund an order completely
 
 Perform a refund operation on an order and then update the order if successful. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE refundOrderCompletely -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1250,6 +1358,8 @@ apiInstance.refundOrderCompletely(order_id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE refundOrderCompletely -->
 
 ### Parameters
 
@@ -1289,7 +1399,10 @@ Replacement order
 
 Create a replacement order based upon a previous order 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE replacement -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1310,6 +1423,8 @@ apiInstance.replacement(order_id, replacement, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE replacement -->
 
 ### Parameters
 
@@ -1341,7 +1456,10 @@ Resend receipt
 
 Resend the receipt for an order on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE resendReceipt -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1361,6 +1479,8 @@ apiInstance.resendReceipt(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE resendReceipt -->
 
 ### Parameters
 
@@ -1391,7 +1511,10 @@ Resend shipment confirmation
 
 Resend shipment confirmation for an order on the UltraCart account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE resendShipmentConfirmation -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1411,6 +1534,8 @@ apiInstance.resendShipmentConfirmation(order_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE resendShipmentConfirmation -->
 
 ### Parameters
 
@@ -1441,7 +1566,10 @@ Update A/R Retry Configuration
 
 Update A/R Retry Configuration.  This is primarily an internal API call.  It is doubtful you would ever need to use it. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateAccountsReceivableRetryConfig -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1461,6 +1589,8 @@ apiInstance.updateAccountsReceivableRetryConfig(retry_config, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateAccountsReceivableRetryConfig -->
 
 ### Parameters
 
@@ -1491,7 +1621,10 @@ Update an order
 
 Update a new order on the UltraCart account.  This is probably NOT the method you want.  It is rare to update a completed order.  This will not trigger charges, emails, or any other automation. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1515,6 +1648,8 @@ apiInstance.updateOrder(order_id, order, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateOrder -->
 
 ### Parameters
 
@@ -1547,7 +1682,10 @@ Validate
 
 Validate the order for errors.  Specific checks can be passed to fine tune what is validated. Read and write permissions are required because the validate method may fix obvious address issues automatically which require update permission.This rest call makes use of the built-in translation of rest objects to UltraCart internal objects which also contains a multitude of validation checks that cannot be trapped.  Therefore any time this call is made, you should also trap api exceptions and examine their content because it may contain validation issues.  So check the response object and trap any exceptions. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE validateOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1567,6 +1705,8 @@ apiInstance.validateOrder(validation_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE validateOrder -->
 
 ### Parameters
 

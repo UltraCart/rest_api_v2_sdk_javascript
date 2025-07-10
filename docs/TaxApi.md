@@ -43,7 +43,10 @@ Deletes a Self tax provider city
 
 Deletes a Self tax provider city. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteTaxProviderSelfCity -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -64,6 +67,8 @@ apiInstance.deleteTaxProviderSelfCity(city, tax_city, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteTaxProviderSelfCity -->
 
 ### Parameters
 
@@ -95,7 +100,10 @@ Deletes a Self tax provider country
 
 Deletes a Self tax provider country. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteTaxProviderSelfCountry -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -116,6 +124,8 @@ apiInstance.deleteTaxProviderSelfCountry(countryCode, tax_country, (error, data,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteTaxProviderSelfCountry -->
 
 ### Parameters
 
@@ -147,7 +157,10 @@ Deletes a Self tax provider county
 
 Deletes a Self tax provider county. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteTaxProviderSelfCounty -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -168,6 +181,8 @@ apiInstance.deleteTaxProviderSelfCounty(county, tax_county, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteTaxProviderSelfCounty -->
 
 ### Parameters
 
@@ -199,7 +214,10 @@ Deletes a Self tax provider postalCode
 
 Deletes a Self tax provider postalCode. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteTaxProviderSelfPostalCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -220,6 +238,8 @@ apiInstance.deleteTaxProviderSelfPostalCode(postal_code, tax_postal_code, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteTaxProviderSelfPostalCode -->
 
 ### Parameters
 
@@ -251,7 +271,10 @@ Deletes a Self tax provider state
 
 Deletes a Self tax provider state. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteTaxProviderSelfState -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -272,6 +295,8 @@ apiInstance.deleteTaxProviderSelfState(stateCode, tax_state, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteTaxProviderSelfState -->
 
 ### Parameters
 
@@ -303,7 +328,10 @@ Retrieve the Avalara tax provider
 
 Retrieves the Avalara tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderAvalara -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -322,6 +350,8 @@ apiInstance.getTaxProviderAvalara((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderAvalara -->
 
 ### Parameters
 
@@ -349,7 +379,10 @@ Returns Avalara Tax companies configured by the merchant
 
 Returns Avalara Tax companies configured by the merchant 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderAvalaraCompanies -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -369,6 +402,8 @@ apiInstance.getTaxProviderAvalaraCompanies(tax_provider_avalara, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderAvalaraCompanies -->
 
 ### Parameters
 
@@ -399,7 +434,10 @@ Attempts to connect to Avalara and returns back the response
 
 Attempts to connect to Avalara and returns back the response. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderAvalaraTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -418,6 +456,8 @@ apiInstance.getTaxProviderAvalaraTest((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderAvalaraTest -->
 
 ### Parameters
 
@@ -445,7 +485,10 @@ Retrieve the Self tax provider
 
 Retrieves the Self tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderSelf -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -464,6 +507,8 @@ apiInstance.getTaxProviderSelf((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderSelf -->
 
 ### Parameters
 
@@ -491,7 +536,10 @@ Retrieve the Self tax provider countries
 
 Retrieves the Self tax provider countries. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderSelfCountries -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -510,6 +558,8 @@ apiInstance.getTaxProviderSelfCountries((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderSelfCountries -->
 
 ### Parameters
 
@@ -537,7 +587,10 @@ Retrieve the Self tax provider regions for a given country code
 
 Retrieves the Self tax provider regions for a given country code. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderSelfRegionsByCountryCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -557,6 +610,8 @@ apiInstance.getTaxProviderSelfRegionsByCountryCode(countryCode, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderSelfRegionsByCountryCode -->
 
 ### Parameters
 
@@ -587,7 +642,10 @@ Retrieve the Sovos tax provider
 
 Retrieves the Sovos tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderSovos -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -606,6 +664,8 @@ apiInstance.getTaxProviderSovos((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderSovos -->
 
 ### Parameters
 
@@ -633,7 +693,10 @@ Attempts to connect to Sovos and returns back the response
 
 Attempts to connect to Sovos and returns back the response. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderSovosTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -652,6 +715,8 @@ apiInstance.getTaxProviderSovosTest((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderSovosTest -->
 
 ### Parameters
 
@@ -679,7 +744,10 @@ Retrieve the TaxJar tax provider
 
 Retrieves the TaxJar tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderTaxJar -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -698,6 +766,8 @@ apiInstance.getTaxProviderTaxJar((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderTaxJar -->
 
 ### Parameters
 
@@ -725,7 +795,10 @@ Attempts to connect to TaxJar and returns back the response
 
 Attempts to connect to TaxJar and returns back the response. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderTaxJarTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -744,6 +817,8 @@ apiInstance.getTaxProviderTaxJarTest((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderTaxJarTest -->
 
 ### Parameters
 
@@ -771,7 +846,10 @@ Retrieve the UltraCart tax provider
 
 Retrieves the UltraCart tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderUltraCart -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -790,6 +868,8 @@ apiInstance.getTaxProviderUltraCart((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviderUltraCart -->
 
 ### Parameters
 
@@ -817,7 +897,10 @@ Retrieve tax methods
 
 Retrieves tax methods for this account. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTaxProviders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -841,6 +924,8 @@ apiInstance.getTaxProviders(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTaxProviders -->
 
 ### Parameters
 
@@ -873,7 +958,10 @@ Toggle a tax provider to active
 
 Toggle a tax provider to active. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE setActiveTaxProvider -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -893,6 +981,8 @@ apiInstance.setActiveTaxProvider(providerName, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE setActiveTaxProvider -->
 
 ### Parameters
 
@@ -923,7 +1013,10 @@ Update the Avalara tax provider
 
 Update the Avalara tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderAvalara -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -943,6 +1036,8 @@ apiInstance.updateTaxProviderAvalara(tax_provider_avalara, (error, data, respons
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderAvalara -->
 
 ### Parameters
 
@@ -973,7 +1068,10 @@ Update the Self tax provider
 
 Update the Self tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderSelf -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -993,6 +1091,8 @@ apiInstance.updateTaxProviderSelf(tax_provider_self, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderSelf -->
 
 ### Parameters
 
@@ -1023,7 +1123,10 @@ Updates a Self tax provider city
 
 Updates a Self tax provider city. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderSelfCity -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1044,6 +1147,8 @@ apiInstance.updateTaxProviderSelfCity(city, tax_city, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderSelfCity -->
 
 ### Parameters
 
@@ -1075,7 +1180,10 @@ Updates a Self tax provider country
 
 Updates a Self tax provider country. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderSelfCountry -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1096,6 +1204,8 @@ apiInstance.updateTaxProviderSelfCountry(countryCode, tax_country, (error, data,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderSelfCountry -->
 
 ### Parameters
 
@@ -1127,7 +1237,10 @@ Updates a Self tax provider county
 
 Updates a Self tax provider county. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderSelfCounty -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1148,6 +1261,8 @@ apiInstance.updateTaxProviderSelfCounty(county, tax_county, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderSelfCounty -->
 
 ### Parameters
 
@@ -1179,7 +1294,10 @@ Updates a Self tax provider postalCode
 
 Updates a Self tax provider postalCode. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderSelfPostalCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1200,6 +1318,8 @@ apiInstance.updateTaxProviderSelfPostalCode(postal_code, tax_postal_code, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderSelfPostalCode -->
 
 ### Parameters
 
@@ -1231,7 +1351,10 @@ Updates a Self tax provider state
 
 Updates a Self tax provider state. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderSelfState -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1252,6 +1375,8 @@ apiInstance.updateTaxProviderSelfState(stateCode, tax_state, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderSelfState -->
 
 ### Parameters
 
@@ -1283,7 +1408,10 @@ Update the Sovos tax provider
 
 Update the Sovos tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderSovos -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1303,6 +1431,8 @@ apiInstance.updateTaxProviderSovos(tax_provider_sovos, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderSovos -->
 
 ### Parameters
 
@@ -1333,7 +1463,10 @@ Update the TaxJar tax provider
 
 Update the TaxJar tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderTaxJar -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1353,6 +1486,8 @@ apiInstance.updateTaxProviderTaxJar(tax_provider_taxJar, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderTaxJar -->
 
 ### Parameters
 
@@ -1383,7 +1518,10 @@ Update the UltraCart tax provider
 
 Update the UltraCart tax provider. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderUltraCart -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1403,6 +1541,8 @@ apiInstance.updateTaxProviderUltraCart(tax_provider_ultracart, (error, data, res
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTaxProviderUltraCart -->
 
 ### Parameters
 

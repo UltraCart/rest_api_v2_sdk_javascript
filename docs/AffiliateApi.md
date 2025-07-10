@@ -17,7 +17,10 @@ Retrieve clicks
 
 Retrieves a group of clicks from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the clicks returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getClicksByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -42,6 +45,8 @@ apiInstance.getClicksByQuery(click_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getClicksByQuery -->
 
 ### Parameters
 
@@ -75,7 +80,10 @@ Retrieve ledger entries
 
 Retrieves a group of ledger entries from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the ledgers returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getLedgersByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -100,6 +108,8 @@ apiInstance.getLedgersByQuery(ledger_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getLedgersByQuery -->
 
 ### Parameters
 

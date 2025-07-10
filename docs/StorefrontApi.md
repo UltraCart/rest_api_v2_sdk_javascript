@@ -191,7 +191,10 @@ Method | HTTP request | Description
 
 Add to library
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE addToLibrary -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -211,6 +214,8 @@ apiInstance.addToLibrary(add_library_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE addToLibrary -->
 
 ### Parameters
 
@@ -239,7 +244,10 @@ Name | Type | Description  | Notes
 
 Apply library item to storefront.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE applyToStoreFront -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -259,6 +267,8 @@ apiInstance.applyToStoreFront(apply_library_request, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE applyToStoreFront -->
 
 ### Parameters
 
@@ -287,7 +297,10 @@ Name | Type | Description  | Notes
 
 Archive email list
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE archiveEmailList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -308,6 +321,8 @@ apiInstance.archiveEmailList(storefront_oid, email_list_uuid, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE archiveEmailList -->
 
 ### Parameters
 
@@ -337,7 +352,10 @@ Name | Type | Description  | Notes
 
 Archive email segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE archiveEmailSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -358,6 +376,8 @@ apiInstance.archiveEmailSegment(storefront_oid, email_segment_uuid, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE archiveEmailSegment -->
 
 ### Parameters
 
@@ -387,7 +407,10 @@ Name | Type | Description  | Notes
 
 Back populate email flow
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE backPopulateEmailFlow -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -409,6 +432,8 @@ apiInstance.backPopulateEmailFlow(storefront_oid, email_flow_uuid, back_populate
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE backPopulateEmailFlow -->
 
 ### Parameters
 
@@ -439,7 +464,10 @@ Name | Type | Description  | Notes
 
 Check download of email segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE checkDownloadEmailSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -461,6 +489,8 @@ apiInstance.checkDownloadEmailSegment(storefront_oid, email_segment_uuid, email_
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE checkDownloadEmailSegment -->
 
 ### Parameters
 
@@ -491,7 +521,10 @@ Name | Type | Description  | Notes
 
 Clone email campaign
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE cloneEmailCampaign -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -515,6 +548,8 @@ apiInstance.cloneEmailCampaign(storefront_oid, email_campaign_uuid, opts, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE cloneEmailCampaign -->
 
 ### Parameters
 
@@ -545,7 +580,10 @@ Name | Type | Description  | Notes
 
 Clone email flow
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE cloneEmailFlow -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -569,6 +607,8 @@ apiInstance.cloneEmailFlow(storefront_oid, email_flow_uuid, opts, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE cloneEmailFlow -->
 
 ### Parameters
 
@@ -599,7 +639,10 @@ Name | Type | Description  | Notes
 
 Create email campaign
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE createEmailSendingDomain -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -619,6 +662,8 @@ apiInstance.createEmailSendingDomain(domain, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE createEmailSendingDomain -->
 
 ### Parameters
 
@@ -647,7 +692,10 @@ Name | Type | Description  | Notes
 
 Create email sending domain for various providers
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE createEmailSendingDomain2 -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -667,6 +715,8 @@ apiInstance.createEmailSendingDomain2(email_domain, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE createEmailSendingDomain2 -->
 
 ### Parameters
 
@@ -695,7 +745,10 @@ Name | Type | Description  | Notes
 
 Create file manager directory
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE createFsDirectory -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -719,6 +772,8 @@ apiInstance.createFsDirectory(id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE createFsDirectory -->
 
 ### Parameters
 
@@ -749,7 +804,10 @@ Name | Type | Description  | Notes
 
 Create Twilio account
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE createTwilioAccount -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -769,6 +827,8 @@ apiInstance.createTwilioAccount(twilio, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE createTwilioAccount -->
 
 ### Parameters
 
@@ -797,7 +857,10 @@ Name | Type | Description  | Notes
 
 Delete email campaignFolder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailCampaignFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -818,6 +881,8 @@ apiInstance.deleteEmailCampaignFolder(storefront_oid, email_campaign_folder_uuid
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailCampaignFolder -->
 
 ### Parameters
 
@@ -847,7 +912,10 @@ Name | Type | Description  | Notes
 
 Delete communication sequence stats
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailCommseqStat -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -868,6 +936,8 @@ apiInstance.deleteEmailCommseqStat(storefront_oid, commseq_uuid, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailCommseqStat -->
 
 ### Parameters
 
@@ -897,7 +967,10 @@ null (empty response body)
 
 Delete email email
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -918,6 +991,8 @@ apiInstance.deleteEmailEmail(storefront_oid, commseq_email_uuid, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailEmail -->
 
 ### Parameters
 
@@ -947,7 +1022,10 @@ Name | Type | Description  | Notes
 
 Delete email flowFolder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailFlowFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -968,6 +1046,8 @@ apiInstance.deleteEmailFlowFolder(storefront_oid, email_flow_folder_uuid, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailFlowFolder -->
 
 ### Parameters
 
@@ -997,7 +1077,10 @@ Name | Type | Description  | Notes
 
 Delete email list customer
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailListCustomer -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1019,6 +1102,8 @@ apiInstance.deleteEmailListCustomer(storefront_oid, email_list_uuid, email_custo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailListCustomer -->
 
 ### Parameters
 
@@ -1049,7 +1134,10 @@ Name | Type | Description  | Notes
 
 Delete email ListSegmentFolder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailListSegmentFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1070,6 +1158,8 @@ apiInstance.deleteEmailListSegmentFolder(storefront_oid, email_list_segment_fold
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -1099,7 +1189,10 @@ Name | Type | Description  | Notes
 
 Delete email postcard
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailPostcard -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1120,6 +1213,8 @@ apiInstance.deleteEmailPostcard(storefront_oid, commseq_postcard_uuid, (error, d
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailPostcard -->
 
 ### Parameters
 
@@ -1149,7 +1244,10 @@ Name | Type | Description  | Notes
 
 delete email campaign
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEmailSendingDomain -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1169,6 +1267,8 @@ apiInstance.deleteEmailSendingDomain(domain, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEmailSendingDomain -->
 
 ### Parameters
 
@@ -1197,7 +1297,10 @@ Name | Type | Description  | Notes
 
 Delete experiment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteExperiment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1218,6 +1321,8 @@ apiInstance.deleteExperiment(storefront_oid, storefront_experiment_oid, (error, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteExperiment -->
 
 ### Parameters
 
@@ -1247,7 +1352,10 @@ null (empty response body)
 
 Delete file manager directory
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteFsFile -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1271,6 +1379,8 @@ apiInstance.deleteFsFile(id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteFsFile -->
 
 ### Parameters
 
@@ -1303,7 +1413,10 @@ Delete screen recording heatmap
 
 Delete screen recording heatmap 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteHeatmap -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1324,6 +1437,8 @@ apiInstance.deleteHeatmap(storefront_oid, query, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteHeatmap -->
 
 ### Parameters
 
@@ -1353,7 +1468,10 @@ null (empty response body)
 
 Delete library item
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteLibraryItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1373,6 +1491,8 @@ apiInstance.deleteLibraryItem(library_item_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteLibraryItem -->
 
 ### Parameters
 
@@ -1401,7 +1521,10 @@ null (empty response body)
 
 Delete all published versions for a library item, including anything in review.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteLibraryItemPublishedVersions -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1421,6 +1544,8 @@ apiInstance.deleteLibraryItemPublishedVersions(library_item_oid, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteLibraryItemPublishedVersions -->
 
 ### Parameters
 
@@ -1449,7 +1574,10 @@ null (empty response body)
 
 Delete screen recording segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteScreenRecordingSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1470,6 +1598,8 @@ apiInstance.deleteScreenRecordingSegment(storefront_oid, screen_recording_segmen
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteScreenRecordingSegment -->
 
 ### Parameters
 
@@ -1499,7 +1629,10 @@ null (empty response body)
 
 delete Twilio account
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteTwilioAccount -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1519,6 +1652,8 @@ apiInstance.deleteTwilioAccount(esp_twilio_uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteTwilioAccount -->
 
 ### Parameters
 
@@ -1547,7 +1682,10 @@ Name | Type | Description  | Notes
 
 Duplicate library item.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE duplicateLibraryItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1567,6 +1705,8 @@ apiInstance.duplicateLibraryItem(library_item_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE duplicateLibraryItem -->
 
 ### Parameters
 
@@ -1597,7 +1737,10 @@ Update favorite flag on screen recording
 
 Update favorite flag on screen recording 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE favoriteScreenRecording -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1618,6 +1761,8 @@ apiInstance.favoriteScreenRecording(storefront_oid, screen_recording_uuid, (erro
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE favoriteScreenRecording -->
 
 ### Parameters
 
@@ -1647,7 +1792,10 @@ null (empty response body)
 
 Obtain lat/long for an address
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE geocodeAddress -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1668,6 +1816,8 @@ apiInstance.geocodeAddress(storefront_oid, geocode_request, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE geocodeAddress -->
 
 ### Parameters
 
@@ -1699,7 +1849,10 @@ Get countries
 
 Obtain a list of all the countries 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCountries -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1719,6 +1872,8 @@ apiInstance.getCountries(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCountries -->
 
 ### Parameters
 
@@ -1749,7 +1904,10 @@ Gets editor token
 
 Fetches a temporary authentication token for the editor 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEditorToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1769,6 +1927,8 @@ apiInstance.getEditorToken(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEditorToken -->
 
 ### Parameters
 
@@ -1797,7 +1957,10 @@ Name | Type | Description  | Notes
 
 Get email communication base templates
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailBaseTemplates -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1817,6 +1980,8 @@ apiInstance.getEmailBaseTemplates(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailBaseTemplates -->
 
 ### Parameters
 
@@ -1845,7 +2010,10 @@ Name | Type | Description  | Notes
 
 Get email campaign
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCampaign -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1866,6 +2034,8 @@ apiInstance.getEmailCampaign(storefront_oid, email_campaign_uuid, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCampaign -->
 
 ### Parameters
 
@@ -1895,7 +2065,10 @@ Name | Type | Description  | Notes
 
 Get email campaign folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCampaignFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1916,6 +2089,8 @@ apiInstance.getEmailCampaignFolder(storefront_oid, email_campaign_folder_uuid, (
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCampaignFolder -->
 
 ### Parameters
 
@@ -1945,7 +2120,10 @@ Name | Type | Description  | Notes
 
 Get email campaign folders
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCampaignFolders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1965,6 +2143,8 @@ apiInstance.getEmailCampaignFolders(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCampaignFolders -->
 
 ### Parameters
 
@@ -1993,7 +2173,10 @@ Name | Type | Description  | Notes
 
 Get email campaign screenshots
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCampaignScreenshots -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2014,6 +2197,8 @@ apiInstance.getEmailCampaignScreenshots(storefront_oid, email_campaign_uuid, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCampaignScreenshots -->
 
 ### Parameters
 
@@ -2043,7 +2228,10 @@ Name | Type | Description  | Notes
 
 Get email campaigns
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCampaigns -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2063,6 +2251,8 @@ apiInstance.getEmailCampaigns(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCampaigns -->
 
 ### Parameters
 
@@ -2091,7 +2281,10 @@ Name | Type | Description  | Notes
 
 Get email campaigns with stats
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCampaignsWithStats -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2112,6 +2305,8 @@ apiInstance.getEmailCampaignsWithStats(storefront_oid, stat_days, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCampaignsWithStats -->
 
 ### Parameters
 
@@ -2141,7 +2336,10 @@ Name | Type | Description  | Notes
 
 Get email commseq
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseq -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2162,6 +2360,8 @@ apiInstance.getEmailCommseq(storefront_oid, commseq_uuid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseq -->
 
 ### Parameters
 
@@ -2191,7 +2391,10 @@ Name | Type | Description  | Notes
 
 Get email communication sequence emails stats
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqEmailStats -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2213,6 +2416,8 @@ apiInstance.getEmailCommseqEmailStats(storefront_oid, commseq_uuid, statsRequest
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqEmailStats -->
 
 ### Parameters
 
@@ -2243,7 +2448,10 @@ Name | Type | Description  | Notes
 
 Get email communication sequence postcard stats
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqPostcardStats -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2265,6 +2473,8 @@ apiInstance.getEmailCommseqPostcardStats(storefront_oid, commseq_uuid, statsRequ
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqPostcardStats -->
 
 ### Parameters
 
@@ -2295,7 +2505,10 @@ Name | Type | Description  | Notes
 
 Get email communication postcard tracking
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqPostcardTracking -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2316,6 +2529,8 @@ apiInstance.getEmailCommseqPostcardTracking(storefront_oid, commseq_postcard_uui
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqPostcardTracking -->
 
 ### Parameters
 
@@ -2345,7 +2560,10 @@ Name | Type | Description  | Notes
 
 Get email commseq rate limiters
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqRateLimiters -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2366,6 +2584,8 @@ apiInstance.getEmailCommseqRateLimiters(storefront_oid, commseq_uuid, (error, da
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqRateLimiters -->
 
 ### Parameters
 
@@ -2395,7 +2615,10 @@ Name | Type | Description  | Notes
 
 Get email communication sequence sms stats
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqSmsStats -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2417,6 +2640,8 @@ apiInstance.getEmailCommseqSmsStats(storefront_oid, commseq_uuid, statsRequest, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqSmsStats -->
 
 ### Parameters
 
@@ -2447,7 +2672,10 @@ Name | Type | Description  | Notes
 
 Get communication sequence stats overall
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqStatOverall -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2468,6 +2696,8 @@ apiInstance.getEmailCommseqStatOverall(storefront_oid, commseq_uuid, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqStatOverall -->
 
 ### Parameters
 
@@ -2497,7 +2727,10 @@ Name | Type | Description  | Notes
 
 Get email communication sequence step stats
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqStepStats -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2519,6 +2752,8 @@ apiInstance.getEmailCommseqStepStats(storefront_oid, commseq_uuid, statsRequest,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqStepStats -->
 
 ### Parameters
 
@@ -2549,7 +2784,10 @@ Name | Type | Description  | Notes
 
 Get email communication sequence customers waiting at each requested step
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqStepWaiting -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2571,6 +2809,8 @@ apiInstance.getEmailCommseqStepWaiting(storefront_oid, commseq_uuid, waitingRequ
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqStepWaiting -->
 
 ### Parameters
 
@@ -2601,7 +2841,10 @@ Name | Type | Description  | Notes
 
 Get email webhook editor values
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqWebhookEditorValues -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2622,6 +2865,8 @@ apiInstance.getEmailCommseqWebhookEditorValues(storefront_oid, commseq_uuid, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqWebhookEditorValues -->
 
 ### Parameters
 
@@ -2651,7 +2896,10 @@ Name | Type | Description  | Notes
 
 Get email commseqs
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqs -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2671,6 +2919,8 @@ apiInstance.getEmailCommseqs(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCommseqs -->
 
 ### Parameters
 
@@ -2699,7 +2949,10 @@ Name | Type | Description  | Notes
 
 Get customers editor URL
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCustomerEditorUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2720,6 +2973,8 @@ apiInstance.getEmailCustomerEditorUrl(storefront_oid, email_customer_uuid, (erro
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCustomerEditorUrl -->
 
 ### Parameters
 
@@ -2749,7 +3004,10 @@ Name | Type | Description  | Notes
 
 Get email customers
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailCustomers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2774,6 +3032,8 @@ apiInstance.getEmailCustomers(storefront_oid, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailCustomers -->
 
 ### Parameters
 
@@ -2805,7 +3065,10 @@ Name | Type | Description  | Notes
 
 Get email dashboard activity
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailDashboardActivity -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2828,6 +3091,8 @@ apiInstance.getEmailDashboardActivity(storefront_oid, opts, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailDashboardActivity -->
 
 ### Parameters
 
@@ -2857,7 +3122,10 @@ Name | Type | Description  | Notes
 
 Get dashboard stats
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailDashboardStats -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2880,6 +3148,8 @@ apiInstance.getEmailDashboardStats(storefront_oid, opts, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailDashboardStats -->
 
 ### Parameters
 
@@ -2909,7 +3179,10 @@ Name | Type | Description  | Notes
 
 Get email dispatch logs
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailDispatchLogs -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2931,6 +3204,8 @@ apiInstance.getEmailDispatchLogs(storefront_oid, commseq_uuid, commseq_step_uuid
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailDispatchLogs -->
 
 ### Parameters
 
@@ -2961,7 +3236,10 @@ Name | Type | Description  | Notes
 
 Get email email
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2982,6 +3260,8 @@ apiInstance.getEmailEmail(storefront_oid, commseq_email_uuid, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailEmail -->
 
 ### Parameters
 
@@ -3011,7 +3291,10 @@ Name | Type | Description  | Notes
 
 Get email email clicks
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailEmailClicks -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3037,6 +3320,8 @@ apiInstance.getEmailEmailClicks(storefront_oid, commseq_uuid, commseq_step_uuid,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailEmailClicks -->
 
 ### Parameters
 
@@ -3069,7 +3354,10 @@ Name | Type | Description  | Notes
 
 Get email order customer editor url
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailEmailCustomerEditorUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3091,6 +3379,8 @@ apiInstance.getEmailEmailCustomerEditorUrl(storefront_oid, commseq_email_uuid, o
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailEmailCustomerEditorUrl -->
 
 ### Parameters
 
@@ -3121,7 +3411,10 @@ Name | Type | Description  | Notes
 
 Get email email orders
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailEmailOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3147,6 +3440,8 @@ apiInstance.getEmailEmailOrders(storefront_oid, commseq_uuid, commseq_step_uuid,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailEmailOrders -->
 
 ### Parameters
 
@@ -3179,7 +3474,10 @@ Name | Type | Description  | Notes
 
 Get email emails
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailEmails -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3199,6 +3497,8 @@ apiInstance.getEmailEmails(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailEmails -->
 
 ### Parameters
 
@@ -3227,7 +3527,10 @@ Name | Type | Description  | Notes
 
 Get email emails multiple
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailEmailsMultiple -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3248,6 +3551,8 @@ apiInstance.getEmailEmailsMultiple(storefront_oid, email_commseq_emails_request,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailEmailsMultiple -->
 
 ### Parameters
 
@@ -3277,7 +3582,10 @@ Name | Type | Description  | Notes
 
 Get email flow
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailFlow -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3298,6 +3606,8 @@ apiInstance.getEmailFlow(storefront_oid, email_flow_uuid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailFlow -->
 
 ### Parameters
 
@@ -3327,7 +3637,10 @@ Name | Type | Description  | Notes
 
 Get email flow folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailFlowFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3348,6 +3661,8 @@ apiInstance.getEmailFlowFolder(storefront_oid, email_flow_folder_uuid, (error, d
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailFlowFolder -->
 
 ### Parameters
 
@@ -3377,7 +3692,10 @@ Name | Type | Description  | Notes
 
 Get email flow folders
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailFlowFolders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3397,6 +3715,8 @@ apiInstance.getEmailFlowFolders(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailFlowFolders -->
 
 ### Parameters
 
@@ -3425,7 +3745,10 @@ Name | Type | Description  | Notes
 
 Get email flow screenshots
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailFlowScreenshots -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3446,6 +3769,8 @@ apiInstance.getEmailFlowScreenshots(storefront_oid, email_flow_uuid, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailFlowScreenshots -->
 
 ### Parameters
 
@@ -3475,7 +3800,10 @@ Name | Type | Description  | Notes
 
 Get email flows
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailFlows -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3495,6 +3823,8 @@ apiInstance.getEmailFlows(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailFlows -->
 
 ### Parameters
 
@@ -3523,7 +3853,10 @@ Name | Type | Description  | Notes
 
 Get email globalsettings
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailGlobalSettings -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3542,6 +3875,8 @@ apiInstance.getEmailGlobalSettings((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailGlobalSettings -->
 
 ### Parameters
 
@@ -3567,7 +3902,10 @@ This endpoint does not need any parameter.
 
 Get email list
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3588,6 +3926,8 @@ apiInstance.getEmailList(storefront_oid, email_list_uuid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailList -->
 
 ### Parameters
 
@@ -3617,7 +3957,10 @@ Name | Type | Description  | Notes
 
 Get email list customer editor url
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailListCustomerEditorUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3639,6 +3982,8 @@ apiInstance.getEmailListCustomerEditorUrl(storefront_oid, email_list_uuid, email
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailListCustomerEditorUrl -->
 
 ### Parameters
 
@@ -3669,7 +4014,10 @@ Name | Type | Description  | Notes
 
 Get email list customers
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailListCustomers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3694,6 +4042,8 @@ apiInstance.getEmailListCustomers(storefront_oid, email_list_uuid, opts, (error,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailListCustomers -->
 
 ### Parameters
 
@@ -3725,7 +4075,10 @@ Name | Type | Description  | Notes
 
 Get email campaign folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailListSegmentFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3746,6 +4099,8 @@ apiInstance.getEmailListSegmentFolder(storefront_oid, email_list_segment_folder_
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -3775,7 +4130,10 @@ Name | Type | Description  | Notes
 
 Get email campaign folders
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailListSegmentFolders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3795,6 +4153,8 @@ apiInstance.getEmailListSegmentFolders(storefront_oid, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailListSegmentFolders -->
 
 ### Parameters
 
@@ -3823,7 +4183,10 @@ Name | Type | Description  | Notes
 
 Get email lists
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailLists -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3843,6 +4206,8 @@ apiInstance.getEmailLists(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailLists -->
 
 ### Parameters
 
@@ -3871,7 +4236,10 @@ Name | Type | Description  | Notes
 
 Get email performance
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailPerformance -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3891,6 +4259,8 @@ apiInstance.getEmailPerformance(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailPerformance -->
 
 ### Parameters
 
@@ -3919,7 +4289,10 @@ Name | Type | Description  | Notes
 
 Get email plan
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailPlan -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3939,6 +4312,8 @@ apiInstance.getEmailPlan(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailPlan -->
 
 ### Parameters
 
@@ -3967,7 +4342,10 @@ Name | Type | Description  | Notes
 
 Get email postcard
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailPostcard -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3988,6 +4366,8 @@ apiInstance.getEmailPostcard(storefront_oid, commseq_postcard_uuid, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailPostcard -->
 
 ### Parameters
 
@@ -4017,7 +4397,10 @@ Name | Type | Description  | Notes
 
 Get email postcards
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailPostcards -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4037,6 +4420,8 @@ apiInstance.getEmailPostcards(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailPostcards -->
 
 ### Parameters
 
@@ -4065,7 +4450,10 @@ Name | Type | Description  | Notes
 
 Get email postcards multiple
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailPostcardsMultiple -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4086,6 +4474,8 @@ apiInstance.getEmailPostcardsMultiple(storefront_oid, email_commseq_postcards_re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailPostcardsMultiple -->
 
 ### Parameters
 
@@ -4115,7 +4505,10 @@ Name | Type | Description  | Notes
 
 Get email segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4136,6 +4529,8 @@ apiInstance.getEmailSegment(storefront_oid, email_segment_uuid, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSegment -->
 
 ### Parameters
 
@@ -4165,7 +4560,10 @@ Name | Type | Description  | Notes
 
 Get email segment customers editor URL
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSegmentCustomerEditorUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4187,6 +4585,8 @@ apiInstance.getEmailSegmentCustomerEditorUrl(storefront_oid, email_segment_uuid,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSegmentCustomerEditorUrl -->
 
 ### Parameters
 
@@ -4217,7 +4617,10 @@ Name | Type | Description  | Notes
 
 Get email segment customers
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSegmentCustomers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4242,6 +4645,8 @@ apiInstance.getEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts, (
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSegmentCustomers -->
 
 ### Parameters
 
@@ -4273,7 +4678,10 @@ Name | Type | Description  | Notes
 
 Get email segments
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSegments -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4293,6 +4701,8 @@ apiInstance.getEmailSegments(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSegments -->
 
 ### Parameters
 
@@ -4321,7 +4731,10 @@ Name | Type | Description  | Notes
 
 Get email sending domain
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSendingDomain -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4341,6 +4754,8 @@ apiInstance.getEmailSendingDomain(domain, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSendingDomain -->
 
 ### Parameters
 
@@ -4369,7 +4784,10 @@ Name | Type | Description  | Notes
 
 Get email sending domain status
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSendingDomainStatus -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4389,6 +4807,8 @@ apiInstance.getEmailSendingDomainStatus(domain, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSendingDomainStatus -->
 
 ### Parameters
 
@@ -4417,7 +4837,10 @@ Name | Type | Description  | Notes
 
 Get email sending domains
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSendingDomains -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4436,6 +4859,8 @@ apiInstance.getEmailSendingDomains((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSendingDomains -->
 
 ### Parameters
 
@@ -4461,7 +4886,10 @@ This endpoint does not need any parameter.
 
 Get email settings
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSettings -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4481,6 +4909,8 @@ apiInstance.getEmailSettings(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSettings -->
 
 ### Parameters
 
@@ -4509,7 +4939,10 @@ Name | Type | Description  | Notes
 
 Get email sms orders
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailSmsOrders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4534,6 +4967,8 @@ apiInstance.getEmailSmsOrders(storefront_oid, commseq_uuid, commseq_step_uuid, o
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailSmsOrders -->
 
 ### Parameters
 
@@ -4565,7 +5000,10 @@ Name | Type | Description  | Notes
 
 Get email template
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailTemplate -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4586,6 +5024,8 @@ apiInstance.getEmailTemplate(storefront_oid, email_template_oid, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailTemplate -->
 
 ### Parameters
 
@@ -4615,7 +5055,10 @@ Name | Type | Description  | Notes
 
 Get email templates
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailTemplates -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4638,6 +5081,8 @@ apiInstance.getEmailTemplates(storefront_oid, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailTemplates -->
 
 ### Parameters
 
@@ -4667,7 +5112,10 @@ Name | Type | Description  | Notes
 
 Get a list of third party email providers
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getEmailThirdPartyProviders -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4687,6 +5135,8 @@ apiInstance.getEmailThirdPartyProviders(storefront_oid, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getEmailThirdPartyProviders -->
 
 ### Parameters
 
@@ -4715,7 +5165,10 @@ Name | Type | Description  | Notes
 
 Get experiments
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getExperiments -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4735,6 +5188,8 @@ apiInstance.getExperiments(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getExperiments -->
 
 ### Parameters
 
@@ -4763,7 +5218,10 @@ Name | Type | Description  | Notes
 
 Get file manager directory
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getFsDirectory -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4788,6 +5246,8 @@ apiInstance.getFsDirectory(id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getFsDirectory -->
 
 ### Parameters
 
@@ -4821,7 +5281,10 @@ Get screen recording heatmap
 
 Get screen recording heatmap 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getHeatmap -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4842,6 +5305,8 @@ apiInstance.getHeatmap(storefront_oid, query, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getHeatmap -->
 
 ### Parameters
 
@@ -4873,7 +5338,10 @@ Get screen recording heatmap index
 
 Get screen recording heatmap index 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getHeatmapIndex -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4899,6 +5367,8 @@ apiInstance.getHeatmapIndex(storefront_oid, query, opts, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getHeatmapIndex -->
 
 ### Parameters
 
@@ -4933,7 +5403,10 @@ Get histogram property names
 
 Obtain a list of property names for a given property type 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getHistogramPropertyNames -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4956,6 +5429,8 @@ apiInstance.getHistogramPropertyNames(storefront_oid, opts, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getHistogramPropertyNames -->
 
 ### Parameters
 
@@ -4987,7 +5462,10 @@ Get histogram property values
 
 Obtain a list of property values for a given property name and type 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getHistogramPropertyValues -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5012,6 +5490,8 @@ apiInstance.getHistogramPropertyValues(storefront_oid, opts, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getHistogramPropertyValues -->
 
 ### Parameters
 
@@ -5043,7 +5523,10 @@ Name | Type | Description  | Notes
 
 Get library values used to populate drop down boxes for filtering.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getLibraryFilterValues -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5062,6 +5545,8 @@ apiInstance.getLibraryFilterValues((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getLibraryFilterValues -->
 
 ### Parameters
 
@@ -5087,7 +5572,10 @@ This endpoint does not need any parameter.
 
 Get library item.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getLibraryItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5107,6 +5595,8 @@ apiInstance.getLibraryItem(library_item_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getLibraryItem -->
 
 ### Parameters
 
@@ -5135,7 +5625,10 @@ Name | Type | Description  | Notes
 
 Get all published versions for a library item.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getLibraryItemPublishedVersions -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5155,6 +5648,8 @@ apiInstance.getLibraryItemPublishedVersions(library_item_oid, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getLibraryItemPublishedVersions -->
 
 ### Parameters
 
@@ -5185,7 +5680,10 @@ Get screen recording
 
 Get screen recording 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecording -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5206,6 +5704,8 @@ apiInstance.getScreenRecording(storefront_oid, screen_recording_uuid, (error, da
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecording -->
 
 ### Parameters
 
@@ -5237,7 +5737,10 @@ Get screen recording page view data
 
 Get screen recording page view data 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecordingPageViewData -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5259,6 +5762,8 @@ apiInstance.getScreenRecordingPageViewData(storefront_oid, screen_recording_uuid
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecordingPageViewData -->
 
 ### Parameters
 
@@ -5289,7 +5794,10 @@ Name | Type | Description  | Notes
 
 Get screen recording segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecordingSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5310,6 +5818,8 @@ apiInstance.getScreenRecordingSegment(storefront_oid, screen_recording_segment_o
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecordingSegment -->
 
 ### Parameters
 
@@ -5339,7 +5849,10 @@ Name | Type | Description  | Notes
 
 Get screen recording segments
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecordingSegments -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5359,6 +5872,8 @@ apiInstance.getScreenRecordingSegments(storefront_oid, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecordingSegments -->
 
 ### Parameters
 
@@ -5387,7 +5902,10 @@ Name | Type | Description  | Notes
 
 Get screen recording settings
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecordingSettings -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5407,6 +5925,8 @@ apiInstance.getScreenRecordingSettings(storefront_oid, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecordingSettings -->
 
 ### Parameters
 
@@ -5437,7 +5957,10 @@ Get tags used by screen recording
 
 Get tags used by screen recording 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecordingTags -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5457,6 +5980,8 @@ apiInstance.getScreenRecordingTags(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecordingTags -->
 
 ### Parameters
 
@@ -5487,7 +6012,10 @@ Query screen recordings
 
 Query screen recordings 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecordingsByQuery -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5513,6 +6041,8 @@ apiInstance.getScreenRecordingsByQuery(storefront_oid, query, opts, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecordingsByQuery -->
 
 ### Parameters
 
@@ -5547,7 +6077,10 @@ Get screen recordings by segment
 
 Get screen recordings by segment 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getScreenRecordingsBySegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5573,6 +6106,8 @@ apiInstance.getScreenRecordingsBySegment(storefront_oid, screen_recording_segmen
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getScreenRecordingsBySegment -->
 
 ### Parameters
 
@@ -5607,7 +6142,10 @@ Retrieve pricing tiers
 
 Retrieves the pricing tiers 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getStoreFrontPricingTiers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5629,6 +6167,8 @@ apiInstance.getStoreFrontPricingTiers(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getStoreFrontPricingTiers -->
 
 ### Parameters
 
@@ -5657,7 +6197,10 @@ Name | Type | Description  | Notes
 
 Get storefronts (internal use only for security reasons)
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getStoreFronts -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5676,6 +6219,8 @@ apiInstance.getStoreFronts((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getStoreFronts -->
 
 ### Parameters
 
@@ -5701,7 +6246,10 @@ This endpoint does not need any parameter.
 
 Get thumbnail parameters
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getThumbnailParameters -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5721,6 +6269,8 @@ apiInstance.getThumbnailParameters(thumbnail_parameters, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getThumbnailParameters -->
 
 ### Parameters
 
@@ -5751,7 +6301,10 @@ Gets a transaction email object
 
 Fetch a transactional email 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTransactionEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5772,6 +6325,8 @@ apiInstance.getTransactionEmail(storefront_oid, email_id, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTransactionEmail -->
 
 ### Parameters
 
@@ -5803,7 +6358,10 @@ Gets a list of transaction email names
 
 Obtain a list of all transactional emails and return back just their names 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTransactionEmailList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5823,6 +6381,8 @@ apiInstance.getTransactionEmailList(storefront_oid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTransactionEmailList -->
 
 ### Parameters
 
@@ -5851,7 +6411,10 @@ Name | Type | Description  | Notes
 
 Get transactional email screenshots
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTransactionEmailScreenshots -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5872,6 +6435,8 @@ apiInstance.getTransactionEmailScreenshots(storefront_oid, email_id, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTransactionEmailScreenshots -->
 
 ### Parameters
 
@@ -5901,7 +6466,10 @@ Name | Type | Description  | Notes
 
 Get Twilio account
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTwilioAccount -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5921,6 +6489,8 @@ apiInstance.getTwilioAccount(esp_twilio_uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTwilioAccount -->
 
 ### Parameters
 
@@ -5949,7 +6519,10 @@ Name | Type | Description  | Notes
 
 Get all Twilio accounts
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getTwilioAccounts -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -5968,6 +6541,8 @@ apiInstance.getTwilioAccounts((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getTwilioAccounts -->
 
 ### Parameters
 
@@ -5993,7 +6568,10 @@ This endpoint does not need any parameter.
 
 Retrieves a S3 url where a file may be uploaded. Once uploaded, use uploadFsFile to trigger the server into reading the S3 bucket and retrieving the file.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getUploadFsFileUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6014,6 +6592,8 @@ apiInstance.getUploadFsFileUrl(id, extension, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getUploadFsFileUrl -->
 
 ### Parameters
 
@@ -6043,7 +6623,10 @@ Name | Type | Description  | Notes
 
 Globally unsubscribe a customer
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE globalUnsubscribe -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6064,6 +6647,8 @@ apiInstance.globalUnsubscribe(storefront_oid, unsubscribe, (error, data, respons
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE globalUnsubscribe -->
 
 ### Parameters
 
@@ -6093,7 +6678,10 @@ Name | Type | Description  | Notes
 
 Import a third party provider list
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE importEmailThirdPartyProviderList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6114,6 +6702,8 @@ apiInstance.importEmailThirdPartyProviderList(storefront_oid, import_request, (e
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE importEmailThirdPartyProviderList -->
 
 ### Parameters
 
@@ -6143,7 +6733,10 @@ null (empty response body)
 
 Insert email campaign
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailCampaign -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6164,6 +6757,8 @@ apiInstance.insertEmailCampaign(storefront_oid, email_campaign, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailCampaign -->
 
 ### Parameters
 
@@ -6193,7 +6788,10 @@ Name | Type | Description  | Notes
 
 Insert email campaign folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailCampaignFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6214,6 +6812,8 @@ apiInstance.insertEmailCampaignFolder(storefront_oid, email_campaign_folder, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailCampaignFolder -->
 
 ### Parameters
 
@@ -6243,7 +6843,10 @@ Name | Type | Description  | Notes
 
 Insert email commseq
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailCommseq -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6264,6 +6867,8 @@ apiInstance.insertEmailCommseq(storefront_oid, email_commseq, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailCommseq -->
 
 ### Parameters
 
@@ -6293,7 +6898,10 @@ Name | Type | Description  | Notes
 
 Insert email email
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6314,6 +6922,8 @@ apiInstance.insertEmailEmail(storefront_oid, email_commseq_email, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailEmail -->
 
 ### Parameters
 
@@ -6343,7 +6953,10 @@ Name | Type | Description  | Notes
 
 Insert email flow
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailFlow -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6364,6 +6977,8 @@ apiInstance.insertEmailFlow(storefront_oid, email_flow, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailFlow -->
 
 ### Parameters
 
@@ -6393,7 +7008,10 @@ Name | Type | Description  | Notes
 
 Insert email flow folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailFlowFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6414,6 +7032,8 @@ apiInstance.insertEmailFlowFolder(storefront_oid, email_flow_folder, (error, dat
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailFlowFolder -->
 
 ### Parameters
 
@@ -6443,7 +7063,10 @@ Name | Type | Description  | Notes
 
 Insert email list
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6464,6 +7087,8 @@ apiInstance.insertEmailList(storefront_oid, email_list, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailList -->
 
 ### Parameters
 
@@ -6493,7 +7118,10 @@ Name | Type | Description  | Notes
 
 Insert email campaign folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailListSegmentFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6514,6 +7142,8 @@ apiInstance.insertEmailListSegmentFolder(storefront_oid, email_list_segment_fold
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -6543,7 +7173,10 @@ Name | Type | Description  | Notes
 
 Insert email postcard
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailPostcard -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6564,6 +7197,8 @@ apiInstance.insertEmailPostcard(storefront_oid, email_commseq_postcard, (error, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailPostcard -->
 
 ### Parameters
 
@@ -6593,7 +7228,10 @@ Name | Type | Description  | Notes
 
 Insert email segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertEmailSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6614,6 +7252,8 @@ apiInstance.insertEmailSegment(storefront_oid, email_segment, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertEmailSegment -->
 
 ### Parameters
 
@@ -6643,7 +7283,10 @@ Name | Type | Description  | Notes
 
 Insert screen recording segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertScreenRecordingSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6664,6 +7307,8 @@ apiInstance.insertScreenRecordingSegment(storefront_oid, segment, (error, data, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertScreenRecordingSegment -->
 
 ### Parameters
 
@@ -6695,7 +7340,10 @@ Upsert a page content attribute
 
 Update a page content attribute, creating it new if it does not yet exist. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertUpdatePageContentAttribute -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6717,6 +7365,8 @@ apiInstance.insertUpdatePageContentAttribute(storefront_oid, page_oid, page_attr
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertUpdatePageContentAttribute -->
 
 ### Parameters
 
@@ -6747,7 +7397,10 @@ null (empty response body)
 
 Prepare download of email segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE prepareDownloadEmailSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6768,6 +7421,8 @@ apiInstance.prepareDownloadEmailSegment(storefront_oid, email_segment_uuid, (err
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE prepareDownloadEmailSegment -->
 
 ### Parameters
 
@@ -6797,7 +7452,10 @@ Name | Type | Description  | Notes
 
 Publish library item.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE publishLibraryItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6818,6 +7476,8 @@ apiInstance.publishLibraryItem(library_item_oid, publish_library_request, (error
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE publishLibraryItem -->
 
 ### Parameters
 
@@ -6847,7 +7507,10 @@ Name | Type | Description  | Notes
 
 Purchase public library item, which creates a copy of the item in your personal code library
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE purchaseLibraryItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6870,6 +7533,8 @@ apiInstance.purchaseLibraryItem(library_item_oid, opts, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE purchaseLibraryItem -->
 
 ### Parameters
 
@@ -6899,7 +7564,10 @@ Name | Type | Description  | Notes
 
 Release email communication sequence customers waiting at the specified step
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE releaseEmailCommseqStepWaiting -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6921,6 +7589,8 @@ apiInstance.releaseEmailCommseqStepWaiting(storefront_oid, commseq_uuid, commseq
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE releaseEmailCommseqStepWaiting -->
 
 ### Parameters
 
@@ -6951,7 +7621,10 @@ null (empty response body)
 
 Reset email commseq rate limiters (only callable by UltraCart Support)
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE resetEmailCommseqRateLimiters -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -6972,6 +7645,8 @@ apiInstance.resetEmailCommseqRateLimiters(storefront_oid, commseq_uuid, (error, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE resetEmailCommseqRateLimiters -->
 
 ### Parameters
 
@@ -7001,7 +7676,10 @@ null (empty response body)
 
 Request a review of an email
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE review -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7023,6 +7701,8 @@ apiInstance.review(storefront_oid, commseq_email_uuid, email_commseq_email_revie
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE review -->
 
 ### Parameters
 
@@ -7053,7 +7733,10 @@ Name | Type | Description  | Notes
 
 Searches for all matching values
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE search -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7079,6 +7762,8 @@ apiInstance.search(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE search -->
 
 ### Parameters
 
@@ -7111,7 +7796,10 @@ Name | Type | Description  | Notes
 
 Searches for all matching values (using POST)
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE search2 -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7131,6 +7819,8 @@ apiInstance.search2(lookup_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE search2 -->
 
 ### Parameters
 
@@ -7159,7 +7849,10 @@ Name | Type | Description  | Notes
 
 Search email list customers
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchEmailListCustomers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7183,6 +7876,8 @@ apiInstance.searchEmailListCustomers(storefront_oid, email_list_uuid, opts, (err
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchEmailListCustomers -->
 
 ### Parameters
 
@@ -7213,7 +7908,10 @@ Name | Type | Description  | Notes
 
 Search email segment customers
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchEmailSegmentCustomers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7237,6 +7935,8 @@ apiInstance.searchEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchEmailSegmentCustomers -->
 
 ### Parameters
 
@@ -7269,7 +7969,10 @@ Retrieve library items
 
 Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchLibraryItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7294,6 +7997,8 @@ apiInstance.searchLibraryItems(item_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchLibraryItems -->
 
 ### Parameters
 
@@ -7327,7 +8032,10 @@ Retrieve library items
 
 Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchPublishedItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7352,6 +8060,8 @@ apiInstance.searchPublishedItems(item_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchPublishedItems -->
 
 ### Parameters
 
@@ -7385,7 +8095,10 @@ Retrieve library items needing review or rejected
 
 Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchReviewItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7410,6 +8123,8 @@ apiInstance.searchReviewItems(item_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchReviewItems -->
 
 ### Parameters
 
@@ -7443,7 +8158,10 @@ Retrieve library items
 
 Retrieves a library items based on a query object.  If no parameters are specified, the API call will default to the merchant id only.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchSharedItems -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7468,6 +8186,8 @@ apiInstance.searchSharedItems(item_query, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchSharedItems -->
 
 ### Parameters
 
@@ -7499,7 +8219,10 @@ Name | Type | Description  | Notes
 
 Send email test
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE sendEmailTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7521,6 +8244,8 @@ apiInstance.sendEmailTest(storefront_oid, commseq_email_uuid, email_commseq_emai
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE sendEmailTest -->
 
 ### Parameters
 
@@ -7551,7 +8276,10 @@ Name | Type | Description  | Notes
 
 Send postcard test
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE sendPostcardTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7573,6 +8301,8 @@ apiInstance.sendPostcardTest(storefront_oid, commseq_postcard_uuid, email_commse
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE sendPostcardTest -->
 
 ### Parameters
 
@@ -7603,7 +8333,10 @@ Name | Type | Description  | Notes
 
 Send SMS test
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE sendSmsTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7626,6 +8359,8 @@ apiInstance.sendSmsTest(storefront_oid, commseq_uuid, commseq_step_uuid, email_c
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE sendSmsTest -->
 
 ### Parameters
 
@@ -7657,7 +8392,10 @@ Name | Type | Description  | Notes
 
 Send webhook test
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE sendWebhookTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7678,6 +8416,8 @@ apiInstance.sendWebhookTest(storefront_oid, email_commseq_webhook_test_request, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE sendWebhookTest -->
 
 ### Parameters
 
@@ -7707,7 +8447,10 @@ Name | Type | Description  | Notes
 
 Sequence test
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE sequenceTest -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7729,6 +8472,8 @@ apiInstance.sequenceTest(storefront_oid, commseq_uuid, email_commseq_sequence_te
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE sequenceTest -->
 
 ### Parameters
 
@@ -7759,7 +8504,10 @@ Name | Type | Description  | Notes
 
 Start email campaign
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE startEmailCampaign -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7780,6 +8528,8 @@ apiInstance.startEmailCampaign(storefront_oid, email_campaign_uuid, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE startEmailCampaign -->
 
 ### Parameters
 
@@ -7809,7 +8559,10 @@ Name | Type | Description  | Notes
 
 Subscribe customers to email list
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE subscribeToEmailList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7831,6 +8584,8 @@ apiInstance.subscribeToEmailList(storefront_oid, email_list_uuid, customers, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE subscribeToEmailList -->
 
 ### Parameters
 
@@ -7861,7 +8616,10 @@ Name | Type | Description  | Notes
 
 Sunset email segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE sunsetEmailSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7882,6 +8640,8 @@ apiInstance.sunsetEmailSegment(storefront_oid, email_segment_uuid, (error, data,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE sunsetEmailSegment -->
 
 ### Parameters
 
@@ -7913,7 +8673,10 @@ Remove favorite flag on screen recording
 
 Remove favorite flag on screen recording 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE unfavoriteScreenRecording -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7934,6 +8697,8 @@ apiInstance.unfavoriteScreenRecording(storefront_oid, screen_recording_uuid, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE unfavoriteScreenRecording -->
 
 ### Parameters
 
@@ -7963,7 +8728,10 @@ null (empty response body)
 
 Update email campaign
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailCampaign -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -7985,6 +8753,8 @@ apiInstance.updateEmailCampaign(storefront_oid, email_campaign_uuid, email_campa
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailCampaign -->
 
 ### Parameters
 
@@ -8015,7 +8785,10 @@ Name | Type | Description  | Notes
 
 Update email campaign folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailCampaignFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8037,6 +8810,8 @@ apiInstance.updateEmailCampaignFolder(storefront_oid, email_campaign_folder_uuid
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailCampaignFolder -->
 
 ### Parameters
 
@@ -8067,7 +8842,10 @@ Name | Type | Description  | Notes
 
 Update email commseq
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailCommseq -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8089,6 +8867,8 @@ apiInstance.updateEmailCommseq(storefront_oid, commseq_uuid, email_commseq, (err
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailCommseq -->
 
 ### Parameters
 
@@ -8119,7 +8899,10 @@ Name | Type | Description  | Notes
 
 Update email customer
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailCustomer -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8141,6 +8924,8 @@ apiInstance.updateEmailCustomer(storefront_oid, email_customer_uuid, email_custo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailCustomer -->
 
 ### Parameters
 
@@ -8171,7 +8956,10 @@ null (empty response body)
 
 Update email email
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8193,6 +8981,8 @@ apiInstance.updateEmailEmail(storefront_oid, commseq_email_uuid, email_commseq_e
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailEmail -->
 
 ### Parameters
 
@@ -8223,7 +9013,10 @@ Name | Type | Description  | Notes
 
 Update email flow
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailFlow -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8245,6 +9038,8 @@ apiInstance.updateEmailFlow(storefront_oid, email_flow_uuid, email_flow, (error,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailFlow -->
 
 ### Parameters
 
@@ -8275,7 +9070,10 @@ Name | Type | Description  | Notes
 
 Update email flow folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailFlowFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8297,6 +9095,8 @@ apiInstance.updateEmailFlowFolder(storefront_oid, email_flow_folder_uuid, email_
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailFlowFolder -->
 
 ### Parameters
 
@@ -8327,7 +9127,10 @@ Name | Type | Description  | Notes
 
 Update email global settings
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailGlobalSettings -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8347,6 +9150,8 @@ apiInstance.updateEmailGlobalSettings(global_settings, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailGlobalSettings -->
 
 ### Parameters
 
@@ -8375,7 +9180,10 @@ Name | Type | Description  | Notes
 
 Update email list
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8397,6 +9205,8 @@ apiInstance.updateEmailList(storefront_oid, email_list_uuid, email_list, (error,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailList -->
 
 ### Parameters
 
@@ -8427,7 +9237,10 @@ Name | Type | Description  | Notes
 
 Update email campaign folder
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailListSegmentFolder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8449,6 +9262,8 @@ apiInstance.updateEmailListSegmentFolder(storefront_oid, email_list_segment_fold
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -8479,7 +9294,10 @@ Name | Type | Description  | Notes
 
 Update email plan
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailPlan -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8500,6 +9318,8 @@ apiInstance.updateEmailPlan(storefront_oid, settings, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailPlan -->
 
 ### Parameters
 
@@ -8529,7 +9349,10 @@ Name | Type | Description  | Notes
 
 Update email postcard
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailPostcard -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8551,6 +9374,8 @@ apiInstance.updateEmailPostcard(storefront_oid, commseq_postcard_uuid, email_com
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailPostcard -->
 
 ### Parameters
 
@@ -8581,7 +9406,10 @@ Name | Type | Description  | Notes
 
 Update email segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8603,6 +9431,8 @@ apiInstance.updateEmailSegment(storefront_oid, email_segment_uuid, email_segment
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailSegment -->
 
 ### Parameters
 
@@ -8633,7 +9463,10 @@ Name | Type | Description  | Notes
 
 Update email sending domain
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailSendingDomain -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8654,6 +9487,8 @@ apiInstance.updateEmailSendingDomain(domain, email_domain, (error, data, respons
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailSendingDomain -->
 
 ### Parameters
 
@@ -8683,7 +9518,10 @@ Name | Type | Description  | Notes
 
 Update email settings
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateEmailSettings -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8704,6 +9542,8 @@ apiInstance.updateEmailSettings(storefront_oid, settings, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateEmailSettings -->
 
 ### Parameters
 
@@ -8733,7 +9573,10 @@ Name | Type | Description  | Notes
 
 Update experiment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateExperiment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8755,6 +9598,8 @@ apiInstance.updateExperiment(storefront_oid, storefront_experiment_oid, experime
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateExperiment -->
 
 ### Parameters
 
@@ -8785,7 +9630,10 @@ Name | Type | Description  | Notes
 
 Update library item. Note that only certain fields may be updated via this method.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateLibraryItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8806,6 +9654,8 @@ apiInstance.updateLibraryItem(library_item_oid, library_item, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateLibraryItem -->
 
 ### Parameters
 
@@ -8837,7 +9687,10 @@ Update merchant notes on a screen recording
 
 Update merchant notes on a screen recording 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateScreenRecordingMerchantNotes -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8859,6 +9712,8 @@ apiInstance.updateScreenRecordingMerchantNotes(storefront_oid, screen_recording_
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateScreenRecordingMerchantNotes -->
 
 ### Parameters
 
@@ -8889,7 +9744,10 @@ null (empty response body)
 
 Update screen recording segment
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateScreenRecordingSegment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8911,6 +9769,8 @@ apiInstance.updateScreenRecordingSegment(storefront_oid, screen_recording_segmen
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateScreenRecordingSegment -->
 
 ### Parameters
 
@@ -8941,7 +9801,10 @@ Name | Type | Description  | Notes
 
 Update screen recording settings
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateScreenRecordingSettings -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -8962,6 +9825,8 @@ apiInstance.updateScreenRecordingSettings(storefront_oid, settings, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateScreenRecordingSettings -->
 
 ### Parameters
 
@@ -8993,7 +9858,10 @@ Update tags on a screen recording
 
 Update tags on a screen recording 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateScreenRecordingTags -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -9015,6 +9883,8 @@ apiInstance.updateScreenRecordingTags(storefront_oid, screen_recording_uuid, tag
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateScreenRecordingTags -->
 
 ### Parameters
 
@@ -9047,7 +9917,10 @@ Updates a transaction email object
 
 Updates a transactional email 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTransactionEmail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -9069,6 +9942,8 @@ apiInstance.updateTransactionEmail(storefront_oid, email_id, transaction_email, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTransactionEmail -->
 
 ### Parameters
 
@@ -9099,7 +9974,10 @@ Name | Type | Description  | Notes
 
 Update Twilio account
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateTwilioAccount -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -9120,6 +9998,8 @@ apiInstance.updateTwilioAccount(esp_twilio_uuid, twilio, (error, data, response)
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateTwilioAccount -->
 
 ### Parameters
 
@@ -9149,7 +10029,10 @@ Name | Type | Description  | Notes
 
 This is the last step in uploading a file after 1) calling getUploadFsFileUrl and 2) uploading a file to the provided url, then finally 3) calling this method and providing the key to trigger the server into reading the S3 bucket and retrieving the file.
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE uploadFsFile -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -9170,6 +10053,8 @@ apiInstance.uploadFsFile(id, upload_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE uploadFsFile -->
 
 ### Parameters
 
@@ -9199,7 +10084,10 @@ null (empty response body)
 
 Validate AWS Event Ruler
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE validateRuler -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -9219,6 +10107,8 @@ apiInstance.validateRuler(ruler_validate_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE validateRuler -->
 
 ### Parameters
 

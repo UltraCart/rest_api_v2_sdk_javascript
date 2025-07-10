@@ -34,7 +34,10 @@ City/State for Zip
 
 Look up the city and state for the shipping zip code.  Useful for building an auto complete for parts of the shipping address 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE cityState -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -54,6 +57,8 @@ apiInstance.cityState(cart, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE cityState -->
 
 ### Parameters
 
@@ -84,7 +89,10 @@ Finalize Order
 
 Finalize the cart into an order.  This method can not be called with browser key authentication.  It is ONLY meant for server side code to call. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE finalizeOrder -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -104,6 +112,8 @@ apiInstance.finalizeOrder(finalize_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE finalizeOrder -->
 
 ### Parameters
 
@@ -134,7 +144,10 @@ Get affirm checkout (by cart id)
 
 Get a Affirm checkout object for the specified cart_id parameter. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAffirmCheckout -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -154,6 +167,8 @@ apiInstance.getAffirmCheckout(cart_id, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAffirmCheckout -->
 
 ### Parameters
 
@@ -184,7 +199,10 @@ Allowed countries
 
 Lookup the allowed countries for this merchant id 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAllowedCountries -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -203,6 +221,8 @@ apiInstance.getAllowedCountries((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAllowedCountries -->
 
 ### Parameters
 
@@ -230,7 +250,10 @@ Get cart
 
 If the cookie is set on the browser making the request then it will return their active cart.  Otherwise it will create a new cart. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCart -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -252,6 +275,8 @@ apiInstance.getCart(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCart -->
 
 ### Parameters
 
@@ -282,7 +307,10 @@ Get cart (by cart id)
 
 Get a cart specified by the cart_id parameter. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCartByCartId -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -305,6 +333,8 @@ apiInstance.getCartByCartId(cart_id, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCartByCartId -->
 
 ### Parameters
 
@@ -336,7 +366,10 @@ Get cart (by return code)
 
 Get a cart specified by the return code parameter. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCartByReturnCode -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -359,6 +392,8 @@ apiInstance.getCartByReturnCode(return_code, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCartByReturnCode -->
 
 ### Parameters
 
@@ -390,7 +425,10 @@ Get cart (by return token)
 
 Get a cart specified by the encrypted return token parameter. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getCartByReturnToken -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -413,6 +451,8 @@ apiInstance.getCartByReturnToken(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getCartByReturnToken -->
 
 ### Parameters
 
@@ -444,7 +484,10 @@ Get state/province list for a country code
 
 Lookup a state/province list for a given country code 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getStateProvincesForCountry -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -464,6 +507,8 @@ apiInstance.getStateProvincesForCountry(country_code, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getStateProvincesForCountry -->
 
 ### Parameters
 
@@ -494,7 +539,10 @@ Handoff cart
 
 Handoff the browser to UltraCart for view cart on StoreFront, transfer to PayPal, transfer to Affirm, transfer to Sezzle or finalization of the order (including upsell processing). 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE handoffCart -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -517,6 +565,8 @@ apiInstance.handoffCart(handoff_request, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE handoffCart -->
 
 ### Parameters
 
@@ -548,7 +598,10 @@ Profile login
 
 Login in to the customer profile specified by cart.billing.email and password 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE login -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -571,6 +624,8 @@ apiInstance.login(login_request, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE login -->
 
 ### Parameters
 
@@ -602,7 +657,10 @@ Profile logout
 
 Log the cart out of the current profile.  No error will occur if they are not logged in. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE logout -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -625,6 +683,8 @@ apiInstance.logout(cart, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE logout -->
 
 ### Parameters
 
@@ -656,7 +716,10 @@ Profile registration
 
 Register a new customer profile.  Requires the cart.billing object to be populated along with the password. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE register -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -679,6 +742,8 @@ apiInstance.register(register_request, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE register -->
 
 ### Parameters
 
@@ -710,7 +775,10 @@ Register affiliate click
 
 Register an affiliate click.  Used by custom checkouts that are completely API based and do not perform checkout handoff. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE registerAffiliateClick -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -733,6 +801,8 @@ apiInstance.registerAffiliateClick(register_affiliate_click_request, opts, (erro
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE registerAffiliateClick -->
 
 ### Parameters
 
@@ -764,7 +834,10 @@ Related items
 
 Retrieve all the related items for the cart contents.  Expansion is limited to content, content.assignments, content.attributes, content.multimedia, content.multimedia.thumbnails, options, pricing, and pricing.tiers. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE relatedItemsForCart -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -787,6 +860,8 @@ apiInstance.relatedItemsForCart(cart, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE relatedItemsForCart -->
 
 ### Parameters
 
@@ -818,7 +893,10 @@ Related items (specific item)
 
 Retrieve all the related items for the cart contents.  Expansion is limited to content, content.assignments, content.attributes, content.multimedia, content.multimedia.thumbnails, options, pricing, and pricing.tiers. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE relatedItemsForItem -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -842,6 +920,8 @@ apiInstance.relatedItemsForItem(item_id, cart, opts, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE relatedItemsForItem -->
 
 ### Parameters
 
@@ -874,7 +954,10 @@ Setup Browser Application
 
 Setup a browser key authenticated application with checkout permissions.  This REST call must be made with an authentication scheme that is not browser key.  The new application will be linked to the application that makes this call.  If this application is disabled / deleted, then so will the application setup by this call.  The purpose of this call is to allow an OAuth application, such as the Wordpress plugin, to setup the proper browser based authentication for the REST checkout API to use. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE setupBrowserKey -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -894,6 +977,8 @@ apiInstance.setupBrowserKey(browser_key_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE setupBrowserKey -->
 
 ### Parameters
 
@@ -924,7 +1009,10 @@ Update cart
 
 Update the cart. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateCart -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -947,6 +1035,8 @@ apiInstance.updateCart(cart, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateCart -->
 
 ### Parameters
 
@@ -978,7 +1068,10 @@ Validate
 
 Validate the cart for errors.  Specific checks can be passed and multiple validations can occur throughout your checkout flow. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE validateCart -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1001,6 +1094,8 @@ apiInstance.validateCart(validation_request, opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE validateCart -->
 
 ### Parameters
 

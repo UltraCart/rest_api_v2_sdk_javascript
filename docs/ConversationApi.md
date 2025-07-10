@@ -103,7 +103,10 @@ Delete a conversation canned message
 
 Delete a conversation canned message 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteConversationCannedMessage -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -123,6 +126,8 @@ apiInstance.deleteConversationCannedMessage(conversation_canned_message_oid, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteConversationCannedMessage -->
 
 ### Parameters
 
@@ -153,7 +158,10 @@ Delete a conversation department
 
 Delete a conversation department 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteDepartment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -173,6 +181,8 @@ apiInstance.deleteDepartment(conversation_department_oid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteDepartment -->
 
 ### Parameters
 
@@ -203,7 +213,10 @@ Delete a conversation engagement
 
 Delete a conversation engagement 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deleteEngagement -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -223,6 +236,8 @@ apiInstance.deleteEngagement(conversation_engagement_oid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deleteEngagement -->
 
 ### Parameters
 
@@ -253,7 +268,10 @@ Delete Agent Voicemail
 
 Delete pbx agent Voicemail 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxAgentVoicemail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -273,6 +291,8 @@ apiInstance.deletePbxAgentVoicemail(recording_sid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxAgentVoicemail -->
 
 ### Parameters
 
@@ -303,7 +323,10 @@ Delete pbx audio
 
 Delete a pbx audio 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxAudio -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -323,6 +346,8 @@ apiInstance.deletePbxAudio(conversationPbxAudioUuid, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxAudio -->
 
 ### Parameters
 
@@ -353,7 +378,10 @@ Delete pbx menu
 
 Delete a pbx menu 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxMenu -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -373,6 +401,8 @@ apiInstance.deletePbxMenu(conversationPbxMenuUuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxMenu -->
 
 ### Parameters
 
@@ -403,7 +433,10 @@ Delete pbx queue
 
 Delete a pbx queue 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxQueue -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -423,6 +456,8 @@ apiInstance.deletePbxQueue(conversationPbxQueueUuid, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxQueue -->
 
 ### Parameters
 
@@ -453,7 +488,10 @@ Delete Queue Voicemail
 
 Delete pbx queue Voicemail 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxQueueVoicemail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -474,6 +512,8 @@ apiInstance.deletePbxQueueVoicemail(queue_uuid, recording_sid, (error, data, res
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxQueueVoicemail -->
 
 ### Parameters
 
@@ -505,7 +545,10 @@ Delete pbx timeBased
 
 Delete a pbx timeBased 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxTimeBased -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -525,6 +568,8 @@ apiInstance.deletePbxTimeBased(conversationPbxTimeBasedUuid, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxTimeBased -->
 
 ### Parameters
 
@@ -555,7 +600,10 @@ Delete pbx timeRange
 
 Delete a pbx timeRange 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxTimeRange -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -575,6 +623,8 @@ apiInstance.deletePbxTimeRange(conversationPbxTimeRangeUuid, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxTimeRange -->
 
 ### Parameters
 
@@ -605,7 +655,10 @@ Delete pbx voicemailMailbox
 
 Delete a pbx voicemailMailbox 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE deletePbxVoicemailMailbox -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -625,6 +678,8 @@ apiInstance.deletePbxVoicemailMailbox(conversationPbxVoicemailMailboxUuid, (erro
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE deletePbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -655,7 +710,10 @@ Agent keep alive
 
 Called periodically by the conversation API to keep the session alive. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAgentKeepAlive -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -674,6 +732,8 @@ apiInstance.getAgentKeepAlive((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAgentKeepAlive -->
 
 ### Parameters
 
@@ -701,7 +761,10 @@ Get agent profile
 
 Retrieve the agents profile 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAgentProfile -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -720,6 +783,8 @@ apiInstance.getAgentProfile((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAgentProfile -->
 
 ### Parameters
 
@@ -747,7 +812,10 @@ Get agent profiles
 
 Retrieve the agents profile 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAgentProfiles -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -766,6 +834,8 @@ apiInstance.getAgentProfiles((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAgentProfiles -->
 
 ### Parameters
 
@@ -793,7 +863,10 @@ Get agent websocket authorization
 
 Retrieve a JWT to authorize an agent to make a websocket connection. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getAgentWebsocketAuthorization -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -812,6 +885,8 @@ apiInstance.getAgentWebsocketAuthorization((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getAgentWebsocketAuthorization -->
 
 ### Parameters
 
@@ -839,7 +914,10 @@ Retrieve a conversation
 
 Retrieve a conversation including the participants and messages 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversation -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -862,6 +940,8 @@ apiInstance.getConversation(conversation_uuid, opts, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversation -->
 
 ### Parameters
 
@@ -893,7 +973,10 @@ Retrieve a list of canned messages ordered by short_code
 
 Retrieve a list of canned messages ordered by short_code 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationCannedMessages -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -912,6 +995,8 @@ apiInstance.getConversationCannedMessages((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationCannedMessages -->
 
 ### Parameters
 
@@ -939,7 +1024,10 @@ Get a webchat conversation context
 
 Get a webchat conversation context 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationContext -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -959,6 +1047,8 @@ apiInstance.getConversationContext(conversation_uuid, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationContext -->
 
 ### Parameters
 
@@ -989,7 +1079,10 @@ Retrieve a list of possible department members
 
 Retrieve a list of possible department members 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationDepartmentMemberList -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1008,6 +1101,8 @@ apiInstance.getConversationDepartmentMemberList((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationDepartmentMemberList -->
 
 ### Parameters
 
@@ -1035,7 +1130,10 @@ Retrieve a list of departments ordered by name
 
 Retrieve a list of departments ordered by name 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationDepartments -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1054,6 +1152,8 @@ apiInstance.getConversationDepartments((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationDepartments -->
 
 ### Parameters
 
@@ -1081,7 +1181,10 @@ Retrieve an engagement
 
 Retrieve an engagement 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationEngagement -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1101,6 +1204,8 @@ apiInstance.getConversationEngagement(conversation_engagement_oid, (error, data,
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationEngagement -->
 
 ### Parameters
 
@@ -1131,7 +1236,10 @@ Retrieve a list of engagements ordered by name
 
 Retrieve a list of engagements ordered by name 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationEngagements -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1150,6 +1258,8 @@ apiInstance.getConversationEngagements((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationEngagements -->
 
 ### Parameters
 
@@ -1177,7 +1287,10 @@ Retrieve conversation messages
 
 Retrieve conversation messages since a particular time 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationMessages -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1201,6 +1314,8 @@ apiInstance.getConversationMessages(conversation_uuid, since, opts, (error, data
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationMessages -->
 
 ### Parameters
 
@@ -1233,7 +1348,10 @@ Get a presigned conversation multimedia upload URL
 
 Get a presigned conversation multimedia upload URL 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationMultimediaUploadUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1253,6 +1371,8 @@ apiInstance.getConversationMultimediaUploadUrl(extension, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationMultimediaUploadUrl -->
 
 ### Parameters
 
@@ -1283,7 +1403,10 @@ Get a pre-signed conversation multimedia upload URL
 
 Get a pre-signed conversation multimedia upload URL 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationPbxAudioUploadUrl -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1303,6 +1426,8 @@ apiInstance.getConversationPbxAudioUploadUrl(extension, (error, data, response) 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationPbxAudioUploadUrl -->
 
 ### Parameters
 
@@ -1333,7 +1458,10 @@ Get orders and customer information for a phone number
 
 Retrieves all the orders, auto orders, and customer profile for a given phone number 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationPbxCustomerSnapshot -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1353,6 +1481,8 @@ apiInstance.getConversationPbxCustomerSnapshot(pbx_customer_snapshot_request, (e
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationPbxCustomerSnapshot -->
 
 ### Parameters
 
@@ -1383,7 +1513,10 @@ Retrieve conversation permissions
 
 Retrieve conversation permissions 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationPermissions -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1402,6 +1535,8 @@ apiInstance.getConversationPermissions((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationPermissions -->
 
 ### Parameters
 
@@ -1429,7 +1564,10 @@ Retrieve a conversation webchat queue statuses
 
 Retrieve a conversation webchat queue statuses including agent status and queue entries 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationWebchatQueueStatuses -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1448,6 +1586,8 @@ apiInstance.getConversationWebchatQueueStatuses((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationWebchatQueueStatuses -->
 
 ### Parameters
 
@@ -1475,7 +1615,10 @@ Retrieve a list of conversation summaries newest to oldest
 
 Retrieve a list of conversation summaries that are ordered newest to oldest, include the most recent message and whether its been read. 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversations -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1500,6 +1643,8 @@ apiInstance.getConversations(opts, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversations -->
 
 ### Parameters
 
@@ -1533,7 +1678,10 @@ Retrieve a list of matching terms for a search field
 
 Retrieve a list of matching terms for a search field 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationsAutocomplete -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1553,6 +1701,8 @@ apiInstance.getConversationsAutocomplete(autocomplete_request, (error, data, res
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationsAutocomplete -->
 
 ### Parameters
 
@@ -1583,7 +1733,10 @@ Search conversations
 
 Search conversations 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getConversationsSearch -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1603,6 +1756,8 @@ apiInstance.getConversationsSearch(search_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getConversationsSearch -->
 
 ### Parameters
 
@@ -1633,7 +1788,10 @@ Get location data for engagement configuration
 
 Get location data for engagement configuration 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getLocationsForEngagement -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1652,6 +1810,8 @@ apiInstance.getLocationsForEngagement((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getLocationsForEngagement -->
 
 ### Parameters
 
@@ -1679,7 +1839,10 @@ Get pbx agent
 
 Retrieve a pbx agent 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxAgent -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1699,6 +1862,8 @@ apiInstance.getPbxAgent(conversationPbxAgentUuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxAgent -->
 
 ### Parameters
 
@@ -1729,7 +1894,10 @@ Get Agent Voicemail
 
 Retrieve pbx agent Voicemail 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxAgentVoicemail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1749,6 +1917,8 @@ apiInstance.getPbxAgentVoicemail(recording_sid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxAgentVoicemail -->
 
 ### Parameters
 
@@ -1779,7 +1949,10 @@ Get Agent Voicemails
 
 Retrieve pbx agent Voicemails 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxAgentVoicemails -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1798,6 +1971,8 @@ apiInstance.getPbxAgentVoicemails((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxAgentVoicemails -->
 
 ### Parameters
 
@@ -1825,7 +2000,10 @@ Get pbx agents
 
 Retrieve pbx agents 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxAgents -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1844,6 +2022,8 @@ apiInstance.getPbxAgents((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxAgents -->
 
 ### Parameters
 
@@ -1871,7 +2051,10 @@ Get pbx audio
 
 Retrieve a pbx audio 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxAudio -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1891,6 +2074,8 @@ apiInstance.getPbxAudio(conversationPbxAudioUuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxAudio -->
 
 ### Parameters
 
@@ -1921,7 +2106,10 @@ Get pbx audio usage
 
 Retrieve a pbx audio usage 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxAudioUsage -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1941,6 +2129,8 @@ apiInstance.getPbxAudioUsage(conversationPbxAudioUuid, (error, data, response) =
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxAudioUsage -->
 
 ### Parameters
 
@@ -1971,7 +2161,10 @@ Get pbx audios
 
 Retrieve pbx audios 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxAudios -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -1990,6 +2183,8 @@ apiInstance.getPbxAudios((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxAudios -->
 
 ### Parameters
 
@@ -2017,7 +2212,10 @@ Get pbx menu
 
 Retrieve a pbx menu 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxMenu -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2037,6 +2235,8 @@ apiInstance.getPbxMenu(conversationPbxMenuUuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxMenu -->
 
 ### Parameters
 
@@ -2067,7 +2267,10 @@ Get pbx menus
 
 Retrieve pbx menus 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxMenus -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2086,6 +2289,8 @@ apiInstance.getPbxMenus((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxMenus -->
 
 ### Parameters
 
@@ -2113,7 +2318,10 @@ Get pbx phoneNumber
 
 Retrieve a pbx phoneNumber 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxPhoneNumber -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2133,6 +2341,8 @@ apiInstance.getPbxPhoneNumber(conversationPbxPhoneNumberUuid, (error, data, resp
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxPhoneNumber -->
 
 ### Parameters
 
@@ -2163,7 +2373,10 @@ Get pbx phoneNumbers
 
 Retrieve pbx phoneNumbers 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxPhoneNumbers -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2182,6 +2395,8 @@ apiInstance.getPbxPhoneNumbers((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxPhoneNumbers -->
 
 ### Parameters
 
@@ -2209,7 +2424,10 @@ Get pbx queue
 
 Retrieve a pbx queue 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxQueue -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2229,6 +2447,8 @@ apiInstance.getPbxQueue(conversationPbxQueueUuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxQueue -->
 
 ### Parameters
 
@@ -2259,7 +2479,10 @@ Get Queue Voicemail
 
 Retrieve pbx queue Voicemail 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxQueueVoicemail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2280,6 +2503,8 @@ apiInstance.getPbxQueueVoicemail(queue_uuid, recording_sid, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxQueueVoicemail -->
 
 ### Parameters
 
@@ -2311,7 +2536,10 @@ Get Queue Voicemails
 
 Retrieve pbx queue voicemails 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxQueueVoicemails -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2331,6 +2559,8 @@ apiInstance.getPbxQueueVoicemails(queue_uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxQueueVoicemails -->
 
 ### Parameters
 
@@ -2361,7 +2591,10 @@ Get pbx queues
 
 Retrieve pbx queues 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxQueues -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2380,6 +2613,8 @@ apiInstance.getPbxQueues((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxQueues -->
 
 ### Parameters
 
@@ -2407,7 +2642,10 @@ Get pbx timeBased
 
 Retrieve a pbx timeBased 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxTimeBased -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2427,6 +2665,8 @@ apiInstance.getPbxTimeBased(conversationPbxTimeBasedUuid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxTimeBased -->
 
 ### Parameters
 
@@ -2457,7 +2697,10 @@ Get pbx timeBaseds
 
 Retrieve pbx timeBaseds 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxTimeBaseds -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2476,6 +2719,8 @@ apiInstance.getPbxTimeBaseds((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxTimeBaseds -->
 
 ### Parameters
 
@@ -2503,7 +2748,10 @@ Get pbx timeRange
 
 Retrieve a pbx timeRange 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxTimeRange -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2523,6 +2771,8 @@ apiInstance.getPbxTimeRange(conversationPbxTimeRangeUuid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxTimeRange -->
 
 ### Parameters
 
@@ -2553,7 +2803,10 @@ Get pbx timeRanges
 
 Retrieve pbx timeRanges 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxTimeRanges -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2572,6 +2825,8 @@ apiInstance.getPbxTimeRanges((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxTimeRanges -->
 
 ### Parameters
 
@@ -2599,7 +2854,10 @@ Get pbx voicemailMailbox
 
 Retrieve a pbx voicemailMailbox 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxVoicemailMailbox -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2619,6 +2877,8 @@ apiInstance.getPbxVoicemailMailbox(conversationPbxVoicemailMailboxUuid, (error, 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -2649,7 +2909,10 @@ Get pbx voicemailMailboxes
 
 Retrieve pbx voicemailMailboxes 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getPbxVoicemailMailboxes -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2668,6 +2931,8 @@ apiInstance.getPbxVoicemailMailboxes((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getPbxVoicemailMailboxes -->
 
 ### Parameters
 
@@ -2695,7 +2960,10 @@ Get virtual agent budget
 
 Retrieve virtual agent budget 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getVirtualAgentBudget -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2714,6 +2982,8 @@ apiInstance.getVirtualAgentBudget((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getVirtualAgentBudget -->
 
 ### Parameters
 
@@ -2741,7 +3011,10 @@ Get virtual agent capabilities
 
 Retrieve virtual agent capabilities 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE getVirtualAgentCapabilities -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2760,6 +3033,8 @@ apiInstance.getVirtualAgentCapabilities((error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE getVirtualAgentCapabilities -->
 
 ### Parameters
 
@@ -2787,7 +3062,10 @@ Insert a canned message
 
 Insert a canned message 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertConversationCannedMessage -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2807,6 +3085,8 @@ apiInstance.insertConversationCannedMessage(canned_message, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertConversationCannedMessage -->
 
 ### Parameters
 
@@ -2837,7 +3117,10 @@ Insert a department
 
 Insert a department 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertConversationDepartment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2857,6 +3140,8 @@ apiInstance.insertConversationDepartment(department, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertConversationDepartment -->
 
 ### Parameters
 
@@ -2887,7 +3172,10 @@ Insert a engagement
 
 Insert a engagement 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertConversationEngagement -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2907,6 +3195,8 @@ apiInstance.insertConversationEngagement(engagement, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertConversationEngagement -->
 
 ### Parameters
 
@@ -2937,7 +3227,10 @@ Insert pbx audio
 
 Insert a pbx audio 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertPbxAudio -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -2957,6 +3250,8 @@ apiInstance.insertPbxAudio(pbx_audio, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertPbxAudio -->
 
 ### Parameters
 
@@ -2987,7 +3282,10 @@ Insert pbx menu
 
 Insert a pbx menu 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertPbxMenu -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3007,6 +3305,8 @@ apiInstance.insertPbxMenu(pbx_menu, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertPbxMenu -->
 
 ### Parameters
 
@@ -3037,7 +3337,10 @@ Insert pbx queue
 
 Insert a pbx queue 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertPbxQueue -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3057,6 +3360,8 @@ apiInstance.insertPbxQueue(pbx_queue, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertPbxQueue -->
 
 ### Parameters
 
@@ -3087,7 +3392,10 @@ Insert pbx timeBased
 
 Insert a pbx timeBased 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertPbxTimeBased -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3107,6 +3415,8 @@ apiInstance.insertPbxTimeBased(pbx_timeBased, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertPbxTimeBased -->
 
 ### Parameters
 
@@ -3137,7 +3447,10 @@ Insert pbx timeRange
 
 Insert a pbx timeRange 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertPbxTimeRange -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3157,6 +3470,8 @@ apiInstance.insertPbxTimeRange(pbx_timeRange, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertPbxTimeRange -->
 
 ### Parameters
 
@@ -3187,7 +3502,10 @@ Insert pbx voicemailMailbox
 
 Insert a pbx voicemailMailbox 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE insertPbxVoicemailMailbox -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3207,6 +3525,8 @@ apiInstance.insertPbxVoicemailMailbox(pbx_voicemailMailbox, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE insertPbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -3237,7 +3557,10 @@ Join a conversation
 
 Join a conversation 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE joinConversation -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3260,6 +3583,8 @@ apiInstance.joinConversation(conversation_uuid, opts, (error, data, response) =>
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE joinConversation -->
 
 ### Parameters
 
@@ -3291,7 +3616,10 @@ Leave a conversation
 
 Leave a conversation 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE leaveConversation -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3311,6 +3639,8 @@ apiInstance.leaveConversation(conversation_uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE leaveConversation -->
 
 ### Parameters
 
@@ -3341,7 +3671,10 @@ Listened Agent Voicemail
 
 Listened pbx agent Voicemail 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE listenedPbxAgentVoicemail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3361,6 +3694,8 @@ apiInstance.listenedPbxAgentVoicemail(recording_sid, (error, data, response) => 
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE listenedPbxAgentVoicemail -->
 
 ### Parameters
 
@@ -3391,7 +3726,10 @@ Listened Queue Voicemail
 
 Listened pbx queue Voicemail 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE listenedPbxQueueVoicemail -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3412,6 +3750,8 @@ apiInstance.listenedPbxQueueVoicemail(queue_uuid, recording_sid, (error, data, r
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE listenedPbxQueueVoicemail -->
 
 ### Parameters
 
@@ -3443,7 +3783,10 @@ Mark a conversation as read
 
 Mark a conversation as read 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE markReadConversation -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3463,6 +3806,8 @@ apiInstance.markReadConversation(conversation_uuid, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE markReadConversation -->
 
 ### Parameters
 
@@ -3493,7 +3838,10 @@ reset statistics within the queue
 
 reset statistics within the queue 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE resetConversationPbxQueueStatistics -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3513,6 +3861,8 @@ apiInstance.resetConversationPbxQueueStatistics(queue_uuid, (error, data, respon
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE resetConversationPbxQueueStatistics -->
 
 ### Parameters
 
@@ -3543,7 +3893,10 @@ Search for canned messages by short_code
 
 Search for canned messages by short_code 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE searchConversationCannedMessages -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3563,6 +3916,8 @@ apiInstance.searchConversationCannedMessages(search_request, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE searchConversationCannedMessages -->
 
 ### Parameters
 
@@ -3593,7 +3948,10 @@ Unsubscribe any SMS participants in this conversation
 
 Unsubscribe any SMS participants in this conversation 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE smsUnsubscribeConversation -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3613,6 +3971,8 @@ apiInstance.smsUnsubscribeConversation(conversation_uuid, (error, data, response
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE smsUnsubscribeConversation -->
 
 ### Parameters
 
@@ -3643,7 +4003,10 @@ Start a conversation
 
 Start a new conversation 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE startConversation -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3663,6 +4026,8 @@ apiInstance.startConversation(start_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE startConversation -->
 
 ### Parameters
 
@@ -3693,7 +4058,10 @@ Update agent profile
 
 Update agent profile 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateAgentProfile -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3713,6 +4081,8 @@ apiInstance.updateAgentProfile(profile_request, (error, data, response) => {
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateAgentProfile -->
 
 ### Parameters
 
@@ -3743,7 +4113,10 @@ Update a canned message
 
 Update a canned message 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateConversationCannedMessage -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3764,6 +4137,8 @@ apiInstance.updateConversationCannedMessage(conversation_canned_message_oid, can
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateConversationCannedMessage -->
 
 ### Parameters
 
@@ -3795,7 +4170,10 @@ Update a department
 
 Update a department 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateConversationDepartment -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3816,6 +4194,8 @@ apiInstance.updateConversationDepartment(conversation_department_oid, department
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateConversationDepartment -->
 
 ### Parameters
 
@@ -3847,7 +4227,10 @@ Update a engagement
 
 Update a engagement 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateConversationEngagement -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3868,6 +4251,8 @@ apiInstance.updateConversationEngagement(conversation_engagement_oid, engagement
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateConversationEngagement -->
 
 ### Parameters
 
@@ -3899,7 +4284,10 @@ Update status within the queue
 
 Update status within the queue 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateConversationWebchatQueueStatus -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3920,6 +4308,8 @@ apiInstance.updateConversationWebchatQueueStatus(queue_name, status_request, (er
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateConversationWebchatQueueStatus -->
 
 ### Parameters
 
@@ -3951,7 +4341,10 @@ Update pbx agent
 
 Update a pbx agent 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxAgent -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -3972,6 +4365,8 @@ apiInstance.updatePbxAgent(conversationPbxAgentUuid, pbx_agent, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxAgent -->
 
 ### Parameters
 
@@ -4003,7 +4398,10 @@ Update pbx audio
 
 Update a pbx audio 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxAudio -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4024,6 +4422,8 @@ apiInstance.updatePbxAudio(conversationPbxAudioUuid, pbx_audio, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxAudio -->
 
 ### Parameters
 
@@ -4055,7 +4455,10 @@ Update pbx menu
 
 Update a pbx menu 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxMenu -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4076,6 +4479,8 @@ apiInstance.updatePbxMenu(conversationPbxMenuUuid, pbx_menu, (error, data, respo
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxMenu -->
 
 ### Parameters
 
@@ -4107,7 +4512,10 @@ Update pbx phoneNumber
 
 Update a pbx phoneNumber 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxPhoneNumber -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4128,6 +4536,8 @@ apiInstance.updatePbxPhoneNumber(conversationPbxPhoneNumberUuid, pbx_phoneNumber
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxPhoneNumber -->
 
 ### Parameters
 
@@ -4159,7 +4569,10 @@ Update pbx queue
 
 Update a pbx queue 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxQueue -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4180,6 +4593,8 @@ apiInstance.updatePbxQueue(conversationPbxQueueUuid, pbx_queue, (error, data, re
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxQueue -->
 
 ### Parameters
 
@@ -4211,7 +4626,10 @@ Update pbx timeBased
 
 Update a pbx timeBased 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxTimeBased -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4232,6 +4650,8 @@ apiInstance.updatePbxTimeBased(conversationPbxTimeBasedUuid, pbx_timeBased, (err
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxTimeBased -->
 
 ### Parameters
 
@@ -4263,7 +4683,10 @@ Update pbx timeRange
 
 Update a pbx timeRange 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxTimeRange -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4284,6 +4707,8 @@ apiInstance.updatePbxTimeRange(conversationPbxTimeRangeUuid, pbx_timeRange, (err
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxTimeRange -->
 
 ### Parameters
 
@@ -4315,7 +4740,10 @@ Update pbx voicemailMailbox
 
 Update a pbx voicemailMailbox 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updatePbxVoicemailMailbox -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4336,6 +4764,8 @@ apiInstance.updatePbxVoicemailMailbox(conversationPbxVoicemailMailboxUuid, pbx_v
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updatePbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -4367,7 +4797,10 @@ Update virtual agent budget
 
 Update virtual agent budget 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateVirtualAgentBudget -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4387,6 +4820,8 @@ apiInstance.updateVirtualAgentBudget(virtual_agent_budget, (error, data, respons
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateVirtualAgentBudget -->
 
 ### Parameters
 
@@ -4417,7 +4852,10 @@ Update virtual agent capabilities
 
 Update virtual agent capabilities 
 
+
 ### Example
+
+<!-- UC_START_EXAMPLE updateVirtualAgentCapabilities -->
 
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
@@ -4437,6 +4875,8 @@ apiInstance.updateVirtualAgentCapabilities(virtual_agent_capabilities, (error, d
   }
 });
 ```
+
+<!-- UC_END_EXAMPLE updateVirtualAgentCapabilities -->
 
 ### Parameters
 
