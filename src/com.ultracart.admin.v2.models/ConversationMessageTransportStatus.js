@@ -34,7 +34,7 @@
   /**
    * The ConversationMessageTransportStatus model module.
    * @module com.ultracart.admin.v2.models/ConversationMessageTransportStatus
-   * @version 3.11.13
+   * @version 3.11.14
    */
 
   /**
