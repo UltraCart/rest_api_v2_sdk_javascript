@@ -5,7 +5,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adjustOrderTotal**](OrderApi.md#adjustOrderTotal) | **POST** /order/orders/{order_id}/adjust_order_total/{desired_total} | Adjusts an order total
-[**blockRefundOnOrder**](OrderApi.md#blockRefundOnOrder) | **POST** /order/orders/{order_id}/refund_block | Set a refund block on an order
+[**blockRefundOnOrder**](OrderApi.md#blockRefundOnOrder) | **GET** /order/orders/{order_id}/refund_block | Set a refund block on an order
 [**cancelOrder**](OrderApi.md#cancelOrder) | **POST** /order/orders/{order_id}/cancel | Cancel an order
 [**deleteOrder**](OrderApi.md#deleteOrder) | **DELETE** /order/orders/{order_id} | Delete an order
 [**duplicateOrder**](OrderApi.md#duplicateOrder) | **POST** /order/orders/{order_id}/duplicate | Duplicate an order
@@ -26,11 +26,10 @@ Method | HTTP request | Description
 [**isRefundableOrder**](OrderApi.md#isRefundableOrder) | **GET** /order/orders/{order_id}/refundable | Determine if an order can be refunded
 [**processPayment**](OrderApi.md#processPayment) | **POST** /order/orders/{order_id}/process_payment | Process payment
 [**refundOrder**](OrderApi.md#refundOrder) | **PUT** /order/orders/{order_id}/refund | Refund an order
-[**refundOrderCompletely**](OrderApi.md#refundOrderCompletely) | **PUT** /order/orders/{order_id}/refund_completely | Refund an order completely
 [**replacement**](OrderApi.md#replacement) | **POST** /order/orders/{order_id}/replacement | Replacement order
 [**resendReceipt**](OrderApi.md#resendReceipt) | **POST** /order/orders/{order_id}/resend_receipt | Resend receipt
 [**resendShipmentConfirmation**](OrderApi.md#resendShipmentConfirmation) | **POST** /order/orders/{order_id}/resend_shipment_confirmation | Resend shipment confirmation
-[**unblockRefundOnOrder**](OrderApi.md#unblockRefundOnOrder) | **POST** /order/orders/{order_id}/refund_unblock | Remove a refund block on an order
+[**unblockRefundOnOrder**](OrderApi.md#unblockRefundOnOrder) | **GET** /order/orders/{order_id}/refund_unblock | Remove a refund block on an order
 [**updateAccountsReceivableRetryConfig**](OrderApi.md#updateAccountsReceivableRetryConfig) | **POST** /order/accountsReceivableRetryConfig | Update A/R Retry Configuration
 [**updateOrder**](OrderApi.md#updateOrder) | **PUT** /order/orders/{order_id} | Update an order
 [**validateOrder**](OrderApi.md#validateOrder) | **POST** /order/validate | Validate
@@ -1374,81 +1373,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
-- **Accept**: application/json
-
-
-## refundOrderCompletely
-
-> OrderResponse refundOrderCompletely(order_id, opts)
-
-Refund an order completely
-
-Perform a refund operation on an order and then update the order if successful. 
-
-
-### Example
-
-<!-- UC_START_EXAMPLE refundOrderCompletely -->
-
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.OrderApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let order_id = "order_id_example"; // String | The order id to refund.
-let opts = {
-  'reject_after_refund': false, // Boolean | Reject order after refund
-  'skip_customer_notification': false, // Boolean | Skip customer email notification
-  'auto_order_cancel': false, // Boolean | Cancel associated auto orders
-  'manual_refund': false, // Boolean | Consider a manual refund done externally
-  'reverse_affiliate_transactions': true, // Boolean | Reverse affiliate transactions
-  'issue_store_credit': false, // Boolean | Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account
-  'auto_order_cancel_reason': "auto_order_cancel_reason_example", // String | Reason for auto orders cancellation
-  'refund_reason': "refund_reason_example", // String | Reason for refund
-  'reject_reason': "reject_reason_example" // String | Reason for reject
-};
-apiInstance.refundOrderCompletely(order_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE refundOrderCompletely -->
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_id** | **String**| The order id to refund. | 
- **reject_after_refund** | **Boolean**| Reject order after refund | [optional] [default to false]
- **skip_customer_notification** | **Boolean**| Skip customer email notification | [optional] [default to false]
- **auto_order_cancel** | **Boolean**| Cancel associated auto orders | [optional] [default to false]
- **manual_refund** | **Boolean**| Consider a manual refund done externally | [optional] [default to false]
- **reverse_affiliate_transactions** | **Boolean**| Reverse affiliate transactions | [optional] [default to true]
- **issue_store_credit** | **Boolean**| Issue a store credit instead of refunding the original payment method, loyalty must be configured on merchant account | [optional] [default to false]
- **auto_order_cancel_reason** | **String**| Reason for auto orders cancellation | [optional] 
- **refund_reason** | **String**| Reason for refund | [optional] 
- **reject_reason** | **String**| Reason for reject | [optional] 
-
-### Return type
-
-[**OrderResponse**](OrderResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

@@ -18,7 +18,7 @@ import EmailThirdPartyTag from './EmailThirdPartyTag';
 /**
  * The EmailThirdPartyProvider model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyProvider
- * @version 4.1.15
+ * @version 4.1.16
  */
 class EmailThirdPartyProvider {
     /**

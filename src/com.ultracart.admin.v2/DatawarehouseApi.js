@@ -18,6 +18,7 @@ import CustomReportAccountConfig from '../com.ultracart.admin.v2.models/CustomRe
 import CustomReportAccountConfigResponse from '../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse';
 import CustomReportExecutionRequest from '../com.ultracart.admin.v2.models/CustomReportExecutionRequest';
 import CustomReportResponse from '../com.ultracart.admin.v2.models/CustomReportResponse';
+import CustomReportsResponse from '../com.ultracart.admin.v2.models/CustomReportsResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Report from '../com.ultracart.admin.v2.models/Report';
 import ReportAuthResponse from '../com.ultracart.admin.v2.models/ReportAuthResponse';
@@ -32,7 +33,7 @@ import ReportsResponse from '../com.ultracart.admin.v2.models/ReportsResponse';
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.1.15
+* @version 4.1.16
 */
 export default class DatawarehouseApi {
 
@@ -338,6 +339,43 @@ export default class DatawarehouseApi {
       let returnType = CustomReportAccountConfigResponse;
       return this.apiClient.callApi(
         '/datawarehouse/custom_reports/account_config', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomReports operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get custom reports
+     * Retrieve a custom reports 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportsResponse}
+     */
+    getCustomReports(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomReportsResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

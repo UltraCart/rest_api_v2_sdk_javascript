@@ -327,6 +327,7 @@ import CustomReportParameterOption from './com.ultracart.admin.v2.models/CustomR
 import CustomReportQuery from './com.ultracart.admin.v2.models/CustomReportQuery';
 import CustomReportResponse from './com.ultracart.admin.v2.models/CustomReportResponse';
 import CustomReportTooltip from './com.ultracart.admin.v2.models/CustomReportTooltip';
+import CustomReportsResponse from './com.ultracart.admin.v2.models/CustomReportsResponse';
 import Customer from './com.ultracart.admin.v2.models/Customer';
 import CustomerActivity from './com.ultracart.admin.v2.models/CustomerActivity';
 import CustomerAffiliate from './com.ultracart.admin.v2.models/CustomerAffiliate';
@@ -938,7 +939,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.15
+* @version 4.1.16
 */
 export {
     /**
@@ -2830,6 +2831,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomReportTooltip}
      */
     CustomReportTooltip,
+
+    /**
+     * The CustomReportsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportsResponse}
+     */
+    CustomReportsResponse,
 
     /**
      * The Customer model constructor.

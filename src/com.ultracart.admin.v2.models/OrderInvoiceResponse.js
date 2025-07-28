@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The OrderInvoiceResponse model module.
  * @module com.ultracart.admin.v2.models/OrderInvoiceResponse
- * @version 4.1.15
+ * @version 4.1.16
  */
 class OrderInvoiceResponse {
     /**

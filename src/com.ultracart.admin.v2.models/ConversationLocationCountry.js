@@ -17,7 +17,7 @@ import ConversationLocationStateProvince from './ConversationLocationStateProvin
 /**
  * The ConversationLocationCountry model module.
  * @module com.ultracart.admin.v2.models/ConversationLocationCountry
- * @version 4.1.15
+ * @version 4.1.16
  */
 class ConversationLocationCountry {
     /**
