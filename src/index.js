@@ -317,6 +317,16 @@ import CouponType from './com.ultracart.admin.v2.models/CouponType';
 import CouponsRequest from './com.ultracart.admin.v2.models/CouponsRequest';
 import CouponsResponse from './com.ultracart.admin.v2.models/CouponsResponse';
 import Currency from './com.ultracart.admin.v2.models/Currency';
+import CustomReport from './com.ultracart.admin.v2.models/CustomReport';
+import CustomReportAccountConfig from './com.ultracart.admin.v2.models/CustomReportAccountConfig';
+import CustomReportAccountConfigResponse from './com.ultracart.admin.v2.models/CustomReportAccountConfigResponse';
+import CustomReportExecutionParameter from './com.ultracart.admin.v2.models/CustomReportExecutionParameter';
+import CustomReportExecutionRequest from './com.ultracart.admin.v2.models/CustomReportExecutionRequest';
+import CustomReportParameter from './com.ultracart.admin.v2.models/CustomReportParameter';
+import CustomReportParameterOption from './com.ultracart.admin.v2.models/CustomReportParameterOption';
+import CustomReportQuery from './com.ultracart.admin.v2.models/CustomReportQuery';
+import CustomReportResponse from './com.ultracart.admin.v2.models/CustomReportResponse';
+import CustomReportTooltip from './com.ultracart.admin.v2.models/CustomReportTooltip';
 import Customer from './com.ultracart.admin.v2.models/Customer';
 import CustomerActivity from './com.ultracart.admin.v2.models/CustomerActivity';
 import CustomerAffiliate from './com.ultracart.admin.v2.models/CustomerAffiliate';
@@ -928,7 +938,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.14
+* @version 4.1.15
 */
 export {
     /**
@@ -2760,6 +2770,66 @@ export {
      * @property {module:com.ultracart.admin.v2.models/Currency}
      */
     Currency,
+
+    /**
+     * The CustomReport model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReport}
+     */
+    CustomReport,
+
+    /**
+     * The CustomReportAccountConfig model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportAccountConfig}
+     */
+    CustomReportAccountConfig,
+
+    /**
+     * The CustomReportAccountConfigResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportAccountConfigResponse}
+     */
+    CustomReportAccountConfigResponse,
+
+    /**
+     * The CustomReportExecutionParameter model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportExecutionParameter}
+     */
+    CustomReportExecutionParameter,
+
+    /**
+     * The CustomReportExecutionRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportExecutionRequest}
+     */
+    CustomReportExecutionRequest,
+
+    /**
+     * The CustomReportParameter model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportParameter}
+     */
+    CustomReportParameter,
+
+    /**
+     * The CustomReportParameterOption model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportParameterOption}
+     */
+    CustomReportParameterOption,
+
+    /**
+     * The CustomReportQuery model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportQuery}
+     */
+    CustomReportQuery,
+
+    /**
+     * The CustomReportResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportResponse}
+     */
+    CustomReportResponse,
+
+    /**
+     * The CustomReportTooltip model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportTooltip}
+     */
+    CustomReportTooltip,
 
     /**
      * The Customer model constructor.

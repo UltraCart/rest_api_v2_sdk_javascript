@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.14
+ * @version 4.1.15
  */
 class ConversationVirtualAgentCapabilities {
     /**
@@ -61,6 +61,12 @@ class ConversationVirtualAgentCapabilities {
             }
             if (data.hasOwnProperty('open_support_ticket')) {
                 obj['open_support_ticket'] = ApiClient.convertToType(data['open_support_ticket'], 'Boolean');
+            }
+            if (data.hasOwnProperty('open_support_ticket_channel')) {
+                obj['open_support_ticket_channel'] = ApiClient.convertToType(data['open_support_ticket_channel'], 'String');
+            }
+            if (data.hasOwnProperty('open_support_ticket_channel_email')) {
+                obj['open_support_ticket_channel_email'] = ApiClient.convertToType(data['open_support_ticket_channel_email'], 'String');
             }
             if (data.hasOwnProperty('pause_subscription')) {
                 obj['pause_subscription'] = ApiClient.convertToType(data['pause_subscription'], 'Boolean');
@@ -107,6 +113,18 @@ ConversationVirtualAgentCapabilities.prototype['lookup_subscription_information'
 ConversationVirtualAgentCapabilities.prototype['open_support_ticket'] = undefined;
 
 /**
+ * Channel to use to open the support ticket
+ * @member {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities.OpenSupportTicketChannelEnum} open_support_ticket_channel
+ */
+ConversationVirtualAgentCapabilities.prototype['open_support_ticket_channel'] = undefined;
+
+/**
+ * Email to send support ticket to
+ * @member {String} open_support_ticket_channel_email
+ */
+ConversationVirtualAgentCapabilities.prototype['open_support_ticket_channel_email'] = undefined;
+
+/**
  * @member {Boolean} pause_subscription
  */
 ConversationVirtualAgentCapabilities.prototype['pause_subscription'] = undefined;
@@ -128,6 +146,39 @@ ConversationVirtualAgentCapabilities.prototype['update_subscription_credit_card'
 
 
 
+
+
+/**
+ * Allowed values for the <code>open_support_ticket_channel</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationVirtualAgentCapabilities['OpenSupportTicketChannelEnum'] = {
+
+    /**
+     * value: "none"
+     * @const
+     */
+    "none": "none",
+
+    /**
+     * value: "email"
+     * @const
+     */
+    "email": "email",
+
+    /**
+     * value: "UltraCart Task"
+     * @const
+     */
+    "UltraCart Task": "UltraCart Task",
+
+    /**
+     * value: "Zoho Desk Ticket"
+     * @const
+     */
+    "Zoho Desk Ticket": "Zoho Desk Ticket"
+};
 
 
 

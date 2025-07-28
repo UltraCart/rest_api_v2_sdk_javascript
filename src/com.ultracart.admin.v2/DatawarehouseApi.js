@@ -13,6 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
+import CustomReport from '../com.ultracart.admin.v2.models/CustomReport';
+import CustomReportAccountConfig from '../com.ultracart.admin.v2.models/CustomReportAccountConfig';
+import CustomReportAccountConfigResponse from '../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse';
+import CustomReportExecutionRequest from '../com.ultracart.admin.v2.models/CustomReportExecutionRequest';
+import CustomReportResponse from '../com.ultracart.admin.v2.models/CustomReportResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Report from '../com.ultracart.admin.v2.models/Report';
 import ReportAuthResponse from '../com.ultracart.admin.v2.models/ReportAuthResponse';
@@ -27,7 +32,7 @@ import ReportsResponse from '../com.ultracart.admin.v2.models/ReportsResponse';
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.1.14
+* @version 4.1.15
 */
 export default class DatawarehouseApi {
 
@@ -42,6 +47,48 @@ export default class DatawarehouseApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the deleteCustomReport operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomReportCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a custom report
+     * Delete a custom report on the UltraCart account. 
+     * @param {Number} custom_report_oid The report oid to delete.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteCustomReport(custom_report_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling deleteCustomReport");
+      }
+
+      let pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteReport operation.
@@ -128,6 +175,54 @@ export default class DatawarehouseApi {
     }
 
     /**
+     * Callback function to receive the result of the executeCustomReport operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~executeCustomReportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Execute a custom report
+     * Execute a custom report on the UltraCart account. 
+     * @param {Number} custom_report_oid The report oid to execute.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportExecutionRequest} execution_request Request to execute custom report
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~executeCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportResponse}
+     */
+    executeCustomReport(custom_report_oid, execution_request, callback) {
+      let postBody = execution_request;
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling executeCustomReport");
+      }
+      // verify the required parameter 'execution_request' is set
+      if (execution_request === undefined || execution_request === null) {
+        throw new Error("Missing the required parameter 'execution_request' when calling executeCustomReport");
+      }
+
+      let pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomReportResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}/execute', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the executeReportQueries operation.
      * @callback module:com.ultracart.admin.v2/DatawarehouseApi~executeReportQueriesCallback
      * @param {String} error Error message, if any.
@@ -163,6 +258,86 @@ export default class DatawarehouseApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/datawarehouse/reports/execute', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomReport operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a custom report
+     * Retrieve a custom report 
+     * @param {Number} custom_report_oid 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportResponse}
+     */
+    getCustomReport(custom_report_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling getCustomReport");
+      }
+
+      let pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomReportResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomReportAccountConfig operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportAccountConfigCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportAccountConfigResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get custom report account configuration
+     * Retrieve a custom report account configuration 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportAccountConfigCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportAccountConfigResponse}
+     */
+    getCustomReportAccountConfig(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomReportAccountConfigResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/account_config', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -378,6 +553,48 @@ export default class DatawarehouseApi {
     }
 
     /**
+     * Callback function to receive the result of the insertCustomReport operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomReportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a custom report
+     * Create a new custom report on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/CustomReport} report Report to create
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportResponse}
+     */
+    insertCustomReport(report, callback) {
+      let postBody = report;
+      // verify the required parameter 'report' is set
+      if (report === undefined || report === null) {
+        throw new Error("Missing the required parameter 'report' when calling insertCustomReport");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomReportResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertReport operation.
      * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertReportCallback
      * @param {String} error Error message, if any.
@@ -414,6 +631,96 @@ export default class DatawarehouseApi {
       let returnType = ReportResponse;
       return this.apiClient.callApi(
         '/datawarehouse/reports', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomReport operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomReportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a custom report
+     * Update a custom report on the UltraCart account. 
+     * @param {Number} custom_report_oid The report oid to custom update.
+     * @param {module:com.ultracart.admin.v2.models/CustomReport} report Report to custom update
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportResponse}
+     */
+    updateCustomReport(custom_report_oid, report, callback) {
+      let postBody = report;
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling updateCustomReport");
+      }
+      // verify the required parameter 'report' is set
+      if (report === undefined || report === null) {
+        throw new Error("Missing the required parameter 'report' when calling updateCustomReport");
+      }
+
+      let pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomReportResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomReportAccountConfig operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomReportAccountConfigCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportAccountConfigResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update custom report account config
+     * Update custom report account config. 
+     * @param {module:com.ultracart.admin.v2.models/CustomReportAccountConfig} account_config Account config to update
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomReportAccountConfigCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportAccountConfigResponse}
+     */
+    updateCustomReportAccountConfig(account_config, callback) {
+      let postBody = account_config;
+      // verify the required parameter 'account_config' is set
+      if (account_config === undefined || account_config === null) {
+        throw new Error("Missing the required parameter 'account_config' when calling updateCustomReportAccountConfig");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomReportAccountConfigResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/account_config', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

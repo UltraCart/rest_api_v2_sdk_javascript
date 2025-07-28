@@ -41,7 +41,7 @@ import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.14
+* @version 4.1.15
 */
 export default class OrderApi {
 
@@ -101,6 +101,52 @@ export default class OrderApi {
       let returnType = BaseResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/adjust_order_total/{desired_total}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the blockRefundOnOrder operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~blockRefundOnOrderCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Set a refund block on an order
+     * Sets a refund block on an order to prevent a user from performing a refund.  Commonly used when a chargeback has been received. 
+     * @param {String} order_id The order id to block a refund on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.block_reason Block reason code (optional)
+     * @param {module:com.ultracart.admin.v2/OrderApi~blockRefundOnOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    blockRefundOnOrder(order_id, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling blockRefundOnOrder");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+        'block_reason': opts['block_reason']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/refund_block', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1280,6 +1326,48 @@ export default class OrderApi {
       let returnType = BaseResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/resend_shipment_confirmation', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the unblockRefundOnOrder operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~unblockRefundOnOrderCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove a refund block on an order
+     * Removes a refund block on an order to prevent a user from performing a refund. 
+     * @param {String} order_id The order id to unblock a refund on.
+     * @param {module:com.ultracart.admin.v2/OrderApi~unblockRefundOnOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    unblockRefundOnOrder(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling unblockRefundOnOrder");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/refund_unblock', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

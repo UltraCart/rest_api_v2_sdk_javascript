@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartUpsellAfter model module.
  * @module com.ultracart.admin.v2.models/CartUpsellAfter
- * @version 4.1.14
+ * @version 4.1.15
  */
 class CartUpsellAfter {
     /**
@@ -56,6 +56,12 @@ class CartUpsellAfter {
             if (data.hasOwnProperty('upsell_path_code')) {
                 obj['upsell_path_code'] = ApiClient.convertToType(data['upsell_path_code'], 'String');
             }
+            if (data.hasOwnProperty('upsell_path_name')) {
+                obj['upsell_path_name'] = ApiClient.convertToType(data['upsell_path_name'], 'String');
+            }
+            if (data.hasOwnProperty('upsell_path_variation')) {
+                obj['upsell_path_variation'] = ApiClient.convertToType(data['upsell_path_variation'], 'String');
+            }
         }
         return obj;
     }
@@ -76,10 +82,22 @@ CartUpsellAfter.prototype['finalize_after_dts'] = undefined;
 CartUpsellAfter.prototype['finalize_after_minutes'] = undefined;
 
 /**
- * Upsell path code
+ * Upsell path code (this is for legacy upsells only)
  * @member {String} upsell_path_code
  */
 CartUpsellAfter.prototype['upsell_path_code'] = undefined;
+
+/**
+ * Upsell path name to start on (StoreFront Upsells).  Will only be respected on a handoff API call.
+ * @member {String} upsell_path_name
+ */
+CartUpsellAfter.prototype['upsell_path_name'] = undefined;
+
+/**
+ * Upsell path variation to start on (StoreFront Upsells).   Will only be respected on a handoff API call.
+ * @member {String} upsell_path_variation
+ */
+CartUpsellAfter.prototype['upsell_path_variation'] = undefined;
 
 
 
