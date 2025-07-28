@@ -34,7 +34,7 @@
   /**
    * The Item model module.
    * @module com.ultracart.admin.v2.models/Item
-   * @version 3.11.14
+   * @version 3.11.15
    */
 
   /**
@@ -331,7 +331,7 @@
   exports.prototype.parent_category_id = undefined;
 
   /**
-   * Parent category path.  / indicates the root folder.
+   * Parent category path.  / indicates the root folder.  This is the folder structure within item management.
    * @member {String} parent_category_path
    */
   exports.prototype.parent_category_path = undefined;

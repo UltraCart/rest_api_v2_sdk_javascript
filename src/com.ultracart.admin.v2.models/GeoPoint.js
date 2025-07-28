@@ -34,7 +34,7 @@
   /**
    * The GeoPoint model module.
    * @module com.ultracart.admin.v2.models/GeoPoint
-   * @version 3.11.14
+   * @version 3.11.15
    */
 
   /**

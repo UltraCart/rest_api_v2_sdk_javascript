@@ -34,7 +34,7 @@
   /**
    * The ConversationVirtualAgentCapabilities model module.
    * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
-   * @version 3.11.14
+   * @version 3.11.15
    */
 
   /**
@@ -65,6 +65,10 @@
         obj.lookup_subscription_information = ApiClient.convertToType(data['lookup_subscription_information'], 'Boolean');
       if (data.hasOwnProperty('open_support_ticket'))
         obj.open_support_ticket = ApiClient.convertToType(data['open_support_ticket'], 'Boolean');
+      if (data.hasOwnProperty('open_support_ticket_channel'))
+        obj.open_support_ticket_channel = ApiClient.convertToType(data['open_support_ticket_channel'], 'String');
+      if (data.hasOwnProperty('open_support_ticket_channel_email'))
+        obj.open_support_ticket_channel_email = ApiClient.convertToType(data['open_support_ticket_channel_email'], 'String');
       if (data.hasOwnProperty('pause_subscription'))
         obj.pause_subscription = ApiClient.convertToType(data['pause_subscription'], 'Boolean');
       if (data.hasOwnProperty('resume_subscription'))
@@ -103,6 +107,18 @@
   exports.prototype.open_support_ticket = undefined;
 
   /**
+   * Channel to use to open the support ticket
+   * @member {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities.OpenSupportTicketChannelEnum} open_support_ticket_channel
+   */
+  exports.prototype.open_support_ticket_channel = undefined;
+
+  /**
+   * Email to send support ticket to
+   * @member {String} open_support_ticket_channel_email
+   */
+  exports.prototype.open_support_ticket_channel_email = undefined;
+
+  /**
    * @member {Boolean} pause_subscription
    */
   exports.prototype.pause_subscription = undefined;
@@ -121,6 +137,38 @@
    * @member {Boolean} update_subscription_credit_card
    */
   exports.prototype.update_subscription_credit_card = undefined;
+
+
+  /**
+   * Allowed values for the <code>open_support_ticket_channel</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.OpenSupportTicketChannelEnum = {
+    /**
+     * value: "none"
+     * @const
+     */
+    none: "none",
+
+    /**
+     * value: "email"
+     * @const
+     */
+    email: "email",
+
+    /**
+     * value: "UltraCart Task"
+     * @const
+     */
+    UltraCart_Task: "UltraCart Task",
+
+    /**
+     * value: "Zoho Desk Ticket"
+     * @const
+     */
+    Zoho_Desk_Ticket: "Zoho Desk Ticket"
+  };
 
   return exports;
 
