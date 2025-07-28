@@ -34,7 +34,7 @@
   /**
    * Webhook service.
    * @module com.ultracart.admin.v2/WebhookApi
-   * @version 3.11.15
+   * @version 3.11.16
    */
 
   /**
@@ -210,14 +210,6 @@
      * Retrieves the log summary information for a given webhook.  This is useful for displaying all the various logs that can be viewed. 
      * @param {Number} webhookOid The webhook oid to retrieve log summaries for.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.requestId 
-     * @param {String} opts.beginDate 
-     * @param {String} opts.endDate 
-     * @param {String} opts.status 
-     * @param {String} opts.event 
-     * @param {String} opts.orderId 
-     * @param {String} opts.request 
-     * @param {Number} opts.duration 
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts._since Fetch log summaries that have been delivered since this date/time.
@@ -238,14 +230,6 @@
         'webhookOid': webhookOid
       };
       var queryParams = {
-        'requestId': opts['requestId'],
-        'beginDate': opts['beginDate'],
-        'endDate': opts['endDate'],
-        'status': opts['status'],
-        'event': opts['event'],
-        'orderId': opts['orderId'],
-        'request': opts['request'],
-        'duration': opts['duration'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset'],
         '_since': opts['_since'],

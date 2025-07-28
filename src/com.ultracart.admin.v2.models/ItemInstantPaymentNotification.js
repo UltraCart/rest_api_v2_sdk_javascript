@@ -34,7 +34,7 @@
   /**
    * The ItemInstantPaymentNotification model module.
    * @module com.ultracart.admin.v2.models/ItemInstantPaymentNotification
-   * @version 3.11.15
+   * @version 3.11.16
    */
 
   /**

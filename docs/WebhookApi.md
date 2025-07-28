@@ -188,14 +188,6 @@ var apiInstance = new UltraCartRestApiV2.WebhookApi();
 var webhookOid = 56; // Number | The webhook oid to retrieve log summaries for.
 
 var opts = { 
-  'requestId': "requestId_example", // String | 
-  'beginDate': "beginDate_example", // String | 
-  'endDate': "endDate_example", // String | 
-  'status': "status_example", // String | 
-  'event': "event_example", // String | 
-  'orderId': "orderId_example", // String | 
-  'request': "request_example", // String | 
-  'duration': 56, // Number | 
   '_limit': 100, // Number | The maximum number of records to return on this one API call.
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_since': "_since_example" // String | Fetch log summaries that have been delivered since this date/time.
@@ -216,14 +208,6 @@ apiInstance.getWebhookLogSummaries(webhookOid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhookOid** | **Number**| The webhook oid to retrieve log summaries for. | 
- **requestId** | **String**|  | [optional] 
- **beginDate** | **String**|  | [optional] 
- **endDate** | **String**|  | [optional] 
- **status** | **String**|  | [optional] 
- **event** | **String**|  | [optional] 
- **orderId** | **String**|  | [optional] 
- **request** | **String**|  | [optional] 
- **duration** | **Number**|  | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **_since** | **String**| Fetch log summaries that have been delivered since this date/time. | [optional] 
