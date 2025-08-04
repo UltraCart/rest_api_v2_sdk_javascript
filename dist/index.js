@@ -2499,6 +2499,12 @@ Object.defineProperty(exports, "EmailEditorTokenResponse", {
     return _EmailEditorTokenResponse["default"];
   }
 });
+Object.defineProperty(exports, "EmailEditorValuesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _EmailEditorValuesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "EmailFlow", {
   enumerable: true,
   get: function get() {
@@ -5840,6 +5846,7 @@ var _EmailDashboardActivityResponse = _interopRequireDefault(require("./com.ultr
 var _EmailDashboardStatsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDashboardStatsResponse"));
 var _EmailDomain = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDomain"));
 var _EmailEditorTokenResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailEditorTokenResponse"));
+var _EmailEditorValuesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailEditorValuesResponse"));
 var _EmailFlow = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailFlow"));
 var _EmailFlowBackPopulateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest"));
 var _EmailFlowBackPopulateResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse"));

@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import CustomDashboardExecutionParameter from './CustomDashboardExecutionParameter';
 import CustomDashboardPage from './CustomDashboardPage';
 
 /**
  * The CustomDashboard model module.
  * @module com.ultracart.admin.v2.models/CustomDashboard
- * @version 4.1.18
+ * @version 4.1.19
  */
 class CustomDashboard {
     /**
@@ -60,6 +61,9 @@ class CustomDashboard {
             if (data.hasOwnProperty('pages')) {
                 obj['pages'] = ApiClient.convertToType(data['pages'], [CustomDashboardPage]);
             }
+            if (data.hasOwnProperty('parameters')) {
+                obj['parameters'] = ApiClient.convertToType(data['parameters'], [CustomDashboardExecutionParameter]);
+            }
         }
         return obj;
     }
@@ -86,6 +90,11 @@ CustomDashboard.prototype['name'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/CustomDashboardPage>} pages
  */
 CustomDashboard.prototype['pages'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/CustomDashboardExecutionParameter>} parameters
+ */
+CustomDashboard.prototype['parameters'] = undefined;
 
 
 

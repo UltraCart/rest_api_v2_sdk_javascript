@@ -48,6 +48,7 @@ var _EmailDashboardActivityResponse = _interopRequireDefault(require("../com.ult
 var _EmailDashboardStatsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailDashboardStatsResponse"));
 var _EmailDomain = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailDomain"));
 var _EmailEditorTokenResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailEditorTokenResponse"));
+var _EmailEditorValuesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailEditorValuesResponse"));
 var _EmailFlow = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailFlow"));
 var _EmailFlowBackPopulateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest"));
 var _EmailFlowBackPopulateResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse"));
@@ -172,7 +173,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.17
+* @version 4.1.18
 */
 var StorefrontApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -1751,6 +1752,41 @@ var StorefrontApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _EmailCommseqResponse["default"];
       return this.apiClient.callApi('/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailCommseqEditorValues operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqEditorValuesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailEditorValuesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get email merchant specific editor values
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqEditorValuesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailEditorValuesResponse}
+     */
+  }, {
+    key: "getEmailCommseqEditorValues",
+    value: function getEmailCommseqEditorValues(storefront_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqEditorValues");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _EmailEditorValuesResponse["default"];
+      return this.apiClient.callApi('/storefront/{storefront_oid}/email/commseqs/editorValues', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

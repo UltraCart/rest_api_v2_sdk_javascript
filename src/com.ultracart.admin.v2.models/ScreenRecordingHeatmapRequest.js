@@ -17,7 +17,7 @@ import ScreenRecordingFilterRangeDate from './ScreenRecordingFilterRangeDate';
 /**
  * The ScreenRecordingHeatmapRequest model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapRequest
- * @version 4.1.18
+ * @version 4.1.19
  */
 class ScreenRecordingHeatmapRequest {
     /**

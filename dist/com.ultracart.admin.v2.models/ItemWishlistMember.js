@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemWishlistMember model module.
  * @module com.ultracart.admin.v2.models/ItemWishlistMember
- * @version 4.1.17
+ * @version 4.1.18
  */
 var ItemWishlistMember = /*#__PURE__*/function () {
   /**

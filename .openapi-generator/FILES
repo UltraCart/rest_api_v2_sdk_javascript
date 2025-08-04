@@ -232,6 +232,7 @@ docs/ConversationVirtualAgentBudget.md
 docs/ConversationVirtualAgentBudgetResponse.md
 docs/ConversationVirtualAgentCapabilities.md
 docs/ConversationVirtualAgentCapabilitiesResponse.md
+docs/ConversationVirtualAgentCapabilityZohoDeskDepartment.md
 docs/ConversationWebchatContext.md
 docs/ConversationWebchatQueueStatus.md
 docs/ConversationWebchatQueueStatusAgent.md
@@ -314,6 +315,7 @@ docs/CouponsRequest.md
 docs/CouponsResponse.md
 docs/Currency.md
 docs/CustomDashboard.md
+docs/CustomDashboardExecutionParameter.md
 docs/CustomDashboardPage.md
 docs/CustomDashboardPageReport.md
 docs/CustomDashboardResponse.md
@@ -1135,6 +1137,7 @@ src/com.ultracart.admin.v2.models/ConversationVirtualAgentBudget.js
 src/com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse.js
 src/com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities.js
 src/com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse.js
+src/com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment.js
 src/com.ultracart.admin.v2.models/ConversationWebchatContext.js
 src/com.ultracart.admin.v2.models/ConversationWebchatQueueStatus.js
 src/com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent.js
@@ -1216,6 +1219,7 @@ src/com.ultracart.admin.v2.models/CouponsRequest.js
 src/com.ultracart.admin.v2.models/CouponsResponse.js
 src/com.ultracart.admin.v2.models/Currency.js
 src/com.ultracart.admin.v2.models/CustomDashboard.js
+src/com.ultracart.admin.v2.models/CustomDashboardExecutionParameter.js
 src/com.ultracart.admin.v2.models/CustomDashboardPage.js
 src/com.ultracart.admin.v2.models/CustomDashboardPageReport.js
 src/com.ultracart.admin.v2.models/CustomDashboardResponse.js

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomDashboardPageReport model module.
  * @module com.ultracart.admin.v2.models/CustomDashboardPageReport
- * @version 4.1.18
+ * @version 4.1.19
  */
 class CustomDashboardPageReport {
     /**

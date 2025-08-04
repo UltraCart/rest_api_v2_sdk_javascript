@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportExecutionParameter model module.
  * @module com.ultracart.admin.v2.models/CustomReportExecutionParameter
- * @version 4.1.18
+ * @version 4.1.19
  */
 class CustomReportExecutionParameter {
     /**
@@ -50,6 +50,9 @@ class CustomReportExecutionParameter {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('quick_pick_key')) {
+                obj['quick_pick_key'] = ApiClient.convertToType(data['quick_pick_key'], 'String');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -67,6 +70,11 @@ class CustomReportExecutionParameter {
  * @member {String} name
  */
 CustomReportExecutionParameter.prototype['name'] = undefined;
+
+/**
+ * @member {String} quick_pick_key
+ */
+CustomReportExecutionParameter.prototype['quick_pick_key'] = undefined;
 
 /**
  * @member {String} type

@@ -237,6 +237,7 @@ import ConversationVirtualAgentBudget from './com.ultracart.admin.v2.models/Conv
 import ConversationVirtualAgentBudgetResponse from './com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse';
 import ConversationVirtualAgentCapabilities from './com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities';
 import ConversationVirtualAgentCapabilitiesResponse from './com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse';
+import ConversationVirtualAgentCapabilityZohoDeskDepartment from './com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment';
 import ConversationWebchatContext from './com.ultracart.admin.v2.models/ConversationWebchatContext';
 import ConversationWebchatQueueStatus from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatus';
 import ConversationWebchatQueueStatusAgent from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent';
@@ -318,6 +319,7 @@ import CouponsRequest from './com.ultracart.admin.v2.models/CouponsRequest';
 import CouponsResponse from './com.ultracart.admin.v2.models/CouponsResponse';
 import Currency from './com.ultracart.admin.v2.models/Currency';
 import CustomDashboard from './com.ultracart.admin.v2.models/CustomDashboard';
+import CustomDashboardExecutionParameter from './com.ultracart.admin.v2.models/CustomDashboardExecutionParameter';
 import CustomDashboardPage from './com.ultracart.admin.v2.models/CustomDashboardPage';
 import CustomDashboardPageReport from './com.ultracart.admin.v2.models/CustomDashboardPageReport';
 import CustomDashboardResponse from './com.ultracart.admin.v2.models/CustomDashboardResponse';
@@ -949,7 +951,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.18
+* @version 4.1.19
 */
 export {
     /**
@@ -2303,6 +2305,12 @@ export {
     ConversationVirtualAgentCapabilitiesResponse,
 
     /**
+     * The ConversationVirtualAgentCapabilityZohoDeskDepartment model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment}
+     */
+    ConversationVirtualAgentCapabilityZohoDeskDepartment,
+
+    /**
      * The ConversationWebchatContext model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationWebchatContext}
      */
@@ -2787,6 +2795,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomDashboard}
      */
     CustomDashboard,
+
+    /**
+     * The CustomDashboardExecutionParameter model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardExecutionParameter}
+     */
+    CustomDashboardExecutionParameter,
 
     /**
      * The CustomDashboardPage model constructor.
