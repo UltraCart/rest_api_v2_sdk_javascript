@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailWebhookEditorValuesResponse model module.
  * @module com.ultracart.admin.v2.models/EmailWebhookEditorValuesResponse
- * @version 4.1.17
+ * @version 4.1.18
  */
 class EmailWebhookEditorValuesResponse {
     /**
@@ -59,9 +59,6 @@ class EmailWebhookEditorValuesResponse {
             if (data.hasOwnProperty('error')) {
                 obj['error'] = Error.constructFromObject(data['error']);
             }
-            if (data.hasOwnProperty('loyalty_tiers')) {
-                obj['loyalty_tiers'] = ApiClient.convertToType(data['loyalty_tiers'], ['String']);
-            }
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
             }
@@ -95,11 +92,6 @@ EmailWebhookEditorValuesResponse.prototype['available_tokens'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/Error} error
  */
 EmailWebhookEditorValuesResponse.prototype['error'] = undefined;
-
-/**
- * @member {Array.<String>} loyalty_tiers
- */
-EmailWebhookEditorValuesResponse.prototype['loyalty_tiers'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata

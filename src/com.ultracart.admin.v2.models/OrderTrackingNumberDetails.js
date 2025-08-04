@@ -17,7 +17,7 @@ import OrderTrackingNumberDetail from './OrderTrackingNumberDetail';
 /**
  * The OrderTrackingNumberDetails model module.
  * @module com.ultracart.admin.v2.models/OrderTrackingNumberDetails
- * @version 4.1.17
+ * @version 4.1.18
  */
 class OrderTrackingNumberDetails {
     /**

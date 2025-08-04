@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingPageViewDataResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewDataResponse
- * @version 4.1.16
+ * @version 4.1.17
  */
 var ScreenRecordingPageViewDataResponse = /*#__PURE__*/function () {
   /**

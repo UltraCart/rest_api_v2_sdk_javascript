@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAutocompleteResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAutocompleteResponse
- * @version 4.1.16
+ * @version 4.1.17
  */
 var ConversationAutocompleteResponse = /*#__PURE__*/function () {
   /**

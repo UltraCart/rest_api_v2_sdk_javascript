@@ -17,7 +17,7 @@ import AutoOrder from './AutoOrder';
 /**
  * The AutoOrdersRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrdersRequest
- * @version 4.1.17
+ * @version 4.1.18
  */
 class AutoOrdersRequest {
     /**

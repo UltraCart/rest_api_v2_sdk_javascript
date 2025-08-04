@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationEventReadMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationEventReadMessage
- * @version 4.1.16
+ * @version 4.1.17
  */
 var ConversationEventReadMessage = /*#__PURE__*/function () {
   /**

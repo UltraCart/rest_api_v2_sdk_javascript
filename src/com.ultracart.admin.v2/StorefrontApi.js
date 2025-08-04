@@ -56,6 +56,7 @@ import EmailDashboardActivityResponse from '../com.ultracart.admin.v2.models/Ema
 import EmailDashboardStatsResponse from '../com.ultracart.admin.v2.models/EmailDashboardStatsResponse';
 import EmailDomain from '../com.ultracart.admin.v2.models/EmailDomain';
 import EmailEditorTokenResponse from '../com.ultracart.admin.v2.models/EmailEditorTokenResponse';
+import EmailEditorValuesResponse from '../com.ultracart.admin.v2.models/EmailEditorValuesResponse';
 import EmailFlow from '../com.ultracart.admin.v2.models/EmailFlow';
 import EmailFlowBackPopulateRequest from '../com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest';
 import EmailFlowBackPopulateResponse from '../com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse';
@@ -163,7 +164,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.17
+* @version 4.1.18
 */
 export default class StorefrontApi {
 
@@ -2020,6 +2021,48 @@ export default class StorefrontApi {
       let returnType = EmailCommseqResponse;
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailCommseqEditorValues operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqEditorValuesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailEditorValuesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get email merchant specific editor values
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCommseqEditorValuesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailEditorValuesResponse}
+     */
+    getEmailCommseqEditorValues(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCommseqEditorValues");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EmailEditorValuesResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/commseqs/editorValues', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

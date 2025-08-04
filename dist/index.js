@@ -1875,6 +1875,36 @@ Object.defineProperty(exports, "Currency", {
     return _Currency["default"];
   }
 });
+Object.defineProperty(exports, "CustomDashboard", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboard["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardPage", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardPage["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardPageReport", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardPageReport["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardResponse["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "CustomReport", {
   enumerable: true,
   get: function get() {
@@ -1905,6 +1935,12 @@ Object.defineProperty(exports, "CustomReportExecutionRequest", {
     return _CustomReportExecutionRequest["default"];
   }
 });
+Object.defineProperty(exports, "CustomReportExecutionResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportExecutionResponse["default"];
+  }
+});
 Object.defineProperty(exports, "CustomReportParameter", {
   enumerable: true,
   get: function get() {
@@ -1933,6 +1969,24 @@ Object.defineProperty(exports, "CustomReportTooltip", {
   enumerable: true,
   get: function get() {
     return _CustomReportTooltip["default"];
+  }
+});
+Object.defineProperty(exports, "CustomReportsExecutionReportData", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportsExecutionReportData["default"];
+  }
+});
+Object.defineProperty(exports, "CustomReportsExecutionRequest", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportsExecutionRequest["default"];
+  }
+});
+Object.defineProperty(exports, "CustomReportsExecutionResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportsExecutionResponse["default"];
   }
 });
 Object.defineProperty(exports, "CustomReportsResponse", {
@@ -5684,16 +5738,25 @@ var _CouponType = _interopRequireDefault(require("./com.ultracart.admin.v2.model
 var _CouponsRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponsRequest"));
 var _CouponsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponsResponse"));
 var _Currency = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Currency"));
+var _CustomDashboard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboard"));
+var _CustomDashboardPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardPage"));
+var _CustomDashboardPageReport = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardPageReport"));
+var _CustomDashboardResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardResponse"));
+var _CustomDashboardsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardsResponse"));
 var _CustomReport = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReport"));
 var _CustomReportAccountConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportAccountConfig"));
 var _CustomReportAccountConfigResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportAccountConfigResponse"));
 var _CustomReportExecutionParameter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportExecutionParameter"));
 var _CustomReportExecutionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportExecutionRequest"));
+var _CustomReportExecutionResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportExecutionResponse"));
 var _CustomReportParameter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportParameter"));
 var _CustomReportParameterOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportParameterOption"));
 var _CustomReportQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportQuery"));
 var _CustomReportResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportResponse"));
 var _CustomReportTooltip = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportTooltip"));
+var _CustomReportsExecutionReportData = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsExecutionReportData"));
+var _CustomReportsExecutionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsExecutionRequest"));
+var _CustomReportsExecutionResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsExecutionResponse"));
 var _CustomReportsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsResponse"));
 var _Customer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Customer"));
 var _CustomerActivity = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerActivity"));

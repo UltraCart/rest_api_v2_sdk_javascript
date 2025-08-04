@@ -44,6 +44,7 @@ Method | HTTP request | Description
 [**getEmailCampaigns**](StorefrontApi.md#getEmailCampaigns) | **GET** /storefront/{storefront_oid}/email/campaigns | Get email campaigns
 [**getEmailCampaignsWithStats**](StorefrontApi.md#getEmailCampaignsWithStats) | **GET** /storefront/{storefront_oid}/email/campaignsWithStats/{stat_days} | Get email campaigns with stats
 [**getEmailCommseq**](StorefrontApi.md#getEmailCommseq) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid} | Get email commseq
+[**getEmailCommseqEditorValues**](StorefrontApi.md#getEmailCommseqEditorValues) | **GET** /storefront/{storefront_oid}/email/commseqs/editorValues | Get email merchant specific editor values
 [**getEmailCommseqEmailStats**](StorefrontApi.md#getEmailCommseqEmailStats) | **POST** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/emailStats | Get email communication sequence emails stats
 [**getEmailCommseqPostcardStats**](StorefrontApi.md#getEmailCommseqPostcardStats) | **POST** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/postcardStats | Get email communication sequence postcard stats
 [**getEmailCommseqPostcardTracking**](StorefrontApi.md#getEmailCommseqPostcardTracking) | **GET** /storefront/{storefront_oid}/email/postcards/{commseq_postcard_uuid}/tracking | Get email communication postcard tracking
@@ -2374,6 +2375,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailCommseqResponse**](EmailCommseqResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getEmailCommseqEditorValues
+
+> EmailEditorValuesResponse getEmailCommseqEditorValues(storefront_oid)
+
+Get email merchant specific editor values
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getEmailCommseqEditorValues -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.StorefrontApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let storefront_oid = 56; // Number | 
+apiInstance.getEmailCommseqEditorValues(storefront_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getEmailCommseqEditorValues -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+
+### Return type
+
+[**EmailEditorValuesResponse**](EmailEditorValuesResponse.md)
 
 ### Authorization
 

@@ -417,6 +417,7 @@ docs/EmailDashboardActivityResponse.md
 docs/EmailDashboardStatsResponse.md
 docs/EmailDomain.md
 docs/EmailEditorTokenResponse.md
+docs/EmailEditorValuesResponse.md
 docs/EmailFlow.md
 docs/EmailFlowBackPopulateRequest.md
 docs/EmailFlowBackPopulateResponse.md
@@ -1316,6 +1317,7 @@ src/com.ultracart.admin.v2.models/EmailDashboardActivityResponse.js
 src/com.ultracart.admin.v2.models/EmailDashboardStatsResponse.js
 src/com.ultracart.admin.v2.models/EmailDomain.js
 src/com.ultracart.admin.v2.models/EmailEditorTokenResponse.js
+src/com.ultracart.admin.v2.models/EmailEditorValuesResponse.js
 src/com.ultracart.admin.v2.models/EmailFlow.js
 src/com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest.js
 src/com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse.js

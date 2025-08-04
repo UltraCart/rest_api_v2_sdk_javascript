@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationWebchatQueueStatusesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse
- * @version 4.1.16
+ * @version 4.1.17
  */
 var ConversationWebchatQueueStatusesResponse = /*#__PURE__*/function () {
   /**

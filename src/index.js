@@ -419,6 +419,7 @@ import EmailDashboardActivityResponse from './com.ultracart.admin.v2.models/Emai
 import EmailDashboardStatsResponse from './com.ultracart.admin.v2.models/EmailDashboardStatsResponse';
 import EmailDomain from './com.ultracart.admin.v2.models/EmailDomain';
 import EmailEditorTokenResponse from './com.ultracart.admin.v2.models/EmailEditorTokenResponse';
+import EmailEditorValuesResponse from './com.ultracart.admin.v2.models/EmailEditorValuesResponse';
 import EmailFlow from './com.ultracart.admin.v2.models/EmailFlow';
 import EmailFlowBackPopulateRequest from './com.ultracart.admin.v2.models/EmailFlowBackPopulateRequest';
 import EmailFlowBackPopulateResponse from './com.ultracart.admin.v2.models/EmailFlowBackPopulateResponse';
@@ -948,7 +949,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.17
+* @version 4.1.18
 */
 export {
     /**
@@ -3392,6 +3393,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/EmailEditorTokenResponse}
      */
     EmailEditorTokenResponse,
+
+    /**
+     * The EmailEditorValuesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailEditorValuesResponse}
+     */
+    EmailEditorValuesResponse,
 
     /**
      * The EmailFlow model constructor.

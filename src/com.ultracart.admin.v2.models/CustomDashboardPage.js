@@ -17,7 +17,7 @@ import CustomDashboardPageReport from './CustomDashboardPageReport';
 /**
  * The CustomDashboardPage model module.
  * @module com.ultracart.admin.v2.models/CustomDashboardPage
- * @version 4.1.17
+ * @version 4.1.18
  */
 class CustomDashboardPage {
     /**

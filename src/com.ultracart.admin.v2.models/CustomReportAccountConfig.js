@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportAccountConfig model module.
  * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
- * @version 4.1.17
+ * @version 4.1.18
  */
 class CustomReportAccountConfig {
     /**
