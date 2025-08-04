@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCustomerSnapshotRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest
-   * @version 3.11.16
+   * @version 3.11.17
    */
 
   /**
