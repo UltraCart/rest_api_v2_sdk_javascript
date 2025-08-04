@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationSearchRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationSearchRequest
- * @version 4.1.15
+ * @version 4.1.16
  */
 var ConversationSearchRequest = /*#__PURE__*/function () {
   /**

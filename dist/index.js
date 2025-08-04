@@ -1935,6 +1935,12 @@ Object.defineProperty(exports, "CustomReportTooltip", {
     return _CustomReportTooltip["default"];
   }
 });
+Object.defineProperty(exports, "CustomReportsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "Customer", {
   enumerable: true,
   get: function get() {
@@ -5688,6 +5694,7 @@ var _CustomReportParameterOption = _interopRequireDefault(require("./com.ultraca
 var _CustomReportQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportQuery"));
 var _CustomReportResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportResponse"));
 var _CustomReportTooltip = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportTooltip"));
+var _CustomReportsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsResponse"));
 var _Customer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Customer"));
 var _CustomerActivity = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerActivity"));
 var _CustomerAffiliate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerAffiliate"));

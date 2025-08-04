@@ -317,16 +317,25 @@ import CouponType from './com.ultracart.admin.v2.models/CouponType';
 import CouponsRequest from './com.ultracart.admin.v2.models/CouponsRequest';
 import CouponsResponse from './com.ultracart.admin.v2.models/CouponsResponse';
 import Currency from './com.ultracart.admin.v2.models/Currency';
+import CustomDashboard from './com.ultracart.admin.v2.models/CustomDashboard';
+import CustomDashboardPage from './com.ultracart.admin.v2.models/CustomDashboardPage';
+import CustomDashboardPageReport from './com.ultracart.admin.v2.models/CustomDashboardPageReport';
+import CustomDashboardResponse from './com.ultracart.admin.v2.models/CustomDashboardResponse';
+import CustomDashboardsResponse from './com.ultracart.admin.v2.models/CustomDashboardsResponse';
 import CustomReport from './com.ultracart.admin.v2.models/CustomReport';
 import CustomReportAccountConfig from './com.ultracart.admin.v2.models/CustomReportAccountConfig';
 import CustomReportAccountConfigResponse from './com.ultracart.admin.v2.models/CustomReportAccountConfigResponse';
 import CustomReportExecutionParameter from './com.ultracart.admin.v2.models/CustomReportExecutionParameter';
 import CustomReportExecutionRequest from './com.ultracart.admin.v2.models/CustomReportExecutionRequest';
+import CustomReportExecutionResponse from './com.ultracart.admin.v2.models/CustomReportExecutionResponse';
 import CustomReportParameter from './com.ultracart.admin.v2.models/CustomReportParameter';
 import CustomReportParameterOption from './com.ultracart.admin.v2.models/CustomReportParameterOption';
 import CustomReportQuery from './com.ultracart.admin.v2.models/CustomReportQuery';
 import CustomReportResponse from './com.ultracart.admin.v2.models/CustomReportResponse';
 import CustomReportTooltip from './com.ultracart.admin.v2.models/CustomReportTooltip';
+import CustomReportsExecutionReportData from './com.ultracart.admin.v2.models/CustomReportsExecutionReportData';
+import CustomReportsExecutionRequest from './com.ultracart.admin.v2.models/CustomReportsExecutionRequest';
+import CustomReportsExecutionResponse from './com.ultracart.admin.v2.models/CustomReportsExecutionResponse';
 import CustomReportsResponse from './com.ultracart.admin.v2.models/CustomReportsResponse';
 import Customer from './com.ultracart.admin.v2.models/Customer';
 import CustomerActivity from './com.ultracart.admin.v2.models/CustomerActivity';
@@ -939,7 +948,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.16
+* @version 4.1.17
 */
 export {
     /**
@@ -2773,6 +2782,36 @@ export {
     Currency,
 
     /**
+     * The CustomDashboard model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboard}
+     */
+    CustomDashboard,
+
+    /**
+     * The CustomDashboardPage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardPage}
+     */
+    CustomDashboardPage,
+
+    /**
+     * The CustomDashboardPageReport model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardPageReport}
+     */
+    CustomDashboardPageReport,
+
+    /**
+     * The CustomDashboardResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardResponse}
+     */
+    CustomDashboardResponse,
+
+    /**
+     * The CustomDashboardsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardsResponse}
+     */
+    CustomDashboardsResponse,
+
+    /**
      * The CustomReport model constructor.
      * @property {module:com.ultracart.admin.v2.models/CustomReport}
      */
@@ -2803,6 +2842,12 @@ export {
     CustomReportExecutionRequest,
 
     /**
+     * The CustomReportExecutionResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportExecutionResponse}
+     */
+    CustomReportExecutionResponse,
+
+    /**
      * The CustomReportParameter model constructor.
      * @property {module:com.ultracart.admin.v2.models/CustomReportParameter}
      */
@@ -2831,6 +2876,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomReportTooltip}
      */
     CustomReportTooltip,
+
+    /**
+     * The CustomReportsExecutionReportData model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportsExecutionReportData}
+     */
+    CustomReportsExecutionReportData,
+
+    /**
+     * The CustomReportsExecutionRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportsExecutionRequest}
+     */
+    CustomReportsExecutionRequest,
+
+    /**
+     * The CustomReportsExecutionResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportsExecutionResponse}
+     */
+    CustomReportsExecutionResponse,
 
     /**
      * The CustomReportsResponse model constructor.

@@ -13,11 +13,17 @@
 
 
 import ApiClient from "../ApiClient";
+import CustomDashboard from '../com.ultracart.admin.v2.models/CustomDashboard';
+import CustomDashboardResponse from '../com.ultracart.admin.v2.models/CustomDashboardResponse';
+import CustomDashboardsResponse from '../com.ultracart.admin.v2.models/CustomDashboardsResponse';
 import CustomReport from '../com.ultracart.admin.v2.models/CustomReport';
 import CustomReportAccountConfig from '../com.ultracart.admin.v2.models/CustomReportAccountConfig';
 import CustomReportAccountConfigResponse from '../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse';
 import CustomReportExecutionRequest from '../com.ultracart.admin.v2.models/CustomReportExecutionRequest';
+import CustomReportExecutionResponse from '../com.ultracart.admin.v2.models/CustomReportExecutionResponse';
 import CustomReportResponse from '../com.ultracart.admin.v2.models/CustomReportResponse';
+import CustomReportsExecutionRequest from '../com.ultracart.admin.v2.models/CustomReportsExecutionRequest';
+import CustomReportsExecutionResponse from '../com.ultracart.admin.v2.models/CustomReportsExecutionResponse';
 import CustomReportsResponse from '../com.ultracart.admin.v2.models/CustomReportsResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Report from '../com.ultracart.admin.v2.models/Report';
@@ -33,7 +39,7 @@ import ReportsResponse from '../com.ultracart.admin.v2.models/ReportsResponse';
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.1.16
+* @version 4.1.17
 */
 export default class DatawarehouseApi {
 
@@ -48,6 +54,48 @@ export default class DatawarehouseApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the deleteCustomDashboard operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomDashboardCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a custom dashboard
+     * Delete a custom dashboard on the UltraCart account. 
+     * @param {Number} custom_dashboard_oid The dashboard oid to delete.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomDashboardCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteCustomDashboard(custom_dashboard_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling deleteCustomDashboard");
+      }
+
+      let pathParams = {
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteCustomReport operation.
@@ -179,7 +227,7 @@ export default class DatawarehouseApi {
      * Callback function to receive the result of the executeCustomReport operation.
      * @callback module:com.ultracart.admin.v2/DatawarehouseApi~executeCustomReportCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CustomReportResponse} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportExecutionResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -189,7 +237,7 @@ export default class DatawarehouseApi {
      * @param {Number} custom_report_oid The report oid to execute.
      * @param {module:com.ultracart.admin.v2.models/CustomReportExecutionRequest} execution_request Request to execute custom report
      * @param {module:com.ultracart.admin.v2/DatawarehouseApi~executeCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportResponse}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportExecutionResponse}
      */
     executeCustomReport(custom_report_oid, execution_request, callback) {
       let postBody = execution_request;
@@ -215,9 +263,51 @@ export default class DatawarehouseApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = ['application/json; charset=UTF-8'];
       let accepts = ['application/json'];
-      let returnType = CustomReportResponse;
+      let returnType = CustomReportExecutionResponse;
       return this.apiClient.callApi(
         '/datawarehouse/custom_reports/{custom_report_oid}/execute', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the executeCustomReports operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~executeCustomReportsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportsExecutionResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Execute a custom reports
+     * Execute a custom reports on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/CustomReportsExecutionRequest} execution_request Request to execute custom reports
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~executeCustomReportsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportsExecutionResponse}
+     */
+    executeCustomReports(execution_request, callback) {
+      let postBody = execution_request;
+      // verify the required parameter 'execution_request' is set
+      if (execution_request === undefined || execution_request === null) {
+        throw new Error("Missing the required parameter 'execution_request' when calling executeCustomReports");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomReportsExecutionResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/execute', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -259,6 +349,86 @@ export default class DatawarehouseApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/datawarehouse/reports/execute', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomDashboard operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a custom dashboard
+     * Retrieve a custom dashboard 
+     * @param {Number} custom_dashboard_oid 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardResponse}
+     */
+    getCustomDashboard(custom_dashboard_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling getCustomDashboard");
+      }
+
+      let pathParams = {
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomDashboardResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomDashboards operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get custom dashboards
+     * Retrieve a custom dashboards 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardsResponse}
+     */
+    getCustomDashboards(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomDashboardsResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -591,6 +761,48 @@ export default class DatawarehouseApi {
     }
 
     /**
+     * Callback function to receive the result of the insertCustomDashboard operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomDashboardCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a custom dashboard
+     * Create a new custom dashboard on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboard} dashboard Dashboard to create
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomDashboardCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardResponse}
+     */
+    insertCustomDashboard(dashboard, callback) {
+      let postBody = dashboard;
+      // verify the required parameter 'dashboard' is set
+      if (dashboard === undefined || dashboard === null) {
+        throw new Error("Missing the required parameter 'dashboard' when calling insertCustomDashboard");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomDashboardResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertCustomReport operation.
      * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomReportCallback
      * @param {String} error Error message, if any.
@@ -669,6 +881,54 @@ export default class DatawarehouseApi {
       let returnType = ReportResponse;
       return this.apiClient.callApi(
         '/datawarehouse/reports', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomDashboard operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomDashboardCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a custom dashboard
+     * Update a custom dashboard on the UltraCart account. 
+     * @param {Number} custom_dashboard_oid The dashboard oid to custom update.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboard} dashboard Dashboard to custom update
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomDashboardCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardResponse}
+     */
+    updateCustomDashboard(custom_dashboard_oid, dashboard, callback) {
+      let postBody = dashboard;
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling updateCustomDashboard");
+      }
+      // verify the required parameter 'dashboard' is set
+      if (dashboard === undefined || dashboard === null) {
+        throw new Error("Missing the required parameter 'dashboard' when calling updateCustomDashboard");
+      }
+
+      let pathParams = {
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomDashboardResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

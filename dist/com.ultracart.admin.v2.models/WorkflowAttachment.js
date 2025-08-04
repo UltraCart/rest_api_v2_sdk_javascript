@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WorkflowAttachment model module.
  * @module com.ultracart.admin.v2.models/WorkflowAttachment
- * @version 4.1.15
+ * @version 4.1.16
  */
 var WorkflowAttachment = /*#__PURE__*/function () {
   /**

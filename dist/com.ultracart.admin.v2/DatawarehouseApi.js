@@ -10,6 +10,7 @@ var _CustomReportAccountConfig = _interopRequireDefault(require("../com.ultracar
 var _CustomReportAccountConfigResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse"));
 var _CustomReportExecutionRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomReportExecutionRequest"));
 var _CustomReportResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomReportResponse"));
+var _CustomReportsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomReportsResponse"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
 var _Report = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Report"));
 var _ReportAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ReportAuthResponse"));
@@ -41,7 +42,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.1.15
+* @version 4.1.16
 */
 var DatawarehouseApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -297,6 +298,35 @@ var DatawarehouseApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _CustomReportAccountConfigResponse["default"];
       return this.apiClient.callApi('/datawarehouse/custom_reports/account_config', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomReports operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get custom reports
+     * Retrieve a custom reports 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportsResponse}
+     */
+  }, {
+    key: "getCustomReports",
+    value: function getCustomReports(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _CustomReportsResponse["default"];
+      return this.apiClient.callApi('/datawarehouse/custom_reports', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

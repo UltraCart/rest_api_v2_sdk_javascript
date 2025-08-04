@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartSettingsTaxes model module.
  * @module com.ultracart.admin.v2.models/CartSettingsTaxes
- * @version 4.1.15
+ * @version 4.1.16
  */
 var CartSettingsTaxes = /*#__PURE__*/function () {
   /**
