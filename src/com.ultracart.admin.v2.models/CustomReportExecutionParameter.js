@@ -34,7 +34,7 @@
   /**
    * The CustomReportExecutionParameter model module.
    * @module com.ultracart.admin.v2.models/CustomReportExecutionParameter
-   * @version 3.11.18
+   * @version 3.11.19
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('quick_pick_key'))
+        obj.quick_pick_key = ApiClient.convertToType(data['quick_pick_key'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('value'))
@@ -69,6 +71,11 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * @member {String} quick_pick_key
+   */
+  exports.prototype.quick_pick_key = undefined;
 
   /**
    * @member {String} type

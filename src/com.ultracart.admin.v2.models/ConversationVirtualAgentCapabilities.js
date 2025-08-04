@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationVirtualAgentCapabilityZohoDeskDepartment'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationVirtualAgentCapabilities = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ConversationVirtualAgentCapabilities = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationVirtualAgentCapabilityZohoDeskDepartment);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ConversationVirtualAgentCapabilityZohoDeskDepartment) {
   'use strict';
 
   /**
    * The ConversationVirtualAgentCapabilities model module.
    * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
-   * @version 3.11.18
+   * @version 3.11.19
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.open_support_ticket_channel = ApiClient.convertToType(data['open_support_ticket_channel'], 'String');
       if (data.hasOwnProperty('open_support_ticket_channel_email'))
         obj.open_support_ticket_channel_email = ApiClient.convertToType(data['open_support_ticket_channel_email'], 'String');
+      if (data.hasOwnProperty('open_support_ticket_zoho_desk_department_id'))
+        obj.open_support_ticket_zoho_desk_department_id = ApiClient.convertToType(data['open_support_ticket_zoho_desk_department_id'], 'String');
       if (data.hasOwnProperty('pause_subscription'))
         obj.pause_subscription = ApiClient.convertToType(data['pause_subscription'], 'Boolean');
       if (data.hasOwnProperty('resume_subscription'))
@@ -77,6 +79,10 @@
         obj.transfer_chat_to_live_agent = ApiClient.convertToType(data['transfer_chat_to_live_agent'], 'Boolean');
       if (data.hasOwnProperty('update_subscription_credit_card'))
         obj.update_subscription_credit_card = ApiClient.convertToType(data['update_subscription_credit_card'], 'Boolean');
+      if (data.hasOwnProperty('zoho_desk_available'))
+        obj.zoho_desk_available = ApiClient.convertToType(data['zoho_desk_available'], 'Boolean');
+      if (data.hasOwnProperty('zoho_desk_departments'))
+        obj.zoho_desk_departments = ApiClient.convertToType(data['zoho_desk_departments'], [ConversationVirtualAgentCapabilityZohoDeskDepartment]);
     }
     return obj;
   }
@@ -119,6 +125,12 @@
   exports.prototype.open_support_ticket_channel_email = undefined;
 
   /**
+   * Department ID to open a Zoho Desk ticket for
+   * @member {String} open_support_ticket_zoho_desk_department_id
+   */
+  exports.prototype.open_support_ticket_zoho_desk_department_id = undefined;
+
+  /**
    * @member {Boolean} pause_subscription
    */
   exports.prototype.pause_subscription = undefined;
@@ -137,6 +149,18 @@
    * @member {Boolean} update_subscription_credit_card
    */
   exports.prototype.update_subscription_credit_card = undefined;
+
+  /**
+   * True if Zoho Desk is connected to UltraCart
+   * @member {Boolean} zoho_desk_available
+   */
+  exports.prototype.zoho_desk_available = undefined;
+
+  /**
+   * Array of Zoho Desk Department if zoho desk is connected to UltraCart
+   * @member {Array.<module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment>} zoho_desk_departments
+   */
+  exports.prototype.zoho_desk_departments = undefined;
 
 
   /**
@@ -158,16 +182,16 @@
     email: "email",
 
     /**
-     * value: "UltraCart Task"
+     * value: "ultracart_task"
      * @const
      */
-    UltraCart_Task: "UltraCart Task",
+    ultracart_task: "ultracart_task",
 
     /**
-     * value: "Zoho Desk Ticket"
+     * value: "zoho_desk_ticket"
      * @const
      */
-    Zoho_Desk_Ticket: "Zoho Desk Ticket"
+    zoho_desk_ticket: "zoho_desk_ticket"
   };
 
   return exports;

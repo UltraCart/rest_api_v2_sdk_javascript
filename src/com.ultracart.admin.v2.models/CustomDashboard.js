@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomDashboardPage'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomDashboardExecutionParameter', 'com.ultracart.admin.v2.models/CustomDashboardPage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CustomDashboardPage'));
+    module.exports = factory(require('../ApiClient'), require('./CustomDashboardExecutionParameter'), require('./CustomDashboardPage'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomDashboard = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomDashboardPage);
+    root.UltraCartRestApiV2.CustomDashboard = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomDashboardExecutionParameter, root.UltraCartRestApiV2.CustomDashboardPage);
   }
-}(this, function(ApiClient, CustomDashboardPage) {
+}(this, function(ApiClient, CustomDashboardExecutionParameter, CustomDashboardPage) {
   'use strict';
 
   /**
    * The CustomDashboard model module.
    * @module com.ultracart.admin.v2.models/CustomDashboard
-   * @version 3.11.18
+   * @version 3.11.19
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('pages'))
         obj.pages = ApiClient.convertToType(data['pages'], [CustomDashboardPage]);
+      if (data.hasOwnProperty('parameters'))
+        obj.parameters = ApiClient.convertToType(data['parameters'], [CustomDashboardExecutionParameter]);
     }
     return obj;
   }
@@ -86,6 +88,11 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/CustomDashboardPage>} pages
    */
   exports.prototype.pages = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomDashboardExecutionParameter>} parameters
+   */
+  exports.prototype.parameters = undefined;
 
   return exports;
 

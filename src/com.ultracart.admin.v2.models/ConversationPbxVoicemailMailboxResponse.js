@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxVoicemailMailboxResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse
-   * @version 3.11.18
+   * @version 3.11.19
    */
 
   /**
