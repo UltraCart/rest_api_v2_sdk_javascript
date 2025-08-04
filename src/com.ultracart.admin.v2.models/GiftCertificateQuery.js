@@ -34,7 +34,7 @@
   /**
    * The GiftCertificateQuery model module.
    * @module com.ultracart.admin.v2.models/GiftCertificateQuery
-   * @version 3.11.17
+   * @version 3.11.18
    */
 
   /**

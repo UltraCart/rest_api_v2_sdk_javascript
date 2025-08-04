@@ -34,7 +34,7 @@
   /**
    * The BrowserDevice model module.
    * @module com.ultracart.admin.v2.models/BrowserDevice
-   * @version 3.11.17
+   * @version 3.11.18
    */
 
   /**

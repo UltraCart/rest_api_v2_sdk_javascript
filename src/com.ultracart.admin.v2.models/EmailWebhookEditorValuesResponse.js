@@ -34,7 +34,7 @@
   /**
    * The EmailWebhookEditorValuesResponse model module.
    * @module com.ultracart.admin.v2.models/EmailWebhookEditorValuesResponse
-   * @version 3.11.17
+   * @version 3.11.18
    */
 
   /**
@@ -61,8 +61,6 @@
         obj.available_tokens = ApiClient.convertToType(data['available_tokens'], ['String']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
-      if (data.hasOwnProperty('loyalty_tiers'))
-        obj.loyalty_tiers = ApiClient.convertToType(data['loyalty_tiers'], ['String']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
       if (data.hasOwnProperty('rest_object_type'))
@@ -89,11 +87,6 @@
    * @member {module:com.ultracart.admin.v2.models/Error} error
    */
   exports.prototype.error = undefined;
-
-  /**
-   * @member {Array.<String>} loyalty_tiers
-   */
-  exports.prototype.loyalty_tiers = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
