@@ -34,7 +34,7 @@
   /**
    * The ItemShippingDistributionCenter model module.
    * @module com.ultracart.admin.v2.models/ItemShippingDistributionCenter
-   * @version 3.11.19
+   * @version 3.11.20
    */
 
   /**

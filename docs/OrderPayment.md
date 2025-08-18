@@ -51,6 +51,10 @@ Name | Type | Description | Notes
 
 * `Google_Shopping` (value: `"Google Shopping"`)
 
+* `Goldbelly` (value: `"Goldbelly"`)
+
+* `GoHighLevel` (value: `"GoHighLevel"`)
+
 * `Insurance` (value: `"Insurance"`)
 
 * `Link` (value: `"Link"`)

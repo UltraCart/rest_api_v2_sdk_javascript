@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.11.19
+   * @version 3.11.20
    */
 
   /**
@@ -283,6 +283,18 @@
      * @const
      */
     Google_Shopping: "Google Shopping",
+
+    /**
+     * value: "Goldbelly"
+     * @const
+     */
+    Goldbelly: "Goldbelly",
+
+    /**
+     * value: "GoHighLevel"
+     * @const
+     */
+    GoHighLevel: "GoHighLevel",
 
     /**
      * value: "Insurance"

@@ -17,50 +17,50 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ChargebackDispute', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomDashboardSchedule', 'com.ultracart.admin.v2.models/Error', 'com.ultracart.admin.v2.models/ResponseMetadata', 'com.ultracart.admin.v2.models/Warning'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ChargebackDispute'), require('./Error'), require('./ResponseMetadata'), require('./Warning'));
+    module.exports = factory(require('../ApiClient'), require('./CustomDashboardSchedule'), require('./Error'), require('./ResponseMetadata'), require('./Warning'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ChargebackDisputesResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ChargebackDispute, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
+    root.UltraCartRestApiV2.CustomDashboardScheduleResponse = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomDashboardSchedule, root.UltraCartRestApiV2.Error, root.UltraCartRestApiV2.ResponseMetadata, root.UltraCartRestApiV2.Warning);
   }
-}(this, function(ApiClient, ChargebackDispute, Error, ResponseMetadata, Warning) {
+}(this, function(ApiClient, CustomDashboardSchedule, Error, ResponseMetadata, Warning) {
   'use strict';
 
   /**
-   * The ChargebackDisputesResponse model module.
-   * @module com.ultracart.admin.v2.models/ChargebackDisputesResponse
-   * @version 3.11.19
+   * The CustomDashboardScheduleResponse model module.
+   * @module com.ultracart.admin.v2.models/CustomDashboardScheduleResponse
+   * @version 3.11.20
    */
 
   /**
-   * Constructs a new <code>ChargebackDisputesResponse</code>.
-   * @alias module:com.ultracart.admin.v2.models/ChargebackDisputesResponse
+   * Constructs a new <code>CustomDashboardScheduleResponse</code>.
+   * @alias module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ChargebackDisputesResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>CustomDashboardScheduleResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.ultracart.admin.v2.models/ChargebackDisputesResponse} obj Optional instance to populate.
-   * @return {module:com.ultracart.admin.v2.models/ChargebackDisputesResponse} The populated <code>ChargebackDisputesResponse</code> instance.
+   * @param {module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse} obj Optional instance to populate.
+   * @return {module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse} The populated <code>CustomDashboardScheduleResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('chargebacks'))
-        obj.chargebacks = ApiClient.convertToType(data['chargebacks'], [ChargebackDispute]);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('schedule'))
+        obj.schedule = CustomDashboardSchedule.constructFromObject(data['schedule']);
       if (data.hasOwnProperty('success'))
         obj.success = ApiClient.convertToType(data['success'], 'Boolean');
       if (data.hasOwnProperty('warning'))
@@ -68,11 +68,6 @@
     }
     return obj;
   }
-
-  /**
-   * @member {Array.<module:com.ultracart.admin.v2.models/ChargebackDispute>} chargebacks
-   */
-  exports.prototype.chargebacks = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error
@@ -83,6 +78,11 @@
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype.metadata = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/CustomDashboardSchedule} schedule
+   */
+  exports.prototype.schedule = undefined;
 
   /**
    * Indicates if API call was successful

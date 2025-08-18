@@ -34,7 +34,7 @@
   /**
    * The CustomReport model module.
    * @module com.ultracart.admin.v2.models/CustomReport
-   * @version 3.11.19
+   * @version 3.11.20
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('business_analysis_prompt'))
+        obj.business_analysis_prompt = ApiClient.convertToType(data['business_analysis_prompt'], 'String');
       if (data.hasOwnProperty('chart_javascript'))
         obj.chart_javascript = ApiClient.convertToType(data['chart_javascript'], 'String');
       if (data.hasOwnProperty('chart_javascript_url'))
@@ -78,6 +80,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {String} business_analysis_prompt
+   */
+  exports.prototype.business_analysis_prompt = undefined;
 
   /**
    * @member {String} chart_javascript

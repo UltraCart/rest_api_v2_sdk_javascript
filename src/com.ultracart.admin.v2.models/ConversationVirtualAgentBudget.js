@@ -34,7 +34,7 @@
   /**
    * The ConversationVirtualAgentBudget model module.
    * @module com.ultracart.admin.v2.models/ConversationVirtualAgentBudget
-   * @version 3.11.19
+   * @version 3.11.20
    */
 
   /**

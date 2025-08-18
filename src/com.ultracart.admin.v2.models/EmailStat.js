@@ -34,7 +34,7 @@
   /**
    * The EmailStat model module.
    * @module com.ultracart.admin.v2.models/EmailStat
-   * @version 3.11.19
+   * @version 3.11.20
    */
 
   /**

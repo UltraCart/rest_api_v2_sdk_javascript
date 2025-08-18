@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomDashboard', 'com.ultracart.admin.v2.models/CustomDashboardResponse', 'com.ultracart.admin.v2.models/CustomDashboardsResponse', 'com.ultracart.admin.v2.models/CustomReport', 'com.ultracart.admin.v2.models/CustomReportAccountConfig', 'com.ultracart.admin.v2.models/CustomReportAccountConfigResponse', 'com.ultracart.admin.v2.models/CustomReportExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportResponse', 'com.ultracart.admin.v2.models/CustomReportsExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportsExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportsResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Report', 'com.ultracart.admin.v2.models/ReportAuthResponse', 'com.ultracart.admin.v2.models/ReportDataSetPageResponse', 'com.ultracart.admin.v2.models/ReportDataSetResponse', 'com.ultracart.admin.v2.models/ReportDryRunQueriesRequest', 'com.ultracart.admin.v2.models/ReportDryRunQueriesResponse', 'com.ultracart.admin.v2.models/ReportExecuteQueriesRequest', 'com.ultracart.admin.v2.models/ReportResponse', 'com.ultracart.admin.v2.models/ReportsResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomDashboard', 'com.ultracart.admin.v2.models/CustomDashboardResponse', 'com.ultracart.admin.v2.models/CustomDashboardSchedule', 'com.ultracart.admin.v2.models/CustomDashboardScheduleResponse', 'com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse', 'com.ultracart.admin.v2.models/CustomDashboardsResponse', 'com.ultracart.admin.v2.models/CustomReport', 'com.ultracart.admin.v2.models/CustomReportAccountConfig', 'com.ultracart.admin.v2.models/CustomReportAccountConfigResponse', 'com.ultracart.admin.v2.models/CustomReportExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportResponse', 'com.ultracart.admin.v2.models/CustomReportsExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportsExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportsResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Report', 'com.ultracart.admin.v2.models/ReportAuthResponse', 'com.ultracart.admin.v2.models/ReportDataSetPageResponse', 'com.ultracart.admin.v2.models/ReportDataSetResponse', 'com.ultracart.admin.v2.models/ReportDryRunQueriesRequest', 'com.ultracart.admin.v2.models/ReportDryRunQueriesResponse', 'com.ultracart.admin.v2.models/ReportExecuteQueriesRequest', 'com.ultracart.admin.v2.models/ReportResponse', 'com.ultracart.admin.v2.models/ReportsResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomDashboard'), require('../com.ultracart.admin.v2.models/CustomDashboardResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardsResponse'), require('../com.ultracart.admin.v2.models/CustomReport'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfig'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse'), require('../com.ultracart.admin.v2.models/CustomReportExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportResponse'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Report'), require('../com.ultracart.admin.v2.models/ReportAuthResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetPageResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetResponse'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesResponse'), require('../com.ultracart.admin.v2.models/ReportExecuteQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportResponse'), require('../com.ultracart.admin.v2.models/ReportsResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomDashboard'), require('../com.ultracart.admin.v2.models/CustomDashboardResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardSchedule'), require('../com.ultracart.admin.v2.models/CustomDashboardScheduleResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardsResponse'), require('../com.ultracart.admin.v2.models/CustomReport'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfig'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse'), require('../com.ultracart.admin.v2.models/CustomReportExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportResponse'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Report'), require('../com.ultracart.admin.v2.models/ReportAuthResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetPageResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetResponse'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesResponse'), require('../com.ultracart.admin.v2.models/ReportExecuteQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportResponse'), require('../com.ultracart.admin.v2.models/ReportsResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.DatawarehouseApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomDashboard, root.UltraCartRestApiV2.CustomDashboardResponse, root.UltraCartRestApiV2.CustomDashboardsResponse, root.UltraCartRestApiV2.CustomReport, root.UltraCartRestApiV2.CustomReportAccountConfig, root.UltraCartRestApiV2.CustomReportAccountConfigResponse, root.UltraCartRestApiV2.CustomReportExecutionRequest, root.UltraCartRestApiV2.CustomReportExecutionResponse, root.UltraCartRestApiV2.CustomReportResponse, root.UltraCartRestApiV2.CustomReportsExecutionRequest, root.UltraCartRestApiV2.CustomReportsExecutionResponse, root.UltraCartRestApiV2.CustomReportsResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Report, root.UltraCartRestApiV2.ReportAuthResponse, root.UltraCartRestApiV2.ReportDataSetPageResponse, root.UltraCartRestApiV2.ReportDataSetResponse, root.UltraCartRestApiV2.ReportDryRunQueriesRequest, root.UltraCartRestApiV2.ReportDryRunQueriesResponse, root.UltraCartRestApiV2.ReportExecuteQueriesRequest, root.UltraCartRestApiV2.ReportResponse, root.UltraCartRestApiV2.ReportsResponse);
+    root.UltraCartRestApiV2.DatawarehouseApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomDashboard, root.UltraCartRestApiV2.CustomDashboardResponse, root.UltraCartRestApiV2.CustomDashboardSchedule, root.UltraCartRestApiV2.CustomDashboardScheduleResponse, root.UltraCartRestApiV2.CustomDashboardSchedulesResponse, root.UltraCartRestApiV2.CustomDashboardsResponse, root.UltraCartRestApiV2.CustomReport, root.UltraCartRestApiV2.CustomReportAccountConfig, root.UltraCartRestApiV2.CustomReportAccountConfigResponse, root.UltraCartRestApiV2.CustomReportExecutionRequest, root.UltraCartRestApiV2.CustomReportExecutionResponse, root.UltraCartRestApiV2.CustomReportResponse, root.UltraCartRestApiV2.CustomReportsExecutionRequest, root.UltraCartRestApiV2.CustomReportsExecutionResponse, root.UltraCartRestApiV2.CustomReportsResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Report, root.UltraCartRestApiV2.ReportAuthResponse, root.UltraCartRestApiV2.ReportDataSetPageResponse, root.UltraCartRestApiV2.ReportDataSetResponse, root.UltraCartRestApiV2.ReportDryRunQueriesRequest, root.UltraCartRestApiV2.ReportDryRunQueriesResponse, root.UltraCartRestApiV2.ReportExecuteQueriesRequest, root.UltraCartRestApiV2.ReportResponse, root.UltraCartRestApiV2.ReportsResponse);
   }
-}(this, function(ApiClient, CustomDashboard, CustomDashboardResponse, CustomDashboardsResponse, CustomReport, CustomReportAccountConfig, CustomReportAccountConfigResponse, CustomReportExecutionRequest, CustomReportExecutionResponse, CustomReportResponse, CustomReportsExecutionRequest, CustomReportsExecutionResponse, CustomReportsResponse, ErrorResponse, Report, ReportAuthResponse, ReportDataSetPageResponse, ReportDataSetResponse, ReportDryRunQueriesRequest, ReportDryRunQueriesResponse, ReportExecuteQueriesRequest, ReportResponse, ReportsResponse) {
+}(this, function(ApiClient, CustomDashboard, CustomDashboardResponse, CustomDashboardSchedule, CustomDashboardScheduleResponse, CustomDashboardSchedulesResponse, CustomDashboardsResponse, CustomReport, CustomReportAccountConfig, CustomReportAccountConfigResponse, CustomReportExecutionRequest, CustomReportExecutionResponse, CustomReportResponse, CustomReportsExecutionRequest, CustomReportsExecutionResponse, CustomReportsResponse, ErrorResponse, Report, ReportAuthResponse, ReportDataSetPageResponse, ReportDataSetResponse, ReportDryRunQueriesRequest, ReportDryRunQueriesResponse, ReportExecuteQueriesRequest, ReportResponse, ReportsResponse) {
   'use strict';
 
   /**
    * Datawarehouse service.
    * @module com.ultracart.admin.v2/DatawarehouseApi
-   * @version 3.11.19
+   * @version 3.11.20
    */
 
   /**
@@ -90,6 +90,60 @@
 
       return this.apiClient.callApi(
         '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteCustomDashboardSchedule operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomDashboardScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a custom dashboard schedule
+     * delete a custom dashboard schedule on the UltraCart account. 
+     * @param {Number} custom_dashboard_schedule_oid The dashboard schedule oid to delete.
+     * @param {Number} custom_dashboard_oid The dashboard oid that owns the schedule.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomDashboardScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.deleteCustomDashboardSchedule = function(custom_dashboard_schedule_oid, custom_dashboard_oid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'custom_dashboard_schedule_oid' is set
+      if (custom_dashboard_schedule_oid === undefined || custom_dashboard_schedule_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_schedule_oid' when calling deleteCustomDashboardSchedule");
+      }
+
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling deleteCustomDashboardSchedule");
+      }
+
+
+      var pathParams = {
+        'custom_dashboard_schedule_oid': custom_dashboard_schedule_oid,
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules/{custom_dashboard_schedule_oid}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -426,6 +480,54 @@
 
       return this.apiClient.callApi(
         '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomDashboardSchedules operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardSchedulesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get custom dashboards
+     * Retrieve a custom dashboards 
+     * @param {Number} custom_dashboard_oid 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardSchedulesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse}
+     */
+    this.getCustomDashboardSchedules = function(custom_dashboard_oid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling getCustomDashboardSchedules");
+      }
+
+
+      var pathParams = {
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = CustomDashboardSchedulesResponse;
+
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -883,6 +985,60 @@
     }
 
     /**
+     * Callback function to receive the result of the insertCustomDashboardSchedule operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomDashboardScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a custom dashboard schedule
+     * Create a new custom dashboard schedule on the UltraCart account. 
+     * @param {Number} custom_dashboard_oid 
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardSchedule} dashboard_schedule Dashboard schedule to create
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomDashboardScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse}
+     */
+    this.insertCustomDashboardSchedule = function(custom_dashboard_oid, dashboard_schedule, callback) {
+      var postBody = dashboard_schedule;
+
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling insertCustomDashboardSchedule");
+      }
+
+      // verify the required parameter 'dashboard_schedule' is set
+      if (dashboard_schedule === undefined || dashboard_schedule === null) {
+        throw new Error("Missing the required parameter 'dashboard_schedule' when calling insertCustomDashboardSchedule");
+      }
+
+
+      var pathParams = {
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = CustomDashboardScheduleResponse;
+
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertCustomReport operation.
      * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomReportCallback
      * @param {String} error Error message, if any.
@@ -1025,6 +1181,67 @@
 
       return this.apiClient.callApi(
         '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomDashboardSchedule operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomDashboardScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a custom dashboard schedule
+     * Update a custom dashboard schedule on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardSchedule} dashboard_schedule Dashboard schedule to update
+     * @param {Number} custom_dashboard_schedule_oid The dashboard schedule oid to update.
+     * @param {Number} custom_dashboard_oid The dashboard oid to update.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomDashboardScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardResponse}
+     */
+    this.updateCustomDashboardSchedule = function(dashboard_schedule, custom_dashboard_schedule_oid, custom_dashboard_oid, callback) {
+      var postBody = dashboard_schedule;
+
+      // verify the required parameter 'dashboard_schedule' is set
+      if (dashboard_schedule === undefined || dashboard_schedule === null) {
+        throw new Error("Missing the required parameter 'dashboard_schedule' when calling updateCustomDashboardSchedule");
+      }
+
+      // verify the required parameter 'custom_dashboard_schedule_oid' is set
+      if (custom_dashboard_schedule_oid === undefined || custom_dashboard_schedule_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_schedule_oid' when calling updateCustomDashboardSchedule");
+      }
+
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling updateCustomDashboardSchedule");
+      }
+
+
+      var pathParams = {
+        'custom_dashboard_schedule_oid': custom_dashboard_schedule_oid,
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = CustomDashboardResponse;
+
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules/{custom_dashboard_schedule_oid}', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
