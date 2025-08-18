@@ -17,7 +17,7 @@ import EmailListSegmentMembership from './EmailListSegmentMembership';
 /**
  * The EmailCampaign model module.
  * @module com.ultracart.admin.v2.models/EmailCampaign
- * @version 4.1.19
+ * @version 4.1.20
  */
 class EmailCampaign {
     /**
@@ -98,6 +98,12 @@ class EmailCampaign {
             }
             if (data.hasOwnProperty('prevent_sending_due_to_spam')) {
                 obj['prevent_sending_due_to_spam'] = ApiClient.convertToType(data['prevent_sending_due_to_spam'], 'Boolean');
+            }
+            if (data.hasOwnProperty('repeat_monthly')) {
+                obj['repeat_monthly'] = ApiClient.convertToType(data['repeat_monthly'], 'Boolean');
+            }
+            if (data.hasOwnProperty('repeat_weekly')) {
+                obj['repeat_weekly'] = ApiClient.convertToType(data['repeat_weekly'], 'Boolean');
             }
             if (data.hasOwnProperty('revenue_formatted')) {
                 obj['revenue_formatted'] = ApiClient.convertToType(data['revenue_formatted'], 'String');
@@ -234,6 +240,18 @@ EmailCampaign.prototype['open_rate_formatted'] = undefined;
  * @member {Boolean} prevent_sending_due_to_spam
  */
 EmailCampaign.prototype['prevent_sending_due_to_spam'] = undefined;
+
+/**
+ * True if the campaign should repeat on a monthly basis
+ * @member {Boolean} repeat_monthly
+ */
+EmailCampaign.prototype['repeat_monthly'] = undefined;
+
+/**
+ * True if the campaign should repeat on a weekly basis
+ * @member {Boolean} repeat_weekly
+ */
+EmailCampaign.prototype['repeat_weekly'] = undefined;
 
 /**
  * Revenue associated with campaign

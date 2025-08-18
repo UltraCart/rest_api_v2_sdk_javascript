@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderReason model module.
  * @module com.ultracart.admin.v2.models/OrderReason
- * @version 4.1.19
+ * @version 4.1.20
  */
 class OrderReason {
     /**

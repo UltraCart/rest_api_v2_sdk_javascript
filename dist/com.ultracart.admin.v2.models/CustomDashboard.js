@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _CustomDashboardExecutionParameter = _interopRequireDefault(require("./CustomDashboardExecutionParameter"));
 var _CustomDashboardPage = _interopRequireDefault(require("./CustomDashboardPage"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -27,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomDashboard model module.
  * @module com.ultracart.admin.v2.models/CustomDashboard
- * @version 4.1.18
+ * @version 4.1.19
  */
 var CustomDashboard = /*#__PURE__*/function () {
   /**
@@ -72,6 +73,9 @@ var CustomDashboard = /*#__PURE__*/function () {
         if (data.hasOwnProperty('pages')) {
           obj['pages'] = _ApiClient["default"].convertToType(data['pages'], [_CustomDashboardPage["default"]]);
         }
+        if (data.hasOwnProperty('parameters')) {
+          obj['parameters'] = _ApiClient["default"].convertToType(data['parameters'], [_CustomDashboardExecutionParameter["default"]]);
+        }
       }
       return obj;
     }
@@ -96,4 +100,9 @@ CustomDashboard.prototype['name'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/CustomDashboardPage>} pages
  */
 CustomDashboard.prototype['pages'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/CustomDashboardExecutionParameter>} parameters
+ */
+CustomDashboard.prototype['parameters'] = undefined;
 var _default = exports["default"] = CustomDashboard;

@@ -133,9 +133,6 @@ import ChannelPartnerShipToPreferenceResponse from './com.ultracart.admin.v2.mod
 import ChannelPartnerShipToPreferencesResponse from './com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse';
 import ChannelPartnerShippingEstimate from './com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate';
 import ChannelPartnersResponse from './com.ultracart.admin.v2.models/ChannelPartnersResponse';
-import ChargebackDispute from './com.ultracart.admin.v2.models/ChargebackDispute';
-import ChargebackDisputeResponse from './com.ultracart.admin.v2.models/ChargebackDisputeResponse';
-import ChargebackDisputesResponse from './com.ultracart.admin.v2.models/ChargebackDisputesResponse';
 import CheckoutAllowedCountriesResponse from './com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse';
 import CheckoutHandoffRequest from './com.ultracart.admin.v2.models/CheckoutHandoffRequest';
 import CheckoutHandoffResponse from './com.ultracart.admin.v2.models/CheckoutHandoffResponse';
@@ -323,6 +320,9 @@ import CustomDashboardExecutionParameter from './com.ultracart.admin.v2.models/C
 import CustomDashboardPage from './com.ultracart.admin.v2.models/CustomDashboardPage';
 import CustomDashboardPageReport from './com.ultracart.admin.v2.models/CustomDashboardPageReport';
 import CustomDashboardResponse from './com.ultracart.admin.v2.models/CustomDashboardResponse';
+import CustomDashboardSchedule from './com.ultracart.admin.v2.models/CustomDashboardSchedule';
+import CustomDashboardScheduleResponse from './com.ultracart.admin.v2.models/CustomDashboardScheduleResponse';
+import CustomDashboardSchedulesResponse from './com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse';
 import CustomDashboardsResponse from './com.ultracart.admin.v2.models/CustomDashboardsResponse';
 import CustomReport from './com.ultracart.admin.v2.models/CustomReport';
 import CustomReportAccountConfig from './com.ultracart.admin.v2.models/CustomReportAccountConfig';
@@ -902,7 +902,6 @@ import WorkflowUsersResponse from './com.ultracart.admin.v2.models/WorkflowUsers
 import AffiliateApi from './com.ultracart.admin.v2/AffiliateApi';
 import AutoOrderApi from './com.ultracart.admin.v2/AutoOrderApi';
 import ChannelPartnerApi from './com.ultracart.admin.v2/ChannelPartnerApi';
-import ChargebackApi from './com.ultracart.admin.v2/ChargebackApi';
 import CheckoutApi from './com.ultracart.admin.v2/CheckoutApi';
 import ConversationApi from './com.ultracart.admin.v2/ConversationApi';
 import CouponApi from './com.ultracart.admin.v2/CouponApi';
@@ -951,7 +950,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.19
+* @version 4.1.20
 */
 export {
     /**
@@ -1679,24 +1678,6 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ChannelPartnersResponse}
      */
     ChannelPartnersResponse,
-
-    /**
-     * The ChargebackDispute model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ChargebackDispute}
-     */
-    ChargebackDispute,
-
-    /**
-     * The ChargebackDisputeResponse model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ChargebackDisputeResponse}
-     */
-    ChargebackDisputeResponse,
-
-    /**
-     * The ChargebackDisputesResponse model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ChargebackDisputesResponse}
-     */
-    ChargebackDisputesResponse,
 
     /**
      * The CheckoutAllowedCountriesResponse model constructor.
@@ -2819,6 +2800,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomDashboardResponse}
      */
     CustomDashboardResponse,
+
+    /**
+     * The CustomDashboardSchedule model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardSchedule}
+     */
+    CustomDashboardSchedule,
+
+    /**
+     * The CustomDashboardScheduleResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse}
+     */
+    CustomDashboardScheduleResponse,
+
+    /**
+     * The CustomDashboardSchedulesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse}
+     */
+    CustomDashboardSchedulesResponse,
 
     /**
      * The CustomDashboardsResponse model constructor.
@@ -6293,12 +6292,6 @@ export {
     * @property {module:com.ultracart.admin.v2/ChannelPartnerApi}
     */
     ChannelPartnerApi,
-
-    /**
-    * The ChargebackApi service constructor.
-    * @property {module:com.ultracart.admin.v2/ChargebackApi}
-    */
-    ChargebackApi,
 
     /**
     * The CheckoutApi service constructor.

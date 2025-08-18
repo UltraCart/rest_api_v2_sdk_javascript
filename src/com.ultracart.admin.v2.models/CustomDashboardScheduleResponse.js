@@ -12,24 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
-import ChargebackDispute from './ChargebackDispute';
+import CustomDashboardSchedule from './CustomDashboardSchedule';
 import Error from './Error';
 import ResponseMetadata from './ResponseMetadata';
 import Warning from './Warning';
 
 /**
- * The ChargebackDisputeResponse model module.
- * @module com.ultracart.admin.v2.models/ChargebackDisputeResponse
- * @version 4.1.19
+ * The CustomDashboardScheduleResponse model module.
+ * @module com.ultracart.admin.v2.models/CustomDashboardScheduleResponse
+ * @version 4.1.20
  */
-class ChargebackDisputeResponse {
+class CustomDashboardScheduleResponse {
     /**
-     * Constructs a new <code>ChargebackDisputeResponse</code>.
-     * @alias module:com.ultracart.admin.v2.models/ChargebackDisputeResponse
+     * Constructs a new <code>CustomDashboardScheduleResponse</code>.
+     * @alias module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse
      */
     constructor() { 
         
-        ChargebackDisputeResponse.initialize(this);
+        CustomDashboardScheduleResponse.initialize(this);
     }
 
     /**
@@ -41,24 +41,24 @@ class ChargebackDisputeResponse {
     }
 
     /**
-     * Constructs a <code>ChargebackDisputeResponse</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CustomDashboardScheduleResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:com.ultracart.admin.v2.models/ChargebackDisputeResponse} obj Optional instance to populate.
-     * @return {module:com.ultracart.admin.v2.models/ChargebackDisputeResponse} The populated <code>ChargebackDisputeResponse</code> instance.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse} obj Optional instance to populate.
+     * @return {module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse} The populated <code>CustomDashboardScheduleResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ChargebackDisputeResponse();
+            obj = obj || new CustomDashboardScheduleResponse();
 
-            if (data.hasOwnProperty('chargeback')) {
-                obj['chargeback'] = ChargebackDispute.constructFromObject(data['chargeback']);
-            }
             if (data.hasOwnProperty('error')) {
                 obj['error'] = Error.constructFromObject(data['error']);
             }
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
+            }
+            if (data.hasOwnProperty('schedule')) {
+                obj['schedule'] = CustomDashboardSchedule.constructFromObject(data['schedule']);
             }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
@@ -74,35 +74,35 @@ class ChargebackDisputeResponse {
 }
 
 /**
- * @member {module:com.ultracart.admin.v2.models/ChargebackDispute} chargeback
- */
-ChargebackDisputeResponse.prototype['chargeback'] = undefined;
-
-/**
  * @member {module:com.ultracart.admin.v2.models/Error} error
  */
-ChargebackDisputeResponse.prototype['error'] = undefined;
+CustomDashboardScheduleResponse.prototype['error'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
-ChargebackDisputeResponse.prototype['metadata'] = undefined;
+CustomDashboardScheduleResponse.prototype['metadata'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CustomDashboardSchedule} schedule
+ */
+CustomDashboardScheduleResponse.prototype['schedule'] = undefined;
 
 /**
  * Indicates if API call was successful
  * @member {Boolean} success
  */
-ChargebackDisputeResponse.prototype['success'] = undefined;
+CustomDashboardScheduleResponse.prototype['success'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/Warning} warning
  */
-ChargebackDisputeResponse.prototype['warning'] = undefined;
+CustomDashboardScheduleResponse.prototype['warning'] = undefined;
 
 
 
 
 
 
-export default ChargebackDisputeResponse;
+export default CustomDashboardScheduleResponse;
 

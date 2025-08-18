@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The LibraryItemsResponse model module.
  * @module com.ultracart.admin.v2.models/LibraryItemsResponse
- * @version 4.1.19
+ * @version 4.1.20
  */
 class LibraryItemsResponse {
     /**

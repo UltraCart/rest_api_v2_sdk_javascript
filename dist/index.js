@@ -1389,6 +1389,12 @@ Object.defineProperty(exports, "ConversationVirtualAgentCapabilitiesResponse", {
     return _ConversationVirtualAgentCapabilitiesResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationVirtualAgentCapabilityZohoDeskDepartment", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationVirtualAgentCapabilityZohoDeskDepartment["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationWebchatContext", {
   enumerable: true,
   get: function get() {
@@ -1879,6 +1885,12 @@ Object.defineProperty(exports, "CustomDashboard", {
   enumerable: true,
   get: function get() {
     return _CustomDashboard["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardExecutionParameter", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardExecutionParameter["default"];
   }
 });
 Object.defineProperty(exports, "CustomDashboardPage", {
@@ -5664,6 +5676,7 @@ var _ConversationVirtualAgentBudget = _interopRequireDefault(require("./com.ultr
 var _ConversationVirtualAgentBudgetResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse"));
 var _ConversationVirtualAgentCapabilities = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities"));
 var _ConversationVirtualAgentCapabilitiesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse"));
+var _ConversationVirtualAgentCapabilityZohoDeskDepartment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment"));
 var _ConversationWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatContext"));
 var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatus"));
 var _ConversationWebchatQueueStatusAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent"));
@@ -5745,6 +5758,7 @@ var _CouponsRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.m
 var _CouponsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponsResponse"));
 var _Currency = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Currency"));
 var _CustomDashboard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboard"));
+var _CustomDashboardExecutionParameter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardExecutionParameter"));
 var _CustomDashboardPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardPage"));
 var _CustomDashboardPageReport = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardPageReport"));
 var _CustomDashboardResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardResponse"));

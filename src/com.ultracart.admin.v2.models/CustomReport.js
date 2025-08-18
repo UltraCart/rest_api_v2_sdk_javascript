@@ -19,7 +19,7 @@ import CustomReportTooltip from './CustomReportTooltip';
 /**
  * The CustomReport model module.
  * @module com.ultracart.admin.v2.models/CustomReport
- * @version 4.1.19
+ * @version 4.1.20
  */
 class CustomReport {
     /**
@@ -50,6 +50,9 @@ class CustomReport {
         if (data) {
             obj = obj || new CustomReport();
 
+            if (data.hasOwnProperty('business_analysis_prompt')) {
+                obj['business_analysis_prompt'] = ApiClient.convertToType(data['business_analysis_prompt'], 'String');
+            }
             if (data.hasOwnProperty('chart_javascript')) {
                 obj['chart_javascript'] = ApiClient.convertToType(data['chart_javascript'], 'String');
             }
@@ -86,6 +89,11 @@ class CustomReport {
 
 
 }
+
+/**
+ * @member {String} business_analysis_prompt
+ */
+CustomReport.prototype['business_analysis_prompt'] = undefined;
 
 /**
  * @member {String} chart_javascript

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderItemSimpleSchedule model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule
- * @version 4.1.19
+ * @version 4.1.20
  */
 class AutoOrderItemSimpleSchedule {
     /**

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**business_analysis_prompt** | **String** |  | [optional] 
 **chart_javascript** | **String** |  | [optional] 
 **chart_javascript_url** | **String** |  | [optional] 
 **data_warehouse_report_config_oid** | **Number** |  | [optional] 

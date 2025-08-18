@@ -25,7 +25,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.19
+ * @version 4.1.20
  */
 class OrderPayment {
     /**
@@ -311,6 +311,18 @@ OrderPayment['PaymentMethodEnum'] = {
      * @const
      */
     "Google Shopping": "Google Shopping",
+
+    /**
+     * value: "Goldbelly"
+     * @const
+     */
+    "Goldbelly": "Goldbelly",
+
+    /**
+     * value: "GoHighLevel"
+     * @const
+     */
+    "GoHighLevel": "GoHighLevel",
 
     /**
      * value: "Insurance"

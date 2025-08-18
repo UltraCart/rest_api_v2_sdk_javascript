@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The GeocodeResponse model module.
  * @module com.ultracart.admin.v2.models/GeocodeResponse
- * @version 4.1.19
+ * @version 4.1.20
  */
 class GeocodeResponse {
     /**

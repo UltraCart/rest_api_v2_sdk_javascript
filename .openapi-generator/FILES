@@ -125,10 +125,6 @@ docs/ChannelPartnerShipToPreferenceResponse.md
 docs/ChannelPartnerShipToPreferencesResponse.md
 docs/ChannelPartnerShippingEstimate.md
 docs/ChannelPartnersResponse.md
-docs/ChargebackApi.md
-docs/ChargebackDispute.md
-docs/ChargebackDisputeResponse.md
-docs/ChargebackDisputesResponse.md
 docs/CheckoutAllowedCountriesResponse.md
 docs/CheckoutApi.md
 docs/CheckoutHandoffRequest.md
@@ -319,6 +315,9 @@ docs/CustomDashboardExecutionParameter.md
 docs/CustomDashboardPage.md
 docs/CustomDashboardPageReport.md
 docs/CustomDashboardResponse.md
+docs/CustomDashboardSchedule.md
+docs/CustomDashboardScheduleResponse.md
+docs/CustomDashboardSchedulesResponse.md
 docs/CustomDashboardsResponse.md
 docs/CustomReport.md
 docs/CustomReportAccountConfig.md
@@ -1033,9 +1032,6 @@ src/com.ultracart.admin.v2.models/ChannelPartnerShipToPreferenceResponse.js
 src/com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse.js
 src/com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate.js
 src/com.ultracart.admin.v2.models/ChannelPartnersResponse.js
-src/com.ultracart.admin.v2.models/ChargebackDispute.js
-src/com.ultracart.admin.v2.models/ChargebackDisputeResponse.js
-src/com.ultracart.admin.v2.models/ChargebackDisputesResponse.js
 src/com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse.js
 src/com.ultracart.admin.v2.models/CheckoutHandoffRequest.js
 src/com.ultracart.admin.v2.models/CheckoutHandoffResponse.js
@@ -1223,6 +1219,9 @@ src/com.ultracart.admin.v2.models/CustomDashboardExecutionParameter.js
 src/com.ultracart.admin.v2.models/CustomDashboardPage.js
 src/com.ultracart.admin.v2.models/CustomDashboardPageReport.js
 src/com.ultracart.admin.v2.models/CustomDashboardResponse.js
+src/com.ultracart.admin.v2.models/CustomDashboardSchedule.js
+src/com.ultracart.admin.v2.models/CustomDashboardScheduleResponse.js
+src/com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse.js
 src/com.ultracart.admin.v2.models/CustomDashboardsResponse.js
 src/com.ultracart.admin.v2.models/CustomReport.js
 src/com.ultracart.admin.v2.models/CustomReportAccountConfig.js
@@ -1802,7 +1801,6 @@ src/com.ultracart.admin.v2.models/WorkflowUsersResponse.js
 src/com.ultracart.admin.v2/AffiliateApi.js
 src/com.ultracart.admin.v2/AutoOrderApi.js
 src/com.ultracart.admin.v2/ChannelPartnerApi.js
-src/com.ultracart.admin.v2/ChargebackApi.js
 src/com.ultracart.admin.v2/CheckoutApi.js
 src/com.ultracart.admin.v2/ConversationApi.js
 src/com.ultracart.admin.v2/CouponApi.js

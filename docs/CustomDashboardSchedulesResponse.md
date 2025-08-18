@@ -1,12 +1,12 @@
-# UltraCartRestApiV2.ChargebackDisputesResponse
+# UltraCartRestApiV2.CustomDashboardSchedulesResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chargebacks** | [**[ChargebackDispute]**](ChargebackDispute.md) |  | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
 **metadata** | [**ResponseMetadata**](ResponseMetadata.md) |  | [optional] 
+**schedules** | [**[CustomDashboardSchedule]**](CustomDashboardSchedule.md) | schedules | [optional] 
 **success** | **Boolean** | Indicates if API call was successful | [optional] 
 **warning** | [**Warning**](Warning.md) |  | [optional] 
 

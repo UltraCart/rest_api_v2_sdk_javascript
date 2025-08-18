@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UploadCouponCodesRequest model module.
  * @module com.ultracart.admin.v2.models/UploadCouponCodesRequest
- * @version 4.1.18
+ * @version 4.1.19
  */
 var UploadCouponCodesRequest = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReportExecutionParameter model module.
  * @module com.ultracart.admin.v2.models/CustomReportExecutionParameter
- * @version 4.1.18
+ * @version 4.1.19
  */
 var CustomReportExecutionParameter = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,9 @@ var CustomReportExecutionParameter = /*#__PURE__*/function () {
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
+        if (data.hasOwnProperty('quick_pick_key')) {
+          obj['quick_pick_key'] = _ApiClient["default"].convertToType(data['quick_pick_key'], 'String');
+        }
         if (data.hasOwnProperty('type')) {
           obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
@@ -77,6 +80,11 @@ var CustomReportExecutionParameter = /*#__PURE__*/function () {
  * @member {String} name
  */
 CustomReportExecutionParameter.prototype['name'] = undefined;
+
+/**
+ * @member {String} quick_pick_key
+ */
+CustomReportExecutionParameter.prototype['quick_pick_key'] = undefined;
 
 /**
  * @member {String} type

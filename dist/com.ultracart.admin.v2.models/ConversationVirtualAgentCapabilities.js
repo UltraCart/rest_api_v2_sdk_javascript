@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _ConversationVirtualAgentCapabilityZohoDeskDepartment = _interopRequireDefault(require("./ConversationVirtualAgentCapabilityZohoDeskDepartment"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -26,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.18
+ * @version 4.1.19
  */
 var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
   /**
@@ -80,6 +81,9 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
         if (data.hasOwnProperty('open_support_ticket_channel_email')) {
           obj['open_support_ticket_channel_email'] = _ApiClient["default"].convertToType(data['open_support_ticket_channel_email'], 'String');
         }
+        if (data.hasOwnProperty('open_support_ticket_zoho_desk_department_id')) {
+          obj['open_support_ticket_zoho_desk_department_id'] = _ApiClient["default"].convertToType(data['open_support_ticket_zoho_desk_department_id'], 'String');
+        }
         if (data.hasOwnProperty('pause_subscription')) {
           obj['pause_subscription'] = _ApiClient["default"].convertToType(data['pause_subscription'], 'Boolean');
         }
@@ -91,6 +95,12 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('update_subscription_credit_card')) {
           obj['update_subscription_credit_card'] = _ApiClient["default"].convertToType(data['update_subscription_credit_card'], 'Boolean');
+        }
+        if (data.hasOwnProperty('zoho_desk_available')) {
+          obj['zoho_desk_available'] = _ApiClient["default"].convertToType(data['zoho_desk_available'], 'Boolean');
+        }
+        if (data.hasOwnProperty('zoho_desk_departments')) {
+          obj['zoho_desk_departments'] = _ApiClient["default"].convertToType(data['zoho_desk_departments'], [_ConversationVirtualAgentCapabilityZohoDeskDepartment["default"]]);
         }
       }
       return obj;
@@ -135,6 +145,12 @@ ConversationVirtualAgentCapabilities.prototype['open_support_ticket_channel'] = 
 ConversationVirtualAgentCapabilities.prototype['open_support_ticket_channel_email'] = undefined;
 
 /**
+ * Department ID to open a Zoho Desk ticket for
+ * @member {String} open_support_ticket_zoho_desk_department_id
+ */
+ConversationVirtualAgentCapabilities.prototype['open_support_ticket_zoho_desk_department_id'] = undefined;
+
+/**
  * @member {Boolean} pause_subscription
  */
 ConversationVirtualAgentCapabilities.prototype['pause_subscription'] = undefined;
@@ -155,6 +171,18 @@ ConversationVirtualAgentCapabilities.prototype['transfer_chat_to_live_agent'] = 
 ConversationVirtualAgentCapabilities.prototype['update_subscription_credit_card'] = undefined;
 
 /**
+ * True if Zoho Desk is connected to UltraCart
+ * @member {Boolean} zoho_desk_available
+ */
+ConversationVirtualAgentCapabilities.prototype['zoho_desk_available'] = undefined;
+
+/**
+ * Array of Zoho Desk Department if zoho desk is connected to UltraCart
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment>} zoho_desk_departments
+ */
+ConversationVirtualAgentCapabilities.prototype['zoho_desk_departments'] = undefined;
+
+/**
  * Allowed values for the <code>open_support_ticket_channel</code> property.
  * @enum {String}
  * @readonly
@@ -171,14 +199,14 @@ ConversationVirtualAgentCapabilities['OpenSupportTicketChannelEnum'] = {
    */
   "email": "email",
   /**
-   * value: "UltraCart Task"
+   * value: "ultracart_task"
    * @const
    */
-  "UltraCart Task": "UltraCart Task",
+  "ultracart_task": "ultracart_task",
   /**
-   * value: "Zoho Desk Ticket"
+   * value: "zoho_desk_ticket"
    * @const
    */
-  "Zoho Desk Ticket": "Zoho Desk Ticket"
+  "zoho_desk_ticket": "zoho_desk_ticket"
 };
 var _default = exports["default"] = ConversationVirtualAgentCapabilities;

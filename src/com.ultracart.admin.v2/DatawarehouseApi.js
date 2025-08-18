@@ -15,6 +15,9 @@
 import ApiClient from "../ApiClient";
 import CustomDashboard from '../com.ultracart.admin.v2.models/CustomDashboard';
 import CustomDashboardResponse from '../com.ultracart.admin.v2.models/CustomDashboardResponse';
+import CustomDashboardSchedule from '../com.ultracart.admin.v2.models/CustomDashboardSchedule';
+import CustomDashboardScheduleResponse from '../com.ultracart.admin.v2.models/CustomDashboardScheduleResponse';
+import CustomDashboardSchedulesResponse from '../com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse';
 import CustomDashboardsResponse from '../com.ultracart.admin.v2.models/CustomDashboardsResponse';
 import CustomReport from '../com.ultracart.admin.v2.models/CustomReport';
 import CustomReportAccountConfig from '../com.ultracart.admin.v2.models/CustomReportAccountConfig';
@@ -39,7 +42,7 @@ import ReportsResponse from '../com.ultracart.admin.v2.models/ReportsResponse';
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.1.19
+* @version 4.1.20
 */
 export default class DatawarehouseApi {
 
@@ -92,6 +95,54 @@ export default class DatawarehouseApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteCustomDashboardSchedule operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomDashboardScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a custom dashboard schedule
+     * delete a custom dashboard schedule on the UltraCart account. 
+     * @param {Number} custom_dashboard_schedule_oid The dashboard schedule oid to delete.
+     * @param {Number} custom_dashboard_oid The dashboard oid that owns the schedule.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~deleteCustomDashboardScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteCustomDashboardSchedule(custom_dashboard_schedule_oid, custom_dashboard_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'custom_dashboard_schedule_oid' is set
+      if (custom_dashboard_schedule_oid === undefined || custom_dashboard_schedule_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_schedule_oid' when calling deleteCustomDashboardSchedule");
+      }
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling deleteCustomDashboardSchedule");
+      }
+
+      let pathParams = {
+        'custom_dashboard_schedule_oid': custom_dashboard_schedule_oid,
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules/{custom_dashboard_schedule_oid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -392,6 +443,49 @@ export default class DatawarehouseApi {
       let returnType = CustomDashboardResponse;
       return this.apiClient.callApi(
         '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomDashboardSchedules operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardSchedulesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get custom dashboards
+     * Retrieve a custom dashboards 
+     * @param {Number} custom_dashboard_oid 
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomDashboardSchedulesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse}
+     */
+    getCustomDashboardSchedules(custom_dashboard_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling getCustomDashboardSchedules");
+      }
+
+      let pathParams = {
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomDashboardSchedulesResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -803,6 +897,54 @@ export default class DatawarehouseApi {
     }
 
     /**
+     * Callback function to receive the result of the insertCustomDashboardSchedule operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomDashboardScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a custom dashboard schedule
+     * Create a new custom dashboard schedule on the UltraCart account. 
+     * @param {Number} custom_dashboard_oid 
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardSchedule} dashboard_schedule Dashboard schedule to create
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomDashboardScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardScheduleResponse}
+     */
+    insertCustomDashboardSchedule(custom_dashboard_oid, dashboard_schedule, callback) {
+      let postBody = dashboard_schedule;
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling insertCustomDashboardSchedule");
+      }
+      // verify the required parameter 'dashboard_schedule' is set
+      if (dashboard_schedule === undefined || dashboard_schedule === null) {
+        throw new Error("Missing the required parameter 'dashboard_schedule' when calling insertCustomDashboardSchedule");
+      }
+
+      let pathParams = {
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomDashboardScheduleResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertCustomReport operation.
      * @callback module:com.ultracart.admin.v2/DatawarehouseApi~insertCustomReportCallback
      * @param {String} error Error message, if any.
@@ -929,6 +1071,60 @@ export default class DatawarehouseApi {
       let returnType = CustomDashboardResponse;
       return this.apiClient.callApi(
         '/datawarehouse/custom_dashboards/{custom_dashboard_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomDashboardSchedule operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomDashboardScheduleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a custom dashboard schedule
+     * Update a custom dashboard schedule on the UltraCart account. 
+     * @param {Number} custom_dashboard_schedule_oid The dashboard schedule oid to update.
+     * @param {Number} custom_dashboard_oid The dashboard oid to update.
+     * @param {module:com.ultracart.admin.v2.models/CustomDashboardSchedule} dashboard_schedule Dashboard schedule to update
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~updateCustomDashboardScheduleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomDashboardResponse}
+     */
+    updateCustomDashboardSchedule(custom_dashboard_schedule_oid, custom_dashboard_oid, dashboard_schedule, callback) {
+      let postBody = dashboard_schedule;
+      // verify the required parameter 'custom_dashboard_schedule_oid' is set
+      if (custom_dashboard_schedule_oid === undefined || custom_dashboard_schedule_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_schedule_oid' when calling updateCustomDashboardSchedule");
+      }
+      // verify the required parameter 'custom_dashboard_oid' is set
+      if (custom_dashboard_oid === undefined || custom_dashboard_oid === null) {
+        throw new Error("Missing the required parameter 'custom_dashboard_oid' when calling updateCustomDashboardSchedule");
+      }
+      // verify the required parameter 'dashboard_schedule' is set
+      if (dashboard_schedule === undefined || dashboard_schedule === null) {
+        throw new Error("Missing the required parameter 'dashboard_schedule' when calling updateCustomDashboardSchedule");
+      }
+
+      let pathParams = {
+        'custom_dashboard_schedule_oid': custom_dashboard_schedule_oid,
+        'custom_dashboard_oid': custom_dashboard_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomDashboardResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules/{custom_dashboard_schedule_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
