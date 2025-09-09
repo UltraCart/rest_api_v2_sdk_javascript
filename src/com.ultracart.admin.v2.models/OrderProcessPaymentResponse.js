@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The OrderProcessPaymentResponse model module.
  * @module com.ultracart.admin.v2.models/OrderProcessPaymentResponse
- * @version 4.1.20
+ * @version 4.1.21
  */
 class OrderProcessPaymentResponse {
     /**

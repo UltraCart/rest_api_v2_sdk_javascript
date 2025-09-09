@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportFilterConnection model module.
  * @module com.ultracart.admin.v2.models/ReportFilterConnection
- * @version 4.1.20
+ * @version 4.1.21
  */
 class ReportFilterConnection {
     /**

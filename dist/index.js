@@ -747,30 +747,6 @@ Object.defineProperty(exports, "ChannelPartnersResponse", {
     return _ChannelPartnersResponse["default"];
   }
 });
-Object.defineProperty(exports, "ChargebackApi", {
-  enumerable: true,
-  get: function get() {
-    return _ChargebackApi["default"];
-  }
-});
-Object.defineProperty(exports, "ChargebackDispute", {
-  enumerable: true,
-  get: function get() {
-    return _ChargebackDispute["default"];
-  }
-});
-Object.defineProperty(exports, "ChargebackDisputeResponse", {
-  enumerable: true,
-  get: function get() {
-    return _ChargebackDisputeResponse["default"];
-  }
-});
-Object.defineProperty(exports, "ChargebackDisputesResponse", {
-  enumerable: true,
-  get: function get() {
-    return _ChargebackDisputesResponse["default"];
-  }
-});
 Object.defineProperty(exports, "CheckoutAllowedCountriesResponse", {
   enumerable: true,
   get: function get() {
@@ -1909,6 +1885,24 @@ Object.defineProperty(exports, "CustomDashboardResponse", {
   enumerable: true,
   get: function get() {
     return _CustomDashboardResponse["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardSchedule", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardSchedule["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardScheduleResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardScheduleResponse["default"];
+  }
+});
+Object.defineProperty(exports, "CustomDashboardSchedulesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomDashboardSchedulesResponse["default"];
   }
 });
 Object.defineProperty(exports, "CustomDashboardsResponse", {
@@ -5572,9 +5566,6 @@ var _ChannelPartnerShipToPreferenceResponse = _interopRequireDefault(require("./
 var _ChannelPartnerShipToPreferencesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerShipToPreferencesResponse"));
 var _ChannelPartnerShippingEstimate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate"));
 var _ChannelPartnersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChannelPartnersResponse"));
-var _ChargebackDispute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChargebackDispute"));
-var _ChargebackDisputeResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChargebackDisputeResponse"));
-var _ChargebackDisputesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChargebackDisputesResponse"));
 var _CheckoutAllowedCountriesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse"));
 var _CheckoutHandoffRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CheckoutHandoffRequest"));
 var _CheckoutHandoffResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CheckoutHandoffResponse"));
@@ -5762,6 +5753,9 @@ var _CustomDashboardExecutionParameter = _interopRequireDefault(require("./com.u
 var _CustomDashboardPage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardPage"));
 var _CustomDashboardPageReport = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardPageReport"));
 var _CustomDashboardResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardResponse"));
+var _CustomDashboardSchedule = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardSchedule"));
+var _CustomDashboardScheduleResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardScheduleResponse"));
+var _CustomDashboardSchedulesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse"));
 var _CustomDashboardsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomDashboardsResponse"));
 var _CustomReport = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReport"));
 var _CustomReportAccountConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportAccountConfig"));
@@ -6341,7 +6335,6 @@ var _WorkflowUsersResponse = _interopRequireDefault(require("./com.ultracart.adm
 var _AffiliateApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AffiliateApi"));
 var _AutoOrderApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AutoOrderApi"));
 var _ChannelPartnerApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ChannelPartnerApi"));
-var _ChargebackApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ChargebackApi"));
 var _CheckoutApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CheckoutApi"));
 var _ConversationApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ConversationApi"));
 var _CouponApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CouponApi"));

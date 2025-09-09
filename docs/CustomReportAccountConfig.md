@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **opt_in** | **Boolean** | True if they have opted into custom reports | [optional] 
 **opt_in_by_user** | **String** | User that opted into custom reporting | [optional] 
 **opt_in_date** | **String** | Date/time that custom reporting was opted in to | [optional] 
+**read_only** | **Boolean** |  | [optional] 
 **sql_budget** | **Number** |  | [optional] 
 **sql_usage** | **Number** |  | [optional] 
 

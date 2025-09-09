@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportAccountConfig model module.
  * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
- * @version 4.1.20
+ * @version 4.1.21
  */
 class CustomReportAccountConfig {
     /**
@@ -67,6 +67,9 @@ class CustomReportAccountConfig {
             }
             if (data.hasOwnProperty('opt_in_date')) {
                 obj['opt_in_date'] = ApiClient.convertToType(data['opt_in_date'], 'String');
+            }
+            if (data.hasOwnProperty('read_only')) {
+                obj['read_only'] = ApiClient.convertToType(data['read_only'], 'Boolean');
             }
             if (data.hasOwnProperty('sql_budget')) {
                 obj['sql_budget'] = ApiClient.convertToType(data['sql_budget'], 'Number');
@@ -120,6 +123,11 @@ CustomReportAccountConfig.prototype['opt_in_by_user'] = undefined;
  * @member {String} opt_in_date
  */
 CustomReportAccountConfig.prototype['opt_in_date'] = undefined;
+
+/**
+ * @member {Boolean} read_only
+ */
+CustomReportAccountConfig.prototype['read_only'] = undefined;
 
 /**
  * @member {Number} sql_budget

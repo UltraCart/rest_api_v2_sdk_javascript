@@ -322,6 +322,9 @@ docs/CustomDashboardsResponse.md
 docs/CustomReport.md
 docs/CustomReportAccountConfig.md
 docs/CustomReportAccountConfigResponse.md
+docs/CustomReportAnalysisRequest.md
+docs/CustomReportAnalysisResponse.md
+docs/CustomReportChartPngUploadResponse.md
 docs/CustomReportExecutionParameter.md
 docs/CustomReportExecutionRequest.md
 docs/CustomReportExecutionResponse.md
@@ -736,6 +739,7 @@ docs/Property.md
 docs/PublishLibraryItemRequest.md
 docs/RegisterAffiliateClickRequest.md
 docs/RegisterAffiliateClickResponse.md
+docs/ReplaceOrderItemIdRequest.md
 docs/Report.md
 docs/ReportAuth.md
 docs/ReportAuthResponse.md
@@ -1226,6 +1230,9 @@ src/com.ultracart.admin.v2.models/CustomDashboardsResponse.js
 src/com.ultracart.admin.v2.models/CustomReport.js
 src/com.ultracart.admin.v2.models/CustomReportAccountConfig.js
 src/com.ultracart.admin.v2.models/CustomReportAccountConfigResponse.js
+src/com.ultracart.admin.v2.models/CustomReportAnalysisRequest.js
+src/com.ultracart.admin.v2.models/CustomReportAnalysisResponse.js
+src/com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse.js
 src/com.ultracart.admin.v2.models/CustomReportExecutionParameter.js
 src/com.ultracart.admin.v2.models/CustomReportExecutionRequest.js
 src/com.ultracart.admin.v2.models/CustomReportExecutionResponse.js
@@ -1632,6 +1639,7 @@ src/com.ultracart.admin.v2.models/Property.js
 src/com.ultracart.admin.v2.models/PublishLibraryItemRequest.js
 src/com.ultracart.admin.v2.models/RegisterAffiliateClickRequest.js
 src/com.ultracart.admin.v2.models/RegisterAffiliateClickResponse.js
+src/com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest.js
 src/com.ultracart.admin.v2.models/Report.js
 src/com.ultracart.admin.v2.models/ReportAuth.js
 src/com.ultracart.admin.v2.models/ReportAuthResponse.js

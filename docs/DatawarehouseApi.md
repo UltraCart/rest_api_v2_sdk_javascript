@@ -4,6 +4,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**analyzeCustomReport**](DatawarehouseApi.md#analyzeCustomReport) | **PUT** /datawarehouse/custom_reports/{custom_report_oid}/analysis | Analyze a custom report
 [**deleteCustomDashboard**](DatawarehouseApi.md#deleteCustomDashboard) | **DELETE** /datawarehouse/custom_dashboards/{custom_dashboard_oid} | Delete a custom dashboard
 [**deleteCustomDashboardSchedule**](DatawarehouseApi.md#deleteCustomDashboardSchedule) | **DELETE** /datawarehouse/custom_dashboards/{custom_dashboard_oid}/schedules/{custom_dashboard_schedule_oid} | Delete a custom dashboard schedule
 [**deleteCustomReport**](DatawarehouseApi.md#deleteCustomReport) | **DELETE** /datawarehouse/custom_reports/{custom_report_oid} | Delete a custom report
@@ -17,6 +18,7 @@ Method | HTTP request | Description
 [**getCustomDashboards**](DatawarehouseApi.md#getCustomDashboards) | **GET** /datawarehouse/custom_dashboards | Get custom dashboards
 [**getCustomReport**](DatawarehouseApi.md#getCustomReport) | **GET** /datawarehouse/custom_reports/{custom_report_oid} | Get a custom report
 [**getCustomReportAccountConfig**](DatawarehouseApi.md#getCustomReportAccountConfig) | **GET** /datawarehouse/custom_reports/account_config | Get custom report account configuration
+[**getCustomReportChartPngUploadUrl**](DatawarehouseApi.md#getCustomReportChartPngUploadUrl) | **GET** /datawarehouse/custom_reports/{custom_report_oid}/chart_png | Upload a PNG of a custom report chart
 [**getCustomReports**](DatawarehouseApi.md#getCustomReports) | **GET** /datawarehouse/custom_reports | Get custom reports
 [**getReport**](DatawarehouseApi.md#getReport) | **GET** /datawarehouse/reports/{report_oid} | Get a report
 [**getReportDataSet**](DatawarehouseApi.md#getReportDataSet) | **GET** /datawarehouse/reports/dataset/{dataset_uuid} | Get a report data set
@@ -33,6 +35,63 @@ Method | HTTP request | Description
 [**updateCustomReportAccountConfig**](DatawarehouseApi.md#updateCustomReportAccountConfig) | **PUT** /datawarehouse/custom_reports/account_config | Update custom report account config
 [**updateReport**](DatawarehouseApi.md#updateReport) | **PUT** /datawarehouse/reports/{report_oid} | Update a report
 
+
+
+## analyzeCustomReport
+
+> CustomReportAnalysisResponse analyzeCustomReport(custom_report_oid, analyze_request)
+
+Analyze a custom report
+
+Analyze a custom report on the UltraCart account. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE analyzeCustomReport -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let custom_report_oid = 56; // Number | The report oid to analyze.
+let analyze_request = new UltraCartRestApiV2.CustomReportAnalysisRequest(); // CustomReportAnalysisRequest | Request to analyze custom report
+apiInstance.analyzeCustomReport(custom_report_oid, analyze_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE analyzeCustomReport -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **custom_report_oid** | **Number**| The report oid to analyze. | 
+ **analyze_request** | [**CustomReportAnalysisRequest**](CustomReportAnalysisRequest.md)| Request to analyze custom report | 
+
+### Return type
+
+[**CustomReportAnalysisResponse**](CustomReportAnalysisResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
 
 
 ## deleteCustomDashboard
@@ -735,6 +794,61 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**CustomReportAccountConfigResponse**](CustomReportAccountConfigResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getCustomReportChartPngUploadUrl
+
+> CustomReportChartPngUploadResponse getCustomReportChartPngUploadUrl(custom_report_oid)
+
+Upload a PNG of a custom report chart
+
+Upload a PNG of a custom report chart 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getCustomReportChartPngUploadUrl -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let custom_report_oid = 56; // Number | The report oid to upload a chart PNG for.
+apiInstance.getCustomReportChartPngUploadUrl(custom_report_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getCustomReportChartPngUploadUrl -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **custom_report_oid** | **Number**| The report oid to upload a chart PNG for. | 
+
+### Return type
+
+[**CustomReportChartPngUploadResponse**](CustomReportChartPngUploadResponse.md)
 
 ### Authorization
 

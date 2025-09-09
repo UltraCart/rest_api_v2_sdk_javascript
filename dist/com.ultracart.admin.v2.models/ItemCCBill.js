@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemCCBill model module.
  * @module com.ultracart.admin.v2.models/ItemCCBill
- * @version 4.1.19
+ * @version 4.1.20
  */
 var ItemCCBill = /*#__PURE__*/function () {
   /**

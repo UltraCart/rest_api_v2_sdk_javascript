@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LibraryItemPublishedMeta model module.
  * @module com.ultracart.admin.v2.models/LibraryItemPublishedMeta
- * @version 4.1.19
+ * @version 4.1.20
  */
 var LibraryItemPublishedMeta = /*#__PURE__*/function () {
   /**

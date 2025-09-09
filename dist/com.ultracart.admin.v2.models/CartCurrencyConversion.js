@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartCurrencyConversion model module.
  * @module com.ultracart.admin.v2.models/CartCurrencyConversion
- * @version 4.1.19
+ * @version 4.1.20
  */
 var CartCurrencyConversion = /*#__PURE__*/function () {
   /**

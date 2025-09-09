@@ -327,6 +327,9 @@ import CustomDashboardsResponse from './com.ultracart.admin.v2.models/CustomDash
 import CustomReport from './com.ultracart.admin.v2.models/CustomReport';
 import CustomReportAccountConfig from './com.ultracart.admin.v2.models/CustomReportAccountConfig';
 import CustomReportAccountConfigResponse from './com.ultracart.admin.v2.models/CustomReportAccountConfigResponse';
+import CustomReportAnalysisRequest from './com.ultracart.admin.v2.models/CustomReportAnalysisRequest';
+import CustomReportAnalysisResponse from './com.ultracart.admin.v2.models/CustomReportAnalysisResponse';
+import CustomReportChartPngUploadResponse from './com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse';
 import CustomReportExecutionParameter from './com.ultracart.admin.v2.models/CustomReportExecutionParameter';
 import CustomReportExecutionRequest from './com.ultracart.admin.v2.models/CustomReportExecutionRequest';
 import CustomReportExecutionResponse from './com.ultracart.admin.v2.models/CustomReportExecutionResponse';
@@ -733,6 +736,7 @@ import Property from './com.ultracart.admin.v2.models/Property';
 import PublishLibraryItemRequest from './com.ultracart.admin.v2.models/PublishLibraryItemRequest';
 import RegisterAffiliateClickRequest from './com.ultracart.admin.v2.models/RegisterAffiliateClickRequest';
 import RegisterAffiliateClickResponse from './com.ultracart.admin.v2.models/RegisterAffiliateClickResponse';
+import ReplaceOrderItemIdRequest from './com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest';
 import Report from './com.ultracart.admin.v2.models/Report';
 import ReportAuth from './com.ultracart.admin.v2.models/ReportAuth';
 import ReportAuthResponse from './com.ultracart.admin.v2.models/ReportAuthResponse';
@@ -950,7 +954,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.20
+* @version 4.1.21
 */
 export {
     /**
@@ -2842,6 +2846,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomReportAccountConfigResponse}
      */
     CustomReportAccountConfigResponse,
+
+    /**
+     * The CustomReportAnalysisRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportAnalysisRequest}
+     */
+    CustomReportAnalysisRequest,
+
+    /**
+     * The CustomReportAnalysisResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportAnalysisResponse}
+     */
+    CustomReportAnalysisResponse,
+
+    /**
+     * The CustomReportChartPngUploadResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse}
+     */
+    CustomReportChartPngUploadResponse,
 
     /**
      * The CustomReportExecutionParameter model constructor.
@@ -5278,6 +5300,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/RegisterAffiliateClickResponse}
      */
     RegisterAffiliateClickResponse,
+
+    /**
+     * The ReplaceOrderItemIdRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest}
+     */
+    ReplaceOrderItemIdRequest,
 
     /**
      * The Report model constructor.

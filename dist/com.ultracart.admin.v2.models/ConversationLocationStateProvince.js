@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationLocationStateProvince model module.
  * @module com.ultracart.admin.v2.models/ConversationLocationStateProvince
- * @version 4.1.19
+ * @version 4.1.20
  */
 var ConversationLocationStateProvince = /*#__PURE__*/function () {
   /**

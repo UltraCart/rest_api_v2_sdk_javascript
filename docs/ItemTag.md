@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tagType** | **String** | tag_tpe | [optional] 
+**tagType** | **String** | tag_type | [optional] 
 **tagValue** | **String** | tag_value | [optional] 
 
 

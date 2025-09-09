@@ -37,11 +37,12 @@ import OrderTokenResponse from '../com.ultracart.admin.v2.models/OrderTokenRespo
 import OrderValidationRequest from '../com.ultracart.admin.v2.models/OrderValidationRequest';
 import OrderValidationResponse from '../com.ultracart.admin.v2.models/OrderValidationResponse';
 import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
+import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest';
 
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.20
+* @version 4.1.21
 */
 export default class OrderApi {
 
@@ -1129,6 +1130,58 @@ export default class OrderApi {
       let returnType = OrderResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/refund', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the replaceOrderItemMerchantItemId operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~replaceOrderItemMerchantItemIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replaces an order item id
+     * Replaces a single order item id with another merchant_item_id, leaving all other attributes and properties unchanged.  A custom method requested by a merchant to allow for item id updates due to shipping errors.  It is doubtful you will ever need this method.  The expansion variable affects the returned order object. 
+     * @param {String} order_id The order id to update.
+     * @param {module:com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest} replace_order_item_id_request Replacement Request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~replaceOrderItemMerchantItemIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    replaceOrderItemMerchantItemId(order_id, replace_order_item_id_request, opts, callback) {
+      opts = opts || {};
+      let postBody = replace_order_item_id_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling replaceOrderItemMerchantItemId");
+      }
+      // verify the required parameter 'replace_order_item_id_request' is set
+      if (replace_order_item_id_request === undefined || replace_order_item_id_request === null) {
+        throw new Error("Missing the required parameter 'replace_order_item_id_request' when calling replaceOrderItemMerchantItemId");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = OrderResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/replace_item_id', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemTag model module.
  * @module com.ultracart.admin.v2.models/ItemTag
- * @version 4.1.20
+ * @version 4.1.21
  */
 class ItemTag {
     /**
@@ -61,7 +61,7 @@ class ItemTag {
 }
 
 /**
- * tag_tpe
+ * tag_type
  * @member {module:com.ultracart.admin.v2.models/ItemTag.TagTypeEnum} tagType
  */
 ItemTag.prototype['tagType'] = undefined;

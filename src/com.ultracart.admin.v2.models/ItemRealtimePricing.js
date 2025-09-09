@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemRealtimePricing model module.
  * @module com.ultracart.admin.v2.models/ItemRealtimePricing
- * @version 4.1.20
+ * @version 4.1.21
  */
 class ItemRealtimePricing {
     /**

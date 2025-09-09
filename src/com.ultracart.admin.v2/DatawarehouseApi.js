@@ -22,6 +22,9 @@ import CustomDashboardsResponse from '../com.ultracart.admin.v2.models/CustomDas
 import CustomReport from '../com.ultracart.admin.v2.models/CustomReport';
 import CustomReportAccountConfig from '../com.ultracart.admin.v2.models/CustomReportAccountConfig';
 import CustomReportAccountConfigResponse from '../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse';
+import CustomReportAnalysisRequest from '../com.ultracart.admin.v2.models/CustomReportAnalysisRequest';
+import CustomReportAnalysisResponse from '../com.ultracart.admin.v2.models/CustomReportAnalysisResponse';
+import CustomReportChartPngUploadResponse from '../com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse';
 import CustomReportExecutionRequest from '../com.ultracart.admin.v2.models/CustomReportExecutionRequest';
 import CustomReportExecutionResponse from '../com.ultracart.admin.v2.models/CustomReportExecutionResponse';
 import CustomReportResponse from '../com.ultracart.admin.v2.models/CustomReportResponse';
@@ -42,7 +45,7 @@ import ReportsResponse from '../com.ultracart.admin.v2.models/ReportsResponse';
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.1.20
+* @version 4.1.21
 */
 export default class DatawarehouseApi {
 
@@ -57,6 +60,54 @@ export default class DatawarehouseApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the analyzeCustomReport operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~analyzeCustomReportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportAnalysisResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Analyze a custom report
+     * Analyze a custom report on the UltraCart account. 
+     * @param {Number} custom_report_oid The report oid to analyze.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportAnalysisRequest} analyze_request Request to analyze custom report
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~analyzeCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportAnalysisResponse}
+     */
+    analyzeCustomReport(custom_report_oid, analyze_request, callback) {
+      let postBody = analyze_request;
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling analyzeCustomReport");
+      }
+      // verify the required parameter 'analyze_request' is set
+      if (analyze_request === undefined || analyze_request === null) {
+        throw new Error("Missing the required parameter 'analyze_request' when calling analyzeCustomReport");
+      }
+
+      let pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = CustomReportAnalysisResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}/analysis', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteCustomDashboard operation.
@@ -603,6 +654,49 @@ export default class DatawarehouseApi {
       let returnType = CustomReportAccountConfigResponse;
       return this.apiClient.callApi(
         '/datawarehouse/custom_reports/account_config', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomReportChartPngUploadUrl operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportChartPngUploadUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Upload a PNG of a custom report chart
+     * Upload a PNG of a custom report chart 
+     * @param {Number} custom_report_oid The report oid to upload a chart PNG for.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportChartPngUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse}
+     */
+    getCustomReportChartPngUploadUrl(custom_report_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling getCustomReportChartPngUploadUrl");
+      }
+
+      let pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomReportChartPngUploadResponse;
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}/chart_png', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

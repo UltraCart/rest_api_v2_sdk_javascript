@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReport model module.
  * @module com.ultracart.admin.v2.models/CustomReport
- * @version 4.1.19
+ * @version 4.1.20
  */
 var CustomReport = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,9 @@ var CustomReport = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new CustomReport();
+        if (data.hasOwnProperty('business_analysis_prompt')) {
+          obj['business_analysis_prompt'] = _ApiClient["default"].convertToType(data['business_analysis_prompt'], 'String');
+        }
         if (data.hasOwnProperty('chart_javascript')) {
           obj['chart_javascript'] = _ApiClient["default"].convertToType(data['chart_javascript'], 'String');
         }
@@ -97,6 +100,11 @@ var CustomReport = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * @member {String} business_analysis_prompt
+ */
+CustomReport.prototype['business_analysis_prompt'] = undefined;
+
 /**
  * @member {String} chart_javascript
  */
