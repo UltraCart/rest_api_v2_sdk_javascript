@@ -34,7 +34,7 @@
   /**
    * The CustomReportAccountConfig model module.
    * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
-   * @version 3.11.20
+   * @version 3.11.21
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.opt_in_by_user = ApiClient.convertToType(data['opt_in_by_user'], 'String');
       if (data.hasOwnProperty('opt_in_date'))
         obj.opt_in_date = ApiClient.convertToType(data['opt_in_date'], 'String');
+      if (data.hasOwnProperty('read_only'))
+        obj.read_only = ApiClient.convertToType(data['read_only'], 'Boolean');
       if (data.hasOwnProperty('sql_budget'))
         obj.sql_budget = ApiClient.convertToType(data['sql_budget'], 'Number');
       if (data.hasOwnProperty('sql_usage'))
@@ -116,6 +118,11 @@
    * @member {String} opt_in_date
    */
   exports.prototype.opt_in_date = undefined;
+
+  /**
+   * @member {Boolean} read_only
+   */
+  exports.prototype.read_only = undefined;
 
   /**
    * @member {Number} sql_budget

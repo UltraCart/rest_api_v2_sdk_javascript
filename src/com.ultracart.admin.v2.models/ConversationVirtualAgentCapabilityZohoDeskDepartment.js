@@ -34,7 +34,7 @@
   /**
    * The ConversationVirtualAgentCapabilityZohoDeskDepartment model module.
    * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment
-   * @version 3.11.20
+   * @version 3.11.21
    */
 
   /**

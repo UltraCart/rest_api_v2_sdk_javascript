@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomDashboard', 'com.ultracart.admin.v2.models/CustomDashboardResponse', 'com.ultracart.admin.v2.models/CustomDashboardSchedule', 'com.ultracart.admin.v2.models/CustomDashboardScheduleResponse', 'com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse', 'com.ultracart.admin.v2.models/CustomDashboardsResponse', 'com.ultracart.admin.v2.models/CustomReport', 'com.ultracart.admin.v2.models/CustomReportAccountConfig', 'com.ultracart.admin.v2.models/CustomReportAccountConfigResponse', 'com.ultracart.admin.v2.models/CustomReportExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportResponse', 'com.ultracart.admin.v2.models/CustomReportsExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportsExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportsResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Report', 'com.ultracart.admin.v2.models/ReportAuthResponse', 'com.ultracart.admin.v2.models/ReportDataSetPageResponse', 'com.ultracart.admin.v2.models/ReportDataSetResponse', 'com.ultracart.admin.v2.models/ReportDryRunQueriesRequest', 'com.ultracart.admin.v2.models/ReportDryRunQueriesResponse', 'com.ultracart.admin.v2.models/ReportExecuteQueriesRequest', 'com.ultracart.admin.v2.models/ReportResponse', 'com.ultracart.admin.v2.models/ReportsResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomDashboard', 'com.ultracart.admin.v2.models/CustomDashboardResponse', 'com.ultracart.admin.v2.models/CustomDashboardSchedule', 'com.ultracart.admin.v2.models/CustomDashboardScheduleResponse', 'com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse', 'com.ultracart.admin.v2.models/CustomDashboardsResponse', 'com.ultracart.admin.v2.models/CustomReport', 'com.ultracart.admin.v2.models/CustomReportAccountConfig', 'com.ultracart.admin.v2.models/CustomReportAccountConfigResponse', 'com.ultracart.admin.v2.models/CustomReportAnalysisRequest', 'com.ultracart.admin.v2.models/CustomReportAnalysisResponse', 'com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse', 'com.ultracart.admin.v2.models/CustomReportExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportResponse', 'com.ultracart.admin.v2.models/CustomReportsExecutionRequest', 'com.ultracart.admin.v2.models/CustomReportsExecutionResponse', 'com.ultracart.admin.v2.models/CustomReportsResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Report', 'com.ultracart.admin.v2.models/ReportAuthResponse', 'com.ultracart.admin.v2.models/ReportDataSetPageResponse', 'com.ultracart.admin.v2.models/ReportDataSetResponse', 'com.ultracart.admin.v2.models/ReportDryRunQueriesRequest', 'com.ultracart.admin.v2.models/ReportDryRunQueriesResponse', 'com.ultracart.admin.v2.models/ReportExecuteQueriesRequest', 'com.ultracart.admin.v2.models/ReportResponse', 'com.ultracart.admin.v2.models/ReportsResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomDashboard'), require('../com.ultracart.admin.v2.models/CustomDashboardResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardSchedule'), require('../com.ultracart.admin.v2.models/CustomDashboardScheduleResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardsResponse'), require('../com.ultracart.admin.v2.models/CustomReport'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfig'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse'), require('../com.ultracart.admin.v2.models/CustomReportExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportResponse'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Report'), require('../com.ultracart.admin.v2.models/ReportAuthResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetPageResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetResponse'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesResponse'), require('../com.ultracart.admin.v2.models/ReportExecuteQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportResponse'), require('../com.ultracart.admin.v2.models/ReportsResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/CustomDashboard'), require('../com.ultracart.admin.v2.models/CustomDashboardResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardSchedule'), require('../com.ultracart.admin.v2.models/CustomDashboardScheduleResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse'), require('../com.ultracart.admin.v2.models/CustomDashboardsResponse'), require('../com.ultracart.admin.v2.models/CustomReport'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfig'), require('../com.ultracart.admin.v2.models/CustomReportAccountConfigResponse'), require('../com.ultracart.admin.v2.models/CustomReportAnalysisRequest'), require('../com.ultracart.admin.v2.models/CustomReportAnalysisResponse'), require('../com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse'), require('../com.ultracart.admin.v2.models/CustomReportExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportResponse'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionRequest'), require('../com.ultracart.admin.v2.models/CustomReportsExecutionResponse'), require('../com.ultracart.admin.v2.models/CustomReportsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Report'), require('../com.ultracart.admin.v2.models/ReportAuthResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetPageResponse'), require('../com.ultracart.admin.v2.models/ReportDataSetResponse'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportDryRunQueriesResponse'), require('../com.ultracart.admin.v2.models/ReportExecuteQueriesRequest'), require('../com.ultracart.admin.v2.models/ReportResponse'), require('../com.ultracart.admin.v2.models/ReportsResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.DatawarehouseApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomDashboard, root.UltraCartRestApiV2.CustomDashboardResponse, root.UltraCartRestApiV2.CustomDashboardSchedule, root.UltraCartRestApiV2.CustomDashboardScheduleResponse, root.UltraCartRestApiV2.CustomDashboardSchedulesResponse, root.UltraCartRestApiV2.CustomDashboardsResponse, root.UltraCartRestApiV2.CustomReport, root.UltraCartRestApiV2.CustomReportAccountConfig, root.UltraCartRestApiV2.CustomReportAccountConfigResponse, root.UltraCartRestApiV2.CustomReportExecutionRequest, root.UltraCartRestApiV2.CustomReportExecutionResponse, root.UltraCartRestApiV2.CustomReportResponse, root.UltraCartRestApiV2.CustomReportsExecutionRequest, root.UltraCartRestApiV2.CustomReportsExecutionResponse, root.UltraCartRestApiV2.CustomReportsResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Report, root.UltraCartRestApiV2.ReportAuthResponse, root.UltraCartRestApiV2.ReportDataSetPageResponse, root.UltraCartRestApiV2.ReportDataSetResponse, root.UltraCartRestApiV2.ReportDryRunQueriesRequest, root.UltraCartRestApiV2.ReportDryRunQueriesResponse, root.UltraCartRestApiV2.ReportExecuteQueriesRequest, root.UltraCartRestApiV2.ReportResponse, root.UltraCartRestApiV2.ReportsResponse);
+    root.UltraCartRestApiV2.DatawarehouseApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomDashboard, root.UltraCartRestApiV2.CustomDashboardResponse, root.UltraCartRestApiV2.CustomDashboardSchedule, root.UltraCartRestApiV2.CustomDashboardScheduleResponse, root.UltraCartRestApiV2.CustomDashboardSchedulesResponse, root.UltraCartRestApiV2.CustomDashboardsResponse, root.UltraCartRestApiV2.CustomReport, root.UltraCartRestApiV2.CustomReportAccountConfig, root.UltraCartRestApiV2.CustomReportAccountConfigResponse, root.UltraCartRestApiV2.CustomReportAnalysisRequest, root.UltraCartRestApiV2.CustomReportAnalysisResponse, root.UltraCartRestApiV2.CustomReportChartPngUploadResponse, root.UltraCartRestApiV2.CustomReportExecutionRequest, root.UltraCartRestApiV2.CustomReportExecutionResponse, root.UltraCartRestApiV2.CustomReportResponse, root.UltraCartRestApiV2.CustomReportsExecutionRequest, root.UltraCartRestApiV2.CustomReportsExecutionResponse, root.UltraCartRestApiV2.CustomReportsResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Report, root.UltraCartRestApiV2.ReportAuthResponse, root.UltraCartRestApiV2.ReportDataSetPageResponse, root.UltraCartRestApiV2.ReportDataSetResponse, root.UltraCartRestApiV2.ReportDryRunQueriesRequest, root.UltraCartRestApiV2.ReportDryRunQueriesResponse, root.UltraCartRestApiV2.ReportExecuteQueriesRequest, root.UltraCartRestApiV2.ReportResponse, root.UltraCartRestApiV2.ReportsResponse);
   }
-}(this, function(ApiClient, CustomDashboard, CustomDashboardResponse, CustomDashboardSchedule, CustomDashboardScheduleResponse, CustomDashboardSchedulesResponse, CustomDashboardsResponse, CustomReport, CustomReportAccountConfig, CustomReportAccountConfigResponse, CustomReportExecutionRequest, CustomReportExecutionResponse, CustomReportResponse, CustomReportsExecutionRequest, CustomReportsExecutionResponse, CustomReportsResponse, ErrorResponse, Report, ReportAuthResponse, ReportDataSetPageResponse, ReportDataSetResponse, ReportDryRunQueriesRequest, ReportDryRunQueriesResponse, ReportExecuteQueriesRequest, ReportResponse, ReportsResponse) {
+}(this, function(ApiClient, CustomDashboard, CustomDashboardResponse, CustomDashboardSchedule, CustomDashboardScheduleResponse, CustomDashboardSchedulesResponse, CustomDashboardsResponse, CustomReport, CustomReportAccountConfig, CustomReportAccountConfigResponse, CustomReportAnalysisRequest, CustomReportAnalysisResponse, CustomReportChartPngUploadResponse, CustomReportExecutionRequest, CustomReportExecutionResponse, CustomReportResponse, CustomReportsExecutionRequest, CustomReportsExecutionResponse, CustomReportsResponse, ErrorResponse, Report, ReportAuthResponse, ReportDataSetPageResponse, ReportDataSetResponse, ReportDryRunQueriesRequest, ReportDryRunQueriesResponse, ReportExecuteQueriesRequest, ReportResponse, ReportsResponse) {
   'use strict';
 
   /**
    * Datawarehouse service.
    * @module com.ultracart.admin.v2/DatawarehouseApi
-   * @version 3.11.20
+   * @version 3.11.21
    */
 
   /**
@@ -47,6 +47,60 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the analyzeCustomReport operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~analyzeCustomReportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportAnalysisResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Analyze a custom report
+     * Analyze a custom report on the UltraCart account. 
+     * @param {module:com.ultracart.admin.v2.models/CustomReportAnalysisRequest} analyze_request Request to analyze custom report
+     * @param {Number} custom_report_oid The report oid to analyze.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~analyzeCustomReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportAnalysisResponse}
+     */
+    this.analyzeCustomReport = function(analyze_request, custom_report_oid, callback) {
+      var postBody = analyze_request;
+
+      // verify the required parameter 'analyze_request' is set
+      if (analyze_request === undefined || analyze_request === null) {
+        throw new Error("Missing the required parameter 'analyze_request' when calling analyzeCustomReport");
+      }
+
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling analyzeCustomReport");
+      }
+
+
+      var pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = CustomReportAnalysisResponse;
+
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}/analysis', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteCustomDashboard operation.
@@ -658,6 +712,54 @@
 
       return this.apiClient.callApi(
         '/datawarehouse/custom_reports/account_config', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomReportChartPngUploadUrl operation.
+     * @callback module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportChartPngUploadUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Upload a PNG of a custom report chart
+     * Upload a PNG of a custom report chart 
+     * @param {Number} custom_report_oid The report oid to upload a chart PNG for.
+     * @param {module:com.ultracart.admin.v2/DatawarehouseApi~getCustomReportChartPngUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse}
+     */
+    this.getCustomReportChartPngUploadUrl = function(custom_report_oid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'custom_report_oid' is set
+      if (custom_report_oid === undefined || custom_report_oid === null) {
+        throw new Error("Missing the required parameter 'custom_report_oid' when calling getCustomReportChartPngUploadUrl");
+      }
+
+
+      var pathParams = {
+        'custom_report_oid': custom_report_oid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = CustomReportChartPngUploadResponse;
+
+      return this.apiClient.callApi(
+        '/datawarehouse/custom_reports/{custom_report_oid}/chart_png', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

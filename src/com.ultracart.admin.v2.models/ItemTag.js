@@ -34,7 +34,7 @@
   /**
    * The ItemTag model module.
    * @module com.ultracart.admin.v2.models/ItemTag
-   * @version 3.11.20
+   * @version 3.11.21
    */
 
   /**
@@ -64,7 +64,7 @@
   }
 
   /**
-   * tag_tpe
+   * tag_type
    * @member {module:com.ultracart.admin.v2.models/ItemTag.TagTypeEnum} tagType
    */
   exports.prototype.tagType = undefined;
