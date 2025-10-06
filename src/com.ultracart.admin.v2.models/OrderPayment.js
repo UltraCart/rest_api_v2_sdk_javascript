@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**
@@ -265,6 +265,12 @@
      * @const
      */
     Credit_Card: "Credit Card",
+
+    /**
+     * value: "Crypto"
+     * @const
+     */
+    Crypto: "Crypto",
 
     /**
      * value: "eBay"

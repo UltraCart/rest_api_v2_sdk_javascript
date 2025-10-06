@@ -34,7 +34,7 @@
   /**
    * The ItemShippingMethod model module.
    * @module com.ultracart.admin.v2.models/ItemShippingMethod
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**
@@ -83,6 +83,8 @@
         obj.shipping_method_oid = ApiClient.convertToType(data['shipping_method_oid'], 'Number');
       if (data.hasOwnProperty('shipping_method_validity'))
         obj.shipping_method_validity = ApiClient.convertToType(data['shipping_method_validity'], 'String');
+      if (data.hasOwnProperty('ships_separately'))
+        obj.ships_separately = ApiClient.convertToType(data['ships_separately'], 'Boolean');
       if (data.hasOwnProperty('signature_required'))
         obj.signature_required = ApiClient.convertToType(data['signature_required'], 'Boolean');
     }
@@ -172,6 +174,12 @@
    * @member {module:com.ultracart.admin.v2.models/ItemShippingMethod.ShippingMethodValidityEnum} shipping_method_validity
    */
   exports.prototype.shipping_method_validity = undefined;
+
+  /**
+   * Ships separately
+   * @member {Boolean} ships_separately
+   */
+  exports.prototype.ships_separately = undefined;
 
   /**
    * Signature required

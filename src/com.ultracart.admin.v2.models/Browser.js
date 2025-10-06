@@ -34,7 +34,7 @@
   /**
    * The Browser model module.
    * @module com.ultracart.admin.v2.models/Browser
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**

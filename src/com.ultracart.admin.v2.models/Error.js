@@ -34,7 +34,7 @@
   /**
    * The Error model module.
    * @module com.ultracart.admin.v2.models/Error
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The OrderByTokenQuery model module.
    * @module com.ultracart.admin.v2.models/OrderByTokenQuery
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**

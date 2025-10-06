@@ -34,7 +34,7 @@
   /**
    * The EmailWebhookEditorValuesResponse model module.
    * @module com.ultracart.admin.v2.models/EmailWebhookEditorValuesResponse
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**

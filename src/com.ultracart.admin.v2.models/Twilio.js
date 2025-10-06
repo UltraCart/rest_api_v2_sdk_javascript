@@ -34,7 +34,7 @@
   /**
    * The Twilio model module.
    * @module com.ultracart.admin.v2.models/Twilio
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**

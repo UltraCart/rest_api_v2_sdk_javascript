@@ -34,7 +34,7 @@
   /**
    * The ReplaceOrderItemIdRequest model module.
    * @module com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest
-   * @version 3.11.21
+   * @version 3.11.22
    */
 
   /**
@@ -68,7 +68,7 @@
   }
 
   /**
-   * Index of the item on the order (one based index)
+   * Index of the item on the order.  Must match order.items[].item_index
    * @member {Number} item_index
    */
   exports.prototype.item_index = undefined;
