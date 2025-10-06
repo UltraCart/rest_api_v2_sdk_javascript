@@ -25,7 +25,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.21
+ * @version 4.1.22
  */
 class OrderPayment {
     /**
@@ -293,6 +293,12 @@ OrderPayment['PaymentMethodEnum'] = {
      * @const
      */
     "Credit Card": "Credit Card",
+
+    /**
+     * value: "Crypto"
+     * @const
+     */
+    "Crypto": "Crypto",
 
     /**
      * value: "eBay"

@@ -1929,6 +1929,24 @@ Object.defineProperty(exports, "CustomReportAccountConfigResponse", {
     return _CustomReportAccountConfigResponse["default"];
   }
 });
+Object.defineProperty(exports, "CustomReportAnalysisRequest", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportAnalysisRequest["default"];
+  }
+});
+Object.defineProperty(exports, "CustomReportAnalysisResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportAnalysisResponse["default"];
+  }
+});
+Object.defineProperty(exports, "CustomReportChartPngUploadResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportChartPngUploadResponse["default"];
+  }
+});
 Object.defineProperty(exports, "CustomReportExecutionParameter", {
   enumerable: true,
   get: function get() {
@@ -4413,6 +4431,12 @@ Object.defineProperty(exports, "RegisterAffiliateClickResponse", {
     return _RegisterAffiliateClickResponse["default"];
   }
 });
+Object.defineProperty(exports, "ReplaceOrderItemIdRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ReplaceOrderItemIdRequest["default"];
+  }
+});
 Object.defineProperty(exports, "Report", {
   enumerable: true,
   get: function get() {
@@ -5760,6 +5784,9 @@ var _CustomDashboardsResponse = _interopRequireDefault(require("./com.ultracart.
 var _CustomReport = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReport"));
 var _CustomReportAccountConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportAccountConfig"));
 var _CustomReportAccountConfigResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportAccountConfigResponse"));
+var _CustomReportAnalysisRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportAnalysisRequest"));
+var _CustomReportAnalysisResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportAnalysisResponse"));
+var _CustomReportChartPngUploadResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse"));
 var _CustomReportExecutionParameter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportExecutionParameter"));
 var _CustomReportExecutionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportExecutionRequest"));
 var _CustomReportExecutionResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportExecutionResponse"));
@@ -6166,6 +6193,7 @@ var _Property = _interopRequireDefault(require("./com.ultracart.admin.v2.models/
 var _PublishLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/PublishLibraryItemRequest"));
 var _RegisterAffiliateClickRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/RegisterAffiliateClickRequest"));
 var _RegisterAffiliateClickResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/RegisterAffiliateClickResponse"));
+var _ReplaceOrderItemIdRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest"));
 var _Report = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Report"));
 var _ReportAuth = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportAuth"));
 var _ReportAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReportAuthResponse"));

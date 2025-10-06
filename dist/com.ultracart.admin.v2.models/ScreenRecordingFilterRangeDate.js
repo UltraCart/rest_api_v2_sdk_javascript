@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingFilterRangeDate model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeDate
- * @version 4.1.20
+ * @version 4.1.21
  */
 var ScreenRecordingFilterRangeDate = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemTag model module.
  * @module com.ultracart.admin.v2.models/ItemTag
- * @version 4.1.20
+ * @version 4.1.21
  */
 var ItemTag = /*#__PURE__*/function () {
   /**
@@ -71,7 +71,7 @@ var ItemTag = /*#__PURE__*/function () {
   }]);
 }();
 /**
- * tag_tpe
+ * tag_type
  * @member {module:com.ultracart.admin.v2.models/ItemTag.TagTypeEnum} tagType
  */
 ItemTag.prototype['tagType'] = undefined;

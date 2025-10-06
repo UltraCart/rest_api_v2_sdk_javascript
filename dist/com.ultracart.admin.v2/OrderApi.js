@@ -29,6 +29,7 @@ var _OrderTokenResponse = _interopRequireDefault(require("../com.ultracart.admin
 var _OrderValidationRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderValidationRequest"));
 var _OrderValidationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderValidationResponse"));
 var _OrdersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrdersResponse"));
+var _ReplaceOrderItemIdRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -50,7 +51,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.20
+* @version 4.1.21
 */
 var OrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -990,6 +991,52 @@ var OrderApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrderResponse["default"];
       return this.apiClient.callApi('/order/orders/{order_id}/refund', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the replaceOrderItemMerchantItemId operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~replaceOrderItemMerchantItemIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replaces an order item id
+     * Replaces a single order item id with another merchant_item_id, leaving all other attributes and properties unchanged.  A custom method requested by a merchant to allow for item id updates due to shipping errors.  It is doubtful you will ever need this method.  The expansion variable affects the returned order object. 
+     * @param {String} order_id The order id to update.
+     * @param {module:com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest} replace_order_item_id_request Replacement Request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~replaceOrderItemMerchantItemIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+  }, {
+    key: "replaceOrderItemMerchantItemId",
+    value: function replaceOrderItemMerchantItemId(order_id, replace_order_item_id_request, opts, callback) {
+      opts = opts || {};
+      var postBody = replace_order_item_id_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling replaceOrderItemMerchantItemId");
+      }
+      // verify the required parameter 'replace_order_item_id_request' is set
+      if (replace_order_item_id_request === undefined || replace_order_item_id_request === null) {
+        throw new Error("Missing the required parameter 'replace_order_item_id_request' when calling replaceOrderItemMerchantItemId");
+      }
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _OrderResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/replace_item_id', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReportAccountConfig model module.
  * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
- * @version 4.1.20
+ * @version 4.1.21
  */
 var CustomReportAccountConfig = /*#__PURE__*/function () {
   /**
@@ -80,6 +80,9 @@ var CustomReportAccountConfig = /*#__PURE__*/function () {
         if (data.hasOwnProperty('opt_in_date')) {
           obj['opt_in_date'] = _ApiClient["default"].convertToType(data['opt_in_date'], 'String');
         }
+        if (data.hasOwnProperty('read_only')) {
+          obj['read_only'] = _ApiClient["default"].convertToType(data['read_only'], 'Boolean');
+        }
         if (data.hasOwnProperty('sql_budget')) {
           obj['sql_budget'] = _ApiClient["default"].convertToType(data['sql_budget'], 'Number');
         }
@@ -130,6 +133,11 @@ CustomReportAccountConfig.prototype['opt_in_by_user'] = undefined;
  * @member {String} opt_in_date
  */
 CustomReportAccountConfig.prototype['opt_in_date'] = undefined;
+
+/**
+ * @member {Boolean} read_only
+ */
+CustomReportAccountConfig.prototype['read_only'] = undefined;
 
 /**
  * @member {Number} sql_budget

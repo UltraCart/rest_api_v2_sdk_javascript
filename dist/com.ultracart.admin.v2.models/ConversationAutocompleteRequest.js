@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAutocompleteRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAutocompleteRequest
- * @version 4.1.20
+ * @version 4.1.21
  */
 var ConversationAutocompleteRequest = /*#__PURE__*/function () {
   /**

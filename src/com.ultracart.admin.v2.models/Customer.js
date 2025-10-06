@@ -34,7 +34,7 @@ import Order from './Order';
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.1.21
+ * @version 4.1.22
  */
 class Customer {
     /**
@@ -133,6 +133,9 @@ class Customer {
             }
             if (data.hasOwnProperty('exempt_shipping_handling_charge')) {
                 obj['exempt_shipping_handling_charge'] = ApiClient.convertToType(data['exempt_shipping_handling_charge'], 'Boolean');
+            }
+            if (data.hasOwnProperty('fax')) {
+                obj['fax'] = ApiClient.convertToType(data['fax'], 'String');
             }
             if (data.hasOwnProperty('fedex_account_number')) {
                 obj['fedex_account_number'] = ApiClient.convertToType(data['fedex_account_number'], 'String');
@@ -399,6 +402,12 @@ Customer.prototype['email'] = undefined;
  * @member {Boolean} exempt_shipping_handling_charge
  */
 Customer.prototype['exempt_shipping_handling_charge'] = undefined;
+
+/**
+ * Fax Number
+ * @member {String} fax
+ */
+Customer.prototype['fax'] = undefined;
 
 /**
  * FedEx account number

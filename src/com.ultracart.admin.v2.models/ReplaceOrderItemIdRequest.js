@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReplaceOrderItemIdRequest model module.
  * @module com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest
- * @version 4.1.21
+ * @version 4.1.22
  */
 class ReplaceOrderItemIdRequest {
     /**
@@ -67,7 +67,7 @@ class ReplaceOrderItemIdRequest {
 }
 
 /**
- * Index of the item on the order (one based index)
+ * Index of the item on the order.  Must match order.items[].item_index
  * @member {Number} item_index
  */
 ReplaceOrderItemIdRequest.prototype['item_index'] = undefined;

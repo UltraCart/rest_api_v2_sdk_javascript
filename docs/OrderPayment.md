@@ -46,6 +46,8 @@ Name | Type | Description | Notes
 
 * `Credit Card` (value: `"Credit Card"`)
 
+* `Crypto` (value: `"Crypto"`)
+
 * `eBay` (value: `"eBay"`)
 
 * `eCheck` (value: `"eCheck"`)
