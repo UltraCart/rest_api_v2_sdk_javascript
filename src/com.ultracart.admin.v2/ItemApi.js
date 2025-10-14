@@ -34,7 +34,7 @@
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.11.22
+   * @version 3.11.23
    */
 
   /**
@@ -185,7 +185,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 
@@ -644,7 +644,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ItemReviewResponse;
 
@@ -692,7 +692,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = ItemReviewsResponse;
 

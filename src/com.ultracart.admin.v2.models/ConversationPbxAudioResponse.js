@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAudioResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAudioResponse
-   * @version 3.11.22
+   * @version 3.11.23
    */
 
   /**

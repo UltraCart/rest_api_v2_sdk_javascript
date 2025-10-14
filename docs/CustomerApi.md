@@ -188,7 +188,7 @@ null (empty response body)
 
 <a name="deleteWishListItem"></a>
 # **deleteWishListItem**
-> CustomerWishListItem deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid)
+> deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid)
 
 Delete a customer wishlist item
 
@@ -213,7 +213,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
 apiInstance.deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid, callback);
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomerWishListItem**](CustomerWishListItem.md)
+null (empty response body)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCustomer"></a>

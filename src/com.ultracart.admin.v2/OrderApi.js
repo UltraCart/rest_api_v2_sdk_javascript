@@ -34,7 +34,7 @@
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.11.22
+   * @version 3.11.23
    */
 
   /**
@@ -788,7 +788,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = OrderEdiDocumentsResponse;
 
@@ -1100,7 +1100,7 @@
       };
 
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      var contentTypes = ['application/json; charset=UTF-8'];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = OrderRefundableResponse;
 

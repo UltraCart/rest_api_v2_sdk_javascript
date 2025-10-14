@@ -34,7 +34,7 @@
   /**
    * The CustomerWishListItemsResponse model module.
    * @module com.ultracart.admin.v2.models/CustomerWishListItemsResponse
-   * @version 3.11.22
+   * @version 3.11.23
    */
 
   /**

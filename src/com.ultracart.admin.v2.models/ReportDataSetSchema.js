@@ -34,7 +34,7 @@
   /**
    * The ReportDataSetSchema model module.
    * @module com.ultracart.admin.v2.models/ReportDataSetSchema
-   * @version 3.11.22
+   * @version 3.11.23
    */
 
   /**

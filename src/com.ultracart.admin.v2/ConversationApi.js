@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationAgentAuthResponse', 'com.ultracart.admin.v2.models/ConversationAgentProfile', 'com.ultracart.admin.v2.models/ConversationAgentProfileResponse', 'com.ultracart.admin.v2.models/ConversationAgentProfilesResponse', 'com.ultracart.admin.v2.models/ConversationAutocompleteRequest', 'com.ultracart.admin.v2.models/ConversationAutocompleteResponse', 'com.ultracart.admin.v2.models/ConversationCannedMessage', 'com.ultracart.admin.v2.models/ConversationCannedMessageResponse', 'com.ultracart.admin.v2.models/ConversationCannedMessagesResponse', 'com.ultracart.admin.v2.models/ConversationCannedMessagesSearch', 'com.ultracart.admin.v2.models/ConversationDepartment', 'com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse', 'com.ultracart.admin.v2.models/ConversationDepartmentResponse', 'com.ultracart.admin.v2.models/ConversationDepartmentsResponse', 'com.ultracart.admin.v2.models/ConversationEngagement', 'com.ultracart.admin.v2.models/ConversationEngagementResponse', 'com.ultracart.admin.v2.models/ConversationEngagementsResponse', 'com.ultracart.admin.v2.models/ConversationJoinRequest', 'com.ultracart.admin.v2.models/ConversationLocationsResponse', 'com.ultracart.admin.v2.models/ConversationMessagesResponse', 'com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationPbxAgent', 'com.ultracart.admin.v2.models/ConversationPbxAgentResponse', 'com.ultracart.admin.v2.models/ConversationPbxAgentsResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudio', 'com.ultracart.admin.v2.models/ConversationPbxAudioResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudiosResponse', 'com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest', 'com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse', 'com.ultracart.admin.v2.models/ConversationPbxMenu', 'com.ultracart.admin.v2.models/ConversationPbxMenuResponse', 'com.ultracart.admin.v2.models/ConversationPbxMenusResponse', 'com.ultracart.admin.v2.models/ConversationPbxPhoneNumber', 'com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse', 'com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse', 'com.ultracart.admin.v2.models/ConversationPbxQueue', 'com.ultracart.admin.v2.models/ConversationPbxQueueResponse', 'com.ultracart.admin.v2.models/ConversationPbxQueuesResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeBased', 'com.ultracart.admin.v2.models/ConversationPbxTimeBasedResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeBasedsResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeRange', 'com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageSummariesResponse', 'com.ultracart.admin.v2.models/ConversationPermissionsResponse', 'com.ultracart.admin.v2.models/ConversationResponse', 'com.ultracart.admin.v2.models/ConversationSearchRequest', 'com.ultracart.admin.v2.models/ConversationSearchResponse', 'com.ultracart.admin.v2.models/ConversationStartRequest', 'com.ultracart.admin.v2.models/ConversationStartResponse', 'com.ultracart.admin.v2.models/ConversationVirtualAgentBudget', 'com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse', 'com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities', 'com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse', 'com.ultracart.admin.v2.models/ConversationWebchatContext', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse', 'com.ultracart.admin.v2.models/ConversationsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationAgentAuthResponse', 'com.ultracart.admin.v2.models/ConversationAgentProfile', 'com.ultracart.admin.v2.models/ConversationAgentProfileResponse', 'com.ultracart.admin.v2.models/ConversationAgentProfilesResponse', 'com.ultracart.admin.v2.models/ConversationAutocompleteRequest', 'com.ultracart.admin.v2.models/ConversationAutocompleteResponse', 'com.ultracart.admin.v2.models/ConversationCannedMessage', 'com.ultracart.admin.v2.models/ConversationCannedMessageResponse', 'com.ultracart.admin.v2.models/ConversationCannedMessagesResponse', 'com.ultracart.admin.v2.models/ConversationCannedMessagesSearch', 'com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse', 'com.ultracart.admin.v2.models/ConversationDepartment', 'com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse', 'com.ultracart.admin.v2.models/ConversationDepartmentResponse', 'com.ultracart.admin.v2.models/ConversationDepartmentsResponse', 'com.ultracart.admin.v2.models/ConversationEngagement', 'com.ultracart.admin.v2.models/ConversationEngagementResponse', 'com.ultracart.admin.v2.models/ConversationEngagementsResponse', 'com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest', 'com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse', 'com.ultracart.admin.v2.models/ConversationJoinRequest', 'com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse', 'com.ultracart.admin.v2.models/ConversationLocationsResponse', 'com.ultracart.admin.v2.models/ConversationMessagesResponse', 'com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationPbxAgent', 'com.ultracart.admin.v2.models/ConversationPbxAgentResponse', 'com.ultracart.admin.v2.models/ConversationPbxAgentsResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudio', 'com.ultracart.admin.v2.models/ConversationPbxAudioResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse', 'com.ultracart.admin.v2.models/ConversationPbxAudiosResponse', 'com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest', 'com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse', 'com.ultracart.admin.v2.models/ConversationPbxMenu', 'com.ultracart.admin.v2.models/ConversationPbxMenuResponse', 'com.ultracart.admin.v2.models/ConversationPbxMenusResponse', 'com.ultracart.admin.v2.models/ConversationPbxPhoneNumber', 'com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse', 'com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse', 'com.ultracart.admin.v2.models/ConversationPbxQueue', 'com.ultracart.admin.v2.models/ConversationPbxQueueResponse', 'com.ultracart.admin.v2.models/ConversationPbxQueuesResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeBased', 'com.ultracart.admin.v2.models/ConversationPbxTimeBasedResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeBasedsResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeRange', 'com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse', 'com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageResponse', 'com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageSummariesResponse', 'com.ultracart.admin.v2.models/ConversationPermissionsResponse', 'com.ultracart.admin.v2.models/ConversationResponse', 'com.ultracart.admin.v2.models/ConversationSearchRequest', 'com.ultracart.admin.v2.models/ConversationSearchResponse', 'com.ultracart.admin.v2.models/ConversationStartRequest', 'com.ultracart.admin.v2.models/ConversationStartResponse', 'com.ultracart.admin.v2.models/ConversationVirtualAgentBudget', 'com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse', 'com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities', 'com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse', 'com.ultracart.admin.v2.models/ConversationWebchatContext', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest', 'com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse', 'com.ultracart.admin.v2.models/ConversationsResponse', 'com.ultracart.admin.v2.models/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ConversationAgentAuthResponse'), require('../com.ultracart.admin.v2.models/ConversationAgentProfile'), require('../com.ultracart.admin.v2.models/ConversationAgentProfileResponse'), require('../com.ultracart.admin.v2.models/ConversationAgentProfilesResponse'), require('../com.ultracart.admin.v2.models/ConversationAutocompleteRequest'), require('../com.ultracart.admin.v2.models/ConversationAutocompleteResponse'), require('../com.ultracart.admin.v2.models/ConversationCannedMessage'), require('../com.ultracart.admin.v2.models/ConversationCannedMessageResponse'), require('../com.ultracart.admin.v2.models/ConversationCannedMessagesResponse'), require('../com.ultracart.admin.v2.models/ConversationCannedMessagesSearch'), require('../com.ultracart.admin.v2.models/ConversationDepartment'), require('../com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse'), require('../com.ultracart.admin.v2.models/ConversationDepartmentResponse'), require('../com.ultracart.admin.v2.models/ConversationDepartmentsResponse'), require('../com.ultracart.admin.v2.models/ConversationEngagement'), require('../com.ultracart.admin.v2.models/ConversationEngagementResponse'), require('../com.ultracart.admin.v2.models/ConversationEngagementsResponse'), require('../com.ultracart.admin.v2.models/ConversationJoinRequest'), require('../com.ultracart.admin.v2.models/ConversationLocationsResponse'), require('../com.ultracart.admin.v2.models/ConversationMessagesResponse'), require('../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAgent'), require('../com.ultracart.admin.v2.models/ConversationPbxAgentResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAgentsResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudio'), require('../com.ultracart.admin.v2.models/ConversationPbxAudioResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudiosResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest'), require('../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxMenu'), require('../com.ultracart.admin.v2.models/ConversationPbxMenuResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxMenusResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxPhoneNumber'), require('../com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxQueue'), require('../com.ultracart.admin.v2.models/ConversationPbxQueueResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxQueuesResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeBased'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeBasedResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeBasedsResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeRange'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageSummariesResponse'), require('../com.ultracart.admin.v2.models/ConversationPermissionsResponse'), require('../com.ultracart.admin.v2.models/ConversationResponse'), require('../com.ultracart.admin.v2.models/ConversationSearchRequest'), require('../com.ultracart.admin.v2.models/ConversationSearchResponse'), require('../com.ultracart.admin.v2.models/ConversationStartRequest'), require('../com.ultracart.admin.v2.models/ConversationStartResponse'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentBudget'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse'), require('../com.ultracart.admin.v2.models/ConversationWebchatContext'), require('../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest'), require('../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse'), require('../com.ultracart.admin.v2.models/ConversationsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ConversationAgentAuthResponse'), require('../com.ultracart.admin.v2.models/ConversationAgentProfile'), require('../com.ultracart.admin.v2.models/ConversationAgentProfileResponse'), require('../com.ultracart.admin.v2.models/ConversationAgentProfilesResponse'), require('../com.ultracart.admin.v2.models/ConversationAutocompleteRequest'), require('../com.ultracart.admin.v2.models/ConversationAutocompleteResponse'), require('../com.ultracart.admin.v2.models/ConversationCannedMessage'), require('../com.ultracart.admin.v2.models/ConversationCannedMessageResponse'), require('../com.ultracart.admin.v2.models/ConversationCannedMessagesResponse'), require('../com.ultracart.admin.v2.models/ConversationCannedMessagesSearch'), require('../com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse'), require('../com.ultracart.admin.v2.models/ConversationDepartment'), require('../com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse'), require('../com.ultracart.admin.v2.models/ConversationDepartmentResponse'), require('../com.ultracart.admin.v2.models/ConversationDepartmentsResponse'), require('../com.ultracart.admin.v2.models/ConversationEngagement'), require('../com.ultracart.admin.v2.models/ConversationEngagementResponse'), require('../com.ultracart.admin.v2.models/ConversationEngagementsResponse'), require('../com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest'), require('../com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse'), require('../com.ultracart.admin.v2.models/ConversationJoinRequest'), require('../com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse'), require('../com.ultracart.admin.v2.models/ConversationLocationsResponse'), require('../com.ultracart.admin.v2.models/ConversationMessagesResponse'), require('../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAgent'), require('../com.ultracart.admin.v2.models/ConversationPbxAgentResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAgentsResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudio'), require('../com.ultracart.admin.v2.models/ConversationPbxAudioResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxAudiosResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest'), require('../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxMenu'), require('../com.ultracart.admin.v2.models/ConversationPbxMenuResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxMenusResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxPhoneNumber'), require('../com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxQueue'), require('../com.ultracart.admin.v2.models/ConversationPbxQueueResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxQueuesResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeBased'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeBasedResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeBasedsResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeRange'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageResponse'), require('../com.ultracart.admin.v2.models/ConversationPbxVoicemailMessageSummariesResponse'), require('../com.ultracart.admin.v2.models/ConversationPermissionsResponse'), require('../com.ultracart.admin.v2.models/ConversationResponse'), require('../com.ultracart.admin.v2.models/ConversationSearchRequest'), require('../com.ultracart.admin.v2.models/ConversationSearchResponse'), require('../com.ultracart.admin.v2.models/ConversationStartRequest'), require('../com.ultracart.admin.v2.models/ConversationStartResponse'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentBudget'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities'), require('../com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse'), require('../com.ultracart.admin.v2.models/ConversationWebchatContext'), require('../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest'), require('../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse'), require('../com.ultracart.admin.v2.models/ConversationsResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationAgentAuthResponse, root.UltraCartRestApiV2.ConversationAgentProfile, root.UltraCartRestApiV2.ConversationAgentProfileResponse, root.UltraCartRestApiV2.ConversationAgentProfilesResponse, root.UltraCartRestApiV2.ConversationAutocompleteRequest, root.UltraCartRestApiV2.ConversationAutocompleteResponse, root.UltraCartRestApiV2.ConversationCannedMessage, root.UltraCartRestApiV2.ConversationCannedMessageResponse, root.UltraCartRestApiV2.ConversationCannedMessagesResponse, root.UltraCartRestApiV2.ConversationCannedMessagesSearch, root.UltraCartRestApiV2.ConversationDepartment, root.UltraCartRestApiV2.ConversationDepartmentMembersResponse, root.UltraCartRestApiV2.ConversationDepartmentResponse, root.UltraCartRestApiV2.ConversationDepartmentsResponse, root.UltraCartRestApiV2.ConversationEngagement, root.UltraCartRestApiV2.ConversationEngagementResponse, root.UltraCartRestApiV2.ConversationEngagementsResponse, root.UltraCartRestApiV2.ConversationJoinRequest, root.UltraCartRestApiV2.ConversationLocationsResponse, root.UltraCartRestApiV2.ConversationMessagesResponse, root.UltraCartRestApiV2.ConversationMultimediaUploadUrlResponse, root.UltraCartRestApiV2.ConversationPbxAgent, root.UltraCartRestApiV2.ConversationPbxAgentResponse, root.UltraCartRestApiV2.ConversationPbxAgentsResponse, root.UltraCartRestApiV2.ConversationPbxAudio, root.UltraCartRestApiV2.ConversationPbxAudioResponse, root.UltraCartRestApiV2.ConversationPbxAudioUploadUrlResponse, root.UltraCartRestApiV2.ConversationPbxAudioUsageResponse, root.UltraCartRestApiV2.ConversationPbxAudiosResponse, root.UltraCartRestApiV2.ConversationPbxCustomerSnapshotRequest, root.UltraCartRestApiV2.ConversationPbxCustomerSnapshotResponse, root.UltraCartRestApiV2.ConversationPbxMenu, root.UltraCartRestApiV2.ConversationPbxMenuResponse, root.UltraCartRestApiV2.ConversationPbxMenusResponse, root.UltraCartRestApiV2.ConversationPbxPhoneNumber, root.UltraCartRestApiV2.ConversationPbxPhoneNumberResponse, root.UltraCartRestApiV2.ConversationPbxPhoneNumbersResponse, root.UltraCartRestApiV2.ConversationPbxQueue, root.UltraCartRestApiV2.ConversationPbxQueueResponse, root.UltraCartRestApiV2.ConversationPbxQueuesResponse, root.UltraCartRestApiV2.ConversationPbxTimeBased, root.UltraCartRestApiV2.ConversationPbxTimeBasedResponse, root.UltraCartRestApiV2.ConversationPbxTimeBasedsResponse, root.UltraCartRestApiV2.ConversationPbxTimeRange, root.UltraCartRestApiV2.ConversationPbxTimeRangeResponse, root.UltraCartRestApiV2.ConversationPbxTimeRangesResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMailbox, root.UltraCartRestApiV2.ConversationPbxVoicemailMailboxResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMailboxesResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMessageResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMessageSummariesResponse, root.UltraCartRestApiV2.ConversationPermissionsResponse, root.UltraCartRestApiV2.ConversationResponse, root.UltraCartRestApiV2.ConversationSearchRequest, root.UltraCartRestApiV2.ConversationSearchResponse, root.UltraCartRestApiV2.ConversationStartRequest, root.UltraCartRestApiV2.ConversationStartResponse, root.UltraCartRestApiV2.ConversationVirtualAgentBudget, root.UltraCartRestApiV2.ConversationVirtualAgentBudgetResponse, root.UltraCartRestApiV2.ConversationVirtualAgentCapabilities, root.UltraCartRestApiV2.ConversationVirtualAgentCapabilitiesResponse, root.UltraCartRestApiV2.ConversationWebchatContext, root.UltraCartRestApiV2.ConversationWebchatQueueStatusUpdateRequest, root.UltraCartRestApiV2.ConversationWebchatQueueStatusesResponse, root.UltraCartRestApiV2.ConversationsResponse, root.UltraCartRestApiV2.ErrorResponse);
+    root.UltraCartRestApiV2.ConversationApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationAgentAuthResponse, root.UltraCartRestApiV2.ConversationAgentProfile, root.UltraCartRestApiV2.ConversationAgentProfileResponse, root.UltraCartRestApiV2.ConversationAgentProfilesResponse, root.UltraCartRestApiV2.ConversationAutocompleteRequest, root.UltraCartRestApiV2.ConversationAutocompleteResponse, root.UltraCartRestApiV2.ConversationCannedMessage, root.UltraCartRestApiV2.ConversationCannedMessageResponse, root.UltraCartRestApiV2.ConversationCannedMessagesResponse, root.UltraCartRestApiV2.ConversationCannedMessagesSearch, root.UltraCartRestApiV2.ConversationDeleteKnowledgeBaseDocumentResponse, root.UltraCartRestApiV2.ConversationDepartment, root.UltraCartRestApiV2.ConversationDepartmentMembersResponse, root.UltraCartRestApiV2.ConversationDepartmentResponse, root.UltraCartRestApiV2.ConversationDepartmentsResponse, root.UltraCartRestApiV2.ConversationEngagement, root.UltraCartRestApiV2.ConversationEngagementResponse, root.UltraCartRestApiV2.ConversationEngagementsResponse, root.UltraCartRestApiV2.ConversationInsertKnowledgeBaseDocumentRequest, root.UltraCartRestApiV2.ConversationInsertKnowledgeBaseDocumentResponse, root.UltraCartRestApiV2.ConversationJoinRequest, root.UltraCartRestApiV2.ConversationKnowledgeBaseDocumentUploadUrlResponse, root.UltraCartRestApiV2.ConversationKnowledgeBaseDocumentsResponse, root.UltraCartRestApiV2.ConversationLocationsResponse, root.UltraCartRestApiV2.ConversationMessagesResponse, root.UltraCartRestApiV2.ConversationMultimediaUploadUrlResponse, root.UltraCartRestApiV2.ConversationPbxAgent, root.UltraCartRestApiV2.ConversationPbxAgentResponse, root.UltraCartRestApiV2.ConversationPbxAgentsResponse, root.UltraCartRestApiV2.ConversationPbxAudio, root.UltraCartRestApiV2.ConversationPbxAudioResponse, root.UltraCartRestApiV2.ConversationPbxAudioUploadUrlResponse, root.UltraCartRestApiV2.ConversationPbxAudioUsageResponse, root.UltraCartRestApiV2.ConversationPbxAudiosResponse, root.UltraCartRestApiV2.ConversationPbxCustomerSnapshotRequest, root.UltraCartRestApiV2.ConversationPbxCustomerSnapshotResponse, root.UltraCartRestApiV2.ConversationPbxMenu, root.UltraCartRestApiV2.ConversationPbxMenuResponse, root.UltraCartRestApiV2.ConversationPbxMenusResponse, root.UltraCartRestApiV2.ConversationPbxPhoneNumber, root.UltraCartRestApiV2.ConversationPbxPhoneNumberResponse, root.UltraCartRestApiV2.ConversationPbxPhoneNumbersResponse, root.UltraCartRestApiV2.ConversationPbxQueue, root.UltraCartRestApiV2.ConversationPbxQueueResponse, root.UltraCartRestApiV2.ConversationPbxQueuesResponse, root.UltraCartRestApiV2.ConversationPbxTimeBased, root.UltraCartRestApiV2.ConversationPbxTimeBasedResponse, root.UltraCartRestApiV2.ConversationPbxTimeBasedsResponse, root.UltraCartRestApiV2.ConversationPbxTimeRange, root.UltraCartRestApiV2.ConversationPbxTimeRangeResponse, root.UltraCartRestApiV2.ConversationPbxTimeRangesResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMailbox, root.UltraCartRestApiV2.ConversationPbxVoicemailMailboxResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMailboxesResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMessageResponse, root.UltraCartRestApiV2.ConversationPbxVoicemailMessageSummariesResponse, root.UltraCartRestApiV2.ConversationPermissionsResponse, root.UltraCartRestApiV2.ConversationResponse, root.UltraCartRestApiV2.ConversationSearchRequest, root.UltraCartRestApiV2.ConversationSearchResponse, root.UltraCartRestApiV2.ConversationStartRequest, root.UltraCartRestApiV2.ConversationStartResponse, root.UltraCartRestApiV2.ConversationVirtualAgentBudget, root.UltraCartRestApiV2.ConversationVirtualAgentBudgetResponse, root.UltraCartRestApiV2.ConversationVirtualAgentCapabilities, root.UltraCartRestApiV2.ConversationVirtualAgentCapabilitiesResponse, root.UltraCartRestApiV2.ConversationWebchatContext, root.UltraCartRestApiV2.ConversationWebchatQueueStatusUpdateRequest, root.UltraCartRestApiV2.ConversationWebchatQueueStatusesResponse, root.UltraCartRestApiV2.ConversationsResponse, root.UltraCartRestApiV2.ErrorResponse);
   }
-}(this, function(ApiClient, ConversationAgentAuthResponse, ConversationAgentProfile, ConversationAgentProfileResponse, ConversationAgentProfilesResponse, ConversationAutocompleteRequest, ConversationAutocompleteResponse, ConversationCannedMessage, ConversationCannedMessageResponse, ConversationCannedMessagesResponse, ConversationCannedMessagesSearch, ConversationDepartment, ConversationDepartmentMembersResponse, ConversationDepartmentResponse, ConversationDepartmentsResponse, ConversationEngagement, ConversationEngagementResponse, ConversationEngagementsResponse, ConversationJoinRequest, ConversationLocationsResponse, ConversationMessagesResponse, ConversationMultimediaUploadUrlResponse, ConversationPbxAgent, ConversationPbxAgentResponse, ConversationPbxAgentsResponse, ConversationPbxAudio, ConversationPbxAudioResponse, ConversationPbxAudioUploadUrlResponse, ConversationPbxAudioUsageResponse, ConversationPbxAudiosResponse, ConversationPbxCustomerSnapshotRequest, ConversationPbxCustomerSnapshotResponse, ConversationPbxMenu, ConversationPbxMenuResponse, ConversationPbxMenusResponse, ConversationPbxPhoneNumber, ConversationPbxPhoneNumberResponse, ConversationPbxPhoneNumbersResponse, ConversationPbxQueue, ConversationPbxQueueResponse, ConversationPbxQueuesResponse, ConversationPbxTimeBased, ConversationPbxTimeBasedResponse, ConversationPbxTimeBasedsResponse, ConversationPbxTimeRange, ConversationPbxTimeRangeResponse, ConversationPbxTimeRangesResponse, ConversationPbxVoicemailMailbox, ConversationPbxVoicemailMailboxResponse, ConversationPbxVoicemailMailboxesResponse, ConversationPbxVoicemailMessageResponse, ConversationPbxVoicemailMessageSummariesResponse, ConversationPermissionsResponse, ConversationResponse, ConversationSearchRequest, ConversationSearchResponse, ConversationStartRequest, ConversationStartResponse, ConversationVirtualAgentBudget, ConversationVirtualAgentBudgetResponse, ConversationVirtualAgentCapabilities, ConversationVirtualAgentCapabilitiesResponse, ConversationWebchatContext, ConversationWebchatQueueStatusUpdateRequest, ConversationWebchatQueueStatusesResponse, ConversationsResponse, ErrorResponse) {
+}(this, function(ApiClient, ConversationAgentAuthResponse, ConversationAgentProfile, ConversationAgentProfileResponse, ConversationAgentProfilesResponse, ConversationAutocompleteRequest, ConversationAutocompleteResponse, ConversationCannedMessage, ConversationCannedMessageResponse, ConversationCannedMessagesResponse, ConversationCannedMessagesSearch, ConversationDeleteKnowledgeBaseDocumentResponse, ConversationDepartment, ConversationDepartmentMembersResponse, ConversationDepartmentResponse, ConversationDepartmentsResponse, ConversationEngagement, ConversationEngagementResponse, ConversationEngagementsResponse, ConversationInsertKnowledgeBaseDocumentRequest, ConversationInsertKnowledgeBaseDocumentResponse, ConversationJoinRequest, ConversationKnowledgeBaseDocumentUploadUrlResponse, ConversationKnowledgeBaseDocumentsResponse, ConversationLocationsResponse, ConversationMessagesResponse, ConversationMultimediaUploadUrlResponse, ConversationPbxAgent, ConversationPbxAgentResponse, ConversationPbxAgentsResponse, ConversationPbxAudio, ConversationPbxAudioResponse, ConversationPbxAudioUploadUrlResponse, ConversationPbxAudioUsageResponse, ConversationPbxAudiosResponse, ConversationPbxCustomerSnapshotRequest, ConversationPbxCustomerSnapshotResponse, ConversationPbxMenu, ConversationPbxMenuResponse, ConversationPbxMenusResponse, ConversationPbxPhoneNumber, ConversationPbxPhoneNumberResponse, ConversationPbxPhoneNumbersResponse, ConversationPbxQueue, ConversationPbxQueueResponse, ConversationPbxQueuesResponse, ConversationPbxTimeBased, ConversationPbxTimeBasedResponse, ConversationPbxTimeBasedsResponse, ConversationPbxTimeRange, ConversationPbxTimeRangeResponse, ConversationPbxTimeRangesResponse, ConversationPbxVoicemailMailbox, ConversationPbxVoicemailMailboxResponse, ConversationPbxVoicemailMailboxesResponse, ConversationPbxVoicemailMessageResponse, ConversationPbxVoicemailMessageSummariesResponse, ConversationPermissionsResponse, ConversationResponse, ConversationSearchRequest, ConversationSearchResponse, ConversationStartRequest, ConversationStartResponse, ConversationVirtualAgentBudget, ConversationVirtualAgentBudgetResponse, ConversationVirtualAgentCapabilities, ConversationVirtualAgentCapabilitiesResponse, ConversationWebchatContext, ConversationWebchatQueueStatusUpdateRequest, ConversationWebchatQueueStatusesResponse, ConversationsResponse, ErrorResponse) {
   'use strict';
 
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.11.22
+   * @version 3.11.23
    */
 
   /**
@@ -47,6 +47,61 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the deleteAgentProfileKnowledgeBaseDocument operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deleteAgentProfileKnowledgeBaseDocumentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a knowledge base document
+     * Delete a knowledge base document 
+     * @param {Number} user_id 
+     * @param {String} document_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deleteAgentProfileKnowledgeBaseDocumentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse}
+     */
+    this.deleteAgentProfileKnowledgeBaseDocument = function(user_id, document_uuid, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling deleteAgentProfileKnowledgeBaseDocument");
+      }
+
+      // verify the required parameter 'document_uuid' is set
+      if (document_uuid === undefined || document_uuid === null) {
+        throw new Error("Missing the required parameter 'document_uuid' when calling deleteAgentProfileKnowledgeBaseDocument");
+      }
+
+
+      var pathParams = {
+        'user_id': user_id,
+        'document_uuid': document_uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConversationDeleteKnowledgeBaseDocumentResponse;
+
+      return this.apiClient.callApi(
+        '/conversation/agent/profiles/{user_id}/knowledge_base/{document_uuid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteConversationCannedMessage operation.
@@ -660,6 +715,54 @@
     }
 
     /**
+     * Callback function to receive the result of the getAgentProfileKnowledgeBase operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfileKnowledgeBaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the list of knowledge base documents associated with this agent profile
+     * Retrieve knowledge base documents 
+     * @param {Number} user_id 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentProfileKnowledgeBaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse}
+     */
+    this.getAgentProfileKnowledgeBase = function(user_id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling getAgentProfileKnowledgeBase");
+      }
+
+
+      var pathParams = {
+        'user_id': user_id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConversationKnowledgeBaseDocumentsResponse;
+
+      return this.apiClient.callApi(
+        '/conversation/agent/profiles/{user_id}/knowledge_base', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getAgentProfiles operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfilesCallback
      * @param {String} error Error message, if any.
@@ -1048,6 +1151,61 @@
 
       return this.apiClient.callApi(
         '/conversation/engagements', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationKnowledgeBaseDocumentUploadUrl operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationKnowledgeBaseDocumentUploadUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a pre-signed conversation knowledge base document upload URL
+     * Get a pre-signed conversation knowledge base document upload URL 
+     * @param {Number} user_id 
+     * @param {String} extension 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationKnowledgeBaseDocumentUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse}
+     */
+    this.getConversationKnowledgeBaseDocumentUploadUrl = function(user_id, extension, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling getConversationKnowledgeBaseDocumentUploadUrl");
+      }
+
+      // verify the required parameter 'extension' is set
+      if (extension === undefined || extension === null) {
+        throw new Error("Missing the required parameter 'extension' when calling getConversationKnowledgeBaseDocumentUploadUrl");
+      }
+
+
+      var pathParams = {
+        'user_id': user_id,
+        'extension': extension
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConversationKnowledgeBaseDocumentUploadUrlResponse;
+
+      return this.apiClient.callApi(
+        '/conversation//rest/v2/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2552,6 +2710,60 @@
 
       return this.apiClient.callApi(
         '/conversation/virtualagent/capabilities', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertAgentProfileKnowledgeBaseDocument operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertAgentProfileKnowledgeBaseDocumentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a knowledge base document
+     * Insert a knowledge base document 
+     * @param {Number} user_id 
+     * @param {module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest} knowledge_base_document_request Insert request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertAgentProfileKnowledgeBaseDocumentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse}
+     */
+    this.insertAgentProfileKnowledgeBaseDocument = function(user_id, knowledge_base_document_request, callback) {
+      var postBody = knowledge_base_document_request;
+
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling insertAgentProfileKnowledgeBaseDocument");
+      }
+
+      // verify the required parameter 'knowledge_base_document_request' is set
+      if (knowledge_base_document_request === undefined || knowledge_base_document_request === null) {
+        throw new Error("Missing the required parameter 'knowledge_base_document_request' when calling insertAgentProfileKnowledgeBaseDocument");
+      }
+
+
+      var pathParams = {
+        'user_id': user_id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ConversationInsertKnowledgeBaseDocumentResponse;
+
+      return this.apiClient.callApi(
+        '/conversation/agent/profiles/{user_id}/knowledge_base', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

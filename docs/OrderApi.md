@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getOrders"></a>
@@ -1141,7 +1141,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=UTF-8
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="processPayment"></a>

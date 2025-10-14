@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CustomReportUsageBreakdown'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./CustomReportUsageBreakdown'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.CustomReportAccountConfig = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.CustomReportAccountConfig = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CustomReportUsageBreakdown);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, CustomReportUsageBreakdown) {
   'use strict';
 
   /**
    * The CustomReportAccountConfig model module.
    * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
-   * @version 3.11.22
+   * @version 3.11.23
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.ai_budget = ApiClient.convertToType(data['ai_budget'], 'Number');
       if (data.hasOwnProperty('ai_usage'))
         obj.ai_usage = ApiClient.convertToType(data['ai_usage'], 'Number');
+      if (data.hasOwnProperty('ai_usage_breakdowns'))
+        obj.ai_usage_breakdowns = ApiClient.convertToType(data['ai_usage_breakdowns'], [CustomReportUsageBreakdown]);
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('novice_sql_comments'))
@@ -89,6 +91,11 @@
    * @member {Number} ai_usage
    */
   exports.prototype.ai_usage = undefined;
+
+  /**
+   * @member {Array.<module:com.ultracart.admin.v2.models/CustomReportUsageBreakdown>} ai_usage_breakdowns
+   */
+  exports.prototype.ai_usage_breakdowns = undefined;
 
   /**
    * Current BigQuery SQL usage running reports
