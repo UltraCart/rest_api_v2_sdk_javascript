@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The OrderEdiDocumentsResponse model module.
  * @module com.ultracart.admin.v2.models/OrderEdiDocumentsResponse
- * @version 4.1.22
+ * @version 4.1.23
  */
 class OrderEdiDocumentsResponse {
     /**

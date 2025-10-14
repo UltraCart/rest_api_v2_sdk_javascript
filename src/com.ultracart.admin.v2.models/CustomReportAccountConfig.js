@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import CustomReportUsageBreakdown from './CustomReportUsageBreakdown';
 
 /**
  * The CustomReportAccountConfig model module.
  * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
- * @version 4.1.22
+ * @version 4.1.23
  */
 class CustomReportAccountConfig {
     /**
@@ -52,6 +53,9 @@ class CustomReportAccountConfig {
             }
             if (data.hasOwnProperty('ai_usage')) {
                 obj['ai_usage'] = ApiClient.convertToType(data['ai_usage'], 'Number');
+            }
+            if (data.hasOwnProperty('ai_usage_breakdowns')) {
+                obj['ai_usage_breakdowns'] = ApiClient.convertToType(data['ai_usage_breakdowns'], [CustomReportUsageBreakdown]);
             }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
@@ -94,6 +98,11 @@ CustomReportAccountConfig.prototype['ai_budget'] = undefined;
  * @member {Number} ai_usage
  */
 CustomReportAccountConfig.prototype['ai_usage'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/CustomReportUsageBreakdown>} ai_usage_breakdowns
+ */
+CustomReportAccountConfig.prototype['ai_usage_breakdowns'] = undefined;
 
 /**
  * Current BigQuery SQL usage running reports

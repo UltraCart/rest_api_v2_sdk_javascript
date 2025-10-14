@@ -153,6 +153,7 @@ import ConversationCannedMessage from './com.ultracart.admin.v2.models/Conversat
 import ConversationCannedMessageResponse from './com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
 import ConversationCannedMessagesResponse from './com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
 import ConversationCannedMessagesSearch from './com.ultracart.admin.v2.models/ConversationCannedMessagesSearch';
+import ConversationDeleteKnowledgeBaseDocumentResponse from './com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse';
 import ConversationDepartment from './com.ultracart.admin.v2.models/ConversationDepartment';
 import ConversationDepartmentMember from './com.ultracart.admin.v2.models/ConversationDepartmentMember';
 import ConversationDepartmentMembersResponse from './com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse';
@@ -171,7 +172,13 @@ import ConversationEventRRWeb from './com.ultracart.admin.v2.models/Conversation
 import ConversationEventReadMessage from './com.ultracart.admin.v2.models/ConversationEventReadMessage';
 import ConversationEventTyping from './com.ultracart.admin.v2.models/ConversationEventTyping';
 import ConversationEventWebchatContext from './com.ultracart.admin.v2.models/ConversationEventWebchatContext';
+import ConversationInsertKnowledgeBaseDocumentRequest from './com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest';
+import ConversationInsertKnowledgeBaseDocumentResponse from './com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse';
 import ConversationJoinRequest from './com.ultracart.admin.v2.models/ConversationJoinRequest';
+import ConversationKnowledgeBaseDocument from './com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocument';
+import ConversationKnowledgeBaseDocumentUploadUrl from './com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl';
+import ConversationKnowledgeBaseDocumentUploadUrlResponse from './com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse';
+import ConversationKnowledgeBaseDocumentsResponse from './com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse';
 import ConversationLocationCountry from './com.ultracart.admin.v2.models/ConversationLocationCountry';
 import ConversationLocationStateProvince from './com.ultracart.admin.v2.models/ConversationLocationStateProvince';
 import ConversationLocationsResponse from './com.ultracart.admin.v2.models/ConversationLocationsResponse';
@@ -338,6 +345,7 @@ import CustomReportParameterOption from './com.ultracart.admin.v2.models/CustomR
 import CustomReportQuery from './com.ultracart.admin.v2.models/CustomReportQuery';
 import CustomReportResponse from './com.ultracart.admin.v2.models/CustomReportResponse';
 import CustomReportTooltip from './com.ultracart.admin.v2.models/CustomReportTooltip';
+import CustomReportUsageBreakdown from './com.ultracart.admin.v2.models/CustomReportUsageBreakdown';
 import CustomReportsExecutionReportData from './com.ultracart.admin.v2.models/CustomReportsExecutionReportData';
 import CustomReportsExecutionRequest from './com.ultracart.admin.v2.models/CustomReportsExecutionRequest';
 import CustomReportsExecutionResponse from './com.ultracart.admin.v2.models/CustomReportsExecutionResponse';
@@ -954,7 +962,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.22
+* @version 4.1.23
 */
 export {
     /**
@@ -1804,6 +1812,12 @@ export {
     ConversationCannedMessagesSearch,
 
     /**
+     * The ConversationDeleteKnowledgeBaseDocumentResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse}
+     */
+    ConversationDeleteKnowledgeBaseDocumentResponse,
+
+    /**
      * The ConversationDepartment model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationDepartment}
      */
@@ -1912,10 +1926,46 @@ export {
     ConversationEventWebchatContext,
 
     /**
+     * The ConversationInsertKnowledgeBaseDocumentRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest}
+     */
+    ConversationInsertKnowledgeBaseDocumentRequest,
+
+    /**
+     * The ConversationInsertKnowledgeBaseDocumentResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse}
+     */
+    ConversationInsertKnowledgeBaseDocumentResponse,
+
+    /**
      * The ConversationJoinRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationJoinRequest}
      */
     ConversationJoinRequest,
+
+    /**
+     * The ConversationKnowledgeBaseDocument model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocument}
+     */
+    ConversationKnowledgeBaseDocument,
+
+    /**
+     * The ConversationKnowledgeBaseDocumentUploadUrl model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl}
+     */
+    ConversationKnowledgeBaseDocumentUploadUrl,
+
+    /**
+     * The ConversationKnowledgeBaseDocumentUploadUrlResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse}
+     */
+    ConversationKnowledgeBaseDocumentUploadUrlResponse,
+
+    /**
+     * The ConversationKnowledgeBaseDocumentsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse}
+     */
+    ConversationKnowledgeBaseDocumentsResponse,
 
     /**
      * The ConversationLocationCountry model constructor.
@@ -2912,6 +2962,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomReportTooltip}
      */
     CustomReportTooltip,
+
+    /**
+     * The CustomReportUsageBreakdown model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomReportUsageBreakdown}
+     */
+    CustomReportUsageBreakdown,
 
     /**
      * The CustomReportsExecutionReportData model constructor.

@@ -147,6 +147,7 @@ docs/ConversationCannedMessage.md
 docs/ConversationCannedMessageResponse.md
 docs/ConversationCannedMessagesResponse.md
 docs/ConversationCannedMessagesSearch.md
+docs/ConversationDeleteKnowledgeBaseDocumentResponse.md
 docs/ConversationDepartment.md
 docs/ConversationDepartmentMember.md
 docs/ConversationDepartmentMembersResponse.md
@@ -165,7 +166,13 @@ docs/ConversationEventRRWeb.md
 docs/ConversationEventReadMessage.md
 docs/ConversationEventTyping.md
 docs/ConversationEventWebchatContext.md
+docs/ConversationInsertKnowledgeBaseDocumentRequest.md
+docs/ConversationInsertKnowledgeBaseDocumentResponse.md
 docs/ConversationJoinRequest.md
+docs/ConversationKnowledgeBaseDocument.md
+docs/ConversationKnowledgeBaseDocumentUploadUrl.md
+docs/ConversationKnowledgeBaseDocumentUploadUrlResponse.md
+docs/ConversationKnowledgeBaseDocumentsResponse.md
 docs/ConversationLocationCountry.md
 docs/ConversationLocationStateProvince.md
 docs/ConversationLocationsResponse.md
@@ -333,6 +340,7 @@ docs/CustomReportParameterOption.md
 docs/CustomReportQuery.md
 docs/CustomReportResponse.md
 docs/CustomReportTooltip.md
+docs/CustomReportUsageBreakdown.md
 docs/CustomReportsExecutionReportData.md
 docs/CustomReportsExecutionRequest.md
 docs/CustomReportsExecutionResponse.md
@@ -1056,6 +1064,7 @@ src/com.ultracart.admin.v2.models/ConversationCannedMessage.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessageResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesSearch.js
+src/com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse.js
 src/com.ultracart.admin.v2.models/ConversationDepartment.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentMember.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse.js
@@ -1074,7 +1083,13 @@ src/com.ultracart.admin.v2.models/ConversationEventRRWeb.js
 src/com.ultracart.admin.v2.models/ConversationEventReadMessage.js
 src/com.ultracart.admin.v2.models/ConversationEventTyping.js
 src/com.ultracart.admin.v2.models/ConversationEventWebchatContext.js
+src/com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest.js
+src/com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse.js
 src/com.ultracart.admin.v2.models/ConversationJoinRequest.js
+src/com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocument.js
+src/com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl.js
+src/com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse.js
+src/com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse.js
 src/com.ultracart.admin.v2.models/ConversationLocationCountry.js
 src/com.ultracart.admin.v2.models/ConversationLocationStateProvince.js
 src/com.ultracart.admin.v2.models/ConversationLocationsResponse.js
@@ -1241,6 +1256,7 @@ src/com.ultracart.admin.v2.models/CustomReportParameterOption.js
 src/com.ultracart.admin.v2.models/CustomReportQuery.js
 src/com.ultracart.admin.v2.models/CustomReportResponse.js
 src/com.ultracart.admin.v2.models/CustomReportTooltip.js
+src/com.ultracart.admin.v2.models/CustomReportUsageBreakdown.js
 src/com.ultracart.admin.v2.models/CustomReportsExecutionReportData.js
 src/com.ultracart.admin.v2.models/CustomReportsExecutionRequest.js
 src/com.ultracart.admin.v2.models/CustomReportsExecutionResponse.js

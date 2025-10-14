@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ai_budget** | **Number** |  | [optional] 
 **ai_usage** | **Number** | Current AI usage creating reports | [optional] 
+**ai_usage_breakdowns** | [**[CustomReportUsageBreakdown]**](CustomReportUsageBreakdown.md) |  | [optional] 
 **merchant_id** | **String** | Current BigQuery SQL usage running reports | [optional] 
 **novice_sql_comments** | **Boolean** |  | [optional] 
 **opt_in** | **Boolean** | True if they have opted into custom reports | [optional] 

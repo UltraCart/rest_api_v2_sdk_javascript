@@ -42,7 +42,7 @@ import LookupResponse from '../com.ultracart.admin.v2.models/LookupResponse';
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.22
+* @version 4.1.23
 */
 export default class CustomerApi {
 
@@ -200,7 +200,7 @@ export default class CustomerApi {
      * Callback function to receive the result of the deleteWishListItem operation.
      * @callback module:com.ultracart.admin.v2/CustomerApi~deleteWishListItemCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItem} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -210,7 +210,6 @@ export default class CustomerApi {
      * @param {Number} customer_profile_oid The customer oid for this wishlist.
      * @param {Number} customer_wishlist_item_oid The wishlist oid for this wishlist item to delete.
      * @param {module:com.ultracart.admin.v2/CustomerApi~deleteWishListItemCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerWishListItem}
      */
     deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid, callback) {
       let postBody = null;
@@ -237,7 +236,7 @@ export default class CustomerApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = CustomerWishListItem;
+      let returnType = null;
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,

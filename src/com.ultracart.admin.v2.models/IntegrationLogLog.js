@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IntegrationLogLog model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogLog
- * @version 4.1.22
+ * @version 4.1.23
  */
 class IntegrationLogLog {
     /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartBuysafe model module.
  * @module com.ultracart.admin.v2.models/CartBuysafe
- * @version 4.1.21
+ * @version 4.1.22
  */
 var CartBuysafe = /*#__PURE__*/function () {
   /**

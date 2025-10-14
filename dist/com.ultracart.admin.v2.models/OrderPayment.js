@@ -35,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.21
+ * @version 4.1.22
  */
 var OrderPayment = /*#__PURE__*/function () {
   /**
@@ -291,6 +291,11 @@ OrderPayment['PaymentMethodEnum'] = {
    * @const
    */
   "Credit Card": "Credit Card",
+  /**
+   * value: "Crypto"
+   * @const
+   */
+  "Crypto": "Crypto",
   /**
    * value: "eBay"
    * @const

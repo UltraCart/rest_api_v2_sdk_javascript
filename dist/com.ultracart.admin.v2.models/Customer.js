@@ -44,7 +44,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.1.21
+ * @version 4.1.22
  */
 var Customer = /*#__PURE__*/function () {
   /**
@@ -145,6 +145,9 @@ var Customer = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('exempt_shipping_handling_charge')) {
           obj['exempt_shipping_handling_charge'] = _ApiClient["default"].convertToType(data['exempt_shipping_handling_charge'], 'Boolean');
+        }
+        if (data.hasOwnProperty('fax')) {
+          obj['fax'] = _ApiClient["default"].convertToType(data['fax'], 'String');
         }
         if (data.hasOwnProperty('fedex_account_number')) {
           obj['fedex_account_number'] = _ApiClient["default"].convertToType(data['fedex_account_number'], 'String');
@@ -409,6 +412,12 @@ Customer.prototype['email'] = undefined;
  * @member {Boolean} exempt_shipping_handling_charge
  */
 Customer.prototype['exempt_shipping_handling_charge'] = undefined;
+
+/**
+ * Fax Number
+ * @member {String} fax
+ */
+Customer.prototype['fax'] = undefined;
 
 /**
  * FedEx account number

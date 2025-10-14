@@ -202,7 +202,7 @@ null (empty response body)
 
 ## deleteWishListItem
 
-> CustomerWishListItem deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid)
+> deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid)
 
 Delete a customer wishlist item
 
@@ -228,7 +228,7 @@ apiInstance.deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid,
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomerWishListItem**](CustomerWishListItem.md)
+null (empty response body)
 
 ### Authorization
 

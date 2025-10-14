@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderConsolidate model module.
  * @module com.ultracart.admin.v2.models/AutoOrderConsolidate
- * @version 4.1.22
+ * @version 4.1.23
  */
 class AutoOrderConsolidate {
     /**

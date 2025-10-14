@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemShippingMethod model module.
  * @module com.ultracart.admin.v2.models/ItemShippingMethod
- * @version 4.1.21
+ * @version 4.1.22
  */
 var ItemShippingMethod = /*#__PURE__*/function () {
   /**
@@ -100,6 +100,9 @@ var ItemShippingMethod = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('shipping_method_validity')) {
           obj['shipping_method_validity'] = _ApiClient["default"].convertToType(data['shipping_method_validity'], 'String');
+        }
+        if (data.hasOwnProperty('ships_separately')) {
+          obj['ships_separately'] = _ApiClient["default"].convertToType(data['ships_separately'], 'Boolean');
         }
         if (data.hasOwnProperty('signature_required')) {
           obj['signature_required'] = _ApiClient["default"].convertToType(data['signature_required'], 'Boolean');
@@ -192,6 +195,12 @@ ItemShippingMethod.prototype['shipping_method_oid'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ItemShippingMethod.ShippingMethodValidityEnum} shipping_method_validity
  */
 ItemShippingMethod.prototype['shipping_method_validity'] = undefined;
+
+/**
+ * Ships separately
+ * @member {Boolean} ships_separately
+ */
+ItemShippingMethod.prototype['ships_separately'] = undefined;
 
 /**
  * Signature required

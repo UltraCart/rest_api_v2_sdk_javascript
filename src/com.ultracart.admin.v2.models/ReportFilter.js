@@ -17,7 +17,7 @@ import ReportFilterConnection from './ReportFilterConnection';
 /**
  * The ReportFilter model module.
  * @module com.ultracart.admin.v2.models/ReportFilter
- * @version 4.1.22
+ * @version 4.1.23
  */
 class ReportFilter {
     /**

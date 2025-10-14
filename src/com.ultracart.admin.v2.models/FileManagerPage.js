@@ -18,7 +18,7 @@ import FileManagerFile from './FileManagerFile';
 /**
  * The FileManagerPage model module.
  * @module com.ultracart.admin.v2.models/FileManagerPage
- * @version 4.1.22
+ * @version 4.1.23
  */
 class FileManagerPage {
     /**
