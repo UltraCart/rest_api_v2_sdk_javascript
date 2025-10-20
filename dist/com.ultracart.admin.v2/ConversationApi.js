@@ -97,7 +97,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.24
+* @version 4.1.25
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -970,7 +970,7 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _ConversationKnowledgeBaseDocumentUploadUrlResponse["default"];
-      return this.apiClient.callApi('/conversation//rest/v2/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailPlan model module.
  * @module com.ultracart.admin.v2.models/EmailPlan
- * @version 4.1.24
+ * @version 4.1.25
  */
 var EmailPlan = /*#__PURE__*/function () {
   /**

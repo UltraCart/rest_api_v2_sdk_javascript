@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxProviderTaxJar model module.
  * @module com.ultracart.admin.v2.models/TaxProviderTaxJar
- * @version 4.1.24
+ * @version 4.1.25
  */
 var TaxProviderTaxJar = /*#__PURE__*/function () {
   /**
