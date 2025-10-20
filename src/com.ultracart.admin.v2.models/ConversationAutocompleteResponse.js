@@ -34,7 +34,7 @@
   /**
    * The ConversationAutocompleteResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationAutocompleteResponse
-   * @version 3.11.24
+   * @version 3.11.25
    */
 
   /**

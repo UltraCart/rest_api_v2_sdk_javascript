@@ -34,7 +34,7 @@
   /**
    * The LibraryFilterValuesResponse model module.
    * @module com.ultracart.admin.v2.models/LibraryFilterValuesResponse
-   * @version 3.11.24
+   * @version 3.11.25
    */
 
   /**

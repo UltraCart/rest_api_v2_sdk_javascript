@@ -34,7 +34,7 @@
   /**
    * Conversation service.
    * @module com.ultracart.admin.v2/ConversationApi
-   * @version 3.11.24
+   * @version 3.11.25
    */
 
   /**
@@ -1205,7 +1205,7 @@
       var returnType = ConversationKnowledgeBaseDocumentUploadUrlResponse;
 
       return this.apiClient.callApi(
-        '/conversation//rest/v2/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET',
+        '/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
