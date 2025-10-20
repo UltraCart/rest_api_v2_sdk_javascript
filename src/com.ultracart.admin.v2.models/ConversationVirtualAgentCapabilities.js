@@ -17,7 +17,7 @@ import ConversationVirtualAgentCapabilityZohoDeskDepartment from './Conversation
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.23
+ * @version 4.1.24
  */
 class ConversationVirtualAgentCapabilities {
     /**
@@ -48,6 +48,9 @@ class ConversationVirtualAgentCapabilities {
         if (data) {
             obj = obj || new ConversationVirtualAgentCapabilities();
 
+            if (data.hasOwnProperty('access_storefront_and_item')) {
+                obj['access_storefront_and_item'] = ApiClient.convertToType(data['access_storefront_and_item'], 'Boolean');
+            }
             if (data.hasOwnProperty('cancel_subscription')) {
                 obj['cancel_subscription'] = ApiClient.convertToType(data['cancel_subscription'], 'Boolean');
             }
@@ -96,6 +99,12 @@ class ConversationVirtualAgentCapabilities {
 
 
 }
+
+/**
+ * Permission flag to allow this Agent access to the storefront and item information.
+ * @member {Boolean} access_storefront_and_item
+ */
+ConversationVirtualAgentCapabilities.prototype['access_storefront_and_item'] = undefined;
 
 /**
  * @member {Boolean} cancel_subscription

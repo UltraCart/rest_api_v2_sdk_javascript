@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartItem model module.
  * @module com.ultracart.admin.v2.models/CartItem
- * @version 4.1.22
+ * @version 4.1.23
  */
 var CartItem = /*#__PURE__*/function () {
   /**

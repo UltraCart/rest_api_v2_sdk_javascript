@@ -879,6 +879,12 @@ Object.defineProperty(exports, "ConversationCannedMessagesSearch", {
     return _ConversationCannedMessagesSearch["default"];
   }
 });
+Object.defineProperty(exports, "ConversationDeleteKnowledgeBaseDocumentResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationDeleteKnowledgeBaseDocumentResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationDepartment", {
   enumerable: true,
   get: function get() {
@@ -987,10 +993,46 @@ Object.defineProperty(exports, "ConversationEventWebchatContext", {
     return _ConversationEventWebchatContext["default"];
   }
 });
+Object.defineProperty(exports, "ConversationInsertKnowledgeBaseDocumentRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationInsertKnowledgeBaseDocumentRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationInsertKnowledgeBaseDocumentResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationInsertKnowledgeBaseDocumentResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationJoinRequest", {
   enumerable: true,
   get: function get() {
     return _ConversationJoinRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationKnowledgeBaseDocument", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationKnowledgeBaseDocument["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationKnowledgeBaseDocumentUploadUrl", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationKnowledgeBaseDocumentUploadUrl["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationKnowledgeBaseDocumentUploadUrlResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationKnowledgeBaseDocumentUploadUrlResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationKnowledgeBaseDocumentsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationKnowledgeBaseDocumentsResponse["default"];
   }
 });
 Object.defineProperty(exports, "ConversationLocationCountry", {
@@ -1993,6 +2035,12 @@ Object.defineProperty(exports, "CustomReportTooltip", {
   enumerable: true,
   get: function get() {
     return _CustomReportTooltip["default"];
+  }
+});
+Object.defineProperty(exports, "CustomReportUsageBreakdown", {
+  enumerable: true,
+  get: function get() {
+    return _CustomReportUsageBreakdown["default"];
   }
 });
 Object.defineProperty(exports, "CustomReportsExecutionReportData", {
@@ -5610,6 +5658,7 @@ var _ConversationCannedMessage = _interopRequireDefault(require("./com.ultracart
 var _ConversationCannedMessageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessageResponse"));
 var _ConversationCannedMessagesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessagesResponse"));
 var _ConversationCannedMessagesSearch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessagesSearch"));
+var _ConversationDeleteKnowledgeBaseDocumentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse"));
 var _ConversationDepartment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartment"));
 var _ConversationDepartmentMember = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentMember"));
 var _ConversationDepartmentMembersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse"));
@@ -5628,7 +5677,13 @@ var _ConversationEventRRWeb = _interopRequireDefault(require("./com.ultracart.ad
 var _ConversationEventReadMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventReadMessage"));
 var _ConversationEventTyping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventTyping"));
 var _ConversationEventWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEventWebchatContext"));
+var _ConversationInsertKnowledgeBaseDocumentRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest"));
+var _ConversationInsertKnowledgeBaseDocumentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse"));
 var _ConversationJoinRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationJoinRequest"));
+var _ConversationKnowledgeBaseDocument = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocument"));
+var _ConversationKnowledgeBaseDocumentUploadUrl = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl"));
+var _ConversationKnowledgeBaseDocumentUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse"));
+var _ConversationKnowledgeBaseDocumentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse"));
 var _ConversationLocationCountry = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationCountry"));
 var _ConversationLocationStateProvince = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationStateProvince"));
 var _ConversationLocationsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationsResponse"));
@@ -5795,6 +5850,7 @@ var _CustomReportParameterOption = _interopRequireDefault(require("./com.ultraca
 var _CustomReportQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportQuery"));
 var _CustomReportResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportResponse"));
 var _CustomReportTooltip = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportTooltip"));
+var _CustomReportUsageBreakdown = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportUsageBreakdown"));
 var _CustomReportsExecutionReportData = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsExecutionReportData"));
 var _CustomReportsExecutionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsExecutionRequest"));
 var _CustomReportsExecutionResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomReportsExecutionResponse"));

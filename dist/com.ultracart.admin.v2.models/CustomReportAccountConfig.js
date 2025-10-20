@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _CustomReportUsageBreakdown = _interopRequireDefault(require("./CustomReportUsageBreakdown"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -26,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReportAccountConfig model module.
  * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
- * @version 4.1.22
+ * @version 4.1.23
  */
 var CustomReportAccountConfig = /*#__PURE__*/function () {
   /**
@@ -64,6 +65,9 @@ var CustomReportAccountConfig = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('ai_usage')) {
           obj['ai_usage'] = _ApiClient["default"].convertToType(data['ai_usage'], 'Number');
+        }
+        if (data.hasOwnProperty('ai_usage_breakdowns')) {
+          obj['ai_usage_breakdowns'] = _ApiClient["default"].convertToType(data['ai_usage_breakdowns'], [_CustomReportUsageBreakdown["default"]]);
         }
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
@@ -104,6 +108,11 @@ CustomReportAccountConfig.prototype['ai_budget'] = undefined;
  * @member {Number} ai_usage
  */
 CustomReportAccountConfig.prototype['ai_usage'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/CustomReportUsageBreakdown>} ai_usage_breakdowns
+ */
+CustomReportAccountConfig.prototype['ai_usage_breakdowns'] = undefined;
 
 /**
  * Current BigQuery SQL usage running reports

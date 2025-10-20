@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderBuysafe model module.
  * @module com.ultracart.admin.v2.models/OrderBuysafe
- * @version 4.1.22
+ * @version 4.1.23
  */
 var OrderBuysafe = /*#__PURE__*/function () {
   /**

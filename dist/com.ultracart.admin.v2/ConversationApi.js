@@ -15,6 +15,7 @@ var _ConversationCannedMessage = _interopRequireDefault(require("../com.ultracar
 var _ConversationCannedMessageResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessageResponse"));
 var _ConversationCannedMessagesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessagesResponse"));
 var _ConversationCannedMessagesSearch = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessagesSearch"));
+var _ConversationDeleteKnowledgeBaseDocumentResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse"));
 var _ConversationDepartment = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationDepartment"));
 var _ConversationDepartmentMembersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse"));
 var _ConversationDepartmentResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationDepartmentResponse"));
@@ -22,7 +23,11 @@ var _ConversationDepartmentsResponse = _interopRequireDefault(require("../com.ul
 var _ConversationEngagement = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationEngagement"));
 var _ConversationEngagementResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationEngagementResponse"));
 var _ConversationEngagementsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationEngagementsResponse"));
+var _ConversationInsertKnowledgeBaseDocumentRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest"));
+var _ConversationInsertKnowledgeBaseDocumentResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse"));
 var _ConversationJoinRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationJoinRequest"));
+var _ConversationKnowledgeBaseDocumentUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse"));
+var _ConversationKnowledgeBaseDocumentsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse"));
 var _ConversationLocationsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationLocationsResponse"));
 var _ConversationMessagesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMessagesResponse"));
 var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
@@ -92,7 +97,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.22
+* @version 4.1.23
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -108,20 +113,62 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   }
 
   /**
-   * Callback function to receive the result of the deleteConversationCannedMessage operation.
-   * @callback module:com.ultracart.admin.v2/ConversationApi~deleteConversationCannedMessageCallback
+   * Callback function to receive the result of the deleteAgentProfileKnowledgeBaseDocument operation.
+   * @callback module:com.ultracart.admin.v2/ConversationApi~deleteAgentProfileKnowledgeBaseDocumentCallback
    * @param {String} error Error message, if any.
-   * @param data This operation does not return a value.
+   * @param {module:com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse} data The data returned by the service call.
    * @param {String} response The complete HTTP response.
    */
 
   /**
-   * Delete a conversation canned message
-   * Delete a conversation canned message 
-   * @param {Number} conversation_canned_message_oid 
-   * @param {module:com.ultracart.admin.v2/ConversationApi~deleteConversationCannedMessageCallback} callback The callback function, accepting three arguments: error, data, response
+   * Delete a knowledge base document
+   * Delete a knowledge base document 
+   * @param {Number} user_id 
+   * @param {String} document_uuid 
+   * @param {module:com.ultracart.admin.v2/ConversationApi~deleteAgentProfileKnowledgeBaseDocumentCallback} callback The callback function, accepting three arguments: error, data, response
+   * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse}
    */
   return _createClass(ConversationApi, [{
+    key: "deleteAgentProfileKnowledgeBaseDocument",
+    value: function deleteAgentProfileKnowledgeBaseDocument(user_id, document_uuid, callback) {
+      var postBody = null;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling deleteAgentProfileKnowledgeBaseDocument");
+      }
+      // verify the required parameter 'document_uuid' is set
+      if (document_uuid === undefined || document_uuid === null) {
+        throw new Error("Missing the required parameter 'document_uuid' when calling deleteAgentProfileKnowledgeBaseDocument");
+      }
+      var pathParams = {
+        'user_id': user_id,
+        'document_uuid': document_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationDeleteKnowledgeBaseDocumentResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/knowledge_base/{document_uuid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the deleteConversationCannedMessage operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deleteConversationCannedMessageCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a conversation canned message
+     * Delete a conversation canned message 
+     * @param {Number} conversation_canned_message_oid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deleteConversationCannedMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+  }, {
     key: "deleteConversationCannedMessage",
     value: function deleteConversationCannedMessage(conversation_canned_message_oid, callback) {
       var postBody = null;
@@ -562,6 +609,42 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getAgentProfileKnowledgeBase operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfileKnowledgeBaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the list of knowledge base documents associated with this agent profile
+     * Retrieve knowledge base documents 
+     * @param {Number} user_id 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentProfileKnowledgeBaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse}
+     */
+  }, {
+    key: "getAgentProfileKnowledgeBase",
+    value: function getAgentProfileKnowledgeBase(user_id, callback) {
+      var postBody = null;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling getAgentProfileKnowledgeBase");
+      }
+      var pathParams = {
+        'user_id': user_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationKnowledgeBaseDocumentsResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/knowledge_base', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the getAgentProfiles operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfilesCallback
      * @param {String} error Error message, if any.
@@ -846,6 +929,48 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationEngagementsResponse["default"];
       return this.apiClient.callApi('/conversation/engagements', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationKnowledgeBaseDocumentUploadUrl operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationKnowledgeBaseDocumentUploadUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a pre-signed conversation knowledge base document upload URL
+     * Get a pre-signed conversation knowledge base document upload URL 
+     * @param {Number} user_id 
+     * @param {String} extension 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationKnowledgeBaseDocumentUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse}
+     */
+  }, {
+    key: "getConversationKnowledgeBaseDocumentUploadUrl",
+    value: function getConversationKnowledgeBaseDocumentUploadUrl(user_id, extension, callback) {
+      var postBody = null;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling getConversationKnowledgeBaseDocumentUploadUrl");
+      }
+      // verify the required parameter 'extension' is set
+      if (extension === undefined || extension === null) {
+        throw new Error("Missing the required parameter 'extension' when calling getConversationKnowledgeBaseDocumentUploadUrl");
+      }
+      var pathParams = {
+        'user_id': user_id,
+        'extension': extension
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationKnowledgeBaseDocumentUploadUrlResponse["default"];
+      return this.apiClient.callApi('/conversation//rest/v2/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1951,6 +2076,47 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationVirtualAgentCapabilitiesResponse["default"];
       return this.apiClient.callApi('/conversation/virtualagent/capabilities', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the insertAgentProfileKnowledgeBaseDocument operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertAgentProfileKnowledgeBaseDocumentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a knowledge base document
+     * Insert a knowledge base document 
+     * @param {Number} user_id 
+     * @param {module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest} knowledge_base_document_request Insert request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertAgentProfileKnowledgeBaseDocumentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse}
+     */
+  }, {
+    key: "insertAgentProfileKnowledgeBaseDocument",
+    value: function insertAgentProfileKnowledgeBaseDocument(user_id, knowledge_base_document_request, callback) {
+      var postBody = knowledge_base_document_request;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling insertAgentProfileKnowledgeBaseDocument");
+      }
+      // verify the required parameter 'knowledge_base_document_request' is set
+      if (knowledge_base_document_request === undefined || knowledge_base_document_request === null) {
+        throw new Error("Missing the required parameter 'knowledge_base_document_request' when calling insertAgentProfileKnowledgeBaseDocument");
+      }
+      var pathParams = {
+        'user_id': user_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationInsertKnowledgeBaseDocumentResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/knowledge_base', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

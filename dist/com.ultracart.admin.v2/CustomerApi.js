@@ -51,7 +51,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.22
+* @version 4.1.23
 */
 var CustomerApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -187,7 +187,7 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
      * Callback function to receive the result of the deleteWishListItem operation.
      * @callback module:com.ultracart.admin.v2/CustomerApi~deleteWishListItemCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/CustomerWishListItem} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -197,7 +197,6 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
      * @param {Number} customer_profile_oid The customer oid for this wishlist.
      * @param {Number} customer_wishlist_item_oid The wishlist oid for this wishlist item to delete.
      * @param {module:com.ultracart.admin.v2/CustomerApi~deleteWishListItemCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerWishListItem}
      */
   }, {
     key: "deleteWishListItem",
@@ -221,7 +220,7 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
       var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _CustomerWishListItem["default"];
+      var returnType = null;
       return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
