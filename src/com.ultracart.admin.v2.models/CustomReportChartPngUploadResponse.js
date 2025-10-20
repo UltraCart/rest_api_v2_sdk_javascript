@@ -34,7 +34,7 @@
   /**
    * The CustomReportChartPngUploadResponse model module.
    * @module com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse
-   * @version 3.11.25
+   * @version 3.11.26
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ConversationKnowledgeBaseDocumentUploadUrlResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrlResponse
-   * @version 3.11.25
+   * @version 3.11.26
    */
 
   /**
@@ -55,8 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('conversation_pbx_audio_upload_url'))
-        obj.conversation_pbx_audio_upload_url = ConversationKnowledgeBaseDocumentUploadUrl.constructFromObject(data['conversation_pbx_audio_upload_url']);
+      if (data.hasOwnProperty('conversation_knowledge_base_document_upload_url'))
+        obj.conversation_knowledge_base_document_upload_url = ConversationKnowledgeBaseDocumentUploadUrl.constructFromObject(data['conversation_knowledge_base_document_upload_url']);
       if (data.hasOwnProperty('error'))
         obj.error = Error.constructFromObject(data['error']);
       if (data.hasOwnProperty('metadata'))
@@ -70,9 +70,9 @@
   }
 
   /**
-   * @member {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl} conversation_pbx_audio_upload_url
+   * @member {module:com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl} conversation_knowledge_base_document_upload_url
    */
-  exports.prototype.conversation_pbx_audio_upload_url = undefined;
+  exports.prototype.conversation_knowledge_base_document_upload_url = undefined;
 
   /**
    * @member {module:com.ultracart.admin.v2.models/Error} error

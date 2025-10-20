@@ -34,7 +34,7 @@
   /**
    * The ChanelPartnerReasonCodesResponse model module.
    * @module com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse
-   * @version 3.11.25
+   * @version 3.11.26
    */
 
   /**
