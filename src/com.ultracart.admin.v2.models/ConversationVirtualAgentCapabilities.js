@@ -34,7 +34,7 @@
   /**
    * The ConversationVirtualAgentCapabilities model module.
    * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
-   * @version 3.11.23
+   * @version 3.11.24
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('access_storefront_and_item'))
+        obj.access_storefront_and_item = ApiClient.convertToType(data['access_storefront_and_item'], 'Boolean');
       if (data.hasOwnProperty('cancel_subscription'))
         obj.cancel_subscription = ApiClient.convertToType(data['cancel_subscription'], 'Boolean');
       if (data.hasOwnProperty('delay_subscription'))
@@ -86,6 +88,12 @@
     }
     return obj;
   }
+
+  /**
+   * Permission flag to allow this Agent access to the storefront and item information.
+   * @member {Boolean} access_storefront_and_item
+   */
+  exports.prototype.access_storefront_and_item = undefined;
 
   /**
    * @member {Boolean} cancel_subscription

@@ -34,7 +34,7 @@
   /**
    * The CustomerLoyalty model module.
    * @module com.ultracart.admin.v2.models/CustomerLoyalty
-   * @version 3.11.23
+   * @version 3.11.24
    */
 
   /**
@@ -65,6 +65,12 @@
         obj.internal_gift_certificate_oid = ApiClient.convertToType(data['internal_gift_certificate_oid'], 'Number');
       if (data.hasOwnProperty('ledger_entries'))
         obj.ledger_entries = ApiClient.convertToType(data['ledger_entries'], [CustomerLoyaltyLedger]);
+      if (data.hasOwnProperty('loyalty_tier_expiration_dts'))
+        obj.loyalty_tier_expiration_dts = ApiClient.convertToType(data['loyalty_tier_expiration_dts'], 'String');
+      if (data.hasOwnProperty('loyalty_tier_name'))
+        obj.loyalty_tier_name = ApiClient.convertToType(data['loyalty_tier_name'], 'String');
+      if (data.hasOwnProperty('loyalty_tier_oid'))
+        obj.loyalty_tier_oid = ApiClient.convertToType(data['loyalty_tier_oid'], 'Number');
       if (data.hasOwnProperty('pending_points'))
         obj.pending_points = ApiClient.convertToType(data['pending_points'], 'Number');
       if (data.hasOwnProperty('redemptions'))
@@ -101,6 +107,24 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/CustomerLoyaltyLedger>} ledger_entries
    */
   exports.prototype.ledger_entries = undefined;
+
+  /**
+   * Loyalty tier expiration date (read only because of SDK addition)
+   * @member {String} loyalty_tier_expiration_dts
+   */
+  exports.prototype.loyalty_tier_expiration_dts = undefined;
+
+  /**
+   * Loyalty tier name
+   * @member {String} loyalty_tier_name
+   */
+  exports.prototype.loyalty_tier_name = undefined;
+
+  /**
+   * Loyalty tier oid (set to zero to remove the tier)
+   * @member {Number} loyalty_tier_oid
+   */
+  exports.prototype.loyalty_tier_oid = undefined;
 
   /**
    * Pending Points

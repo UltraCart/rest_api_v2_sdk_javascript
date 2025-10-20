@@ -34,7 +34,7 @@
   /**
    * The ConversationDeleteKnowledgeBaseDocumentResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse
-   * @version 3.11.23
+   * @version 3.11.24
    */
 
   /**
