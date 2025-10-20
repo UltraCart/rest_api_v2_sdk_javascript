@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerSoftwareEntitlement model module.
  * @module com.ultracart.admin.v2.models/CustomerSoftwareEntitlement
- * @version 4.1.23
+ * @version 4.1.24
  */
 var CustomerSoftwareEntitlement = /*#__PURE__*/function () {
   /**

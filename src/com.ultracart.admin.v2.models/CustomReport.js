@@ -19,7 +19,7 @@ import CustomReportTooltip from './CustomReportTooltip';
 /**
  * The CustomReport model module.
  * @module com.ultracart.admin.v2.models/CustomReport
- * @version 4.1.24
+ * @version 4.1.25
  */
 class CustomReport {
     /**

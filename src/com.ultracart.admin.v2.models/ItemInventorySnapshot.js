@@ -17,7 +17,7 @@ import ItemInventorySnapshotDistributionCenter from './ItemInventorySnapshotDist
 /**
  * The ItemInventorySnapshot model module.
  * @module com.ultracart.admin.v2.models/ItemInventorySnapshot
- * @version 4.1.24
+ * @version 4.1.25
  */
 class ItemInventorySnapshot {
     /**

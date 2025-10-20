@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.23
+ * @version 4.1.24
  */
 var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
   /**
@@ -60,6 +60,9 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationVirtualAgentCapabilities();
+        if (data.hasOwnProperty('access_storefront_and_item')) {
+          obj['access_storefront_and_item'] = _ApiClient["default"].convertToType(data['access_storefront_and_item'], 'Boolean');
+        }
         if (data.hasOwnProperty('cancel_subscription')) {
           obj['cancel_subscription'] = _ApiClient["default"].convertToType(data['cancel_subscription'], 'Boolean');
         }
@@ -107,6 +110,12 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Permission flag to allow this Agent access to the storefront and item information.
+ * @member {Boolean} access_storefront_and_item
+ */
+ConversationVirtualAgentCapabilities.prototype['access_storefront_and_item'] = undefined;
+
 /**
  * @member {Boolean} cancel_subscription
  */

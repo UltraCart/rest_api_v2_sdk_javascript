@@ -18,7 +18,7 @@ import ConversationSentiment from './ConversationSentiment';
 /**
  * The ConversationSummary model module.
  * @module com.ultracart.admin.v2.models/ConversationSummary
- * @version 4.1.24
+ * @version 4.1.25
  */
 class ConversationSummary {
     /**

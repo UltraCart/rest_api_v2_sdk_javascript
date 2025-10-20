@@ -88,7 +88,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.24
+* @version 4.1.25
 */
 export default class ConversationApi {
 
@@ -1141,7 +1141,7 @@ export default class ConversationApi {
       let accepts = ['application/json'];
       let returnType = ConversationKnowledgeBaseDocumentUploadUrlResponse;
       return this.apiClient.callApi(
-        '/conversation//rest/v2/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET',
+        '/conversation/agent/profiles/{user_id}/knowledge_base/upload_url/{extension}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

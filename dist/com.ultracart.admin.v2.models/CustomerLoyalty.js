@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerLoyalty model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyalty
- * @version 4.1.23
+ * @version 4.1.24
  */
 var CustomerLoyalty = /*#__PURE__*/function () {
   /**
@@ -77,6 +77,15 @@ var CustomerLoyalty = /*#__PURE__*/function () {
         if (data.hasOwnProperty('ledger_entries')) {
           obj['ledger_entries'] = _ApiClient["default"].convertToType(data['ledger_entries'], [_CustomerLoyaltyLedger["default"]]);
         }
+        if (data.hasOwnProperty('loyalty_tier_expiration_dts')) {
+          obj['loyalty_tier_expiration_dts'] = _ApiClient["default"].convertToType(data['loyalty_tier_expiration_dts'], 'String');
+        }
+        if (data.hasOwnProperty('loyalty_tier_name')) {
+          obj['loyalty_tier_name'] = _ApiClient["default"].convertToType(data['loyalty_tier_name'], 'String');
+        }
+        if (data.hasOwnProperty('loyalty_tier_oid')) {
+          obj['loyalty_tier_oid'] = _ApiClient["default"].convertToType(data['loyalty_tier_oid'], 'Number');
+        }
         if (data.hasOwnProperty('pending_points')) {
           obj['pending_points'] = _ApiClient["default"].convertToType(data['pending_points'], 'Number');
         }
@@ -116,6 +125,24 @@ CustomerLoyalty.prototype['internal_gift_certificate_oid'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/CustomerLoyaltyLedger>} ledger_entries
  */
 CustomerLoyalty.prototype['ledger_entries'] = undefined;
+
+/**
+ * Loyalty tier expiration date (read only because of SDK addition)
+ * @member {String} loyalty_tier_expiration_dts
+ */
+CustomerLoyalty.prototype['loyalty_tier_expiration_dts'] = undefined;
+
+/**
+ * Loyalty tier name
+ * @member {String} loyalty_tier_name
+ */
+CustomerLoyalty.prototype['loyalty_tier_name'] = undefined;
+
+/**
+ * Loyalty tier oid (set to zero to remove the tier)
+ * @member {Number} loyalty_tier_oid
+ */
+CustomerLoyalty.prototype['loyalty_tier_oid'] = undefined;
 
 /**
  * Pending Points

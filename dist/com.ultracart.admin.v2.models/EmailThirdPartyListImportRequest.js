@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailThirdPartyListImportRequest model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyListImportRequest
- * @version 4.1.23
+ * @version 4.1.24
  */
 var EmailThirdPartyListImportRequest = /*#__PURE__*/function () {
   /**
