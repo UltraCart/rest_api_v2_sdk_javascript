@@ -42,7 +42,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.26
+* @version 4.1.27
 */
 export default class OrderApi {
 

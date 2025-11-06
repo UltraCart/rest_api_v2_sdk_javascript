@@ -20,7 +20,7 @@ import WorkflowTask from './WorkflowTask';
 /**
  * The WorkflowTasksResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowTasksResponse
- * @version 4.1.26
+ * @version 4.1.27
  */
 class WorkflowTasksResponse {
     /**

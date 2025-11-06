@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerResponse model module.
  * @module com.ultracart.admin.v2.models/CustomerResponse
- * @version 4.1.25
+ * @version 4.1.26
  */
 var CustomerResponse = /*#__PURE__*/function () {
   /**

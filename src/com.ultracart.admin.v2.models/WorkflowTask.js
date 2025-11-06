@@ -21,7 +21,7 @@ import WorkflowUser from './WorkflowUser';
 /**
  * The WorkflowTask model module.
  * @module com.ultracart.admin.v2.models/WorkflowTask
- * @version 4.1.26
+ * @version 4.1.27
  */
 class WorkflowTask {
     /**

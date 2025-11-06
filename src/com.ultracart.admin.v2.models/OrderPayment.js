@@ -25,7 +25,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.26
+ * @version 4.1.27
  */
 class OrderPayment {
     /**
@@ -430,7 +430,13 @@ OrderPayment['PaymentMethodEnum'] = {
      * value: "PayPal Fastlane"
      * @const
      */
-    "PayPal Fastlane": "PayPal Fastlane"
+    "PayPal Fastlane": "PayPal Fastlane",
+
+    /**
+     * value: "Klarna"
+     * @const
+     */
+    "Klarna": "Klarna"
 };
 
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationInsertKnowledgeBaseDocumentRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest
- * @version 4.1.26
+ * @version 4.1.27
  */
 class ConversationInsertKnowledgeBaseDocumentRequest {
     /**
@@ -47,6 +47,9 @@ class ConversationInsertKnowledgeBaseDocumentRequest {
         if (data) {
             obj = obj || new ConversationInsertKnowledgeBaseDocumentRequest();
 
+            if (data.hasOwnProperty('original_file_name')) {
+                obj['original_file_name'] = ApiClient.convertToType(data['original_file_name'], 'String');
+            }
             if (data.hasOwnProperty('presigned_url')) {
                 obj['presigned_url'] = ApiClient.convertToType(data['presigned_url'], 'String');
             }
@@ -56,6 +59,11 @@ class ConversationInsertKnowledgeBaseDocumentRequest {
 
 
 }
+
+/**
+ * @member {String} original_file_name
+ */
+ConversationInsertKnowledgeBaseDocumentRequest.prototype['original_file_name'] = undefined;
 
 /**
  * @member {String} presigned_url

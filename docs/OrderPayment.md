@@ -92,6 +92,8 @@ Name | Type | Description | Notes
 
 * `PayPal Fastlane` (value: `"PayPal Fastlane"`)
 
+* `Klarna` (value: `"Klarna"`)
+
 
 
 
