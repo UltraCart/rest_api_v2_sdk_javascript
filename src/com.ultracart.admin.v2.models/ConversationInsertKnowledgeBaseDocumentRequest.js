@@ -34,7 +34,7 @@
   /**
    * The ConversationInsertKnowledgeBaseDocumentRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest
-   * @version 3.11.26
+   * @version 3.11.27
    */
 
   /**
@@ -55,11 +55,18 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('original_file_name'))
+        obj.original_file_name = ApiClient.convertToType(data['original_file_name'], 'String');
       if (data.hasOwnProperty('presigned_url'))
         obj.presigned_url = ApiClient.convertToType(data['presigned_url'], 'String');
     }
     return obj;
   }
+
+  /**
+   * @member {String} original_file_name
+   */
+  exports.prototype.original_file_name = undefined;
 
   /**
    * @member {String} presigned_url

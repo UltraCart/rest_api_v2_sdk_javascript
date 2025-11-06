@@ -34,7 +34,7 @@
   /**
    * The ConversationKnowledgeBaseDocument model module.
    * @module com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocument
-   * @version 3.11.26
+   * @version 3.11.27
    */
 
   /**
@@ -69,6 +69,8 @@
         obj.mime_type = ApiClient.convertToType(data['mime_type'], 'String');
       if (data.hasOwnProperty('s3_key'))
         obj.s3_key = ApiClient.convertToType(data['s3_key'], 'String');
+      if (data.hasOwnProperty('s3_url'))
+        obj.s3_url = ApiClient.convertToType(data['s3_url'], 'String');
     }
     return obj;
   }
@@ -108,6 +110,11 @@
    * @member {String} s3_key
    */
   exports.prototype.s3_key = undefined;
+
+  /**
+   * @member {String} s3_url
+   */
+  exports.prototype.s3_url = undefined;
 
   return exports;
 

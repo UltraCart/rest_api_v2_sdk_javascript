@@ -34,7 +34,7 @@
   /**
    * The OrderPayment model module.
    * @module com.ultracart.admin.v2.models/OrderPayment
-   * @version 3.11.26
+   * @version 3.11.27
    */
 
   /**
@@ -402,7 +402,13 @@
      * value: "PayPal Fastlane"
      * @const
      */
-    PayPal_Fastlane: "PayPal Fastlane"
+    PayPal_Fastlane: "PayPal Fastlane",
+
+    /**
+     * value: "Klarna"
+     * @const
+     */
+    Klarna: "Klarna"
   };
 
 

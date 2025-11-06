@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **metadata** | **String** |  | [optional] 
 **mime_type** | **String** |  | [optional] 
 **s3_key** | **String** |  | [optional] 
+**s3_url** | **String** |  | [optional] 
 
 
