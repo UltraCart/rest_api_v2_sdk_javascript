@@ -667,6 +667,7 @@ docs/Order.md
 docs/OrderAffiliate.md
 docs/OrderAffiliateLedger.md
 docs/OrderApi.md
+docs/OrderAssignToAffiliateRequest.md
 docs/OrderAutoOrder.md
 docs/OrderBilling.md
 docs/OrderBuysafe.md
@@ -1575,6 +1576,7 @@ src/com.ultracart.admin.v2.models/OauthTokenResponse.js
 src/com.ultracart.admin.v2.models/Order.js
 src/com.ultracart.admin.v2.models/OrderAffiliate.js
 src/com.ultracart.admin.v2.models/OrderAffiliateLedger.js
+src/com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest.js
 src/com.ultracart.admin.v2.models/OrderAutoOrder.js
 src/com.ultracart.admin.v2.models/OrderBilling.js
 src/com.ultracart.admin.v2.models/OrderBuysafe.js

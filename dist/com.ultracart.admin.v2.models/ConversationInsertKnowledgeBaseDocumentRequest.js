@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationInsertKnowledgeBaseDocumentRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest
- * @version 4.1.26
+ * @version 4.1.27
  */
 var ConversationInsertKnowledgeBaseDocumentRequest = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var ConversationInsertKnowledgeBaseDocumentRequest = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationInsertKnowledgeBaseDocumentRequest();
+        if (data.hasOwnProperty('original_file_name')) {
+          obj['original_file_name'] = _ApiClient["default"].convertToType(data['original_file_name'], 'String');
+        }
         if (data.hasOwnProperty('presigned_url')) {
           obj['presigned_url'] = _ApiClient["default"].convertToType(data['presigned_url'], 'String');
         }
@@ -67,6 +70,11 @@ var ConversationInsertKnowledgeBaseDocumentRequest = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * @member {String} original_file_name
+ */
+ConversationInsertKnowledgeBaseDocumentRequest.prototype['original_file_name'] = undefined;
+
 /**
  * @member {String} presigned_url
  */

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationKnowledgeBaseDocument model module.
  * @module com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocument
- * @version 4.1.26
+ * @version 4.1.27
  */
 var ConversationKnowledgeBaseDocument = /*#__PURE__*/function () {
   /**
@@ -80,6 +80,9 @@ var ConversationKnowledgeBaseDocument = /*#__PURE__*/function () {
         if (data.hasOwnProperty('s3_key')) {
           obj['s3_key'] = _ApiClient["default"].convertToType(data['s3_key'], 'String');
         }
+        if (data.hasOwnProperty('s3_url')) {
+          obj['s3_url'] = _ApiClient["default"].convertToType(data['s3_url'], 'String');
+        }
       }
       return obj;
     }
@@ -120,4 +123,9 @@ ConversationKnowledgeBaseDocument.prototype['mime_type'] = undefined;
  * @member {String} s3_key
  */
 ConversationKnowledgeBaseDocument.prototype['s3_key'] = undefined;
+
+/**
+ * @member {String} s3_url
+ */
+ConversationKnowledgeBaseDocument.prototype['s3_url'] = undefined;
 var _default = exports["default"] = ConversationKnowledgeBaseDocument;

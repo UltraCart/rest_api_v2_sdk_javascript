@@ -19,6 +19,7 @@ import AccountsReceivableRetryStatsResponse from '../com.ultracart.admin.v2.mode
 import BaseResponse from '../com.ultracart.admin.v2.models/BaseResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Order from '../com.ultracart.admin.v2.models/Order';
+import OrderAssignToAffiliateRequest from '../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
 import OrderEdiDocumentsResponse from '../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
 import OrderFormat from '../com.ultracart.admin.v2.models/OrderFormat';
@@ -42,7 +43,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.27
+* @version 4.1.28
 */
 export default class OrderApi {
 
@@ -102,6 +103,58 @@ export default class OrderApi {
       let returnType = BaseResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/adjust_order_total/{desired_total}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the assignToAffiliate operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~assignToAffiliateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Assigns an order to an affiliate
+     * Assigns an order to an affiliate. 
+     * @param {String} order_id The order id to assign to the affiliate.
+     * @param {module:com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest} assign_to_affiliate_request Assign to affiliate request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~assignToAffiliateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    assignToAffiliate(order_id, assign_to_affiliate_request, opts, callback) {
+      opts = opts || {};
+      let postBody = assign_to_affiliate_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling assignToAffiliate");
+      }
+      // verify the required parameter 'assign_to_affiliate_request' is set
+      if (assign_to_affiliate_request === undefined || assign_to_affiliate_request === null) {
+        throw new Error("Missing the required parameter 'assign_to_affiliate_request' when calling assignToAffiliate");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = OrderResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/assignToAffiliate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

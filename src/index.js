@@ -664,6 +664,7 @@ import OauthTokenResponse from './com.ultracart.admin.v2.models/OauthTokenRespon
 import Order from './com.ultracart.admin.v2.models/Order';
 import OrderAffiliate from './com.ultracart.admin.v2.models/OrderAffiliate';
 import OrderAffiliateLedger from './com.ultracart.admin.v2.models/OrderAffiliateLedger';
+import OrderAssignToAffiliateRequest from './com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
 import OrderAutoOrder from './com.ultracart.admin.v2.models/OrderAutoOrder';
 import OrderBilling from './com.ultracart.admin.v2.models/OrderBilling';
 import OrderBuysafe from './com.ultracart.admin.v2.models/OrderBuysafe';
@@ -962,7 +963,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.27
+* @version 4.1.28
 */
 export {
     /**
@@ -4876,6 +4877,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderAffiliateLedger}
      */
     OrderAffiliateLedger,
+
+    /**
+     * The OrderAssignToAffiliateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest}
+     */
+    OrderAssignToAffiliateRequest,
 
     /**
      * The OrderAutoOrder model constructor.
