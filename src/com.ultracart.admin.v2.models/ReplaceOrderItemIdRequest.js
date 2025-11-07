@@ -34,7 +34,7 @@
   /**
    * The ReplaceOrderItemIdRequest model module.
    * @module com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest
-   * @version 3.11.27
+   * @version 3.11.28
    */
 
   /**

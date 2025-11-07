@@ -34,7 +34,7 @@
   /**
    * The WorkflowNote model module.
    * @module com.ultracart.admin.v2.models/WorkflowNote
-   * @version 3.11.27
+   * @version 3.11.28
    */
 
   /**
