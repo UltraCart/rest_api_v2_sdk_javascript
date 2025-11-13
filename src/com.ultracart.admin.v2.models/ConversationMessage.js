@@ -18,7 +18,7 @@ import ConversationMessageTransportStatus from './ConversationMessageTransportSt
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.1.28
+ * @version 4.1.29
  */
 class ConversationMessage {
     /**
@@ -81,6 +81,9 @@ class ConversationMessage {
             }
             if (data.hasOwnProperty('message_epoch')) {
                 obj['message_epoch'] = ApiClient.convertToType(data['message_epoch'], 'Number');
+            }
+            if (data.hasOwnProperty('message_type')) {
+                obj['message_type'] = ApiClient.convertToType(data['message_type'], 'String');
             }
             if (data.hasOwnProperty('translations')) {
                 obj['translations'] = ApiClient.convertToType(data['translations'], [ConversationMessageTranslation]);
@@ -158,6 +161,11 @@ ConversationMessage.prototype['message_dts'] = undefined;
  * @member {Number} message_epoch
  */
 ConversationMessage.prototype['message_epoch'] = undefined;
+
+/**
+ * @member {String} message_type
+ */
+ConversationMessage.prototype['message_type'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTranslation>} translations

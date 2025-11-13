@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerCard model module.
  * @module com.ultracart.admin.v2.models/CustomerCard
- * @version 4.1.27
+ * @version 4.1.28
  */
 var CustomerCard = /*#__PURE__*/function () {
   /**

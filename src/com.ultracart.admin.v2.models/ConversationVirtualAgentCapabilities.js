@@ -17,7 +17,7 @@ import ConversationVirtualAgentCapabilityZohoDeskDepartment from './Conversation
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.28
+ * @version 4.1.29
  */
 class ConversationVirtualAgentCapabilities {
     /**
@@ -56,6 +56,9 @@ class ConversationVirtualAgentCapabilities {
             }
             if (data.hasOwnProperty('delay_subscription')) {
                 obj['delay_subscription'] = ApiClient.convertToType(data['delay_subscription'], 'Boolean');
+            }
+            if (data.hasOwnProperty('generate_coupon')) {
+                obj['generate_coupon'] = ApiClient.convertToType(data['generate_coupon'], 'Boolean');
             }
             if (data.hasOwnProperty('lookup_order_information')) {
                 obj['lookup_order_information'] = ApiClient.convertToType(data['lookup_order_information'], 'Boolean');
@@ -115,6 +118,12 @@ ConversationVirtualAgentCapabilities.prototype['cancel_subscription'] = undefine
  * @member {Boolean} delay_subscription
  */
 ConversationVirtualAgentCapabilities.prototype['delay_subscription'] = undefined;
+
+/**
+ * Permission flag to allow this Agent to generate coupons based upon the agent prompt instructions
+ * @member {Boolean} generate_coupon
+ */
+ConversationVirtualAgentCapabilities.prototype['generate_coupon'] = undefined;
 
 /**
  * @member {Boolean} lookup_order_information

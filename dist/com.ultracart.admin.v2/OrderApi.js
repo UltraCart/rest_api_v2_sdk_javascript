@@ -11,6 +11,7 @@ var _AccountsReceivableRetryStatsResponse = _interopRequireDefault(require("../c
 var _BaseResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/BaseResponse"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
 var _Order = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Order"));
+var _OrderAssignToAffiliateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest"));
 var _OrderByTokenQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderByTokenQuery"));
 var _OrderEdiDocumentsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse"));
 var _OrderFormat = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderFormat"));
@@ -51,7 +52,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.27
+* @version 4.1.28
 */
 var OrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -106,6 +107,52 @@ var OrderApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _BaseResponse["default"];
       return this.apiClient.callApi('/order/orders/{order_id}/adjust_order_total/{desired_total}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the assignToAffiliate operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~assignToAffiliateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Assigns an order to an affiliate
+     * Assigns an order to an affiliate. 
+     * @param {String} order_id The order id to assign to the affiliate.
+     * @param {module:com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest} assign_to_affiliate_request Assign to affiliate request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~assignToAffiliateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+  }, {
+    key: "assignToAffiliate",
+    value: function assignToAffiliate(order_id, assign_to_affiliate_request, opts, callback) {
+      opts = opts || {};
+      var postBody = assign_to_affiliate_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling assignToAffiliate");
+      }
+      // verify the required parameter 'assign_to_affiliate_request' is set
+      if (assign_to_affiliate_request === undefined || assign_to_affiliate_request === null) {
+        throw new Error("Missing the required parameter 'assign_to_affiliate_request' when calling assignToAffiliate");
+      }
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _OrderResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/assignToAffiliate', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

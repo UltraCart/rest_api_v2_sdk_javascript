@@ -3999,6 +3999,12 @@ Object.defineProperty(exports, "OrderApi", {
     return _OrderApi["default"];
   }
 });
+Object.defineProperty(exports, "OrderAssignToAffiliateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _OrderAssignToAffiliateRequest["default"];
+  }
+});
 Object.defineProperty(exports, "OrderAutoOrder", {
   enumerable: true,
   get: function get() {
@@ -6169,6 +6175,7 @@ var _OauthTokenResponse = _interopRequireDefault(require("./com.ultracart.admin.
 var _Order = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Order"));
 var _OrderAffiliate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAffiliate"));
 var _OrderAffiliateLedger = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAffiliateLedger"));
+var _OrderAssignToAffiliateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest"));
 var _OrderAutoOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAutoOrder"));
 var _OrderBilling = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderBilling"));
 var _OrderBuysafe = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderBuysafe"));

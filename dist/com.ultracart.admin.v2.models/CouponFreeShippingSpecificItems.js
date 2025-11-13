@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponFreeShippingSpecificItems model module.
  * @module com.ultracart.admin.v2.models/CouponFreeShippingSpecificItems
- * @version 4.1.27
+ * @version 4.1.28
  */
 var CouponFreeShippingSpecificItems = /*#__PURE__*/function () {
   /**
