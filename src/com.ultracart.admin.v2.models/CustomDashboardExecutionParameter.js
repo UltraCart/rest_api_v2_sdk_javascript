@@ -34,7 +34,7 @@
   /**
    * The CustomDashboardExecutionParameter model module.
    * @module com.ultracart.admin.v2.models/CustomDashboardExecutionParameter
-   * @version 3.11.28
+   * @version 3.11.29
    */
 
   /**

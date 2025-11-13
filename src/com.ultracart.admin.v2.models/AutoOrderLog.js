@@ -34,7 +34,7 @@
   /**
    * The AutoOrderLog model module.
    * @module com.ultracart.admin.v2.models/AutoOrderLog
-   * @version 3.11.28
+   * @version 3.11.29
    */
 
   /**

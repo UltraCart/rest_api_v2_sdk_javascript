@@ -34,7 +34,7 @@
   /**
    * The ConversationMessage model module.
    * @module com.ultracart.admin.v2.models/ConversationMessage
-   * @version 3.11.28
+   * @version 3.11.29
    */
 
   /**
@@ -77,6 +77,8 @@
         obj.message_dts = ApiClient.convertToType(data['message_dts'], 'String');
       if (data.hasOwnProperty('message_epoch'))
         obj.message_epoch = ApiClient.convertToType(data['message_epoch'], 'Number');
+      if (data.hasOwnProperty('message_type'))
+        obj.message_type = ApiClient.convertToType(data['message_type'], 'String');
       if (data.hasOwnProperty('translations'))
         obj.translations = ApiClient.convertToType(data['translations'], [ConversationMessageTranslation]);
       if (data.hasOwnProperty('transport_statuses'))
@@ -146,6 +148,11 @@
    * @member {Number} message_epoch
    */
   exports.prototype.message_epoch = undefined;
+
+  /**
+   * @member {String} message_type
+   */
+  exports.prototype.message_type = undefined;
 
   /**
    * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTranslation>} translations

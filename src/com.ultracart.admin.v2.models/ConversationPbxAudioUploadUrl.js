@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAudioUploadUrl model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrl
-   * @version 3.11.28
+   * @version 3.11.29
    */
 
   /**
