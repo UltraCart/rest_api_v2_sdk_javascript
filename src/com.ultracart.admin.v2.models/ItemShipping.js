@@ -34,7 +34,7 @@
   /**
    * The ItemShipping model module.
    * @module com.ultracart.admin.v2.models/ItemShipping
-   * @version 3.11.29
+   * @version 3.11.30
    */
 
   /**
@@ -103,6 +103,8 @@
         obj.hazmat = ApiClient.convertToType(data['hazmat'], 'Boolean');
       if (data.hasOwnProperty('hold_for_transmission'))
         obj.hold_for_transmission = ApiClient.convertToType(data['hold_for_transmission'], 'Boolean');
+      if (data.hasOwnProperty('include_on_packing_slip'))
+        obj.include_on_packing_slip = ApiClient.convertToType(data['include_on_packing_slip'], 'Boolean');
       if (data.hasOwnProperty('made_to_order'))
         obj.made_to_order = ApiClient.convertToType(data['made_to_order'], 'Boolean');
       if (data.hasOwnProperty('made_to_order_lead_time'))
@@ -300,6 +302,12 @@
    * @member {Boolean} hold_for_transmission
    */
   exports.prototype.hold_for_transmission = undefined;
+
+  /**
+   * Force this item onto the packing slip even if there is no weight.
+   * @member {Boolean} include_on_packing_slip
+   */
+  exports.prototype.include_on_packing_slip = undefined;
 
   /**
    * True if this item is made to order

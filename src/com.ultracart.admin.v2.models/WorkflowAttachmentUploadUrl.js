@@ -34,7 +34,7 @@
   /**
    * The WorkflowAttachmentUploadUrl model module.
    * @module com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrl
-   * @version 3.11.29
+   * @version 3.11.30
    */
 
   /**
