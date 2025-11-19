@@ -176,6 +176,9 @@ docs/ConversationKnowledgeBaseDocumentsResponse.md
 docs/ConversationLocationCountry.md
 docs/ConversationLocationStateProvince.md
 docs/ConversationLocationsResponse.md
+docs/ConversationMcpServer.md
+docs/ConversationMcpServerResponse.md
+docs/ConversationMcpServersResponse.md
 docs/ConversationMessage.md
 docs/ConversationMessageTranslation.md
 docs/ConversationMessageTransportStatus.md
@@ -1094,6 +1097,9 @@ src/com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse.js
 src/com.ultracart.admin.v2.models/ConversationLocationCountry.js
 src/com.ultracart.admin.v2.models/ConversationLocationStateProvince.js
 src/com.ultracart.admin.v2.models/ConversationLocationsResponse.js
+src/com.ultracart.admin.v2.models/ConversationMcpServer.js
+src/com.ultracart.admin.v2.models/ConversationMcpServerResponse.js
+src/com.ultracart.admin.v2.models/ConversationMcpServersResponse.js
 src/com.ultracart.admin.v2.models/ConversationMessage.js
 src/com.ultracart.admin.v2.models/ConversationMessageTranslation.js
 src/com.ultracart.admin.v2.models/ConversationMessageTransportStatus.js

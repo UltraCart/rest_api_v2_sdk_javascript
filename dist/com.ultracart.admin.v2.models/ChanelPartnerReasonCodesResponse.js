@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChanelPartnerReasonCodesResponse model module.
  * @module com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse
- * @version 4.1.28
+ * @version 4.1.29
  */
 var ChanelPartnerReasonCodesResponse = /*#__PURE__*/function () {
   /**

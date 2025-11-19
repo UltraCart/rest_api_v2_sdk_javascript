@@ -182,6 +182,9 @@ import ConversationKnowledgeBaseDocumentsResponse from './com.ultracart.admin.v2
 import ConversationLocationCountry from './com.ultracart.admin.v2.models/ConversationLocationCountry';
 import ConversationLocationStateProvince from './com.ultracart.admin.v2.models/ConversationLocationStateProvince';
 import ConversationLocationsResponse from './com.ultracart.admin.v2.models/ConversationLocationsResponse';
+import ConversationMcpServer from './com.ultracart.admin.v2.models/ConversationMcpServer';
+import ConversationMcpServerResponse from './com.ultracart.admin.v2.models/ConversationMcpServerResponse';
+import ConversationMcpServersResponse from './com.ultracart.admin.v2.models/ConversationMcpServersResponse';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTranslation from './com.ultracart.admin.v2.models/ConversationMessageTranslation';
 import ConversationMessageTransportStatus from './com.ultracart.admin.v2.models/ConversationMessageTransportStatus';
@@ -963,7 +966,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.29
+* @version 4.1.30
 */
 export {
     /**
@@ -1985,6 +1988,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationLocationsResponse}
      */
     ConversationLocationsResponse,
+
+    /**
+     * The ConversationMcpServer model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMcpServer}
+     */
+    ConversationMcpServer,
+
+    /**
+     * The ConversationMcpServerResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMcpServerResponse}
+     */
+    ConversationMcpServerResponse,
+
+    /**
+     * The ConversationMcpServersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMcpServersResponse}
+     */
+    ConversationMcpServersResponse,
 
     /**
      * The ConversationMessage model constructor.

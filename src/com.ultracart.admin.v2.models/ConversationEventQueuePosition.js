@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationEventQueuePosition model module.
  * @module com.ultracart.admin.v2.models/ConversationEventQueuePosition
- * @version 4.1.29
+ * @version 4.1.30
  */
 class ConversationEventQueuePosition {
     /**

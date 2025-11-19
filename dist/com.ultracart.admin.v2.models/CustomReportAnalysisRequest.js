@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReportAnalysisRequest model module.
  * @module com.ultracart.admin.v2.models/CustomReportAnalysisRequest
- * @version 4.1.28
+ * @version 4.1.29
  */
 var CustomReportAnalysisRequest = /*#__PURE__*/function () {
   /**

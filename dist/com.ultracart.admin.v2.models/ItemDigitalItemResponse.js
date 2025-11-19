@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemDigitalItemResponse model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalItemResponse
- * @version 4.1.28
+ * @version 4.1.29
  */
 var ItemDigitalItemResponse = /*#__PURE__*/function () {
   /**

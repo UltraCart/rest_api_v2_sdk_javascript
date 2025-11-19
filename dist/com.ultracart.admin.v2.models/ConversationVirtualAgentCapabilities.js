@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.28
+ * @version 4.1.29
  */
 var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,9 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('delay_subscription')) {
           obj['delay_subscription'] = _ApiClient["default"].convertToType(data['delay_subscription'], 'Boolean');
+        }
+        if (data.hasOwnProperty('generate_coupon')) {
+          obj['generate_coupon'] = _ApiClient["default"].convertToType(data['generate_coupon'], 'Boolean');
         }
         if (data.hasOwnProperty('lookup_order_information')) {
           obj['lookup_order_information'] = _ApiClient["default"].convertToType(data['lookup_order_information'], 'Boolean');
@@ -125,6 +128,12 @@ ConversationVirtualAgentCapabilities.prototype['cancel_subscription'] = undefine
  * @member {Boolean} delay_subscription
  */
 ConversationVirtualAgentCapabilities.prototype['delay_subscription'] = undefined;
+
+/**
+ * Permission flag to allow this Agent to generate coupons based upon the agent prompt instructions
+ * @member {Boolean} generate_coupon
+ */
+ConversationVirtualAgentCapabilities.prototype['generate_coupon'] = undefined;
 
 /**
  * @member {Boolean} lookup_order_information

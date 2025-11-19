@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.1.28
+ * @version 4.1.29
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -93,6 +93,9 @@ var ConversationMessage = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('message_epoch')) {
           obj['message_epoch'] = _ApiClient["default"].convertToType(data['message_epoch'], 'Number');
+        }
+        if (data.hasOwnProperty('message_type')) {
+          obj['message_type'] = _ApiClient["default"].convertToType(data['message_type'], 'String');
         }
         if (data.hasOwnProperty('translations')) {
           obj['translations'] = _ApiClient["default"].convertToType(data['translations'], [_ConversationMessageTranslation["default"]]);
@@ -168,6 +171,11 @@ ConversationMessage.prototype['message_dts'] = undefined;
  * @member {Number} message_epoch
  */
 ConversationMessage.prototype['message_epoch'] = undefined;
+
+/**
+ * @member {String} message_type
+ */
+ConversationMessage.prototype['message_type'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationMessageTranslation>} translations
