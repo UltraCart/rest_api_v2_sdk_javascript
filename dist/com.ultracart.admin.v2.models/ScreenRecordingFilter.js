@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingFilter model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
- * @version 4.1.29
+ * @version 4.1.30
  */
 var ScreenRecordingFilter = /*#__PURE__*/function () {
   /**

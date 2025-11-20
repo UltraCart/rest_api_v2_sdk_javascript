@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemShipping model module.
  * @module com.ultracart.admin.v2.models/ItemShipping
- * @version 4.1.29
+ * @version 4.1.30
  */
 var ItemShipping = /*#__PURE__*/function () {
   /**
@@ -138,6 +138,9 @@ var ItemShipping = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('hold_for_transmission')) {
           obj['hold_for_transmission'] = _ApiClient["default"].convertToType(data['hold_for_transmission'], 'Boolean');
+        }
+        if (data.hasOwnProperty('include_on_packing_slip')) {
+          obj['include_on_packing_slip'] = _ApiClient["default"].convertToType(data['include_on_packing_slip'], 'Boolean');
         }
         if (data.hasOwnProperty('made_to_order')) {
           obj['made_to_order'] = _ApiClient["default"].convertToType(data['made_to_order'], 'Boolean');
@@ -362,6 +365,12 @@ ItemShipping.prototype['hazmat'] = undefined;
  * @member {Boolean} hold_for_transmission
  */
 ItemShipping.prototype['hold_for_transmission'] = undefined;
+
+/**
+ * Force this item onto the packing slip even if there is no weight.
+ * @member {Boolean} include_on_packing_slip
+ */
+ItemShipping.prototype['include_on_packing_slip'] = undefined;
 
 /**
  * True if this item is made to order

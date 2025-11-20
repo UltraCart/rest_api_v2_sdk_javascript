@@ -1053,6 +1053,24 @@ Object.defineProperty(exports, "ConversationLocationsResponse", {
     return _ConversationLocationsResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationMcpServer", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMcpServer["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationMcpServerResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMcpServerResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationMcpServersResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMcpServersResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationMessage", {
   enumerable: true,
   get: function get() {
@@ -5693,6 +5711,9 @@ var _ConversationKnowledgeBaseDocumentsResponse = _interopRequireDefault(require
 var _ConversationLocationCountry = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationCountry"));
 var _ConversationLocationStateProvince = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationStateProvince"));
 var _ConversationLocationsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationsResponse"));
+var _ConversationMcpServer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMcpServer"));
+var _ConversationMcpServerResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMcpServerResponse"));
+var _ConversationMcpServersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMcpServersResponse"));
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
 var _ConversationMessageTranslation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTranslation"));
 var _ConversationMessageTransportStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTransportStatus"));

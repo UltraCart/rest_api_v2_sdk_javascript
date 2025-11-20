@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailFlowFoldersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailFlowFoldersResponse
- * @version 4.1.29
+ * @version 4.1.30
  */
 var EmailFlowFoldersResponse = /*#__PURE__*/function () {
   /**

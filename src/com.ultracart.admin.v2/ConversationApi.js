@@ -39,6 +39,7 @@ import ConversationKnowledgeBaseDocumentsResponse from '../com.ultracart.admin.v
 import ConversationLocationsResponse from '../com.ultracart.admin.v2.models/ConversationLocationsResponse';
 import ConversationMcpServer from '../com.ultracart.admin.v2.models/ConversationMcpServer';
 import ConversationMcpServerResponse from '../com.ultracart.admin.v2.models/ConversationMcpServerResponse';
+import ConversationMcpServerToolsResponse from '../com.ultracart.admin.v2.models/ConversationMcpServerToolsResponse';
 import ConversationMcpServersResponse from '../com.ultracart.admin.v2.models/ConversationMcpServersResponse';
 import ConversationMessagesResponse from '../com.ultracart.admin.v2.models/ConversationMessagesResponse';
 import ConversationMultimediaUploadUrlResponse from '../com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
@@ -91,7 +92,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.30
+* @version 4.1.31
 */
 export default class ConversationApi {
 
@@ -151,6 +152,54 @@ export default class ConversationApi {
       let returnType = ConversationDeleteKnowledgeBaseDocumentResponse;
       return this.apiClient.callApi(
         '/conversation/agent/profiles/{user_id}/knowledge_base/{document_uuid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteAgentProfileMcp operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deleteAgentProfileMcpCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete an agent MCP server
+     * Delete an agent MCP server 
+     * @param {Number} user_id 
+     * @param {String} mcp_server_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deleteAgentProfileMcpCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteAgentProfileMcp(user_id, mcp_server_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling deleteAgentProfileMcp");
+      }
+      // verify the required parameter 'mcp_server_uuid' is set
+      if (mcp_server_uuid === undefined || mcp_server_uuid === null) {
+        throw new Error("Missing the required parameter 'mcp_server_uuid' when calling deleteAgentProfileMcp");
+      }
+
+      let pathParams = {
+        'user_id': user_id,
+        'mcp_server_uuid': mcp_server_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -790,6 +839,55 @@ export default class ConversationApi {
       let returnType = ConversationMcpServerResponse;
       return this.apiClient.callApi(
         '/conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentProfileMcpTools operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentProfileMcpToolsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationMcpServerToolsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the tools available from the MCP server
+     * Get the tools available from the MCP server 
+     * @param {Number} user_id 
+     * @param {String} mcp_server_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentProfileMcpToolsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMcpServerToolsResponse}
+     */
+    getAgentProfileMcpTools(user_id, mcp_server_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling getAgentProfileMcpTools");
+      }
+      // verify the required parameter 'mcp_server_uuid' is set
+      if (mcp_server_uuid === undefined || mcp_server_uuid === null) {
+        throw new Error("Missing the required parameter 'mcp_server_uuid' when calling getAgentProfileMcpTools");
+      }
+
+      let pathParams = {
+        'user_id': user_id,
+        'mcp_server_uuid': mcp_server_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationMcpServerToolsResponse;
+      return this.apiClient.callApi(
+        '/conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid}/tools', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -3492,60 +3590,6 @@ export default class ConversationApi {
       let returnType = ConversationAgentProfileResponse;
       return this.apiClient.callApi(
         '/conversation/agent/profile', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the updateAgentProfileMcp operation.
-     * @callback module:com.ultracart.admin.v2/ConversationApi~updateAgentProfileMcpCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/ConversationMcpServerResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update an agent MCP server
-     * Update an agent MCP server 
-     * @param {Number} user_id 
-     * @param {String} mcp_server_uuid 
-     * @param {module:com.ultracart.admin.v2.models/ConversationMcpServer} mcp_server MCP Server
-     * @param {module:com.ultracart.admin.v2/ConversationApi~updateAgentProfileMcpCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationMcpServerResponse}
-     */
-    updateAgentProfileMcp(user_id, mcp_server_uuid, mcp_server, callback) {
-      let postBody = mcp_server;
-      // verify the required parameter 'user_id' is set
-      if (user_id === undefined || user_id === null) {
-        throw new Error("Missing the required parameter 'user_id' when calling updateAgentProfileMcp");
-      }
-      // verify the required parameter 'mcp_server_uuid' is set
-      if (mcp_server_uuid === undefined || mcp_server_uuid === null) {
-        throw new Error("Missing the required parameter 'mcp_server_uuid' when calling updateAgentProfileMcp");
-      }
-      // verify the required parameter 'mcp_server' is set
-      if (mcp_server === undefined || mcp_server === null) {
-        throw new Error("Missing the required parameter 'mcp_server' when calling updateAgentProfileMcp");
-      }
-
-      let pathParams = {
-        'user_id': user_id,
-        'mcp_server_uuid': mcp_server_uuid
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = ConversationMcpServerResponse;
-      return this.apiClient.callApi(
-        '/conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

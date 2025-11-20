@@ -22,7 +22,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxCustomerSnapshotResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse
- * @version 4.1.30
+ * @version 4.1.31
  */
 class ConversationPbxCustomerSnapshotResponse {
     /**

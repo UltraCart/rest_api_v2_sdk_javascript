@@ -184,6 +184,7 @@ import ConversationLocationStateProvince from './com.ultracart.admin.v2.models/C
 import ConversationLocationsResponse from './com.ultracart.admin.v2.models/ConversationLocationsResponse';
 import ConversationMcpServer from './com.ultracart.admin.v2.models/ConversationMcpServer';
 import ConversationMcpServerResponse from './com.ultracart.admin.v2.models/ConversationMcpServerResponse';
+import ConversationMcpServerToolsResponse from './com.ultracart.admin.v2.models/ConversationMcpServerToolsResponse';
 import ConversationMcpServersResponse from './com.ultracart.admin.v2.models/ConversationMcpServersResponse';
 import ConversationMessage from './com.ultracart.admin.v2.models/ConversationMessage';
 import ConversationMessageTranslation from './com.ultracart.admin.v2.models/ConversationMessageTranslation';
@@ -966,7 +967,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.30
+* @version 4.1.31
 */
 export {
     /**
@@ -2000,6 +2001,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationMcpServerResponse}
      */
     ConversationMcpServerResponse,
+
+    /**
+     * The ConversationMcpServerToolsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationMcpServerToolsResponse}
+     */
+    ConversationMcpServerToolsResponse,
 
     /**
      * The ConversationMcpServersResponse model constructor.
