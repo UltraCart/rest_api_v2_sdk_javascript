@@ -1065,6 +1065,12 @@ Object.defineProperty(exports, "ConversationMcpServerResponse", {
     return _ConversationMcpServerResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationMcpServerToolsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationMcpServerToolsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationMcpServersResponse", {
   enumerable: true,
   get: function get() {
@@ -5713,6 +5719,7 @@ var _ConversationLocationStateProvince = _interopRequireDefault(require("./com.u
 var _ConversationLocationsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationLocationsResponse"));
 var _ConversationMcpServer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMcpServer"));
 var _ConversationMcpServerResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMcpServerResponse"));
+var _ConversationMcpServerToolsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMcpServerToolsResponse"));
 var _ConversationMcpServersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMcpServersResponse"));
 var _ConversationMessage = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessage"));
 var _ConversationMessageTranslation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMessageTranslation"));

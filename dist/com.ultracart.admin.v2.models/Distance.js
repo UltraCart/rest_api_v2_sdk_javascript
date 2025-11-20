@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Distance model module.
  * @module com.ultracart.admin.v2.models/Distance
- * @version 4.1.30
+ * @version 4.1.31
  */
 var Distance = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerEDI model module.
  * @module com.ultracart.admin.v2.models/CustomerEDI
- * @version 4.1.31
+ * @version 4.1.32
  */
 class CustomerEDI {
     /**
