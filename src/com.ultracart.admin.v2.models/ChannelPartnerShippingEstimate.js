@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerShippingEstimate model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerShippingEstimate
-   * @version 3.11.30
+   * @version 3.11.31
    */
 
   /**

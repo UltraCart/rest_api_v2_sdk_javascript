@@ -5,6 +5,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteAgentProfileKnowledgeBaseDocument**](ConversationApi.md#deleteAgentProfileKnowledgeBaseDocument) | **DELETE** /conversation/agent/profiles/{user_id}/knowledge_base/{document_uuid} | Delete a knowledge base document
+[**deleteAgentProfileMcp**](ConversationApi.md#deleteAgentProfileMcp) | **POST** /conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid} | Delete an agent MCP server
 [**deleteConversationCannedMessage**](ConversationApi.md#deleteConversationCannedMessage) | **DELETE** /conversation/canned_messages/{conversation_canned_message_oid} | Delete a conversation canned message
 [**deleteDepartment**](ConversationApi.md#deleteDepartment) | **DELETE** /conversation/departments/{conversation_department_oid} | Delete a conversation department
 [**deleteEngagement**](ConversationApi.md#deleteEngagement) | **DELETE** /conversation/engagements/{conversation_engagement_oid} | Delete a conversation engagement
@@ -20,6 +21,7 @@ Method | HTTP request | Description
 [**getAgentProfile**](ConversationApi.md#getAgentProfile) | **GET** /conversation/agent/profile | Get agent profile
 [**getAgentProfileKnowledgeBase**](ConversationApi.md#getAgentProfileKnowledgeBase) | **GET** /conversation/agent/profiles/{user_id}/knowledge_base | Get the list of knowledge base documents associated with this agent profile
 [**getAgentProfileMcp**](ConversationApi.md#getAgentProfileMcp) | **GET** /conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid} | Get an MCP server associated with this agent
+[**getAgentProfileMcpTools**](ConversationApi.md#getAgentProfileMcpTools) | **GET** /conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid}/tools | Get the tools available from the MCP server
 [**getAgentProfileMcps**](ConversationApi.md#getAgentProfileMcps) | **GET** /conversation/agent/profiles/{user_id}/mcps | Get the list of MCP servers associated with this agent
 [**getAgentProfiles**](ConversationApi.md#getAgentProfiles) | **GET** /conversation/agent/profiles | Get agent profiles
 [**getAgentWebsocketAuthorization**](ConversationApi.md#getAgentWebsocketAuthorization) | **PUT** /conversation/agent/auth | Get agent websocket authorization
@@ -85,7 +87,6 @@ Method | HTTP request | Description
 [**smsUnsubscribeConversation**](ConversationApi.md#smsUnsubscribeConversation) | **PUT** /conversation/conversations/{conversation_uuid}/sms_unsubscribe | Unsubscribe any SMS participants in this conversation
 [**startConversation**](ConversationApi.md#startConversation) | **PUT** /conversation/conversations | Start a conversation
 [**updateAgentProfile**](ConversationApi.md#updateAgentProfile) | **PUT** /conversation/agent/profile | Update agent profile
-[**updateAgentProfileMcp**](ConversationApi.md#updateAgentProfileMcp) | **POST** /conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid} | Update an agent MCP server
 [**updateConversationCannedMessage**](ConversationApi.md#updateConversationCannedMessage) | **PUT** /conversation/canned_messages/{conversation_canned_message_oid} | Update a canned message
 [**updateConversationDepartment**](ConversationApi.md#updateConversationDepartment) | **PUT** /conversation/departments/{conversation_department_oid} | Update a department
 [**updateConversationEngagement**](ConversationApi.md#updateConversationEngagement) | **PUT** /conversation/engagements/{conversation_engagement_oid} | Update a engagement
@@ -145,6 +146,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationDeleteKnowledgeBaseDocumentResponse**](ConversationDeleteKnowledgeBaseDocumentResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="deleteAgentProfileMcp"></a>
+# **deleteAgentProfileMcp**
+> deleteAgentProfileMcp(user_id, mcp_server_uuid)
+
+Delete an agent MCP server
+
+Delete an agent MCP server 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.ConversationApi();
+
+
+var user_id = 56; // Number | 
+
+var mcp_server_uuid = "mcp_server_uuid_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.deleteAgentProfileMcp(user_id, mcp_server_uuid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Number**|  | 
+ **mcp_server_uuid** | **String**|  | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -891,6 +945,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationMcpServerResponse**](ConversationMcpServerResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getAgentProfileMcpTools"></a>
+# **getAgentProfileMcpTools**
+> ConversationMcpServerToolsResponse getAgentProfileMcpTools(user_id, mcp_server_uuid)
+
+Get the tools available from the MCP server
+
+Get the tools available from the MCP server 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.ConversationApi();
+
+
+var user_id = 56; // Number | 
+
+var mcp_server_uuid = "mcp_server_uuid_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getAgentProfileMcpTools(user_id, mcp_server_uuid, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Number**|  | 
+ **mcp_server_uuid** | **String**|  | 
+
+### Return type
+
+[**ConversationMcpServerToolsResponse**](ConversationMcpServerToolsResponse.md)
 
 ### Authorization
 
@@ -4078,62 +4185,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationAgentProfileResponse**](ConversationAgentProfileResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="updateAgentProfileMcp"></a>
-# **updateAgentProfileMcp**
-> ConversationMcpServerResponse updateAgentProfileMcp(user_id, mcp_server_uuid, mcp_server)
-
-Update an agent MCP server
-
-Update an agent MCP server 
-
-### Example
-```javascript
-var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
-
-// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
-var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
-UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
-var apiInstance = new UltraCartRestApiV2.ConversationApi();
-
-
-var user_id = 56; // Number | 
-
-var mcp_server_uuid = "mcp_server_uuid_example"; // String | 
-
-var mcp_server = new UltraCartRestApiV2.ConversationMcpServer(); // ConversationMcpServer | MCP Server
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.updateAgentProfileMcp(user_id, mcp_server_uuid, mcp_server, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Number**|  | 
- **mcp_server_uuid** | **String**|  | 
- **mcp_server** | [**ConversationMcpServer**](ConversationMcpServer.md)| MCP Server | 
-
-### Return type
-
-[**ConversationMcpServerResponse**](ConversationMcpServerResponse.md)
 
 ### Authorization
 

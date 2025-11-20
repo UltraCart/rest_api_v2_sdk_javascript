@@ -34,7 +34,7 @@
   /**
    * Datawarehouse service.
    * @module com.ultracart.admin.v2/DatawarehouseApi
-   * @version 3.11.30
+   * @version 3.11.31
    */
 
   /**

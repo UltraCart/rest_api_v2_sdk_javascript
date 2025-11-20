@@ -34,7 +34,7 @@
   /**
    * The ConversationKnowledgeBaseDocument model module.
    * @module com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocument
-   * @version 3.11.30
+   * @version 3.11.31
    */
 
   /**
