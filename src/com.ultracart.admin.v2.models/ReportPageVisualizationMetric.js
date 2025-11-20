@@ -34,7 +34,7 @@
   /**
    * The ReportPageVisualizationMetric model module.
    * @module com.ultracart.admin.v2.models/ReportPageVisualizationMetric
-   * @version 3.11.31
+   * @version 3.11.32
    */
 
   /**
