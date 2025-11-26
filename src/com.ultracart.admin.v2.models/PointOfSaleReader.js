@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PointOfSaleReader model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleReader
- * @version 4.1.32
+ * @version 4.1.33
  */
 class PointOfSaleReader {
     /**

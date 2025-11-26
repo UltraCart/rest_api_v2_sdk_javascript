@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Sso service.
 * @module com.ultracart.admin.v2/SsoApi
-* @version 4.1.31
+* @version 4.1.32
 */
 var SsoApi = exports["default"] = /*#__PURE__*/function () {
   /**
