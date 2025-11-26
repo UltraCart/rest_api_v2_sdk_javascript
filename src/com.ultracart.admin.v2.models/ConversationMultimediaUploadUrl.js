@@ -34,7 +34,7 @@
   /**
    * The ConversationMultimediaUploadUrl model module.
    * @module com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl
-   * @version 3.11.32
+   * @version 3.11.33
    */
 
   /**

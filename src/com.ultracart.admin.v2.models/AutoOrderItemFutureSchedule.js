@@ -34,7 +34,7 @@
   /**
    * The AutoOrderItemFutureSchedule model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule
-   * @version 3.11.32
+   * @version 3.11.33
    */
 
   /**

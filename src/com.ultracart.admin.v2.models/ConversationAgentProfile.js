@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentProfile model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentProfile
-   * @version 3.11.32
+   * @version 3.11.33
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.ai_persona = ApiClient.convertToType(data['ai_persona'], 'String');
       if (data.hasOwnProperty('ai_sms_instructions'))
         obj.ai_sms_instructions = ApiClient.convertToType(data['ai_sms_instructions'], 'String');
+      if (data.hasOwnProperty('ai_ticket_instructions'))
+        obj.ai_ticket_instructions = ApiClient.convertToType(data['ai_ticket_instructions'], 'String');
       if (data.hasOwnProperty('chat_limit'))
         obj.chat_limit = ApiClient.convertToType(data['chat_limit'], 'Number');
       if (data.hasOwnProperty('default_language_iso_code'))
@@ -79,6 +81,10 @@
         obj.profile_image_url = ApiClient.convertToType(data['profile_image_url'], 'String');
       if (data.hasOwnProperty('user_id'))
         obj.user_id = ApiClient.convertToType(data['user_id'], 'Number');
+      if (data.hasOwnProperty('zohodesk_classifications'))
+        obj.zohodesk_classifications = ApiClient.convertToType(data['zohodesk_classifications'], ['String']);
+      if (data.hasOwnProperty('zohodesk_departments'))
+        obj.zohodesk_departments = ApiClient.convertToType(data['zohodesk_departments'], ['String']);
     }
     return obj;
   }
@@ -106,6 +112,12 @@
    * @member {String} ai_sms_instructions
    */
   exports.prototype.ai_sms_instructions = undefined;
+
+  /**
+   * Additional instructions for this AI when handling ticket draft replies
+   * @member {String} ai_ticket_instructions
+   */
+  exports.prototype.ai_ticket_instructions = undefined;
 
   /**
    * The number of engagement chats that can be pushed on them at any given time.
@@ -154,6 +166,18 @@
    * @member {Number} user_id
    */
   exports.prototype.user_id = undefined;
+
+  /**
+   * Restrict this agent to drafting replies only to tickets with these classifications
+   * @member {Array.<String>} zohodesk_classifications
+   */
+  exports.prototype.zohodesk_classifications = undefined;
+
+  /**
+   * Restrict this agent to drafting replies only to these department ids
+   * @member {Array.<String>} zohodesk_departments
+   */
+  exports.prototype.zohodesk_departments = undefined;
 
 
   /**

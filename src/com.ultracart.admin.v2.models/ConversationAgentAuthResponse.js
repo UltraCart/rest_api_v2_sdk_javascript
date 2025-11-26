@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentAuthResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuthResponse
-   * @version 3.11.32
+   * @version 3.11.33
    */
 
   /**
