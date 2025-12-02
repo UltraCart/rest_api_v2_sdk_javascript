@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**insertWishListItem**](CustomerApi.md#insertWishListItem) | **POST** /customer/customers/{customer_profile_oid}/wishlist | Insert a customer wishlist item
 [**mergeCustomer**](CustomerApi.md#mergeCustomer) | **PUT** /customer/customers/{customer_profile_oid}/merge | Merge customer into this customer
 [**searchCustomerProfileValues**](CustomerApi.md#searchCustomerProfileValues) | **POST** /customer/search | Searches for all matching values (using POST)
+[**searchCustomers**](CustomerApi.md#searchCustomers) | **GET** /customer/customers/search | Search for customers
 [**updateCustomer**](CustomerApi.md#updateCustomer) | **PUT** /customer/customers/{customer_profile_oid} | Update a customer
 [**updateCustomerEmailLists**](CustomerApi.md#updateCustomerEmailLists) | **POST** /customer/customers/{customer_profile_oid}/email_lists | Update email list subscriptions for a customer
 [**updateWishListItem**](CustomerApi.md#updateWishListItem) | **PUT** /customer/customers/{customer_profile_oid}/wishlist/{customer_wishlist_item_oid} | Update a customer wishlist item
@@ -1125,6 +1126,71 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="searchCustomers"></a>
+# **searchCustomers**
+> CustomersResponse searchCustomers(opts)
+
+Search for customers
+
+Retrieves customers from the account by matching the search value against most customer fields.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination.  This search also goes against the cache so updates should not be performed with these result objects.  Always re-query the individual customer profile if you are going to make updates. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.CustomerApi();
+
+
+var opts = { 
+  'search_string': "search_string_example", // String | Search
+  'signup_dts_start': "signup_dts_start_example", // String | Signup date start
+  'signup_dts_end': "signup_dts_end_example", // String | Signup date end
+  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
+  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
+  '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
+  '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.searchCustomers(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **search_string** | **String**| Search | [optional] 
+ **signup_dts_start** | **String**| Signup date start | [optional] 
+ **signup_dts_end** | **String**| Signup date end | [optional] 
+ **_limit** | **Number**| The maximum number of records to return on this one API call. (Max 200) | [optional] [default to 100]
+ **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
+ **_since** | **String**| Fetch customers that have been created/modified since this date/time. | [optional] 
+ **_sort** | **String**| The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending. | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**CustomersResponse**](CustomersResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
 
 ### HTTP request headers
 

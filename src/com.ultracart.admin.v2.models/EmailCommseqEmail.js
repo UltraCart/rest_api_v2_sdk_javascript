@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqEmail model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmail
-   * @version 3.11.34
+   * @version 3.11.35
    */
 
   /**
@@ -55,6 +55,12 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ai_generation'))
+        obj.ai_generation = ApiClient.convertToType(data['ai_generation'], 'Boolean');
+      if (data.hasOwnProperty('ai_generation_prompt'))
+        obj.ai_generation_prompt = ApiClient.convertToType(data['ai_generation_prompt'], 'String');
+      if (data.hasOwnProperty('ai_generation_user_id'))
+        obj.ai_generation_user_id = ApiClient.convertToType(data['ai_generation_user_id'], 'Number');
       if (data.hasOwnProperty('deleted'))
         obj.deleted = ApiClient.convertToType(data['deleted'], 'Boolean');
       if (data.hasOwnProperty('edited_by_user'))
@@ -126,6 +132,21 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} ai_generation
+   */
+  exports.prototype.ai_generation = undefined;
+
+  /**
+   * @member {String} ai_generation_prompt
+   */
+  exports.prototype.ai_generation_prompt = undefined;
+
+  /**
+   * @member {Number} ai_generation_user_id
+   */
+  exports.prototype.ai_generation_user_id = undefined;
 
   /**
    * Deleted

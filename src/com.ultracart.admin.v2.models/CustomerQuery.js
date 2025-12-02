@@ -34,7 +34,7 @@
   /**
    * The CustomerQuery model module.
    * @module com.ultracart.admin.v2.models/CustomerQuery
-   * @version 3.11.34
+   * @version 3.11.35
    */
 
   /**
@@ -91,6 +91,8 @@
         obj.pricing_tier_oid = ApiClient.convertToType(data['pricing_tier_oid'], 'Number');
       if (data.hasOwnProperty('qb_class'))
         obj.qb_class = ApiClient.convertToType(data['qb_class'], 'String');
+      if (data.hasOwnProperty('query_target'))
+        obj.query_target = ApiClient.convertToType(data['query_target'], 'String');
       if (data.hasOwnProperty('quickbooks_code'))
         obj.quickbooks_code = ApiClient.convertToType(data['quickbooks_code'], 'String');
       if (data.hasOwnProperty('shipping_city'))
@@ -228,6 +230,12 @@
   exports.prototype.qb_class = undefined;
 
   /**
+   * Query Target
+   * @member {module:com.ultracart.admin.v2.models/CustomerQuery.QueryTargetEnum} query_target
+   */
+  exports.prototype.query_target = undefined;
+
+  /**
    * QuickBooks name to import this customer as
    * @member {String} quickbooks_code
    */
@@ -298,6 +306,26 @@
    * @member {String} signup_dts_start
    */
   exports.prototype.signup_dts_start = undefined;
+
+
+  /**
+   * Allowed values for the <code>query_target</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.QueryTargetEnum = {
+    /**
+     * value: "origin"
+     * @const
+     */
+    origin: "origin",
+
+    /**
+     * value: "cache"
+     * @const
+     */
+    cache: "cache"
+  };
 
   return exports;
 

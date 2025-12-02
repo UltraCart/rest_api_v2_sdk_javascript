@@ -34,7 +34,7 @@
   /**
    * The Mailgun model module.
    * @module com.ultracart.admin.v2.models/Mailgun
-   * @version 3.11.34
+   * @version 3.11.35
    */
 
   /**
