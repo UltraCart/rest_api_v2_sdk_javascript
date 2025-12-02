@@ -34,7 +34,7 @@
   /**
    * The EmailFlowFolder model module.
    * @module com.ultracart.admin.v2.models/EmailFlowFolder
-   * @version 3.11.33
+   * @version 3.11.34
    */
 
   /**

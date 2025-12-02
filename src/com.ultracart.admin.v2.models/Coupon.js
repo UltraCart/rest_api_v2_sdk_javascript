@@ -34,7 +34,7 @@
   /**
    * The Coupon model module.
    * @module com.ultracart.admin.v2.models/Coupon
-   * @version 3.11.33
+   * @version 3.11.34
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The WorkflowTaskOpenCountResponse model module.
    * @module com.ultracart.admin.v2.models/WorkflowTaskOpenCountResponse
-   * @version 3.11.33
+   * @version 3.11.34
    */
 
   /**

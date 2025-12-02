@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingAdPlatform model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingAdPlatform
-   * @version 3.11.33
+   * @version 3.11.34
    */
 
   /**

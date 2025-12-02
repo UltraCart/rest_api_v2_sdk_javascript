@@ -34,7 +34,7 @@
   /**
    * The OrderPointOfSale model module.
    * @module com.ultracart.admin.v2.models/OrderPointOfSale
-   * @version 3.11.33
+   * @version 3.11.34
    */
 
   /**
