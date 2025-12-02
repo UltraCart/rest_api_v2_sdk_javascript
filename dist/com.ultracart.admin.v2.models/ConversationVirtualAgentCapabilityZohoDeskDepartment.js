@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationVirtualAgentCapabilityZohoDeskDepartment model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment
- * @version 4.1.33
+ * @version 4.1.34
  */
 var ConversationVirtualAgentCapabilityZohoDeskDepartment = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponFreeItemWithItemPurchaseAndFreeShipping model module.
  * @module com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchaseAndFreeShipping
- * @version 4.1.33
+ * @version 4.1.34
  */
 var CouponFreeItemWithItemPurchaseAndFreeShipping = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var CouponFreeItemWithItemPurchaseAndFreeShipping = /*#__PURE__*/function () {
         if (data.hasOwnProperty('required_purchase_items')) {
           obj['required_purchase_items'] = _ApiClient["default"].convertToType(data['required_purchase_items'], ['String']);
         }
+        if (data.hasOwnProperty('shipping_methods')) {
+          obj['shipping_methods'] = _ApiClient["default"].convertToType(data['shipping_methods'], ['String']);
+        }
       }
       return obj;
     }
@@ -99,4 +102,10 @@ CouponFreeItemWithItemPurchaseAndFreeShipping.prototype['match_required_purchase
  * @member {Array.<String>} required_purchase_items
  */
 CouponFreeItemWithItemPurchaseAndFreeShipping.prototype['required_purchase_items'] = undefined;
+
+/**
+ * One or more shipping methods that may be used with this coupon.  If not specified or empty, methods that are marked as qualifies for free shipping will be the only free methods
+ * @member {Array.<String>} shipping_methods
+ */
+CouponFreeItemWithItemPurchaseAndFreeShipping.prototype['shipping_methods'] = undefined;
 var _default = exports["default"] = CouponFreeItemWithItemPurchaseAndFreeShipping;

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartSettingsPaymentAmazon model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPaymentAmazon
- * @version 4.1.33
+ * @version 4.1.34
  */
 var CartSettingsPaymentAmazon = /*#__PURE__*/function () {
   /**

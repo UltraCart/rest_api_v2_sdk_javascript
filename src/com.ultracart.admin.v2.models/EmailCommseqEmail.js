@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqEmail model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqEmail
- * @version 4.1.34
+ * @version 4.1.35
  */
 class EmailCommseqEmail {
     /**
@@ -47,6 +47,15 @@ class EmailCommseqEmail {
         if (data) {
             obj = obj || new EmailCommseqEmail();
 
+            if (data.hasOwnProperty('ai_generation')) {
+                obj['ai_generation'] = ApiClient.convertToType(data['ai_generation'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ai_generation_prompt')) {
+                obj['ai_generation_prompt'] = ApiClient.convertToType(data['ai_generation_prompt'], 'String');
+            }
+            if (data.hasOwnProperty('ai_generation_user_id')) {
+                obj['ai_generation_user_id'] = ApiClient.convertToType(data['ai_generation_user_id'], 'Number');
+            }
             if (data.hasOwnProperty('deleted')) {
                 obj['deleted'] = ApiClient.convertToType(data['deleted'], 'Boolean');
             }
@@ -155,6 +164,21 @@ class EmailCommseqEmail {
 
 
 }
+
+/**
+ * @member {Boolean} ai_generation
+ */
+EmailCommseqEmail.prototype['ai_generation'] = undefined;
+
+/**
+ * @member {String} ai_generation_prompt
+ */
+EmailCommseqEmail.prototype['ai_generation_prompt'] = undefined;
+
+/**
+ * @member {Number} ai_generation_user_id
+ */
+EmailCommseqEmail.prototype['ai_generation_user_id'] = undefined;
 
 /**
  * Deleted
