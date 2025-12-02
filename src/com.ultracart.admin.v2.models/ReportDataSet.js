@@ -18,7 +18,7 @@ import ReportDataSetSchema from './ReportDataSetSchema';
 /**
  * The ReportDataSet model module.
  * @module com.ultracart.admin.v2.models/ReportDataSet
- * @version 4.1.33
+ * @version 4.1.34
  */
 class ReportDataSet {
     /**

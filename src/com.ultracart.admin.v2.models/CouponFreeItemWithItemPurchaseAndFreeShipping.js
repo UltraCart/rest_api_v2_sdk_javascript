@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponFreeItemWithItemPurchaseAndFreeShipping model module.
  * @module com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchaseAndFreeShipping
- * @version 4.1.33
+ * @version 4.1.34
  */
 class CouponFreeItemWithItemPurchaseAndFreeShipping {
     /**
@@ -59,6 +59,9 @@ class CouponFreeItemWithItemPurchaseAndFreeShipping {
             if (data.hasOwnProperty('required_purchase_items')) {
                 obj['required_purchase_items'] = ApiClient.convertToType(data['required_purchase_items'], ['String']);
             }
+            if (data.hasOwnProperty('shipping_methods')) {
+                obj['shipping_methods'] = ApiClient.convertToType(data['shipping_methods'], ['String']);
+            }
         }
         return obj;
     }
@@ -89,6 +92,12 @@ CouponFreeItemWithItemPurchaseAndFreeShipping.prototype['match_required_purchase
  * @member {Array.<String>} required_purchase_items
  */
 CouponFreeItemWithItemPurchaseAndFreeShipping.prototype['required_purchase_items'] = undefined;
+
+/**
+ * One or more shipping methods that may be used with this coupon.  If not specified or empty, methods that are marked as qualifies for free shipping will be the only free methods
+ * @member {Array.<String>} shipping_methods
+ */
+CouponFreeItemWithItemPurchaseAndFreeShipping.prototype['shipping_methods'] = undefined;
 
 
 

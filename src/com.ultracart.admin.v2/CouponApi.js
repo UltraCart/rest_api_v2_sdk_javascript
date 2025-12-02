@@ -32,7 +32,7 @@ import UploadCouponCodesResponse from '../com.ultracart.admin.v2.models/UploadCo
 /**
 * Coupon service.
 * @module com.ultracart.admin.v2/CouponApi
-* @version 4.1.33
+* @version 4.1.34
 */
 export default class CouponApi {
 

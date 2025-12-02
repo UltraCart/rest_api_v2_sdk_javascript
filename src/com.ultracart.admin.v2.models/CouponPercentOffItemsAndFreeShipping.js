@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponPercentOffItemsAndFreeShipping model module.
  * @module com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping
- * @version 4.1.33
+ * @version 4.1.34
  */
 class CouponPercentOffItemsAndFreeShipping {
     /**
@@ -62,6 +62,9 @@ class CouponPercentOffItemsAndFreeShipping {
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], ['String']);
             }
+            if (data.hasOwnProperty('shipping_methods')) {
+                obj['shipping_methods'] = ApiClient.convertToType(data['shipping_methods'], ['String']);
+            }
         }
         return obj;
     }
@@ -98,6 +101,12 @@ CouponPercentOffItemsAndFreeShipping.prototype['item_tags'] = undefined;
  * @member {Array.<String>} items
  */
 CouponPercentOffItemsAndFreeShipping.prototype['items'] = undefined;
+
+/**
+ * One or more shipping methods that may be used with this coupon.  If not specified or empty, methods that are marked as qualifies for free shipping will be the only free methods
+ * @member {Array.<String>} shipping_methods
+ */
+CouponPercentOffItemsAndFreeShipping.prototype['shipping_methods'] = undefined;
 
 
 

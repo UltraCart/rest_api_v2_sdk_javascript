@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportDataSetRow model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetRow
- * @version 4.1.32
+ * @version 4.1.33
  */
 var ReportDataSetRow = /*#__PURE__*/function () {
   /**

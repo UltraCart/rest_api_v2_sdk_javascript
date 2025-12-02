@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FileManagerPageResponse model module.
  * @module com.ultracart.admin.v2.models/FileManagerPageResponse
- * @version 4.1.32
+ * @version 4.1.33
  */
 var FileManagerPageResponse = /*#__PURE__*/function () {
   /**

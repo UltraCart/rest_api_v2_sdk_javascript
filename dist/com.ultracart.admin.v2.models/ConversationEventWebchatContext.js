@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationEventWebchatContext model module.
  * @module com.ultracart.admin.v2.models/ConversationEventWebchatContext
- * @version 4.1.32
+ * @version 4.1.33
  */
 var ConversationEventWebchatContext = /*#__PURE__*/function () {
   /**

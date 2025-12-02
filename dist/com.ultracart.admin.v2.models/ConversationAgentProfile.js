@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.1.32
+ * @version 4.1.33
  */
 var ConversationAgentProfile = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var ConversationAgentProfile = /*#__PURE__*/function () {
         if (data.hasOwnProperty('ai_sms_instructions')) {
           obj['ai_sms_instructions'] = _ApiClient["default"].convertToType(data['ai_sms_instructions'], 'String');
         }
+        if (data.hasOwnProperty('ai_ticket_instructions')) {
+          obj['ai_ticket_instructions'] = _ApiClient["default"].convertToType(data['ai_ticket_instructions'], 'String');
+        }
         if (data.hasOwnProperty('chat_limit')) {
           obj['chat_limit'] = _ApiClient["default"].convertToType(data['chat_limit'], 'Number');
         }
@@ -94,6 +97,12 @@ var ConversationAgentProfile = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('user_id')) {
           obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'Number');
+        }
+        if (data.hasOwnProperty('zohodesk_classifications')) {
+          obj['zohodesk_classifications'] = _ApiClient["default"].convertToType(data['zohodesk_classifications'], ['String']);
+        }
+        if (data.hasOwnProperty('zohodesk_departments')) {
+          obj['zohodesk_departments'] = _ApiClient["default"].convertToType(data['zohodesk_departments'], ['String']);
         }
       }
       return obj;
@@ -123,6 +132,12 @@ ConversationAgentProfile.prototype['ai_persona'] = undefined;
  * @member {String} ai_sms_instructions
  */
 ConversationAgentProfile.prototype['ai_sms_instructions'] = undefined;
+
+/**
+ * Additional instructions for this AI when handling ticket draft replies
+ * @member {String} ai_ticket_instructions
+ */
+ConversationAgentProfile.prototype['ai_ticket_instructions'] = undefined;
 
 /**
  * The number of engagement chats that can be pushed on them at any given time.
@@ -171,6 +186,18 @@ ConversationAgentProfile.prototype['profile_image_url'] = undefined;
  * @member {Number} user_id
  */
 ConversationAgentProfile.prototype['user_id'] = undefined;
+
+/**
+ * Restrict this agent to drafting replies only to tickets with these classifications
+ * @member {Array.<String>} zohodesk_classifications
+ */
+ConversationAgentProfile.prototype['zohodesk_classifications'] = undefined;
+
+/**
+ * Restrict this agent to drafting replies only to these department ids
+ * @member {Array.<String>} zohodesk_departments
+ */
+ConversationAgentProfile.prototype['zohodesk_departments'] = undefined;
 
 /**
  * Allowed values for the <code>default_status</code> property.

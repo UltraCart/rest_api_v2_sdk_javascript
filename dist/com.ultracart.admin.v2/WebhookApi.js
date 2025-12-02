@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Webhook service.
 * @module com.ultracart.admin.v2/WebhookApi
-* @version 4.1.32
+* @version 4.1.33
 */
 var WebhookApi = exports["default"] = /*#__PURE__*/function () {
   /**

@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingUserAgent model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingUserAgent
- * @version 4.1.32
+ * @version 4.1.33
  */
 var ScreenRecordingUserAgent = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxVoicemailMailbox model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox
- * @version 4.1.33
+ * @version 4.1.34
  */
 class ConversationPbxVoicemailMailbox {
     /**
