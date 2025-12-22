@@ -34,7 +34,7 @@
   /**
    * The CartSettingsGiftWrap model module.
    * @module com.ultracart.admin.v2.models/CartSettingsGiftWrap
-   * @version 3.11.35
+   * @version 3.11.36
    */
 
   /**

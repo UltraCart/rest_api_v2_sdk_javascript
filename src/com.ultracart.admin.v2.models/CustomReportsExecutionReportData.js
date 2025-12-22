@@ -34,7 +34,7 @@
   /**
    * The CustomReportsExecutionReportData model module.
    * @module com.ultracart.admin.v2.models/CustomReportsExecutionReportData
-   * @version 3.11.35
+   * @version 3.11.36
    */
 
   /**

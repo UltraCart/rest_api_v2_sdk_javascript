@@ -34,7 +34,7 @@
   /**
    * The CustomReportUsageBreakdown model module.
    * @module com.ultracart.admin.v2.models/CustomReportUsageBreakdown
-   * @version 3.11.35
+   * @version 3.11.36
    */
 
   /**
