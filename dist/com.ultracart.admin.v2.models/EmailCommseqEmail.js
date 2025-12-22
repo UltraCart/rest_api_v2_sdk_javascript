@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCommseqEmail model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqEmail
- * @version 4.1.34
+ * @version 4.1.35
  */
 var EmailCommseqEmail = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,15 @@ var EmailCommseqEmail = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new EmailCommseqEmail();
+        if (data.hasOwnProperty('ai_generation')) {
+          obj['ai_generation'] = _ApiClient["default"].convertToType(data['ai_generation'], 'Boolean');
+        }
+        if (data.hasOwnProperty('ai_generation_prompt')) {
+          obj['ai_generation_prompt'] = _ApiClient["default"].convertToType(data['ai_generation_prompt'], 'String');
+        }
+        if (data.hasOwnProperty('ai_generation_user_id')) {
+          obj['ai_generation_user_id'] = _ApiClient["default"].convertToType(data['ai_generation_user_id'], 'Number');
+        }
         if (data.hasOwnProperty('deleted')) {
           obj['deleted'] = _ApiClient["default"].convertToType(data['deleted'], 'Boolean');
         }
@@ -166,6 +175,21 @@ var EmailCommseqEmail = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * @member {Boolean} ai_generation
+ */
+EmailCommseqEmail.prototype['ai_generation'] = undefined;
+
+/**
+ * @member {String} ai_generation_prompt
+ */
+EmailCommseqEmail.prototype['ai_generation_prompt'] = undefined;
+
+/**
+ * @member {Number} ai_generation_user_id
+ */
+EmailCommseqEmail.prototype['ai_generation_user_id'] = undefined;
+
 /**
  * Deleted
  * @member {Boolean} deleted

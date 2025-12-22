@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponMoreLoyaltyCashback model module.
  * @module com.ultracart.admin.v2.models/CouponMoreLoyaltyCashback
- * @version 4.1.34
+ * @version 4.1.35
  */
 var CouponMoreLoyaltyCashback = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerQuery model module.
  * @module com.ultracart.admin.v2.models/CustomerQuery
- * @version 4.1.34
+ * @version 4.1.35
  */
 var CustomerQuery = /*#__PURE__*/function () {
   /**
@@ -112,6 +112,9 @@ var CustomerQuery = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('qb_class')) {
           obj['qb_class'] = _ApiClient["default"].convertToType(data['qb_class'], 'String');
+        }
+        if (data.hasOwnProperty('query_target')) {
+          obj['query_target'] = _ApiClient["default"].convertToType(data['query_target'], 'String');
         }
         if (data.hasOwnProperty('quickbooks_code')) {
           obj['quickbooks_code'] = _ApiClient["default"].convertToType(data['quickbooks_code'], 'String');
@@ -263,6 +266,12 @@ CustomerQuery.prototype['pricing_tier_oid'] = undefined;
 CustomerQuery.prototype['qb_class'] = undefined;
 
 /**
+ * Query Target
+ * @member {module:com.ultracart.admin.v2.models/CustomerQuery.QueryTargetEnum} query_target
+ */
+CustomerQuery.prototype['query_target'] = undefined;
+
+/**
  * QuickBooks name to import this customer as
  * @member {String} quickbooks_code
  */
@@ -333,4 +342,22 @@ CustomerQuery.prototype['signup_dts_end'] = undefined;
  * @member {String} signup_dts_start
  */
 CustomerQuery.prototype['signup_dts_start'] = undefined;
+
+/**
+ * Allowed values for the <code>query_target</code> property.
+ * @enum {String}
+ * @readonly
+ */
+CustomerQuery['QueryTargetEnum'] = {
+  /**
+   * value: "origin"
+   * @const
+   */
+  "origin": "origin",
+  /**
+   * value: "cache"
+   * @const
+   */
+  "cache": "cache"
+};
 var _default = exports["default"] = CustomerQuery;

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OauthRevokeSuccessResponse model module.
  * @module com.ultracart.admin.v2.models/OauthRevokeSuccessResponse
- * @version 4.1.34
+ * @version 4.1.35
  */
 var OauthRevokeSuccessResponse = /*#__PURE__*/function () {
   /**

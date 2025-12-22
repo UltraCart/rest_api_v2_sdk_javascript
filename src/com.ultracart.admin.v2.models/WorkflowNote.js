@@ -18,7 +18,7 @@ import WorkflowUser from './WorkflowUser';
 /**
  * The WorkflowNote model module.
  * @module com.ultracart.admin.v2.models/WorkflowNote
- * @version 4.1.35
+ * @version 4.1.36
  */
 class WorkflowNote {
     /**

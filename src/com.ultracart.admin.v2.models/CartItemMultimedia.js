@@ -17,7 +17,7 @@ import CartItemMultimediaThumbnail from './CartItemMultimediaThumbnail';
 /**
  * The CartItemMultimedia model module.
  * @module com.ultracart.admin.v2.models/CartItemMultimedia
- * @version 4.1.35
+ * @version 4.1.36
  */
 class CartItemMultimedia {
     /**

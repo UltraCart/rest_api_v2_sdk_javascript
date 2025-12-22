@@ -38,7 +38,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Workflow service.
 * @module com.ultracart.admin.v2/WorkflowApi
-* @version 4.1.34
+* @version 4.1.35
 */
 var WorkflowApi = exports["default"] = /*#__PURE__*/function () {
   /**

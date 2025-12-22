@@ -17,7 +17,7 @@ import Coupon from './Coupon';
 /**
  * The CouponsRequest model module.
  * @module com.ultracart.admin.v2.models/CouponsRequest
- * @version 4.1.35
+ * @version 4.1.36
  */
 class CouponsRequest {
     /**

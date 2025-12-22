@@ -17,7 +17,7 @@ import TaxCountryCode from './TaxCountryCode';
 /**
  * The TaxProviderSelfCountriesResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse
- * @version 4.1.35
+ * @version 4.1.36
  */
 class TaxProviderSelfCountriesResponse {
     /**

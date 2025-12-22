@@ -17,7 +17,7 @@ import ConversationTwilioAccount from './ConversationTwilioAccount';
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.35
+ * @version 4.1.36
  */
 class ConversationAgentAuth {
     /**
@@ -83,6 +83,9 @@ class ConversationAgentAuth {
             }
             if (data.hasOwnProperty('pbx_worker_token')) {
                 obj['pbx_worker_token'] = ApiClient.convertToType(data['pbx_worker_token'], 'String');
+            }
+            if (data.hasOwnProperty('pbx_worker_token_v2')) {
+                obj['pbx_worker_token_v2'] = ApiClient.convertToType(data['pbx_worker_token_v2'], 'String');
             }
             if (data.hasOwnProperty('twilio_accounts')) {
                 obj['twilio_accounts'] = ApiClient.convertToType(data['twilio_accounts'], [ConversationTwilioAccount]);
@@ -160,6 +163,11 @@ ConversationAgentAuth.prototype['pbx_voice_token'] = undefined;
  * @member {String} pbx_worker_token
  */
 ConversationAgentAuth.prototype['pbx_worker_token'] = undefined;
+
+/**
+ * @member {String} pbx_worker_token_v2
+ */
+ConversationAgentAuth.prototype['pbx_worker_token_v2'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationTwilioAccount>} twilio_accounts

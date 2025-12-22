@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationInsertKnowledgeBaseDocumentRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest
- * @version 4.1.35
+ * @version 4.1.36
  */
 class ConversationInsertKnowledgeBaseDocumentRequest {
     /**

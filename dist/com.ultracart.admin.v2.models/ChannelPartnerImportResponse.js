@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerImportResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerImportResponse
- * @version 4.1.34
+ * @version 4.1.35
  */
 var ChannelPartnerImportResponse = /*#__PURE__*/function () {
   /**

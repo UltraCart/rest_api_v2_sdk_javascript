@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StoreFrontPageContentAttribute model module.
  * @module com.ultracart.admin.v2.models/StoreFrontPageContentAttribute
- * @version 4.1.35
+ * @version 4.1.36
  */
 class StoreFrontPageContentAttribute {
     /**
