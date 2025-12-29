@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentHealthBenefitCard model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentHealthBenefitCard
-   * @version 3.11.37
+   * @version 3.11.38
    */
 
   /**

@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ConversationVirtualAgentCapabilities'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ConversationAgentProfile = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ConversationAgentProfile = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ConversationVirtualAgentCapabilities);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ConversationVirtualAgentCapabilities) {
   'use strict';
 
   /**
    * The ConversationAgentProfile model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentProfile
-   * @version 3.11.37
+   * @version 3.11.38
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('ai'))
         obj.ai = ApiClient.convertToType(data['ai'], 'Boolean');
+      if (data.hasOwnProperty('ai_capabilities'))
+        obj.ai_capabilities = ConversationVirtualAgentCapabilities.constructFromObject(data['ai_capabilities']);
       if (data.hasOwnProperty('ai_chat_instructions'))
         obj.ai_chat_instructions = ApiClient.convertToType(data['ai_chat_instructions'], 'String');
       if (data.hasOwnProperty('ai_persona'))
@@ -94,6 +96,11 @@
    * @member {Boolean} ai
    */
   exports.prototype.ai = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities} ai_capabilities
+   */
+  exports.prototype.ai_capabilities = undefined;
 
   /**
    * Additional instructions for this AI when handle web chats

@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerOrder model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
-   * @version 3.11.37
+   * @version 3.11.38
    */
 
   /**
