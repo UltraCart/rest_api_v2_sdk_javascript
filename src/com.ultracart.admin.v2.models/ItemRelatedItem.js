@@ -34,7 +34,7 @@
   /**
    * The ItemRelatedItem model module.
    * @module com.ultracart.admin.v2.models/ItemRelatedItem
-   * @version 3.11.36
+   * @version 3.11.37
    */
 
   /**
@@ -100,7 +100,19 @@
      * value: "UserDefined"
      * @const
      */
-    UserDefined: "UserDefined"
+    UserDefined: "UserDefined",
+
+    /**
+     * value: "Addon"
+     * @const
+     */
+    Addon: "Addon",
+
+    /**
+     * value: "Complementary"
+     * @const
+     */
+    Complementary: "Complementary"
   };
 
   return exports;

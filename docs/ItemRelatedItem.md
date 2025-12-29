@@ -16,6 +16,10 @@ Name | Type | Description | Notes
 
 * `UserDefined` (value: `"UserDefined"`)
 
+* `Addon` (value: `"Addon"`)
+
+* `Complementary` (value: `"Complementary"`)
+
 
 
 

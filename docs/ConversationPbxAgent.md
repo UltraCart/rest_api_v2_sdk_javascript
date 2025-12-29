@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ai** | **Boolean** | Flag to indicate if the agent is AI | [optional] 
 **cellphone** | **String** | Cellphone number of agent in E.164 format | [optional] 
 **conversation_pbx_agent_uuid** | **String** | Conversation Pbx Agent unique identifier | [optional] 
 **extension** | **Number** | Extension | [optional] 

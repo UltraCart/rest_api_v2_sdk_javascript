@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getInventorySnapshot**](ItemApi.md#getInventorySnapshot) | **GET** /item/items/inventory_snapshot | Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
 [**getItem**](ItemApi.md#getItem) | **GET** /item/items/{merchant_item_oid} | Retrieve an item
 [**getItemByMerchantItemId**](ItemApi.md#getItemByMerchantItemId) | **GET** /item/items/merchant_item_id/{merchant_item_id} | Retrieve an item by item id
+[**getItemShippingDistributionCenterByCode**](ItemApi.md#getItemShippingDistributionCenterByCode) | **GET** /item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code} | Retrieve an item shipping distribution center
 [**getItems**](ItemApi.md#getItems) | **GET** /item/items | Retrieve items
 [**getPricingTiers**](ItemApi.md#getPricingTiers) | **GET** /item/pricing_tiers | Retrieve pricing tiers
 [**getReview**](ItemApi.md#getReview) | **GET** /item/items/{merchant_item_oid}/reviews/{review_oid} | Get a review
@@ -24,6 +25,7 @@ Method | HTTP request | Description
 [**insertUpdateItemContentAttribute**](ItemApi.md#insertUpdateItemContentAttribute) | **POST** /item/items/{merchant_item_oid}/content/attributes | Upsert an item content attribute
 [**updateDigitalItem**](ItemApi.md#updateDigitalItem) | **PUT** /item/digital_library/{digital_item_oid} | Updates a file within the digital library
 [**updateItem**](ItemApi.md#updateItem) | **PUT** /item/items/{merchant_item_oid} | Update an item
+[**updateItemShippingDistributionCenterByCode**](ItemApi.md#updateItemShippingDistributionCenterByCode) | **PUT** /item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code} | Update an item shipping distribution center
 [**updateItems**](ItemApi.md#updateItems) | **PUT** /item/items/batch | Update multiple items
 [**updateReview**](ItemApi.md#updateReview) | **PUT** /item/items/{merchant_item_oid}/reviews/{review_oid} | Update a review
 [**uploadTemporaryMultimedia**](ItemApi.md#uploadTemporaryMultimedia) | **POST** /item/temp_multimedia | Upload an image to the temporary multimedia.
@@ -490,6 +492,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ItemResponse**](ItemResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getItemShippingDistributionCenterByCode"></a>
+# **getItemShippingDistributionCenterByCode**
+> ItemShippingDistributionCenterResponse getItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, opts)
+
+Retrieve an item shipping distribution center
+
+Retrieve an item shipping distribution center. 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.ItemApi();
+
+
+var merchant_item_oid = 56; // Number | The item oid to retrieve.
+
+var distribution_center_code = "distribution_center_code_example"; // String | 
+
+var opts = { 
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_item_oid** | **Number**| The item oid to retrieve. | 
+ **distribution_center_code** | **String**|  | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
+
+### Return type
+
+[**ItemShippingDistributionCenterResponse**](ItemShippingDistributionCenterResponse.md)
 
 ### Authorization
 
@@ -1094,6 +1155,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ItemResponse**](ItemResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateItemShippingDistributionCenterByCode"></a>
+# **updateItemShippingDistributionCenterByCode**
+> updateItemShippingDistributionCenterByCode(item_shipping_distribution_center, merchant_item_oid, distribution_center_code)
+
+Update an item shipping distribution center
+
+Update an item shipping distribution center 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.ItemApi();
+
+
+var item_shipping_distribution_center = new UltraCartRestApiV2.ItemShippingDistributionCenter(); // ItemShippingDistributionCenter | Item shipping distribution center
+
+var merchant_item_oid = 56; // Number | The item oid to update.
+
+var distribution_center_code = "distribution_center_code_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.updateItemShippingDistributionCenterByCode(item_shipping_distribution_center, merchant_item_oid, distribution_center_code, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **item_shipping_distribution_center** | [**ItemShippingDistributionCenter**](ItemShippingDistributionCenter.md)| Item shipping distribution center | 
+ **merchant_item_oid** | **Number**| The item oid to update. | 
+ **distribution_center_code** | **String**|  | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

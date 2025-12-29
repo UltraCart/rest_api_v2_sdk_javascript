@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAgent model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAgent
-   * @version 3.11.36
+   * @version 3.11.37
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ai'))
+        obj.ai = ApiClient.convertToType(data['ai'], 'Boolean');
       if (data.hasOwnProperty('cellphone'))
         obj.cellphone = ApiClient.convertToType(data['cellphone'], 'String');
       if (data.hasOwnProperty('conversation_pbx_agent_uuid'))
@@ -90,6 +92,12 @@
     }
     return obj;
   }
+
+  /**
+   * Flag to indicate if the agent is AI
+   * @member {Boolean} ai
+   */
+  exports.prototype.ai = undefined;
 
   /**
    * Cellphone number of agent in E.164 format

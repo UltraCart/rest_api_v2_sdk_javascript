@@ -34,7 +34,7 @@
   /**
    * The ReportsResponse model module.
    * @module com.ultracart.admin.v2.models/ReportsResponse
-   * @version 3.11.36
+   * @version 3.11.37
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The CartCurrencyConversion model module.
    * @module com.ultracart.admin.v2.models/CartCurrencyConversion
-   * @version 3.11.36
+   * @version 3.11.37
    */
 
   /**

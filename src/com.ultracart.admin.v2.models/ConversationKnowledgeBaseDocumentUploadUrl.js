@@ -34,7 +34,7 @@
   /**
    * The ConversationKnowledgeBaseDocumentUploadUrl model module.
    * @module com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl
-   * @version 3.11.36
+   * @version 3.11.37
    */
 
   /**
