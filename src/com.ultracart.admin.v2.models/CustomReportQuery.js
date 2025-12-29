@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportQuery model module.
  * @module com.ultracart.admin.v2.models/CustomReportQuery
- * @version 4.1.36
+ * @version 4.1.37
  */
 class CustomReportQuery {
     /**

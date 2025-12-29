@@ -17,7 +17,7 @@ import ItemContentMultimediaThumbnail from './ItemContentMultimediaThumbnail';
 /**
  * The ItemContentMultimedia model module.
  * @module com.ultracart.admin.v2.models/ItemContentMultimedia
- * @version 4.1.36
+ * @version 4.1.37
  */
 class ItemContentMultimedia {
     /**

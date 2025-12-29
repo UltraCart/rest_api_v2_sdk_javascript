@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Weight model module.
  * @module com.ultracart.admin.v2.models/Weight
- * @version 4.1.35
+ * @version 4.1.36
  */
 var Weight = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationMcpServer model module.
  * @module com.ultracart.admin.v2.models/ConversationMcpServer
- * @version 4.1.36
+ * @version 4.1.37
  */
 class ConversationMcpServer {
     /**

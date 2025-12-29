@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.35
+ * @version 4.1.36
  */
 var ConversationAgentAuth = /*#__PURE__*/function () {
   /**
@@ -95,6 +95,9 @@ var ConversationAgentAuth = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('pbx_worker_token')) {
           obj['pbx_worker_token'] = _ApiClient["default"].convertToType(data['pbx_worker_token'], 'String');
+        }
+        if (data.hasOwnProperty('pbx_worker_token_v2')) {
+          obj['pbx_worker_token_v2'] = _ApiClient["default"].convertToType(data['pbx_worker_token_v2'], 'String');
         }
         if (data.hasOwnProperty('twilio_accounts')) {
           obj['twilio_accounts'] = _ApiClient["default"].convertToType(data['twilio_accounts'], [_ConversationTwilioAccount["default"]]);
@@ -170,6 +173,11 @@ ConversationAgentAuth.prototype['pbx_voice_token'] = undefined;
  * @member {String} pbx_worker_token
  */
 ConversationAgentAuth.prototype['pbx_worker_token'] = undefined;
+
+/**
+ * @member {String} pbx_worker_token_v2
+ */
+ConversationAgentAuth.prototype['pbx_worker_token_v2'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationTwilioAccount>} twilio_accounts

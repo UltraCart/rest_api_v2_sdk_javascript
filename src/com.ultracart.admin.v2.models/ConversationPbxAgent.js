@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAgent
- * @version 4.1.36
+ * @version 4.1.37
  */
 class ConversationPbxAgent {
     /**
@@ -47,6 +47,9 @@ class ConversationPbxAgent {
         if (data) {
             obj = obj || new ConversationPbxAgent();
 
+            if (data.hasOwnProperty('ai')) {
+                obj['ai'] = ApiClient.convertToType(data['ai'], 'Boolean');
+            }
             if (data.hasOwnProperty('cellphone')) {
                 obj['cellphone'] = ApiClient.convertToType(data['cellphone'], 'String');
             }
@@ -101,6 +104,12 @@ class ConversationPbxAgent {
 
 
 }
+
+/**
+ * Flag to indicate if the agent is AI
+ * @member {Boolean} ai
+ */
+ConversationPbxAgent.prototype['ai'] = undefined;
 
 /**
  * Cellphone number of agent in E.164 format

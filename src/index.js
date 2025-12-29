@@ -629,6 +629,7 @@ import ItemShippingCase from './com.ultracart.admin.v2.models/ItemShippingCase';
 import ItemShippingDestinationMarkup from './com.ultracart.admin.v2.models/ItemShippingDestinationMarkup';
 import ItemShippingDestinationRestriction from './com.ultracart.admin.v2.models/ItemShippingDestinationRestriction';
 import ItemShippingDistributionCenter from './com.ultracart.admin.v2.models/ItemShippingDistributionCenter';
+import ItemShippingDistributionCenterResponse from './com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse';
 import ItemShippingMethod from './com.ultracart.admin.v2.models/ItemShippingMethod';
 import ItemShippingPackageRequirement from './com.ultracart.admin.v2.models/ItemShippingPackageRequirement';
 import ItemTag from './com.ultracart.admin.v2.models/ItemTag';
@@ -967,7 +968,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.36
+* @version 4.1.37
 */
 export {
     /**
@@ -4671,6 +4672,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter}
      */
     ItemShippingDistributionCenter,
+
+    /**
+     * The ItemShippingDistributionCenterResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse}
+     */
+    ItemShippingDistributionCenterResponse,
 
     /**
      * The ItemShippingMethod model constructor.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemRelatedItem model module.
  * @module com.ultracart.admin.v2.models/ItemRelatedItem
- * @version 4.1.36
+ * @version 4.1.37
  */
 class ItemRelatedItem {
     /**
@@ -102,7 +102,19 @@ ItemRelatedItem['TypeEnum'] = {
      * value: "UserDefined"
      * @const
      */
-    "UserDefined": "UserDefined"
+    "UserDefined": "UserDefined",
+
+    /**
+     * value: "Addon"
+     * @const
+     */
+    "Addon": "Addon",
+
+    /**
+     * value: "Complementary"
+     * @const
+     */
+    "Complementary": "Complementary"
 };
 
 

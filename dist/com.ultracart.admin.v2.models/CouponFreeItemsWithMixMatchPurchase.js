@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponFreeItemsWithMixMatchPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponFreeItemsWithMixMatchPurchase
- * @version 4.1.35
+ * @version 4.1.36
  */
 var CouponFreeItemsWithMixMatchPurchase = /*#__PURE__*/function () {
   /**

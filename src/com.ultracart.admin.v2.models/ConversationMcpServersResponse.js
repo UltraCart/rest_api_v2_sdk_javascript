@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationMcpServersResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationMcpServersResponse
- * @version 4.1.36
+ * @version 4.1.37
  */
 class ConversationMcpServersResponse {
     /**
