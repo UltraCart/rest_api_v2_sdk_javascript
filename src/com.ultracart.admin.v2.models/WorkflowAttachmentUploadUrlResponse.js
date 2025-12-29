@@ -20,7 +20,7 @@ import WorkflowAttachmentUploadUrl from './WorkflowAttachmentUploadUrl';
 /**
  * The WorkflowAttachmentUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse
- * @version 4.1.37
+ * @version 4.1.38
  */
 class WorkflowAttachmentUploadUrlResponse {
     /**

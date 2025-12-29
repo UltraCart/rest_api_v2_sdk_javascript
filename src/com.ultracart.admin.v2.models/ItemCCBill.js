@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemCCBill model module.
  * @module com.ultracart.admin.v2.models/ItemCCBill
- * @version 4.1.37
+ * @version 4.1.38
  */
 class ItemCCBill {
     /**

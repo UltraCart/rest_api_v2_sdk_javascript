@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxPhoneNumber model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
- * @version 4.1.36
+ * @version 4.1.37
  */
 var ConversationPbxPhoneNumber = /*#__PURE__*/function () {
   /**

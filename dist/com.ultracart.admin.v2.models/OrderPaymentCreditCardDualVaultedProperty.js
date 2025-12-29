@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPaymentCreditCardDualVaultedProperty model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaultedProperty
- * @version 4.1.36
+ * @version 4.1.37
  */
 var OrderPaymentCreditCardDualVaultedProperty = /*#__PURE__*/function () {
   /**

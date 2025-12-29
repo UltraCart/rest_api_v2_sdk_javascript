@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationVirtualAgentCapabilities from './ConversationVirtualAgentCapabilities';
 
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.1.37
+ * @version 4.1.38
  */
 class ConversationAgentProfile {
     /**
@@ -49,6 +50,9 @@ class ConversationAgentProfile {
 
             if (data.hasOwnProperty('ai')) {
                 obj['ai'] = ApiClient.convertToType(data['ai'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ai_capabilities')) {
+                obj['ai_capabilities'] = ConversationVirtualAgentCapabilities.constructFromObject(data['ai_capabilities']);
             }
             if (data.hasOwnProperty('ai_chat_instructions')) {
                 obj['ai_chat_instructions'] = ApiClient.convertToType(data['ai_chat_instructions'], 'String');
@@ -104,6 +108,11 @@ class ConversationAgentProfile {
  * @member {Boolean} ai
  */
 ConversationAgentProfile.prototype['ai'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities} ai_capabilities
+ */
+ConversationAgentProfile.prototype['ai_capabilities'] = undefined;
 
 /**
  * Additional instructions for this AI when handle web chats

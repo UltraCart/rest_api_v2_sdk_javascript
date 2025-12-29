@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAgent
- * @version 4.1.36
+ * @version 4.1.37
  */
 var ConversationPbxAgent = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationPbxAgent();
+        if (data.hasOwnProperty('ai')) {
+          obj['ai'] = _ApiClient["default"].convertToType(data['ai'], 'Boolean');
+        }
         if (data.hasOwnProperty('cellphone')) {
           obj['cellphone'] = _ApiClient["default"].convertToType(data['cellphone'], 'String');
         }
@@ -112,6 +115,12 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Flag to indicate if the agent is AI
+ * @member {Boolean} ai
+ */
+ConversationPbxAgent.prototype['ai'] = undefined;
+
 /**
  * Cellphone number of agent in E.164 format
  * @member {String} cellphone

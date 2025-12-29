@@ -3777,6 +3777,12 @@ Object.defineProperty(exports, "ItemShippingDistributionCenter", {
     return _ItemShippingDistributionCenter["default"];
   }
 });
+Object.defineProperty(exports, "ItemShippingDistributionCenterResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemShippingDistributionCenterResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ItemShippingMethod", {
   enumerable: true,
   get: function get() {
@@ -6164,6 +6170,7 @@ var _ItemShippingCase = _interopRequireDefault(require("./com.ultracart.admin.v2
 var _ItemShippingDestinationMarkup = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationMarkup"));
 var _ItemShippingDestinationRestriction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationRestriction"));
 var _ItemShippingDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenter"));
+var _ItemShippingDistributionCenterResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse"));
 var _ItemShippingMethod = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingMethod"));
 var _ItemShippingPackageRequirement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingPackageRequirement"));
 var _ItemTag = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemTag"));

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AvalaraConfig model module.
  * @module com.ultracart.admin.v2.models/AvalaraConfig
- * @version 4.1.36
+ * @version 4.1.37
  */
 var AvalaraConfig = /*#__PURE__*/function () {
   /**

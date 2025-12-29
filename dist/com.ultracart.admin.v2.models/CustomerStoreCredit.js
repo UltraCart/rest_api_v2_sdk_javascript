@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerStoreCredit model module.
  * @module com.ultracart.admin.v2.models/CustomerStoreCredit
- * @version 4.1.36
+ * @version 4.1.37
  */
 var CustomerStoreCredit = /*#__PURE__*/function () {
   /**
