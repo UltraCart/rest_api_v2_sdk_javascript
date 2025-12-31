@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.models/ItemContentAttribute', 'com.ultracart.admin.v2.models/ItemDigitalItem', 'com.ultracart.admin.v2.models/ItemDigitalItemResponse', 'com.ultracart.admin.v2.models/ItemDigitalItemsResponse', 'com.ultracart.admin.v2.models/ItemInventorySnapshotResponse', 'com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.models/ItemReview', 'com.ultracart.admin.v2.models/ItemReviewResponse', 'com.ultracart.admin.v2.models/ItemReviewsResponse', 'com.ultracart.admin.v2.models/ItemShippingDistributionCenter', 'com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse', 'com.ultracart.admin.v2.models/ItemsRequest', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/PricingTiersResponse', 'com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Item', 'com.ultracart.admin.v2.models/ItemContentAttribute', 'com.ultracart.admin.v2.models/ItemDigitalItem', 'com.ultracart.admin.v2.models/ItemDigitalItemResponse', 'com.ultracart.admin.v2.models/ItemDigitalItemsResponse', 'com.ultracart.admin.v2.models/ItemInventorySnapshotResponse', 'com.ultracart.admin.v2.models/ItemInventoryUpdateRequest', 'com.ultracart.admin.v2.models/ItemResponse', 'com.ultracart.admin.v2.models/ItemReview', 'com.ultracart.admin.v2.models/ItemReviewResponse', 'com.ultracart.admin.v2.models/ItemReviewsResponse', 'com.ultracart.admin.v2.models/ItemShippingDistributionCenter', 'com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse', 'com.ultracart.admin.v2.models/ItemsRequest', 'com.ultracart.admin.v2.models/ItemsResponse', 'com.ultracart.admin.v2.models/PricingTiersResponse', 'com.ultracart.admin.v2.models/TempMultimediaResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/ItemContentAttribute'), require('../com.ultracart.admin.v2.models/ItemDigitalItem'), require('../com.ultracart.admin.v2.models/ItemDigitalItemResponse'), require('../com.ultracart.admin.v2.models/ItemDigitalItemsResponse'), require('../com.ultracart.admin.v2.models/ItemInventorySnapshotResponse'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemReview'), require('../com.ultracart.admin.v2.models/ItemReviewResponse'), require('../com.ultracart.admin.v2.models/ItemReviewsResponse'), require('../com.ultracart.admin.v2.models/ItemShippingDistributionCenter'), require('../com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse'), require('../com.ultracart.admin.v2.models/ItemsRequest'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/PricingTiersResponse'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Item'), require('../com.ultracart.admin.v2.models/ItemContentAttribute'), require('../com.ultracart.admin.v2.models/ItemDigitalItem'), require('../com.ultracart.admin.v2.models/ItemDigitalItemResponse'), require('../com.ultracart.admin.v2.models/ItemDigitalItemsResponse'), require('../com.ultracart.admin.v2.models/ItemInventorySnapshotResponse'), require('../com.ultracart.admin.v2.models/ItemInventoryUpdateRequest'), require('../com.ultracart.admin.v2.models/ItemResponse'), require('../com.ultracart.admin.v2.models/ItemReview'), require('../com.ultracart.admin.v2.models/ItemReviewResponse'), require('../com.ultracart.admin.v2.models/ItemReviewsResponse'), require('../com.ultracart.admin.v2.models/ItemShippingDistributionCenter'), require('../com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse'), require('../com.ultracart.admin.v2.models/ItemsRequest'), require('../com.ultracart.admin.v2.models/ItemsResponse'), require('../com.ultracart.admin.v2.models/PricingTiersResponse'), require('../com.ultracart.admin.v2.models/TempMultimediaResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ItemContentAttribute, root.UltraCartRestApiV2.ItemDigitalItem, root.UltraCartRestApiV2.ItemDigitalItemResponse, root.UltraCartRestApiV2.ItemDigitalItemsResponse, root.UltraCartRestApiV2.ItemInventorySnapshotResponse, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemReview, root.UltraCartRestApiV2.ItemReviewResponse, root.UltraCartRestApiV2.ItemReviewsResponse, root.UltraCartRestApiV2.ItemShippingDistributionCenter, root.UltraCartRestApiV2.ItemShippingDistributionCenterResponse, root.UltraCartRestApiV2.ItemsRequest, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.PricingTiersResponse, root.UltraCartRestApiV2.TempMultimediaResponse);
+    root.UltraCartRestApiV2.ItemApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Item, root.UltraCartRestApiV2.ItemContentAttribute, root.UltraCartRestApiV2.ItemDigitalItem, root.UltraCartRestApiV2.ItemDigitalItemResponse, root.UltraCartRestApiV2.ItemDigitalItemsResponse, root.UltraCartRestApiV2.ItemInventorySnapshotResponse, root.UltraCartRestApiV2.ItemInventoryUpdateRequest, root.UltraCartRestApiV2.ItemResponse, root.UltraCartRestApiV2.ItemReview, root.UltraCartRestApiV2.ItemReviewResponse, root.UltraCartRestApiV2.ItemReviewsResponse, root.UltraCartRestApiV2.ItemShippingDistributionCenter, root.UltraCartRestApiV2.ItemShippingDistributionCenterResponse, root.UltraCartRestApiV2.ItemsRequest, root.UltraCartRestApiV2.ItemsResponse, root.UltraCartRestApiV2.PricingTiersResponse, root.UltraCartRestApiV2.TempMultimediaResponse);
   }
-}(this, function(ApiClient, ErrorResponse, Item, ItemContentAttribute, ItemDigitalItem, ItemDigitalItemResponse, ItemDigitalItemsResponse, ItemInventorySnapshotResponse, ItemResponse, ItemReview, ItemReviewResponse, ItemReviewsResponse, ItemShippingDistributionCenter, ItemShippingDistributionCenterResponse, ItemsRequest, ItemsResponse, PricingTiersResponse, TempMultimediaResponse) {
+}(this, function(ApiClient, ErrorResponse, Item, ItemContentAttribute, ItemDigitalItem, ItemDigitalItemResponse, ItemDigitalItemsResponse, ItemInventorySnapshotResponse, ItemInventoryUpdateRequest, ItemResponse, ItemReview, ItemReviewResponse, ItemReviewsResponse, ItemShippingDistributionCenter, ItemShippingDistributionCenterResponse, ItemsRequest, ItemsResponse, PricingTiersResponse, TempMultimediaResponse) {
   'use strict';
 
   /**
    * Item service.
    * @module com.ultracart.admin.v2/ItemApi
-   * @version 3.11.38
+   * @version 3.11.39
    */
 
   /**
@@ -1135,6 +1135,52 @@
 
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateItemInventories operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update item inventories for a distribution center
+     * Update item inventories for a distribution center 
+     * @param {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest} item_inventory_update_request Item inventory updates
+     * @param {module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.updateItemInventories = function(item_inventory_update_request, callback) {
+      var postBody = item_inventory_update_request;
+
+      // verify the required parameter 'item_inventory_update_request' is set
+      if (item_inventory_update_request === undefined || item_inventory_update_request === null) {
+        throw new Error("Missing the required parameter 'item_inventory_update_request' when calling updateItemInventories");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/item/items/update_item_inventories', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

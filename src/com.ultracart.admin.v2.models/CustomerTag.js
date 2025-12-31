@@ -34,7 +34,7 @@
   /**
    * The CustomerTag model module.
    * @module com.ultracart.admin.v2.models/CustomerTag
-   * @version 3.11.38
+   * @version 3.11.39
    */
 
   /**

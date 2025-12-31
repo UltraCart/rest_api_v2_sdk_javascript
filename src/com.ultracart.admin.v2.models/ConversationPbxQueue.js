@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxQueue model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxQueue
-   * @version 3.11.38
+   * @version 3.11.39
    */
 
   /**
@@ -55,6 +55,10 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ai_priority'))
+        obj.ai_priority = ApiClient.convertToType(data['ai_priority'], 'String');
+      if (data.hasOwnProperty('ai_timeout_seconds'))
+        obj.ai_timeout_seconds = ApiClient.convertToType(data['ai_timeout_seconds'], 'Number');
       if (data.hasOwnProperty('announce_queue_position'))
         obj.announce_queue_position = ApiClient.convertToType(data['announce_queue_position'], 'Boolean');
       if (data.hasOwnProperty('conversation_pbx_queue_uuid'))
@@ -100,6 +104,18 @@
     }
     return obj;
   }
+
+  /**
+   * AI Agent Priority compared to human agents
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxQueue.AiPriorityEnum} ai_priority
+   */
+  exports.prototype.ai_priority = undefined;
+
+  /**
+   * AI timeout seconds
+   * @member {Number} ai_timeout_seconds
+   */
+  exports.prototype.ai_timeout_seconds = undefined;
 
   /**
    * If true, the customer is told their queue position upon entering the queue
@@ -225,6 +241,32 @@
    * @member {Number} wrap_up_seconds
    */
   exports.prototype.wrap_up_seconds = undefined;
+
+
+  /**
+   * Allowed values for the <code>ai_priority</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.AiPriorityEnum = {
+    /**
+     * value: "neutral"
+     * @const
+     */
+    neutral: "neutral",
+
+    /**
+     * value: "first"
+     * @const
+     */
+    first: "first",
+
+    /**
+     * value: "backup"
+     * @const
+     */
+    backup: "backup"
+  };
 
   return exports;
 

@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**insertUpdateItemContentAttribute**](ItemApi.md#insertUpdateItemContentAttribute) | **POST** /item/items/{merchant_item_oid}/content/attributes | Upsert an item content attribute
 [**updateDigitalItem**](ItemApi.md#updateDigitalItem) | **PUT** /item/digital_library/{digital_item_oid} | Updates a file within the digital library
 [**updateItem**](ItemApi.md#updateItem) | **PUT** /item/items/{merchant_item_oid} | Update an item
+[**updateItemInventories**](ItemApi.md#updateItemInventories) | **PUT** /item/items/update_item_inventories | Update item inventories for a distribution center
 [**updateItemShippingDistributionCenterByCode**](ItemApi.md#updateItemShippingDistributionCenterByCode) | **PUT** /item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code} | Update an item shipping distribution center
 [**updateItems**](ItemApi.md#updateItems) | **PUT** /item/items/batch | Update multiple items
 [**updateReview**](ItemApi.md#updateReview) | **PUT** /item/items/{merchant_item_oid}/reviews/{review_oid} | Update a review
@@ -1155,6 +1156,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ItemResponse**](ItemResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateItemInventories"></a>
+# **updateItemInventories**
+> updateItemInventories(item_inventory_update_request)
+
+Update item inventories for a distribution center
+
+Update item inventories for a distribution center 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.ItemApi();
+
+
+var item_inventory_update_request = new UltraCartRestApiV2.ItemInventoryUpdateRequest(); // ItemInventoryUpdateRequest | Item inventory updates
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.updateItemInventories(item_inventory_update_request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **item_inventory_update_request** | [**ItemInventoryUpdateRequest**](ItemInventoryUpdateRequest.md)| Item inventory updates | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
