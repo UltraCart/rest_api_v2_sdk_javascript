@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The CustomReportAnalysisResponse model module.
  * @module com.ultracart.admin.v2.models/CustomReportAnalysisResponse
- * @version 4.1.38
+ * @version 4.1.39
  */
 class CustomReportAnalysisResponse {
     /**

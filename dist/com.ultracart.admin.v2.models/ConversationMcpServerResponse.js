@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationMcpServerResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationMcpServerResponse
- * @version 4.1.37
+ * @version 4.1.38
  */
 var ConversationMcpServerResponse = /*#__PURE__*/function () {
   /**

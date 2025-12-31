@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderFormat model module.
  * @module com.ultracart.admin.v2.models/OrderFormat
- * @version 4.1.37
+ * @version 4.1.38
  */
 var OrderFormat = /*#__PURE__*/function () {
   /**

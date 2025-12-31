@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _ConversationVirtualAgentCapabilities = _interopRequireDefault(require("./ConversationVirtualAgentCapabilities"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -26,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.1.37
+ * @version 4.1.38
  */
 var ConversationAgentProfile = /*#__PURE__*/function () {
   /**
@@ -61,6 +62,9 @@ var ConversationAgentProfile = /*#__PURE__*/function () {
         obj = obj || new ConversationAgentProfile();
         if (data.hasOwnProperty('ai')) {
           obj['ai'] = _ApiClient["default"].convertToType(data['ai'], 'Boolean');
+        }
+        if (data.hasOwnProperty('ai_capabilities')) {
+          obj['ai_capabilities'] = _ConversationVirtualAgentCapabilities["default"].constructFromObject(data['ai_capabilities']);
         }
         if (data.hasOwnProperty('ai_chat_instructions')) {
           obj['ai_chat_instructions'] = _ApiClient["default"].convertToType(data['ai_chat_instructions'], 'String');
@@ -114,6 +118,11 @@ var ConversationAgentProfile = /*#__PURE__*/function () {
  * @member {Boolean} ai
  */
 ConversationAgentProfile.prototype['ai'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities} ai_capabilities
+ */
+ConversationAgentProfile.prototype['ai_capabilities'] = undefined;
 
 /**
  * Additional instructions for this AI when handle web chats

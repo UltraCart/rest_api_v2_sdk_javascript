@@ -598,6 +598,8 @@ import ItemInternal from './com.ultracart.admin.v2.models/ItemInternal';
 import ItemInventorySnapshot from './com.ultracart.admin.v2.models/ItemInventorySnapshot';
 import ItemInventorySnapshotDistributionCenter from './com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter';
 import ItemInventorySnapshotResponse from './com.ultracart.admin.v2.models/ItemInventorySnapshotResponse';
+import ItemInventoryUpdate from './com.ultracart.admin.v2.models/ItemInventoryUpdate';
+import ItemInventoryUpdateRequest from './com.ultracart.admin.v2.models/ItemInventoryUpdateRequest';
 import ItemKitComponent from './com.ultracart.admin.v2.models/ItemKitComponent';
 import ItemKitDefinition from './com.ultracart.admin.v2.models/ItemKitDefinition';
 import ItemOption from './com.ultracart.admin.v2.models/ItemOption';
@@ -968,7 +970,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.38
+* @version 4.1.39
 */
 export {
     /**
@@ -4486,6 +4488,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemInventorySnapshotResponse}
      */
     ItemInventorySnapshotResponse,
+
+    /**
+     * The ItemInventoryUpdate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdate}
+     */
+    ItemInventoryUpdate,
+
+    /**
+     * The ItemInventoryUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest}
+     */
+    ItemInventoryUpdateRequest,
 
     /**
      * The ItemKitComponent model constructor.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportParameterOption model module.
  * @module com.ultracart.admin.v2.models/CustomReportParameterOption
- * @version 4.1.38
+ * @version 4.1.39
  */
 class CustomReportParameterOption {
     /**

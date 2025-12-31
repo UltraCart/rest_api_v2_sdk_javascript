@@ -20,6 +20,7 @@ import ItemDigitalItem from '../com.ultracart.admin.v2.models/ItemDigitalItem';
 import ItemDigitalItemResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemResponse';
 import ItemDigitalItemsResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemsResponse';
 import ItemInventorySnapshotResponse from '../com.ultracart.admin.v2.models/ItemInventorySnapshotResponse';
+import ItemInventoryUpdateRequest from '../com.ultracart.admin.v2.models/ItemInventoryUpdateRequest';
 import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
 import ItemReview from '../com.ultracart.admin.v2.models/ItemReview';
 import ItemReviewResponse from '../com.ultracart.admin.v2.models/ItemReviewResponse';
@@ -34,7 +35,7 @@ import TempMultimediaResponse from '../com.ultracart.admin.v2.models/TempMultime
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.1.38
+* @version 4.1.39
 */
 export default class ItemApi {
 
@@ -1030,6 +1031,47 @@ export default class ItemApi {
       let returnType = ItemResponse;
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateItemInventories operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update item inventories for a distribution center
+     * Update item inventories for a distribution center 
+     * @param {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest} item_inventory_update_request Item inventory updates
+     * @param {module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    updateItemInventories(item_inventory_update_request, callback) {
+      let postBody = item_inventory_update_request;
+      // verify the required parameter 'item_inventory_update_request' is set
+      if (item_inventory_update_request === undefined || item_inventory_update_request === null) {
+        throw new Error("Missing the required parameter 'item_inventory_update_request' when calling updateItemInventories");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/item/items/update_item_inventories', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
