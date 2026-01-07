@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CheckoutAllowedCountriesResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse
- * @version 4.1.38
+ * @version 4.1.39
  */
 var CheckoutAllowedCountriesResponse = /*#__PURE__*/function () {
   /**

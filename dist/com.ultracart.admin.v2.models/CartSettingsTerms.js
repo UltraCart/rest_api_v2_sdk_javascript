@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartSettingsTerms model module.
  * @module com.ultracart.admin.v2.models/CartSettingsTerms
- * @version 4.1.38
+ * @version 4.1.39
  */
 var CartSettingsTerms = /*#__PURE__*/function () {
   /**

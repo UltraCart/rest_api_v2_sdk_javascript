@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderByTokenQuery model module.
  * @module com.ultracart.admin.v2.models/OrderByTokenQuery
- * @version 4.1.38
+ * @version 4.1.39
  */
 var OrderByTokenQuery = /*#__PURE__*/function () {
   /**

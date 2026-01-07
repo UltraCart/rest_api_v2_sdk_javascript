@@ -12,6 +12,7 @@ var _ItemDigitalItem = _interopRequireDefault(require("../com.ultracart.admin.v2
 var _ItemDigitalItemResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemDigitalItemResponse"));
 var _ItemDigitalItemsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemDigitalItemsResponse"));
 var _ItemInventorySnapshotResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemInventorySnapshotResponse"));
+var _ItemInventoryUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemInventoryUpdateRequest"));
 var _ItemResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemResponse"));
 var _ItemReview = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemReview"));
 var _ItemReviewResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemReviewResponse"));
@@ -43,7 +44,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.1.38
+* @version 4.1.39
 */
 var ItemApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -896,6 +897,39 @@ var ItemApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ItemResponse["default"];
       return this.apiClient.callApi('/item/items/{merchant_item_oid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updateItemInventories operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update item inventories for a distribution center
+     * Update item inventories for a distribution center 
+     * @param {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest} item_inventory_update_request Item inventory updates
+     * @param {module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+  }, {
+    key: "updateItemInventories",
+    value: function updateItemInventories(item_inventory_update_request, callback) {
+      var postBody = item_inventory_update_request;
+      // verify the required parameter 'item_inventory_update_request' is set
+      if (item_inventory_update_request === undefined || item_inventory_update_request === null) {
+        throw new Error("Missing the required parameter 'item_inventory_update_request' when calling updateItemInventories");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/item/items/update_item_inventories', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

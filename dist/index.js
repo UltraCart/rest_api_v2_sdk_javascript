@@ -3591,6 +3591,18 @@ Object.defineProperty(exports, "ItemInventorySnapshotResponse", {
     return _ItemInventorySnapshotResponse["default"];
   }
 });
+Object.defineProperty(exports, "ItemInventoryUpdate", {
+  enumerable: true,
+  get: function get() {
+    return _ItemInventoryUpdate["default"];
+  }
+});
+Object.defineProperty(exports, "ItemInventoryUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ItemInventoryUpdateRequest["default"];
+  }
+});
 Object.defineProperty(exports, "ItemKitComponent", {
   enumerable: true,
   get: function get() {
@@ -6139,6 +6151,8 @@ var _ItemInternal = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ItemInventorySnapshot = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshot"));
 var _ItemInventorySnapshotDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter"));
 var _ItemInventorySnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotResponse"));
+var _ItemInventoryUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdate"));
+var _ItemInventoryUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdateRequest"));
 var _ItemKitComponent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitComponent"));
 var _ItemKitDefinition = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitDefinition"));
 var _ItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemOption"));
