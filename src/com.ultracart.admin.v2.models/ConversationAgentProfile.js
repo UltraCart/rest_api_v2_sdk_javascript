@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentProfile model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentProfile
-   * @version 3.11.39
+   * @version 3.11.40
    */
 
   /**
@@ -67,6 +67,10 @@
         obj.ai_sms_instructions = ApiClient.convertToType(data['ai_sms_instructions'], 'String');
       if (data.hasOwnProperty('ai_ticket_instructions'))
         obj.ai_ticket_instructions = ApiClient.convertToType(data['ai_ticket_instructions'], 'String');
+      if (data.hasOwnProperty('ai_voice_instructions'))
+        obj.ai_voice_instructions = ApiClient.convertToType(data['ai_voice_instructions'], 'String');
+      if (data.hasOwnProperty('ai_voice_personality'))
+        obj.ai_voice_personality = ApiClient.convertToType(data['ai_voice_personality'], 'String');
       if (data.hasOwnProperty('chat_limit'))
         obj.chat_limit = ApiClient.convertToType(data['chat_limit'], 'Number');
       if (data.hasOwnProperty('default_language_iso_code'))
@@ -127,6 +131,18 @@
   exports.prototype.ai_ticket_instructions = undefined;
 
   /**
+   * Additional voice instructions for this AI when handling voice calls
+   * @member {String} ai_voice_instructions
+   */
+  exports.prototype.ai_voice_instructions = undefined;
+
+  /**
+   * Which AI voice personality to use when handling the call.
+   * @member {module:com.ultracart.admin.v2.models/ConversationAgentProfile.AiVoicePersonalityEnum} ai_voice_personality
+   */
+  exports.prototype.ai_voice_personality = undefined;
+
+  /**
    * The number of engagement chats that can be pushed on them at any given time.
    * @member {Number} chat_limit
    */
@@ -185,6 +201,44 @@
    * @member {Array.<String>} zohodesk_departments
    */
   exports.prototype.zohodesk_departments = undefined;
+
+
+  /**
+   * Allowed values for the <code>ai_voice_personality</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.AiVoicePersonalityEnum = {
+    /**
+     * value: "Ara"
+     * @const
+     */
+    Ara: "Ara",
+
+    /**
+     * value: "Rex"
+     * @const
+     */
+    Rex: "Rex",
+
+    /**
+     * value: "Sal"
+     * @const
+     */
+    Sal: "Sal",
+
+    /**
+     * value: "Eve"
+     * @const
+     */
+    Eve: "Eve",
+
+    /**
+     * value: "Leo"
+     * @const
+     */
+    Leo: "Leo"
+  };
 
 
   /**

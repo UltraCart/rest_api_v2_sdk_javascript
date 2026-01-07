@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **ai_persona** | **String** | Persona of this AI agent | [optional] 
 **ai_sms_instructions** | **String** | Additional instructions for this AI when handle SMS messages | [optional] 
 **ai_ticket_instructions** | **String** | Additional instructions for this AI when handling ticket draft replies | [optional] 
+**ai_voice_instructions** | **String** | Additional voice instructions for this AI when handling voice calls | [optional] 
+**ai_voice_personality** | **String** | Which AI voice personality to use when handling the call. | [optional] 
 **chat_limit** | **Number** | The number of engagement chats that can be pushed on them at any given time. | [optional] 
 **default_language_iso_code** | **String** | The default language the agent is chatting in | [optional] 
 **default_status** | **String** | Default status when the agent loads conversations app. | [optional] 
@@ -19,6 +21,23 @@ Name | Type | Description | Notes
 **user_id** | **Number** | User ID associated with the agent.  Populated by getAgentProfiles call only. | [optional] 
 **zohodesk_classifications** | **[String]** | Restrict this agent to drafting replies only to tickets with these classifications | [optional] 
 **zohodesk_departments** | **[String]** | Restrict this agent to drafting replies only to these department ids | [optional] 
+
+
+<a name="AiVoicePersonalityEnum"></a>
+## Enum: AiVoicePersonalityEnum
+
+
+* `Ara` (value: `"Ara"`)
+
+* `Rex` (value: `"Rex"`)
+
+* `Sal` (value: `"Sal"`)
+
+* `Eve` (value: `"Eve"`)
+
+* `Leo` (value: `"Leo"`)
+
+
 
 
 <a name="DefaultStatusEnum"></a>

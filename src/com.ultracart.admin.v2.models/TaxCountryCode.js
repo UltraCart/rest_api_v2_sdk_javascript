@@ -34,7 +34,7 @@
   /**
    * The TaxCountryCode model module.
    * @module com.ultracart.admin.v2.models/TaxCountryCode
-   * @version 3.11.39
+   * @version 3.11.40
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The CustomerWishListItem model module.
    * @module com.ultracart.admin.v2.models/CustomerWishListItem
-   * @version 3.11.39
+   * @version 3.11.40
    */
 
   /**
