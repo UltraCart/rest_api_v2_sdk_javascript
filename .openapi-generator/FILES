@@ -187,6 +187,9 @@ docs/ConversationMessagesResponse.md
 docs/ConversationMultimediaUploadUrl.md
 docs/ConversationMultimediaUploadUrlResponse.md
 docs/ConversationParticipant.md
+docs/ConversationPbxAddress.md
+docs/ConversationPbxAddressResponse.md
+docs/ConversationPbxAddressesResponse.md
 docs/ConversationPbxAgent.md
 docs/ConversationPbxAgentResponse.md
 docs/ConversationPbxAgentsResponse.md
@@ -196,6 +199,8 @@ docs/ConversationPbxAudioUploadUrl.md
 docs/ConversationPbxAudioUploadUrlResponse.md
 docs/ConversationPbxAudioUsageResponse.md
 docs/ConversationPbxAudiosResponse.md
+docs/ConversationPbxAvailablePhoneNumber.md
+docs/ConversationPbxAvailablePhoneNumbersResponse.md
 docs/ConversationPbxCustomerSnapshotRequest.md
 docs/ConversationPbxCustomerSnapshotResponse.md
 docs/ConversationPbxMenu.md
@@ -203,6 +208,7 @@ docs/ConversationPbxMenuMapping.md
 docs/ConversationPbxMenuResponse.md
 docs/ConversationPbxMenusResponse.md
 docs/ConversationPbxPhoneNumber.md
+docs/ConversationPbxPhoneNumberPurchaseRequest.md
 docs/ConversationPbxPhoneNumberResponse.md
 docs/ConversationPbxPhoneNumbersResponse.md
 docs/ConversationPbxQueue.md
@@ -1112,6 +1118,9 @@ src/com.ultracart.admin.v2.models/ConversationMessagesResponse.js
 src/com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl.js
 src/com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/ConversationParticipant.js
+src/com.ultracart.admin.v2.models/ConversationPbxAddress.js
+src/com.ultracart.admin.v2.models/ConversationPbxAddressResponse.js
+src/com.ultracart.admin.v2.models/ConversationPbxAddressesResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxAgent.js
 src/com.ultracart.admin.v2.models/ConversationPbxAgentResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxAgentsResponse.js
@@ -1121,6 +1130,8 @@ src/com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrl.js
 src/com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxAudiosResponse.js
+src/com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumber.js
+src/com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest.js
 src/com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxMenu.js
@@ -1128,6 +1139,7 @@ src/com.ultracart.admin.v2.models/ConversationPbxMenuMapping.js
 src/com.ultracart.admin.v2.models/ConversationPbxMenuResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxMenusResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxPhoneNumber.js
+src/com.ultracart.admin.v2.models/ConversationPbxPhoneNumberPurchaseRequest.js
 src/com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxQueue.js

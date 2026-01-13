@@ -193,6 +193,9 @@ import ConversationMessagesResponse from './com.ultracart.admin.v2.models/Conver
 import ConversationMultimediaUploadUrl from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl';
 import ConversationMultimediaUploadUrlResponse from './com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse';
 import ConversationParticipant from './com.ultracart.admin.v2.models/ConversationParticipant';
+import ConversationPbxAddress from './com.ultracart.admin.v2.models/ConversationPbxAddress';
+import ConversationPbxAddressResponse from './com.ultracart.admin.v2.models/ConversationPbxAddressResponse';
+import ConversationPbxAddressesResponse from './com.ultracart.admin.v2.models/ConversationPbxAddressesResponse';
 import ConversationPbxAgent from './com.ultracart.admin.v2.models/ConversationPbxAgent';
 import ConversationPbxAgentResponse from './com.ultracart.admin.v2.models/ConversationPbxAgentResponse';
 import ConversationPbxAgentsResponse from './com.ultracart.admin.v2.models/ConversationPbxAgentsResponse';
@@ -202,6 +205,8 @@ import ConversationPbxAudioUploadUrl from './com.ultracart.admin.v2.models/Conve
 import ConversationPbxAudioUploadUrlResponse from './com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse';
 import ConversationPbxAudioUsageResponse from './com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse';
 import ConversationPbxAudiosResponse from './com.ultracart.admin.v2.models/ConversationPbxAudiosResponse';
+import ConversationPbxAvailablePhoneNumber from './com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumber';
+import ConversationPbxAvailablePhoneNumbersResponse from './com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse';
 import ConversationPbxCustomerSnapshotRequest from './com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest';
 import ConversationPbxCustomerSnapshotResponse from './com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse';
 import ConversationPbxMenu from './com.ultracart.admin.v2.models/ConversationPbxMenu';
@@ -209,6 +214,7 @@ import ConversationPbxMenuMapping from './com.ultracart.admin.v2.models/Conversa
 import ConversationPbxMenuResponse from './com.ultracart.admin.v2.models/ConversationPbxMenuResponse';
 import ConversationPbxMenusResponse from './com.ultracart.admin.v2.models/ConversationPbxMenusResponse';
 import ConversationPbxPhoneNumber from './com.ultracart.admin.v2.models/ConversationPbxPhoneNumber';
+import ConversationPbxPhoneNumberPurchaseRequest from './com.ultracart.admin.v2.models/ConversationPbxPhoneNumberPurchaseRequest';
 import ConversationPbxPhoneNumberResponse from './com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse';
 import ConversationPbxPhoneNumbersResponse from './com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse';
 import ConversationPbxQueue from './com.ultracart.admin.v2.models/ConversationPbxQueue';
@@ -970,7 +976,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.40
+* @version 4.1.41
 */
 export {
     /**
@@ -2060,6 +2066,24 @@ export {
     ConversationParticipant,
 
     /**
+     * The ConversationPbxAddress model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxAddress}
+     */
+    ConversationPbxAddress,
+
+    /**
+     * The ConversationPbxAddressResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxAddressResponse}
+     */
+    ConversationPbxAddressResponse,
+
+    /**
+     * The ConversationPbxAddressesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxAddressesResponse}
+     */
+    ConversationPbxAddressesResponse,
+
+    /**
      * The ConversationPbxAgent model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationPbxAgent}
      */
@@ -2114,6 +2138,18 @@ export {
     ConversationPbxAudiosResponse,
 
     /**
+     * The ConversationPbxAvailablePhoneNumber model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumber}
+     */
+    ConversationPbxAvailablePhoneNumber,
+
+    /**
+     * The ConversationPbxAvailablePhoneNumbersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse}
+     */
+    ConversationPbxAvailablePhoneNumbersResponse,
+
+    /**
      * The ConversationPbxCustomerSnapshotRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest}
      */
@@ -2154,6 +2190,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationPbxPhoneNumber}
      */
     ConversationPbxPhoneNumber,
+
+    /**
+     * The ConversationPbxPhoneNumberPurchaseRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxPhoneNumberPurchaseRequest}
+     */
+    ConversationPbxPhoneNumberPurchaseRequest,
 
     /**
      * The ConversationPbxPhoneNumberResponse model constructor.

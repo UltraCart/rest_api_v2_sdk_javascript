@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerWishListItem model module.
  * @module com.ultracart.admin.v2.models/CustomerWishListItem
- * @version 4.1.40
+ * @version 4.1.41
  */
 class CustomerWishListItem {
     /**

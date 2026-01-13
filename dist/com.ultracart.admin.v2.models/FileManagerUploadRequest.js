@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FileManagerUploadRequest model module.
  * @module com.ultracart.admin.v2.models/FileManagerUploadRequest
- * @version 4.1.39
+ * @version 4.1.40
  */
 var FileManagerUploadRequest = /*#__PURE__*/function () {
   /**

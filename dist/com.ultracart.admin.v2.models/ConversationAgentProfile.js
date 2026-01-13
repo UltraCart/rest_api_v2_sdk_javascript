@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.1.39
+ * @version 4.1.40
  */
 var ConversationAgentProfile = /*#__PURE__*/function () {
   /**
@@ -77,6 +77,12 @@ var ConversationAgentProfile = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('ai_ticket_instructions')) {
           obj['ai_ticket_instructions'] = _ApiClient["default"].convertToType(data['ai_ticket_instructions'], 'String');
+        }
+        if (data.hasOwnProperty('ai_voice_instructions')) {
+          obj['ai_voice_instructions'] = _ApiClient["default"].convertToType(data['ai_voice_instructions'], 'String');
+        }
+        if (data.hasOwnProperty('ai_voice_personality')) {
+          obj['ai_voice_personality'] = _ApiClient["default"].convertToType(data['ai_voice_personality'], 'String');
         }
         if (data.hasOwnProperty('chat_limit')) {
           obj['chat_limit'] = _ApiClient["default"].convertToType(data['chat_limit'], 'Number');
@@ -149,6 +155,18 @@ ConversationAgentProfile.prototype['ai_sms_instructions'] = undefined;
 ConversationAgentProfile.prototype['ai_ticket_instructions'] = undefined;
 
 /**
+ * Additional voice instructions for this AI when handling voice calls
+ * @member {String} ai_voice_instructions
+ */
+ConversationAgentProfile.prototype['ai_voice_instructions'] = undefined;
+
+/**
+ * Which AI voice personality to use when handling the call.
+ * @member {module:com.ultracart.admin.v2.models/ConversationAgentProfile.AiVoicePersonalityEnum} ai_voice_personality
+ */
+ConversationAgentProfile.prototype['ai_voice_personality'] = undefined;
+
+/**
  * The number of engagement chats that can be pushed on them at any given time.
  * @member {Number} chat_limit
  */
@@ -207,6 +225,39 @@ ConversationAgentProfile.prototype['zohodesk_classifications'] = undefined;
  * @member {Array.<String>} zohodesk_departments
  */
 ConversationAgentProfile.prototype['zohodesk_departments'] = undefined;
+
+/**
+ * Allowed values for the <code>ai_voice_personality</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationAgentProfile['AiVoicePersonalityEnum'] = {
+  /**
+   * value: "Ara"
+   * @const
+   */
+  "Ara": "Ara",
+  /**
+   * value: "Rex"
+   * @const
+   */
+  "Rex": "Rex",
+  /**
+   * value: "Sal"
+   * @const
+   */
+  "Sal": "Sal",
+  /**
+   * value: "Eve"
+   * @const
+   */
+  "Eve": "Eve",
+  /**
+   * value: "Leo"
+   * @const
+   */
+  "Leo": "Leo"
+};
 
 /**
  * Allowed values for the <code>default_status</code> property.
