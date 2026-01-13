@@ -17,7 +17,7 @@ import ItemKitComponent from './ItemKitComponent';
 /**
  * The ItemKitDefinition model module.
  * @module com.ultracart.admin.v2.models/ItemKitDefinition
- * @version 4.1.41
+ * @version 4.1.42
  */
 class ItemKitDefinition {
     /**

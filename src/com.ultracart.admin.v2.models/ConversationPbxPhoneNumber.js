@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxPhoneNumber model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
- * @version 4.1.41
+ * @version 4.1.42
  */
 class ConversationPbxPhoneNumber {
     /**
@@ -53,6 +53,9 @@ class ConversationPbxPhoneNumber {
             if (data.hasOwnProperty('action_target')) {
                 obj['action_target'] = ApiClient.convertToType(data['action_target'], 'String');
             }
+            if (data.hasOwnProperty('address_sid')) {
+                obj['address_sid'] = ApiClient.convertToType(data['address_sid'], 'String');
+            }
             if (data.hasOwnProperty('conversation_pbx_phone_number_uuid')) {
                 obj['conversation_pbx_phone_number_uuid'] = ApiClient.convertToType(data['conversation_pbx_phone_number_uuid'], 'String');
             }
@@ -83,6 +86,12 @@ ConversationPbxPhoneNumber.prototype['action'] = undefined;
  * @member {String} action_target
  */
 ConversationPbxPhoneNumber.prototype['action_target'] = undefined;
+
+/**
+ * Twilio Address SID linked to this phone number for regulatory compliance
+ * @member {String} address_sid
+ */
+ConversationPbxPhoneNumber.prototype['address_sid'] = undefined;
 
 /**
  * Conversation Pbx Phone Number UUID

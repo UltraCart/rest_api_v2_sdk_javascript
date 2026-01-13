@@ -1119,6 +1119,24 @@ Object.defineProperty(exports, "ConversationParticipant", {
     return _ConversationParticipant["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPbxAddress", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxAddress["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxAddressResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxAddressResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxAddressesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxAddressesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationPbxAgent", {
   enumerable: true,
   get: function get() {
@@ -1173,6 +1191,18 @@ Object.defineProperty(exports, "ConversationPbxAudiosResponse", {
     return _ConversationPbxAudiosResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPbxAvailablePhoneNumber", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxAvailablePhoneNumber["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxAvailablePhoneNumbersResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxAvailablePhoneNumbersResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationPbxCustomerSnapshotRequest", {
   enumerable: true,
   get: function get() {
@@ -1213,6 +1243,12 @@ Object.defineProperty(exports, "ConversationPbxPhoneNumber", {
   enumerable: true,
   get: function get() {
     return _ConversationPbxPhoneNumber["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxPhoneNumberPurchaseRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxPhoneNumberPurchaseRequest["default"];
   }
 });
 Object.defineProperty(exports, "ConversationPbxPhoneNumberResponse", {
@@ -5746,6 +5782,9 @@ var _ConversationMessagesResponse = _interopRequireDefault(require("./com.ultrac
 var _ConversationMultimediaUploadUrl = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMultimediaUploadUrl"));
 var _ConversationMultimediaUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationMultimediaUploadUrlResponse"));
 var _ConversationParticipant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationParticipant"));
+var _ConversationPbxAddress = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAddress"));
+var _ConversationPbxAddressResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAddressResponse"));
+var _ConversationPbxAddressesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAddressesResponse"));
 var _ConversationPbxAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAgent"));
 var _ConversationPbxAgentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAgentResponse"));
 var _ConversationPbxAgentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAgentsResponse"));
@@ -5755,6 +5794,8 @@ var _ConversationPbxAudioUploadUrl = _interopRequireDefault(require("./com.ultra
 var _ConversationPbxAudioUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse"));
 var _ConversationPbxAudioUsageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse"));
 var _ConversationPbxAudiosResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAudiosResponse"));
+var _ConversationPbxAvailablePhoneNumber = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumber"));
+var _ConversationPbxAvailablePhoneNumbersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse"));
 var _ConversationPbxCustomerSnapshotRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest"));
 var _ConversationPbxCustomerSnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse"));
 var _ConversationPbxMenu = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxMenu"));
@@ -5762,6 +5803,7 @@ var _ConversationPbxMenuMapping = _interopRequireDefault(require("./com.ultracar
 var _ConversationPbxMenuResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxMenuResponse"));
 var _ConversationPbxMenusResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxMenusResponse"));
 var _ConversationPbxPhoneNumber = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxPhoneNumber"));
+var _ConversationPbxPhoneNumberPurchaseRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxPhoneNumberPurchaseRequest"));
 var _ConversationPbxPhoneNumberResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse"));
 var _ConversationPbxPhoneNumbersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxPhoneNumbersResponse"));
 var _ConversationPbxQueue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxQueue"));

@@ -17,7 +17,7 @@ import ConversationPbxMenuMapping from './ConversationPbxMenuMapping';
 /**
  * The ConversationPbxMenu model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxMenu
- * @version 4.1.41
+ * @version 4.1.42
  */
 class ConversationPbxMenu {
     /**

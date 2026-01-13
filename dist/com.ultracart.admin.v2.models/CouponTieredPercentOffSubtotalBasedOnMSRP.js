@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponTieredPercentOffSubtotalBasedOnMSRP model module.
  * @module com.ultracart.admin.v2.models/CouponTieredPercentOffSubtotalBasedOnMSRP
- * @version 4.1.40
+ * @version 4.1.41
  */
 var CouponTieredPercentOffSubtotalBasedOnMSRP = /*#__PURE__*/function () {
   /**

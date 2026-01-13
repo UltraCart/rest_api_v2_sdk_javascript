@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxPhoneNumber model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
- * @version 4.1.40
+ * @version 4.1.41
  */
 var ConversationPbxPhoneNumber = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,9 @@ var ConversationPbxPhoneNumber = /*#__PURE__*/function () {
         if (data.hasOwnProperty('conversation_pbx_phone_number_uuid')) {
           obj['conversation_pbx_phone_number_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_phone_number_uuid'], 'String');
         }
+        if (data.hasOwnProperty('deletion_protected')) {
+          obj['deletion_protected'] = _ApiClient["default"].convertToType(data['deletion_protected'], 'Boolean');
+        }
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
@@ -96,6 +99,12 @@ ConversationPbxPhoneNumber.prototype['action_target'] = undefined;
  * @member {String} conversation_pbx_phone_number_uuid
  */
 ConversationPbxPhoneNumber.prototype['conversation_pbx_phone_number_uuid'] = undefined;
+
+/**
+ * If true, this phone number cannot be deleted through the API. It must be deleted via the Twilio console.
+ * @member {Boolean} deletion_protected
+ */
+ConversationPbxPhoneNumber.prototype['deletion_protected'] = undefined;
 
 /**
  * Merchant Id

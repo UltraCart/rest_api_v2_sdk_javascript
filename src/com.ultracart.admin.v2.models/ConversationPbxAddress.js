@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxAddress model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAddress
- * @version 4.1.41
+ * @version 4.1.42
  */
 class ConversationPbxAddress {
     /**
@@ -76,6 +76,9 @@ class ConversationPbxAddress {
             }
             if (data.hasOwnProperty('street')) {
                 obj['street'] = ApiClient.convertToType(data['street'], 'String');
+            }
+            if (data.hasOwnProperty('valid')) {
+                obj['valid'] = ApiClient.convertToType(data['valid'], 'Boolean');
             }
             if (data.hasOwnProperty('validated')) {
                 obj['validated'] = ApiClient.convertToType(data['validated'], 'Boolean');
@@ -149,6 +152,12 @@ ConversationPbxAddress.prototype['region'] = undefined;
  * @member {String} street
  */
 ConversationPbxAddress.prototype['street'] = undefined;
+
+/**
+ * Whether the address is valid (validated or verified)
+ * @member {Boolean} valid
+ */
+ConversationPbxAddress.prototype['valid'] = undefined;
 
 /**
  * Whether the address has been validated by Twilio

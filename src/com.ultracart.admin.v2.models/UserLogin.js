@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserLogin model module.
  * @module com.ultracart.admin.v2.models/UserLogin
- * @version 4.1.41
+ * @version 4.1.42
  */
 class UserLogin {
     /**

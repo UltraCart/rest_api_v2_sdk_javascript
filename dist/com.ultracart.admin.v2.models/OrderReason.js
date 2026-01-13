@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderReason model module.
  * @module com.ultracart.admin.v2.models/OrderReason
- * @version 4.1.40
+ * @version 4.1.41
  */
 var OrderReason = /*#__PURE__*/function () {
   /**
