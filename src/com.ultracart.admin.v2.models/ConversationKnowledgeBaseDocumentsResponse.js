@@ -34,7 +34,7 @@
   /**
    * The ConversationKnowledgeBaseDocumentsResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentsResponse
-   * @version 3.11.41
+   * @version 3.11.42
    */
 
   /**

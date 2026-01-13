@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxPhoneNumber model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
-   * @version 3.11.41
+   * @version 3.11.42
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.action = ApiClient.convertToType(data['action'], 'String');
       if (data.hasOwnProperty('action_target'))
         obj.action_target = ApiClient.convertToType(data['action_target'], 'String');
+      if (data.hasOwnProperty('address_sid'))
+        obj.address_sid = ApiClient.convertToType(data['address_sid'], 'String');
       if (data.hasOwnProperty('conversation_pbx_phone_number_uuid'))
         obj.conversation_pbx_phone_number_uuid = ApiClient.convertToType(data['conversation_pbx_phone_number_uuid'], 'String');
       if (data.hasOwnProperty('deletion_protected'))
@@ -82,6 +84,12 @@
    * @member {String} action_target
    */
   exports.prototype.action_target = undefined;
+
+  /**
+   * Twilio Address SID linked to this phone number for regulatory compliance
+   * @member {String} address_sid
+   */
+  exports.prototype.address_sid = undefined;
 
   /**
    * Conversation Pbx Phone Number UUID

@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAvailablePhoneNumber model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumber
-   * @version 3.11.41
+   * @version 3.11.42
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.locality = ApiClient.convertToType(data['locality'], 'String');
       if (data.hasOwnProperty('mms'))
         obj.mms = ApiClient.convertToType(data['mms'], 'Boolean');
+      if (data.hasOwnProperty('monthly_cost'))
+        obj.monthly_cost = ApiClient.convertToType(data['monthly_cost'], 'Number');
       if (data.hasOwnProperty('phone_number'))
         obj.phone_number = ApiClient.convertToType(data['phone_number'], 'String');
       if (data.hasOwnProperty('region'))
@@ -106,6 +108,12 @@
    * @member {Boolean} mms
    */
   exports.prototype.mms = undefined;
+
+  /**
+   * Monthly cost for this phone number
+   * @member {Number} monthly_cost
+   */
+  exports.prototype.monthly_cost = undefined;
 
   /**
    * Phone number in E.164 format
