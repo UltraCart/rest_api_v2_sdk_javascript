@@ -34,7 +34,7 @@
   /**
    * The CartItemMultimedia model module.
    * @module com.ultracart.admin.v2.models/CartItemMultimedia
-   * @version 3.11.40
+   * @version 3.11.41
    */
 
   /**
