@@ -34,7 +34,7 @@
   /**
    * The CouponCodesRequest model module.
    * @module com.ultracart.admin.v2.models/CouponCodesRequest
-   * @version 3.11.42
+   * @version 3.11.43
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.expiration_seconds = ApiClient.convertToType(data['expiration_seconds'], 'Number');
       if (data.hasOwnProperty('metadata'))
         obj.metadata = ResponseMetadata.constructFromObject(data['metadata']);
+      if (data.hasOwnProperty('prefix'))
+        obj.prefix = ApiClient.convertToType(data['prefix'], 'String');
       if (data.hasOwnProperty('quantity'))
         obj.quantity = ApiClient.convertToType(data['quantity'], 'Number');
       if (data.hasOwnProperty('success'))
@@ -94,6 +96,12 @@
    * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
    */
   exports.prototype.metadata = undefined;
+
+  /**
+   * Optional prefix for generated codes
+   * @member {String} prefix
+   */
+  exports.prototype.prefix = undefined;
 
   /**
    * Quantity
