@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxAvailablePhoneNumber model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumber
- * @version 4.1.41
+ * @version 4.1.42
  */
 var ConversationPbxAvailablePhoneNumber = /*#__PURE__*/function () {
   /**
@@ -74,6 +74,9 @@ var ConversationPbxAvailablePhoneNumber = /*#__PURE__*/function () {
         if (data.hasOwnProperty('mms')) {
           obj['mms'] = _ApiClient["default"].convertToType(data['mms'], 'Boolean');
         }
+        if (data.hasOwnProperty('monthly_cost')) {
+          obj['monthly_cost'] = _ApiClient["default"].convertToType(data['monthly_cost'], 'Number');
+        }
         if (data.hasOwnProperty('phone_number')) {
           obj['phone_number'] = _ApiClient["default"].convertToType(data['phone_number'], 'String');
         }
@@ -120,6 +123,12 @@ ConversationPbxAvailablePhoneNumber.prototype['locality'] = undefined;
  * @member {Boolean} mms
  */
 ConversationPbxAvailablePhoneNumber.prototype['mms'] = undefined;
+
+/**
+ * Monthly cost for this phone number
+ * @member {Number} monthly_cost
+ */
+ConversationPbxAvailablePhoneNumber.prototype['monthly_cost'] = undefined;
 
 /**
  * Phone number in E.164 format

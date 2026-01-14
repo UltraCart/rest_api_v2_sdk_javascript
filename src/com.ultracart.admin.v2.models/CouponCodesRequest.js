@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The CouponCodesRequest model module.
  * @module com.ultracart.admin.v2.models/CouponCodesRequest
- * @version 4.1.42
+ * @version 4.1.43
  */
 class CouponCodesRequest {
     /**
@@ -62,6 +62,9 @@ class CouponCodesRequest {
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
             }
+            if (data.hasOwnProperty('prefix')) {
+                obj['prefix'] = ApiClient.convertToType(data['prefix'], 'String');
+            }
             if (data.hasOwnProperty('quantity')) {
                 obj['quantity'] = ApiClient.convertToType(data['quantity'], 'Number');
             }
@@ -99,6 +102,12 @@ CouponCodesRequest.prototype['expiration_seconds'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
 CouponCodesRequest.prototype['metadata'] = undefined;
+
+/**
+ * Optional prefix for generated codes
+ * @member {String} prefix
+ */
+CouponCodesRequest.prototype['prefix'] = undefined;
 
 /**
  * Quantity

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxAddress model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAddress
- * @version 4.1.41
+ * @version 4.1.42
  */
 var ConversationPbxAddress = /*#__PURE__*/function () {
   /**
@@ -88,6 +88,9 @@ var ConversationPbxAddress = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('street')) {
           obj['street'] = _ApiClient["default"].convertToType(data['street'], 'String');
+        }
+        if (data.hasOwnProperty('valid')) {
+          obj['valid'] = _ApiClient["default"].convertToType(data['valid'], 'Boolean');
         }
         if (data.hasOwnProperty('validated')) {
           obj['validated'] = _ApiClient["default"].convertToType(data['validated'], 'Boolean');
@@ -159,6 +162,12 @@ ConversationPbxAddress.prototype['region'] = undefined;
  * @member {String} street
  */
 ConversationPbxAddress.prototype['street'] = undefined;
+
+/**
+ * Whether the address is valid (validated or verified)
+ * @member {Boolean} valid
+ */
+ConversationPbxAddress.prototype['valid'] = undefined;
 
 /**
  * Whether the address has been validated by Twilio

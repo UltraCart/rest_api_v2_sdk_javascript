@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailGlobalUnsubscribeRequest model module.
  * @module com.ultracart.admin.v2.models/EmailGlobalUnsubscribeRequest
- * @version 4.1.41
+ * @version 4.1.42
  */
 var EmailGlobalUnsubscribeRequest = /*#__PURE__*/function () {
   /**

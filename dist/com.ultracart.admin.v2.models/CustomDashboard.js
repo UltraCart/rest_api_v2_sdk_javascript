@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomDashboard model module.
  * @module com.ultracart.admin.v2.models/CustomDashboard
- * @version 4.1.41
+ * @version 4.1.42
  */
 var CustomDashboard = /*#__PURE__*/function () {
   /**

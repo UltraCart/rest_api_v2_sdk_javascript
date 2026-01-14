@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportWebsocketEvent model module.
  * @module com.ultracart.admin.v2.models/ReportWebsocketEvent
- * @version 4.1.41
+ * @version 4.1.42
  */
 var ReportWebsocketEvent = /*#__PURE__*/function () {
   /**

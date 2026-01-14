@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Notification model module.
  * @module com.ultracart.admin.v2.models/Notification
- * @version 4.1.41
+ * @version 4.1.42
  */
 var Notification = /*#__PURE__*/function () {
   /**
