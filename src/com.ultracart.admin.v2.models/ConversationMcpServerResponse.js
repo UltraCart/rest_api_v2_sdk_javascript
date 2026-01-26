@@ -34,7 +34,7 @@
   /**
    * The ConversationMcpServerResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationMcpServerResponse
-   * @version 3.11.44
+   * @version 3.11.45
    */
 
   /**

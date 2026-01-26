@@ -34,7 +34,7 @@
   /**
    * The ItemContentMultimedia model module.
    * @module com.ultracart.admin.v2.models/ItemContentMultimedia
-   * @version 3.11.44
+   * @version 3.11.45
    */
 
   /**
@@ -75,6 +75,8 @@
         obj.orphan = ApiClient.convertToType(data['orphan'], 'Boolean');
       if (data.hasOwnProperty('placeholder'))
         obj.placeholder = ApiClient.convertToType(data['placeholder'], 'Boolean');
+      if (data.hasOwnProperty('size'))
+        obj.size = ApiClient.convertToType(data['size'], 'Number');
       if (data.hasOwnProperty('temp_multimedia_oid'))
         obj.temp_multimedia_oid = ApiClient.convertToType(data['temp_multimedia_oid'], 'Number');
       if (data.hasOwnProperty('thumbnails'))
@@ -148,6 +150,12 @@
    * @member {Boolean} placeholder
    */
   exports.prototype.placeholder = undefined;
+
+  /**
+   * Size of the file in bytes if known
+   * @member {Number} size
+   */
+  exports.prototype.size = undefined;
 
   /**
    * Temporary multimedia object identifier assigned if uploading new multimedia
