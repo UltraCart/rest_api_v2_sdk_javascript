@@ -34,7 +34,7 @@
   /**
    * The ConversationEventAddItem model module.
    * @module com.ultracart.admin.v2.models/ConversationEventAddItem
-   * @version 3.11.46
+   * @version 3.11.47
    */
 
   /**

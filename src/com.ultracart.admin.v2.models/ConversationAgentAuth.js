@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentAuth model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuth
-   * @version 3.11.46
+   * @version 3.11.47
    */
 
   /**
@@ -55,6 +55,10 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('chat_admin'))
+        obj.chat_admin = ApiClient.convertToType(data['chat_admin'], 'Boolean');
+      if (data.hasOwnProperty('chat_user'))
+        obj.chat_user = ApiClient.convertToType(data['chat_user'], 'Boolean');
       if (data.hasOwnProperty('conversation_participant_arn'))
         obj.conversation_participant_arn = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
       if (data.hasOwnProperty('conversation_participant_name'))
@@ -90,6 +94,16 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} chat_admin
+   */
+  exports.prototype.chat_admin = undefined;
+
+  /**
+   * @member {Boolean} chat_user
+   */
+  exports.prototype.chat_user = undefined;
 
   /**
    * @member {String} conversation_participant_arn
