@@ -34,7 +34,7 @@
   /**
    * The Warning model module.
    * @module com.ultracart.admin.v2.models/Warning
-   * @version 3.11.48
+   * @version 3.11.49
    */
 
   /**
