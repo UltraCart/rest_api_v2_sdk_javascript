@@ -39,7 +39,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * ChannelPartner service.
 * @module com.ultracart.admin.v2/ChannelPartnerApi
-* @version 4.1.47
+* @version 4.1.48
 */
 var ChannelPartnerApi = exports["default"] = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCommseqStep model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqStep
- * @version 4.1.47
+ * @version 4.1.48
  */
 var EmailCommseqStep = /*#__PURE__*/function () {
   /**

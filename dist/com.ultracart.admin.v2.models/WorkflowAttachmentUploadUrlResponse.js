@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WorkflowAttachmentUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrlResponse
- * @version 4.1.47
+ * @version 4.1.48
  */
 var WorkflowAttachmentUploadUrlResponse = /*#__PURE__*/function () {
   /**

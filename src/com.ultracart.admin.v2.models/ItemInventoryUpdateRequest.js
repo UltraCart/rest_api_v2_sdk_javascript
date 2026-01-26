@@ -17,7 +17,7 @@ import ItemInventoryUpdate from './ItemInventoryUpdate';
 /**
  * The ItemInventoryUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/ItemInventoryUpdateRequest
- * @version 4.1.48
+ * @version 4.1.49
  */
 class ItemInventoryUpdateRequest {
     /**
