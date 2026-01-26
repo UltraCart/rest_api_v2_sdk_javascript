@@ -57,9 +57,13 @@ import ConversationPbxAudiosResponse from '../com.ultracart.admin.v2.models/Conv
 import ConversationPbxAvailablePhoneNumbersResponse from '../com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse';
 import ConversationPbxCustomerSnapshotRequest from '../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest';
 import ConversationPbxCustomerSnapshotResponse from '../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse';
+import ConversationPbxHardwarePhone from '../com.ultracart.admin.v2.models/ConversationPbxHardwarePhone';
+import ConversationPbxHardwarePhoneResponse from '../com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse';
+import ConversationPbxHardwarePhonesResponse from '../com.ultracart.admin.v2.models/ConversationPbxHardwarePhonesResponse';
 import ConversationPbxMenu from '../com.ultracart.admin.v2.models/ConversationPbxMenu';
 import ConversationPbxMenuResponse from '../com.ultracart.admin.v2.models/ConversationPbxMenuResponse';
 import ConversationPbxMenusResponse from '../com.ultracart.admin.v2.models/ConversationPbxMenusResponse';
+import ConversationPbxPhoneManufacturersResponse from '../com.ultracart.admin.v2.models/ConversationPbxPhoneManufacturersResponse';
 import ConversationPbxPhoneNumber from '../com.ultracart.admin.v2.models/ConversationPbxPhoneNumber';
 import ConversationPbxPhoneNumberPurchaseRequest from '../com.ultracart.admin.v2.models/ConversationPbxPhoneNumberPurchaseRequest';
 import ConversationPbxPhoneNumberResponse from '../com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse';
@@ -97,7 +101,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.47
+* @version 4.1.48
 */
 export default class ConversationApi {
 
@@ -459,6 +463,49 @@ export default class ConversationApi {
       let returnType = ConversationPbxAudioResponse;
       return this.apiClient.callApi(
         '/conversation/pbx/audio/{conversationPbxAudioUuid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deletePbxHardwarePhone operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deletePbxHardwarePhoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete pbx hardware phone
+     * Delete a pbx hardware phone 
+     * @param {String} conversationPbxHardwarePhoneUuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deletePbxHardwarePhoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse}
+     */
+    deletePbxHardwarePhone(conversationPbxHardwarePhoneUuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'conversationPbxHardwarePhoneUuid' is set
+      if (conversationPbxHardwarePhoneUuid === undefined || conversationPbxHardwarePhoneUuid === null) {
+        throw new Error("Missing the required parameter 'conversationPbxHardwarePhoneUuid' when calling deletePbxHardwarePhone");
+      }
+
+      let pathParams = {
+        'conversationPbxHardwarePhoneUuid': conversationPbxHardwarePhoneUuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxHardwarePhoneResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/hardware_phone/{conversationPbxHardwarePhoneUuid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2217,6 +2264,123 @@ export default class ConversationApi {
     }
 
     /**
+     * Callback function to receive the result of the getPbxHardwarePhone operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx hardware phone
+     * Retrieve a pbx hardware phone 
+     * @param {String} conversationPbxHardwarePhoneUuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse}
+     */
+    getPbxHardwarePhone(conversationPbxHardwarePhoneUuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'conversationPbxHardwarePhoneUuid' is set
+      if (conversationPbxHardwarePhoneUuid === undefined || conversationPbxHardwarePhoneUuid === null) {
+        throw new Error("Missing the required parameter 'conversationPbxHardwarePhoneUuid' when calling getPbxHardwarePhone");
+      }
+
+      let pathParams = {
+        'conversationPbxHardwarePhoneUuid': conversationPbxHardwarePhoneUuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxHardwarePhoneResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/hardware_phone/{conversationPbxHardwarePhoneUuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getPbxHardwarePhoneManufacturers operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhoneManufacturersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxPhoneManufacturersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx hardware phone manufacturers
+     * Retrieve pbx hardware phone manufacturers and models for auto-provisioning 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhoneManufacturersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxPhoneManufacturersResponse}
+     */
+    getPbxHardwarePhoneManufacturers(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxPhoneManufacturersResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/hardware_phone/manufacturers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getPbxHardwarePhones operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhonesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhonesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx hardware phones
+     * Retrieve pbx hardware phones 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhonesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhonesResponse}
+     */
+    getPbxHardwarePhones(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxHardwarePhonesResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/hardware_phone', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getPbxMenu operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxMenuCallback
      * @param {String} error Error message, if any.
@@ -3169,6 +3333,48 @@ export default class ConversationApi {
     }
 
     /**
+     * Callback function to receive the result of the insertPbxHardwarePhone operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertPbxHardwarePhoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert pbx hardware phone
+     * Insert a pbx hardware phone 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhone} pbx_hardware_phone Pbx Hardware Phone
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertPbxHardwarePhoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse}
+     */
+    insertPbxHardwarePhone(pbx_hardware_phone, callback) {
+      let postBody = pbx_hardware_phone;
+      // verify the required parameter 'pbx_hardware_phone' is set
+      if (pbx_hardware_phone === undefined || pbx_hardware_phone === null) {
+        throw new Error("Missing the required parameter 'pbx_hardware_phone' when calling insertPbxHardwarePhone");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxHardwarePhoneResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/hardware_phone', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertPbxMenu operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~insertPbxMenuCallback
      * @param {String} error Error message, if any.
@@ -3677,6 +3883,54 @@ export default class ConversationApi {
       let returnType = ConversationPbxPhoneNumberResponse;
       return this.apiClient.callApi(
         '/conversation/pbx/phone_number', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the regeneratePasswordForPbxHardwarePhone operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~regeneratePasswordForPbxHardwarePhoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update pbx hardware phone
+     * Update a pbx hardware phone 
+     * @param {String} conversationPbxHardwarePhoneUuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhone} pbx_hardware_phone Pbx Hardware Phone
+     * @param {module:com.ultracart.admin.v2/ConversationApi~regeneratePasswordForPbxHardwarePhoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse}
+     */
+    regeneratePasswordForPbxHardwarePhone(conversationPbxHardwarePhoneUuid, pbx_hardware_phone, callback) {
+      let postBody = pbx_hardware_phone;
+      // verify the required parameter 'conversationPbxHardwarePhoneUuid' is set
+      if (conversationPbxHardwarePhoneUuid === undefined || conversationPbxHardwarePhoneUuid === null) {
+        throw new Error("Missing the required parameter 'conversationPbxHardwarePhoneUuid' when calling regeneratePasswordForPbxHardwarePhone");
+      }
+      // verify the required parameter 'pbx_hardware_phone' is set
+      if (pbx_hardware_phone === undefined || pbx_hardware_phone === null) {
+        throw new Error("Missing the required parameter 'pbx_hardware_phone' when calling regeneratePasswordForPbxHardwarePhone");
+      }
+
+      let pathParams = {
+        'conversationPbxHardwarePhoneUuid': conversationPbxHardwarePhoneUuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxHardwarePhoneResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/hardware_phone/{conversationPbxHardwarePhoneUuid}/regenerate_password', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4333,6 +4587,54 @@ export default class ConversationApi {
       let returnType = ConversationPbxAudioResponse;
       return this.apiClient.callApi(
         '/conversation/pbx/audio/{conversationPbxAudioUuid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updatePbxHardwarePhone operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updatePbxHardwarePhoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update pbx hardware phone
+     * Update a pbx hardware phone 
+     * @param {String} conversationPbxHardwarePhoneUuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhone} pbx_hardware_phone Pbx Hardware Phone
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updatePbxHardwarePhoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse}
+     */
+    updatePbxHardwarePhone(conversationPbxHardwarePhoneUuid, pbx_hardware_phone, callback) {
+      let postBody = pbx_hardware_phone;
+      // verify the required parameter 'conversationPbxHardwarePhoneUuid' is set
+      if (conversationPbxHardwarePhoneUuid === undefined || conversationPbxHardwarePhoneUuid === null) {
+        throw new Error("Missing the required parameter 'conversationPbxHardwarePhoneUuid' when calling updatePbxHardwarePhone");
+      }
+      // verify the required parameter 'pbx_hardware_phone' is set
+      if (pbx_hardware_phone === undefined || pbx_hardware_phone === null) {
+        throw new Error("Missing the required parameter 'pbx_hardware_phone' when calling updatePbxHardwarePhone");
+      }
+
+      let pathParams = {
+        'conversationPbxHardwarePhoneUuid': conversationPbxHardwarePhoneUuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxHardwarePhoneResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/hardware_phone/{conversationPbxHardwarePhoneUuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

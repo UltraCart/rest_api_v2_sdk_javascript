@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemEmailNotifications model module.
  * @module com.ultracart.admin.v2.models/ItemEmailNotifications
- * @version 4.1.46
+ * @version 4.1.47
  */
 var ItemEmailNotifications = /*#__PURE__*/function () {
   /**

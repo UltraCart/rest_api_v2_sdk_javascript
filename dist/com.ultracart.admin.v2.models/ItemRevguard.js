@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemRevguard model module.
  * @module com.ultracart.admin.v2.models/ItemRevguard
- * @version 4.1.46
+ * @version 4.1.47
  */
 var ItemRevguard = /*#__PURE__*/function () {
   /**

@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GiftCertificatesResponse model module.
  * @module com.ultracart.admin.v2.models/GiftCertificatesResponse
- * @version 4.1.46
+ * @version 4.1.47
  */
 var GiftCertificatesResponse = /*#__PURE__*/function () {
   /**

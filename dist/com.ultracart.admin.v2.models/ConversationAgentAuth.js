@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.46
+ * @version 4.1.47
  */
 var ConversationAgentAuth = /*#__PURE__*/function () {
   /**
@@ -60,6 +60,12 @@ var ConversationAgentAuth = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationAgentAuth();
+        if (data.hasOwnProperty('chat_admin')) {
+          obj['chat_admin'] = _ApiClient["default"].convertToType(data['chat_admin'], 'Boolean');
+        }
+        if (data.hasOwnProperty('chat_user')) {
+          obj['chat_user'] = _ApiClient["default"].convertToType(data['chat_user'], 'Boolean');
+        }
         if (data.hasOwnProperty('conversation_participant_arn')) {
           obj['conversation_participant_arn'] = _ApiClient["default"].convertToType(data['conversation_participant_arn'], 'String');
         }
@@ -113,6 +119,16 @@ var ConversationAgentAuth = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * @member {Boolean} chat_admin
+ */
+ConversationAgentAuth.prototype['chat_admin'] = undefined;
+
+/**
+ * @member {Boolean} chat_user
+ */
+ConversationAgentAuth.prototype['chat_user'] = undefined;
+
 /**
  * @member {String} conversation_participant_arn
  */
