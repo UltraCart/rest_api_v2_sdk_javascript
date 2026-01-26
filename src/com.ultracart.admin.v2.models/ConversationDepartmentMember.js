@@ -34,7 +34,7 @@
   /**
    * The ConversationDepartmentMember model module.
    * @module com.ultracart.admin.v2.models/ConversationDepartmentMember
-   * @version 3.11.43
+   * @version 3.11.44
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('ai'))
+        obj.ai = ApiClient.convertToType(data['ai'], 'Boolean');
       if (data.hasOwnProperty('member'))
         obj.member = ApiClient.convertToType(data['member'], 'Boolean');
       if (data.hasOwnProperty('name'))
@@ -64,6 +66,11 @@
     }
     return obj;
   }
+
+  /**
+   * @member {Boolean} ai
+   */
+  exports.prototype.ai = undefined;
 
   /**
    * @member {Boolean} member

@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnersResponse model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnersResponse
-   * @version 3.11.43
+   * @version 3.11.44
    */
 
   /**

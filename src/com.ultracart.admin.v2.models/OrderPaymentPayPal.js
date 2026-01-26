@@ -34,7 +34,7 @@
   /**
    * The OrderPaymentPayPal model module.
    * @module com.ultracart.admin.v2.models/OrderPaymentPayPal
-   * @version 3.11.43
+   * @version 3.11.44
    */
 
   /**

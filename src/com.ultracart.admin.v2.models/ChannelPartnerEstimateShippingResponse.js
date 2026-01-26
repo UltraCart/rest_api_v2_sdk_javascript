@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerEstimateShippingResponse model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse
-   * @version 3.11.43
+   * @version 3.11.44
    */
 
   /**

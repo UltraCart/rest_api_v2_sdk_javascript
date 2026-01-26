@@ -34,7 +34,7 @@
   /**
    * The AccountsReceivableRetryTransactionReject model module.
    * @module com.ultracart.admin.v2.models/AccountsReceivableRetryTransactionReject
-   * @version 3.11.43
+   * @version 3.11.44
    */
 
   /**
