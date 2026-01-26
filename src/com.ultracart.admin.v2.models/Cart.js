@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/CartAffiliate', 'com.ultracart.admin.v2.models/CartBilling', 'com.ultracart.admin.v2.models/CartBuysafe', 'com.ultracart.admin.v2.models/CartCheckout', 'com.ultracart.admin.v2.models/CartCoupon', 'com.ultracart.admin.v2.models/CartCurrencyConversion', 'com.ultracart.admin.v2.models/CartCustomerProfile', 'com.ultracart.admin.v2.models/CartGift', 'com.ultracart.admin.v2.models/CartGiftCertificate', 'com.ultracart.admin.v2.models/CartItem', 'com.ultracart.admin.v2.models/CartMarketing', 'com.ultracart.admin.v2.models/CartPayment', 'com.ultracart.admin.v2.models/CartProperty', 'com.ultracart.admin.v2.models/CartSettings', 'com.ultracart.admin.v2.models/CartShipping', 'com.ultracart.admin.v2.models/CartSummary', 'com.ultracart.admin.v2.models/CartTaxes', 'com.ultracart.admin.v2.models/CartUpsellAfter'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/CartAffiliate', 'com.ultracart.admin.v2.models/CartBilling', 'com.ultracart.admin.v2.models/CartBuysafe', 'com.ultracart.admin.v2.models/CartCheckout', 'com.ultracart.admin.v2.models/CartCoupon', 'com.ultracart.admin.v2.models/CartCurrencyConversion', 'com.ultracart.admin.v2.models/CartCustomerProfile', 'com.ultracart.admin.v2.models/CartGift', 'com.ultracart.admin.v2.models/CartGiftCertificate', 'com.ultracart.admin.v2.models/CartItem', 'com.ultracart.admin.v2.models/CartMarketing', 'com.ultracart.admin.v2.models/CartPayment', 'com.ultracart.admin.v2.models/CartProperty', 'com.ultracart.admin.v2.models/CartSettings', 'com.ultracart.admin.v2.models/CartShipping', 'com.ultracart.admin.v2.models/CartSummary', 'com.ultracart.admin.v2.models/CartTaxes', 'com.ultracart.admin.v2.models/CartUpsellAfter', 'com.ultracart.admin.v2.models/CartUtm'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CartAffiliate'), require('./CartBilling'), require('./CartBuysafe'), require('./CartCheckout'), require('./CartCoupon'), require('./CartCurrencyConversion'), require('./CartCustomerProfile'), require('./CartGift'), require('./CartGiftCertificate'), require('./CartItem'), require('./CartMarketing'), require('./CartPayment'), require('./CartProperty'), require('./CartSettings'), require('./CartShipping'), require('./CartSummary'), require('./CartTaxes'), require('./CartUpsellAfter'));
+    module.exports = factory(require('../ApiClient'), require('./CartAffiliate'), require('./CartBilling'), require('./CartBuysafe'), require('./CartCheckout'), require('./CartCoupon'), require('./CartCurrencyConversion'), require('./CartCustomerProfile'), require('./CartGift'), require('./CartGiftCertificate'), require('./CartItem'), require('./CartMarketing'), require('./CartPayment'), require('./CartProperty'), require('./CartSettings'), require('./CartShipping'), require('./CartSummary'), require('./CartTaxes'), require('./CartUpsellAfter'), require('./CartUtm'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.Cart = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartAffiliate, root.UltraCartRestApiV2.CartBilling, root.UltraCartRestApiV2.CartBuysafe, root.UltraCartRestApiV2.CartCheckout, root.UltraCartRestApiV2.CartCoupon, root.UltraCartRestApiV2.CartCurrencyConversion, root.UltraCartRestApiV2.CartCustomerProfile, root.UltraCartRestApiV2.CartGift, root.UltraCartRestApiV2.CartGiftCertificate, root.UltraCartRestApiV2.CartItem, root.UltraCartRestApiV2.CartMarketing, root.UltraCartRestApiV2.CartPayment, root.UltraCartRestApiV2.CartProperty, root.UltraCartRestApiV2.CartSettings, root.UltraCartRestApiV2.CartShipping, root.UltraCartRestApiV2.CartSummary, root.UltraCartRestApiV2.CartTaxes, root.UltraCartRestApiV2.CartUpsellAfter);
+    root.UltraCartRestApiV2.Cart = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.CartAffiliate, root.UltraCartRestApiV2.CartBilling, root.UltraCartRestApiV2.CartBuysafe, root.UltraCartRestApiV2.CartCheckout, root.UltraCartRestApiV2.CartCoupon, root.UltraCartRestApiV2.CartCurrencyConversion, root.UltraCartRestApiV2.CartCustomerProfile, root.UltraCartRestApiV2.CartGift, root.UltraCartRestApiV2.CartGiftCertificate, root.UltraCartRestApiV2.CartItem, root.UltraCartRestApiV2.CartMarketing, root.UltraCartRestApiV2.CartPayment, root.UltraCartRestApiV2.CartProperty, root.UltraCartRestApiV2.CartSettings, root.UltraCartRestApiV2.CartShipping, root.UltraCartRestApiV2.CartSummary, root.UltraCartRestApiV2.CartTaxes, root.UltraCartRestApiV2.CartUpsellAfter, root.UltraCartRestApiV2.CartUtm);
   }
-}(this, function(ApiClient, CartAffiliate, CartBilling, CartBuysafe, CartCheckout, CartCoupon, CartCurrencyConversion, CartCustomerProfile, CartGift, CartGiftCertificate, CartItem, CartMarketing, CartPayment, CartProperty, CartSettings, CartShipping, CartSummary, CartTaxes, CartUpsellAfter) {
+}(this, function(ApiClient, CartAffiliate, CartBilling, CartBuysafe, CartCheckout, CartCoupon, CartCurrencyConversion, CartCustomerProfile, CartGift, CartGiftCertificate, CartItem, CartMarketing, CartPayment, CartProperty, CartSettings, CartShipping, CartSummary, CartTaxes, CartUpsellAfter, CartUtm) {
   'use strict';
 
   /**
    * The Cart model module.
    * @module com.ultracart.admin.v2.models/Cart
-   * @version 3.11.45
+   * @version 3.11.46
    */
 
   /**
@@ -107,6 +107,8 @@
         obj.taxes = CartTaxes.constructFromObject(data['taxes']);
       if (data.hasOwnProperty('upsell_after'))
         obj.upsell_after = CartUpsellAfter.constructFromObject(data['upsell_after']);
+      if (data.hasOwnProperty('utms'))
+        obj.utms = ApiClient.convertToType(data['utms'], [CartUtm]);
     }
     return obj;
   }
@@ -251,6 +253,12 @@
    * @member {module:com.ultracart.admin.v2.models/CartUpsellAfter} upsell_after
    */
   exports.prototype.upsell_after = undefined;
+
+  /**
+   * UTM clicks.  The zero index is the most recent (last) UTM click.  Only available in BigQuery and on an abandon webhook.
+   * @member {Array.<module:com.ultracart.admin.v2.models/CartUtm>} utms
+   */
+  exports.prototype.utms = undefined;
 
   return exports;
 

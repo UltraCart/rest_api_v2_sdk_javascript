@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAvailablePhoneNumbersResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse
-   * @version 3.11.45
+   * @version 3.11.46
    */
 
   /**

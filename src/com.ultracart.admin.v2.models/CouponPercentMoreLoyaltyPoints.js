@@ -34,7 +34,7 @@
   /**
    * The CouponPercentMoreLoyaltyPoints model module.
    * @module com.ultracart.admin.v2.models/CouponPercentMoreLoyaltyPoints
-   * @version 3.11.45
+   * @version 3.11.46
    */
 
   /**
