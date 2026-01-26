@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponCodesRequest model module.
  * @module com.ultracart.admin.v2.models/CouponCodesRequest
- * @version 4.1.42
+ * @version 4.1.43
  */
 var CouponCodesRequest = /*#__PURE__*/function () {
   /**
@@ -74,6 +74,9 @@ var CouponCodesRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('metadata')) {
           obj['metadata'] = _ResponseMetadata["default"].constructFromObject(data['metadata']);
         }
+        if (data.hasOwnProperty('prefix')) {
+          obj['prefix'] = _ApiClient["default"].convertToType(data['prefix'], 'String');
+        }
         if (data.hasOwnProperty('quantity')) {
           obj['quantity'] = _ApiClient["default"].convertToType(data['quantity'], 'Number');
         }
@@ -109,6 +112,12 @@ CouponCodesRequest.prototype['expiration_seconds'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
 CouponCodesRequest.prototype['metadata'] = undefined;
+
+/**
+ * Optional prefix for generated codes
+ * @member {String} prefix
+ */
+CouponCodesRequest.prototype['prefix'] = undefined;
 
 /**
  * Quantity

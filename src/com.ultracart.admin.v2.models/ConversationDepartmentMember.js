@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationDepartmentMember model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartmentMember
- * @version 4.1.43
+ * @version 4.1.44
  */
 class ConversationDepartmentMember {
     /**
@@ -47,6 +47,9 @@ class ConversationDepartmentMember {
         if (data) {
             obj = obj || new ConversationDepartmentMember();
 
+            if (data.hasOwnProperty('ai')) {
+                obj['ai'] = ApiClient.convertToType(data['ai'], 'Boolean');
+            }
             if (data.hasOwnProperty('member')) {
                 obj['member'] = ApiClient.convertToType(data['member'], 'Boolean');
             }
@@ -62,6 +65,11 @@ class ConversationDepartmentMember {
 
 
 }
+
+/**
+ * @member {Boolean} ai
+ */
+ConversationDepartmentMember.prototype['ai'] = undefined;
 
 /**
  * @member {Boolean} member

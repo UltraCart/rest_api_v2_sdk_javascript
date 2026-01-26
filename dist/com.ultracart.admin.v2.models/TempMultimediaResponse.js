@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TempMultimediaResponse model module.
  * @module com.ultracart.admin.v2.models/TempMultimediaResponse
- * @version 4.1.42
+ * @version 4.1.43
  */
 var TempMultimediaResponse = /*#__PURE__*/function () {
   /**

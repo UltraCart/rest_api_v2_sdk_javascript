@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AccountsReceivableRetryDayActivity model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryDayActivity
- * @version 4.1.42
+ * @version 4.1.43
  */
 var AccountsReceivableRetryDayActivity = /*#__PURE__*/function () {
   /**
