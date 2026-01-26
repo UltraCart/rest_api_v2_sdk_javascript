@@ -114,6 +114,7 @@ import CartShipping from './com.ultracart.admin.v2.models/CartShipping';
 import CartSummary from './com.ultracart.admin.v2.models/CartSummary';
 import CartTaxes from './com.ultracart.admin.v2.models/CartTaxes';
 import CartUpsellAfter from './com.ultracart.admin.v2.models/CartUpsellAfter';
+import CartUtm from './com.ultracart.admin.v2.models/CartUtm';
 import CartValidationRequest from './com.ultracart.admin.v2.models/CartValidationRequest';
 import CartValidationResponse from './com.ultracart.admin.v2.models/CartValidationResponse';
 import ChanelPartnerReasonCodesResponse from './com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse';
@@ -976,7 +977,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.45
+* @version 4.1.46
 */
 export {
     /**
@@ -1590,6 +1591,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CartUpsellAfter}
      */
     CartUpsellAfter,
+
+    /**
+     * The CartUtm model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CartUtm}
+     */
+    CartUtm,
 
     /**
      * The CartValidationRequest model constructor.

@@ -30,11 +30,12 @@ import CartShipping from './CartShipping';
 import CartSummary from './CartSummary';
 import CartTaxes from './CartTaxes';
 import CartUpsellAfter from './CartUpsellAfter';
+import CartUtm from './CartUtm';
 
 /**
  * The Cart model module.
  * @module com.ultracart.admin.v2.models/Cart
- * @version 4.1.45
+ * @version 4.1.46
  */
 class Cart {
     /**
@@ -142,6 +143,9 @@ class Cart {
             }
             if (data.hasOwnProperty('upsell_after')) {
                 obj['upsell_after'] = CartUpsellAfter.constructFromObject(data['upsell_after']);
+            }
+            if (data.hasOwnProperty('utms')) {
+                obj['utms'] = ApiClient.convertToType(data['utms'], [CartUtm]);
             }
         }
         return obj;
@@ -290,6 +294,12 @@ Cart.prototype['taxes'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CartUpsellAfter} upsell_after
  */
 Cart.prototype['upsell_after'] = undefined;
+
+/**
+ * UTM clicks.  The zero index is the most recent (last) UTM click.  Only available in BigQuery and on an abandon webhook.
+ * @member {Array.<module:com.ultracart.admin.v2.models/CartUtm>} utms
+ */
+Cart.prototype['utms'] = undefined;
 
 
 

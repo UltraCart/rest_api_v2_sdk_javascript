@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxProviderAvalara model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAvalara
- * @version 4.1.44
+ * @version 4.1.45
  */
 var TaxProviderAvalara = /*#__PURE__*/function () {
   /**

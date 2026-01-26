@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartItemOptionValue model module.
  * @module com.ultracart.admin.v2.models/CartItemOptionValue
- * @version 4.1.44
+ * @version 4.1.45
  */
 var CartItemOptionValue = /*#__PURE__*/function () {
   /**

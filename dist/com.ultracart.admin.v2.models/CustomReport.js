@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReport model module.
  * @module com.ultracart.admin.v2.models/CustomReport
- * @version 4.1.44
+ * @version 4.1.45
  */
 var CustomReport = /*#__PURE__*/function () {
   /**

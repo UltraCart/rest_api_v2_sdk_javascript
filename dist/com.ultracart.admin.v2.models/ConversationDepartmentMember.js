@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationDepartmentMember model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartmentMember
- * @version 4.1.44
+ * @version 4.1.45
  */
 var ConversationDepartmentMember = /*#__PURE__*/function () {
   /**

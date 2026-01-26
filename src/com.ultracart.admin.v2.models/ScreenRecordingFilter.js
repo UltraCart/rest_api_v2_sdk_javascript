@@ -22,7 +22,7 @@ import ScreenRecordingFilterStringSearch from './ScreenRecordingFilterStringSear
 /**
  * The ScreenRecordingFilter model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilter
- * @version 4.1.45
+ * @version 4.1.46
  */
 class ScreenRecordingFilter {
     /**

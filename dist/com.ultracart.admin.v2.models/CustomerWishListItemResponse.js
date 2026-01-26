@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerWishListItemResponse model module.
  * @module com.ultracart.admin.v2.models/CustomerWishListItemResponse
- * @version 4.1.44
+ * @version 4.1.45
  */
 var CustomerWishListItemResponse = /*#__PURE__*/function () {
   /**

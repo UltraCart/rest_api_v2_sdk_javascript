@@ -17,7 +17,7 @@ import CouponTierQuantityAmount from './CouponTierQuantityAmount';
 /**
  * The CouponTieredAmountOffItems model module.
  * @module com.ultracart.admin.v2.models/CouponTieredAmountOffItems
- * @version 4.1.45
+ * @version 4.1.46
  */
 class CouponTieredAmountOffItems {
     /**

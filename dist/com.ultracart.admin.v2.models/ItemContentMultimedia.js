@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemContentMultimedia model module.
  * @module com.ultracart.admin.v2.models/ItemContentMultimedia
- * @version 4.1.44
+ * @version 4.1.45
  */
 var ItemContentMultimedia = /*#__PURE__*/function () {
   /**
@@ -89,6 +89,9 @@ var ItemContentMultimedia = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('placeholder')) {
           obj['placeholder'] = _ApiClient["default"].convertToType(data['placeholder'], 'Boolean');
+        }
+        if (data.hasOwnProperty('size')) {
+          obj['size'] = _ApiClient["default"].convertToType(data['size'], 'Number');
         }
         if (data.hasOwnProperty('temp_multimedia_oid')) {
           obj['temp_multimedia_oid'] = _ApiClient["default"].convertToType(data['temp_multimedia_oid'], 'Number');
@@ -169,6 +172,12 @@ ItemContentMultimedia.prototype['orphan'] = undefined;
  * @member {Boolean} placeholder
  */
 ItemContentMultimedia.prototype['placeholder'] = undefined;
+
+/**
+ * Size of the file in bytes if known
+ * @member {Number} size
+ */
+ItemContentMultimedia.prototype['size'] = undefined;
 
 /**
  * Temporary multimedia object identifier assigned if uploading new multimedia

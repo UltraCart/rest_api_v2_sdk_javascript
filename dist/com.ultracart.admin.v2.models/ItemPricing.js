@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemPricing model module.
  * @module com.ultracart.admin.v2.models/ItemPricing
- * @version 4.1.44
+ * @version 4.1.45
  */
 var ItemPricing = /*#__PURE__*/function () {
   /**
