@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemChargebackAddendum model module.
  * @module com.ultracart.admin.v2.models/ItemChargebackAddendum
- * @version 4.1.45
+ * @version 4.1.46
  */
 var ItemChargebackAddendum = /*#__PURE__*/function () {
   /**

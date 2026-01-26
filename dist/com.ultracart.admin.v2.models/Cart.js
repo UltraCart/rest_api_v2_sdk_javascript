@@ -23,6 +23,7 @@ var _CartShipping = _interopRequireDefault(require("./CartShipping"));
 var _CartSummary = _interopRequireDefault(require("./CartSummary"));
 var _CartTaxes = _interopRequireDefault(require("./CartTaxes"));
 var _CartUpsellAfter = _interopRequireDefault(require("./CartUpsellAfter"));
+var _CartUtm = _interopRequireDefault(require("./CartUtm"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -44,7 +45,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Cart model module.
  * @module com.ultracart.admin.v2.models/Cart
- * @version 4.1.45
+ * @version 4.1.46
  */
 var Cart = /*#__PURE__*/function () {
   /**
@@ -154,6 +155,9 @@ var Cart = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('upsell_after')) {
           obj['upsell_after'] = _CartUpsellAfter["default"].constructFromObject(data['upsell_after']);
+        }
+        if (data.hasOwnProperty('utms')) {
+          obj['utms'] = _ApiClient["default"].convertToType(data['utms'], [_CartUtm["default"]]);
         }
       }
       return obj;
@@ -300,4 +304,10 @@ Cart.prototype['taxes'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CartUpsellAfter} upsell_after
  */
 Cart.prototype['upsell_after'] = undefined;
+
+/**
+ * UTM clicks.  The zero index is the most recent (last) UTM click.  Only available in BigQuery and on an abandon webhook.
+ * @member {Array.<module:com.ultracart.admin.v2.models/CartUtm>} utms
+ */
+Cart.prototype['utms'] = undefined;
 var _default = exports["default"] = Cart;

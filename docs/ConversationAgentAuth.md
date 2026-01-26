@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**chat_admin** | **Boolean** |  | [optional] 
+**chat_user** | **Boolean** |  | [optional] 
 **conversation_participant_arn** | **String** |  | [optional] 
 **conversation_participant_name** | **String** |  | [optional] 
 **group_ids** | **[Number]** | UltraCart Groups this user belongs to | [optional] 

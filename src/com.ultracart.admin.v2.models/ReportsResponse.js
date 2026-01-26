@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ReportsResponse model module.
  * @module com.ultracart.admin.v2.models/ReportsResponse
- * @version 4.1.46
+ * @version 4.1.47
  */
 class ReportsResponse {
     /**

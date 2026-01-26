@@ -17,7 +17,7 @@ import ConversationTwilioAccount from './ConversationTwilioAccount';
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.46
+ * @version 4.1.47
  */
 class ConversationAgentAuth {
     /**
@@ -48,6 +48,12 @@ class ConversationAgentAuth {
         if (data) {
             obj = obj || new ConversationAgentAuth();
 
+            if (data.hasOwnProperty('chat_admin')) {
+                obj['chat_admin'] = ApiClient.convertToType(data['chat_admin'], 'Boolean');
+            }
+            if (data.hasOwnProperty('chat_user')) {
+                obj['chat_user'] = ApiClient.convertToType(data['chat_user'], 'Boolean');
+            }
             if (data.hasOwnProperty('conversation_participant_arn')) {
                 obj['conversation_participant_arn'] = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
             }
@@ -102,6 +108,16 @@ class ConversationAgentAuth {
 
 
 }
+
+/**
+ * @member {Boolean} chat_admin
+ */
+ConversationAgentAuth.prototype['chat_admin'] = undefined;
+
+/**
+ * @member {Boolean} chat_user
+ */
+ConversationAgentAuth.prototype['chat_user'] = undefined;
 
 /**
  * @member {String} conversation_participant_arn

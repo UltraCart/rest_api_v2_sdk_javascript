@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderManagement model module.
  * @module com.ultracart.admin.v2.models/AutoOrderManagement
- * @version 4.1.45
+ * @version 4.1.46
  */
 var AutoOrderManagement = /*#__PURE__*/function () {
   /**

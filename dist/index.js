@@ -627,6 +627,12 @@ Object.defineProperty(exports, "CartUpsellAfter", {
     return _CartUpsellAfter["default"];
   }
 });
+Object.defineProperty(exports, "CartUtm", {
+  enumerable: true,
+  get: function get() {
+    return _CartUtm["default"];
+  }
+});
 Object.defineProperty(exports, "CartValidationRequest", {
   enumerable: true,
   get: function get() {
@@ -5703,6 +5709,7 @@ var _CartShipping = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _CartSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartSummary"));
 var _CartTaxes = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartTaxes"));
 var _CartUpsellAfter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartUpsellAfter"));
+var _CartUtm = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartUtm"));
 var _CartValidationRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartValidationRequest"));
 var _CartValidationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartValidationResponse"));
 var _ChanelPartnerReasonCodesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse"));

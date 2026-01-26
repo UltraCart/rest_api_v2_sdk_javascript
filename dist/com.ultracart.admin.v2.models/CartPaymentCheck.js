@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartPaymentCheck model module.
  * @module com.ultracart.admin.v2.models/CartPaymentCheck
- * @version 4.1.45
+ * @version 4.1.46
  */
 var CartPaymentCheck = /*#__PURE__*/function () {
   /**
