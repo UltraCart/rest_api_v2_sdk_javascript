@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxStateCode model module.
  * @module com.ultracart.admin.v2.models/TaxStateCode
- * @version 4.1.43
+ * @version 4.1.44
  */
 var TaxStateCode = /*#__PURE__*/function () {
   /**

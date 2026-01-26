@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagement
- * @version 4.1.43
+ * @version 4.1.44
  */
 var ConversationEngagement = /*#__PURE__*/function () {
   /**

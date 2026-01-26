@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CheckoutSetupBrowserKeyResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutSetupBrowserKeyResponse
- * @version 4.1.43
+ * @version 4.1.44
  */
 var CheckoutSetupBrowserKeyResponse = /*#__PURE__*/function () {
   /**

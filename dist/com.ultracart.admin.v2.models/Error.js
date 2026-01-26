@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Error model module.
  * @module com.ultracart.admin.v2.models/Error
- * @version 4.1.43
+ * @version 4.1.44
  */
 var Error = /*#__PURE__*/function () {
   /**

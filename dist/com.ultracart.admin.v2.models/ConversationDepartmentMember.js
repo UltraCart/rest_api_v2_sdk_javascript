@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationDepartmentMember model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartmentMember
- * @version 4.1.43
+ * @version 4.1.44
  */
 var ConversationDepartmentMember = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var ConversationDepartmentMember = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationDepartmentMember();
+        if (data.hasOwnProperty('ai')) {
+          obj['ai'] = _ApiClient["default"].convertToType(data['ai'], 'Boolean');
+        }
         if (data.hasOwnProperty('member')) {
           obj['member'] = _ApiClient["default"].convertToType(data['member'], 'Boolean');
         }
@@ -73,6 +76,11 @@ var ConversationDepartmentMember = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * @member {Boolean} ai
+ */
+ConversationDepartmentMember.prototype['ai'] = undefined;
+
 /**
  * @member {Boolean} member
  */

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportExecuteQueriesRequest model module.
  * @module com.ultracart.admin.v2.models/ReportExecuteQueriesRequest
- * @version 4.1.43
+ * @version 4.1.44
  */
 var ReportExecuteQueriesRequest = /*#__PURE__*/function () {
   /**

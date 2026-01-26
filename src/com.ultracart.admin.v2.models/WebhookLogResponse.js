@@ -20,7 +20,7 @@ import WebhookLog from './WebhookLog';
 /**
  * The WebhookLogResponse model module.
  * @module com.ultracart.admin.v2.models/WebhookLogResponse
- * @version 4.1.44
+ * @version 4.1.45
  */
 class WebhookLogResponse {
     /**

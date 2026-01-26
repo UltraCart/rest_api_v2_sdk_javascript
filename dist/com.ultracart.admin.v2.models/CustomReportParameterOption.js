@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReportParameterOption model module.
  * @module com.ultracart.admin.v2.models/CustomReportParameterOption
- * @version 4.1.43
+ * @version 4.1.44
  */
 var CustomReportParameterOption = /*#__PURE__*/function () {
   /**

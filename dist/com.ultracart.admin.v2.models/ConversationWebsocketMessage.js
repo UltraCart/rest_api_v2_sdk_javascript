@@ -38,7 +38,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationWebsocketMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationWebsocketMessage
- * @version 4.1.43
+ * @version 4.1.44
  */
 var ConversationWebsocketMessage = /*#__PURE__*/function () {
   /**

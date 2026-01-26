@@ -22,7 +22,7 @@ import ScreenRecordingUserProperty from './ScreenRecordingUserProperty';
 /**
  * The ScreenRecording model module.
  * @module com.ultracart.admin.v2.models/ScreenRecording
- * @version 4.1.44
+ * @version 4.1.45
  */
 class ScreenRecording {
     /**
