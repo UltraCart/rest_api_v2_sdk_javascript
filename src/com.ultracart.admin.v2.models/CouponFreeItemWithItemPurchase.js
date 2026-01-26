@@ -34,7 +34,7 @@
   /**
    * The CouponFreeItemWithItemPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponFreeItemWithItemPurchase
-   * @version 3.11.47
+   * @version 3.11.48
    */
 
   /**

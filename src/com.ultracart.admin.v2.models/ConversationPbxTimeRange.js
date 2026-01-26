@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxTimeRange model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxTimeRange
-   * @version 3.11.47
+   * @version 3.11.48
    */
 
   /**

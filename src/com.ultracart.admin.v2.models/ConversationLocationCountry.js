@@ -34,7 +34,7 @@
   /**
    * The ConversationLocationCountry model module.
    * @module com.ultracart.admin.v2.models/ConversationLocationCountry
-   * @version 3.11.47
+   * @version 3.11.48
    */
 
   /**

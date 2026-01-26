@@ -34,7 +34,7 @@
   /**
    * The ReportDataSourceSchema model module.
    * @module com.ultracart.admin.v2.models/ReportDataSourceSchema
-   * @version 3.11.47
+   * @version 3.11.48
    */
 
   /**

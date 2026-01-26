@@ -34,7 +34,7 @@
   /**
    * The ReportDataSetPageResponse model module.
    * @module com.ultracart.admin.v2.models/ReportDataSetPageResponse
-   * @version 3.11.47
+   * @version 3.11.48
    */
 
   /**

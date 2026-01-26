@@ -34,7 +34,7 @@
   /**
    * The CartUtm model module.
    * @module com.ultracart.admin.v2.models/CartUtm
-   * @version 3.11.47
+   * @version 3.11.48
    */
 
   /**

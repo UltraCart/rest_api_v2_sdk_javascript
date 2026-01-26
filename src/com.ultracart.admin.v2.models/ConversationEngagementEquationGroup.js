@@ -34,7 +34,7 @@
   /**
    * The ConversationEngagementEquationGroup model module.
    * @module com.ultracart.admin.v2.models/ConversationEngagementEquationGroup
-   * @version 3.11.47
+   * @version 3.11.48
    */
 
   /**
