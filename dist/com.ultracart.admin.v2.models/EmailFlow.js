@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailFlow model module.
  * @module com.ultracart.admin.v2.models/EmailFlow
- * @version 4.1.48
+ * @version 4.1.49
  */
 var EmailFlow = /*#__PURE__*/function () {
   /**

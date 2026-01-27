@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxHardwarePhone model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxHardwarePhone
- * @version 4.1.49
+ * @version 4.1.50
  */
 class ConversationPbxHardwarePhone {
     /**
@@ -47,6 +47,12 @@ class ConversationPbxHardwarePhone {
         if (data) {
             obj = obj || new ConversationPbxHardwarePhone();
 
+            if (data.hasOwnProperty('admin_username')) {
+                obj['admin_username'] = ApiClient.convertToType(data['admin_username'], 'String');
+            }
+            if (data.hasOwnProperty('conversation_pbx_agent_uuid')) {
+                obj['conversation_pbx_agent_uuid'] = ApiClient.convertToType(data['conversation_pbx_agent_uuid'], 'String');
+            }
             if (data.hasOwnProperty('conversation_pbx_hardware_phone_uuid')) {
                 obj['conversation_pbx_hardware_phone_uuid'] = ApiClient.convertToType(data['conversation_pbx_hardware_phone_uuid'], 'String');
             }
@@ -77,11 +83,17 @@ class ConversationPbxHardwarePhone {
             if (data.hasOwnProperty('sip_domain')) {
                 obj['sip_domain'] = ApiClient.convertToType(data['sip_domain'], 'String');
             }
+            if (data.hasOwnProperty('sip_edge_location')) {
+                obj['sip_edge_location'] = ApiClient.convertToType(data['sip_edge_location'], 'String');
+            }
             if (data.hasOwnProperty('sip_password')) {
                 obj['sip_password'] = ApiClient.convertToType(data['sip_password'], 'String');
             }
             if (data.hasOwnProperty('sip_username')) {
                 obj['sip_username'] = ApiClient.convertToType(data['sip_username'], 'String');
+            }
+            if (data.hasOwnProperty('twilio_credential_sid')) {
+                obj['twilio_credential_sid'] = ApiClient.convertToType(data['twilio_credential_sid'], 'String');
             }
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], Object);
@@ -92,6 +104,18 @@ class ConversationPbxHardwarePhone {
 
 
 }
+
+/**
+ * Admin Username
+ * @member {String} admin_username
+ */
+ConversationPbxHardwarePhone.prototype['admin_username'] = undefined;
+
+/**
+ * Associated Agent UUID
+ * @member {String} conversation_pbx_agent_uuid
+ */
+ConversationPbxHardwarePhone.prototype['conversation_pbx_agent_uuid'] = undefined;
 
 /**
  * Conversation Pbx Hardware Phone UUID
@@ -154,7 +178,13 @@ ConversationPbxHardwarePhone.prototype['provisioning_url'] = undefined;
 ConversationPbxHardwarePhone.prototype['sip_domain'] = undefined;
 
 /**
- * SIP Password
+ * SIP Edge Location
+ * @member {String} sip_edge_location
+ */
+ConversationPbxHardwarePhone.prototype['sip_edge_location'] = undefined;
+
+/**
+ * SIP Password (only on create or regenerate password requests)
  * @member {String} sip_password
  */
 ConversationPbxHardwarePhone.prototype['sip_password'] = undefined;
@@ -164,6 +194,12 @@ ConversationPbxHardwarePhone.prototype['sip_password'] = undefined;
  * @member {String} sip_username
  */
 ConversationPbxHardwarePhone.prototype['sip_username'] = undefined;
+
+/**
+ * Twilio Credential SID
+ * @member {String} twilio_credential_sid
+ */
+ConversationPbxHardwarePhone.prototype['twilio_credential_sid'] = undefined;
 
 /**
  * Updated At

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartProfileRegisterRequest model module.
  * @module com.ultracart.admin.v2.models/CartProfileRegisterRequest
- * @version 4.1.48
+ * @version 4.1.49
  */
 var CartProfileRegisterRequest = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApplyLibraryItemRequest model module.
  * @module com.ultracart.admin.v2.models/ApplyLibraryItemRequest
- * @version 4.1.48
+ * @version 4.1.49
  */
 var ApplyLibraryItemRequest = /*#__PURE__*/function () {
   /**

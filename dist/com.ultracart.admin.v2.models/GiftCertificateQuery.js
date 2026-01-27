@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GiftCertificateQuery model module.
  * @module com.ultracart.admin.v2.models/GiftCertificateQuery
- * @version 4.1.48
+ * @version 4.1.49
  */
 var GiftCertificateQuery = /*#__PURE__*/function () {
   /**
