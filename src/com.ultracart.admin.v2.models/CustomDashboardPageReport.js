@@ -34,7 +34,7 @@
   /**
    * The CustomDashboardPageReport model module.
    * @module com.ultracart.admin.v2.models/CustomDashboardPageReport
-   * @version 3.11.49
+   * @version 3.11.50
    */
 
   /**

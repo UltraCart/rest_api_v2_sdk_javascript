@@ -34,7 +34,7 @@
   /**
    * The ChannelPartnerShipToPreference model module.
    * @module com.ultracart.admin.v2.models/ChannelPartnerShipToPreference
-   * @version 3.11.49
+   * @version 3.11.50
    */
 
   /**

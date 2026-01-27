@@ -34,7 +34,7 @@
   /**
    * The AffiliateLedgerQuery model module.
    * @module com.ultracart.admin.v2.models/AffiliateLedgerQuery
-   * @version 3.11.49
+   * @version 3.11.50
    */
 
   /**

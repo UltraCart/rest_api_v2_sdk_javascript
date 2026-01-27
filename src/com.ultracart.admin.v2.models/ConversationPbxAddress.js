@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAddress model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAddress
-   * @version 3.11.49
+   * @version 3.11.50
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAgent model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAgent
-   * @version 3.11.49
+   * @version 3.11.50
    */
 
   /**
@@ -57,22 +57,26 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('ai'))
         obj.ai = ApiClient.convertToType(data['ai'], 'Boolean');
+      if (data.hasOwnProperty('call_routing_preference'))
+        obj.call_routing_preference = ApiClient.convertToType(data['call_routing_preference'], 'String');
       if (data.hasOwnProperty('cellphone'))
         obj.cellphone = ApiClient.convertToType(data['cellphone'], 'String');
       if (data.hasOwnProperty('conversation_pbx_agent_uuid'))
         obj.conversation_pbx_agent_uuid = ApiClient.convertToType(data['conversation_pbx_agent_uuid'], 'String');
       if (data.hasOwnProperty('extension'))
         obj.extension = ApiClient.convertToType(data['extension'], 'Number');
-      if (data.hasOwnProperty('forward_calls_to_cellphone'))
-        obj.forward_calls_to_cellphone = ApiClient.convertToType(data['forward_calls_to_cellphone'], 'Boolean');
       if (data.hasOwnProperty('full_name'))
         obj.full_name = ApiClient.convertToType(data['full_name'], 'String');
+      if (data.hasOwnProperty('hardware_phone_uuids'))
+        obj.hardware_phone_uuids = ApiClient.convertToType(data['hardware_phone_uuids'], ['String']);
       if (data.hasOwnProperty('login'))
         obj.login = ApiClient.convertToType(data['login'], 'String');
       if (data.hasOwnProperty('merchant_id'))
         obj.merchant_id = ApiClient.convertToType(data['merchant_id'], 'String');
       if (data.hasOwnProperty('personal_conversation_pbx_voicemail_mailbox_uuid'))
         obj.personal_conversation_pbx_voicemail_mailbox_uuid = ApiClient.convertToType(data['personal_conversation_pbx_voicemail_mailbox_uuid'], 'String');
+      if (data.hasOwnProperty('preferred_hardware_phone_uuid'))
+        obj.preferred_hardware_phone_uuid = ApiClient.convertToType(data['preferred_hardware_phone_uuid'], 'String');
       if (data.hasOwnProperty('record_outgoing_automatically'))
         obj.record_outgoing_automatically = ApiClient.convertToType(data['record_outgoing_automatically'], 'Boolean');
       if (data.hasOwnProperty('shared_conversation_pbx_voicemail_mailbox_uuid'))
@@ -100,6 +104,12 @@
   exports.prototype.ai = undefined;
 
   /**
+   * The call routing preference
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxAgent.CallRoutingPreferenceEnum} call_routing_preference
+   */
+  exports.prototype.call_routing_preference = undefined;
+
+  /**
    * Cellphone number of agent in E.164 format
    * @member {String} cellphone
    */
@@ -118,16 +128,16 @@
   exports.prototype.extension = undefined;
 
   /**
-   * True if calls to this agent should be forwarded to their cellphone
-   * @member {Boolean} forward_calls_to_cellphone
-   */
-  exports.prototype.forward_calls_to_cellphone = undefined;
-
-  /**
    * Full name
    * @member {String} full_name
    */
   exports.prototype.full_name = undefined;
+
+  /**
+   * Array of hardware phones UUIDs associated with this agent
+   * @member {Array.<String>} hardware_phone_uuids
+   */
+  exports.prototype.hardware_phone_uuids = undefined;
 
   /**
    * Agent login
@@ -146,6 +156,12 @@
    * @member {String} personal_conversation_pbx_voicemail_mailbox_uuid
    */
   exports.prototype.personal_conversation_pbx_voicemail_mailbox_uuid = undefined;
+
+  /**
+   * The hardware phone that will be dialed on an incoming call if routing preference is hardware_phone
+   * @member {String} preferred_hardware_phone_uuid
+   */
+  exports.prototype.preferred_hardware_phone_uuid = undefined;
 
   /**
    * True if outgoing calls should be automatically recorded
@@ -194,6 +210,32 @@
    * @member {Boolean} voicemail
    */
   exports.prototype.voicemail = undefined;
+
+
+  /**
+   * Allowed values for the <code>call_routing_preference</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.CallRoutingPreferenceEnum = {
+    /**
+     * value: "softphone"
+     * @const
+     */
+    softphone: "softphone",
+
+    /**
+     * value: "hardware_phone"
+     * @const
+     */
+    hardware_phone: "hardware_phone",
+
+    /**
+     * value: "cellphone"
+     * @const
+     */
+    cellphone: "cellphone"
+  };
 
   return exports;
 
