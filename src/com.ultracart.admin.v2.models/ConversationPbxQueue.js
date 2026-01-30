@@ -17,7 +17,7 @@ import ConversationPbxQueueMembers from './ConversationPbxQueueMembers';
 /**
  * The ConversationPbxQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxQueue
- * @version 4.1.50
+ * @version 4.1.51
  */
 class ConversationPbxQueue {
     /**
@@ -56,6 +56,9 @@ class ConversationPbxQueue {
             }
             if (data.hasOwnProperty('announce_queue_position')) {
                 obj['announce_queue_position'] = ApiClient.convertToType(data['announce_queue_position'], 'Boolean');
+            }
+            if (data.hasOwnProperty('automatic_coach_agent_uuid')) {
+                obj['automatic_coach_agent_uuid'] = ApiClient.convertToType(data['automatic_coach_agent_uuid'], 'String');
             }
             if (data.hasOwnProperty('conversation_pbx_queue_uuid')) {
                 obj['conversation_pbx_queue_uuid'] = ApiClient.convertToType(data['conversation_pbx_queue_uuid'], 'String');
@@ -141,6 +144,12 @@ ConversationPbxQueue.prototype['ai_timeout_seconds'] = undefined;
  * @member {Boolean} announce_queue_position
  */
 ConversationPbxQueue.prototype['announce_queue_position'] = undefined;
+
+/**
+ * AI Agent UUID to automatically engage to provide coaching
+ * @member {String} automatic_coach_agent_uuid
+ */
+ConversationPbxQueue.prototype['automatic_coach_agent_uuid'] = undefined;
 
 /**
  * Conversation Pbx Queue unique identifier

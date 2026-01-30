@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailSegmentDownloadPrepareResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSegmentDownloadPrepareResponse
- * @version 4.1.50
+ * @version 4.1.51
  */
 class EmailSegmentDownloadPrepareResponse {
     /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAgent
- * @version 4.1.49
+ * @version 4.1.50
  */
 var ConversationPbxAgent = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,9 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
         if (data.hasOwnProperty('ai')) {
           obj['ai'] = _ApiClient["default"].convertToType(data['ai'], 'Boolean');
         }
+        if (data.hasOwnProperty('call_routing_preference')) {
+          obj['call_routing_preference'] = _ApiClient["default"].convertToType(data['call_routing_preference'], 'String');
+        }
         if (data.hasOwnProperty('cellphone')) {
           obj['cellphone'] = _ApiClient["default"].convertToType(data['cellphone'], 'String');
         }
@@ -71,11 +74,11 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
         if (data.hasOwnProperty('extension')) {
           obj['extension'] = _ApiClient["default"].convertToType(data['extension'], 'Number');
         }
-        if (data.hasOwnProperty('forward_calls_to_cellphone')) {
-          obj['forward_calls_to_cellphone'] = _ApiClient["default"].convertToType(data['forward_calls_to_cellphone'], 'Boolean');
-        }
         if (data.hasOwnProperty('full_name')) {
           obj['full_name'] = _ApiClient["default"].convertToType(data['full_name'], 'String');
+        }
+        if (data.hasOwnProperty('hardware_phone_uuids')) {
+          obj['hardware_phone_uuids'] = _ApiClient["default"].convertToType(data['hardware_phone_uuids'], ['String']);
         }
         if (data.hasOwnProperty('login')) {
           obj['login'] = _ApiClient["default"].convertToType(data['login'], 'String');
@@ -85,6 +88,9 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('personal_conversation_pbx_voicemail_mailbox_uuid')) {
           obj['personal_conversation_pbx_voicemail_mailbox_uuid'] = _ApiClient["default"].convertToType(data['personal_conversation_pbx_voicemail_mailbox_uuid'], 'String');
+        }
+        if (data.hasOwnProperty('preferred_hardware_phone_uuid')) {
+          obj['preferred_hardware_phone_uuid'] = _ApiClient["default"].convertToType(data['preferred_hardware_phone_uuid'], 'String');
         }
         if (data.hasOwnProperty('record_outgoing_automatically')) {
           obj['record_outgoing_automatically'] = _ApiClient["default"].convertToType(data['record_outgoing_automatically'], 'Boolean');
@@ -122,6 +128,12 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
 ConversationPbxAgent.prototype['ai'] = undefined;
 
 /**
+ * The call routing preference
+ * @member {module:com.ultracart.admin.v2.models/ConversationPbxAgent.CallRoutingPreferenceEnum} call_routing_preference
+ */
+ConversationPbxAgent.prototype['call_routing_preference'] = undefined;
+
+/**
  * Cellphone number of agent in E.164 format
  * @member {String} cellphone
  */
@@ -140,16 +152,16 @@ ConversationPbxAgent.prototype['conversation_pbx_agent_uuid'] = undefined;
 ConversationPbxAgent.prototype['extension'] = undefined;
 
 /**
- * True if calls to this agent should be forwarded to their cellphone
- * @member {Boolean} forward_calls_to_cellphone
- */
-ConversationPbxAgent.prototype['forward_calls_to_cellphone'] = undefined;
-
-/**
  * Full name
  * @member {String} full_name
  */
 ConversationPbxAgent.prototype['full_name'] = undefined;
+
+/**
+ * Array of hardware phones UUIDs associated with this agent
+ * @member {Array.<String>} hardware_phone_uuids
+ */
+ConversationPbxAgent.prototype['hardware_phone_uuids'] = undefined;
 
 /**
  * Agent login
@@ -168,6 +180,12 @@ ConversationPbxAgent.prototype['merchant_id'] = undefined;
  * @member {String} personal_conversation_pbx_voicemail_mailbox_uuid
  */
 ConversationPbxAgent.prototype['personal_conversation_pbx_voicemail_mailbox_uuid'] = undefined;
+
+/**
+ * The hardware phone that will be dialed on an incoming call if routing preference is hardware_phone
+ * @member {String} preferred_hardware_phone_uuid
+ */
+ConversationPbxAgent.prototype['preferred_hardware_phone_uuid'] = undefined;
 
 /**
  * True if outgoing calls should be automatically recorded
@@ -216,4 +234,27 @@ ConversationPbxAgent.prototype['user_id'] = undefined;
  * @member {Boolean} voicemail
  */
 ConversationPbxAgent.prototype['voicemail'] = undefined;
+
+/**
+ * Allowed values for the <code>call_routing_preference</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationPbxAgent['CallRoutingPreferenceEnum'] = {
+  /**
+   * value: "softphone"
+   * @const
+   */
+  "softphone": "softphone",
+  /**
+   * value: "hardware_phone"
+   * @const
+   */
+  "hardware_phone": "hardware_phone",
+  /**
+   * value: "cellphone"
+   * @const
+   */
+  "cellphone": "cellphone"
+};
 var _default = exports["default"] = ConversationPbxAgent;

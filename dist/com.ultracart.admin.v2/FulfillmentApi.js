@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Fulfillment service.
 * @module com.ultracart.admin.v2/FulfillmentApi
-* @version 4.1.49
+* @version 4.1.50
 */
 var FulfillmentApi = exports["default"] = /*#__PURE__*/function () {
   /**

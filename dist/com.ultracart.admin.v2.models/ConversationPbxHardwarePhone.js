@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxHardwarePhone model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxHardwarePhone
- * @version 4.1.49
+ * @version 4.1.50
  */
 var ConversationPbxHardwarePhone = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,12 @@ var ConversationPbxHardwarePhone = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationPbxHardwarePhone();
+        if (data.hasOwnProperty('admin_username')) {
+          obj['admin_username'] = _ApiClient["default"].convertToType(data['admin_username'], 'String');
+        }
+        if (data.hasOwnProperty('conversation_pbx_agent_uuid')) {
+          obj['conversation_pbx_agent_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_agent_uuid'], 'String');
+        }
         if (data.hasOwnProperty('conversation_pbx_hardware_phone_uuid')) {
           obj['conversation_pbx_hardware_phone_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_hardware_phone_uuid'], 'String');
         }
@@ -89,11 +95,17 @@ var ConversationPbxHardwarePhone = /*#__PURE__*/function () {
         if (data.hasOwnProperty('sip_domain')) {
           obj['sip_domain'] = _ApiClient["default"].convertToType(data['sip_domain'], 'String');
         }
+        if (data.hasOwnProperty('sip_edge_location')) {
+          obj['sip_edge_location'] = _ApiClient["default"].convertToType(data['sip_edge_location'], 'String');
+        }
         if (data.hasOwnProperty('sip_password')) {
           obj['sip_password'] = _ApiClient["default"].convertToType(data['sip_password'], 'String');
         }
         if (data.hasOwnProperty('sip_username')) {
           obj['sip_username'] = _ApiClient["default"].convertToType(data['sip_username'], 'String');
+        }
+        if (data.hasOwnProperty('twilio_credential_sid')) {
+          obj['twilio_credential_sid'] = _ApiClient["default"].convertToType(data['twilio_credential_sid'], 'String');
         }
         if (data.hasOwnProperty('updated_at')) {
           obj['updated_at'] = _ApiClient["default"].convertToType(data['updated_at'], Object);
@@ -103,6 +115,18 @@ var ConversationPbxHardwarePhone = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Admin Username
+ * @member {String} admin_username
+ */
+ConversationPbxHardwarePhone.prototype['admin_username'] = undefined;
+
+/**
+ * Associated Agent UUID
+ * @member {String} conversation_pbx_agent_uuid
+ */
+ConversationPbxHardwarePhone.prototype['conversation_pbx_agent_uuid'] = undefined;
+
 /**
  * Conversation Pbx Hardware Phone UUID
  * @member {String} conversation_pbx_hardware_phone_uuid
@@ -164,7 +188,13 @@ ConversationPbxHardwarePhone.prototype['provisioning_url'] = undefined;
 ConversationPbxHardwarePhone.prototype['sip_domain'] = undefined;
 
 /**
- * SIP Password
+ * SIP Edge Location
+ * @member {String} sip_edge_location
+ */
+ConversationPbxHardwarePhone.prototype['sip_edge_location'] = undefined;
+
+/**
+ * SIP Password (only on create or regenerate password requests)
  * @member {String} sip_password
  */
 ConversationPbxHardwarePhone.prototype['sip_password'] = undefined;
@@ -174,6 +204,12 @@ ConversationPbxHardwarePhone.prototype['sip_password'] = undefined;
  * @member {String} sip_username
  */
 ConversationPbxHardwarePhone.prototype['sip_username'] = undefined;
+
+/**
+ * Twilio Credential SID
+ * @member {String} twilio_credential_sid
+ */
+ConversationPbxHardwarePhone.prototype['twilio_credential_sid'] = undefined;
 
 /**
  * Updated At
