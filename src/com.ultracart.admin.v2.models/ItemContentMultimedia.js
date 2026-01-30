@@ -34,7 +34,7 @@
   /**
    * The ItemContentMultimedia model module.
    * @module com.ultracart.admin.v2.models/ItemContentMultimedia
-   * @version 3.11.50
+   * @version 3.11.51
    */
 
   /**

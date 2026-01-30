@@ -34,7 +34,7 @@
   /**
    * The GroupsResponse model module.
    * @module com.ultracart.admin.v2.models/GroupsResponse
-   * @version 3.11.50
+   * @version 3.11.51
    */
 
   /**

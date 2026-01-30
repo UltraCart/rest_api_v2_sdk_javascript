@@ -34,7 +34,7 @@
   /**
    * The ScreenRecordingMerchantNotesRequest model module.
    * @module com.ultracart.admin.v2.models/ScreenRecordingMerchantNotesRequest
-   * @version 3.11.50
+   * @version 3.11.51
    */
 
   /**

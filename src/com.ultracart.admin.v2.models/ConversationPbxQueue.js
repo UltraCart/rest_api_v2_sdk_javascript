@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxQueue model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxQueue
-   * @version 3.11.50
+   * @version 3.11.51
    */
 
   /**
@@ -61,6 +61,8 @@
         obj.ai_timeout_seconds = ApiClient.convertToType(data['ai_timeout_seconds'], 'Number');
       if (data.hasOwnProperty('announce_queue_position'))
         obj.announce_queue_position = ApiClient.convertToType(data['announce_queue_position'], 'Boolean');
+      if (data.hasOwnProperty('automatic_coach_agent_uuid'))
+        obj.automatic_coach_agent_uuid = ApiClient.convertToType(data['automatic_coach_agent_uuid'], 'String');
       if (data.hasOwnProperty('conversation_pbx_queue_uuid'))
         obj.conversation_pbx_queue_uuid = ApiClient.convertToType(data['conversation_pbx_queue_uuid'], 'String');
       if (data.hasOwnProperty('conversation_voicemail_mailbox_uuid'))
@@ -122,6 +124,12 @@
    * @member {Boolean} announce_queue_position
    */
   exports.prototype.announce_queue_position = undefined;
+
+  /**
+   * AI Agent UUID to automatically engage to provide coaching
+   * @member {String} automatic_coach_agent_uuid
+   */
+  exports.prototype.automatic_coach_agent_uuid = undefined;
 
   /**
    * Conversation Pbx Queue unique identifier
