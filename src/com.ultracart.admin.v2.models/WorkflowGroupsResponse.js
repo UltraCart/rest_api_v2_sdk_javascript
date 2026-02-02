@@ -20,7 +20,7 @@ import WorkflowGroup from './WorkflowGroup';
 /**
  * The WorkflowGroupsResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowGroupsResponse
- * @version 4.1.54
+ * @version 4.1.55
  */
 class WorkflowGroupsResponse {
     /**

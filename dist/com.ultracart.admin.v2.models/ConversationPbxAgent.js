@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAgent
- * @version 4.1.51
+ * @version 4.1.54
  */
 var ConversationPbxAgent = /*#__PURE__*/function () {
   /**
@@ -70,6 +70,9 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('conversation_pbx_agent_uuid')) {
           obj['conversation_pbx_agent_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_agent_uuid'], 'String');
+        }
+        if (data.hasOwnProperty('default_phone_number_uuid')) {
+          obj['default_phone_number_uuid'] = _ApiClient["default"].convertToType(data['default_phone_number_uuid'], 'String');
         }
         if (data.hasOwnProperty('extension')) {
           obj['extension'] = _ApiClient["default"].convertToType(data['extension'], 'Number');
@@ -144,6 +147,12 @@ ConversationPbxAgent.prototype['cellphone'] = undefined;
  * @member {String} conversation_pbx_agent_uuid
  */
 ConversationPbxAgent.prototype['conversation_pbx_agent_uuid'] = undefined;
+
+/**
+ * The default phone number that this agent should dial out to the PSTN with.
+ * @member {String} default_phone_number_uuid
+ */
+ConversationPbxAgent.prototype['default_phone_number_uuid'] = undefined;
 
 /**
  * Extension

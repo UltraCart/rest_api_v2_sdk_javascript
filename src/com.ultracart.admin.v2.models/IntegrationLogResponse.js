@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The IntegrationLogResponse model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogResponse
- * @version 4.1.54
+ * @version 4.1.55
  */
 class IntegrationLogResponse {
     /**

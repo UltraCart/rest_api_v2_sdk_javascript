@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartProfileLoginResponse model module.
  * @module com.ultracart.admin.v2.models/CartProfileLoginResponse
- * @version 4.1.51
+ * @version 4.1.54
  */
 var CartProfileLoginResponse = /*#__PURE__*/function () {
   /**

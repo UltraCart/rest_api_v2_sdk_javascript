@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WorkflowTasksResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowTasksResponse
- * @version 4.1.51
+ * @version 4.1.54
  */
 var WorkflowTasksResponse = /*#__PURE__*/function () {
   /**

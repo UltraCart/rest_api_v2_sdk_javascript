@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxPhoneNumber model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
- * @version 4.1.51
+ * @version 4.1.54
  */
 var ConversationPbxPhoneNumber = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var ConversationPbxPhoneNumber = /*#__PURE__*/function () {
         if (data.hasOwnProperty('conversation_pbx_phone_number_uuid')) {
           obj['conversation_pbx_phone_number_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_phone_number_uuid'], 'String');
         }
+        if (data.hasOwnProperty('default_phone_number')) {
+          obj['default_phone_number'] = _ApiClient["default"].convertToType(data['default_phone_number'], 'Boolean');
+        }
         if (data.hasOwnProperty('deletion_protected')) {
           obj['deletion_protected'] = _ApiClient["default"].convertToType(data['deletion_protected'], 'Boolean');
         }
@@ -108,6 +111,12 @@ ConversationPbxPhoneNumber.prototype['address_sid'] = undefined;
  * @member {String} conversation_pbx_phone_number_uuid
  */
 ConversationPbxPhoneNumber.prototype['conversation_pbx_phone_number_uuid'] = undefined;
+
+/**
+ * Default phone number for outbound calling.
+ * @member {Boolean} default_phone_number
+ */
+ConversationPbxPhoneNumber.prototype['default_phone_number'] = undefined;
 
 /**
  * If true, this phone number cannot be deleted through the API. It must be deleted via the Twilio console.

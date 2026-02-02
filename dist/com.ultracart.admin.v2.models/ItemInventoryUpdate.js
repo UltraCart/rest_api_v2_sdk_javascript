@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemInventoryUpdate model module.
  * @module com.ultracart.admin.v2.models/ItemInventoryUpdate
- * @version 4.1.51
+ * @version 4.1.54
  */
 var ItemInventoryUpdate = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerBilling model module.
  * @module com.ultracart.admin.v2.models/CustomerBilling
- * @version 4.1.51
+ * @version 4.1.54
  */
 var CustomerBilling = /*#__PURE__*/function () {
   /**

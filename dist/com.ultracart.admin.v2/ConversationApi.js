@@ -47,6 +47,9 @@ var _ConversationPbxAudioUploadUrlResponse = _interopRequireDefault(require("../
 var _ConversationPbxAudioUsageResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxAudioUsageResponse"));
 var _ConversationPbxAudiosResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxAudiosResponse"));
 var _ConversationPbxAvailablePhoneNumbersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse"));
+var _ConversationPbxCallResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallResponse"));
+var _ConversationPbxCallSearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallSearchRequest"));
+var _ConversationPbxCallSearchResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse"));
 var _ConversationPbxCustomerSnapshotRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest"));
 var _ConversationPbxCustomerSnapshotResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse"));
 var _ConversationPbxHardwarePhone = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxHardwarePhone"));
@@ -110,7 +113,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.51
+* @version 4.1.54
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -1899,6 +1902,42 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getPbxCall operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxCallCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCallResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx call record
+     * Retrieve a single PBX call record with full details 
+     * @param {String} callUuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxCallCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxCallResponse}
+     */
+  }, {
+    key: "getPbxCall",
+    value: function getPbxCall(callUuid, callback) {
+      var postBody = null;
+      // verify the required parameter 'callUuid' is set
+      if (callUuid === undefined || callUuid === null) {
+        throw new Error("Missing the required parameter 'callUuid' when calling getPbxCall");
+      }
+      var pathParams = {
+        'callUuid': callUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxCallResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/call/{callUuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the getPbxHardwarePhone operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhoneCallback
      * @param {String} error Error message, if any.
@@ -3386,6 +3425,49 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxAvailablePhoneNumbersResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/phone_number/search', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the searchPbxCalls operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~searchPbxCallsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search pbx call records
+     * Search and list PBX call records with filtering, sorting, and pagination 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCallSearchRequest} search_request Search Request
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the calls.
+     * @param {module:com.ultracart.admin.v2/ConversationApi~searchPbxCallsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse}
+     */
+  }, {
+    key: "searchPbxCalls",
+    value: function searchPbxCalls(search_request, opts, callback) {
+      opts = opts || {};
+      var postBody = search_request;
+      // verify the required parameter 'search_request' is set
+      if (search_request === undefined || search_request === null) {
+        throw new Error("Missing the required parameter 'search_request' when calling searchPbxCalls");
+      }
+      var pathParams = {};
+      var queryParams = {
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxCallSearchResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/call/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

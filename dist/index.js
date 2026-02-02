@@ -1209,6 +1209,120 @@ Object.defineProperty(exports, "ConversationPbxAvailablePhoneNumbersResponse", {
     return _ConversationPbxAvailablePhoneNumbersResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPbxCall", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCall["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallAgent", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallAgent["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallAiCost", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallAiCost["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallAiEngagement", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallAiEngagement["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallAiToolCall", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallAiToolCall["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallAiWhisper", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallAiWhisper["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallCaller", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallCaller["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallFinancial", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallFinancial["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallHold", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallHold["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallQueue", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallQueue["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallRecording", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallRecording["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallRouting", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallRouting["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallSearchRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallSearchRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallSearchResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallSearchResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallTimeline", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallTimeline["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallTranscript", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallTranscript["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallTranscriptSegment", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallTranscriptSegment["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCallTransfer", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallTransfer["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationPbxCustomerSnapshotRequest", {
   enumerable: true,
   get: function get() {
@@ -5839,6 +5953,25 @@ var _ConversationPbxAudioUsageResponse = _interopRequireDefault(require("./com.u
 var _ConversationPbxAudiosResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAudiosResponse"));
 var _ConversationPbxAvailablePhoneNumber = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumber"));
 var _ConversationPbxAvailablePhoneNumbersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse"));
+var _ConversationPbxCall = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCall"));
+var _ConversationPbxCallAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAgent"));
+var _ConversationPbxCallAiCost = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiCost"));
+var _ConversationPbxCallAiEngagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiEngagement"));
+var _ConversationPbxCallAiToolCall = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiToolCall"));
+var _ConversationPbxCallAiWhisper = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiWhisper"));
+var _ConversationPbxCallCaller = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallCaller"));
+var _ConversationPbxCallFinancial = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallFinancial"));
+var _ConversationPbxCallHold = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallHold"));
+var _ConversationPbxCallQueue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallQueue"));
+var _ConversationPbxCallRecording = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallRecording"));
+var _ConversationPbxCallResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallResponse"));
+var _ConversationPbxCallRouting = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallRouting"));
+var _ConversationPbxCallSearchRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallSearchRequest"));
+var _ConversationPbxCallSearchResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse"));
+var _ConversationPbxCallTimeline = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTimeline"));
+var _ConversationPbxCallTranscript = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTranscript"));
+var _ConversationPbxCallTranscriptSegment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment"));
+var _ConversationPbxCallTransfer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTransfer"));
 var _ConversationPbxCustomerSnapshotRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest"));
 var _ConversationPbxCustomerSnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse"));
 var _ConversationPbxHardwarePhone = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxHardwarePhone"));
