@@ -34,7 +34,7 @@
   /**
    * The EmailEditorValuesResponse model module.
    * @module com.ultracart.admin.v2.models/EmailEditorValuesResponse
-   * @version 3.11.54
+   * @version 3.11.55
    */
 
   /**

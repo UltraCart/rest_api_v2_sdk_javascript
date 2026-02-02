@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCallTranscript model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCallTranscript
-   * @version 3.11.54
+   * @version 3.11.55
    */
 
   /**
