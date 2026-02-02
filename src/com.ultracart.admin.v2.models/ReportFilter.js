@@ -34,7 +34,7 @@
   /**
    * The ReportFilter model module.
    * @module com.ultracart.admin.v2.models/ReportFilter
-   * @version 3.11.55
+   * @version 3.11.56
    */
 
   /**

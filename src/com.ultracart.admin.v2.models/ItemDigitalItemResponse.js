@@ -34,7 +34,7 @@
   /**
    * The ItemDigitalItemResponse model module.
    * @module com.ultracart.admin.v2.models/ItemDigitalItemResponse
-   * @version 3.11.55
+   * @version 3.11.56
    */
 
   /**

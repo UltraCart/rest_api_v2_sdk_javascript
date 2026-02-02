@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxHardwarePhonesResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxHardwarePhonesResponse
-   * @version 3.11.55
+   * @version 3.11.56
    */
 
   /**
