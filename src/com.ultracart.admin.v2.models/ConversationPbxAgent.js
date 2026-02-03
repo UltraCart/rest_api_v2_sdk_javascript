@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxAgent model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxAgent
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.cellphone = ApiClient.convertToType(data['cellphone'], 'String');
       if (data.hasOwnProperty('conversation_pbx_agent_uuid'))
         obj.conversation_pbx_agent_uuid = ApiClient.convertToType(data['conversation_pbx_agent_uuid'], 'String');
+      if (data.hasOwnProperty('cos_uuid'))
+        obj.cos_uuid = ApiClient.convertToType(data['cos_uuid'], 'String');
       if (data.hasOwnProperty('default_phone_number_uuid'))
         obj.default_phone_number_uuid = ApiClient.convertToType(data['default_phone_number_uuid'], 'String');
       if (data.hasOwnProperty('extension'))
@@ -122,6 +124,12 @@
    * @member {String} conversation_pbx_agent_uuid
    */
   exports.prototype.conversation_pbx_agent_uuid = undefined;
+
+  /**
+   * Class of Service UUID. If null, the merchant default CoS applies.
+   * @member {String} cos_uuid
+   */
+  exports.prototype.cos_uuid = undefined;
 
   /**
    * The default phone number that this agent should dial out to the PSTN with.
@@ -203,7 +211,7 @@
 
   /**
    * Unavailable say voice
-   * @member {String} unavailable_say_voice
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxAgent.UnavailableSayVoiceEnum} unavailable_say_voice
    */
   exports.prototype.unavailable_say_voice = undefined;
 
@@ -243,6 +251,26 @@
      * @const
      */
     cellphone: "cellphone"
+  };
+
+
+  /**
+   * Allowed values for the <code>unavailable_say_voice</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.UnavailableSayVoiceEnum = {
+    /**
+     * value: "man"
+     * @const
+     */
+    man: "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    woman: "woman"
   };
 
   return exports;

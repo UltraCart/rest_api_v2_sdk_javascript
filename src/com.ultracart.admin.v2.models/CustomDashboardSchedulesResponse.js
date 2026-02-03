@@ -34,7 +34,7 @@
   /**
    * The CustomDashboardSchedulesResponse model module.
    * @module com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ConversationAgentAuth model module.
    * @module com.ultracart.admin.v2.models/ConversationAgentAuth
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**
@@ -63,6 +63,8 @@
         obj.conversation_participant_arn = ApiClient.convertToType(data['conversation_participant_arn'], 'String');
       if (data.hasOwnProperty('conversation_participant_name'))
         obj.conversation_participant_name = ApiClient.convertToType(data['conversation_participant_name'], 'String');
+      if (data.hasOwnProperty('default_phone_number'))
+        obj.default_phone_number = ApiClient.convertToType(data['default_phone_number'], 'String');
       if (data.hasOwnProperty('group_ids'))
         obj.group_ids = ApiClient.convertToType(data['group_ids'], ['Number']);
       if (data.hasOwnProperty('jwt'))
@@ -114,6 +116,12 @@
    * @member {String} conversation_participant_name
    */
   exports.prototype.conversation_participant_name = undefined;
+
+  /**
+   * The default phone number this agent should use when making an outbound call.
+   * @member {String} default_phone_number
+   */
+  exports.prototype.default_phone_number = undefined;
 
   /**
    * UltraCart Groups this user belongs to

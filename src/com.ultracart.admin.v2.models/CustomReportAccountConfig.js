@@ -34,7 +34,7 @@
   /**
    * The CustomReportAccountConfig model module.
    * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**

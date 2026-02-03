@@ -42,3 +42,25 @@ Name | Type | Description | Notes
 
 
 
+<a name="NoAgentAvailableSayVoiceEnum"></a>
+## Enum: NoAgentAvailableSayVoiceEnum
+
+
+* `man` (value: `"man"`)
+
+* `woman` (value: `"woman"`)
+
+
+
+
+<a name="SayVoiceEnum"></a>
+## Enum: SayVoiceEnum
+
+
+* `man` (value: `"man"`)
+
+* `woman` (value: `"woman"`)
+
+
+
+

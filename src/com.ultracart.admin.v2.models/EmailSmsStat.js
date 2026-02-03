@@ -34,7 +34,7 @@
   /**
    * The EmailSmsStat model module.
    * @module com.ultracart.admin.v2.models/EmailSmsStat
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**

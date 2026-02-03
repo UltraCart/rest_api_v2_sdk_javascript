@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxQueue model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxQueue
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**
@@ -186,7 +186,7 @@
 
   /**
    * The type of voice used to say text when no agent is available
-   * @member {String} no_agent_available_say_voice
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxQueue.NoAgentAvailableSayVoiceEnum} no_agent_available_say_voice
    */
   exports.prototype.no_agent_available_say_voice = undefined;
 
@@ -210,7 +210,7 @@
 
   /**
    * The type of voice to use when say text is spoken
-   * @member {String} say_voice
+   * @member {module:com.ultracart.admin.v2.models/ConversationPbxQueue.SayVoiceEnum} say_voice
    */
   exports.prototype.say_voice = undefined;
 
@@ -274,6 +274,46 @@
      * @const
      */
     backup: "backup"
+  };
+
+
+  /**
+   * Allowed values for the <code>no_agent_available_say_voice</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.NoAgentAvailableSayVoiceEnum = {
+    /**
+     * value: "man"
+     * @const
+     */
+    man: "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    woman: "woman"
+  };
+
+
+  /**
+   * Allowed values for the <code>say_voice</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.SayVoiceEnum = {
+    /**
+     * value: "man"
+     * @const
+     */
+    man: "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    woman: "woman"
   };
 
   return exports;

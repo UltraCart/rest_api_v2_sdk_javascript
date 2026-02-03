@@ -34,7 +34,7 @@
   /**
    * The Twilio model module.
    * @module com.ultracart.admin.v2.models/Twilio
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**
@@ -57,6 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('account_sid'))
         obj.account_sid = ApiClient.convertToType(data['account_sid'], 'String');
+      if (data.hasOwnProperty('ai_twiml_app_sid'))
+        obj.ai_twiml_app_sid = ApiClient.convertToType(data['ai_twiml_app_sid'], 'String');
       if (data.hasOwnProperty('api_key_id'))
         obj.api_key_id = ApiClient.convertToType(data['api_key_id'], 'String');
       if (data.hasOwnProperty('api_key_name'))
@@ -81,6 +83,11 @@
    * @member {String} account_sid
    */
   exports.prototype.account_sid = undefined;
+
+  /**
+   * @member {String} ai_twiml_app_sid
+   */
+  exports.prototype.ai_twiml_app_sid = undefined;
 
   /**
    * @member {String} api_key_id

@@ -34,7 +34,7 @@
   /**
    * The UploadCouponCodesRequest model module.
    * @module com.ultracart.admin.v2.models/UploadCouponCodesRequest
-   * @version 3.11.56
+   * @version 3.11.57
    */
 
   /**
