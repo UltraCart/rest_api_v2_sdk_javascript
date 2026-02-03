@@ -17,7 +17,7 @@ import ConversationPbxQueueMembers from './ConversationPbxQueueMembers';
 /**
  * The ConversationPbxQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxQueue
- * @version 4.1.56
+ * @version 4.1.57
  */
 class ConversationPbxQueue {
     /**
@@ -206,7 +206,7 @@ ConversationPbxQueue.prototype['no_agent_available_say'] = undefined;
 
 /**
  * The type of voice used to say text when no agent is available
- * @member {String} no_agent_available_say_voice
+ * @member {module:com.ultracart.admin.v2.models/ConversationPbxQueue.NoAgentAvailableSayVoiceEnum} no_agent_available_say_voice
  */
 ConversationPbxQueue.prototype['no_agent_available_say_voice'] = undefined;
 
@@ -230,7 +230,7 @@ ConversationPbxQueue.prototype['say'] = undefined;
 
 /**
  * The type of voice to use when say text is spoken
- * @member {String} say_voice
+ * @member {module:com.ultracart.admin.v2.models/ConversationPbxQueue.SayVoiceEnum} say_voice
  */
 ConversationPbxQueue.prototype['say_voice'] = undefined;
 
@@ -298,6 +298,48 @@ ConversationPbxQueue['AiPriorityEnum'] = {
      * @const
      */
     "backup": "backup"
+};
+
+
+/**
+ * Allowed values for the <code>no_agent_available_say_voice</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationPbxQueue['NoAgentAvailableSayVoiceEnum'] = {
+
+    /**
+     * value: "man"
+     * @const
+     */
+    "man": "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    "woman": "woman"
+};
+
+
+/**
+ * Allowed values for the <code>say_voice</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationPbxQueue['SayVoiceEnum'] = {
+
+    /**
+     * value: "man"
+     * @const
+     */
+    "man": "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    "woman": "woman"
 };
 
 

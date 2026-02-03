@@ -17,7 +17,7 @@ import ConversationPbxCallTranscript from './ConversationPbxCallTranscript';
 /**
  * The ConversationPbxCallRecording model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallRecording
- * @version 4.1.56
+ * @version 4.1.57
  */
 class ConversationPbxCallRecording {
     /**
@@ -57,6 +57,9 @@ class ConversationPbxCallRecording {
             if (data.hasOwnProperty('is_primary')) {
                 obj['is_primary'] = ApiClient.convertToType(data['is_primary'], 'Boolean');
             }
+            if (data.hasOwnProperty('recording_s3_key')) {
+                obj['recording_s3_key'] = ApiClient.convertToType(data['recording_s3_key'], 'String');
+            }
             if (data.hasOwnProperty('recording_sid')) {
                 obj['recording_sid'] = ApiClient.convertToType(data['recording_sid'], 'String');
             }
@@ -93,6 +96,12 @@ ConversationPbxCallRecording.prototype['duration_seconds'] = undefined;
  * @member {Boolean} is_primary
  */
 ConversationPbxCallRecording.prototype['is_primary'] = undefined;
+
+/**
+ * S3 key for the recording audio file
+ * @member {String} recording_s3_key
+ */
+ConversationPbxCallRecording.prototype['recording_s3_key'] = undefined;
 
 /**
  * Twilio recording SID

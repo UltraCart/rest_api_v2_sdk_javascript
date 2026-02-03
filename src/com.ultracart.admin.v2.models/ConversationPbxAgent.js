@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAgent
- * @version 4.1.56
+ * @version 4.1.57
  */
 class ConversationPbxAgent {
     /**
@@ -58,6 +58,9 @@ class ConversationPbxAgent {
             }
             if (data.hasOwnProperty('conversation_pbx_agent_uuid')) {
                 obj['conversation_pbx_agent_uuid'] = ApiClient.convertToType(data['conversation_pbx_agent_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('cos_uuid')) {
+                obj['cos_uuid'] = ApiClient.convertToType(data['cos_uuid'], 'String');
             }
             if (data.hasOwnProperty('default_phone_number_uuid')) {
                 obj['default_phone_number_uuid'] = ApiClient.convertToType(data['default_phone_number_uuid'], 'String');
@@ -139,6 +142,12 @@ ConversationPbxAgent.prototype['cellphone'] = undefined;
 ConversationPbxAgent.prototype['conversation_pbx_agent_uuid'] = undefined;
 
 /**
+ * Class of Service UUID. If null, the merchant default CoS applies.
+ * @member {String} cos_uuid
+ */
+ConversationPbxAgent.prototype['cos_uuid'] = undefined;
+
+/**
  * The default phone number that this agent should dial out to the PSTN with.
  * @member {String} default_phone_number_uuid
  */
@@ -218,7 +227,7 @@ ConversationPbxAgent.prototype['unavailable_say'] = undefined;
 
 /**
  * Unavailable say voice
- * @member {String} unavailable_say_voice
+ * @member {module:com.ultracart.admin.v2.models/ConversationPbxAgent.UnavailableSayVoiceEnum} unavailable_say_voice
  */
 ConversationPbxAgent.prototype['unavailable_say_voice'] = undefined;
 
@@ -262,6 +271,27 @@ ConversationPbxAgent['CallRoutingPreferenceEnum'] = {
      * @const
      */
     "cellphone": "cellphone"
+};
+
+
+/**
+ * Allowed values for the <code>unavailable_say_voice</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationPbxAgent['UnavailableSayVoiceEnum'] = {
+
+    /**
+     * value: "man"
+     * @const
+     */
+    "man": "man",
+
+    /**
+     * value: "woman"
+     * @const
+     */
+    "woman": "woman"
 };
 
 

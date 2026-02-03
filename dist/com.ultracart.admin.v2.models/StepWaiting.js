@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The StepWaiting model module.
  * @module com.ultracart.admin.v2.models/StepWaiting
- * @version 4.1.55
+ * @version 4.1.56
  */
 var StepWaiting = /*#__PURE__*/function () {
   /**

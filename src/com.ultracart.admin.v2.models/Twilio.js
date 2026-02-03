@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Twilio model module.
  * @module com.ultracart.admin.v2.models/Twilio
- * @version 4.1.56
+ * @version 4.1.57
  */
 class Twilio {
     /**
@@ -49,6 +49,9 @@ class Twilio {
 
             if (data.hasOwnProperty('account_sid')) {
                 obj['account_sid'] = ApiClient.convertToType(data['account_sid'], 'String');
+            }
+            if (data.hasOwnProperty('ai_twiml_app_sid')) {
+                obj['ai_twiml_app_sid'] = ApiClient.convertToType(data['ai_twiml_app_sid'], 'String');
             }
             if (data.hasOwnProperty('api_key_id')) {
                 obj['api_key_id'] = ApiClient.convertToType(data['api_key_id'], 'String');
@@ -85,6 +88,11 @@ class Twilio {
  * @member {String} account_sid
  */
 Twilio.prototype['account_sid'] = undefined;
+
+/**
+ * @member {String} ai_twiml_app_sid
+ */
+Twilio.prototype['ai_twiml_app_sid'] = undefined;
 
 /**
  * @member {String} api_key_id

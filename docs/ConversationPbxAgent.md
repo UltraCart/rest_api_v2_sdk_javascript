@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **call_routing_preference** | **String** | The call routing preference | [optional] 
 **cellphone** | **String** | Cellphone number of agent in E.164 format | [optional] 
 **conversation_pbx_agent_uuid** | **String** | Conversation Pbx Agent unique identifier | [optional] 
+**cos_uuid** | **String** | Class of Service UUID. If null, the merchant default CoS applies. | [optional] 
 **default_phone_number_uuid** | **String** | The default phone number that this agent should dial out to the PSTN with. | [optional] 
 **extension** | **Number** | Extension | [optional] 
 **full_name** | **String** | Full name | [optional] 
@@ -35,6 +36,17 @@ Name | Type | Description | Notes
 * `hardware_phone` (value: `"hardware_phone"`)
 
 * `cellphone` (value: `"cellphone"`)
+
+
+
+
+
+## Enum: UnavailableSayVoiceEnum
+
+
+* `man` (value: `"man"`)
+
+* `woman` (value: `"woman"`)
 
 
 

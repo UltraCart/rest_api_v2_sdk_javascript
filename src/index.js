@@ -227,6 +227,11 @@ import ConversationPbxCallTimeline from './com.ultracart.admin.v2.models/Convers
 import ConversationPbxCallTranscript from './com.ultracart.admin.v2.models/ConversationPbxCallTranscript';
 import ConversationPbxCallTranscriptSegment from './com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment';
 import ConversationPbxCallTransfer from './com.ultracart.admin.v2.models/ConversationPbxCallTransfer';
+import ConversationPbxClassOfService from './com.ultracart.admin.v2.models/ConversationPbxClassOfService';
+import ConversationPbxClassOfServiceResponse from './com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse';
+import ConversationPbxClassOfServicesResponse from './com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse';
+import ConversationPbxCosAuditLog from './com.ultracart.admin.v2.models/ConversationPbxCosAuditLog';
+import ConversationPbxCosAuditLogsResponse from './com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse';
 import ConversationPbxCustomerSnapshotRequest from './com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest';
 import ConversationPbxCustomerSnapshotResponse from './com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse';
 import ConversationPbxHardwarePhone from './com.ultracart.admin.v2.models/ConversationPbxHardwarePhone';
@@ -1002,7 +1007,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.56
+* @version 4.1.57
 */
 export {
     /**
@@ -2294,6 +2299,36 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationPbxCallTransfer}
      */
     ConversationPbxCallTransfer,
+
+    /**
+     * The ConversationPbxClassOfService model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxClassOfService}
+     */
+    ConversationPbxClassOfService,
+
+    /**
+     * The ConversationPbxClassOfServiceResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse}
+     */
+    ConversationPbxClassOfServiceResponse,
+
+    /**
+     * The ConversationPbxClassOfServicesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse}
+     */
+    ConversationPbxClassOfServicesResponse,
+
+    /**
+     * The ConversationPbxCosAuditLog model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxCosAuditLog}
+     */
+    ConversationPbxCosAuditLog,
+
+    /**
+     * The ConversationPbxCosAuditLogsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse}
+     */
+    ConversationPbxCosAuditLogsResponse,
 
     /**
      * The ConversationPbxCustomerSnapshotRequest model constructor.

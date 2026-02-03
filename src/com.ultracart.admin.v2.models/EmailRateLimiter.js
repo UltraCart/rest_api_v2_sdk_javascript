@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailRateLimiter model module.
  * @module com.ultracart.admin.v2.models/EmailRateLimiter
- * @version 4.1.56
+ * @version 4.1.57
  */
 class EmailRateLimiter {
     /**

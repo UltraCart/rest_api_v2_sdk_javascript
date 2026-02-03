@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemShippingCase model module.
  * @module com.ultracart.admin.v2.models/ItemShippingCase
- * @version 4.1.55
+ * @version 4.1.56
  */
 var ItemShippingCase = /*#__PURE__*/function () {
   /**
