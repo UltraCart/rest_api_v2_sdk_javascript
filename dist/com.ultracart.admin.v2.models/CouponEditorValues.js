@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponEditorValues model module.
  * @module com.ultracart.admin.v2.models/CouponEditorValues
- * @version 4.1.57
+ * @version 4.1.58
  */
 var CouponEditorValues = /*#__PURE__*/function () {
   /**

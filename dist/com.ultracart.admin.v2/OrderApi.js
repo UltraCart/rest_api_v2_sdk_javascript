@@ -27,6 +27,7 @@ var _OrderReplacement = _interopRequireDefault(require("../com.ultracart.admin.v
 var _OrderReplacementResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderReplacementResponse"));
 var _OrderResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderResponse"));
 var _OrderTokenResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderTokenResponse"));
+var _OrderUpsellCartRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderUpsellCartRequest"));
 var _OrderValidationRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderValidationRequest"));
 var _OrderValidationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderValidationResponse"));
 var _OrdersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrdersResponse"));
@@ -52,7 +53,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.57
+* @version 4.1.58
 */
 var OrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -684,6 +685,52 @@ var OrderApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrderEdiDocumentsResponse["default"];
       return this.apiClient.callApi('/order/orders/{order_id}/edi', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getOrderUpsellCart operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderUpsellCartCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Order Upsell Cart
+     * Creates a new cart using cloned information from the order, but with a specific set of items, coupons and optionally a checkout URL to return the customer to 
+     * @param {String} order_id The order id to base things on.
+     * @param {module:com.ultracart.admin.v2.models/OrderUpsellCartRequest} upsell_cart_request Request for the upsell cart
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderUpsellCartCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+  }, {
+    key: "getOrderUpsellCart",
+    value: function getOrderUpsellCart(order_id, upsell_cart_request, opts, callback) {
+      opts = opts || {};
+      var postBody = upsell_cart_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderUpsellCart");
+      }
+      // verify the required parameter 'upsell_cart_request' is set
+      if (upsell_cart_request === undefined || upsell_cart_request === null) {
+        throw new Error("Missing the required parameter 'upsell_cart_request' when calling getOrderUpsellCart");
+      }
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _OrderResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/upsell_with_cart', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

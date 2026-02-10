@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemKitDefinition model module.
  * @module com.ultracart.admin.v2.models/ItemKitDefinition
- * @version 4.1.57
+ * @version 4.1.58
  */
 var ItemKitDefinition = /*#__PURE__*/function () {
   /**

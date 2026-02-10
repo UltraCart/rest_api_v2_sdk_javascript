@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailStepStatRequest model module.
  * @module com.ultracart.admin.v2.models/EmailStepStatRequest
- * @version 4.1.57
+ * @version 4.1.58
  */
 var EmailStepStatRequest = /*#__PURE__*/function () {
   /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxQueue
- * @version 4.1.57
+ * @version 4.1.58
  */
 var ConversationPbxQueue = /*#__PURE__*/function () {
   /**

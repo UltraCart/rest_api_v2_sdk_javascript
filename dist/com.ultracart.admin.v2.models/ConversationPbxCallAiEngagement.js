@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCallAiEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallAiEngagement
- * @version 4.1.57
+ * @version 4.1.58
  */
 var ConversationPbxCallAiEngagement = /*#__PURE__*/function () {
   /**

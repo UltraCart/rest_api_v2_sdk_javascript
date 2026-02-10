@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkflowAgentAuth model module.
  * @module com.ultracart.admin.v2.models/WorkflowAgentAuth
- * @version 4.1.58
+ * @version 4.1.59
  */
 class WorkflowAgentAuth {
     /**

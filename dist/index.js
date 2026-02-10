@@ -3813,18 +3813,6 @@ Object.defineProperty(exports, "ItemInventorySnapshotResponse", {
     return _ItemInventorySnapshotResponse["default"];
   }
 });
-Object.defineProperty(exports, "ItemInventoryUpdate", {
-  enumerable: true,
-  get: function get() {
-    return _ItemInventoryUpdate["default"];
-  }
-});
-Object.defineProperty(exports, "ItemInventoryUpdateRequest", {
-  enumerable: true,
-  get: function get() {
-    return _ItemInventoryUpdateRequest["default"];
-  }
-});
 Object.defineProperty(exports, "ItemKitComponent", {
   enumerable: true,
   get: function get() {
@@ -4009,12 +3997,6 @@ Object.defineProperty(exports, "ItemShippingDistributionCenter", {
   enumerable: true,
   get: function get() {
     return _ItemShippingDistributionCenter["default"];
-  }
-});
-Object.defineProperty(exports, "ItemShippingDistributionCenterResponse", {
-  enumerable: true,
-  get: function get() {
-    return _ItemShippingDistributionCenterResponse["default"];
   }
 });
 Object.defineProperty(exports, "ItemShippingMethod", {
@@ -4657,6 +4639,12 @@ Object.defineProperty(exports, "OrderTransactionalMerchantNote", {
   enumerable: true,
   get: function get() {
     return _OrderTransactionalMerchantNote["default"];
+  }
+});
+Object.defineProperty(exports, "OrderUpsellCartRequest", {
+  enumerable: true,
+  get: function get() {
+    return _OrderUpsellCartRequest["default"];
   }
 });
 Object.defineProperty(exports, "OrderUtm", {
@@ -6410,8 +6398,6 @@ var _ItemInternal = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ItemInventorySnapshot = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshot"));
 var _ItemInventorySnapshotDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter"));
 var _ItemInventorySnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotResponse"));
-var _ItemInventoryUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdate"));
-var _ItemInventoryUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdateRequest"));
 var _ItemKitComponent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitComponent"));
 var _ItemKitDefinition = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitDefinition"));
 var _ItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemOption"));
@@ -6443,7 +6429,6 @@ var _ItemShippingCase = _interopRequireDefault(require("./com.ultracart.admin.v2
 var _ItemShippingDestinationMarkup = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationMarkup"));
 var _ItemShippingDestinationRestriction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationRestriction"));
 var _ItemShippingDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenter"));
-var _ItemShippingDistributionCenterResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse"));
 var _ItemShippingMethod = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingMethod"));
 var _ItemShippingPackageRequirement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingPackageRequirement"));
 var _ItemTag = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemTag"));
@@ -6549,6 +6534,7 @@ var _OrderTokenResponse = _interopRequireDefault(require("./com.ultracart.admin.
 var _OrderTrackingNumberDetail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderTrackingNumberDetail"));
 var _OrderTrackingNumberDetails = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderTrackingNumberDetails"));
 var _OrderTransactionalMerchantNote = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderTransactionalMerchantNote"));
+var _OrderUpsellCartRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderUpsellCartRequest"));
 var _OrderUtm = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderUtm"));
 var _OrderValidationRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderValidationRequest"));
 var _OrderValidationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderValidationResponse"));
