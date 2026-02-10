@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqPostcard model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqPostcard
-   * @version 3.11.57
+   * @version 3.11.58
    */
 
   /**
@@ -146,7 +146,7 @@
   exports.prototype.postcard_front_container_uuid = undefined;
 
   /**
-   * URL to screenshot of the back of the postcard
+   * URL to screenshot of the front of the postcard
    * @member {String} screenshot_back_url
    */
   exports.prototype.screenshot_back_url = undefined;
