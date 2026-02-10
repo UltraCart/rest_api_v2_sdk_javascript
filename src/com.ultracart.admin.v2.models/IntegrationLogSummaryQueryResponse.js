@@ -34,7 +34,7 @@
   /**
    * The IntegrationLogSummaryQueryResponse model module.
    * @module com.ultracart.admin.v2.models/IntegrationLogSummaryQueryResponse
-   * @version 3.11.58
+   * @version 3.11.59
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCallSearchResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse
-   * @version 3.11.58
+   * @version 3.11.59
    */
 
   /**

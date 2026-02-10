@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCallQueue model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCallQueue
-   * @version 3.11.58
+   * @version 3.11.59
    */
 
   /**
