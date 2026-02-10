@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Twilio model module.
  * @module com.ultracart.admin.v2.models/Twilio
- * @version 4.1.56
+ * @version 4.1.57
  */
 var Twilio = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,9 @@ var Twilio = /*#__PURE__*/function () {
         if (data.hasOwnProperty('account_sid')) {
           obj['account_sid'] = _ApiClient["default"].convertToType(data['account_sid'], 'String');
         }
+        if (data.hasOwnProperty('ai_twiml_app_sid')) {
+          obj['ai_twiml_app_sid'] = _ApiClient["default"].convertToType(data['ai_twiml_app_sid'], 'String');
+        }
         if (data.hasOwnProperty('api_key_id')) {
           obj['api_key_id'] = _ApiClient["default"].convertToType(data['api_key_id'], 'String');
         }
@@ -95,6 +98,11 @@ var Twilio = /*#__PURE__*/function () {
  * @member {String} account_sid
  */
 Twilio.prototype['account_sid'] = undefined;
+
+/**
+ * @member {String} ai_twiml_app_sid
+ */
+Twilio.prototype['ai_twiml_app_sid'] = undefined;
 
 /**
  * @member {String} api_key_id

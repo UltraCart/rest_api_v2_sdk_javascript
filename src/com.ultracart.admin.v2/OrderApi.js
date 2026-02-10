@@ -35,6 +35,7 @@ import OrderReplacement from '../com.ultracart.admin.v2.models/OrderReplacement'
 import OrderReplacementResponse from '../com.ultracart.admin.v2.models/OrderReplacementResponse';
 import OrderResponse from '../com.ultracart.admin.v2.models/OrderResponse';
 import OrderTokenResponse from '../com.ultracart.admin.v2.models/OrderTokenResponse';
+import OrderUpsellCartRequest from '../com.ultracart.admin.v2.models/OrderUpsellCartRequest';
 import OrderValidationRequest from '../com.ultracart.admin.v2.models/OrderValidationRequest';
 import OrderValidationResponse from '../com.ultracart.admin.v2.models/OrderValidationResponse';
 import OrdersResponse from '../com.ultracart.admin.v2.models/OrdersResponse';
@@ -43,7 +44,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.57
+* @version 4.1.58
 */
 export default class OrderApi {
 
@@ -781,6 +782,58 @@ export default class OrderApi {
       let returnType = OrderEdiDocumentsResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/edi', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrderUpsellCart operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderUpsellCartCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Order Upsell Cart
+     * Creates a new cart using cloned information from the order, but with a specific set of items, coupons and optionally a checkout URL to return the customer to 
+     * @param {String} order_id The order id to base things on.
+     * @param {module:com.ultracart.admin.v2.models/OrderUpsellCartRequest} upsell_cart_request Request for the upsell cart
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderUpsellCartCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    getOrderUpsellCart(order_id, upsell_cart_request, opts, callback) {
+      opts = opts || {};
+      let postBody = upsell_cart_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderUpsellCart");
+      }
+      // verify the required parameter 'upsell_cart_request' is set
+      if (upsell_cart_request === undefined || upsell_cart_request === null) {
+        throw new Error("Missing the required parameter 'upsell_cart_request' when calling getOrderUpsellCart");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = OrderResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/upsell_with_cart', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

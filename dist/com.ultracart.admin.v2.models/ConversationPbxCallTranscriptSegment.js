@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCallTranscriptSegment model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment
- * @version 4.1.56
+ * @version 4.1.57
  */
 var ConversationPbxCallTranscriptSegment = /*#__PURE__*/function () {
   /**

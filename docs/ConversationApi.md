@@ -3145,6 +3145,7 @@ let apiInstance = new ucApi.ConversationApi(apiClient);
 let opts = {
   'since': "since_example", // String | ISO timestamp to filter entries since
   'agent_login': "agent_login_example", // String | Filter by agent login
+  'action': "action_example", // String | Action
   'limit': 56 // Number | Maximum number of entries to return (default 100)
 };
 apiInstance.getPbxCosAuditLogs(opts, (error, data, response) => {
@@ -3165,6 +3166,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **since** | **String**| ISO timestamp to filter entries since | [optional] 
  **agent_login** | **String**| Filter by agent login | [optional] 
+ **action** | **String**| Action | [optional] 
  **limit** | **Number**| Maximum number of entries to return (default 100) | [optional] 
 
 ### Return type

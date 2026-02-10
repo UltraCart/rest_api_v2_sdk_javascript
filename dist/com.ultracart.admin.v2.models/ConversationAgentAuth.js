@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.56
+ * @version 4.1.57
  */
 var ConversationAgentAuth = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var ConversationAgentAuth = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('conversation_participant_name')) {
           obj['conversation_participant_name'] = _ApiClient["default"].convertToType(data['conversation_participant_name'], 'String');
+        }
+        if (data.hasOwnProperty('default_phone_number')) {
+          obj['default_phone_number'] = _ApiClient["default"].convertToType(data['default_phone_number'], 'String');
         }
         if (data.hasOwnProperty('group_ids')) {
           obj['group_ids'] = _ApiClient["default"].convertToType(data['group_ids'], ['Number']);
@@ -138,6 +141,12 @@ ConversationAgentAuth.prototype['conversation_participant_arn'] = undefined;
  * @member {String} conversation_participant_name
  */
 ConversationAgentAuth.prototype['conversation_participant_name'] = undefined;
+
+/**
+ * The default phone number this agent should use when making an outbound call.
+ * @member {String} default_phone_number
+ */
+ConversationAgentAuth.prototype['default_phone_number'] = undefined;
 
 /**
  * UltraCart Groups this user belongs to

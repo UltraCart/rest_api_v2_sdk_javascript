@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCallRecording model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallRecording
- * @version 4.1.56
+ * @version 4.1.57
  */
 var ConversationPbxCallRecording = /*#__PURE__*/function () {
   /**
@@ -69,6 +69,9 @@ var ConversationPbxCallRecording = /*#__PURE__*/function () {
         if (data.hasOwnProperty('is_primary')) {
           obj['is_primary'] = _ApiClient["default"].convertToType(data['is_primary'], 'Boolean');
         }
+        if (data.hasOwnProperty('recording_s3_key')) {
+          obj['recording_s3_key'] = _ApiClient["default"].convertToType(data['recording_s3_key'], 'String');
+        }
         if (data.hasOwnProperty('recording_sid')) {
           obj['recording_sid'] = _ApiClient["default"].convertToType(data['recording_sid'], 'String');
         }
@@ -103,6 +106,12 @@ ConversationPbxCallRecording.prototype['duration_seconds'] = undefined;
  * @member {Boolean} is_primary
  */
 ConversationPbxCallRecording.prototype['is_primary'] = undefined;
+
+/**
+ * S3 key for the recording audio file
+ * @member {String} recording_s3_key
+ */
+ConversationPbxCallRecording.prototype['recording_s3_key'] = undefined;
 
 /**
  * Twilio recording SID

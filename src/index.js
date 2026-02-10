@@ -635,8 +635,6 @@ import ItemInternal from './com.ultracart.admin.v2.models/ItemInternal';
 import ItemInventorySnapshot from './com.ultracart.admin.v2.models/ItemInventorySnapshot';
 import ItemInventorySnapshotDistributionCenter from './com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter';
 import ItemInventorySnapshotResponse from './com.ultracart.admin.v2.models/ItemInventorySnapshotResponse';
-import ItemInventoryUpdate from './com.ultracart.admin.v2.models/ItemInventoryUpdate';
-import ItemInventoryUpdateRequest from './com.ultracart.admin.v2.models/ItemInventoryUpdateRequest';
 import ItemKitComponent from './com.ultracart.admin.v2.models/ItemKitComponent';
 import ItemKitDefinition from './com.ultracart.admin.v2.models/ItemKitDefinition';
 import ItemOption from './com.ultracart.admin.v2.models/ItemOption';
@@ -668,7 +666,6 @@ import ItemShippingCase from './com.ultracart.admin.v2.models/ItemShippingCase';
 import ItemShippingDestinationMarkup from './com.ultracart.admin.v2.models/ItemShippingDestinationMarkup';
 import ItemShippingDestinationRestriction from './com.ultracart.admin.v2.models/ItemShippingDestinationRestriction';
 import ItemShippingDistributionCenter from './com.ultracart.admin.v2.models/ItemShippingDistributionCenter';
-import ItemShippingDistributionCenterResponse from './com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse';
 import ItemShippingMethod from './com.ultracart.admin.v2.models/ItemShippingMethod';
 import ItemShippingPackageRequirement from './com.ultracart.admin.v2.models/ItemShippingPackageRequirement';
 import ItemTag from './com.ultracart.admin.v2.models/ItemTag';
@@ -774,6 +771,7 @@ import OrderTokenResponse from './com.ultracart.admin.v2.models/OrderTokenRespon
 import OrderTrackingNumberDetail from './com.ultracart.admin.v2.models/OrderTrackingNumberDetail';
 import OrderTrackingNumberDetails from './com.ultracart.admin.v2.models/OrderTrackingNumberDetails';
 import OrderTransactionalMerchantNote from './com.ultracart.admin.v2.models/OrderTransactionalMerchantNote';
+import OrderUpsellCartRequest from './com.ultracart.admin.v2.models/OrderUpsellCartRequest';
 import OrderUtm from './com.ultracart.admin.v2.models/OrderUtm';
 import OrderValidationRequest from './com.ultracart.admin.v2.models/OrderValidationRequest';
 import OrderValidationResponse from './com.ultracart.admin.v2.models/OrderValidationResponse';
@@ -1007,7 +1005,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.57
+* @version 4.1.58
 */
 export {
     /**
@@ -4749,18 +4747,6 @@ export {
     ItemInventorySnapshotResponse,
 
     /**
-     * The ItemInventoryUpdate model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdate}
-     */
-    ItemInventoryUpdate,
-
-    /**
-     * The ItemInventoryUpdateRequest model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest}
-     */
-    ItemInventoryUpdateRequest,
-
-    /**
      * The ItemKitComponent model constructor.
      * @property {module:com.ultracart.admin.v2.models/ItemKitComponent}
      */
@@ -4945,12 +4931,6 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter}
      */
     ItemShippingDistributionCenter,
-
-    /**
-     * The ItemShippingDistributionCenterResponse model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse}
-     */
-    ItemShippingDistributionCenterResponse,
 
     /**
      * The ItemShippingMethod model constructor.
@@ -5581,6 +5561,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderTransactionalMerchantNote}
      */
     OrderTransactionalMerchantNote,
+
+    /**
+     * The OrderUpsellCartRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderUpsellCartRequest}
+     */
+    OrderUpsellCartRequest,
 
     /**
      * The OrderUtm model constructor.

@@ -1323,6 +1323,36 @@ Object.defineProperty(exports, "ConversationPbxCallTransfer", {
     return _ConversationPbxCallTransfer["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPbxClassOfService", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxClassOfService["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxClassOfServiceResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxClassOfServiceResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxClassOfServicesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxClassOfServicesResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCosAuditLog", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCosAuditLog["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxCosAuditLogsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCosAuditLogsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationPbxCustomerSnapshotRequest", {
   enumerable: true,
   get: function get() {
@@ -5972,6 +6002,11 @@ var _ConversationPbxCallTimeline = _interopRequireDefault(require("./com.ultraca
 var _ConversationPbxCallTranscript = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTranscript"));
 var _ConversationPbxCallTranscriptSegment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment"));
 var _ConversationPbxCallTransfer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTransfer"));
+var _ConversationPbxClassOfService = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxClassOfService"));
+var _ConversationPbxClassOfServiceResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse"));
+var _ConversationPbxClassOfServicesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse"));
+var _ConversationPbxCosAuditLog = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCosAuditLog"));
+var _ConversationPbxCosAuditLogsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse"));
 var _ConversationPbxCustomerSnapshotRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest"));
 var _ConversationPbxCustomerSnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse"));
 var _ConversationPbxHardwarePhone = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxHardwarePhone"));

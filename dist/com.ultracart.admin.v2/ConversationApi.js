@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _BaseResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/BaseResponse"));
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 var _ConversationAgentProfile = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfile"));
 var _ConversationAgentProfileResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfileResponse"));
@@ -50,6 +51,10 @@ var _ConversationPbxAvailablePhoneNumbersResponse = _interopRequireDefault(requi
 var _ConversationPbxCallResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallResponse"));
 var _ConversationPbxCallSearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallSearchRequest"));
 var _ConversationPbxCallSearchResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse"));
+var _ConversationPbxClassOfService = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxClassOfService"));
+var _ConversationPbxClassOfServiceResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse"));
+var _ConversationPbxClassOfServicesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse"));
+var _ConversationPbxCosAuditLogsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse"));
 var _ConversationPbxCustomerSnapshotRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest"));
 var _ConversationPbxCustomerSnapshotResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse"));
 var _ConversationPbxHardwarePhone = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxHardwarePhone"));
@@ -113,7 +118,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.56
+* @version 4.1.57
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -421,6 +426,42 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxAudioResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/audio/{conversationPbxAudioUuid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the deletePbxClassOfService operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deletePbxClassOfServiceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete pbx class of service
+     * Delete a class of service 
+     * @param {String} classOfServiceUuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deletePbxClassOfServiceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+  }, {
+    key: "deletePbxClassOfService",
+    value: function deletePbxClassOfService(classOfServiceUuid, callback) {
+      var postBody = null;
+      // verify the required parameter 'classOfServiceUuid' is set
+      if (classOfServiceUuid === undefined || classOfServiceUuid === null) {
+        throw new Error("Missing the required parameter 'classOfServiceUuid' when calling deletePbxClassOfService");
+      }
+      var pathParams = {
+        'classOfServiceUuid': classOfServiceUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _BaseResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/class_of_service/{classOfServiceUuid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1938,6 +1979,109 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getPbxClassOfService operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxClassOfServiceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx class of service
+     * Retrieve a single class of service 
+     * @param {String} classOfServiceUuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxClassOfServiceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse}
+     */
+  }, {
+    key: "getPbxClassOfService",
+    value: function getPbxClassOfService(classOfServiceUuid, callback) {
+      var postBody = null;
+      // verify the required parameter 'classOfServiceUuid' is set
+      if (classOfServiceUuid === undefined || classOfServiceUuid === null) {
+        throw new Error("Missing the required parameter 'classOfServiceUuid' when calling getPbxClassOfService");
+      }
+      var pathParams = {
+        'classOfServiceUuid': classOfServiceUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxClassOfServiceResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/class_of_service/{classOfServiceUuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getPbxClassesOfService operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxClassesOfServiceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx classes of service
+     * Retrieve all classes of service for the merchant 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxClassesOfServiceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse}
+     */
+  }, {
+    key: "getPbxClassesOfService",
+    value: function getPbxClassesOfService(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxClassOfServicesResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/class_of_service', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getPbxCosAuditLogs operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxCosAuditLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx class of service audit logs
+     * Retrieve audit log entries for class of service enforcement 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.since ISO timestamp to filter entries since
+     * @param {String} opts.agent_login Filter by agent login
+     * @param {Number} opts.limit Maximum number of entries to return (default 100)
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxCosAuditLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse}
+     */
+  }, {
+    key: "getPbxCosAuditLogs",
+    value: function getPbxCosAuditLogs(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {
+        'since': opts['since'],
+        'agent_login': opts['agent_login'],
+        'limit': opts['limit']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxCosAuditLogsResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/class_of_service/audit_log', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the getPbxHardwarePhone operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhoneCallback
      * @param {String} error Error message, if any.
@@ -2807,6 +2951,40 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxAudioResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/audio', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the insertPbxClassOfService operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertPbxClassOfServiceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert pbx class of service
+     * Create a new class of service 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxClassOfService} class_of_service Class of service
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertPbxClassOfServiceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse}
+     */
+  }, {
+    key: "insertPbxClassOfService",
+    value: function insertPbxClassOfService(class_of_service, callback) {
+      var postBody = class_of_service;
+      // verify the required parameter 'class_of_service' is set
+      if (class_of_service === undefined || class_of_service === null) {
+        throw new Error("Missing the required parameter 'class_of_service' when calling insertPbxClassOfService");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxClassOfServiceResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/class_of_service', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -3904,6 +4082,47 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxAudioResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/audio/{conversationPbxAudioUuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updatePbxClassOfService operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updatePbxClassOfServiceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update pbx class of service
+     * Update an existing class of service 
+     * @param {String} classOfServiceUuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxClassOfService} class_of_service Class of service
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updatePbxClassOfServiceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse}
+     */
+  }, {
+    key: "updatePbxClassOfService",
+    value: function updatePbxClassOfService(classOfServiceUuid, class_of_service, callback) {
+      var postBody = class_of_service;
+      // verify the required parameter 'classOfServiceUuid' is set
+      if (classOfServiceUuid === undefined || classOfServiceUuid === null) {
+        throw new Error("Missing the required parameter 'classOfServiceUuid' when calling updatePbxClassOfService");
+      }
+      // verify the required parameter 'class_of_service' is set
+      if (class_of_service === undefined || class_of_service === null) {
+        throw new Error("Missing the required parameter 'class_of_service' when calling updatePbxClassOfService");
+      }
+      var pathParams = {
+        'classOfServiceUuid': classOfServiceUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxClassOfServiceResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/class_of_service/{classOfServiceUuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

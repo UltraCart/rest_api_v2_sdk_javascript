@@ -109,7 +109,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.57
+* @version 4.1.58
 */
 export default class ConversationApi {
 
@@ -2451,6 +2451,7 @@ export default class ConversationApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.since ISO timestamp to filter entries since
      * @param {String} opts.agent_login Filter by agent login
+     * @param {String} opts.action Action
      * @param {Number} opts.limit Maximum number of entries to return (default 100)
      * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxCosAuditLogsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse}
@@ -2464,6 +2465,7 @@ export default class ConversationApi {
       let queryParams = {
         'since': opts['since'],
         'agent_login': opts['agent_login'],
+        'action': opts['action'],
         'limit': opts['limit']
       };
       let headerParams = {

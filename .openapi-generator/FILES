@@ -636,8 +636,6 @@ docs/ItemInternal.md
 docs/ItemInventorySnapshot.md
 docs/ItemInventorySnapshotDistributionCenter.md
 docs/ItemInventorySnapshotResponse.md
-docs/ItemInventoryUpdate.md
-docs/ItemInventoryUpdateRequest.md
 docs/ItemKitComponent.md
 docs/ItemKitDefinition.md
 docs/ItemOption.md
@@ -669,7 +667,6 @@ docs/ItemShippingCase.md
 docs/ItemShippingDestinationMarkup.md
 docs/ItemShippingDestinationRestriction.md
 docs/ItemShippingDistributionCenter.md
-docs/ItemShippingDistributionCenterResponse.md
 docs/ItemShippingMethod.md
 docs/ItemShippingPackageRequirement.md
 docs/ItemTag.md
@@ -777,6 +774,7 @@ docs/OrderTokenResponse.md
 docs/OrderTrackingNumberDetail.md
 docs/OrderTrackingNumberDetails.md
 docs/OrderTransactionalMerchantNote.md
+docs/OrderUpsellCartRequest.md
 docs/OrderUtm.md
 docs/OrderValidationRequest.md
 docs/OrderValidationResponse.md
@@ -1591,8 +1589,6 @@ src/com.ultracart.admin.v2.models/ItemInternal.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshot.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshotResponse.js
-src/com.ultracart.admin.v2.models/ItemInventoryUpdate.js
-src/com.ultracart.admin.v2.models/ItemInventoryUpdateRequest.js
 src/com.ultracart.admin.v2.models/ItemKitComponent.js
 src/com.ultracart.admin.v2.models/ItemKitDefinition.js
 src/com.ultracart.admin.v2.models/ItemOption.js
@@ -1624,7 +1620,6 @@ src/com.ultracart.admin.v2.models/ItemShippingCase.js
 src/com.ultracart.admin.v2.models/ItemShippingDestinationMarkup.js
 src/com.ultracart.admin.v2.models/ItemShippingDestinationRestriction.js
 src/com.ultracart.admin.v2.models/ItemShippingDistributionCenter.js
-src/com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse.js
 src/com.ultracart.admin.v2.models/ItemShippingMethod.js
 src/com.ultracart.admin.v2.models/ItemShippingPackageRequirement.js
 src/com.ultracart.admin.v2.models/ItemTag.js
@@ -1730,6 +1725,7 @@ src/com.ultracart.admin.v2.models/OrderTokenResponse.js
 src/com.ultracart.admin.v2.models/OrderTrackingNumberDetail.js
 src/com.ultracart.admin.v2.models/OrderTrackingNumberDetails.js
 src/com.ultracart.admin.v2.models/OrderTransactionalMerchantNote.js
+src/com.ultracart.admin.v2.models/OrderUpsellCartRequest.js
 src/com.ultracart.admin.v2.models/OrderUtm.js
 src/com.ultracart.admin.v2.models/OrderValidationRequest.js
 src/com.ultracart.admin.v2.models/OrderValidationResponse.js

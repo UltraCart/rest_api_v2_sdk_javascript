@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderReplacementResponse model module.
  * @module com.ultracart.admin.v2.models/OrderReplacementResponse
- * @version 4.1.56
+ * @version 4.1.57
  */
 var OrderReplacementResponse = /*#__PURE__*/function () {
   /**
