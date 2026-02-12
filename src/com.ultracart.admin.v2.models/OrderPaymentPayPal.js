@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderPaymentPayPal model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentPayPal
- * @version 4.1.59
+ * @version 4.1.60
  */
 class OrderPaymentPayPal {
     /**

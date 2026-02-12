@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCosAuditLog model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCosAuditLog
- * @version 4.1.58
+ * @version 4.1.59
  */
 var ConversationPbxCosAuditLog = /*#__PURE__*/function () {
   /**

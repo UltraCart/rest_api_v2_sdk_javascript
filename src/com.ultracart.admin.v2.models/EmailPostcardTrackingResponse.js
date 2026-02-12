@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailPostcardTrackingResponse model module.
  * @module com.ultracart.admin.v2.models/EmailPostcardTrackingResponse
- * @version 4.1.59
+ * @version 4.1.60
  */
 class EmailPostcardTrackingResponse {
     /**
