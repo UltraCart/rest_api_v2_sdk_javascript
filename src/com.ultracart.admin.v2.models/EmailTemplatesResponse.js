@@ -34,7 +34,7 @@
   /**
    * The EmailTemplatesResponse model module.
    * @module com.ultracart.admin.v2.models/EmailTemplatesResponse
-   * @version 3.11.60
+   * @version 3.11.61
    */
 
   /**

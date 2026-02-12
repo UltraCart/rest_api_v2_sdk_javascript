@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCosAuditLogsResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse
-   * @version 3.11.60
+   * @version 3.11.61
    */
 
   /**
