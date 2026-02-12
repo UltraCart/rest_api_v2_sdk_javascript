@@ -34,7 +34,7 @@
   /**
    * The CustomerMagicLinkResponse model module.
    * @module com.ultracart.admin.v2.models/CustomerMagicLinkResponse
-   * @version 3.11.61
+   * @version 3.11.62
    */
 
   /**

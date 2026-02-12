@@ -34,7 +34,7 @@
   /**
    * The ItemVariationOption model module.
    * @module com.ultracart.admin.v2.models/ItemVariationOption
-   * @version 3.11.61
+   * @version 3.11.62
    */
 
   /**

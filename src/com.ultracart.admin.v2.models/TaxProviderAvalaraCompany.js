@@ -34,7 +34,7 @@
   /**
    * The TaxProviderAvalaraCompany model module.
    * @module com.ultracart.admin.v2.models/TaxProviderAvalaraCompany
-   * @version 3.11.61
+   * @version 3.11.62
    */
 
   /**
