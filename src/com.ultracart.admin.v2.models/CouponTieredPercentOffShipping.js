@@ -17,7 +17,7 @@ import CouponTierPercent from './CouponTierPercent';
 /**
  * The CouponTieredPercentOffShipping model module.
  * @module com.ultracart.admin.v2.models/CouponTieredPercentOffShipping
- * @version 4.1.61
+ * @version 4.1.62
  */
 class CouponTieredPercentOffShipping {
     /**

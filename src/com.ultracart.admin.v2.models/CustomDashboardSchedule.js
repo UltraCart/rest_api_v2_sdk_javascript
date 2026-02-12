@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomDashboardSchedule model module.
  * @module com.ultracart.admin.v2.models/CustomDashboardSchedule
- * @version 4.1.61
+ * @version 4.1.62
  */
 class CustomDashboardSchedule {
     /**

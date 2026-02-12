@@ -17,7 +17,7 @@ import OrderTransactionalMerchantNote from './OrderTransactionalMerchantNote';
 /**
  * The OrderInternal model module.
  * @module com.ultracart.admin.v2.models/OrderInternal
- * @version 4.1.61
+ * @version 4.1.62
  */
 class OrderInternal {
     /**

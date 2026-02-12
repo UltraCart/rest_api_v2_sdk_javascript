@@ -17,7 +17,7 @@ import OrderPaymentCreditCardDualVaultedProperty from './OrderPaymentCreditCardD
 /**
  * The OrderPaymentCreditCardDualVaulted model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentCreditCardDualVaulted
- * @version 4.1.61
+ * @version 4.1.62
  */
 class OrderPaymentCreditCardDualVaulted {
     /**

@@ -17,7 +17,7 @@ import ExperimentVariation from './ExperimentVariation';
 /**
  * The Experiment model module.
  * @module com.ultracart.admin.v2.models/Experiment
- * @version 4.1.61
+ * @version 4.1.62
  */
 class Experiment {
     /**

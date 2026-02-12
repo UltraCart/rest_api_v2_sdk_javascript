@@ -17,7 +17,7 @@ import ReportDataSetRow from './ReportDataSetRow';
 /**
  * The ReportDataSetPage model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetPage
- * @version 4.1.61
+ * @version 4.1.62
  */
 class ReportDataSetPage {
     /**
