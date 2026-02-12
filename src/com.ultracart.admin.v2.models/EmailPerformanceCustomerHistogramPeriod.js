@@ -34,7 +34,7 @@
   /**
    * The EmailPerformanceCustomerHistogramPeriod model module.
    * @module com.ultracart.admin.v2.models/EmailPerformanceCustomerHistogramPeriod
-   * @version 3.11.62
+   * @version 3.11.63
    */
 
   /**

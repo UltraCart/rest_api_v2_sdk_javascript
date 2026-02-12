@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule', 'com.ultracart.admin.v2.models/AutoOrderItemOption', 'com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderAddonItem', 'com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule', 'com.ultracart.admin.v2.models/AutoOrderItemOption', 'com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule', 'com.ultracart.admin.v2.models/AutoOrderProperty'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AutoOrderItemFutureSchedule'), require('./AutoOrderItemOption'), require('./AutoOrderItemSimpleSchedule'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrderAddonItem'), require('./AutoOrderItemFutureSchedule'), require('./AutoOrderItemOption'), require('./AutoOrderItemSimpleSchedule'), require('./AutoOrderProperty'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderItemFutureSchedule, root.UltraCartRestApiV2.AutoOrderItemOption, root.UltraCartRestApiV2.AutoOrderItemSimpleSchedule);
+    root.UltraCartRestApiV2.AutoOrderItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderAddonItem, root.UltraCartRestApiV2.AutoOrderItemFutureSchedule, root.UltraCartRestApiV2.AutoOrderItemOption, root.UltraCartRestApiV2.AutoOrderItemSimpleSchedule, root.UltraCartRestApiV2.AutoOrderProperty);
   }
-}(this, function(ApiClient, AutoOrderItemFutureSchedule, AutoOrderItemOption, AutoOrderItemSimpleSchedule) {
+}(this, function(ApiClient, AutoOrderAddonItem, AutoOrderItemFutureSchedule, AutoOrderItemOption, AutoOrderItemSimpleSchedule, AutoOrderProperty) {
   'use strict';
 
   /**
    * The AutoOrderItem model module.
    * @module com.ultracart.admin.v2.models/AutoOrderItem
-   * @version 3.11.62
+   * @version 3.11.63
    */
 
   /**
@@ -55,6 +55,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('add_ons'))
+        obj.add_ons = ApiClient.convertToType(data['add_ons'], [AutoOrderAddonItem]);
       if (data.hasOwnProperty('arbitrary_item_id'))
         obj.arbitrary_item_id = ApiClient.convertToType(data['arbitrary_item_id'], 'String');
       if (data.hasOwnProperty('arbitrary_percentage_discount'))
@@ -105,6 +107,8 @@
         obj.paypal_recurring_payment_profile_id = ApiClient.convertToType(data['paypal_recurring_payment_profile_id'], 'String');
       if (data.hasOwnProperty('preshipment_notice_sent'))
         obj.preshipment_notice_sent = ApiClient.convertToType(data['preshipment_notice_sent'], 'Boolean');
+      if (data.hasOwnProperty('properties'))
+        obj.properties = ApiClient.convertToType(data['properties'], [AutoOrderProperty]);
       if (data.hasOwnProperty('rebill_value'))
         obj.rebill_value = ApiClient.convertToType(data['rebill_value'], 'Number');
       if (data.hasOwnProperty('remaining_repeat_count'))
@@ -114,6 +118,12 @@
     }
     return obj;
   }
+
+  /**
+   * Array of addon objects instructing which items to add to auto order and how many times they should be added.
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderAddonItem>} add_ons
+   */
+  exports.prototype.add_ons = undefined;
 
   /**
    * Arbitrary item id that should be rebilled instead of the normal schedule
@@ -264,6 +274,12 @@
    * @member {Boolean} preshipment_notice_sent
    */
   exports.prototype.preshipment_notice_sent = undefined;
+
+  /**
+   * Array of property objects
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderProperty>} properties
+   */
+  exports.prototype.properties = undefined;
 
   /**
    * The value of the rebills of this item

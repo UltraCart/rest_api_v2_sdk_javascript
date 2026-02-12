@@ -24,6 +24,8 @@ Method | HTTP request | Description
 [**getOrders**](OrderApi.md#getOrders) | **GET** /order/orders | Retrieve orders
 [**getOrdersBatch**](OrderApi.md#getOrdersBatch) | **POST** /order/orders/batch | Retrieve order batch
 [**getOrdersByQuery**](OrderApi.md#getOrdersByQuery) | **POST** /order/orders/query | Retrieve orders by query
+[**heldOrderAddItemsAndRelease**](OrderApi.md#heldOrderAddItemsAndRelease) | **PUT** /order/orders/{order_id}/hold/add_items_and_release | Add items and release a held order
+[**heldOrderRelease**](OrderApi.md#heldOrderRelease) | **PUT** /order/orders/{order_id}/hold/release | Release a held order
 [**insertOrder**](OrderApi.md#insertOrder) | **POST** /order/orders | Insert an order
 [**isRefundableOrder**](OrderApi.md#isRefundableOrder) | **GET** /order/orders/{order_id}/refundable | Determine if an order can be refunded
 [**processPayment**](OrderApi.md#processPayment) | **POST** /order/orders/{order_id}/process_payment | Process payment
@@ -1154,6 +1156,117 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="heldOrderAddItemsAndRelease"></a>
+# **heldOrderAddItemsAndRelease**
+> OrderResponse heldOrderAddItemsAndRelease(add_items_and_release_request, order_id, opts)
+
+Add items and release a held order
+
+This method adds items to an order in the hold stage and releases it 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+
+var add_items_and_release_request = new UltraCartRestApiV2.OrderAddItemsAndReleaseRequest(); // OrderAddItemsAndReleaseRequest | Add items and release request
+
+var order_id = "order_id_example"; // String | The order id to release.
+
+var opts = { 
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.heldOrderAddItemsAndRelease(add_items_and_release_request, order_id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **add_items_and_release_request** | [**OrderAddItemsAndReleaseRequest**](OrderAddItemsAndReleaseRequest.md)| Add items and release request | 
+ **order_id** | **String**| The order id to release. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**OrderResponse**](OrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="heldOrderRelease"></a>
+# **heldOrderRelease**
+> OrderResponse heldOrderRelease(order_id, opts)
+
+Release a held order
+
+This method releases an order from the hold stage 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.OrderApi();
+
+
+var order_id = "order_id_example"; // String | The order id to release.
+
+var opts = { 
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.heldOrderRelease(order_id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **String**| The order id to release. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**OrderResponse**](OrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
  - **Accept**: application/json
 
 <a name="insertOrder"></a>

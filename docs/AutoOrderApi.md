@@ -14,6 +14,9 @@ Method | HTTP request | Description
 [**getAutoOrdersByQuery**](AutoOrderApi.md#getAutoOrdersByQuery) | **POST** /auto_order/auto_orders/query | Retrieve auto orders by query
 [**pauseAutoOrder**](AutoOrderApi.md#pauseAutoOrder) | **PUT** /auto_order/auto_orders/{auto_order_oid}/pause | Pause auto order
 [**updateAutoOrder**](AutoOrderApi.md#updateAutoOrder) | **PUT** /auto_order/auto_orders/{auto_order_oid} | Update an auto order
+[**updateAutoOrderItemAddOns**](AutoOrderApi.md#updateAutoOrderItemAddOns) | **PUT** /auto_order/auto_orders/{auto_order_oid}/items/{auto_order_item_oid}/add_ons | Update an auto order item add ons
+[**updateAutoOrderItemProperties**](AutoOrderApi.md#updateAutoOrderItemProperties) | **PUT** /auto_order/auto_orders/{auto_order_oid}/items/{auto_order_item_oid}/properties | Update an auto order item properties
+[**updateAutoOrderProperties**](AutoOrderApi.md#updateAutoOrderProperties) | **PUT** /auto_order/auto_orders/{auto_order_oid}/properties | Update an auto order properties
 [**updateAutoOrdersBatch**](AutoOrderApi.md#updateAutoOrdersBatch) | **PUT** /auto_order/auto_orders/batch | Update multiple auto orders
 
 
@@ -600,6 +603,183 @@ Name | Type | Description  | Notes
  **auto_order** | [**AutoOrder**](AutoOrder.md)| Auto order to update | 
  **auto_order_oid** | **Number**| The auto order oid to update. | 
  **validate_original_order** | **String**| Validate original order before updating | [optional] 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateAutoOrderItemAddOns"></a>
+# **updateAutoOrderItemAddOns**
+> AutoOrderResponse updateAutoOrderItemAddOns(auto_order_add_ons_update_request, auto_order_oid, auto_order_item_oid, opts)
+
+Update an auto order item add ons
+
+Update an auto order item add ons.  Returns the auto order based upon expansion 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
+
+var auto_order_add_ons_update_request = new UltraCartRestApiV2.AutoOrderAddonItemsUpdateRequest(); // AutoOrderAddonItemsUpdateRequest | Auto order add ons update request
+
+var auto_order_oid = 56; // Number | The auto order oid to update.
+
+var auto_order_item_oid = 56; // Number | The auto order item oid to update.
+
+var opts = { 
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateAutoOrderItemAddOns(auto_order_add_ons_update_request, auto_order_oid, auto_order_item_oid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **auto_order_add_ons_update_request** | [**AutoOrderAddonItemsUpdateRequest**](AutoOrderAddonItemsUpdateRequest.md)| Auto order add ons update request | 
+ **auto_order_oid** | **Number**| The auto order oid to update. | 
+ **auto_order_item_oid** | **Number**| The auto order item oid to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateAutoOrderItemProperties"></a>
+# **updateAutoOrderItemProperties**
+> AutoOrderResponse updateAutoOrderItemProperties(auto_order_properties_update_request, auto_order_oid, auto_order_item_oid, opts)
+
+Update an auto order item properties
+
+Update an auto order item properties.  Returns the auto order based upon expansion 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
+
+var auto_order_properties_update_request = new UltraCartRestApiV2.AutoOrderPropertiesUpdateRequest(); // AutoOrderPropertiesUpdateRequest | Auto order property update request
+
+var auto_order_oid = 56; // Number | The auto order oid to update.
+
+var auto_order_item_oid = 56; // Number | The auto order item oid to update.
+
+var opts = { 
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateAutoOrderItemProperties(auto_order_properties_update_request, auto_order_oid, auto_order_item_oid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **auto_order_properties_update_request** | [**AutoOrderPropertiesUpdateRequest**](AutoOrderPropertiesUpdateRequest.md)| Auto order property update request | 
+ **auto_order_oid** | **Number**| The auto order oid to update. | 
+ **auto_order_item_oid** | **Number**| The auto order item oid to update. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=UTF-8
+ - **Accept**: application/json
+
+<a name="updateAutoOrderProperties"></a>
+# **updateAutoOrderProperties**
+> AutoOrderResponse updateAutoOrderProperties(auto_order_properties_update_request, auto_order_oid, opts)
+
+Update an auto order properties
+
+Update an auto order properties.  Returns the auto order based upon expansion 
+
+### Example
+```javascript
+var UltraCartRestApiV2 = require('ultra_cart_rest_api_v2');
+
+// Create a Simple Key: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/38688545/API+Simple+Key
+var simpleKey = "109ee846ee69f50177018ab12f008a00748a25aa28dbdc0177018ab12f008a00";
+UltraCartRestApiV2.ApiClient.usingApiKey(simpleKey, false)
+var apiInstance = new UltraCartRestApiV2.AutoOrderApi();
+
+
+var auto_order_properties_update_request = new UltraCartRestApiV2.AutoOrderPropertiesUpdateRequest(); // AutoOrderPropertiesUpdateRequest | Auto order property update request
+
+var auto_order_oid = 56; // Number | The auto order oid to update.
+
+var opts = { 
+  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateAutoOrderProperties(auto_order_properties_update_request, auto_order_oid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **auto_order_properties_update_request** | [**AutoOrderPropertiesUpdateRequest**](AutoOrderPropertiesUpdateRequest.md)| Auto order property update request | 
+ **auto_order_oid** | **Number**| The auto order oid to update. | 
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type

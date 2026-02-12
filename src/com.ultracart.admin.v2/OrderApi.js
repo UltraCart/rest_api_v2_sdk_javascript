@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfig', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse', 'com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest', 'com.ultracart.admin.v2.models/OrderByTokenQuery', 'com.ultracart.admin.v2.models/OrderEdiDocumentsResponse', 'com.ultracart.admin.v2.models/OrderFormat', 'com.ultracart.admin.v2.models/OrderFormatResponse', 'com.ultracart.admin.v2.models/OrderInvoiceResponse', 'com.ultracart.admin.v2.models/OrderPackingSlipResponse', 'com.ultracart.admin.v2.models/OrderProcessPaymentRequest', 'com.ultracart.admin.v2.models/OrderProcessPaymentResponse', 'com.ultracart.admin.v2.models/OrderQuery', 'com.ultracart.admin.v2.models/OrderQueryBatch', 'com.ultracart.admin.v2.models/OrderRefundableResponse', 'com.ultracart.admin.v2.models/OrderReplacement', 'com.ultracart.admin.v2.models/OrderReplacementResponse', 'com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.models/OrderTokenResponse', 'com.ultracart.admin.v2.models/OrderUpsellCartRequest', 'com.ultracart.admin.v2.models/OrderValidationRequest', 'com.ultracart.admin.v2.models/OrderValidationResponse', 'com.ultracart.admin.v2.models/OrdersResponse', 'com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfig', 'com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse', 'com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse', 'com.ultracart.admin.v2.models/BaseResponse', 'com.ultracart.admin.v2.models/ErrorResponse', 'com.ultracart.admin.v2.models/Order', 'com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest', 'com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest', 'com.ultracart.admin.v2.models/OrderByTokenQuery', 'com.ultracart.admin.v2.models/OrderEdiDocumentsResponse', 'com.ultracart.admin.v2.models/OrderFormat', 'com.ultracart.admin.v2.models/OrderFormatResponse', 'com.ultracart.admin.v2.models/OrderInvoiceResponse', 'com.ultracart.admin.v2.models/OrderPackingSlipResponse', 'com.ultracart.admin.v2.models/OrderProcessPaymentRequest', 'com.ultracart.admin.v2.models/OrderProcessPaymentResponse', 'com.ultracart.admin.v2.models/OrderQuery', 'com.ultracart.admin.v2.models/OrderQueryBatch', 'com.ultracart.admin.v2.models/OrderRefundableResponse', 'com.ultracart.admin.v2.models/OrderReplacement', 'com.ultracart.admin.v2.models/OrderReplacementResponse', 'com.ultracart.admin.v2.models/OrderResponse', 'com.ultracart.admin.v2.models/OrderTokenResponse', 'com.ultracart.admin.v2.models/OrderUpsellCartRequest', 'com.ultracart.admin.v2.models/OrderValidationRequest', 'com.ultracart.admin.v2.models/OrderValidationResponse', 'com.ultracart.admin.v2.models/OrdersResponse', 'com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfig'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Order'), require('../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest'), require('../com.ultracart.admin.v2.models/OrderByTokenQuery'), require('../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse'), require('../com.ultracart.admin.v2.models/OrderFormat'), require('../com.ultracart.admin.v2.models/OrderFormatResponse'), require('../com.ultracart.admin.v2.models/OrderInvoiceResponse'), require('../com.ultracart.admin.v2.models/OrderPackingSlipResponse'), require('../com.ultracart.admin.v2.models/OrderProcessPaymentRequest'), require('../com.ultracart.admin.v2.models/OrderProcessPaymentResponse'), require('../com.ultracart.admin.v2.models/OrderQuery'), require('../com.ultracart.admin.v2.models/OrderQueryBatch'), require('../com.ultracart.admin.v2.models/OrderRefundableResponse'), require('../com.ultracart.admin.v2.models/OrderReplacement'), require('../com.ultracart.admin.v2.models/OrderReplacementResponse'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/OrderTokenResponse'), require('../com.ultracart.admin.v2.models/OrderUpsellCartRequest'), require('../com.ultracart.admin.v2.models/OrderValidationRequest'), require('../com.ultracart.admin.v2.models/OrderValidationResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'), require('../com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest'));
+    module.exports = factory(require('../ApiClient'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfig'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse'), require('../com.ultracart.admin.v2.models/AccountsReceivableRetryStatsResponse'), require('../com.ultracart.admin.v2.models/BaseResponse'), require('../com.ultracart.admin.v2.models/ErrorResponse'), require('../com.ultracart.admin.v2.models/Order'), require('../com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest'), require('../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest'), require('../com.ultracart.admin.v2.models/OrderByTokenQuery'), require('../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse'), require('../com.ultracart.admin.v2.models/OrderFormat'), require('../com.ultracart.admin.v2.models/OrderFormatResponse'), require('../com.ultracart.admin.v2.models/OrderInvoiceResponse'), require('../com.ultracart.admin.v2.models/OrderPackingSlipResponse'), require('../com.ultracart.admin.v2.models/OrderProcessPaymentRequest'), require('../com.ultracart.admin.v2.models/OrderProcessPaymentResponse'), require('../com.ultracart.admin.v2.models/OrderQuery'), require('../com.ultracart.admin.v2.models/OrderQueryBatch'), require('../com.ultracart.admin.v2.models/OrderRefundableResponse'), require('../com.ultracart.admin.v2.models/OrderReplacement'), require('../com.ultracart.admin.v2.models/OrderReplacementResponse'), require('../com.ultracart.admin.v2.models/OrderResponse'), require('../com.ultracart.admin.v2.models/OrderTokenResponse'), require('../com.ultracart.admin.v2.models/OrderUpsellCartRequest'), require('../com.ultracart.admin.v2.models/OrderValidationRequest'), require('../com.ultracart.admin.v2.models/OrderValidationResponse'), require('../com.ultracart.admin.v2.models/OrdersResponse'), require('../com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AccountsReceivableRetryConfig, root.UltraCartRestApiV2.AccountsReceivableRetryConfigResponse, root.UltraCartRestApiV2.AccountsReceivableRetryStatsResponse, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Order, root.UltraCartRestApiV2.OrderAssignToAffiliateRequest, root.UltraCartRestApiV2.OrderByTokenQuery, root.UltraCartRestApiV2.OrderEdiDocumentsResponse, root.UltraCartRestApiV2.OrderFormat, root.UltraCartRestApiV2.OrderFormatResponse, root.UltraCartRestApiV2.OrderInvoiceResponse, root.UltraCartRestApiV2.OrderPackingSlipResponse, root.UltraCartRestApiV2.OrderProcessPaymentRequest, root.UltraCartRestApiV2.OrderProcessPaymentResponse, root.UltraCartRestApiV2.OrderQuery, root.UltraCartRestApiV2.OrderQueryBatch, root.UltraCartRestApiV2.OrderRefundableResponse, root.UltraCartRestApiV2.OrderReplacement, root.UltraCartRestApiV2.OrderReplacementResponse, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.OrderTokenResponse, root.UltraCartRestApiV2.OrderUpsellCartRequest, root.UltraCartRestApiV2.OrderValidationRequest, root.UltraCartRestApiV2.OrderValidationResponse, root.UltraCartRestApiV2.OrdersResponse, root.UltraCartRestApiV2.ReplaceOrderItemIdRequest);
+    root.UltraCartRestApiV2.OrderApi = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AccountsReceivableRetryConfig, root.UltraCartRestApiV2.AccountsReceivableRetryConfigResponse, root.UltraCartRestApiV2.AccountsReceivableRetryStatsResponse, root.UltraCartRestApiV2.BaseResponse, root.UltraCartRestApiV2.ErrorResponse, root.UltraCartRestApiV2.Order, root.UltraCartRestApiV2.OrderAddItemsAndReleaseRequest, root.UltraCartRestApiV2.OrderAssignToAffiliateRequest, root.UltraCartRestApiV2.OrderByTokenQuery, root.UltraCartRestApiV2.OrderEdiDocumentsResponse, root.UltraCartRestApiV2.OrderFormat, root.UltraCartRestApiV2.OrderFormatResponse, root.UltraCartRestApiV2.OrderInvoiceResponse, root.UltraCartRestApiV2.OrderPackingSlipResponse, root.UltraCartRestApiV2.OrderProcessPaymentRequest, root.UltraCartRestApiV2.OrderProcessPaymentResponse, root.UltraCartRestApiV2.OrderQuery, root.UltraCartRestApiV2.OrderQueryBatch, root.UltraCartRestApiV2.OrderRefundableResponse, root.UltraCartRestApiV2.OrderReplacement, root.UltraCartRestApiV2.OrderReplacementResponse, root.UltraCartRestApiV2.OrderResponse, root.UltraCartRestApiV2.OrderTokenResponse, root.UltraCartRestApiV2.OrderUpsellCartRequest, root.UltraCartRestApiV2.OrderValidationRequest, root.UltraCartRestApiV2.OrderValidationResponse, root.UltraCartRestApiV2.OrdersResponse, root.UltraCartRestApiV2.ReplaceOrderItemIdRequest);
   }
-}(this, function(ApiClient, AccountsReceivableRetryConfig, AccountsReceivableRetryConfigResponse, AccountsReceivableRetryStatsResponse, BaseResponse, ErrorResponse, Order, OrderAssignToAffiliateRequest, OrderByTokenQuery, OrderEdiDocumentsResponse, OrderFormat, OrderFormatResponse, OrderInvoiceResponse, OrderPackingSlipResponse, OrderProcessPaymentRequest, OrderProcessPaymentResponse, OrderQuery, OrderQueryBatch, OrderRefundableResponse, OrderReplacement, OrderReplacementResponse, OrderResponse, OrderTokenResponse, OrderUpsellCartRequest, OrderValidationRequest, OrderValidationResponse, OrdersResponse, ReplaceOrderItemIdRequest) {
+}(this, function(ApiClient, AccountsReceivableRetryConfig, AccountsReceivableRetryConfigResponse, AccountsReceivableRetryStatsResponse, BaseResponse, ErrorResponse, Order, OrderAddItemsAndReleaseRequest, OrderAssignToAffiliateRequest, OrderByTokenQuery, OrderEdiDocumentsResponse, OrderFormat, OrderFormatResponse, OrderInvoiceResponse, OrderPackingSlipResponse, OrderProcessPaymentRequest, OrderProcessPaymentResponse, OrderQuery, OrderQueryBatch, OrderRefundableResponse, OrderReplacement, OrderReplacementResponse, OrderResponse, OrderTokenResponse, OrderUpsellCartRequest, OrderValidationRequest, OrderValidationResponse, OrdersResponse, ReplaceOrderItemIdRequest) {
   'use strict';
 
   /**
    * Order service.
    * @module com.ultracart.admin.v2/OrderApi
-   * @version 3.11.62
+   * @version 3.11.63
    */
 
   /**
@@ -1123,6 +1123,116 @@
 
       return this.apiClient.callApi(
         '/order/orders/query', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the heldOrderAddItemsAndRelease operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~heldOrderAddItemsAndReleaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add items and release a held order
+     * This method adds items to an order in the hold stage and releases it 
+     * @param {module:com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest} add_items_and_release_request Add items and release request
+     * @param {String} order_id The order id to release.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~heldOrderAddItemsAndReleaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.heldOrderAddItemsAndRelease = function(add_items_and_release_request, order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = add_items_and_release_request;
+
+      // verify the required parameter 'add_items_and_release_request' is set
+      if (add_items_and_release_request === undefined || add_items_and_release_request === null) {
+        throw new Error("Missing the required parameter 'add_items_and_release_request' when calling heldOrderAddItemsAndRelease");
+      }
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling heldOrderAddItemsAndRelease");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/hold/add_items_and_release', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the heldOrderRelease operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~heldOrderReleaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Release a held order
+     * This method releases an order from the hold stage 
+     * @param {String} order_id The order id to release.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~heldOrderReleaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    this.heldOrderRelease = function(order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling heldOrderRelease");
+      }
+
+
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = OrderResponse;
+
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/hold/release', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

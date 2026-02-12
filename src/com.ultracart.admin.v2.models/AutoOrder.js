@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderAddonItem', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/AutoOrderLog', 'com.ultracart.admin.v2.models/AutoOrderManagement', 'com.ultracart.admin.v2.models/Order'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/AutoOrderAddonItem', 'com.ultracart.admin.v2.models/AutoOrderItem', 'com.ultracart.admin.v2.models/AutoOrderLog', 'com.ultracart.admin.v2.models/AutoOrderManagement', 'com.ultracart.admin.v2.models/AutoOrderProperty', 'com.ultracart.admin.v2.models/Order'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AutoOrderAddonItem'), require('./AutoOrderItem'), require('./AutoOrderLog'), require('./AutoOrderManagement'), require('./Order'));
+    module.exports = factory(require('../ApiClient'), require('./AutoOrderAddonItem'), require('./AutoOrderItem'), require('./AutoOrderLog'), require('./AutoOrderManagement'), require('./AutoOrderProperty'), require('./Order'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderAddonItem, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.AutoOrderLog, root.UltraCartRestApiV2.AutoOrderManagement, root.UltraCartRestApiV2.Order);
+    root.UltraCartRestApiV2.AutoOrder = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.AutoOrderAddonItem, root.UltraCartRestApiV2.AutoOrderItem, root.UltraCartRestApiV2.AutoOrderLog, root.UltraCartRestApiV2.AutoOrderManagement, root.UltraCartRestApiV2.AutoOrderProperty, root.UltraCartRestApiV2.Order);
   }
-}(this, function(ApiClient, AutoOrderAddonItem, AutoOrderItem, AutoOrderLog, AutoOrderManagement, Order) {
+}(this, function(ApiClient, AutoOrderAddonItem, AutoOrderItem, AutoOrderLog, AutoOrderManagement, AutoOrderProperty, Order) {
   'use strict';
 
   /**
    * The AutoOrder model module.
    * @module com.ultracart.admin.v2.models/AutoOrder
-   * @version 3.11.62
+   * @version 3.11.63
    */
 
   /**
@@ -103,6 +103,8 @@
         obj.original_order_id = ApiClient.convertToType(data['original_order_id'], 'String');
       if (data.hasOwnProperty('override_affiliate_id'))
         obj.override_affiliate_id = ApiClient.convertToType(data['override_affiliate_id'], 'Number');
+      if (data.hasOwnProperty('properties'))
+        obj.properties = ApiClient.convertToType(data['properties'], [AutoOrderProperty]);
       if (data.hasOwnProperty('rebill_orders'))
         obj.rebill_orders = ApiClient.convertToType(data['rebill_orders'], [Order]);
       if (data.hasOwnProperty('rotating_transaction_gateway_code'))
@@ -254,6 +256,12 @@
    * @member {Number} override_affiliate_id
    */
   exports.prototype.override_affiliate_id = undefined;
+
+  /**
+   * Array of property objects
+   * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderProperty>} properties
+   */
+  exports.prototype.properties = undefined;
 
   /**
    * Rebill orders that have taken place on this auto order

@@ -34,7 +34,7 @@
   /**
    * The ItemShipping model module.
    * @module com.ultracart.admin.v2.models/ItemShipping
-   * @version 3.11.62
+   * @version 3.11.63
    */
 
   /**
@@ -139,6 +139,8 @@
         obj.restrict_shipment_on_tuesday = ApiClient.convertToType(data['restrict_shipment_on_tuesday'], 'Boolean');
       if (data.hasOwnProperty('restrict_shipment_on_wednesday'))
         obj.restrict_shipment_on_wednesday = ApiClient.convertToType(data['restrict_shipment_on_wednesday'], 'Boolean');
+      if (data.hasOwnProperty('send_to_hold_before_fulfillment'))
+        obj.send_to_hold_before_fulfillment = ApiClient.convertToType(data['send_to_hold_before_fulfillment'], 'Boolean');
       if (data.hasOwnProperty('ship_separately'))
         obj.ship_separately = ApiClient.convertToType(data['ship_separately'], 'Boolean');
       if (data.hasOwnProperty('ship_separately_additional_weight'))
@@ -410,6 +412,12 @@
    * @member {Boolean} restrict_shipment_on_wednesday
    */
   exports.prototype.restrict_shipment_on_wednesday = undefined;
+
+  /**
+   * Send order to hold stage before fulfillment
+   * @member {Boolean} send_to_hold_before_fulfillment
+   */
+  exports.prototype.send_to_hold_before_fulfillment = undefined;
 
   /**
    * Ship this item in a separate box
