@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhookReflow model module.
  * @module com.ultracart.admin.v2.models/WebhookReflow
- * @version 4.1.60
+ * @version 4.1.61
  */
 class WebhookReflow {
     /**
