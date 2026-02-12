@@ -28,6 +28,7 @@ docs/ApplyLibraryItemResponse.md
 docs/AutoOrder.md
 docs/AutoOrderAddonItem.md
 docs/AutoOrderAddonItemOption.md
+docs/AutoOrderAddonItemsUpdateRequest.md
 docs/AutoOrderApi.md
 docs/AutoOrderConsolidate.md
 docs/AutoOrderItem.md
@@ -36,6 +37,8 @@ docs/AutoOrderItemOption.md
 docs/AutoOrderItemSimpleSchedule.md
 docs/AutoOrderLog.md
 docs/AutoOrderManagement.md
+docs/AutoOrderPropertiesUpdateRequest.md
+docs/AutoOrderProperty.md
 docs/AutoOrderQuery.md
 docs/AutoOrderQueryBatch.md
 docs/AutoOrderResponse.md
@@ -636,6 +639,8 @@ docs/ItemInternal.md
 docs/ItemInventorySnapshot.md
 docs/ItemInventorySnapshotDistributionCenter.md
 docs/ItemInventorySnapshotResponse.md
+docs/ItemInventoryUpdate.md
+docs/ItemInventoryUpdateRequest.md
 docs/ItemKitComponent.md
 docs/ItemKitDefinition.md
 docs/ItemOption.md
@@ -667,6 +672,7 @@ docs/ItemShippingCase.md
 docs/ItemShippingDestinationMarkup.md
 docs/ItemShippingDestinationRestriction.md
 docs/ItemShippingDistributionCenter.md
+docs/ItemShippingDistributionCenterResponse.md
 docs/ItemShippingMethod.md
 docs/ItemShippingPackageRequirement.md
 docs/ItemTag.md
@@ -705,6 +711,7 @@ docs/OauthApi.md
 docs/OauthRevokeSuccessResponse.md
 docs/OauthTokenResponse.md
 docs/Order.md
+docs/OrderAddItemsAndReleaseRequest.md
 docs/OrderAffiliate.md
 docs/OrderAffiliateLedger.md
 docs/OrderApi.md
@@ -992,6 +999,7 @@ src/com.ultracart.admin.v2.models/ApplyLibraryItemResponse.js
 src/com.ultracart.admin.v2.models/AutoOrder.js
 src/com.ultracart.admin.v2.models/AutoOrderAddonItem.js
 src/com.ultracart.admin.v2.models/AutoOrderAddonItemOption.js
+src/com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest.js
 src/com.ultracart.admin.v2.models/AutoOrderConsolidate.js
 src/com.ultracart.admin.v2.models/AutoOrderItem.js
 src/com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule.js
@@ -999,6 +1007,8 @@ src/com.ultracart.admin.v2.models/AutoOrderItemOption.js
 src/com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule.js
 src/com.ultracart.admin.v2.models/AutoOrderLog.js
 src/com.ultracart.admin.v2.models/AutoOrderManagement.js
+src/com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest.js
+src/com.ultracart.admin.v2.models/AutoOrderProperty.js
 src/com.ultracart.admin.v2.models/AutoOrderQuery.js
 src/com.ultracart.admin.v2.models/AutoOrderQueryBatch.js
 src/com.ultracart.admin.v2.models/AutoOrderResponse.js
@@ -1589,6 +1599,8 @@ src/com.ultracart.admin.v2.models/ItemInternal.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshot.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshotResponse.js
+src/com.ultracart.admin.v2.models/ItemInventoryUpdate.js
+src/com.ultracart.admin.v2.models/ItemInventoryUpdateRequest.js
 src/com.ultracart.admin.v2.models/ItemKitComponent.js
 src/com.ultracart.admin.v2.models/ItemKitDefinition.js
 src/com.ultracart.admin.v2.models/ItemOption.js
@@ -1620,6 +1632,7 @@ src/com.ultracart.admin.v2.models/ItemShippingCase.js
 src/com.ultracart.admin.v2.models/ItemShippingDestinationMarkup.js
 src/com.ultracart.admin.v2.models/ItemShippingDestinationRestriction.js
 src/com.ultracart.admin.v2.models/ItemShippingDistributionCenter.js
+src/com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse.js
 src/com.ultracart.admin.v2.models/ItemShippingMethod.js
 src/com.ultracart.admin.v2.models/ItemShippingPackageRequirement.js
 src/com.ultracart.admin.v2.models/ItemTag.js
@@ -1657,6 +1670,7 @@ src/com.ultracart.admin.v2.models/Notification.js
 src/com.ultracart.admin.v2.models/OauthRevokeSuccessResponse.js
 src/com.ultracart.admin.v2.models/OauthTokenResponse.js
 src/com.ultracart.admin.v2.models/Order.js
+src/com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest.js
 src/com.ultracart.admin.v2.models/OrderAffiliate.js
 src/com.ultracart.admin.v2.models/OrderAffiliateLedger.js
 src/com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest.js

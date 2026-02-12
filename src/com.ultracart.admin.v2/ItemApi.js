@@ -20,10 +20,13 @@ import ItemDigitalItem from '../com.ultracart.admin.v2.models/ItemDigitalItem';
 import ItemDigitalItemResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemResponse';
 import ItemDigitalItemsResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemsResponse';
 import ItemInventorySnapshotResponse from '../com.ultracart.admin.v2.models/ItemInventorySnapshotResponse';
+import ItemInventoryUpdateRequest from '../com.ultracart.admin.v2.models/ItemInventoryUpdateRequest';
 import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
 import ItemReview from '../com.ultracart.admin.v2.models/ItemReview';
 import ItemReviewResponse from '../com.ultracart.admin.v2.models/ItemReviewResponse';
 import ItemReviewsResponse from '../com.ultracart.admin.v2.models/ItemReviewsResponse';
+import ItemShippingDistributionCenter from '../com.ultracart.admin.v2.models/ItemShippingDistributionCenter';
+import ItemShippingDistributionCenterResponse from '../com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse';
 import ItemsRequest from '../com.ultracart.admin.v2.models/ItemsRequest';
 import ItemsResponse from '../com.ultracart.admin.v2.models/ItemsResponse';
 import PricingTiersResponse from '../com.ultracart.admin.v2.models/PricingTiersResponse';
@@ -32,7 +35,7 @@ import TempMultimediaResponse from '../com.ultracart.admin.v2.models/TempMultime
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.1.62
+* @version 4.1.63
 */
 export default class ItemApi {
 
@@ -447,6 +450,61 @@ export default class ItemApi {
       let returnType = ItemResponse;
       return this.apiClient.callApi(
         '/item/items/merchant_item_id/{merchant_item_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getItemShippingDistributionCenterByCode operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getItemShippingDistributionCenterByCodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an item shipping distribution center
+     * Retrieve an item shipping distribution center. 
+     * @param {Number} merchant_item_oid The item oid to retrieve.
+     * @param {String} distribution_center_code 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
+     * @param {module:com.ultracart.admin.v2/ItemApi~getItemShippingDistributionCenterByCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse}
+     */
+    getItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling getItemShippingDistributionCenterByCode");
+      }
+      // verify the required parameter 'distribution_center_code' is set
+      if (distribution_center_code === undefined || distribution_center_code === null) {
+        throw new Error("Missing the required parameter 'distribution_center_code' when calling getItemShippingDistributionCenterByCode");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid,
+        'distribution_center_code': distribution_center_code
+      };
+      let queryParams = {
+        '_expand': opts['_expand'],
+        '_placeholders': opts['_placeholders']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ItemShippingDistributionCenterResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -973,6 +1031,100 @@ export default class ItemApi {
       let returnType = ItemResponse;
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateItemInventories operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update item inventories for a distribution center
+     * Update item inventories for a distribution center 
+     * @param {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest} item_inventory_update_request Item inventory updates
+     * @param {module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    updateItemInventories(item_inventory_update_request, callback) {
+      let postBody = item_inventory_update_request;
+      // verify the required parameter 'item_inventory_update_request' is set
+      if (item_inventory_update_request === undefined || item_inventory_update_request === null) {
+        throw new Error("Missing the required parameter 'item_inventory_update_request' when calling updateItemInventories");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/item/items/update_item_inventories', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateItemShippingDistributionCenterByCode operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~updateItemShippingDistributionCenterByCodeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update an item shipping distribution center
+     * Update an item shipping distribution center 
+     * @param {Number} merchant_item_oid The item oid to update.
+     * @param {String} distribution_center_code 
+     * @param {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter} item_shipping_distribution_center Item shipping distribution center
+     * @param {module:com.ultracart.admin.v2/ItemApi~updateItemShippingDistributionCenterByCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    updateItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, item_shipping_distribution_center, callback) {
+      let postBody = item_shipping_distribution_center;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling updateItemShippingDistributionCenterByCode");
+      }
+      // verify the required parameter 'distribution_center_code' is set
+      if (distribution_center_code === undefined || distribution_center_code === null) {
+        throw new Error("Missing the required parameter 'distribution_center_code' when calling updateItemShippingDistributionCenterByCode");
+      }
+      // verify the required parameter 'item_shipping_distribution_center' is set
+      if (item_shipping_distribution_center === undefined || item_shipping_distribution_center === null) {
+        throw new Error("Missing the required parameter 'item_shipping_distribution_center' when calling updateItemShippingDistributionCenterByCode");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid,
+        'distribution_center_code': distribution_center_code
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

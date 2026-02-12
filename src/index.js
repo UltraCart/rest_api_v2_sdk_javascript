@@ -38,6 +38,7 @@ import ApplyLibraryItemResponse from './com.ultracart.admin.v2.models/ApplyLibra
 import AutoOrder from './com.ultracart.admin.v2.models/AutoOrder';
 import AutoOrderAddonItem from './com.ultracart.admin.v2.models/AutoOrderAddonItem';
 import AutoOrderAddonItemOption from './com.ultracart.admin.v2.models/AutoOrderAddonItemOption';
+import AutoOrderAddonItemsUpdateRequest from './com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest';
 import AutoOrderConsolidate from './com.ultracart.admin.v2.models/AutoOrderConsolidate';
 import AutoOrderItem from './com.ultracart.admin.v2.models/AutoOrderItem';
 import AutoOrderItemFutureSchedule from './com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule';
@@ -45,6 +46,8 @@ import AutoOrderItemOption from './com.ultracart.admin.v2.models/AutoOrderItemOp
 import AutoOrderItemSimpleSchedule from './com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule';
 import AutoOrderLog from './com.ultracart.admin.v2.models/AutoOrderLog';
 import AutoOrderManagement from './com.ultracart.admin.v2.models/AutoOrderManagement';
+import AutoOrderPropertiesUpdateRequest from './com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest';
+import AutoOrderProperty from './com.ultracart.admin.v2.models/AutoOrderProperty';
 import AutoOrderQuery from './com.ultracart.admin.v2.models/AutoOrderQuery';
 import AutoOrderQueryBatch from './com.ultracart.admin.v2.models/AutoOrderQueryBatch';
 import AutoOrderResponse from './com.ultracart.admin.v2.models/AutoOrderResponse';
@@ -635,6 +638,8 @@ import ItemInternal from './com.ultracart.admin.v2.models/ItemInternal';
 import ItemInventorySnapshot from './com.ultracart.admin.v2.models/ItemInventorySnapshot';
 import ItemInventorySnapshotDistributionCenter from './com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter';
 import ItemInventorySnapshotResponse from './com.ultracart.admin.v2.models/ItemInventorySnapshotResponse';
+import ItemInventoryUpdate from './com.ultracart.admin.v2.models/ItemInventoryUpdate';
+import ItemInventoryUpdateRequest from './com.ultracart.admin.v2.models/ItemInventoryUpdateRequest';
 import ItemKitComponent from './com.ultracart.admin.v2.models/ItemKitComponent';
 import ItemKitDefinition from './com.ultracart.admin.v2.models/ItemKitDefinition';
 import ItemOption from './com.ultracart.admin.v2.models/ItemOption';
@@ -666,6 +671,7 @@ import ItemShippingCase from './com.ultracart.admin.v2.models/ItemShippingCase';
 import ItemShippingDestinationMarkup from './com.ultracart.admin.v2.models/ItemShippingDestinationMarkup';
 import ItemShippingDestinationRestriction from './com.ultracart.admin.v2.models/ItemShippingDestinationRestriction';
 import ItemShippingDistributionCenter from './com.ultracart.admin.v2.models/ItemShippingDistributionCenter';
+import ItemShippingDistributionCenterResponse from './com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse';
 import ItemShippingMethod from './com.ultracart.admin.v2.models/ItemShippingMethod';
 import ItemShippingPackageRequirement from './com.ultracart.admin.v2.models/ItemShippingPackageRequirement';
 import ItemTag from './com.ultracart.admin.v2.models/ItemTag';
@@ -703,6 +709,7 @@ import Notification from './com.ultracart.admin.v2.models/Notification';
 import OauthRevokeSuccessResponse from './com.ultracart.admin.v2.models/OauthRevokeSuccessResponse';
 import OauthTokenResponse from './com.ultracart.admin.v2.models/OauthTokenResponse';
 import Order from './com.ultracart.admin.v2.models/Order';
+import OrderAddItemsAndReleaseRequest from './com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest';
 import OrderAffiliate from './com.ultracart.admin.v2.models/OrderAffiliate';
 import OrderAffiliateLedger from './com.ultracart.admin.v2.models/OrderAffiliateLedger';
 import OrderAssignToAffiliateRequest from './com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
@@ -1005,7 +1012,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.62
+* @version 4.1.63
 */
 export {
     /**
@@ -1165,6 +1172,12 @@ export {
     AutoOrderAddonItemOption,
 
     /**
+     * The AutoOrderAddonItemsUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest}
+     */
+    AutoOrderAddonItemsUpdateRequest,
+
+    /**
      * The AutoOrderConsolidate model constructor.
      * @property {module:com.ultracart.admin.v2.models/AutoOrderConsolidate}
      */
@@ -1205,6 +1218,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AutoOrderManagement}
      */
     AutoOrderManagement,
+
+    /**
+     * The AutoOrderPropertiesUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest}
+     */
+    AutoOrderPropertiesUpdateRequest,
+
+    /**
+     * The AutoOrderProperty model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderProperty}
+     */
+    AutoOrderProperty,
 
     /**
      * The AutoOrderQuery model constructor.
@@ -4747,6 +4772,18 @@ export {
     ItemInventorySnapshotResponse,
 
     /**
+     * The ItemInventoryUpdate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdate}
+     */
+    ItemInventoryUpdate,
+
+    /**
+     * The ItemInventoryUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest}
+     */
+    ItemInventoryUpdateRequest,
+
+    /**
      * The ItemKitComponent model constructor.
      * @property {module:com.ultracart.admin.v2.models/ItemKitComponent}
      */
@@ -4931,6 +4968,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter}
      */
     ItemShippingDistributionCenter,
+
+    /**
+     * The ItemShippingDistributionCenterResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse}
+     */
+    ItemShippingDistributionCenterResponse,
 
     /**
      * The ItemShippingMethod model constructor.
@@ -5153,6 +5196,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/Order}
      */
     Order,
+
+    /**
+     * The OrderAddItemsAndReleaseRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest}
+     */
+    OrderAddItemsAndReleaseRequest,
 
     /**
      * The OrderAffiliate model constructor.

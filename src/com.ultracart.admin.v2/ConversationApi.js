@@ -105,11 +105,12 @@ import ConversationWebchatQueueStatusUpdateRequest from '../com.ultracart.admin.
 import ConversationWebchatQueueStatusesResponse from '../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse';
 import ConversationsResponse from '../com.ultracart.admin.v2.models/ConversationsResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
+import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.62
+* @version 4.1.63
 */
 export default class ConversationApi {
 
@@ -1474,6 +1475,49 @@ export default class ConversationApi {
       let returnType = ConversationEngagementsResponse;
       return this.apiClient.callApi(
         '/conversation/engagements', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationItemVariations operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationItemVariationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an item with sparse variations populated
+     * Retrieve an item with sparse variations populated 
+     * @param {String} merchant_item_id 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationItemVariationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemResponse}
+     */
+    getConversationItemVariations(merchant_item_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'merchant_item_id' is set
+      if (merchant_item_id === undefined || merchant_item_id === null) {
+        throw new Error("Missing the required parameter 'merchant_item_id' when calling getConversationItemVariations");
+      }
+
+      let pathParams = {
+        'merchant_item_id': merchant_item_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ItemResponse;
+      return this.apiClient.callApi(
+        '/conversation/items/{merchant_item_id}/variations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

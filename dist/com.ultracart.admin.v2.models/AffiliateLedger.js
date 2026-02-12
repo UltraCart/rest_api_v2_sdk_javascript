@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateLedger model module.
  * @module com.ultracart.admin.v2.models/AffiliateLedger
- * @version 4.1.59
+ * @version 4.1.62
  */
 var AffiliateLedger = /*#__PURE__*/function () {
   /**

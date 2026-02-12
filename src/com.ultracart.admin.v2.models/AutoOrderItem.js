@@ -12,14 +12,16 @@
  */
 
 import ApiClient from '../ApiClient';
+import AutoOrderAddonItem from './AutoOrderAddonItem';
 import AutoOrderItemFutureSchedule from './AutoOrderItemFutureSchedule';
 import AutoOrderItemOption from './AutoOrderItemOption';
 import AutoOrderItemSimpleSchedule from './AutoOrderItemSimpleSchedule';
+import AutoOrderProperty from './AutoOrderProperty';
 
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.1.62
+ * @version 4.1.63
  */
 class AutoOrderItem {
     /**
@@ -50,6 +52,9 @@ class AutoOrderItem {
         if (data) {
             obj = obj || new AutoOrderItem();
 
+            if (data.hasOwnProperty('add_ons')) {
+                obj['add_ons'] = ApiClient.convertToType(data['add_ons'], [AutoOrderAddonItem]);
+            }
             if (data.hasOwnProperty('arbitrary_item_id')) {
                 obj['arbitrary_item_id'] = ApiClient.convertToType(data['arbitrary_item_id'], 'String');
             }
@@ -125,6 +130,9 @@ class AutoOrderItem {
             if (data.hasOwnProperty('preshipment_notice_sent')) {
                 obj['preshipment_notice_sent'] = ApiClient.convertToType(data['preshipment_notice_sent'], 'Boolean');
             }
+            if (data.hasOwnProperty('properties')) {
+                obj['properties'] = ApiClient.convertToType(data['properties'], [AutoOrderProperty]);
+            }
             if (data.hasOwnProperty('rebill_value')) {
                 obj['rebill_value'] = ApiClient.convertToType(data['rebill_value'], 'Number');
             }
@@ -140,6 +148,12 @@ class AutoOrderItem {
 
 
 }
+
+/**
+ * Array of addon objects instructing which items to add to auto order and how many times they should be added.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderAddonItem>} add_ons
+ */
+AutoOrderItem.prototype['add_ons'] = undefined;
 
 /**
  * Arbitrary item id that should be rebilled instead of the normal schedule
@@ -290,6 +304,12 @@ AutoOrderItem.prototype['paypal_recurring_payment_profile_id'] = undefined;
  * @member {Boolean} preshipment_notice_sent
  */
 AutoOrderItem.prototype['preshipment_notice_sent'] = undefined;
+
+/**
+ * Array of property objects
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderProperty>} properties
+ */
+AutoOrderItem.prototype['properties'] = undefined;
 
 /**
  * The value of the rebills of this item

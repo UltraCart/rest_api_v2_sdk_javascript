@@ -19,6 +19,7 @@ import AccountsReceivableRetryStatsResponse from '../com.ultracart.admin.v2.mode
 import BaseResponse from '../com.ultracart.admin.v2.models/BaseResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Order from '../com.ultracart.admin.v2.models/Order';
+import OrderAddItemsAndReleaseRequest from '../com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest';
 import OrderAssignToAffiliateRequest from '../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
 import OrderEdiDocumentsResponse from '../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
@@ -44,7 +45,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.62
+* @version 4.1.63
 */
 export default class OrderApi {
 
@@ -1033,6 +1034,105 @@ export default class OrderApi {
       let returnType = OrdersResponse;
       return this.apiClient.callApi(
         '/order/orders/query', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the heldOrderAddItemsAndRelease operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~heldOrderAddItemsAndReleaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add items and release a held order
+     * This method adds items to an order in the hold stage and releases it 
+     * @param {String} order_id The order id to release.
+     * @param {module:com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest} add_items_and_release_request Add items and release request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~heldOrderAddItemsAndReleaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    heldOrderAddItemsAndRelease(order_id, add_items_and_release_request, opts, callback) {
+      opts = opts || {};
+      let postBody = add_items_and_release_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling heldOrderAddItemsAndRelease");
+      }
+      // verify the required parameter 'add_items_and_release_request' is set
+      if (add_items_and_release_request === undefined || add_items_and_release_request === null) {
+        throw new Error("Missing the required parameter 'add_items_and_release_request' when calling heldOrderAddItemsAndRelease");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = OrderResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/hold/add_items_and_release', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the heldOrderRelease operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~heldOrderReleaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Release a held order
+     * This method releases an order from the hold stage 
+     * @param {String} order_id The order id to release.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~heldOrderReleaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    heldOrderRelease(order_id, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling heldOrderRelease");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/hold/release', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

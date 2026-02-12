@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxClassOfServicesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse
- * @version 4.1.59
+ * @version 4.1.62
  */
 var ConversationPbxClassOfServicesResponse = /*#__PURE__*/function () {
   /**

@@ -16,12 +16,13 @@ import AutoOrderAddonItem from './AutoOrderAddonItem';
 import AutoOrderItem from './AutoOrderItem';
 import AutoOrderLog from './AutoOrderLog';
 import AutoOrderManagement from './AutoOrderManagement';
+import AutoOrderProperty from './AutoOrderProperty';
 import Order from './Order';
 
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.1.62
+ * @version 4.1.63
  */
 class AutoOrder {
     /**
@@ -123,6 +124,9 @@ class AutoOrder {
             }
             if (data.hasOwnProperty('override_affiliate_id')) {
                 obj['override_affiliate_id'] = ApiClient.convertToType(data['override_affiliate_id'], 'Number');
+            }
+            if (data.hasOwnProperty('properties')) {
+                obj['properties'] = ApiClient.convertToType(data['properties'], [AutoOrderProperty]);
             }
             if (data.hasOwnProperty('rebill_orders')) {
                 obj['rebill_orders'] = ApiClient.convertToType(data['rebill_orders'], [Order]);
@@ -281,6 +285,12 @@ AutoOrder.prototype['original_order_id'] = undefined;
  * @member {Number} override_affiliate_id
  */
 AutoOrder.prototype['override_affiliate_id'] = undefined;
+
+/**
+ * Array of property objects
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderProperty>} properties
+ */
+AutoOrder.prototype['properties'] = undefined;
 
 /**
  * Rebill orders that have taken place on this auto order

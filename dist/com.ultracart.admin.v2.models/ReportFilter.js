@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportFilter model module.
  * @module com.ultracart.admin.v2.models/ReportFilter
- * @version 4.1.59
+ * @version 4.1.62
  */
 var ReportFilter = /*#__PURE__*/function () {
   /**
