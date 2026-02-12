@@ -34,7 +34,7 @@
   /**
    * The EmailOrder model module.
    * @module com.ultracart.admin.v2.models/EmailOrder
-   * @version 3.11.59
+   * @version 3.11.60
    */
 
   /**

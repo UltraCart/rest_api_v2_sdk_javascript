@@ -34,7 +34,7 @@
   /**
    * The RulerValidationRequest model module.
    * @module com.ultracart.admin.v2.models/RulerValidationRequest
-   * @version 3.11.59
+   * @version 3.11.60
    */
 
   /**
