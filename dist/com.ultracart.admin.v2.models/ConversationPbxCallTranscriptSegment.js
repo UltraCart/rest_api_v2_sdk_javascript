@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCallTranscriptSegment model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment
- * @version 4.1.63
+ * @version 4.1.64
  */
 var ConversationPbxCallTranscriptSegment = /*#__PURE__*/function () {
   /**
@@ -139,9 +139,9 @@ ConversationPbxCallTranscriptSegment['SpeakerEnum'] = {
    */
   "customer": "customer",
   /**
-   * value: " agent"
+   * value: "agent"
    * @const
    */
-  " agent": " agent"
+  "agent": "agent"
 };
 var _default = exports["default"] = ConversationPbxCallTranscriptSegment;

@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import ItemContentMultimedia from './ItemContentMultimedia';
+import ItemPricing from './ItemPricing';
 
 /**
  * The ItemVariantItem model module.
  * @module com.ultracart.admin.v2.models/ItemVariantItem
- * @version 4.1.64
+ * @version 4.1.65
  */
 class ItemVariantItem {
     /**
@@ -63,6 +64,9 @@ class ItemVariantItem {
             if (data.hasOwnProperty('variant_merchant_item_oid')) {
                 obj['variant_merchant_item_oid'] = ApiClient.convertToType(data['variant_merchant_item_oid'], 'Number');
             }
+            if (data.hasOwnProperty('variant_pricing')) {
+                obj['variant_pricing'] = ItemPricing.constructFromObject(data['variant_pricing']);
+            }
             if (data.hasOwnProperty('variation_options')) {
                 obj['variation_options'] = ApiClient.convertToType(data['variation_options'], ['String']);
             }
@@ -104,6 +108,11 @@ ItemVariantItem.prototype['variant_merchant_item_id'] = undefined;
  * @member {Number} variant_merchant_item_oid
  */
 ItemVariantItem.prototype['variant_merchant_item_oid'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ItemPricing} variant_pricing
+ */
+ItemVariantItem.prototype['variant_pricing'] = undefined;
 
 /**
  * Variation options

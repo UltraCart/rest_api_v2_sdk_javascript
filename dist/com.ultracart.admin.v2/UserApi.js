@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * User service.
 * @module com.ultracart.admin.v2/UserApi
-* @version 4.1.63
+* @version 4.1.64
 */
 var UserApi = exports["default"] = /*#__PURE__*/function () {
   /**

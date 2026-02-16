@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _ItemContentMultimedia = _interopRequireDefault(require("./ItemContentMultimedia"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -26,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemVariantItem model module.
  * @module com.ultracart.admin.v2.models/ItemVariantItem
- * @version 4.1.63
+ * @version 4.1.64
  */
 var ItemVariantItem = /*#__PURE__*/function () {
   /**
@@ -65,6 +66,9 @@ var ItemVariantItem = /*#__PURE__*/function () {
         if (data.hasOwnProperty('merchant_item_multimedia_oid')) {
           obj['merchant_item_multimedia_oid'] = _ApiClient["default"].convertToType(data['merchant_item_multimedia_oid'], 'Number');
         }
+        if (data.hasOwnProperty('variant_default_multimedia')) {
+          obj['variant_default_multimedia'] = _ItemContentMultimedia["default"].constructFromObject(data['variant_default_multimedia']);
+        }
         if (data.hasOwnProperty('variant_merchant_item_id')) {
           obj['variant_merchant_item_id'] = _ApiClient["default"].convertToType(data['variant_merchant_item_id'], 'String');
         }
@@ -93,6 +97,11 @@ ItemVariantItem.prototype['description'] = undefined;
  * @member {Number} merchant_item_multimedia_oid
  */
 ItemVariantItem.prototype['merchant_item_multimedia_oid'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ItemContentMultimedia} variant_default_multimedia
+ */
+ItemVariantItem.prototype['variant_default_multimedia'] = undefined;
 
 /**
  * Variant item id

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponFreeShippingWithSubtotal model module.
  * @module com.ultracart.admin.v2.models/CouponFreeShippingWithSubtotal
- * @version 4.1.63
+ * @version 4.1.64
  */
 var CouponFreeShippingWithSubtotal = /*#__PURE__*/function () {
   /**

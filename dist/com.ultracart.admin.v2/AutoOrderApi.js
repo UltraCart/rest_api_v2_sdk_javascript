@@ -36,7 +36,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.63
+* @version 4.1.64
 */
 var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   /**

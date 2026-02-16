@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerQuery model module.
  * @module com.ultracart.admin.v2.models/CustomerQuery
- * @version 4.1.63
+ * @version 4.1.64
  */
 var CustomerQuery = /*#__PURE__*/function () {
   /**
