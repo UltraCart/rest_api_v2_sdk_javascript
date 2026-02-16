@@ -34,7 +34,7 @@
   /**
    * The ConversationCannedMessageResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationCannedMessageResponse
-   * @version 3.11.63
+   * @version 3.11.64
    */
 
   /**

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 * `customer` (value: `"customer"`)
 
-* `_agent` (value: `" agent"`)
+* `agent` (value: `"agent"`)
 
 
 

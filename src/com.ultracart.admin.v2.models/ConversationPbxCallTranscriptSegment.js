@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCallTranscriptSegment model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment
-   * @version 3.11.63
+   * @version 3.11.64
    */
 
   /**
@@ -129,10 +129,10 @@
     customer: "customer",
 
     /**
-     * value: " agent"
+     * value: "agent"
      * @const
      */
-    _agent: " agent"
+    agent: "agent"
   };
 
   return exports;

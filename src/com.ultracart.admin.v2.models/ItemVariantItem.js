@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ItemContentMultimedia'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ItemContentMultimedia'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemVariantItem = factory(root.UltraCartRestApiV2.ApiClient);
+    root.UltraCartRestApiV2.ItemVariantItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ItemContentMultimedia);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ItemContentMultimedia) {
   'use strict';
 
   /**
    * The ItemVariantItem model module.
    * @module com.ultracart.admin.v2.models/ItemVariantItem
-   * @version 3.11.63
+   * @version 3.11.64
    */
 
   /**
@@ -59,6 +59,8 @@
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('merchant_item_multimedia_oid'))
         obj.merchant_item_multimedia_oid = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
+      if (data.hasOwnProperty('variant_default_multimedia'))
+        obj.variant_default_multimedia = ItemContentMultimedia.constructFromObject(data['variant_default_multimedia']);
       if (data.hasOwnProperty('variant_merchant_item_id'))
         obj.variant_merchant_item_id = ApiClient.convertToType(data['variant_merchant_item_id'], 'String');
       if (data.hasOwnProperty('variant_merchant_item_oid'))
@@ -82,6 +84,11 @@
    * @member {Number} merchant_item_multimedia_oid
    */
   exports.prototype.merchant_item_multimedia_oid = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ItemContentMultimedia} variant_default_multimedia
+   */
+  exports.prototype.variant_default_multimedia = undefined;
 
   /**
    * Variant item id

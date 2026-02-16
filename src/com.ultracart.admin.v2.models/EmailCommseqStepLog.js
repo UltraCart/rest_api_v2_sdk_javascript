@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqStepLog model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqStepLog
-   * @version 3.11.63
+   * @version 3.11.64
    */
 
   /**
