@@ -34,7 +34,7 @@
   /**
    * The AutoOrderPropertiesUpdateRequest model module.
    * @module com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest
-   * @version 3.11.64
+   * @version 3.11.65
    */
 
   /**

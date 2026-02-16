@@ -17,24 +17,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'com.ultracart.admin.v2.models/ItemContentMultimedia'], factory);
+    define(['ApiClient', 'com.ultracart.admin.v2.models/ItemContentMultimedia', 'com.ultracart.admin.v2.models/ItemPricing'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ItemContentMultimedia'));
+    module.exports = factory(require('../ApiClient'), require('./ItemContentMultimedia'), require('./ItemPricing'));
   } else {
     // Browser globals (root is window)
     if (!root.UltraCartRestApiV2) {
       root.UltraCartRestApiV2 = {};
     }
-    root.UltraCartRestApiV2.ItemVariantItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ItemContentMultimedia);
+    root.UltraCartRestApiV2.ItemVariantItem = factory(root.UltraCartRestApiV2.ApiClient, root.UltraCartRestApiV2.ItemContentMultimedia, root.UltraCartRestApiV2.ItemPricing);
   }
-}(this, function(ApiClient, ItemContentMultimedia) {
+}(this, function(ApiClient, ItemContentMultimedia, ItemPricing) {
   'use strict';
 
   /**
    * The ItemVariantItem model module.
    * @module com.ultracart.admin.v2.models/ItemVariantItem
-   * @version 3.11.64
+   * @version 3.11.65
    */
 
   /**
@@ -65,6 +65,8 @@
         obj.variant_merchant_item_id = ApiClient.convertToType(data['variant_merchant_item_id'], 'String');
       if (data.hasOwnProperty('variant_merchant_item_oid'))
         obj.variant_merchant_item_oid = ApiClient.convertToType(data['variant_merchant_item_oid'], 'Number');
+      if (data.hasOwnProperty('variant_pricing'))
+        obj.variant_pricing = ItemPricing.constructFromObject(data['variant_pricing']);
       if (data.hasOwnProperty('variation_options'))
         obj.variation_options = ApiClient.convertToType(data['variation_options'], ['String']);
       if (data.hasOwnProperty('variations'))
@@ -101,6 +103,11 @@
    * @member {Number} variant_merchant_item_oid
    */
   exports.prototype.variant_merchant_item_oid = undefined;
+
+  /**
+   * @member {module:com.ultracart.admin.v2.models/ItemPricing} variant_pricing
+   */
+  exports.prototype.variant_pricing = undefined;
 
   /**
    * Variation options
