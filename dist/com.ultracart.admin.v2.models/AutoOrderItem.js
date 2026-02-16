@@ -5,9 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _AutoOrderAddonItem = _interopRequireDefault(require("./AutoOrderAddonItem"));
 var _AutoOrderItemFutureSchedule = _interopRequireDefault(require("./AutoOrderItemFutureSchedule"));
 var _AutoOrderItemOption = _interopRequireDefault(require("./AutoOrderItemOption"));
 var _AutoOrderItemSimpleSchedule = _interopRequireDefault(require("./AutoOrderItemSimpleSchedule"));
+var _AutoOrderProperty = _interopRequireDefault(require("./AutoOrderProperty"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -29,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.1.62
+ * @version 4.1.63
  */
 var AutoOrderItem = /*#__PURE__*/function () {
   /**
@@ -62,6 +64,9 @@ var AutoOrderItem = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new AutoOrderItem();
+        if (data.hasOwnProperty('add_ons')) {
+          obj['add_ons'] = _ApiClient["default"].convertToType(data['add_ons'], [_AutoOrderAddonItem["default"]]);
+        }
         if (data.hasOwnProperty('arbitrary_item_id')) {
           obj['arbitrary_item_id'] = _ApiClient["default"].convertToType(data['arbitrary_item_id'], 'String');
         }
@@ -137,6 +142,9 @@ var AutoOrderItem = /*#__PURE__*/function () {
         if (data.hasOwnProperty('preshipment_notice_sent')) {
           obj['preshipment_notice_sent'] = _ApiClient["default"].convertToType(data['preshipment_notice_sent'], 'Boolean');
         }
+        if (data.hasOwnProperty('properties')) {
+          obj['properties'] = _ApiClient["default"].convertToType(data['properties'], [_AutoOrderProperty["default"]]);
+        }
         if (data.hasOwnProperty('rebill_value')) {
           obj['rebill_value'] = _ApiClient["default"].convertToType(data['rebill_value'], 'Number');
         }
@@ -151,6 +159,12 @@ var AutoOrderItem = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Array of addon objects instructing which items to add to auto order and how many times they should be added.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderAddonItem>} add_ons
+ */
+AutoOrderItem.prototype['add_ons'] = undefined;
+
 /**
  * Arbitrary item id that should be rebilled instead of the normal schedule
  * @member {String} arbitrary_item_id
@@ -300,6 +314,12 @@ AutoOrderItem.prototype['paypal_recurring_payment_profile_id'] = undefined;
  * @member {Boolean} preshipment_notice_sent
  */
 AutoOrderItem.prototype['preshipment_notice_sent'] = undefined;
+
+/**
+ * Array of property objects
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderProperty>} properties
+ */
+AutoOrderItem.prototype['properties'] = undefined;
 
 /**
  * The value of the rebills of this item

@@ -11,6 +11,7 @@ var _AccountsReceivableRetryStatsResponse = _interopRequireDefault(require("../c
 var _BaseResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/BaseResponse"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
 var _Order = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Order"));
+var _OrderAddItemsAndReleaseRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest"));
 var _OrderAssignToAffiliateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest"));
 var _OrderByTokenQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderByTokenQuery"));
 var _OrderEdiDocumentsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse"));
@@ -53,7 +54,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.62
+* @version 4.1.63
 */
 var OrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -909,6 +910,93 @@ var OrderApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrdersResponse["default"];
       return this.apiClient.callApi('/order/orders/query', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the heldOrderAddItemsAndRelease operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~heldOrderAddItemsAndReleaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add items and release a held order
+     * This method adds items to an order in the hold stage and releases it 
+     * @param {String} order_id The order id to release.
+     * @param {module:com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest} add_items_and_release_request Add items and release request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~heldOrderAddItemsAndReleaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+  }, {
+    key: "heldOrderAddItemsAndRelease",
+    value: function heldOrderAddItemsAndRelease(order_id, add_items_and_release_request, opts, callback) {
+      opts = opts || {};
+      var postBody = add_items_and_release_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling heldOrderAddItemsAndRelease");
+      }
+      // verify the required parameter 'add_items_and_release_request' is set
+      if (add_items_and_release_request === undefined || add_items_and_release_request === null) {
+        throw new Error("Missing the required parameter 'add_items_and_release_request' when calling heldOrderAddItemsAndRelease");
+      }
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _OrderResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/hold/add_items_and_release', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the heldOrderRelease operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~heldOrderReleaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Release a held order
+     * This method releases an order from the hold stage 
+     * @param {String} order_id The order id to release.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~heldOrderReleaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+  }, {
+    key: "heldOrderRelease",
+    value: function heldOrderRelease(order_id, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling heldOrderRelease");
+      }
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _OrderResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/hold/release', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

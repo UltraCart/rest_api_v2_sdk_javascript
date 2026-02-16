@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ItemContentMultimedia from './ItemContentMultimedia';
 
 /**
  * The ItemVariantItem model module.
  * @module com.ultracart.admin.v2.models/ItemVariantItem
- * @version 4.1.63
+ * @version 4.1.64
  */
 class ItemVariantItem {
     /**
@@ -53,6 +54,9 @@ class ItemVariantItem {
             if (data.hasOwnProperty('merchant_item_multimedia_oid')) {
                 obj['merchant_item_multimedia_oid'] = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
             }
+            if (data.hasOwnProperty('variant_default_multimedia')) {
+                obj['variant_default_multimedia'] = ItemContentMultimedia.constructFromObject(data['variant_default_multimedia']);
+            }
             if (data.hasOwnProperty('variant_merchant_item_id')) {
                 obj['variant_merchant_item_id'] = ApiClient.convertToType(data['variant_merchant_item_id'], 'String');
             }
@@ -83,6 +87,11 @@ ItemVariantItem.prototype['description'] = undefined;
  * @member {Number} merchant_item_multimedia_oid
  */
 ItemVariantItem.prototype['merchant_item_multimedia_oid'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ItemContentMultimedia} variant_default_multimedia
+ */
+ItemVariantItem.prototype['variant_default_multimedia'] = undefined;
 
 /**
  * Variant item id

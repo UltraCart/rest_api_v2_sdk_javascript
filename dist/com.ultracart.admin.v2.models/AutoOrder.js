@@ -9,6 +9,7 @@ var _AutoOrderAddonItem = _interopRequireDefault(require("./AutoOrderAddonItem")
 var _AutoOrderItem = _interopRequireDefault(require("./AutoOrderItem"));
 var _AutoOrderLog = _interopRequireDefault(require("./AutoOrderLog"));
 var _AutoOrderManagement = _interopRequireDefault(require("./AutoOrderManagement"));
+var _AutoOrderProperty = _interopRequireDefault(require("./AutoOrderProperty"));
 var _Order = _interopRequireDefault(require("./Order"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -31,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.1.62
+ * @version 4.1.63
  */
 var AutoOrder = /*#__PURE__*/function () {
   /**
@@ -135,6 +136,9 @@ var AutoOrder = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('override_affiliate_id')) {
           obj['override_affiliate_id'] = _ApiClient["default"].convertToType(data['override_affiliate_id'], 'Number');
+        }
+        if (data.hasOwnProperty('properties')) {
+          obj['properties'] = _ApiClient["default"].convertToType(data['properties'], [_AutoOrderProperty["default"]]);
         }
         if (data.hasOwnProperty('rebill_orders')) {
           obj['rebill_orders'] = _ApiClient["default"].convertToType(data['rebill_orders'], [_Order["default"]]);
@@ -291,6 +295,12 @@ AutoOrder.prototype['original_order_id'] = undefined;
  * @member {Number} override_affiliate_id
  */
 AutoOrder.prototype['override_affiliate_id'] = undefined;
+
+/**
+ * Array of property objects
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderProperty>} properties
+ */
+AutoOrder.prototype['properties'] = undefined;
 
 /**
  * Rebill orders that have taken place on this auto order

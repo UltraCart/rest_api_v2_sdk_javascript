@@ -97,6 +97,7 @@ var _ConversationWebchatQueueStatusUpdateRequest = _interopRequireDefault(requir
 var _ConversationWebchatQueueStatusesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationWebchatQueueStatusesResponse"));
 var _ConversationsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationsResponse"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
+var _ItemResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemResponse"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -118,7 +119,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.62
+* @version 4.1.63
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -1254,6 +1255,42 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationEngagementsResponse["default"];
       return this.apiClient.callApi('/conversation/engagements', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getConversationItemVariations operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getConversationItemVariationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an item with sparse variations populated
+     * Retrieve an item with sparse variations populated 
+     * @param {String} merchant_item_id 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getConversationItemVariationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemResponse}
+     */
+  }, {
+    key: "getConversationItemVariations",
+    value: function getConversationItemVariations(merchant_item_id, callback) {
+      var postBody = null;
+      // verify the required parameter 'merchant_item_id' is set
+      if (merchant_item_id === undefined || merchant_item_id === null) {
+        throw new Error("Missing the required parameter 'merchant_item_id' when calling getConversationItemVariations");
+      }
+      var pathParams = {
+        'merchant_item_id': merchant_item_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ItemResponse["default"];
+      return this.apiClient.callApi('/conversation/items/{merchant_item_id}/variations', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

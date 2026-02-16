@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCommseqPostcard model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqPostcard
- * @version 4.1.62
+ * @version 4.1.63
  */
 var EmailCommseqPostcard = /*#__PURE__*/function () {
   /**
@@ -164,7 +164,7 @@ EmailCommseqPostcard.prototype['postcard_front_container_cjson'] = undefined;
 EmailCommseqPostcard.prototype['postcard_front_container_uuid'] = undefined;
 
 /**
- * URL to screenshot of the front of the postcard
+ * URL to screenshot of the back of the postcard
  * @member {String} screenshot_back_url
  */
 EmailCommseqPostcard.prototype['screenshot_back_url'] = undefined;

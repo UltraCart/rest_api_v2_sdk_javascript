@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The IntegrationLogFile model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogFile
- * @version 4.1.62
+ * @version 4.1.63
  */
 var IntegrationLogFile = /*#__PURE__*/function () {
   /**

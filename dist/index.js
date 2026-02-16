@@ -165,6 +165,12 @@ Object.defineProperty(exports, "AutoOrderAddonItemOption", {
     return _AutoOrderAddonItemOption["default"];
   }
 });
+Object.defineProperty(exports, "AutoOrderAddonItemsUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderAddonItemsUpdateRequest["default"];
+  }
+});
 Object.defineProperty(exports, "AutoOrderApi", {
   enumerable: true,
   get: function get() {
@@ -211,6 +217,18 @@ Object.defineProperty(exports, "AutoOrderManagement", {
   enumerable: true,
   get: function get() {
     return _AutoOrderManagement["default"];
+  }
+});
+Object.defineProperty(exports, "AutoOrderPropertiesUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderPropertiesUpdateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "AutoOrderProperty", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderProperty["default"];
   }
 });
 Object.defineProperty(exports, "AutoOrderQuery", {
@@ -3813,6 +3831,18 @@ Object.defineProperty(exports, "ItemInventorySnapshotResponse", {
     return _ItemInventorySnapshotResponse["default"];
   }
 });
+Object.defineProperty(exports, "ItemInventoryUpdate", {
+  enumerable: true,
+  get: function get() {
+    return _ItemInventoryUpdate["default"];
+  }
+});
+Object.defineProperty(exports, "ItemInventoryUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ItemInventoryUpdateRequest["default"];
+  }
+});
 Object.defineProperty(exports, "ItemKitComponent", {
   enumerable: true,
   get: function get() {
@@ -3997,6 +4027,12 @@ Object.defineProperty(exports, "ItemShippingDistributionCenter", {
   enumerable: true,
   get: function get() {
     return _ItemShippingDistributionCenter["default"];
+  }
+});
+Object.defineProperty(exports, "ItemShippingDistributionCenterResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemShippingDistributionCenterResponse["default"];
   }
 });
 Object.defineProperty(exports, "ItemShippingMethod", {
@@ -4225,6 +4261,12 @@ Object.defineProperty(exports, "Order", {
   enumerable: true,
   get: function get() {
     return _Order["default"];
+  }
+});
+Object.defineProperty(exports, "OrderAddItemsAndReleaseRequest", {
+  enumerable: true,
+  get: function get() {
+    return _OrderAddItemsAndReleaseRequest["default"];
   }
 });
 Object.defineProperty(exports, "OrderAffiliate", {
@@ -5801,6 +5843,7 @@ var _ApplyLibraryItemResponse = _interopRequireDefault(require("./com.ultracart.
 var _AutoOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrder"));
 var _AutoOrderAddonItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItem"));
 var _AutoOrderAddonItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemOption"));
+var _AutoOrderAddonItemsUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest"));
 var _AutoOrderConsolidate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderConsolidate"));
 var _AutoOrderItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItem"));
 var _AutoOrderItemFutureSchedule = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule"));
@@ -5808,6 +5851,8 @@ var _AutoOrderItemOption = _interopRequireDefault(require("./com.ultracart.admin
 var _AutoOrderItemSimpleSchedule = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule"));
 var _AutoOrderLog = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderLog"));
 var _AutoOrderManagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderManagement"));
+var _AutoOrderPropertiesUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest"));
+var _AutoOrderProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderProperty"));
 var _AutoOrderQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderQuery"));
 var _AutoOrderQueryBatch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderQueryBatch"));
 var _AutoOrderResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderResponse"));
@@ -6398,6 +6443,8 @@ var _ItemInternal = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ItemInventorySnapshot = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshot"));
 var _ItemInventorySnapshotDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter"));
 var _ItemInventorySnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotResponse"));
+var _ItemInventoryUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdate"));
+var _ItemInventoryUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdateRequest"));
 var _ItemKitComponent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitComponent"));
 var _ItemKitDefinition = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitDefinition"));
 var _ItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemOption"));
@@ -6429,6 +6476,7 @@ var _ItemShippingCase = _interopRequireDefault(require("./com.ultracart.admin.v2
 var _ItemShippingDestinationMarkup = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationMarkup"));
 var _ItemShippingDestinationRestriction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationRestriction"));
 var _ItemShippingDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenter"));
+var _ItemShippingDistributionCenterResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse"));
 var _ItemShippingMethod = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingMethod"));
 var _ItemShippingPackageRequirement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingPackageRequirement"));
 var _ItemTag = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemTag"));
@@ -6466,6 +6514,7 @@ var _Notification = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _OauthRevokeSuccessResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OauthRevokeSuccessResponse"));
 var _OauthTokenResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OauthTokenResponse"));
 var _Order = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Order"));
+var _OrderAddItemsAndReleaseRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest"));
 var _OrderAffiliate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAffiliate"));
 var _OrderAffiliateLedger = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAffiliateLedger"));
 var _OrderAssignToAffiliateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest"));
