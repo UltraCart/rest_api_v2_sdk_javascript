@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailSmsOrdersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSmsOrdersResponse
- * @version 4.1.64
+ * @version 4.1.65
  */
 var EmailSmsOrdersResponse = /*#__PURE__*/function () {
   /**

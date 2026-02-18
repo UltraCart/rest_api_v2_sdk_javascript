@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WorkflowUser model module.
  * @module com.ultracart.admin.v2.models/WorkflowUser
- * @version 4.1.64
+ * @version 4.1.65
  */
 var WorkflowUser = /*#__PURE__*/function () {
   /**

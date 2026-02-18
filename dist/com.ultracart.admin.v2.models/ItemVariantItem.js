@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _ItemContentMultimedia = _interopRequireDefault(require("./ItemContentMultimedia"));
+var _ItemPricing = _interopRequireDefault(require("./ItemPricing"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -27,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemVariantItem model module.
  * @module com.ultracart.admin.v2.models/ItemVariantItem
- * @version 4.1.64
+ * @version 4.1.65
  */
 var ItemVariantItem = /*#__PURE__*/function () {
   /**
@@ -75,6 +76,9 @@ var ItemVariantItem = /*#__PURE__*/function () {
         if (data.hasOwnProperty('variant_merchant_item_oid')) {
           obj['variant_merchant_item_oid'] = _ApiClient["default"].convertToType(data['variant_merchant_item_oid'], 'Number');
         }
+        if (data.hasOwnProperty('variant_pricing')) {
+          obj['variant_pricing'] = _ItemPricing["default"].constructFromObject(data['variant_pricing']);
+        }
         if (data.hasOwnProperty('variation_options')) {
           obj['variation_options'] = _ApiClient["default"].convertToType(data['variation_options'], ['String']);
         }
@@ -114,6 +118,11 @@ ItemVariantItem.prototype['variant_merchant_item_id'] = undefined;
  * @member {Number} variant_merchant_item_oid
  */
 ItemVariantItem.prototype['variant_merchant_item_oid'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ItemPricing} variant_pricing
+ */
+ItemVariantItem.prototype['variant_pricing'] = undefined;
 
 /**
  * Variation options

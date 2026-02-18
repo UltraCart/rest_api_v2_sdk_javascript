@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ExperimentsResponse model module.
  * @module com.ultracart.admin.v2.models/ExperimentsResponse
- * @version 4.1.65
+ * @version 4.1.66
  */
 class ExperimentsResponse {
     /**
