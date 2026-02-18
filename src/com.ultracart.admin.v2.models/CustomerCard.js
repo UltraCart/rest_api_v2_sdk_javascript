@@ -34,7 +34,7 @@
   /**
    * The CustomerCard model module.
    * @module com.ultracart.admin.v2.models/CustomerCard
-   * @version 3.11.65
+   * @version 3.11.66
    */
 
   /**

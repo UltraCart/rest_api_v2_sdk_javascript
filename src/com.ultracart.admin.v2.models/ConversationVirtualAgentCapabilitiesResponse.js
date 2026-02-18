@@ -34,7 +34,7 @@
   /**
    * The ConversationVirtualAgentCapabilitiesResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse
-   * @version 3.11.65
+   * @version 3.11.66
    */
 
   /**

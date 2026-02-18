@@ -34,7 +34,7 @@
   /**
    * The EmailCommseqEmailsRequest model module.
    * @module com.ultracart.admin.v2.models/EmailCommseqEmailsRequest
-   * @version 3.11.65
+   * @version 3.11.66
    */
 
   /**

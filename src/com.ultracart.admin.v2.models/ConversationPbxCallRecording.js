@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxCallRecording model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxCallRecording
-   * @version 3.11.65
+   * @version 3.11.66
    */
 
   /**

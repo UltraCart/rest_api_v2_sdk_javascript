@@ -34,7 +34,7 @@
   /**
    * The ConversationWebchatQueueStatusUpdateRequest model module.
    * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest
-   * @version 3.11.65
+   * @version 3.11.66
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The CouponFreeItemsWithMixMatchPurchase model module.
    * @module com.ultracart.admin.v2.models/CouponFreeItemsWithMixMatchPurchase
-   * @version 3.11.65
+   * @version 3.11.66
    */
 
   /**

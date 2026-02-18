@@ -34,7 +34,7 @@
   /**
    * The ConversationPbxPhoneNumberResponse model module.
    * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumberResponse
-   * @version 3.11.65
+   * @version 3.11.66
    */
 
   /**
