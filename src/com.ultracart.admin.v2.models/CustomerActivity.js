@@ -34,7 +34,7 @@
   /**
    * The CustomerActivity model module.
    * @module com.ultracart.admin.v2.models/CustomerActivity
-   * @version 3.11.66
+   * @version 3.11.67
    */
 
   /**
@@ -67,6 +67,10 @@
         obj.metrics = ApiClient.convertToType(data['metrics'], [Metric]);
       if (data.hasOwnProperty('properties_list'))
         obj.properties_list = ApiClient.convertToType(data['properties_list'], [Property]);
+      if (data.hasOwnProperty('sms'))
+        obj.sms = ApiClient.convertToType(data['sms'], 'String');
+      if (data.hasOwnProperty('sms_stop'))
+        obj.sms_stop = ApiClient.convertToType(data['sms_stop'], 'Boolean');
       if (data.hasOwnProperty('spam_complaint'))
         obj.spam_complaint = ApiClient.convertToType(data['spam_complaint'], 'Boolean');
       if (data.hasOwnProperty('spam_complaint_dts'))
@@ -104,6 +108,16 @@
    * @member {Array.<module:com.ultracart.admin.v2.models/Property>} properties_list
    */
   exports.prototype.properties_list = undefined;
+
+  /**
+   * @member {String} sms
+   */
+  exports.prototype.sms = undefined;
+
+  /**
+   * @member {Boolean} sms_stop
+   */
+  exports.prototype.sms_stop = undefined;
 
   /**
    * @member {Boolean} spam_complaint

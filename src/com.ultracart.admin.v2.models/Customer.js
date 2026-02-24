@@ -34,7 +34,7 @@
   /**
    * The Customer model module.
    * @module com.ultracart.admin.v2.models/Customer
-   * @version 3.11.66
+   * @version 3.11.67
    */
 
   /**
@@ -472,7 +472,7 @@
   exports.prototype.quotes_summary = undefined;
 
   /**
-   * Referral Source
+   * Referral Source specified on the wholesale customer signup form.  No other meaning than that signup flow.
    * @member {String} referral_source
    */
   exports.prototype.referral_source = undefined;

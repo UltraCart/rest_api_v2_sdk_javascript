@@ -34,7 +34,7 @@
   /**
    * The OrderValidationResponse model module.
    * @module com.ultracart.admin.v2.models/OrderValidationResponse
-   * @version 3.11.66
+   * @version 3.11.67
    */
 
   /**

@@ -34,7 +34,7 @@
   /**
    * The ReportPageVisualizationDimension model module.
    * @module com.ultracart.admin.v2.models/ReportPageVisualizationDimension
-   * @version 3.11.66
+   * @version 3.11.67
    */
 
   /**

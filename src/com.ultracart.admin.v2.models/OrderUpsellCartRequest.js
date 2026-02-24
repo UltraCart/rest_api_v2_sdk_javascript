@@ -34,7 +34,7 @@
   /**
    * The OrderUpsellCartRequest model module.
    * @module com.ultracart.admin.v2.models/OrderUpsellCartRequest
-   * @version 3.11.66
+   * @version 3.11.67
    */
 
   /**
