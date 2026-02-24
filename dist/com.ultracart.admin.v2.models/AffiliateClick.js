@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateClick model module.
  * @module com.ultracart.admin.v2.models/AffiliateClick
- * @version 4.1.65
+ * @version 4.1.66
  */
 var AffiliateClick = /*#__PURE__*/function () {
   /**

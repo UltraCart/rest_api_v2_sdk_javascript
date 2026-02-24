@@ -34,7 +34,7 @@ import Order from './Order';
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.1.66
+ * @version 4.1.67
  */
 class Customer {
     /**
@@ -550,7 +550,7 @@ Customer.prototype['quotes'] = undefined;
 Customer.prototype['quotes_summary'] = undefined;
 
 /**
- * Referral Source
+ * Referral Source specified on the wholesale customer signup form.  No other meaning than that signup flow.
  * @member {String} referral_source
  */
 Customer.prototype['referral_source'] = undefined;

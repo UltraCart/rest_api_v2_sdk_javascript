@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.65
+ * @version 4.1.66
  */
 var ConversationAgentAuth = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var ConversationAgentAuth = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('conversation_participant_name')) {
           obj['conversation_participant_name'] = _ApiClient["default"].convertToType(data['conversation_participant_name'], 'String');
+        }
+        if (data.hasOwnProperty('customer_profile')) {
+          obj['customer_profile'] = _ApiClient["default"].convertToType(data['customer_profile'], 'Boolean');
         }
         if (data.hasOwnProperty('default_phone_number')) {
           obj['default_phone_number'] = _ApiClient["default"].convertToType(data['default_phone_number'], 'String');
@@ -141,6 +144,11 @@ ConversationAgentAuth.prototype['conversation_participant_arn'] = undefined;
  * @member {String} conversation_participant_name
  */
 ConversationAgentAuth.prototype['conversation_participant_name'] = undefined;
+
+/**
+ * @member {Boolean} customer_profile
+ */
+ConversationAgentAuth.prototype['customer_profile'] = undefined;
 
 /**
  * The default phone number this agent should use when making an outbound call.
