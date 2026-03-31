@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailWebhookEditorValuesResponse model module.
  * @module com.ultracart.admin.v2.models/EmailWebhookEditorValuesResponse
- * @version 4.1.68
+ * @version 4.1.69
  */
 class EmailWebhookEditorValuesResponse {
     /**

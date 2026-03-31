@@ -17,7 +17,7 @@ import CustomReportExecutionParameter from './CustomReportExecutionParameter';
 /**
  * The CustomReportsExecutionRequest model module.
  * @module com.ultracart.admin.v2.models/CustomReportsExecutionRequest
- * @version 4.1.68
+ * @version 4.1.69
  */
 class CustomReportsExecutionRequest {
     /**

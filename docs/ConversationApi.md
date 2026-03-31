@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**deletePbxTimeBased**](ConversationApi.md#deletePbxTimeBased) | **DELETE** /conversation/pbx/time_based/{conversationPbxTimeBasedUuid} | Delete pbx timeBased
 [**deletePbxTimeRange**](ConversationApi.md#deletePbxTimeRange) | **DELETE** /conversation/pbx/time_range/{conversationPbxTimeRangeUuid} | Delete pbx timeRange
 [**deletePbxVoicemailMailbox**](ConversationApi.md#deletePbxVoicemailMailbox) | **DELETE** /conversation/pbx/voicemail_mailbox/{conversationPbxVoicemailMailboxUuid} | Delete pbx voicemailMailbox
+[**deleteUserPbxAudio**](ConversationApi.md#deleteUserPbxAudio) | **DELETE** /conversation/pbx/audio/user/{conversationPbxAudioUuid} | Delete user pbx audio
 [**getAgentKeepAlive**](ConversationApi.md#getAgentKeepAlive) | **GET** /conversation/agent/keepalive | Agent keep alive
 [**getAgentProfile**](ConversationApi.md#getAgentProfile) | **GET** /conversation/agent/profile | Get agent profile
 [**getAgentProfileKnowledgeBase**](ConversationApi.md#getAgentProfileKnowledgeBase) | **GET** /conversation/agent/profiles/{user_id}/knowledge_base | Get the list of knowledge base documents associated with this agent profile
@@ -78,6 +79,8 @@ Method | HTTP request | Description
 [**getPbxTimeRanges**](ConversationApi.md#getPbxTimeRanges) | **GET** /conversation/pbx/time_range | Get pbx timeRanges
 [**getPbxVoicemailMailbox**](ConversationApi.md#getPbxVoicemailMailbox) | **GET** /conversation/pbx/voicemail_mailbox/{conversationPbxVoicemailMailboxUuid} | Get pbx voicemailMailbox
 [**getPbxVoicemailMailboxes**](ConversationApi.md#getPbxVoicemailMailboxes) | **GET** /conversation/pbx/voicemail_mailbox | Get pbx voicemailMailboxes
+[**getUserPbxAudio**](ConversationApi.md#getUserPbxAudio) | **GET** /conversation/pbx/audio/user/{conversationPbxAudioUuid} | Get user pbx audio
+[**getUserPbxAudios**](ConversationApi.md#getUserPbxAudios) | **GET** /conversation/pbx/audio/user | Get user pbx audios
 [**getVirtualAgentBudget**](ConversationApi.md#getVirtualAgentBudget) | **GET** /conversation/virtualagent/budget | Get virtual agent budget
 [**getVirtualAgentCapabilities**](ConversationApi.md#getVirtualAgentCapabilities) | **GET** /conversation/virtualagent/capabilities | Get virtual agent capabilities
 [**insertAgentProfileKnowledgeBaseDocument**](ConversationApi.md#insertAgentProfileKnowledgeBaseDocument) | **POST** /conversation/agent/profiles/{user_id}/knowledge_base | Insert a knowledge base document
@@ -94,6 +97,7 @@ Method | HTTP request | Description
 [**insertPbxTimeBased**](ConversationApi.md#insertPbxTimeBased) | **POST** /conversation/pbx/time_based | Insert pbx timeBased
 [**insertPbxTimeRange**](ConversationApi.md#insertPbxTimeRange) | **POST** /conversation/pbx/time_range | Insert pbx timeRange
 [**insertPbxVoicemailMailbox**](ConversationApi.md#insertPbxVoicemailMailbox) | **POST** /conversation/pbx/voicemail_mailbox | Insert pbx voicemailMailbox
+[**insertUserPbxAudio**](ConversationApi.md#insertUserPbxAudio) | **POST** /conversation/pbx/audio/user | Insert user pbx audio
 [**joinConversation**](ConversationApi.md#joinConversation) | **PUT** /conversation/conversations/{conversation_uuid}/join | Join a conversation
 [**leaveConversation**](ConversationApi.md#leaveConversation) | **DELETE** /conversation/conversations/{conversation_uuid}/leave | Leave a conversation
 [**listenedPbxAgentVoicemail**](ConversationApi.md#listenedPbxAgentVoicemail) | **GET** /conversation/pbx/agent/voicemails/{recording_sid}/listened | Listened Agent Voicemail
@@ -125,6 +129,7 @@ Method | HTTP request | Description
 [**updatePbxTimeBased**](ConversationApi.md#updatePbxTimeBased) | **PUT** /conversation/pbx/time_based/{conversationPbxTimeBasedUuid} | Update pbx timeBased
 [**updatePbxTimeRange**](ConversationApi.md#updatePbxTimeRange) | **PUT** /conversation/pbx/time_range/{conversationPbxTimeRangeUuid} | Update pbx timeRange
 [**updatePbxVoicemailMailbox**](ConversationApi.md#updatePbxVoicemailMailbox) | **PUT** /conversation/pbx/voicemail_mailbox/{conversationPbxVoicemailMailboxUuid} | Update pbx voicemailMailbox
+[**updateUserPbxAudio**](ConversationApi.md#updateUserPbxAudio) | **PUT** /conversation/pbx/audio/user/{conversationPbxAudioUuid} | Update user pbx audio
 [**updateVirtualAgentBudget**](ConversationApi.md#updateVirtualAgentBudget) | **PUT** /conversation/virtualagent/budget | Update virtual agent budget
 [**updateVirtualAgentCapabilities**](ConversationApi.md#updateVirtualAgentCapabilities) | **PUT** /conversation/virtualagent/capabilities | Update virtual agent capabilities
 
@@ -1060,6 +1065,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationPbxVoicemailMailboxResponse**](ConversationPbxVoicemailMailboxResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteUserPbxAudio
+
+> ConversationPbxAudioResponse deleteUserPbxAudio(conversationPbxAudioUuid)
+
+Delete user pbx audio
+
+Delete a pbx audio file owned by the authenticated user 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE deleteUserPbxAudio -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
+apiInstance.deleteUserPbxAudio(conversationPbxAudioUuid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE deleteUserPbxAudio -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversationPbxAudioUuid** | **String**|  | 
+
+### Return type
+
+[**ConversationPbxAudioResponse**](ConversationPbxAudioResponse.md)
 
 ### Authorization
 
@@ -4144,6 +4204,112 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
+## getUserPbxAudio
+
+> ConversationPbxAudioResponse getUserPbxAudio(conversationPbxAudioUuid)
+
+Get user pbx audio
+
+Retrieve a pbx audio file owned by the authenticated user 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getUserPbxAudio -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
+apiInstance.getUserPbxAudio(conversationPbxAudioUuid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getUserPbxAudio -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversationPbxAudioUuid** | **String**|  | 
+
+### Return type
+
+[**ConversationPbxAudioResponse**](ConversationPbxAudioResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getUserPbxAudios
+
+> ConversationPbxAudiosResponse getUserPbxAudios()
+
+Get user pbx audios
+
+Retrieve pbx audio files owned by the authenticated user 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getUserPbxAudios -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getUserPbxAudios((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getUserPbxAudios -->
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ConversationPbxAudiosResponse**](ConversationPbxAudiosResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getVirtualAgentBudget
 
 > ConversationVirtualAgentBudgetResponse getVirtualAgentBudget()
@@ -5009,6 +5175,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationPbxVoicemailMailboxResponse**](ConversationPbxVoicemailMailboxResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## insertUserPbxAudio
+
+> ConversationPbxAudioResponse insertUserPbxAudio(pbx_audio)
+
+Insert user pbx audio
+
+Insert a pbx audio file for the authenticated user 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE insertUserPbxAudio -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let pbx_audio = new UltraCartRestApiV2.ConversationPbxAudio(); // ConversationPbxAudio | Pbx Audio
+apiInstance.insertUserPbxAudio(pbx_audio, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE insertUserPbxAudio -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pbx_audio** | [**ConversationPbxAudio**](ConversationPbxAudio.md)| Pbx Audio | 
+
+### Return type
+
+[**ConversationPbxAudioResponse**](ConversationPbxAudioResponse.md)
 
 ### Authorization
 
@@ -6778,6 +6999,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationPbxVoicemailMailboxResponse**](ConversationPbxVoicemailMailboxResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateUserPbxAudio
+
+> ConversationPbxAudioResponse updateUserPbxAudio(conversationPbxAudioUuid, pbx_audio)
+
+Update user pbx audio
+
+Update a pbx audio file owned by the authenticated user 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE updateUserPbxAudio -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
+let pbx_audio = new UltraCartRestApiV2.ConversationPbxAudio(); // ConversationPbxAudio | Pbx Audio
+apiInstance.updateUserPbxAudio(conversationPbxAudioUuid, pbx_audio, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE updateUserPbxAudio -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **conversationPbxAudioUuid** | **String**|  | 
+ **pbx_audio** | [**ConversationPbxAudio**](ConversationPbxAudio.md)| Pbx Audio | 
+
+### Return type
+
+[**ConversationPbxAudioResponse**](ConversationPbxAudioResponse.md)
 
 ### Authorization
 

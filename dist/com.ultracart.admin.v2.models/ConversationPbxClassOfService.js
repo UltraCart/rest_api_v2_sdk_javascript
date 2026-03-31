@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxClassOfService model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxClassOfService
- * @version 4.1.67
+ * @version 4.1.68
  */
 var ConversationPbxClassOfService = /*#__PURE__*/function () {
   /**

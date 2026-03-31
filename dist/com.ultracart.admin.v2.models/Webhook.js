@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Webhook model module.
  * @module com.ultracart.admin.v2.models/Webhook
- * @version 4.1.67
+ * @version 4.1.68
  */
 var Webhook = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailHistogramPropertyValuesResponse model module.
  * @module com.ultracart.admin.v2.models/EmailHistogramPropertyValuesResponse
- * @version 4.1.67
+ * @version 4.1.68
  */
 var EmailHistogramPropertyValuesResponse = /*#__PURE__*/function () {
   /**

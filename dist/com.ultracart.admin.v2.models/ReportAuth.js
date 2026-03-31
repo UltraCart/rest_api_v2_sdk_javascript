@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportAuth model module.
  * @module com.ultracart.admin.v2.models/ReportAuth
- * @version 4.1.67
+ * @version 4.1.68
  */
 var ReportAuth = /*#__PURE__*/function () {
   /**
