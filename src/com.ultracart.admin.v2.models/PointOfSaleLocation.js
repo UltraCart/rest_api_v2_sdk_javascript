@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PointOfSaleLocation model module.
  * @module com.ultracart.admin.v2.models/PointOfSaleLocation
- * @version 4.1.67
+ * @version 4.1.68
  */
 class PointOfSaleLocation {
     /**
@@ -76,6 +76,9 @@ class PointOfSaleLocation {
             }
             if (data.hasOwnProperty('state_province')) {
                 obj['state_province'] = ApiClient.convertToType(data['state_province'], 'String');
+            }
+            if (data.hasOwnProperty('tax_county')) {
+                obj['tax_county'] = ApiClient.convertToType(data['tax_county'], 'String');
             }
         }
         return obj;
@@ -143,6 +146,12 @@ PointOfSaleLocation.prototype['postal_code'] = undefined;
  * @member {String} state_province
  */
 PointOfSaleLocation.prototype['state_province'] = undefined;
+
+/**
+ * Tax county associated with this address.  Need when a self managed tax configuration is being used.
+ * @member {String} tax_county
+ */
+PointOfSaleLocation.prototype['tax_county'] = undefined;
 
 
 

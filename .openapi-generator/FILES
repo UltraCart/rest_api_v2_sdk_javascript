@@ -708,6 +708,7 @@ docs/Mailgun.md
 docs/Metric.md
 docs/Notification.md
 docs/OauthApi.md
+docs/OauthDeviceAuthorizationResponse.md
 docs/OauthRevokeSuccessResponse.md
 docs/OauthTokenResponse.md
 docs/Order.md
@@ -1667,6 +1668,7 @@ src/com.ultracart.admin.v2.models/LookupResponse.js
 src/com.ultracart.admin.v2.models/Mailgun.js
 src/com.ultracart.admin.v2.models/Metric.js
 src/com.ultracart.admin.v2.models/Notification.js
+src/com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse.js
 src/com.ultracart.admin.v2.models/OauthRevokeSuccessResponse.js
 src/com.ultracart.admin.v2.models/OauthTokenResponse.js
 src/com.ultracart.admin.v2.models/Order.js

@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **pos_location_oid** | **Number** | Object identifier of the point of sale location. | [optional] 
 **postal_code** | **String** | Postal code | [optional] 
 **state_province** | **String** | State/province | [optional] 
+**tax_county** | **String** | Tax county associated with this address.  Need when a self managed tax configuration is being used. | [optional] 
 
 

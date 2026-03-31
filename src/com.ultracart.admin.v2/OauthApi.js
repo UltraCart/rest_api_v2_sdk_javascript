@@ -20,7 +20,7 @@ import OauthTokenResponse from '../com.ultracart.admin.v2.models/OauthTokenRespo
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.1.67
+* @version 4.1.68
 */
 export default class OauthApi {
 
@@ -53,6 +53,7 @@ export default class OauthApi {
      * @param {String} opts.code Authorization code received back from the browser redirect
      * @param {String} opts.redirect_uri The URI that you redirect the browser to start the authorization process
      * @param {String} opts.refresh_token The refresh token received during the original grant_type=authorization_code that can be used to return a new access token
+     * @param {String} opts.device_code The device code received from /oauth/device/authorize
      * @param {module:com.ultracart.admin.v2/OauthApi~oauthAccessTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OauthTokenResponse}
      */
@@ -79,7 +80,8 @@ export default class OauthApi {
         'grant_type': grant_type,
         'code': opts['code'],
         'redirect_uri': opts['redirect_uri'],
-        'refresh_token': opts['refresh_token']
+        'refresh_token': opts['refresh_token'],
+        'device_code': opts['device_code']
       };
 
       let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
@@ -88,6 +90,54 @@ export default class OauthApi {
       let returnType = OauthTokenResponse;
       return this.apiClient.callApi(
         '/oauth/token', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the oauthDeviceAuthorize operation.
+     * @callback module:com.ultracart.admin.v2/OauthApi~oauthDeviceAuthorizeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Initiate a device authorization flow.
+     * Initiates the device authorization flow by returning a device code and user code. The device displays the user code to the merchant, who visits the verification URI to approve the request. RFC 8628. 
+     * @param {String} client_id The OAuth application client_id.
+     * @param {String} scope The application-level scope (e.g., crm, ultraship).
+     * @param {module:com.ultracart.admin.v2/OauthApi~oauthDeviceAuthorizeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    oauthDeviceAuthorize(client_id, scope, callback) {
+      let postBody = null;
+      // verify the required parameter 'client_id' is set
+      if (client_id === undefined || client_id === null) {
+        throw new Error("Missing the required parameter 'client_id' when calling oauthDeviceAuthorize");
+      }
+      // verify the required parameter 'scope' is set
+      if (scope === undefined || scope === null) {
+        throw new Error("Missing the required parameter 'scope' when calling oauthDeviceAuthorize");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+        'client_id': client_id,
+        'scope': scope
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/x-www-form-urlencoded'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/oauth/device/authorize', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

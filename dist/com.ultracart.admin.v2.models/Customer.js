@@ -44,7 +44,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.1.66
+ * @version 4.1.67
  */
 var Customer = /*#__PURE__*/function () {
   /**
@@ -560,7 +560,7 @@ Customer.prototype['quotes'] = undefined;
 Customer.prototype['quotes_summary'] = undefined;
 
 /**
- * Referral Source
+ * Referral Source specified on the wholesale customer signup form.  No other meaning than that signup flow.
  * @member {String} referral_source
  */
 Customer.prototype['referral_source'] = undefined;

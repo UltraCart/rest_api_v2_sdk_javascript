@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerActivity model module.
  * @module com.ultracart.admin.v2.models/CustomerActivity
- * @version 4.1.66
+ * @version 4.1.67
  */
 var CustomerActivity = /*#__PURE__*/function () {
   /**
@@ -81,6 +81,12 @@ var CustomerActivity = /*#__PURE__*/function () {
         if (data.hasOwnProperty('properties_list')) {
           obj['properties_list'] = _ApiClient["default"].convertToType(data['properties_list'], [_Property["default"]]);
         }
+        if (data.hasOwnProperty('sms')) {
+          obj['sms'] = _ApiClient["default"].convertToType(data['sms'], 'String');
+        }
+        if (data.hasOwnProperty('sms_stop')) {
+          obj['sms_stop'] = _ApiClient["default"].convertToType(data['sms_stop'], 'Boolean');
+        }
         if (data.hasOwnProperty('spam_complaint')) {
           obj['spam_complaint'] = _ApiClient["default"].convertToType(data['spam_complaint'], 'Boolean');
         }
@@ -121,6 +127,16 @@ CustomerActivity.prototype['metrics'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/Property>} properties_list
  */
 CustomerActivity.prototype['properties_list'] = undefined;
+
+/**
+ * @member {String} sms
+ */
+CustomerActivity.prototype['sms'] = undefined;
+
+/**
+ * @member {Boolean} sms_stop
+ */
+CustomerActivity.prototype['sms_stop'] = undefined;
 
 /**
  * @member {Boolean} spam_complaint

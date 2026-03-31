@@ -706,6 +706,7 @@ import LookupResponse from './com.ultracart.admin.v2.models/LookupResponse';
 import Mailgun from './com.ultracart.admin.v2.models/Mailgun';
 import Metric from './com.ultracart.admin.v2.models/Metric';
 import Notification from './com.ultracart.admin.v2.models/Notification';
+import OauthDeviceAuthorizationResponse from './com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse';
 import OauthRevokeSuccessResponse from './com.ultracart.admin.v2.models/OauthRevokeSuccessResponse';
 import OauthTokenResponse from './com.ultracart.admin.v2.models/OauthTokenResponse';
 import Order from './com.ultracart.admin.v2.models/Order';
@@ -1012,7 +1013,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.67
+* @version 4.1.68
 */
 export {
     /**
@@ -5178,6 +5179,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/Notification}
      */
     Notification,
+
+    /**
+     * The OauthDeviceAuthorizationResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse}
+     */
+    OauthDeviceAuthorizationResponse,
 
     /**
      * The OauthRevokeSuccessResponse model constructor.

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCallAiToolCall model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallAiToolCall
- * @version 4.1.66
+ * @version 4.1.67
  */
 var ConversationPbxCallAiToolCall = /*#__PURE__*/function () {
   /**
