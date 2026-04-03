@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponPercentOffItemWithItemsQuantityPurchase model module.
  * @module com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase
- * @version 4.1.68
+ * @version 4.1.69
  */
 var CouponPercentOffItemWithItemsQuantityPurchase = /*#__PURE__*/function () {
   /**

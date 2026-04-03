@@ -17,7 +17,7 @@ import ConversationPbxQueueMembers from './ConversationPbxQueueMembers';
 /**
  * The ConversationPbxQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxQueue
- * @version 4.1.69
+ * @version 4.1.70
  */
 class ConversationPbxQueue {
     /**
@@ -59,6 +59,42 @@ class ConversationPbxQueue {
             }
             if (data.hasOwnProperty('automatic_coach_agent_uuid')) {
                 obj['automatic_coach_agent_uuid'] = ApiClient.convertToType(data['automatic_coach_agent_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('callback_announce_audio_uuid')) {
+                obj['callback_announce_audio_uuid'] = ApiClient.convertToType(data['callback_announce_audio_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('callback_announce_say')) {
+                obj['callback_announce_say'] = ApiClient.convertToType(data['callback_announce_say'], 'String');
+            }
+            if (data.hasOwnProperty('callback_confirm_audio_uuid')) {
+                obj['callback_confirm_audio_uuid'] = ApiClient.convertToType(data['callback_confirm_audio_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('callback_confirm_say')) {
+                obj['callback_confirm_say'] = ApiClient.convertToType(data['callback_confirm_say'], 'String');
+            }
+            if (data.hasOwnProperty('callback_enabled')) {
+                obj['callback_enabled'] = ApiClient.convertToType(data['callback_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('callback_hours_only')) {
+                obj['callback_hours_only'] = ApiClient.convertToType(data['callback_hours_only'], 'Boolean');
+            }
+            if (data.hasOwnProperty('callback_max_attempts')) {
+                obj['callback_max_attempts'] = ApiClient.convertToType(data['callback_max_attempts'], 'Number');
+            }
+            if (data.hasOwnProperty('callback_max_offers')) {
+                obj['callback_max_offers'] = ApiClient.convertToType(data['callback_max_offers'], 'Number');
+            }
+            if (data.hasOwnProperty('callback_max_pending')) {
+                obj['callback_max_pending'] = ApiClient.convertToType(data['callback_max_pending'], 'Number');
+            }
+            if (data.hasOwnProperty('callback_offer_after_seconds')) {
+                obj['callback_offer_after_seconds'] = ApiClient.convertToType(data['callback_offer_after_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('callback_offer_interval_seconds')) {
+                obj['callback_offer_interval_seconds'] = ApiClient.convertToType(data['callback_offer_interval_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('callback_retry_delay_seconds')) {
+                obj['callback_retry_delay_seconds'] = ApiClient.convertToType(data['callback_retry_delay_seconds'], 'Number');
             }
             if (data.hasOwnProperty('conversation_pbx_queue_uuid')) {
                 obj['conversation_pbx_queue_uuid'] = ApiClient.convertToType(data['conversation_pbx_queue_uuid'], 'String');
@@ -150,6 +186,78 @@ ConversationPbxQueue.prototype['announce_queue_position'] = undefined;
  * @member {String} automatic_coach_agent_uuid
  */
 ConversationPbxQueue.prototype['automatic_coach_agent_uuid'] = undefined;
+
+/**
+ * Custom audio file UUID for the callback offer prompt
+ * @member {String} callback_announce_audio_uuid
+ */
+ConversationPbxQueue.prototype['callback_announce_audio_uuid'] = undefined;
+
+/**
+ * Custom TTS text for the callback offer prompt
+ * @member {String} callback_announce_say
+ */
+ConversationPbxQueue.prototype['callback_announce_say'] = undefined;
+
+/**
+ * Custom audio file UUID for the callback confirmation message
+ * @member {String} callback_confirm_audio_uuid
+ */
+ConversationPbxQueue.prototype['callback_confirm_audio_uuid'] = undefined;
+
+/**
+ * Custom TTS text for the callback confirmation message
+ * @member {String} callback_confirm_say
+ */
+ConversationPbxQueue.prototype['callback_confirm_say'] = undefined;
+
+/**
+ * If true, the callback option is enabled for this queue
+ * @member {Boolean} callback_enabled
+ */
+ConversationPbxQueue.prototype['callback_enabled'] = undefined;
+
+/**
+ * When true, only offer callbacks during business hours
+ * @member {Boolean} callback_hours_only
+ */
+ConversationPbxQueue.prototype['callback_hours_only'] = undefined;
+
+/**
+ * Maximum number of times the system will attempt to call the customer back
+ * @member {Number} callback_max_attempts
+ */
+ConversationPbxQueue.prototype['callback_max_attempts'] = undefined;
+
+/**
+ * Maximum number of times the callback option is offered to a caller per call
+ * @member {Number} callback_max_offers
+ */
+ConversationPbxQueue.prototype['callback_max_offers'] = undefined;
+
+/**
+ * Maximum number of pending callbacks allowed per queue
+ * @member {Number} callback_max_pending
+ */
+ConversationPbxQueue.prototype['callback_max_pending'] = undefined;
+
+/**
+ * Seconds a caller must wait in queue before the callback option is offered
+ * @member {Number} callback_offer_after_seconds
+ */
+ConversationPbxQueue.prototype['callback_offer_after_seconds'] = undefined;
+
+/**
+ * Seconds between repeat callback offers to the same caller
+ * @member {Number} callback_offer_interval_seconds
+ */
+ConversationPbxQueue.prototype['callback_offer_interval_seconds'] = undefined;
+
+/**
+ * Delay in seconds between callback retry attempts
+ * @member {Number} callback_retry_delay_seconds
+ */
+ConversationPbxQueue.prototype['callback_retry_delay_seconds'] = undefined;
 
 /**
  * Conversation Pbx Queue unique identifier

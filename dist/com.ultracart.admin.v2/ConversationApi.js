@@ -119,7 +119,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.68
+* @version 4.1.69
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -755,6 +755,42 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxVoicemailMailboxResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/voicemail_mailbox/{conversationPbxVoicemailMailboxUuid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the deleteUserPbxAudio operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deleteUserPbxAudioCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete user pbx audio
+     * Delete a pbx audio file owned by the authenticated user 
+     * @param {String} conversationPbxAudioUuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deleteUserPbxAudioCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse}
+     */
+  }, {
+    key: "deleteUserPbxAudio",
+    value: function deleteUserPbxAudio(conversationPbxAudioUuid, callback) {
+      var postBody = null;
+      // verify the required parameter 'conversationPbxAudioUuid' is set
+      if (conversationPbxAudioUuid === undefined || conversationPbxAudioUuid === null) {
+        throw new Error("Missing the required parameter 'conversationPbxAudioUuid' when calling deleteUserPbxAudio");
+      }
+      var pathParams = {
+        'conversationPbxAudioUuid': conversationPbxAudioUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxAudioResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/audio/user/{conversationPbxAudioUuid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -2683,6 +2719,71 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getUserPbxAudio operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getUserPbxAudioCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get user pbx audio
+     * Retrieve a pbx audio file owned by the authenticated user 
+     * @param {String} conversationPbxAudioUuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getUserPbxAudioCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse}
+     */
+  }, {
+    key: "getUserPbxAudio",
+    value: function getUserPbxAudio(conversationPbxAudioUuid, callback) {
+      var postBody = null;
+      // verify the required parameter 'conversationPbxAudioUuid' is set
+      if (conversationPbxAudioUuid === undefined || conversationPbxAudioUuid === null) {
+        throw new Error("Missing the required parameter 'conversationPbxAudioUuid' when calling getUserPbxAudio");
+      }
+      var pathParams = {
+        'conversationPbxAudioUuid': conversationPbxAudioUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxAudioResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/audio/user/{conversationPbxAudioUuid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getUserPbxAudios operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getUserPbxAudiosCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxAudiosResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get user pbx audios
+     * Retrieve pbx audio files owned by the authenticated user 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getUserPbxAudiosCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxAudiosResponse}
+     */
+  }, {
+    key: "getUserPbxAudios",
+    value: function getUserPbxAudios(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxAudiosResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/audio/user', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the getVirtualAgentBudget operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getVirtualAgentBudgetCallback
      * @param {String} error Error message, if any.
@@ -3228,6 +3329,40 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxVoicemailMailboxResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/voicemail_mailbox', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the insertUserPbxAudio operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertUserPbxAudioCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert user pbx audio
+     * Insert a pbx audio file for the authenticated user 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxAudio} pbx_audio Pbx Audio
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertUserPbxAudioCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse}
+     */
+  }, {
+    key: "insertUserPbxAudio",
+    value: function insertUserPbxAudio(pbx_audio, callback) {
+      var postBody = pbx_audio;
+      // verify the required parameter 'pbx_audio' is set
+      if (pbx_audio === undefined || pbx_audio === null) {
+        throw new Error("Missing the required parameter 'pbx_audio' when calling insertUserPbxAudio");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxAudioResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/audio/user', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -4449,6 +4584,47 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxVoicemailMailboxResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/voicemail_mailbox/{conversationPbxVoicemailMailboxUuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updateUserPbxAudio operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateUserPbxAudioCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update user pbx audio
+     * Update a pbx audio file owned by the authenticated user 
+     * @param {String} conversationPbxAudioUuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxAudio} pbx_audio Pbx Audio
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateUserPbxAudioCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxAudioResponse}
+     */
+  }, {
+    key: "updateUserPbxAudio",
+    value: function updateUserPbxAudio(conversationPbxAudioUuid, pbx_audio, callback) {
+      var postBody = pbx_audio;
+      // verify the required parameter 'conversationPbxAudioUuid' is set
+      if (conversationPbxAudioUuid === undefined || conversationPbxAudioUuid === null) {
+        throw new Error("Missing the required parameter 'conversationPbxAudioUuid' when calling updateUserPbxAudio");
+      }
+      // verify the required parameter 'pbx_audio' is set
+      if (pbx_audio === undefined || pbx_audio === null) {
+        throw new Error("Missing the required parameter 'pbx_audio' when calling updateUserPbxAudio");
+      }
+      var pathParams = {
+        'conversationPbxAudioUuid': conversationPbxAudioUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxAudioResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/audio/user/{conversationPbxAudioUuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
