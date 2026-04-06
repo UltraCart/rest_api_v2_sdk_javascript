@@ -335,6 +335,7 @@ docs/CouponPercentOffItemWithItemsQuantityPurchase.md
 docs/CouponPercentOffItems.md
 docs/CouponPercentOffItemsAndFreeShipping.md
 docs/CouponPercentOffItemsWithItemsPurchase.md
+docs/CouponPercentOffItemsWithMinimumItemAmount.md
 docs/CouponPercentOffMsrpItems.md
 docs/CouponPercentOffRetailPriceItems.md
 docs/CouponPercentOffShipping.md
@@ -1302,6 +1303,7 @@ src/com.ultracart.admin.v2.models/CouponPercentOffItemWithItemsQuantityPurchase.
 src/com.ultracart.admin.v2.models/CouponPercentOffItems.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping.js
 src/com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase.js
+src/com.ultracart.admin.v2.models/CouponPercentOffItemsWithMinimumItemAmount.js
 src/com.ultracart.admin.v2.models/CouponPercentOffMsrpItems.js
 src/com.ultracart.admin.v2.models/CouponPercentOffRetailPriceItems.js
 src/com.ultracart.admin.v2.models/CouponPercentOffShipping.js

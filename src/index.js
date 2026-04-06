@@ -340,6 +340,7 @@ import CouponPercentOffItemWithItemsQuantityPurchase from './com.ultracart.admin
 import CouponPercentOffItems from './com.ultracart.admin.v2.models/CouponPercentOffItems';
 import CouponPercentOffItemsAndFreeShipping from './com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping';
 import CouponPercentOffItemsWithItemsPurchase from './com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase';
+import CouponPercentOffItemsWithMinimumItemAmount from './com.ultracart.admin.v2.models/CouponPercentOffItemsWithMinimumItemAmount';
 import CouponPercentOffMsrpItems from './com.ultracart.admin.v2.models/CouponPercentOffMsrpItems';
 import CouponPercentOffRetailPriceItems from './com.ultracart.admin.v2.models/CouponPercentOffRetailPriceItems';
 import CouponPercentOffShipping from './com.ultracart.admin.v2.models/CouponPercentOffShipping';
@@ -1013,7 +1014,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.70
+* @version 4.1.71
 */
 export {
     /**
@@ -2983,6 +2984,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase}
      */
     CouponPercentOffItemsWithItemsPurchase,
+
+    /**
+     * The CouponPercentOffItemsWithMinimumItemAmount model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponPercentOffItemsWithMinimumItemAmount}
+     */
+    CouponPercentOffItemsWithMinimumItemAmount,
 
     /**
      * The CouponPercentOffMsrpItems model constructor.

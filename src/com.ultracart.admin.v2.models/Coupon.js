@@ -46,6 +46,7 @@ import CouponPercentOffItemWithItemsQuantityPurchase from './CouponPercentOffIte
 import CouponPercentOffItems from './CouponPercentOffItems';
 import CouponPercentOffItemsAndFreeShipping from './CouponPercentOffItemsAndFreeShipping';
 import CouponPercentOffItemsWithItemsPurchase from './CouponPercentOffItemsWithItemsPurchase';
+import CouponPercentOffItemsWithMinimumItemAmount from './CouponPercentOffItemsWithMinimumItemAmount';
 import CouponPercentOffMsrpItems from './CouponPercentOffMsrpItems';
 import CouponPercentOffRetailPriceItems from './CouponPercentOffRetailPriceItems';
 import CouponPercentOffShipping from './CouponPercentOffShipping';
@@ -65,7 +66,7 @@ import CouponTieredPercentOffSubtotalBasedOnMSRP from './CouponTieredPercentOffS
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.1.70
+ * @version 4.1.71
  */
 class Coupon {
     /**
@@ -230,6 +231,9 @@ class Coupon {
             }
             if (data.hasOwnProperty('percent_off_items_with_items_purchase')) {
                 obj['percent_off_items_with_items_purchase'] = CouponPercentOffItemsWithItemsPurchase.constructFromObject(data['percent_off_items_with_items_purchase']);
+            }
+            if (data.hasOwnProperty('percent_off_items_with_minimum_item_amount')) {
+                obj['percent_off_items_with_minimum_item_amount'] = CouponPercentOffItemsWithMinimumItemAmount.constructFromObject(data['percent_off_items_with_minimum_item_amount']);
             }
             if (data.hasOwnProperty('percent_off_msrp_items')) {
                 obj['percent_off_msrp_items'] = CouponPercentOffMsrpItems.constructFromObject(data['percent_off_msrp_items']);
@@ -539,6 +543,11 @@ Coupon.prototype['percent_off_items_and_free_shipping'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase} percent_off_items_with_items_purchase
  */
 Coupon.prototype['percent_off_items_with_items_purchase'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponPercentOffItemsWithMinimumItemAmount} percent_off_items_with_minimum_item_amount
+ */
+Coupon.prototype['percent_off_items_with_minimum_item_amount'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponPercentOffMsrpItems} percent_off_msrp_items
