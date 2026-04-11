@@ -85,6 +85,7 @@ import ConversationPbxTimeBasedsResponse from '../com.ultracart.admin.v2.models/
 import ConversationPbxTimeRange from '../com.ultracart.admin.v2.models/ConversationPbxTimeRange';
 import ConversationPbxTimeRangeResponse from '../com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse';
 import ConversationPbxTimeRangesResponse from '../com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse';
+import ConversationPbxVoicemailCapabilitiesResponse from '../com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse';
 import ConversationPbxVoicemailMailbox from '../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox';
 import ConversationPbxVoicemailMailboxResponse from '../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse';
 import ConversationPbxVoicemailMailboxesResponse from '../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse';
@@ -110,7 +111,7 @@ import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.71
+* @version 4.1.72
 */
 export default class ConversationApi {
 
@@ -3175,6 +3176,43 @@ export default class ConversationApi {
       let returnType = ConversationPbxTimeRangesResponse;
       return this.apiClient.callApi(
         '/conversation/pbx/time_range', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getPbxVoicemailCapabilities operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxVoicemailCapabilitiesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx voicemail capabilities
+     * Retrieve voicemail notification capabilities including available channels 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxVoicemailCapabilitiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse}
+     */
+    getPbxVoicemailCapabilities(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxVoicemailCapabilitiesResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/voicemail/capabilities', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

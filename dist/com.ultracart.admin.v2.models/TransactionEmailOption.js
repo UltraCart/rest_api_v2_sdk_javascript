@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TransactionEmailOption model module.
  * @module com.ultracart.admin.v2.models/TransactionEmailOption
- * @version 4.1.70
+ * @version 4.1.71
  */
 var TransactionEmailOption = /*#__PURE__*/function () {
   /**

@@ -77,6 +77,7 @@ Method | HTTP request | Description
 [**getPbxTimeBaseds**](ConversationApi.md#getPbxTimeBaseds) | **GET** /conversation/pbx/time_based | Get pbx timeBaseds
 [**getPbxTimeRange**](ConversationApi.md#getPbxTimeRange) | **GET** /conversation/pbx/time_range/{conversationPbxTimeRangeUuid} | Get pbx timeRange
 [**getPbxTimeRanges**](ConversationApi.md#getPbxTimeRanges) | **GET** /conversation/pbx/time_range | Get pbx timeRanges
+[**getPbxVoicemailCapabilities**](ConversationApi.md#getPbxVoicemailCapabilities) | **GET** /conversation/pbx/voicemail/capabilities | Get pbx voicemail capabilities
 [**getPbxVoicemailMailbox**](ConversationApi.md#getPbxVoicemailMailbox) | **GET** /conversation/pbx/voicemail_mailbox/{conversationPbxVoicemailMailboxUuid} | Get pbx voicemailMailbox
 [**getPbxVoicemailMailboxes**](ConversationApi.md#getPbxVoicemailMailboxes) | **GET** /conversation/pbx/voicemail_mailbox | Get pbx voicemailMailboxes
 [**getUserPbxAudio**](ConversationApi.md#getUserPbxAudio) | **GET** /conversation/pbx/audio/user/{conversationPbxAudioUuid} | Get user pbx audio
@@ -4087,6 +4088,57 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ConversationPbxTimeRangesResponse**](ConversationPbxTimeRangesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getPbxVoicemailCapabilities
+
+> ConversationPbxVoicemailCapabilitiesResponse getPbxVoicemailCapabilities()
+
+Get pbx voicemail capabilities
+
+Retrieve voicemail notification capabilities including available channels 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getPbxVoicemailCapabilities -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getPbxVoicemailCapabilities((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getPbxVoicemailCapabilities -->
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ConversationPbxVoicemailCapabilitiesResponse**](ConversationPbxVoicemailCapabilitiesResponse.md)
 
 ### Authorization
 

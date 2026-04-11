@@ -2007,6 +2007,12 @@ Object.defineProperty(exports, "CouponPercentOffItemsWithItemsPurchase", {
     return _CouponPercentOffItemsWithItemsPurchase["default"];
   }
 });
+Object.defineProperty(exports, "CouponPercentOffItemsWithMinimumItemAmount", {
+  enumerable: true,
+  get: function get() {
+    return _CouponPercentOffItemsWithMinimumItemAmount["default"];
+  }
+});
 Object.defineProperty(exports, "CouponPercentOffMsrpItems", {
   enumerable: true,
   get: function get() {
@@ -6151,6 +6157,7 @@ var _CouponPercentOffItemWithItemsQuantityPurchase = _interopRequireDefault(requ
 var _CouponPercentOffItems = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffItems"));
 var _CouponPercentOffItemsAndFreeShipping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffItemsAndFreeShipping"));
 var _CouponPercentOffItemsWithItemsPurchase = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase"));
+var _CouponPercentOffItemsWithMinimumItemAmount = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffItemsWithMinimumItemAmount"));
 var _CouponPercentOffMsrpItems = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffMsrpItems"));
 var _CouponPercentOffRetailPriceItems = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffRetailPriceItems"));
 var _CouponPercentOffShipping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponPercentOffShipping"));

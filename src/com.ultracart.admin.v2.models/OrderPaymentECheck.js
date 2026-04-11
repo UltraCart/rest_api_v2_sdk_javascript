@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderPaymentECheck model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentECheck
- * @version 4.1.71
+ * @version 4.1.72
  */
 class OrderPaymentECheck {
     /**

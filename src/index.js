@@ -264,6 +264,7 @@ import ConversationPbxTimeRange from './com.ultracart.admin.v2.models/Conversati
 import ConversationPbxTimeRangeConfig from './com.ultracart.admin.v2.models/ConversationPbxTimeRangeConfig';
 import ConversationPbxTimeRangeResponse from './com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse';
 import ConversationPbxTimeRangesResponse from './com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse';
+import ConversationPbxVoicemailCapabilitiesResponse from './com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse';
 import ConversationPbxVoicemailMailbox from './com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox';
 import ConversationPbxVoicemailMailboxResponse from './com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse';
 import ConversationPbxVoicemailMailboxesResponse from './com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse';
@@ -1014,7 +1015,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.71
+* @version 4.1.72
 */
 export {
     /**
@@ -2528,6 +2529,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse}
      */
     ConversationPbxTimeRangesResponse,
+
+    /**
+     * The ConversationPbxVoicemailCapabilitiesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse}
+     */
+    ConversationPbxVoicemailCapabilitiesResponse,
 
     /**
      * The ConversationPbxVoicemailMailbox model constructor.

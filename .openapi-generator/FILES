@@ -258,6 +258,7 @@ docs/ConversationPbxTimeRange.md
 docs/ConversationPbxTimeRangeConfig.md
 docs/ConversationPbxTimeRangeResponse.md
 docs/ConversationPbxTimeRangesResponse.md
+docs/ConversationPbxVoicemailCapabilitiesResponse.md
 docs/ConversationPbxVoicemailMailbox.md
 docs/ConversationPbxVoicemailMailboxResponse.md
 docs/ConversationPbxVoicemailMailboxesResponse.md
@@ -1227,6 +1228,7 @@ src/com.ultracart.admin.v2.models/ConversationPbxTimeRange.js
 src/com.ultracart.admin.v2.models/ConversationPbxTimeRangeConfig.js
 src/com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse.js
+src/com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox.js
 src/com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse.js
 src/com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse.js

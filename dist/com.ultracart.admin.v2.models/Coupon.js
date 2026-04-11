@@ -39,6 +39,7 @@ var _CouponPercentOffItemWithItemsQuantityPurchase = _interopRequireDefault(requ
 var _CouponPercentOffItems = _interopRequireDefault(require("./CouponPercentOffItems"));
 var _CouponPercentOffItemsAndFreeShipping = _interopRequireDefault(require("./CouponPercentOffItemsAndFreeShipping"));
 var _CouponPercentOffItemsWithItemsPurchase = _interopRequireDefault(require("./CouponPercentOffItemsWithItemsPurchase"));
+var _CouponPercentOffItemsWithMinimumItemAmount = _interopRequireDefault(require("./CouponPercentOffItemsWithMinimumItemAmount"));
 var _CouponPercentOffMsrpItems = _interopRequireDefault(require("./CouponPercentOffMsrpItems"));
 var _CouponPercentOffRetailPriceItems = _interopRequireDefault(require("./CouponPercentOffRetailPriceItems"));
 var _CouponPercentOffShipping = _interopRequireDefault(require("./CouponPercentOffShipping"));
@@ -75,7 +76,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.1.70
+ * @version 4.1.71
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -242,6 +243,9 @@ var Coupon = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('percent_off_items_with_items_purchase')) {
           obj['percent_off_items_with_items_purchase'] = _CouponPercentOffItemsWithItemsPurchase["default"].constructFromObject(data['percent_off_items_with_items_purchase']);
+        }
+        if (data.hasOwnProperty('percent_off_items_with_minimum_item_amount')) {
+          obj['percent_off_items_with_minimum_item_amount'] = _CouponPercentOffItemsWithMinimumItemAmount["default"].constructFromObject(data['percent_off_items_with_minimum_item_amount']);
         }
         if (data.hasOwnProperty('percent_off_msrp_items')) {
           obj['percent_off_msrp_items'] = _CouponPercentOffMsrpItems["default"].constructFromObject(data['percent_off_msrp_items']);
@@ -549,6 +553,11 @@ Coupon.prototype['percent_off_items_and_free_shipping'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CouponPercentOffItemsWithItemsPurchase} percent_off_items_with_items_purchase
  */
 Coupon.prototype['percent_off_items_with_items_purchase'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponPercentOffItemsWithMinimumItemAmount} percent_off_items_with_minimum_item_amount
+ */
+Coupon.prototype['percent_off_items_with_minimum_item_amount'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponPercentOffMsrpItems} percent_off_msrp_items
