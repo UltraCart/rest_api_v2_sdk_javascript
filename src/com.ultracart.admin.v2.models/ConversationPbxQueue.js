@@ -17,7 +17,7 @@ import ConversationPbxQueueMembers from './ConversationPbxQueueMembers';
 /**
  * The ConversationPbxQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxQueue
- * @version 4.1.72
+ * @version 4.1.73
  */
 class ConversationPbxQueue {
     /**
@@ -50,6 +50,12 @@ class ConversationPbxQueue {
 
             if (data.hasOwnProperty('ai_priority')) {
                 obj['ai_priority'] = ApiClient.convertToType(data['ai_priority'], 'String');
+            }
+            if (data.hasOwnProperty('ai_summary_enabled')) {
+                obj['ai_summary_enabled'] = ApiClient.convertToType(data['ai_summary_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ai_summary_instructions')) {
+                obj['ai_summary_instructions'] = ApiClient.convertToType(data['ai_summary_instructions'], 'String');
             }
             if (data.hasOwnProperty('ai_timeout_seconds')) {
                 obj['ai_timeout_seconds'] = ApiClient.convertToType(data['ai_timeout_seconds'], 'Number');
@@ -156,6 +162,12 @@ class ConversationPbxQueue {
             if (data.hasOwnProperty('wrap_up_seconds')) {
                 obj['wrap_up_seconds'] = ApiClient.convertToType(data['wrap_up_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('zoho_desk_department_id')) {
+                obj['zoho_desk_department_id'] = ApiClient.convertToType(data['zoho_desk_department_id'], 'String');
+            }
+            if (data.hasOwnProperty('zoho_desk_ticket_enabled')) {
+                obj['zoho_desk_ticket_enabled'] = ApiClient.convertToType(data['zoho_desk_ticket_enabled'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -168,6 +180,18 @@ class ConversationPbxQueue {
  * @member {module:com.ultracart.admin.v2.models/ConversationPbxQueue.AiPriorityEnum} ai_priority
  */
 ConversationPbxQueue.prototype['ai_priority'] = undefined;
+
+/**
+ * If true, AI summaries are generated for answered calls in this queue
+ * @member {Boolean} ai_summary_enabled
+ */
+ConversationPbxQueue.prototype['ai_summary_enabled'] = undefined;
+
+/**
+ * Custom instructions injected into the AI summary system prompt for this queue
+ * @member {String} ai_summary_instructions
+ */
+ConversationPbxQueue.prototype['ai_summary_instructions'] = undefined;
 
 /**
  * AI timeout seconds
@@ -377,6 +401,18 @@ ConversationPbxQueue.prototype['wait_warning_seconds'] = undefined;
  * @member {Number} wrap_up_seconds
  */
 ConversationPbxQueue.prototype['wrap_up_seconds'] = undefined;
+
+/**
+ * Zoho Desk department ID to create tickets in
+ * @member {String} zoho_desk_department_id
+ */
+ConversationPbxQueue.prototype['zoho_desk_department_id'] = undefined;
+
+/**
+ * If true, a Zoho Desk ticket is automatically created for answered calls in this queue
+ * @member {Boolean} zoho_desk_ticket_enabled
+ */
+ConversationPbxQueue.prototype['zoho_desk_ticket_enabled'] = undefined;
 
 
 

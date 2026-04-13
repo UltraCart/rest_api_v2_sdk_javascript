@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxVoicemailMailbox model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox
- * @version 4.1.71
+ * @version 4.1.72
  */
 var ConversationPbxVoicemailMailbox = /*#__PURE__*/function () {
   /**
@@ -65,8 +65,14 @@ var ConversationPbxVoicemailMailbox = /*#__PURE__*/function () {
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
+        if (data.hasOwnProperty('send_notices_to_channel')) {
+          obj['send_notices_to_channel'] = _ApiClient["default"].convertToType(data['send_notices_to_channel'], 'String');
+        }
         if (data.hasOwnProperty('send_notices_to_email')) {
           obj['send_notices_to_email'] = _ApiClient["default"].convertToType(data['send_notices_to_email'], 'String');
+        }
+        if (data.hasOwnProperty('send_notices_to_zoho_desk_department_id')) {
+          obj['send_notices_to_zoho_desk_department_id'] = _ApiClient["default"].convertToType(data['send_notices_to_zoho_desk_department_id'], 'String');
         }
         if (data.hasOwnProperty('user_id')) {
           obj['user_id'] = _ApiClient["default"].convertToType(data['user_id'], 'Number');
@@ -113,10 +119,22 @@ ConversationPbxVoicemailMailbox.prototype['conversation_pbx_voicemail_mailbox_uu
 ConversationPbxVoicemailMailbox.prototype['merchant_id'] = undefined;
 
 /**
+ * Send notices to channel
+ * @member {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox.SendNoticesToChannelEnum} send_notices_to_channel
+ */
+ConversationPbxVoicemailMailbox.prototype['send_notices_to_channel'] = undefined;
+
+/**
  * Send notices to email
  * @member {String} send_notices_to_email
  */
 ConversationPbxVoicemailMailbox.prototype['send_notices_to_email'] = undefined;
+
+/**
+ * Send notices to Zoho Desk department id
+ * @member {String} send_notices_to_zoho_desk_department_id
+ */
+ConversationPbxVoicemailMailbox.prototype['send_notices_to_zoho_desk_department_id'] = undefined;
 
 /**
  * User Id
@@ -171,6 +189,34 @@ ConversationPbxVoicemailMailbox.prototype['voicemail_prompt_say'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox.VoicemailPromptSayVoiceEnum} voicemail_prompt_say_voice
  */
 ConversationPbxVoicemailMailbox.prototype['voicemail_prompt_say_voice'] = undefined;
+
+/**
+ * Allowed values for the <code>send_notices_to_channel</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationPbxVoicemailMailbox['SendNoticesToChannelEnum'] = {
+  /**
+   * value: "none"
+   * @const
+   */
+  "none": "none",
+  /**
+   * value: "email"
+   * @const
+   */
+  "email": "email",
+  /**
+   * value: "zoho_desk_ticket"
+   * @const
+   */
+  "zoho_desk_ticket": "zoho_desk_ticket",
+  /**
+   * value: "ultracart_task"
+   * @const
+   */
+  "ultracart_task": "ultracart_task"
+};
 
 /**
  * Allowed values for the <code>voicemail_followup_say_voice</code> property.

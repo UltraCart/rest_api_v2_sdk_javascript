@@ -1545,6 +1545,12 @@ Object.defineProperty(exports, "ConversationPbxTimeRangesResponse", {
     return _ConversationPbxTimeRangesResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPbxVoicemailCapabilitiesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxVoicemailCapabilitiesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationPbxVoicemailMailbox", {
   enumerable: true,
   get: function get() {
@@ -6081,6 +6087,7 @@ var _ConversationPbxTimeRange = _interopRequireDefault(require("./com.ultracart.
 var _ConversationPbxTimeRangeConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxTimeRangeConfig"));
 var _ConversationPbxTimeRangeResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse"));
 var _ConversationPbxTimeRangesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse"));
+var _ConversationPbxVoicemailCapabilitiesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse"));
 var _ConversationPbxVoicemailMailbox = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox"));
 var _ConversationPbxVoicemailMailboxResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse"));
 var _ConversationPbxVoicemailMailboxesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse"));

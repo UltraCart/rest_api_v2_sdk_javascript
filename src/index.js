@@ -215,6 +215,7 @@ import ConversationPbxCall from './com.ultracart.admin.v2.models/ConversationPbx
 import ConversationPbxCallAgent from './com.ultracart.admin.v2.models/ConversationPbxCallAgent';
 import ConversationPbxCallAiCost from './com.ultracart.admin.v2.models/ConversationPbxCallAiCost';
 import ConversationPbxCallAiEngagement from './com.ultracart.admin.v2.models/ConversationPbxCallAiEngagement';
+import ConversationPbxCallAiSummary from './com.ultracart.admin.v2.models/ConversationPbxCallAiSummary';
 import ConversationPbxCallAiToolCall from './com.ultracart.admin.v2.models/ConversationPbxCallAiToolCall';
 import ConversationPbxCallAiWhisper from './com.ultracart.admin.v2.models/ConversationPbxCallAiWhisper';
 import ConversationPbxCallCaller from './com.ultracart.admin.v2.models/ConversationPbxCallCaller';
@@ -1015,7 +1016,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.72
+* @version 4.1.73
 */
 export {
     /**
@@ -2235,6 +2236,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationPbxCallAiEngagement}
      */
     ConversationPbxCallAiEngagement,
+
+    /**
+     * The ConversationPbxCallAiSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxCallAiSummary}
+     */
+    ConversationPbxCallAiSummary,
 
     /**
      * The ConversationPbxCallAiToolCall model constructor.

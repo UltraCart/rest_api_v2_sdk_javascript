@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemShippingDestinationRestriction model module.
  * @module com.ultracart.admin.v2.models/ItemShippingDestinationRestriction
- * @version 4.1.71
+ * @version 4.1.72
  */
 var ItemShippingDestinationRestriction = /*#__PURE__*/function () {
   /**

@@ -77,6 +77,7 @@ var _ConversationPbxTimeBasedsResponse = _interopRequireDefault(require("../com.
 var _ConversationPbxTimeRange = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxTimeRange"));
 var _ConversationPbxTimeRangeResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxTimeRangeResponse"));
 var _ConversationPbxTimeRangesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse"));
+var _ConversationPbxVoicemailCapabilitiesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse"));
 var _ConversationPbxVoicemailMailbox = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox"));
 var _ConversationPbxVoicemailMailboxResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxResponse"));
 var _ConversationPbxVoicemailMailboxesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxVoicemailMailboxesResponse"));
@@ -119,7 +120,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.71
+* @version 4.1.72
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -2651,6 +2652,35 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxTimeRangesResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/time_range', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getPbxVoicemailCapabilities operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxVoicemailCapabilitiesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx voicemail capabilities
+     * Retrieve voicemail notification capabilities including available channels 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxVoicemailCapabilitiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxVoicemailCapabilitiesResponse}
+     */
+  }, {
+    key: "getPbxVoicemailCapabilities",
+    value: function getPbxVoicemailCapabilities(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxVoicemailCapabilitiesResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/voicemail/capabilities', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

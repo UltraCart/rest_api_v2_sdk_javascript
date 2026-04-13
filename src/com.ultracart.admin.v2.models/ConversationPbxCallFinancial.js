@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallFinancial model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallFinancial
- * @version 4.1.72
+ * @version 4.1.73
  */
 class ConversationPbxCallFinancial {
     /**
@@ -56,6 +56,9 @@ class ConversationPbxCallFinancial {
             if (data.hasOwnProperty('ai_agent_cost_currency')) {
                 obj['ai_agent_cost_currency'] = ApiClient.convertToType(data['ai_agent_cost_currency'], 'String');
             }
+            if (data.hasOwnProperty('ai_summary_cost')) {
+                obj['ai_summary_cost'] = ApiClient.convertToType(data['ai_summary_cost'], 'Number');
+            }
             if (data.hasOwnProperty('call_currency')) {
                 obj['call_currency'] = ApiClient.convertToType(data['call_currency'], 'String');
             }
@@ -92,6 +95,12 @@ ConversationPbxCallFinancial.prototype['ai_agent_cost'] = undefined;
  * @member {String} ai_agent_cost_currency
  */
 ConversationPbxCallFinancial.prototype['ai_agent_cost_currency'] = undefined;
+
+/**
+ * AI summary generation cost (LLM call made by pbx-transcript-formatter after the call ends)
+ * @member {Number} ai_summary_cost
+ */
+ConversationPbxCallFinancial.prototype['ai_summary_cost'] = undefined;
 
 /**
  * Currency for call price (default USD)
