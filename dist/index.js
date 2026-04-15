@@ -1251,6 +1251,12 @@ Object.defineProperty(exports, "ConversationPbxCallAiEngagement", {
     return _ConversationPbxCallAiEngagement["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPbxCallAiSummary", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallAiSummary["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationPbxCallAiToolCall", {
   enumerable: true,
   get: function get() {
@@ -6038,6 +6044,7 @@ var _ConversationPbxCall = _interopRequireDefault(require("./com.ultracart.admin
 var _ConversationPbxCallAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAgent"));
 var _ConversationPbxCallAiCost = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiCost"));
 var _ConversationPbxCallAiEngagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiEngagement"));
+var _ConversationPbxCallAiSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiSummary"));
 var _ConversationPbxCallAiToolCall = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiToolCall"));
 var _ConversationPbxCallAiWhisper = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallAiWhisper"));
 var _ConversationPbxCallCaller = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallCaller"));

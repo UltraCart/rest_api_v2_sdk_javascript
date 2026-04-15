@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The CustomerWishListItemResponse model module.
  * @module com.ultracart.admin.v2.models/CustomerWishListItemResponse
- * @version 4.1.73
+ * @version 4.1.74
  */
 class CustomerWishListItemResponse {
     /**

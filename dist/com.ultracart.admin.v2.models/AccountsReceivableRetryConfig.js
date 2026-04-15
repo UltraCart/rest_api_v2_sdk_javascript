@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AccountsReceivableRetryConfig model module.
  * @module com.ultracart.admin.v2.models/AccountsReceivableRetryConfig
- * @version 4.1.72
+ * @version 4.1.73
  */
 var AccountsReceivableRetryConfig = /*#__PURE__*/function () {
   /**

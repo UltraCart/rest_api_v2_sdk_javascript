@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemKitComponent model module.
  * @module com.ultracart.admin.v2.models/ItemKitComponent
- * @version 4.1.73
+ * @version 4.1.74
  */
 class ItemKitComponent {
     /**

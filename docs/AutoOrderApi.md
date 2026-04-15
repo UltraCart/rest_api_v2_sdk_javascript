@@ -4,6 +4,7 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cancelAutoOrderItemByReferenceOrderId**](AutoOrderApi.md#cancelAutoOrderItemByReferenceOrderId) | **POST** /auto_order/auto_orders/reference_order_id/{reference_order_id}/items/original/{original_item_id}/cancel | Cancel a single item on an auto order
 [**consolidateAutoOrders**](AutoOrderApi.md#consolidateAutoOrders) | **PUT** /auto_order/auto_orders/{auto_order_oid}/consolidate | Consolidates multiple auto orders
 [**establishAutoOrderByReferenceOrderId**](AutoOrderApi.md#establishAutoOrderByReferenceOrderId) | **POST** /auto_order/auto_orders/reference_order_id/{reference_order_id} | Establish an auto order by referencing a regular order id
 [**getAutoOrder**](AutoOrderApi.md#getAutoOrder) | **GET** /auto_order/auto_orders/{auto_order_oid} | Retrieve an auto order by oid
@@ -19,6 +20,69 @@ Method | HTTP request | Description
 [**updateAutoOrderProperties**](AutoOrderApi.md#updateAutoOrderProperties) | **PUT** /auto_order/auto_orders/{auto_order_oid}/properties | Update an auto order properties
 [**updateAutoOrdersBatch**](AutoOrderApi.md#updateAutoOrdersBatch) | **PUT** /auto_order/auto_orders/batch | Update multiple auto orders
 
+
+
+## cancelAutoOrderItemByReferenceOrderId
+
+> AutoOrderResponse cancelAutoOrderItemByReferenceOrderId(reference_order_id, original_item_id, opts)
+
+Cancel a single item on an auto order
+
+Cancels a single item on an auto order identified by the original order id and the item&#39;s original_item_id.  The request body may specify mode&#x3D;end (soft cancel by setting no_order_after_dts to the current time, preserving the row for reporting; this is the default when the body is omitted) or mode&#x3D;remove (hard delete).  Returns the updated auto order based upon expansion. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE cancelAutoOrderItemByReferenceOrderId -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.AutoOrderApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let reference_order_id = "reference_order_id_example"; // String | The reference order id (original_order_id) of the auto order.
+let original_item_id = "original_item_id_example"; // String | The original_item_id (SKU) of the item to cancel.
+let opts = {
+  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
+  'auto_order_item_cancel_request': new UltraCartRestApiV2.AutoOrderItemCancelRequest() // AutoOrderItemCancelRequest | Cancel request.  Body is optional; omit for default mode=end.
+};
+apiInstance.cancelAutoOrderItemByReferenceOrderId(reference_order_id, original_item_id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE cancelAutoOrderItemByReferenceOrderId -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reference_order_id** | **String**| The reference order id (original_order_id) of the auto order. | 
+ **original_item_id** | **String**| The original_item_id (SKU) of the item to cancel. | 
+ **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
+ **auto_order_item_cancel_request** | [**AutoOrderItemCancelRequest**](AutoOrderItemCancelRequest.md)| Cancel request.  Body is optional; omit for default mode&#x3D;end. | [optional] 
+
+### Return type
+
+[**AutoOrderResponse**](AutoOrderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
 
 
 ## consolidateAutoOrders

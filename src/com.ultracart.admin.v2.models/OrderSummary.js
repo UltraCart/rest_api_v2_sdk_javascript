@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The OrderSummary model module.
  * @module com.ultracart.admin.v2.models/OrderSummary
- * @version 4.1.73
+ * @version 4.1.74
  */
 class OrderSummary {
     /**

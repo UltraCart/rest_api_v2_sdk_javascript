@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderFormat model module.
  * @module com.ultracart.admin.v2.models/OrderFormat
- * @version 4.1.73
+ * @version 4.1.74
  */
 class OrderFormat {
     /**
@@ -94,6 +94,9 @@ class OrderFormat {
             }
             if (data.hasOwnProperty('translate')) {
                 obj['translate'] = ApiClient.convertToType(data['translate'], 'Boolean');
+            }
+            if (data.hasOwnProperty('use_phone_number_web_component')) {
+                obj['use_phone_number_web_component'] = ApiClient.convertToType(data['use_phone_number_web_component'], 'Boolean');
             }
         }
         return obj;
@@ -197,6 +200,12 @@ OrderFormat.prototype['show_payment_info'] = undefined;
  * @member {Boolean} translate
  */
 OrderFormat.prototype['translate'] = undefined;
+
+/**
+ * True to render phone numbers as <phone-number-format> web components in the HTML output. Only honored by the div format. Default false preserves legacy scalar rendering for receipts and unauthenticated consumers.
+ * @member {Boolean} use_phone_number_web_component
+ */
+OrderFormat.prototype['use_phone_number_web_component'] = undefined;
 
 
 

@@ -41,6 +41,7 @@ import AutoOrderAddonItemOption from './com.ultracart.admin.v2.models/AutoOrderA
 import AutoOrderAddonItemsUpdateRequest from './com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest';
 import AutoOrderConsolidate from './com.ultracart.admin.v2.models/AutoOrderConsolidate';
 import AutoOrderItem from './com.ultracart.admin.v2.models/AutoOrderItem';
+import AutoOrderItemCancelRequest from './com.ultracart.admin.v2.models/AutoOrderItemCancelRequest';
 import AutoOrderItemFutureSchedule from './com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule';
 import AutoOrderItemOption from './com.ultracart.admin.v2.models/AutoOrderItemOption';
 import AutoOrderItemSimpleSchedule from './com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule';
@@ -1016,7 +1017,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.73
+* @version 4.1.74
 */
 export {
     /**
@@ -1192,6 +1193,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AutoOrderItem}
      */
     AutoOrderItem,
+
+    /**
+     * The AutoOrderItemCancelRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest}
+     */
+    AutoOrderItemCancelRequest,
 
     /**
      * The AutoOrderItemFutureSchedule model constructor.

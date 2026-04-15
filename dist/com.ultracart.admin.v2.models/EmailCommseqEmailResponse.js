@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCommseqEmailResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqEmailResponse
- * @version 4.1.72
+ * @version 4.1.73
  */
 var EmailCommseqEmailResponse = /*#__PURE__*/function () {
   /**

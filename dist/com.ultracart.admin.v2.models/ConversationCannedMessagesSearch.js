@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationCannedMessagesSearch model module.
  * @module com.ultracart.admin.v2.models/ConversationCannedMessagesSearch
- * @version 4.1.72
+ * @version 4.1.73
  */
 var ConversationCannedMessagesSearch = /*#__PURE__*/function () {
   /**

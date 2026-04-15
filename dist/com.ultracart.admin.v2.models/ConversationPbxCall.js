@@ -7,6 +7,7 @@ exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _ConversationPbxCallAgent = _interopRequireDefault(require("./ConversationPbxCallAgent"));
 var _ConversationPbxCallAiEngagement = _interopRequireDefault(require("./ConversationPbxCallAiEngagement"));
+var _ConversationPbxCallAiSummary = _interopRequireDefault(require("./ConversationPbxCallAiSummary"));
 var _ConversationPbxCallCaller = _interopRequireDefault(require("./ConversationPbxCallCaller"));
 var _ConversationPbxCallFinancial = _interopRequireDefault(require("./ConversationPbxCallFinancial"));
 var _ConversationPbxCallHold = _interopRequireDefault(require("./ConversationPbxCallHold"));
@@ -35,7 +36,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCall model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCall
- * @version 4.1.72
+ * @version 4.1.73
  */
 var ConversationPbxCall = /*#__PURE__*/function () {
   /**
@@ -76,6 +77,9 @@ var ConversationPbxCall = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('ai_agent_engagements')) {
           obj['ai_agent_engagements'] = _ApiClient["default"].convertToType(data['ai_agent_engagements'], [_ConversationPbxCallAiEngagement["default"]]);
+        }
+        if (data.hasOwnProperty('ai_summary')) {
+          obj['ai_summary'] = _ConversationPbxCallAiSummary["default"].constructFromObject(data['ai_summary']);
         }
         if (data.hasOwnProperty('call_sid')) {
           obj['call_sid'] = _ApiClient["default"].convertToType(data['call_sid'], 'String');
@@ -134,6 +138,12 @@ var ConversationPbxCall = /*#__PURE__*/function () {
         if (data.hasOwnProperty('updated_at_dts')) {
           obj['updated_at_dts'] = _ApiClient["default"].convertToType(data['updated_at_dts'], 'String');
         }
+        if (data.hasOwnProperty('zoho_desk_ticket_id')) {
+          obj['zoho_desk_ticket_id'] = _ApiClient["default"].convertToType(data['zoho_desk_ticket_id'], 'String');
+        }
+        if (data.hasOwnProperty('zoho_desk_ticket_url')) {
+          obj['zoho_desk_ticket_url'] = _ApiClient["default"].convertToType(data['zoho_desk_ticket_url'], 'String');
+        }
       }
       return obj;
     }
@@ -156,6 +166,11 @@ ConversationPbxCall.prototype['agents'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationPbxCallAiEngagement>} ai_agent_engagements
  */
 ConversationPbxCall.prototype['ai_agent_engagements'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/ConversationPbxCallAiSummary} ai_summary
+ */
+ConversationPbxCall.prototype['ai_summary'] = undefined;
 
 /**
  * Twilio call SID for the primary (customer) call leg
@@ -266,4 +281,16 @@ ConversationPbxCall.prototype['transfers'] = undefined;
  * @member {String} updated_at_dts
  */
 ConversationPbxCall.prototype['updated_at_dts'] = undefined;
+
+/**
+ * Zoho Desk ticket ID if a ticket was created for this call
+ * @member {String} zoho_desk_ticket_id
+ */
+ConversationPbxCall.prototype['zoho_desk_ticket_id'] = undefined;
+
+/**
+ * URL to the Zoho Desk ticket if a ticket was created for this call
+ * @member {String} zoho_desk_ticket_url
+ */
+ConversationPbxCall.prototype['zoho_desk_ticket_url'] = undefined;
 var _default = exports["default"] = ConversationPbxCall;

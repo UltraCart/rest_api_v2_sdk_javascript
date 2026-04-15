@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import AutoOrder from '../com.ultracart.admin.v2.models/AutoOrder';
 import AutoOrderAddonItemsUpdateRequest from '../com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest';
 import AutoOrderConsolidate from '../com.ultracart.admin.v2.models/AutoOrderConsolidate';
+import AutoOrderItemCancelRequest from '../com.ultracart.admin.v2.models/AutoOrderItemCancelRequest';
 import AutoOrderPropertiesUpdateRequest from '../com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest';
 import AutoOrderQuery from '../com.ultracart.admin.v2.models/AutoOrderQuery';
 import AutoOrderQueryBatch from '../com.ultracart.admin.v2.models/AutoOrderQueryBatch';
@@ -27,7 +28,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.73
+* @version 4.1.74
 */
 export default class AutoOrderApi {
 
@@ -42,6 +43,60 @@ export default class AutoOrderApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the cancelAutoOrderItemByReferenceOrderId operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cancel a single item on an auto order
+     * Cancels a single item on an auto order identified by the original order id and the item's original_item_id.  The request body may specify mode=end (soft cancel by setting no_order_after_dts to the current time, preserving the row for reporting; this is the default when the body is omitted) or mode=remove (hard delete).  Returns the updated auto order based upon expansion. 
+     * @param {String} reference_order_id The reference order id (original_order_id) of the auto order.
+     * @param {String} original_item_id The original_item_id (SKU) of the item to cancel.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest} opts.auto_order_item_cancel_request Cancel request.  Body is optional; omit for default mode=end.
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+    cancelAutoOrderItemByReferenceOrderId(reference_order_id, original_item_id, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['auto_order_item_cancel_request'];
+      // verify the required parameter 'reference_order_id' is set
+      if (reference_order_id === undefined || reference_order_id === null) {
+        throw new Error("Missing the required parameter 'reference_order_id' when calling cancelAutoOrderItemByReferenceOrderId");
+      }
+      // verify the required parameter 'original_item_id' is set
+      if (original_item_id === undefined || original_item_id === null) {
+        throw new Error("Missing the required parameter 'original_item_id' when calling cancelAutoOrderItemByReferenceOrderId");
+      }
+
+      let pathParams = {
+        'reference_order_id': reference_order_id,
+        'original_item_id': original_item_id
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = AutoOrderResponse;
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/reference_order_id/{reference_order_id}/items/original/{original_item_id}/cancel', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the consolidateAutoOrders operation.
