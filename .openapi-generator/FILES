@@ -158,6 +158,8 @@ docs/ConversationDepartmentMember.md
 docs/ConversationDepartmentMembersResponse.md
 docs/ConversationDepartmentResponse.md
 docs/ConversationDepartmentsResponse.md
+docs/ConversationEmbedApi.md
+docs/ConversationEmbedPbxAuthResponse.md
 docs/ConversationEngagement.md
 docs/ConversationEngagementEquation.md
 docs/ConversationEngagementEquationFunction.md
@@ -1130,6 +1132,7 @@ src/com.ultracart.admin.v2.models/ConversationDepartmentMember.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentResponse.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentsResponse.js
+src/com.ultracart.admin.v2.models/ConversationEmbedPbxAuthResponse.js
 src/com.ultracart.admin.v2.models/ConversationEngagement.js
 src/com.ultracart.admin.v2.models/ConversationEngagementEquation.js
 src/com.ultracart.admin.v2.models/ConversationEngagementEquationFunction.js
@@ -1937,6 +1940,7 @@ src/com.ultracart.admin.v2/AutoOrderApi.js
 src/com.ultracart.admin.v2/ChannelPartnerApi.js
 src/com.ultracart.admin.v2/CheckoutApi.js
 src/com.ultracart.admin.v2/ConversationApi.js
+src/com.ultracart.admin.v2/ConversationEmbedApi.js
 src/com.ultracart.admin.v2/CouponApi.js
 src/com.ultracart.admin.v2/CustomerApi.js
 src/com.ultracart.admin.v2/DatawarehouseApi.js
