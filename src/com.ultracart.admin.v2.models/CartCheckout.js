@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartCheckout model module.
  * @module com.ultracart.admin.v2.models/CartCheckout
- * @version 4.1.76
+ * @version 4.1.77
  */
 class CartCheckout {
     /**

@@ -17,7 +17,7 @@ import OrderDigitalItem from './OrderDigitalItem';
 /**
  * The OrderDigitalOrder model module.
  * @module com.ultracart.admin.v2.models/OrderDigitalOrder
- * @version 4.1.76
+ * @version 4.1.77
  */
 class OrderDigitalOrder {
     /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemVariation model module.
  * @module com.ultracart.admin.v2.models/ItemVariation
- * @version 4.1.74
+ * @version 4.1.76
  */
 var ItemVariation = /*#__PURE__*/function () {
   /**

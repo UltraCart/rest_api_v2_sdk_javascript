@@ -945,6 +945,18 @@ Object.defineProperty(exports, "ConversationDepartmentsResponse", {
     return _ConversationDepartmentsResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationEmbedApi", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEmbedApi["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationEmbedPbxAuthResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationEmbedPbxAuthResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationEngagement", {
   enumerable: true,
   get: function get() {
@@ -5999,6 +6011,7 @@ var _ConversationDepartmentMember = _interopRequireDefault(require("./com.ultrac
 var _ConversationDepartmentMembersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentMembersResponse"));
 var _ConversationDepartmentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentResponse"));
 var _ConversationDepartmentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentsResponse"));
+var _ConversationEmbedPbxAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEmbedPbxAuthResponse"));
 var _ConversationEngagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagement"));
 var _ConversationEngagementEquation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementEquation"));
 var _ConversationEngagementEquationFunction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationEngagementEquationFunction"));
@@ -6806,6 +6819,7 @@ var _AutoOrderApi = _interopRequireDefault(require("./com.ultracart.admin.v2/Aut
 var _ChannelPartnerApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ChannelPartnerApi"));
 var _CheckoutApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CheckoutApi"));
 var _ConversationApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ConversationApi"));
+var _ConversationEmbedApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ConversationEmbedApi"));
 var _CouponApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CouponApi"));
 var _CustomerApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CustomerApi"));
 var _DatawarehouseApi = _interopRequireDefault(require("./com.ultracart.admin.v2/DatawarehouseApi"));

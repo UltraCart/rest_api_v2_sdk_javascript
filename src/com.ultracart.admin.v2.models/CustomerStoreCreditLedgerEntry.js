@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerStoreCreditLedgerEntry model module.
  * @module com.ultracart.admin.v2.models/CustomerStoreCreditLedgerEntry
- * @version 4.1.76
+ * @version 4.1.77
  */
 class CustomerStoreCreditLedgerEntry {
     /**
