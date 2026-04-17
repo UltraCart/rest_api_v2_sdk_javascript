@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemTag model module.
  * @module com.ultracart.admin.v2.models/ItemTag
- * @version 4.1.73
+ * @version 4.1.74
  */
 var ItemTag = /*#__PURE__*/function () {
   /**

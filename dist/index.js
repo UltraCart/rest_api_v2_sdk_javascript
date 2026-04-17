@@ -189,6 +189,12 @@ Object.defineProperty(exports, "AutoOrderItem", {
     return _AutoOrderItem["default"];
   }
 });
+Object.defineProperty(exports, "AutoOrderItemCancelRequest", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderItemCancelRequest["default"];
+  }
+});
 Object.defineProperty(exports, "AutoOrderItemFutureSchedule", {
   enumerable: true,
   get: function get() {
@@ -5870,6 +5876,7 @@ var _AutoOrderAddonItemOption = _interopRequireDefault(require("./com.ultracart.
 var _AutoOrderAddonItemsUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest"));
 var _AutoOrderConsolidate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderConsolidate"));
 var _AutoOrderItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItem"));
+var _AutoOrderItemCancelRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemCancelRequest"));
 var _AutoOrderItemFutureSchedule = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule"));
 var _AutoOrderItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemOption"));
 var _AutoOrderItemSimpleSchedule = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule"));

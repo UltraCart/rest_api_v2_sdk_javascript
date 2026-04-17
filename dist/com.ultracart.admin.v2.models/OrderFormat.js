@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderFormat model module.
  * @module com.ultracart.admin.v2.models/OrderFormat
- * @version 4.1.73
+ * @version 4.1.74
  */
 var OrderFormat = /*#__PURE__*/function () {
   /**
@@ -106,6 +106,9 @@ var OrderFormat = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('translate')) {
           obj['translate'] = _ApiClient["default"].convertToType(data['translate'], 'Boolean');
+        }
+        if (data.hasOwnProperty('use_phone_number_web_component')) {
+          obj['use_phone_number_web_component'] = _ApiClient["default"].convertToType(data['use_phone_number_web_component'], 'Boolean');
         }
       }
       return obj;
@@ -207,6 +210,12 @@ OrderFormat.prototype['show_payment_info'] = undefined;
  * @member {Boolean} translate
  */
 OrderFormat.prototype['translate'] = undefined;
+
+/**
+ * True to render phone numbers as <phone-number-format> web components in the HTML output. Only honored by the div format. Default false preserves legacy scalar rendering for receipts and unauthenticated consumers.
+ * @member {Boolean} use_phone_number_web_component
+ */
+OrderFormat.prototype['use_phone_number_web_component'] = undefined;
 
 /**
  * Allowed values for the <code>format</code> property.

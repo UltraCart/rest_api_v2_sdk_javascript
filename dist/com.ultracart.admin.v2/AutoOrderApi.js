@@ -8,6 +8,7 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _AutoOrder = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrder"));
 var _AutoOrderAddonItemsUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest"));
 var _AutoOrderConsolidate = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderConsolidate"));
+var _AutoOrderItemCancelRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderItemCancelRequest"));
 var _AutoOrderPropertiesUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest"));
 var _AutoOrderQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderQuery"));
 var _AutoOrderQueryBatch = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderQueryBatch"));
@@ -36,7 +37,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.73
+* @version 4.1.74
 */
 var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -52,24 +53,72 @@ var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   }
 
   /**
-   * Callback function to receive the result of the consolidateAutoOrders operation.
-   * @callback module:com.ultracart.admin.v2/AutoOrderApi~consolidateAutoOrdersCallback
+   * Callback function to receive the result of the cancelAutoOrderItemByReferenceOrderId operation.
+   * @callback module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback
    * @param {String} error Error message, if any.
    * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
    * @param {String} response The complete HTTP response.
    */
 
   /**
-   * Consolidates multiple auto orders
-   * Consolidates mutliple auto orders on the UltraCart account. 
-   * @param {Number} auto_order_oid The auto order oid to consolidate into.
-   * @param {module:com.ultracart.admin.v2.models/AutoOrderConsolidate} auto_order_consolidate Auto orders to consolidate
+   * Cancel a single item on an auto order
+   * Cancels a single item on an auto order identified by the original order id and the item's original_item_id.  The request body may specify mode=end (soft cancel by setting no_order_after_dts to the current time, preserving the row for reporting; this is the default when the body is omitted) or mode=remove (hard delete).  Returns the updated auto order based upon expansion. 
+   * @param {String} reference_order_id The reference order id (original_order_id) of the auto order.
+   * @param {String} original_item_id The original_item_id (SKU) of the item to cancel.
    * @param {Object} opts Optional parameters
    * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
-   * @param {module:com.ultracart.admin.v2/AutoOrderApi~consolidateAutoOrdersCallback} callback The callback function, accepting three arguments: error, data, response
+   * @param {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest} opts.auto_order_item_cancel_request Cancel request.  Body is optional; omit for default mode=end.
+   * @param {module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
    * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
    */
   return _createClass(AutoOrderApi, [{
+    key: "cancelAutoOrderItemByReferenceOrderId",
+    value: function cancelAutoOrderItemByReferenceOrderId(reference_order_id, original_item_id, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['auto_order_item_cancel_request'];
+      // verify the required parameter 'reference_order_id' is set
+      if (reference_order_id === undefined || reference_order_id === null) {
+        throw new Error("Missing the required parameter 'reference_order_id' when calling cancelAutoOrderItemByReferenceOrderId");
+      }
+      // verify the required parameter 'original_item_id' is set
+      if (original_item_id === undefined || original_item_id === null) {
+        throw new Error("Missing the required parameter 'original_item_id' when calling cancelAutoOrderItemByReferenceOrderId");
+      }
+      var pathParams = {
+        'reference_order_id': reference_order_id,
+        'original_item_id': original_item_id
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _AutoOrderResponse["default"];
+      return this.apiClient.callApi('/auto_order/auto_orders/reference_order_id/{reference_order_id}/items/original/{original_item_id}/cancel', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the consolidateAutoOrders operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~consolidateAutoOrdersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Consolidates multiple auto orders
+     * Consolidates mutliple auto orders on the UltraCart account. 
+     * @param {Number} auto_order_oid The auto order oid to consolidate into.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderConsolidate} auto_order_consolidate Auto orders to consolidate
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~consolidateAutoOrdersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+  }, {
     key: "consolidateAutoOrders",
     value: function consolidateAutoOrders(auto_order_oid, auto_order_consolidate, opts, callback) {
       opts = opts || {};

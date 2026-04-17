@@ -24,18 +24,18 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
  *
  */
 /**
- * The ItemRealtimePricing model module.
- * @module com.ultracart.admin.v2.models/ItemRealtimePricing
+ * The AutoOrderItemCancelRequest model module.
+ * @module com.ultracart.admin.v2.models/AutoOrderItemCancelRequest
  * @version 4.1.74
  */
-var ItemRealtimePricing = /*#__PURE__*/function () {
+var AutoOrderItemCancelRequest = /*#__PURE__*/function () {
   /**
-   * Constructs a new <code>ItemRealtimePricing</code>.
-   * @alias module:com.ultracart.admin.v2.models/ItemRealtimePricing
+   * Constructs a new <code>AutoOrderItemCancelRequest</code>.
+   * @alias module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest
    */
-  function ItemRealtimePricing() {
-    _classCallCheck(this, ItemRealtimePricing);
-    ItemRealtimePricing.initialize(this);
+  function AutoOrderItemCancelRequest() {
+    _classCallCheck(this, AutoOrderItemCancelRequest);
+    AutoOrderItemCancelRequest.initialize(this);
   }
 
   /**
@@ -43,30 +43,27 @@ var ItemRealtimePricing = /*#__PURE__*/function () {
    * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
    * Only for internal use.
    */
-  return _createClass(ItemRealtimePricing, null, [{
+  return _createClass(AutoOrderItemCancelRequest, null, [{
     key: "initialize",
     value: function initialize(obj) {}
 
     /**
-     * Constructs a <code>ItemRealtimePricing</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>AutoOrderItemCancelRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:com.ultracart.admin.v2.models/ItemRealtimePricing} obj Optional instance to populate.
-     * @return {module:com.ultracart.admin.v2.models/ItemRealtimePricing} The populated <code>ItemRealtimePricing</code> instance.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest} obj Optional instance to populate.
+     * @return {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest} The populated <code>AutoOrderItemCancelRequest</code> instance.
      */
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
-        obj = obj || new ItemRealtimePricing();
-        if (data.hasOwnProperty('realtime_pricing_parameter')) {
-          obj['realtime_pricing_parameter'] = _ApiClient["default"].convertToType(data['realtime_pricing_parameter'], 'String');
+        obj = obj || new AutoOrderItemCancelRequest();
+        if (data.hasOwnProperty('auto_order_item_oid')) {
+          obj['auto_order_item_oid'] = _ApiClient["default"].convertToType(data['auto_order_item_oid'], 'Number');
         }
-        if (data.hasOwnProperty('realtime_pricing_provider')) {
-          obj['realtime_pricing_provider'] = _ApiClient["default"].convertToType(data['realtime_pricing_provider'], 'String');
-        }
-        if (data.hasOwnProperty('realtime_pricing_provider_oid')) {
-          obj['realtime_pricing_provider_oid'] = _ApiClient["default"].convertToType(data['realtime_pricing_provider_oid'], 'Number');
+        if (data.hasOwnProperty('mode')) {
+          obj['mode'] = _ApiClient["default"].convertToType(data['mode'], 'String');
         }
       }
       return obj;
@@ -74,20 +71,32 @@ var ItemRealtimePricing = /*#__PURE__*/function () {
   }]);
 }();
 /**
- * Real-time pricing provider parameters
- * @member {String} realtime_pricing_parameter
+ * Optional tiebreaker when more than one item on the auto order shares the same original_item_id.  When present, the item with this oid is targeted and its original_item_id must match the URL path parameter (safety check).  Leave unset for the common case of a unique original_item_id.
+ * @member {Number} auto_order_item_oid
  */
-ItemRealtimePricing.prototype['realtime_pricing_parameter'] = undefined;
+AutoOrderItemCancelRequest.prototype['auto_order_item_oid'] = undefined;
 
 /**
- * Real-time pricing provider name
- * @member {String} realtime_pricing_provider
+ * Cancellation mode.  'end' soft-cancels the item by setting no_order_after_dts to the current time, preserving the row for reporting.  'remove' hard-deletes the item from the auto order.  Defaults to 'end' (the less destructive option) when omitted.
+ * @member {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest.ModeEnum} mode
  */
-ItemRealtimePricing.prototype['realtime_pricing_provider'] = undefined;
+AutoOrderItemCancelRequest.prototype['mode'] = undefined;
 
 /**
- * Real-time pricing provide object identifier
- * @member {Number} realtime_pricing_provider_oid
+ * Allowed values for the <code>mode</code> property.
+ * @enum {String}
+ * @readonly
  */
-ItemRealtimePricing.prototype['realtime_pricing_provider_oid'] = undefined;
-var _default = exports["default"] = ItemRealtimePricing;
+AutoOrderItemCancelRequest['ModeEnum'] = {
+  /**
+   * value: "end"
+   * @const
+   */
+  "end": "end",
+  /**
+   * value: "remove"
+   * @const
+   */
+  "remove": "remove"
+};
+var _default = exports["default"] = AutoOrderItemCancelRequest;

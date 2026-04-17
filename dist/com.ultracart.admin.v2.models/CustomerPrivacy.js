@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerPrivacy model module.
  * @module com.ultracart.admin.v2.models/CustomerPrivacy
- * @version 4.1.73
+ * @version 4.1.74
  */
 var CustomerPrivacy = /*#__PURE__*/function () {
   /**

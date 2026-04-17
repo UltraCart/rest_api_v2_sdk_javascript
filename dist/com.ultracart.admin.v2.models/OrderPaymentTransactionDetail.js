@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPaymentTransactionDetail model module.
  * @module com.ultracart.admin.v2.models/OrderPaymentTransactionDetail
- * @version 4.1.73
+ * @version 4.1.74
  */
 var OrderPaymentTransactionDetail = /*#__PURE__*/function () {
   /**
