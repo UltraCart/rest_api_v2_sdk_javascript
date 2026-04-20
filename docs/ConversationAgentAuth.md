@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **group_ids** | **[Number]** | UltraCart Groups this user belongs to | [optional] 
 **jwt** | **String** |  | [optional] 
 **merchant_id** | **String** |  | [optional] 
+**merchants** | [**[ConversationAgentAuthMerchant]**](ConversationAgentAuthMerchant.md) | List of merchants in this linked merchant group | [optional] 
+**parent_merchant_id** | **String** | The parent merchant ID for PBX. For non-linked merchants, equals merchant_id. | [optional] 
 **pbx_admin** | **Boolean** |  | [optional] 
 **pbx_jwt** | **String** |  | [optional] 
 **pbx_supervisor** | **Boolean** |  | [optional] 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxClassOfService model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxClassOfService
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationPbxClassOfService {
     /**
@@ -52,6 +52,9 @@ class ConversationPbxClassOfService {
             }
             if (data.hasOwnProperty('block_premium_numbers')) {
                 obj['block_premium_numbers'] = ApiClient.convertToType(data['block_premium_numbers'], 'Boolean');
+            }
+            if (data.hasOwnProperty('context_merchant_id')) {
+                obj['context_merchant_id'] = ApiClient.convertToType(data['context_merchant_id'], 'String');
             }
             if (data.hasOwnProperty('conversation_pbx_class_of_service_uuid')) {
                 obj['conversation_pbx_class_of_service_uuid'] = ApiClient.convertToType(data['conversation_pbx_class_of_service_uuid'], 'String');
@@ -92,6 +95,12 @@ ConversationPbxClassOfService.prototype['allowed_countries'] = undefined;
  * @member {Boolean} block_premium_numbers
  */
 ConversationPbxClassOfService.prototype['block_premium_numbers'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxClassOfService.prototype['context_merchant_id'] = undefined;
 
 /**
  * Class of Service unique identifier

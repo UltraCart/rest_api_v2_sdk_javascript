@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationAgentAuthMerchant from './ConversationAgentAuthMerchant';
 import ConversationTwilioAccount from './ConversationTwilioAccount';
 
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationAgentAuth {
     /**
@@ -74,6 +75,12 @@ class ConversationAgentAuth {
             }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+            }
+            if (data.hasOwnProperty('merchants')) {
+                obj['merchants'] = ApiClient.convertToType(data['merchants'], [ConversationAgentAuthMerchant]);
+            }
+            if (data.hasOwnProperty('parent_merchant_id')) {
+                obj['parent_merchant_id'] = ApiClient.convertToType(data['parent_merchant_id'], 'String');
             }
             if (data.hasOwnProperty('pbx_admin')) {
                 obj['pbx_admin'] = ApiClient.convertToType(data['pbx_admin'], 'Boolean');
@@ -161,6 +168,18 @@ ConversationAgentAuth.prototype['jwt'] = undefined;
  * @member {String} merchant_id
  */
 ConversationAgentAuth.prototype['merchant_id'] = undefined;
+
+/**
+ * List of merchants in this linked merchant group
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationAgentAuthMerchant>} merchants
+ */
+ConversationAgentAuth.prototype['merchants'] = undefined;
+
+/**
+ * The parent merchant ID for PBX. For non-linked merchants, equals merchant_id.
+ * @member {String} parent_merchant_id
+ */
+ConversationAgentAuth.prototype['parent_merchant_id'] = undefined;
 
 /**
  * @member {Boolean} pbx_admin

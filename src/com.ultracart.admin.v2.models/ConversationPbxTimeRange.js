@@ -17,7 +17,7 @@ import ConversationPbxTimeRangeConfig from './ConversationPbxTimeRangeConfig';
 /**
  * The ConversationPbxTimeRange model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeRange
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationPbxTimeRange {
     /**
@@ -51,6 +51,9 @@ class ConversationPbxTimeRange {
             if (data.hasOwnProperty('configs')) {
                 obj['configs'] = ApiClient.convertToType(data['configs'], [ConversationPbxTimeRangeConfig]);
             }
+            if (data.hasOwnProperty('context_merchant_id')) {
+                obj['context_merchant_id'] = ApiClient.convertToType(data['context_merchant_id'], 'String');
+            }
             if (data.hasOwnProperty('conversation_pbx_time_range_uuid')) {
                 obj['conversation_pbx_time_range_uuid'] = ApiClient.convertToType(data['conversation_pbx_time_range_uuid'], 'String');
             }
@@ -75,6 +78,12 @@ class ConversationPbxTimeRange {
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationPbxTimeRangeConfig>} configs
  */
 ConversationPbxTimeRange.prototype['configs'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxTimeRange.prototype['context_merchant_id'] = undefined;
 
 /**
  * Conversation Pbx Time Range UUID

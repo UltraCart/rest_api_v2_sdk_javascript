@@ -17,7 +17,7 @@ import ConversationPbxTimeBasedMappingConfig from './ConversationPbxTimeBasedMap
 /**
  * The ConversationPbxTimeBased model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeBased
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationPbxTimeBased {
     /**
@@ -48,6 +48,9 @@ class ConversationPbxTimeBased {
         if (data) {
             obj = obj || new ConversationPbxTimeBased();
 
+            if (data.hasOwnProperty('context_merchant_id')) {
+                obj['context_merchant_id'] = ApiClient.convertToType(data['context_merchant_id'], 'String');
+            }
             if (data.hasOwnProperty('conversation_pbx_time_based_uuid')) {
                 obj['conversation_pbx_time_based_uuid'] = ApiClient.convertToType(data['conversation_pbx_time_based_uuid'], 'String');
             }
@@ -66,6 +69,11 @@ class ConversationPbxTimeBased {
 
 
 }
+
+/**
+ * @member {String} context_merchant_id
+ */
+ConversationPbxTimeBased.prototype['context_merchant_id'] = undefined;
 
 /**
  * @member {String} conversation_pbx_time_based_uuid

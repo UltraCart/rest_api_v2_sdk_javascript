@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxVoicemailMailbox model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationPbxVoicemailMailbox {
     /**
@@ -47,6 +47,9 @@ class ConversationPbxVoicemailMailbox {
         if (data) {
             obj = obj || new ConversationPbxVoicemailMailbox();
 
+            if (data.hasOwnProperty('context_merchant_id')) {
+                obj['context_merchant_id'] = ApiClient.convertToType(data['context_merchant_id'], 'String');
+            }
             if (data.hasOwnProperty('conversation_pbx_voicemail_mailbox_uuid')) {
                 obj['conversation_pbx_voicemail_mailbox_uuid'] = ApiClient.convertToType(data['conversation_pbx_voicemail_mailbox_uuid'], 'String');
             }
@@ -95,6 +98,12 @@ class ConversationPbxVoicemailMailbox {
 
 
 }
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxVoicemailMailbox.prototype['context_merchant_id'] = undefined;
 
 /**
  * Conversation Pbx Voicemail Mailbox UUID

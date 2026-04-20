@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxCustomerSnapshotRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationPbxCustomerSnapshotRequest {
     /**
@@ -68,6 +68,9 @@ class ConversationPbxCustomerSnapshotRequest {
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
+            if (data.hasOwnProperty('search_linked_accounts')) {
+                obj['search_linked_accounts'] = ApiClient.convertToType(data['search_linked_accounts'], 'Boolean');
+            }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
@@ -110,6 +113,11 @@ ConversationPbxCustomerSnapshotRequest.prototype['order_expand'] = undefined;
  * @member {String} phone_number
  */
 ConversationPbxCustomerSnapshotRequest.prototype['phone_number'] = undefined;
+
+/**
+ * @member {Boolean} search_linked_accounts
+ */
+ConversationPbxCustomerSnapshotRequest.prototype['search_linked_accounts'] = undefined;
 
 /**
  * Indicates if API call was successful

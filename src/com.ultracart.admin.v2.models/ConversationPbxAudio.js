@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxAudio model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAudio
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationPbxAudio {
     /**
@@ -49,6 +49,9 @@ class ConversationPbxAudio {
 
             if (data.hasOwnProperty('audio_s3_listing_key')) {
                 obj['audio_s3_listing_key'] = ApiClient.convertToType(data['audio_s3_listing_key'], 'String');
+            }
+            if (data.hasOwnProperty('context_merchant_id')) {
+                obj['context_merchant_id'] = ApiClient.convertToType(data['context_merchant_id'], 'String');
             }
             if (data.hasOwnProperty('conversation_pbx_audio_uuid')) {
                 obj['conversation_pbx_audio_uuid'] = ApiClient.convertToType(data['conversation_pbx_audio_uuid'], 'String');
@@ -89,6 +92,12 @@ class ConversationPbxAudio {
  * @member {String} audio_s3_listing_key
  */
 ConversationPbxAudio.prototype['audio_s3_listing_key'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxAudio.prototype['context_merchant_id'] = undefined;
 
 /**
  * Conversation Pbx Audio UUID

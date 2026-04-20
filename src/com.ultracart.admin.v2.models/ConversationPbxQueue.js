@@ -17,7 +17,7 @@ import ConversationPbxQueueMembers from './ConversationPbxQueueMembers';
 /**
  * The ConversationPbxQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxQueue
- * @version 4.1.77
+ * @version 4.1.78
  */
 class ConversationPbxQueue {
     /**
@@ -101,6 +101,9 @@ class ConversationPbxQueue {
             }
             if (data.hasOwnProperty('callback_retry_delay_seconds')) {
                 obj['callback_retry_delay_seconds'] = ApiClient.convertToType(data['callback_retry_delay_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('context_merchant_id')) {
+                obj['context_merchant_id'] = ApiClient.convertToType(data['context_merchant_id'], 'String');
             }
             if (data.hasOwnProperty('conversation_pbx_queue_uuid')) {
                 obj['conversation_pbx_queue_uuid'] = ApiClient.convertToType(data['conversation_pbx_queue_uuid'], 'String');
@@ -282,6 +285,12 @@ ConversationPbxQueue.prototype['callback_offer_interval_seconds'] = undefined;
  * @member {Number} callback_retry_delay_seconds
  */
 ConversationPbxQueue.prototype['callback_retry_delay_seconds'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxQueue.prototype['context_merchant_id'] = undefined;
 
 /**
  * Conversation Pbx Queue unique identifier

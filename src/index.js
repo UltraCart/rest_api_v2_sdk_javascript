@@ -147,6 +147,7 @@ import CheckoutStateProvinceResponse from './com.ultracart.admin.v2.models/Check
 import CityStateZip from './com.ultracart.admin.v2.models/CityStateZip';
 import Conversation from './com.ultracart.admin.v2.models/Conversation';
 import ConversationAgentAuth from './com.ultracart.admin.v2.models/ConversationAgentAuth';
+import ConversationAgentAuthMerchant from './com.ultracart.admin.v2.models/ConversationAgentAuthMerchant';
 import ConversationAgentAuthResponse from './com.ultracart.admin.v2.models/ConversationAgentAuthResponse';
 import ConversationAgentProfile from './com.ultracart.admin.v2.models/ConversationAgentProfile';
 import ConversationAgentProfileResponse from './com.ultracart.admin.v2.models/ConversationAgentProfileResponse';
@@ -1019,7 +1020,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.77
+* @version 4.1.78
 */
 export {
     /**
@@ -1831,6 +1832,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationAgentAuth}
      */
     ConversationAgentAuth,
+
+    /**
+     * The ConversationAgentAuthMerchant model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentAuthMerchant}
+     */
+    ConversationAgentAuthMerchant,
 
     /**
      * The ConversationAgentAuthResponse model constructor.

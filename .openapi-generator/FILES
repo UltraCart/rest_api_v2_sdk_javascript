@@ -140,6 +140,7 @@ docs/CheckoutStateProvinceResponse.md
 docs/CityStateZip.md
 docs/Conversation.md
 docs/ConversationAgentAuth.md
+docs/ConversationAgentAuthMerchant.md
 docs/ConversationAgentAuthResponse.md
 docs/ConversationAgentProfile.md
 docs/ConversationAgentProfileResponse.md
@@ -1115,6 +1116,7 @@ src/com.ultracart.admin.v2.models/CheckoutStateProvinceResponse.js
 src/com.ultracart.admin.v2.models/CityStateZip.js
 src/com.ultracart.admin.v2.models/Conversation.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuth.js
+src/com.ultracart.admin.v2.models/ConversationAgentAuthMerchant.js
 src/com.ultracart.admin.v2.models/ConversationAgentAuthResponse.js
 src/com.ultracart.admin.v2.models/ConversationAgentProfile.js
 src/com.ultracart.admin.v2.models/ConversationAgentProfileResponse.js
