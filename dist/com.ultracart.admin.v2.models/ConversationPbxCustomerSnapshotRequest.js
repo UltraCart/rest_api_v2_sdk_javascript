@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCustomerSnapshotRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxCustomerSnapshotRequest = /*#__PURE__*/function () {
   /**
@@ -80,6 +80,9 @@ var ConversationPbxCustomerSnapshotRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('phone_number')) {
           obj['phone_number'] = _ApiClient["default"].convertToType(data['phone_number'], 'String');
         }
+        if (data.hasOwnProperty('search_linked_accounts')) {
+          obj['search_linked_accounts'] = _ApiClient["default"].convertToType(data['search_linked_accounts'], 'Boolean');
+        }
         if (data.hasOwnProperty('success')) {
           obj['success'] = _ApiClient["default"].convertToType(data['success'], 'Boolean');
         }
@@ -120,6 +123,11 @@ ConversationPbxCustomerSnapshotRequest.prototype['order_expand'] = undefined;
  * @member {String} phone_number
  */
 ConversationPbxCustomerSnapshotRequest.prototype['phone_number'] = undefined;
+
+/**
+ * @member {Boolean} search_linked_accounts
+ */
+ConversationPbxCustomerSnapshotRequest.prototype['search_linked_accounts'] = undefined;
 
 /**
  * Indicates if API call was successful

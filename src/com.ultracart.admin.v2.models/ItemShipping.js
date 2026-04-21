@@ -24,7 +24,7 @@ import Weight from './Weight';
 /**
  * The ItemShipping model module.
  * @module com.ultracart.admin.v2.models/ItemShipping
- * @version 4.1.78
+ * @version 4.1.79
  */
 class ItemShipping {
     /**
@@ -144,6 +144,9 @@ class ItemShipping {
             }
             if (data.hasOwnProperty('no_shipping_discount')) {
                 obj['no_shipping_discount'] = ApiClient.convertToType(data['no_shipping_discount'], 'Boolean');
+            }
+            if (data.hasOwnProperty('one_line_per_unit')) {
+                obj['one_line_per_unit'] = ApiClient.convertToType(data['one_line_per_unit'], 'Boolean');
             }
             if (data.hasOwnProperty('package_requirements')) {
                 obj['package_requirements'] = ApiClient.convertToType(data['package_requirements'], [ItemShippingPackageRequirement]);
@@ -394,6 +397,12 @@ ItemShipping.prototype['methods'] = undefined;
  * @member {Boolean} no_shipping_discount
  */
 ItemShipping.prototype['no_shipping_discount'] = undefined;
+
+/**
+ * Split cart line items with quantity greater than one into individual lines of quantity one on the order
+ * @member {Boolean} one_line_per_unit
+ */
+ItemShipping.prototype['one_line_per_unit'] = undefined;
 
 /**
  * Package requirements

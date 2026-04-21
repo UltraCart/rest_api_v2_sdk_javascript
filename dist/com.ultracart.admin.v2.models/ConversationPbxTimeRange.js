@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxTimeRange model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeRange
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxTimeRange = /*#__PURE__*/function () {
   /**
@@ -63,6 +63,9 @@ var ConversationPbxTimeRange = /*#__PURE__*/function () {
         if (data.hasOwnProperty('configs')) {
           obj['configs'] = _ApiClient["default"].convertToType(data['configs'], [_ConversationPbxTimeRangeConfig["default"]]);
         }
+        if (data.hasOwnProperty('context_merchant_id')) {
+          obj['context_merchant_id'] = _ApiClient["default"].convertToType(data['context_merchant_id'], 'String');
+        }
         if (data.hasOwnProperty('conversation_pbx_time_range_uuid')) {
           obj['conversation_pbx_time_range_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_time_range_uuid'], 'String');
         }
@@ -85,6 +88,12 @@ var ConversationPbxTimeRange = /*#__PURE__*/function () {
  * @member {Array.<module:com.ultracart.admin.v2.models/ConversationPbxTimeRangeConfig>} configs
  */
 ConversationPbxTimeRange.prototype['configs'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxTimeRange.prototype['context_merchant_id'] = undefined;
 
 /**
  * Conversation Pbx Time Range UUID

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxMenu model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxMenu
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxMenu = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,9 @@ var ConversationPbxMenu = /*#__PURE__*/function () {
         obj = obj || new ConversationPbxMenu();
         if (data.hasOwnProperty('allow_direct_extensions')) {
           obj['allow_direct_extensions'] = _ApiClient["default"].convertToType(data['allow_direct_extensions'], 'Boolean');
+        }
+        if (data.hasOwnProperty('context_merchant_id')) {
+          obj['context_merchant_id'] = _ApiClient["default"].convertToType(data['context_merchant_id'], 'String');
         }
         if (data.hasOwnProperty('conversation_pbx_menu_uuid')) {
           obj['conversation_pbx_menu_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_menu_uuid'], 'String');
@@ -103,6 +106,12 @@ var ConversationPbxMenu = /*#__PURE__*/function () {
  * @member {Boolean} allow_direct_extensions
  */
 ConversationPbxMenu.prototype['allow_direct_extensions'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxMenu.prototype['context_merchant_id'] = undefined;
 
 /**
  * Conversation Pbx Menu UUID

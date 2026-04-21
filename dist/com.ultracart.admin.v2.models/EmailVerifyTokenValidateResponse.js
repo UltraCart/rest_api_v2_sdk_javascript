@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailVerifyTokenValidateResponse model module.
  * @module com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse
- * @version 4.1.77
+ * @version 4.1.78
  */
 var EmailVerifyTokenValidateResponse = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxVoicemailMailbox model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxVoicemailMailbox
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxVoicemailMailbox = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var ConversationPbxVoicemailMailbox = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationPbxVoicemailMailbox();
+        if (data.hasOwnProperty('context_merchant_id')) {
+          obj['context_merchant_id'] = _ApiClient["default"].convertToType(data['context_merchant_id'], 'String');
+        }
         if (data.hasOwnProperty('conversation_pbx_voicemail_mailbox_uuid')) {
           obj['conversation_pbx_voicemail_mailbox_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_voicemail_mailbox_uuid'], 'String');
         }
@@ -106,6 +109,12 @@ var ConversationPbxVoicemailMailbox = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxVoicemailMailbox.prototype['context_merchant_id'] = undefined;
+
 /**
  * Conversation Pbx Voicemail Mailbox UUID
  * @member {String} conversation_pbx_voicemail_mailbox_uuid

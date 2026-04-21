@@ -837,6 +837,12 @@ Object.defineProperty(exports, "ConversationAgentAuth", {
     return _ConversationAgentAuth["default"];
   }
 });
+Object.defineProperty(exports, "ConversationAgentAuthMerchant", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentAuthMerchant["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationAgentAuthResponse", {
   enumerable: true,
   get: function get() {
@@ -5994,6 +6000,7 @@ var _CheckoutStateProvinceResponse = _interopRequireDefault(require("./com.ultra
 var _CityStateZip = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CityStateZip"));
 var _Conversation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Conversation"));
 var _ConversationAgentAuth = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuth"));
+var _ConversationAgentAuthMerchant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthMerchant"));
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
 var _ConversationAgentProfile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfile"));
 var _ConversationAgentProfileResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfileResponse"));

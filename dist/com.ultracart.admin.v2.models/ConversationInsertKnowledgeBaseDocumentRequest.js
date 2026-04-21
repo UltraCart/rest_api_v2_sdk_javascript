@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationInsertKnowledgeBaseDocumentRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentRequest
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationInsertKnowledgeBaseDocumentRequest = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxClassOfService model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxClassOfService
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxClassOfService = /*#__PURE__*/function () {
   /**
@@ -65,6 +65,9 @@ var ConversationPbxClassOfService = /*#__PURE__*/function () {
         if (data.hasOwnProperty('block_premium_numbers')) {
           obj['block_premium_numbers'] = _ApiClient["default"].convertToType(data['block_premium_numbers'], 'Boolean');
         }
+        if (data.hasOwnProperty('context_merchant_id')) {
+          obj['context_merchant_id'] = _ApiClient["default"].convertToType(data['context_merchant_id'], 'String');
+        }
         if (data.hasOwnProperty('conversation_pbx_class_of_service_uuid')) {
           obj['conversation_pbx_class_of_service_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_class_of_service_uuid'], 'String');
         }
@@ -102,6 +105,12 @@ ConversationPbxClassOfService.prototype['allowed_countries'] = undefined;
  * @member {Boolean} block_premium_numbers
  */
 ConversationPbxClassOfService.prototype['block_premium_numbers'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxClassOfService.prototype['context_merchant_id'] = undefined;
 
 /**
  * Class of Service unique identifier

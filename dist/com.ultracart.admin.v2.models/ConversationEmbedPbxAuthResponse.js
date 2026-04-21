@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationEmbedPbxAuthResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationEmbedPbxAuthResponse
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationEmbedPbxAuthResponse = /*#__PURE__*/function () {
   /**

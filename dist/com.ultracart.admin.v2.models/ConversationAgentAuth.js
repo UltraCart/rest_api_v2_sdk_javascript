@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _ConversationAgentAuthMerchant = _interopRequireDefault(require("./ConversationAgentAuthMerchant"));
 var _ConversationTwilioAccount = _interopRequireDefault(require("./ConversationTwilioAccount"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -27,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationAgentAuth = /*#__PURE__*/function () {
   /**
@@ -86,6 +87,12 @@ var ConversationAgentAuth = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
+        }
+        if (data.hasOwnProperty('merchants')) {
+          obj['merchants'] = _ApiClient["default"].convertToType(data['merchants'], [_ConversationAgentAuthMerchant["default"]]);
+        }
+        if (data.hasOwnProperty('parent_merchant_id')) {
+          obj['parent_merchant_id'] = _ApiClient["default"].convertToType(data['parent_merchant_id'], 'String');
         }
         if (data.hasOwnProperty('pbx_admin')) {
           obj['pbx_admin'] = _ApiClient["default"].convertToType(data['pbx_admin'], 'Boolean');
@@ -171,6 +178,18 @@ ConversationAgentAuth.prototype['jwt'] = undefined;
  * @member {String} merchant_id
  */
 ConversationAgentAuth.prototype['merchant_id'] = undefined;
+
+/**
+ * List of merchants in this linked merchant group
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationAgentAuthMerchant>} merchants
+ */
+ConversationAgentAuth.prototype['merchants'] = undefined;
+
+/**
+ * The parent merchant ID for PBX. For non-linked merchants, equals merchant_id.
+ * @member {String} parent_merchant_id
+ */
+ConversationAgentAuth.prototype['parent_merchant_id'] = undefined;
 
 /**
  * @member {Boolean} pbx_admin

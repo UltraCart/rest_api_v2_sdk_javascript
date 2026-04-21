@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxTimeBased model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeBased
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxTimeBased = /*#__PURE__*/function () {
   /**
@@ -60,6 +60,9 @@ var ConversationPbxTimeBased = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationPbxTimeBased();
+        if (data.hasOwnProperty('context_merchant_id')) {
+          obj['context_merchant_id'] = _ApiClient["default"].convertToType(data['context_merchant_id'], 'String');
+        }
         if (data.hasOwnProperty('conversation_pbx_time_based_uuid')) {
           obj['conversation_pbx_time_based_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_time_based_uuid'], 'String');
         }
@@ -77,6 +80,11 @@ var ConversationPbxTimeBased = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * @member {String} context_merchant_id
+ */
+ConversationPbxTimeBased.prototype['context_merchant_id'] = undefined;
+
 /**
  * @member {String} conversation_pbx_time_based_uuid
  */

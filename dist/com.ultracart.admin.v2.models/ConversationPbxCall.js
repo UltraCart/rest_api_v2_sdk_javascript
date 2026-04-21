@@ -36,7 +36,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCall model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCall
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxCall = /*#__PURE__*/function () {
   /**
@@ -92,6 +92,9 @@ var ConversationPbxCall = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('conference_sid')) {
           obj['conference_sid'] = _ApiClient["default"].convertToType(data['conference_sid'], 'String');
+        }
+        if (data.hasOwnProperty('context_merchant_id')) {
+          obj['context_merchant_id'] = _ApiClient["default"].convertToType(data['context_merchant_id'], 'String');
         }
         if (data.hasOwnProperty('created_at_dts')) {
           obj['created_at_dts'] = _ApiClient["default"].convertToType(data['created_at_dts'], 'String');
@@ -194,6 +197,12 @@ ConversationPbxCall.prototype['caller'] = undefined;
  * @member {String} conference_sid
  */
 ConversationPbxCall.prototype['conference_sid'] = undefined;
+
+/**
+ * Optional child merchant ID this call is attributed to. Null = no child attribution (parent-level call).
+ * @member {String} context_merchant_id
+ */
+ConversationPbxCall.prototype['context_merchant_id'] = undefined;
 
 /**
  * Timestamp when the call record was created

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxAudio model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAudio
- * @version 4.1.77
+ * @version 4.1.78
  */
 var ConversationPbxAudio = /*#__PURE__*/function () {
   /**
@@ -61,6 +61,9 @@ var ConversationPbxAudio = /*#__PURE__*/function () {
         obj = obj || new ConversationPbxAudio();
         if (data.hasOwnProperty('audio_s3_listing_key')) {
           obj['audio_s3_listing_key'] = _ApiClient["default"].convertToType(data['audio_s3_listing_key'], 'String');
+        }
+        if (data.hasOwnProperty('context_merchant_id')) {
+          obj['context_merchant_id'] = _ApiClient["default"].convertToType(data['context_merchant_id'], 'String');
         }
         if (data.hasOwnProperty('conversation_pbx_audio_uuid')) {
           obj['conversation_pbx_audio_uuid'] = _ApiClient["default"].convertToType(data['conversation_pbx_audio_uuid'], 'String');
@@ -99,6 +102,12 @@ var ConversationPbxAudio = /*#__PURE__*/function () {
  * @member {String} audio_s3_listing_key
  */
 ConversationPbxAudio.prototype['audio_s3_listing_key'] = undefined;
+
+/**
+ * Optional child merchant ID this resource is assigned to. Null = shared across the linked merchant group.
+ * @member {String} context_merchant_id
+ */
+ConversationPbxAudio.prototype['context_merchant_id'] = undefined;
 
 /**
  * Conversation Pbx Audio UUID
