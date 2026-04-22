@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxTimeBasedMapping model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeBasedMapping
- * @version 4.1.79
+ * @version 4.1.80
  */
 class ConversationPbxTimeBasedMapping {
     /**

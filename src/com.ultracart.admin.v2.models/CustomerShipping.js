@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerShipping model module.
  * @module com.ultracart.admin.v2.models/CustomerShipping
- * @version 4.1.79
+ * @version 4.1.80
  */
 class CustomerShipping {
     /**
@@ -71,11 +71,17 @@ class CustomerShipping {
             if (data.hasOwnProperty('day_phone')) {
                 obj['day_phone'] = ApiClient.convertToType(data['day_phone'], 'String');
             }
+            if (data.hasOwnProperty('day_phone_e164')) {
+                obj['day_phone_e164'] = ApiClient.convertToType(data['day_phone_e164'], 'String');
+            }
             if (data.hasOwnProperty('default_shipping')) {
                 obj['default_shipping'] = ApiClient.convertToType(data['default_shipping'], 'Boolean');
             }
             if (data.hasOwnProperty('evening_phone')) {
                 obj['evening_phone'] = ApiClient.convertToType(data['evening_phone'], 'String');
+            }
+            if (data.hasOwnProperty('evening_phone_e164')) {
+                obj['evening_phone_e164'] = ApiClient.convertToType(data['evening_phone_e164'], 'String');
             }
             if (data.hasOwnProperty('first_name')) {
                 obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
@@ -154,6 +160,12 @@ CustomerShipping.prototype['customer_shipping_oid'] = undefined;
 CustomerShipping.prototype['day_phone'] = undefined;
 
 /**
+ * Day phone in E.164 format (derived â€” read only)
+ * @member {String} day_phone_e164
+ */
+CustomerShipping.prototype['day_phone_e164'] = undefined;
+
+/**
  * Default shipping
  * @member {Boolean} default_shipping
  */
@@ -164,6 +176,12 @@ CustomerShipping.prototype['default_shipping'] = undefined;
  * @member {String} evening_phone
  */
 CustomerShipping.prototype['evening_phone'] = undefined;
+
+/**
+ * Evening phone in E.164 format (derived â€” read only)
+ * @member {String} evening_phone_e164
+ */
+CustomerShipping.prototype['evening_phone_e164'] = undefined;
 
 /**
  * First name

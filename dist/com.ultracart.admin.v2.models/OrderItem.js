@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderItem model module.
  * @module com.ultracart.admin.v2.models/OrderItem
- * @version 4.1.78
+ * @version 4.1.79
  */
 var OrderItem = /*#__PURE__*/function () {
   /**

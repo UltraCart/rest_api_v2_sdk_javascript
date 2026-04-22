@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemShipping model module.
  * @module com.ultracart.admin.v2.models/ItemShipping
- * @version 4.1.78
+ * @version 4.1.79
  */
 var ItemShipping = /*#__PURE__*/function () {
   /**
@@ -156,6 +156,9 @@ var ItemShipping = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('no_shipping_discount')) {
           obj['no_shipping_discount'] = _ApiClient["default"].convertToType(data['no_shipping_discount'], 'Boolean');
+        }
+        if (data.hasOwnProperty('one_line_per_unit')) {
+          obj['one_line_per_unit'] = _ApiClient["default"].convertToType(data['one_line_per_unit'], 'Boolean');
         }
         if (data.hasOwnProperty('package_requirements')) {
           obj['package_requirements'] = _ApiClient["default"].convertToType(data['package_requirements'], [_ItemShippingPackageRequirement["default"]]);
@@ -404,6 +407,12 @@ ItemShipping.prototype['methods'] = undefined;
  * @member {Boolean} no_shipping_discount
  */
 ItemShipping.prototype['no_shipping_discount'] = undefined;
+
+/**
+ * Split cart line items with quantity greater than one into individual lines of quantity one on the order
+ * @member {Boolean} one_line_per_unit
+ */
+ItemShipping.prototype['one_line_per_unit'] = undefined;
 
 /**
  * Package requirements

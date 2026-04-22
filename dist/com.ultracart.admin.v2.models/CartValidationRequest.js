@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartValidationRequest model module.
  * @module com.ultracart.admin.v2.models/CartValidationRequest
- * @version 4.1.78
+ * @version 4.1.79
  */
 var CartValidationRequest = /*#__PURE__*/function () {
   /**

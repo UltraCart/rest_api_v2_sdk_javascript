@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartTaxes model module.
  * @module com.ultracart.admin.v2.models/CartTaxes
- * @version 4.1.79
+ * @version 4.1.80
  */
 class CartTaxes {
     /**
