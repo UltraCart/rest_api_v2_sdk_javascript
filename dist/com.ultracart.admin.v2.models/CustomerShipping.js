@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerShipping model module.
  * @module com.ultracart.admin.v2.models/CustomerShipping
- * @version 4.1.79
+ * @version 4.1.80
  */
 var CustomerShipping = /*#__PURE__*/function () {
   /**
@@ -83,11 +83,17 @@ var CustomerShipping = /*#__PURE__*/function () {
         if (data.hasOwnProperty('day_phone')) {
           obj['day_phone'] = _ApiClient["default"].convertToType(data['day_phone'], 'String');
         }
+        if (data.hasOwnProperty('day_phone_e164')) {
+          obj['day_phone_e164'] = _ApiClient["default"].convertToType(data['day_phone_e164'], 'String');
+        }
         if (data.hasOwnProperty('default_shipping')) {
           obj['default_shipping'] = _ApiClient["default"].convertToType(data['default_shipping'], 'Boolean');
         }
         if (data.hasOwnProperty('evening_phone')) {
           obj['evening_phone'] = _ApiClient["default"].convertToType(data['evening_phone'], 'String');
+        }
+        if (data.hasOwnProperty('evening_phone_e164')) {
+          obj['evening_phone_e164'] = _ApiClient["default"].convertToType(data['evening_phone_e164'], 'String');
         }
         if (data.hasOwnProperty('first_name')) {
           obj['first_name'] = _ApiClient["default"].convertToType(data['first_name'], 'String');
@@ -164,6 +170,12 @@ CustomerShipping.prototype['customer_shipping_oid'] = undefined;
 CustomerShipping.prototype['day_phone'] = undefined;
 
 /**
+ * Day phone in E.164 format (derived â€” read only)
+ * @member {String} day_phone_e164
+ */
+CustomerShipping.prototype['day_phone_e164'] = undefined;
+
+/**
  * Default shipping
  * @member {Boolean} default_shipping
  */
@@ -174,6 +186,12 @@ CustomerShipping.prototype['default_shipping'] = undefined;
  * @member {String} evening_phone
  */
 CustomerShipping.prototype['evening_phone'] = undefined;
+
+/**
+ * Evening phone in E.164 format (derived â€” read only)
+ * @member {String} evening_phone_e164
+ */
+CustomerShipping.prototype['evening_phone_e164'] = undefined;
 
 /**
  * First name
