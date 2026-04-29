@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * ConversationEmbed service.
 * @module com.ultracart.admin.v2/ConversationEmbedApi
-* @version 4.1.80
+* @version 4.1.82
 */
 var ConversationEmbedApi = exports["default"] = /*#__PURE__*/function () {
   /**

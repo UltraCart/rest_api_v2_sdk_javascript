@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationWebchatQueueStatusAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusAgent
- * @version 4.1.80
+ * @version 4.1.82
  */
 var ConversationWebchatQueueStatusAgent = /*#__PURE__*/function () {
   /**
@@ -62,11 +62,20 @@ var ConversationWebchatQueueStatusAgent = /*#__PURE__*/function () {
         if (data.hasOwnProperty('agent_status')) {
           obj['agent_status'] = _ApiClient["default"].convertToType(data['agent_status'], 'String');
         }
+        if (data.hasOwnProperty('agent_user_id')) {
+          obj['agent_user_id'] = _ApiClient["default"].convertToType(data['agent_user_id'], 'String');
+        }
         if (data.hasOwnProperty('conversation_participant_arn')) {
           obj['conversation_participant_arn'] = _ApiClient["default"].convertToType(data['conversation_participant_arn'], 'String');
         }
         if (data.hasOwnProperty('conversation_participant_name')) {
           obj['conversation_participant_name'] = _ApiClient["default"].convertToType(data['conversation_participant_name'], 'String');
+        }
+        if (data.hasOwnProperty('custom_status_name')) {
+          obj['custom_status_name'] = _ApiClient["default"].convertToType(data['custom_status_name'], 'String');
+        }
+        if (data.hasOwnProperty('custom_status_uuid')) {
+          obj['custom_status_uuid'] = _ApiClient["default"].convertToType(data['custom_status_uuid'], 'String');
         }
         if (data.hasOwnProperty('last_chat_dts')) {
           obj['last_chat_dts'] = _ApiClient["default"].convertToType(data['last_chat_dts'], 'String');
@@ -89,6 +98,12 @@ var ConversationWebchatQueueStatusAgent = /*#__PURE__*/function () {
 ConversationWebchatQueueStatusAgent.prototype['agent_status'] = undefined;
 
 /**
+ * Agent user id (populated by Java so the dispatch-scheduler Lambda can read it directly without parsing conversation_participant_arn)
+ * @member {String} agent_user_id
+ */
+ConversationWebchatQueueStatusAgent.prototype['agent_user_id'] = undefined;
+
+/**
  * @member {String} conversation_participant_arn
  */
 ConversationWebchatQueueStatusAgent.prototype['conversation_participant_arn'] = undefined;
@@ -97,6 +112,18 @@ ConversationWebchatQueueStatusAgent.prototype['conversation_participant_arn'] = 
  * @member {String} conversation_participant_name
  */
 ConversationWebchatQueueStatusAgent.prototype['conversation_participant_name'] = undefined;
+
+/**
+ * Active custom status display name for this agent (denormalized)
+ * @member {String} custom_status_name
+ */
+ConversationWebchatQueueStatusAgent.prototype['custom_status_name'] = undefined;
+
+/**
+ * Active custom status uuid for this agent (null when on a system status)
+ * @member {String} custom_status_uuid
+ */
+ConversationWebchatQueueStatusAgent.prototype['custom_status_uuid'] = undefined;
 
 /**
  * Date/time that this agent took their last chat

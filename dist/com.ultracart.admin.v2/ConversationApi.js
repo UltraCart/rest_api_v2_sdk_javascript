@@ -10,6 +10,17 @@ var _ConversationAgentAuthResponse = _interopRequireDefault(require("../com.ultr
 var _ConversationAgentProfile = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfile"));
 var _ConversationAgentProfileResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfileResponse"));
 var _ConversationAgentProfilesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentProfilesResponse"));
+var _ConversationAgentStatusConfig = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusConfig"));
+var _ConversationAgentStatusConfigResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusConfigResponse"));
+var _ConversationAgentStatusConfigsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusConfigsResponse"));
+var _ConversationAgentStatusHeatmapRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapRequest"));
+var _ConversationAgentStatusHeatmapResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapResponse"));
+var _ConversationAgentStatusHistorySearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchRequest"));
+var _ConversationAgentStatusHistorySearchResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchResponse"));
+var _ConversationAgentStatusRollupSearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchRequest"));
+var _ConversationAgentStatusRollupSearchResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse"));
+var _ConversationAgentStatusSummaryResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse"));
+var _ConversationAgentStatusTimelineResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse"));
 var _ConversationAutocompleteRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
 var _ConversationAutocompleteResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
 var _ConversationCannedMessage = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessage"));
@@ -57,6 +68,8 @@ var _ConversationPbxClassOfServicesResponse = _interopRequireDefault(require("..
 var _ConversationPbxCosAuditLogsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse"));
 var _ConversationPbxCustomerSnapshotRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest"));
 var _ConversationPbxCustomerSnapshotResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse"));
+var _ConversationPbxDefaultTimezoneResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse"));
+var _ConversationPbxDefaultTimezoneUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneUpdateRequest"));
 var _ConversationPbxHardwarePhone = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxHardwarePhone"));
 var _ConversationPbxHardwarePhoneResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse"));
 var _ConversationPbxHardwarePhonesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxHardwarePhonesResponse"));
@@ -101,6 +114,7 @@ var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.m
 var _ItemResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ItemResponse"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
@@ -120,7 +134,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.80
+* @version 4.1.82
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -216,6 +230,41 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = null;
       return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the deleteAgentStatusConfig operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~deleteAgentStatusConfigCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Soft-deactivate a custom agent status
+     * Sets active=false on the row and the DDB sync record. The Twilio Activity is preserved (Round 2 decision) so historic worker reporting still resolves the SID. 
+     * @param {String} conversation_status_uuid 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~deleteAgentStatusConfigCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+  }, {
+    key: "deleteAgentStatusConfig",
+    value: function deleteAgentStatusConfig(conversation_status_uuid, callback) {
+      var postBody = null;
+      // verify the required parameter 'conversation_status_uuid' is set
+      if (conversation_status_uuid === undefined || conversation_status_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_status_uuid' when calling deleteAgentStatusConfig");
+      }
+      var pathParams = {
+        'conversation_status_uuid': conversation_status_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/agent/status/config/{conversation_status_uuid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1034,6 +1083,164 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationAgentProfilesResponse["default"];
       return this.apiClient.callApi('/conversation/agent/profiles', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentStatusConfigs operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentStatusConfigsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusConfigsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List custom agent statuses
+     * Returns all custom statuses (active and soft-deactivated) for the merchant. 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentStatusConfigsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusConfigsResponse}
+     */
+  }, {
+    key: "getAgentStatusConfigs",
+    value: function getAgentStatusConfigs(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusConfigsResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/config', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentStatusHeatmap operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentStatusHeatmapCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Agent x hour-of-day heatmap
+     * Returns ECharts-shaped agent x hour grid for the requested metric (availability, call_volume, chat_volume). Multi-day requests average the cell values across the date range. 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapRequest} heatmap_request Heatmap request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentStatusHeatmapCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapResponse}
+     */
+  }, {
+    key: "getAgentStatusHeatmap",
+    value: function getAgentStatusHeatmap(heatmap_request, callback) {
+      var postBody = heatmap_request;
+      // verify the required parameter 'heatmap_request' is set
+      if (heatmap_request === undefined || heatmap_request === null) {
+        throw new Error("Missing the required parameter 'heatmap_request' when calling getAgentStatusHeatmap");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusHeatmapResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/heatmap', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentStatusSummary operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentStatusSummaryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Dashboard summary for a date range
+     * Top-line summary: total_agents, avg_available_pct, status_breakdown, per-agent rollups. 
+     * @param {String} date_start2 Range start (YYYY-MM-DD)
+     * @param {String} date_end2 Range end (YYYY-MM-DD)
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.date_start 
+     * @param {String} opts.date_end 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentStatusSummaryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse}
+     */
+  }, {
+    key: "getAgentStatusSummary",
+    value: function getAgentStatusSummary(date_start2, date_end2, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'date_start2' is set
+      if (date_start2 === undefined || date_start2 === null) {
+        throw new Error("Missing the required parameter 'date_start2' when calling getAgentStatusSummary");
+      }
+      // verify the required parameter 'date_end2' is set
+      if (date_end2 === undefined || date_end2 === null) {
+        throw new Error("Missing the required parameter 'date_end2' when calling getAgentStatusSummary");
+      }
+      var pathParams = {};
+      var queryParams = _defineProperty(_defineProperty({
+        'date_start': opts['date_start'],
+        'date_end': opts['date_end']
+      }, "date_start", date_start2), "date_end", date_end2);
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusSummaryResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/rollup/summary', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAgentStatusTimeline operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getAgentStatusTimelineCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Day timeline for a single agent
+     * Returns merged status events + PBX calls + chat conversations for the agent on the given date. Omitting the channel parameter returns both channels merged. 
+     * @param {String} agent_user_id 
+     * @param {String} date2 Day to retrieve (YYYY-MM-DD)
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.date 
+     * @param {String} opts.channel 
+     * @param {String} opts.channel2 Restrict to one channel (omit for both)
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getAgentStatusTimelineCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse}
+     */
+  }, {
+    key: "getAgentStatusTimeline",
+    value: function getAgentStatusTimeline(agent_user_id, date2, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'agent_user_id' is set
+      if (agent_user_id === undefined || agent_user_id === null) {
+        throw new Error("Missing the required parameter 'agent_user_id' when calling getAgentStatusTimeline");
+      }
+      // verify the required parameter 'date2' is set
+      if (date2 === undefined || date2 === null) {
+        throw new Error("Missing the required parameter 'date2' when calling getAgentStatusTimeline");
+      }
+      var pathParams = {
+        'agent_user_id': agent_user_id
+      };
+      var queryParams = _defineProperty(_defineProperty({
+        'date': opts['date'],
+        'channel': opts['channel']
+      }, "date", date2), "channel", opts['channel2']);
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusTimelineResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/history/{agent_user_id}/timeline', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -2158,6 +2365,35 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getPbxDefaultTimezone operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxDefaultTimezoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the merchant default timezone
+     * Returns the merchant's stored default timezone (IANA name). Falls back to America/New_York when unset. 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxDefaultTimezoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse}
+     */
+  }, {
+    key: "getPbxDefaultTimezone",
+    value: function getPbxDefaultTimezone(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxDefaultTimezoneResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/config/default-timezone', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the getPbxHardwarePhone operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxHardwarePhoneCallback
      * @param {String} error Error message, if any.
@@ -2954,6 +3190,40 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the insertAgentStatusConfig operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~insertAgentStatusConfigCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusConfigResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a custom agent status
+     * Create a custom status. Enforces a 20-active-status-per-merchant cap and the 50-Twilio-Activity-per-workspace cap. 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusConfig} status_config Status config
+     * @param {module:com.ultracart.admin.v2/ConversationApi~insertAgentStatusConfigCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusConfigResponse}
+     */
+  }, {
+    key: "insertAgentStatusConfig",
+    value: function insertAgentStatusConfig(status_config, callback) {
+      var postBody = status_config;
+      // verify the required parameter 'status_config' is set
+      if (status_config === undefined || status_config === null) {
+        throw new Error("Missing the required parameter 'status_config' when calling insertAgentStatusConfig");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusConfigResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/config', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the insertConversationCannedMessage operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~insertConversationCannedMessageCallback
      * @param {String} error Error message, if any.
@@ -3726,6 +3996,81 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the searchAgentStatusHistory operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~searchAgentStatusHistoryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search agent status history
+     * Paginated search over conversation_agent_status_events_all. Filters: agent_user_id, channel, status, trigger, date range. 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchRequest} search_request Search request
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit Maximum records per call (max 200) (default to 100)
+     * @param {Number} opts._offset Pagination offset (zero-based) (default to 0)
+     * @param {module:com.ultracart.admin.v2/ConversationApi~searchAgentStatusHistoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchResponse}
+     */
+  }, {
+    key: "searchAgentStatusHistory",
+    value: function searchAgentStatusHistory(search_request, opts, callback) {
+      opts = opts || {};
+      var postBody = search_request;
+      // verify the required parameter 'search_request' is set
+      if (search_request === undefined || search_request === null) {
+        throw new Error("Missing the required parameter 'search_request' when calling searchAgentStatusHistory");
+      }
+      var pathParams = {};
+      var queryParams = {
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusHistorySearchResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/history/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the searchAgentStatusRollups operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~searchAgentStatusRollupsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search per-(agent, day) rollups
+     * Aggregated over conversation_agent_status_events_all via date_histogram + terms. Returns one row per (agent, day, channel). 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchRequest} search_request Search request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~searchAgentStatusRollupsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse}
+     */
+  }, {
+    key: "searchAgentStatusRollups",
+    value: function searchAgentStatusRollups(search_request, callback) {
+      var postBody = search_request;
+      // verify the required parameter 'search_request' is set
+      if (search_request === undefined || search_request === null) {
+        throw new Error("Missing the required parameter 'search_request' when calling searchAgentStatusRollups");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusRollupSearchResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/rollup/search', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the searchConversationCannedMessages operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~searchConversationCannedMessagesCallback
      * @param {String} error Error message, if any.
@@ -4000,6 +4345,47 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationMcpServerResponse["default"];
       return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updateAgentStatusConfig operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updateAgentStatusConfigCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusConfigResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a custom agent status
+     * Update a custom status. Renaming flows through to the Twilio Activity. 
+     * @param {String} conversation_status_uuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentStatusConfig} status_config Status config
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updateAgentStatusConfigCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentStatusConfigResponse}
+     */
+  }, {
+    key: "updateAgentStatusConfig",
+    value: function updateAgentStatusConfig(conversation_status_uuid, status_config, callback) {
+      var postBody = status_config;
+      // verify the required parameter 'conversation_status_uuid' is set
+      if (conversation_status_uuid === undefined || conversation_status_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_status_uuid' when calling updateAgentStatusConfig");
+      }
+      // verify the required parameter 'status_config' is set
+      if (status_config === undefined || status_config === null) {
+        throw new Error("Missing the required parameter 'status_config' when calling updateAgentStatusConfig");
+      }
+      var pathParams = {
+        'conversation_status_uuid': conversation_status_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentStatusConfigResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/status/config/{conversation_status_uuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -4327,6 +4713,40 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxClassOfServiceResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/class_of_service/{classOfServiceUuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updatePbxDefaultTimezone operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updatePbxDefaultTimezoneCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Set the merchant default timezone
+     * Persists the IANA timezone on the Config#<merchant_id>/default DDB record (creates on first PUT). 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneUpdateRequest} timezone_update Timezone update
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updatePbxDefaultTimezoneCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse}
+     */
+  }, {
+    key: "updatePbxDefaultTimezone",
+    value: function updatePbxDefaultTimezone(timezone_update, callback) {
+      var postBody = timezone_update;
+      // verify the required parameter 'timezone_update' is set
+      if (timezone_update === undefined || timezone_update === null) {
+        throw new Error("Missing the required parameter 'timezone_update' when calling updatePbxDefaultTimezone");
+      }
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxDefaultTimezoneResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/config/default-timezone', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

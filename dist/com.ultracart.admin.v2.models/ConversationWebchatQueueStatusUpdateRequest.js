@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationWebchatQueueStatusUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest
- * @version 4.1.80
+ * @version 4.1.82
  */
 var ConversationWebchatQueueStatusUpdateRequest = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,12 @@ var ConversationWebchatQueueStatusUpdateRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('agent_status')) {
           obj['agent_status'] = _ApiClient["default"].convertToType(data['agent_status'], 'String');
         }
+        if (data.hasOwnProperty('custom_status_name')) {
+          obj['custom_status_name'] = _ApiClient["default"].convertToType(data['custom_status_name'], 'String');
+        }
+        if (data.hasOwnProperty('custom_status_uuid')) {
+          obj['custom_status_uuid'] = _ApiClient["default"].convertToType(data['custom_status_uuid'], 'String');
+        }
       }
       return obj;
     }
@@ -72,6 +78,18 @@ var ConversationWebchatQueueStatusUpdateRequest = /*#__PURE__*/function () {
  * @member {module:com.ultracart.admin.v2.models/ConversationWebchatQueueStatusUpdateRequest.AgentStatusEnum} agent_status
  */
 ConversationWebchatQueueStatusUpdateRequest.prototype['agent_status'] = undefined;
+
+/**
+ * Custom status display name (denormalized so the queue panel can render without a config lookup)
+ * @member {String} custom_status_name
+ */
+ConversationWebchatQueueStatusUpdateRequest.prototype['custom_status_name'] = undefined;
+
+/**
+ * Custom status uuid (when picking a custom status). Pair with custom_status_name.
+ * @member {String} custom_status_uuid
+ */
+ConversationWebchatQueueStatusUpdateRequest.prototype['custom_status_uuid'] = undefined;
 
 /**
  * Allowed values for the <code>agent_status</code> property.

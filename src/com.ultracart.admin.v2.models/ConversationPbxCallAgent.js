@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallAgent
- * @version 4.1.82
+ * @version 4.1.83
  */
 class ConversationPbxCallAgent {
     /**
@@ -55,6 +55,9 @@ class ConversationPbxCallAgent {
             }
             if (data.hasOwnProperty('agent_name')) {
                 obj['agent_name'] = ApiClient.convertToType(data['agent_name'], 'String');
+            }
+            if (data.hasOwnProperty('agent_user_id')) {
+                obj['agent_user_id'] = ApiClient.convertToType(data['agent_user_id'], 'String');
             }
             if (data.hasOwnProperty('answered')) {
                 obj['answered'] = ApiClient.convertToType(data['answered'], 'Boolean');
@@ -98,6 +101,12 @@ ConversationPbxCallAgent.prototype['agent_id'] = undefined;
  * @member {String} agent_name
  */
 ConversationPbxCallAgent.prototype['agent_name'] = undefined;
+
+/**
+ * UltraCart user id for the agent (denormalized at index time so reporting endpoints can join on agent_user_id without translating from the agent_id login).
+ * @member {String} agent_user_id
+ */
+ConversationPbxCallAgent.prototype['agent_user_id'] = undefined;
 
 /**
  * Whether the agent answered the call

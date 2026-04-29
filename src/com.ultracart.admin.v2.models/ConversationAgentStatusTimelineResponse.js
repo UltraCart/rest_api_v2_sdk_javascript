@@ -23,7 +23,7 @@ import Warning from './Warning';
 /**
  * The ConversationAgentStatusTimelineResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse
- * @version 4.1.82
+ * @version 4.1.83
  */
 class ConversationAgentStatusTimelineResponse {
     /**

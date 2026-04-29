@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import AutoOrderItem from './AutoOrderItem';
 
 /**
  * The AutoOrderItemCancelRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemCancelRequest
- * @version 4.1.82
+ * @version 4.1.83
  */
 class AutoOrderItemCancelRequest {
     /**
@@ -47,6 +48,9 @@ class AutoOrderItemCancelRequest {
         if (data) {
             obj = obj || new AutoOrderItemCancelRequest();
 
+            if (data.hasOwnProperty('append_items')) {
+                obj['append_items'] = ApiClient.convertToType(data['append_items'], [AutoOrderItem]);
+            }
             if (data.hasOwnProperty('auto_order_item_oid')) {
                 obj['auto_order_item_oid'] = ApiClient.convertToType(data['auto_order_item_oid'], 'Number');
             }
@@ -61,7 +65,13 @@ class AutoOrderItemCancelRequest {
 }
 
 /**
- * Optional tiebreaker when more than one item on the auto order shares the same original_item_id.  When present, the item with this oid is targeted and its original_item_id must match the URL path parameter (safety check).  Leave unset for the common case of a unique original_item_id.
+ * Specifying these items allows for an easier immutable item contact.  Validation will occur before any operations take place.  After the end/remove operation is successful, append these additional item(s) to the auto order.  The changes will be available in the response if the expansion includes items.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderItem>} append_items
+ */
+AutoOrderItemCancelRequest.prototype['append_items'] = undefined;
+
+/**
+ * Optional tiebreaker when more than one item on the auto order shares the same original_item_id.  When present, the item with this oid is targeted and its original_item_id must match the URL path parameter (safety check).  Leave unset for the common case of a unique original_item_id.  For reference the order_item.item_reference_oid is the same value as auto_order_item.auto_order_item_oid UNLESS the a manual edit took place AFTER the original order was placed.
  * @member {Number} auto_order_item_oid
  */
 AutoOrderItemCancelRequest.prototype['auto_order_item_oid'] = undefined;

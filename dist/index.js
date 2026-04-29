@@ -123,6 +123,12 @@ Object.defineProperty(exports, "AffiliateLink", {
     return _AffiliateLink["default"];
   }
 });
+Object.defineProperty(exports, "AgentSummary", {
+  enumerable: true,
+  get: function get() {
+    return _AgentSummary["default"];
+  }
+});
 Object.defineProperty(exports, "ApiClient", {
   enumerable: true,
   get: function get() {
@@ -849,6 +855,18 @@ Object.defineProperty(exports, "ConversationAgentAuthResponse", {
     return _ConversationAgentAuthResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationAgentCallEvent", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentCallEvent["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentChatEvent", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentChatEvent["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationAgentProfile", {
   enumerable: true,
   get: function get() {
@@ -865,6 +883,84 @@ Object.defineProperty(exports, "ConversationAgentProfilesResponse", {
   enumerable: true,
   get: function get() {
     return _ConversationAgentProfilesResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusConfig", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusConfig["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusConfigResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusConfigResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusConfigsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusConfigsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusEvent", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusEvent["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusHeatmapRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusHeatmapRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusHeatmapResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusHeatmapResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusHistorySearchRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusHistorySearchRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusHistorySearchResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusHistorySearchResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusRollup", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusRollup["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusRollupSearchRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusRollupSearchRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusRollupSearchResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusRollupSearchResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusSummaryResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusSummaryResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentStatusTimelineResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentStatusTimelineResponse["default"];
   }
 });
 Object.defineProperty(exports, "ConversationApi", {
@@ -1411,6 +1507,18 @@ Object.defineProperty(exports, "ConversationPbxCustomerSnapshotResponse", {
   enumerable: true,
   get: function get() {
     return _ConversationPbxCustomerSnapshotResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxDefaultTimezoneResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxDefaultTimezoneResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationPbxDefaultTimezoneUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxDefaultTimezoneUpdateRequest["default"];
   }
 });
 Object.defineProperty(exports, "ConversationPbxHardwarePhone", {
@@ -5559,6 +5667,12 @@ Object.defineProperty(exports, "ThumbnailParametersResponse", {
     return _ThumbnailParametersResponse["default"];
   }
 });
+Object.defineProperty(exports, "TimelineSummary", {
+  enumerable: true,
+  get: function get() {
+    return _TimelineSummary["default"];
+  }
+});
 Object.defineProperty(exports, "TransactionEmail", {
   enumerable: true,
   get: function get() {
@@ -5885,6 +5999,7 @@ var _AffiliateLedger = _interopRequireDefault(require("./com.ultracart.admin.v2.
 var _AffiliateLedgerQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateLedgerQuery"));
 var _AffiliateLedgersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateLedgersResponse"));
 var _AffiliateLink = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateLink"));
+var _AgentSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AgentSummary"));
 var _ApiUserApplicationProfile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApiUserApplicationProfile"));
 var _ApplyLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApplyLibraryItemRequest"));
 var _ApplyLibraryItemResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApplyLibraryItemResponse"));
@@ -6002,9 +6117,24 @@ var _Conversation = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ConversationAgentAuth = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuth"));
 var _ConversationAgentAuthMerchant = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthMerchant"));
 var _ConversationAgentAuthResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentAuthResponse"));
+var _ConversationAgentCallEvent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentCallEvent"));
+var _ConversationAgentChatEvent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentChatEvent"));
 var _ConversationAgentProfile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfile"));
 var _ConversationAgentProfileResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfileResponse"));
 var _ConversationAgentProfilesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentProfilesResponse"));
+var _ConversationAgentStatusConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusConfig"));
+var _ConversationAgentStatusConfigResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusConfigResponse"));
+var _ConversationAgentStatusConfigsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusConfigsResponse"));
+var _ConversationAgentStatusEvent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusEvent"));
+var _ConversationAgentStatusHeatmapRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapRequest"));
+var _ConversationAgentStatusHeatmapResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapResponse"));
+var _ConversationAgentStatusHistorySearchRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchRequest"));
+var _ConversationAgentStatusHistorySearchResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchResponse"));
+var _ConversationAgentStatusRollup = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusRollup"));
+var _ConversationAgentStatusRollupSearchRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchRequest"));
+var _ConversationAgentStatusRollupSearchResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse"));
+var _ConversationAgentStatusSummaryResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse"));
+var _ConversationAgentStatusTimelineResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse"));
 var _ConversationAutocompleteRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
 var _ConversationAutocompleteResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
 var _ConversationAutocompleteValue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteValue"));
@@ -6094,6 +6224,8 @@ var _ConversationPbxCosAuditLog = _interopRequireDefault(require("./com.ultracar
 var _ConversationPbxCosAuditLogsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCosAuditLogsResponse"));
 var _ConversationPbxCustomerSnapshotRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest"));
 var _ConversationPbxCustomerSnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse"));
+var _ConversationPbxDefaultTimezoneResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse"));
+var _ConversationPbxDefaultTimezoneUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneUpdateRequest"));
 var _ConversationPbxHardwarePhone = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxHardwarePhone"));
 var _ConversationPbxHardwarePhoneResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxHardwarePhoneResponse"));
 var _ConversationPbxHardwarePhonesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxHardwarePhonesResponse"));
@@ -6773,6 +6905,7 @@ var _TempMultimedia = _interopRequireDefault(require("./com.ultracart.admin.v2.m
 var _TempMultimediaResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TempMultimediaResponse"));
 var _ThumbnailParametersRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ThumbnailParametersRequest"));
 var _ThumbnailParametersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ThumbnailParametersResponse"));
+var _TimelineSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TimelineSummary"));
 var _TransactionEmail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TransactionEmail"));
 var _TransactionEmailListResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TransactionEmailListResponse"));
 var _TransactionEmailOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TransactionEmailOption"));
