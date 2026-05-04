@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _AutoOrderItem = _interopRequireDefault(require("./AutoOrderItem"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -26,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderItemCancelRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemCancelRequest
- * @version 4.1.82
+ * @version 4.1.83
  */
 var AutoOrderItemCancelRequest = /*#__PURE__*/function () {
   /**
@@ -59,6 +60,9 @@ var AutoOrderItemCancelRequest = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new AutoOrderItemCancelRequest();
+        if (data.hasOwnProperty('append_items')) {
+          obj['append_items'] = _ApiClient["default"].convertToType(data['append_items'], [_AutoOrderItem["default"]]);
+        }
         if (data.hasOwnProperty('auto_order_item_oid')) {
           obj['auto_order_item_oid'] = _ApiClient["default"].convertToType(data['auto_order_item_oid'], 'Number');
         }
@@ -71,7 +75,13 @@ var AutoOrderItemCancelRequest = /*#__PURE__*/function () {
   }]);
 }();
 /**
- * Optional tiebreaker when more than one item on the auto order shares the same original_item_id.  When present, the item with this oid is targeted and its original_item_id must match the URL path parameter (safety check).  Leave unset for the common case of a unique original_item_id.
+ * Specifying these items allows for an easier immutable item contact.  Validation will occur before any operations take place.  After the end/remove operation is successful, append these additional item(s) to the auto order.  The changes will be available in the response if the expansion includes items.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderItem>} append_items
+ */
+AutoOrderItemCancelRequest.prototype['append_items'] = undefined;
+
+/**
+ * Optional tiebreaker when more than one item on the auto order shares the same original_item_id.  When present, the item with this oid is targeted and its original_item_id must match the URL path parameter (safety check).  Leave unset for the common case of a unique original_item_id.  For reference the order_item.item_reference_oid is the same value as auto_order_item.auto_order_item_oid UNLESS the a manual edit took place AFTER the original order was placed.
  * @member {Number} auto_order_item_oid
  */
 AutoOrderItemCancelRequest.prototype['auto_order_item_oid'] = undefined;

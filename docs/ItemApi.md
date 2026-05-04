@@ -4,33 +4,91 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**deleteAllGatedCodes**](ItemApi.md#deleteAllGatedCodes) | **DELETE** /item/items/{merchant_item_oid}/gated_codes | Delete all gated access codes for an item
 [**deleteDigitalItem**](ItemApi.md#deleteDigitalItem) | **DELETE** /item/digital_library/{digital_item_oid} | Delete a digital item, which is a file within the digital library, not an actual merchant item
+[**deleteGatedCode**](ItemApi.md#deleteGatedCode) | **DELETE** /item/items/{merchant_item_oid}/gated_codes/{merchant_item_gated_code_oid} | Delete a gated access code by OID
 [**deleteItem**](ItemApi.md#deleteItem) | **DELETE** /item/items/{merchant_item_oid} | Delete an item
 [**deleteReview**](ItemApi.md#deleteReview) | **DELETE** /item/items/{merchant_item_oid}/reviews/{review_oid} | Delete a review
+[**generateGatedCodes**](ItemApi.md#generateGatedCodes) | **POST** /item/items/{merchant_item_oid}/gated_codes/generate | Generate a batch of gated access codes
 [**getDigitalItem**](ItemApi.md#getDigitalItem) | **GET** /item/digital_library/{digital_item_oid} | Retrieve a digital item from the digital library, which are digital files that may be attached to normal items
 [**getDigitalItems**](ItemApi.md#getDigitalItems) | **GET** /item/digital_library | Retrieve digital items from the digital library which are digital files that may be attached to normal items
 [**getDigitalItemsByExternalId**](ItemApi.md#getDigitalItemsByExternalId) | **GET** /item/digital_library/by_external/{external_id} | Retrieves digital items from the digital library (which are digital files that may be attached to normal items) that having a matching external id
+[**getGatedCodes**](ItemApi.md#getGatedCodes) | **GET** /item/items/{merchant_item_oid}/gated_codes | Get gated access codes for an item
 [**getInventorySnapshot**](ItemApi.md#getInventorySnapshot) | **GET** /item/items/inventory_snapshot | Retrieve a list of item inventories.  This method may be called once every 15 minutes.  More than that will result in a 429 response.
 [**getItem**](ItemApi.md#getItem) | **GET** /item/items/{merchant_item_oid} | Retrieve an item
 [**getItemByMerchantItemId**](ItemApi.md#getItemByMerchantItemId) | **GET** /item/items/merchant_item_id/{merchant_item_id} | Retrieve an item by item id
-[**getItemShippingDistributionCenterByCode**](ItemApi.md#getItemShippingDistributionCenterByCode) | **GET** /item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code} | Retrieve an item shipping distribution center
 [**getItems**](ItemApi.md#getItems) | **GET** /item/items | Retrieve items
 [**getPricingTiers**](ItemApi.md#getPricingTiers) | **GET** /item/pricing_tiers | Retrieve pricing tiers
 [**getReview**](ItemApi.md#getReview) | **GET** /item/items/{merchant_item_oid}/reviews/{review_oid} | Get a review
 [**getReviews**](ItemApi.md#getReviews) | **GET** /item/items/{merchant_item_oid}/reviews | Get reviews for an item
 [**getUnassociatedDigitalItems**](ItemApi.md#getUnassociatedDigitalItems) | **GET** /item/digital_library/unassociated | Retrieve digital items from the digital library (which are digital files that may be attached to normal items) not yet associated with actual items
 [**insertDigitalItem**](ItemApi.md#insertDigitalItem) | **POST** /item/digital_library | Create a file within the digital library
+[**insertGatedCode**](ItemApi.md#insertGatedCode) | **POST** /item/items/{merchant_item_oid}/gated_codes | Add a single gated access code to an item
 [**insertItem**](ItemApi.md#insertItem) | **POST** /item/items | Create an item
 [**insertReview**](ItemApi.md#insertReview) | **POST** /item/items/{merchant_item_oid}/reviews | Insert a review
 [**insertUpdateItemContentAttribute**](ItemApi.md#insertUpdateItemContentAttribute) | **POST** /item/items/{merchant_item_oid}/content/attributes | Upsert an item content attribute
+[**replaceGatedCodes**](ItemApi.md#replaceGatedCodes) | **PUT** /item/items/{merchant_item_oid}/gated_codes | Replace the full list of gated access codes for an item
 [**updateDigitalItem**](ItemApi.md#updateDigitalItem) | **PUT** /item/digital_library/{digital_item_oid} | Updates a file within the digital library
 [**updateItem**](ItemApi.md#updateItem) | **PUT** /item/items/{merchant_item_oid} | Update an item
-[**updateItemInventories**](ItemApi.md#updateItemInventories) | **PUT** /item/items/update_item_inventories | Update item inventories for a distribution center
-[**updateItemShippingDistributionCenterByCode**](ItemApi.md#updateItemShippingDistributionCenterByCode) | **PUT** /item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code} | Update an item shipping distribution center
 [**updateItems**](ItemApi.md#updateItems) | **PUT** /item/items/batch | Update multiple items
 [**updateReview**](ItemApi.md#updateReview) | **PUT** /item/items/{merchant_item_oid}/reviews/{review_oid} | Update a review
 [**uploadTemporaryMultimedia**](ItemApi.md#uploadTemporaryMultimedia) | **POST** /item/temp_multimedia | Upload an image to the temporary multimedia.
 
+
+
+## deleteAllGatedCodes
+
+> BaseResponse deleteAllGatedCodes(merchant_item_oid)
+
+Delete all gated access codes for an item
+
+Removes every gated access code currently configured for the item. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE deleteAllGatedCodes -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let merchant_item_oid = 56; // Number | The item oid.
+apiInstance.deleteAllGatedCodes(merchant_item_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE deleteAllGatedCodes -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_item_oid** | **Number**| The item oid. | 
+
+### Return type
+
+[**BaseResponse**](BaseResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## deleteDigitalItem
@@ -77,6 +135,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteGatedCode
+
+> BaseResponse deleteGatedCode(merchant_item_oid, merchant_item_gated_code_oid)
+
+Delete a gated access code by OID
+
+Delete a specific gated access code by its OID. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE deleteGatedCode -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let merchant_item_oid = 56; // Number | The item oid.
+let merchant_item_gated_code_oid = 56; // Number | The gated code oid.
+apiInstance.deleteGatedCode(merchant_item_oid, merchant_item_gated_code_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE deleteGatedCode -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_item_oid** | **Number**| The item oid. | 
+ **merchant_item_gated_code_oid** | **Number**| The gated code oid. | 
+
+### Return type
+
+[**BaseResponse**](BaseResponse.md)
 
 ### Authorization
 
@@ -197,6 +312,63 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## generateGatedCodes
+
+> ItemGatedCodesResponse generateGatedCodes(merchant_item_oid, generate_request)
+
+Generate a batch of gated access codes
+
+Returns randomly generated codes using a profanity-safe charset (vowel-free, 0/1 removed). Codes are NOT persisted; submit them via PUT or POST to commit. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE generateGatedCodes -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let merchant_item_oid = 56; // Number | The item oid.
+let generate_request = new UltraCartRestApiV2.ItemGenerateGatedCodesRequest(); // ItemGenerateGatedCodesRequest | Generate request.
+apiInstance.generateGatedCodes(merchant_item_oid, generate_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE generateGatedCodes -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_item_oid** | **Number**| The item oid. | 
+ **generate_request** | [**ItemGenerateGatedCodesRequest**](ItemGenerateGatedCodesRequest.md)| Generate request. | 
+
+### Return type
+
+[**ItemGatedCodesResponse**](ItemGatedCodesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
 - **Accept**: application/json
 
 
@@ -377,6 +549,61 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getGatedCodes
+
+> ItemGatedCodesResponse getGatedCodes(merchant_item_oid)
+
+Get gated access codes for an item
+
+Retrieve all unredeemed gated access codes configured for an item. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getGatedCodes -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let merchant_item_oid = 56; // Number | The item oid.
+apiInstance.getGatedCodes(merchant_item_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getGatedCodes -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_item_oid** | **Number**| The item oid. | 
+
+### Return type
+
+[**ItemGatedCodesResponse**](ItemGatedCodesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getInventorySnapshot
 
 > ItemInventorySnapshotResponse getInventorySnapshot()
@@ -539,69 +766,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ItemResponse**](ItemResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## getItemShippingDistributionCenterByCode
-
-> ItemShippingDistributionCenterResponse getItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, opts)
-
-Retrieve an item shipping distribution center
-
-Retrieve an item shipping distribution center. 
-
-
-### Example
-
-<!-- UC_START_EXAMPLE getItemShippingDistributionCenterByCode -->
-
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid to retrieve.
-let distribution_center_code = "distribution_center_code_example"; // String | 
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.getItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getItemShippingDistributionCenterByCode -->
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchant_item_oid** | **Number**| The item oid to retrieve. | 
- **distribution_center_code** | **String**|  | 
- **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
- **_placeholders** | **Boolean**| Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API. | [optional] 
-
-### Return type
-
-[**ItemShippingDistributionCenterResponse**](ItemShippingDistributionCenterResponse.md)
 
 ### Authorization
 
@@ -975,6 +1139,63 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## insertGatedCode
+
+> ItemGatedCodeResponse insertGatedCode(merchant_item_oid, gated_code)
+
+Add a single gated access code to an item
+
+Insert a single gated access code; the server assigns the OID and created_dts. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE insertGatedCode -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let merchant_item_oid = 56; // Number | The item oid.
+let gated_code = new UltraCartRestApiV2.ItemGatedCode(); // ItemGatedCode | Gated code to insert.
+apiInstance.insertGatedCode(merchant_item_oid, gated_code, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE insertGatedCode -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_item_oid** | **Number**| The item oid. | 
+ **gated_code** | [**ItemGatedCode**](ItemGatedCode.md)| Gated code to insert. | 
+
+### Return type
+
+[**ItemGatedCodeResponse**](ItemGatedCodeResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
 ## insertItem
 
 > ItemResponse insertItem(item, opts)
@@ -1150,6 +1371,63 @@ null (empty response body)
 - **Accept**: application/json
 
 
+## replaceGatedCodes
+
+> ItemGatedCodesResponse replaceGatedCodes(merchant_item_oid, gated_codes_request)
+
+Replace the full list of gated access codes for an item
+
+Existing codes not present in the request body are deleted. New codes are inserted. Unchanged codes preserve their OID and created_dts. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE replaceGatedCodes -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ItemApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let merchant_item_oid = 56; // Number | The item oid.
+let gated_codes_request = new UltraCartRestApiV2.ItemGatedCodesRequest(); // ItemGatedCodesRequest | Codes to replace the existing list with.
+apiInstance.replaceGatedCodes(merchant_item_oid, gated_codes_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE replaceGatedCodes -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_item_oid** | **Number**| The item oid. | 
+ **gated_codes_request** | [**ItemGatedCodesRequest**](ItemGatedCodesRequest.md)| Codes to replace the existing list with. | 
+
+### Return type
+
+[**ItemGatedCodesResponse**](ItemGatedCodesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
 ## updateDigitalItem
 
 > ItemDigitalItemResponse updateDigitalItem(digital_item_oid, digital_item)
@@ -1259,120 +1537,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ItemResponse**](ItemResponse.md)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json; charset=UTF-8
-- **Accept**: application/json
-
-
-## updateItemInventories
-
-> updateItemInventories(item_inventory_update_request)
-
-Update item inventories for a distribution center
-
-Update item inventories for a distribution center 
-
-
-### Example
-
-<!-- UC_START_EXAMPLE updateItemInventories -->
-
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let item_inventory_update_request = new UltraCartRestApiV2.ItemInventoryUpdateRequest(); // ItemInventoryUpdateRequest | Item inventory updates
-apiInstance.updateItemInventories(item_inventory_update_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateItemInventories -->
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **item_inventory_update_request** | [**ItemInventoryUpdateRequest**](ItemInventoryUpdateRequest.md)| Item inventory updates | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json; charset=UTF-8
-- **Accept**: application/json
-
-
-## updateItemShippingDistributionCenterByCode
-
-> updateItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, item_shipping_distribution_center)
-
-Update an item shipping distribution center
-
-Update an item shipping distribution center 
-
-
-### Example
-
-<!-- UC_START_EXAMPLE updateItemShippingDistributionCenterByCode -->
-
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid to update.
-let distribution_center_code = "distribution_center_code_example"; // String | 
-let item_shipping_distribution_center = new UltraCartRestApiV2.ItemShippingDistributionCenter(); // ItemShippingDistributionCenter | Item shipping distribution center
-apiInstance.updateItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, item_shipping_distribution_center, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateItemShippingDistributionCenterByCode -->
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchant_item_oid** | **Number**| The item oid to update. | 
- **distribution_center_code** | **String**|  | 
- **item_shipping_distribution_center** | [**ItemShippingDistributionCenter**](ItemShippingDistributionCenter.md)| Item shipping distribution center | 
-
-### Return type
-
-null (empty response body)
 
 ### Authorization
 

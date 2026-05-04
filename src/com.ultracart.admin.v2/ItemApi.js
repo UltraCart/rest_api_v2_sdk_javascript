@@ -13,20 +13,23 @@
 
 
 import ApiClient from "../ApiClient";
+import BaseResponse from '../com.ultracart.admin.v2.models/BaseResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Item from '../com.ultracart.admin.v2.models/Item';
 import ItemContentAttribute from '../com.ultracart.admin.v2.models/ItemContentAttribute';
 import ItemDigitalItem from '../com.ultracart.admin.v2.models/ItemDigitalItem';
 import ItemDigitalItemResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemResponse';
 import ItemDigitalItemsResponse from '../com.ultracart.admin.v2.models/ItemDigitalItemsResponse';
+import ItemGatedCode from '../com.ultracart.admin.v2.models/ItemGatedCode';
+import ItemGatedCodeResponse from '../com.ultracart.admin.v2.models/ItemGatedCodeResponse';
+import ItemGatedCodesRequest from '../com.ultracart.admin.v2.models/ItemGatedCodesRequest';
+import ItemGatedCodesResponse from '../com.ultracart.admin.v2.models/ItemGatedCodesResponse';
+import ItemGenerateGatedCodesRequest from '../com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest';
 import ItemInventorySnapshotResponse from '../com.ultracart.admin.v2.models/ItemInventorySnapshotResponse';
-import ItemInventoryUpdateRequest from '../com.ultracart.admin.v2.models/ItemInventoryUpdateRequest';
 import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
 import ItemReview from '../com.ultracart.admin.v2.models/ItemReview';
 import ItemReviewResponse from '../com.ultracart.admin.v2.models/ItemReviewResponse';
 import ItemReviewsResponse from '../com.ultracart.admin.v2.models/ItemReviewsResponse';
-import ItemShippingDistributionCenter from '../com.ultracart.admin.v2.models/ItemShippingDistributionCenter';
-import ItemShippingDistributionCenterResponse from '../com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse';
 import ItemsRequest from '../com.ultracart.admin.v2.models/ItemsRequest';
 import ItemsResponse from '../com.ultracart.admin.v2.models/ItemsResponse';
 import PricingTiersResponse from '../com.ultracart.admin.v2.models/PricingTiersResponse';
@@ -35,7 +38,7 @@ import TempMultimediaResponse from '../com.ultracart.admin.v2.models/TempMultime
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.1.83
+* @version 4.1.84
 */
 export default class ItemApi {
 
@@ -50,6 +53,49 @@ export default class ItemApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the deleteAllGatedCodes operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~deleteAllGatedCodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete all gated access codes for an item
+     * Removes every gated access code currently configured for the item. 
+     * @param {Number} merchant_item_oid The item oid.
+     * @param {module:com.ultracart.admin.v2/ItemApi~deleteAllGatedCodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    deleteAllGatedCodes(merchant_item_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling deleteAllGatedCodes");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = BaseResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/gated_codes', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the deleteDigitalItem operation.
@@ -88,6 +134,55 @@ export default class ItemApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/item/digital_library/{digital_item_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteGatedCode operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~deleteGatedCodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a gated access code by OID
+     * Delete a specific gated access code by its OID. 
+     * @param {Number} merchant_item_oid The item oid.
+     * @param {Number} merchant_item_gated_code_oid The gated code oid.
+     * @param {module:com.ultracart.admin.v2/ItemApi~deleteGatedCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    deleteGatedCode(merchant_item_oid, merchant_item_gated_code_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling deleteGatedCode");
+      }
+      // verify the required parameter 'merchant_item_gated_code_oid' is set
+      if (merchant_item_gated_code_oid === undefined || merchant_item_gated_code_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_gated_code_oid' when calling deleteGatedCode");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid,
+        'merchant_item_gated_code_oid': merchant_item_gated_code_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = BaseResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/gated_codes/{merchant_item_gated_code_oid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -178,6 +273,54 @@ export default class ItemApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}/reviews/{review_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the generateGatedCodes operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~generateGatedCodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemGatedCodesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Generate a batch of gated access codes
+     * Returns randomly generated codes using a profanity-safe charset (vowel-free, 0/1 removed). Codes are NOT persisted; submit them via PUT or POST to commit. 
+     * @param {Number} merchant_item_oid The item oid.
+     * @param {module:com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest} generate_request Generate request.
+     * @param {module:com.ultracart.admin.v2/ItemApi~generateGatedCodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemGatedCodesResponse}
+     */
+    generateGatedCodes(merchant_item_oid, generate_request, callback) {
+      let postBody = generate_request;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling generateGatedCodes");
+      }
+      // verify the required parameter 'generate_request' is set
+      if (generate_request === undefined || generate_request === null) {
+        throw new Error("Missing the required parameter 'generate_request' when calling generateGatedCodes");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = ItemGatedCodesResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/gated_codes/generate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -321,6 +464,49 @@ export default class ItemApi {
     }
 
     /**
+     * Callback function to receive the result of the getGatedCodes operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~getGatedCodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemGatedCodesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get gated access codes for an item
+     * Retrieve all unredeemed gated access codes configured for an item. 
+     * @param {Number} merchant_item_oid The item oid.
+     * @param {module:com.ultracart.admin.v2/ItemApi~getGatedCodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemGatedCodesResponse}
+     */
+    getGatedCodes(merchant_item_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling getGatedCodes");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ItemGatedCodesResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/gated_codes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getInventorySnapshot operation.
      * @callback module:com.ultracart.admin.v2/ItemApi~getInventorySnapshotCallback
      * @param {String} error Error message, if any.
@@ -450,61 +636,6 @@ export default class ItemApi {
       let returnType = ItemResponse;
       return this.apiClient.callApi(
         '/item/items/merchant_item_id/{merchant_item_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getItemShippingDistributionCenterByCode operation.
-     * @callback module:com.ultracart.admin.v2/ItemApi~getItemShippingDistributionCenterByCodeCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Retrieve an item shipping distribution center
-     * Retrieve an item shipping distribution center. 
-     * @param {Number} merchant_item_oid The item oid to retrieve.
-     * @param {String} distribution_center_code 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
-     * @param {Boolean} opts._placeholders Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-     * @param {module:com.ultracart.admin.v2/ItemApi~getItemShippingDistributionCenterByCodeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse}
-     */
-    getItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'merchant_item_oid' is set
-      if (merchant_item_oid === undefined || merchant_item_oid === null) {
-        throw new Error("Missing the required parameter 'merchant_item_oid' when calling getItemShippingDistributionCenterByCode");
-      }
-      // verify the required parameter 'distribution_center_code' is set
-      if (distribution_center_code === undefined || distribution_center_code === null) {
-        throw new Error("Missing the required parameter 'distribution_center_code' when calling getItemShippingDistributionCenterByCode");
-      }
-
-      let pathParams = {
-        'merchant_item_oid': merchant_item_oid,
-        'distribution_center_code': distribution_center_code
-      };
-      let queryParams = {
-        '_expand': opts['_expand'],
-        '_placeholders': opts['_placeholders']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ItemShippingDistributionCenterResponse;
-      return this.apiClient.callApi(
-        '/item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -792,6 +923,54 @@ export default class ItemApi {
     }
 
     /**
+     * Callback function to receive the result of the insertGatedCode operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~insertGatedCodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemGatedCodeResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add a single gated access code to an item
+     * Insert a single gated access code; the server assigns the OID and created_dts. 
+     * @param {Number} merchant_item_oid The item oid.
+     * @param {module:com.ultracart.admin.v2.models/ItemGatedCode} gated_code Gated code to insert.
+     * @param {module:com.ultracart.admin.v2/ItemApi~insertGatedCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemGatedCodeResponse}
+     */
+    insertGatedCode(merchant_item_oid, gated_code, callback) {
+      let postBody = gated_code;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling insertGatedCode");
+      }
+      // verify the required parameter 'gated_code' is set
+      if (gated_code === undefined || gated_code === null) {
+        throw new Error("Missing the required parameter 'gated_code' when calling insertGatedCode");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = ItemGatedCodeResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/gated_codes', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertItem operation.
      * @callback module:com.ultracart.admin.v2/ItemApi~insertItemCallback
      * @param {String} error Error message, if any.
@@ -935,6 +1114,54 @@ export default class ItemApi {
     }
 
     /**
+     * Callback function to receive the result of the replaceGatedCodes operation.
+     * @callback module:com.ultracart.admin.v2/ItemApi~replaceGatedCodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ItemGatedCodesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replace the full list of gated access codes for an item
+     * Existing codes not present in the request body are deleted. New codes are inserted. Unchanged codes preserve their OID and created_dts. 
+     * @param {Number} merchant_item_oid The item oid.
+     * @param {module:com.ultracart.admin.v2.models/ItemGatedCodesRequest} gated_codes_request Codes to replace the existing list with.
+     * @param {module:com.ultracart.admin.v2/ItemApi~replaceGatedCodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ItemGatedCodesResponse}
+     */
+    replaceGatedCodes(merchant_item_oid, gated_codes_request, callback) {
+      let postBody = gated_codes_request;
+      // verify the required parameter 'merchant_item_oid' is set
+      if (merchant_item_oid === undefined || merchant_item_oid === null) {
+        throw new Error("Missing the required parameter 'merchant_item_oid' when calling replaceGatedCodes");
+      }
+      // verify the required parameter 'gated_codes_request' is set
+      if (gated_codes_request === undefined || gated_codes_request === null) {
+        throw new Error("Missing the required parameter 'gated_codes_request' when calling replaceGatedCodes");
+      }
+
+      let pathParams = {
+        'merchant_item_oid': merchant_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = ItemGatedCodesResponse;
+      return this.apiClient.callApi(
+        '/item/items/{merchant_item_oid}/gated_codes', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the updateDigitalItem operation.
      * @callback module:com.ultracart.admin.v2/ItemApi~updateDigitalItemCallback
      * @param {String} error Error message, if any.
@@ -1031,100 +1258,6 @@ export default class ItemApi {
       let returnType = ItemResponse;
       return this.apiClient.callApi(
         '/item/items/{merchant_item_oid}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the updateItemInventories operation.
-     * @callback module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update item inventories for a distribution center
-     * Update item inventories for a distribution center 
-     * @param {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest} item_inventory_update_request Item inventory updates
-     * @param {module:com.ultracart.admin.v2/ItemApi~updateItemInventoriesCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    updateItemInventories(item_inventory_update_request, callback) {
-      let postBody = item_inventory_update_request;
-      // verify the required parameter 'item_inventory_update_request' is set
-      if (item_inventory_update_request === undefined || item_inventory_update_request === null) {
-        throw new Error("Missing the required parameter 'item_inventory_update_request' when calling updateItemInventories");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      let contentTypes = ['application/json; charset=UTF-8'];
-      let accepts = ['application/json'];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/item/items/update_item_inventories', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the updateItemShippingDistributionCenterByCode operation.
-     * @callback module:com.ultracart.admin.v2/ItemApi~updateItemShippingDistributionCenterByCodeCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update an item shipping distribution center
-     * Update an item shipping distribution center 
-     * @param {Number} merchant_item_oid The item oid to update.
-     * @param {String} distribution_center_code 
-     * @param {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter} item_shipping_distribution_center Item shipping distribution center
-     * @param {module:com.ultracart.admin.v2/ItemApi~updateItemShippingDistributionCenterByCodeCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    updateItemShippingDistributionCenterByCode(merchant_item_oid, distribution_center_code, item_shipping_distribution_center, callback) {
-      let postBody = item_shipping_distribution_center;
-      // verify the required parameter 'merchant_item_oid' is set
-      if (merchant_item_oid === undefined || merchant_item_oid === null) {
-        throw new Error("Missing the required parameter 'merchant_item_oid' when calling updateItemShippingDistributionCenterByCode");
-      }
-      // verify the required parameter 'distribution_center_code' is set
-      if (distribution_center_code === undefined || distribution_center_code === null) {
-        throw new Error("Missing the required parameter 'distribution_center_code' when calling updateItemShippingDistributionCenterByCode");
-      }
-      // verify the required parameter 'item_shipping_distribution_center' is set
-      if (item_shipping_distribution_center === undefined || item_shipping_distribution_center === null) {
-        throw new Error("Missing the required parameter 'item_shipping_distribution_center' when calling updateItemShippingDistributionCenterByCode");
-      }
-
-      let pathParams = {
-        'merchant_item_oid': merchant_item_oid,
-        'distribution_center_code': distribution_center_code
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      let contentTypes = ['application/json; charset=UTF-8'];
-      let accepts = ['application/json'];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/item/items/{merchant_item_oid}/shipping/distribution_centers/by_code/{distribution_center_code}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

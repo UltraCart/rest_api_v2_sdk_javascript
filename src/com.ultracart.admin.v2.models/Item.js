@@ -25,6 +25,7 @@ import ItemEbay from './ItemEbay';
 import ItemEmailNotifications from './ItemEmailNotifications';
 import ItemEnrollment123 from './ItemEnrollment123';
 import ItemFulfillmentAddon from './ItemFulfillmentAddon';
+import ItemGatedCode from './ItemGatedCode';
 import ItemGiftCertificate from './ItemGiftCertificate';
 import ItemGoogleProductSearch from './ItemGoogleProductSearch';
 import ItemIdentifiers from './ItemIdentifiers';
@@ -54,7 +55,7 @@ import ItemWishlistMember from './ItemWishlistMember';
 /**
  * The Item model module.
  * @module com.ultracart.admin.v2.models/Item
- * @version 4.1.83
+ * @version 4.1.84
  */
 class Item {
     /**
@@ -132,6 +133,9 @@ class Item {
             }
             if (data.hasOwnProperty('fulfillment_addons')) {
                 obj['fulfillment_addons'] = ApiClient.convertToType(data['fulfillment_addons'], [ItemFulfillmentAddon]);
+            }
+            if (data.hasOwnProperty('gated_codes')) {
+                obj['gated_codes'] = ApiClient.convertToType(data['gated_codes'], [ItemGatedCode]);
             }
             if (data.hasOwnProperty('gift_certificate')) {
                 obj['gift_certificate'] = ItemGiftCertificate.constructFromObject(data['gift_certificate']);
@@ -329,6 +333,12 @@ Item.prototype['enrollment123'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ItemFulfillmentAddon>} fulfillment_addons
  */
 Item.prototype['fulfillment_addons'] = undefined;
+
+/**
+ * Gated access codes for this item. Read-only on this object. Use the /items/{merchant_item_oid}/gated_codes endpoints to manage.
+ * @member {Array.<module:com.ultracart.admin.v2.models/ItemGatedCode>} gated_codes
+ */
+Item.prototype['gated_codes'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ItemGiftCertificate} gift_certificate

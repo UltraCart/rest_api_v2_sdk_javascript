@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.83
+ * @version 4.1.84
  */
 class OrderQuery {
     /**
@@ -510,7 +510,13 @@ OrderQuery['CurrentStageEnum'] = {
      * value: "Unknown"
      * @const
      */
-    "Unknown": "Unknown"
+    "Unknown": "Unknown",
+
+    /**
+     * value: "Hold"
+     * @const
+     */
+    "Hold": "Hold"
 };
 
 

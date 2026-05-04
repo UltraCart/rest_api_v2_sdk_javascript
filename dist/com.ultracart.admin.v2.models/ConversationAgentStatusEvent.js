@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentStatusEvent model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusEvent
- * @version 4.1.82
+ * @version 4.1.83
  */
 var ConversationAgentStatusEvent = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var ConversationAgentStatusEvent = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationAgentStatusEvent();
+        if (data.hasOwnProperty('agent_identifier')) {
+          obj['agent_identifier'] = _ApiClient["default"].convertToType(data['agent_identifier'], 'String');
+        }
         if (data.hasOwnProperty('agent_name')) {
           obj['agent_name'] = _ApiClient["default"].convertToType(data['agent_name'], 'String');
         }
@@ -112,6 +115,12 @@ var ConversationAgentStatusEvent = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Agent identifier â€” voice_identity for PBX (e.g. 'client:login'), participant_arn for chat, synthetic 'ai:<user_id>' for AI flag events. Stable across an agent's events; participates in DDB pk and GSI1 sk.
+ * @member {String} agent_identifier
+ */
+ConversationAgentStatusEvent.prototype['agent_identifier'] = undefined;
+
 /**
  * Agent display name at the time of the event
  * @member {String} agent_name

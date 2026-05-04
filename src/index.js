@@ -653,6 +653,11 @@ import ItemEbayMarketPlaceAnalysis from './com.ultracart.admin.v2.models/ItemEba
 import ItemEmailNotifications from './com.ultracart.admin.v2.models/ItemEmailNotifications';
 import ItemEnrollment123 from './com.ultracart.admin.v2.models/ItemEnrollment123';
 import ItemFulfillmentAddon from './com.ultracart.admin.v2.models/ItemFulfillmentAddon';
+import ItemGatedCode from './com.ultracart.admin.v2.models/ItemGatedCode';
+import ItemGatedCodeResponse from './com.ultracart.admin.v2.models/ItemGatedCodeResponse';
+import ItemGatedCodesRequest from './com.ultracart.admin.v2.models/ItemGatedCodesRequest';
+import ItemGatedCodesResponse from './com.ultracart.admin.v2.models/ItemGatedCodesResponse';
+import ItemGenerateGatedCodesRequest from './com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest';
 import ItemGiftCertificate from './com.ultracart.admin.v2.models/ItemGiftCertificate';
 import ItemGoogleProductSearch from './com.ultracart.admin.v2.models/ItemGoogleProductSearch';
 import ItemIdentifiers from './com.ultracart.admin.v2.models/ItemIdentifiers';
@@ -662,8 +667,6 @@ import ItemInternal from './com.ultracart.admin.v2.models/ItemInternal';
 import ItemInventorySnapshot from './com.ultracart.admin.v2.models/ItemInventorySnapshot';
 import ItemInventorySnapshotDistributionCenter from './com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter';
 import ItemInventorySnapshotResponse from './com.ultracart.admin.v2.models/ItemInventorySnapshotResponse';
-import ItemInventoryUpdate from './com.ultracart.admin.v2.models/ItemInventoryUpdate';
-import ItemInventoryUpdateRequest from './com.ultracart.admin.v2.models/ItemInventoryUpdateRequest';
 import ItemKitComponent from './com.ultracart.admin.v2.models/ItemKitComponent';
 import ItemKitDefinition from './com.ultracart.admin.v2.models/ItemKitDefinition';
 import ItemOption from './com.ultracart.admin.v2.models/ItemOption';
@@ -695,7 +698,6 @@ import ItemShippingCase from './com.ultracart.admin.v2.models/ItemShippingCase';
 import ItemShippingDestinationMarkup from './com.ultracart.admin.v2.models/ItemShippingDestinationMarkup';
 import ItemShippingDestinationRestriction from './com.ultracart.admin.v2.models/ItemShippingDestinationRestriction';
 import ItemShippingDistributionCenter from './com.ultracart.admin.v2.models/ItemShippingDistributionCenter';
-import ItemShippingDistributionCenterResponse from './com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse';
 import ItemShippingMethod from './com.ultracart.admin.v2.models/ItemShippingMethod';
 import ItemShippingPackageRequirement from './com.ultracart.admin.v2.models/ItemShippingPackageRequirement';
 import ItemTag from './com.ultracart.admin.v2.models/ItemTag';
@@ -1039,7 +1041,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.83
+* @version 4.1.84
 */
 export {
     /**
@@ -4889,6 +4891,36 @@ export {
     ItemFulfillmentAddon,
 
     /**
+     * The ItemGatedCode model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemGatedCode}
+     */
+    ItemGatedCode,
+
+    /**
+     * The ItemGatedCodeResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemGatedCodeResponse}
+     */
+    ItemGatedCodeResponse,
+
+    /**
+     * The ItemGatedCodesRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemGatedCodesRequest}
+     */
+    ItemGatedCodesRequest,
+
+    /**
+     * The ItemGatedCodesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemGatedCodesResponse}
+     */
+    ItemGatedCodesResponse,
+
+    /**
+     * The ItemGenerateGatedCodesRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest}
+     */
+    ItemGenerateGatedCodesRequest,
+
+    /**
      * The ItemGiftCertificate model constructor.
      * @property {module:com.ultracart.admin.v2.models/ItemGiftCertificate}
      */
@@ -4941,18 +4973,6 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemInventorySnapshotResponse}
      */
     ItemInventorySnapshotResponse,
-
-    /**
-     * The ItemInventoryUpdate model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdate}
-     */
-    ItemInventoryUpdate,
-
-    /**
-     * The ItemInventoryUpdateRequest model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ItemInventoryUpdateRequest}
-     */
-    ItemInventoryUpdateRequest,
 
     /**
      * The ItemKitComponent model constructor.
@@ -5139,12 +5159,6 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter}
      */
     ItemShippingDistributionCenter,
-
-    /**
-     * The ItemShippingDistributionCenterResponse model constructor.
-     * @property {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse}
-     */
-    ItemShippingDistributionCenterResponse,
 
     /**
      * The ItemShippingMethod model constructor.

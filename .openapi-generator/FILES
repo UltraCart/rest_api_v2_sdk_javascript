@@ -655,6 +655,11 @@ docs/ItemEbayMarketPlaceAnalysis.md
 docs/ItemEmailNotifications.md
 docs/ItemEnrollment123.md
 docs/ItemFulfillmentAddon.md
+docs/ItemGatedCode.md
+docs/ItemGatedCodeResponse.md
+docs/ItemGatedCodesRequest.md
+docs/ItemGatedCodesResponse.md
+docs/ItemGenerateGatedCodesRequest.md
 docs/ItemGiftCertificate.md
 docs/ItemGoogleProductSearch.md
 docs/ItemIdentifiers.md
@@ -664,8 +669,6 @@ docs/ItemInternal.md
 docs/ItemInventorySnapshot.md
 docs/ItemInventorySnapshotDistributionCenter.md
 docs/ItemInventorySnapshotResponse.md
-docs/ItemInventoryUpdate.md
-docs/ItemInventoryUpdateRequest.md
 docs/ItemKitComponent.md
 docs/ItemKitDefinition.md
 docs/ItemOption.md
@@ -697,7 +700,6 @@ docs/ItemShippingCase.md
 docs/ItemShippingDestinationMarkup.md
 docs/ItemShippingDestinationRestriction.md
 docs/ItemShippingDistributionCenter.md
-docs/ItemShippingDistributionCenterResponse.md
 docs/ItemShippingMethod.md
 docs/ItemShippingPackageRequirement.md
 docs/ItemTag.md
@@ -1641,6 +1643,11 @@ src/com.ultracart.admin.v2.models/ItemEbayMarketPlaceAnalysis.js
 src/com.ultracart.admin.v2.models/ItemEmailNotifications.js
 src/com.ultracart.admin.v2.models/ItemEnrollment123.js
 src/com.ultracart.admin.v2.models/ItemFulfillmentAddon.js
+src/com.ultracart.admin.v2.models/ItemGatedCode.js
+src/com.ultracart.admin.v2.models/ItemGatedCodeResponse.js
+src/com.ultracart.admin.v2.models/ItemGatedCodesRequest.js
+src/com.ultracart.admin.v2.models/ItemGatedCodesResponse.js
+src/com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest.js
 src/com.ultracart.admin.v2.models/ItemGiftCertificate.js
 src/com.ultracart.admin.v2.models/ItemGoogleProductSearch.js
 src/com.ultracart.admin.v2.models/ItemIdentifiers.js
@@ -1650,8 +1657,6 @@ src/com.ultracart.admin.v2.models/ItemInternal.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshot.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter.js
 src/com.ultracart.admin.v2.models/ItemInventorySnapshotResponse.js
-src/com.ultracart.admin.v2.models/ItemInventoryUpdate.js
-src/com.ultracart.admin.v2.models/ItemInventoryUpdateRequest.js
 src/com.ultracart.admin.v2.models/ItemKitComponent.js
 src/com.ultracart.admin.v2.models/ItemKitDefinition.js
 src/com.ultracart.admin.v2.models/ItemOption.js
@@ -1683,7 +1688,6 @@ src/com.ultracart.admin.v2.models/ItemShippingCase.js
 src/com.ultracart.admin.v2.models/ItemShippingDestinationMarkup.js
 src/com.ultracart.admin.v2.models/ItemShippingDestinationRestriction.js
 src/com.ultracart.admin.v2.models/ItemShippingDistributionCenter.js
-src/com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse.js
 src/com.ultracart.admin.v2.models/ItemShippingMethod.js
 src/com.ultracart.admin.v2.models/ItemShippingPackageRequirement.js
 src/com.ultracart.admin.v2.models/ItemTag.js

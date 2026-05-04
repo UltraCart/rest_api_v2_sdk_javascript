@@ -73,6 +73,8 @@ Name | Type | Description | Notes
 
 * `Unknown` (value: `"Unknown"`)
 
+* `Hold` (value: `"Hold"`)
+
 
 
 

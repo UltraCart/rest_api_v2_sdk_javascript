@@ -13,23 +13,23 @@
 
 import ApiClient from '../ApiClient';
 import Error from './Error';
-import ItemShippingDistributionCenter from './ItemShippingDistributionCenter';
+import ItemGatedCode from './ItemGatedCode';
 import ResponseMetadata from './ResponseMetadata';
 import Warning from './Warning';
 
 /**
- * The ItemShippingDistributionCenterResponse model module.
- * @module com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse
- * @version 4.1.83
+ * The ItemGatedCodesResponse model module.
+ * @module com.ultracart.admin.v2.models/ItemGatedCodesResponse
+ * @version 4.1.84
  */
-class ItemShippingDistributionCenterResponse {
+class ItemGatedCodesResponse {
     /**
-     * Constructs a new <code>ItemShippingDistributionCenterResponse</code>.
-     * @alias module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse
+     * Constructs a new <code>ItemGatedCodesResponse</code>.
+     * @alias module:com.ultracart.admin.v2.models/ItemGatedCodesResponse
      */
     constructor() { 
         
-        ItemShippingDistributionCenterResponse.initialize(this);
+        ItemGatedCodesResponse.initialize(this);
     }
 
     /**
@@ -41,21 +41,21 @@ class ItemShippingDistributionCenterResponse {
     }
 
     /**
-     * Constructs a <code>ItemShippingDistributionCenterResponse</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ItemGatedCodesResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse} obj Optional instance to populate.
-     * @return {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse} The populated <code>ItemShippingDistributionCenterResponse</code> instance.
+     * @param {module:com.ultracart.admin.v2.models/ItemGatedCodesResponse} obj Optional instance to populate.
+     * @return {module:com.ultracart.admin.v2.models/ItemGatedCodesResponse} The populated <code>ItemGatedCodesResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ItemShippingDistributionCenterResponse();
+            obj = obj || new ItemGatedCodesResponse();
 
             if (data.hasOwnProperty('error')) {
                 obj['error'] = Error.constructFromObject(data['error']);
             }
-            if (data.hasOwnProperty('itemShippingDistributionCenter')) {
-                obj['itemShippingDistributionCenter'] = ItemShippingDistributionCenter.constructFromObject(data['itemShippingDistributionCenter']);
+            if (data.hasOwnProperty('gatedCodes')) {
+                obj['gatedCodes'] = ApiClient.convertToType(data['gatedCodes'], [ItemGatedCode]);
             }
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ResponseMetadata.constructFromObject(data['metadata']);
@@ -76,33 +76,34 @@ class ItemShippingDistributionCenterResponse {
 /**
  * @member {module:com.ultracart.admin.v2.models/Error} error
  */
-ItemShippingDistributionCenterResponse.prototype['error'] = undefined;
+ItemGatedCodesResponse.prototype['error'] = undefined;
 
 /**
- * @member {module:com.ultracart.admin.v2.models/ItemShippingDistributionCenter} itemShippingDistributionCenter
+ * gated_codes
+ * @member {Array.<module:com.ultracart.admin.v2.models/ItemGatedCode>} gatedCodes
  */
-ItemShippingDistributionCenterResponse.prototype['itemShippingDistributionCenter'] = undefined;
+ItemGatedCodesResponse.prototype['gatedCodes'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ResponseMetadata} metadata
  */
-ItemShippingDistributionCenterResponse.prototype['metadata'] = undefined;
+ItemGatedCodesResponse.prototype['metadata'] = undefined;
 
 /**
  * Indicates if API call was successful
  * @member {Boolean} success
  */
-ItemShippingDistributionCenterResponse.prototype['success'] = undefined;
+ItemGatedCodesResponse.prototype['success'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/Warning} warning
  */
-ItemShippingDistributionCenterResponse.prototype['warning'] = undefined;
+ItemGatedCodesResponse.prototype['warning'] = undefined;
 
 
 
 
 
 
-export default ItemShippingDistributionCenterResponse;
+export default ItemGatedCodesResponse;
 

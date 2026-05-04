@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ChannelPartnerEstimateShippingResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse
- * @version 4.1.83
+ * @version 4.1.84
  */
 class ChannelPartnerEstimateShippingResponse {
     /**
