@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomDashboardExecutionParameter model module.
  * @module com.ultracart.admin.v2.models/CustomDashboardExecutionParameter
- * @version 4.1.83
+ * @version 4.1.84
  */
 var CustomDashboardExecutionParameter = /*#__PURE__*/function () {
   /**

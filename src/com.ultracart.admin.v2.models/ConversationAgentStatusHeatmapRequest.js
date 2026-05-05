@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentStatusHeatmapRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapRequest
- * @version 4.1.84
+ * @version 4.1.85
  */
 class ConversationAgentStatusHeatmapRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Notification model module.
  * @module com.ultracart.admin.v2.models/Notification
- * @version 4.1.84
+ * @version 4.1.85
  */
 class Notification {
     /**

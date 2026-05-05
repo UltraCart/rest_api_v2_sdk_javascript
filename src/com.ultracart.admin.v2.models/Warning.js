@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Warning model module.
  * @module com.ultracart.admin.v2.models/Warning
- * @version 4.1.84
+ * @version 4.1.85
  */
 class Warning {
     /**
@@ -50,6 +50,9 @@ class Warning {
             if (data.hasOwnProperty('more_info')) {
                 obj['more_info'] = ApiClient.convertToType(data['more_info'], 'String');
             }
+            if (data.hasOwnProperty('warning_code')) {
+                obj['warning_code'] = ApiClient.convertToType(data['warning_code'], 'String');
+            }
             if (data.hasOwnProperty('warning_message')) {
                 obj['warning_message'] = ApiClient.convertToType(data['warning_message'], 'String');
             }
@@ -65,6 +68,12 @@ class Warning {
  * @member {String} more_info
  */
 Warning.prototype['more_info'] = undefined;
+
+/**
+ * A stable machine-readable code identifying the warning. See API docs for known values.
+ * @member {String} warning_code
+ */
+Warning.prototype['warning_code'] = undefined;
 
 /**
  * A technical message meant to be read by a developer

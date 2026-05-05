@@ -15,6 +15,8 @@ Method | HTTP request | Description
 [**generateOrderToken**](OrderApi.md#generateOrderToken) | **GET** /order/orders/token/{order_id} | Generate an order token for a given order id
 [**generatePackingSlipAllDC**](OrderApi.md#generatePackingSlipAllDC) | **GET** /order/orders/{order_id}/packing_slip | Generate a packing slip for this order across all distribution centers.
 [**generatePackingSlipSpecificDC**](OrderApi.md#generatePackingSlipSpecificDC) | **GET** /order/orders/{order_id}/packing_slip/{distribution_center_code} | Generate a packing slip for this order for the given distribution center.
+[**getAccountsReceivableDetailValueHistogram**](OrderApi.md#getAccountsReceivableDetailValueHistogram) | **GET** /order/accounts_receivable/detail_value_histogram | Retrieve a value histogram for a given AR transaction-detail name
+[**getAccountsReceivableGatewayDetailNames**](OrderApi.md#getAccountsReceivableGatewayDetailNames) | **GET** /order/accounts_receivable/gateway_detail_names | Retrieve gateway / detail-name picker data for the AR filter modal
 [**getAccountsReceivableRetryConfig**](OrderApi.md#getAccountsReceivableRetryConfig) | **GET** /order/accountsReceivableRetryConfig | Retrieve A/R Retry Configuration
 [**getAccountsReceivableRetryStats**](OrderApi.md#getAccountsReceivableRetryStats) | **GET** /order/accountsReceivableRetryConfig/stats | Retrieve A/R Retry Statistics
 [**getOrder**](OrderApi.md#getOrder) | **GET** /order/orders/{order_id} | Retrieve an order
@@ -661,6 +663,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrderPackingSlipResponse**](OrderPackingSlipResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAccountsReceivableDetailValueHistogram
+
+> getAccountsReceivableDetailValueHistogram(detail, opts)
+
+Retrieve a value histogram for a given AR transaction-detail name
+
+For the calling merchant&#39;s Accounts Receivable orders, returns a value -&gt; document-count histogram for the named transaction detail, optionally scoped to transactions on the named gateway. Drives the AR filter modal&#39;s autocomplete on the detail-value input. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getAccountsReceivableDetailValueHistogram -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let detail = "detail_example"; // String | The transaction-detail name to histogram.
+let opts = {
+  'gateway': "gateway_example" // String | The gateway name to scope to (optional).
+};
+apiInstance.getAccountsReceivableDetailValueHistogram(detail, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getAccountsReceivableDetailValueHistogram -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **detail** | **String**| The transaction-detail name to histogram. | 
+ **gateway** | **String**| The gateway name to scope to (optional). | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAccountsReceivableGatewayDetailNames
+
+> getAccountsReceivableGatewayDetailNames()
+
+Retrieve gateway / detail-name picker data for the AR filter modal
+
+For the calling merchant&#39;s Accounts Receivable orders, returns the distinct payment gateway names paired with the set of transaction-detail names observed on those gateways. Drives the cascading gateway / detail-name pickers in the AR filter modal. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getAccountsReceivableGatewayDetailNames -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getAccountsReceivableGatewayDetailNames((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getAccountsReceivableGatewayDetailNames -->
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

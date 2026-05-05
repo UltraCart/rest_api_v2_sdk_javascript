@@ -18,6 +18,7 @@ var _ItemEbay = _interopRequireDefault(require("./ItemEbay"));
 var _ItemEmailNotifications = _interopRequireDefault(require("./ItemEmailNotifications"));
 var _ItemEnrollment = _interopRequireDefault(require("./ItemEnrollment123"));
 var _ItemFulfillmentAddon = _interopRequireDefault(require("./ItemFulfillmentAddon"));
+var _ItemGatedCode = _interopRequireDefault(require("./ItemGatedCode"));
 var _ItemGiftCertificate = _interopRequireDefault(require("./ItemGiftCertificate"));
 var _ItemGoogleProductSearch = _interopRequireDefault(require("./ItemGoogleProductSearch"));
 var _ItemIdentifiers = _interopRequireDefault(require("./ItemIdentifiers"));
@@ -64,7 +65,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Item model module.
  * @module com.ultracart.admin.v2.models/Item
- * @version 4.1.83
+ * @version 4.1.84
  */
 var Item = /*#__PURE__*/function () {
   /**
@@ -144,6 +145,9 @@ var Item = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('fulfillment_addons')) {
           obj['fulfillment_addons'] = _ApiClient["default"].convertToType(data['fulfillment_addons'], [_ItemFulfillmentAddon["default"]]);
+        }
+        if (data.hasOwnProperty('gated_codes')) {
+          obj['gated_codes'] = _ApiClient["default"].convertToType(data['gated_codes'], [_ItemGatedCode["default"]]);
         }
         if (data.hasOwnProperty('gift_certificate')) {
           obj['gift_certificate'] = _ItemGiftCertificate["default"].constructFromObject(data['gift_certificate']);
@@ -339,6 +343,12 @@ Item.prototype['enrollment123'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/ItemFulfillmentAddon>} fulfillment_addons
  */
 Item.prototype['fulfillment_addons'] = undefined;
+
+/**
+ * Gated access codes for this item. Read-only on this object. Use the /items/{merchant_item_oid}/gated_codes endpoints to manage.
+ * @member {Array.<module:com.ultracart.admin.v2.models/ItemGatedCode>} gated_codes
+ */
+Item.prototype['gated_codes'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ItemGiftCertificate} gift_certificate

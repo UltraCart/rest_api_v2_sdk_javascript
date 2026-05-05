@@ -45,7 +45,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.84
+* @version 4.1.85
 */
 export default class OrderApi {
 
@@ -567,6 +567,88 @@ export default class OrderApi {
       let returnType = OrderPackingSlipResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/packing_slip/{distribution_center_code}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAccountsReceivableDetailValueHistogram operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getAccountsReceivableDetailValueHistogramCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve a value histogram for a given AR transaction-detail name
+     * For the calling merchant's Accounts Receivable orders, returns a value -> document-count histogram for the named transaction detail, optionally scoped to transactions on the named gateway. Drives the AR filter modal's autocomplete on the detail-value input. 
+     * @param {String} detail The transaction-detail name to histogram.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.gateway The gateway name to scope to (optional).
+     * @param {module:com.ultracart.admin.v2/OrderApi~getAccountsReceivableDetailValueHistogramCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getAccountsReceivableDetailValueHistogram(detail, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'detail' is set
+      if (detail === undefined || detail === null) {
+        throw new Error("Missing the required parameter 'detail' when calling getAccountsReceivableDetailValueHistogram");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'gateway': opts['gateway'],
+        'detail': detail
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/order/accounts_receivable/detail_value_histogram', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAccountsReceivableGatewayDetailNames operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getAccountsReceivableGatewayDetailNamesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve gateway / detail-name picker data for the AR filter modal
+     * For the calling merchant's Accounts Receivable orders, returns the distinct payment gateway names paired with the set of transaction-detail names observed on those gateways. Drives the cascading gateway / detail-name pickers in the AR filter modal. 
+     * @param {module:com.ultracart.admin.v2/OrderApi~getAccountsReceivableGatewayDetailNamesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getAccountsReceivableGatewayDetailNames(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/order/accounts_receivable/gateway_detail_names', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

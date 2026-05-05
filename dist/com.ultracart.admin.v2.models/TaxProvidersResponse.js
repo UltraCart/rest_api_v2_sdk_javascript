@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProvidersResponse
- * @version 4.1.83
+ * @version 4.1.84
  */
 var TaxProvidersResponse = /*#__PURE__*/function () {
   /**

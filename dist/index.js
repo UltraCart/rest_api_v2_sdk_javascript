@@ -3927,6 +3927,36 @@ Object.defineProperty(exports, "ItemFulfillmentAddon", {
     return _ItemFulfillmentAddon["default"];
   }
 });
+Object.defineProperty(exports, "ItemGatedCode", {
+  enumerable: true,
+  get: function get() {
+    return _ItemGatedCode["default"];
+  }
+});
+Object.defineProperty(exports, "ItemGatedCodeResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemGatedCodeResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ItemGatedCodesRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ItemGatedCodesRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ItemGatedCodesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ItemGatedCodesResponse["default"];
+  }
+});
+Object.defineProperty(exports, "ItemGenerateGatedCodesRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ItemGenerateGatedCodesRequest["default"];
+  }
+});
 Object.defineProperty(exports, "ItemGiftCertificate", {
   enumerable: true,
   get: function get() {
@@ -3979,18 +4009,6 @@ Object.defineProperty(exports, "ItemInventorySnapshotResponse", {
   enumerable: true,
   get: function get() {
     return _ItemInventorySnapshotResponse["default"];
-  }
-});
-Object.defineProperty(exports, "ItemInventoryUpdate", {
-  enumerable: true,
-  get: function get() {
-    return _ItemInventoryUpdate["default"];
-  }
-});
-Object.defineProperty(exports, "ItemInventoryUpdateRequest", {
-  enumerable: true,
-  get: function get() {
-    return _ItemInventoryUpdateRequest["default"];
   }
 });
 Object.defineProperty(exports, "ItemKitComponent", {
@@ -4177,12 +4195,6 @@ Object.defineProperty(exports, "ItemShippingDistributionCenter", {
   enumerable: true,
   get: function get() {
     return _ItemShippingDistributionCenter["default"];
-  }
-});
-Object.defineProperty(exports, "ItemShippingDistributionCenterResponse", {
-  enumerable: true,
-  get: function get() {
-    return _ItemShippingDistributionCenterResponse["default"];
   }
 });
 Object.defineProperty(exports, "ItemShippingMethod", {
@@ -6620,6 +6632,11 @@ var _ItemEbayMarketPlaceAnalysis = _interopRequireDefault(require("./com.ultraca
 var _ItemEmailNotifications = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemEmailNotifications"));
 var _ItemEnrollment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemEnrollment123"));
 var _ItemFulfillmentAddon = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemFulfillmentAddon"));
+var _ItemGatedCode = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemGatedCode"));
+var _ItemGatedCodeResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemGatedCodeResponse"));
+var _ItemGatedCodesRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemGatedCodesRequest"));
+var _ItemGatedCodesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemGatedCodesResponse"));
+var _ItemGenerateGatedCodesRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest"));
 var _ItemGiftCertificate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemGiftCertificate"));
 var _ItemGoogleProductSearch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemGoogleProductSearch"));
 var _ItemIdentifiers = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemIdentifiers"));
@@ -6629,8 +6646,6 @@ var _ItemInternal = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _ItemInventorySnapshot = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshot"));
 var _ItemInventorySnapshotDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter"));
 var _ItemInventorySnapshotResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventorySnapshotResponse"));
-var _ItemInventoryUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdate"));
-var _ItemInventoryUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemInventoryUpdateRequest"));
 var _ItemKitComponent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitComponent"));
 var _ItemKitDefinition = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemKitDefinition"));
 var _ItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemOption"));
@@ -6662,7 +6677,6 @@ var _ItemShippingCase = _interopRequireDefault(require("./com.ultracart.admin.v2
 var _ItemShippingDestinationMarkup = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationMarkup"));
 var _ItemShippingDestinationRestriction = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDestinationRestriction"));
 var _ItemShippingDistributionCenter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenter"));
-var _ItemShippingDistributionCenterResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingDistributionCenterResponse"));
 var _ItemShippingMethod = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingMethod"));
 var _ItemShippingPackageRequirement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemShippingPackageRequirement"));
 var _ItemTag = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ItemTag"));

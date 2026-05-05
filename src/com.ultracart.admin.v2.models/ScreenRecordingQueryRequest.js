@@ -17,7 +17,7 @@ import ScreenRecordingFilter from './ScreenRecordingFilter';
 /**
  * The ScreenRecordingQueryRequest model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingQueryRequest
- * @version 4.1.84
+ * @version 4.1.85
  */
 class ScreenRecordingQueryRequest {
     /**
