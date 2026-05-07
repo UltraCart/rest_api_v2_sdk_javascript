@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Warning model module.
  * @module com.ultracart.admin.v2.models/Warning
- * @version 4.1.84
+ * @version 4.1.85
  */
 var Warning = /*#__PURE__*/function () {
   /**
@@ -62,6 +62,9 @@ var Warning = /*#__PURE__*/function () {
         if (data.hasOwnProperty('more_info')) {
           obj['more_info'] = _ApiClient["default"].convertToType(data['more_info'], 'String');
         }
+        if (data.hasOwnProperty('warning_code')) {
+          obj['warning_code'] = _ApiClient["default"].convertToType(data['warning_code'], 'String');
+        }
         if (data.hasOwnProperty('warning_message')) {
           obj['warning_message'] = _ApiClient["default"].convertToType(data['warning_message'], 'String');
         }
@@ -75,6 +78,12 @@ var Warning = /*#__PURE__*/function () {
  * @member {String} more_info
  */
 Warning.prototype['more_info'] = undefined;
+
+/**
+ * A stable machine-readable code identifying the warning. See API docs for known values.
+ * @member {String} warning_code
+ */
+Warning.prototype['warning_code'] = undefined;
 
 /**
  * A technical message meant to be read by a developer

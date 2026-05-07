@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallAiToolCall model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallAiToolCall
- * @version 4.1.85
+ * @version 4.1.86
  */
 class ConversationPbxCallAiToolCall {
     /**

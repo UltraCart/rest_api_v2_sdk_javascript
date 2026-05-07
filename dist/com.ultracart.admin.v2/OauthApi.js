@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.1.84
+* @version 4.1.85
 */
 var OauthApi = exports["default"] = /*#__PURE__*/function () {
   /**

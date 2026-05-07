@@ -17,7 +17,7 @@ import AutoOrderItem from './AutoOrderItem';
 /**
  * The AutoOrderItemCancelRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemCancelRequest
- * @version 4.1.85
+ * @version 4.1.86
  */
 class AutoOrderItemCancelRequest {
     /**
@@ -57,6 +57,9 @@ class AutoOrderItemCancelRequest {
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
             }
+            if (data.hasOwnProperty('no_orders_after_dts')) {
+                obj['no_orders_after_dts'] = ApiClient.convertToType(data['no_orders_after_dts'], 'String');
+            }
         }
         return obj;
     }
@@ -81,6 +84,12 @@ AutoOrderItemCancelRequest.prototype['auto_order_item_oid'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest.ModeEnum} mode
  */
 AutoOrderItemCancelRequest.prototype['mode'] = undefined;
+
+/**
+ * Date/time that will be used in an END mode (optional)
+ * @member {String} no_orders_after_dts
+ */
+AutoOrderItemCancelRequest.prototype['no_orders_after_dts'] = undefined;
 
 
 
