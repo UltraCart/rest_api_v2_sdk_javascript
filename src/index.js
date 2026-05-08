@@ -41,6 +41,8 @@ import AutoOrderAddonItem from './com.ultracart.admin.v2.models/AutoOrderAddonIt
 import AutoOrderAddonItemOption from './com.ultracart.admin.v2.models/AutoOrderAddonItemOption';
 import AutoOrderAddonItemsUpdateRequest from './com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest';
 import AutoOrderConsolidate from './com.ultracart.admin.v2.models/AutoOrderConsolidate';
+import AutoOrderEmail from './com.ultracart.admin.v2.models/AutoOrderEmail';
+import AutoOrderEmailsResponse from './com.ultracart.admin.v2.models/AutoOrderEmailsResponse';
 import AutoOrderItem from './com.ultracart.admin.v2.models/AutoOrderItem';
 import AutoOrderItemCancelRequest from './com.ultracart.admin.v2.models/AutoOrderItemCancelRequest';
 import AutoOrderItemFutureSchedule from './com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule';
@@ -753,6 +755,8 @@ import OrderDigitalOrder from './com.ultracart.admin.v2.models/OrderDigitalOrder
 import OrderEdi from './com.ultracart.admin.v2.models/OrderEdi';
 import OrderEdiDocument from './com.ultracart.admin.v2.models/OrderEdiDocument';
 import OrderEdiDocumentsResponse from './com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
+import OrderEmail from './com.ultracart.admin.v2.models/OrderEmail';
+import OrderEmailsResponse from './com.ultracart.admin.v2.models/OrderEmailsResponse';
 import OrderFormat from './com.ultracart.admin.v2.models/OrderFormat';
 import OrderFormatResponse from './com.ultracart.admin.v2.models/OrderFormatResponse';
 import OrderFraudScore from './com.ultracart.admin.v2.models/OrderFraudScore';
@@ -1041,7 +1045,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.86
+* @version 4.1.87
 */
 export {
     /**
@@ -1217,6 +1221,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AutoOrderConsolidate}
      */
     AutoOrderConsolidate,
+
+    /**
+     * The AutoOrderEmail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderEmail}
+     */
+    AutoOrderEmail,
+
+    /**
+     * The AutoOrderEmailsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderEmailsResponse}
+     */
+    AutoOrderEmailsResponse,
 
     /**
      * The AutoOrderItem model constructor.
@@ -5489,6 +5505,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderEdiDocumentsResponse}
      */
     OrderEdiDocumentsResponse,
+
+    /**
+     * The OrderEmail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderEmail}
+     */
+    OrderEmail,
+
+    /**
+     * The OrderEmailsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderEmailsResponse}
+     */
+    OrderEmailsResponse,
 
     /**
      * The OrderFormat model constructor.

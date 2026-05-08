@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ReportDataSetPageResponse model module.
  * @module com.ultracart.admin.v2.models/ReportDataSetPageResponse
- * @version 4.1.86
+ * @version 4.1.87
  */
 class ReportDataSetPageResponse {
     /**

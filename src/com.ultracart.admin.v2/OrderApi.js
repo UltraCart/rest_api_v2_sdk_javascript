@@ -23,6 +23,7 @@ import OrderAddItemsAndReleaseRequest from '../com.ultracart.admin.v2.models/Ord
 import OrderAssignToAffiliateRequest from '../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
 import OrderEdiDocumentsResponse from '../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
+import OrderEmailsResponse from '../com.ultracart.admin.v2.models/OrderEmailsResponse';
 import OrderFormat from '../com.ultracart.admin.v2.models/OrderFormat';
 import OrderFormatResponse from '../com.ultracart.admin.v2.models/OrderFormatResponse';
 import OrderInvoiceResponse from '../com.ultracart.admin.v2.models/OrderInvoiceResponse';
@@ -45,7 +46,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.86
+* @version 4.1.87
 */
 export default class OrderApi {
 
@@ -865,6 +866,49 @@ export default class OrderApi {
       let returnType = OrderEdiDocumentsResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/edi', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrderEmails operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderEmailsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderEmailsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve email delivery information for this order.
+     * Retrieves email delivery records associated with the specified order id. 
+     * @param {String} order_id The order id to retrieve email delivery information for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderEmailsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderEmailsResponse}
+     */
+    getOrderEmails(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderEmails");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderEmailsResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/emails', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationVirtualAgentBudgetResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse
- * @version 4.1.86
+ * @version 4.1.87
  */
 class ConversationVirtualAgentBudgetResponse {
     /**

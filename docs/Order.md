@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **customer_profile** | [**Customer**](Customer.md) |  | [optional] 
 **digital_order** | [**OrderDigitalOrder**](OrderDigitalOrder.md) |  | [optional] 
 **edi** | [**OrderEdi**](OrderEdi.md) |  | [optional] 
+**emails** | [**[OrderEmail]**](OrderEmail.md) | Email delivery records associated with this order. | [optional] 
 **exchange_rate** | **Number** | Exchange rate at the time the order was placed if currency code is different than the base currency | [optional] 
 **fraud_score** | [**OrderFraudScore**](OrderFraudScore.md) |  | [optional] 
 **gift** | [**OrderGift**](OrderGift.md) |  | [optional] 

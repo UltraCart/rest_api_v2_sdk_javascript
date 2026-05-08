@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import AutoOrder from '../com.ultracart.admin.v2.models/AutoOrder';
 import AutoOrderAddonItemsUpdateRequest from '../com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest';
 import AutoOrderConsolidate from '../com.ultracart.admin.v2.models/AutoOrderConsolidate';
+import AutoOrderEmailsResponse from '../com.ultracart.admin.v2.models/AutoOrderEmailsResponse';
 import AutoOrderItemCancelRequest from '../com.ultracart.admin.v2.models/AutoOrderItemCancelRequest';
 import AutoOrderPropertiesUpdateRequest from '../com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest';
 import AutoOrderQuery from '../com.ultracart.admin.v2.models/AutoOrderQuery';
@@ -28,7 +29,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.86
+* @version 4.1.87
 */
 export default class AutoOrderApi {
 
@@ -333,6 +334,49 @@ export default class AutoOrderApi {
       let returnType = AutoOrderResponse;
       return this.apiClient.callApi(
         '/auto_order/auto_orders/reference_order_id/{reference_order_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAutoOrderEmails operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderEmailsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderEmailsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve email delivery information for this auto order.
+     * Retrieves email delivery records associated with the specified auto order. 
+     * @param {Number} auto_order_oid The auto order oid to retrieve email delivery information for.
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderEmailsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderEmailsResponse}
+     */
+    getAutoOrderEmails(auto_order_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling getAutoOrderEmails");
+      }
+
+      let pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = AutoOrderEmailsResponse;
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/{auto_order_oid}/emails', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

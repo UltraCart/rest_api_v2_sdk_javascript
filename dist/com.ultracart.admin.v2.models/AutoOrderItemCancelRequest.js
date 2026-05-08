@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderItemCancelRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemCancelRequest
- * @version 4.1.85
+ * @version 4.1.86
  */
 var AutoOrderItemCancelRequest = /*#__PURE__*/function () {
   /**
@@ -69,6 +69,9 @@ var AutoOrderItemCancelRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('mode')) {
           obj['mode'] = _ApiClient["default"].convertToType(data['mode'], 'String');
         }
+        if (data.hasOwnProperty('no_orders_after_dts')) {
+          obj['no_orders_after_dts'] = _ApiClient["default"].convertToType(data['no_orders_after_dts'], 'String');
+        }
       }
       return obj;
     }
@@ -91,6 +94,12 @@ AutoOrderItemCancelRequest.prototype['auto_order_item_oid'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest.ModeEnum} mode
  */
 AutoOrderItemCancelRequest.prototype['mode'] = undefined;
+
+/**
+ * Date/time that will be used in an END mode (optional)
+ * @member {String} no_orders_after_dts
+ */
+AutoOrderItemCancelRequest.prototype['no_orders_after_dts'] = undefined;
 
 /**
  * Allowed values for the <code>mode</code> property.

@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import AutoOrderAddonItem from './AutoOrderAddonItem';
+import AutoOrderEmail from './AutoOrderEmail';
 import AutoOrderItem from './AutoOrderItem';
 import AutoOrderLog from './AutoOrderLog';
 import AutoOrderManagement from './AutoOrderManagement';
@@ -22,7 +23,7 @@ import Order from './Order';
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.1.86
+ * @version 4.1.87
  */
 class AutoOrder {
     /**
@@ -88,6 +89,9 @@ class AutoOrder {
             }
             if (data.hasOwnProperty('disabled_dts')) {
                 obj['disabled_dts'] = ApiClient.convertToType(data['disabled_dts'], 'String');
+            }
+            if (data.hasOwnProperty('emails')) {
+                obj['emails'] = ApiClient.convertToType(data['emails'], [AutoOrderEmail]);
             }
             if (data.hasOwnProperty('enabled')) {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
@@ -215,6 +219,12 @@ AutoOrder.prototype['credit_card_attempt'] = undefined;
  * @member {String} disabled_dts
  */
 AutoOrder.prototype['disabled_dts'] = undefined;
+
+/**
+ * Email delivery records associated with this auto order.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderEmail>} emails
+ */
+AutoOrder.prototype['emails'] = undefined;
 
 /**
  * True if this auto order is enabled

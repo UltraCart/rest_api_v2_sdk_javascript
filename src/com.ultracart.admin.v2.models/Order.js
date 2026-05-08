@@ -23,6 +23,7 @@ import OrderCoupon from './OrderCoupon';
 import OrderCurrentStageHistory from './OrderCurrentStageHistory';
 import OrderDigitalOrder from './OrderDigitalOrder';
 import OrderEdi from './OrderEdi';
+import OrderEmail from './OrderEmail';
 import OrderFraudScore from './OrderFraudScore';
 import OrderGift from './OrderGift';
 import OrderGiftCertificate from './OrderGiftCertificate';
@@ -44,7 +45,7 @@ import OrderUtm from './OrderUtm';
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.1.86
+ * @version 4.1.87
  */
 class Order {
     /**
@@ -116,6 +117,9 @@ class Order {
             }
             if (data.hasOwnProperty('edi')) {
                 obj['edi'] = OrderEdi.constructFromObject(data['edi']);
+            }
+            if (data.hasOwnProperty('emails')) {
+                obj['emails'] = ApiClient.convertToType(data['emails'], [OrderEmail]);
             }
             if (data.hasOwnProperty('exchange_rate')) {
                 obj['exchange_rate'] = ApiClient.convertToType(data['exchange_rate'], 'Number');
@@ -274,6 +278,12 @@ Order.prototype['digital_order'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderEdi} edi
  */
 Order.prototype['edi'] = undefined;
+
+/**
+ * Email delivery records associated with this order.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderEmail>} emails
+ */
+Order.prototype['emails'] = undefined;
 
 /**
  * Exchange rate at the time the order was placed if currency code is different than the base currency
