@@ -17,7 +17,7 @@ import WorkflowUser from './WorkflowUser';
 /**
  * The WorkflowTasksRequest model module.
  * @module com.ultracart.admin.v2.models/WorkflowTasksRequest
- * @version 4.1.87
+ * @version 4.1.88
  */
 class WorkflowTasksRequest {
     /**

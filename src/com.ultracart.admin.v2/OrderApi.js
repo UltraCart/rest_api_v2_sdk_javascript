@@ -28,6 +28,7 @@ import OrderFormat from '../com.ultracart.admin.v2.models/OrderFormat';
 import OrderFormatResponse from '../com.ultracart.admin.v2.models/OrderFormatResponse';
 import OrderInvoiceResponse from '../com.ultracart.admin.v2.models/OrderInvoiceResponse';
 import OrderPackingSlipResponse from '../com.ultracart.admin.v2.models/OrderPackingSlipResponse';
+import OrderPageViewHistoryResponse from '../com.ultracart.admin.v2.models/OrderPageViewHistoryResponse';
 import OrderProcessPaymentRequest from '../com.ultracart.admin.v2.models/OrderProcessPaymentRequest';
 import OrderProcessPaymentResponse from '../com.ultracart.admin.v2.models/OrderProcessPaymentResponse';
 import OrderQuery from '../com.ultracart.admin.v2.models/OrderQuery';
@@ -46,7 +47,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.87
+* @version 4.1.88
 */
 export default class OrderApi {
 
@@ -909,6 +910,49 @@ export default class OrderApi {
       let returnType = OrderEmailsResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/emails', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrderPageViewHistory operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderPageViewHistoryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderPageViewHistoryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve page view history for this order.
+     * Retrieves the page views captured during the session that placed this order. 
+     * @param {String} order_id The order id to retrieve page view history for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderPageViewHistoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderPageViewHistoryResponse}
+     */
+    getOrderPageViewHistory(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderPageViewHistory");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderPageViewHistoryResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/page_view_history', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _AutoOrderAddonItem = _interopRequireDefault(require("./AutoOrderAddonItem"));
+var _AutoOrderEmail = _interopRequireDefault(require("./AutoOrderEmail"));
 var _AutoOrderItem = _interopRequireDefault(require("./AutoOrderItem"));
 var _AutoOrderLog = _interopRequireDefault(require("./AutoOrderLog"));
 var _AutoOrderManagement = _interopRequireDefault(require("./AutoOrderManagement"));
@@ -32,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.1.86
+ * @version 4.1.87
  */
 var AutoOrder = /*#__PURE__*/function () {
   /**
@@ -100,6 +101,9 @@ var AutoOrder = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('disabled_dts')) {
           obj['disabled_dts'] = _ApiClient["default"].convertToType(data['disabled_dts'], 'String');
+        }
+        if (data.hasOwnProperty('emails')) {
+          obj['emails'] = _ApiClient["default"].convertToType(data['emails'], [_AutoOrderEmail["default"]]);
         }
         if (data.hasOwnProperty('enabled')) {
           obj['enabled'] = _ApiClient["default"].convertToType(data['enabled'], 'Boolean');
@@ -225,6 +229,12 @@ AutoOrder.prototype['credit_card_attempt'] = undefined;
  * @member {String} disabled_dts
  */
 AutoOrder.prototype['disabled_dts'] = undefined;
+
+/**
+ * Email delivery records associated with this auto order.
+ * @member {Array.<module:com.ultracart.admin.v2.models/AutoOrderEmail>} emails
+ */
+AutoOrder.prototype['emails'] = undefined;
 
 /**
  * True if this auto order is enabled

@@ -16,6 +16,7 @@ var _OrderCoupon = _interopRequireDefault(require("./OrderCoupon"));
 var _OrderCurrentStageHistory = _interopRequireDefault(require("./OrderCurrentStageHistory"));
 var _OrderDigitalOrder = _interopRequireDefault(require("./OrderDigitalOrder"));
 var _OrderEdi = _interopRequireDefault(require("./OrderEdi"));
+var _OrderEmail = _interopRequireDefault(require("./OrderEmail"));
 var _OrderFraudScore = _interopRequireDefault(require("./OrderFraudScore"));
 var _OrderGift = _interopRequireDefault(require("./OrderGift"));
 var _OrderGiftCertificate = _interopRequireDefault(require("./OrderGiftCertificate"));
@@ -54,7 +55,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.1.86
+ * @version 4.1.87
  */
 var Order = /*#__PURE__*/function () {
   /**
@@ -128,6 +129,9 @@ var Order = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('edi')) {
           obj['edi'] = _OrderEdi["default"].constructFromObject(data['edi']);
+        }
+        if (data.hasOwnProperty('emails')) {
+          obj['emails'] = _ApiClient["default"].convertToType(data['emails'], [_OrderEmail["default"]]);
         }
         if (data.hasOwnProperty('exchange_rate')) {
           obj['exchange_rate'] = _ApiClient["default"].convertToType(data['exchange_rate'], 'Number');
@@ -284,6 +288,12 @@ Order.prototype['digital_order'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderEdi} edi
  */
 Order.prototype['edi'] = undefined;
+
+/**
+ * Email delivery records associated with this order.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderEmail>} emails
+ */
+Order.prototype['emails'] = undefined;
 
 /**
  * Exchange rate at the time the order was placed if currency code is different than the base currency

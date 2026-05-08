@@ -775,6 +775,10 @@ import OrderItemTag from './com.ultracart.admin.v2.models/OrderItemTag';
 import OrderLinkedShipment from './com.ultracart.admin.v2.models/OrderLinkedShipment';
 import OrderMarketing from './com.ultracart.admin.v2.models/OrderMarketing';
 import OrderPackingSlipResponse from './com.ultracart.admin.v2.models/OrderPackingSlipResponse';
+import OrderPageView from './com.ultracart.admin.v2.models/OrderPageView';
+import OrderPageViewHistoryResponse from './com.ultracart.admin.v2.models/OrderPageViewHistoryResponse';
+import OrderPageViewMetaData from './com.ultracart.admin.v2.models/OrderPageViewMetaData';
+import OrderPageViewParam from './com.ultracart.admin.v2.models/OrderPageViewParam';
 import OrderPayment from './com.ultracart.admin.v2.models/OrderPayment';
 import OrderPaymentCheck from './com.ultracart.admin.v2.models/OrderPaymentCheck';
 import OrderPaymentCreditCard from './com.ultracart.admin.v2.models/OrderPaymentCreditCard';
@@ -1045,7 +1049,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.87
+* @version 4.1.88
 */
 export {
     /**
@@ -5625,6 +5629,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderPackingSlipResponse}
      */
     OrderPackingSlipResponse,
+
+    /**
+     * The OrderPageView model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPageView}
+     */
+    OrderPageView,
+
+    /**
+     * The OrderPageViewHistoryResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPageViewHistoryResponse}
+     */
+    OrderPageViewHistoryResponse,
+
+    /**
+     * The OrderPageViewMetaData model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPageViewMetaData}
+     */
+    OrderPageViewMetaData,
+
+    /**
+     * The OrderPageViewParam model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderPageViewParam}
+     */
+    OrderPageViewParam,
 
     /**
      * The OrderPayment model constructor.

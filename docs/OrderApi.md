@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**getOrderByToken**](OrderApi.md#getOrderByToken) | **POST** /order/orders/token | Retrieve an order using a token
 [**getOrderEdiDocuments**](OrderApi.md#getOrderEdiDocuments) | **GET** /order/orders/{order_id}/edi | Retrieve EDI documents associated with this order.
 [**getOrderEmails**](OrderApi.md#getOrderEmails) | **GET** /order/orders/{order_id}/emails | Retrieve email delivery information for this order.
+[**getOrderPageViewHistory**](OrderApi.md#getOrderPageViewHistory) | **GET** /order/orders/{order_id}/page_view_history | Retrieve page view history for this order.
 [**getOrderUpsellCart**](OrderApi.md#getOrderUpsellCart) | **PUT** /order/orders/{order_id}/upsell_with_cart | Get Order Upsell Cart
 [**getOrders**](OrderApi.md#getOrders) | **GET** /order/orders | Retrieve orders
 [**getOrdersBatch**](OrderApi.md#getOrdersBatch) | **POST** /order/orders/batch | Retrieve order batch
@@ -1112,6 +1113,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrderEmailsResponse**](OrderEmailsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getOrderPageViewHistory
+
+> OrderPageViewHistoryResponse getOrderPageViewHistory(order_id)
+
+Retrieve page view history for this order.
+
+Retrieves the page views captured during the session that placed this order. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getOrderPageViewHistory -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let order_id = "order_id_example"; // String | The order id to retrieve page view history for.
+apiInstance.getOrderPageViewHistory(order_id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getOrderPageViewHistory -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **String**| The order id to retrieve page view history for. | 
+
+### Return type
+
+[**OrderPageViewHistoryResponse**](OrderPageViewHistoryResponse.md)
 
 ### Authorization
 

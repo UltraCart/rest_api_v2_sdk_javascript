@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingStoreFront model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingStoreFront
- * @version 4.1.86
+ * @version 4.1.87
  */
 var ScreenRecordingStoreFront = /*#__PURE__*/function () {
   /**

@@ -8,6 +8,7 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _AutoOrder = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrder"));
 var _AutoOrderAddonItemsUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest"));
 var _AutoOrderConsolidate = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderConsolidate"));
+var _AutoOrderEmailsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderEmailsResponse"));
 var _AutoOrderItemCancelRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderItemCancelRequest"));
 var _AutoOrderPropertiesUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest"));
 var _AutoOrderQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderQuery"));
@@ -37,7 +38,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.86
+* @version 4.1.87
 */
 var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -308,6 +309,42 @@ var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _AutoOrderResponse["default"];
       return this.apiClient.callApi('/auto_order/auto_orders/reference_order_id/{reference_order_id}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAutoOrderEmails operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderEmailsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderEmailsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve email delivery information for this auto order.
+     * Retrieves email delivery records associated with the specified auto order. 
+     * @param {Number} auto_order_oid The auto order oid to retrieve email delivery information for.
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderEmailsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderEmailsResponse}
+     */
+  }, {
+    key: "getAutoOrderEmails",
+    value: function getAutoOrderEmails(auto_order_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling getAutoOrderEmails");
+      }
+      var pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _AutoOrderEmailsResponse["default"];
+      return this.apiClient.callApi('/auto_order/auto_orders/{auto_order_oid}/emails', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

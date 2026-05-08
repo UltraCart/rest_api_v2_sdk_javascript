@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderRefundableResponse model module.
  * @module com.ultracart.admin.v2.models/OrderRefundableResponse
- * @version 4.1.86
+ * @version 4.1.87
  */
 var OrderRefundableResponse = /*#__PURE__*/function () {
   /**

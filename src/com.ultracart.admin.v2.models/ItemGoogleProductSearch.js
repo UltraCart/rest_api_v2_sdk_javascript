@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemGoogleProductSearch model module.
  * @module com.ultracart.admin.v2.models/ItemGoogleProductSearch
- * @version 4.1.87
+ * @version 4.1.88
  */
 class ItemGoogleProductSearch {
     /**

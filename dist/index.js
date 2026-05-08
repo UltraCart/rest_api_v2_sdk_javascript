@@ -189,6 +189,18 @@ Object.defineProperty(exports, "AutoOrderConsolidate", {
     return _AutoOrderConsolidate["default"];
   }
 });
+Object.defineProperty(exports, "AutoOrderEmail", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderEmail["default"];
+  }
+});
+Object.defineProperty(exports, "AutoOrderEmailsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderEmailsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "AutoOrderItem", {
   enumerable: true,
   get: function get() {
@@ -4539,6 +4551,18 @@ Object.defineProperty(exports, "OrderEdiDocumentsResponse", {
     return _OrderEdiDocumentsResponse["default"];
   }
 });
+Object.defineProperty(exports, "OrderEmail", {
+  enumerable: true,
+  get: function get() {
+    return _OrderEmail["default"];
+  }
+});
+Object.defineProperty(exports, "OrderEmailsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _OrderEmailsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "OrderFormat", {
   enumerable: true,
   get: function get() {
@@ -6020,6 +6044,8 @@ var _AutoOrderAddonItem = _interopRequireDefault(require("./com.ultracart.admin.
 var _AutoOrderAddonItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemOption"));
 var _AutoOrderAddonItemsUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest"));
 var _AutoOrderConsolidate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderConsolidate"));
+var _AutoOrderEmail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderEmail"));
+var _AutoOrderEmailsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderEmailsResponse"));
 var _AutoOrderItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItem"));
 var _AutoOrderItemCancelRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemCancelRequest"));
 var _AutoOrderItemFutureSchedule = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemFutureSchedule"));
@@ -6732,6 +6758,8 @@ var _OrderDigitalOrder = _interopRequireDefault(require("./com.ultracart.admin.v
 var _OrderEdi = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEdi"));
 var _OrderEdiDocument = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEdiDocument"));
 var _OrderEdiDocumentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEdiDocumentsResponse"));
+var _OrderEmail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEmail"));
+var _OrderEmailsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEmailsResponse"));
 var _OrderFormat = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderFormat"));
 var _OrderFormatResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderFormatResponse"));
 var _OrderFraudScore = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderFraudScore"));

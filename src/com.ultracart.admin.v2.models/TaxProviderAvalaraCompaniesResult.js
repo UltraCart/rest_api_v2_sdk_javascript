@@ -17,7 +17,7 @@ import TaxProviderAvalaraCompany from './TaxProviderAvalaraCompany';
 /**
  * The TaxProviderAvalaraCompaniesResult model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult
- * @version 4.1.87
+ * @version 4.1.88
  */
 class TaxProviderAvalaraCompaniesResult {
     /**
