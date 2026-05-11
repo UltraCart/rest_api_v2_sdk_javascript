@@ -20,6 +20,7 @@ var _OrderFormat = _interopRequireDefault(require("../com.ultracart.admin.v2.mod
 var _OrderFormatResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderFormatResponse"));
 var _OrderInvoiceResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderInvoiceResponse"));
 var _OrderPackingSlipResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderPackingSlipResponse"));
+var _OrderPageViewHistoryResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderPageViewHistoryResponse"));
 var _OrderProcessPaymentRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderProcessPaymentRequest"));
 var _OrderProcessPaymentResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderProcessPaymentResponse"));
 var _OrderQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OrderQuery"));
@@ -55,7 +56,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.87
+* @version 4.1.88
 */
 var OrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -790,6 +791,42 @@ var OrderApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OrderEmailsResponse["default"];
       return this.apiClient.callApi('/order/orders/{order_id}/emails', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getOrderPageViewHistory operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderPageViewHistoryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderPageViewHistoryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve page view history for this order.
+     * Retrieves the page views captured during the session that placed this order. 
+     * @param {String} order_id The order id to retrieve page view history for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderPageViewHistoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderPageViewHistoryResponse}
+     */
+  }, {
+    key: "getOrderPageViewHistory",
+    value: function getOrderPageViewHistory(order_id, callback) {
+      var postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderPageViewHistory");
+      }
+      var pathParams = {
+        'order_id': order_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _OrderPageViewHistoryResponse["default"];
+      return this.apiClient.callApi('/order/orders/{order_id}/page_view_history', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemShippingPackageRequirement model module.
  * @module com.ultracart.admin.v2.models/ItemShippingPackageRequirement
- * @version 4.1.87
+ * @version 4.1.88
  */
 var ItemShippingPackageRequirement = /*#__PURE__*/function () {
   /**

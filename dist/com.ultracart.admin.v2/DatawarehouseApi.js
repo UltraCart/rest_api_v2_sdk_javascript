@@ -54,7 +54,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Datawarehouse service.
 * @module com.ultracart.admin.v2/DatawarehouseApi
-* @version 4.1.87
+* @version 4.1.88
 */
 var DatawarehouseApi = exports["default"] = /*#__PURE__*/function () {
   /**

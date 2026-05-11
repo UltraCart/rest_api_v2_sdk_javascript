@@ -4671,6 +4671,30 @@ Object.defineProperty(exports, "OrderPackingSlipResponse", {
     return _OrderPackingSlipResponse["default"];
   }
 });
+Object.defineProperty(exports, "OrderPageView", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPageView["default"];
+  }
+});
+Object.defineProperty(exports, "OrderPageViewHistoryResponse", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPageViewHistoryResponse["default"];
+  }
+});
+Object.defineProperty(exports, "OrderPageViewMetaData", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPageViewMetaData["default"];
+  }
+});
+Object.defineProperty(exports, "OrderPageViewParam", {
+  enumerable: true,
+  get: function get() {
+    return _OrderPageViewParam["default"];
+  }
+});
 Object.defineProperty(exports, "OrderPayment", {
   enumerable: true,
   get: function get() {
@@ -6778,6 +6802,10 @@ var _OrderItemTag = _interopRequireDefault(require("./com.ultracart.admin.v2.mod
 var _OrderLinkedShipment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderLinkedShipment"));
 var _OrderMarketing = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderMarketing"));
 var _OrderPackingSlipResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPackingSlipResponse"));
+var _OrderPageView = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPageView"));
+var _OrderPageViewHistoryResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPageViewHistoryResponse"));
+var _OrderPageViewMetaData = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPageViewMetaData"));
+var _OrderPageViewParam = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPageViewParam"));
 var _OrderPayment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPayment"));
 var _OrderPaymentCheck = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentCheck"));
 var _OrderPaymentCreditCard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderPaymentCreditCard"));
