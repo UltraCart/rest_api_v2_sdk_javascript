@@ -968,6 +968,7 @@ import UsersResponse from './com.ultracart.admin.v2.models/UsersResponse';
 import VerificationRecord from './com.ultracart.admin.v2.models/VerificationRecord';
 import Warning from './com.ultracart.admin.v2.models/Warning';
 import Webhook from './com.ultracart.admin.v2.models/Webhook';
+import WebhookEventCategoriesResponse from './com.ultracart.admin.v2.models/WebhookEventCategoriesResponse';
 import WebhookEventCategory from './com.ultracart.admin.v2.models/WebhookEventCategory';
 import WebhookEventSubscription from './com.ultracart.admin.v2.models/WebhookEventSubscription';
 import WebhookLog from './com.ultracart.admin.v2.models/WebhookLog';
@@ -1049,7 +1050,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.89
+* @version 4.1.90
 */
 export {
     /**
@@ -6787,6 +6788,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/Webhook}
      */
     Webhook,
+
+    /**
+     * The WebhookEventCategoriesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/WebhookEventCategoriesResponse}
+     */
+    WebhookEventCategoriesResponse,
 
     /**
      * The WebhookEventCategory model constructor.

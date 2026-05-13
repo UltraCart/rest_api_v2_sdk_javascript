@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentStatusHeatmapResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapResponse
- * @version 4.1.88
+ * @version 4.1.89
  */
 var ConversationAgentStatusHeatmapResponse = /*#__PURE__*/function () {
   /**

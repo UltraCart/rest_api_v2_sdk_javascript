@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteWebhook**](WebhookApi.md#deleteWebhook) | **DELETE** /webhook/webhooks/{webhookOid} | Delete a webhook
 [**deleteWebhookByUrl**](WebhookApi.md#deleteWebhookByUrl) | **DELETE** /webhook/webhooks | Delete a webhook by URL
+[**getWebhookEventCategories**](WebhookApi.md#getWebhookEventCategories) | **GET** /webhook/webhook_event_categories | Retrieve webhook event categories
 [**getWebhookLog**](WebhookApi.md#getWebhookLog) | **GET** /webhook/webhooks/{webhookOid}/logs/{requestId} | Retrieve an individual log
 [**getWebhookLogSummaries**](WebhookApi.md#getWebhookLogSummaries) | **GET** /webhook/webhooks/{webhookOid}/logs | Retrieve the log summaries
 [**getWebhooks**](WebhookApi.md#getWebhooks) | **GET** /webhook/webhooks | Retrieve webhooks
@@ -122,6 +123,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## getWebhookEventCategories
+
+> WebhookEventCategoriesResponse getWebhookEventCategories()
+
+Retrieve webhook event categories
+
+Retrieves the available webhook event categories and events with backend-owned metadata (OIDs, names, descriptions, available expansions, flags) independent of whether any webhooks are saved.  Used by the New Webhook editor so a merchant with zero webhooks can still see the catalog. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getWebhookEventCategories -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.WebhookApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getWebhookEventCategories((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getWebhookEventCategories -->
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**WebhookEventCategoriesResponse**](WebhookEventCategoriesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

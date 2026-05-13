@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Webhook from '../com.ultracart.admin.v2.models/Webhook';
+import WebhookEventCategoriesResponse from '../com.ultracart.admin.v2.models/WebhookEventCategoriesResponse';
 import WebhookLogResponse from '../com.ultracart.admin.v2.models/WebhookLogResponse';
 import WebhookLogSummariesResponse from '../com.ultracart.admin.v2.models/WebhookLogSummariesResponse';
 import WebhookReflowResponse from '../com.ultracart.admin.v2.models/WebhookReflowResponse';
@@ -24,7 +25,7 @@ import WebhooksResponse from '../com.ultracart.admin.v2.models/WebhooksResponse'
 /**
 * Webhook service.
 * @module com.ultracart.admin.v2/WebhookApi
-* @version 4.1.89
+* @version 4.1.90
 */
 export default class WebhookApi {
 
@@ -119,6 +120,43 @@ export default class WebhookApi {
       let returnType = WebhookResponse;
       return this.apiClient.callApi(
         '/webhook/webhooks', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getWebhookEventCategories operation.
+     * @callback module:com.ultracart.admin.v2/WebhookApi~getWebhookEventCategoriesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/WebhookEventCategoriesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve webhook event categories
+     * Retrieves the available webhook event categories and events with backend-owned metadata (OIDs, names, descriptions, available expansions, flags) independent of whether any webhooks are saved.  Used by the New Webhook editor so a merchant with zero webhooks can still see the catalog. 
+     * @param {module:com.ultracart.admin.v2/WebhookApi~getWebhookEventCategoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookEventCategoriesResponse}
+     */
+    getWebhookEventCategories(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = WebhookEventCategoriesResponse;
+      return this.apiClient.callApi(
+        '/webhook/webhook_event_categories', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

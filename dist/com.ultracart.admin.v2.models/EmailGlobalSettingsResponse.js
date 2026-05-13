@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailGlobalSettingsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailGlobalSettingsResponse
- * @version 4.1.88
+ * @version 4.1.89
  */
 var EmailGlobalSettingsResponse = /*#__PURE__*/function () {
   /**

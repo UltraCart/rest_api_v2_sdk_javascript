@@ -977,6 +977,7 @@ docs/VerificationRecord.md
 docs/Warning.md
 docs/Webhook.md
 docs/WebhookApi.md
+docs/WebhookEventCategoriesResponse.md
 docs/WebhookEventCategory.md
 docs/WebhookEventSubscription.md
 docs/WebhookLog.md
@@ -1966,6 +1967,7 @@ src/com.ultracart.admin.v2.models/UsersResponse.js
 src/com.ultracart.admin.v2.models/VerificationRecord.js
 src/com.ultracart.admin.v2.models/Warning.js
 src/com.ultracart.admin.v2.models/Webhook.js
+src/com.ultracart.admin.v2.models/WebhookEventCategoriesResponse.js
 src/com.ultracart.admin.v2.models/WebhookEventCategory.js
 src/com.ultracart.admin.v2.models/WebhookEventSubscription.js
 src/com.ultracart.admin.v2.models/WebhookLog.js

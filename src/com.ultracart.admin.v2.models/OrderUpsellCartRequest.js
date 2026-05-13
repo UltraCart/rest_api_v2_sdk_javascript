@@ -17,7 +17,7 @@ import CartItem from './CartItem';
 /**
  * The OrderUpsellCartRequest model module.
  * @module com.ultracart.admin.v2.models/OrderUpsellCartRequest
- * @version 4.1.89
+ * @version 4.1.90
  */
 class OrderUpsellCartRequest {
     /**
