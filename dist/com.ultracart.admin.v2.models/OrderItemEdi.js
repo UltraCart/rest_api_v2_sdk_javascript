@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderItemEdi model module.
  * @module com.ultracart.admin.v2.models/OrderItemEdi
- * @version 4.1.89
+ * @version 4.1.90
  */
 var OrderItemEdi = /*#__PURE__*/function () {
   /**

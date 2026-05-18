@@ -5859,6 +5859,12 @@ Object.defineProperty(exports, "WebhookApi", {
     return _WebhookApi["default"];
   }
 });
+Object.defineProperty(exports, "WebhookEventCategoriesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _WebhookEventCategoriesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "WebhookEventCategory", {
   enumerable: true,
   get: function get() {
@@ -6995,6 +7001,7 @@ var _UsersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.mo
 var _VerificationRecord = _interopRequireDefault(require("./com.ultracart.admin.v2.models/VerificationRecord"));
 var _Warning = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Warning"));
 var _Webhook = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Webhook"));
+var _WebhookEventCategoriesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WebhookEventCategoriesResponse"));
 var _WebhookEventCategory = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WebhookEventCategory"));
 var _WebhookEventSubscription = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WebhookEventSubscription"));
 var _WebhookLog = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WebhookLog"));

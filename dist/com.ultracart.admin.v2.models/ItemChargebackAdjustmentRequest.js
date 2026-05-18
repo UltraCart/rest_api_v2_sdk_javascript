@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemChargebackAdjustmentRequest model module.
  * @module com.ultracart.admin.v2.models/ItemChargebackAdjustmentRequest
- * @version 4.1.89
+ * @version 4.1.90
  */
 var ItemChargebackAdjustmentRequest = /*#__PURE__*/function () {
   /**

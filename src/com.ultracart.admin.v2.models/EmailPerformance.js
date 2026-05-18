@@ -18,7 +18,7 @@ import EmailPerformanceDaily from './EmailPerformanceDaily';
 /**
  * The EmailPerformance model module.
  * @module com.ultracart.admin.v2.models/EmailPerformance
- * @version 4.1.90
+ * @version 4.1.91
  */
 class EmailPerformance {
     /**

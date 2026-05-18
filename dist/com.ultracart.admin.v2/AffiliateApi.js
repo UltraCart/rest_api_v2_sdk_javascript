@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Affiliate service.
 * @module com.ultracart.admin.v2/AffiliateApi
-* @version 4.1.89
+* @version 4.1.90
 */
 var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
   /**

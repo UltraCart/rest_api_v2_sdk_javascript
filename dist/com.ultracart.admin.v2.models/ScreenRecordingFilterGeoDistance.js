@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingFilterGeoDistance model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterGeoDistance
- * @version 4.1.89
+ * @version 4.1.90
  */
 var ScreenRecordingFilterGeoDistance = /*#__PURE__*/function () {
   /**

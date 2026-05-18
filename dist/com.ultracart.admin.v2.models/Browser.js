@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Browser model module.
  * @module com.ultracart.admin.v2.models/Browser
- * @version 4.1.89
+ * @version 4.1.90
  */
 var Browser = /*#__PURE__*/function () {
   /**

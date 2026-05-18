@@ -7,6 +7,7 @@ exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
 var _Webhook = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Webhook"));
+var _WebhookEventCategoriesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/WebhookEventCategoriesResponse"));
 var _WebhookLogResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/WebhookLogResponse"));
 var _WebhookLogSummariesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/WebhookLogSummariesResponse"));
 var _WebhookReflowResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/WebhookReflowResponse"));
@@ -33,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Webhook service.
 * @module com.ultracart.admin.v2/WebhookApi
-* @version 4.1.89
+* @version 4.1.90
 */
 var WebhookApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -115,6 +116,35 @@ var WebhookApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _WebhookResponse["default"];
       return this.apiClient.callApi('/webhook/webhooks', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getWebhookEventCategories operation.
+     * @callback module:com.ultracart.admin.v2/WebhookApi~getWebhookEventCategoriesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/WebhookEventCategoriesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve webhook event categories
+     * Retrieves the available webhook event categories and events with backend-owned metadata (OIDs, names, descriptions, available expansions, flags) independent of whether any webhooks are saved.  Used by the New Webhook editor so a merchant with zero webhooks can still see the catalog. 
+     * @param {module:com.ultracart.admin.v2/WebhookApi~getWebhookEventCategoriesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/WebhookEventCategoriesResponse}
+     */
+  }, {
+    key: "getWebhookEventCategories",
+    value: function getWebhookEventCategories(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _WebhookEventCategoriesResponse["default"];
+      return this.apiClient.callApi('/webhook/webhook_event_categories', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

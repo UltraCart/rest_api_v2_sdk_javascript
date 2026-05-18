@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ExperimentVariation model module.
  * @module com.ultracart.admin.v2.models/ExperimentVariation
- * @version 4.1.89
+ * @version 4.1.90
  */
 var ExperimentVariation = /*#__PURE__*/function () {
   /**

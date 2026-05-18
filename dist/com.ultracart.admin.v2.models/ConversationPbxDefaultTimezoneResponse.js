@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxDefaultTimezoneResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse
- * @version 4.1.89
+ * @version 4.1.90
  */
 var ConversationPbxDefaultTimezoneResponse = /*#__PURE__*/function () {
   /**
