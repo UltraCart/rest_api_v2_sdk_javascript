@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerOrder model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
- * @version 4.1.90
+ * @version 4.1.91
  */
 var ChannelPartnerOrder = /*#__PURE__*/function () {
   /**
@@ -135,6 +135,9 @@ var ChannelPartnerOrder = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('coupons')) {
           obj['coupons'] = _ApiClient["default"].convertToType(data['coupons'], ['String']);
+        }
+        if (data.hasOwnProperty('creation_dts')) {
+          obj['creation_dts'] = _ApiClient["default"].convertToType(data['creation_dts'], 'String');
         }
         if (data.hasOwnProperty('credit_card_authorization_amount')) {
           obj['credit_card_authorization_amount'] = _ApiClient["default"].convertToType(data['credit_card_authorization_amount'], 'Number');
@@ -494,6 +497,12 @@ ChannelPartnerOrder.prototype['consider_recurring'] = undefined;
  * @member {Array.<String>} coupons
  */
 ChannelPartnerOrder.prototype['coupons'] = undefined;
+
+/**
+ * Date/time the original order was placed on the channel partner's system, in ISO8601 format. Only honored when store_completed is true (historical order imports). Rejected on live orders.
+ * @member {String} creation_dts
+ */
+ChannelPartnerOrder.prototype['creation_dts'] = undefined;
 
 /**
  * The amount authorized externally

@@ -40,6 +40,8 @@ import AutoOrder from './com.ultracart.admin.v2.models/AutoOrder';
 import AutoOrderAddonItem from './com.ultracart.admin.v2.models/AutoOrderAddonItem';
 import AutoOrderAddonItemOption from './com.ultracart.admin.v2.models/AutoOrderAddonItemOption';
 import AutoOrderAddonItemsUpdateRequest from './com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest';
+import AutoOrderCancelReason from './com.ultracart.admin.v2.models/AutoOrderCancelReason';
+import AutoOrderCancelReasonsResponse from './com.ultracart.admin.v2.models/AutoOrderCancelReasonsResponse';
 import AutoOrderConsolidate from './com.ultracart.admin.v2.models/AutoOrderConsolidate';
 import AutoOrderEmail from './com.ultracart.admin.v2.models/AutoOrderEmail';
 import AutoOrderEmailsResponse from './com.ultracart.admin.v2.models/AutoOrderEmailsResponse';
@@ -1050,7 +1052,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.91
+* @version 4.1.92
 */
 export {
     /**
@@ -1220,6 +1222,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest}
      */
     AutoOrderAddonItemsUpdateRequest,
+
+    /**
+     * The AutoOrderCancelReason model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderCancelReason}
+     */
+    AutoOrderCancelReason,
+
+    /**
+     * The AutoOrderCancelReasonsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderCancelReasonsResponse}
+     */
+    AutoOrderCancelReasonsResponse,
 
     /**
      * The AutoOrderConsolidate model constructor.

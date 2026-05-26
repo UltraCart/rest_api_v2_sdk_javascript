@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import AutoOrder from '../com.ultracart.admin.v2.models/AutoOrder';
 import AutoOrderAddonItemsUpdateRequest from '../com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest';
+import AutoOrderCancelReasonsResponse from '../com.ultracart.admin.v2.models/AutoOrderCancelReasonsResponse';
 import AutoOrderConsolidate from '../com.ultracart.admin.v2.models/AutoOrderConsolidate';
 import AutoOrderEmailsResponse from '../com.ultracart.admin.v2.models/AutoOrderEmailsResponse';
 import AutoOrderItemCancelRequest from '../com.ultracart.admin.v2.models/AutoOrderItemCancelRequest';
@@ -29,7 +30,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.91
+* @version 4.1.92
 */
 export default class AutoOrderApi {
 
@@ -334,6 +335,43 @@ export default class AutoOrderApi {
       let returnType = AutoOrderResponse;
       return this.apiClient.callApi(
         '/auto_order/auto_orders/reference_order_id/{reference_order_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAutoOrderCancelReasons operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderCancelReasonsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderCancelReasonsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve auto order cancel reasons.
+     * Retrieves auto order cancel reasons. 
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderCancelReasonsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderCancelReasonsResponse}
+     */
+    getAutoOrderCancelReasons(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = AutoOrderCancelReasonsResponse;
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/cancel_reasons', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
