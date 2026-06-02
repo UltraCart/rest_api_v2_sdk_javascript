@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerLoyaltyLedger model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyaltyLedger
- * @version 4.1.91
+ * @version 4.1.92
  */
 var CustomerLoyaltyLedger = /*#__PURE__*/function () {
   /**

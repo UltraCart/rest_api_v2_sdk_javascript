@@ -183,6 +183,18 @@ Object.defineProperty(exports, "AutoOrderApi", {
     return _AutoOrderApi["default"];
   }
 });
+Object.defineProperty(exports, "AutoOrderCancelReason", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderCancelReason["default"];
+  }
+});
+Object.defineProperty(exports, "AutoOrderCancelReasonsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderCancelReasonsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "AutoOrderConsolidate", {
   enumerable: true,
   get: function get() {
@@ -6073,6 +6085,8 @@ var _AutoOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models
 var _AutoOrderAddonItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItem"));
 var _AutoOrderAddonItemOption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemOption"));
 var _AutoOrderAddonItemsUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest"));
+var _AutoOrderCancelReason = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderCancelReason"));
+var _AutoOrderCancelReasonsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderCancelReasonsResponse"));
 var _AutoOrderConsolidate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderConsolidate"));
 var _AutoOrderEmail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderEmail"));
 var _AutoOrderEmailsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderEmailsResponse"));

@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderInvoiceResponse model module.
  * @module com.ultracart.admin.v2.models/OrderInvoiceResponse
- * @version 4.1.91
+ * @version 4.1.92
  */
 var OrderInvoiceResponse = /*#__PURE__*/function () {
   /**
