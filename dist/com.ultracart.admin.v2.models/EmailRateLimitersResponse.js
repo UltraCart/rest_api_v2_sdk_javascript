@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailRateLimitersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailRateLimitersResponse
- * @version 4.1.92
+ * @version 4.1.94
  */
 var EmailRateLimitersResponse = /*#__PURE__*/function () {
   /**

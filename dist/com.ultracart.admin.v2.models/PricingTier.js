@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The PricingTier model module.
  * @module com.ultracart.admin.v2.models/PricingTier
- * @version 4.1.92
+ * @version 4.1.94
  */
 var PricingTier = /*#__PURE__*/function () {
   /**

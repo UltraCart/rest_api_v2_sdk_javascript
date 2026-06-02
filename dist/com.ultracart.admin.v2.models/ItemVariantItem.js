@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemVariantItem model module.
  * @module com.ultracart.admin.v2.models/ItemVariantItem
- * @version 4.1.92
+ * @version 4.1.94
  */
 var ItemVariantItem = /*#__PURE__*/function () {
   /**
@@ -67,6 +67,9 @@ var ItemVariantItem = /*#__PURE__*/function () {
         if (data.hasOwnProperty('merchant_item_multimedia_oid')) {
           obj['merchant_item_multimedia_oid'] = _ApiClient["default"].convertToType(data['merchant_item_multimedia_oid'], 'Number');
         }
+        if (data.hasOwnProperty('quantity')) {
+          obj['quantity'] = _ApiClient["default"].convertToType(data['quantity'], 'Number');
+        }
         if (data.hasOwnProperty('variant_default_multimedia')) {
           obj['variant_default_multimedia'] = _ItemContentMultimedia["default"].constructFromObject(data['variant_default_multimedia']);
         }
@@ -101,6 +104,12 @@ ItemVariantItem.prototype['description'] = undefined;
  * @member {Number} merchant_item_multimedia_oid
  */
 ItemVariantItem.prototype['merchant_item_multimedia_oid'] = undefined;
+
+/**
+ * Quantity of the variant item added to the cart when this combination is selected.  Defaults to 1.
+ * @member {Number} quantity
+ */
+ItemVariantItem.prototype['quantity'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/ItemContentMultimedia} variant_default_multimedia
