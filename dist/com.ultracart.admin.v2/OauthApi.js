@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
+var _OauthDeviceAuthorizationResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse"));
 var _OauthRevokeSuccessResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OauthRevokeSuccessResponse"));
 var _OauthTokenResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/OauthTokenResponse"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
@@ -29,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.1.94
+* @version 4.1.95
 */
 var OauthApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -100,7 +101,7 @@ var OauthApi = exports["default"] = /*#__PURE__*/function () {
      * Callback function to receive the result of the oauthDeviceAuthorize operation.
      * @callback module:com.ultracart.admin.v2/OauthApi~oauthDeviceAuthorizeCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -110,6 +111,7 @@ var OauthApi = exports["default"] = /*#__PURE__*/function () {
      * @param {String} client_id The OAuth application client_id.
      * @param {String} scope The application-level scope (e.g., crm, ultraship).
      * @param {module:com.ultracart.admin.v2/OauthApi~oauthDeviceAuthorizeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse}
      */
   }, {
     key: "oauthDeviceAuthorize",
@@ -133,7 +135,7 @@ var OauthApi = exports["default"] = /*#__PURE__*/function () {
       var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       var contentTypes = ['application/x-www-form-urlencoded'];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = _OauthDeviceAuthorizationResponse["default"];
       return this.apiClient.callApi('/oauth/device/authorize', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 

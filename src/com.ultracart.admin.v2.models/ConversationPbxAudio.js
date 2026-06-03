@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxAudio model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAudio
- * @version 4.1.95
+ * @version 4.1.96
  */
 class ConversationPbxAudio {
     /**

@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **modify_skip_affiliate** | **Boolean** |  | [optional] 
 **modify_skip_affiliate_network_pixel** | **Boolean** |  | [optional] 
 **rotating_transaction_gateway_filters** | [**[FraudRuleRotatingTransactionGatewayFilter]**](FraudRuleRotatingTransactionGatewayFilter.md) |  | [optional] 
-**rule_group** | **String** | Group containing this rule type (eg &#39;creditCardRules&#39;) | [optional] 
+**rule_group** | **String** | Group containing this rule type (eg &#39;creditCardRules&#39;). Deliberately not constrained by allowableValues on the response so SDK consumers do not hard-fail on an unexpected value if a future rule_type slips through the server-side mapping. Search REQUESTS still restrict rule_group to the known set. | [optional] 
 **rule_type** | **String** | Rule type. | [optional] 
 **storefront_filters** | [**[FraudRuleStorefrontFilter]**](FraudRuleStorefrontFilter.md) |  | [optional] 
 **user_action** | **String** |  | [optional] 
@@ -80,29 +80,6 @@ Name | Type | Description | Notes
 * `address` (value: `"address"`)
 
 * `subnet` (value: `"subnet"`)
-
-
-
-
-
-## Enum: RuleGroupEnum
-
-
-* `exemptRules` (value: `"exemptRules"`)
-
-* `creditCardRules` (value: `"creditCardRules"`)
-
-* `ipRules` (value: `"ipRules"`)
-
-* `addressRules` (value: `"addressRules"`)
-
-* `affiliateRules` (value: `"affiliateRules"`)
-
-* `itemRules` (value: `"itemRules"`)
-
-* `orderRules` (value: `"orderRules"`)
-
-* `browserRules` (value: `"browserRules"`)
 
 
 

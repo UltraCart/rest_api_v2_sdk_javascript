@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomReportExecutionResponse model module.
  * @module com.ultracart.admin.v2.models/CustomReportExecutionResponse
- * @version 4.1.94
+ * @version 4.1.95
  */
 var CustomReportExecutionResponse = /*#__PURE__*/function () {
   /**

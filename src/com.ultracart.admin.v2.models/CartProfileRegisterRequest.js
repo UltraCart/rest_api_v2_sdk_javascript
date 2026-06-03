@@ -17,7 +17,7 @@ import Cart from './Cart';
 /**
  * The CartProfileRegisterRequest model module.
  * @module com.ultracart.admin.v2.models/CartProfileRegisterRequest
- * @version 4.1.95
+ * @version 4.1.96
  */
 class CartProfileRegisterRequest {
     /**

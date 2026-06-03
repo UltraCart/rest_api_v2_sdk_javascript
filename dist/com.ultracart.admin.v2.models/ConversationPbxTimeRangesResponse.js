@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxTimeRangesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeRangesResponse
- * @version 4.1.94
+ * @version 4.1.95
  */
 var ConversationPbxTimeRangesResponse = /*#__PURE__*/function () {
   /**

@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationEngagementsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagementsResponse
- * @version 4.1.94
+ * @version 4.1.95
  */
 var ConversationEngagementsResponse = /*#__PURE__*/function () {
   /**

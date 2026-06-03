@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GeocodeRequest model module.
  * @module com.ultracart.admin.v2.models/GeocodeRequest
- * @version 4.1.94
+ * @version 4.1.95
  */
 var GeocodeRequest = /*#__PURE__*/function () {
   /**

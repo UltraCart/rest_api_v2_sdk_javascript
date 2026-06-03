@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemDigitalDelivery model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalDelivery
- * @version 4.1.94
+ * @version 4.1.95
  */
 var ItemDigitalDelivery = /*#__PURE__*/function () {
   /**
