@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## oauthDeviceAuthorize
 
-> oauthDeviceAuthorize(client_id, scope)
+> OauthDeviceAuthorizationResponse oauthDeviceAuthorize(client_id, scope)
 
 Initiate a device authorization flow.
 
@@ -105,7 +105,7 @@ apiInstance.oauthDeviceAuthorize(client_id, scope, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**OauthDeviceAuthorizationResponse**](OauthDeviceAuthorizationResponse.md)
 
 ### Authorization
 

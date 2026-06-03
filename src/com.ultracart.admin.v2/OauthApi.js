@@ -14,13 +14,14 @@
 
 import ApiClient from "../ApiClient";
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
+import OauthDeviceAuthorizationResponse from '../com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse';
 import OauthRevokeSuccessResponse from '../com.ultracart.admin.v2.models/OauthRevokeSuccessResponse';
 import OauthTokenResponse from '../com.ultracart.admin.v2.models/OauthTokenResponse';
 
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.1.94
+* @version 4.1.95
 */
 export default class OauthApi {
 
@@ -99,7 +100,7 @@ export default class OauthApi {
      * Callback function to receive the result of the oauthDeviceAuthorize operation.
      * @callback module:com.ultracart.admin.v2/OauthApi~oauthDeviceAuthorizeCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -109,6 +110,7 @@ export default class OauthApi {
      * @param {String} client_id The OAuth application client_id.
      * @param {String} scope The application-level scope (e.g., crm, ultraship).
      * @param {module:com.ultracart.admin.v2/OauthApi~oauthDeviceAuthorizeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse}
      */
     oauthDeviceAuthorize(client_id, scope, callback) {
       let postBody = null;
@@ -135,7 +137,7 @@ export default class OauthApi {
       let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = ['application/x-www-form-urlencoded'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = OauthDeviceAuthorizationResponse;
       return this.apiClient.callApi(
         '/oauth/device/authorize', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
