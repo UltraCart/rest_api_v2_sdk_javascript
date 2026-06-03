@@ -19,7 +19,7 @@ import FraudRuleStorefrontFilter from './FraudRuleStorefrontFilter';
 /**
  * The FraudRulePublic model module.
  * @module com.ultracart.admin.v2.models/FraudRulePublic
- * @version 4.1.96
+ * @version 4.1.97
  */
 class FraudRulePublic {
     /**
@@ -81,7 +81,7 @@ class FraudRulePublic {
                 obj['created_dts'] = ApiClient.convertToType(data['created_dts'], 'String');
             }
             if (data.hasOwnProperty('credit_card_bins')) {
-                obj['credit_card_bins'] = ApiClient.convertToType(data['credit_card_bins'], Object);
+                obj['credit_card_bins'] = ApiClient.convertToType(data['credit_card_bins'], ['String']);
             }
             if (data.hasOwnProperty('decline_message')) {
                 obj['decline_message'] = ApiClient.convertToType(data['decline_message'], 'String');
@@ -169,16 +169,19 @@ class FraudRulePublic {
 }
 
 /**
+ * Affiliate oid for the 'affiliate matches' rule type.
  * @member {Number} affiliate_oid
  */
 FraudRulePublic.prototype['affiliate_oid'] = undefined;
 
 /**
+ * Monetary or score threshold for amount/score/percentage rule types.
  * @member {Number} amount_threshold
  */
 FraudRulePublic.prototype['amount_threshold'] = undefined;
 
 /**
+ * Note automatically appended to the order's merchant note when this rule fires.
  * @member {String} auto_note
  */
 FraudRulePublic.prototype['auto_note'] = undefined;
@@ -189,6 +192,7 @@ FraudRulePublic.prototype['auto_note'] = undefined;
 FraudRulePublic.prototype['avs_match_type'] = undefined;
 
 /**
+ * AVS response codes for the 'address street and zip avs' rule type.
  * @member {String} avs_response_codes
  */
 FraudRulePublic.prototype['avs_response_codes'] = undefined;
@@ -200,11 +204,13 @@ FraudRulePublic.prototype['avs_response_codes'] = undefined;
 FraudRulePublic.prototype['card_number'] = undefined;
 
 /**
+ * Integer count threshold for count/quantity/hours rule types.
  * @member {Number} count_threshold
  */
 FraudRulePublic.prototype['count_threshold'] = undefined;
 
 /**
+ * ISO country code for the 'address not in country' rule type.
  * @member {String} country_code
  */
 FraudRulePublic.prototype['country_code'] = undefined;
@@ -222,11 +228,12 @@ FraudRulePublic.prototype['created_dts'] = undefined;
 
 /**
  * Credit card BINs blocked by the 'credit card block bin' rule type.
- * @member {Object} credit_card_bins
+ * @member {Array.<String>} credit_card_bins
  */
 FraudRulePublic.prototype['credit_card_bins'] = undefined;
 
 /**
+ * Message shown in the A/R review screen when this rule fires.
  * @member {String} decline_message
  */
 FraudRulePublic.prototype['decline_message'] = undefined;
@@ -244,6 +251,7 @@ FraudRulePublic.prototype['description'] = undefined;
 FraudRulePublic.prototype['description_html'] = undefined;
 
 /**
+ * Email address for the 'address email' rule type.
  * @member {String} email
  */
 FraudRulePublic.prototype['email'] = undefined;
@@ -261,16 +269,19 @@ FraudRulePublic.prototype['failure_action'] = undefined;
 FraudRulePublic.prototype['fraud_rule_oid'] = undefined;
 
 /**
+ * Gateway response code key for the 'gateway response' rule type.
  * @member {String} gateway_response_codes
  */
 FraudRulePublic.prototype['gateway_response_codes'] = undefined;
 
 /**
+ * Gateway response code value for the 'gateway response' rule type.
  * @member {String} gateway_response_value
  */
 FraudRulePublic.prototype['gateway_response_value'] = undefined;
 
 /**
+ * IP address or subnet for 'exempt ip' and 'ip matches' rule types.
  * @member {String} ip_address
  */
 FraudRulePublic.prototype['ip_address'] = undefined;
@@ -281,61 +292,73 @@ FraudRulePublic.prototype['ip_address'] = undefined;
 FraudRulePublic.prototype['ip_range_type'] = undefined;
 
 /**
+ * Item filters restricting this rule to orders containing one or more of these items.
  * @member {Array.<module:com.ultracart.admin.v2.models/FraudRuleItemFilter>} item_filters
  */
 FraudRulePublic.prototype['item_filters'] = undefined;
 
 /**
+ * Merchant item id for the 'item matches' rule type.
  * @member {String} merchant_item_id
  */
 FraudRulePublic.prototype['merchant_item_id'] = undefined;
 
 /**
+ * Value the rule sets on order custom field 1 (only meaningful for 'Process Payment and Modify').
  * @member {String} modify_custom_field1
  */
 FraudRulePublic.prototype['modify_custom_field1'] = undefined;
 
 /**
+ * Value the rule sets on order custom field 2 (only meaningful for 'Process Payment and Modify').
  * @member {String} modify_custom_field2
  */
 FraudRulePublic.prototype['modify_custom_field2'] = undefined;
 
 /**
+ * Value the rule sets on order custom field 3 (only meaningful for 'Process Payment and Modify').
  * @member {String} modify_custom_field3
  */
 FraudRulePublic.prototype['modify_custom_field3'] = undefined;
 
 /**
+ * Value the rule sets on order custom field 4 (only meaningful for 'Process Payment and Modify').
  * @member {String} modify_custom_field4
  */
 FraudRulePublic.prototype['modify_custom_field4'] = undefined;
 
 /**
+ * Value the rule sets on order custom field 5 (only meaningful for 'Process Payment and Modify').
  * @member {String} modify_custom_field5
  */
 FraudRulePublic.prototype['modify_custom_field5'] = undefined;
 
 /**
+ * Value the rule sets on order custom field 6 (only meaningful for 'Process Payment and Modify').
  * @member {String} modify_custom_field6
  */
 FraudRulePublic.prototype['modify_custom_field6'] = undefined;
 
 /**
+ * Value the rule sets on order custom field 7 (only meaningful for 'Process Payment and Modify').
  * @member {String} modify_custom_field7
  */
 FraudRulePublic.prototype['modify_custom_field7'] = undefined;
 
 /**
+ * When true, the rule strips the affiliate from the order (only meaningful for 'Process Payment and Modify').
  * @member {Boolean} modify_skip_affiliate
  */
 FraudRulePublic.prototype['modify_skip_affiliate'] = undefined;
 
 /**
+ * When true, the rule suppresses the affiliate network pixel (only meaningful for 'Process Payment and Modify').
  * @member {Boolean} modify_skip_affiliate_network_pixel
  */
 FraudRulePublic.prototype['modify_skip_affiliate_network_pixel'] = undefined;
 
 /**
+ * Gateway filters restricting this rule to orders processed by one of these rotating transaction gateways.
  * @member {Array.<module:com.ultracart.admin.v2.models/FraudRuleRotatingTransactionGatewayFilter>} rotating_transaction_gateway_filters
  */
 FraudRulePublic.prototype['rotating_transaction_gateway_filters'] = undefined;
@@ -353,6 +376,7 @@ FraudRulePublic.prototype['rule_group'] = undefined;
 FraudRulePublic.prototype['rule_type'] = undefined;
 
 /**
+ * Storefront filters restricting this rule to orders placed on one of these storefronts.
  * @member {Array.<module:com.ultracart.admin.v2.models/FraudRuleStorefrontFilter>} storefront_filters
  */
 FraudRulePublic.prototype['storefront_filters'] = undefined;

@@ -12,11 +12,14 @@
  */
 
 import ApiClient from '../ApiClient';
+import FraudLookupAffiliate from './FraudLookupAffiliate';
+import FraudLookupGateway from './FraudLookupGateway';
+import FraudLookupTheme from './FraudLookupTheme';
 
 /**
  * The FraudLookupValues model module.
  * @module com.ultracart.admin.v2.models/FraudLookupValues
- * @version 4.1.96
+ * @version 4.1.97
  */
 class FraudLookupValues {
     /**
@@ -48,22 +51,37 @@ class FraudLookupValues {
             obj = obj || new FraudLookupValues();
 
             if (data.hasOwnProperty('affiliates')) {
-                obj['affiliates'] = ApiClient.convertToType(data['affiliates'], Object);
+                obj['affiliates'] = ApiClient.convertToType(data['affiliates'], [FraudLookupAffiliate]);
+            }
+            if (data.hasOwnProperty('avs_match_types')) {
+                obj['avs_match_types'] = ApiClient.convertToType(data['avs_match_types'], ['String']);
             }
             if (data.hasOwnProperty('countries')) {
-                obj['countries'] = ApiClient.convertToType(data['countries'], Object);
+                obj['countries'] = ApiClient.convertToType(data['countries'], ['String']);
+            }
+            if (data.hasOwnProperty('failure_actions')) {
+                obj['failure_actions'] = ApiClient.convertToType(data['failure_actions'], ['String']);
             }
             if (data.hasOwnProperty('ip_range_types')) {
-                obj['ip_range_types'] = ApiClient.convertToType(data['ip_range_types'], Object);
+                obj['ip_range_types'] = ApiClient.convertToType(data['ip_range_types'], ['String']);
             }
             if (data.hasOwnProperty('linked_accounts')) {
                 obj['linked_accounts'] = ApiClient.convertToType(data['linked_accounts'], 'Boolean');
             }
+            if (data.hasOwnProperty('rotating_transaction_gateways')) {
+                obj['rotating_transaction_gateways'] = ApiClient.convertToType(data['rotating_transaction_gateways'], [FraudLookupGateway]);
+            }
             if (data.hasOwnProperty('rule_groups')) {
-                obj['rule_groups'] = ApiClient.convertToType(data['rule_groups'], Object);
+                obj['rule_groups'] = ApiClient.convertToType(data['rule_groups'], ['String']);
             }
             if (data.hasOwnProperty('rule_types')) {
-                obj['rule_types'] = ApiClient.convertToType(data['rule_types'], Object);
+                obj['rule_types'] = ApiClient.convertToType(data['rule_types'], ['String']);
+            }
+            if (data.hasOwnProperty('screen_branding_themes')) {
+                obj['screen_branding_themes'] = ApiClient.convertToType(data['screen_branding_themes'], [FraudLookupTheme]);
+            }
+            if (data.hasOwnProperty('user_actions')) {
+                obj['user_actions'] = ApiClient.convertToType(data['user_actions'], ['String']);
             }
         }
         return obj;
@@ -74,19 +92,31 @@ class FraudLookupValues {
 
 /**
  * Affiliates with non-empty email, sorted by email.
- * @member {Object} affiliates
+ * @member {Array.<module:com.ultracart.admin.v2.models/FraudLookupAffiliate>} affiliates
  */
 FraudLookupValues.prototype['affiliates'] = undefined;
 
 /**
+ * Valid values for avs_match_type on the 'address street and zip avs' rule type.
+ * @member {Array.<String>} avs_match_types
+ */
+FraudLookupValues.prototype['avs_match_types'] = undefined;
+
+/**
  * ISO country codes available to this merchant.
- * @member {Object} countries
+ * @member {Array.<String>} countries
  */
 FraudLookupValues.prototype['countries'] = undefined;
 
 /**
+ * Valid values for failure_action on insert and search requests.
+ * @member {Array.<String>} failure_actions
+ */
+FraudLookupValues.prototype['failure_actions'] = undefined;
+
+/**
  * Valid values for ip_range_type on IP-based rules.
- * @member {Object} ip_range_types
+ * @member {Array.<String>} ip_range_types
  */
 FraudLookupValues.prototype['ip_range_types'] = undefined;
 
@@ -97,16 +127,34 @@ FraudLookupValues.prototype['ip_range_types'] = undefined;
 FraudLookupValues.prototype['linked_accounts'] = undefined;
 
 /**
+ * Rotating transaction gateways configured for this merchant. Use the oid as a value in rotating_transaction_gateway_filters on insert.
+ * @member {Array.<module:com.ultracart.admin.v2.models/FraudLookupGateway>} rotating_transaction_gateways
+ */
+FraudLookupValues.prototype['rotating_transaction_gateways'] = undefined;
+
+/**
  * Valid values for rule_group on search requests.
- * @member {Object} rule_groups
+ * @member {Array.<String>} rule_groups
  */
 FraudLookupValues.prototype['rule_groups'] = undefined;
 
 /**
  * Valid values for rule_type on insert and search requests.
- * @member {Object} rule_types
+ * @member {Array.<String>} rule_types
  */
 FraudLookupValues.prototype['rule_types'] = undefined;
+
+/**
+ * Screen branding themes configured for this merchant. Use the oid as a value in screen_branding_theme_filters on insert.
+ * @member {Array.<module:com.ultracart.admin.v2.models/FraudLookupTheme>} screen_branding_themes
+ */
+FraudLookupValues.prototype['screen_branding_themes'] = undefined;
+
+/**
+ * Valid values for user_action on rule types that distinguish between attempted and approved transactions.
+ * @member {Array.<String>} user_actions
+ */
+FraudLookupValues.prototype['user_actions'] = undefined;
 
 
 

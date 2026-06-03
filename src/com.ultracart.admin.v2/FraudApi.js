@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import FraudDeclineEmailRequest from '../com.ultracart.admin.v2.models/FraudDeclineEmailRequest';
 import FraudLookupValuesResponse from '../com.ultracart.admin.v2.models/FraudLookupValuesResponse';
+import FraudRuleFromOrderRequest from '../com.ultracart.admin.v2.models/FraudRuleFromOrderRequest';
 import FraudRuleInsertRequest from '../com.ultracart.admin.v2.models/FraudRuleInsertRequest';
 import FraudRuleResponse from '../com.ultracart.admin.v2.models/FraudRuleResponse';
 import FraudRuleSearchRequest from '../com.ultracart.admin.v2.models/FraudRuleSearchRequest';
@@ -24,7 +25,7 @@ import FraudRulesResponse from '../com.ultracart.admin.v2.models/FraudRulesRespo
 /**
 * Fraud service.
 * @module com.ultracart.admin.v2/FraudApi
-* @version 4.1.96
+* @version 4.1.97
 */
 export default class FraudApi {
 
@@ -49,8 +50,8 @@ export default class FraudApi {
      */
 
     /**
-     * Decline emails during checkout fraud review
-     * Adds one or more email addresses to the fraud decline list for this merchant account. 
+     * Decline email during checkout fraud review
+     * Adds one email address to the fraud decline list for this merchant account. 
      * @param {module:com.ultracart.admin.v2.models/FraudDeclineEmailRequest} fraud_decline_emails_request Fraud decline emails request
      * @param {module:com.ultracart.admin.v2/FraudApi~declineEmailCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -118,6 +119,48 @@ export default class FraudApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/fraud/rules/{fraud_rule_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the establishFraudRulesFromOrder operation.
+     * @callback module:com.ultracart.admin.v2/FraudApi~establishFraudRulesFromOrderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/FraudRulesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Establish fraud rules from an order
+     * Creates one or more fraud rules for this merchant account derived from an existing order, mirroring the 'establish fraud filter' action in the order processing screen. Select which filters to establish; all values are taken from the order. The IP rule is created against the order's /24 subnet (last octet masked). The credit card filter duplicates the order's stored card vault token, so no card number is sent through the API. Filters whose order data is missing (no stored card, no email, no usable IP, or no numeric street) are skipped and reported in the warning slot rather than failing the request. 
+     * @param {module:com.ultracart.admin.v2.models/FraudRuleFromOrderRequest} fraud_rule_from_order_request Fraud rule from order request
+     * @param {module:com.ultracart.admin.v2/FraudApi~establishFraudRulesFromOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/FraudRulesResponse}
+     */
+    establishFraudRulesFromOrder(fraud_rule_from_order_request, callback) {
+      let postBody = fraud_rule_from_order_request;
+      // verify the required parameter 'fraud_rule_from_order_request' is set
+      if (fraud_rule_from_order_request === undefined || fraud_rule_from_order_request === null) {
+        throw new Error("Missing the required parameter 'fraud_rule_from_order_request' when calling establishFraudRulesFromOrder");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = FraudRulesResponse;
+      return this.apiClient.callApi(
+        '/fraud/rules/from_order', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

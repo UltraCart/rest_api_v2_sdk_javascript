@@ -4,8 +4,9 @@ All URIs are relative to *https://secure.ultracart.com/rest/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**declineEmail**](FraudApi.md#declineEmail) | **POST** /fraud/decline_email | Decline emails during checkout fraud review
+[**declineEmail**](FraudApi.md#declineEmail) | **POST** /fraud/decline_email | Decline email during checkout fraud review
 [**deleteFraudRule**](FraudApi.md#deleteFraudRule) | **DELETE** /fraud/rules/{fraud_rule_oid} | Delete a fraud rule
+[**establishFraudRulesFromOrder**](FraudApi.md#establishFraudRulesFromOrder) | **POST** /fraud/rules/from_order | Establish fraud rules from an order
 [**getFraudLookupValues**](FraudApi.md#getFraudLookupValues) | **GET** /fraud/lookup_values | Retrieve fraud rule lookup values
 [**insertFraudRule**](FraudApi.md#insertFraudRule) | **POST** /fraud/rules | Insert a fraud rule
 [**searchFraudRules**](FraudApi.md#searchFraudRules) | **POST** /fraud/rules/search | Search fraud rules
@@ -16,9 +17,9 @@ Method | HTTP request | Description
 
 > declineEmail(fraud_decline_emails_request)
 
-Decline emails during checkout fraud review
+Decline email during checkout fraud review
 
-Adds one or more email addresses to the fraud decline list for this merchant account. 
+Adds one email address to the fraud decline list for this merchant account. 
 
 
 ### Example
@@ -119,6 +120,61 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## establishFraudRulesFromOrder
+
+> FraudRulesResponse establishFraudRulesFromOrder(fraud_rule_from_order_request)
+
+Establish fraud rules from an order
+
+Creates one or more fraud rules for this merchant account derived from an existing order, mirroring the &#39;establish fraud filter&#39; action in the order processing screen. Select which filters to establish; all values are taken from the order. The IP rule is created against the order&#39;s /24 subnet (last octet masked). The credit card filter duplicates the order&#39;s stored card vault token, so no card number is sent through the API. Filters whose order data is missing (no stored card, no email, no usable IP, or no numeric street) are skipped and reported in the warning slot rather than failing the request. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE establishFraudRulesFromOrder -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.FraudApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let fraud_rule_from_order_request = new UltraCartRestApiV2.FraudRuleFromOrderRequest(); // FraudRuleFromOrderRequest | Fraud rule from order request
+apiInstance.establishFraudRulesFromOrder(fraud_rule_from_order_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE establishFraudRulesFromOrder -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fraud_rule_from_order_request** | [**FraudRuleFromOrderRequest**](FraudRuleFromOrderRequest.md)| Fraud rule from order request | 
+
+### Return type
+
+[**FraudRulesResponse**](FraudRulesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

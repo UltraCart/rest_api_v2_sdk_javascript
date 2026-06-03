@@ -598,8 +598,12 @@ import FileManagerPageResponse from './com.ultracart.admin.v2.models/FileManager
 import FileManagerUploadRequest from './com.ultracart.admin.v2.models/FileManagerUploadRequest';
 import FileManagerUploadUrlResponse from './com.ultracart.admin.v2.models/FileManagerUploadUrlResponse';
 import FraudDeclineEmailRequest from './com.ultracart.admin.v2.models/FraudDeclineEmailRequest';
+import FraudLookupAffiliate from './com.ultracart.admin.v2.models/FraudLookupAffiliate';
+import FraudLookupGateway from './com.ultracart.admin.v2.models/FraudLookupGateway';
+import FraudLookupTheme from './com.ultracart.admin.v2.models/FraudLookupTheme';
 import FraudLookupValues from './com.ultracart.admin.v2.models/FraudLookupValues';
 import FraudLookupValuesResponse from './com.ultracart.admin.v2.models/FraudLookupValuesResponse';
+import FraudRuleFromOrderRequest from './com.ultracart.admin.v2.models/FraudRuleFromOrderRequest';
 import FraudRuleInsertRequest from './com.ultracart.admin.v2.models/FraudRuleInsertRequest';
 import FraudRuleItemFilter from './com.ultracart.admin.v2.models/FraudRuleItemFilter';
 import FraudRulePublic from './com.ultracart.admin.v2.models/FraudRulePublic';
@@ -1064,7 +1068,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.96
+* @version 4.1.97
 */
 export {
     /**
@@ -4584,6 +4588,24 @@ export {
     FraudDeclineEmailRequest,
 
     /**
+     * The FraudLookupAffiliate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FraudLookupAffiliate}
+     */
+    FraudLookupAffiliate,
+
+    /**
+     * The FraudLookupGateway model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FraudLookupGateway}
+     */
+    FraudLookupGateway,
+
+    /**
+     * The FraudLookupTheme model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FraudLookupTheme}
+     */
+    FraudLookupTheme,
+
+    /**
      * The FraudLookupValues model constructor.
      * @property {module:com.ultracart.admin.v2.models/FraudLookupValues}
      */
@@ -4594,6 +4616,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/FraudLookupValuesResponse}
      */
     FraudLookupValuesResponse,
+
+    /**
+     * The FraudRuleFromOrderRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/FraudRuleFromOrderRequest}
+     */
+    FraudRuleFromOrderRequest,
 
     /**
      * The FraudRuleInsertRequest model constructor.

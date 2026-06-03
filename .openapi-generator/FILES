@@ -597,8 +597,12 @@ docs/FileManagerUploadRequest.md
 docs/FileManagerUploadUrlResponse.md
 docs/FraudApi.md
 docs/FraudDeclineEmailRequest.md
+docs/FraudLookupAffiliate.md
+docs/FraudLookupGateway.md
+docs/FraudLookupTheme.md
 docs/FraudLookupValues.md
 docs/FraudLookupValuesResponse.md
+docs/FraudRuleFromOrderRequest.md
 docs/FraudRuleInsertRequest.md
 docs/FraudRuleItemFilter.md
 docs/FraudRulePublic.md
@@ -1611,8 +1615,12 @@ src/com.ultracart.admin.v2.models/FileManagerPageResponse.js
 src/com.ultracart.admin.v2.models/FileManagerUploadRequest.js
 src/com.ultracart.admin.v2.models/FileManagerUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/FraudDeclineEmailRequest.js
+src/com.ultracart.admin.v2.models/FraudLookupAffiliate.js
+src/com.ultracart.admin.v2.models/FraudLookupGateway.js
+src/com.ultracart.admin.v2.models/FraudLookupTheme.js
 src/com.ultracart.admin.v2.models/FraudLookupValues.js
 src/com.ultracart.admin.v2.models/FraudLookupValuesResponse.js
+src/com.ultracart.admin.v2.models/FraudRuleFromOrderRequest.js
 src/com.ultracart.admin.v2.models/FraudRuleInsertRequest.js
 src/com.ultracart.admin.v2.models/FraudRuleItemFilter.js
 src/com.ultracart.admin.v2.models/FraudRulePublic.js

@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FraudRulePublic model module.
  * @module com.ultracart.admin.v2.models/FraudRulePublic
- * @version 4.1.95
+ * @version 4.1.96
  */
 var FraudRulePublic = /*#__PURE__*/function () {
   /**
@@ -351,8 +351,8 @@ FraudRulePublic.prototype['modify_skip_affiliate_network_pixel'] = undefined;
 FraudRulePublic.prototype['rotating_transaction_gateway_filters'] = undefined;
 
 /**
- * Group containing this rule type (eg 'creditCardRules')
- * @member {module:com.ultracart.admin.v2.models/FraudRulePublic.RuleGroupEnum} rule_group
+ * Group containing this rule type (eg 'creditCardRules'). Deliberately not constrained by allowableValues on the response so SDK consumers do not hard-fail on an unexpected value if a future rule_type slips through the server-side mapping. Search REQUESTS still restrict rule_group to the known set.
+ * @member {String} rule_group
  */
 FraudRulePublic.prototype['rule_group'] = undefined;
 
@@ -444,54 +444,6 @@ FraudRulePublic['IpRangeTypeEnum'] = {
    * @const
    */
   "subnet": "subnet"
-};
-
-/**
- * Allowed values for the <code>rule_group</code> property.
- * @enum {String}
- * @readonly
- */
-FraudRulePublic['RuleGroupEnum'] = {
-  /**
-   * value: "exemptRules"
-   * @const
-   */
-  "exemptRules": "exemptRules",
-  /**
-   * value: "creditCardRules"
-   * @const
-   */
-  "creditCardRules": "creditCardRules",
-  /**
-   * value: "ipRules"
-   * @const
-   */
-  "ipRules": "ipRules",
-  /**
-   * value: "addressRules"
-   * @const
-   */
-  "addressRules": "addressRules",
-  /**
-   * value: "affiliateRules"
-   * @const
-   */
-  "affiliateRules": "affiliateRules",
-  /**
-   * value: "itemRules"
-   * @const
-   */
-  "itemRules": "itemRules",
-  /**
-   * value: "orderRules"
-   * @const
-   */
-  "orderRules": "orderRules",
-  /**
-   * value: "browserRules"
-   * @const
-   */
-  "browserRules": "browserRules"
 };
 
 /**

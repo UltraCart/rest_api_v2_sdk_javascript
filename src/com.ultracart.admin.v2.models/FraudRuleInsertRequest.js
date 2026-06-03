@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudRuleInsertRequest model module.
  * @module com.ultracart.admin.v2.models/FraudRuleInsertRequest
- * @version 4.1.96
+ * @version 4.1.97
  */
 class FraudRuleInsertRequest {
     /**
@@ -72,7 +72,7 @@ class FraudRuleInsertRequest {
                 obj['country_code'] = ApiClient.convertToType(data['country_code'], 'String');
             }
             if (data.hasOwnProperty('credit_card_bins')) {
-                obj['credit_card_bins'] = ApiClient.convertToType(data['credit_card_bins'], Object);
+                obj['credit_card_bins'] = ApiClient.convertToType(data['credit_card_bins'], ['String']);
             }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -93,7 +93,7 @@ class FraudRuleInsertRequest {
                 obj['ip_range_type'] = ApiClient.convertToType(data['ip_range_type'], 'String');
             }
             if (data.hasOwnProperty('item_filters')) {
-                obj['item_filters'] = ApiClient.convertToType(data['item_filters'], Object);
+                obj['item_filters'] = ApiClient.convertToType(data['item_filters'], ['String']);
             }
             if (data.hasOwnProperty('merchant_item_id')) {
                 obj['merchant_item_id'] = ApiClient.convertToType(data['merchant_item_id'], 'String');
@@ -126,13 +126,13 @@ class FraudRuleInsertRequest {
                 obj['modify_skip_affiliate_network_pixel'] = ApiClient.convertToType(data['modify_skip_affiliate_network_pixel'], 'Boolean');
             }
             if (data.hasOwnProperty('rotating_transaction_gateway_filters')) {
-                obj['rotating_transaction_gateway_filters'] = ApiClient.convertToType(data['rotating_transaction_gateway_filters'], Object);
+                obj['rotating_transaction_gateway_filters'] = ApiClient.convertToType(data['rotating_transaction_gateway_filters'], ['Number']);
             }
             if (data.hasOwnProperty('rule_type')) {
                 obj['rule_type'] = ApiClient.convertToType(data['rule_type'], 'String');
             }
             if (data.hasOwnProperty('screen_branding_theme_filters')) {
-                obj['screen_branding_theme_filters'] = ApiClient.convertToType(data['screen_branding_theme_filters'], Object);
+                obj['screen_branding_theme_filters'] = ApiClient.convertToType(data['screen_branding_theme_filters'], ['Number']);
             }
             if (data.hasOwnProperty('user_action')) {
                 obj['user_action'] = ApiClient.convertToType(data['user_action'], 'String');
@@ -194,7 +194,7 @@ FraudRuleInsertRequest.prototype['country_code'] = undefined;
 
 /**
  * Credit card BINs to block (max 20). Used by the 'credit card block bin' rule type.
- * @member {Object} credit_card_bins
+ * @member {Array.<String>} credit_card_bins
  */
 FraudRuleInsertRequest.prototype['credit_card_bins'] = undefined;
 
@@ -236,7 +236,7 @@ FraudRuleInsertRequest.prototype['ip_range_type'] = undefined;
 
 /**
  * Optional list of merchant item ids restricting this rule to orders containing one or more of these items.
- * @member {Object} item_filters
+ * @member {Array.<String>} item_filters
  */
 FraudRuleInsertRequest.prototype['item_filters'] = undefined;
 
@@ -247,53 +247,62 @@ FraudRuleInsertRequest.prototype['item_filters'] = undefined;
 FraudRuleInsertRequest.prototype['merchant_item_id'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', set order custom field 1 to this value.
  * @member {String} modify_custom_field1
  */
 FraudRuleInsertRequest.prototype['modify_custom_field1'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', set order custom field 2 to this value.
  * @member {String} modify_custom_field2
  */
 FraudRuleInsertRequest.prototype['modify_custom_field2'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', set order custom field 3 to this value.
  * @member {String} modify_custom_field3
  */
 FraudRuleInsertRequest.prototype['modify_custom_field3'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', set order custom field 4 to this value.
  * @member {String} modify_custom_field4
  */
 FraudRuleInsertRequest.prototype['modify_custom_field4'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', set order custom field 5 to this value.
  * @member {String} modify_custom_field5
  */
 FraudRuleInsertRequest.prototype['modify_custom_field5'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', set order custom field 6 to this value.
  * @member {String} modify_custom_field6
  */
 FraudRuleInsertRequest.prototype['modify_custom_field6'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', set order custom field 7 to this value.
  * @member {String} modify_custom_field7
  */
 FraudRuleInsertRequest.prototype['modify_custom_field7'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', strip the affiliate from the order.
  * @member {Boolean} modify_skip_affiliate
  */
 FraudRuleInsertRequest.prototype['modify_skip_affiliate'] = undefined;
 
 /**
+ * When failure_action is 'Process Payment and Modify', skip firing the affiliate network pixel.
  * @member {Boolean} modify_skip_affiliate_network_pixel
  */
 FraudRuleInsertRequest.prototype['modify_skip_affiliate_network_pixel'] = undefined;
 
 /**
  * Optional list of rotating transaction gateway oids restricting this rule to orders processed by one of these gateways.
- * @member {Object} rotating_transaction_gateway_filters
+ * @member {Array.<Number>} rotating_transaction_gateway_filters
  */
 FraudRuleInsertRequest.prototype['rotating_transaction_gateway_filters'] = undefined;
 
@@ -305,7 +314,7 @@ FraudRuleInsertRequest.prototype['rule_type'] = undefined;
 
 /**
  * Optional list of screen branding theme oids restricting this rule to orders associated with one or more storefronts.
- * @member {Object} screen_branding_theme_filters
+ * @member {Array.<Number>} screen_branding_theme_filters
  */
 FraudRuleInsertRequest.prototype['screen_branding_theme_filters'] = undefined;
 
