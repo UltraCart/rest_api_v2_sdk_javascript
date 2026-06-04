@@ -3579,6 +3579,24 @@ Object.defineProperty(exports, "FraudDeclineEmailRequest", {
     return _FraudDeclineEmailRequest["default"];
   }
 });
+Object.defineProperty(exports, "FraudLookupAffiliate", {
+  enumerable: true,
+  get: function get() {
+    return _FraudLookupAffiliate["default"];
+  }
+});
+Object.defineProperty(exports, "FraudLookupGateway", {
+  enumerable: true,
+  get: function get() {
+    return _FraudLookupGateway["default"];
+  }
+});
+Object.defineProperty(exports, "FraudLookupTheme", {
+  enumerable: true,
+  get: function get() {
+    return _FraudLookupTheme["default"];
+  }
+});
 Object.defineProperty(exports, "FraudLookupValues", {
   enumerable: true,
   get: function get() {
@@ -3589,6 +3607,12 @@ Object.defineProperty(exports, "FraudLookupValuesResponse", {
   enumerable: true,
   get: function get() {
     return _FraudLookupValuesResponse["default"];
+  }
+});
+Object.defineProperty(exports, "FraudRuleFromOrderRequest", {
+  enumerable: true,
+  get: function get() {
+    return _FraudRuleFromOrderRequest["default"];
   }
 });
 Object.defineProperty(exports, "FraudRuleInsertRequest", {
@@ -6715,8 +6739,12 @@ var _FileManagerPageResponse = _interopRequireDefault(require("./com.ultracart.a
 var _FileManagerUploadRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerUploadRequest"));
 var _FileManagerUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FileManagerUploadUrlResponse"));
 var _FraudDeclineEmailRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudDeclineEmailRequest"));
+var _FraudLookupAffiliate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudLookupAffiliate"));
+var _FraudLookupGateway = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudLookupGateway"));
+var _FraudLookupTheme = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudLookupTheme"));
 var _FraudLookupValues = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudLookupValues"));
 var _FraudLookupValuesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudLookupValuesResponse"));
+var _FraudRuleFromOrderRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudRuleFromOrderRequest"));
 var _FraudRuleInsertRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudRuleInsertRequest"));
 var _FraudRuleItemFilter = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudRuleItemFilter"));
 var _FraudRulePublic = _interopRequireDefault(require("./com.ultracart.admin.v2.models/FraudRulePublic"));

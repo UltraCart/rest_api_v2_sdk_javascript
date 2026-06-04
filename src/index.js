@@ -325,6 +325,7 @@ import CountriesResponse from './com.ultracart.admin.v2.models/CountriesResponse
 import Country from './com.ultracart.admin.v2.models/Country';
 import Coupon from './com.ultracart.admin.v2.models/Coupon';
 import CouponAmountOffItems from './com.ultracart.admin.v2.models/CouponAmountOffItems';
+import CouponAmountOffItemsAndFreeShipping from './com.ultracart.admin.v2.models/CouponAmountOffItemsAndFreeShipping';
 import CouponAmountOffShipping from './com.ultracart.admin.v2.models/CouponAmountOffShipping';
 import CouponAmountOffShippingWithItemsPurchase from './com.ultracart.admin.v2.models/CouponAmountOffShippingWithItemsPurchase';
 import CouponAmountOffSubtotal from './com.ultracart.admin.v2.models/CouponAmountOffSubtotal';
@@ -1068,7 +1069,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.97
+* @version 4.1.98
 */
 export {
     /**
@@ -2948,6 +2949,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CouponAmountOffItems}
      */
     CouponAmountOffItems,
+
+    /**
+     * The CouponAmountOffItemsAndFreeShipping model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CouponAmountOffItemsAndFreeShipping}
+     */
+    CouponAmountOffItemsAndFreeShipping,
 
     /**
      * The CouponAmountOffShipping model constructor.

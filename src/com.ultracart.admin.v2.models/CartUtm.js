@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartUtm model module.
  * @module com.ultracart.admin.v2.models/CartUtm
- * @version 4.1.97
+ * @version 4.1.98
  */
 class CartUtm {
     /**

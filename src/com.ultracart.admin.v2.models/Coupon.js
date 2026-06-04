@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import CouponAmountOffItems from './CouponAmountOffItems';
+import CouponAmountOffItemsAndFreeShipping from './CouponAmountOffItemsAndFreeShipping';
 import CouponAmountOffShipping from './CouponAmountOffShipping';
 import CouponAmountOffShippingWithItemsPurchase from './CouponAmountOffShippingWithItemsPurchase';
 import CouponAmountOffSubtotal from './CouponAmountOffSubtotal';
@@ -66,7 +67,7 @@ import CouponTieredPercentOffSubtotalBasedOnMSRP from './CouponTieredPercentOffS
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.1.97
+ * @version 4.1.98
  */
 class Coupon {
     /**
@@ -105,6 +106,9 @@ class Coupon {
             }
             if (data.hasOwnProperty('amount_off_items')) {
                 obj['amount_off_items'] = CouponAmountOffItems.constructFromObject(data['amount_off_items']);
+            }
+            if (data.hasOwnProperty('amount_off_items_and_free_shipping')) {
+                obj['amount_off_items_and_free_shipping'] = CouponAmountOffItemsAndFreeShipping.constructFromObject(data['amount_off_items_and_free_shipping']);
             }
             if (data.hasOwnProperty('amount_off_shipping')) {
                 obj['amount_off_shipping'] = CouponAmountOffShipping.constructFromObject(data['amount_off_shipping']);
@@ -324,6 +328,11 @@ Coupon.prototype['allow_multiple_one_time_codes'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CouponAmountOffItems} amount_off_items
  */
 Coupon.prototype['amount_off_items'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponAmountOffItemsAndFreeShipping} amount_off_items_and_free_shipping
+ */
+Coupon.prototype['amount_off_items_and_free_shipping'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponAmountOffShipping} amount_off_shipping

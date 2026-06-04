@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FraudRuleSearchRequest model module.
  * @module com.ultracart.admin.v2.models/FraudRuleSearchRequest
- * @version 4.1.96
+ * @version 4.1.97
  */
 var FraudRuleSearchRequest = /*#__PURE__*/function () {
   /**
@@ -170,6 +170,7 @@ FraudRuleSearchRequest.prototype['affiliate_oid_or_email'] = undefined;
 FraudRuleSearchRequest.prototype['amount_threshold_begin'] = undefined;
 
 /**
+ * Upper bound on amount/score/percentage thresholds (rules backed by the same numeric column).
  * @member {Number} amount_threshold_end
  */
 FraudRuleSearchRequest.prototype['amount_threshold_end'] = undefined;
@@ -187,11 +188,13 @@ FraudRuleSearchRequest.prototype['auto_note'] = undefined;
 FraudRuleSearchRequest.prototype['count_threshold_begin'] = undefined;
 
 /**
+ * Upper bound on count thresholds (rules backed by the same integer count column).
  * @member {Number} count_threshold_end
  */
 FraudRuleSearchRequest.prototype['count_threshold_end'] = undefined;
 
 /**
+ * Filter to rules created by this user login.
  * @member {String} created_by
  */
 FraudRuleSearchRequest.prototype['created_by'] = undefined;
@@ -226,11 +229,13 @@ FraudRuleSearchRequest.prototype['decline_message'] = undefined;
 FraudRuleSearchRequest.prototype['failure_action'] = undefined;
 
 /**
+ * Filter to rules with this rotating transaction gateway code in their rotating_transaction_gateway_filters list.
  * @member {String} gateway_code
  */
 FraudRuleSearchRequest.prototype['gateway_code'] = undefined;
 
 /**
+ * Filter to rules with this merchant item id in their item_filters list.
  * @member {String} merchant_item_id
  */
 FraudRuleSearchRequest.prototype['merchant_item_id'] = undefined;
@@ -242,46 +247,55 @@ FraudRuleSearchRequest.prototype['merchant_item_id'] = undefined;
 FraudRuleSearchRequest.prototype['modifier_value'] = undefined;
 
 /**
+ * Wildcard search on rules' modify_custom_field1 value.
  * @member {String} modify_custom_field1
  */
 FraudRuleSearchRequest.prototype['modify_custom_field1'] = undefined;
 
 /**
+ * Wildcard search on rules' modify_custom_field2 value.
  * @member {String} modify_custom_field2
  */
 FraudRuleSearchRequest.prototype['modify_custom_field2'] = undefined;
 
 /**
+ * Wildcard search on rules' modify_custom_field3 value.
  * @member {String} modify_custom_field3
  */
 FraudRuleSearchRequest.prototype['modify_custom_field3'] = undefined;
 
 /**
+ * Wildcard search on rules' modify_custom_field4 value.
  * @member {String} modify_custom_field4
  */
 FraudRuleSearchRequest.prototype['modify_custom_field4'] = undefined;
 
 /**
+ * Wildcard search on rules' modify_custom_field5 value.
  * @member {String} modify_custom_field5
  */
 FraudRuleSearchRequest.prototype['modify_custom_field5'] = undefined;
 
 /**
+ * Wildcard search on rules' modify_custom_field6 value.
  * @member {String} modify_custom_field6
  */
 FraudRuleSearchRequest.prototype['modify_custom_field6'] = undefined;
 
 /**
+ * Wildcard search on rules' modify_custom_field7 value.
  * @member {String} modify_custom_field7
  */
 FraudRuleSearchRequest.prototype['modify_custom_field7'] = undefined;
 
 /**
+ * Filter to rules whose modify_skip_affiliate flag matches this value.
  * @member {Boolean} modify_skip_affiliate
  */
 FraudRuleSearchRequest.prototype['modify_skip_affiliate'] = undefined;
 
 /**
+ * Filter to rules whose modify_skip_affiliate_network_pixel flag matches this value.
  * @member {Boolean} modify_skip_affiliate_network_pixel
  */
 FraudRuleSearchRequest.prototype['modify_skip_affiliate_network_pixel'] = undefined;
@@ -305,6 +319,7 @@ FraudRuleSearchRequest.prototype['rule_type'] = undefined;
 FraudRuleSearchRequest.prototype['search_linked_accounts'] = undefined;
 
 /**
+ * Filter to rules with this storefront hostname in their screen_branding_theme_filters list.
  * @member {String} storefront_hostname
  */
 FraudRuleSearchRequest.prototype['storefront_hostname'] = undefined;
@@ -316,6 +331,7 @@ FraudRuleSearchRequest.prototype['storefront_hostname'] = undefined;
 FraudRuleSearchRequest.prototype['text_value'] = undefined;
 
 /**
+ * Filter to rules with this screen branding theme code in their screen_branding_theme_filters list.
  * @member {String} theme_code
  */
 FraudRuleSearchRequest.prototype['theme_code'] = undefined;

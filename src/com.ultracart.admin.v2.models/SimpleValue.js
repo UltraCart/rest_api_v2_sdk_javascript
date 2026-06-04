@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SimpleValue model module.
  * @module com.ultracart.admin.v2.models/SimpleValue
- * @version 4.1.97
+ * @version 4.1.98
  */
 class SimpleValue {
     /**
