@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _CouponAmountOffItems = _interopRequireDefault(require("./CouponAmountOffItems"));
+var _CouponAmountOffItemsAndFreeShipping = _interopRequireDefault(require("./CouponAmountOffItemsAndFreeShipping"));
 var _CouponAmountOffShipping = _interopRequireDefault(require("./CouponAmountOffShipping"));
 var _CouponAmountOffShippingWithItemsPurchase = _interopRequireDefault(require("./CouponAmountOffShippingWithItemsPurchase"));
 var _CouponAmountOffSubtotal = _interopRequireDefault(require("./CouponAmountOffSubtotal"));
@@ -76,7 +77,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Coupon model module.
  * @module com.ultracart.admin.v2.models/Coupon
- * @version 4.1.97
+ * @version 4.1.98
  */
 var Coupon = /*#__PURE__*/function () {
   /**
@@ -117,6 +118,9 @@ var Coupon = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('amount_off_items')) {
           obj['amount_off_items'] = _CouponAmountOffItems["default"].constructFromObject(data['amount_off_items']);
+        }
+        if (data.hasOwnProperty('amount_off_items_and_free_shipping')) {
+          obj['amount_off_items_and_free_shipping'] = _CouponAmountOffItemsAndFreeShipping["default"].constructFromObject(data['amount_off_items_and_free_shipping']);
         }
         if (data.hasOwnProperty('amount_off_shipping')) {
           obj['amount_off_shipping'] = _CouponAmountOffShipping["default"].constructFromObject(data['amount_off_shipping']);
@@ -334,6 +338,11 @@ Coupon.prototype['allow_multiple_one_time_codes'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/CouponAmountOffItems} amount_off_items
  */
 Coupon.prototype['amount_off_items'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/CouponAmountOffItemsAndFreeShipping} amount_off_items_and_free_shipping
+ */
+Coupon.prototype['amount_off_items_and_free_shipping'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/CouponAmountOffShipping} amount_off_shipping

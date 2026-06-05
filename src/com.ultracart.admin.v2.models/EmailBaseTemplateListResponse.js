@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailBaseTemplateListResponse model module.
  * @module com.ultracart.admin.v2.models/EmailBaseTemplateListResponse
- * @version 4.1.98
+ * @version 4.1.99
  */
 class EmailBaseTemplateListResponse {
     /**

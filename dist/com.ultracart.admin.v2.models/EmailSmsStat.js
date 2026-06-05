@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailSmsStat model module.
  * @module com.ultracart.admin.v2.models/EmailSmsStat
- * @version 4.1.97
+ * @version 4.1.98
  */
 var EmailSmsStat = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FraudLookupAffiliate model module.
  * @module com.ultracart.admin.v2.models/FraudLookupAffiliate
- * @version 4.1.97
+ * @version 4.1.98
  */
 var FraudLookupAffiliate = /*#__PURE__*/function () {
   /**

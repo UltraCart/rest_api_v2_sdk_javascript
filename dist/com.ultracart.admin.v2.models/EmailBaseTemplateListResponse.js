@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailBaseTemplateListResponse model module.
  * @module com.ultracart.admin.v2.models/EmailBaseTemplateListResponse
- * @version 4.1.97
+ * @version 4.1.98
  */
 var EmailBaseTemplateListResponse = /*#__PURE__*/function () {
   /**

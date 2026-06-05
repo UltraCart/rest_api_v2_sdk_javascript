@@ -1917,6 +1917,12 @@ Object.defineProperty(exports, "CouponAmountOffItems", {
     return _CouponAmountOffItems["default"];
   }
 });
+Object.defineProperty(exports, "CouponAmountOffItemsAndFreeShipping", {
+  enumerable: true,
+  get: function get() {
+    return _CouponAmountOffItemsAndFreeShipping["default"];
+  }
+});
 Object.defineProperty(exports, "CouponAmountOffShipping", {
   enumerable: true,
   get: function get() {
@@ -6466,6 +6472,7 @@ var _CountriesResponse = _interopRequireDefault(require("./com.ultracart.admin.v
 var _Country = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Country"));
 var _Coupon = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Coupon"));
 var _CouponAmountOffItems = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponAmountOffItems"));
+var _CouponAmountOffItemsAndFreeShipping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponAmountOffItemsAndFreeShipping"));
 var _CouponAmountOffShipping = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponAmountOffShipping"));
 var _CouponAmountOffShippingWithItemsPurchase = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponAmountOffShippingWithItemsPurchase"));
 var _CouponAmountOffSubtotal = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CouponAmountOffSubtotal"));

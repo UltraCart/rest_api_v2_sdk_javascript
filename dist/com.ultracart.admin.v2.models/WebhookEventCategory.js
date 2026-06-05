@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WebhookEventCategory model module.
  * @module com.ultracart.admin.v2.models/WebhookEventCategory
- * @version 4.1.97
+ * @version 4.1.98
  */
 var WebhookEventCategory = /*#__PURE__*/function () {
   /**
