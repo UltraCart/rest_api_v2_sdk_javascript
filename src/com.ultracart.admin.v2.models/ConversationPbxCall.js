@@ -26,7 +26,7 @@ import ConversationPbxCallTransfer from './ConversationPbxCallTransfer';
 /**
  * The ConversationPbxCall model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCall
- * @version 4.1.99
+ * @version 4.1.100
  */
 class ConversationPbxCall {
     /**

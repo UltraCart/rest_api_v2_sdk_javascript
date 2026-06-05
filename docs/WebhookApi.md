@@ -258,6 +258,15 @@ let apiInstance = new ucApi.WebhookApi(apiClient);
 
 let webhookOid = 56; // Number | The webhook oid to retrieve log summaries for.
 let opts = {
+  'requestId': "requestId_example", // String | Filter by request id
+  'beginDate': "beginDate_example", // String | Filter to deliveries on or after this date/time
+  'endDate': "endDate_example", // String | Filter to deliveries on or before this date/time
+  'status': "status_example", // String | Filter by HTTP status code
+  'success': true, // Boolean | Filter by success (true) or failure (false)
+  'event': "event_example", // String | Filter by an event name contained in the delivery
+  'orderId': "orderId_example", // String | Filter by an order id contained in the delivery
+  'request': "request_example", // String | Filter by text contained in the request payload
+  'duration': 56, // Number | Filter to deliveries that took at least this many milliseconds
   '_limit': 100, // Number | The maximum number of records to return on this one API call.
   '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
   '_since': "_since_example" // String | Fetch log summaries that have been delivered since this date/time.
@@ -279,6 +288,15 @@ apiInstance.getWebhookLogSummaries(webhookOid, opts, (error, data, response) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhookOid** | **Number**| The webhook oid to retrieve log summaries for. | 
+ **requestId** | **String**| Filter by request id | [optional] 
+ **beginDate** | **String**| Filter to deliveries on or after this date/time | [optional] 
+ **endDate** | **String**| Filter to deliveries on or before this date/time | [optional] 
+ **status** | **String**| Filter by HTTP status code | [optional] 
+ **success** | **Boolean**| Filter by success (true) or failure (false) | [optional] 
+ **event** | **String**| Filter by an event name contained in the delivery | [optional] 
+ **orderId** | **String**| Filter by an order id contained in the delivery | [optional] 
+ **request** | **String**| Filter by text contained in the request payload | [optional] 
+ **duration** | **Number**| Filter to deliveries that took at least this many milliseconds | [optional] 
  **_limit** | **Number**| The maximum number of records to return on this one API call. | [optional] [default to 100]
  **_offset** | **Number**| Pagination of the record set.  Offset is a zero based index. | [optional] [default to 0]
  **_since** | **String**| Fetch log summaries that have been delivered since this date/time. | [optional] 

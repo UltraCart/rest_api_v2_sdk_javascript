@@ -25,7 +25,7 @@ import WebhooksResponse from '../com.ultracart.admin.v2.models/WebhooksResponse'
 /**
 * Webhook service.
 * @module com.ultracart.admin.v2/WebhookApi
-* @version 4.1.99
+* @version 4.1.100
 */
 export default class WebhookApi {
 
@@ -224,6 +224,15 @@ export default class WebhookApi {
      * Retrieves the log summary information for a given webhook.  This is useful for displaying all the various logs that can be viewed. 
      * @param {Number} webhookOid The webhook oid to retrieve log summaries for.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.requestId Filter by request id
+     * @param {String} opts.beginDate Filter to deliveries on or after this date/time
+     * @param {String} opts.endDate Filter to deliveries on or before this date/time
+     * @param {String} opts.status Filter by HTTP status code
+     * @param {Boolean} opts.success Filter by success (true) or failure (false)
+     * @param {String} opts.event Filter by an event name contained in the delivery
+     * @param {String} opts.orderId Filter by an order id contained in the delivery
+     * @param {String} opts.request Filter by text contained in the request payload
+     * @param {Number} opts.duration Filter to deliveries that took at least this many milliseconds
      * @param {Number} opts._limit The maximum number of records to return on this one API call. (default to 100)
      * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
      * @param {String} opts._since Fetch log summaries that have been delivered since this date/time.
@@ -242,6 +251,15 @@ export default class WebhookApi {
         'webhookOid': webhookOid
       };
       let queryParams = {
+        'requestId': opts['requestId'],
+        'beginDate': opts['beginDate'],
+        'endDate': opts['endDate'],
+        'status': opts['status'],
+        'success': opts['success'],
+        'event': opts['event'],
+        'orderId': opts['orderId'],
+        'request': opts['request'],
+        'duration': opts['duration'],
         '_limit': opts['_limit'],
         '_offset': opts['_offset'],
         '_since': opts['_since']

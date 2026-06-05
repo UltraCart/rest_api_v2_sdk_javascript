@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Webhook model module.
  * @module com.ultracart.admin.v2.models/Webhook
- * @version 4.1.98
+ * @version 4.1.99
  */
 var Webhook = /*#__PURE__*/function () {
   /**
@@ -103,8 +103,14 @@ var Webhook = /*#__PURE__*/function () {
         if (data.hasOwnProperty('maximum_size')) {
           obj['maximum_size'] = _ApiClient["default"].convertToType(data['maximum_size'], 'Number');
         }
+        if (data.hasOwnProperty('merchant_comments')) {
+          obj['merchant_comments'] = _ApiClient["default"].convertToType(data['merchant_comments'], 'String');
+        }
         if (data.hasOwnProperty('merchant_id')) {
           obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
+        }
+        if (data.hasOwnProperty('name')) {
+          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
         if (data.hasOwnProperty('next_retry_after')) {
           obj['next_retry_after'] = _ApiClient["default"].convertToType(data['next_retry_after'], 'String');
@@ -207,10 +213,22 @@ Webhook.prototype['maximum_events'] = undefined;
 Webhook.prototype['maximum_size'] = undefined;
 
 /**
+ * Merchant comments about this webhook
+ * @member {String} merchant_comments
+ */
+Webhook.prototype['merchant_comments'] = undefined;
+
+/**
  * The UltraCart merchant ID that owns this webhook
  * @member {String} merchant_id
  */
 Webhook.prototype['merchant_id'] = undefined;
+
+/**
+ * Friendly name to help identify this webhook
+ * @member {String} name
+ */
+Webhook.prototype['name'] = undefined;
 
 /**
  * The next time UltraCart will attempt delivery if failures have been occurring

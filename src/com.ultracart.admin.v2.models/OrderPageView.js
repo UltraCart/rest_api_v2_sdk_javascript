@@ -18,7 +18,7 @@ import OrderPageViewParam from './OrderPageViewParam';
 /**
  * The OrderPageView model module.
  * @module com.ultracart.admin.v2.models/OrderPageView
- * @version 4.1.99
+ * @version 4.1.100
  */
 class OrderPageView {
     /**

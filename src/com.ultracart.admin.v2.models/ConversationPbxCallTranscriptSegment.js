@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallTranscriptSegment model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment
- * @version 4.1.99
+ * @version 4.1.100
  */
 class ConversationPbxCallTranscriptSegment {
     /**

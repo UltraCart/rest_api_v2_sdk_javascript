@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationKnowledgeBaseDocumentUploadUrl model module.
  * @module com.ultracart.admin.v2.models/ConversationKnowledgeBaseDocumentUploadUrl
- * @version 4.1.99
+ * @version 4.1.100
  */
 class ConversationKnowledgeBaseDocumentUploadUrl {
     /**

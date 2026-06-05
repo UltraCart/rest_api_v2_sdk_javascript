@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhookLogSummary model module.
  * @module com.ultracart.admin.v2.models/WebhookLogSummary
- * @version 4.1.99
+ * @version 4.1.100
  */
 class WebhookLogSummary {
     /**
@@ -50,8 +50,20 @@ class WebhookLogSummary {
             if (data.hasOwnProperty('delivery_dts')) {
                 obj['delivery_dts'] = ApiClient.convertToType(data['delivery_dts'], 'String');
             }
+            if (data.hasOwnProperty('duration')) {
+                obj['duration'] = ApiClient.convertToType(data['duration'], 'Number');
+            }
+            if (data.hasOwnProperty('event_names')) {
+                obj['event_names'] = ApiClient.convertToType(data['event_names'], ['String']);
+            }
+            if (data.hasOwnProperty('order_ids')) {
+                obj['order_ids'] = ApiClient.convertToType(data['order_ids'], ['String']);
+            }
             if (data.hasOwnProperty('request_id')) {
                 obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
+            }
+            if (data.hasOwnProperty('status_code')) {
+                obj['status_code'] = ApiClient.convertToType(data['status_code'], 'Number');
             }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
@@ -70,10 +82,34 @@ class WebhookLogSummary {
 WebhookLogSummary.prototype['delivery_dts'] = undefined;
 
 /**
+ * Number of milliseconds to process the notification
+ * @member {Number} duration
+ */
+WebhookLogSummary.prototype['duration'] = undefined;
+
+/**
+ * Event names contained in this delivery
+ * @member {Array.<String>} event_names
+ */
+WebhookLogSummary.prototype['event_names'] = undefined;
+
+/**
+ * Order ids contained in this delivery
+ * @member {Array.<String>} order_ids
+ */
+WebhookLogSummary.prototype['order_ids'] = undefined;
+
+/**
  * Request id
  * @member {String} request_id
  */
 WebhookLogSummary.prototype['request_id'] = undefined;
+
+/**
+ * HTTP status code received from the server
+ * @member {Number} status_code
+ */
+WebhookLogSummary.prototype['status_code'] = undefined;
 
 /**
  * True if the notification was successful
