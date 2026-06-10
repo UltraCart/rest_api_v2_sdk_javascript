@@ -26,7 +26,7 @@ import ConversationPbxCallTransfer from './ConversationPbxCallTransfer';
 /**
  * The ConversationPbxCall model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCall
- * @version 4.1.100
+ * @version 4.1.101
  */
 class ConversationPbxCall {
     /**
@@ -107,6 +107,12 @@ class ConversationPbxCall {
             }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+            }
+            if (data.hasOwnProperty('notes')) {
+                obj['notes'] = ApiClient.convertToType(data['notes'], 'String');
+            }
+            if (data.hasOwnProperty('notes_finalized_dts')) {
+                obj['notes_finalized_dts'] = ApiClient.convertToType(data['notes_finalized_dts'], 'String');
             }
             if (data.hasOwnProperty('recording_sids')) {
                 obj['recording_sids'] = ApiClient.convertToType(data['recording_sids'], ['String']);
@@ -240,6 +246,18 @@ ConversationPbxCall.prototype['holds'] = undefined;
  * @member {String} merchant_id
  */
 ConversationPbxCall.prototype['merchant_id'] = undefined;
+
+/**
+ * Agent-authored notes for this call, captured during the call and after-call work
+ * @member {String} notes
+ */
+ConversationPbxCall.prototype['notes'] = undefined;
+
+/**
+ * Timestamp when the agent finalized notes via Save & finish; gates Zoho Desk ticket creation
+ * @member {String} notes_finalized_dts
+ */
+ConversationPbxCall.prototype['notes_finalized_dts'] = undefined;
 
 /**
  * List of all Twilio recording SIDs associated with this call

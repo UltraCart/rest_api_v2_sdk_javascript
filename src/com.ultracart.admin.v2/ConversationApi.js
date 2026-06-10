@@ -70,6 +70,7 @@ import ConversationPbxAvailablePhoneNumbersResponse from '../com.ultracart.admin
 import ConversationPbxCallResponse from '../com.ultracart.admin.v2.models/ConversationPbxCallResponse';
 import ConversationPbxCallSearchRequest from '../com.ultracart.admin.v2.models/ConversationPbxCallSearchRequest';
 import ConversationPbxCallSearchResponse from '../com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse';
+import ConversationPbxCallUpdateRequest from '../com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest';
 import ConversationPbxClassOfService from '../com.ultracart.admin.v2.models/ConversationPbxClassOfService';
 import ConversationPbxClassOfServiceResponse from '../com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse';
 import ConversationPbxClassOfServicesResponse from '../com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse';
@@ -124,7 +125,7 @@ import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.100
+* @version 4.1.101
 */
 export default class ConversationApi {
 
@@ -5610,6 +5611,54 @@ export default class ConversationApi {
       let returnType = ConversationPbxAudioResponse;
       return this.apiClient.callApi(
         '/conversation/pbx/audio/{conversationPbxAudioUuid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updatePbxCall operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updatePbxCallCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCallResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update pbx call record
+     * Update the agent-authored fields (notes, finalize) on a PBX call record 
+     * @param {String} callUuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest} update_request Update Request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updatePbxCallCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxCallResponse}
+     */
+    updatePbxCall(callUuid, update_request, callback) {
+      let postBody = update_request;
+      // verify the required parameter 'callUuid' is set
+      if (callUuid === undefined || callUuid === null) {
+        throw new Error("Missing the required parameter 'callUuid' when calling updatePbxCall");
+      }
+      // verify the required parameter 'update_request' is set
+      if (update_request === undefined || update_request === null) {
+        throw new Error("Missing the required parameter 'update_request' when calling updatePbxCall");
+      }
+
+      let pathParams = {
+        'callUuid': callUuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ConversationPbxCallResponse;
+      return this.apiClient.callApi(
+        '/conversation/pbx/call/{callUuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartPayment model module.
  * @module com.ultracart.admin.v2.models/CartPayment
- * @version 4.1.99
+ * @version 4.1.100
  */
 var CartPayment = /*#__PURE__*/function () {
   /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The WebhookLog model module.
  * @module com.ultracart.admin.v2.models/WebhookLog
- * @version 4.1.99
+ * @version 4.1.100
  */
 var WebhookLog = /*#__PURE__*/function () {
   /**
@@ -65,6 +65,12 @@ var WebhookLog = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('duration')) {
           obj['duration'] = _ApiClient["default"].convertToType(data['duration'], 'Number');
+        }
+        if (data.hasOwnProperty('event_names')) {
+          obj['event_names'] = _ApiClient["default"].convertToType(data['event_names'], ['String']);
+        }
+        if (data.hasOwnProperty('order_ids')) {
+          obj['order_ids'] = _ApiClient["default"].convertToType(data['order_ids'], ['String']);
         }
         if (data.hasOwnProperty('queue_delay')) {
           obj['queue_delay'] = _ApiClient["default"].convertToType(data['queue_delay'], 'Number');
@@ -112,6 +118,18 @@ WebhookLog.prototype['delivery_dts'] = undefined;
  * @member {Number} duration
  */
 WebhookLog.prototype['duration'] = undefined;
+
+/**
+ * Event names contained in this delivery
+ * @member {Array.<String>} event_names
+ */
+WebhookLog.prototype['event_names'] = undefined;
+
+/**
+ * Order ids contained in this delivery
+ * @member {Array.<String>} order_ids
+ */
+WebhookLog.prototype['order_ids'] = undefined;
 
 /**
  * Number of milliseconds of delay caused by queuing

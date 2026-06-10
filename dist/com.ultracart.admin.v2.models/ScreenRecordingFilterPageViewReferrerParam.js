@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingFilterPageViewReferrerParam model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewReferrerParam
- * @version 4.1.99
+ * @version 4.1.100
  */
 var ScreenRecordingFilterPageViewReferrerParam = /*#__PURE__*/function () {
   /**

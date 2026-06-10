@@ -132,6 +132,7 @@ Method | HTTP request | Description
 [**updatePbxAddress**](ConversationApi.md#updatePbxAddress) | **PUT** /conversation/pbx/address/{conversationPbxAddressUuid} | Update pbx address
 [**updatePbxAgent**](ConversationApi.md#updatePbxAgent) | **PUT** /conversation/pbx/agent/{conversationPbxAgentUuid} | Update pbx agent
 [**updatePbxAudio**](ConversationApi.md#updatePbxAudio) | **PUT** /conversation/pbx/audio/{conversationPbxAudioUuid} | Update pbx audio
+[**updatePbxCall**](ConversationApi.md#updatePbxCall) | **PUT** /conversation/pbx/call/{callUuid} | Update pbx call record
 [**updatePbxClassOfService**](ConversationApi.md#updatePbxClassOfService) | **PUT** /conversation/pbx/class_of_service/{classOfServiceUuid} | Update pbx class of service
 [**updatePbxDefaultTimezone**](ConversationApi.md#updatePbxDefaultTimezone) | **PUT** /conversation/pbx/config/default-timezone | Set the merchant default timezone
 [**updatePbxHardwarePhone**](ConversationApi.md#updatePbxHardwarePhone) | **PUT** /conversation/pbx/hardware_phone/{conversationPbxHardwarePhoneUuid} | Update pbx hardware phone
@@ -7174,6 +7175,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ConversationPbxAudioResponse**](ConversationPbxAudioResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updatePbxCall
+
+> ConversationPbxCallResponse updatePbxCall(callUuid, update_request)
+
+Update pbx call record
+
+Update the agent-authored fields (notes, finalize) on a PBX call record 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE updatePbxCall -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let callUuid = "callUuid_example"; // String | 
+let update_request = new UltraCartRestApiV2.ConversationPbxCallUpdateRequest(); // ConversationPbxCallUpdateRequest | Update Request
+apiInstance.updatePbxCall(callUuid, update_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE updatePbxCall -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **callUuid** | **String**|  | 
+ **update_request** | [**ConversationPbxCallUpdateRequest**](ConversationPbxCallUpdateRequest.md)| Update Request | 
+
+### Return type
+
+[**ConversationPbxCallResponse**](ConversationPbxCallResponse.md)
 
 ### Authorization
 

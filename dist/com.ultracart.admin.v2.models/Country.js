@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Country model module.
  * @module com.ultracart.admin.v2.models/Country
- * @version 4.1.99
+ * @version 4.1.100
  */
 var Country = /*#__PURE__*/function () {
   /**

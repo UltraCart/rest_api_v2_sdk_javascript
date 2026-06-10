@@ -254,6 +254,7 @@ import ConversationPbxCallTimeline from './com.ultracart.admin.v2.models/Convers
 import ConversationPbxCallTranscript from './com.ultracart.admin.v2.models/ConversationPbxCallTranscript';
 import ConversationPbxCallTranscriptSegment from './com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment';
 import ConversationPbxCallTransfer from './com.ultracart.admin.v2.models/ConversationPbxCallTransfer';
+import ConversationPbxCallUpdateRequest from './com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest';
 import ConversationPbxClassOfService from './com.ultracart.admin.v2.models/ConversationPbxClassOfService';
 import ConversationPbxClassOfServiceResponse from './com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse';
 import ConversationPbxClassOfServicesResponse from './com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse';
@@ -1069,7 +1070,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.100
+* @version 4.1.101
 */
 export {
     /**
@@ -2523,6 +2524,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationPbxCallTransfer}
      */
     ConversationPbxCallTransfer,
+
+    /**
+     * The ConversationPbxCallUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest}
+     */
+    ConversationPbxCallUpdateRequest,
 
     /**
      * The ConversationPbxClassOfService model constructor.
