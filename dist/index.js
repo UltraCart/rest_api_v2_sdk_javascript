@@ -1491,6 +1491,12 @@ Object.defineProperty(exports, "ConversationPbxCallTransfer", {
     return _ConversationPbxCallTransfer["default"];
   }
 });
+Object.defineProperty(exports, "ConversationPbxCallUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationPbxCallUpdateRequest["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationPbxClassOfService", {
   enumerable: true,
   get: function get() {
@@ -6401,6 +6407,7 @@ var _ConversationPbxCallTimeline = _interopRequireDefault(require("./com.ultraca
 var _ConversationPbxCallTranscript = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTranscript"));
 var _ConversationPbxCallTranscriptSegment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTranscriptSegment"));
 var _ConversationPbxCallTransfer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallTransfer"));
+var _ConversationPbxCallUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest"));
 var _ConversationPbxClassOfService = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxClassOfService"));
 var _ConversationPbxClassOfServiceResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse"));
 var _ConversationPbxClassOfServicesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse"));

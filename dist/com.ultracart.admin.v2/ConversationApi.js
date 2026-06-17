@@ -62,6 +62,7 @@ var _ConversationPbxAvailablePhoneNumbersResponse = _interopRequireDefault(requi
 var _ConversationPbxCallResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallResponse"));
 var _ConversationPbxCallSearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallSearchRequest"));
 var _ConversationPbxCallSearchResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallSearchResponse"));
+var _ConversationPbxCallUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest"));
 var _ConversationPbxClassOfService = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxClassOfService"));
 var _ConversationPbxClassOfServiceResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxClassOfServiceResponse"));
 var _ConversationPbxClassOfServicesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxClassOfServicesResponse"));
@@ -134,7 +135,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.100
+* @version 4.1.101
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -4672,6 +4673,47 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxAudioResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/audio/{conversationPbxAudioUuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updatePbxCall operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~updatePbxCallCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCallResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update pbx call record
+     * Update the agent-authored fields (notes, finalize) on a PBX call record 
+     * @param {String} callUuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest} update_request Update Request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~updatePbxCallCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxCallResponse}
+     */
+  }, {
+    key: "updatePbxCall",
+    value: function updatePbxCall(callUuid, update_request, callback) {
+      var postBody = update_request;
+      // verify the required parameter 'callUuid' is set
+      if (callUuid === undefined || callUuid === null) {
+        throw new Error("Missing the required parameter 'callUuid' when calling updatePbxCall");
+      }
+      // verify the required parameter 'update_request' is set
+      if (update_request === undefined || update_request === null) {
+        throw new Error("Missing the required parameter 'update_request' when calling updatePbxCall");
+      }
+      var pathParams = {
+        'callUuid': callUuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxCallResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/call/{callUuid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

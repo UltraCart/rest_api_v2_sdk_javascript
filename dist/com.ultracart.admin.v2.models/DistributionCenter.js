@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The DistributionCenter model module.
  * @module com.ultracart.admin.v2.models/DistributionCenter
- * @version 4.1.100
+ * @version 4.1.101
  */
 var DistributionCenter = /*#__PURE__*/function () {
   /**

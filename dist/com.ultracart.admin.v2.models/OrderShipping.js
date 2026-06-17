@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderShipping model module.
  * @module com.ultracart.admin.v2.models/OrderShipping
- * @version 4.1.100
+ * @version 4.1.101
  */
 var OrderShipping = /*#__PURE__*/function () {
   /**

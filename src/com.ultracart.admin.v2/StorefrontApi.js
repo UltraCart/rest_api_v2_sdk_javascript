@@ -33,6 +33,8 @@ import EmailCommseqEmailSendTestRequest from '../com.ultracart.admin.v2.models/E
 import EmailCommseqEmailSendTestResponse from '../com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse';
 import EmailCommseqEmailsRequest from '../com.ultracart.admin.v2.models/EmailCommseqEmailsRequest';
 import EmailCommseqEmailsResponse from '../com.ultracart.admin.v2.models/EmailCommseqEmailsResponse';
+import EmailCommseqEnrollmentRequest from '../com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest';
+import EmailCommseqEnrollmentResponse from '../com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse';
 import EmailCommseqPostcard from '../com.ultracart.admin.v2.models/EmailCommseqPostcard';
 import EmailCommseqPostcardResponse from '../com.ultracart.admin.v2.models/EmailCommseqPostcardResponse';
 import EmailCommseqPostcardSendTestRequest from '../com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest';
@@ -164,7 +166,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.101
+* @version 4.1.102
 */
 export default class StorefrontApi {
 
@@ -1474,6 +1476,60 @@ export default class StorefrontApi {
       let returnType = LibraryItemResponse;
       return this.apiClient.callApi(
         '/storefront/code_library/{library_item_oid}/duplicate', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the enrollCommseqCustomer operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~enrollCommseqCustomerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Enroll a customer into a communication sequence
+     * Enrolls a single real customer (by email) into the communication sequence.  A customer who is already enrolled will not be enrolled a second time. 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest} email_commseq_enrollment_request Commseq enrollment request
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~enrollCommseqCustomerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse}
+     */
+    enrollCommseqCustomer(storefront_oid, commseq_uuid, email_commseq_enrollment_request, callback) {
+      let postBody = email_commseq_enrollment_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling enrollCommseqCustomer");
+      }
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling enrollCommseqCustomer");
+      }
+      // verify the required parameter 'email_commseq_enrollment_request' is set
+      if (email_commseq_enrollment_request === undefined || email_commseq_enrollment_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_enrollment_request' when calling enrollCommseqCustomer");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EmailCommseqEnrollmentResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/enroll', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

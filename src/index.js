@@ -479,6 +479,8 @@ import EmailCommseqEmailSendTestRequest from './com.ultracart.admin.v2.models/Em
 import EmailCommseqEmailSendTestResponse from './com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse';
 import EmailCommseqEmailsRequest from './com.ultracart.admin.v2.models/EmailCommseqEmailsRequest';
 import EmailCommseqEmailsResponse from './com.ultracart.admin.v2.models/EmailCommseqEmailsResponse';
+import EmailCommseqEnrollmentRequest from './com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest';
+import EmailCommseqEnrollmentResponse from './com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse';
 import EmailCommseqPostcard from './com.ultracart.admin.v2.models/EmailCommseqPostcard';
 import EmailCommseqPostcardResponse from './com.ultracart.admin.v2.models/EmailCommseqPostcardResponse';
 import EmailCommseqPostcardSendTestRequest from './com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest';
@@ -1070,7 +1072,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.101
+* @version 4.1.102
 */
 export {
     /**
@@ -3874,6 +3876,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/EmailCommseqEmailsResponse}
      */
     EmailCommseqEmailsResponse,
+
+    /**
+     * The EmailCommseqEnrollmentRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest}
+     */
+    EmailCommseqEnrollmentRequest,
+
+    /**
+     * The EmailCommseqEnrollmentResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse}
+     */
+    EmailCommseqEnrollmentResponse,
 
     /**
      * The EmailCommseqPostcard model constructor.
