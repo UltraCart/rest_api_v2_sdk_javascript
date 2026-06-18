@@ -2859,6 +2859,18 @@ Object.defineProperty(exports, "EmailCommseqEmailsResponse", {
     return _EmailCommseqEmailsResponse["default"];
   }
 });
+Object.defineProperty(exports, "EmailCommseqEnrollmentRequest", {
+  enumerable: true,
+  get: function get() {
+    return _EmailCommseqEnrollmentRequest["default"];
+  }
+});
+Object.defineProperty(exports, "EmailCommseqEnrollmentResponse", {
+  enumerable: true,
+  get: function get() {
+    return _EmailCommseqEnrollmentResponse["default"];
+  }
+});
 Object.defineProperty(exports, "EmailCommseqPostcard", {
   enumerable: true,
   get: function get() {
@@ -6632,6 +6644,8 @@ var _EmailCommseqEmailSendTestRequest = _interopRequireDefault(require("./com.ul
 var _EmailCommseqEmailSendTestResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse"));
 var _EmailCommseqEmailsRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqEmailsRequest"));
 var _EmailCommseqEmailsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqEmailsResponse"));
+var _EmailCommseqEnrollmentRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest"));
+var _EmailCommseqEnrollmentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse"));
 var _EmailCommseqPostcard = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqPostcard"));
 var _EmailCommseqPostcardResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqPostcardResponse"));
 var _EmailCommseqPostcardSendTestRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest"));

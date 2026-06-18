@@ -14,7 +14,9 @@ docs/Activity.md
 docs/AddLibraryItemRequest.md
 docs/AdjustInternalCertificateRequest.md
 docs/AdjustInternalCertificateResponse.md
+docs/Affiliate.md
 docs/AffiliateApi.md
+docs/AffiliateAttribute.md
 docs/AffiliateClick.md
 docs/AffiliateClickQuery.md
 docs/AffiliateClicksResponse.md
@@ -22,6 +24,11 @@ docs/AffiliateLedger.md
 docs/AffiliateLedgerQuery.md
 docs/AffiliateLedgersResponse.md
 docs/AffiliateLink.md
+docs/AffiliateMarketingStrategy.md
+docs/AffiliateQuery.md
+docs/AffiliateResponse.md
+docs/AffiliateTierRelationship.md
+docs/AffiliatesResponse.md
 docs/AgentSummary.md
 docs/ApiUserApplicationProfile.md
 docs/ApplyLibraryItemRequest.md
@@ -1046,6 +1053,8 @@ src/com.ultracart.admin.v2.models/Activity.js
 src/com.ultracart.admin.v2.models/AddLibraryItemRequest.js
 src/com.ultracart.admin.v2.models/AdjustInternalCertificateRequest.js
 src/com.ultracart.admin.v2.models/AdjustInternalCertificateResponse.js
+src/com.ultracart.admin.v2.models/Affiliate.js
+src/com.ultracart.admin.v2.models/AffiliateAttribute.js
 src/com.ultracart.admin.v2.models/AffiliateClick.js
 src/com.ultracart.admin.v2.models/AffiliateClickQuery.js
 src/com.ultracart.admin.v2.models/AffiliateClicksResponse.js
@@ -1053,6 +1062,11 @@ src/com.ultracart.admin.v2.models/AffiliateLedger.js
 src/com.ultracart.admin.v2.models/AffiliateLedgerQuery.js
 src/com.ultracart.admin.v2.models/AffiliateLedgersResponse.js
 src/com.ultracart.admin.v2.models/AffiliateLink.js
+src/com.ultracart.admin.v2.models/AffiliateMarketingStrategy.js
+src/com.ultracart.admin.v2.models/AffiliateQuery.js
+src/com.ultracart.admin.v2.models/AffiliateResponse.js
+src/com.ultracart.admin.v2.models/AffiliateTierRelationship.js
+src/com.ultracart.admin.v2.models/AffiliatesResponse.js
 src/com.ultracart.admin.v2.models/AgentSummary.js
 src/com.ultracart.admin.v2.models/ApiUserApplicationProfile.js
 src/com.ultracart.admin.v2.models/ApplyLibraryItemRequest.js

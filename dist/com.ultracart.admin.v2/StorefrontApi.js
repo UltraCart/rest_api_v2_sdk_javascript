@@ -25,6 +25,8 @@ var _EmailCommseqEmailSendTestRequest = _interopRequireDefault(require("../com.u
 var _EmailCommseqEmailSendTestResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse"));
 var _EmailCommseqEmailsRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqEmailsRequest"));
 var _EmailCommseqEmailsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqEmailsResponse"));
+var _EmailCommseqEnrollmentRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest"));
+var _EmailCommseqEnrollmentResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse"));
 var _EmailCommseqPostcard = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqPostcard"));
 var _EmailCommseqPostcardResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqPostcardResponse"));
 var _EmailCommseqPostcardSendTestRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/EmailCommseqPostcardSendTestRequest"));
@@ -173,7 +175,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.101
+* @version 4.1.102
 */
 var StorefrontApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -1289,6 +1291,53 @@ var StorefrontApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _LibraryItemResponse["default"];
       return this.apiClient.callApi('/storefront/code_library/{library_item_oid}/duplicate', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the enrollCommseqCustomer operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~enrollCommseqCustomerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Enroll a customer into a communication sequence
+     * Enrolls a single real customer (by email) into the communication sequence.  A customer who is already enrolled will not be enrolled a second time. 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest} email_commseq_enrollment_request Commseq enrollment request
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~enrollCommseqCustomerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse}
+     */
+  }, {
+    key: "enrollCommseqCustomer",
+    value: function enrollCommseqCustomer(storefront_oid, commseq_uuid, email_commseq_enrollment_request, callback) {
+      var postBody = email_commseq_enrollment_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling enrollCommseqCustomer");
+      }
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling enrollCommseqCustomer");
+      }
+      // verify the required parameter 'email_commseq_enrollment_request' is set
+      if (email_commseq_enrollment_request === undefined || email_commseq_enrollment_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_enrollment_request' when calling enrollCommseqCustomer");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _EmailCommseqEnrollmentResponse["default"];
+      return this.apiClient.callApi('/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/enroll', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

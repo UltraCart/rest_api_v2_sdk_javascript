@@ -31,7 +31,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.1.101
+ * @version 4.1.102
  */
 var AutoOrderItem = /*#__PURE__*/function () {
   /**
@@ -90,6 +90,12 @@ var AutoOrderItem = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('calculated_next_shipment_dts')) {
           obj['calculated_next_shipment_dts'] = _ApiClient["default"].convertToType(data['calculated_next_shipment_dts'], 'String');
+        }
+        if (data.hasOwnProperty('cancel_dts')) {
+          obj['cancel_dts'] = _ApiClient["default"].convertToType(data['cancel_dts'], 'String');
+        }
+        if (data.hasOwnProperty('cancel_reason')) {
+          obj['cancel_reason'] = _ApiClient["default"].convertToType(data['cancel_reason'], 'String');
         }
         if (data.hasOwnProperty('first_order_dts')) {
           obj['first_order_dts'] = _ApiClient["default"].convertToType(data['first_order_dts'], 'String');
@@ -212,6 +218,18 @@ AutoOrderItem.prototype['auto_order_item_oid'] = undefined;
  * @member {String} calculated_next_shipment_dts
  */
 AutoOrderItem.prototype['calculated_next_shipment_dts'] = undefined;
+
+/**
+ * Date/time this item was cancelled (companion to cancel_reason).  On update, null leaves the existing value unchanged; pass an empty string to clear it.
+ * @member {String} cancel_dts
+ */
+AutoOrderItem.prototype['cancel_dts'] = undefined;
+
+/**
+ * Reason this item was cancelled, captured when the item was cancelled by the customer or merchant.  On update, null leaves the existing value unchanged; pass an empty string to clear it.
+ * @member {String} cancel_reason
+ */
+AutoOrderItem.prototype['cancel_reason'] = undefined;
 
 /**
  * Date/time of the first order of this item.  Null if item added to auto order and has not been rebilled yet.

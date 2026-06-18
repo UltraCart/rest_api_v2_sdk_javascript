@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxTimeRangeConfig model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeRangeConfig
- * @version 4.1.102
+ * @version 4.1.103
  */
 class ConversationPbxTimeRangeConfig {
     /**

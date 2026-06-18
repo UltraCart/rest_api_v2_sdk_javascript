@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudLookupGateway model module.
  * @module com.ultracart.admin.v2.models/FraudLookupGateway
- * @version 4.1.102
+ * @version 4.1.103
  */
 class FraudLookupGateway {
     /**

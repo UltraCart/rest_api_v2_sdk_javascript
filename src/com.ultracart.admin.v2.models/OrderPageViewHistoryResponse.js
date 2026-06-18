@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The OrderPageViewHistoryResponse model module.
  * @module com.ultracart.admin.v2.models/OrderPageViewHistoryResponse
- * @version 4.1.102
+ * @version 4.1.103
  */
 class OrderPageViewHistoryResponse {
     /**

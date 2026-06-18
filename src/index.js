@@ -25,6 +25,8 @@ import Activity from './com.ultracart.admin.v2.models/Activity';
 import AddLibraryItemRequest from './com.ultracart.admin.v2.models/AddLibraryItemRequest';
 import AdjustInternalCertificateRequest from './com.ultracart.admin.v2.models/AdjustInternalCertificateRequest';
 import AdjustInternalCertificateResponse from './com.ultracart.admin.v2.models/AdjustInternalCertificateResponse';
+import Affiliate from './com.ultracart.admin.v2.models/Affiliate';
+import AffiliateAttribute from './com.ultracart.admin.v2.models/AffiliateAttribute';
 import AffiliateClick from './com.ultracart.admin.v2.models/AffiliateClick';
 import AffiliateClickQuery from './com.ultracart.admin.v2.models/AffiliateClickQuery';
 import AffiliateClicksResponse from './com.ultracart.admin.v2.models/AffiliateClicksResponse';
@@ -32,6 +34,11 @@ import AffiliateLedger from './com.ultracart.admin.v2.models/AffiliateLedger';
 import AffiliateLedgerQuery from './com.ultracart.admin.v2.models/AffiliateLedgerQuery';
 import AffiliateLedgersResponse from './com.ultracart.admin.v2.models/AffiliateLedgersResponse';
 import AffiliateLink from './com.ultracart.admin.v2.models/AffiliateLink';
+import AffiliateMarketingStrategy from './com.ultracart.admin.v2.models/AffiliateMarketingStrategy';
+import AffiliateQuery from './com.ultracart.admin.v2.models/AffiliateQuery';
+import AffiliateResponse from './com.ultracart.admin.v2.models/AffiliateResponse';
+import AffiliateTierRelationship from './com.ultracart.admin.v2.models/AffiliateTierRelationship';
+import AffiliatesResponse from './com.ultracart.admin.v2.models/AffiliatesResponse';
 import AgentSummary from './com.ultracart.admin.v2.models/AgentSummary';
 import ApiUserApplicationProfile from './com.ultracart.admin.v2.models/ApiUserApplicationProfile';
 import ApplyLibraryItemRequest from './com.ultracart.admin.v2.models/ApplyLibraryItemRequest';
@@ -1072,7 +1079,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.102
+* @version 4.1.103
 */
 export {
     /**
@@ -1154,6 +1161,18 @@ export {
     AdjustInternalCertificateResponse,
 
     /**
+     * The Affiliate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/Affiliate}
+     */
+    Affiliate,
+
+    /**
+     * The AffiliateAttribute model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AffiliateAttribute}
+     */
+    AffiliateAttribute,
+
+    /**
      * The AffiliateClick model constructor.
      * @property {module:com.ultracart.admin.v2.models/AffiliateClick}
      */
@@ -1194,6 +1213,36 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AffiliateLink}
      */
     AffiliateLink,
+
+    /**
+     * The AffiliateMarketingStrategy model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AffiliateMarketingStrategy}
+     */
+    AffiliateMarketingStrategy,
+
+    /**
+     * The AffiliateQuery model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AffiliateQuery}
+     */
+    AffiliateQuery,
+
+    /**
+     * The AffiliateResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AffiliateResponse}
+     */
+    AffiliateResponse,
+
+    /**
+     * The AffiliateTierRelationship model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AffiliateTierRelationship}
+     */
+    AffiliateTierRelationship,
+
+    /**
+     * The AffiliatesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AffiliatesResponse}
+     */
+    AffiliatesResponse,
 
     /**
      * The AgentSummary model constructor.

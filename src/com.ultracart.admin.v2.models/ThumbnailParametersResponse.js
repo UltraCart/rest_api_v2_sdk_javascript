@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ThumbnailParametersResponse model module.
  * @module com.ultracart.admin.v2.models/ThumbnailParametersResponse
- * @version 4.1.102
+ * @version 4.1.103
  */
 class ThumbnailParametersResponse {
     /**

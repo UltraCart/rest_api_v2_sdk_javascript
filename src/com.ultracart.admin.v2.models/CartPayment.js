@@ -22,7 +22,7 @@ import CartPaymentPurchaseOrder from './CartPaymentPurchaseOrder';
 /**
  * The CartPayment model module.
  * @module com.ultracart.admin.v2.models/CartPayment
- * @version 4.1.102
+ * @version 4.1.103
  */
 class CartPayment {
     /**
