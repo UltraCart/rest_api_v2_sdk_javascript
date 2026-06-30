@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderCancelReason model module.
  * @module com.ultracart.admin.v2.models/AutoOrderCancelReason
- * @version 4.1.103
+ * @version 4.1.104
  */
 class AutoOrderCancelReason {
     /**

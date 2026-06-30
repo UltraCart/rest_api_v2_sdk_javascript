@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponMoreLoyaltyPoints model module.
  * @module com.ultracart.admin.v2.models/CouponMoreLoyaltyPoints
- * @version 4.1.103
+ * @version 4.1.104
  */
 class CouponMoreLoyaltyPoints {
     /**

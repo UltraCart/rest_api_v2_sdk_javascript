@@ -18,11 +18,12 @@ import Error from './Error';
 import Order from './Order';
 import ResponseMetadata from './ResponseMetadata';
 import Warning from './Warning';
+import ZohoDeskTicketSummary from './ZohoDeskTicketSummary';
 
 /**
  * The ConversationPbxCustomerSnapshotResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse
- * @version 4.1.103
+ * @version 4.1.104
  */
 class ConversationPbxCustomerSnapshotResponse {
     /**
@@ -74,6 +75,9 @@ class ConversationPbxCustomerSnapshotResponse {
             if (data.hasOwnProperty('warning')) {
                 obj['warning'] = Warning.constructFromObject(data['warning']);
             }
+            if (data.hasOwnProperty('zoho_desk_tickets')) {
+                obj['zoho_desk_tickets'] = ApiClient.convertToType(data['zoho_desk_tickets'], [ZohoDeskTicketSummary]);
+            }
         }
         return obj;
     }
@@ -116,6 +120,11 @@ ConversationPbxCustomerSnapshotResponse.prototype['success'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/Warning} warning
  */
 ConversationPbxCustomerSnapshotResponse.prototype['warning'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ZohoDeskTicketSummary>} zoho_desk_tickets
+ */
+ConversationPbxCustomerSnapshotResponse.prototype['zoho_desk_tickets'] = undefined;
 
 
 

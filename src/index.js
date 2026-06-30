@@ -1026,6 +1026,7 @@ import WorkflowTasksResponse from './com.ultracart.admin.v2.models/WorkflowTasks
 import WorkflowUser from './com.ultracart.admin.v2.models/WorkflowUser';
 import WorkflowUserResponse from './com.ultracart.admin.v2.models/WorkflowUserResponse';
 import WorkflowUsersResponse from './com.ultracart.admin.v2.models/WorkflowUsersResponse';
+import ZohoDeskTicketSummary from './com.ultracart.admin.v2.models/ZohoDeskTicketSummary';
 import AffiliateApi from './com.ultracart.admin.v2/AffiliateApi';
 import AutoOrderApi from './com.ultracart.admin.v2/AutoOrderApi';
 import ChannelPartnerApi from './com.ultracart.admin.v2/ChannelPartnerApi';
@@ -1079,7 +1080,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.103
+* @version 4.1.104
 */
 export {
     /**
@@ -7165,6 +7166,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/WorkflowUsersResponse}
      */
     WorkflowUsersResponse,
+
+    /**
+     * The ZohoDeskTicketSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ZohoDeskTicketSummary}
+     */
+    ZohoDeskTicketSummary,
 
     /**
     * The AffiliateApi service constructor.

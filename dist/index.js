@@ -75,10 +75,22 @@ Object.defineProperty(exports, "AdjustInternalCertificateResponse", {
     return _AdjustInternalCertificateResponse["default"];
   }
 });
+Object.defineProperty(exports, "Affiliate", {
+  enumerable: true,
+  get: function get() {
+    return _Affiliate["default"];
+  }
+});
 Object.defineProperty(exports, "AffiliateApi", {
   enumerable: true,
   get: function get() {
     return _AffiliateApi["default"];
+  }
+});
+Object.defineProperty(exports, "AffiliateAttribute", {
+  enumerable: true,
+  get: function get() {
+    return _AffiliateAttribute["default"];
   }
 });
 Object.defineProperty(exports, "AffiliateClick", {
@@ -121,6 +133,36 @@ Object.defineProperty(exports, "AffiliateLink", {
   enumerable: true,
   get: function get() {
     return _AffiliateLink["default"];
+  }
+});
+Object.defineProperty(exports, "AffiliateMarketingStrategy", {
+  enumerable: true,
+  get: function get() {
+    return _AffiliateMarketingStrategy["default"];
+  }
+});
+Object.defineProperty(exports, "AffiliateQuery", {
+  enumerable: true,
+  get: function get() {
+    return _AffiliateQuery["default"];
+  }
+});
+Object.defineProperty(exports, "AffiliateResponse", {
+  enumerable: true,
+  get: function get() {
+    return _AffiliateResponse["default"];
+  }
+});
+Object.defineProperty(exports, "AffiliateTierRelationship", {
+  enumerable: true,
+  get: function get() {
+    return _AffiliateTierRelationship["default"];
+  }
+});
+Object.defineProperty(exports, "AffiliatesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _AffiliatesResponse["default"];
   }
 });
 Object.defineProperty(exports, "AgentSummary", {
@@ -6190,6 +6232,8 @@ var _Activity = _interopRequireDefault(require("./com.ultracart.admin.v2.models/
 var _AddLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AddLibraryItemRequest"));
 var _AdjustInternalCertificateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AdjustInternalCertificateRequest"));
 var _AdjustInternalCertificateResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AdjustInternalCertificateResponse"));
+var _Affiliate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Affiliate"));
+var _AffiliateAttribute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateAttribute"));
 var _AffiliateClick = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateClick"));
 var _AffiliateClickQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateClickQuery"));
 var _AffiliateClicksResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateClicksResponse"));
@@ -6197,6 +6241,11 @@ var _AffiliateLedger = _interopRequireDefault(require("./com.ultracart.admin.v2.
 var _AffiliateLedgerQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateLedgerQuery"));
 var _AffiliateLedgersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateLedgersResponse"));
 var _AffiliateLink = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateLink"));
+var _AffiliateMarketingStrategy = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateMarketingStrategy"));
+var _AffiliateQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateQuery"));
+var _AffiliateResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateResponse"));
+var _AffiliateTierRelationship = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateTierRelationship"));
+var _AffiliatesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliatesResponse"));
 var _AgentSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AgentSummary"));
 var _ApiUserApplicationProfile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApiUserApplicationProfile"));
 var _ApplyLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApplyLibraryItemRequest"));

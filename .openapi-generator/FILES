@@ -1037,6 +1037,7 @@ docs/WorkflowTasksResponse.md
 docs/WorkflowUser.md
 docs/WorkflowUserResponse.md
 docs/WorkflowUsersResponse.md
+docs/ZohoDeskTicketSummary.md
 git_push.sh
 mocha.opts
 package.json
@@ -2054,6 +2055,7 @@ src/com.ultracart.admin.v2.models/WorkflowTasksResponse.js
 src/com.ultracart.admin.v2.models/WorkflowUser.js
 src/com.ultracart.admin.v2.models/WorkflowUserResponse.js
 src/com.ultracart.admin.v2.models/WorkflowUsersResponse.js
+src/com.ultracart.admin.v2.models/ZohoDeskTicketSummary.js
 src/com.ultracart.admin.v2/AffiliateApi.js
 src/com.ultracart.admin.v2/AutoOrderApi.js
 src/com.ultracart.admin.v2/ChannelPartnerApi.js

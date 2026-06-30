@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **order_expand** | **String** |  | [optional] 
 **phone_number** | **String** |  | [optional] 
 **search_linked_accounts** | **Boolean** |  | [optional] 
+**search_zoho_desk_tickets** | **Boolean** |  | [optional] 
 **success** | **Boolean** | Indicates if API call was successful | [optional] 
 **warning** | [**Warning**](Warning.md) |  | [optional] 
 

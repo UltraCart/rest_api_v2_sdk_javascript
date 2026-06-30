@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **orders** | [**[Order]**](Order.md) |  | [optional] 
 **success** | **Boolean** | Indicates if API call was successful | [optional] 
 **warning** | [**Warning**](Warning.md) |  | [optional] 
+**zoho_desk_tickets** | [**[ZohoDeskTicketSummary]**](ZohoDeskTicketSummary.md) |  | [optional] 
 
 

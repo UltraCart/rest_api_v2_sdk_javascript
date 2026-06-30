@@ -5,10 +5,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _Affiliate = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Affiliate"));
 var _AffiliateClickQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AffiliateClickQuery"));
 var _AffiliateClicksResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AffiliateClicksResponse"));
 var _AffiliateLedgerQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AffiliateLedgerQuery"));
 var _AffiliateLedgersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AffiliateLedgersResponse"));
+var _AffiliateQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AffiliateQuery"));
+var _AffiliateResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AffiliateResponse"));
+var _AffiliatesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AffiliatesResponse"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -31,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Affiliate service.
 * @module com.ultracart.admin.v2/AffiliateApi
-* @version 4.1.102
+* @version 4.1.103
 */
 var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -47,25 +51,144 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
   }
 
   /**
-   * Callback function to receive the result of the getClicksByQuery operation.
-   * @callback module:com.ultracart.admin.v2/AffiliateApi~getClicksByQueryCallback
+   * Callback function to receive the result of the deleteAffiliate operation.
+   * @callback module:com.ultracart.admin.v2/AffiliateApi~deleteAffiliateCallback
    * @param {String} error Error message, if any.
-   * @param {module:com.ultracart.admin.v2.models/AffiliateClicksResponse} data The data returned by the service call.
+   * @param data This operation does not return a value.
    * @param {String} response The complete HTTP response.
    */
 
   /**
-   * Retrieve clicks
-   * Retrieves a group of clicks from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the clicks returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
-   * @param {module:com.ultracart.admin.v2.models/AffiliateClickQuery} click_query Click query
-   * @param {Object} opts Optional parameters
-   * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
-   * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
-   * @param {String} opts._expand The object expansion to perform on the result.  Only option is link.
-   * @param {module:com.ultracart.admin.v2/AffiliateApi~getClicksByQueryCallback} callback The callback function, accepting three arguments: error, data, response
-   * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateClicksResponse}
+   * Delete an affiliate
+   * Delete an affiliate on the UltraCart account.  The affiliate is disabled within the active affiliate program; their ledger and click history is preserved. 
+   * @param {Number} affiliate_oid The affiliate oid to delete.
+   * @param {module:com.ultracart.admin.v2/AffiliateApi~deleteAffiliateCallback} callback The callback function, accepting three arguments: error, data, response
    */
   return _createClass(AffiliateApi, [{
+    key: "deleteAffiliate",
+    value: function deleteAffiliate(affiliate_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'affiliate_oid' is set
+      if (affiliate_oid === undefined || affiliate_oid === null) {
+        throw new Error("Missing the required parameter 'affiliate_oid' when calling deleteAffiliate");
+      }
+      var pathParams = {
+        'affiliate_oid': affiliate_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/affiliate/affiliates/{affiliate_oid}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAffiliate operation.
+     * @callback module:com.ultracart.admin.v2/AffiliateApi~getAffiliateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AffiliateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an affiliate
+     * Retrieves a single affiliate using the specified affiliate oid. 
+     * @param {Number} affiliate_oid The affiliate oid to retrieve.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AffiliateApi~getAffiliateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateResponse}
+     */
+  }, {
+    key: "getAffiliate",
+    value: function getAffiliate(affiliate_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'affiliate_oid' is set
+      if (affiliate_oid === undefined || affiliate_oid === null) {
+        throw new Error("Missing the required parameter 'affiliate_oid' when calling getAffiliate");
+      }
+      var pathParams = {
+        'affiliate_oid': affiliate_oid
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _AffiliateResponse["default"];
+      return this.apiClient.callApi('/affiliate/affiliates/{affiliate_oid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getAffiliatesByQuery operation.
+     * @callback module:com.ultracart.admin.v2/AffiliateApi~getAffiliatesByQueryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AffiliatesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve affiliates
+     * Retrieves a group of affiliates from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the affiliates returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+     * @param {module:com.ultracart.admin.v2.models/AffiliateQuery} affiliate_query Affiliate query
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 200) (default to 100)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._sort The sort order of the affiliates.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
+     * @param {module:com.ultracart.admin.v2/AffiliateApi~getAffiliatesByQueryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliatesResponse}
+     */
+  }, {
+    key: "getAffiliatesByQuery",
+    value: function getAffiliatesByQuery(affiliate_query, opts, callback) {
+      opts = opts || {};
+      var postBody = affiliate_query;
+      // verify the required parameter 'affiliate_query' is set
+      if (affiliate_query === undefined || affiliate_query === null) {
+        throw new Error("Missing the required parameter 'affiliate_query' when calling getAffiliatesByQuery");
+      }
+      var pathParams = {};
+      var queryParams = {
+        '_limit': opts['_limit'],
+        '_offset': opts['_offset'],
+        '_sort': opts['_sort']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _AffiliatesResponse["default"];
+      return this.apiClient.callApi('/affiliate/affiliates/query', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getClicksByQuery operation.
+     * @callback module:com.ultracart.admin.v2/AffiliateApi~getClicksByQueryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AffiliateClicksResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve clicks
+     * Retrieves a group of clicks from the account based on a query object.  If no parameters are specified, the API call will fail with a bad request error.  Always specify some parameters to limit the scope of the clicks returned to ones you are truly interested in.  You will need to make multiple API calls in order to retrieve the entire result set since this API performs result set pagination. 
+     * @param {module:com.ultracart.admin.v2.models/AffiliateClickQuery} click_query Click query
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts._limit The maximum number of records to return on this one API call. (Maximum 10000) (default to 10000)
+     * @param {Number} opts._offset Pagination of the record set.  Offset is a zero based index. (default to 0)
+     * @param {String} opts._expand The object expansion to perform on the result.  Only option is link.
+     * @param {module:com.ultracart.admin.v2/AffiliateApi~getClicksByQueryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateClicksResponse}
+     */
+  }, {
     key: "getClicksByQuery",
     value: function getClicksByQuery(click_query, opts, callback) {
       opts = opts || {};
@@ -130,6 +253,91 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _AffiliateLedgersResponse["default"];
       return this.apiClient.callApi('/affiliate/ledgers/query', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the insertAffiliate operation.
+     * @callback module:com.ultracart.admin.v2/AffiliateApi~insertAffiliateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AffiliateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert an affiliate
+     * Insert an affiliate on the UltraCart account.  The affiliate is created within the merchant's active affiliate program. 
+     * @param {module:com.ultracart.admin.v2.models/Affiliate} affiliate Affiliate to insert
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AffiliateApi~insertAffiliateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateResponse}
+     */
+  }, {
+    key: "insertAffiliate",
+    value: function insertAffiliate(affiliate, opts, callback) {
+      opts = opts || {};
+      var postBody = affiliate;
+      // verify the required parameter 'affiliate' is set
+      if (affiliate === undefined || affiliate === null) {
+        throw new Error("Missing the required parameter 'affiliate' when calling insertAffiliate");
+      }
+      var pathParams = {};
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _AffiliateResponse["default"];
+      return this.apiClient.callApi('/affiliate/affiliates', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updateAffiliate operation.
+     * @callback module:com.ultracart.admin.v2/AffiliateApi~updateAffiliateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AffiliateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update an affiliate
+     * Update an affiliate on the UltraCart account.  This is a full replacement of the affiliate; omitted fields are reset to their defaults, with the exception of password which is only changed when supplied. 
+     * @param {Number} affiliate_oid The affiliate oid to update.
+     * @param {module:com.ultracart.admin.v2.models/Affiliate} affiliate Affiliate to update
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AffiliateApi~updateAffiliateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateResponse}
+     */
+  }, {
+    key: "updateAffiliate",
+    value: function updateAffiliate(affiliate_oid, affiliate, opts, callback) {
+      opts = opts || {};
+      var postBody = affiliate;
+      // verify the required parameter 'affiliate_oid' is set
+      if (affiliate_oid === undefined || affiliate_oid === null) {
+        throw new Error("Missing the required parameter 'affiliate_oid' when calling updateAffiliate");
+      }
+      // verify the required parameter 'affiliate' is set
+      if (affiliate === undefined || affiliate === null) {
+        throw new Error("Missing the required parameter 'affiliate' when calling updateAffiliate");
+      }
+      var pathParams = {
+        'affiliate_oid': affiliate_oid
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _AffiliateResponse["default"];
+      return this.apiClient.callApi('/affiliate/affiliates/{affiliate_oid}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
   }]);
 }();

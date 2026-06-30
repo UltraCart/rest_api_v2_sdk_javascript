@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxCustomerSnapshotRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotRequest
- * @version 4.1.103
+ * @version 4.1.104
  */
 class ConversationPbxCustomerSnapshotRequest {
     /**
@@ -71,6 +71,9 @@ class ConversationPbxCustomerSnapshotRequest {
             if (data.hasOwnProperty('search_linked_accounts')) {
                 obj['search_linked_accounts'] = ApiClient.convertToType(data['search_linked_accounts'], 'Boolean');
             }
+            if (data.hasOwnProperty('search_zoho_desk_tickets')) {
+                obj['search_zoho_desk_tickets'] = ApiClient.convertToType(data['search_zoho_desk_tickets'], 'Boolean');
+            }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
@@ -118,6 +121,11 @@ ConversationPbxCustomerSnapshotRequest.prototype['phone_number'] = undefined;
  * @member {Boolean} search_linked_accounts
  */
 ConversationPbxCustomerSnapshotRequest.prototype['search_linked_accounts'] = undefined;
+
+/**
+ * @member {Boolean} search_zoho_desk_tickets
+ */
+ConversationPbxCustomerSnapshotRequest.prototype['search_zoho_desk_tickets'] = undefined;
 
 /**
  * Indicates if API call was successful
