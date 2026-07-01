@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BrowserOS model module.
  * @module com.ultracart.admin.v2.models/BrowserOS
- * @version 4.1.103
+ * @version 4.1.104
  */
 var BrowserOS = /*#__PURE__*/function () {
   /**

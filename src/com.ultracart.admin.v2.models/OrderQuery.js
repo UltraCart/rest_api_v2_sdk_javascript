@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.104
+ * @version 4.1.105
  */
 class OrderQuery {
     /**

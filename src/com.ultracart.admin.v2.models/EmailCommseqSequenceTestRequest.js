@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqSequenceTestRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqSequenceTestRequest
- * @version 4.1.104
+ * @version 4.1.105
  */
 class EmailCommseqSequenceTestRequest {
     /**

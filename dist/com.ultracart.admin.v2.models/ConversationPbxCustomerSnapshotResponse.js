@@ -11,6 +11,7 @@ var _Error = _interopRequireDefault(require("./Error"));
 var _Order = _interopRequireDefault(require("./Order"));
 var _ResponseMetadata = _interopRequireDefault(require("./ResponseMetadata"));
 var _Warning = _interopRequireDefault(require("./Warning"));
+var _ZohoDeskTicketSummary = _interopRequireDefault(require("./ZohoDeskTicketSummary"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -32,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxCustomerSnapshotResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse
- * @version 4.1.103
+ * @version 4.1.104
  */
 var ConversationPbxCustomerSnapshotResponse = /*#__PURE__*/function () {
   /**
@@ -86,6 +87,9 @@ var ConversationPbxCustomerSnapshotResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('warning')) {
           obj['warning'] = _Warning["default"].constructFromObject(data['warning']);
         }
+        if (data.hasOwnProperty('zoho_desk_tickets')) {
+          obj['zoho_desk_tickets'] = _ApiClient["default"].convertToType(data['zoho_desk_tickets'], [_ZohoDeskTicketSummary["default"]]);
+        }
       }
       return obj;
     }
@@ -126,4 +130,9 @@ ConversationPbxCustomerSnapshotResponse.prototype['success'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/Warning} warning
  */
 ConversationPbxCustomerSnapshotResponse.prototype['warning'] = undefined;
+
+/**
+ * @member {Array.<module:com.ultracart.admin.v2.models/ZohoDeskTicketSummary>} zoho_desk_tickets
+ */
+ConversationPbxCustomerSnapshotResponse.prototype['zoho_desk_tickets'] = undefined;
 var _default = exports["default"] = ConversationPbxCustomerSnapshotResponse;

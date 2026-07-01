@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallUpdateRequest
- * @version 4.1.104
+ * @version 4.1.105
  */
 class ConversationPbxCallUpdateRequest {
     /**
@@ -53,6 +53,12 @@ class ConversationPbxCallUpdateRequest {
             if (data.hasOwnProperty('notes')) {
                 obj['notes'] = ApiClient.convertToType(data['notes'], 'String');
             }
+            if (data.hasOwnProperty('zoho_desk_ticket_id')) {
+                obj['zoho_desk_ticket_id'] = ApiClient.convertToType(data['zoho_desk_ticket_id'], 'String');
+            }
+            if (data.hasOwnProperty('zoho_desk_ticket_url')) {
+                obj['zoho_desk_ticket_url'] = ApiClient.convertToType(data['zoho_desk_ticket_url'], 'String');
+            }
         }
         return obj;
     }
@@ -71,6 +77,18 @@ ConversationPbxCallUpdateRequest.prototype['finalize'] = undefined;
  * @member {String} notes
  */
 ConversationPbxCallUpdateRequest.prototype['notes'] = undefined;
+
+/**
+ * Existing zoho desk ticket id to associate this call with.
+ * @member {String} zoho_desk_ticket_id
+ */
+ConversationPbxCallUpdateRequest.prototype['zoho_desk_ticket_id'] = undefined;
+
+/**
+ * Existing zoho desk ticket URL
+ * @member {String} zoho_desk_ticket_url
+ */
+ConversationPbxCallUpdateRequest.prototype['zoho_desk_ticket_url'] = undefined;
 
 
 

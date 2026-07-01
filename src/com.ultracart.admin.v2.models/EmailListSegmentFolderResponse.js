@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailListSegmentFolderResponse model module.
  * @module com.ultracart.admin.v2.models/EmailListSegmentFolderResponse
- * @version 4.1.104
+ * @version 4.1.105
  */
 class EmailListSegmentFolderResponse {
     /**

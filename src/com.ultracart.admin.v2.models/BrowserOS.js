@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BrowserOS model module.
  * @module com.ultracart.admin.v2.models/BrowserOS
- * @version 4.1.104
+ * @version 4.1.105
  */
 class BrowserOS {
     /**

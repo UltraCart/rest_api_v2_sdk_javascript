@@ -6219,6 +6219,12 @@ Object.defineProperty(exports, "WorkflowUsersResponse", {
     return _WorkflowUsersResponse["default"];
   }
 });
+Object.defineProperty(exports, "ZohoDeskTicketSummary", {
+  enumerable: true,
+  get: function get() {
+    return _ZohoDeskTicketSummary["default"];
+  }
+});
 var _ApiClient = _interopRequireDefault(require("./ApiClient"));
 var _AccountsReceivableRetryConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AccountsReceivableRetryConfig"));
 var _AccountsReceivableRetryConfigResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AccountsReceivableRetryConfigResponse"));
@@ -7233,6 +7239,7 @@ var _WorkflowTasksResponse = _interopRequireDefault(require("./com.ultracart.adm
 var _WorkflowUser = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowUser"));
 var _WorkflowUserResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowUserResponse"));
 var _WorkflowUsersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/WorkflowUsersResponse"));
+var _ZohoDeskTicketSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ZohoDeskTicketSummary"));
 var _AffiliateApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AffiliateApi"));
 var _AutoOrderApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AutoOrderApi"));
 var _ChannelPartnerApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ChannelPartnerApi"));
