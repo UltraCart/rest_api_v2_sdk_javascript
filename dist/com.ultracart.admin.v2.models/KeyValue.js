@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The KeyValue model module.
  * @module com.ultracart.admin.v2.models/KeyValue
- * @version 4.1.104
+ * @version 4.1.105
  */
 var KeyValue = /*#__PURE__*/function () {
   /**

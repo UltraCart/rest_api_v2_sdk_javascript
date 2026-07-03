@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SingleSignOnAuthorizeResponse model module.
  * @module com.ultracart.admin.v2.models/SingleSignOnAuthorizeResponse
- * @version 4.1.104
+ * @version 4.1.105
  */
 var SingleSignOnAuthorizeResponse = /*#__PURE__*/function () {
   /**

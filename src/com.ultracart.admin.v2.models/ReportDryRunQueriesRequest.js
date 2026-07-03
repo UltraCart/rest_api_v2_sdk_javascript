@@ -17,7 +17,7 @@ import ReportDataSetQuery from './ReportDataSetQuery';
 /**
  * The ReportDryRunQueriesRequest model module.
  * @module com.ultracart.admin.v2.models/ReportDryRunQueriesRequest
- * @version 4.1.105
+ * @version 4.1.106
  */
 class ReportDryRunQueriesRequest {
     /**

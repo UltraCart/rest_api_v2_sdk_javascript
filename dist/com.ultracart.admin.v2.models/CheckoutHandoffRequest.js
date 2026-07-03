@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CheckoutHandoffRequest model module.
  * @module com.ultracart.admin.v2.models/CheckoutHandoffRequest
- * @version 4.1.104
+ * @version 4.1.105
  */
 var CheckoutHandoffRequest = /*#__PURE__*/function () {
   /**
