@@ -63,6 +63,14 @@ docs/Browser.md
 docs/BrowserDevice.md
 docs/BrowserOS.md
 docs/BrowserUserAgent.md
+docs/BulkApi.md
+docs/BulkJob.md
+docs/BulkJobRequest.md
+docs/BulkJobResponse.md
+docs/BulkJobsResponse.md
+docs/BulkRecord.md
+docs/BulkRecordsResponse.md
+docs/BulkUploadUrlResponse.md
 docs/Cart.md
 docs/CartAffiliate.md
 docs/CartAffirmCheckoutResponse.md
@@ -1101,6 +1109,13 @@ src/com.ultracart.admin.v2.models/Browser.js
 src/com.ultracart.admin.v2.models/BrowserDevice.js
 src/com.ultracart.admin.v2.models/BrowserOS.js
 src/com.ultracart.admin.v2.models/BrowserUserAgent.js
+src/com.ultracart.admin.v2.models/BulkJob.js
+src/com.ultracart.admin.v2.models/BulkJobRequest.js
+src/com.ultracart.admin.v2.models/BulkJobResponse.js
+src/com.ultracart.admin.v2.models/BulkJobsResponse.js
+src/com.ultracart.admin.v2.models/BulkRecord.js
+src/com.ultracart.admin.v2.models/BulkRecordsResponse.js
+src/com.ultracart.admin.v2.models/BulkUploadUrlResponse.js
 src/com.ultracart.admin.v2.models/Cart.js
 src/com.ultracart.admin.v2.models/CartAffiliate.js
 src/com.ultracart.admin.v2.models/CartAffirmCheckoutResponse.js
@@ -2058,6 +2073,7 @@ src/com.ultracart.admin.v2.models/WorkflowUsersResponse.js
 src/com.ultracart.admin.v2.models/ZohoDeskTicketSummary.js
 src/com.ultracart.admin.v2/AffiliateApi.js
 src/com.ultracart.admin.v2/AutoOrderApi.js
+src/com.ultracart.admin.v2/BulkApi.js
 src/com.ultracart.admin.v2/ChannelPartnerApi.js
 src/com.ultracart.admin.v2/CheckoutApi.js
 src/com.ultracart.admin.v2/ConversationApi.js
