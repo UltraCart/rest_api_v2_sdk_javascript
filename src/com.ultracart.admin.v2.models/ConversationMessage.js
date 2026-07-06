@@ -18,7 +18,7 @@ import ConversationMessageTransportStatus from './ConversationMessageTransportSt
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.1.109
+ * @version 4.1.110
  */
 class ConversationMessage {
     /**
@@ -215,7 +215,13 @@ ConversationMessage['TypeEnum'] = {
      * value: "engagement prompt"
      * @const
      */
-    "engagement prompt": "engagement prompt"
+    "engagement prompt": "engagement prompt",
+
+    /**
+     * value: "tool call"
+     * @const
+     */
+    "tool call": "tool call"
 };
 
 

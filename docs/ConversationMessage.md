@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 
 * `engagement prompt` (value: `"engagement prompt"`)
 
+* `tool call` (value: `"tool call"`)
+
 
 
 

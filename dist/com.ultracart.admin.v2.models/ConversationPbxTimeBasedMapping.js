@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxTimeBasedMapping model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeBasedMapping
- * @version 4.1.106
+ * @version 4.1.109
  */
 var ConversationPbxTimeBasedMapping = /*#__PURE__*/function () {
   /**

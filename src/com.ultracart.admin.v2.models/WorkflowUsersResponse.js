@@ -20,7 +20,7 @@ import WorkflowUser from './WorkflowUser';
 /**
  * The WorkflowUsersResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowUsersResponse
- * @version 4.1.109
+ * @version 4.1.110
  */
 class WorkflowUsersResponse {
     /**

@@ -375,6 +375,54 @@ Object.defineProperty(exports, "BrowserUserAgent", {
     return _BrowserUserAgent["default"];
   }
 });
+Object.defineProperty(exports, "BulkApi", {
+  enumerable: true,
+  get: function get() {
+    return _BulkApi["default"];
+  }
+});
+Object.defineProperty(exports, "BulkJob", {
+  enumerable: true,
+  get: function get() {
+    return _BulkJob["default"];
+  }
+});
+Object.defineProperty(exports, "BulkJobRequest", {
+  enumerable: true,
+  get: function get() {
+    return _BulkJobRequest["default"];
+  }
+});
+Object.defineProperty(exports, "BulkJobResponse", {
+  enumerable: true,
+  get: function get() {
+    return _BulkJobResponse["default"];
+  }
+});
+Object.defineProperty(exports, "BulkJobsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _BulkJobsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "BulkRecord", {
+  enumerable: true,
+  get: function get() {
+    return _BulkRecord["default"];
+  }
+});
+Object.defineProperty(exports, "BulkRecordsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _BulkRecordsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "BulkUploadUrlResponse", {
+  enumerable: true,
+  get: function get() {
+    return _BulkUploadUrlResponse["default"];
+  }
+});
 Object.defineProperty(exports, "Cart", {
   enumerable: true,
   get: function get() {
@@ -6285,6 +6333,13 @@ var _Browser = _interopRequireDefault(require("./com.ultracart.admin.v2.models/B
 var _BrowserDevice = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BrowserDevice"));
 var _BrowserOS = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BrowserOS"));
 var _BrowserUserAgent = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BrowserUserAgent"));
+var _BulkJob = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BulkJob"));
+var _BulkJobRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BulkJobRequest"));
+var _BulkJobResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BulkJobResponse"));
+var _BulkJobsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BulkJobsResponse"));
+var _BulkRecord = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BulkRecord"));
+var _BulkRecordsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BulkRecordsResponse"));
+var _BulkUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/BulkUploadUrlResponse"));
 var _Cart = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Cart"));
 var _CartAffiliate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartAffiliate"));
 var _CartAffirmCheckoutResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CartAffirmCheckoutResponse"));
@@ -7242,6 +7297,7 @@ var _WorkflowUsersResponse = _interopRequireDefault(require("./com.ultracart.adm
 var _ZohoDeskTicketSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ZohoDeskTicketSummary"));
 var _AffiliateApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AffiliateApi"));
 var _AutoOrderApi = _interopRequireDefault(require("./com.ultracart.admin.v2/AutoOrderApi"));
+var _BulkApi = _interopRequireDefault(require("./com.ultracart.admin.v2/BulkApi"));
 var _ChannelPartnerApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ChannelPartnerApi"));
 var _CheckoutApi = _interopRequireDefault(require("./com.ultracart.admin.v2/CheckoutApi"));
 var _ConversationApi = _interopRequireDefault(require("./com.ultracart.admin.v2/ConversationApi"));
