@@ -30,7 +30,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.113
+* @version 4.1.114
 */
 export default class AutoOrderApi {
 

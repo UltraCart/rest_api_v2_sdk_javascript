@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BulkJobRequest model module.
  * @module com.ultracart.admin.v2.models/BulkJobRequest
- * @version 4.1.113
+ * @version 4.1.114
  */
 class BulkJobRequest {
     /**

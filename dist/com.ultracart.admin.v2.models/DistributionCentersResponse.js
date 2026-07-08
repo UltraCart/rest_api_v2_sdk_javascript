@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The DistributionCentersResponse model module.
  * @module com.ultracart.admin.v2.models/DistributionCentersResponse
- * @version 4.1.112
+ * @version 4.1.113
  */
 var DistributionCentersResponse = /*#__PURE__*/function () {
   /**

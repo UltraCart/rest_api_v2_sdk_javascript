@@ -17,7 +17,7 @@ import ReportDataSourceSchema from './ReportDataSourceSchema';
 /**
  * The ReportDataSource model module.
  * @module com.ultracart.admin.v2.models/ReportDataSource
- * @version 4.1.113
+ * @version 4.1.114
  */
 class ReportDataSource {
     /**

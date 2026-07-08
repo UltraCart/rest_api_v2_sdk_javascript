@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailStatPostcardSummaryRequest model module.
  * @module com.ultracart.admin.v2.models/EmailStatPostcardSummaryRequest
- * @version 4.1.112
+ * @version 4.1.113
  */
 var EmailStatPostcardSummaryRequest = /*#__PURE__*/function () {
   /**

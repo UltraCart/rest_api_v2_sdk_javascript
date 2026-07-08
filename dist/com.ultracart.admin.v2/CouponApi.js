@@ -41,7 +41,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Coupon service.
 * @module com.ultracart.admin.v2/CouponApi
-* @version 4.1.112
+* @version 4.1.113
 */
 var CouponApi = exports["default"] = /*#__PURE__*/function () {
   /**

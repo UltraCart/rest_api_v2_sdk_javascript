@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerQuotesSummary model module.
  * @module com.ultracart.admin.v2.models/CustomerQuotesSummary
- * @version 4.1.112
+ * @version 4.1.113
  */
 var CustomerQuotesSummary = /*#__PURE__*/function () {
   /**
