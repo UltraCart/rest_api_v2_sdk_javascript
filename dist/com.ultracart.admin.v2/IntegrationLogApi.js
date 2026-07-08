@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * IntegrationLog service.
 * @module com.ultracart.admin.v2/IntegrationLogApi
-* @version 4.1.111
+* @version 4.1.112
 */
 var IntegrationLogApi = exports["default"] = /*#__PURE__*/function () {
   /**

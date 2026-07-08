@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AnrokConfig model module.
  * @module com.ultracart.admin.v2.models/AnrokConfig
- * @version 4.1.112
+ * @version 4.1.113
  */
 class AnrokConfig {
     /**
@@ -50,6 +50,9 @@ class AnrokConfig {
             if (data.hasOwnProperty('api_key')) {
                 obj['api_key'] = ApiClient.convertToType(data['api_key'], 'String');
             }
+            if (data.hasOwnProperty('default_product_id')) {
+                obj['default_product_id'] = ApiClient.convertToType(data['default_product_id'], 'String');
+            }
             if (data.hasOwnProperty('estimate_only')) {
                 obj['estimate_only'] = ApiClient.convertToType(data['estimate_only'], 'Boolean');
             }
@@ -71,6 +74,12 @@ class AnrokConfig {
  * @member {String} api_key
  */
 AnrokConfig.prototype['api_key'] = undefined;
+
+/**
+ * Default Anrok Product ID, used for cart items that do not have their own Anrok Product ID assigned
+ * @member {String} default_product_id
+ */
+AnrokConfig.prototype['default_product_id'] = undefined;
 
 /**
  * True if this Anrok configuration is to estimate taxes only and not report placed orders to Anrok

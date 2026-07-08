@@ -171,6 +171,12 @@ Object.defineProperty(exports, "AgentSummary", {
     return _AgentSummary["default"];
   }
 });
+Object.defineProperty(exports, "AnrokConfig", {
+  enumerable: true,
+  get: function get() {
+    return _AnrokConfig["default"];
+  }
+});
 Object.defineProperty(exports, "ApiClient", {
   enumerable: true,
   get: function get() {
@@ -5871,6 +5877,12 @@ Object.defineProperty(exports, "TaxProviderActivateResult", {
     return _TaxProviderActivateResult["default"];
   }
 });
+Object.defineProperty(exports, "TaxProviderAnrok", {
+  enumerable: true,
+  get: function get() {
+    return _TaxProviderAnrok["default"];
+  }
+});
 Object.defineProperty(exports, "TaxProviderAvalara", {
   enumerable: true,
   get: function get() {
@@ -6331,6 +6343,7 @@ var _AffiliateResponse = _interopRequireDefault(require("./com.ultracart.admin.v
 var _AffiliateTierRelationship = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateTierRelationship"));
 var _AffiliatesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliatesResponse"));
 var _AgentSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AgentSummary"));
+var _AnrokConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AnrokConfig"));
 var _ApiUserApplicationProfile = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApiUserApplicationProfile"));
 var _ApplyLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApplyLibraryItemRequest"));
 var _ApplyLibraryItemResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ApplyLibraryItemResponse"));
@@ -7261,6 +7274,7 @@ var _TaxCounty = _interopRequireDefault(require("./com.ultracart.admin.v2.models
 var _TaxJarConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxJarConfig"));
 var _TaxPostalCode = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxPostalCode"));
 var _TaxProviderActivateResult = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxProviderActivateResult"));
+var _TaxProviderAnrok = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxProviderAnrok"));
 var _TaxProviderAvalara = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxProviderAvalara"));
 var _TaxProviderAvalaraCompaniesResult = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult"));
 var _TaxProviderAvalaraCompany = _interopRequireDefault(require("./com.ultracart.admin.v2.models/TaxProviderAvalaraCompany"));

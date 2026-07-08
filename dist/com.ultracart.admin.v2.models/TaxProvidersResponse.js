@@ -7,6 +7,7 @@ exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _Error = _interopRequireDefault(require("./Error"));
 var _ResponseMetadata = _interopRequireDefault(require("./ResponseMetadata"));
+var _TaxProviderAnrok = _interopRequireDefault(require("./TaxProviderAnrok"));
 var _TaxProviderAvalara = _interopRequireDefault(require("./TaxProviderAvalara"));
 var _TaxProviderSelf = _interopRequireDefault(require("./TaxProviderSelf"));
 var _TaxProviderSovos = _interopRequireDefault(require("./TaxProviderSovos"));
@@ -34,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProvidersResponse
- * @version 4.1.111
+ * @version 4.1.112
  */
 var TaxProvidersResponse = /*#__PURE__*/function () {
   /**
@@ -67,6 +68,9 @@ var TaxProvidersResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new TaxProvidersResponse();
+        if (data.hasOwnProperty('anrok')) {
+          obj['anrok'] = _TaxProviderAnrok["default"].constructFromObject(data['anrok']);
+        }
         if (data.hasOwnProperty('avalara')) {
           obj['avalara'] = _TaxProviderAvalara["default"].constructFromObject(data['avalara']);
         }
@@ -99,6 +103,11 @@ var TaxProvidersResponse = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * @member {module:com.ultracart.admin.v2.models/TaxProviderAnrok} anrok
+ */
+TaxProvidersResponse.prototype['anrok'] = undefined;
+
 /**
  * @member {module:com.ultracart.admin.v2.models/TaxProviderAvalara} avalara
  */
