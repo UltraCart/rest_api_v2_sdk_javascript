@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Error from './Error';
 import ResponseMetadata from './ResponseMetadata';
+import TaxProviderAnrok from './TaxProviderAnrok';
 import TaxProviderAvalara from './TaxProviderAvalara';
 import TaxProviderSelf from './TaxProviderSelf';
 import TaxProviderSovos from './TaxProviderSovos';
@@ -24,7 +25,7 @@ import Warning from './Warning';
 /**
  * The TaxProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProvidersResponse
- * @version 4.1.111
+ * @version 4.1.112
  */
 class TaxProvidersResponse {
     /**
@@ -55,6 +56,9 @@ class TaxProvidersResponse {
         if (data) {
             obj = obj || new TaxProvidersResponse();
 
+            if (data.hasOwnProperty('anrok')) {
+                obj['anrok'] = TaxProviderAnrok.constructFromObject(data['anrok']);
+            }
             if (data.hasOwnProperty('avalara')) {
                 obj['avalara'] = TaxProviderAvalara.constructFromObject(data['avalara']);
             }
@@ -88,6 +92,11 @@ class TaxProvidersResponse {
 
 
 }
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/TaxProviderAnrok} anrok
+ */
+TaxProvidersResponse.prototype['anrok'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/TaxProviderAvalara} avalara

@@ -30,6 +30,7 @@ docs/AffiliateResponse.md
 docs/AffiliateTierRelationship.md
 docs/AffiliatesResponse.md
 docs/AgentSummary.md
+docs/AnrokConfig.md
 docs/ApiUserApplicationProfile.md
 docs/ApplyLibraryItemRequest.md
 docs/ApplyLibraryItemResponse.md
@@ -979,6 +980,7 @@ docs/TaxCounty.md
 docs/TaxJarConfig.md
 docs/TaxPostalCode.md
 docs/TaxProviderActivateResult.md
+docs/TaxProviderAnrok.md
 docs/TaxProviderAvalara.md
 docs/TaxProviderAvalaraCompaniesResult.md
 docs/TaxProviderAvalaraCompany.md
@@ -1082,6 +1084,7 @@ src/com.ultracart.admin.v2.models/AffiliateResponse.js
 src/com.ultracart.admin.v2.models/AffiliateTierRelationship.js
 src/com.ultracart.admin.v2.models/AffiliatesResponse.js
 src/com.ultracart.admin.v2.models/AgentSummary.js
+src/com.ultracart.admin.v2.models/AnrokConfig.js
 src/com.ultracart.admin.v2.models/ApiUserApplicationProfile.js
 src/com.ultracart.admin.v2.models/ApplyLibraryItemRequest.js
 src/com.ultracart.admin.v2.models/ApplyLibraryItemResponse.js
@@ -2012,6 +2015,7 @@ src/com.ultracart.admin.v2.models/TaxCounty.js
 src/com.ultracart.admin.v2.models/TaxJarConfig.js
 src/com.ultracart.admin.v2.models/TaxPostalCode.js
 src/com.ultracart.admin.v2.models/TaxProviderActivateResult.js
+src/com.ultracart.admin.v2.models/TaxProviderAnrok.js
 src/com.ultracart.admin.v2.models/TaxProviderAvalara.js
 src/com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult.js
 src/com.ultracart.admin.v2.models/TaxProviderAvalaraCompany.js

@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**deleteTaxProviderSelfCounty**](TaxApi.md#deleteTaxProviderSelfCounty) | **DELETE** /tax/providers/self/county/{county} | Deletes a Self tax provider county
 [**deleteTaxProviderSelfPostalCode**](TaxApi.md#deleteTaxProviderSelfPostalCode) | **DELETE** /tax/providers/self/postalCode/{postal_code} | Deletes a Self tax provider postalCode
 [**deleteTaxProviderSelfState**](TaxApi.md#deleteTaxProviderSelfState) | **DELETE** /tax/providers/self/state/{stateCode} | Deletes a Self tax provider state
+[**getTaxProviderAnrok**](TaxApi.md#getTaxProviderAnrok) | **GET** /tax/providers/anrok | Retrieve the Anrok tax provider
+[**getTaxProviderAnrokTest**](TaxApi.md#getTaxProviderAnrokTest) | **GET** /tax/providers/anrok/test | Attempts to connect to Anrok and returns back the response
 [**getTaxProviderAvalara**](TaxApi.md#getTaxProviderAvalara) | **GET** /tax/providers/avalara | Retrieve the Avalara tax provider
 [**getTaxProviderAvalaraCompanies**](TaxApi.md#getTaxProviderAvalaraCompanies) | **POST** /tax/providers/avalara/companies | Returns Avalara Tax companies configured by the merchant
 [**getTaxProviderAvalaraTest**](TaxApi.md#getTaxProviderAvalaraTest) | **GET** /tax/providers/avalara/test | Attempts to connect to Avalara and returns back the response
@@ -22,6 +24,7 @@ Method | HTTP request | Description
 [**getTaxProviderUltraCart**](TaxApi.md#getTaxProviderUltraCart) | **GET** /tax/providers/ultracart | Retrieve the UltraCart tax provider
 [**getTaxProviders**](TaxApi.md#getTaxProviders) | **GET** /tax/providers | Retrieve tax methods
 [**setActiveTaxProvider**](TaxApi.md#setActiveTaxProvider) | **POST** /tax/providers/setActive/{providerName} | Toggle a tax provider to active
+[**updateTaxProviderAnrok**](TaxApi.md#updateTaxProviderAnrok) | **POST** /tax/providers/anrok | Update the Anrok tax provider
 [**updateTaxProviderAvalara**](TaxApi.md#updateTaxProviderAvalara) | **POST** /tax/providers/avalara | Update the Avalara tax provider
 [**updateTaxProviderSelf**](TaxApi.md#updateTaxProviderSelf) | **POST** /tax/providers/self | Update the Self tax provider
 [**updateTaxProviderSelfCity**](TaxApi.md#updateTaxProviderSelfCity) | **POST** /tax/providers/self/city/{city} | Updates a Self tax provider city
@@ -317,6 +320,108 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getTaxProviderAnrok
+
+> TaxProviderAnrok getTaxProviderAnrok()
+
+Retrieve the Anrok tax provider
+
+Retrieves the Anrok tax provider. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderAnrok -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.TaxApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getTaxProviderAnrok((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getTaxProviderAnrok -->
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**TaxProviderAnrok**](TaxProviderAnrok.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getTaxProviderAnrokTest
+
+> TaxProviderTestResult getTaxProviderAnrokTest()
+
+Attempts to connect to Anrok and returns back the response
+
+Attempts to connect to Anrok and returns back the response. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getTaxProviderAnrokTest -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.TaxApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+apiInstance.getTaxProviderAnrokTest((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getTaxProviderAnrokTest -->
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**TaxProviderTestResult**](TaxProviderTestResult.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -1002,6 +1107,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## updateTaxProviderAnrok
+
+> TaxProviderAnrok updateTaxProviderAnrok(tax_provider_anrok)
+
+Update the Anrok tax provider
+
+Update the Anrok tax provider. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE updateTaxProviderAnrok -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.TaxApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let tax_provider_anrok = new UltraCartRestApiV2.TaxProviderAnrok(); // TaxProviderAnrok | TaxProviderAnrok object
+apiInstance.updateTaxProviderAnrok(tax_provider_anrok, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE updateTaxProviderAnrok -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tax_provider_anrok** | [**TaxProviderAnrok**](TaxProviderAnrok.md)| TaxProviderAnrok object | 
+
+### Return type
+
+[**TaxProviderAnrok**](TaxProviderAnrok.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

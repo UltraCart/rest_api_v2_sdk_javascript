@@ -17,7 +17,7 @@ import ReportDataSet from './ReportDataSet';
 /**
  * The ReportWebsocketEvent model module.
  * @module com.ultracart.admin.v2.models/ReportWebsocketEvent
- * @version 4.1.111
+ * @version 4.1.112
  */
 class ReportWebsocketEvent {
     /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FraudLookupGateway model module.
  * @module com.ultracart.admin.v2.models/FraudLookupGateway
- * @version 4.1.110
+ * @version 4.1.111
  */
 var FraudLookupGateway = /*#__PURE__*/function () {
   /**

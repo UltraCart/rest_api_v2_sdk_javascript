@@ -19,6 +19,7 @@ import TaxCountry from '../com.ultracart.admin.v2.models/TaxCountry';
 import TaxCounty from '../com.ultracart.admin.v2.models/TaxCounty';
 import TaxPostalCode from '../com.ultracart.admin.v2.models/TaxPostalCode';
 import TaxProviderActivateResult from '../com.ultracart.admin.v2.models/TaxProviderActivateResult';
+import TaxProviderAnrok from '../com.ultracart.admin.v2.models/TaxProviderAnrok';
 import TaxProviderAvalara from '../com.ultracart.admin.v2.models/TaxProviderAvalara';
 import TaxProviderAvalaraCompaniesResult from '../com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult';
 import TaxProviderSelf from '../com.ultracart.admin.v2.models/TaxProviderSelf';
@@ -34,7 +35,7 @@ import TaxState from '../com.ultracart.admin.v2.models/TaxState';
 /**
 * Tax service.
 * @module com.ultracart.admin.v2/TaxApi
-* @version 4.1.111
+* @version 4.1.112
 */
 export default class TaxApi {
 
@@ -280,6 +281,80 @@ export default class TaxApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/tax/providers/self/state/{stateCode}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTaxProviderAnrok operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderAnrokCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderAnrok} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the Anrok tax provider
+     * Retrieves the Anrok tax provider. 
+     * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderAnrokCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderAnrok}
+     */
+    getTaxProviderAnrok(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = TaxProviderAnrok;
+      return this.apiClient.callApi(
+        '/tax/providers/anrok', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTaxProviderAnrokTest operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderAnrokTestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderTestResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Attempts to connect to Anrok and returns back the response
+     * Attempts to connect to Anrok and returns back the response. 
+     * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderAnrokTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderTestResult}
+     */
+    getTaxProviderAnrokTest(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = TaxProviderTestResult;
+      return this.apiClient.callApi(
+        '/tax/providers/anrok/test', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -786,6 +861,48 @@ export default class TaxApi {
       let returnType = TaxProviderActivateResult;
       return this.apiClient.callApi(
         '/tax/providers/setActive/{providerName}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateTaxProviderAnrok operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~updateTaxProviderAnrokCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderAnrok} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update the Anrok tax provider
+     * Update the Anrok tax provider. 
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderAnrok} tax_provider_anrok TaxProviderAnrok object
+     * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderAnrokCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderAnrok}
+     */
+    updateTaxProviderAnrok(tax_provider_anrok, callback) {
+      let postBody = tax_provider_anrok;
+      // verify the required parameter 'tax_provider_anrok' is set
+      if (tax_provider_anrok === undefined || tax_provider_anrok === null) {
+        throw new Error("Missing the required parameter 'tax_provider_anrok' when calling updateTaxProviderAnrok");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = TaxProviderAnrok;
+      return this.apiClient.callApi(
+        '/tax/providers/anrok', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

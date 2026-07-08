@@ -40,6 +40,7 @@ import AffiliateResponse from './com.ultracart.admin.v2.models/AffiliateResponse
 import AffiliateTierRelationship from './com.ultracart.admin.v2.models/AffiliateTierRelationship';
 import AffiliatesResponse from './com.ultracart.admin.v2.models/AffiliatesResponse';
 import AgentSummary from './com.ultracart.admin.v2.models/AgentSummary';
+import AnrokConfig from './com.ultracart.admin.v2.models/AnrokConfig';
 import ApiUserApplicationProfile from './com.ultracart.admin.v2.models/ApiUserApplicationProfile';
 import ApplyLibraryItemRequest from './com.ultracart.admin.v2.models/ApplyLibraryItemRequest';
 import ApplyLibraryItemResponse from './com.ultracart.admin.v2.models/ApplyLibraryItemResponse';
@@ -970,6 +971,7 @@ import TaxCounty from './com.ultracart.admin.v2.models/TaxCounty';
 import TaxJarConfig from './com.ultracart.admin.v2.models/TaxJarConfig';
 import TaxPostalCode from './com.ultracart.admin.v2.models/TaxPostalCode';
 import TaxProviderActivateResult from './com.ultracart.admin.v2.models/TaxProviderActivateResult';
+import TaxProviderAnrok from './com.ultracart.admin.v2.models/TaxProviderAnrok';
 import TaxProviderAvalara from './com.ultracart.admin.v2.models/TaxProviderAvalara';
 import TaxProviderAvalaraCompaniesResult from './com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult';
 import TaxProviderAvalaraCompany from './com.ultracart.admin.v2.models/TaxProviderAvalaraCompany';
@@ -1093,7 +1095,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.111
+* @version 4.1.112
 */
 export {
     /**
@@ -1263,6 +1265,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AgentSummary}
      */
     AgentSummary,
+
+    /**
+     * The AnrokConfig model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AnrokConfig}
+     */
+    AnrokConfig,
 
     /**
      * The ApiUserApplicationProfile model constructor.
@@ -6843,6 +6851,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/TaxProviderActivateResult}
      */
     TaxProviderActivateResult,
+
+    /**
+     * The TaxProviderAnrok model constructor.
+     * @property {module:com.ultracart.admin.v2.models/TaxProviderAnrok}
+     */
+    TaxProviderAnrok,
 
     /**
      * The TaxProviderAvalara model constructor.

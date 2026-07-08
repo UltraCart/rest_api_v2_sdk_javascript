@@ -3087,6 +3087,12 @@ Object.defineProperty(exports, "EmailCustomerEditorUrlResponse", {
     return _EmailCustomerEditorUrlResponse["default"];
   }
 });
+Object.defineProperty(exports, "EmailCustomerLookupResponse", {
+  enumerable: true,
+  get: function get() {
+    return _EmailCustomerLookupResponse["default"];
+  }
+});
 Object.defineProperty(exports, "EmailCustomersResponse", {
   enumerable: true,
   get: function get() {
@@ -3109,6 +3115,30 @@ Object.defineProperty(exports, "EmailDashboardStatsResponse", {
   enumerable: true,
   get: function get() {
     return _EmailDashboardStatsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "EmailDispatchLog", {
+  enumerable: true,
+  get: function get() {
+    return _EmailDispatchLog["default"];
+  }
+});
+Object.defineProperty(exports, "EmailDispatchLogDetail", {
+  enumerable: true,
+  get: function get() {
+    return _EmailDispatchLogDetail["default"];
+  }
+});
+Object.defineProperty(exports, "EmailDispatchLogDetailResponse", {
+  enumerable: true,
+  get: function get() {
+    return _EmailDispatchLogDetailResponse["default"];
+  }
+});
+Object.defineProperty(exports, "EmailDispatchLogsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _EmailDispatchLogsResponse["default"];
   }
 });
 Object.defineProperty(exports, "EmailDomain", {
@@ -6777,10 +6807,15 @@ var _EmailCommseqWebhookSendTestResponse = _interopRequireDefault(require("./com
 var _EmailCommseqsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCommseqsResponse"));
 var _EmailCustomer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCustomer"));
 var _EmailCustomerEditorUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse"));
+var _EmailCustomerLookupResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCustomerLookupResponse"));
 var _EmailCustomersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailCustomersResponse"));
 var _EmailDashboardActivity = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDashboardActivity"));
 var _EmailDashboardActivityResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDashboardActivityResponse"));
 var _EmailDashboardStatsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDashboardStatsResponse"));
+var _EmailDispatchLog = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDispatchLog"));
+var _EmailDispatchLogDetail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDispatchLogDetail"));
+var _EmailDispatchLogDetailResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDispatchLogDetailResponse"));
+var _EmailDispatchLogsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDispatchLogsResponse"));
 var _EmailDomain = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailDomain"));
 var _EmailEditorTokenResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailEditorTokenResponse"));
 var _EmailEditorValuesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailEditorValuesResponse"));

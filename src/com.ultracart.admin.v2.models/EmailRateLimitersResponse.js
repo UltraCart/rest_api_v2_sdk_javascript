@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailRateLimitersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailRateLimitersResponse
- * @version 4.1.111
+ * @version 4.1.112
  */
 class EmailRateLimitersResponse {
     /**

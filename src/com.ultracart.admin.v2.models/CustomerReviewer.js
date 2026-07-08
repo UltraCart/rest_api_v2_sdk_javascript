@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerReviewer model module.
  * @module com.ultracart.admin.v2.models/CustomerReviewer
- * @version 4.1.111
+ * @version 4.1.112
  */
 class CustomerReviewer {
     /**
