@@ -516,10 +516,15 @@ import EmailCommseqWebhookSendTestResponse from './com.ultracart.admin.v2.models
 import EmailCommseqsResponse from './com.ultracart.admin.v2.models/EmailCommseqsResponse';
 import EmailCustomer from './com.ultracart.admin.v2.models/EmailCustomer';
 import EmailCustomerEditorUrlResponse from './com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse';
+import EmailCustomerLookupResponse from './com.ultracart.admin.v2.models/EmailCustomerLookupResponse';
 import EmailCustomersResponse from './com.ultracart.admin.v2.models/EmailCustomersResponse';
 import EmailDashboardActivity from './com.ultracart.admin.v2.models/EmailDashboardActivity';
 import EmailDashboardActivityResponse from './com.ultracart.admin.v2.models/EmailDashboardActivityResponse';
 import EmailDashboardStatsResponse from './com.ultracart.admin.v2.models/EmailDashboardStatsResponse';
+import EmailDispatchLog from './com.ultracart.admin.v2.models/EmailDispatchLog';
+import EmailDispatchLogDetail from './com.ultracart.admin.v2.models/EmailDispatchLogDetail';
+import EmailDispatchLogDetailResponse from './com.ultracart.admin.v2.models/EmailDispatchLogDetailResponse';
+import EmailDispatchLogsResponse from './com.ultracart.admin.v2.models/EmailDispatchLogsResponse';
 import EmailDomain from './com.ultracart.admin.v2.models/EmailDomain';
 import EmailEditorTokenResponse from './com.ultracart.admin.v2.models/EmailEditorTokenResponse';
 import EmailEditorValuesResponse from './com.ultracart.admin.v2.models/EmailEditorValuesResponse';
@@ -1088,7 +1093,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.110
+* @version 4.1.111
 */
 export {
     /**
@@ -4116,6 +4121,12 @@ export {
     EmailCustomerEditorUrlResponse,
 
     /**
+     * The EmailCustomerLookupResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCustomerLookupResponse}
+     */
+    EmailCustomerLookupResponse,
+
+    /**
      * The EmailCustomersResponse model constructor.
      * @property {module:com.ultracart.admin.v2.models/EmailCustomersResponse}
      */
@@ -4138,6 +4149,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/EmailDashboardStatsResponse}
      */
     EmailDashboardStatsResponse,
+
+    /**
+     * The EmailDispatchLog model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailDispatchLog}
+     */
+    EmailDispatchLog,
+
+    /**
+     * The EmailDispatchLogDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailDispatchLogDetail}
+     */
+    EmailDispatchLogDetail,
+
+    /**
+     * The EmailDispatchLogDetailResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailDispatchLogDetailResponse}
+     */
+    EmailDispatchLogDetailResponse,
+
+    /**
+     * The EmailDispatchLogsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailDispatchLogsResponse}
+     */
+    EmailDispatchLogsResponse,
 
     /**
      * The EmailDomain model constructor.

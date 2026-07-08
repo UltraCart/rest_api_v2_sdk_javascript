@@ -53,9 +53,12 @@ import EmailCommseqWebhookSendTestResponse from '../com.ultracart.admin.v2.model
 import EmailCommseqsResponse from '../com.ultracart.admin.v2.models/EmailCommseqsResponse';
 import EmailCustomer from '../com.ultracart.admin.v2.models/EmailCustomer';
 import EmailCustomerEditorUrlResponse from '../com.ultracart.admin.v2.models/EmailCustomerEditorUrlResponse';
+import EmailCustomerLookupResponse from '../com.ultracart.admin.v2.models/EmailCustomerLookupResponse';
 import EmailCustomersResponse from '../com.ultracart.admin.v2.models/EmailCustomersResponse';
 import EmailDashboardActivityResponse from '../com.ultracart.admin.v2.models/EmailDashboardActivityResponse';
 import EmailDashboardStatsResponse from '../com.ultracart.admin.v2.models/EmailDashboardStatsResponse';
+import EmailDispatchLogDetailResponse from '../com.ultracart.admin.v2.models/EmailDispatchLogDetailResponse';
+import EmailDispatchLogsResponse from '../com.ultracart.admin.v2.models/EmailDispatchLogsResponse';
 import EmailDomain from '../com.ultracart.admin.v2.models/EmailDomain';
 import EmailEditorTokenResponse from '../com.ultracart.admin.v2.models/EmailEditorTokenResponse';
 import EmailEditorValuesResponse from '../com.ultracart.admin.v2.models/EmailEditorValuesResponse';
@@ -166,7 +169,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.110
+* @version 4.1.111
 */
 export default class StorefrontApi {
 
@@ -2624,6 +2627,67 @@ export default class StorefrontApi {
     }
 
     /**
+     * Callback function to receive the result of the getEmailCustomerDispatchLogs operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomerDispatchLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailDispatchLogsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a customer's dispatch-log journey across all flows/campaigns
+     * Paginated, date-boundable journey of every flow/campaign step a customer moved through (AP1/AP2), time-sorted. Rows are lean; fetch a row's detail via getEmailStepDispatchLogDetail. scanForward=false (default) returns recent-first; true returns chronological progression. Page forward until 'more' is false. 
+     * @param {Number} storefront_oid 
+     * @param {String} email_customer_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.since 
+     * @param {String} opts.until 
+     * @param {Number} opts.pageNumber 
+     * @param {Number} opts.pageSize 
+     * @param {Boolean} opts.scanForward 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomerDispatchLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDispatchLogsResponse}
+     */
+    getEmailCustomerDispatchLogs(storefront_oid, email_customer_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailCustomerDispatchLogs");
+      }
+      // verify the required parameter 'email_customer_uuid' is set
+      if (email_customer_uuid === undefined || email_customer_uuid === null) {
+        throw new Error("Missing the required parameter 'email_customer_uuid' when calling getEmailCustomerDispatchLogs");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'email_customer_uuid': email_customer_uuid
+      };
+      let queryParams = {
+        'since': opts['since'],
+        'until': opts['until'],
+        'pageNumber': opts['pageNumber'],
+        'pageSize': opts['pageSize'],
+        'scanForward': opts['scanForward']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EmailDispatchLogsResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/customers/{email_customer_uuid}/dispatch_logs', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getEmailCustomerEditorUrl operation.
      * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomerEditorUrlCallback
      * @param {String} error Error message, if any.
@@ -2808,6 +2872,53 @@ export default class StorefrontApi {
       let returnType = EmailDashboardStatsResponse;
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/dashboard_stats', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailDispatchLogCustomerLookup operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailDispatchLogCustomerLookupCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCustomerLookupResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Resolve a customer email to its ESP customer UUID
+     * Entry-hop resolver for the customer-journey screen (AP0). Returns the esp_customer_uuid for a merchant's customer email, or a null uuid when the email is not on file. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.email 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailDispatchLogCustomerLookupCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCustomerLookupResponse}
+     */
+    getEmailDispatchLogCustomerLookup(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailDispatchLogCustomerLookup");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'email': opts['email']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EmailCustomerLookupResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/dispatch_logs/customer_lookup', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4372,6 +4483,132 @@ export default class StorefrontApi {
       let returnType = EmailSmsOrdersResponse;
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/sms/orders', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailStepDispatchLogDetail operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailStepDispatchLogDetailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailDispatchLogDetailResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the full detail of a single dispatch-log record
+     * Fetches and gunzips the full detail payload of one dispatch-log record (AP5 drill-down), identified by its step plus the log_dts and esp_customer_uuid shown on the list row. 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {String} commseq_step_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.log_dts 
+     * @param {String} opts.esp_customer_uuid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailStepDispatchLogDetailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDispatchLogDetailResponse}
+     */
+    getEmailStepDispatchLogDetail(storefront_oid, commseq_uuid, commseq_step_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailStepDispatchLogDetail");
+      }
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailStepDispatchLogDetail");
+      }
+      // verify the required parameter 'commseq_step_uuid' is set
+      if (commseq_step_uuid === undefined || commseq_step_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_step_uuid' when calling getEmailStepDispatchLogDetail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid,
+        'commseq_step_uuid': commseq_step_uuid
+      };
+      let queryParams = {
+        'log_dts': opts['log_dts'],
+        'esp_customer_uuid': opts['esp_customer_uuid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EmailDispatchLogDetailResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/dispatch_logs/detail', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailStepDispatchLogs operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailStepDispatchLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailDispatchLogsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a paginated, date-boundable dispatch-log feed for a step
+     * Paginated per-step dispatch activity with 90-day depth (AP3/AP4). Rows are lean, rendered from the DynamoDB keys; fetch a row's full detail via getEmailStepDispatchLogDetail. Page forward by incrementing pageNumber until the response 'more' flag is false. since/until are inclusive ISO-8601 bounds on log_dts. 
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_uuid 
+     * @param {String} commseq_step_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.since 
+     * @param {String} opts.until 
+     * @param {Number} opts.pageNumber 
+     * @param {Number} opts.pageSize 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailStepDispatchLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDispatchLogsResponse}
+     */
+    getEmailStepDispatchLogs(storefront_oid, commseq_uuid, commseq_step_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailStepDispatchLogs");
+      }
+      // verify the required parameter 'commseq_uuid' is set
+      if (commseq_uuid === undefined || commseq_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_uuid' when calling getEmailStepDispatchLogs");
+      }
+      // verify the required parameter 'commseq_step_uuid' is set
+      if (commseq_step_uuid === undefined || commseq_step_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_step_uuid' when calling getEmailStepDispatchLogs");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_uuid': commseq_uuid,
+        'commseq_step_uuid': commseq_step_uuid
+      };
+      let queryParams = {
+        'since': opts['since'],
+        'until': opts['until'],
+        'pageNumber': opts['pageNumber'],
+        'pageSize': opts['pageSize']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EmailDispatchLogsResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/dispatch_logs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

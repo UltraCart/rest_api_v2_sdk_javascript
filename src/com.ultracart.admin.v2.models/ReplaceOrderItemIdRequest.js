@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReplaceOrderItemIdRequest model module.
  * @module com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest
- * @version 4.1.110
+ * @version 4.1.111
  */
 class ReplaceOrderItemIdRequest {
     /**

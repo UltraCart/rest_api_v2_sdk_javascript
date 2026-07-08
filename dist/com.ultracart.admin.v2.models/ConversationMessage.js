@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationMessage
- * @version 4.1.109
+ * @version 4.1.110
  */
 var ConversationMessage = /*#__PURE__*/function () {
   /**
@@ -218,6 +218,11 @@ ConversationMessage['TypeEnum'] = {
    * value: "engagement prompt"
    * @const
    */
-  "engagement prompt": "engagement prompt"
+  "engagement prompt": "engagement prompt",
+  /**
+   * value: "tool call"
+   * @const
+   */
+  "tool call": "tool call"
 };
 var _default = exports["default"] = ConversationMessage;

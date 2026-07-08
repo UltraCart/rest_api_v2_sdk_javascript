@@ -56,10 +56,12 @@ Method | HTTP request | Description
 [**getEmailCommseqStepWaiting**](StorefrontApi.md#getEmailCommseqStepWaiting) | **POST** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/waiting | Get email communication sequence customers waiting at each requested step
 [**getEmailCommseqWebhookEditorValues**](StorefrontApi.md#getEmailCommseqWebhookEditorValues) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/webhookEditorValues | Get email webhook editor values
 [**getEmailCommseqs**](StorefrontApi.md#getEmailCommseqs) | **GET** /storefront/{storefront_oid}/email/commseqs | Get email commseqs
+[**getEmailCustomerDispatchLogs**](StorefrontApi.md#getEmailCustomerDispatchLogs) | **GET** /storefront/{storefront_oid}/email/customers/{email_customer_uuid}/dispatch_logs | Get a customer&#39;s dispatch-log journey across all flows/campaigns
 [**getEmailCustomerEditorUrl**](StorefrontApi.md#getEmailCustomerEditorUrl) | **GET** /storefront/{storefront_oid}/email/customers/{email_customer_uuid}/editor_url | Get customers editor URL
 [**getEmailCustomers**](StorefrontApi.md#getEmailCustomers) | **GET** /storefront/{storefront_oid}/email/customers | Get email customers
 [**getEmailDashboardActivity**](StorefrontApi.md#getEmailDashboardActivity) | **GET** /storefront/{storefront_oid}/email/dashboard_activity | Get email dashboard activity
 [**getEmailDashboardStats**](StorefrontApi.md#getEmailDashboardStats) | **GET** /storefront/{storefront_oid}/email/dashboard_stats | Get dashboard stats
+[**getEmailDispatchLogCustomerLookup**](StorefrontApi.md#getEmailDispatchLogCustomerLookup) | **GET** /storefront/{storefront_oid}/email/dispatch_logs/customer_lookup | Resolve a customer email to its ESP customer UUID
 [**getEmailDispatchLogs**](StorefrontApi.md#getEmailDispatchLogs) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/logs | Get email dispatch logs
 [**getEmailEmail**](StorefrontApi.md#getEmailEmail) | **GET** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid} | Get email email
 [**getEmailEmailClicks**](StorefrontApi.md#getEmailEmailClicks) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/emails/{commseq_email_uuid}/clicks | Get email email clicks
@@ -93,6 +95,8 @@ Method | HTTP request | Description
 [**getEmailSendingDomains**](StorefrontApi.md#getEmailSendingDomains) | **GET** /storefront/email/sending_domains | Get email sending domains
 [**getEmailSettings**](StorefrontApi.md#getEmailSettings) | **GET** /storefront/{storefront_oid}/email/settings | Get email settings
 [**getEmailSmsOrders**](StorefrontApi.md#getEmailSmsOrders) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/sms/orders | Get email sms orders
+[**getEmailStepDispatchLogDetail**](StorefrontApi.md#getEmailStepDispatchLogDetail) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/dispatch_logs/detail | Get the full detail of a single dispatch-log record
+[**getEmailStepDispatchLogs**](StorefrontApi.md#getEmailStepDispatchLogs) | **GET** /storefront/{storefront_oid}/email/commseqs/{commseq_uuid}/steps/{commseq_step_uuid}/dispatch_logs | Get a paginated, date-boundable dispatch-log feed for a step
 [**getEmailTemplate**](StorefrontApi.md#getEmailTemplate) | **GET** /storefront/{storefront_oid}/email/templates/{email_template_oid} | Get email template
 [**getEmailTemplates**](StorefrontApi.md#getEmailTemplates) | **GET** /storefront/{storefront_oid}/email/templates | Get email templates
 [**getEmailThirdPartyProviders**](StorefrontApi.md#getEmailThirdPartyProviders) | **GET** /storefront/{storefront_oid}/email/third_party_providers | Get a list of third party email providers
@@ -3057,6 +3061,75 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getEmailCustomerDispatchLogs
+
+> EmailDispatchLogsResponse getEmailCustomerDispatchLogs(storefront_oid, email_customer_uuid, opts)
+
+Get a customer&#39;s dispatch-log journey across all flows/campaigns
+
+Paginated, date-boundable journey of every flow/campaign step a customer moved through (AP1/AP2), time-sorted. Rows are lean; fetch a row&#39;s detail via getEmailStepDispatchLogDetail. scanForward&#x3D;false (default) returns recent-first; true returns chronological progression. Page forward until &#39;more&#39; is false. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getEmailCustomerDispatchLogs -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.StorefrontApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let storefront_oid = 56; // Number | 
+let email_customer_uuid = "email_customer_uuid_example"; // String | 
+let opts = {
+  'since': "since_example", // String | 
+  'until': "until_example", // String | 
+  'pageNumber': 56, // Number | 
+  'pageSize': 56, // Number | 
+  'scanForward': true // Boolean | 
+};
+apiInstance.getEmailCustomerDispatchLogs(storefront_oid, email_customer_uuid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getEmailCustomerDispatchLogs -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **email_customer_uuid** | **String**|  | 
+ **since** | **String**|  | [optional] 
+ **until** | **String**|  | [optional] 
+ **pageNumber** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
+ **scanForward** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**EmailDispatchLogsResponse**](EmailDispatchLogsResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getEmailCustomerEditorUrl
 
 > EmailCustomerEditorUrlResponse getEmailCustomerEditorUrl(storefront_oid, email_customer_uuid)
@@ -3276,6 +3349,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailDashboardStatsResponse**](EmailDashboardStatsResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getEmailDispatchLogCustomerLookup
+
+> EmailCustomerLookupResponse getEmailDispatchLogCustomerLookup(storefront_oid, opts)
+
+Resolve a customer email to its ESP customer UUID
+
+Entry-hop resolver for the customer-journey screen (AP0). Returns the esp_customer_uuid for a merchant&#39;s customer email, or a null uuid when the email is not on file. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getEmailDispatchLogCustomerLookup -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.StorefrontApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let storefront_oid = 56; // Number | 
+let opts = {
+  'email': "email_example" // String | 
+};
+apiInstance.getEmailDispatchLogCustomerLookup(storefront_oid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getEmailDispatchLogCustomerLookup -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **email** | **String**|  | [optional] 
+
+### Return type
+
+[**EmailCustomerLookupResponse**](EmailCustomerLookupResponse.md)
 
 ### Authorization
 
@@ -5097,6 +5229,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailSmsOrdersResponse**](EmailSmsOrdersResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getEmailStepDispatchLogDetail
+
+> EmailDispatchLogDetailResponse getEmailStepDispatchLogDetail(storefront_oid, commseq_uuid, commseq_step_uuid, opts)
+
+Get the full detail of a single dispatch-log record
+
+Fetches and gunzips the full detail payload of one dispatch-log record (AP5 drill-down), identified by its step plus the log_dts and esp_customer_uuid shown on the list row. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getEmailStepDispatchLogDetail -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.StorefrontApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let storefront_oid = 56; // Number | 
+let commseq_uuid = "commseq_uuid_example"; // String | 
+let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
+let opts = {
+  'log_dts': "log_dts_example", // String | 
+  'esp_customer_uuid': "esp_customer_uuid_example" // String | 
+};
+apiInstance.getEmailStepDispatchLogDetail(storefront_oid, commseq_uuid, commseq_step_uuid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getEmailStepDispatchLogDetail -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
+ **commseq_step_uuid** | **String**|  | 
+ **log_dts** | **String**|  | [optional] 
+ **esp_customer_uuid** | **String**|  | [optional] 
+
+### Return type
+
+[**EmailDispatchLogDetailResponse**](EmailDispatchLogDetailResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getEmailStepDispatchLogs
+
+> EmailDispatchLogsResponse getEmailStepDispatchLogs(storefront_oid, commseq_uuid, commseq_step_uuid, opts)
+
+Get a paginated, date-boundable dispatch-log feed for a step
+
+Paginated per-step dispatch activity with 90-day depth (AP3/AP4). Rows are lean, rendered from the DynamoDB keys; fetch a row&#39;s full detail via getEmailStepDispatchLogDetail. Page forward by incrementing pageNumber until the response &#39;more&#39; flag is false. since/until are inclusive ISO-8601 bounds on log_dts. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getEmailStepDispatchLogs -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.StorefrontApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let storefront_oid = 56; // Number | 
+let commseq_uuid = "commseq_uuid_example"; // String | 
+let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
+let opts = {
+  'since': "since_example", // String | 
+  'until': "until_example", // String | 
+  'pageNumber': 56, // Number | 
+  'pageSize': 56 // Number | 
+};
+apiInstance.getEmailStepDispatchLogs(storefront_oid, commseq_uuid, commseq_step_uuid, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getEmailStepDispatchLogs -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **commseq_uuid** | **String**|  | 
+ **commseq_step_uuid** | **String**|  | 
+ **since** | **String**|  | [optional] 
+ **until** | **String**|  | [optional] 
+ **pageNumber** | **Number**|  | [optional] 
+ **pageSize** | **Number**|  | [optional] 
+
+### Return type
+
+[**EmailDispatchLogsResponse**](EmailDispatchLogsResponse.md)
 
 ### Authorization
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentStatusHistorySearchRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchRequest
- * @version 4.1.110
+ * @version 4.1.111
  */
 class ConversationAgentStatusHistorySearchRequest {
     /**
