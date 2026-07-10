@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportDryRunQueryResult model module.
  * @module com.ultracart.admin.v2.models/ReportDryRunQueryResult
- * @version 4.1.114
+ * @version 4.1.115
  */
 var ReportDryRunQueryResult = /*#__PURE__*/function () {
   /**

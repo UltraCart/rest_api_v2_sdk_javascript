@@ -44,7 +44,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.1.114
+ * @version 4.1.115
  */
 var Customer = /*#__PURE__*/function () {
   /**
@@ -115,6 +115,9 @@ var Customer = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('billing')) {
           obj['billing'] = _ApiClient["default"].convertToType(data['billing'], [_CustomerBilling["default"]]);
+        }
+        if (data.hasOwnProperty('birth_date')) {
+          obj['birth_date'] = _ApiClient["default"].convertToType(data['birth_date'], 'String');
         }
         if (data.hasOwnProperty('business_notes')) {
           obj['business_notes'] = _ApiClient["default"].convertToType(data['business_notes'], 'String');
@@ -214,6 +217,9 @@ var Customer = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('qb_tax_exemption_reason_code')) {
           obj['qb_tax_exemption_reason_code'] = _ApiClient["default"].convertToType(data['qb_tax_exemption_reason_code'], 'Number');
+        }
+        if (data.hasOwnProperty('quickbooks_online_customer_id')) {
+          obj['quickbooks_online_customer_id'] = _ApiClient["default"].convertToType(data['quickbooks_online_customer_id'], 'String');
         }
         if (data.hasOwnProperty('quotes')) {
           obj['quotes'] = _ApiClient["default"].convertToType(data['quotes'], [_Order["default"]]);
@@ -353,6 +359,12 @@ Customer.prototype['automatic_merchant_notes'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/CustomerBilling>} billing
  */
 Customer.prototype['billing'] = undefined;
+
+/**
+ * Customer birthday
+ * @member {String} birth_date
+ */
+Customer.prototype['birth_date'] = undefined;
 
 /**
  * Business notes (internally visible only)
@@ -547,6 +559,12 @@ Customer.prototype['qb_code'] = undefined;
  * @member {Number} qb_tax_exemption_reason_code
  */
 Customer.prototype['qb_tax_exemption_reason_code'] = undefined;
+
+/**
+ * QuickBooks Online customer ID used to lock this customer 1:1 with QuickBooks Online
+ * @member {String} quickbooks_online_customer_id
+ */
+Customer.prototype['quickbooks_online_customer_id'] = undefined;
 
 /**
  * Quotes associated with this customer profile

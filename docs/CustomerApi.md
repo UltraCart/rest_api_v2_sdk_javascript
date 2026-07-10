@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getCustomersForDataTables**](CustomerApi.md#getCustomersForDataTables) | **POST** /customer/customers/dataTables | Retrieve customers for DataTables plugin
 [**getEmailVerificationToken**](CustomerApi.md#getEmailVerificationToken) | **POST** /customer/customers/email_verify/get_token | Create a token that can be used to verify a customer email address
 [**getMagicLink**](CustomerApi.md#getMagicLink) | **PUT** /customer/customers/{customer_profile_oid}/magic_link/{storefront_host_name} | getMagicLink
+[**getQuickBooksOnlineCustomers**](CustomerApi.md#getQuickBooksOnlineCustomers) | **GET** /customer/quickbooks_online/customers | Search the merchant&#39;s QuickBooks Online customers
 [**insertCustomer**](CustomerApi.md#insertCustomer) | **POST** /customer/customers | Insert a customer
 [**insertWishListItem**](CustomerApi.md#insertWishListItem) | **POST** /customer/customers/{customer_profile_oid}/wishlist | Insert a customer wishlist item
 [**mergeCustomer**](CustomerApi.md#mergeCustomer) | **PUT** /customer/customers/{customer_profile_oid}/merge | Merge customer into this customer
@@ -989,6 +990,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CustomerMagicLinkResponse**](CustomerMagicLinkResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getQuickBooksOnlineCustomers
+
+> QuickBooksOnlineCustomersResponse getQuickBooksOnlineCustomers(opts)
+
+Search the merchant&#39;s QuickBooks Online customers
+
+Typeahead search of the merchant&#39;s QuickBooks Online customers by display name.  Used by the customer profile editor to link a profile 1:1 to a QuickBooks Online customer.  Returns up to 100 matches.  If QuickBooks Online is not connected the list will be empty. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getQuickBooksOnlineCustomers -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.CustomerApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let opts = {
+  'q': "q_example" // String | Search query matched against the QuickBooks Online customer display name
+};
+apiInstance.getQuickBooksOnlineCustomers(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getQuickBooksOnlineCustomers -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **q** | **String**| Search query matched against the QuickBooks Online customer display name | [optional] 
+
+### Return type
+
+[**QuickBooksOnlineCustomersResponse**](QuickBooksOnlineCustomersResponse.md)
 
 ### Authorization
 

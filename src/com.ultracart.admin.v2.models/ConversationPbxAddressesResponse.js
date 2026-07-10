@@ -17,7 +17,7 @@ import ConversationPbxAddress from './ConversationPbxAddress';
 /**
  * The ConversationPbxAddressesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAddressesResponse
- * @version 4.1.115
+ * @version 4.1.116
  */
 class ConversationPbxAddressesResponse {
     /**

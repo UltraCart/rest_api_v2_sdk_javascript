@@ -38,11 +38,12 @@ import EmailVerifyTokenValidateResponse from '../com.ultracart.admin.v2.models/E
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import LookupRequest from '../com.ultracart.admin.v2.models/LookupRequest';
 import LookupResponse from '../com.ultracart.admin.v2.models/LookupResponse';
+import QuickBooksOnlineCustomersResponse from '../com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse';
 
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.115
+* @version 4.1.116
 */
 export default class CustomerApi {
 
@@ -831,6 +832,47 @@ export default class CustomerApi {
       let returnType = CustomerMagicLinkResponse;
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}/magic_link/{storefront_host_name}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getQuickBooksOnlineCustomers operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getQuickBooksOnlineCustomersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search the merchant's QuickBooks Online customers
+     * Typeahead search of the merchant's QuickBooks Online customers by display name.  Used by the customer profile editor to link a profile 1:1 to a QuickBooks Online customer.  Returns up to 100 matches.  If QuickBooks Online is not connected the list will be empty. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.q Search query matched against the QuickBooks Online customer display name
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getQuickBooksOnlineCustomersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse}
+     */
+    getQuickBooksOnlineCustomers(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'q': opts['q']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = QuickBooksOnlineCustomersResponse;
+      return this.apiClient.callApi(
+        '/customer/quickbooks_online/customers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

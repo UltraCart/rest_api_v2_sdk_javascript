@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemProperty model module.
  * @module com.ultracart.admin.v2.models/ItemProperty
- * @version 4.1.115
+ * @version 4.1.116
  */
 class ItemProperty {
     /**

@@ -868,6 +868,8 @@ import PricingTierNotification from './com.ultracart.admin.v2.models/PricingTier
 import PricingTiersResponse from './com.ultracart.admin.v2.models/PricingTiersResponse';
 import Property from './com.ultracart.admin.v2.models/Property';
 import PublishLibraryItemRequest from './com.ultracart.admin.v2.models/PublishLibraryItemRequest';
+import QuickBooksOnlineCustomer from './com.ultracart.admin.v2.models/QuickBooksOnlineCustomer';
+import QuickBooksOnlineCustomersResponse from './com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse';
 import RegisterAffiliateClickRequest from './com.ultracart.admin.v2.models/RegisterAffiliateClickRequest';
 import RegisterAffiliateClickResponse from './com.ultracart.admin.v2.models/RegisterAffiliateClickResponse';
 import ReplaceOrderItemIdRequest from './com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest';
@@ -1095,7 +1097,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.115
+* @version 4.1.116
 */
 export {
     /**
@@ -6233,6 +6235,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/PublishLibraryItemRequest}
      */
     PublishLibraryItemRequest,
+
+    /**
+     * The QuickBooksOnlineCustomer model constructor.
+     * @property {module:com.ultracart.admin.v2.models/QuickBooksOnlineCustomer}
+     */
+    QuickBooksOnlineCustomer,
+
+    /**
+     * The QuickBooksOnlineCustomersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse}
+     */
+    QuickBooksOnlineCustomersResponse,
 
     /**
      * The RegisterAffiliateClickRequest model constructor.

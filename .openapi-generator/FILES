@@ -874,6 +874,8 @@ docs/PricingTierNotification.md
 docs/PricingTiersResponse.md
 docs/Property.md
 docs/PublishLibraryItemRequest.md
+docs/QuickBooksOnlineCustomer.md
+docs/QuickBooksOnlineCustomersResponse.md
 docs/RegisterAffiliateClickRequest.md
 docs/RegisterAffiliateClickResponse.md
 docs/ReplaceOrderItemIdRequest.md
@@ -1912,6 +1914,8 @@ src/com.ultracart.admin.v2.models/PricingTierNotification.js
 src/com.ultracart.admin.v2.models/PricingTiersResponse.js
 src/com.ultracart.admin.v2.models/Property.js
 src/com.ultracart.admin.v2.models/PublishLibraryItemRequest.js
+src/com.ultracart.admin.v2.models/QuickBooksOnlineCustomer.js
+src/com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse.js
 src/com.ultracart.admin.v2.models/RegisterAffiliateClickRequest.js
 src/com.ultracart.admin.v2.models/RegisterAffiliateClickResponse.js
 src/com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest.js

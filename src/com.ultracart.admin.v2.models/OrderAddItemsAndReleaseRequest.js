@@ -17,7 +17,7 @@ import OrderItem from './OrderItem';
 /**
  * The OrderAddItemsAndReleaseRequest model module.
  * @module com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest
- * @version 4.1.115
+ * @version 4.1.116
  */
 class OrderAddItemsAndReleaseRequest {
     /**

@@ -17,7 +17,7 @@ import ConversationVirtualAgentCapabilities from './ConversationVirtualAgentCapa
 /**
  * The ConversationAgentProfile model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentProfile
- * @version 4.1.115
+ * @version 4.1.116
  */
 class ConversationAgentProfile {
     /**

@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ExperimentsResponse model module.
  * @module com.ultracart.admin.v2.models/ExperimentsResponse
- * @version 4.1.114
+ * @version 4.1.115
  */
 var ExperimentsResponse = /*#__PURE__*/function () {
   /**
