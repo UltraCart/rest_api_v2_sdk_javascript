@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AnrokConfig model module.
  * @module com.ultracart.admin.v2.models/AnrokConfig
- * @version 4.1.113
+ * @version 4.1.114
  */
 var AnrokConfig = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var AnrokConfig = /*#__PURE__*/function () {
         if (data.hasOwnProperty('last_test_dts')) {
           obj['last_test_dts'] = _ApiClient["default"].convertToType(data['last_test_dts'], 'String');
         }
+        if (data.hasOwnProperty('shipping_product_id')) {
+          obj['shipping_product_id'] = _ApiClient["default"].convertToType(data['shipping_product_id'], 'String');
+        }
         if (data.hasOwnProperty('test_results')) {
           obj['test_results'] = _ApiClient["default"].convertToType(data['test_results'], 'String');
         }
@@ -102,6 +105,12 @@ AnrokConfig.prototype['estimate_only'] = undefined;
  * @member {String} last_test_dts
  */
 AnrokConfig.prototype['last_test_dts'] = undefined;
+
+/**
+ * Anrok Product ID used to classify shipping/handling charges; must be created in Anrok and mapped to the Shipping cost tax category
+ * @member {String} shipping_product_id
+ */
+AnrokConfig.prototype['shipping_product_id'] = undefined;
 
 /**
  * Test results of the last connection test to Anrok

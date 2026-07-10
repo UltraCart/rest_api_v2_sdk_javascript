@@ -34,7 +34,7 @@ import Order from './Order';
 /**
  * The Customer model module.
  * @module com.ultracart.admin.v2.models/Customer
- * @version 4.1.114
+ * @version 4.1.115
  */
 class Customer {
     /**
@@ -103,6 +103,9 @@ class Customer {
             }
             if (data.hasOwnProperty('billing')) {
                 obj['billing'] = ApiClient.convertToType(data['billing'], [CustomerBilling]);
+            }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'String');
             }
             if (data.hasOwnProperty('business_notes')) {
                 obj['business_notes'] = ApiClient.convertToType(data['business_notes'], 'String');
@@ -202,6 +205,9 @@ class Customer {
             }
             if (data.hasOwnProperty('qb_tax_exemption_reason_code')) {
                 obj['qb_tax_exemption_reason_code'] = ApiClient.convertToType(data['qb_tax_exemption_reason_code'], 'Number');
+            }
+            if (data.hasOwnProperty('quickbooks_online_customer_id')) {
+                obj['quickbooks_online_customer_id'] = ApiClient.convertToType(data['quickbooks_online_customer_id'], 'String');
             }
             if (data.hasOwnProperty('quotes')) {
                 obj['quotes'] = ApiClient.convertToType(data['quotes'], [Order]);
@@ -343,6 +349,12 @@ Customer.prototype['automatic_merchant_notes'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/CustomerBilling>} billing
  */
 Customer.prototype['billing'] = undefined;
+
+/**
+ * Customer birthday
+ * @member {String} birth_date
+ */
+Customer.prototype['birth_date'] = undefined;
 
 /**
  * Business notes (internally visible only)
@@ -537,6 +549,12 @@ Customer.prototype['qb_code'] = undefined;
  * @member {Number} qb_tax_exemption_reason_code
  */
 Customer.prototype['qb_tax_exemption_reason_code'] = undefined;
+
+/**
+ * QuickBooks Online customer ID used to lock this customer 1:1 with QuickBooks Online
+ * @member {String} quickbooks_online_customer_id
+ */
+Customer.prototype['quickbooks_online_customer_id'] = undefined;
 
 /**
  * Quotes associated with this customer profile

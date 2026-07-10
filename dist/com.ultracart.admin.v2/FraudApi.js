@@ -34,7 +34,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Fraud service.
 * @module com.ultracart.admin.v2/FraudApi
-* @version 4.1.113
+* @version 4.1.114
 */
 var FraudApi = exports["default"] = /*#__PURE__*/function () {
   /**

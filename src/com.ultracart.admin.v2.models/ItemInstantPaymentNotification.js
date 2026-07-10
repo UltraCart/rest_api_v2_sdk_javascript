@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemInstantPaymentNotification model module.
  * @module com.ultracart.admin.v2.models/ItemInstantPaymentNotification
- * @version 4.1.114
+ * @version 4.1.115
  */
 class ItemInstantPaymentNotification {
     /**
