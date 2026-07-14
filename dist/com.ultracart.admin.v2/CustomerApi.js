@@ -30,6 +30,7 @@ var _EmailVerifyTokenValidateResponse = _interopRequireDefault(require("../com.u
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
 var _LookupRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/LookupRequest"));
 var _LookupResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/LookupResponse"));
+var _QuickBooksOnlineCustomersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -51,7 +52,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.115
+* @version 4.1.116
 */
 var CustomerApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -729,6 +730,40 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _CustomerMagicLinkResponse["default"];
       return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/magic_link/{storefront_host_name}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getQuickBooksOnlineCustomers operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getQuickBooksOnlineCustomersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search the merchant's QuickBooks Online customers
+     * Typeahead search of the merchant's QuickBooks Online customers by display name.  Used by the customer profile editor to link a profile 1:1 to a QuickBooks Online customer.  Returns up to 100 matches.  If QuickBooks Online is not connected the list will be empty. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.q Search query matched against the QuickBooks Online customer display name
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getQuickBooksOnlineCustomersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse}
+     */
+  }, {
+    key: "getQuickBooksOnlineCustomers",
+    value: function getQuickBooksOnlineCustomers(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {
+        'q': opts['q']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _QuickBooksOnlineCustomersResponse["default"];
+      return this.apiClient.callApi('/customer/quickbooks_online/customers', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

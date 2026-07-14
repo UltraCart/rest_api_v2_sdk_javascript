@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BulkRecord model module.
  * @module com.ultracart.admin.v2.models/BulkRecord
- * @version 4.1.115
+ * @version 4.1.116
  */
 var BulkRecord = /*#__PURE__*/function () {
   /**

@@ -5241,6 +5241,18 @@ Object.defineProperty(exports, "PublishLibraryItemRequest", {
     return _PublishLibraryItemRequest["default"];
   }
 });
+Object.defineProperty(exports, "QuickBooksOnlineCustomer", {
+  enumerable: true,
+  get: function get() {
+    return _QuickBooksOnlineCustomer["default"];
+  }
+});
+Object.defineProperty(exports, "QuickBooksOnlineCustomersResponse", {
+  enumerable: true,
+  get: function get() {
+    return _QuickBooksOnlineCustomersResponse["default"];
+  }
+});
 Object.defineProperty(exports, "RegisterAffiliateClickRequest", {
   enumerable: true,
   get: function get() {
@@ -7171,6 +7183,8 @@ var _PricingTierNotification = _interopRequireDefault(require("./com.ultracart.a
 var _PricingTiersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/PricingTiersResponse"));
 var _Property = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Property"));
 var _PublishLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/PublishLibraryItemRequest"));
+var _QuickBooksOnlineCustomer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/QuickBooksOnlineCustomer"));
+var _QuickBooksOnlineCustomersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse"));
 var _RegisterAffiliateClickRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/RegisterAffiliateClickRequest"));
 var _RegisterAffiliateClickResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/RegisterAffiliateClickResponse"));
 var _ReplaceOrderItemIdRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ReplaceOrderItemIdRequest"));

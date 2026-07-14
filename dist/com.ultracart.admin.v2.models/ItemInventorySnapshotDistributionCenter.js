@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemInventorySnapshotDistributionCenter model module.
  * @module com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter
- * @version 4.1.115
+ * @version 4.1.116
  */
 var ItemInventorySnapshotDistributionCenter = /*#__PURE__*/function () {
   /**
