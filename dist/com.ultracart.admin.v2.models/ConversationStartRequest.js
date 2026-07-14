@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationStartRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationStartRequest
- * @version 4.1.116
+ * @version 4.1.117
  */
 var ConversationStartRequest = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,9 @@ var ConversationStartRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('conversation_webchat_queue_uuid')) {
           obj['conversation_webchat_queue_uuid'] = _ApiClient["default"].convertToType(data['conversation_webchat_queue_uuid'], 'String');
         }
+        if (data.hasOwnProperty('resolve_only')) {
+          obj['resolve_only'] = _ApiClient["default"].convertToType(data['resolve_only'], 'Boolean');
+        }
       }
       return obj;
     }
@@ -87,4 +90,9 @@ ConversationStartRequest.prototype['conversation_arn'] = undefined;
  * @member {String} conversation_webchat_queue_uuid
  */
 ConversationStartRequest.prototype['conversation_webchat_queue_uuid'] = undefined;
+
+/**
+ * @member {Boolean} resolve_only
+ */
+ConversationStartRequest.prototype['resolve_only'] = undefined;
 var _default = exports["default"] = ConversationStartRequest;

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxProviderAnrok model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAnrok
- * @version 4.1.116
+ * @version 4.1.117
  */
 var TaxProviderAnrok = /*#__PURE__*/function () {
   /**
