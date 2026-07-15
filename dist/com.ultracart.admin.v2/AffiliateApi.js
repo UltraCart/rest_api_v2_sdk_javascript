@@ -35,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Affiliate service.
 * @module com.ultracart.admin.v2/AffiliateApi
-* @version 4.1.118
+* @version 4.1.119
 */
 var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -268,6 +268,7 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
      * Insert an affiliate on the UltraCart account.  The affiliate is created within the merchant's active affiliate program. 
      * @param {module:com.ultracart.admin.v2.models/Affiliate} affiliate Affiliate to insert
      * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.send_welcome_email Whether to send a welcome email to the affiliate after it is created.  Defaults to false. (default to false)
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
      * @param {module:com.ultracart.admin.v2/AffiliateApi~insertAffiliateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/AffiliateResponse}
@@ -283,6 +284,7 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
       }
       var pathParams = {};
       var queryParams = {
+        'send_welcome_email': opts['send_welcome_email'],
         '_expand': opts['_expand']
       };
       var headerParams = {};
@@ -292,6 +294,41 @@ var AffiliateApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _AffiliateResponse["default"];
       return this.apiClient.callApi('/affiliate/affiliates', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the sendAffiliateWelcomeEmail operation.
+     * @callback module:com.ultracart.admin.v2/AffiliateApi~sendAffiliateWelcomeEmailCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Send a welcome email to an affiliate
+     * Sends a welcome email to the specified affiliate using the welcome letter configured on the merchant's active affiliate program. 
+     * @param {Number} affiliate_oid The affiliate oid to send the welcome email to.
+     * @param {module:com.ultracart.admin.v2/AffiliateApi~sendAffiliateWelcomeEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+  }, {
+    key: "sendAffiliateWelcomeEmail",
+    value: function sendAffiliateWelcomeEmail(affiliate_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'affiliate_oid' is set
+      if (affiliate_oid === undefined || affiliate_oid === null) {
+        throw new Error("Missing the required parameter 'affiliate_oid' when calling sendAffiliateWelcomeEmail");
+      }
+      var pathParams = {
+        'affiliate_oid': affiliate_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/affiliate/affiliates/{affiliate_oid}/welcome_email', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

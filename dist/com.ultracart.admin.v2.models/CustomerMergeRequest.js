@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerMergeRequest model module.
  * @module com.ultracart.admin.v2.models/CustomerMergeRequest
- * @version 4.1.118
+ * @version 4.1.119
  */
 var CustomerMergeRequest = /*#__PURE__*/function () {
   /**

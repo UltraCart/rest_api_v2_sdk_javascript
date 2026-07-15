@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerEstimateShippingResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerEstimateShippingResponse
- * @version 4.1.118
+ * @version 4.1.119
  */
 var ChannelPartnerEstimateShippingResponse = /*#__PURE__*/function () {
   /**

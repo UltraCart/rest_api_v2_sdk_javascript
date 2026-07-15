@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _OrderQueryPaymentTransactionFilter = _interopRequireDefault(require("./OrderQueryPaymentTransactionFilter"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -26,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.118
+ * @version 4.1.119
  */
 var OrderQuery = /*#__PURE__*/function () {
   /**
@@ -142,6 +143,9 @@ var OrderQuery = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('payment_method')) {
           obj['payment_method'] = _ApiClient["default"].convertToType(data['payment_method'], 'String');
+        }
+        if (data.hasOwnProperty('payment_transaction_filters')) {
+          obj['payment_transaction_filters'] = _ApiClient["default"].convertToType(data['payment_transaction_filters'], [_OrderQueryPaymentTransactionFilter["default"]]);
         }
         if (data.hasOwnProperty('phone')) {
           obj['phone'] = _ApiClient["default"].convertToType(data['phone'], 'String');
@@ -360,6 +364,12 @@ OrderQuery.prototype['payment_date_end'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderQuery.PaymentMethodEnum} payment_method
  */
 OrderQuery.prototype['payment_method'] = undefined;
+
+/**
+ * Exact-match filters on the detail name/value pairs of a single payment transaction, AND-ed against the same transaction. Requires query_target=cache which uses the ElasticSearch cache. The origin or database path cannot search transaction details. The rotating gateway is just another pair, name equals rotatingTransactionGatewayCode or rotatingTransactionGatewayName.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderQueryPaymentTransactionFilter>} payment_transaction_filters
+ */
+OrderQuery.prototype['payment_transaction_filters'] = undefined;
 
 /**
  * Phone

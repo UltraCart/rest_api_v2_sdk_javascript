@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateTierRelationship model module.
  * @module com.ultracart.admin.v2.models/AffiliateTierRelationship
- * @version 4.1.119
+ * @version 4.1.120
  */
 class AffiliateTierRelationship {
     /**
