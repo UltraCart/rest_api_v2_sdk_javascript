@@ -3090,7 +3090,8 @@ let opts = {
   'until': "until_example", // String | 
   'pageNumber': 56, // Number | 
   'pageSize': 56, // Number | 
-  'scanForward': true // Boolean | 
+  'scanForward': true, // Boolean | 
+  'includeDetail': true // Boolean | 
 };
 apiInstance.getEmailCustomerDispatchLogs(storefront_oid, email_customer_uuid, opts, (error, data, response) => {
   if (error) {
@@ -3115,6 +3116,7 @@ Name | Type | Description  | Notes
  **pageNumber** | **Number**|  | [optional] 
  **pageSize** | **Number**|  | [optional] 
  **scanForward** | **Boolean**|  | [optional] 
+ **includeDetail** | **Boolean**|  | [optional] 
 
 ### Return type
 
@@ -5311,7 +5313,7 @@ Name | Type | Description  | Notes
 
 Get a paginated, date-boundable dispatch-log feed for a step
 
-Paginated per-step dispatch activity with 90-day depth (AP3/AP4). Rows are lean, rendered from the DynamoDB keys; fetch a row&#39;s full detail via getEmailStepDispatchLogDetail. Page forward by incrementing pageNumber until the response &#39;more&#39; flag is false. since/until are inclusive ISO-8601 bounds on log_dts. 
+Paginated per-step dispatch activity with 90-day depth (AP3/AP4). Rows are lean unless includeDetail is passed as true, rendered from the DynamoDB keys; fetch a row&#39;s full detail via getEmailStepDispatchLogDetail. Page forward by incrementing pageNumber until the response &#39;more&#39; flag is false. since/until are inclusive ISO-8601 bounds on log_dts. 
 
 
 ### Example
@@ -5334,7 +5336,8 @@ let opts = {
   'since': "since_example", // String | 
   'until': "until_example", // String | 
   'pageNumber': 56, // Number | 
-  'pageSize': 56 // Number | 
+  'pageSize': 56, // Number | 
+  'includeDetail': true // Boolean | 
 };
 apiInstance.getEmailStepDispatchLogs(storefront_oid, commseq_uuid, commseq_step_uuid, opts, (error, data, response) => {
   if (error) {
@@ -5359,6 +5362,7 @@ Name | Type | Description  | Notes
  **until** | **String**|  | [optional] 
  **pageNumber** | **Number**|  | [optional] 
  **pageSize** | **Number**|  | [optional] 
+ **includeDetail** | **Boolean**|  | [optional] 
 
 ### Return type
 

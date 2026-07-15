@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailDispatchLog model module.
  * @module com.ultracart.admin.v2.models/EmailDispatchLog
- * @version 4.1.120
+ * @version 4.1.121
  */
 class EmailDispatchLog {
     /**
@@ -47,6 +47,9 @@ class EmailDispatchLog {
         if (data) {
             obj = obj || new EmailDispatchLog();
 
+            if (data.hasOwnProperty('detail')) {
+                obj['detail'] = ApiClient.convertToType(data['detail'], 'String');
+            }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
@@ -68,6 +71,12 @@ class EmailDispatchLog {
 
 
 }
+
+/**
+ * Dispatch detail text (free-form log of how the customer moved through the step)
+ * @member {String} detail
+ */
+EmailDispatchLog.prototype['detail'] = undefined;
 
 /**
  * Customer email, resolved from the customer UUID for the page

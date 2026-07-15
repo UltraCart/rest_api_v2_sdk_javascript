@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The BulkJobsResponse model module.
  * @module com.ultracart.admin.v2.models/BulkJobsResponse
- * @version 4.1.120
+ * @version 4.1.121
  */
 class BulkJobsResponse {
     /**

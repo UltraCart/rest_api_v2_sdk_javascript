@@ -52,7 +52,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.119
+* @version 4.1.120
 */
 var CustomerApi = exports["default"] = /*#__PURE__*/function () {
   /**

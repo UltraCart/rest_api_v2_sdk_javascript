@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ConversationAgentStatusHeatmapResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusHeatmapResponse
- * @version 4.1.120
+ * @version 4.1.121
  */
 class ConversationAgentStatusHeatmapResponse {
     /**

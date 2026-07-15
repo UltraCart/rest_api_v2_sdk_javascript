@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ItemGatedCodesResponse model module.
  * @module com.ultracart.admin.v2.models/ItemGatedCodesResponse
- * @version 4.1.120
+ * @version 4.1.121
  */
 class ItemGatedCodesResponse {
     /**

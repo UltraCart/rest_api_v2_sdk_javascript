@@ -169,7 +169,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.120
+* @version 4.1.121
 */
 export default class StorefrontApi {
 
@@ -2645,6 +2645,7 @@ export default class StorefrontApi {
      * @param {Number} opts.pageNumber 
      * @param {Number} opts.pageSize 
      * @param {Boolean} opts.scanForward 
+     * @param {Boolean} opts.includeDetail 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCustomerDispatchLogsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDispatchLogsResponse}
      */
@@ -2669,7 +2670,8 @@ export default class StorefrontApi {
         'until': opts['until'],
         'pageNumber': opts['pageNumber'],
         'pageSize': opts['pageSize'],
-        'scanForward': opts['scanForward']
+        'scanForward': opts['scanForward'],
+        'includeDetail': opts['includeDetail']
       };
       let headerParams = {
       };
@@ -4559,7 +4561,7 @@ export default class StorefrontApi {
 
     /**
      * Get a paginated, date-boundable dispatch-log feed for a step
-     * Paginated per-step dispatch activity with 90-day depth (AP3/AP4). Rows are lean, rendered from the DynamoDB keys; fetch a row's full detail via getEmailStepDispatchLogDetail. Page forward by incrementing pageNumber until the response 'more' flag is false. since/until are inclusive ISO-8601 bounds on log_dts. 
+     * Paginated per-step dispatch activity with 90-day depth (AP3/AP4). Rows are lean unless includeDetail is passed as true, rendered from the DynamoDB keys; fetch a row's full detail via getEmailStepDispatchLogDetail. Page forward by incrementing pageNumber until the response 'more' flag is false. since/until are inclusive ISO-8601 bounds on log_dts. 
      * @param {Number} storefront_oid 
      * @param {String} commseq_uuid 
      * @param {String} commseq_step_uuid 
@@ -4568,6 +4570,7 @@ export default class StorefrontApi {
      * @param {String} opts.until 
      * @param {Number} opts.pageNumber 
      * @param {Number} opts.pageSize 
+     * @param {Boolean} opts.includeDetail 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailStepDispatchLogsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/EmailDispatchLogsResponse}
      */
@@ -4596,7 +4599,8 @@ export default class StorefrontApi {
         'since': opts['since'],
         'until': opts['until'],
         'pageNumber': opts['pageNumber'],
-        'pageSize': opts['pageSize']
+        'pageSize': opts['pageSize'],
+        'includeDetail': opts['includeDetail']
       };
       let headerParams = {
       };
