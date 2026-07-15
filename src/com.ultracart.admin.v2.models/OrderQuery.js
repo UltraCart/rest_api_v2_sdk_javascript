@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import OrderQueryPaymentTransactionFilter from './OrderQueryPaymentTransactionFilter';
 
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.118
+ * @version 4.1.119
  */
 class OrderQuery {
     /**
@@ -130,6 +131,9 @@ class OrderQuery {
             }
             if (data.hasOwnProperty('payment_method')) {
                 obj['payment_method'] = ApiClient.convertToType(data['payment_method'], 'String');
+            }
+            if (data.hasOwnProperty('payment_transaction_filters')) {
+                obj['payment_transaction_filters'] = ApiClient.convertToType(data['payment_transaction_filters'], [OrderQueryPaymentTransactionFilter]);
             }
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
@@ -350,6 +354,12 @@ OrderQuery.prototype['payment_date_end'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/OrderQuery.PaymentMethodEnum} payment_method
  */
 OrderQuery.prototype['payment_method'] = undefined;
+
+/**
+ * Exact-match filters on the detail name/value pairs of a single payment transaction, AND-ed against the same transaction. Requires query_target=cache which uses the ElasticSearch cache. The origin or database path cannot search transaction details. The rotating gateway is just another pair, name equals rotatingTransactionGatewayCode or rotatingTransactionGatewayName.
+ * @member {Array.<module:com.ultracart.admin.v2.models/OrderQueryPaymentTransactionFilter>} payment_transaction_filters
+ */
+OrderQuery.prototype['payment_transaction_filters'] = undefined;
 
 /**
  * Phone

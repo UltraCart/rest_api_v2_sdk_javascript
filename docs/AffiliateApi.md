@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getClicksByQuery**](AffiliateApi.md#getClicksByQuery) | **POST** /affiliate/clicks/query | Retrieve clicks
 [**getLedgersByQuery**](AffiliateApi.md#getLedgersByQuery) | **POST** /affiliate/ledgers/query | Retrieve ledger entries
 [**insertAffiliate**](AffiliateApi.md#insertAffiliate) | **POST** /affiliate/affiliates | Insert an affiliate
+[**sendAffiliateWelcomeEmail**](AffiliateApi.md#sendAffiliateWelcomeEmail) | **POST** /affiliate/affiliates/{affiliate_oid}/welcome_email | Send a welcome email to an affiliate
 [**updateAffiliate**](AffiliateApi.md#updateAffiliate) | **PUT** /affiliate/affiliates/{affiliate_oid} | Update an affiliate
 
 
@@ -341,6 +342,7 @@ let apiInstance = new ucApi.AffiliateApi(apiClient);
 
 let affiliate = new UltraCartRestApiV2.Affiliate(); // Affiliate | Affiliate to insert
 let opts = {
+  'send_welcome_email': false, // Boolean | Whether to send a welcome email to the affiliate after it is created.  Defaults to false.
   '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
 };
 apiInstance.insertAffiliate(affiliate, opts, (error, data, response) => {
@@ -360,6 +362,7 @@ apiInstance.insertAffiliate(affiliate, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **affiliate** | [**Affiliate**](Affiliate.md)| Affiliate to insert | 
+ **send_welcome_email** | **Boolean**| Whether to send a welcome email to the affiliate after it is created.  Defaults to false. | [optional] [default to false]
  **_expand** | **String**| The object expansion to perform on the result.  See documentation for examples | [optional] 
 
 ### Return type
@@ -373,6 +376,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## sendAffiliateWelcomeEmail
+
+> sendAffiliateWelcomeEmail(affiliate_oid)
+
+Send a welcome email to an affiliate
+
+Sends a welcome email to the specified affiliate using the welcome letter configured on the merchant&#39;s active affiliate program. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE sendAffiliateWelcomeEmail -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.AffiliateApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let affiliate_oid = 56; // Number | The affiliate oid to send the welcome email to.
+apiInstance.sendAffiliateWelcomeEmail(affiliate_oid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE sendAffiliateWelcomeEmail -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **affiliate_oid** | **Number**| The affiliate oid to send the welcome email to. | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

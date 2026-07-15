@@ -838,6 +838,7 @@ import OrderProcessPaymentResponse from './com.ultracart.admin.v2.models/OrderPr
 import OrderProperty from './com.ultracart.admin.v2.models/OrderProperty';
 import OrderQuery from './com.ultracart.admin.v2.models/OrderQuery';
 import OrderQueryBatch from './com.ultracart.admin.v2.models/OrderQueryBatch';
+import OrderQueryPaymentTransactionFilter from './com.ultracart.admin.v2.models/OrderQueryPaymentTransactionFilter';
 import OrderQuote from './com.ultracart.admin.v2.models/OrderQuote';
 import OrderReason from './com.ultracart.admin.v2.models/OrderReason';
 import OrderRefundableResponse from './com.ultracart.admin.v2.models/OrderRefundableResponse';
@@ -1097,7 +1098,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.118
+* @version 4.1.119
 */
 export {
     /**
@@ -6055,6 +6056,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderQueryBatch}
      */
     OrderQueryBatch,
+
+    /**
+     * The OrderQueryPaymentTransactionFilter model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderQueryPaymentTransactionFilter}
+     */
+    OrderQueryPaymentTransactionFilter,
 
     /**
      * The OrderQuote model constructor.
