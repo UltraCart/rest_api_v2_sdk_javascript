@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationWebchatQueueStatusQueueEntry model module.
  * @module com.ultracart.admin.v2.models/ConversationWebchatQueueStatusQueueEntry
- * @version 4.1.121
+ * @version 4.1.122
  */
 class ConversationWebchatQueueStatusQueueEntry {
     /**

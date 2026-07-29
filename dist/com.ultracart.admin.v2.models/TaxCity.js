@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxCity model module.
  * @module com.ultracart.admin.v2.models/TaxCity
- * @version 4.1.120
+ * @version 4.1.121
  */
 var TaxCity = /*#__PURE__*/function () {
   /**

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The WorkflowTaskTagsResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowTaskTagsResponse
- * @version 4.1.121
+ * @version 4.1.122
  */
 class WorkflowTaskTagsResponse {
     /**

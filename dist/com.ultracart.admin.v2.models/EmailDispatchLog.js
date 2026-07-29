@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailDispatchLog model module.
  * @module com.ultracart.admin.v2.models/EmailDispatchLog
- * @version 4.1.120
+ * @version 4.1.121
  */
 var EmailDispatchLog = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var EmailDispatchLog = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new EmailDispatchLog();
+        if (data.hasOwnProperty('detail')) {
+          obj['detail'] = _ApiClient["default"].convertToType(data['detail'], 'String');
+        }
         if (data.hasOwnProperty('email')) {
           obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
         }
@@ -79,6 +82,12 @@ var EmailDispatchLog = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * Dispatch detail text (free-form log of how the customer moved through the step)
+ * @member {String} detail
+ */
+EmailDispatchLog.prototype['detail'] = undefined;
+
 /**
  * Customer email, resolved from the customer UUID for the page
  * @member {String} email

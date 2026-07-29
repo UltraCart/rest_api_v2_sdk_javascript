@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The BaseResponse model module.
  * @module com.ultracart.admin.v2.models/BaseResponse
- * @version 4.1.121
+ * @version 4.1.122
  */
 class BaseResponse {
     /**

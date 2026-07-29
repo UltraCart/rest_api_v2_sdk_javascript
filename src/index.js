@@ -60,10 +60,12 @@ import AutoOrderItemOption from './com.ultracart.admin.v2.models/AutoOrderItemOp
 import AutoOrderItemSimpleSchedule from './com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule';
 import AutoOrderLog from './com.ultracart.admin.v2.models/AutoOrderLog';
 import AutoOrderManagement from './com.ultracart.admin.v2.models/AutoOrderManagement';
+import AutoOrderPaymentUpdateRequest from './com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest';
 import AutoOrderPropertiesUpdateRequest from './com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest';
 import AutoOrderProperty from './com.ultracart.admin.v2.models/AutoOrderProperty';
 import AutoOrderQuery from './com.ultracart.admin.v2.models/AutoOrderQuery';
 import AutoOrderQueryBatch from './com.ultracart.admin.v2.models/AutoOrderQueryBatch';
+import AutoOrderRebillResponse from './com.ultracart.admin.v2.models/AutoOrderRebillResponse';
 import AutoOrderResponse from './com.ultracart.admin.v2.models/AutoOrderResponse';
 import AutoOrdersRequest from './com.ultracart.admin.v2.models/AutoOrdersRequest';
 import AutoOrdersResponse from './com.ultracart.admin.v2.models/AutoOrdersResponse';
@@ -1098,7 +1100,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.121
+* @version 4.1.122
 */
 export {
     /**
@@ -1390,6 +1392,12 @@ export {
     AutoOrderManagement,
 
     /**
+     * The AutoOrderPaymentUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest}
+     */
+    AutoOrderPaymentUpdateRequest,
+
+    /**
      * The AutoOrderPropertiesUpdateRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest}
      */
@@ -1412,6 +1420,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AutoOrderQueryBatch}
      */
     AutoOrderQueryBatch,
+
+    /**
+     * The AutoOrderRebillResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AutoOrderRebillResponse}
+     */
+    AutoOrderRebillResponse,
 
     /**
      * The AutoOrderResponse model constructor.

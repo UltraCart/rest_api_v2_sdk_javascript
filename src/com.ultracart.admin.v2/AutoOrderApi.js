@@ -19,9 +19,11 @@ import AutoOrderCancelReasonsResponse from '../com.ultracart.admin.v2.models/Aut
 import AutoOrderConsolidate from '../com.ultracart.admin.v2.models/AutoOrderConsolidate';
 import AutoOrderEmailsResponse from '../com.ultracart.admin.v2.models/AutoOrderEmailsResponse';
 import AutoOrderItemCancelRequest from '../com.ultracart.admin.v2.models/AutoOrderItemCancelRequest';
+import AutoOrderPaymentUpdateRequest from '../com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest';
 import AutoOrderPropertiesUpdateRequest from '../com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest';
 import AutoOrderQuery from '../com.ultracart.admin.v2.models/AutoOrderQuery';
 import AutoOrderQueryBatch from '../com.ultracart.admin.v2.models/AutoOrderQueryBatch';
+import AutoOrderRebillResponse from '../com.ultracart.admin.v2.models/AutoOrderRebillResponse';
 import AutoOrderResponse from '../com.ultracart.admin.v2.models/AutoOrderResponse';
 import AutoOrdersRequest from '../com.ultracart.admin.v2.models/AutoOrdersRequest';
 import AutoOrdersResponse from '../com.ultracart.admin.v2.models/AutoOrdersResponse';
@@ -30,7 +32,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.121
+* @version 4.1.122
 */
 export default class AutoOrderApi {
 
@@ -45,6 +47,53 @@ export default class AutoOrderApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the attemptAutoOrderRebill operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~attemptAutoOrderRebillCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderRebillResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Attempt a failed rebill on an auto order
+     * Attempts to rebill an auto order using the payment information already on the original order.  The attempt is refused if the auto order is scheduled to charge within the next five minutes, or if it was already billed within the last 24 hours, both of which guard against double charging.  Runs synchronously and may take some time while the gateway is contacted.  A declined card is reported in the response body rather than as an API error. 
+     * @param {Number} auto_order_oid The auto order oid to rebill.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~attemptAutoOrderRebillCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderRebillResponse}
+     */
+    attemptAutoOrderRebill(auto_order_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling attemptAutoOrderRebill");
+      }
+
+      let pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = AutoOrderRebillResponse;
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/{auto_order_oid}/rebill', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the cancelAutoOrderItemByReferenceOrderId operation.
@@ -820,6 +869,58 @@ export default class AutoOrderApi {
       let returnType = AutoOrderResponse;
       return this.apiClient.callApi(
         '/auto_order/auto_orders/{auto_order_oid}/items/{auto_order_item_oid}/properties', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateAutoOrderPayment operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrderPaymentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderRebillResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update the payment information on an auto order
+     * Updates the credit card on the original order behind an auto order, along with any rebills sitting in accounts receivable, and reactivates the auto order.  Card data is accepted as hosted field tokens only. raw card numbers and card verification numbers are rejected.  Set attempt_rebill to true to also attempt the rebill immediately, which runs synchronously and may take some time while the gateway is contacted.  A declined card is reported in the response body rather than as an API error. 
+     * @param {Number} auto_order_oid The auto order oid to update payment information on.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest} auto_order_payment_update_request Payment information to place on the auto order
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrderPaymentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderRebillResponse}
+     */
+    updateAutoOrderPayment(auto_order_oid, auto_order_payment_update_request, opts, callback) {
+      opts = opts || {};
+      let postBody = auto_order_payment_update_request;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling updateAutoOrderPayment");
+      }
+      // verify the required parameter 'auto_order_payment_update_request' is set
+      if (auto_order_payment_update_request === undefined || auto_order_payment_update_request === null) {
+        throw new Error("Missing the required parameter 'auto_order_payment_update_request' when calling updateAutoOrderPayment");
+      }
+
+      let pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = AutoOrderRebillResponse;
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/{auto_order_oid}/payment', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

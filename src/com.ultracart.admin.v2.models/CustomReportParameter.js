@@ -17,7 +17,7 @@ import CustomReportParameterOption from './CustomReportParameterOption';
 /**
  * The CustomReportParameter model module.
  * @module com.ultracart.admin.v2.models/CustomReportParameter
- * @version 4.1.121
+ * @version 4.1.122
  */
 class CustomReportParameter {
     /**

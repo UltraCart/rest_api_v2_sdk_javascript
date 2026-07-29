@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingQueryRequest model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingQueryRequest
- * @version 4.1.120
+ * @version 4.1.121
  */
 var ScreenRecordingQueryRequest = /*#__PURE__*/function () {
   /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The UserGroupMembership model module.
  * @module com.ultracart.admin.v2.models/UserGroupMembership
- * @version 4.1.120
+ * @version 4.1.121
  */
 var UserGroupMembership = /*#__PURE__*/function () {
   /**

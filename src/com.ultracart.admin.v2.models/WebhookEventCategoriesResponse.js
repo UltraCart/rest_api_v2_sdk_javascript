@@ -20,7 +20,7 @@ import WebhookEventCategory from './WebhookEventCategory';
 /**
  * The WebhookEventCategoriesResponse model module.
  * @module com.ultracart.admin.v2.models/WebhookEventCategoriesResponse
- * @version 4.1.121
+ * @version 4.1.122
  */
 class WebhookEventCategoriesResponse {
     /**

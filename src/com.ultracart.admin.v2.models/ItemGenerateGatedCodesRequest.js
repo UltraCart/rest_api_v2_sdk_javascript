@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemGenerateGatedCodesRequest model module.
  * @module com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest
- * @version 4.1.121
+ * @version 4.1.122
  */
 class ItemGenerateGatedCodesRequest {
     /**

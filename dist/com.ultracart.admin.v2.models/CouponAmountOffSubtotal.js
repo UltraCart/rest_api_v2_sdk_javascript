@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CouponAmountOffSubtotal model module.
  * @module com.ultracart.admin.v2.models/CouponAmountOffSubtotal
- * @version 4.1.120
+ * @version 4.1.121
  */
 var CouponAmountOffSubtotal = /*#__PURE__*/function () {
   /**

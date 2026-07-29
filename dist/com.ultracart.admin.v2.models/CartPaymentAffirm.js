@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CartPaymentAffirm model module.
  * @module com.ultracart.admin.v2.models/CartPaymentAffirm
- * @version 4.1.120
+ * @version 4.1.121
  */
 var CartPaymentAffirm = /*#__PURE__*/function () {
   /**

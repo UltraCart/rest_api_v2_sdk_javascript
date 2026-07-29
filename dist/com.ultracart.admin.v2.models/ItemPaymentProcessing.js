@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemPaymentProcessing model module.
  * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
- * @version 4.1.120
+ * @version 4.1.121
  */
 var ItemPaymentProcessing = /*#__PURE__*/function () {
   /**

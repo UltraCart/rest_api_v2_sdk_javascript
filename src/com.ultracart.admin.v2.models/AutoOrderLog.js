@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderLog model module.
  * @module com.ultracart.admin.v2.models/AutoOrderLog
- * @version 4.1.121
+ * @version 4.1.122
  */
 class AutoOrderLog {
     /**
