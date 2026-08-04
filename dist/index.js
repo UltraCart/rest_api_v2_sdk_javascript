@@ -303,6 +303,12 @@ Object.defineProperty(exports, "AutoOrderManagement", {
     return _AutoOrderManagement["default"];
   }
 });
+Object.defineProperty(exports, "AutoOrderPaymentUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderPaymentUpdateRequest["default"];
+  }
+});
 Object.defineProperty(exports, "AutoOrderPropertiesUpdateRequest", {
   enumerable: true,
   get: function get() {
@@ -325,6 +331,12 @@ Object.defineProperty(exports, "AutoOrderQueryBatch", {
   enumerable: true,
   get: function get() {
     return _AutoOrderQueryBatch["default"];
+  }
+});
+Object.defineProperty(exports, "AutoOrderRebillResponse", {
+  enumerable: true,
+  get: function get() {
+    return _AutoOrderRebillResponse["default"];
   }
 });
 Object.defineProperty(exports, "AutoOrderResponse", {
@@ -6381,10 +6393,12 @@ var _AutoOrderItemOption = _interopRequireDefault(require("./com.ultracart.admin
 var _AutoOrderItemSimpleSchedule = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderItemSimpleSchedule"));
 var _AutoOrderLog = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderLog"));
 var _AutoOrderManagement = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderManagement"));
+var _AutoOrderPaymentUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest"));
 var _AutoOrderPropertiesUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest"));
 var _AutoOrderProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderProperty"));
 var _AutoOrderQuery = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderQuery"));
 var _AutoOrderQueryBatch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderQueryBatch"));
+var _AutoOrderRebillResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderRebillResponse"));
 var _AutoOrderResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrderResponse"));
 var _AutoOrdersRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrdersRequest"));
 var _AutoOrdersResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AutoOrdersResponse"));

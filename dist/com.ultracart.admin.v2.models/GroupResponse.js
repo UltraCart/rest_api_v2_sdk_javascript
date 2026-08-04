@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The GroupResponse model module.
  * @module com.ultracart.admin.v2.models/GroupResponse
- * @version 4.1.121
+ * @version 4.1.122
  */
 var GroupResponse = /*#__PURE__*/function () {
   /**

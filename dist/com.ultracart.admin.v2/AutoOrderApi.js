@@ -11,9 +11,11 @@ var _AutoOrderCancelReasonsResponse = _interopRequireDefault(require("../com.ult
 var _AutoOrderConsolidate = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderConsolidate"));
 var _AutoOrderEmailsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderEmailsResponse"));
 var _AutoOrderItemCancelRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderItemCancelRequest"));
+var _AutoOrderPaymentUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest"));
 var _AutoOrderPropertiesUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest"));
 var _AutoOrderQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderQuery"));
 var _AutoOrderQueryBatch = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderQueryBatch"));
+var _AutoOrderRebillResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderRebillResponse"));
 var _AutoOrderResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrderResponse"));
 var _AutoOrdersRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrdersRequest"));
 var _AutoOrdersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AutoOrdersResponse"));
@@ -39,7 +41,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.121
+* @version 4.1.122
 */
 var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -55,25 +57,66 @@ var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   }
 
   /**
-   * Callback function to receive the result of the cancelAutoOrderItemByReferenceOrderId operation.
-   * @callback module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback
+   * Callback function to receive the result of the attemptAutoOrderRebill operation.
+   * @callback module:com.ultracart.admin.v2/AutoOrderApi~attemptAutoOrderRebillCallback
    * @param {String} error Error message, if any.
-   * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+   * @param {module:com.ultracart.admin.v2.models/AutoOrderRebillResponse} data The data returned by the service call.
    * @param {String} response The complete HTTP response.
    */
 
   /**
-   * Cancel a single item on an auto order
-   * Cancels a single item on an auto order identified by the original order id and the item's original_item_id.  The request body may specify mode=end (soft cancel by setting no_order_after_dts to the current time, preserving the row for reporting; this is the default when the body is omitted) or mode=remove (hard delete).  Returns the updated auto order based upon expansion. 
-   * @param {String} reference_order_id The reference order id (original_order_id) of the auto order.
-   * @param {String} original_item_id The original_item_id (SKU) of the item to cancel.
+   * Attempt a failed rebill on an auto order
+   * Attempts to rebill an auto order using the payment information already on the original order.  The attempt is refused if the auto order is scheduled to charge within the next five minutes, or if it was already billed within the last 24 hours, both of which guard against double charging.  Runs synchronously and may take some time while the gateway is contacted.  A declined card is reported in the response body rather than as an API error. 
+   * @param {Number} auto_order_oid The auto order oid to rebill.
    * @param {Object} opts Optional parameters
    * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
-   * @param {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest} opts.auto_order_item_cancel_request Cancel request.  Body is optional; omit for default mode=end.
-   * @param {module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
-   * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
+   * @param {module:com.ultracart.admin.v2/AutoOrderApi~attemptAutoOrderRebillCallback} callback The callback function, accepting three arguments: error, data, response
+   * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderRebillResponse}
    */
   return _createClass(AutoOrderApi, [{
+    key: "attemptAutoOrderRebill",
+    value: function attemptAutoOrderRebill(auto_order_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling attemptAutoOrderRebill");
+      }
+      var pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _AutoOrderRebillResponse["default"];
+      return this.apiClient.callApi('/auto_order/auto_orders/{auto_order_oid}/rebill', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the cancelAutoOrderItemByReferenceOrderId operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cancel a single item on an auto order
+     * Cancels a single item on an auto order identified by the original order id and the item's original_item_id.  The request body may specify mode=end (soft cancel by setting no_order_after_dts to the current time, preserving the row for reporting; this is the default when the body is omitted) or mode=remove (hard delete).  Returns the updated auto order based upon expansion. 
+     * @param {String} reference_order_id The reference order id (original_order_id) of the auto order.
+     * @param {String} original_item_id The original_item_id (SKU) of the item to cancel.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderItemCancelRequest} opts.auto_order_item_cancel_request Cancel request.  Body is optional; omit for default mode=end.
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~cancelAutoOrderItemByReferenceOrderIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderResponse}
+     */
+  }, {
     key: "cancelAutoOrderItemByReferenceOrderId",
     value: function cancelAutoOrderItemByReferenceOrderId(reference_order_id, original_item_id, opts, callback) {
       opts = opts || {};
@@ -735,6 +778,52 @@ var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _AutoOrderResponse["default"];
       return this.apiClient.callApi('/auto_order/auto_orders/{auto_order_oid}/items/{auto_order_item_oid}/properties', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updateAutoOrderPayment operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrderPaymentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderRebillResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update the payment information on an auto order
+     * Updates the credit card on the original order behind an auto order, along with any rebills sitting in accounts receivable, and reactivates the auto order.  Card data is accepted as hosted field tokens only. raw card numbers and card verification numbers are rejected.  Set attempt_rebill to true to also attempt the rebill immediately, which runs synchronously and may take some time while the gateway is contacted.  A declined card is reported in the response body rather than as an API error. 
+     * @param {Number} auto_order_oid The auto order oid to update payment information on.
+     * @param {module:com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest} auto_order_payment_update_request Payment information to place on the auto order
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~updateAutoOrderPaymentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AutoOrderRebillResponse}
+     */
+  }, {
+    key: "updateAutoOrderPayment",
+    value: function updateAutoOrderPayment(auto_order_oid, auto_order_payment_update_request, opts, callback) {
+      opts = opts || {};
+      var postBody = auto_order_payment_update_request;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling updateAutoOrderPayment");
+      }
+      // verify the required parameter 'auto_order_payment_update_request' is set
+      if (auto_order_payment_update_request === undefined || auto_order_payment_update_request === null) {
+        throw new Error("Missing the required parameter 'auto_order_payment_update_request' when calling updateAutoOrderPayment");
+      }
+      var pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      var queryParams = {
+        '_expand': opts['_expand']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _AutoOrderRebillResponse["default"];
+      return this.apiClient.callApi('/auto_order/auto_orders/{auto_order_oid}/payment', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

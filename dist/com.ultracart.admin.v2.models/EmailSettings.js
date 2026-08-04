@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailSettings model module.
  * @module com.ultracart.admin.v2.models/EmailSettings
- * @version 4.1.121
+ * @version 4.1.122
  */
 var EmailSettings = /*#__PURE__*/function () {
   /**
@@ -67,6 +67,9 @@ var EmailSettings = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('emails_per_month')) {
           obj['emails_per_month'] = _ApiClient["default"].convertToType(data['emails_per_month'], 'Number');
+        }
+        if (data.hasOwnProperty('machine_open_ignore')) {
+          obj['machine_open_ignore'] = _ApiClient["default"].convertToType(data['machine_open_ignore'], 'Boolean');
         }
         if (data.hasOwnProperty('marketing_esp_domain_user')) {
           obj['marketing_esp_domain_user'] = _ApiClient["default"].convertToType(data['marketing_esp_domain_user'], 'String');
@@ -138,6 +141,12 @@ EmailSettings.prototype['emails_per_hour'] = undefined;
  * @member {Number} emails_per_month
  */
 EmailSettings.prototype['emails_per_month'] = undefined;
+
+/**
+ * If machine open should be ignored
+ * @member {Boolean} machine_open_ignore
+ */
+EmailSettings.prototype['machine_open_ignore'] = undefined;
 
 /**
  * @member {String} marketing_esp_domain_user

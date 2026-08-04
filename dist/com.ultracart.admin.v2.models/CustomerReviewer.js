@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerReviewer model module.
  * @module com.ultracart.admin.v2.models/CustomerReviewer
- * @version 4.1.121
+ * @version 4.1.122
  */
 var CustomerReviewer = /*#__PURE__*/function () {
   /**
