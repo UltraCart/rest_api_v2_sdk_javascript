@@ -11,6 +11,8 @@ var _BaseResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.mo
 var _Customer = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Customer"));
 var _CustomerEditorValues = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEditorValues"));
 var _CustomerEmailListChanges = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEmailListChanges"));
+var _CustomerEmailSuppressionRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEmailSuppressionRequest"));
+var _CustomerEmailSuppressionResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEmailSuppressionResponse"));
 var _CustomerMagicLinkResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerMagicLinkResponse"));
 var _CustomerMergeRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerMergeRequest"));
 var _CustomerQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerQuery"));
@@ -52,7 +54,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.122
+* @version 4.1.124
 */
 var CustomerApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -1057,6 +1059,47 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _CustomerEmailListChanges["default"];
       return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/email_lists', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the updateCustomerEmailSuppression operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~updateCustomerEmailSuppressionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerEmailSuppressionResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clear email suppression for a customer
+     * Clears global unsubscribe, spam complaint and/or bounce suppression for a customer.  This method is clear-only and cannot set a suppression flag.  Clearing a suppression removes the send gate but does not subscribe the customer to any email list -- list membership survives a global unsubscribe untouched, so the customer's original lists become deliverable again with no further action.  Returns 200 with a warning if the flags were cleared but an upstream ESP suppression removal failed; the profile was still modified in that case. 
+     * @param {Number} customer_profile_oid The customer profile oid
+     * @param {module:com.ultracart.admin.v2.models/CustomerEmailSuppressionRequest} suppression_changes Suppression changes
+     * @param {module:com.ultracart.admin.v2/CustomerApi~updateCustomerEmailSuppressionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerEmailSuppressionResponse}
+     */
+  }, {
+    key: "updateCustomerEmailSuppression",
+    value: function updateCustomerEmailSuppression(customer_profile_oid, suppression_changes, callback) {
+      var postBody = suppression_changes;
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling updateCustomerEmailSuppression");
+      }
+      // verify the required parameter 'suppression_changes' is set
+      if (suppression_changes === undefined || suppression_changes === null) {
+        throw new Error("Missing the required parameter 'suppression_changes' when calling updateCustomerEmailSuppression");
+      }
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _CustomerEmailSuppressionResponse["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/email_suppression', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

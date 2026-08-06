@@ -2691,6 +2691,24 @@ Object.defineProperty(exports, "CustomerEmailListChanges", {
     return _CustomerEmailListChanges["default"];
   }
 });
+Object.defineProperty(exports, "CustomerEmailSuppressionRequest", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerEmailSuppressionRequest["default"];
+  }
+});
+Object.defineProperty(exports, "CustomerEmailSuppressionResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerEmailSuppressionResponse["default"];
+  }
+});
+Object.defineProperty(exports, "CustomerEmailSuppressionResult", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerEmailSuppressionResult["default"];
+  }
+});
 Object.defineProperty(exports, "CustomerLoyalty", {
   enumerable: true,
   get: function get() {
@@ -3577,6 +3595,12 @@ Object.defineProperty(exports, "EmailStepWaitingResponse", {
   enumerable: true,
   get: function get() {
     return _EmailStepWaitingResponse["default"];
+  }
+});
+Object.defineProperty(exports, "EmailSuppressionSurfaces", {
+  enumerable: true,
+  get: function get() {
+    return _EmailSuppressionSurfaces["default"];
   }
 });
 Object.defineProperty(exports, "EmailTemplate", {
@@ -6784,6 +6808,9 @@ var _CustomerEDI = _interopRequireDefault(require("./com.ultracart.admin.v2.mode
 var _CustomerEditorValues = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEditorValues"));
 var _CustomerEmail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEmail"));
 var _CustomerEmailListChanges = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEmailListChanges"));
+var _CustomerEmailSuppressionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEmailSuppressionRequest"));
+var _CustomerEmailSuppressionResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEmailSuppressionResponse"));
+var _CustomerEmailSuppressionResult = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerEmailSuppressionResult"));
 var _CustomerLoyalty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyalty"));
 var _CustomerLoyaltyLedger = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyLedger"));
 var _CustomerLoyaltyRedemption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyRedemption"));
@@ -6931,6 +6958,7 @@ var _EmailStepStatRequest = _interopRequireDefault(require("./com.ultracart.admi
 var _EmailStepStatResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailStepStatResponse"));
 var _EmailStepWaitingRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailStepWaitingRequest"));
 var _EmailStepWaitingResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailStepWaitingResponse"));
+var _EmailSuppressionSurfaces = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailSuppressionSurfaces"));
 var _EmailTemplate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailTemplate"));
 var _EmailTemplatesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailTemplatesResponse"));
 var _EmailThirdPartyList = _interopRequireDefault(require("./com.ultracart.admin.v2.models/EmailThirdPartyList"));

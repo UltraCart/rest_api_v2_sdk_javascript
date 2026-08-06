@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxCountry model module.
  * @module com.ultracart.admin.v2.models/TaxCountry
- * @version 4.1.122
+ * @version 4.1.124
  */
 var TaxCountry = /*#__PURE__*/function () {
   /**
@@ -87,6 +87,12 @@ var TaxCountry = /*#__PURE__*/function () {
         if (data.hasOwnProperty('tax_shipping')) {
           obj['tax_shipping'] = _ApiClient["default"].convertToType(data['tax_shipping'], 'Boolean');
         }
+        if (data.hasOwnProperty('vat_threshold')) {
+          obj['vat_threshold'] = _ApiClient["default"].convertToType(data['vat_threshold'], 'Number');
+        }
+        if (data.hasOwnProperty('vat_threshold_currency')) {
+          obj['vat_threshold_currency'] = _ApiClient["default"].convertToType(data['vat_threshold_currency'], 'String');
+        }
       }
       return obj;
     }
@@ -145,4 +151,16 @@ TaxCountry.prototype['tax_rate_formatted'] = undefined;
  * @member {Boolean} tax_shipping
  */
 TaxCountry.prototype['tax_shipping'] = undefined;
+
+/**
+ * VAT collection threshold for this country. Blank means no threshold, 0 always collects VAT, a positive value collects at or below that order subtotal.
+ * @member {Number} vat_threshold
+ */
+TaxCountry.prototype['vat_threshold'] = undefined;
+
+/**
+ * Currency code the vat_threshold amount is expressed in (USD, EUR or GBP).
+ * @member {String} vat_threshold_currency
+ */
+TaxCountry.prototype['vat_threshold_currency'] = undefined;
 var _default = exports["default"] = TaxCountry;

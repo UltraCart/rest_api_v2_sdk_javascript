@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The TaxState model module.
  * @module com.ultracart.admin.v2.models/TaxState
- * @version 4.1.122
+ * @version 4.1.124
  */
 var TaxState = /*#__PURE__*/function () {
   /**
@@ -113,6 +113,12 @@ var TaxState = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('use_ultracart_managed_rates')) {
           obj['use_ultracart_managed_rates'] = _ApiClient["default"].convertToType(data['use_ultracart_managed_rates'], 'Boolean');
+        }
+        if (data.hasOwnProperty('vat_threshold')) {
+          obj['vat_threshold'] = _ApiClient["default"].convertToType(data['vat_threshold'], 'Number');
+        }
+        if (data.hasOwnProperty('vat_threshold_currency')) {
+          obj['vat_threshold_currency'] = _ApiClient["default"].convertToType(data['vat_threshold_currency'], 'String');
         }
       }
       return obj;
@@ -226,4 +232,16 @@ TaxState.prototype['tax_shipping'] = undefined;
  * @member {Boolean} use_ultracart_managed_rates
  */
 TaxState.prototype['use_ultracart_managed_rates'] = undefined;
+
+/**
+ * VAT collection threshold override for this region. Blank inherits the country threshold, 0 always collects VAT, a positive value collects at or below that order subtotal.
+ * @member {Number} vat_threshold
+ */
+TaxState.prototype['vat_threshold'] = undefined;
+
+/**
+ * Currency code the vat_threshold amount is expressed in (USD, EUR or GBP).
+ * @member {String} vat_threshold_currency
+ */
+TaxState.prototype['vat_threshold_currency'] = undefined;
 var _default = exports["default"] = TaxState;

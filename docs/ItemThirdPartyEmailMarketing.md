@@ -37,8 +37,6 @@ Name | Type | Description | Notes
 
 * `MailChimp` (value: `"MailChimp"`)
 
-* `SilverPop` (value: `"SilverPop"`)
-
 
 
 

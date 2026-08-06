@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The QuickBooksOnlineCustomer model module.
  * @module com.ultracart.admin.v2.models/QuickBooksOnlineCustomer
- * @version 4.1.124
+ * @version 4.1.125
  */
 class QuickBooksOnlineCustomer {
     /**

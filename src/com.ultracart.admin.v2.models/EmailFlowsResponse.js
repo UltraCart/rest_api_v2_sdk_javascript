@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailFlowsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailFlowsResponse
- * @version 4.1.124
+ * @version 4.1.125
  */
 class EmailFlowsResponse {
     /**

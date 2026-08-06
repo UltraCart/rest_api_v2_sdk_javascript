@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudRuleRotatingTransactionGatewayFilter model module.
  * @module com.ultracart.admin.v2.models/FraudRuleRotatingTransactionGatewayFilter
- * @version 4.1.124
+ * @version 4.1.125
  */
 class FraudRuleRotatingTransactionGatewayFilter {
     /**
