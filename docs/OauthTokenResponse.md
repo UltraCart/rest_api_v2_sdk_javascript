@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **error_description** | **String** |  | [optional] 
 **error_uri** | **String** |  | [optional] 
 **expires_in** | **String** | The number of seconds since issuance when the access token will expire and need to be refreshed using the refresh token | [optional] 
+**merchant_id** | **String** | The UltraCart merchant account that authorized this token.  Use it to map the token to the merchant within your own system.  Also returned by GET /oauth/me along with the account name. | [optional] 
 **refresh_token** | **String** | The refresh token that should be used to fetch a new access token when the expiration occurs | [optional] 
 **scope** | **String** | The scope of permissions associated with teh access token | [optional] 
 **token_type** | **String** | Type of token | [optional] 

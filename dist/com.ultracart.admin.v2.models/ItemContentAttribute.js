@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemContentAttribute model module.
  * @module com.ultracart.admin.v2.models/ItemContentAttribute
- * @version 4.1.124
+ * @version 4.1.125
  */
 var ItemContentAttribute = /*#__PURE__*/function () {
   /**

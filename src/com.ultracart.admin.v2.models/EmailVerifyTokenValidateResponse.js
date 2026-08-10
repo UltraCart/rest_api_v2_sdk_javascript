@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailVerifyTokenValidateResponse model module.
  * @module com.ultracart.admin.v2.models/EmailVerifyTokenValidateResponse
- * @version 4.1.125
+ * @version 4.1.126
  */
 class EmailVerifyTokenValidateResponse {
     /**

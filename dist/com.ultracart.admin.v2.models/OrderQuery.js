@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.124
+ * @version 4.1.125
  */
 var OrderQuery = /*#__PURE__*/function () {
   /**
@@ -60,6 +60,12 @@ var OrderQuery = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new OrderQuery();
+        if (data.hasOwnProperty('card_bin')) {
+          obj['card_bin'] = _ApiClient["default"].convertToType(data['card_bin'], 'String');
+        }
+        if (data.hasOwnProperty('card_last4')) {
+          obj['card_last4'] = _ApiClient["default"].convertToType(data['card_last4'], 'String');
+        }
         if (data.hasOwnProperty('cc_email')) {
           obj['cc_email'] = _ApiClient["default"].convertToType(data['cc_email'], 'String');
         }
@@ -197,6 +203,18 @@ var OrderQuery = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * First six digits (BIN) of the credit card number.  Must be specified together with card_last4 and a payment_date_begin/payment_date_end range.  Requires query_target=cache.
+ * @member {String} card_bin
+ */
+OrderQuery.prototype['card_bin'] = undefined;
+
+/**
+ * Last four digits of the credit card number.  Must be specified together with card_bin and a payment_date_begin/payment_date_end range.  Always supply four digits, including for American Express.  Requires query_target=cache.
+ * @member {String} card_last4
+ */
+OrderQuery.prototype['card_last4'] = undefined;
+
 /**
  * CC Email
  * @member {String} cc_email
@@ -366,7 +384,7 @@ OrderQuery.prototype['payment_date_end'] = undefined;
 OrderQuery.prototype['payment_method'] = undefined;
 
 /**
- * Exact-match filters on the detail name/value pairs of a single payment transaction, AND-ed against the same transaction. Requires query_target=cache which uses the ElasticSearch cache. The origin or database path cannot search transaction details. The rotating gateway is just another pair, name equals rotatingTransactionGatewayCode or rotatingTransactionGatewayName.
+ * Exact-match filters on the detail name/value pairs of a single payment transaction, AND-ed against the same transaction. Requires query_target=cache. The origin or database path cannot search transaction details. The rotating gateway is just another pair, name equals rotatingTransactionGatewayCode or rotatingTransactionGatewayName.
  * @member {Array.<module:com.ultracart.admin.v2.models/OrderQueryPaymentTransactionFilter>} payment_transaction_filters
  */
 OrderQuery.prototype['payment_transaction_filters'] = undefined;

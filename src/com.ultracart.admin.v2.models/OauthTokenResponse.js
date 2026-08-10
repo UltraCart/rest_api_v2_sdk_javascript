@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OauthTokenResponse model module.
  * @module com.ultracart.admin.v2.models/OauthTokenResponse
- * @version 4.1.125
+ * @version 4.1.126
  */
 class OauthTokenResponse {
     /**
@@ -62,6 +62,9 @@ class OauthTokenResponse {
             if (data.hasOwnProperty('expires_in')) {
                 obj['expires_in'] = ApiClient.convertToType(data['expires_in'], 'String');
             }
+            if (data.hasOwnProperty('merchant_id')) {
+                obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+            }
             if (data.hasOwnProperty('refresh_token')) {
                 obj['refresh_token'] = ApiClient.convertToType(data['refresh_token'], 'String');
             }
@@ -104,6 +107,12 @@ OauthTokenResponse.prototype['error_uri'] = undefined;
  * @member {String} expires_in
  */
 OauthTokenResponse.prototype['expires_in'] = undefined;
+
+/**
+ * The UltraCart merchant account that authorized this token.  Use it to map the token to the merchant within your own system.  Also returned by GET /oauth/me along with the account name.
+ * @member {String} merchant_id
+ */
+OauthTokenResponse.prototype['merchant_id'] = undefined;
 
 /**
  * The refresh token that should be used to fetch a new access token when the expiration occurs

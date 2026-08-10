@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqEnrollmentRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqEnrollmentRequest
- * @version 4.1.125
+ * @version 4.1.126
  */
 class EmailCommseqEnrollmentRequest {
     /**

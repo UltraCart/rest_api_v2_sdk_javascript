@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateMarketingStrategy model module.
  * @module com.ultracart.admin.v2.models/AffiliateMarketingStrategy
- * @version 4.1.124
+ * @version 4.1.125
  */
 var AffiliateMarketingStrategy = /*#__PURE__*/function () {
   /**

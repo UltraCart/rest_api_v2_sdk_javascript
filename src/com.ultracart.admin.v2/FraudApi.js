@@ -25,7 +25,7 @@ import FraudRulesResponse from '../com.ultracart.admin.v2.models/FraudRulesRespo
 /**
 * Fraud service.
 * @module com.ultracart.admin.v2/FraudApi
-* @version 4.1.125
+* @version 4.1.126
 */
 export default class FraudApi {
 

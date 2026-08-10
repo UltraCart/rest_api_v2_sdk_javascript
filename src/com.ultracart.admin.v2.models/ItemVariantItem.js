@@ -18,7 +18,7 @@ import ItemPricing from './ItemPricing';
 /**
  * The ItemVariantItem model module.
  * @module com.ultracart.admin.v2.models/ItemVariantItem
- * @version 4.1.125
+ * @version 4.1.126
  */
 class ItemVariantItem {
     /**
