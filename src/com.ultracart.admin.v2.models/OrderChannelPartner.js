@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderChannelPartner model module.
  * @module com.ultracart.admin.v2.models/OrderChannelPartner
- * @version 4.1.128
+ * @version 4.1.129
  */
 class OrderChannelPartner {
     /**
@@ -67,6 +67,9 @@ class OrderChannelPartner {
             }
             if (data.hasOwnProperty('no_realtime_payment_processing')) {
                 obj['no_realtime_payment_processing'] = ApiClient.convertToType(data['no_realtime_payment_processing'], 'Boolean');
+            }
+            if (data.hasOwnProperty('skip_auto_order_setup')) {
+                obj['skip_auto_order_setup'] = ApiClient.convertToType(data['skip_auto_order_setup'], 'Boolean');
             }
             if (data.hasOwnProperty('skip_payment_processing')) {
                 obj['skip_payment_processing'] = ApiClient.convertToType(data['skip_payment_processing'], 'Boolean');
@@ -128,6 +131,12 @@ OrderChannelPartner.prototype['ignore_invalid_shipping_method'] = undefined;
  * @member {Boolean} no_realtime_payment_processing
  */
 OrderChannelPartner.prototype['no_realtime_payment_processing'] = undefined;
+
+/**
+ * Instructs UltraCart to skip auto order setup.  Only applicable on inserting orders.
+ * @member {Boolean} skip_auto_order_setup
+ */
+OrderChannelPartner.prototype['skip_auto_order_setup'] = undefined;
 
 /**
  * Indicates this order was already paid for via a channel purchase and no payment collection should be attempted

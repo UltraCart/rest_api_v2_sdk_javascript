@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateResponse model module.
  * @module com.ultracart.admin.v2.models/AffiliateResponse
- * @version 4.1.127
+ * @version 4.1.128
  */
 var AffiliateResponse = /*#__PURE__*/function () {
   /**
