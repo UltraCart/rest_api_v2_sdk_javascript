@@ -18,7 +18,7 @@ import ChannelPartnerOrderTransaction from './ChannelPartnerOrderTransaction';
 /**
  * The ChannelPartnerOrder model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
- * @version 4.1.127
+ * @version 4.1.128
  */
 class ChannelPartnerOrder {
     /**
@@ -61,6 +61,9 @@ class ChannelPartnerOrder {
             if (data.hasOwnProperty('arbitrary_shipping_handling_total')) {
                 obj['arbitrary_shipping_handling_total'] = ApiClient.convertToType(data['arbitrary_shipping_handling_total'], 'Number');
             }
+            if (data.hasOwnProperty('arbitrary_subtotal_discount')) {
+                obj['arbitrary_subtotal_discount'] = ApiClient.convertToType(data['arbitrary_subtotal_discount'], 'Number');
+            }
             if (data.hasOwnProperty('arbitrary_tax')) {
                 obj['arbitrary_tax'] = ApiClient.convertToType(data['arbitrary_tax'], 'Number');
             }
@@ -69,6 +72,9 @@ class ChannelPartnerOrder {
             }
             if (data.hasOwnProperty('arbitrary_taxable_subtotal')) {
                 obj['arbitrary_taxable_subtotal'] = ApiClient.convertToType(data['arbitrary_taxable_subtotal'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_taxable_subtotal_discount')) {
+                obj['arbitrary_taxable_subtotal_discount'] = ApiClient.convertToType(data['arbitrary_taxable_subtotal_discount'], 'Number');
             }
             if (data.hasOwnProperty('associate_with_customer_profile_if_present')) {
                 obj['associate_with_customer_profile_if_present'] = ApiClient.convertToType(data['associate_with_customer_profile_if_present'], 'Boolean');
@@ -363,6 +369,12 @@ ChannelPartnerOrder.prototype['affiliate_sub_id'] = undefined;
 ChannelPartnerOrder.prototype['arbitrary_shipping_handling_total'] = undefined;
 
 /**
+ * Arbitrary subtotal discount for overriding the calculated subtotal discount.  Send the gross price in the item arbitrary unit cost and the discount here.
+ * @member {Number} arbitrary_subtotal_discount
+ */
+ChannelPartnerOrder.prototype['arbitrary_subtotal_discount'] = undefined;
+
+/**
  * Arbitrary tax for overriding calculated taxes
  * @member {Number} arbitrary_tax
  */
@@ -379,6 +391,12 @@ ChannelPartnerOrder.prototype['arbitrary_tax_rate'] = undefined;
  * @member {Number} arbitrary_taxable_subtotal
  */
 ChannelPartnerOrder.prototype['arbitrary_taxable_subtotal'] = undefined;
+
+/**
+ * Arbitrary taxable subtotal discount.  If an arbitrary subtotal discount is supplied without this field, the arbitrary subtotal discount is used for both.
+ * @member {Number} arbitrary_taxable_subtotal_discount
+ */
+ChannelPartnerOrder.prototype['arbitrary_taxable_subtotal_discount'] = undefined;
 
 /**
  * If true any matching customer profile based on email is associated with this order

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AnrokConfig model module.
  * @module com.ultracart.admin.v2.models/AnrokConfig
- * @version 4.1.126
+ * @version 4.1.127
  */
 var AnrokConfig = /*#__PURE__*/function () {
   /**

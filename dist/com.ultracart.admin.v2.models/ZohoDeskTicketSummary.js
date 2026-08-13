@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ZohoDeskTicketSummary model module.
  * @module com.ultracart.admin.v2.models/ZohoDeskTicketSummary
- * @version 4.1.126
+ * @version 4.1.127
  */
 var ZohoDeskTicketSummary = /*#__PURE__*/function () {
   /**
