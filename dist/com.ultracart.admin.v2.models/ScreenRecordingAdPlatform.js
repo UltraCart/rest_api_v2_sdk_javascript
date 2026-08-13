@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingAdPlatform model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingAdPlatform
- * @version 4.1.125
+ * @version 4.1.126
  */
 var ScreenRecordingAdPlatform = /*#__PURE__*/function () {
   /**

@@ -19,7 +19,7 @@ import ReportPage from './ReportPage';
 /**
  * The Report model module.
  * @module com.ultracart.admin.v2.models/Report
- * @version 4.1.126
+ * @version 4.1.127
  */
 class Report {
     /**

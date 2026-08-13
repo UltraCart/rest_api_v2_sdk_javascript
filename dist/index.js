@@ -4719,6 +4719,12 @@ Object.defineProperty(exports, "OauthDeviceAuthorizationResponse", {
     return _OauthDeviceAuthorizationResponse["default"];
   }
 });
+Object.defineProperty(exports, "OauthMeResponse", {
+  enumerable: true,
+  get: function get() {
+    return _OauthMeResponse["default"];
+  }
+});
 Object.defineProperty(exports, "OauthRevokeSuccessResponse", {
   enumerable: true,
   get: function get() {
@@ -7139,6 +7145,7 @@ var _Mailgun = _interopRequireDefault(require("./com.ultracart.admin.v2.models/M
 var _Metric = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Metric"));
 var _Notification = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Notification"));
 var _OauthDeviceAuthorizationResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse"));
+var _OauthMeResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OauthMeResponse"));
 var _OauthRevokeSuccessResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OauthRevokeSuccessResponse"));
 var _OauthTokenResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OauthTokenResponse"));
 var _Order = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Order"));

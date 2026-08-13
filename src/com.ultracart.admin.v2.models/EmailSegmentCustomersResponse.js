@@ -17,7 +17,7 @@ import EmailSegmentCustomer from './EmailSegmentCustomer';
 /**
  * The EmailSegmentCustomersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSegmentCustomersResponse
- * @version 4.1.126
+ * @version 4.1.127
  */
 class EmailSegmentCustomersResponse {
     /**

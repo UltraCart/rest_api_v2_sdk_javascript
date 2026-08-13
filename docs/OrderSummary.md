@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **actual_profit_review** | **Boolean** | Actual profit needs review | [optional] 
 **actual_shipping** | [**Currency**](Currency.md) |  | [optional] 
 **arbitrary_shipping_handling_total** | [**Currency**](Currency.md) |  | [optional] 
+**arbitrary_subtotal_discount** | [**Currency**](Currency.md) |  | [optional] 
+**arbitrary_taxable_subtotal_discount** | [**Currency**](Currency.md) |  | [optional] 
 **health_benefit_card_amount** | [**Currency**](Currency.md) |  | [optional] 
 **health_benefit_card_refunded** | [**Currency**](Currency.md) |  | [optional] 
 **internal_gift_certificate_amount** | [**Currency**](Currency.md) |  | [optional] 

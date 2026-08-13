@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderAssignToAffiliateRequest model module.
  * @module com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest
- * @version 4.1.125
+ * @version 4.1.126
  */
 var OrderAssignToAffiliateRequest = /*#__PURE__*/function () {
   /**

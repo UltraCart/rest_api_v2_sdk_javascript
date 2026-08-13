@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The OrderSummary model module.
  * @module com.ultracart.admin.v2.models/OrderSummary
- * @version 4.1.126
+ * @version 4.1.127
  */
 class OrderSummary {
     /**
@@ -71,6 +71,12 @@ class OrderSummary {
             }
             if (data.hasOwnProperty('arbitrary_shipping_handling_total')) {
                 obj['arbitrary_shipping_handling_total'] = Currency.constructFromObject(data['arbitrary_shipping_handling_total']);
+            }
+            if (data.hasOwnProperty('arbitrary_subtotal_discount')) {
+                obj['arbitrary_subtotal_discount'] = Currency.constructFromObject(data['arbitrary_subtotal_discount']);
+            }
+            if (data.hasOwnProperty('arbitrary_taxable_subtotal_discount')) {
+                obj['arbitrary_taxable_subtotal_discount'] = Currency.constructFromObject(data['arbitrary_taxable_subtotal_discount']);
             }
             if (data.hasOwnProperty('health_benefit_card_amount')) {
                 obj['health_benefit_card_amount'] = Currency.constructFromObject(data['health_benefit_card_amount']);
@@ -174,6 +180,16 @@ OrderSummary.prototype['actual_shipping'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_shipping_handling_total
  */
 OrderSummary.prototype['arbitrary_shipping_handling_total'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_subtotal_discount
+ */
+OrderSummary.prototype['arbitrary_subtotal_discount'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/Currency} arbitrary_taxable_subtotal_discount
+ */
+OrderSummary.prototype['arbitrary_taxable_subtotal_discount'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/Currency} health_benefit_card_amount

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportPageVisualizationMetric model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualizationMetric
- * @version 4.1.125
+ * @version 4.1.126
  */
 var ReportPageVisualizationMetric = /*#__PURE__*/function () {
   /**

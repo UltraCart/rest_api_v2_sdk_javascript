@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.1.125
+* @version 4.1.126
 */
 var OauthApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -137,6 +137,34 @@ var OauthApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _OauthDeviceAuthorizationResponse["default"];
       return this.apiClient.callApi('/oauth/device/authorize', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the oauthMe operation.
+     * @callback module:com.ultracart.admin.v2/OauthApi~oauthMeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Identify the merchant account this access token belongs to.
+     * Returns the UltraCart merchant account that authorized your application, along with the permissions that were granted.  Call it immediately after exchanging your authorization code so you can display the connected account to your user and map it within your own system.  Any OAuth access token may call this endpoint regardless of the permissions it holds.  The granted permissions are the ones the merchant approved, which may be narrower than the permissions your application currently requests, because permissions are recorded when the merchant authorizes and do not change afterwards.  If you add a permission to your application, already connected merchants keep the permissions they originally approved until they authorize again, so read this list rather than assuming your application's configured permissions. 
+     * @param {module:com.ultracart.admin.v2/OauthApi~oauthMeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+  }, {
+    key: "oauthMe",
+    value: function oauthMe(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/oauth/me', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
