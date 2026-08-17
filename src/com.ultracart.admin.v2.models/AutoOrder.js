@@ -23,7 +23,7 @@ import Order from './Order';
 /**
  * The AutoOrder model module.
  * @module com.ultracart.admin.v2.models/AutoOrder
- * @version 4.1.129
+ * @version 4.1.130
  */
 class AutoOrder {
     /**
@@ -179,7 +179,7 @@ AutoOrder.prototype['cancel_after_next_x_orders'] = undefined;
 AutoOrder.prototype['cancel_downgrade'] = undefined;
 
 /**
- * The reason this auto order was canceled by either merchant or customer
+ * The reason this auto order was canceled by either merchant or customer. Supplying this when setting enabled to false records the change as a cancellation rather than a disable.
  * @member {String} cancel_reason
  */
 AutoOrder.prototype['cancel_reason'] = undefined;
@@ -191,13 +191,13 @@ AutoOrder.prototype['cancel_reason'] = undefined;
 AutoOrder.prototype['cancel_upgrade'] = undefined;
 
 /**
- * The user that canceled the auto order
+ * The user that canceled the auto order. Supplying this when setting enabled to false records the change as a cancellation rather than a disable.
  * @member {String} canceled_by_user
  */
 AutoOrder.prototype['canceled_by_user'] = undefined;
 
 /**
- * The date/time that the auto order was canceled
+ * The date/time that the auto order was canceled. Supply this to record an explicit cancellation time, otherwise it is stamped automatically when enabled is set to false along with cancel_reason or canceled_by_user.
  * @member {String} canceled_dts
  */
 AutoOrder.prototype['canceled_dts'] = undefined;
@@ -215,7 +215,7 @@ AutoOrder.prototype['completed'] = undefined;
 AutoOrder.prototype['credit_card_attempt'] = undefined;
 
 /**
- * The date/time the auto order was disabled due to failed rebills
+ * The date/time the auto order was disabled, either by a failed rebill or by setting enabled to false without a cancellation
  * @member {String} disabled_dts
  */
 AutoOrder.prototype['disabled_dts'] = undefined;
@@ -227,7 +227,7 @@ AutoOrder.prototype['disabled_dts'] = undefined;
 AutoOrder.prototype['emails'] = undefined;
 
 /**
- * True if this auto order is enabled
+ * True if this auto order is enabled. Setting this to false along with cancel_reason or canceled_by_user records the change as a cancellation and fires the auto order cancel notifications. Setting it to false without either field records a disable instead.
  * @member {Boolean} enabled
  */
 AutoOrder.prototype['enabled'] = undefined;

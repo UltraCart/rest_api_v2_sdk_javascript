@@ -804,6 +804,7 @@ docs/OrderChannelPartner.md
 docs/OrderCheckout.md
 docs/OrderCoupon.md
 docs/OrderCurrentStageHistory.md
+docs/OrderCustomerActivityResponse.md
 docs/OrderDigitalItem.md
 docs/OrderDigitalOrder.md
 docs/OrderEdi.md
@@ -1852,6 +1853,7 @@ src/com.ultracart.admin.v2.models/OrderChannelPartner.js
 src/com.ultracart.admin.v2.models/OrderCheckout.js
 src/com.ultracart.admin.v2.models/OrderCoupon.js
 src/com.ultracart.admin.v2.models/OrderCurrentStageHistory.js
+src/com.ultracart.admin.v2.models/OrderCustomerActivityResponse.js
 src/com.ultracart.admin.v2.models/OrderDigitalItem.js
 src/com.ultracart.admin.v2.models/OrderDigitalOrder.js
 src/com.ultracart.admin.v2.models/OrderEdi.js

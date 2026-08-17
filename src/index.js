@@ -798,6 +798,7 @@ import OrderChannelPartner from './com.ultracart.admin.v2.models/OrderChannelPar
 import OrderCheckout from './com.ultracart.admin.v2.models/OrderCheckout';
 import OrderCoupon from './com.ultracart.admin.v2.models/OrderCoupon';
 import OrderCurrentStageHistory from './com.ultracart.admin.v2.models/OrderCurrentStageHistory';
+import OrderCustomerActivityResponse from './com.ultracart.admin.v2.models/OrderCustomerActivityResponse';
 import OrderDigitalItem from './com.ultracart.admin.v2.models/OrderDigitalItem';
 import OrderDigitalOrder from './com.ultracart.admin.v2.models/OrderDigitalOrder';
 import OrderEdi from './com.ultracart.admin.v2.models/OrderEdi';
@@ -1105,7 +1106,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.129
+* @version 4.1.130
 */
 export {
     /**
@@ -5823,6 +5824,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderCurrentStageHistory}
      */
     OrderCurrentStageHistory,
+
+    /**
+     * The OrderCustomerActivityResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderCustomerActivityResponse}
+     */
+    OrderCustomerActivityResponse,
 
     /**
      * The OrderDigitalItem model constructor.

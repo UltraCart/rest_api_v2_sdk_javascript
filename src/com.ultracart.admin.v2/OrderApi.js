@@ -22,6 +22,7 @@ import Order from '../com.ultracart.admin.v2.models/Order';
 import OrderAddItemsAndReleaseRequest from '../com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest';
 import OrderAssignToAffiliateRequest from '../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
+import OrderCustomerActivityResponse from '../com.ultracart.admin.v2.models/OrderCustomerActivityResponse';
 import OrderEdiDocumentsResponse from '../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
 import OrderEmailsResponse from '../com.ultracart.admin.v2.models/OrderEmailsResponse';
 import OrderFormat from '../com.ultracart.admin.v2.models/OrderFormat';
@@ -47,7 +48,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.129
+* @version 4.1.130
 */
 export default class OrderApi {
 
@@ -824,6 +825,49 @@ export default class OrderApi {
       let returnType = OrderResponse;
       return this.apiClient.callApi(
         '/order/orders/token', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrderCustomerActivity operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrderCustomerActivityCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderCustomerActivityResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve customer activity for this order.
+     * Retrieves the customer activity associated with the email address on this order.  This includes email engagement history, email list and segment membership, lifetime metrics and email suppression status.  A customer profile is not required and is not consulted, so this method works for guest orders that have never had a customer profile established.  For the page views captured during the session that placed the order, see the page view history method instead. 
+     * @param {String} order_id The order id to retrieve customer activity for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrderCustomerActivityCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderCustomerActivityResponse}
+     */
+    getOrderCustomerActivity(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getOrderCustomerActivity");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderCustomerActivityResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/customer_activity', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

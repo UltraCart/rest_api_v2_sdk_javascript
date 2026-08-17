@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**getAccountsReceivableRetryStats**](OrderApi.md#getAccountsReceivableRetryStats) | **GET** /order/accountsReceivableRetryConfig/stats | Retrieve A/R Retry Statistics
 [**getOrder**](OrderApi.md#getOrder) | **GET** /order/orders/{order_id} | Retrieve an order
 [**getOrderByToken**](OrderApi.md#getOrderByToken) | **POST** /order/orders/token | Retrieve an order using a token
+[**getOrderCustomerActivity**](OrderApi.md#getOrderCustomerActivity) | **GET** /order/orders/{order_id}/customer_activity | Retrieve customer activity for this order.
 [**getOrderEdiDocuments**](OrderApi.md#getOrderEdiDocuments) | **GET** /order/orders/{order_id}/edi | Retrieve EDI documents associated with this order.
 [**getOrderEmails**](OrderApi.md#getOrderEmails) | **GET** /order/orders/{order_id}/emails | Retrieve email delivery information for this order.
 [**getOrderPageViewHistory**](OrderApi.md#getOrderPageViewHistory) | **GET** /order/orders/{order_id}/page_view_history | Retrieve page view history for this order.
@@ -1011,6 +1012,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getOrderCustomerActivity
+
+> OrderCustomerActivityResponse getOrderCustomerActivity(order_id)
+
+Retrieve customer activity for this order.
+
+Retrieves the customer activity associated with the email address on this order.  This includes email engagement history, email list and segment membership, lifetime metrics and email suppression status.  A customer profile is not required and is not consulted, so this method works for guest orders that have never had a customer profile established.  For the page views captured during the session that placed the order, see the page view history method instead. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getOrderCustomerActivity -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.OrderApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let order_id = "order_id_example"; // String | The order id to retrieve customer activity for.
+apiInstance.getOrderCustomerActivity(order_id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getOrderCustomerActivity -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **String**| The order id to retrieve customer activity for. | 
+
+### Return type
+
+[**OrderCustomerActivityResponse**](OrderCustomerActivityResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

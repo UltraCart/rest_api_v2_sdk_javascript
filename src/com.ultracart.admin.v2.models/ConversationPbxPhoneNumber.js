@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxPhoneNumber model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPhoneNumber
- * @version 4.1.129
+ * @version 4.1.130
  */
 class ConversationPbxPhoneNumber {
     /**

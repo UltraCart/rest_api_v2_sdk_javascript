@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerOrder model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
- * @version 4.1.128
+ * @version 4.1.129
  */
 var ChannelPartnerOrder = /*#__PURE__*/function () {
   /**
@@ -318,6 +318,9 @@ var ChannelPartnerOrder = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('shipto_title')) {
           obj['shipto_title'] = _ApiClient["default"].convertToType(data['shipto_title'], 'String');
+        }
+        if (data.hasOwnProperty('skip_auto_order_setup')) {
+          obj['skip_auto_order_setup'] = _ApiClient["default"].convertToType(data['skip_auto_order_setup'], 'Boolean');
         }
         if (data.hasOwnProperty('skip_payment_processing')) {
           obj['skip_payment_processing'] = _ApiClient["default"].convertToType(data['skip_payment_processing'], 'Boolean');
@@ -869,6 +872,12 @@ ChannelPartnerOrder.prototype['shipto_state_region'] = undefined;
  * @member {String} shipto_title
  */
 ChannelPartnerOrder.prototype['shipto_title'] = undefined;
+
+/**
+ * If true the setup of the auto order record is skipped
+ * @member {Boolean} skip_auto_order_setup
+ */
+ChannelPartnerOrder.prototype['skip_auto_order_setup'] = undefined;
 
 /**
  * If true the order is placed directly into the shipping department
