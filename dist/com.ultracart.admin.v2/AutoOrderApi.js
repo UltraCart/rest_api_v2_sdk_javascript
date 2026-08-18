@@ -41,7 +41,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.129
+* @version 4.1.130
 */
 var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -638,7 +638,7 @@ var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
 
     /**
      * Update an auto order
-     * Update an auto order on the UltraCart account. 
+     * Update an auto order on the UltraCart account.  To cancel an auto order, set enabled to false and supply either cancel_reason or canceled_by_user, which records the change as a cancellation and fires the auto order cancel notifications.  Setting enabled to false without either field records a disable. 
      * @param {Number} auto_order_oid The auto order oid to update.
      * @param {module:com.ultracart.admin.v2.models/AutoOrder} auto_order Auto order to update
      * @param {Object} opts Optional parameters
@@ -882,7 +882,7 @@ var AutoOrderApi = exports["default"] = /*#__PURE__*/function () {
 
     /**
      * Update multiple auto orders
-     * Update multiple auto orders on the UltraCart account. 
+     * Update multiple auto orders on the UltraCart account.  To cancel an auto order, set enabled to false and supply either cancel_reason or canceled_by_user, which records the change as a cancellation and fires the auto order cancel notifications.  Setting enabled to false without either field records a disable. 
      * @param {module:com.ultracart.admin.v2.models/AutoOrdersRequest} auto_orders_request Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
      * @param {Object} opts Optional parameters
      * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples

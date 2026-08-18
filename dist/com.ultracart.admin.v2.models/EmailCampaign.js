@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCampaign model module.
  * @module com.ultracart.admin.v2.models/EmailCampaign
- * @version 4.1.129
+ * @version 4.1.130
  */
 var EmailCampaign = /*#__PURE__*/function () {
   /**

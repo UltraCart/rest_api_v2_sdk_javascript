@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingMultifield model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingMultifield
- * @version 4.1.129
+ * @version 4.1.130
  */
 var ScreenRecordingMultifield = /*#__PURE__*/function () {
   /**

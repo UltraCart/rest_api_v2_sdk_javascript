@@ -4821,6 +4821,12 @@ Object.defineProperty(exports, "OrderCurrentStageHistory", {
     return _OrderCurrentStageHistory["default"];
   }
 });
+Object.defineProperty(exports, "OrderCustomerActivityResponse", {
+  enumerable: true,
+  get: function get() {
+    return _OrderCustomerActivityResponse["default"];
+  }
+});
 Object.defineProperty(exports, "OrderDigitalItem", {
   enumerable: true,
   get: function get() {
@@ -7161,6 +7167,7 @@ var _OrderChannelPartner = _interopRequireDefault(require("./com.ultracart.admin
 var _OrderCheckout = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderCheckout"));
 var _OrderCoupon = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderCoupon"));
 var _OrderCurrentStageHistory = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderCurrentStageHistory"));
+var _OrderCustomerActivityResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderCustomerActivityResponse"));
 var _OrderDigitalItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderDigitalItem"));
 var _OrderDigitalOrder = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderDigitalOrder"));
 var _OrderEdi = _interopRequireDefault(require("./com.ultracart.admin.v2.models/OrderEdi"));

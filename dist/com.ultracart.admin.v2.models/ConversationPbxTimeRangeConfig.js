@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxTimeRangeConfig model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeRangeConfig
- * @version 4.1.129
+ * @version 4.1.130
  */
 var ConversationPbxTimeRangeConfig = /*#__PURE__*/function () {
   /**

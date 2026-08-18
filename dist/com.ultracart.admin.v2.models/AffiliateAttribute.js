@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateAttribute model module.
  * @module com.ultracart.admin.v2.models/AffiliateAttribute
- * @version 4.1.129
+ * @version 4.1.130
  */
 var AffiliateAttribute = /*#__PURE__*/function () {
   /**

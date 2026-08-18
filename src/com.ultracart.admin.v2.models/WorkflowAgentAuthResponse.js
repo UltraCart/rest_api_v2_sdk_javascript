@@ -20,7 +20,7 @@ import WorkflowAgentAuth from './WorkflowAgentAuth';
 /**
  * The WorkflowAgentAuthResponse model module.
  * @module com.ultracart.admin.v2.models/WorkflowAgentAuthResponse
- * @version 4.1.130
+ * @version 4.1.131
  */
 class WorkflowAgentAuthResponse {
     /**

@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The AutoOrderRebillResponse model module.
  * @module com.ultracart.admin.v2.models/AutoOrderRebillResponse
- * @version 4.1.130
+ * @version 4.1.131
  */
 class AutoOrderRebillResponse {
     /**
