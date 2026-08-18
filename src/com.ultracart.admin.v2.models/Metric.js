@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Metric model module.
  * @module com.ultracart.admin.v2.models/Metric
- * @version 4.1.131
+ * @version 4.1.132
  */
 class Metric {
     /**
@@ -47,9 +47,6 @@ class Metric {
         if (data) {
             obj = obj || new Metric();
 
-            if (data.hasOwnProperty('active')) {
-                obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
-            }
             if (data.hasOwnProperty('all_time')) {
                 obj['all_time'] = ApiClient.convertToType(data['all_time'], 'Number');
             }
@@ -61,9 +58,6 @@ class Metric {
             }
             if (data.hasOwnProperty('last_30_formatted')) {
                 obj['last_30_formatted'] = ApiClient.convertToType(data['last_30_formatted'], 'String');
-            }
-            if (data.hasOwnProperty('last_activity_dts')) {
-                obj['last_activity_dts'] = ApiClient.convertToType(data['last_activity_dts'], 'String');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -85,11 +79,6 @@ class Metric {
 }
 
 /**
- * @member {Boolean} active
- */
-Metric.prototype['active'] = undefined;
-
-/**
  * @member {Number} all_time
  */
 Metric.prototype['all_time'] = undefined;
@@ -108,11 +97,6 @@ Metric.prototype['last_30'] = undefined;
  * @member {String} last_30_formatted
  */
 Metric.prototype['last_30_formatted'] = undefined;
-
-/**
- * @member {String} last_activity_dts
- */
-Metric.prototype['last_activity_dts'] = undefined;
 
 /**
  * @member {String} name

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Metric model module.
  * @module com.ultracart.admin.v2.models/Metric
- * @version 4.1.130
+ * @version 4.1.131
  */
 var Metric = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var Metric = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new Metric();
+        if (data.hasOwnProperty('active')) {
+          obj['active'] = _ApiClient["default"].convertToType(data['active'], 'Boolean');
+        }
         if (data.hasOwnProperty('all_time')) {
           obj['all_time'] = _ApiClient["default"].convertToType(data['all_time'], 'Number');
         }
@@ -70,6 +73,9 @@ var Metric = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('last_30_formatted')) {
           obj['last_30_formatted'] = _ApiClient["default"].convertToType(data['last_30_formatted'], 'String');
+        }
+        if (data.hasOwnProperty('last_activity_dts')) {
+          obj['last_activity_dts'] = _ApiClient["default"].convertToType(data['last_activity_dts'], 'String');
         }
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
@@ -89,6 +95,11 @@ var Metric = /*#__PURE__*/function () {
   }]);
 }();
 /**
+ * @member {Boolean} active
+ */
+Metric.prototype['active'] = undefined;
+
+/**
  * @member {Number} all_time
  */
 Metric.prototype['all_time'] = undefined;
@@ -107,6 +118,11 @@ Metric.prototype['last_30'] = undefined;
  * @member {String} last_30_formatted
  */
 Metric.prototype['last_30_formatted'] = undefined;
+
+/**
+ * @member {String} last_activity_dts
+ */
+Metric.prototype['last_activity_dts'] = undefined;
 
 /**
  * @member {String} name

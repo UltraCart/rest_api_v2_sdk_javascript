@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateQuery model module.
  * @module com.ultracart.admin.v2.models/AffiliateQuery
- * @version 4.1.131
+ * @version 4.1.132
  */
 class AffiliateQuery {
     /**

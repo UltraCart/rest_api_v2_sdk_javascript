@@ -20,7 +20,7 @@ import Property from './Property';
 /**
  * The CustomerActivity model module.
  * @module com.ultracart.admin.v2.models/CustomerActivity
- * @version 4.1.131
+ * @version 4.1.132
  */
 class CustomerActivity {
     /**
@@ -51,6 +51,9 @@ class CustomerActivity {
         if (data) {
             obj = obj || new CustomerActivity();
 
+            if (data.hasOwnProperty('active')) {
+                obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
+            }
             if (data.hasOwnProperty('activities')) {
                 obj['activities'] = ApiClient.convertToType(data['activities'], [Activity]);
             }
@@ -59,6 +62,9 @@ class CustomerActivity {
             }
             if (data.hasOwnProperty('global_unsubscribed_dts')) {
                 obj['global_unsubscribed_dts'] = ApiClient.convertToType(data['global_unsubscribed_dts'], 'String');
+            }
+            if (data.hasOwnProperty('last_activity_dts')) {
+                obj['last_activity_dts'] = ApiClient.convertToType(data['last_activity_dts'], 'String');
             }
             if (data.hasOwnProperty('memberships')) {
                 obj['memberships'] = ApiClient.convertToType(data['memberships'], [ListSegmentMembership]);
@@ -89,6 +95,11 @@ class CustomerActivity {
 }
 
 /**
+ * @member {Boolean} active
+ */
+CustomerActivity.prototype['active'] = undefined;
+
+/**
  * @member {Array.<module:com.ultracart.admin.v2.models/Activity>} activities
  */
 CustomerActivity.prototype['activities'] = undefined;
@@ -102,6 +113,11 @@ CustomerActivity.prototype['global_unsubscribed'] = undefined;
  * @member {String} global_unsubscribed_dts
  */
 CustomerActivity.prototype['global_unsubscribed_dts'] = undefined;
+
+/**
+ * @member {String} last_activity_dts
+ */
+CustomerActivity.prototype['last_activity_dts'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ListSegmentMembership>} memberships
