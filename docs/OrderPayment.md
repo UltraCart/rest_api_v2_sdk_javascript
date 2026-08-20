@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **surcharge_transaction_fee** | **Number** | Surcharge transaction fee | [optional] 
 **surcharge_transaction_percentage** | **Number** | Surcharge transaction percentage | [optional] 
 **test_order** | **Boolean** | True if this is a test order | [optional] 
-**transactions** | [**[OrderPaymentTransaction]**](OrderPaymentTransaction.md) | Transactions associated with processing this payment | [optional] 
+**transactions** | [**[OrderPaymentTransaction]**](OrderPaymentTransaction.md) | Transactions associated with processing this payment.  Accepted on insert to carry the payment history of an order captured outside the system. | [optional] 
 
 
 

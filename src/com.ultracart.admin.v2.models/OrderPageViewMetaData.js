@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderPageViewMetaData model module.
  * @module com.ultracart.admin.v2.models/OrderPageViewMetaData
- * @version 4.1.132
+ * @version 4.1.133
  */
 class OrderPageViewMetaData {
     /**

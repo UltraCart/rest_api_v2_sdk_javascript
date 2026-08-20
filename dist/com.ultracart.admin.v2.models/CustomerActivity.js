@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerActivity model module.
  * @module com.ultracart.admin.v2.models/CustomerActivity
- * @version 4.1.131
+ * @version 4.1.132
  */
 var CustomerActivity = /*#__PURE__*/function () {
   /**
@@ -63,6 +63,9 @@ var CustomerActivity = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new CustomerActivity();
+        if (data.hasOwnProperty('active')) {
+          obj['active'] = _ApiClient["default"].convertToType(data['active'], 'Boolean');
+        }
         if (data.hasOwnProperty('activities')) {
           obj['activities'] = _ApiClient["default"].convertToType(data['activities'], [_Activity["default"]]);
         }
@@ -71,6 +74,9 @@ var CustomerActivity = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('global_unsubscribed_dts')) {
           obj['global_unsubscribed_dts'] = _ApiClient["default"].convertToType(data['global_unsubscribed_dts'], 'String');
+        }
+        if (data.hasOwnProperty('last_activity_dts')) {
+          obj['last_activity_dts'] = _ApiClient["default"].convertToType(data['last_activity_dts'], 'String');
         }
         if (data.hasOwnProperty('memberships')) {
           obj['memberships'] = _ApiClient["default"].convertToType(data['memberships'], [_ListSegmentMembership["default"]]);
@@ -99,6 +105,11 @@ var CustomerActivity = /*#__PURE__*/function () {
   }]);
 }();
 /**
+ * @member {Boolean} active
+ */
+CustomerActivity.prototype['active'] = undefined;
+
+/**
  * @member {Array.<module:com.ultracart.admin.v2.models/Activity>} activities
  */
 CustomerActivity.prototype['activities'] = undefined;
@@ -112,6 +123,11 @@ CustomerActivity.prototype['global_unsubscribed'] = undefined;
  * @member {String} global_unsubscribed_dts
  */
 CustomerActivity.prototype['global_unsubscribed_dts'] = undefined;
+
+/**
+ * @member {String} last_activity_dts
+ */
+CustomerActivity.prototype['last_activity_dts'] = undefined;
 
 /**
  * @member {Array.<module:com.ultracart.admin.v2.models/ListSegmentMembership>} memberships

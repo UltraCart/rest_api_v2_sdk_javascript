@@ -45,7 +45,7 @@ import OrderUtm from './OrderUtm';
 /**
  * The Order model module.
  * @module com.ultracart.admin.v2.models/Order
- * @version 4.1.132
+ * @version 4.1.133
  */
 class Order {
     /**
@@ -356,7 +356,7 @@ Order.prototype['payment'] = undefined;
 Order.prototype['point_of_sale'] = undefined;
 
 /**
- * Properties, available only through update, not through insert due to the nature of how properties are handled internally
+ * Properties associated with the order
  * @member {Array.<module:com.ultracart.admin.v2.models/OrderProperty>} properties
  */
 Order.prototype['properties'] = undefined;

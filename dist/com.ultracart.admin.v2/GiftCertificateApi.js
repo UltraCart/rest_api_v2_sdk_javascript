@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * GiftCertificate service.
 * @module com.ultracart.admin.v2/GiftCertificateApi
-* @version 4.1.131
+* @version 4.1.132
 */
 var GiftCertificateApi = exports["default"] = /*#__PURE__*/function () {
   /**

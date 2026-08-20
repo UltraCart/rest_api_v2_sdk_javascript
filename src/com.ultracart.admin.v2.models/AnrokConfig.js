@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AnrokConfig model module.
  * @module com.ultracart.admin.v2.models/AnrokConfig
- * @version 4.1.132
+ * @version 4.1.133
  */
 class AnrokConfig {
     /**

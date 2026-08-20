@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 **unavailable_say_voice** | **String** | Unavailable say voice | [optional] 
 **user_id** | **Number** | User Id | [optional] 
 **voicemail** | **Boolean** | True if this agent has voicemail configured | [optional] 
+**zoho_desk_outbound_department_id** | **String** | Zoho Desk department ID to create outbound-call tickets in for this agent | [optional] 
+**zoho_desk_outbound_ticket_enabled** | **Boolean** | If true, a Zoho Desk ticket is automatically created for outbound calls placed by this agent | [optional] 
 
 
 
