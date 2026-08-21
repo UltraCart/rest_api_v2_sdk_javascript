@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAgent
- * @version 4.1.132
+ * @version 4.1.133
  */
 var ConversationPbxAgent = /*#__PURE__*/function () {
   /**
@@ -121,6 +121,12 @@ var ConversationPbxAgent = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('voicemail')) {
           obj['voicemail'] = _ApiClient["default"].convertToType(data['voicemail'], 'Boolean');
+        }
+        if (data.hasOwnProperty('zoho_desk_outbound_department_id')) {
+          obj['zoho_desk_outbound_department_id'] = _ApiClient["default"].convertToType(data['zoho_desk_outbound_department_id'], 'String');
+        }
+        if (data.hasOwnProperty('zoho_desk_outbound_ticket_enabled')) {
+          obj['zoho_desk_outbound_ticket_enabled'] = _ApiClient["default"].convertToType(data['zoho_desk_outbound_ticket_enabled'], 'Boolean');
         }
       }
       return obj;
@@ -252,6 +258,18 @@ ConversationPbxAgent.prototype['user_id'] = undefined;
  * @member {Boolean} voicemail
  */
 ConversationPbxAgent.prototype['voicemail'] = undefined;
+
+/**
+ * Zoho Desk department ID to create outbound-call tickets in for this agent
+ * @member {String} zoho_desk_outbound_department_id
+ */
+ConversationPbxAgent.prototype['zoho_desk_outbound_department_id'] = undefined;
+
+/**
+ * If true, a Zoho Desk ticket is automatically created for outbound calls placed by this agent
+ * @member {Boolean} zoho_desk_outbound_ticket_enabled
+ */
+ConversationPbxAgent.prototype['zoho_desk_outbound_ticket_enabled'] = undefined;
 
 /**
  * Allowed values for the <code>call_routing_preference</code> property.

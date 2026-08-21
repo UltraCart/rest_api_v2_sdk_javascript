@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportPageVisualizationMetric model module.
  * @module com.ultracart.admin.v2.models/ReportPageVisualizationMetric
- * @version 4.1.133
+ * @version 4.1.134
  */
 class ReportPageVisualizationMetric {
     /**

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **action_target** | **String** | Action target.  This is the UUID associated with the configuration object of that particular type. | [optional] 
 **digits** | **Number** | Digits | [optional] 
 **speech** | **String** | Speech | [optional] 
+**text_message** | **String** | Text message body sent to the caller when the action is &#39;send text&#39;.  Ignored for all other actions. | [optional] 
 
 
 
@@ -23,6 +24,8 @@ Name | Type | Description | Notes
 * `voicemail` (value: `"voicemail"`)
 
 * `agent` (value: `"agent"`)
+
+* `send text` (value: `"send text"`)
 
 
 

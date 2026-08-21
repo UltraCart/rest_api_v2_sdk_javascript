@@ -35,7 +35,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.132
+ * @version 4.1.133
  */
 var OrderPayment = /*#__PURE__*/function () {
   /**
@@ -240,7 +240,7 @@ OrderPayment.prototype['surcharge_transaction_percentage'] = undefined;
 OrderPayment.prototype['test_order'] = undefined;
 
 /**
- * Transactions associated with processing this payment
+ * Transactions associated with processing this payment.  Accepted on insert to carry the payment history of an order captured outside the system.
  * @member {Array.<module:com.ultracart.admin.v2.models/OrderPaymentTransaction>} transactions
  */
 OrderPayment.prototype['transactions'] = undefined;
