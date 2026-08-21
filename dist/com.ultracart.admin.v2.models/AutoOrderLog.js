@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderLog model module.
  * @module com.ultracart.admin.v2.models/AutoOrderLog
- * @version 4.1.133
+ * @version 4.1.134
  */
 var AutoOrderLog = /*#__PURE__*/function () {
   /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxMenuMapping model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxMenuMapping
- * @version 4.1.134
+ * @version 4.1.135
  */
 class ConversationPbxMenuMapping {
     /**
@@ -56,6 +56,9 @@ class ConversationPbxMenuMapping {
             if (data.hasOwnProperty('digits')) {
                 obj['digits'] = ApiClient.convertToType(data['digits'], 'Number');
             }
+            if (data.hasOwnProperty('sms_from_number')) {
+                obj['sms_from_number'] = ApiClient.convertToType(data['sms_from_number'], 'String');
+            }
             if (data.hasOwnProperty('speech')) {
                 obj['speech'] = ApiClient.convertToType(data['speech'], 'String');
             }
@@ -86,6 +89,12 @@ ConversationPbxMenuMapping.prototype['action_target'] = undefined;
  * @member {Number} digits
  */
 ConversationPbxMenuMapping.prototype['digits'] = undefined;
+
+/**
+ * Optional phone number to send the text message from.  Must be a phone number configured on this merchant account and SMS enabled.  Defaults to the number the caller dialed.  Only used when the action is 'send text'.
+ * @member {String} sms_from_number
+ */
+ConversationPbxMenuMapping.prototype['sms_from_number'] = undefined;
 
 /**
  * Speech

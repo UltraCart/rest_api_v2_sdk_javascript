@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Activity model module.
  * @module com.ultracart.admin.v2.models/Activity
- * @version 4.1.133
+ * @version 4.1.134
  */
 var Activity = /*#__PURE__*/function () {
   /**

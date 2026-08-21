@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxMenuMapping model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxMenuMapping
- * @version 4.1.133
+ * @version 4.1.134
  */
 var ConversationPbxMenuMapping = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var ConversationPbxMenuMapping = /*#__PURE__*/function () {
         if (data.hasOwnProperty('speech')) {
           obj['speech'] = _ApiClient["default"].convertToType(data['speech'], 'String');
         }
+        if (data.hasOwnProperty('text_message')) {
+          obj['text_message'] = _ApiClient["default"].convertToType(data['text_message'], 'String');
+        }
       }
       return obj;
     }
@@ -99,6 +102,12 @@ ConversationPbxMenuMapping.prototype['digits'] = undefined;
  * @member {String} speech
  */
 ConversationPbxMenuMapping.prototype['speech'] = undefined;
+
+/**
+ * Text message body sent to the caller when the action is 'send text'.  Ignored for all other actions.
+ * @member {String} text_message
+ */
+ConversationPbxMenuMapping.prototype['text_message'] = undefined;
 
 /**
  * Allowed values for the <code>action</code> property.
@@ -130,6 +139,11 @@ ConversationPbxMenuMapping['ActionEnum'] = {
    * value: "agent"
    * @const
    */
-  "agent": "agent"
+  "agent": "agent",
+  /**
+   * value: "send text"
+   * @const
+   */
+  "send text": "send text"
 };
 var _default = exports["default"] = ConversationPbxMenuMapping;
