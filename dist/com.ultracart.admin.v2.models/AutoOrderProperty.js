@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderProperty model module.
  * @module com.ultracart.admin.v2.models/AutoOrderProperty
- * @version 4.1.134
+ * @version 4.1.135
  */
 var AutoOrderProperty = /*#__PURE__*/function () {
   /**

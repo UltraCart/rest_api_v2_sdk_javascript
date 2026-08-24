@@ -17,7 +17,7 @@ import AutoOrderProperty from './AutoOrderProperty';
 /**
  * The AutoOrderPropertiesUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderPropertiesUpdateRequest
- * @version 4.1.135
+ * @version 4.1.136
  */
 class AutoOrderPropertiesUpdateRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkflowUser model module.
  * @module com.ultracart.admin.v2.models/WorkflowUser
- * @version 4.1.135
+ * @version 4.1.136
  */
 class WorkflowUser {
     /**

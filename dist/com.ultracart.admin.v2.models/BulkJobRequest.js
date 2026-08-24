@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BulkJobRequest model module.
  * @module com.ultracart.admin.v2.models/BulkJobRequest
- * @version 4.1.134
+ * @version 4.1.135
  */
 var BulkJobRequest = /*#__PURE__*/function () {
   /**

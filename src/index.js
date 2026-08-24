@@ -25,6 +25,8 @@ import Activity from './com.ultracart.admin.v2.models/Activity';
 import AddLibraryItemRequest from './com.ultracart.admin.v2.models/AddLibraryItemRequest';
 import AdjustInternalCertificateRequest from './com.ultracart.admin.v2.models/AdjustInternalCertificateRequest';
 import AdjustInternalCertificateResponse from './com.ultracart.admin.v2.models/AdjustInternalCertificateResponse';
+import AdjustLoyaltyPointsRequest from './com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest';
+import AdjustLoyaltyPointsResponse from './com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse';
 import Affiliate from './com.ultracart.admin.v2.models/Affiliate';
 import AffiliateAttribute from './com.ultracart.admin.v2.models/AffiliateAttribute';
 import AffiliateClick from './com.ultracart.admin.v2.models/AffiliateClick';
@@ -457,6 +459,7 @@ import CustomerEmailSuppressionResult from './com.ultracart.admin.v2.models/Cust
 import CustomerLoyalty from './com.ultracart.admin.v2.models/CustomerLoyalty';
 import CustomerLoyaltyLedger from './com.ultracart.admin.v2.models/CustomerLoyaltyLedger';
 import CustomerLoyaltyRedemption from './com.ultracart.admin.v2.models/CustomerLoyaltyRedemption';
+import CustomerLoyaltyResponse from './com.ultracart.admin.v2.models/CustomerLoyaltyResponse';
 import CustomerMagicLinkResponse from './com.ultracart.admin.v2.models/CustomerMagicLinkResponse';
 import CustomerMergeRequest from './com.ultracart.admin.v2.models/CustomerMergeRequest';
 import CustomerOrdersSummary from './com.ultracart.admin.v2.models/CustomerOrdersSummary';
@@ -1106,7 +1109,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.135
+* @version 4.1.136
 */
 export {
     /**
@@ -1186,6 +1189,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/AdjustInternalCertificateResponse}
      */
     AdjustInternalCertificateResponse,
+
+    /**
+     * The AdjustLoyaltyPointsRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest}
+     */
+    AdjustLoyaltyPointsRequest,
+
+    /**
+     * The AdjustLoyaltyPointsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse}
+     */
+    AdjustLoyaltyPointsResponse,
 
     /**
      * The Affiliate model constructor.
@@ -3778,6 +3793,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/CustomerLoyaltyRedemption}
      */
     CustomerLoyaltyRedemption,
+
+    /**
+     * The CustomerLoyaltyResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/CustomerLoyaltyResponse}
+     */
+    CustomerLoyaltyResponse,
 
     /**
      * The CustomerMagicLinkResponse model constructor.

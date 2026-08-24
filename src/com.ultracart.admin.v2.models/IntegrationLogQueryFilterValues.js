@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IntegrationLogQueryFilterValues model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogQueryFilterValues
- * @version 4.1.135
+ * @version 4.1.136
  */
 class IntegrationLogQueryFilterValues {
     /**

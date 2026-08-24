@@ -15,12 +15,15 @@
 import ApiClient from "../ApiClient";
 import AdjustInternalCertificateRequest from '../com.ultracart.admin.v2.models/AdjustInternalCertificateRequest';
 import AdjustInternalCertificateResponse from '../com.ultracart.admin.v2.models/AdjustInternalCertificateResponse';
+import AdjustLoyaltyPointsRequest from '../com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest';
+import AdjustLoyaltyPointsResponse from '../com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse';
 import BaseResponse from '../com.ultracart.admin.v2.models/BaseResponse';
 import Customer from '../com.ultracart.admin.v2.models/Customer';
 import CustomerEditorValues from '../com.ultracart.admin.v2.models/CustomerEditorValues';
 import CustomerEmailListChanges from '../com.ultracart.admin.v2.models/CustomerEmailListChanges';
 import CustomerEmailSuppressionRequest from '../com.ultracart.admin.v2.models/CustomerEmailSuppressionRequest';
 import CustomerEmailSuppressionResponse from '../com.ultracart.admin.v2.models/CustomerEmailSuppressionResponse';
+import CustomerLoyaltyResponse from '../com.ultracart.admin.v2.models/CustomerLoyaltyResponse';
 import CustomerMagicLinkResponse from '../com.ultracart.admin.v2.models/CustomerMagicLinkResponse';
 import CustomerMergeRequest from '../com.ultracart.admin.v2.models/CustomerMergeRequest';
 import CustomerQuery from '../com.ultracart.admin.v2.models/CustomerQuery';
@@ -45,7 +48,7 @@ import QuickBooksOnlineCustomersResponse from '../com.ultracart.admin.v2.models/
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.135
+* @version 4.1.136
 */
 export default class CustomerApi {
 
@@ -152,6 +155,54 @@ export default class CustomerApi {
       let returnType = AdjustInternalCertificateResponse;
       return this.apiClient.callApi(
         '/customer/customers/{customer_profile_oid}/adjust_cashback_balance', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the adjustLoyaltyPoints operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~adjustLoyaltyPointsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Adjusts the loyalty points for a customer by adding a record to the loyalty ledger.
+     * Adjusts the loyalty points for a customer by adding a record to the loyalty ledger.  The loyalty ledger is append only.  Records are never updated or deleted, so a correction is made by posting a second adjustment with the opposite sign. 
+     * @param {Number} customer_profile_oid The customer profile oid
+     * @param {module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest} adjust_loyalty_points_request adjustLoyaltyPointsRequest
+     * @param {module:com.ultracart.admin.v2/CustomerApi~adjustLoyaltyPointsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse}
+     */
+    adjustLoyaltyPoints(customer_profile_oid, adjust_loyalty_points_request, callback) {
+      let postBody = adjust_loyalty_points_request;
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling adjustLoyaltyPoints");
+      }
+      // verify the required parameter 'adjust_loyalty_points_request' is set
+      if (adjust_loyalty_points_request === undefined || adjust_loyalty_points_request === null) {
+        throw new Error("Missing the required parameter 'adjust_loyalty_points_request' when calling adjustLoyaltyPoints");
+      }
+
+      let pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = AdjustLoyaltyPointsResponse;
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}/adjust_loyalty_points', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -410,6 +461,49 @@ export default class CustomerApi {
       let returnType = EmailListsResponse;
       return this.apiClient.callApi(
         '/customer/email_lists', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerLoyalty operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerLoyaltyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerLoyaltyResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the loyalty points, ledger and redemptions for a customer
+     * Retrieve the loyalty points, ledger and redemptions for a customer.  This is a convenience method that returns the same information as expanding loyalty on the customer object, without having to retrieve the entire customer. 
+     * @param {Number} customer_profile_oid The customer oid to retrieve.
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerLoyaltyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerLoyaltyResponse}
+     */
+    getCustomerLoyalty(customer_profile_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling getCustomerLoyalty");
+      }
+
+      let pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CustomerLoyaltyResponse;
+      return this.apiClient.callApi(
+        '/customer/customers/{customer_profile_oid}/loyalty', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -17,7 +17,7 @@ import AnrokConfig from './AnrokConfig';
 /**
  * The TaxProviderAnrok model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAnrok
- * @version 4.1.135
+ * @version 4.1.136
  */
 class TaxProviderAnrok {
     /**

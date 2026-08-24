@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudDeclineEmailRequest model module.
  * @module com.ultracart.admin.v2.models/FraudDeclineEmailRequest
- * @version 4.1.135
+ * @version 4.1.136
  */
 class FraudDeclineEmailRequest {
     /**

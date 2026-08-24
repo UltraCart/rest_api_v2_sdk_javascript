@@ -19,7 +19,7 @@ import FraudLookupTheme from './FraudLookupTheme';
 /**
  * The FraudLookupValues model module.
  * @module com.ultracart.admin.v2.models/FraudLookupValues
- * @version 4.1.135
+ * @version 4.1.136
  */
 class FraudLookupValues {
     /**
