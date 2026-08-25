@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemGenerateGatedCodesRequest model module.
  * @module com.ultracart.admin.v2.models/ItemGenerateGatedCodesRequest
- * @version 4.1.135
+ * @version 4.1.136
  */
 var ItemGenerateGatedCodesRequest = /*#__PURE__*/function () {
   /**

@@ -7,12 +7,15 @@ exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _AdjustInternalCertificateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AdjustInternalCertificateRequest"));
 var _AdjustInternalCertificateResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AdjustInternalCertificateResponse"));
+var _AdjustLoyaltyPointsRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest"));
+var _AdjustLoyaltyPointsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse"));
 var _BaseResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/BaseResponse"));
 var _Customer = _interopRequireDefault(require("../com.ultracart.admin.v2.models/Customer"));
 var _CustomerEditorValues = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEditorValues"));
 var _CustomerEmailListChanges = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEmailListChanges"));
 var _CustomerEmailSuppressionRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEmailSuppressionRequest"));
 var _CustomerEmailSuppressionResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerEmailSuppressionResponse"));
+var _CustomerLoyaltyResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerLoyaltyResponse"));
 var _CustomerMagicLinkResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerMagicLinkResponse"));
 var _CustomerMergeRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerMergeRequest"));
 var _CustomerQuery = _interopRequireDefault(require("../com.ultracart.admin.v2.models/CustomerQuery"));
@@ -54,7 +57,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.135
+* @version 4.1.136
 */
 var CustomerApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -149,6 +152,47 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _AdjustInternalCertificateResponse["default"];
       return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/adjust_cashback_balance', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the adjustLoyaltyPoints operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~adjustLoyaltyPointsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Adjusts the loyalty points for a customer by adding a record to the loyalty ledger.
+     * Adjusts the loyalty points for a customer by adding a record to the loyalty ledger.  The loyalty ledger is append only.  Records are never updated or deleted, so a correction is made by posting a second adjustment with the opposite sign. 
+     * @param {Number} customer_profile_oid The customer profile oid
+     * @param {module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest} adjust_loyalty_points_request adjustLoyaltyPointsRequest
+     * @param {module:com.ultracart.admin.v2/CustomerApi~adjustLoyaltyPointsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse}
+     */
+  }, {
+    key: "adjustLoyaltyPoints",
+    value: function adjustLoyaltyPoints(customer_profile_oid, adjust_loyalty_points_request, callback) {
+      var postBody = adjust_loyalty_points_request;
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling adjustLoyaltyPoints");
+      }
+      // verify the required parameter 'adjust_loyalty_points_request' is set
+      if (adjust_loyalty_points_request === undefined || adjust_loyalty_points_request === null) {
+        throw new Error("Missing the required parameter 'adjust_loyalty_points_request' when calling adjustLoyaltyPoints");
+      }
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _AdjustLoyaltyPointsResponse["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/adjust_loyalty_points', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -365,6 +409,42 @@ var CustomerApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _EmailListsResponse["default"];
       return this.apiClient.callApi('/customer/email_lists', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getCustomerLoyalty operation.
+     * @callback module:com.ultracart.admin.v2/CustomerApi~getCustomerLoyaltyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/CustomerLoyaltyResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the loyalty points, ledger and redemptions for a customer
+     * Retrieve the loyalty points, ledger and redemptions for a customer.  This is a convenience method that returns the same information as expanding loyalty on the customer object, without having to retrieve the entire customer. 
+     * @param {Number} customer_profile_oid The customer oid to retrieve.
+     * @param {module:com.ultracart.admin.v2/CustomerApi~getCustomerLoyaltyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/CustomerLoyaltyResponse}
+     */
+  }, {
+    key: "getCustomerLoyalty",
+    value: function getCustomerLoyalty(customer_profile_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'customer_profile_oid' is set
+      if (customer_profile_oid === undefined || customer_profile_oid === null) {
+        throw new Error("Missing the required parameter 'customer_profile_oid' when calling getCustomerLoyalty");
+      }
+      var pathParams = {
+        'customer_profile_oid': customer_profile_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _CustomerLoyaltyResponse["default"];
+      return this.apiClient.callApi('/customer/customers/{customer_profile_oid}/loyalty', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

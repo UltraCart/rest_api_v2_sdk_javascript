@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderChannelPartner model module.
  * @module com.ultracart.admin.v2.models/OrderChannelPartner
- * @version 4.1.136
+ * @version 4.1.137
  */
 class OrderChannelPartner {
     /**
@@ -47,6 +47,9 @@ class OrderChannelPartner {
         if (data) {
             obj = obj || new OrderChannelPartner();
 
+            if (data.hasOwnProperty('arbitrary_pricing_tier_names')) {
+                obj['arbitrary_pricing_tier_names'] = ApiClient.convertToType(data['arbitrary_pricing_tier_names'], ['String']);
+            }
             if (data.hasOwnProperty('auto_approve_purchase_order')) {
                 obj['auto_approve_purchase_order'] = ApiClient.convertToType(data['auto_approve_purchase_order'], 'Boolean');
             }
@@ -89,6 +92,12 @@ class OrderChannelPartner {
 
 
 }
+
+/**
+ * Names of pricing tiers to price this order against, without associating a customer profile.  An unknown tier name will fail the import.  An item that also supplies arbitrary_unit_cost keeps that cost and ignores the tier.  If a customer profile is attached to this order during checkout, these tiers are granted to that profile permanently.  Only applicable on inserting orders.
+ * @member {Array.<String>} arbitrary_pricing_tier_names
+ */
+OrderChannelPartner.prototype['arbitrary_pricing_tier_names'] = undefined;
 
 /**
  * If true, any purchase order submitted is automatically approved

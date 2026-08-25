@@ -75,6 +75,18 @@ Object.defineProperty(exports, "AdjustInternalCertificateResponse", {
     return _AdjustInternalCertificateResponse["default"];
   }
 });
+Object.defineProperty(exports, "AdjustLoyaltyPointsRequest", {
+  enumerable: true,
+  get: function get() {
+    return _AdjustLoyaltyPointsRequest["default"];
+  }
+});
+Object.defineProperty(exports, "AdjustLoyaltyPointsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _AdjustLoyaltyPointsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "Affiliate", {
   enumerable: true,
   get: function get() {
@@ -2725,6 +2737,12 @@ Object.defineProperty(exports, "CustomerLoyaltyRedemption", {
   enumerable: true,
   get: function get() {
     return _CustomerLoyaltyRedemption["default"];
+  }
+});
+Object.defineProperty(exports, "CustomerLoyaltyResponse", {
+  enumerable: true,
+  get: function get() {
+    return _CustomerLoyaltyResponse["default"];
   }
 });
 Object.defineProperty(exports, "CustomerMagicLinkResponse", {
@@ -6394,6 +6412,8 @@ var _Activity = _interopRequireDefault(require("./com.ultracart.admin.v2.models/
 var _AddLibraryItemRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AddLibraryItemRequest"));
 var _AdjustInternalCertificateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AdjustInternalCertificateRequest"));
 var _AdjustInternalCertificateResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AdjustInternalCertificateResponse"));
+var _AdjustLoyaltyPointsRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest"));
+var _AdjustLoyaltyPointsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse"));
 var _Affiliate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/Affiliate"));
 var _AffiliateAttribute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateAttribute"));
 var _AffiliateClick = _interopRequireDefault(require("./com.ultracart.admin.v2.models/AffiliateClick"));
@@ -6826,6 +6846,7 @@ var _CustomerEmailSuppressionResult = _interopRequireDefault(require("./com.ultr
 var _CustomerLoyalty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyalty"));
 var _CustomerLoyaltyLedger = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyLedger"));
 var _CustomerLoyaltyRedemption = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyRedemption"));
+var _CustomerLoyaltyResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerLoyaltyResponse"));
 var _CustomerMagicLinkResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerMagicLinkResponse"));
 var _CustomerMergeRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerMergeRequest"));
 var _CustomerOrdersSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/CustomerOrdersSummary"));

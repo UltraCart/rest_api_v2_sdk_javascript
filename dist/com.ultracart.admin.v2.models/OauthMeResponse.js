@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OauthMeResponse model module.
  * @module com.ultracart.admin.v2.models/OauthMeResponse
- * @version 4.1.135
+ * @version 4.1.136
  */
 var OauthMeResponse = /*#__PURE__*/function () {
   /**

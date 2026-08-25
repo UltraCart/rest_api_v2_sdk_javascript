@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AutoOrderEmailsResponse model module.
  * @module com.ultracart.admin.v2.models/AutoOrderEmailsResponse
- * @version 4.1.135
+ * @version 4.1.136
  */
 var AutoOrderEmailsResponse = /*#__PURE__*/function () {
   /**

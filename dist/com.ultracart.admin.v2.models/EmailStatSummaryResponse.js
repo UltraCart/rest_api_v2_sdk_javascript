@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailStatSummaryResponse model module.
  * @module com.ultracart.admin.v2.models/EmailStatSummaryResponse
- * @version 4.1.135
+ * @version 4.1.136
  */
 var EmailStatSummaryResponse = /*#__PURE__*/function () {
   /**
