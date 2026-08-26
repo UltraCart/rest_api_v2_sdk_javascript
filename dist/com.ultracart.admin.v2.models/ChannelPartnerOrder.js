@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ChannelPartnerOrder model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrder
- * @version 4.1.136
+ * @version 4.1.137
  */
 var ChannelPartnerOrder = /*#__PURE__*/function () {
   /**
@@ -69,6 +69,9 @@ var ChannelPartnerOrder = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('affiliate_sub_id')) {
           obj['affiliate_sub_id'] = _ApiClient["default"].convertToType(data['affiliate_sub_id'], 'String');
+        }
+        if (data.hasOwnProperty('arbitrary_pricing_tier_names')) {
+          obj['arbitrary_pricing_tier_names'] = _ApiClient["default"].convertToType(data['arbitrary_pricing_tier_names'], ['String']);
         }
         if (data.hasOwnProperty('arbitrary_shipping_handling_total')) {
           obj['arbitrary_shipping_handling_total'] = _ApiClient["default"].convertToType(data['arbitrary_shipping_handling_total'], 'Number');
@@ -374,6 +377,12 @@ ChannelPartnerOrder.prototype['affiliate_id'] = undefined;
  * @member {String} affiliate_sub_id
  */
 ChannelPartnerOrder.prototype['affiliate_sub_id'] = undefined;
+
+/**
+ * Names of pricing tiers to price this order against, without associating a customer profile.  An unknown tier name will fail the import.  An item that also supplies arbitrary_unit_cost keeps that cost and ignores the tier.  If a customer profile is attached to this order during checkout, these tiers are granted to that profile permanently.
+ * @member {Array.<String>} arbitrary_pricing_tier_names
+ */
+ChannelPartnerOrder.prototype['arbitrary_pricing_tier_names'] = undefined;
 
 /**
  * Arbitrary shipping handling total

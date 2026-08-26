@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemSalesforce model module.
  * @module com.ultracart.admin.v2.models/ItemSalesforce
- * @version 4.1.136
+ * @version 4.1.137
  */
 var ItemSalesforce = /*#__PURE__*/function () {
   /**

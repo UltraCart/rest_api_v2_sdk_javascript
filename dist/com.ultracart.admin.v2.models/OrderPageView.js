@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPageView model module.
  * @module com.ultracart.admin.v2.models/OrderPageView
- * @version 4.1.136
+ * @version 4.1.137
  */
 var OrderPageView = /*#__PURE__*/function () {
   /**
