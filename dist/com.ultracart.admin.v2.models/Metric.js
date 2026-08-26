@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The Metric model module.
  * @module com.ultracart.admin.v2.models/Metric
- * @version 4.1.137
+ * @version 4.1.140
  */
 var Metric = /*#__PURE__*/function () {
   /**

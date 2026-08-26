@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemInventorySnapshotDistributionCenter model module.
  * @module com.ultracart.admin.v2.models/ItemInventorySnapshotDistributionCenter
- * @version 4.1.140
+ * @version 4.1.141
  */
 class ItemInventorySnapshotDistributionCenter {
     /**

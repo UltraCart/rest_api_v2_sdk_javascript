@@ -17,7 +17,7 @@ import SfvbStorefront from './SfvbStorefront';
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.140
+ * @version 4.1.141
  */
 class SfvbWhoamiResponse {
     /**
@@ -56,6 +56,15 @@ class SfvbWhoamiResponse {
             }
             if (data.hasOwnProperty('authenticationType')) {
                 obj['authenticationType'] = ApiClient.convertToType(data['authenticationType'], 'String');
+            }
+            if (data.hasOwnProperty('canPublish')) {
+                obj['canPublish'] = ApiClient.convertToType(data['canPublish'], 'Boolean');
+            }
+            if (data.hasOwnProperty('canRead')) {
+                obj['canRead'] = ApiClient.convertToType(data['canRead'], 'Boolean');
+            }
+            if (data.hasOwnProperty('canWrite')) {
+                obj['canWrite'] = ApiClient.convertToType(data['canWrite'], 'Boolean');
             }
             if (data.hasOwnProperty('deviceScope')) {
                 obj['deviceScope'] = ApiClient.convertToType(data['deviceScope'], 'String');
@@ -102,6 +111,24 @@ SfvbWhoamiResponse.prototype['applicationName'] = undefined;
  * @member {String} authenticationType
  */
 SfvbWhoamiResponse.prototype['authenticationType'] = undefined;
+
+/**
+ * True when this token may write a target that is currently live - an active upsell offer, an email on a delivering flow, the active theme, the storefront root.  Never infer this; it is the difference between a draft edit and a shopper visible change.
+ * @member {Boolean} canPublish
+ */
+SfvbWhoamiResponse.prototype['canPublish'] = undefined;
+
+/**
+ * True when this token may read.  Do not infer this from the requested scope name.
+ * @member {Boolean} canRead
+ */
+SfvbWhoamiResponse.prototype['canRead'] = undefined;
+
+/**
+ * True when this token may write.  Writing a target that is not currently live needs only this.
+ * @member {Boolean} canWrite
+ */
+SfvbWhoamiResponse.prototype['canWrite'] = undefined;
 
 /**
  * Device scope name, when this is a device flow token.

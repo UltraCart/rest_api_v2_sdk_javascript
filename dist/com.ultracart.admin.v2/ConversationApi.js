@@ -77,6 +77,7 @@ var _ConversationPbxHardwarePhonesResponse = _interopRequireDefault(require("../
 var _ConversationPbxMenu = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxMenu"));
 var _ConversationPbxMenuResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxMenuResponse"));
 var _ConversationPbxMenusResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxMenusResponse"));
+var _ConversationPbxPayConnectorsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxPayConnectorsResponse"));
 var _ConversationPbxPhoneManufacturersResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxPhoneManufacturersResponse"));
 var _ConversationPbxPhoneNumber = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxPhoneNumber"));
 var _ConversationPbxPhoneNumberPurchaseRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationPbxPhoneNumberPurchaseRequest"));
@@ -135,7 +136,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.137
+* @version 4.1.140
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -2551,6 +2552,35 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _ConversationPbxMenusResponse["default"];
       return this.apiClient.callApi('/conversation/pbx/menu', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getPbxPayConnectors operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~getPbxPayConnectorsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationPbxPayConnectorsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get pbx pay connectors
+     * Retrieve the Twilio Pay Connectors installed in the Twilio account for this merchant.  This list is refreshed each time the PBX configuration is deployed. 
+     * @param {module:com.ultracart.admin.v2/ConversationApi~getPbxPayConnectorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationPbxPayConnectorsResponse}
+     */
+  }, {
+    key: "getPbxPayConnectors",
+    value: function getPbxPayConnectors(callback) {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _ConversationPbxPayConnectorsResponse["default"];
+      return this.apiClient.callApi('/conversation/pbx/pay_connector', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
