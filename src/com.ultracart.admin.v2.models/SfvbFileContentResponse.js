@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileContentResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileContentResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbFileContentResponse {
     /**
@@ -47,20 +47,20 @@ class SfvbFileContentResponse {
         if (data) {
             obj = obj || new SfvbFileContentResponse();
 
-            if (data.hasOwnProperty('autoCompiled')) {
-                obj['autoCompiled'] = ApiClient.convertToType(data['autoCompiled'], 'Boolean');
+            if (data.hasOwnProperty('auto_compiled')) {
+                obj['auto_compiled'] = ApiClient.convertToType(data['auto_compiled'], 'Boolean');
             }
             if (data.hasOwnProperty('content')) {
                 obj['content'] = ApiClient.convertToType(data['content'], 'String');
             }
-            if (data.hasOwnProperty('fsFileOid')) {
-                obj['fsFileOid'] = ApiClient.convertToType(data['fsFileOid'], 'Number');
+            if (data.hasOwnProperty('fs_file_oid')) {
+                obj['fs_file_oid'] = ApiClient.convertToType(data['fs_file_oid'], 'Number');
             }
-            if (data.hasOwnProperty('hashSha256')) {
-                obj['hashSha256'] = ApiClient.convertToType(data['hashSha256'], 'String');
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
             }
-            if (data.hasOwnProperty('mimeType')) {
-                obj['mimeType'] = ApiClient.convertToType(data['mimeType'], 'String');
+            if (data.hasOwnProperty('mime_type')) {
+                obj['mime_type'] = ApiClient.convertToType(data['mime_type'], 'String');
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
@@ -74,8 +74,8 @@ class SfvbFileContentResponse {
             if (data.hasOwnProperty('valid')) {
                 obj['valid'] = ApiClient.convertToType(data['valid'], 'Boolean');
             }
-            if (data.hasOwnProperty('velocityErrors')) {
-                obj['velocityErrors'] = ApiClient.convertToType(data['velocityErrors'], 'String');
+            if (data.hasOwnProperty('velocity_errors')) {
+                obj['velocity_errors'] = ApiClient.convertToType(data['velocity_errors'], 'String');
             }
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], 'Number');
@@ -89,9 +89,9 @@ class SfvbFileContentResponse {
 
 /**
  * True when this file is compiler output and must not be edited directly.
- * @member {Boolean} autoCompiled
+ * @member {Boolean} auto_compiled
  */
-SfvbFileContentResponse.prototype['autoCompiled'] = undefined;
+SfvbFileContentResponse.prototype['auto_compiled'] = undefined;
 
 /**
  * UTF-8 content.  Only text/_* files can be read this way.
@@ -101,21 +101,21 @@ SfvbFileContentResponse.prototype['content'] = undefined;
 
 /**
  * StoreFront file system file oid.
- * @member {Number} fsFileOid
+ * @member {Number} fs_file_oid
  */
-SfvbFileContentResponse.prototype['fsFileOid'] = undefined;
+SfvbFileContentResponse.prototype['fs_file_oid'] = undefined;
 
 /**
  * SHA-256 of the content.  Also returned as the ETag header; send it back as If-Match when writing.
- * @member {String} hashSha256
+ * @member {String} hash_sha256
  */
-SfvbFileContentResponse.prototype['hashSha256'] = undefined;
+SfvbFileContentResponse.prototype['hash_sha256'] = undefined;
 
 /**
  * Mime type.
- * @member {String} mimeType
+ * @member {String} mime_type
  */
-SfvbFileContentResponse.prototype['mimeType'] = undefined;
+SfvbFileContentResponse.prototype['mime_type'] = undefined;
 
 /**
  * Full path of the file.
@@ -143,9 +143,9 @@ SfvbFileContentResponse.prototype['valid'] = undefined;
 
 /**
  * Velocity errors recorded on the last write.  Null when valid.
- * @member {String} velocityErrors
+ * @member {String} velocity_errors
  */
-SfvbFileContentResponse.prototype['velocityErrors'] = undefined;
+SfvbFileContentResponse.prototype['velocity_errors'] = undefined;
 
 /**
  * Version number of the content returned.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerRevertRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerRevertRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbContainerRevertRequest {
     /**
@@ -50,8 +50,8 @@ class SfvbContainerRevertRequest {
             if (data.hasOwnProperty('comment')) {
                 obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
             }
-            if (data.hasOwnProperty('containerHistoryOid')) {
-                obj['containerHistoryOid'] = ApiClient.convertToType(data['containerHistoryOid'], 'Number');
+            if (data.hasOwnProperty('container_history_oid')) {
+                obj['container_history_oid'] = ApiClient.convertToType(data['container_history_oid'], 'Number');
             }
         }
         return obj;
@@ -68,9 +68,9 @@ SfvbContainerRevertRequest.prototype['comment'] = undefined;
 
 /**
  * History record oid to restore, as returned by container_versions.
- * @member {Number} containerHistoryOid
+ * @member {Number} container_history_oid
  */
-SfvbContainerRevertRequest.prototype['containerHistoryOid'] = undefined;
+SfvbContainerRevertRequest.prototype['container_history_oid'] = undefined;
 
 
 

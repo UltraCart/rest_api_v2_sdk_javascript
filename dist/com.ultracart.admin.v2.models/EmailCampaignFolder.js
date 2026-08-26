@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCampaignFolder model module.
  * @module com.ultracart.admin.v2.models/EmailCampaignFolder
- * @version 4.1.140
+ * @version 4.1.141
  */
 var EmailCampaignFolder = /*#__PURE__*/function () {
   /**

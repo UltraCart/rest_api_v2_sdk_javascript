@@ -47,7 +47,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.1.140
+* @version 4.1.141
 */
 var ItemApi = exports["default"] = /*#__PURE__*/function () {
   /**

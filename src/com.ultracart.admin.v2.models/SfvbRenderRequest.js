@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRenderRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbRenderRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbRenderRequest {
     /**
@@ -47,38 +47,38 @@ class SfvbRenderRequest {
         if (data) {
             obj = obj || new SfvbRenderRequest();
 
-            if (data.hasOwnProperty('ancestorsCjson')) {
-                obj['ancestorsCjson'] = ApiClient.convertToType(data['ancestorsCjson'], 'String');
+            if (data.hasOwnProperty('ancestors_cjson')) {
+                obj['ancestors_cjson'] = ApiClient.convertToType(data['ancestors_cjson'], 'String');
             }
-            if (data.hasOwnProperty('childContainersJson')) {
-                obj['childContainersJson'] = ApiClient.convertToType(data['childContainersJson'], 'String');
+            if (data.hasOwnProperty('child_containers_json')) {
+                obj['child_containers_json'] = ApiClient.convertToType(data['child_containers_json'], 'String');
             }
             if (data.hasOwnProperty('cjson')) {
                 obj['cjson'] = ApiClient.convertToType(data['cjson'], 'String');
             }
-            if (data.hasOwnProperty('contextAffiliateOid')) {
-                obj['contextAffiliateOid'] = ApiClient.convertToType(data['contextAffiliateOid'], 'Number');
+            if (data.hasOwnProperty('context_affiliate_oid')) {
+                obj['context_affiliate_oid'] = ApiClient.convertToType(data['context_affiliate_oid'], 'Number');
             }
-            if (data.hasOwnProperty('contextBlogPostOid')) {
-                obj['contextBlogPostOid'] = ApiClient.convertToType(data['contextBlogPostOid'], 'Number');
+            if (data.hasOwnProperty('context_blog_post_oid')) {
+                obj['context_blog_post_oid'] = ApiClient.convertToType(data['context_blog_post_oid'], 'Number');
             }
-            if (data.hasOwnProperty('contextGroupPath')) {
-                obj['contextGroupPath'] = ApiClient.convertToType(data['contextGroupPath'], 'String');
+            if (data.hasOwnProperty('context_group_path')) {
+                obj['context_group_path'] = ApiClient.convertToType(data['context_group_path'], 'String');
             }
-            if (data.hasOwnProperty('contextItemId')) {
-                obj['contextItemId'] = ApiClient.convertToType(data['contextItemId'], 'String');
+            if (data.hasOwnProperty('context_item_id')) {
+                obj['context_item_id'] = ApiClient.convertToType(data['context_item_id'], 'String');
             }
-            if (data.hasOwnProperty('contextOrderId')) {
-                obj['contextOrderId'] = ApiClient.convertToType(data['contextOrderId'], 'String');
+            if (data.hasOwnProperty('context_order_id')) {
+                obj['context_order_id'] = ApiClient.convertToType(data['context_order_id'], 'String');
             }
-            if (data.hasOwnProperty('contextPageNumber')) {
-                obj['contextPageNumber'] = ApiClient.convertToType(data['contextPageNumber'], 'String');
+            if (data.hasOwnProperty('context_page_number')) {
+                obj['context_page_number'] = ApiClient.convertToType(data['context_page_number'], 'String');
             }
-            if (data.hasOwnProperty('contextUpsellOfferOid')) {
-                obj['contextUpsellOfferOid'] = ApiClient.convertToType(data['contextUpsellOfferOid'], 'Number');
+            if (data.hasOwnProperty('context_upsell_offer_oid')) {
+                obj['context_upsell_offer_oid'] = ApiClient.convertToType(data['context_upsell_offer_oid'], 'Number');
             }
-            if (data.hasOwnProperty('languageIsoCode')) {
-                obj['languageIsoCode'] = ApiClient.convertToType(data['languageIsoCode'], 'String');
+            if (data.hasOwnProperty('language_iso_code')) {
+                obj['language_iso_code'] = ApiClient.convertToType(data['language_iso_code'], 'String');
             }
             if (data.hasOwnProperty('uri')) {
                 obj['uri'] = ApiClient.convertToType(data['uri'], 'String');
@@ -92,15 +92,15 @@ class SfvbRenderRequest {
 
 /**
  * The chain of ancestor nodes above this one, as CJSON.  Elements that inherit layout or styling from a parent render differently without it, so supply it when rendering a node from inside a container rather than a standalone fragment.
- * @member {String} ancestorsCjson
+ * @member {String} ancestors_cjson
  */
-SfvbRenderRequest.prototype['ancestorsCjson'] = undefined;
+SfvbRenderRequest.prototype['ancestors_cjson'] = undefined;
 
 /**
  * Child containers this node references, as a JSON object keyed by container id.  Compiled into the render context so nested containers resolve.
- * @member {String} childContainersJson
+ * @member {String} child_containers_json
  */
-SfvbRenderRequest.prototype['childContainersJson'] = undefined;
+SfvbRenderRequest.prototype['child_containers_json'] = undefined;
 
 /**
  * The CJSON node to render.
@@ -110,51 +110,51 @@ SfvbRenderRequest.prototype['cjson'] = undefined;
 
 /**
  * Affiliate oid for the rendering context.
- * @member {Number} contextAffiliateOid
+ * @member {Number} context_affiliate_oid
  */
-SfvbRenderRequest.prototype['contextAffiliateOid'] = undefined;
+SfvbRenderRequest.prototype['context_affiliate_oid'] = undefined;
 
 /**
  * Blog post oid for the rendering context.
- * @member {Number} contextBlogPostOid
+ * @member {Number} context_blog_post_oid
  */
-SfvbRenderRequest.prototype['contextBlogPostOid'] = undefined;
+SfvbRenderRequest.prototype['context_blog_post_oid'] = undefined;
 
 /**
  * Catalog group path for the rendering context.
- * @member {String} contextGroupPath
+ * @member {String} context_group_path
  */
-SfvbRenderRequest.prototype['contextGroupPath'] = undefined;
+SfvbRenderRequest.prototype['context_group_path'] = undefined;
 
 /**
  * Item id for the rendering context.  Required for item bound elements.
- * @member {String} contextItemId
+ * @member {String} context_item_id
  */
-SfvbRenderRequest.prototype['contextItemId'] = undefined;
+SfvbRenderRequest.prototype['context_item_id'] = undefined;
 
 /**
  * Order id for the rendering context.
- * @member {String} contextOrderId
+ * @member {String} context_order_id
  */
-SfvbRenderRequest.prototype['contextOrderId'] = undefined;
+SfvbRenderRequest.prototype['context_order_id'] = undefined;
 
 /**
  * Page number for paginated elements.  Defaults to 1.
- * @member {String} contextPageNumber
+ * @member {String} context_page_number
  */
-SfvbRenderRequest.prototype['contextPageNumber'] = undefined;
+SfvbRenderRequest.prototype['context_page_number'] = undefined;
 
 /**
  * Upsell offer oid for the rendering context.
- * @member {Number} contextUpsellOfferOid
+ * @member {Number} context_upsell_offer_oid
  */
-SfvbRenderRequest.prototype['contextUpsellOfferOid'] = undefined;
+SfvbRenderRequest.prototype['context_upsell_offer_oid'] = undefined;
 
 /**
  * Language ISO code.  Defaults to ENG.
- * @member {String} languageIsoCode
+ * @member {String} language_iso_code
  */
-SfvbRenderRequest.prototype['languageIsoCode'] = undefined;
+SfvbRenderRequest.prototype['language_iso_code'] = undefined;
 
 /**
  * Storefront URI the node would appear on.  Affects rendering of anything page relative.

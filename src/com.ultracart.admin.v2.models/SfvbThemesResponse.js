@@ -17,7 +17,7 @@ import SfvbTheme from './SfvbTheme';
 /**
  * The SfvbThemesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemesResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbThemesResponse {
     /**
@@ -48,8 +48,8 @@ class SfvbThemesResponse {
         if (data) {
             obj = obj || new SfvbThemesResponse();
 
-            if (data.hasOwnProperty('activeThemeOid')) {
-                obj['activeThemeOid'] = ApiClient.convertToType(data['activeThemeOid'], 'Number');
+            if (data.hasOwnProperty('active_theme_oid')) {
+                obj['active_theme_oid'] = ApiClient.convertToType(data['active_theme_oid'], 'Number');
             }
             if (data.hasOwnProperty('themes')) {
                 obj['themes'] = ApiClient.convertToType(data['themes'], [SfvbTheme]);
@@ -63,9 +63,9 @@ class SfvbThemesResponse {
 
 /**
  * Oid of the active theme, repeated here so a caller does not have to scan the list.
- * @member {Number} activeThemeOid
+ * @member {Number} active_theme_oid
  */
-SfvbThemesResponse.prototype['activeThemeOid'] = undefined;
+SfvbThemesResponse.prototype['active_theme_oid'] = undefined;
 
 /**
  * Themes belonging to the storefront.  Exactly one is flagged active.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPreviewSessionRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewSessionRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbPreviewSessionRequest {
     /**
@@ -50,8 +50,8 @@ class SfvbPreviewSessionRequest {
             if (data.hasOwnProperty('containers')) {
                 obj['containers'] = ApiClient.convertToType(data['containers'], Object);
             }
-            if (data.hasOwnProperty('themeOid')) {
-                obj['themeOid'] = ApiClient.convertToType(data['themeOid'], 'Number');
+            if (data.hasOwnProperty('theme_oid')) {
+                obj['theme_oid'] = ApiClient.convertToType(data['theme_oid'], 'Number');
             }
         }
         return obj;
@@ -68,9 +68,9 @@ SfvbPreviewSessionRequest.prototype['containers'] = undefined;
 
 /**
  * Theme to compile against.  Supplies the inherit groups configuration.  Defaults to the active theme.
- * @member {Number} themeOid
+ * @member {Number} theme_oid
  */
-SfvbPreviewSessionRequest.prototype['themeOid'] = undefined;
+SfvbPreviewSessionRequest.prototype['theme_oid'] = undefined;
 
 
 

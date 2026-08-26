@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbElement model module.
  * @module com.ultracart.admin.v2.models/SfvbElement
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbElement {
     /**
@@ -47,8 +47,8 @@ class SfvbElement {
         if (data) {
             obj = obj || new SfvbElement();
 
-            if (data.hasOwnProperty('schemaAvailable')) {
-                obj['schemaAvailable'] = ApiClient.convertToType(data['schemaAvailable'], 'Boolean');
+            if (data.hasOwnProperty('schema_available')) {
+                obj['schema_available'] = ApiClient.convertToType(data['schema_available'], 'Boolean');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -62,9 +62,9 @@ class SfvbElement {
 
 /**
  * True when a per element configuration schema is available from elements/{element_type}.
- * @member {Boolean} schemaAvailable
+ * @member {Boolean} schema_available
  */
-SfvbElement.prototype['schemaAvailable'] = undefined;
+SfvbElement.prototype['schema_available'] = undefined;
 
 /**
  * The element type as it appears in the type property of a CJSON node.

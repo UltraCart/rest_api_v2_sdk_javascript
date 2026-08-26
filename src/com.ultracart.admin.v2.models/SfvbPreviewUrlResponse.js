@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPreviewUrlResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewUrlResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbPreviewUrlResponse {
     /**
@@ -47,26 +47,26 @@ class SfvbPreviewUrlResponse {
         if (data) {
             obj = obj || new SfvbPreviewUrlResponse();
 
-            if (data.hasOwnProperty('expiresInSeconds')) {
-                obj['expiresInSeconds'] = ApiClient.convertToType(data['expiresInSeconds'], 'Number');
+            if (data.hasOwnProperty('expires_in_seconds')) {
+                obj['expires_in_seconds'] = ApiClient.convertToType(data['expires_in_seconds'], 'Number');
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
             }
-            if (data.hasOwnProperty('previewSessionId')) {
-                obj['previewSessionId'] = ApiClient.convertToType(data['previewSessionId'], 'String');
+            if (data.hasOwnProperty('preview_session_id')) {
+                obj['preview_session_id'] = ApiClient.convertToType(data['preview_session_id'], 'String');
             }
-            if (data.hasOwnProperty('previewUrl')) {
-                obj['previewUrl'] = ApiClient.convertToType(data['previewUrl'], 'String');
+            if (data.hasOwnProperty('preview_url')) {
+                obj['preview_url'] = ApiClient.convertToType(data['preview_url'], 'String');
             }
-            if (data.hasOwnProperty('requiresBrowserSession')) {
-                obj['requiresBrowserSession'] = ApiClient.convertToType(data['requiresBrowserSession'], 'Boolean');
+            if (data.hasOwnProperty('requires_browser_session')) {
+                obj['requires_browser_session'] = ApiClient.convertToType(data['requires_browser_session'], 'Boolean');
             }
             if (data.hasOwnProperty('shareable')) {
                 obj['shareable'] = ApiClient.convertToType(data['shareable'], 'Boolean');
             }
-            if (data.hasOwnProperty('usageNote')) {
-                obj['usageNote'] = ApiClient.convertToType(data['usageNote'], 'String');
+            if (data.hasOwnProperty('usage_note')) {
+                obj['usage_note'] = ApiClient.convertToType(data['usage_note'], 'String');
             }
         }
         return obj;
@@ -77,9 +77,9 @@ class SfvbPreviewUrlResponse {
 
 /**
  * Seconds until the session expires.
- * @member {Number} expiresInSeconds
+ * @member {Number} expires_in_seconds
  */
-SfvbPreviewUrlResponse.prototype['expiresInSeconds'] = undefined;
+SfvbPreviewUrlResponse.prototype['expires_in_seconds'] = undefined;
 
 /**
  * Storefront path being previewed.
@@ -89,21 +89,21 @@ SfvbPreviewUrlResponse.prototype['path'] = undefined;
 
 /**
  * The preview session id used.
- * @member {String} previewSessionId
+ * @member {String} preview_session_id
  */
-SfvbPreviewUrlResponse.prototype['previewSessionId'] = undefined;
+SfvbPreviewUrlResponse.prototype['preview_session_id'] = undefined;
 
 /**
  * URL that renders the storefront page with the preview session's containers substituted for the stored ones.
- * @member {String} previewUrl
+ * @member {String} preview_url
  */
-SfvbPreviewUrlResponse.prototype['previewUrl'] = undefined;
+SfvbPreviewUrlResponse.prototype['preview_url'] = undefined;
 
 /**
  * Always true.  The preview only applies to a request carrying the UltraCart admin session cookie of the user who authorised this token.  Fetched without it, the URL returns the LIVE page with a 200 and no error, so a successful fetch is not evidence the preview was applied.  Present this URL for a human to open; do not fetch it.
- * @member {Boolean} requiresBrowserSession
+ * @member {Boolean} requires_browser_session
  */
-SfvbPreviewUrlResponse.prototype['requiresBrowserSession'] = undefined;
+SfvbPreviewUrlResponse.prototype['requires_browser_session'] = undefined;
 
 /**
  * Always false.  The session is keyed by individual login, so anyone else opening this URL sees the live page rather than the preview.
@@ -113,9 +113,9 @@ SfvbPreviewUrlResponse.prototype['shareable'] = undefined;
 
 /**
  * Plain language restatement of the two flags above, safe to show a user.
- * @member {String} usageNote
+ * @member {String} usage_note
  */
-SfvbPreviewUrlResponse.prototype['usageNote'] = undefined;
+SfvbPreviewUrlResponse.prototype['usage_note'] = undefined;
 
 
 

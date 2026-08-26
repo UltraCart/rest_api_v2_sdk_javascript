@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileSearchRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFileSearchRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbFileSearchRequest {
     /**
@@ -47,35 +47,35 @@ class SfvbFileSearchRequest {
         if (data) {
             obj = obj || new SfvbFileSearchRequest();
 
-            if (data.hasOwnProperty('caseSensitive')) {
-                obj['caseSensitive'] = ApiClient.convertToType(data['caseSensitive'], 'Boolean');
+            if (data.hasOwnProperty('case_sensitive')) {
+                obj['case_sensitive'] = ApiClient.convertToType(data['case_sensitive'], 'Boolean');
             }
-            if (data.hasOwnProperty('dynamicHtml')) {
-                obj['dynamicHtml'] = ApiClient.convertToType(data['dynamicHtml'], 'Boolean');
+            if (data.hasOwnProperty('dynamic_html')) {
+                obj['dynamic_html'] = ApiClient.convertToType(data['dynamic_html'], 'Boolean');
             }
-            if (data.hasOwnProperty('fileName')) {
-                obj['fileName'] = ApiClient.convertToType(data['fileName'], 'String');
+            if (data.hasOwnProperty('file_name')) {
+                obj['file_name'] = ApiClient.convertToType(data['file_name'], 'String');
             }
-            if (data.hasOwnProperty('i18nViolations')) {
-                obj['i18nViolations'] = ApiClient.convertToType(data['i18nViolations'], 'Boolean');
+            if (data.hasOwnProperty('i18n_violations')) {
+                obj['i18n_violations'] = ApiClient.convertToType(data['i18n_violations'], 'Boolean');
             }
             if (data.hasOwnProperty('invalid')) {
                 obj['invalid'] = ApiClient.convertToType(data['invalid'], 'Boolean');
             }
-            if (data.hasOwnProperty('maxResults')) {
-                obj['maxResults'] = ApiClient.convertToType(data['maxResults'], 'Number');
+            if (data.hasOwnProperty('max_results')) {
+                obj['max_results'] = ApiClient.convertToType(data['max_results'], 'Number');
             }
-            if (data.hasOwnProperty('mergeConflicts')) {
-                obj['mergeConflicts'] = ApiClient.convertToType(data['mergeConflicts'], 'Boolean');
+            if (data.hasOwnProperty('merge_conflicts')) {
+                obj['merge_conflicts'] = ApiClient.convertToType(data['merge_conflicts'], 'Boolean');
             }
-            if (data.hasOwnProperty('mimeType')) {
-                obj['mimeType'] = ApiClient.convertToType(data['mimeType'], 'String');
+            if (data.hasOwnProperty('mime_type')) {
+                obj['mime_type'] = ApiClient.convertToType(data['mime_type'], 'String');
             }
-            if (data.hasOwnProperty('modifiedMax')) {
-                obj['modifiedMax'] = ApiClient.convertToType(data['modifiedMax'], 'String');
+            if (data.hasOwnProperty('modified_max')) {
+                obj['modified_max'] = ApiClient.convertToType(data['modified_max'], 'String');
             }
-            if (data.hasOwnProperty('modifiedMin')) {
-                obj['modifiedMin'] = ApiClient.convertToType(data['modifiedMin'], 'String');
+            if (data.hasOwnProperty('modified_min')) {
+                obj['modified_min'] = ApiClient.convertToType(data['modified_min'], 'String');
             }
             if (data.hasOwnProperty('offset')) {
                 obj['offset'] = ApiClient.convertToType(data['offset'], 'Number');
@@ -83,14 +83,14 @@ class SfvbFileSearchRequest {
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
             }
-            if (data.hasOwnProperty('sizeMax')) {
-                obj['sizeMax'] = ApiClient.convertToType(data['sizeMax'], 'Number');
+            if (data.hasOwnProperty('size_max')) {
+                obj['size_max'] = ApiClient.convertToType(data['size_max'], 'Number');
             }
-            if (data.hasOwnProperty('sizeMin')) {
-                obj['sizeMin'] = ApiClient.convertToType(data['sizeMin'], 'Number');
+            if (data.hasOwnProperty('size_min')) {
+                obj['size_min'] = ApiClient.convertToType(data['size_min'], 'Number');
             }
-            if (data.hasOwnProperty('subDirectories')) {
-                obj['subDirectories'] = ApiClient.convertToType(data['subDirectories'], 'Boolean');
+            if (data.hasOwnProperty('sub_directories')) {
+                obj['sub_directories'] = ApiClient.convertToType(data['sub_directories'], 'Boolean');
             }
             if (data.hasOwnProperty('text')) {
                 obj['text'] = ApiClient.convertToType(data['text'], 'String');
@@ -104,27 +104,27 @@ class SfvbFileSearchRequest {
 
 /**
  * Whether the text search is case sensitive.  Defaults to false.
- * @member {Boolean} caseSensitive
+ * @member {Boolean} case_sensitive
  */
-SfvbFileSearchRequest.prototype['caseSensitive'] = undefined;
+SfvbFileSearchRequest.prototype['case_sensitive'] = undefined;
 
 /**
  * Only dynamic HTML (arbitrary) files.
- * @member {Boolean} dynamicHtml
+ * @member {Boolean} dynamic_html
  */
-SfvbFileSearchRequest.prototype['dynamicHtml'] = undefined;
+SfvbFileSearchRequest.prototype['dynamic_html'] = undefined;
 
 /**
  * Comma separated file name patterns, matched case insensitively with wildcards.
- * @member {String} fileName
+ * @member {String} file_name
  */
-SfvbFileSearchRequest.prototype['fileName'] = undefined;
+SfvbFileSearchRequest.prototype['file_name'] = undefined;
 
 /**
  * Only files with internationalization violations.
- * @member {Boolean} i18nViolations
+ * @member {Boolean} i18n_violations
  */
-SfvbFileSearchRequest.prototype['i18nViolations'] = undefined;
+SfvbFileSearchRequest.prototype['i18n_violations'] = undefined;
 
 /**
  * Only files that failed Velocity validation.
@@ -134,33 +134,33 @@ SfvbFileSearchRequest.prototype['invalid'] = undefined;
 
 /**
  * Maximum results to return.  Clamped to the server maximum.
- * @member {Number} maxResults
+ * @member {Number} max_results
  */
-SfvbFileSearchRequest.prototype['maxResults'] = undefined;
+SfvbFileSearchRequest.prototype['max_results'] = undefined;
 
 /**
  * Only files with unresolved theme merge conflicts.
- * @member {Boolean} mergeConflicts
+ * @member {Boolean} merge_conflicts
  */
-SfvbFileSearchRequest.prototype['mergeConflicts'] = undefined;
+SfvbFileSearchRequest.prototype['merge_conflicts'] = undefined;
 
 /**
  * Restrict to a mime type.
- * @member {String} mimeType
+ * @member {String} mime_type
  */
-SfvbFileSearchRequest.prototype['mimeType'] = undefined;
+SfvbFileSearchRequest.prototype['mime_type'] = undefined;
 
 /**
  * Only files modified at or before this ISO-8601 timestamp.
- * @member {String} modifiedMax
+ * @member {String} modified_max
  */
-SfvbFileSearchRequest.prototype['modifiedMax'] = undefined;
+SfvbFileSearchRequest.prototype['modified_max'] = undefined;
 
 /**
  * Only files modified at or after this ISO-8601 timestamp.
- * @member {String} modifiedMin
+ * @member {String} modified_min
  */
-SfvbFileSearchRequest.prototype['modifiedMin'] = undefined;
+SfvbFileSearchRequest.prototype['modified_min'] = undefined;
 
 /**
  * Results to skip.  Send the next_offset from a truncated response to continue.  Ordering is by path with the file oid as a tie breaker, so pages do not overlap or skip entries between calls.
@@ -176,21 +176,21 @@ SfvbFileSearchRequest.prototype['path'] = undefined;
 
 /**
  * Maximum size in bytes.
- * @member {Number} sizeMax
+ * @member {Number} size_max
  */
-SfvbFileSearchRequest.prototype['sizeMax'] = undefined;
+SfvbFileSearchRequest.prototype['size_max'] = undefined;
 
 /**
  * Minimum size in bytes.
- * @member {Number} sizeMin
+ * @member {Number} size_min
  */
-SfvbFileSearchRequest.prototype['sizeMin'] = undefined;
+SfvbFileSearchRequest.prototype['size_min'] = undefined;
 
 /**
  * Recurse below path.  Defaults to true.
- * @member {Boolean} subDirectories
+ * @member {Boolean} sub_directories
  */
-SfvbFileSearchRequest.prototype['subDirectories'] = undefined;
+SfvbFileSearchRequest.prototype['sub_directories'] = undefined;
 
 /**
  * Text to find inside files.  Only text/_* files are searched.  This is the expensive filter; narrow with path or file_name where possible.

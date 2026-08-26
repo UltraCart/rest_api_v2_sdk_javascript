@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryEntry
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbLibraryEntry {
     /**
@@ -56,8 +56,8 @@ class SfvbLibraryEntry {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('libraryOid')) {
-                obj['libraryOid'] = ApiClient.convertToType(data['libraryOid'], 'Number');
+            if (data.hasOwnProperty('library_oid')) {
+                obj['library_oid'] = ApiClient.convertToType(data['library_oid'], 'Number');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -65,20 +65,20 @@ class SfvbLibraryEntry {
             if (data.hasOwnProperty('owned')) {
                 obj['owned'] = ApiClient.convertToType(data['owned'], 'Boolean');
             }
-            if (data.hasOwnProperty('referencedFiles')) {
-                obj['referencedFiles'] = ApiClient.convertToType(data['referencedFiles'], ['String']);
+            if (data.hasOwnProperty('referenced_files')) {
+                obj['referenced_files'] = ApiClient.convertToType(data['referenced_files'], ['String']);
             }
-            if (data.hasOwnProperty('screenshotKey')) {
-                obj['screenshotKey'] = ApiClient.convertToType(data['screenshotKey'], 'String');
+            if (data.hasOwnProperty('screenshot_key')) {
+                obj['screenshot_key'] = ApiClient.convertToType(data['screenshot_key'], 'String');
             }
-            if (data.hasOwnProperty('shareWithAccount')) {
-                obj['shareWithAccount'] = ApiClient.convertToType(data['shareWithAccount'], 'Boolean');
+            if (data.hasOwnProperty('share_with_account')) {
+                obj['share_with_account'] = ApiClient.convertToType(data['share_with_account'], 'Boolean');
             }
-            if (data.hasOwnProperty('thumbnailKey')) {
-                obj['thumbnailKey'] = ApiClient.convertToType(data['thumbnailKey'], 'String');
+            if (data.hasOwnProperty('thumbnail_key')) {
+                obj['thumbnail_key'] = ApiClient.convertToType(data['thumbnail_key'], 'String');
             }
-            if (data.hasOwnProperty('widgetType')) {
-                obj['widgetType'] = ApiClient.convertToType(data['widgetType'], 'String');
+            if (data.hasOwnProperty('widget_type')) {
+                obj['widget_type'] = ApiClient.convertToType(data['widget_type'], 'String');
             }
         }
         return obj;
@@ -107,9 +107,9 @@ SfvbLibraryEntry.prototype['description'] = undefined;
 
 /**
  * Library entry oid.
- * @member {Number} libraryOid
+ * @member {Number} library_oid
  */
-SfvbLibraryEntry.prototype['libraryOid'] = undefined;
+SfvbLibraryEntry.prototype['library_oid'] = undefined;
 
 /**
  * Entry name.
@@ -125,33 +125,33 @@ SfvbLibraryEntry.prototype['owned'] = undefined;
 
 /**
  * Storefront file paths this fragment references.  Installing the fragment copies them into the storefront; reading it does not.
- * @member {Array.<String>} referencedFiles
+ * @member {Array.<String>} referenced_files
  */
-SfvbLibraryEntry.prototype['referencedFiles'] = undefined;
+SfvbLibraryEntry.prototype['referenced_files'] = undefined;
 
 /**
  * S3 listing key for the large screenshot, when one has been generated.
- * @member {String} screenshotKey
+ * @member {String} screenshot_key
  */
-SfvbLibraryEntry.prototype['screenshotKey'] = undefined;
+SfvbLibraryEntry.prototype['screenshot_key'] = undefined;
 
 /**
  * True when the entry is shared across the merchant account.
- * @member {Boolean} shareWithAccount
+ * @member {Boolean} share_with_account
  */
-SfvbLibraryEntry.prototype['shareWithAccount'] = undefined;
+SfvbLibraryEntry.prototype['share_with_account'] = undefined;
 
 /**
  * S3 listing key for the medium thumbnail, when one has been generated.  Thumbnails are produced asynchronously and can lag a save by a minute or two.
- * @member {String} thumbnailKey
+ * @member {String} thumbnail_key
  */
-SfvbLibraryEntry.prototype['thumbnailKey'] = undefined;
+SfvbLibraryEntry.prototype['thumbnail_key'] = undefined;
 
 /**
  * Element type at the root of the fragment.
- * @member {String} widgetType
+ * @member {String} widget_type
  */
-SfvbLibraryEntry.prototype['widgetType'] = undefined;
+SfvbLibraryEntry.prototype['widget_type'] = undefined;
 
 
 

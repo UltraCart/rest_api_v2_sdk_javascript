@@ -17,7 +17,7 @@ import SfvbFileVersion from './SfvbFileVersion';
 /**
  * The SfvbFileVersionsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileVersionsResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbFileVersionsResponse {
     /**
@@ -48,8 +48,8 @@ class SfvbFileVersionsResponse {
         if (data) {
             obj = obj || new SfvbFileVersionsResponse();
 
-            if (data.hasOwnProperty('fsFileOid')) {
-                obj['fsFileOid'] = ApiClient.convertToType(data['fsFileOid'], 'Number');
+            if (data.hasOwnProperty('fs_file_oid')) {
+                obj['fs_file_oid'] = ApiClient.convertToType(data['fs_file_oid'], 'Number');
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
@@ -66,9 +66,9 @@ class SfvbFileVersionsResponse {
 
 /**
  * StoreFront file system file oid.
- * @member {Number} fsFileOid
+ * @member {Number} fs_file_oid
  */
-SfvbFileVersionsResponse.prototype['fsFileOid'] = undefined;
+SfvbFileVersionsResponse.prototype['fs_file_oid'] = undefined;
 
 /**
  * Path of the file.

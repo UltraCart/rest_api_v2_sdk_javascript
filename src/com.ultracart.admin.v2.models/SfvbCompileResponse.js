@@ -17,7 +17,7 @@ import SfvbValidationResponse from './SfvbValidationResponse';
 /**
  * The SfvbCompileResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCompileResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbCompileResponse {
     /**
@@ -48,8 +48,8 @@ class SfvbCompileResponse {
         if (data) {
             obj = obj || new SfvbCompileResponse();
 
-            if (data.hasOwnProperty('containerId')) {
-                obj['containerId'] = ApiClient.convertToType(data['containerId'], 'String');
+            if (data.hasOwnProperty('container_id')) {
+                obj['container_id'] = ApiClient.convertToType(data['container_id'], 'String');
             }
             if (data.hasOwnProperty('directives')) {
                 obj['directives'] = ApiClient.convertToType(data['directives'], ['String']);
@@ -57,8 +57,8 @@ class SfvbCompileResponse {
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
             }
-            if (data.hasOwnProperty('usedElements')) {
-                obj['usedElements'] = ApiClient.convertToType(data['usedElements'], ['String']);
+            if (data.hasOwnProperty('used_elements')) {
+                obj['used_elements'] = ApiClient.convertToType(data['used_elements'], ['String']);
             }
             if (data.hasOwnProperty('validation')) {
                 obj['validation'] = SfvbValidationResponse.constructFromObject(data['validation']);
@@ -75,9 +75,9 @@ class SfvbCompileResponse {
 
 /**
  * Container id the document compiled under.
- * @member {String} containerId
+ * @member {String} container_id
  */
-SfvbCompileResponse.prototype['containerId'] = undefined;
+SfvbCompileResponse.prototype['container_id'] = undefined;
 
 /**
  * Velocity directives the compiled output declares.
@@ -93,9 +93,9 @@ SfvbCompileResponse.prototype['success'] = undefined;
 
 /**
  * Element types used, sorted.
- * @member {Array.<String>} usedElements
+ * @member {Array.<String>} used_elements
  */
-SfvbCompileResponse.prototype['usedElements'] = undefined;
+SfvbCompileResponse.prototype['used_elements'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbValidationResponse} validation

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**upsellOffers** | [**[SfvbUpsellOffer]**](SfvbUpsellOffer.md) | Upsell offers on this storefront. | [optional] 
+**upsell_offers** | [**[SfvbUpsellOffer]**](SfvbUpsellOffer.md) | Upsell offers on this storefront. | [optional] 
 
 

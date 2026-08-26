@@ -17,7 +17,7 @@ import SfvbElement from './SfvbElement';
 /**
  * The SfvbElementsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbElementsResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbElementsResponse {
     /**
@@ -48,8 +48,8 @@ class SfvbElementsResponse {
         if (data) {
             obj = obj || new SfvbElementsResponse();
 
-            if (data.hasOwnProperty('elementCount')) {
-                obj['elementCount'] = ApiClient.convertToType(data['elementCount'], 'Number');
+            if (data.hasOwnProperty('element_count')) {
+                obj['element_count'] = ApiClient.convertToType(data['element_count'], 'Number');
             }
             if (data.hasOwnProperty('elements')) {
                 obj['elements'] = ApiClient.convertToType(data['elements'], [SfvbElement]);
@@ -66,9 +66,9 @@ class SfvbElementsResponse {
 
 /**
  * Number of element types.
- * @member {Number} elementCount
+ * @member {Number} element_count
  */
-SfvbElementsResponse.prototype['elementCount'] = undefined;
+SfvbElementsResponse.prototype['element_count'] = undefined;
 
 /**
  * Every element type the compiler recognizes, sorted.

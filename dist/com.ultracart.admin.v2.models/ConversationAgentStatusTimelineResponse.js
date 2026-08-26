@@ -33,7 +33,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentStatusTimelineResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse
- * @version 4.1.140
+ * @version 4.1.141
  */
 var ConversationAgentStatusTimelineResponse = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ import SfvbLibraryFacet from './SfvbLibraryFacet';
 /**
  * The SfvbLibraryResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbLibraryResponse {
     /**
@@ -52,20 +52,20 @@ class SfvbLibraryResponse {
             if (data.hasOwnProperty('facets')) {
                 obj['facets'] = ApiClient.convertToType(data['facets'], [SfvbLibraryFacet]);
             }
-            if (data.hasOwnProperty('firstResultNumber')) {
-                obj['firstResultNumber'] = ApiClient.convertToType(data['firstResultNumber'], 'Number');
+            if (data.hasOwnProperty('first_result_number')) {
+                obj['first_result_number'] = ApiClient.convertToType(data['first_result_number'], 'Number');
             }
-            if (data.hasOwnProperty('lastResultNumber')) {
-                obj['lastResultNumber'] = ApiClient.convertToType(data['lastResultNumber'], 'Number');
+            if (data.hasOwnProperty('last_result_number')) {
+                obj['last_result_number'] = ApiClient.convertToType(data['last_result_number'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [SfvbLibraryEntry]);
             }
-            if (data.hasOwnProperty('totalPages')) {
-                obj['totalPages'] = ApiClient.convertToType(data['totalPages'], 'Number');
+            if (data.hasOwnProperty('total_pages')) {
+                obj['total_pages'] = ApiClient.convertToType(data['total_pages'], 'Number');
             }
-            if (data.hasOwnProperty('totalResults')) {
-                obj['totalResults'] = ApiClient.convertToType(data['totalResults'], 'Number');
+            if (data.hasOwnProperty('total_results')) {
+                obj['total_results'] = ApiClient.convertToType(data['total_results'], 'Number');
             }
         }
         return obj;
@@ -82,15 +82,15 @@ SfvbLibraryResponse.prototype['facets'] = undefined;
 
 /**
  * 1-indexed position of the first result on this page.
- * @member {Number} firstResultNumber
+ * @member {Number} first_result_number
  */
-SfvbLibraryResponse.prototype['firstResultNumber'] = undefined;
+SfvbLibraryResponse.prototype['first_result_number'] = undefined;
 
 /**
  * 1-indexed position of the last result on this page.
- * @member {Number} lastResultNumber
+ * @member {Number} last_result_number
  */
-SfvbLibraryResponse.prototype['lastResultNumber'] = undefined;
+SfvbLibraryResponse.prototype['last_result_number'] = undefined;
 
 /**
  * Matching library entries, without their CJSON.  Fetch a single entry to get the fragment itself.
@@ -100,15 +100,15 @@ SfvbLibraryResponse.prototype['results'] = undefined;
 
 /**
  * Total pages available.
- * @member {Number} totalPages
+ * @member {Number} total_pages
  */
-SfvbLibraryResponse.prototype['totalPages'] = undefined;
+SfvbLibraryResponse.prototype['total_pages'] = undefined;
 
 /**
  * Total matches across all pages.
- * @member {Number} totalResults
+ * @member {Number} total_results
  */
-SfvbLibraryResponse.prototype['totalResults'] = undefined;
+SfvbLibraryResponse.prototype['total_results'] = undefined;
 
 
 

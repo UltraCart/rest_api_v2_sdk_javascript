@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The QuickBooksOnlineCustomersResponse model module.
  * @module com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse
- * @version 4.1.140
+ * @version 4.1.141
  */
 var QuickBooksOnlineCustomersResponse = /*#__PURE__*/function () {
   /**

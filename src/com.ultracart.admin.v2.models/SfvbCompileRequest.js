@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCompileRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbCompileRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbCompileRequest {
     /**
@@ -50,14 +50,14 @@ class SfvbCompileRequest {
             if (data.hasOwnProperty('cjson')) {
                 obj['cjson'] = ApiClient.convertToType(data['cjson'], 'String');
             }
-            if (data.hasOwnProperty('containerName')) {
-                obj['containerName'] = ApiClient.convertToType(data['containerName'], 'String');
+            if (data.hasOwnProperty('container_name')) {
+                obj['container_name'] = ApiClient.convertToType(data['container_name'], 'String');
             }
-            if (data.hasOwnProperty('storefrontOid')) {
-                obj['storefrontOid'] = ApiClient.convertToType(data['storefrontOid'], 'Number');
+            if (data.hasOwnProperty('storefront_oid')) {
+                obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
             }
-            if (data.hasOwnProperty('themeOid')) {
-                obj['themeOid'] = ApiClient.convertToType(data['themeOid'], 'Number');
+            if (data.hasOwnProperty('theme_oid')) {
+                obj['theme_oid'] = ApiClient.convertToType(data['theme_oid'], 'Number');
             }
             if (data.hasOwnProperty('validate')) {
                 obj['validate'] = ApiClient.convertToType(data['validate'], 'Boolean');
@@ -77,21 +77,21 @@ SfvbCompileRequest.prototype['cjson'] = undefined;
 
 /**
  * Optional container name, used to derive the container id the same way a .cjson file name would.  Omit and the id on the document is kept.
- * @member {String} containerName
+ * @member {String} container_name
  */
-SfvbCompileRequest.prototype['containerName'] = undefined;
+SfvbCompileRequest.prototype['container_name'] = undefined;
 
 /**
  * Optional storefront oid.  Required when theme_oid is supplied.
- * @member {Number} storefrontOid
+ * @member {Number} storefront_oid
  */
-SfvbCompileRequest.prototype['storefrontOid'] = undefined;
+SfvbCompileRequest.prototype['storefront_oid'] = undefined;
 
 /**
  * Optional theme oid.  Supplies the theme's inherit groups configuration so compilation matches what the theme would produce.  Omit to compile without inheritance.
- * @member {Number} themeOid
+ * @member {Number} theme_oid
  */
-SfvbCompileRequest.prototype['themeOid'] = undefined;
+SfvbCompileRequest.prototype['theme_oid'] = undefined;
 
 /**
  * Run validation before compiling and fail on errors.  Defaults to true.

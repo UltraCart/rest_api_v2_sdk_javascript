@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerWriteRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbContainerWriteRequest {
     /**
@@ -47,8 +47,8 @@ class SfvbContainerWriteRequest {
         if (data) {
             obj = obj || new SfvbContainerWriteRequest();
 
-            if (data.hasOwnProperty('allowWarnings')) {
-                obj['allowWarnings'] = ApiClient.convertToType(data['allowWarnings'], 'Boolean');
+            if (data.hasOwnProperty('allow_warnings')) {
+                obj['allow_warnings'] = ApiClient.convertToType(data['allow_warnings'], 'Boolean');
             }
             if (data.hasOwnProperty('cjson')) {
                 obj['cjson'] = ApiClient.convertToType(data['cjson'], 'String');
@@ -56,8 +56,8 @@ class SfvbContainerWriteRequest {
             if (data.hasOwnProperty('comment')) {
                 obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
             }
-            if (data.hasOwnProperty('marketingEmail')) {
-                obj['marketingEmail'] = ApiClient.convertToType(data['marketingEmail'], 'Boolean');
+            if (data.hasOwnProperty('marketing_email')) {
+                obj['marketing_email'] = ApiClient.convertToType(data['marketing_email'], 'Boolean');
             }
         }
         return obj;
@@ -68,9 +68,9 @@ class SfvbContainerWriteRequest {
 
 /**
  * Store the container even if quality warnings were raised.  Warnings never block by default; this field exists so a caller can opt into treating them as blocking by setting it false.
- * @member {Boolean} allowWarnings
+ * @member {Boolean} allow_warnings
  */
-SfvbContainerWriteRequest.prototype['allowWarnings'] = undefined;
+SfvbContainerWriteRequest.prototype['allow_warnings'] = undefined;
 
 /**
  * The container JSON to store.
@@ -86,9 +86,9 @@ SfvbContainerWriteRequest.prototype['comment'] = undefined;
 
 /**
  * For email containers, whether this is a marketing email.  Selects whether CAN-SPAM footer rules apply.
- * @member {Boolean} marketingEmail
+ * @member {Boolean} marketing_email
  */
-SfvbContainerWriteRequest.prototype['marketingEmail'] = undefined;
+SfvbContainerWriteRequest.prototype['marketing_email'] = undefined;
 
 
 

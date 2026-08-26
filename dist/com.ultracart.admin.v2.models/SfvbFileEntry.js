@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbFileEntry
- * @version 4.1.140
+ * @version 4.1.141
  */
 var SfvbFileEntry = /*#__PURE__*/function () {
   /**

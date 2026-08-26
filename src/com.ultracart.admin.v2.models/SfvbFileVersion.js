@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileVersion model module.
  * @module com.ultracart.admin.v2.models/SfvbFileVersion
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbFileVersion {
     /**
@@ -53,17 +53,17 @@ class SfvbFileVersion {
             if (data.hasOwnProperty('current')) {
                 obj['current'] = ApiClient.convertToType(data['current'], 'Boolean');
             }
-            if (data.hasOwnProperty('editedBy')) {
-                obj['editedBy'] = ApiClient.convertToType(data['editedBy'], 'String');
+            if (data.hasOwnProperty('edited_by')) {
+                obj['edited_by'] = ApiClient.convertToType(data['edited_by'], 'String');
             }
-            if (data.hasOwnProperty('fsFileHistoryOid')) {
-                obj['fsFileHistoryOid'] = ApiClient.convertToType(data['fsFileHistoryOid'], 'Number');
+            if (data.hasOwnProperty('fs_file_history_oid')) {
+                obj['fs_file_history_oid'] = ApiClient.convertToType(data['fs_file_history_oid'], 'Number');
             }
-            if (data.hasOwnProperty('hashSha256')) {
-                obj['hashSha256'] = ApiClient.convertToType(data['hashSha256'], 'String');
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
             }
-            if (data.hasOwnProperty('lastModified')) {
-                obj['lastModified'] = ApiClient.convertToType(data['lastModified'], 'String');
+            if (data.hasOwnProperty('last_modified')) {
+                obj['last_modified'] = ApiClient.convertToType(data['last_modified'], 'String');
             }
             if (data.hasOwnProperty('revertable')) {
                 obj['revertable'] = ApiClient.convertToType(data['revertable'], 'Boolean');
@@ -95,27 +95,27 @@ SfvbFileVersion.prototype['current'] = undefined;
 
 /**
  * Login of whoever wrote this version.
- * @member {String} editedBy
+ * @member {String} edited_by
  */
-SfvbFileVersion.prototype['editedBy'] = undefined;
+SfvbFileVersion.prototype['edited_by'] = undefined;
 
 /**
  * History record oid.
- * @member {Number} fsFileHistoryOid
+ * @member {Number} fs_file_history_oid
  */
-SfvbFileVersion.prototype['fsFileHistoryOid'] = undefined;
+SfvbFileVersion.prototype['fs_file_history_oid'] = undefined;
 
 /**
  * SHA-256 of this version's content.
- * @member {String} hashSha256
+ * @member {String} hash_sha256
  */
-SfvbFileVersion.prototype['hashSha256'] = undefined;
+SfvbFileVersion.prototype['hash_sha256'] = undefined;
 
 /**
  * When this version was written.
- * @member {String} lastModified
+ * @member {String} last_modified
  */
-SfvbFileVersion.prototype['lastModified'] = undefined;
+SfvbFileVersion.prototype['last_modified'] = undefined;
 
 /**
  * True when this version can be reverted to.

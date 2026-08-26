@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbUpsellOffer model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellOffer
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbUpsellOffer {
     /**
@@ -50,29 +50,29 @@ class SfvbUpsellOffer {
             if (data.hasOwnProperty('active')) {
                 obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
             }
-            if (data.hasOwnProperty('activeOverall')) {
-                obj['activeOverall'] = ApiClient.convertToType(data['activeOverall'], 'Boolean');
+            if (data.hasOwnProperty('active_overall')) {
+                obj['active_overall'] = ApiClient.convertToType(data['active_overall'], 'Boolean');
             }
-            if (data.hasOwnProperty('cjsonSize')) {
-                obj['cjsonSize'] = ApiClient.convertToType(data['cjsonSize'], 'Number');
+            if (data.hasOwnProperty('cjson_size')) {
+                obj['cjson_size'] = ApiClient.convertToType(data['cjson_size'], 'Number');
             }
-            if (data.hasOwnProperty('hasContainer')) {
-                obj['hasContainer'] = ApiClient.convertToType(data['hasContainer'], 'Boolean');
+            if (data.hasOwnProperty('has_container')) {
+                obj['has_container'] = ApiClient.convertToType(data['has_container'], 'Boolean');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('pathName')) {
-                obj['pathName'] = ApiClient.convertToType(data['pathName'], 'String');
+            if (data.hasOwnProperty('path_name')) {
+                obj['path_name'] = ApiClient.convertToType(data['path_name'], 'String');
             }
-            if (data.hasOwnProperty('storefrontOid')) {
-                obj['storefrontOid'] = ApiClient.convertToType(data['storefrontOid'], 'Number');
+            if (data.hasOwnProperty('storefront_oid')) {
+                obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
             }
-            if (data.hasOwnProperty('testOnly')) {
-                obj['testOnly'] = ApiClient.convertToType(data['testOnly'], 'Boolean');
+            if (data.hasOwnProperty('test_only')) {
+                obj['test_only'] = ApiClient.convertToType(data['test_only'], 'Boolean');
             }
-            if (data.hasOwnProperty('upsellOfferOid')) {
-                obj['upsellOfferOid'] = ApiClient.convertToType(data['upsellOfferOid'], 'Number');
+            if (data.hasOwnProperty('upsell_offer_oid')) {
+                obj['upsell_offer_oid'] = ApiClient.convertToType(data['upsell_offer_oid'], 'Number');
             }
         }
         return obj;
@@ -89,21 +89,21 @@ SfvbUpsellOffer.prototype['active'] = undefined;
 
 /**
  * Whether the offer is active once its date window and daily pricing are taken into account.  This is the one that says whether shoppers are actually seeing it.
- * @member {Boolean} activeOverall
+ * @member {Boolean} active_overall
  */
-SfvbUpsellOffer.prototype['activeOverall'] = undefined;
+SfvbUpsellOffer.prototype['active_overall'] = undefined;
 
 /**
  * Size of the offer's container JSON in bytes.  A large value here alongside a low element count is the signature of a hand pasted HTML dump.
- * @member {Number} cjsonSize
+ * @member {Number} cjson_size
  */
-SfvbUpsellOffer.prototype['cjsonSize'] = undefined;
+SfvbUpsellOffer.prototype['cjson_size'] = undefined;
 
 /**
  * Whether a container has been authored for this offer.
- * @member {Boolean} hasContainer
+ * @member {Boolean} has_container
  */
-SfvbUpsellOffer.prototype['hasContainer'] = undefined;
+SfvbUpsellOffer.prototype['has_container'] = undefined;
 
 /**
  * Offer name.
@@ -113,27 +113,27 @@ SfvbUpsellOffer.prototype['name'] = undefined;
 
 /**
  * Name of the upsell path this offer sits on.
- * @member {String} pathName
+ * @member {String} path_name
  */
-SfvbUpsellOffer.prototype['pathName'] = undefined;
+SfvbUpsellOffer.prototype['path_name'] = undefined;
 
 /**
  * Storefront oid.
- * @member {Number} storefrontOid
+ * @member {Number} storefront_oid
  */
-SfvbUpsellOffer.prototype['storefrontOid'] = undefined;
+SfvbUpsellOffer.prototype['storefront_oid'] = undefined;
 
 /**
  * Whether the offer is restricted to test traffic.
- * @member {Boolean} testOnly
+ * @member {Boolean} test_only
  */
-SfvbUpsellOffer.prototype['testOnly'] = undefined;
+SfvbUpsellOffer.prototype['test_only'] = undefined;
 
 /**
  * Upsell offer oid.
- * @member {Number} upsellOfferOid
+ * @member {Number} upsell_offer_oid
  */
-SfvbUpsellOffer.prototype['upsellOfferOid'] = undefined;
+SfvbUpsellOffer.prototype['upsell_offer_oid'] = undefined;
 
 
 

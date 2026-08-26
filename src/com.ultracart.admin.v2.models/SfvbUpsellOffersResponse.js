@@ -17,7 +17,7 @@ import SfvbUpsellOffer from './SfvbUpsellOffer';
 /**
  * The SfvbUpsellOffersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellOffersResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbUpsellOffersResponse {
     /**
@@ -48,8 +48,8 @@ class SfvbUpsellOffersResponse {
         if (data) {
             obj = obj || new SfvbUpsellOffersResponse();
 
-            if (data.hasOwnProperty('upsellOffers')) {
-                obj['upsellOffers'] = ApiClient.convertToType(data['upsellOffers'], [SfvbUpsellOffer]);
+            if (data.hasOwnProperty('upsell_offers')) {
+                obj['upsell_offers'] = ApiClient.convertToType(data['upsell_offers'], [SfvbUpsellOffer]);
             }
         }
         return obj;
@@ -60,9 +60,9 @@ class SfvbUpsellOffersResponse {
 
 /**
  * Upsell offers on this storefront.
- * @member {Array.<module:com.ultracart.admin.v2.models/SfvbUpsellOffer>} upsellOffers
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbUpsellOffer>} upsell_offers
  */
-SfvbUpsellOffersResponse.prototype['upsellOffers'] = undefined;
+SfvbUpsellOffersResponse.prototype['upsell_offers'] = undefined;
 
 
 

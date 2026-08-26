@@ -17,7 +17,7 @@ import SfvbFileEntry from './SfvbFileEntry';
 /**
  * The SfvbFileSearchResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileSearchResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbFileSearchResponse {
     /**
@@ -51,26 +51,26 @@ class SfvbFileSearchResponse {
             if (data.hasOwnProperty('files')) {
                 obj['files'] = ApiClient.convertToType(data['files'], [SfvbFileEntry]);
             }
-            if (data.hasOwnProperty('maxResults')) {
-                obj['maxResults'] = ApiClient.convertToType(data['maxResults'], 'Number');
+            if (data.hasOwnProperty('max_results')) {
+                obj['max_results'] = ApiClient.convertToType(data['max_results'], 'Number');
             }
-            if (data.hasOwnProperty('nextOffset')) {
-                obj['nextOffset'] = ApiClient.convertToType(data['nextOffset'], 'Number');
+            if (data.hasOwnProperty('next_offset')) {
+                obj['next_offset'] = ApiClient.convertToType(data['next_offset'], 'Number');
             }
             if (data.hasOwnProperty('offset')) {
                 obj['offset'] = ApiClient.convertToType(data['offset'], 'Number');
             }
-            if (data.hasOwnProperty('resultCount')) {
-                obj['resultCount'] = ApiClient.convertToType(data['resultCount'], 'Number');
+            if (data.hasOwnProperty('result_count')) {
+                obj['result_count'] = ApiClient.convertToType(data['result_count'], 'Number');
             }
-            if (data.hasOwnProperty('totalCount')) {
-                obj['totalCount'] = ApiClient.convertToType(data['totalCount'], 'Number');
+            if (data.hasOwnProperty('total_count')) {
+                obj['total_count'] = ApiClient.convertToType(data['total_count'], 'Number');
             }
             if (data.hasOwnProperty('truncated')) {
                 obj['truncated'] = ApiClient.convertToType(data['truncated'], 'Boolean');
             }
-            if (data.hasOwnProperty('truncationAdvice')) {
-                obj['truncationAdvice'] = ApiClient.convertToType(data['truncationAdvice'], 'String');
+            if (data.hasOwnProperty('truncation_advice')) {
+                obj['truncation_advice'] = ApiClient.convertToType(data['truncation_advice'], 'String');
             }
         }
         return obj;
@@ -87,15 +87,15 @@ SfvbFileSearchResponse.prototype['files'] = undefined;
 
 /**
  * The cap that was applied.
- * @member {Number} maxResults
+ * @member {Number} max_results
  */
-SfvbFileSearchResponse.prototype['maxResults'] = undefined;
+SfvbFileSearchResponse.prototype['max_results'] = undefined;
 
 /**
  * Offset to send for the next page.  Zero when truncated is false.  Never truncates without giving a way to continue.
- * @member {Number} nextOffset
+ * @member {Number} next_offset
  */
-SfvbFileSearchResponse.prototype['nextOffset'] = undefined;
+SfvbFileSearchResponse.prototype['next_offset'] = undefined;
 
 /**
  * Results skipped to produce this page.
@@ -105,15 +105,15 @@ SfvbFileSearchResponse.prototype['offset'] = undefined;
 
 /**
  * Number of results returned.
- * @member {Number} resultCount
+ * @member {Number} result_count
  */
-SfvbFileSearchResponse.prototype['resultCount'] = undefined;
+SfvbFileSearchResponse.prototype['result_count'] = undefined;
 
 /**
  * Total matches found.  Available because the underlying query is unbounded and returns everything anyway; it is not evidence that fetching them all is cheap.
- * @member {Number} totalCount
+ * @member {Number} total_count
  */
-SfvbFileSearchResponse.prototype['totalCount'] = undefined;
+SfvbFileSearchResponse.prototype['total_count'] = undefined;
 
 /**
  * True when matches exist beyond this page.  next_offset is populated when it is.
@@ -123,9 +123,9 @@ SfvbFileSearchResponse.prototype['truncated'] = undefined;
 
 /**
  * Advice for the caller when truncated is true.
- * @member {String} truncationAdvice
+ * @member {String} truncation_advice
  */
-SfvbFileSearchResponse.prototype['truncationAdvice'] = undefined;
+SfvbFileSearchResponse.prototype['truncation_advice'] = undefined;
 
 
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerVersion model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerVersion
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbContainerVersion {
     /**
@@ -53,32 +53,32 @@ class SfvbContainerVersion {
             if (data.hasOwnProperty('comment')) {
                 obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
             }
-            if (data.hasOwnProperty('containerHistoryOid')) {
-                obj['containerHistoryOid'] = ApiClient.convertToType(data['containerHistoryOid'], 'Number');
+            if (data.hasOwnProperty('container_history_oid')) {
+                obj['container_history_oid'] = ApiClient.convertToType(data['container_history_oid'], 'Number');
             }
-            if (data.hasOwnProperty('containerName')) {
-                obj['containerName'] = ApiClient.convertToType(data['containerName'], 'String');
+            if (data.hasOwnProperty('container_name')) {
+                obj['container_name'] = ApiClient.convertToType(data['container_name'], 'String');
             }
-            if (data.hasOwnProperty('createdDts')) {
-                obj['createdDts'] = ApiClient.convertToType(data['createdDts'], 'String');
+            if (data.hasOwnProperty('created_dts')) {
+                obj['created_dts'] = ApiClient.convertToType(data['created_dts'], 'String');
             }
             if (data.hasOwnProperty('current')) {
                 obj['current'] = ApiClient.convertToType(data['current'], 'Boolean');
             }
-            if (data.hasOwnProperty('editedBy')) {
-                obj['editedBy'] = ApiClient.convertToType(data['editedBy'], 'String');
+            if (data.hasOwnProperty('edited_by')) {
+                obj['edited_by'] = ApiClient.convertToType(data['edited_by'], 'String');
             }
-            if (data.hasOwnProperty('hashSha256')) {
-                obj['hashSha256'] = ApiClient.convertToType(data['hashSha256'], 'String');
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
             }
             if (data.hasOwnProperty('operation')) {
                 obj['operation'] = ApiClient.convertToType(data['operation'], 'String');
             }
-            if (data.hasOwnProperty('ownerObjectId')) {
-                obj['ownerObjectId'] = ApiClient.convertToType(data['ownerObjectId'], 'String');
+            if (data.hasOwnProperty('owner_object_id')) {
+                obj['owner_object_id'] = ApiClient.convertToType(data['owner_object_id'], 'String');
             }
-            if (data.hasOwnProperty('ownerType')) {
-                obj['ownerType'] = ApiClient.convertToType(data['ownerType'], 'String');
+            if (data.hasOwnProperty('owner_type')) {
+                obj['owner_type'] = ApiClient.convertToType(data['owner_type'], 'String');
             }
             if (data.hasOwnProperty('size')) {
                 obj['size'] = ApiClient.convertToType(data['size'], 'Number');
@@ -104,21 +104,21 @@ SfvbContainerVersion.prototype['comment'] = undefined;
 
 /**
  * History record oid.  Pass to the revert operation on the owning container.
- * @member {Number} containerHistoryOid
+ * @member {Number} container_history_oid
  */
-SfvbContainerVersion.prototype['containerHistoryOid'] = undefined;
+SfvbContainerVersion.prototype['container_history_oid'] = undefined;
 
 /**
  * Container name, where the owner has more than one container.
- * @member {String} containerName
+ * @member {String} container_name
  */
-SfvbContainerVersion.prototype['containerName'] = undefined;
+SfvbContainerVersion.prototype['container_name'] = undefined;
 
 /**
  * When this snapshot was taken.
- * @member {String} createdDts
+ * @member {String} created_dts
  */
-SfvbContainerVersion.prototype['createdDts'] = undefined;
+SfvbContainerVersion.prototype['created_dts'] = undefined;
 
 /**
  * True for the value currently stored.
@@ -128,15 +128,15 @@ SfvbContainerVersion.prototype['current'] = undefined;
 
 /**
  * Login of whoever caused this snapshot.
- * @member {String} editedBy
+ * @member {String} edited_by
  */
-SfvbContainerVersion.prototype['editedBy'] = undefined;
+SfvbContainerVersion.prototype['edited_by'] = undefined;
 
 /**
  * SHA-256 of this version's CJSON.
- * @member {String} hashSha256
+ * @member {String} hash_sha256
  */
-SfvbContainerVersion.prototype['hashSha256'] = undefined;
+SfvbContainerVersion.prototype['hash_sha256'] = undefined;
 
 /**
  * What the container was before the write this entry precedes.  create means it did not exist, so reverting to this entry removes it again; update means it held the cjson recorded here.
@@ -146,15 +146,15 @@ SfvbContainerVersion.prototype['operation'] = undefined;
 
 /**
  * Owner object identifier.
- * @member {String} ownerObjectId
+ * @member {String} owner_object_id
  */
-SfvbContainerVersion.prototype['ownerObjectId'] = undefined;
+SfvbContainerVersion.prototype['owner_object_id'] = undefined;
 
 /**
  * Owner type.
- * @member {module:com.ultracart.admin.v2.models/SfvbContainerVersion.OwnerTypeEnum} ownerType
+ * @member {module:com.ultracart.admin.v2.models/SfvbContainerVersion.OwnerTypeEnum} owner_type
  */
-SfvbContainerVersion.prototype['ownerType'] = undefined;
+SfvbContainerVersion.prototype['owner_type'] = undefined;
 
 /**
  * Size of this version's CJSON in bytes.
@@ -188,7 +188,7 @@ SfvbContainerVersion['OperationEnum'] = {
 
 
 /**
- * Allowed values for the <code>ownerType</code> property.
+ * Allowed values for the <code>owner_type</code> property.
  * @enum {String}
  * @readonly
  */

@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbPreviewSessionResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewSessionResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbPreviewSessionResponse {
     /**
@@ -48,26 +48,26 @@ class SfvbPreviewSessionResponse {
         if (data) {
             obj = obj || new SfvbPreviewSessionResponse();
 
-            if (data.hasOwnProperty('bytesStored')) {
-                obj['bytesStored'] = ApiClient.convertToType(data['bytesStored'], 'Number');
+            if (data.hasOwnProperty('bytes_stored')) {
+                obj['bytes_stored'] = ApiClient.convertToType(data['bytes_stored'], 'Number');
             }
-            if (data.hasOwnProperty('expiresInSeconds')) {
-                obj['expiresInSeconds'] = ApiClient.convertToType(data['expiresInSeconds'], 'Number');
+            if (data.hasOwnProperty('expires_in_seconds')) {
+                obj['expires_in_seconds'] = ApiClient.convertToType(data['expires_in_seconds'], 'Number');
             }
-            if (data.hasOwnProperty('maxBytes')) {
-                obj['maxBytes'] = ApiClient.convertToType(data['maxBytes'], 'Number');
+            if (data.hasOwnProperty('max_bytes')) {
+                obj['max_bytes'] = ApiClient.convertToType(data['max_bytes'], 'Number');
             }
-            if (data.hasOwnProperty('ownerLogin')) {
-                obj['ownerLogin'] = ApiClient.convertToType(data['ownerLogin'], 'String');
+            if (data.hasOwnProperty('owner_login')) {
+                obj['owner_login'] = ApiClient.convertToType(data['owner_login'], 'String');
             }
-            if (data.hasOwnProperty('previewSessionId')) {
-                obj['previewSessionId'] = ApiClient.convertToType(data['previewSessionId'], 'String');
+            if (data.hasOwnProperty('preview_session_id')) {
+                obj['preview_session_id'] = ApiClient.convertToType(data['preview_session_id'], 'String');
             }
             if (data.hasOwnProperty('skipped')) {
                 obj['skipped'] = ApiClient.convertToType(data['skipped'], [SfvbErrorDetail]);
             }
-            if (data.hasOwnProperty('storedKeys')) {
-                obj['storedKeys'] = ApiClient.convertToType(data['storedKeys'], ['String']);
+            if (data.hasOwnProperty('stored_keys')) {
+                obj['stored_keys'] = ApiClient.convertToType(data['stored_keys'], ['String']);
             }
         }
         return obj;
@@ -78,33 +78,33 @@ class SfvbPreviewSessionResponse {
 
 /**
  * Bytes stored in this session by the request that returned this response.
- * @member {Number} bytesStored
+ * @member {Number} bytes_stored
  */
-SfvbPreviewSessionResponse.prototype['bytesStored'] = undefined;
+SfvbPreviewSessionResponse.prototype['bytes_stored'] = undefined;
 
 /**
  * Seconds until this session expires.
- * @member {Number} expiresInSeconds
+ * @member {Number} expires_in_seconds
  */
-SfvbPreviewSessionResponse.prototype['expiresInSeconds'] = undefined;
+SfvbPreviewSessionResponse.prototype['expires_in_seconds'] = undefined;
 
 /**
  * Maximum bytes one preview session may hold.
- * @member {Number} maxBytes
+ * @member {Number} max_bytes
  */
-SfvbPreviewSessionResponse.prototype['maxBytes'] = undefined;
+SfvbPreviewSessionResponse.prototype['max_bytes'] = undefined;
 
 /**
  * Login this session belongs to.  Sessions are keyed by user, not by token.
- * @member {String} ownerLogin
+ * @member {String} owner_login
  */
-SfvbPreviewSessionResponse.prototype['ownerLogin'] = undefined;
+SfvbPreviewSessionResponse.prototype['owner_login'] = undefined;
 
 /**
  * The preview session id.
- * @member {String} previewSessionId
+ * @member {String} preview_session_id
  */
-SfvbPreviewSessionResponse.prototype['previewSessionId'] = undefined;
+SfvbPreviewSessionResponse.prototype['preview_session_id'] = undefined;
 
 /**
  * Containers that were sent but could not be stored, with the reason.
@@ -114,9 +114,9 @@ SfvbPreviewSessionResponse.prototype['skipped'] = undefined;
 
 /**
  * Preview map keys that were stored.  A container whose owner type could not be resolved is silently dropped by the underlying store, so compare this against what you sent.
- * @member {Array.<String>} storedKeys
+ * @member {Array.<String>} stored_keys
  */
-SfvbPreviewSessionResponse.prototype['storedKeys'] = undefined;
+SfvbPreviewSessionResponse.prototype['stored_keys'] = undefined;
 
 
 

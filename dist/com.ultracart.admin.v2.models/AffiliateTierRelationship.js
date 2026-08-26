@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AffiliateTierRelationship model module.
  * @module com.ultracart.admin.v2.models/AffiliateTierRelationship
- * @version 4.1.140
+ * @version 4.1.141
  */
 var AffiliateTierRelationship = /*#__PURE__*/function () {
   /**

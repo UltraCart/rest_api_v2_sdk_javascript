@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**displayName** | **String** | Human readable facet name. | [optional] 
+**display_name** | **String** | Human readable facet name. | [optional] 
 **name** | **String** | Facet key.  Pass a chosen option back as facet_{name}&#x3D;{option}. | [optional] 
 **options** | **[String]** | Available values for this facet. | [optional] 
 

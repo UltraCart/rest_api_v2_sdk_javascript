@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryFacet model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryFacet
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbLibraryFacet {
     /**
@@ -47,8 +47,8 @@ class SfvbLibraryFacet {
         if (data) {
             obj = obj || new SfvbLibraryFacet();
 
-            if (data.hasOwnProperty('displayName')) {
-                obj['displayName'] = ApiClient.convertToType(data['displayName'], 'String');
+            if (data.hasOwnProperty('display_name')) {
+                obj['display_name'] = ApiClient.convertToType(data['display_name'], 'String');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -65,9 +65,9 @@ class SfvbLibraryFacet {
 
 /**
  * Human readable facet name.
- * @member {String} displayName
+ * @member {String} display_name
  */
-SfvbLibraryFacet.prototype['displayName'] = undefined;
+SfvbLibraryFacet.prototype['display_name'] = undefined;
 
 /**
  * Facet key.  Pass a chosen option back as facet_{name}={option}.

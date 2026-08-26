@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbValidationResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbValidationResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbValidationResponse {
     /**
@@ -51,8 +51,8 @@ class SfvbValidationResponse {
             if (data.hasOwnProperty('errors')) {
                 obj['errors'] = ApiClient.convertToType(data['errors'], [SfvbErrorDetail]);
             }
-            if (data.hasOwnProperty('usedElements')) {
-                obj['usedElements'] = ApiClient.convertToType(data['usedElements'], ['String']);
+            if (data.hasOwnProperty('used_elements')) {
+                obj['used_elements'] = ApiClient.convertToType(data['used_elements'], ['String']);
             }
             if (data.hasOwnProperty('valid')) {
                 obj['valid'] = ApiClient.convertToType(data['valid'], 'Boolean');
@@ -75,9 +75,9 @@ SfvbValidationResponse.prototype['errors'] = undefined;
 
 /**
  * Element types found in the document, sorted.
- * @member {Array.<String>} usedElements
+ * @member {Array.<String>} used_elements
  */
-SfvbValidationResponse.prototype['usedElements'] = undefined;
+SfvbValidationResponse.prototype['used_elements'] = undefined;
 
 /**
  * True when there are no errors.  Warnings do not affect this flag.

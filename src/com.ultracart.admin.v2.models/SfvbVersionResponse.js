@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbVersionResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbVersionResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbVersionResponse {
     /**
@@ -47,32 +47,32 @@ class SfvbVersionResponse {
         if (data) {
             obj = obj || new SfvbVersionResponse();
 
-            if (data.hasOwnProperty('containerManagerVersion')) {
-                obj['containerManagerVersion'] = ApiClient.convertToType(data['containerManagerVersion'], 'String');
+            if (data.hasOwnProperty('container_manager_version')) {
+                obj['container_manager_version'] = ApiClient.convertToType(data['container_manager_version'], 'String');
             }
-            if (data.hasOwnProperty('containerVersionsRetained')) {
-                obj['containerVersionsRetained'] = ApiClient.convertToType(data['containerVersionsRetained'], 'Number');
+            if (data.hasOwnProperty('container_versions_retained')) {
+                obj['container_versions_retained'] = ApiClient.convertToType(data['container_versions_retained'], 'Number');
             }
-            if (data.hasOwnProperty('elementCount')) {
-                obj['elementCount'] = ApiClient.convertToType(data['elementCount'], 'Number');
+            if (data.hasOwnProperty('element_count')) {
+                obj['element_count'] = ApiClient.convertToType(data['element_count'], 'Number');
             }
-            if (data.hasOwnProperty('maxCjsonBytes')) {
-                obj['maxCjsonBytes'] = ApiClient.convertToType(data['maxCjsonBytes'], 'Number');
+            if (data.hasOwnProperty('max_cjson_bytes')) {
+                obj['max_cjson_bytes'] = ApiClient.convertToType(data['max_cjson_bytes'], 'Number');
             }
-            if (data.hasOwnProperty('maxPreviewSessionBytes')) {
-                obj['maxPreviewSessionBytes'] = ApiClient.convertToType(data['maxPreviewSessionBytes'], 'Number');
+            if (data.hasOwnProperty('max_preview_session_bytes')) {
+                obj['max_preview_session_bytes'] = ApiClient.convertToType(data['max_preview_session_bytes'], 'Number');
             }
-            if (data.hasOwnProperty('maxSearchResults')) {
-                obj['maxSearchResults'] = ApiClient.convertToType(data['maxSearchResults'], 'Number');
+            if (data.hasOwnProperty('max_search_results')) {
+                obj['max_search_results'] = ApiClient.convertToType(data['max_search_results'], 'Number');
             }
-            if (data.hasOwnProperty('maxTemplateBytes')) {
-                obj['maxTemplateBytes'] = ApiClient.convertToType(data['maxTemplateBytes'], 'Number');
+            if (data.hasOwnProperty('max_template_bytes')) {
+                obj['max_template_bytes'] = ApiClient.convertToType(data['max_template_bytes'], 'Number');
             }
-            if (data.hasOwnProperty('maxWidgetIdsPerRequest')) {
-                obj['maxWidgetIdsPerRequest'] = ApiClient.convertToType(data['maxWidgetIdsPerRequest'], 'Number');
+            if (data.hasOwnProperty('max_widget_ids_per_request')) {
+                obj['max_widget_ids_per_request'] = ApiClient.convertToType(data['max_widget_ids_per_request'], 'Number');
             }
-            if (data.hasOwnProperty('previewSessionTtlSeconds')) {
-                obj['previewSessionTtlSeconds'] = ApiClient.convertToType(data['previewSessionTtlSeconds'], 'Number');
+            if (data.hasOwnProperty('preview_session_ttl_seconds')) {
+                obj['preview_session_ttl_seconds'] = ApiClient.convertToType(data['preview_session_ttl_seconds'], 'Number');
             }
             if (data.hasOwnProperty('release')) {
                 obj['release'] = ApiClient.convertToType(data['release'], 'String');
@@ -86,57 +86,57 @@ class SfvbVersionResponse {
 
 /**
  * Container manager version used to compile for this merchant.
- * @member {String} containerManagerVersion
+ * @member {String} container_manager_version
  */
-SfvbVersionResponse.prototype['containerManagerVersion'] = undefined;
+SfvbVersionResponse.prototype['container_manager_version'] = undefined;
 
 /**
  * Versions kept per non-file container before the oldest are pruned.  Beyond this, history is gone - not merely paginated.
- * @member {Number} containerVersionsRetained
+ * @member {Number} container_versions_retained
  */
-SfvbVersionResponse.prototype['containerVersionsRetained'] = undefined;
+SfvbVersionResponse.prototype['container_versions_retained'] = undefined;
 
 /**
  * Number of element types this version recognizes.
- * @member {Number} elementCount
+ * @member {Number} element_count
  */
-SfvbVersionResponse.prototype['elementCount'] = undefined;
+SfvbVersionResponse.prototype['element_count'] = undefined;
 
 /**
  * Largest CJSON document that will be parsed, in bytes.
- * @member {Number} maxCjsonBytes
+ * @member {Number} max_cjson_bytes
  */
-SfvbVersionResponse.prototype['maxCjsonBytes'] = undefined;
+SfvbVersionResponse.prototype['max_cjson_bytes'] = undefined;
 
 /**
  * Largest payload one preview session may hold, in bytes.
- * @member {Number} maxPreviewSessionBytes
+ * @member {Number} max_preview_session_bytes
  */
-SfvbVersionResponse.prototype['maxPreviewSessionBytes'] = undefined;
+SfvbVersionResponse.prototype['max_preview_session_bytes'] = undefined;
 
 /**
  * Hard ceiling on file search results per page.
- * @member {Number} maxSearchResults
+ * @member {Number} max_search_results
  */
-SfvbVersionResponse.prototype['maxSearchResults'] = undefined;
+SfvbVersionResponse.prototype['max_search_results'] = undefined;
 
 /**
  * Largest template file that can be written, in bytes.
- * @member {Number} maxTemplateBytes
+ * @member {Number} max_template_bytes
  */
-SfvbVersionResponse.prototype['maxTemplateBytes'] = undefined;
+SfvbVersionResponse.prototype['max_template_bytes'] = undefined;
 
 /**
  * Most widget ids that can be reserved in one call.
- * @member {Number} maxWidgetIdsPerRequest
+ * @member {Number} max_widget_ids_per_request
  */
-SfvbVersionResponse.prototype['maxWidgetIdsPerRequest'] = undefined;
+SfvbVersionResponse.prototype['max_widget_ids_per_request'] = undefined;
 
 /**
  * Seconds a preview session survives before expiring.
- * @member {Number} previewSessionTtlSeconds
+ * @member {Number} preview_session_ttl_seconds
  */
-SfvbVersionResponse.prototype['previewSessionTtlSeconds'] = undefined;
+SfvbVersionResponse.prototype['preview_session_ttl_seconds'] = undefined;
 
 /**
  * Release channel selected for this merchant.

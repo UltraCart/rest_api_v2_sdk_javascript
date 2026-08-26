@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activeThemeOid** | **Number** | Oid of the theme currently serving live traffic. | [optional] 
-**hostName** | **String** | Host name of the storefront. | [optional] 
-**storefrontOid** | **Number** | StoreFront oid. | [optional] 
+**active_theme_oid** | **Number** | Oid of the theme currently serving live traffic. | [optional] 
+**host_name** | **String** | Host name of the storefront. | [optional] 
+**storefront_oid** | **Number** | StoreFront oid. | [optional] 
 
 

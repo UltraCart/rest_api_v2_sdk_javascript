@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTheme model module.
  * @module com.ultracart.admin.v2.models/SfvbTheme
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbTheme {
     /**
@@ -53,23 +53,23 @@ class SfvbTheme {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('fsDirectoryOid')) {
-                obj['fsDirectoryOid'] = ApiClient.convertToType(data['fsDirectoryOid'], 'Number');
+            if (data.hasOwnProperty('fs_directory_oid')) {
+                obj['fs_directory_oid'] = ApiClient.convertToType(data['fs_directory_oid'], 'Number');
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
             }
-            if (data.hasOwnProperty('storefrontOid')) {
-                obj['storefrontOid'] = ApiClient.convertToType(data['storefrontOid'], 'Number');
+            if (data.hasOwnProperty('storefront_oid')) {
+                obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
             }
-            if (data.hasOwnProperty('themeName')) {
-                obj['themeName'] = ApiClient.convertToType(data['themeName'], 'String');
+            if (data.hasOwnProperty('theme_name')) {
+                obj['theme_name'] = ApiClient.convertToType(data['theme_name'], 'String');
             }
-            if (data.hasOwnProperty('themeOid')) {
-                obj['themeOid'] = ApiClient.convertToType(data['themeOid'], 'Number');
+            if (data.hasOwnProperty('theme_oid')) {
+                obj['theme_oid'] = ApiClient.convertToType(data['theme_oid'], 'Number');
             }
-            if (data.hasOwnProperty('upgradeAvailable')) {
-                obj['upgradeAvailable'] = ApiClient.convertToType(data['upgradeAvailable'], 'Boolean');
+            if (data.hasOwnProperty('upgrade_available')) {
+                obj['upgrade_available'] = ApiClient.convertToType(data['upgrade_available'], 'Boolean');
             }
             if (data.hasOwnProperty('valid')) {
                 obj['valid'] = ApiClient.convertToType(data['valid'], 'Boolean');
@@ -98,9 +98,9 @@ SfvbTheme.prototype['description'] = undefined;
 
 /**
  * Oid of the theme root directory in the storefront file system.
- * @member {Number} fsDirectoryOid
+ * @member {Number} fs_directory_oid
  */
-SfvbTheme.prototype['fsDirectoryOid'] = undefined;
+SfvbTheme.prototype['fs_directory_oid'] = undefined;
 
 /**
  * Root path of the theme in the storefront file system, for example /themes/mytheme/
@@ -110,27 +110,27 @@ SfvbTheme.prototype['path'] = undefined;
 
 /**
  * StoreFront oid this theme belongs to.
- * @member {Number} storefrontOid
+ * @member {Number} storefront_oid
  */
-SfvbTheme.prototype['storefrontOid'] = undefined;
+SfvbTheme.prototype['storefront_oid'] = undefined;
 
 /**
  * Theme name.
- * @member {String} themeName
+ * @member {String} theme_name
  */
-SfvbTheme.prototype['themeName'] = undefined;
+SfvbTheme.prototype['theme_name'] = undefined;
 
 /**
  * StoreFront theme oid.
- * @member {Number} themeOid
+ * @member {Number} theme_oid
  */
-SfvbTheme.prototype['themeOid'] = undefined;
+SfvbTheme.prototype['theme_oid'] = undefined;
 
 /**
  * True when a newer version of this theme exists.  Relevant because an upgrade is what produces the merge conflicts that block activation.
- * @member {Boolean} upgradeAvailable
+ * @member {Boolean} upgrade_available
  */
-SfvbTheme.prototype['upgradeAvailable'] = undefined;
+SfvbTheme.prototype['upgrade_available'] = undefined;
 
 /**
  * False when the theme contains templates that failed validation.  Worth checking before choosing a theme to work in.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbStorefront model module.
  * @module com.ultracart.admin.v2.models/SfvbStorefront
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbStorefront {
     /**
@@ -47,14 +47,14 @@ class SfvbStorefront {
         if (data) {
             obj = obj || new SfvbStorefront();
 
-            if (data.hasOwnProperty('activeThemeOid')) {
-                obj['activeThemeOid'] = ApiClient.convertToType(data['activeThemeOid'], 'Number');
+            if (data.hasOwnProperty('active_theme_oid')) {
+                obj['active_theme_oid'] = ApiClient.convertToType(data['active_theme_oid'], 'Number');
             }
-            if (data.hasOwnProperty('hostName')) {
-                obj['hostName'] = ApiClient.convertToType(data['hostName'], 'String');
+            if (data.hasOwnProperty('host_name')) {
+                obj['host_name'] = ApiClient.convertToType(data['host_name'], 'String');
             }
-            if (data.hasOwnProperty('storefrontOid')) {
-                obj['storefrontOid'] = ApiClient.convertToType(data['storefrontOid'], 'Number');
+            if (data.hasOwnProperty('storefront_oid')) {
+                obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
             }
         }
         return obj;
@@ -65,21 +65,21 @@ class SfvbStorefront {
 
 /**
  * Oid of the theme currently serving live traffic.
- * @member {Number} activeThemeOid
+ * @member {Number} active_theme_oid
  */
-SfvbStorefront.prototype['activeThemeOid'] = undefined;
+SfvbStorefront.prototype['active_theme_oid'] = undefined;
 
 /**
  * Host name of the storefront.
- * @member {String} hostName
+ * @member {String} host_name
  */
-SfvbStorefront.prototype['hostName'] = undefined;
+SfvbStorefront.prototype['host_name'] = undefined;
 
 /**
  * StoreFront oid.
- * @member {Number} storefrontOid
+ * @member {Number} storefront_oid
  */
-SfvbStorefront.prototype['storefrontOid'] = undefined;
+SfvbStorefront.prototype['storefront_oid'] = undefined;
 
 
 

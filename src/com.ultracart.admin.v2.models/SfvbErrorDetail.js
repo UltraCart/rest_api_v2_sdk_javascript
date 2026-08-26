@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbErrorDetail model module.
  * @module com.ultracart.admin.v2.models/SfvbErrorDetail
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbErrorDetail {
     /**
@@ -53,8 +53,8 @@ class SfvbErrorDetail {
             if (data.hasOwnProperty('column')) {
                 obj['column'] = ApiClient.convertToType(data['column'], 'Number');
             }
-            if (data.hasOwnProperty('didYouMean')) {
-                obj['didYouMean'] = ApiClient.convertToType(data['didYouMean'], ['String']);
+            if (data.hasOwnProperty('did_you_mean')) {
+                obj['did_you_mean'] = ApiClient.convertToType(data['did_you_mean'], ['String']);
             }
             if (data.hasOwnProperty('expected')) {
                 obj['expected'] = ApiClient.convertToType(data['expected'], 'String');
@@ -98,9 +98,9 @@ SfvbErrorDetail.prototype['column'] = undefined;
 
 /**
  * Close matches for an unrecognized value, best match first.  Populated for unknown element types and unknown configuration keys.
- * @member {Array.<String>} didYouMean
+ * @member {Array.<String>} did_you_mean
  */
-SfvbErrorDetail.prototype['didYouMean'] = undefined;
+SfvbErrorDetail.prototype['did_you_mean'] = undefined;
 
 /**
  * Description of what was expected instead.

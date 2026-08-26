@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbWidgetIdsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWidgetIdsResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbWidgetIdsResponse {
     /**
@@ -50,8 +50,8 @@ class SfvbWidgetIdsResponse {
             if (data.hasOwnProperty('count')) {
                 obj['count'] = ApiClient.convertToType(data['count'], 'Number');
             }
-            if (data.hasOwnProperty('firstId')) {
-                obj['firstId'] = ApiClient.convertToType(data['firstId'], 'Number');
+            if (data.hasOwnProperty('first_id')) {
+                obj['first_id'] = ApiClient.convertToType(data['first_id'], 'Number');
             }
             if (data.hasOwnProperty('ids')) {
                 obj['ids'] = ApiClient.convertToType(data['ids'], ['Number']);
@@ -71,9 +71,9 @@ SfvbWidgetIdsResponse.prototype['count'] = undefined;
 
 /**
  * First reserved number.
- * @member {Number} firstId
+ * @member {Number} first_id
  */
-SfvbWidgetIdsResponse.prototype['firstId'] = undefined;
+SfvbWidgetIdsResponse.prototype['first_id'] = undefined;
 
 /**
  * Reserved id numbers.  Combine with an element type to form a widget id, for example headline-4271.

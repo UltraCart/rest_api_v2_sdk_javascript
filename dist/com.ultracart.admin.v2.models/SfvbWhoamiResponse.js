@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.140
+ * @version 4.1.141
  */
 var SfvbWhoamiResponse = /*#__PURE__*/function () {
   /**
@@ -68,6 +68,15 @@ var SfvbWhoamiResponse = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('authenticationType')) {
           obj['authenticationType'] = _ApiClient["default"].convertToType(data['authenticationType'], 'String');
+        }
+        if (data.hasOwnProperty('canPublish')) {
+          obj['canPublish'] = _ApiClient["default"].convertToType(data['canPublish'], 'Boolean');
+        }
+        if (data.hasOwnProperty('canRead')) {
+          obj['canRead'] = _ApiClient["default"].convertToType(data['canRead'], 'Boolean');
+        }
+        if (data.hasOwnProperty('canWrite')) {
+          obj['canWrite'] = _ApiClient["default"].convertToType(data['canWrite'], 'Boolean');
         }
         if (data.hasOwnProperty('deviceScope')) {
           obj['deviceScope'] = _ApiClient["default"].convertToType(data['deviceScope'], 'String');
@@ -112,6 +121,24 @@ SfvbWhoamiResponse.prototype['applicationName'] = undefined;
  * @member {String} authenticationType
  */
 SfvbWhoamiResponse.prototype['authenticationType'] = undefined;
+
+/**
+ * True when this token may write a target that is currently live - an active upsell offer, an email on a delivering flow, the active theme, the storefront root.  Never infer this; it is the difference between a draft edit and a shopper visible change.
+ * @member {Boolean} canPublish
+ */
+SfvbWhoamiResponse.prototype['canPublish'] = undefined;
+
+/**
+ * True when this token may read.  Do not infer this from the requested scope name.
+ * @member {Boolean} canRead
+ */
+SfvbWhoamiResponse.prototype['canRead'] = undefined;
+
+/**
+ * True when this token may write.  Writing a target that is not currently live needs only this.
+ * @member {Boolean} canWrite
+ */
+SfvbWhoamiResponse.prototype['canWrite'] = undefined;
 
 /**
  * Device scope name, when this is a device flow token.

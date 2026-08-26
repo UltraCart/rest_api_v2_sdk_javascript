@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFileWriteRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 class SfvbFileWriteRequest {
     /**
@@ -53,8 +53,8 @@ class SfvbFileWriteRequest {
             if (data.hasOwnProperty('content')) {
                 obj['content'] = ApiClient.convertToType(data['content'], 'String');
             }
-            if (data.hasOwnProperty('createIfMissing')) {
-                obj['createIfMissing'] = ApiClient.convertToType(data['createIfMissing'], 'Boolean');
+            if (data.hasOwnProperty('create_if_missing')) {
+                obj['create_if_missing'] = ApiClient.convertToType(data['create_if_missing'], 'Boolean');
             }
         }
         return obj;
@@ -77,9 +77,9 @@ SfvbFileWriteRequest.prototype['content'] = undefined;
 
 /**
  * Create the file if it does not exist.  Defaults to true.
- * @member {Boolean} createIfMissing
+ * @member {Boolean} create_if_missing
  */
-SfvbFileWriteRequest.prototype['createIfMissing'] = undefined;
+SfvbFileWriteRequest.prototype['create_if_missing'] = undefined;
 
 
 
