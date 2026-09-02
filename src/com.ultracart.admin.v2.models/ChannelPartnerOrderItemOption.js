@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChannelPartnerOrderItemOption model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerOrderItemOption
- * @version 4.1.143
+ * @version 4.1.144
  */
 class ChannelPartnerOrderItemOption {
     /**

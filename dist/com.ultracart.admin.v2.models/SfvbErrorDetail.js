@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbErrorDetail model module.
  * @module com.ultracart.admin.v2.models/SfvbErrorDetail
- * @version 4.1.142
+ * @version 4.1.143
  */
 var SfvbErrorDetail = /*#__PURE__*/function () {
   /**

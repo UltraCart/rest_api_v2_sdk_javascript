@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbContainerVersion model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerVersion
- * @version 4.1.142
+ * @version 4.1.143
  */
 var SfvbContainerVersion = /*#__PURE__*/function () {
   /**
@@ -113,7 +113,7 @@ SfvbContainerVersion.prototype['cjson'] = undefined;
 SfvbContainerVersion.prototype['comment'] = undefined;
 
 /**
- * History record oid.  Pass to the revert operation on the owning container.
+ * History record oid.  Pass to the revert operation on the owning container.  Absent on the entry marked current, which holds the value stored right now, has no history row of its own, and so cannot be fetched or reverted to.
  * @member {Number} container_history_oid
  */
 SfvbContainerVersion.prototype['container_history_oid'] = undefined;

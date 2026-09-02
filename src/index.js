@@ -985,6 +985,8 @@ import SfvbFileEntry from './com.ultracart.admin.v2.models/SfvbFileEntry';
 import SfvbFileRevertRequest from './com.ultracart.admin.v2.models/SfvbFileRevertRequest';
 import SfvbFileSearchRequest from './com.ultracart.admin.v2.models/SfvbFileSearchRequest';
 import SfvbFileSearchResponse from './com.ultracart.admin.v2.models/SfvbFileSearchResponse';
+import SfvbFileUploadRequest from './com.ultracart.admin.v2.models/SfvbFileUploadRequest';
+import SfvbFileUploadUrlResponse from './com.ultracart.admin.v2.models/SfvbFileUploadUrlResponse';
 import SfvbFileVersion from './com.ultracart.admin.v2.models/SfvbFileVersion';
 import SfvbFileVersionsResponse from './com.ultracart.admin.v2.models/SfvbFileVersionsResponse';
 import SfvbFileWriteRequest from './com.ultracart.admin.v2.models/SfvbFileWriteRequest';
@@ -1155,7 +1157,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.143
+* @version 4.1.144
 */
 export {
     /**
@@ -6995,6 +6997,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbFileSearchResponse}
      */
     SfvbFileSearchResponse,
+
+    /**
+     * The SfvbFileUploadRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFileUploadRequest}
+     */
+    SfvbFileUploadRequest,
+
+    /**
+     * The SfvbFileUploadUrlResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFileUploadUrlResponse}
+     */
+    SfvbFileUploadUrlResponse,
 
     /**
      * The SfvbFileVersion model constructor.

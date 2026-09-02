@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbValidationResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbValidationResponse
- * @version 4.1.142
+ * @version 4.1.143
  */
 var SfvbValidationResponse = /*#__PURE__*/function () {
   /**

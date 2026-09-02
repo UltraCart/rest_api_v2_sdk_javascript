@@ -18,7 +18,7 @@ import SfvbValidationResponse from './SfvbValidationResponse';
 /**
  * The SfvbFileWriteResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileWriteResponse
- * @version 4.1.143
+ * @version 4.1.144
  */
 class SfvbFileWriteResponse {
     /**
@@ -58,6 +58,9 @@ class SfvbFileWriteResponse {
             if (data.hasOwnProperty('hash_sha256')) {
                 obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
             }
+            if (data.hasOwnProperty('public_url')) {
+                obj['public_url'] = ApiClient.convertToType(data['public_url'], 'String');
+            }
             if (data.hasOwnProperty('validation')) {
                 obj['validation'] = SfvbValidationResponse.constructFromObject(data['validation']);
             }
@@ -90,6 +93,12 @@ SfvbFileWriteResponse.prototype['file'] = undefined;
  * @member {String} hash_sha256
  */
 SfvbFileWriteResponse.prototype['hash_sha256'] = undefined;
+
+/**
+ * Where a shopper's browser will fetch this file, for use in an img src or a background image.  Present only for a path outside /themes/, which is served straight off the storefront root.  A file inside a theme is absent here because its public URL depends on which theme is active, and guessing it would be worse than omitting it.
+ * @member {String} public_url
+ */
+SfvbFileWriteResponse.prototype['public_url'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbValidationResponse} validation

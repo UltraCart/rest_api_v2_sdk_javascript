@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileRevertRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFileRevertRequest
- * @version 4.1.142
+ * @version 4.1.143
  */
 var SfvbFileRevertRequest = /*#__PURE__*/function () {
   /**

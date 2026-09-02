@@ -27,6 +27,8 @@ import SfvbFileContentResponse from '../com.ultracart.admin.v2.models/SfvbFileCo
 import SfvbFileRevertRequest from '../com.ultracart.admin.v2.models/SfvbFileRevertRequest';
 import SfvbFileSearchRequest from '../com.ultracart.admin.v2.models/SfvbFileSearchRequest';
 import SfvbFileSearchResponse from '../com.ultracart.admin.v2.models/SfvbFileSearchResponse';
+import SfvbFileUploadRequest from '../com.ultracart.admin.v2.models/SfvbFileUploadRequest';
+import SfvbFileUploadUrlResponse from '../com.ultracart.admin.v2.models/SfvbFileUploadUrlResponse';
 import SfvbFileVersionsResponse from '../com.ultracart.admin.v2.models/SfvbFileVersionsResponse';
 import SfvbFileWriteRequest from '../com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWriteResponse';
@@ -54,7 +56,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.143
+* @version 4.1.144
 */
 export default class SfvbApi {
 
@@ -250,6 +252,52 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the downloadSfvbFile operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~downloadSfvbFileCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a storefront file's raw bytes
+     * Returns the file itself rather than a JSON envelope, for any type including binaries that files/content refuses.  Use this to verify what you uploaded, and note it is the only way to read a file inside a theme that is not active - such a file is served to nobody until the theme is promoted, so it has no public URL to fetch instead.  On success the body is the file; on failure it is the usual JSON error object, so do not assume the content type without checking the status. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.path 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~downloadSfvbFileCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    downloadSfvbFile(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling downloadSfvbFile");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'path': opts['path']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/octet-stream'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/files/download', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -518,7 +566,7 @@ export default class SfvbApi {
 
     /**
      * Read a storefront file
-     * Returns the current content, or an earlier version when version is supplied.  The content hash is returned as an ETag; send it back as If-Match when writing. 
+     * Returns the current content, or an earlier version when version is supplied.  Send the body's hash_sha256 back as If-Match when writing.  The ETag header carries the same hash, but a compressing proxy may append a suffix such as -gzip to it, so prefer the body value. 
      * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.path 
@@ -552,6 +600,55 @@ export default class SfvbApi {
       let returnType = SfvbFileContentResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/content', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbFileUploadUrl operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbFileUploadUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbFileUploadUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a URL to upload a binary asset to
+     * Binary content does not travel through this API as JSON, so uploading an image, font, video or PDF is two steps.  Ask here for a URL, PUT the raw bytes straight to it, then call uploadSfvbFile quoting the key you were given.  The bytes never pass through the API server.  The extension is checked against the accepted type list before a URL is issued, so an unsupported type fails here rather than after you have sent the file.  The URL is short lived and the key is bound to your account. 
+     * @param {Number} storefront_oid 
+     * @param {String} extension 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbFileUploadUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFileUploadUrlResponse}
+     */
+    getSfvbFileUploadUrl(storefront_oid, extension, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbFileUploadUrl");
+      }
+      // verify the required parameter 'extension' is set
+      if (extension === undefined || extension === null) {
+        throw new Error("Missing the required parameter 'extension' when calling getSfvbFileUploadUrl");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'extension': extension
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbFileUploadUrlResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/files/upload_url/{extension}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1694,6 +1791,58 @@ export default class SfvbApi {
       let returnType = SfvbLibraryResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uploadSfvbFile operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~uploadSfvbFileCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbFileWriteResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Store a binary asset that was already uploaded
+     * The second half of the two step upload.  The bytes are fetched from the key, checked against the extension they claim to be, and written exactly as a text write is - so the same If-Match precondition, the same read only refusal and the same publish gate apply.  An SVG is sanitized before it is stored.  Writing outside /themes/ requires sfvb_publish, because anything served off the storefront root is live by definition. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbFileUploadRequest} file_upload_request Where to store the uploaded bytes
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.If_Match Content hash from the last read.  Required when the file already exists; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~uploadSfvbFileCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFileWriteResponse}
+     */
+    uploadSfvbFile(storefront_oid, file_upload_request, opts, callback) {
+      opts = opts || {};
+      let postBody = file_upload_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling uploadSfvbFile");
+      }
+      // verify the required parameter 'file_upload_request' is set
+      if (file_upload_request === undefined || file_upload_request === null) {
+        throw new Error("Missing the required parameter 'file_upload_request' when calling uploadSfvbFile");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': opts['If_Match']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbFileWriteResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/files/upload', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

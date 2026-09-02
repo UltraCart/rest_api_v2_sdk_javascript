@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbCompileRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbCompileRequest
- * @version 4.1.142
+ * @version 4.1.143
  */
 var SfvbCompileRequest = /*#__PURE__*/function () {
   /**
