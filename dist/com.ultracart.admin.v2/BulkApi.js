@@ -32,7 +32,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Bulk service.
 * @module com.ultracart.admin.v2/BulkApi
-* @version 4.1.143
+* @version 4.1.144
 */
 var BulkApi = exports["default"] = /*#__PURE__*/function () {
   /**

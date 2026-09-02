@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemGatedCodesResponse model module.
  * @module com.ultracart.admin.v2.models/ItemGatedCodesResponse
- * @version 4.1.143
+ * @version 4.1.144
  */
 var ItemGatedCodesResponse = /*#__PURE__*/function () {
   /**

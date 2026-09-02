@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ReportDataSourceSchema model module.
  * @module com.ultracart.admin.v2.models/ReportDataSourceSchema
- * @version 4.1.143
+ * @version 4.1.144
  */
 var ReportDataSourceSchema = /*#__PURE__*/function () {
   /**

@@ -806,6 +806,8 @@ Name | Type | Description  | Notes
 
 URL that renders a preview session
 
+Refuses a session that does not exist, so a URL you receive is for a session that was really there.  expires_in_seconds is the time actually remaining, not the configured lifetime.  Needs a token that resolves to a user, because a preview session belongs to the person who created it. 
+
 
 ### Example
 

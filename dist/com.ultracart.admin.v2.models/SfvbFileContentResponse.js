@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileContentResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileContentResponse
- * @version 4.1.143
+ * @version 4.1.144
  */
 var SfvbFileContentResponse = /*#__PURE__*/function () {
   /**
@@ -116,7 +116,7 @@ SfvbFileContentResponse.prototype['content'] = undefined;
 SfvbFileContentResponse.prototype['fs_file_oid'] = undefined;
 
 /**
- * SHA-256 of the content.  Also returned as the ETag header; send it back as If-Match when writing.
+ * SHA-256 of the content.  Send this back as If-Match when writing.  The ETag header carries the same hash, but a compressing proxy may append a suffix such as -gzip to it, so this body value is the authoritative one.  Both forms are accepted on write.
  * @member {String} hash_sha256
  */
 SfvbFileContentResponse.prototype['hash_sha256'] = undefined;

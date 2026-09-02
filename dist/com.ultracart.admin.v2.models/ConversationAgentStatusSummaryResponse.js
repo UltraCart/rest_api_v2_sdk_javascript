@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentStatusSummaryResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse
- * @version 4.1.143
+ * @version 4.1.144
  */
 var ConversationAgentStatusSummaryResponse = /*#__PURE__*/function () {
   /**

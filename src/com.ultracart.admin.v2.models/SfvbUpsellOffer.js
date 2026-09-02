@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbUpsellOffer model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellOffer
- * @version 4.1.144
+ * @version 4.1.145
  */
 class SfvbUpsellOffer {
     /**

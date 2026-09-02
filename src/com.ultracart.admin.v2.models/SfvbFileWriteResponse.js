@@ -18,7 +18,7 @@ import SfvbValidationResponse from './SfvbValidationResponse';
 /**
  * The SfvbFileWriteResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileWriteResponse
- * @version 4.1.144
+ * @version 4.1.145
  */
 class SfvbFileWriteResponse {
     /**

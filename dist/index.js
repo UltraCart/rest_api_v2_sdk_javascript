@@ -5949,6 +5949,18 @@ Object.defineProperty(exports, "SfvbFileSearchResponse", {
     return _SfvbFileSearchResponse["default"];
   }
 });
+Object.defineProperty(exports, "SfvbFileUploadRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbFileUploadRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbFileUploadUrlResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbFileUploadUrlResponse["default"];
+  }
+});
 Object.defineProperty(exports, "SfvbFileVersion", {
   enumerable: true,
   get: function get() {
@@ -7648,6 +7660,8 @@ var _SfvbFileEntry = _interopRequireDefault(require("./com.ultracart.admin.v2.mo
 var _SfvbFileRevertRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileRevertRequest"));
 var _SfvbFileSearchRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileSearchRequest"));
 var _SfvbFileSearchResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileSearchResponse"));
+var _SfvbFileUploadRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileUploadRequest"));
+var _SfvbFileUploadUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileUploadUrlResponse"));
 var _SfvbFileVersion = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileVersion"));
 var _SfvbFileVersionsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileVersionsResponse"));
 var _SfvbFileWriteRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileWriteRequest"));

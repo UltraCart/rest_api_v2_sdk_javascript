@@ -17,7 +17,7 @@ import ConversationPbxTimeRangeConfig from './ConversationPbxTimeRangeConfig';
 /**
  * The ConversationPbxTimeRange model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeRange
- * @version 4.1.144
+ * @version 4.1.145
  */
 class ConversationPbxTimeRange {
     /**

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderAffiliateLedger model module.
  * @module com.ultracart.admin.v2.models/OrderAffiliateLedger
- * @version 4.1.143
+ * @version 4.1.144
  */
 var OrderAffiliateLedger = /*#__PURE__*/function () {
   /**
