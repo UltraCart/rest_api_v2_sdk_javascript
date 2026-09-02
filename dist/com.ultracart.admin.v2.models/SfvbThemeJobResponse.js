@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbThemeJobResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeJobResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbThemeJobResponse = /*#__PURE__*/function () {
   /**
@@ -65,35 +65,35 @@ var SfvbThemeJobResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
-        if (data.hasOwnProperty('errorMessage')) {
-          obj['errorMessage'] = _ApiClient["default"].convertToType(data['errorMessage'], 'String');
+        if (data.hasOwnProperty('error_message')) {
+          obj['error_message'] = _ApiClient["default"].convertToType(data['error_message'], 'String');
         }
-        if (data.hasOwnProperty('finishedDts')) {
-          obj['finishedDts'] = _ApiClient["default"].convertToType(data['finishedDts'], 'String');
+        if (data.hasOwnProperty('finished_dts')) {
+          obj['finished_dts'] = _ApiClient["default"].convertToType(data['finished_dts'], 'String');
         }
-        if (data.hasOwnProperty('jobId')) {
-          obj['jobId'] = _ApiClient["default"].convertToType(data['jobId'], 'Number');
+        if (data.hasOwnProperty('job_id')) {
+          obj['job_id'] = _ApiClient["default"].convertToType(data['job_id'], 'Number');
         }
         if (data.hasOwnProperty('progress')) {
           obj['progress'] = _ApiClient["default"].convertToType(data['progress'], 'Number');
         }
-        if (data.hasOwnProperty('progressDescription')) {
-          obj['progressDescription'] = _ApiClient["default"].convertToType(data['progressDescription'], 'String');
+        if (data.hasOwnProperty('progress_description')) {
+          obj['progress_description'] = _ApiClient["default"].convertToType(data['progress_description'], 'String');
         }
-        if (data.hasOwnProperty('startedDts')) {
-          obj['startedDts'] = _ApiClient["default"].convertToType(data['startedDts'], 'String');
+        if (data.hasOwnProperty('started_dts')) {
+          obj['started_dts'] = _ApiClient["default"].convertToType(data['started_dts'], 'String');
         }
         if (data.hasOwnProperty('status')) {
           obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
         }
-        if (data.hasOwnProperty('submittedDts')) {
-          obj['submittedDts'] = _ApiClient["default"].convertToType(data['submittedDts'], 'String');
+        if (data.hasOwnProperty('submitted_dts')) {
+          obj['submitted_dts'] = _ApiClient["default"].convertToType(data['submitted_dts'], 'String');
         }
         if (data.hasOwnProperty('success')) {
           obj['success'] = _ApiClient["default"].convertToType(data['success'], 'Boolean');
         }
-        if (data.hasOwnProperty('targetPath')) {
-          obj['targetPath'] = _ApiClient["default"].convertToType(data['targetPath'], 'String');
+        if (data.hasOwnProperty('target_path')) {
+          obj['target_path'] = _ApiClient["default"].convertToType(data['target_path'], 'String');
         }
       }
       return obj;
@@ -114,21 +114,21 @@ SfvbThemeJobResponse.prototype['description'] = undefined;
 
 /**
  * Failure detail.  Populated only when status is error.
- * @member {String} errorMessage
+ * @member {String} error_message
  */
-SfvbThemeJobResponse.prototype['errorMessage'] = undefined;
+SfvbThemeJobResponse.prototype['error_message'] = undefined;
 
 /**
  * When the job stopped.  Null until it does.
- * @member {String} finishedDts
+ * @member {String} finished_dts
  */
-SfvbThemeJobResponse.prototype['finishedDts'] = undefined;
+SfvbThemeJobResponse.prototype['finished_dts'] = undefined;
 
 /**
  * Job handle.  Poll getSfvbThemeJob with this.
- * @member {Number} jobId
+ * @member {Number} job_id
  */
-SfvbThemeJobResponse.prototype['jobId'] = undefined;
+SfvbThemeJobResponse.prototype['job_id'] = undefined;
 
 /**
  * Percent complete, 0-100.
@@ -138,15 +138,15 @@ SfvbThemeJobResponse.prototype['progress'] = undefined;
 
 /**
  * What the job is doing right now, for example 'Duplicating locale text'.
- * @member {String} progressDescription
+ * @member {String} progress_description
  */
-SfvbThemeJobResponse.prototype['progressDescription'] = undefined;
+SfvbThemeJobResponse.prototype['progress_description'] = undefined;
 
 /**
  * When the job started running.  Null until it does.
- * @member {String} startedDts
+ * @member {String} started_dts
  */
-SfvbThemeJobResponse.prototype['startedDts'] = undefined;
+SfvbThemeJobResponse.prototype['started_dts'] = undefined;
 
 /**
  * Raw job status.
@@ -156,9 +156,9 @@ SfvbThemeJobResponse.prototype['status'] = undefined;
 
 /**
  * When the job was queued.
- * @member {String} submittedDts
+ * @member {String} submitted_dts
  */
-SfvbThemeJobResponse.prototype['submittedDts'] = undefined;
+SfvbThemeJobResponse.prototype['submitted_dts'] = undefined;
 
 /**
  * True only when the job finished successfully.  Check complete first.
@@ -168,9 +168,9 @@ SfvbThemeJobResponse.prototype['success'] = undefined;
 
 /**
  * Path the new theme was created at.  Returned when the job is started; the theme oid itself is NOT returned, because the job's product is a plain text report rather than a structured result.  Once the job completes, list themes and match on this path.
- * @member {String} targetPath
+ * @member {String} target_path
  */
-SfvbThemeJobResponse.prototype['targetPath'] = undefined;
+SfvbThemeJobResponse.prototype['target_path'] = undefined;
 
 /**
  * Allowed values for the <code>status</code> property.

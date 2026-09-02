@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbCompileResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCompileResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbCompileResponse = /*#__PURE__*/function () {
   /**
@@ -60,8 +60,8 @@ var SfvbCompileResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbCompileResponse();
-        if (data.hasOwnProperty('containerId')) {
-          obj['containerId'] = _ApiClient["default"].convertToType(data['containerId'], 'String');
+        if (data.hasOwnProperty('container_id')) {
+          obj['container_id'] = _ApiClient["default"].convertToType(data['container_id'], 'String');
         }
         if (data.hasOwnProperty('directives')) {
           obj['directives'] = _ApiClient["default"].convertToType(data['directives'], ['String']);
@@ -69,8 +69,8 @@ var SfvbCompileResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('success')) {
           obj['success'] = _ApiClient["default"].convertToType(data['success'], 'Boolean');
         }
-        if (data.hasOwnProperty('usedElements')) {
-          obj['usedElements'] = _ApiClient["default"].convertToType(data['usedElements'], ['String']);
+        if (data.hasOwnProperty('used_elements')) {
+          obj['used_elements'] = _ApiClient["default"].convertToType(data['used_elements'], ['String']);
         }
         if (data.hasOwnProperty('validation')) {
           obj['validation'] = _SfvbValidationResponse["default"].constructFromObject(data['validation']);
@@ -85,9 +85,9 @@ var SfvbCompileResponse = /*#__PURE__*/function () {
 }();
 /**
  * Container id the document compiled under.
- * @member {String} containerId
+ * @member {String} container_id
  */
-SfvbCompileResponse.prototype['containerId'] = undefined;
+SfvbCompileResponse.prototype['container_id'] = undefined;
 
 /**
  * Velocity directives the compiled output declares.
@@ -103,9 +103,9 @@ SfvbCompileResponse.prototype['success'] = undefined;
 
 /**
  * Element types used, sorted.
- * @member {Array.<String>} usedElements
+ * @member {Array.<String>} used_elements
  */
-SfvbCompileResponse.prototype['usedElements'] = undefined;
+SfvbCompileResponse.prototype['used_elements'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbValidationResponse} validation

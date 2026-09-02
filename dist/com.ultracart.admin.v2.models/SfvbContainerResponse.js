@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbContainerResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbContainerResponse = /*#__PURE__*/function () {
   /**
@@ -59,29 +59,29 @@ var SfvbContainerResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbContainerResponse();
-        if (data.hasOwnProperty('activeTheme')) {
-          obj['activeTheme'] = _ApiClient["default"].convertToType(data['activeTheme'], 'Boolean');
+        if (data.hasOwnProperty('active_theme')) {
+          obj['active_theme'] = _ApiClient["default"].convertToType(data['active_theme'], 'Boolean');
         }
         if (data.hasOwnProperty('cjson')) {
           obj['cjson'] = _ApiClient["default"].convertToType(data['cjson'], 'String');
         }
-        if (data.hasOwnProperty('containerId')) {
-          obj['containerId'] = _ApiClient["default"].convertToType(data['containerId'], 'String');
+        if (data.hasOwnProperty('container_id')) {
+          obj['container_id'] = _ApiClient["default"].convertToType(data['container_id'], 'String');
         }
-        if (data.hasOwnProperty('containerName')) {
-          obj['containerName'] = _ApiClient["default"].convertToType(data['containerName'], 'String');
+        if (data.hasOwnProperty('container_name')) {
+          obj['container_name'] = _ApiClient["default"].convertToType(data['container_name'], 'String');
         }
-        if (data.hasOwnProperty('hashSha256')) {
-          obj['hashSha256'] = _ApiClient["default"].convertToType(data['hashSha256'], 'String');
+        if (data.hasOwnProperty('hash_sha256')) {
+          obj['hash_sha256'] = _ApiClient["default"].convertToType(data['hash_sha256'], 'String');
         }
-        if (data.hasOwnProperty('lastModified')) {
-          obj['lastModified'] = _ApiClient["default"].convertToType(data['lastModified'], 'String');
+        if (data.hasOwnProperty('last_modified')) {
+          obj['last_modified'] = _ApiClient["default"].convertToType(data['last_modified'], 'String');
         }
-        if (data.hasOwnProperty('ownerObjectId')) {
-          obj['ownerObjectId'] = _ApiClient["default"].convertToType(data['ownerObjectId'], 'String');
+        if (data.hasOwnProperty('owner_object_id')) {
+          obj['owner_object_id'] = _ApiClient["default"].convertToType(data['owner_object_id'], 'String');
         }
-        if (data.hasOwnProperty('ownerType')) {
-          obj['ownerType'] = _ApiClient["default"].convertToType(data['ownerType'], 'String');
+        if (data.hasOwnProperty('owner_type')) {
+          obj['owner_type'] = _ApiClient["default"].convertToType(data['owner_type'], 'String');
         }
         if (data.hasOwnProperty('path')) {
           obj['path'] = _ApiClient["default"].convertToType(data['path'], 'String');
@@ -96,9 +96,9 @@ var SfvbContainerResponse = /*#__PURE__*/function () {
 }();
 /**
  * True when this container lives in the theme currently serving live traffic.  Writing to it requires the sfvb_publish scope.
- * @member {Boolean} activeTheme
+ * @member {Boolean} active_theme
  */
-SfvbContainerResponse.prototype['activeTheme'] = undefined;
+SfvbContainerResponse.prototype['active_theme'] = undefined;
 
 /**
  * The container JSON.  Runtime state is stripped on the way out.
@@ -108,39 +108,39 @@ SfvbContainerResponse.prototype['cjson'] = undefined;
 
 /**
  * Container id as the compiler will derive it.
- * @member {String} containerId
+ * @member {String} container_id
  */
-SfvbContainerResponse.prototype['containerId'] = undefined;
+SfvbContainerResponse.prototype['container_id'] = undefined;
 
 /**
  * Container name.
- * @member {String} containerName
+ * @member {String} container_name
  */
-SfvbContainerResponse.prototype['containerName'] = undefined;
+SfvbContainerResponse.prototype['container_name'] = undefined;
 
 /**
  * SHA-256 of the cjson.  Send back as If-Match when writing.
- * @member {String} hashSha256
+ * @member {String} hash_sha256
  */
-SfvbContainerResponse.prototype['hashSha256'] = undefined;
+SfvbContainerResponse.prototype['hash_sha256'] = undefined;
 
 /**
  * When the container was last modified, where the store records it.
- * @member {String} lastModified
+ * @member {String} last_modified
  */
-SfvbContainerResponse.prototype['lastModified'] = undefined;
+SfvbContainerResponse.prototype['last_modified'] = undefined;
 
 /**
  * Identifier of the owning object within its store.
- * @member {String} ownerObjectId
+ * @member {String} owner_object_id
  */
-SfvbContainerResponse.prototype['ownerObjectId'] = undefined;
+SfvbContainerResponse.prototype['owner_object_id'] = undefined;
 
 /**
  * Where this container lives.
- * @member {module:com.ultracart.admin.v2.models/SfvbContainerResponse.OwnerTypeEnum} ownerType
+ * @member {module:com.ultracart.admin.v2.models/SfvbContainerResponse.OwnerTypeEnum} owner_type
  */
-SfvbContainerResponse.prototype['ownerType'] = undefined;
+SfvbContainerResponse.prototype['owner_type'] = undefined;
 
 /**
  * File path, for theme and page containers only.
@@ -155,7 +155,7 @@ SfvbContainerResponse.prototype['path'] = undefined;
 SfvbContainerResponse.prototype['version'] = undefined;
 
 /**
- * Allowed values for the <code>ownerType</code> property.
+ * Allowed values for the <code>owner_type</code> property.
  * @enum {String}
  * @readonly
  */

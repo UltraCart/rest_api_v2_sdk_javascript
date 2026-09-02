@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFilesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFilesResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbFilesResponse = /*#__PURE__*/function () {
   /**
@@ -63,14 +63,14 @@ var SfvbFilesResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('files')) {
           obj['files'] = _ApiClient["default"].convertToType(data['files'], [_SfvbFileEntry["default"]]);
         }
-        if (data.hasOwnProperty('fsDirectoryOid')) {
-          obj['fsDirectoryOid'] = _ApiClient["default"].convertToType(data['fsDirectoryOid'], 'Number');
+        if (data.hasOwnProperty('fs_directory_oid')) {
+          obj['fs_directory_oid'] = _ApiClient["default"].convertToType(data['fs_directory_oid'], 'Number');
         }
-        if (data.hasOwnProperty('omittedCount')) {
-          obj['omittedCount'] = _ApiClient["default"].convertToType(data['omittedCount'], 'Number');
+        if (data.hasOwnProperty('omitted_count')) {
+          obj['omitted_count'] = _ApiClient["default"].convertToType(data['omitted_count'], 'Number');
         }
-        if (data.hasOwnProperty('parentFsDirectoryOid')) {
-          obj['parentFsDirectoryOid'] = _ApiClient["default"].convertToType(data['parentFsDirectoryOid'], 'Number');
+        if (data.hasOwnProperty('parent_fs_directory_oid')) {
+          obj['parent_fs_directory_oid'] = _ApiClient["default"].convertToType(data['parent_fs_directory_oid'], 'Number');
         }
         if (data.hasOwnProperty('path')) {
           obj['path'] = _ApiClient["default"].convertToType(data['path'], 'String');
@@ -91,21 +91,21 @@ SfvbFilesResponse.prototype['files'] = undefined;
 
 /**
  * Oid of the directory that was listed.
- * @member {Number} fsDirectoryOid
+ * @member {Number} fs_directory_oid
  */
-SfvbFilesResponse.prototype['fsDirectoryOid'] = undefined;
+SfvbFilesResponse.prototype['fs_directory_oid'] = undefined;
 
 /**
  * Number of entries omitted when truncated is true.
- * @member {Number} omittedCount
+ * @member {Number} omitted_count
  */
-SfvbFilesResponse.prototype['omittedCount'] = undefined;
+SfvbFilesResponse.prototype['omitted_count'] = undefined;
 
 /**
  * Oid of the parent directory, or zero at the root.
- * @member {Number} parentFsDirectoryOid
+ * @member {Number} parent_fs_directory_oid
  */
-SfvbFilesResponse.prototype['parentFsDirectoryOid'] = undefined;
+SfvbFilesResponse.prototype['parent_fs_directory_oid'] = undefined;
 
 /**
  * Path that was listed.

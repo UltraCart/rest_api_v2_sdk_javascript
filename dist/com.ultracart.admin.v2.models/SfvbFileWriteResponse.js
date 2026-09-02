@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileWriteResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileWriteResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbFileWriteResponse = /*#__PURE__*/function () {
   /**
@@ -61,20 +61,20 @@ var SfvbFileWriteResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbFileWriteResponse();
-        if (data.hasOwnProperty('compiledPath')) {
-          obj['compiledPath'] = _ApiClient["default"].convertToType(data['compiledPath'], 'String');
+        if (data.hasOwnProperty('compiled_path')) {
+          obj['compiled_path'] = _ApiClient["default"].convertToType(data['compiled_path'], 'String');
         }
         if (data.hasOwnProperty('file')) {
           obj['file'] = _SfvbFileEntry["default"].constructFromObject(data['file']);
         }
-        if (data.hasOwnProperty('hashSha256')) {
-          obj['hashSha256'] = _ApiClient["default"].convertToType(data['hashSha256'], 'String');
+        if (data.hasOwnProperty('hash_sha256')) {
+          obj['hash_sha256'] = _ApiClient["default"].convertToType(data['hash_sha256'], 'String');
         }
         if (data.hasOwnProperty('validation')) {
           obj['validation'] = _SfvbValidationResponse["default"].constructFromObject(data['validation']);
         }
-        if (data.hasOwnProperty('velocityErrors')) {
-          obj['velocityErrors'] = _ApiClient["default"].convertToType(data['velocityErrors'], 'String');
+        if (data.hasOwnProperty('velocity_errors')) {
+          obj['velocity_errors'] = _ApiClient["default"].convertToType(data['velocity_errors'], 'String');
         }
         if (data.hasOwnProperty('version')) {
           obj['version'] = _ApiClient["default"].convertToType(data['version'], 'Number');
@@ -86,9 +86,9 @@ var SfvbFileWriteResponse = /*#__PURE__*/function () {
 }();
 /**
  * Path of the compiled output, when writing a .cjson under a theme triggered a compile.
- * @member {String} compiledPath
+ * @member {String} compiled_path
  */
-SfvbFileWriteResponse.prototype['compiledPath'] = undefined;
+SfvbFileWriteResponse.prototype['compiled_path'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbFileEntry} file
@@ -97,9 +97,9 @@ SfvbFileWriteResponse.prototype['file'] = undefined;
 
 /**
  * New SHA-256.  Use as the next If-Match value.
- * @member {String} hashSha256
+ * @member {String} hash_sha256
  */
-SfvbFileWriteResponse.prototype['hashSha256'] = undefined;
+SfvbFileWriteResponse.prototype['hash_sha256'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbValidationResponse} validation
@@ -108,9 +108,9 @@ SfvbFileWriteResponse.prototype['validation'] = undefined;
 
 /**
  * Velocity errors recorded by the store.  Present means the file was written but is not valid.
- * @member {String} velocityErrors
+ * @member {String} velocity_errors
  */
-SfvbFileWriteResponse.prototype['velocityErrors'] = undefined;
+SfvbFileWriteResponse.prototype['velocity_errors'] = undefined;
 
 /**
  * New version number.

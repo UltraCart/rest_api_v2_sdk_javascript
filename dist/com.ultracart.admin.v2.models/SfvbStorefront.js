@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbStorefront model module.
  * @module com.ultracart.admin.v2.models/SfvbStorefront
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbStorefront = /*#__PURE__*/function () {
   /**
@@ -59,14 +59,14 @@ var SfvbStorefront = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbStorefront();
-        if (data.hasOwnProperty('activeThemeOid')) {
-          obj['activeThemeOid'] = _ApiClient["default"].convertToType(data['activeThemeOid'], 'Number');
+        if (data.hasOwnProperty('active_theme_oid')) {
+          obj['active_theme_oid'] = _ApiClient["default"].convertToType(data['active_theme_oid'], 'Number');
         }
-        if (data.hasOwnProperty('hostName')) {
-          obj['hostName'] = _ApiClient["default"].convertToType(data['hostName'], 'String');
+        if (data.hasOwnProperty('host_name')) {
+          obj['host_name'] = _ApiClient["default"].convertToType(data['host_name'], 'String');
         }
-        if (data.hasOwnProperty('storefrontOid')) {
-          obj['storefrontOid'] = _ApiClient["default"].convertToType(data['storefrontOid'], 'Number');
+        if (data.hasOwnProperty('storefront_oid')) {
+          obj['storefront_oid'] = _ApiClient["default"].convertToType(data['storefront_oid'], 'Number');
         }
       }
       return obj;
@@ -75,19 +75,19 @@ var SfvbStorefront = /*#__PURE__*/function () {
 }();
 /**
  * Oid of the theme currently serving live traffic.
- * @member {Number} activeThemeOid
+ * @member {Number} active_theme_oid
  */
-SfvbStorefront.prototype['activeThemeOid'] = undefined;
+SfvbStorefront.prototype['active_theme_oid'] = undefined;
 
 /**
  * Host name of the storefront.
- * @member {String} hostName
+ * @member {String} host_name
  */
-SfvbStorefront.prototype['hostName'] = undefined;
+SfvbStorefront.prototype['host_name'] = undefined;
 
 /**
  * StoreFront oid.
- * @member {Number} storefrontOid
+ * @member {Number} storefront_oid
  */
-SfvbStorefront.prototype['storefrontOid'] = undefined;
+SfvbStorefront.prototype['storefront_oid'] = undefined;
 var _default = exports["default"] = SfvbStorefront;

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbValidationResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbValidationResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbValidationResponse = /*#__PURE__*/function () {
   /**
@@ -63,8 +63,8 @@ var SfvbValidationResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('errors')) {
           obj['errors'] = _ApiClient["default"].convertToType(data['errors'], [_SfvbErrorDetail["default"]]);
         }
-        if (data.hasOwnProperty('usedElements')) {
-          obj['usedElements'] = _ApiClient["default"].convertToType(data['usedElements'], ['String']);
+        if (data.hasOwnProperty('used_elements')) {
+          obj['used_elements'] = _ApiClient["default"].convertToType(data['used_elements'], ['String']);
         }
         if (data.hasOwnProperty('valid')) {
           obj['valid'] = _ApiClient["default"].convertToType(data['valid'], 'Boolean');
@@ -85,9 +85,9 @@ SfvbValidationResponse.prototype['errors'] = undefined;
 
 /**
  * Element types found in the document, sorted.
- * @member {Array.<String>} usedElements
+ * @member {Array.<String>} used_elements
  */
-SfvbValidationResponse.prototype['usedElements'] = undefined;
+SfvbValidationResponse.prototype['used_elements'] = undefined;
 
 /**
  * True when there are no errors.  Warnings do not affect this flag.

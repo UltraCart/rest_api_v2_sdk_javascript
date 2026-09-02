@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbElementsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbElementsResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbElementsResponse = /*#__PURE__*/function () {
   /**
@@ -60,8 +60,8 @@ var SfvbElementsResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbElementsResponse();
-        if (data.hasOwnProperty('elementCount')) {
-          obj['elementCount'] = _ApiClient["default"].convertToType(data['elementCount'], 'Number');
+        if (data.hasOwnProperty('element_count')) {
+          obj['element_count'] = _ApiClient["default"].convertToType(data['element_count'], 'Number');
         }
         if (data.hasOwnProperty('elements')) {
           obj['elements'] = _ApiClient["default"].convertToType(data['elements'], [_SfvbElement["default"]]);
@@ -76,9 +76,9 @@ var SfvbElementsResponse = /*#__PURE__*/function () {
 }();
 /**
  * Number of element types.
- * @member {Number} elementCount
+ * @member {Number} element_count
  */
-SfvbElementsResponse.prototype['elementCount'] = undefined;
+SfvbElementsResponse.prototype['element_count'] = undefined;
 
 /**
  * Every element type the compiler recognizes, sorted.

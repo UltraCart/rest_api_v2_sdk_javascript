@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbContainerRevertRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerRevertRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbContainerRevertRequest = /*#__PURE__*/function () {
   /**
@@ -62,8 +62,8 @@ var SfvbContainerRevertRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('comment')) {
           obj['comment'] = _ApiClient["default"].convertToType(data['comment'], 'String');
         }
-        if (data.hasOwnProperty('containerHistoryOid')) {
-          obj['containerHistoryOid'] = _ApiClient["default"].convertToType(data['containerHistoryOid'], 'Number');
+        if (data.hasOwnProperty('container_history_oid')) {
+          obj['container_history_oid'] = _ApiClient["default"].convertToType(data['container_history_oid'], 'Number');
         }
       }
       return obj;
@@ -78,7 +78,7 @@ SfvbContainerRevertRequest.prototype['comment'] = undefined;
 
 /**
  * History record oid to restore, as returned by container_versions.
- * @member {Number} containerHistoryOid
+ * @member {Number} container_history_oid
  */
-SfvbContainerRevertRequest.prototype['containerHistoryOid'] = undefined;
+SfvbContainerRevertRequest.prototype['container_history_oid'] = undefined;
 var _default = exports["default"] = SfvbContainerRevertRequest;

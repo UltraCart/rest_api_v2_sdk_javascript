@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbThemeDuplicateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbThemeDuplicateRequest = /*#__PURE__*/function () {
   /**
@@ -62,11 +62,11 @@ var SfvbThemeDuplicateRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('folder')) {
           obj['folder'] = _ApiClient["default"].convertToType(data['folder'], 'String');
         }
-        if (data.hasOwnProperty('targetStorefrontOid')) {
-          obj['targetStorefrontOid'] = _ApiClient["default"].convertToType(data['targetStorefrontOid'], 'Number');
+        if (data.hasOwnProperty('target_storefront_oid')) {
+          obj['target_storefront_oid'] = _ApiClient["default"].convertToType(data['target_storefront_oid'], 'Number');
         }
-        if (data.hasOwnProperty('themeName')) {
-          obj['themeName'] = _ApiClient["default"].convertToType(data['themeName'], 'String');
+        if (data.hasOwnProperty('theme_name')) {
+          obj['theme_name'] = _ApiClient["default"].convertToType(data['theme_name'], 'String');
         }
       }
       return obj;
@@ -81,13 +81,13 @@ SfvbThemeDuplicateRequest.prototype['folder'] = undefined;
 
 /**
  * Storefront to create the copy on.  Defaults to the storefront in the path.  Supply it only when copying a theme between storefronts you own.
- * @member {Number} targetStorefrontOid
+ * @member {Number} target_storefront_oid
  */
-SfvbThemeDuplicateRequest.prototype['targetStorefrontOid'] = undefined;
+SfvbThemeDuplicateRequest.prototype['target_storefront_oid'] = undefined;
 
 /**
  * Name for the new theme.
- * @member {String} themeName
+ * @member {String} theme_name
  */
-SfvbThemeDuplicateRequest.prototype['themeName'] = undefined;
+SfvbThemeDuplicateRequest.prototype['theme_name'] = undefined;
 var _default = exports["default"] = SfvbThemeDuplicateRequest;

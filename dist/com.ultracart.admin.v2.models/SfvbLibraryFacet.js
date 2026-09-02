@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbLibraryFacet model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryFacet
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbLibraryFacet = /*#__PURE__*/function () {
   /**
@@ -59,8 +59,8 @@ var SfvbLibraryFacet = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbLibraryFacet();
-        if (data.hasOwnProperty('displayName')) {
-          obj['displayName'] = _ApiClient["default"].convertToType(data['displayName'], 'String');
+        if (data.hasOwnProperty('display_name')) {
+          obj['display_name'] = _ApiClient["default"].convertToType(data['display_name'], 'String');
         }
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
@@ -75,9 +75,9 @@ var SfvbLibraryFacet = /*#__PURE__*/function () {
 }();
 /**
  * Human readable facet name.
- * @member {String} displayName
+ * @member {String} display_name
  */
-SfvbLibraryFacet.prototype['displayName'] = undefined;
+SfvbLibraryFacet.prototype['display_name'] = undefined;
 
 /**
  * Facet key.  Pass a chosen option back as facet_{name}={option}.

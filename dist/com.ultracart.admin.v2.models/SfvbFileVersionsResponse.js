@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileVersionsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileVersionsResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbFileVersionsResponse = /*#__PURE__*/function () {
   /**
@@ -60,8 +60,8 @@ var SfvbFileVersionsResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbFileVersionsResponse();
-        if (data.hasOwnProperty('fsFileOid')) {
-          obj['fsFileOid'] = _ApiClient["default"].convertToType(data['fsFileOid'], 'Number');
+        if (data.hasOwnProperty('fs_file_oid')) {
+          obj['fs_file_oid'] = _ApiClient["default"].convertToType(data['fs_file_oid'], 'Number');
         }
         if (data.hasOwnProperty('path')) {
           obj['path'] = _ApiClient["default"].convertToType(data['path'], 'String');
@@ -76,9 +76,9 @@ var SfvbFileVersionsResponse = /*#__PURE__*/function () {
 }();
 /**
  * StoreFront file system file oid.
- * @member {Number} fsFileOid
+ * @member {Number} fs_file_oid
  */
-SfvbFileVersionsResponse.prototype['fsFileOid'] = undefined;
+SfvbFileVersionsResponse.prototype['fs_file_oid'] = undefined;
 
 /**
  * Path of the file.

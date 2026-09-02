@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbUpsellOffersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellOffersResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbUpsellOffersResponse = /*#__PURE__*/function () {
   /**
@@ -60,8 +60,8 @@ var SfvbUpsellOffersResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbUpsellOffersResponse();
-        if (data.hasOwnProperty('upsellOffers')) {
-          obj['upsellOffers'] = _ApiClient["default"].convertToType(data['upsellOffers'], [_SfvbUpsellOffer["default"]]);
+        if (data.hasOwnProperty('upsell_offers')) {
+          obj['upsell_offers'] = _ApiClient["default"].convertToType(data['upsell_offers'], [_SfvbUpsellOffer["default"]]);
         }
       }
       return obj;
@@ -70,7 +70,7 @@ var SfvbUpsellOffersResponse = /*#__PURE__*/function () {
 }();
 /**
  * Upsell offers on this storefront.
- * @member {Array.<module:com.ultracart.admin.v2.models/SfvbUpsellOffer>} upsellOffers
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbUpsellOffer>} upsell_offers
  */
-SfvbUpsellOffersResponse.prototype['upsellOffers'] = undefined;
+SfvbUpsellOffersResponse.prototype['upsell_offers'] = undefined;
 var _default = exports["default"] = SfvbUpsellOffersResponse;

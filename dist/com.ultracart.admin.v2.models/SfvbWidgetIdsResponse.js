@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbWidgetIdsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWidgetIdsResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbWidgetIdsResponse = /*#__PURE__*/function () {
   /**
@@ -62,8 +62,8 @@ var SfvbWidgetIdsResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('count')) {
           obj['count'] = _ApiClient["default"].convertToType(data['count'], 'Number');
         }
-        if (data.hasOwnProperty('firstId')) {
-          obj['firstId'] = _ApiClient["default"].convertToType(data['firstId'], 'Number');
+        if (data.hasOwnProperty('first_id')) {
+          obj['first_id'] = _ApiClient["default"].convertToType(data['first_id'], 'Number');
         }
         if (data.hasOwnProperty('ids')) {
           obj['ids'] = _ApiClient["default"].convertToType(data['ids'], ['Number']);
@@ -81,9 +81,9 @@ SfvbWidgetIdsResponse.prototype['count'] = undefined;
 
 /**
  * First reserved number.
- * @member {Number} firstId
+ * @member {Number} first_id
  */
-SfvbWidgetIdsResponse.prototype['firstId'] = undefined;
+SfvbWidgetIdsResponse.prototype['first_id'] = undefined;
 
 /**
  * Reserved id numbers.  Combine with an element type to form a widget id, for example headline-4271.

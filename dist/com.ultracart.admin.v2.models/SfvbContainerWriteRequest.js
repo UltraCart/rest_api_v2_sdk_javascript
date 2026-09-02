@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbContainerWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerWriteRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbContainerWriteRequest = /*#__PURE__*/function () {
   /**
@@ -59,8 +59,8 @@ var SfvbContainerWriteRequest = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbContainerWriteRequest();
-        if (data.hasOwnProperty('allowWarnings')) {
-          obj['allowWarnings'] = _ApiClient["default"].convertToType(data['allowWarnings'], 'Boolean');
+        if (data.hasOwnProperty('allow_warnings')) {
+          obj['allow_warnings'] = _ApiClient["default"].convertToType(data['allow_warnings'], 'Boolean');
         }
         if (data.hasOwnProperty('cjson')) {
           obj['cjson'] = _ApiClient["default"].convertToType(data['cjson'], 'String');
@@ -68,8 +68,8 @@ var SfvbContainerWriteRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('comment')) {
           obj['comment'] = _ApiClient["default"].convertToType(data['comment'], 'String');
         }
-        if (data.hasOwnProperty('marketingEmail')) {
-          obj['marketingEmail'] = _ApiClient["default"].convertToType(data['marketingEmail'], 'Boolean');
+        if (data.hasOwnProperty('marketing_email')) {
+          obj['marketing_email'] = _ApiClient["default"].convertToType(data['marketing_email'], 'Boolean');
         }
       }
       return obj;
@@ -78,9 +78,9 @@ var SfvbContainerWriteRequest = /*#__PURE__*/function () {
 }();
 /**
  * Store the container even if quality warnings were raised.  Warnings never block by default; this field exists so a caller can opt into treating them as blocking by setting it false.
- * @member {Boolean} allowWarnings
+ * @member {Boolean} allow_warnings
  */
-SfvbContainerWriteRequest.prototype['allowWarnings'] = undefined;
+SfvbContainerWriteRequest.prototype['allow_warnings'] = undefined;
 
 /**
  * The container JSON to store.
@@ -96,7 +96,7 @@ SfvbContainerWriteRequest.prototype['comment'] = undefined;
 
 /**
  * For email containers, whether this is a marketing email.  Selects whether CAN-SPAM footer rules apply.
- * @member {Boolean} marketingEmail
+ * @member {Boolean} marketing_email
  */
-SfvbContainerWriteRequest.prototype['marketingEmail'] = undefined;
+SfvbContainerWriteRequest.prototype['marketing_email'] = undefined;
 var _default = exports["default"] = SfvbContainerWriteRequest;

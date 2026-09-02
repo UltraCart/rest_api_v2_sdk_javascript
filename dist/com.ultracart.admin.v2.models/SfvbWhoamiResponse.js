@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbWhoamiResponse = /*#__PURE__*/function () {
   /**
@@ -60,32 +60,32 @@ var SfvbWhoamiResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbWhoamiResponse();
-        if (data.hasOwnProperty('actingAsUser')) {
-          obj['actingAsUser'] = _ApiClient["default"].convertToType(data['actingAsUser'], 'Boolean');
+        if (data.hasOwnProperty('acting_as_user')) {
+          obj['acting_as_user'] = _ApiClient["default"].convertToType(data['acting_as_user'], 'Boolean');
         }
-        if (data.hasOwnProperty('applicationName')) {
-          obj['applicationName'] = _ApiClient["default"].convertToType(data['applicationName'], 'String');
+        if (data.hasOwnProperty('application_name')) {
+          obj['application_name'] = _ApiClient["default"].convertToType(data['application_name'], 'String');
         }
-        if (data.hasOwnProperty('authenticationType')) {
-          obj['authenticationType'] = _ApiClient["default"].convertToType(data['authenticationType'], 'String');
+        if (data.hasOwnProperty('authentication_type')) {
+          obj['authentication_type'] = _ApiClient["default"].convertToType(data['authentication_type'], 'String');
         }
-        if (data.hasOwnProperty('canPublish')) {
-          obj['canPublish'] = _ApiClient["default"].convertToType(data['canPublish'], 'Boolean');
+        if (data.hasOwnProperty('can_publish')) {
+          obj['can_publish'] = _ApiClient["default"].convertToType(data['can_publish'], 'Boolean');
         }
-        if (data.hasOwnProperty('canRead')) {
-          obj['canRead'] = _ApiClient["default"].convertToType(data['canRead'], 'Boolean');
+        if (data.hasOwnProperty('can_read')) {
+          obj['can_read'] = _ApiClient["default"].convertToType(data['can_read'], 'Boolean');
         }
-        if (data.hasOwnProperty('canWrite')) {
-          obj['canWrite'] = _ApiClient["default"].convertToType(data['canWrite'], 'Boolean');
+        if (data.hasOwnProperty('can_write')) {
+          obj['can_write'] = _ApiClient["default"].convertToType(data['can_write'], 'Boolean');
         }
-        if (data.hasOwnProperty('deviceScope')) {
-          obj['deviceScope'] = _ApiClient["default"].convertToType(data['deviceScope'], 'String');
+        if (data.hasOwnProperty('device_scope')) {
+          obj['device_scope'] = _ApiClient["default"].convertToType(data['device_scope'], 'String');
         }
         if (data.hasOwnProperty('login')) {
           obj['login'] = _ApiClient["default"].convertToType(data['login'], 'String');
         }
-        if (data.hasOwnProperty('merchantId')) {
-          obj['merchantId'] = _ApiClient["default"].convertToType(data['merchantId'], 'String');
+        if (data.hasOwnProperty('merchant_id')) {
+          obj['merchant_id'] = _ApiClient["default"].convertToType(data['merchant_id'], 'String');
         }
         if (data.hasOwnProperty('scopes')) {
           obj['scopes'] = _ApiClient["default"].convertToType(data['scopes'], ['String']);
@@ -93,11 +93,11 @@ var SfvbWhoamiResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('storefronts')) {
           obj['storefronts'] = _ApiClient["default"].convertToType(data['storefronts'], [_SfvbStorefront["default"]]);
         }
-        if (data.hasOwnProperty('storefrontsWithheld')) {
-          obj['storefrontsWithheld'] = _ApiClient["default"].convertToType(data['storefrontsWithheld'], 'Boolean');
+        if (data.hasOwnProperty('storefronts_withheld')) {
+          obj['storefronts_withheld'] = _ApiClient["default"].convertToType(data['storefronts_withheld'], 'Boolean');
         }
-        if (data.hasOwnProperty('userName')) {
-          obj['userName'] = _ApiClient["default"].convertToType(data['userName'], 'String');
+        if (data.hasOwnProperty('user_name')) {
+          obj['user_name'] = _ApiClient["default"].convertToType(data['user_name'], 'String');
         }
       }
       return obj;
@@ -106,45 +106,45 @@ var SfvbWhoamiResponse = /*#__PURE__*/function () {
 }();
 /**
  * True when this token resolves to a merchant user.  Preview sessions and file writes need one, because they are recorded against the person who approved the token.  Only device flow tokens resolve a user, so a plain API key will see this false.
- * @member {Boolean} actingAsUser
+ * @member {Boolean} acting_as_user
  */
-SfvbWhoamiResponse.prototype['actingAsUser'] = undefined;
+SfvbWhoamiResponse.prototype['acting_as_user'] = undefined;
 
 /**
  * Description of the application this credential belongs to.
- * @member {String} applicationName
+ * @member {String} application_name
  */
-SfvbWhoamiResponse.prototype['applicationName'] = undefined;
+SfvbWhoamiResponse.prototype['application_name'] = undefined;
 
 /**
  * How this token authenticated - Oauth2, Simple Key, Public/Private Key or Browser Key.
- * @member {String} authenticationType
+ * @member {String} authentication_type
  */
-SfvbWhoamiResponse.prototype['authenticationType'] = undefined;
+SfvbWhoamiResponse.prototype['authentication_type'] = undefined;
 
 /**
  * True when this token may write a target that is currently live - an active upsell offer, an email on a delivering flow, the active theme, the storefront root.  Never infer this; it is the difference between a draft edit and a shopper visible change.
- * @member {Boolean} canPublish
+ * @member {Boolean} can_publish
  */
-SfvbWhoamiResponse.prototype['canPublish'] = undefined;
+SfvbWhoamiResponse.prototype['can_publish'] = undefined;
 
 /**
  * True when this token may read.  Do not infer this from the requested scope name.
- * @member {Boolean} canRead
+ * @member {Boolean} can_read
  */
-SfvbWhoamiResponse.prototype['canRead'] = undefined;
+SfvbWhoamiResponse.prototype['can_read'] = undefined;
 
 /**
  * True when this token may write.  Writing a target that is not currently live needs only this.
- * @member {Boolean} canWrite
+ * @member {Boolean} can_write
  */
-SfvbWhoamiResponse.prototype['canWrite'] = undefined;
+SfvbWhoamiResponse.prototype['can_write'] = undefined;
 
 /**
  * Device scope name, when this is a device flow token.
- * @member {String} deviceScope
+ * @member {String} device_scope
  */
-SfvbWhoamiResponse.prototype['deviceScope'] = undefined;
+SfvbWhoamiResponse.prototype['device_scope'] = undefined;
 
 /**
  * Login of the user who approved this token.  Populated for device flow tokens; null for plain API key credentials.
@@ -154,9 +154,9 @@ SfvbWhoamiResponse.prototype['login'] = undefined;
 
 /**
  * Merchant id this token acts against.
- * @member {String} merchantId
+ * @member {String} merchant_id
  */
-SfvbWhoamiResponse.prototype['merchantId'] = undefined;
+SfvbWhoamiResponse.prototype['merchant_id'] = undefined;
 
 /**
  * Scopes granted to this token.
@@ -172,13 +172,13 @@ SfvbWhoamiResponse.prototype['storefronts'] = undefined;
 
 /**
  * True when storefronts was emptied because the token lacks sfvb_read, rather than because the account has none.  Without this the two look identical.
- * @member {Boolean} storefrontsWithheld
+ * @member {Boolean} storefronts_withheld
  */
-SfvbWhoamiResponse.prototype['storefrontsWithheld'] = undefined;
+SfvbWhoamiResponse.prototype['storefronts_withheld'] = undefined;
 
 /**
  * Display name of the approving user, when known.
- * @member {String} userName
+ * @member {String} user_name
  */
-SfvbWhoamiResponse.prototype['userName'] = undefined;
+SfvbWhoamiResponse.prototype['user_name'] = undefined;
 var _default = exports["default"] = SfvbWhoamiResponse;

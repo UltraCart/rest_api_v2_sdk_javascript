@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbRenderResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRenderResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbRenderResponse = /*#__PURE__*/function () {
   /**
@@ -66,8 +66,8 @@ var SfvbRenderResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('html')) {
           obj['html'] = _ApiClient["default"].convertToType(data['html'], 'String');
         }
-        if (data.hasOwnProperty('pendingTranslationCount')) {
-          obj['pendingTranslationCount'] = _ApiClient["default"].convertToType(data['pendingTranslationCount'], 'Number');
+        if (data.hasOwnProperty('pending_translation_count')) {
+          obj['pending_translation_count'] = _ApiClient["default"].convertToType(data['pending_translation_count'], 'Number');
         }
         if (data.hasOwnProperty('success')) {
           obj['success'] = _ApiClient["default"].convertToType(data['success'], 'Boolean');
@@ -97,9 +97,9 @@ SfvbRenderResponse.prototype['html'] = undefined;
 
 /**
  * Number of strings still awaiting translation in the requested language.
- * @member {Number} pendingTranslationCount
+ * @member {Number} pending_translation_count
  */
-SfvbRenderResponse.prototype['pendingTranslationCount'] = undefined;
+SfvbRenderResponse.prototype['pending_translation_count'] = undefined;
 
 /**
  * True when HTML was produced.

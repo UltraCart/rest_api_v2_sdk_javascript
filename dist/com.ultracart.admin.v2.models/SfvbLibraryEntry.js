@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbLibraryEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryEntry
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbLibraryEntry = /*#__PURE__*/function () {
   /**
@@ -68,8 +68,8 @@ var SfvbLibraryEntry = /*#__PURE__*/function () {
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
-        if (data.hasOwnProperty('libraryOid')) {
-          obj['libraryOid'] = _ApiClient["default"].convertToType(data['libraryOid'], 'Number');
+        if (data.hasOwnProperty('library_oid')) {
+          obj['library_oid'] = _ApiClient["default"].convertToType(data['library_oid'], 'Number');
         }
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
@@ -77,20 +77,20 @@ var SfvbLibraryEntry = /*#__PURE__*/function () {
         if (data.hasOwnProperty('owned')) {
           obj['owned'] = _ApiClient["default"].convertToType(data['owned'], 'Boolean');
         }
-        if (data.hasOwnProperty('referencedFiles')) {
-          obj['referencedFiles'] = _ApiClient["default"].convertToType(data['referencedFiles'], ['String']);
+        if (data.hasOwnProperty('referenced_files')) {
+          obj['referenced_files'] = _ApiClient["default"].convertToType(data['referenced_files'], ['String']);
         }
-        if (data.hasOwnProperty('screenshotKey')) {
-          obj['screenshotKey'] = _ApiClient["default"].convertToType(data['screenshotKey'], 'String');
+        if (data.hasOwnProperty('screenshot_key')) {
+          obj['screenshot_key'] = _ApiClient["default"].convertToType(data['screenshot_key'], 'String');
         }
-        if (data.hasOwnProperty('shareWithAccount')) {
-          obj['shareWithAccount'] = _ApiClient["default"].convertToType(data['shareWithAccount'], 'Boolean');
+        if (data.hasOwnProperty('share_with_account')) {
+          obj['share_with_account'] = _ApiClient["default"].convertToType(data['share_with_account'], 'Boolean');
         }
-        if (data.hasOwnProperty('thumbnailKey')) {
-          obj['thumbnailKey'] = _ApiClient["default"].convertToType(data['thumbnailKey'], 'String');
+        if (data.hasOwnProperty('thumbnail_key')) {
+          obj['thumbnail_key'] = _ApiClient["default"].convertToType(data['thumbnail_key'], 'String');
         }
-        if (data.hasOwnProperty('widgetType')) {
-          obj['widgetType'] = _ApiClient["default"].convertToType(data['widgetType'], 'String');
+        if (data.hasOwnProperty('widget_type')) {
+          obj['widget_type'] = _ApiClient["default"].convertToType(data['widget_type'], 'String');
         }
       }
       return obj;
@@ -117,9 +117,9 @@ SfvbLibraryEntry.prototype['description'] = undefined;
 
 /**
  * Library entry oid.
- * @member {Number} libraryOid
+ * @member {Number} library_oid
  */
-SfvbLibraryEntry.prototype['libraryOid'] = undefined;
+SfvbLibraryEntry.prototype['library_oid'] = undefined;
 
 /**
  * Entry name.
@@ -135,31 +135,31 @@ SfvbLibraryEntry.prototype['owned'] = undefined;
 
 /**
  * Storefront file paths this fragment references.  Installing the fragment copies them into the storefront; reading it does not.
- * @member {Array.<String>} referencedFiles
+ * @member {Array.<String>} referenced_files
  */
-SfvbLibraryEntry.prototype['referencedFiles'] = undefined;
+SfvbLibraryEntry.prototype['referenced_files'] = undefined;
 
 /**
  * S3 listing key for the large screenshot, when one has been generated.
- * @member {String} screenshotKey
+ * @member {String} screenshot_key
  */
-SfvbLibraryEntry.prototype['screenshotKey'] = undefined;
+SfvbLibraryEntry.prototype['screenshot_key'] = undefined;
 
 /**
  * True when the entry is shared across the merchant account.
- * @member {Boolean} shareWithAccount
+ * @member {Boolean} share_with_account
  */
-SfvbLibraryEntry.prototype['shareWithAccount'] = undefined;
+SfvbLibraryEntry.prototype['share_with_account'] = undefined;
 
 /**
  * S3 listing key for the medium thumbnail, when one has been generated.  Thumbnails are produced asynchronously and can lag a save by a minute or two.
- * @member {String} thumbnailKey
+ * @member {String} thumbnail_key
  */
-SfvbLibraryEntry.prototype['thumbnailKey'] = undefined;
+SfvbLibraryEntry.prototype['thumbnail_key'] = undefined;
 
 /**
  * Element type at the root of the fragment.
- * @member {String} widgetType
+ * @member {String} widget_type
  */
-SfvbLibraryEntry.prototype['widgetType'] = undefined;
+SfvbLibraryEntry.prototype['widget_type'] = undefined;
 var _default = exports["default"] = SfvbLibraryEntry;

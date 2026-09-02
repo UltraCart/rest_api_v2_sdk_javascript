@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The LibraryItemEmail model module.
  * @module com.ultracart.admin.v2.models/LibraryItemEmail
- * @version 4.1.141
+ * @version 4.1.142
  */
 var LibraryItemEmail = /*#__PURE__*/function () {
   /**

@@ -63,7 +63,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.141
+* @version 4.1.142
 */
 var SfvbApi = exports["default"] = /*#__PURE__*/function () {
   /**

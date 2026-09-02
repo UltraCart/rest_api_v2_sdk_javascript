@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbValidateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbValidateRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbValidateRequest = /*#__PURE__*/function () {
   /**
@@ -62,17 +62,17 @@ var SfvbValidateRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('cjson')) {
           obj['cjson'] = _ApiClient["default"].convertToType(data['cjson'], 'String');
         }
-        if (data.hasOwnProperty('containerName')) {
-          obj['containerName'] = _ApiClient["default"].convertToType(data['containerName'], 'String');
+        if (data.hasOwnProperty('container_name')) {
+          obj['container_name'] = _ApiClient["default"].convertToType(data['container_name'], 'String');
         }
-        if (data.hasOwnProperty('includeWarnings')) {
-          obj['includeWarnings'] = _ApiClient["default"].convertToType(data['includeWarnings'], 'Boolean');
+        if (data.hasOwnProperty('include_warnings')) {
+          obj['include_warnings'] = _ApiClient["default"].convertToType(data['include_warnings'], 'Boolean');
         }
-        if (data.hasOwnProperty('marketingEmail')) {
-          obj['marketingEmail'] = _ApiClient["default"].convertToType(data['marketingEmail'], 'Boolean');
+        if (data.hasOwnProperty('marketing_email')) {
+          obj['marketing_email'] = _ApiClient["default"].convertToType(data['marketing_email'], 'Boolean');
         }
-        if (data.hasOwnProperty('ownerType')) {
-          obj['ownerType'] = _ApiClient["default"].convertToType(data['ownerType'], 'String');
+        if (data.hasOwnProperty('owner_type')) {
+          obj['owner_type'] = _ApiClient["default"].convertToType(data['owner_type'], 'String');
         }
       }
       return obj;
@@ -87,30 +87,30 @@ SfvbValidateRequest.prototype['cjson'] = undefined;
 
 /**
  * Container name it will be stored under, for example upsell-offer or email-footer.  Some rules key off the name.
- * @member {String} containerName
+ * @member {String} container_name
  */
-SfvbValidateRequest.prototype['containerName'] = undefined;
+SfvbValidateRequest.prototype['container_name'] = undefined;
 
 /**
  * Include quality warnings as well as errors.  Defaults to true.
- * @member {Boolean} includeWarnings
+ * @member {Boolean} include_warnings
  */
-SfvbValidateRequest.prototype['includeWarnings'] = undefined;
+SfvbValidateRequest.prototype['include_warnings'] = undefined;
 
 /**
  * For email containers, whether this is a marketing email.  Marketing emails carry CAN-SPAM footer requirements that transactional emails do not.
- * @member {Boolean} marketingEmail
+ * @member {Boolean} marketing_email
  */
-SfvbValidateRequest.prototype['marketingEmail'] = undefined;
+SfvbValidateRequest.prototype['marketing_email'] = undefined;
 
 /**
  * Where this container is destined to live.  Determines which contextual rules apply.
- * @member {module:com.ultracart.admin.v2.models/SfvbValidateRequest.OwnerTypeEnum} ownerType
+ * @member {module:com.ultracart.admin.v2.models/SfvbValidateRequest.OwnerTypeEnum} owner_type
  */
-SfvbValidateRequest.prototype['ownerType'] = undefined;
+SfvbValidateRequest.prototype['owner_type'] = undefined;
 
 /**
- * Allowed values for the <code>ownerType</code> property.
+ * Allowed values for the <code>owner_type</code> property.
  * @enum {String}
  * @readonly
  */

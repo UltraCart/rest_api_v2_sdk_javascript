@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbFileEntry
- * @version 4.1.142
+ * @version 4.1.143
  */
 class SfvbFileEntry {
     /**
@@ -118,7 +118,7 @@ SfvbFileEntry.prototype['directory'] = undefined;
 SfvbFileEntry.prototype['fs_directory_oid'] = undefined;
 
 /**
- * StoreFront file system file oid.
+ * StoreFront file system file oid.  Absent on a directory entry, which has no file oid.
  * @member {Number} fs_file_oid
  */
 SfvbFileEntry.prototype['fs_file_oid'] = undefined;
@@ -184,7 +184,7 @@ SfvbFileEntry.prototype['size'] = undefined;
 SfvbFileEntry.prototype['valid'] = undefined;
 
 /**
- * Current version number of the file.
+ * Current version number of the file.  Absent on a directory entry, which is not versioned.
  * @member {Number} version
  */
 SfvbFileEntry.prototype['version'] = undefined;

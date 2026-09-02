@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileSearchResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileSearchResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbFileSearchResponse = /*#__PURE__*/function () {
   /**
@@ -63,26 +63,26 @@ var SfvbFileSearchResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('files')) {
           obj['files'] = _ApiClient["default"].convertToType(data['files'], [_SfvbFileEntry["default"]]);
         }
-        if (data.hasOwnProperty('maxResults')) {
-          obj['maxResults'] = _ApiClient["default"].convertToType(data['maxResults'], 'Number');
+        if (data.hasOwnProperty('max_results')) {
+          obj['max_results'] = _ApiClient["default"].convertToType(data['max_results'], 'Number');
         }
-        if (data.hasOwnProperty('nextOffset')) {
-          obj['nextOffset'] = _ApiClient["default"].convertToType(data['nextOffset'], 'Number');
+        if (data.hasOwnProperty('next_offset')) {
+          obj['next_offset'] = _ApiClient["default"].convertToType(data['next_offset'], 'Number');
         }
         if (data.hasOwnProperty('offset')) {
           obj['offset'] = _ApiClient["default"].convertToType(data['offset'], 'Number');
         }
-        if (data.hasOwnProperty('resultCount')) {
-          obj['resultCount'] = _ApiClient["default"].convertToType(data['resultCount'], 'Number');
+        if (data.hasOwnProperty('result_count')) {
+          obj['result_count'] = _ApiClient["default"].convertToType(data['result_count'], 'Number');
         }
-        if (data.hasOwnProperty('totalCount')) {
-          obj['totalCount'] = _ApiClient["default"].convertToType(data['totalCount'], 'Number');
+        if (data.hasOwnProperty('total_count')) {
+          obj['total_count'] = _ApiClient["default"].convertToType(data['total_count'], 'Number');
         }
         if (data.hasOwnProperty('truncated')) {
           obj['truncated'] = _ApiClient["default"].convertToType(data['truncated'], 'Boolean');
         }
-        if (data.hasOwnProperty('truncationAdvice')) {
-          obj['truncationAdvice'] = _ApiClient["default"].convertToType(data['truncationAdvice'], 'String');
+        if (data.hasOwnProperty('truncation_advice')) {
+          obj['truncation_advice'] = _ApiClient["default"].convertToType(data['truncation_advice'], 'String');
         }
       }
       return obj;
@@ -97,15 +97,15 @@ SfvbFileSearchResponse.prototype['files'] = undefined;
 
 /**
  * The cap that was applied.
- * @member {Number} maxResults
+ * @member {Number} max_results
  */
-SfvbFileSearchResponse.prototype['maxResults'] = undefined;
+SfvbFileSearchResponse.prototype['max_results'] = undefined;
 
 /**
  * Offset to send for the next page.  Zero when truncated is false.  Never truncates without giving a way to continue.
- * @member {Number} nextOffset
+ * @member {Number} next_offset
  */
-SfvbFileSearchResponse.prototype['nextOffset'] = undefined;
+SfvbFileSearchResponse.prototype['next_offset'] = undefined;
 
 /**
  * Results skipped to produce this page.
@@ -115,15 +115,15 @@ SfvbFileSearchResponse.prototype['offset'] = undefined;
 
 /**
  * Number of results returned.
- * @member {Number} resultCount
+ * @member {Number} result_count
  */
-SfvbFileSearchResponse.prototype['resultCount'] = undefined;
+SfvbFileSearchResponse.prototype['result_count'] = undefined;
 
 /**
  * Total matches found.  Available because the underlying query is unbounded and returns everything anyway; it is not evidence that fetching them all is cheap.
- * @member {Number} totalCount
+ * @member {Number} total_count
  */
-SfvbFileSearchResponse.prototype['totalCount'] = undefined;
+SfvbFileSearchResponse.prototype['total_count'] = undefined;
 
 /**
  * True when matches exist beyond this page.  next_offset is populated when it is.
@@ -133,7 +133,7 @@ SfvbFileSearchResponse.prototype['truncated'] = undefined;
 
 /**
  * Advice for the caller when truncated is true.
- * @member {String} truncationAdvice
+ * @member {String} truncation_advice
  */
-SfvbFileSearchResponse.prototype['truncationAdvice'] = undefined;
+SfvbFileSearchResponse.prototype['truncation_advice'] = undefined;
 var _default = exports["default"] = SfvbFileSearchResponse;

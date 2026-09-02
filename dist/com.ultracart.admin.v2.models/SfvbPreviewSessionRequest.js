@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbPreviewSessionRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewSessionRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbPreviewSessionRequest = /*#__PURE__*/function () {
   /**
@@ -62,8 +62,8 @@ var SfvbPreviewSessionRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('containers')) {
           obj['containers'] = _ApiClient["default"].convertToType(data['containers'], Object);
         }
-        if (data.hasOwnProperty('themeOid')) {
-          obj['themeOid'] = _ApiClient["default"].convertToType(data['themeOid'], 'Number');
+        if (data.hasOwnProperty('theme_oid')) {
+          obj['theme_oid'] = _ApiClient["default"].convertToType(data['theme_oid'], 'Number');
         }
       }
       return obj;
@@ -78,7 +78,7 @@ SfvbPreviewSessionRequest.prototype['containers'] = undefined;
 
 /**
  * Theme to compile against.  Supplies the inherit groups configuration.  Defaults to the active theme.
- * @member {Number} themeOid
+ * @member {Number} theme_oid
  */
-SfvbPreviewSessionRequest.prototype['themeOid'] = undefined;
+SfvbPreviewSessionRequest.prototype['theme_oid'] = undefined;
 var _default = exports["default"] = SfvbPreviewSessionRequest;

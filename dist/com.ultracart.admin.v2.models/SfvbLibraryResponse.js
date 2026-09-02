@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbLibraryResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbLibraryResponse = /*#__PURE__*/function () {
   /**
@@ -64,20 +64,20 @@ var SfvbLibraryResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('facets')) {
           obj['facets'] = _ApiClient["default"].convertToType(data['facets'], [_SfvbLibraryFacet["default"]]);
         }
-        if (data.hasOwnProperty('firstResultNumber')) {
-          obj['firstResultNumber'] = _ApiClient["default"].convertToType(data['firstResultNumber'], 'Number');
+        if (data.hasOwnProperty('first_result_number')) {
+          obj['first_result_number'] = _ApiClient["default"].convertToType(data['first_result_number'], 'Number');
         }
-        if (data.hasOwnProperty('lastResultNumber')) {
-          obj['lastResultNumber'] = _ApiClient["default"].convertToType(data['lastResultNumber'], 'Number');
+        if (data.hasOwnProperty('last_result_number')) {
+          obj['last_result_number'] = _ApiClient["default"].convertToType(data['last_result_number'], 'Number');
         }
         if (data.hasOwnProperty('results')) {
           obj['results'] = _ApiClient["default"].convertToType(data['results'], [_SfvbLibraryEntry["default"]]);
         }
-        if (data.hasOwnProperty('totalPages')) {
-          obj['totalPages'] = _ApiClient["default"].convertToType(data['totalPages'], 'Number');
+        if (data.hasOwnProperty('total_pages')) {
+          obj['total_pages'] = _ApiClient["default"].convertToType(data['total_pages'], 'Number');
         }
-        if (data.hasOwnProperty('totalResults')) {
-          obj['totalResults'] = _ApiClient["default"].convertToType(data['totalResults'], 'Number');
+        if (data.hasOwnProperty('total_results')) {
+          obj['total_results'] = _ApiClient["default"].convertToType(data['total_results'], 'Number');
         }
       }
       return obj;
@@ -92,15 +92,15 @@ SfvbLibraryResponse.prototype['facets'] = undefined;
 
 /**
  * 1-indexed position of the first result on this page.
- * @member {Number} firstResultNumber
+ * @member {Number} first_result_number
  */
-SfvbLibraryResponse.prototype['firstResultNumber'] = undefined;
+SfvbLibraryResponse.prototype['first_result_number'] = undefined;
 
 /**
  * 1-indexed position of the last result on this page.
- * @member {Number} lastResultNumber
+ * @member {Number} last_result_number
  */
-SfvbLibraryResponse.prototype['lastResultNumber'] = undefined;
+SfvbLibraryResponse.prototype['last_result_number'] = undefined;
 
 /**
  * Matching library entries, without their CJSON.  Fetch a single entry to get the fragment itself.
@@ -110,13 +110,13 @@ SfvbLibraryResponse.prototype['results'] = undefined;
 
 /**
  * Total pages available.
- * @member {Number} totalPages
+ * @member {Number} total_pages
  */
-SfvbLibraryResponse.prototype['totalPages'] = undefined;
+SfvbLibraryResponse.prototype['total_pages'] = undefined;
 
 /**
  * Total matches across all pages.
- * @member {Number} totalResults
+ * @member {Number} total_results
  */
-SfvbLibraryResponse.prototype['totalResults'] = undefined;
+SfvbLibraryResponse.prototype['total_results'] = undefined;
 var _default = exports["default"] = SfvbLibraryResponse;

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileContentResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileContentResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbFileContentResponse = /*#__PURE__*/function () {
   /**
@@ -59,20 +59,20 @@ var SfvbFileContentResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbFileContentResponse();
-        if (data.hasOwnProperty('autoCompiled')) {
-          obj['autoCompiled'] = _ApiClient["default"].convertToType(data['autoCompiled'], 'Boolean');
+        if (data.hasOwnProperty('auto_compiled')) {
+          obj['auto_compiled'] = _ApiClient["default"].convertToType(data['auto_compiled'], 'Boolean');
         }
         if (data.hasOwnProperty('content')) {
           obj['content'] = _ApiClient["default"].convertToType(data['content'], 'String');
         }
-        if (data.hasOwnProperty('fsFileOid')) {
-          obj['fsFileOid'] = _ApiClient["default"].convertToType(data['fsFileOid'], 'Number');
+        if (data.hasOwnProperty('fs_file_oid')) {
+          obj['fs_file_oid'] = _ApiClient["default"].convertToType(data['fs_file_oid'], 'Number');
         }
-        if (data.hasOwnProperty('hashSha256')) {
-          obj['hashSha256'] = _ApiClient["default"].convertToType(data['hashSha256'], 'String');
+        if (data.hasOwnProperty('hash_sha256')) {
+          obj['hash_sha256'] = _ApiClient["default"].convertToType(data['hash_sha256'], 'String');
         }
-        if (data.hasOwnProperty('mimeType')) {
-          obj['mimeType'] = _ApiClient["default"].convertToType(data['mimeType'], 'String');
+        if (data.hasOwnProperty('mime_type')) {
+          obj['mime_type'] = _ApiClient["default"].convertToType(data['mime_type'], 'String');
         }
         if (data.hasOwnProperty('path')) {
           obj['path'] = _ApiClient["default"].convertToType(data['path'], 'String');
@@ -86,8 +86,8 @@ var SfvbFileContentResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('valid')) {
           obj['valid'] = _ApiClient["default"].convertToType(data['valid'], 'Boolean');
         }
-        if (data.hasOwnProperty('velocityErrors')) {
-          obj['velocityErrors'] = _ApiClient["default"].convertToType(data['velocityErrors'], 'String');
+        if (data.hasOwnProperty('velocity_errors')) {
+          obj['velocity_errors'] = _ApiClient["default"].convertToType(data['velocity_errors'], 'String');
         }
         if (data.hasOwnProperty('version')) {
           obj['version'] = _ApiClient["default"].convertToType(data['version'], 'Number');
@@ -99,9 +99,9 @@ var SfvbFileContentResponse = /*#__PURE__*/function () {
 }();
 /**
  * True when this file is compiler output and must not be edited directly.
- * @member {Boolean} autoCompiled
+ * @member {Boolean} auto_compiled
  */
-SfvbFileContentResponse.prototype['autoCompiled'] = undefined;
+SfvbFileContentResponse.prototype['auto_compiled'] = undefined;
 
 /**
  * UTF-8 content.  Only text/_* files can be read this way.
@@ -111,21 +111,21 @@ SfvbFileContentResponse.prototype['content'] = undefined;
 
 /**
  * StoreFront file system file oid.
- * @member {Number} fsFileOid
+ * @member {Number} fs_file_oid
  */
-SfvbFileContentResponse.prototype['fsFileOid'] = undefined;
+SfvbFileContentResponse.prototype['fs_file_oid'] = undefined;
 
 /**
  * SHA-256 of the content.  Also returned as the ETag header; send it back as If-Match when writing.
- * @member {String} hashSha256
+ * @member {String} hash_sha256
  */
-SfvbFileContentResponse.prototype['hashSha256'] = undefined;
+SfvbFileContentResponse.prototype['hash_sha256'] = undefined;
 
 /**
  * Mime type.
- * @member {String} mimeType
+ * @member {String} mime_type
  */
-SfvbFileContentResponse.prototype['mimeType'] = undefined;
+SfvbFileContentResponse.prototype['mime_type'] = undefined;
 
 /**
  * Full path of the file.
@@ -153,9 +153,9 @@ SfvbFileContentResponse.prototype['valid'] = undefined;
 
 /**
  * Velocity errors recorded on the last write.  Null when valid.
- * @member {String} velocityErrors
+ * @member {String} velocity_errors
  */
-SfvbFileContentResponse.prototype['velocityErrors'] = undefined;
+SfvbFileContentResponse.prototype['velocity_errors'] = undefined;
 
 /**
  * Version number of the content returned.

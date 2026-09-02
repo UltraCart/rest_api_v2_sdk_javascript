@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbElement model module.
  * @module com.ultracart.admin.v2.models/SfvbElement
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbElement = /*#__PURE__*/function () {
   /**
@@ -59,8 +59,8 @@ var SfvbElement = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbElement();
-        if (data.hasOwnProperty('schemaAvailable')) {
-          obj['schemaAvailable'] = _ApiClient["default"].convertToType(data['schemaAvailable'], 'Boolean');
+        if (data.hasOwnProperty('schema_available')) {
+          obj['schema_available'] = _ApiClient["default"].convertToType(data['schema_available'], 'Boolean');
         }
         if (data.hasOwnProperty('type')) {
           obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
@@ -72,9 +72,9 @@ var SfvbElement = /*#__PURE__*/function () {
 }();
 /**
  * True when a per element configuration schema is available from elements/{element_type}.
- * @member {Boolean} schemaAvailable
+ * @member {Boolean} schema_available
  */
-SfvbElement.prototype['schemaAvailable'] = undefined;
+SfvbElement.prototype['schema_available'] = undefined;
 
 /**
  * The element type as it appears in the type property of a CJSON node.

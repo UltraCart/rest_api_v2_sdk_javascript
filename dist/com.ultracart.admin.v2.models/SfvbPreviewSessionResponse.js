@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbPreviewSessionResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewSessionResponse
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbPreviewSessionResponse = /*#__PURE__*/function () {
   /**
@@ -60,26 +60,26 @@ var SfvbPreviewSessionResponse = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbPreviewSessionResponse();
-        if (data.hasOwnProperty('bytesStored')) {
-          obj['bytesStored'] = _ApiClient["default"].convertToType(data['bytesStored'], 'Number');
+        if (data.hasOwnProperty('bytes_stored')) {
+          obj['bytes_stored'] = _ApiClient["default"].convertToType(data['bytes_stored'], 'Number');
         }
-        if (data.hasOwnProperty('expiresInSeconds')) {
-          obj['expiresInSeconds'] = _ApiClient["default"].convertToType(data['expiresInSeconds'], 'Number');
+        if (data.hasOwnProperty('expires_in_seconds')) {
+          obj['expires_in_seconds'] = _ApiClient["default"].convertToType(data['expires_in_seconds'], 'Number');
         }
-        if (data.hasOwnProperty('maxBytes')) {
-          obj['maxBytes'] = _ApiClient["default"].convertToType(data['maxBytes'], 'Number');
+        if (data.hasOwnProperty('max_bytes')) {
+          obj['max_bytes'] = _ApiClient["default"].convertToType(data['max_bytes'], 'Number');
         }
-        if (data.hasOwnProperty('ownerLogin')) {
-          obj['ownerLogin'] = _ApiClient["default"].convertToType(data['ownerLogin'], 'String');
+        if (data.hasOwnProperty('owner_login')) {
+          obj['owner_login'] = _ApiClient["default"].convertToType(data['owner_login'], 'String');
         }
-        if (data.hasOwnProperty('previewSessionId')) {
-          obj['previewSessionId'] = _ApiClient["default"].convertToType(data['previewSessionId'], 'String');
+        if (data.hasOwnProperty('preview_session_id')) {
+          obj['preview_session_id'] = _ApiClient["default"].convertToType(data['preview_session_id'], 'String');
         }
         if (data.hasOwnProperty('skipped')) {
           obj['skipped'] = _ApiClient["default"].convertToType(data['skipped'], [_SfvbErrorDetail["default"]]);
         }
-        if (data.hasOwnProperty('storedKeys')) {
-          obj['storedKeys'] = _ApiClient["default"].convertToType(data['storedKeys'], ['String']);
+        if (data.hasOwnProperty('stored_keys')) {
+          obj['stored_keys'] = _ApiClient["default"].convertToType(data['stored_keys'], ['String']);
         }
       }
       return obj;
@@ -88,33 +88,33 @@ var SfvbPreviewSessionResponse = /*#__PURE__*/function () {
 }();
 /**
  * Bytes stored in this session by the request that returned this response.
- * @member {Number} bytesStored
+ * @member {Number} bytes_stored
  */
-SfvbPreviewSessionResponse.prototype['bytesStored'] = undefined;
+SfvbPreviewSessionResponse.prototype['bytes_stored'] = undefined;
 
 /**
  * Seconds until this session expires.
- * @member {Number} expiresInSeconds
+ * @member {Number} expires_in_seconds
  */
-SfvbPreviewSessionResponse.prototype['expiresInSeconds'] = undefined;
+SfvbPreviewSessionResponse.prototype['expires_in_seconds'] = undefined;
 
 /**
  * Maximum bytes one preview session may hold.
- * @member {Number} maxBytes
+ * @member {Number} max_bytes
  */
-SfvbPreviewSessionResponse.prototype['maxBytes'] = undefined;
+SfvbPreviewSessionResponse.prototype['max_bytes'] = undefined;
 
 /**
  * Login this session belongs to.  Sessions are keyed by user, not by token.
- * @member {String} ownerLogin
+ * @member {String} owner_login
  */
-SfvbPreviewSessionResponse.prototype['ownerLogin'] = undefined;
+SfvbPreviewSessionResponse.prototype['owner_login'] = undefined;
 
 /**
  * The preview session id.
- * @member {String} previewSessionId
+ * @member {String} preview_session_id
  */
-SfvbPreviewSessionResponse.prototype['previewSessionId'] = undefined;
+SfvbPreviewSessionResponse.prototype['preview_session_id'] = undefined;
 
 /**
  * Containers that were sent but could not be stored, with the reason.
@@ -124,7 +124,7 @@ SfvbPreviewSessionResponse.prototype['skipped'] = undefined;
 
 /**
  * Preview map keys that were stored.  A container whose owner type could not be resolved is silently dropped by the underlying store, so compare this against what you sent.
- * @member {Array.<String>} storedKeys
+ * @member {Array.<String>} stored_keys
  */
-SfvbPreviewSessionResponse.prototype['storedKeys'] = undefined;
+SfvbPreviewSessionResponse.prototype['stored_keys'] = undefined;
 var _default = exports["default"] = SfvbPreviewSessionResponse;

@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFileWriteRequest
- * @version 4.1.141
+ * @version 4.1.142
  */
 var SfvbFileWriteRequest = /*#__PURE__*/function () {
   /**
@@ -65,8 +65,8 @@ var SfvbFileWriteRequest = /*#__PURE__*/function () {
         if (data.hasOwnProperty('content')) {
           obj['content'] = _ApiClient["default"].convertToType(data['content'], 'String');
         }
-        if (data.hasOwnProperty('createIfMissing')) {
-          obj['createIfMissing'] = _ApiClient["default"].convertToType(data['createIfMissing'], 'Boolean');
+        if (data.hasOwnProperty('create_if_missing')) {
+          obj['create_if_missing'] = _ApiClient["default"].convertToType(data['create_if_missing'], 'Boolean');
         }
       }
       return obj;
@@ -87,7 +87,7 @@ SfvbFileWriteRequest.prototype['content'] = undefined;
 
 /**
  * Create the file if it does not exist.  Defaults to true.
- * @member {Boolean} createIfMissing
+ * @member {Boolean} create_if_missing
  */
-SfvbFileWriteRequest.prototype['createIfMissing'] = undefined;
+SfvbFileWriteRequest.prototype['create_if_missing'] = undefined;
 var _default = exports["default"] = SfvbFileWriteRequest;
