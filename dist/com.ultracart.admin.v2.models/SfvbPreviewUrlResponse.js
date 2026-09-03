@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbPreviewUrlResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewUrlResponse
- * @version 4.1.144
+ * @version 4.1.145
  */
 var SfvbPreviewUrlResponse = /*#__PURE__*/function () {
   /**
@@ -116,7 +116,7 @@ SfvbPreviewUrlResponse.prototype['preview_url'] = undefined;
 SfvbPreviewUrlResponse.prototype['requires_browser_session'] = undefined;
 
 /**
- * Always false.  The session is keyed by individual login, so anyone else opening this URL sees the live page rather than the preview.
+ * The session is keyed by individual login, so anyone else opening this URL sees the live page rather than the preview.  This is false in every response, which means it is absent from the JSON - false booleans are omitted across this API, so a generated client sees undefined rather than false.  Do not test it for equality with false.  usage_note carries the same warning as a string and does survive.
  * @member {Boolean} shareable
  */
 SfvbPreviewUrlResponse.prototype['shareable'] = undefined;

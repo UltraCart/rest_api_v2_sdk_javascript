@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbFileSearchRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFileSearchRequest
- * @version 4.1.144
+ * @version 4.1.145
  */
 var SfvbFileSearchRequest = /*#__PURE__*/function () {
   /**

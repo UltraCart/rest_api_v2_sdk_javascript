@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The HTTPHeader model module.
  * @module com.ultracart.admin.v2.models/HTTPHeader
- * @version 4.1.144
+ * @version 4.1.145
  */
 var HTTPHeader = /*#__PURE__*/function () {
   /**

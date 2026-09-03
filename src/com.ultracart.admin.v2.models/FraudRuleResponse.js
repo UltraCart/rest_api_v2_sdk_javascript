@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The FraudRuleResponse model module.
  * @module com.ultracart.admin.v2.models/FraudRuleResponse
- * @version 4.1.145
+ * @version 4.1.146
  */
 class FraudRuleResponse {
     /**

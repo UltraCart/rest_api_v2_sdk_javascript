@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerResponse
- * @version 4.1.145
+ * @version 4.1.146
  */
 class SfvbContainerResponse {
     /**
@@ -47,14 +47,8 @@ class SfvbContainerResponse {
         if (data) {
             obj = obj || new SfvbContainerResponse();
 
-            if (data.hasOwnProperty('active_theme')) {
-                obj['active_theme'] = ApiClient.convertToType(data['active_theme'], 'Boolean');
-            }
             if (data.hasOwnProperty('cjson')) {
                 obj['cjson'] = ApiClient.convertToType(data['cjson'], 'String');
-            }
-            if (data.hasOwnProperty('container_id')) {
-                obj['container_id'] = ApiClient.convertToType(data['container_id'], 'String');
             }
             if (data.hasOwnProperty('container_name')) {
                 obj['container_name'] = ApiClient.convertToType(data['container_name'], 'String');
@@ -71,12 +65,6 @@ class SfvbContainerResponse {
             if (data.hasOwnProperty('owner_type')) {
                 obj['owner_type'] = ApiClient.convertToType(data['owner_type'], 'String');
             }
-            if (data.hasOwnProperty('path')) {
-                obj['path'] = ApiClient.convertToType(data['path'], 'String');
-            }
-            if (data.hasOwnProperty('version')) {
-                obj['version'] = ApiClient.convertToType(data['version'], 'Number');
-            }
         }
         return obj;
     }
@@ -85,22 +73,10 @@ class SfvbContainerResponse {
 }
 
 /**
- * True when this container lives in the theme currently serving live traffic.  Writing to it requires the sfvb_publish scope.
- * @member {Boolean} active_theme
- */
-SfvbContainerResponse.prototype['active_theme'] = undefined;
-
-/**
  * The container JSON.  Runtime state is stripped on the way out.
  * @member {String} cjson
  */
 SfvbContainerResponse.prototype['cjson'] = undefined;
-
-/**
- * Container id as the compiler will derive it.
- * @member {String} container_id
- */
-SfvbContainerResponse.prototype['container_id'] = undefined;
 
 /**
  * Container name.
@@ -115,7 +91,7 @@ SfvbContainerResponse.prototype['container_name'] = undefined;
 SfvbContainerResponse.prototype['hash_sha256'] = undefined;
 
 /**
- * When the container was last modified, where the store records it.
+ * When the container was last modified, in the store's own record of it.  Present for email, postcardfront and postcardback.  Absent for upsell and item, because those tables carry no modification timestamp at all - for those two, read created_dts on the current entry of container_versions, which records when this API last wrote the container.  Note that a postcard keeps one timestamp for both of its sides, so writing the front moves the value the back reports.
  * @member {String} last_modified
  */
 SfvbContainerResponse.prototype['last_modified'] = undefined;
@@ -131,18 +107,6 @@ SfvbContainerResponse.prototype['owner_object_id'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbContainerResponse.OwnerTypeEnum} owner_type
  */
 SfvbContainerResponse.prototype['owner_type'] = undefined;
-
-/**
- * File path, for theme and page containers only.
- * @member {String} path
- */
-SfvbContainerResponse.prototype['path'] = undefined;
-
-/**
- * File version, for theme and page containers only.
- * @member {Number} version
- */
-SfvbContainerResponse.prototype['version'] = undefined;
 
 
 
