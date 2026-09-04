@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallSearchRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallSearchRequest
- * @version 4.1.149
+ * @version 4.1.150
  */
 class ConversationPbxCallSearchRequest {
     /**

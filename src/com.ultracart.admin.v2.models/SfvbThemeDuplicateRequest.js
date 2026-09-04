@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbThemeDuplicateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest
- * @version 4.1.149
+ * @version 4.1.150
  */
 class SfvbThemeDuplicateRequest {
     /**

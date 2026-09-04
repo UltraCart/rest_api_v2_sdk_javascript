@@ -30,7 +30,7 @@ import OrderResponse from '../com.ultracart.admin.v2.models/OrderResponse';
 /**
 * ChannelPartner service.
 * @module com.ultracart.admin.v2/ChannelPartnerApi
-* @version 4.1.149
+* @version 4.1.150
 */
 export default class ChannelPartnerApi {
 

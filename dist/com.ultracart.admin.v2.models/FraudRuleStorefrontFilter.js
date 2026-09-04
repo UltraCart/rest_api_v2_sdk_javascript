@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FraudRuleStorefrontFilter model module.
  * @module com.ultracart.admin.v2.models/FraudRuleStorefrontFilter
- * @version 4.1.148
+ * @version 4.1.149
  */
 var FraudRuleStorefrontFilter = /*#__PURE__*/function () {
   /**

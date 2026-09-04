@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.148
+ * @version 4.1.149
  */
 var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
   /**
@@ -71,7 +71,7 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
           obj['cancel_subscription'] = _ApiClient["default"].convertToType(data['cancel_subscription'], 'Boolean');
         }
         if (data.hasOwnProperty('custom_collection_oids')) {
-          obj['custom_collection_oids'] = _ApiClient["default"].convertToType(data['custom_collection_oids'], Object);
+          obj['custom_collection_oids'] = _ApiClient["default"].convertToType(data['custom_collection_oids'], ['Number']);
         }
         if (data.hasOwnProperty('custom_collections')) {
           obj['custom_collections'] = _ApiClient["default"].convertToType(data['custom_collections'], [_ConversationVirtualAgentCapabilityCustomCollection["default"]]);
@@ -142,7 +142,7 @@ ConversationVirtualAgentCapabilities.prototype['cancel_subscription'] = undefine
 
 /**
  * The custom collections this Agent is allowed to search.  Empty means none, even when access_custom_collections is true.
- * @member {Object} custom_collection_oids
+ * @member {Array.<Number>} custom_collection_oids
  */
 ConversationVirtualAgentCapabilities.prototype['custom_collection_oids'] = undefined;
 

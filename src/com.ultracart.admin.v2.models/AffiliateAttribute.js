@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateAttribute model module.
  * @module com.ultracart.admin.v2.models/AffiliateAttribute
- * @version 4.1.149
+ * @version 4.1.150
  */
 class AffiliateAttribute {
     /**
