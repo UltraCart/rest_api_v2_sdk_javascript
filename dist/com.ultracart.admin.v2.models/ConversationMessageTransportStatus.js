@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationMessageTransportStatus model module.
  * @module com.ultracart.admin.v2.models/ConversationMessageTransportStatus
- * @version 4.1.149
+ * @version 4.1.150
  */
 var ConversationMessageTransportStatus = /*#__PURE__*/function () {
   /**

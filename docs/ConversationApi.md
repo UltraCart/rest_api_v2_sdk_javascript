@@ -107,6 +107,7 @@ Method | HTTP request | Description
 [**insertPbxTimeRange**](ConversationApi.md#insertPbxTimeRange) | **POST** /conversation/pbx/time_range | Insert pbx timeRange
 [**insertPbxVoicemailMailbox**](ConversationApi.md#insertPbxVoicemailMailbox) | **POST** /conversation/pbx/voicemail_mailbox | Insert pbx voicemailMailbox
 [**insertUserPbxAudio**](ConversationApi.md#insertUserPbxAudio) | **POST** /conversation/pbx/audio/user | Insert user pbx audio
+[**joinAgentTestSession**](ConversationApi.md#joinAgentTestSession) | **PUT** /conversation/agent/profiles/{user_id}/test_session/{conversation_uuid}/join | Join a test conversation as the simulated customer
 [**joinConversation**](ConversationApi.md#joinConversation) | **PUT** /conversation/conversations/{conversation_uuid}/join | Join a conversation
 [**leaveConversation**](ConversationApi.md#leaveConversation) | **DELETE** /conversation/conversations/{conversation_uuid}/leave | Leave a conversation
 [**listenedPbxAgentVoicemail**](ConversationApi.md#listenedPbxAgentVoicemail) | **GET** /conversation/pbx/agent/voicemails/{recording_sid}/listened | Listened Agent Voicemail
@@ -122,6 +123,7 @@ Method | HTTP request | Description
 [**searchPbxAvailablePhoneNumbers**](ConversationApi.md#searchPbxAvailablePhoneNumbers) | **GET** /conversation/pbx/phone_number/search | Search for available phone numbers
 [**searchPbxCalls**](ConversationApi.md#searchPbxCalls) | **POST** /conversation/pbx/call/search | Search pbx call records
 [**smsUnsubscribeConversation**](ConversationApi.md#smsUnsubscribeConversation) | **PUT** /conversation/conversations/{conversation_uuid}/sms_unsubscribe | Unsubscribe any SMS participants in this conversation
+[**startAgentTestSession**](ConversationApi.md#startAgentTestSession) | **PUT** /conversation/agent/profiles/{user_id}/test_session | Start a test conversation with this AI agent
 [**startConversation**](ConversationApi.md#startConversation) | **PUT** /conversation/conversations | Start a conversation
 [**updateAgentProfile**](ConversationApi.md#updateAgentProfile) | **PUT** /conversation/agent/profile | Update agent profile
 [**updateAgentProfileMcp**](ConversationApi.md#updateAgentProfileMcp) | **POST** /conversation/agent/profiles/{user_id}/mcps/{mcp_server_uuid} | Update an agent MCP server
@@ -5752,6 +5754,65 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## joinAgentTestSession
+
+> joinAgentTestSession(user_id, conversation_uuid, join_request)
+
+Join a test conversation as the simulated customer
+
+Joins the simulated customer to the conversation the agent opened for a test session.  This mirrors what the storefront webchat widget does after an agent picks up its queue entry, and it is what gives the conversation a customer participant.  Requires a logged in user with conversations admin; an API key or OAuth application cannot call this. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE joinAgentTestSession -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let user_id = 56; // Number | 
+let conversation_uuid = "conversation_uuid_example"; // String | 
+let join_request = new UltraCartRestApiV2.ConversationAgentTestSessionJoinRequest(); // ConversationAgentTestSessionJoinRequest | Test session join request
+apiInstance.joinAgentTestSession(user_id, conversation_uuid, join_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE joinAgentTestSession -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Number**|  | 
+ **conversation_uuid** | **String**|  | 
+ **join_request** | [**ConversationAgentTestSessionJoinRequest**](ConversationAgentTestSessionJoinRequest.md)| Test session join request | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## joinConversation
 
 > joinConversation(conversation_uuid, opts)
@@ -6610,6 +6671,63 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## startAgentTestSession
+
+> ConversationAgentTestSessionResponse startAgentTestSession(user_id, test_session_request)
+
+Start a test conversation with this AI agent
+
+Opens a webchat conversation against this specific AI agent as if the given customer had started it from the storefront, so the agent can be tried out before it is put in front of anyone.  The session runs against live data: the cart is real, the customer is real, and anything the agent does during the conversation actually happens.  Requires a logged in user with conversations admin; an API key or OAuth application cannot call this. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE startAgentTestSession -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.ConversationApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let user_id = 56; // Number | 
+let test_session_request = new UltraCartRestApiV2.ConversationAgentTestSessionRequest(); // ConversationAgentTestSessionRequest | Test session request
+apiInstance.startAgentTestSession(user_id, test_session_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE startAgentTestSession -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Number**|  | 
+ **test_session_request** | [**ConversationAgentTestSessionRequest**](ConversationAgentTestSessionRequest.md)| Test session request | 
+
+### Return type
+
+[**ConversationAgentTestSessionResponse**](ConversationAgentTestSessionResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

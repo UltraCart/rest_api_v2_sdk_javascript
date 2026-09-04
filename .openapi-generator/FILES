@@ -185,6 +185,9 @@ docs/ConversationAgentStatusRollupSearchRequest.md
 docs/ConversationAgentStatusRollupSearchResponse.md
 docs/ConversationAgentStatusSummaryResponse.md
 docs/ConversationAgentStatusTimelineResponse.md
+docs/ConversationAgentTestSessionJoinRequest.md
+docs/ConversationAgentTestSessionRequest.md
+docs/ConversationAgentTestSessionResponse.md
 docs/ConversationApi.md
 docs/ConversationAutocompleteRequest.md
 docs/ConversationAutocompleteResponse.md
@@ -193,6 +196,7 @@ docs/ConversationCannedMessage.md
 docs/ConversationCannedMessageResponse.md
 docs/ConversationCannedMessagesResponse.md
 docs/ConversationCannedMessagesSearch.md
+docs/ConversationCustomerAuth.md
 docs/ConversationDeleteKnowledgeBaseDocumentResponse.md
 docs/ConversationDepartment.md
 docs/ConversationDepartmentMember.md
@@ -1298,6 +1302,9 @@ src/com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchRequest.js
 src/com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse.js
 src/com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse.js
 src/com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse.js
+src/com.ultracart.admin.v2.models/ConversationAgentTestSessionJoinRequest.js
+src/com.ultracart.admin.v2.models/ConversationAgentTestSessionRequest.js
+src/com.ultracart.admin.v2.models/ConversationAgentTestSessionResponse.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteRequest.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteResponse.js
 src/com.ultracart.admin.v2.models/ConversationAutocompleteValue.js
@@ -1305,6 +1312,7 @@ src/com.ultracart.admin.v2.models/ConversationCannedMessage.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessageResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesResponse.js
 src/com.ultracart.admin.v2.models/ConversationCannedMessagesSearch.js
+src/com.ultracart.admin.v2.models/ConversationCustomerAuth.js
 src/com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse.js
 src/com.ultracart.admin.v2.models/ConversationDepartment.js
 src/com.ultracart.admin.v2.models/ConversationDepartmentMember.js

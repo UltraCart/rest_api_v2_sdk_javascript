@@ -21,7 +21,7 @@ import AutoOrderProperty from './AutoOrderProperty';
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.1.150
+ * @version 4.1.151
  */
 class AutoOrderItem {
     /**

@@ -191,6 +191,9 @@ import ConversationAgentStatusRollupSearchRequest from './com.ultracart.admin.v2
 import ConversationAgentStatusRollupSearchResponse from './com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse';
 import ConversationAgentStatusSummaryResponse from './com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse';
 import ConversationAgentStatusTimelineResponse from './com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse';
+import ConversationAgentTestSessionJoinRequest from './com.ultracart.admin.v2.models/ConversationAgentTestSessionJoinRequest';
+import ConversationAgentTestSessionRequest from './com.ultracart.admin.v2.models/ConversationAgentTestSessionRequest';
+import ConversationAgentTestSessionResponse from './com.ultracart.admin.v2.models/ConversationAgentTestSessionResponse';
 import ConversationAutocompleteRequest from './com.ultracart.admin.v2.models/ConversationAutocompleteRequest';
 import ConversationAutocompleteResponse from './com.ultracart.admin.v2.models/ConversationAutocompleteResponse';
 import ConversationAutocompleteValue from './com.ultracart.admin.v2.models/ConversationAutocompleteValue';
@@ -198,6 +201,7 @@ import ConversationCannedMessage from './com.ultracart.admin.v2.models/Conversat
 import ConversationCannedMessageResponse from './com.ultracart.admin.v2.models/ConversationCannedMessageResponse';
 import ConversationCannedMessagesResponse from './com.ultracart.admin.v2.models/ConversationCannedMessagesResponse';
 import ConversationCannedMessagesSearch from './com.ultracart.admin.v2.models/ConversationCannedMessagesSearch';
+import ConversationCustomerAuth from './com.ultracart.admin.v2.models/ConversationCustomerAuth';
 import ConversationDeleteKnowledgeBaseDocumentResponse from './com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse';
 import ConversationDepartment from './com.ultracart.admin.v2.models/ConversationDepartment';
 import ConversationDepartmentMember from './com.ultracart.admin.v2.models/ConversationDepartmentMember';
@@ -1158,7 +1162,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.150
+* @version 4.1.151
 */
 export {
     /**
@@ -2236,6 +2240,24 @@ export {
     ConversationAgentStatusTimelineResponse,
 
     /**
+     * The ConversationAgentTestSessionJoinRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentTestSessionJoinRequest}
+     */
+    ConversationAgentTestSessionJoinRequest,
+
+    /**
+     * The ConversationAgentTestSessionRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentTestSessionRequest}
+     */
+    ConversationAgentTestSessionRequest,
+
+    /**
+     * The ConversationAgentTestSessionResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationAgentTestSessionResponse}
+     */
+    ConversationAgentTestSessionResponse,
+
+    /**
      * The ConversationAutocompleteRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/ConversationAutocompleteRequest}
      */
@@ -2276,6 +2298,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationCannedMessagesSearch}
      */
     ConversationCannedMessagesSearch,
+
+    /**
+     * The ConversationCustomerAuth model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationCustomerAuth}
+     */
+    ConversationCustomerAuth,
 
     /**
      * The ConversationDeleteKnowledgeBaseDocumentResponse model constructor.

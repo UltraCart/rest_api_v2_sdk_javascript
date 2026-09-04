@@ -29,7 +29,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The AdjustLoyaltyPointsResponse model module.
  * @module com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse
- * @version 4.1.149
+ * @version 4.1.150
  */
 var AdjustLoyaltyPointsResponse = /*#__PURE__*/function () {
   /**

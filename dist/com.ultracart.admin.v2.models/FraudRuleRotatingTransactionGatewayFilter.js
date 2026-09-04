@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The FraudRuleRotatingTransactionGatewayFilter model module.
  * @module com.ultracart.admin.v2.models/FraudRuleRotatingTransactionGatewayFilter
- * @version 4.1.149
+ * @version 4.1.150
  */
 var FraudRuleRotatingTransactionGatewayFilter = /*#__PURE__*/function () {
   /**
