@@ -334,6 +334,7 @@ import ConversationVirtualAgentBudget from './com.ultracart.admin.v2.models/Conv
 import ConversationVirtualAgentBudgetResponse from './com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse';
 import ConversationVirtualAgentCapabilities from './com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities';
 import ConversationVirtualAgentCapabilitiesResponse from './com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse';
+import ConversationVirtualAgentCapabilityCustomCollection from './com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityCustomCollection';
 import ConversationVirtualAgentCapabilityZohoDeskDepartment from './com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment';
 import ConversationWebchatContext from './com.ultracart.admin.v2.models/ConversationWebchatContext';
 import ConversationWebchatQueueStatus from './com.ultracart.admin.v2.models/ConversationWebchatQueueStatus';
@@ -1157,7 +1158,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.147
+* @version 4.1.148
 */
 export {
     /**
@@ -3091,6 +3092,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse}
      */
     ConversationVirtualAgentCapabilitiesResponse,
+
+    /**
+     * The ConversationVirtualAgentCapabilityCustomCollection model constructor.
+     * @property {module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityCustomCollection}
+     */
+    ConversationVirtualAgentCapabilityCustomCollection,
 
     /**
      * The ConversationVirtualAgentCapabilityZohoDeskDepartment model constructor.

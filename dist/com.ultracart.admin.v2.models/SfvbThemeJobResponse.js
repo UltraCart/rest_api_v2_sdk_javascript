@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbThemeJobResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeJobResponse
- * @version 4.1.146
+ * @version 4.1.147
  */
 var SfvbThemeJobResponse = /*#__PURE__*/function () {
   /**
@@ -167,7 +167,7 @@ SfvbThemeJobResponse.prototype['submitted_dts'] = undefined;
 SfvbThemeJobResponse.prototype['success'] = undefined;
 
 /**
- * Path the new theme was created at.  Returned when the job is started; the theme oid itself is NOT returned, because the job's product is a plain text report rather than a structured result.  Once the job completes, list themes and match on this path.
+ * Path the new theme is being created at.  Returned when the job is started and on every poll, so you do not have to keep the response that started it.  The theme oid itself is NOT returned, so once the job completes you list themes and match on this path.  It is also what success is checked against - a finished job whose theme is not here reports success false rather than pretending.
  * @member {String} target_path
  */
 SfvbThemeJobResponse.prototype['target_path'] = undefined;

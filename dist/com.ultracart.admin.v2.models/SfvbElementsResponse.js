@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbElementsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbElementsResponse
- * @version 4.1.146
+ * @version 4.1.147
  */
 var SfvbElementsResponse = /*#__PURE__*/function () {
   /**

@@ -17,7 +17,7 @@ import SfvbContainerVersion from './SfvbContainerVersion';
 /**
  * The SfvbContainerVersionsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerVersionsResponse
- * @version 4.1.147
+ * @version 4.1.148
  */
 class SfvbContainerVersionsResponse {
     /**

@@ -17,7 +17,7 @@ import ReportDataSetQuery from './ReportDataSetQuery';
 /**
  * The ReportExecuteQueriesRequest model module.
  * @module com.ultracart.admin.v2.models/ReportExecuteQueriesRequest
- * @version 4.1.147
+ * @version 4.1.148
  */
 class ReportExecuteQueriesRequest {
     /**

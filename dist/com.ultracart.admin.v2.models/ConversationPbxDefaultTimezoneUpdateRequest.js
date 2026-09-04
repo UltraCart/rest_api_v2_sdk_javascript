@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxDefaultTimezoneUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneUpdateRequest
- * @version 4.1.146
+ * @version 4.1.147
  */
 var ConversationPbxDefaultTimezoneUpdateRequest = /*#__PURE__*/function () {
   /**

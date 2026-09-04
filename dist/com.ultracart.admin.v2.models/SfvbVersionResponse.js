@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbVersionResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbVersionResponse
- * @version 4.1.146
+ * @version 4.1.147
  */
 var SfvbVersionResponse = /*#__PURE__*/function () {
   /**
@@ -68,17 +68,35 @@ var SfvbVersionResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('element_count')) {
           obj['element_count'] = _ApiClient["default"].convertToType(data['element_count'], 'Number');
         }
+        if (data.hasOwnProperty('max_asset_bytes')) {
+          obj['max_asset_bytes'] = _ApiClient["default"].convertToType(data['max_asset_bytes'], 'Number');
+        }
         if (data.hasOwnProperty('max_cjson_bytes')) {
           obj['max_cjson_bytes'] = _ApiClient["default"].convertToType(data['max_cjson_bytes'], 'Number');
         }
+        if (data.hasOwnProperty('max_directory_entries')) {
+          obj['max_directory_entries'] = _ApiClient["default"].convertToType(data['max_directory_entries'], 'Number');
+        }
+        if (data.hasOwnProperty('max_library_results_per_page')) {
+          obj['max_library_results_per_page'] = _ApiClient["default"].convertToType(data['max_library_results_per_page'], 'Number');
+        }
         if (data.hasOwnProperty('max_preview_session_bytes')) {
           obj['max_preview_session_bytes'] = _ApiClient["default"].convertToType(data['max_preview_session_bytes'], 'Number');
+        }
+        if (data.hasOwnProperty('max_revertable_bytes')) {
+          obj['max_revertable_bytes'] = _ApiClient["default"].convertToType(data['max_revertable_bytes'], 'Number');
         }
         if (data.hasOwnProperty('max_search_results')) {
           obj['max_search_results'] = _ApiClient["default"].convertToType(data['max_search_results'], 'Number');
         }
         if (data.hasOwnProperty('max_template_bytes')) {
           obj['max_template_bytes'] = _ApiClient["default"].convertToType(data['max_template_bytes'], 'Number');
+        }
+        if (data.hasOwnProperty('max_text_read_bytes')) {
+          obj['max_text_read_bytes'] = _ApiClient["default"].convertToType(data['max_text_read_bytes'], 'Number');
+        }
+        if (data.hasOwnProperty('max_video_bytes')) {
+          obj['max_video_bytes'] = _ApiClient["default"].convertToType(data['max_video_bytes'], 'Number');
         }
         if (data.hasOwnProperty('max_widget_ids_per_request')) {
           obj['max_widget_ids_per_request'] = _ApiClient["default"].convertToType(data['max_widget_ids_per_request'], 'Number');
@@ -113,10 +131,28 @@ SfvbVersionResponse.prototype['container_versions_retained'] = undefined;
 SfvbVersionResponse.prototype['element_count'] = undefined;
 
 /**
+ * Largest binary asset that can be uploaded, in bytes, for every accepted type except video.
+ * @member {Number} max_asset_bytes
+ */
+SfvbVersionResponse.prototype['max_asset_bytes'] = undefined;
+
+/**
  * Largest CJSON document that will be parsed, in bytes.
  * @member {Number} max_cjson_bytes
  */
 SfvbVersionResponse.prototype['max_cjson_bytes'] = undefined;
+
+/**
+ * Most entries one directory listing returns.  Asking for more is silently reduced to this rather than refused, so compare against it instead of trusting that you got what you asked for.  The listing does set a truncated flag when it drops entries.
+ * @member {Number} max_directory_entries
+ */
+SfvbVersionResponse.prototype['max_directory_entries'] = undefined;
+
+/**
+ * Most element library results one page returns.  Asking for more is silently reduced to this, and unlike the directory listing there is no truncation flag on the response, so this number is the only way to know a larger request was cut.
+ * @member {Number} max_library_results_per_page
+ */
+SfvbVersionResponse.prototype['max_library_results_per_page'] = undefined;
 
 /**
  * Largest payload one preview session may hold, in bytes.
@@ -125,16 +161,34 @@ SfvbVersionResponse.prototype['max_cjson_bytes'] = undefined;
 SfvbVersionResponse.prototype['max_preview_session_bytes'] = undefined;
 
 /**
+ * Largest historical version files/revert will restore, in bytes.  Higher than max_text_read_bytes deliberately - putting back a version that is already stored is cheaper than serving it as JSON, so a version too large to read can still be reverted to.
+ * @member {Number} max_revertable_bytes
+ */
+SfvbVersionResponse.prototype['max_revertable_bytes'] = undefined;
+
+/**
  * Hard ceiling on file search results per page.
  * @member {Number} max_search_results
  */
 SfvbVersionResponse.prototype['max_search_results'] = undefined;
 
 /**
- * Largest template file that can be written, in bytes.
+ * Largest .vm template that can be written, in bytes.  Narrow on purpose - it gates writes, only for files ending in .vm, and it is not the ceiling on reading a file back.  Use max_text_read_bytes for that.
  * @member {Number} max_template_bytes
  */
 SfvbVersionResponse.prototype['max_template_bytes'] = undefined;
+
+/**
+ * Largest file files/content will return as text, in bytes.  A file above this is refused with sfvb.too_large however small its history versions are.  Bigger than max_template_bytes, so a file can be readable here and still be too large to write back as a template.  Anything above this is still readable in full through files/download, which returns raw bytes and applies no ceiling.
+ * @member {Number} max_text_read_bytes
+ */
+SfvbVersionResponse.prototype['max_text_read_bytes'] = undefined;
+
+/**
+ * Largest video that can be uploaded, in bytes.  Video is the one type allowed past max_asset_bytes.
+ * @member {Number} max_video_bytes
+ */
+SfvbVersionResponse.prototype['max_video_bytes'] = undefined;
 
 /**
  * Most widget ids that can be reserved in one call.

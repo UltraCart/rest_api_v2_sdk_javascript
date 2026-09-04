@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbThemeDuplicateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest
- * @version 4.1.146
+ * @version 4.1.147
  */
 var SfvbThemeDuplicateRequest = /*#__PURE__*/function () {
   /**
@@ -74,7 +74,7 @@ var SfvbThemeDuplicateRequest = /*#__PURE__*/function () {
   }]);
 }();
 /**
- * Directory name for the new theme under /themes/.  Letters and numbers; it is cleansed before use.  Must not already exist - a collision is refused rather than resolved, because silently creating a differently named theme leaves you unsure what you made.
+ * Directory name for the new theme under /themes/.  Letters and numbers, one path segment.  Used verbatim - anything that is not already a valid directory name is refused rather than adjusted, because this call does not return the new theme's oid and you find your copy by matching the target_path you asked for.  Must not already exist - a collision is refused rather than resolved, because silently creating a differently named theme leaves you unsure what you made.
  * @member {String} folder
  */
 SfvbThemeDuplicateRequest.prototype['folder'] = undefined;

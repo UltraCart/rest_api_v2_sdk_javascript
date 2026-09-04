@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailDispatchLog model module.
  * @module com.ultracart.admin.v2.models/EmailDispatchLog
- * @version 4.1.146
+ * @version 4.1.147
  */
 var EmailDispatchLog = /*#__PURE__*/function () {
   /**

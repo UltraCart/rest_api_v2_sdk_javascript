@@ -65,7 +65,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.146
+* @version 4.1.147
 */
 var SfvbApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -124,7 +124,7 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
 
     /**
      * Create a preview session
-     * Returns a server generated session id to push containers into.  The id is not caller supplied, because concurrent agents choosing their own would be free to collide, and the browser editor's habit of minting one with Math.random is not a property worth carrying into an API.  Expires after eight hours and can be deleted sooner.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * Returns a server generated session id to push containers into, and opens the session so that id exists rather than merely being random.  The id is not caller supplied, because concurrent agents choosing their own would be free to collide, and the browser editor's habit of minting one with Math.random is not a property worth carrying into an API.  Expires after eight hours and can be deleted sooner.  Requires a token that resolves to a user, so use the device authorization flow. 
      * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/SfvbApi~createSfvbPreviewSessionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPreviewSessionResponse}
@@ -1243,7 +1243,7 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
 
     /**
      * Push containers into a preview session
-     * Stores compiled containers against a session created by createSfvbPreviewSession.  Replaces whatever the session held.  Nothing durable is written.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * Stores compiled containers against a session created by createSfvbPreviewSession.  Replaces whatever the session held.  The session must exist - this does not create one, so a deleted, expired or never issued id is a 404 rather than a new session.  Nothing durable is written.  Requires a token that resolves to a user, so use the device authorization flow. 
      * @param {Number} storefront_oid 
      * @param {String} preview_session_id 
      * @param {module:com.ultracart.admin.v2.models/SfvbPreviewSessionRequest} preview_session Containers to stage in the preview session

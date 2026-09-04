@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import ConversationVirtualAgentCapabilityCustomCollection from './ConversationVirtualAgentCapabilityCustomCollection';
 import ConversationVirtualAgentCapabilityZohoDeskDepartment from './ConversationVirtualAgentCapabilityZohoDeskDepartment';
 
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.147
+ * @version 4.1.148
  */
 class ConversationVirtualAgentCapabilities {
     /**
@@ -48,11 +49,20 @@ class ConversationVirtualAgentCapabilities {
         if (data) {
             obj = obj || new ConversationVirtualAgentCapabilities();
 
+            if (data.hasOwnProperty('access_custom_collections')) {
+                obj['access_custom_collections'] = ApiClient.convertToType(data['access_custom_collections'], 'Boolean');
+            }
             if (data.hasOwnProperty('access_storefront_and_item')) {
                 obj['access_storefront_and_item'] = ApiClient.convertToType(data['access_storefront_and_item'], 'Boolean');
             }
             if (data.hasOwnProperty('cancel_subscription')) {
                 obj['cancel_subscription'] = ApiClient.convertToType(data['cancel_subscription'], 'Boolean');
+            }
+            if (data.hasOwnProperty('custom_collection_oids')) {
+                obj['custom_collection_oids'] = ApiClient.convertToType(data['custom_collection_oids'], Object);
+            }
+            if (data.hasOwnProperty('custom_collections')) {
+                obj['custom_collections'] = ApiClient.convertToType(data['custom_collections'], [ConversationVirtualAgentCapabilityCustomCollection]);
             }
             if (data.hasOwnProperty('delay_subscription')) {
                 obj['delay_subscription'] = ApiClient.convertToType(data['delay_subscription'], 'Boolean');
@@ -104,6 +114,12 @@ class ConversationVirtualAgentCapabilities {
 }
 
 /**
+ * Permission flag to allow this Agent to search the merchant's custom Typesense collections.
+ * @member {Boolean} access_custom_collections
+ */
+ConversationVirtualAgentCapabilities.prototype['access_custom_collections'] = undefined;
+
+/**
  * Permission flag to allow this Agent access to the storefront and item information.
  * @member {Boolean} access_storefront_and_item
  */
@@ -113,6 +129,18 @@ ConversationVirtualAgentCapabilities.prototype['access_storefront_and_item'] = u
  * @member {Boolean} cancel_subscription
  */
 ConversationVirtualAgentCapabilities.prototype['cancel_subscription'] = undefined;
+
+/**
+ * The custom collections this Agent is allowed to search.  Empty means none, even when access_custom_collections is true.
+ * @member {Object} custom_collection_oids
+ */
+ConversationVirtualAgentCapabilities.prototype['custom_collection_oids'] = undefined;
+
+/**
+ * Read only.  All of the merchant's custom collections, to populate the selection list for custom_collection_oids.  Changes here are ignored.
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityCustomCollection>} custom_collections
+ */
+ConversationVirtualAgentCapabilities.prototype['custom_collections'] = undefined;
 
 /**
  * @member {Boolean} delay_subscription

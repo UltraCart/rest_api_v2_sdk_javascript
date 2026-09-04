@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemInstantPaymentNotifications model module.
  * @module com.ultracart.admin.v2.models/ItemInstantPaymentNotifications
- * @version 4.1.146
+ * @version 4.1.147
  */
 var ItemInstantPaymentNotifications = /*#__PURE__*/function () {
   /**

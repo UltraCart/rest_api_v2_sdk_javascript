@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallAiCost model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallAiCost
- * @version 4.1.147
+ * @version 4.1.148
  */
 class ConversationPbxCallAiCost {
     /**
