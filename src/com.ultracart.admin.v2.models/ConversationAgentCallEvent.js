@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentCallEvent model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentCallEvent
- * @version 4.1.146
+ * @version 4.1.147
  */
 class ConversationAgentCallEvent {
     /**

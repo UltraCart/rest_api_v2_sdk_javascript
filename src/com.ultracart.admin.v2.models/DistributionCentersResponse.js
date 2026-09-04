@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The DistributionCentersResponse model module.
  * @module com.ultracart.admin.v2.models/DistributionCentersResponse
- * @version 4.1.146
+ * @version 4.1.147
  */
 class DistributionCentersResponse {
     /**
