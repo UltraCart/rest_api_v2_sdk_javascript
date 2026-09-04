@@ -1977,6 +1977,12 @@ Object.defineProperty(exports, "ConversationVirtualAgentCapabilitiesResponse", {
     return _ConversationVirtualAgentCapabilitiesResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationVirtualAgentCapabilityCustomCollection", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationVirtualAgentCapabilityCustomCollection["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationVirtualAgentCapabilityZohoDeskDepartment", {
   enumerable: true,
   get: function get() {
@@ -7009,6 +7015,7 @@ var _ConversationVirtualAgentBudget = _interopRequireDefault(require("./com.ultr
 var _ConversationVirtualAgentBudgetResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentBudgetResponse"));
 var _ConversationVirtualAgentCapabilities = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities"));
 var _ConversationVirtualAgentCapabilitiesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilitiesResponse"));
+var _ConversationVirtualAgentCapabilityCustomCollection = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityCustomCollection"));
 var _ConversationVirtualAgentCapabilityZohoDeskDepartment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityZohoDeskDepartment"));
 var _ConversationWebchatContext = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatContext"));
 var _ConversationWebchatQueueStatus = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationWebchatQueueStatus"));

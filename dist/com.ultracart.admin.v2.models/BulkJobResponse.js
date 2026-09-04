@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The BulkJobResponse model module.
  * @module com.ultracart.admin.v2.models/BulkJobResponse
- * @version 4.1.147
+ * @version 4.1.148
  */
 var BulkJobResponse = /*#__PURE__*/function () {
   /**

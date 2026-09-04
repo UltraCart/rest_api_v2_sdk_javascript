@@ -18,7 +18,7 @@ import ConversationVirtualAgentCapabilityZohoDeskDepartment from './Conversation
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.148
+ * @version 4.1.149
  */
 class ConversationVirtualAgentCapabilities {
     /**
@@ -59,7 +59,7 @@ class ConversationVirtualAgentCapabilities {
                 obj['cancel_subscription'] = ApiClient.convertToType(data['cancel_subscription'], 'Boolean');
             }
             if (data.hasOwnProperty('custom_collection_oids')) {
-                obj['custom_collection_oids'] = ApiClient.convertToType(data['custom_collection_oids'], Object);
+                obj['custom_collection_oids'] = ApiClient.convertToType(data['custom_collection_oids'], ['Number']);
             }
             if (data.hasOwnProperty('custom_collections')) {
                 obj['custom_collections'] = ApiClient.convertToType(data['custom_collections'], [ConversationVirtualAgentCapabilityCustomCollection]);
@@ -132,7 +132,7 @@ ConversationVirtualAgentCapabilities.prototype['cancel_subscription'] = undefine
 
 /**
  * The custom collections this Agent is allowed to search.  Empty means none, even when access_custom_collections is true.
- * @member {Object} custom_collection_oids
+ * @member {Array.<Number>} custom_collection_oids
  */
 ConversationVirtualAgentCapabilities.prototype['custom_collection_oids'] = undefined;
 

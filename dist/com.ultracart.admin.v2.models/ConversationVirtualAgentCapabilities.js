@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+var _ConversationVirtualAgentCapabilityCustomCollection = _interopRequireDefault(require("./ConversationVirtualAgentCapabilityCustomCollection"));
 var _ConversationVirtualAgentCapabilityZohoDeskDepartment = _interopRequireDefault(require("./ConversationVirtualAgentCapabilityZohoDeskDepartment"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -27,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.147
+ * @version 4.1.148
  */
 var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
   /**
@@ -60,11 +61,20 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new ConversationVirtualAgentCapabilities();
+        if (data.hasOwnProperty('access_custom_collections')) {
+          obj['access_custom_collections'] = _ApiClient["default"].convertToType(data['access_custom_collections'], 'Boolean');
+        }
         if (data.hasOwnProperty('access_storefront_and_item')) {
           obj['access_storefront_and_item'] = _ApiClient["default"].convertToType(data['access_storefront_and_item'], 'Boolean');
         }
         if (data.hasOwnProperty('cancel_subscription')) {
           obj['cancel_subscription'] = _ApiClient["default"].convertToType(data['cancel_subscription'], 'Boolean');
+        }
+        if (data.hasOwnProperty('custom_collection_oids')) {
+          obj['custom_collection_oids'] = _ApiClient["default"].convertToType(data['custom_collection_oids'], Object);
+        }
+        if (data.hasOwnProperty('custom_collections')) {
+          obj['custom_collections'] = _ApiClient["default"].convertToType(data['custom_collections'], [_ConversationVirtualAgentCapabilityCustomCollection["default"]]);
         }
         if (data.hasOwnProperty('delay_subscription')) {
           obj['delay_subscription'] = _ApiClient["default"].convertToType(data['delay_subscription'], 'Boolean');
@@ -114,6 +124,12 @@ var ConversationVirtualAgentCapabilities = /*#__PURE__*/function () {
   }]);
 }();
 /**
+ * Permission flag to allow this Agent to search the merchant's custom Typesense collections.
+ * @member {Boolean} access_custom_collections
+ */
+ConversationVirtualAgentCapabilities.prototype['access_custom_collections'] = undefined;
+
+/**
  * Permission flag to allow this Agent access to the storefront and item information.
  * @member {Boolean} access_storefront_and_item
  */
@@ -123,6 +139,18 @@ ConversationVirtualAgentCapabilities.prototype['access_storefront_and_item'] = u
  * @member {Boolean} cancel_subscription
  */
 ConversationVirtualAgentCapabilities.prototype['cancel_subscription'] = undefined;
+
+/**
+ * The custom collections this Agent is allowed to search.  Empty means none, even when access_custom_collections is true.
+ * @member {Object} custom_collection_oids
+ */
+ConversationVirtualAgentCapabilities.prototype['custom_collection_oids'] = undefined;
+
+/**
+ * Read only.  All of the merchant's custom collections, to populate the selection list for custom_collection_oids.  Changes here are ignored.
+ * @member {Array.<module:com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityCustomCollection>} custom_collections
+ */
+ConversationVirtualAgentCapabilities.prototype['custom_collections'] = undefined;
 
 /**
  * @member {Boolean} delay_subscription
