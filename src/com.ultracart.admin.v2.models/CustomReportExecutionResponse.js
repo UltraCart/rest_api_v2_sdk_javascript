@@ -21,7 +21,7 @@ import Warning from './Warning';
 /**
  * The CustomReportExecutionResponse model module.
  * @module com.ultracart.admin.v2.models/CustomReportExecutionResponse
- * @version 4.1.151
+ * @version 4.1.152
  */
 class CustomReportExecutionResponse {
     /**

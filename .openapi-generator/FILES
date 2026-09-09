@@ -1015,7 +1015,13 @@ docs/SfvbRenderResponse.md
 docs/SfvbStorefront.md
 docs/SfvbStorefrontsResponse.md
 docs/SfvbTheme.md
+docs/SfvbThemeAttribute.md
+docs/SfvbThemeAttributeUpdate.md
+docs/SfvbThemeAttributeUpdateRequest.md
+docs/SfvbThemeAttributesResponse.md
 docs/SfvbThemeDuplicateRequest.md
+docs/SfvbThemeFont.md
+docs/SfvbThemeFontFamily.md
 docs/SfvbThemeJobResponse.md
 docs/SfvbThemesResponse.md
 docs/SfvbUpsellOffer.md
@@ -2119,7 +2125,13 @@ src/com.ultracart.admin.v2.models/SfvbRenderResponse.js
 src/com.ultracart.admin.v2.models/SfvbStorefront.js
 src/com.ultracart.admin.v2.models/SfvbStorefrontsResponse.js
 src/com.ultracart.admin.v2.models/SfvbTheme.js
+src/com.ultracart.admin.v2.models/SfvbThemeAttribute.js
+src/com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate.js
+src/com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest.js
+src/com.ultracart.admin.v2.models/SfvbThemeAttributesResponse.js
 src/com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest.js
+src/com.ultracart.admin.v2.models/SfvbThemeFont.js
+src/com.ultracart.admin.v2.models/SfvbThemeFontFamily.js
 src/com.ultracart.admin.v2.models/SfvbThemeJobResponse.js
 src/com.ultracart.admin.v2.models/SfvbThemesResponse.js
 src/com.ultracart.admin.v2.models/SfvbUpsellOffer.js

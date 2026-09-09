@@ -21,6 +21,9 @@ var _ConversationAgentStatusRollupSearchRequest = _interopRequireDefault(require
 var _ConversationAgentStatusRollupSearchResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse"));
 var _ConversationAgentStatusSummaryResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse"));
 var _ConversationAgentStatusTimelineResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse"));
+var _ConversationAgentTestSessionJoinRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentTestSessionJoinRequest"));
+var _ConversationAgentTestSessionRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentTestSessionRequest"));
+var _ConversationAgentTestSessionResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAgentTestSessionResponse"));
 var _ConversationAutocompleteRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
 var _ConversationAutocompleteResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
 var _ConversationCannedMessage = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ConversationCannedMessage"));
@@ -136,7 +139,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.150
+* @version 4.1.151
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -3697,6 +3700,52 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the joinAgentTestSession operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~joinAgentTestSessionCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Join a test conversation as the simulated customer
+     * Joins the simulated customer to the conversation the agent opened for a test session.  This mirrors what the storefront webchat widget does after an agent picks up its queue entry, and it is what gives the conversation a customer participant.  Requires a logged in user with conversations admin; an API key or OAuth application cannot call this. 
+     * @param {Number} user_id 
+     * @param {String} conversation_uuid 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentTestSessionJoinRequest} join_request Test session join request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~joinAgentTestSessionCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+  }, {
+    key: "joinAgentTestSession",
+    value: function joinAgentTestSession(user_id, conversation_uuid, join_request, callback) {
+      var postBody = join_request;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling joinAgentTestSession");
+      }
+      // verify the required parameter 'conversation_uuid' is set
+      if (conversation_uuid === undefined || conversation_uuid === null) {
+        throw new Error("Missing the required parameter 'conversation_uuid' when calling joinAgentTestSession");
+      }
+      // verify the required parameter 'join_request' is set
+      if (join_request === undefined || join_request === null) {
+        throw new Error("Missing the required parameter 'join_request' when calling joinAgentTestSession");
+      }
+      var pathParams = {
+        'user_id': user_id,
+        'conversation_uuid': conversation_uuid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/test_session/{conversation_uuid}/join', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the joinConversation operation.
      * @callback module:com.ultracart.admin.v2/ConversationApi~joinConversationCallback
      * @param {String} error Error message, if any.
@@ -4261,6 +4310,47 @@ var ConversationApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = null;
       return this.apiClient.callApi('/conversation/conversations/{conversation_uuid}/sms_unsubscribe', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the startAgentTestSession operation.
+     * @callback module:com.ultracart.admin.v2/ConversationApi~startAgentTestSessionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentTestSessionResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Start a test conversation with this AI agent
+     * Opens a webchat conversation against this specific AI agent as if the given customer had started it from the storefront, so the agent can be tried out before it is put in front of anyone.  The session runs against live data: the cart is real, the customer is real, and anything the agent does during the conversation actually happens.  Requires a logged in user with conversations admin; an API key or OAuth application cannot call this. 
+     * @param {Number} user_id 
+     * @param {module:com.ultracart.admin.v2.models/ConversationAgentTestSessionRequest} test_session_request Test session request
+     * @param {module:com.ultracart.admin.v2/ConversationApi~startAgentTestSessionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/ConversationAgentTestSessionResponse}
+     */
+  }, {
+    key: "startAgentTestSession",
+    value: function startAgentTestSession(user_id, test_session_request, callback) {
+      var postBody = test_session_request;
+      // verify the required parameter 'user_id' is set
+      if (user_id === undefined || user_id === null) {
+        throw new Error("Missing the required parameter 'user_id' when calling startAgentTestSession");
+      }
+      // verify the required parameter 'test_session_request' is set
+      if (test_session_request === undefined || test_session_request === null) {
+        throw new Error("Missing the required parameter 'test_session_request' when calling startAgentTestSession");
+      }
+      var pathParams = {
+        'user_id': user_id
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _ConversationAgentTestSessionResponse["default"];
+      return this.apiClient.callApi('/conversation/agent/profiles/{user_id}/test_session', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

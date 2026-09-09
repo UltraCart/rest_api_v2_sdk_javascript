@@ -1008,7 +1008,13 @@ import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderRespon
 import SfvbStorefront from './com.ultracart.admin.v2.models/SfvbStorefront';
 import SfvbStorefrontsResponse from './com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTheme from './com.ultracart.admin.v2.models/SfvbTheme';
+import SfvbThemeAttribute from './com.ultracart.admin.v2.models/SfvbThemeAttribute';
+import SfvbThemeAttributeUpdate from './com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate';
+import SfvbThemeAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest';
+import SfvbThemeAttributesResponse from './com.ultracart.admin.v2.models/SfvbThemeAttributesResponse';
 import SfvbThemeDuplicateRequest from './com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest';
+import SfvbThemeFont from './com.ultracart.admin.v2.models/SfvbThemeFont';
+import SfvbThemeFontFamily from './com.ultracart.admin.v2.models/SfvbThemeFontFamily';
 import SfvbThemeJobResponse from './com.ultracart.admin.v2.models/SfvbThemeJobResponse';
 import SfvbThemesResponse from './com.ultracart.admin.v2.models/SfvbThemesResponse';
 import SfvbUpsellOffer from './com.ultracart.admin.v2.models/SfvbUpsellOffer';
@@ -1162,7 +1168,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.151
+* @version 4.1.152
 */
 export {
     /**
@@ -7142,10 +7148,46 @@ export {
     SfvbTheme,
 
     /**
+     * The SfvbThemeAttribute model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeAttribute}
+     */
+    SfvbThemeAttribute,
+
+    /**
+     * The SfvbThemeAttributeUpdate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate}
+     */
+    SfvbThemeAttributeUpdate,
+
+    /**
+     * The SfvbThemeAttributeUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest}
+     */
+    SfvbThemeAttributeUpdateRequest,
+
+    /**
+     * The SfvbThemeAttributesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeAttributesResponse}
+     */
+    SfvbThemeAttributesResponse,
+
+    /**
      * The SfvbThemeDuplicateRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest}
      */
     SfvbThemeDuplicateRequest,
+
+    /**
+     * The SfvbThemeFont model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeFont}
+     */
+    SfvbThemeFont,
+
+    /**
+     * The SfvbThemeFontFamily model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeFontFamily}
+     */
+    SfvbThemeFontFamily,
 
     /**
      * The SfvbThemeJobResponse model constructor.

@@ -1107,6 +1107,24 @@ Object.defineProperty(exports, "ConversationAgentStatusTimelineResponse", {
     return _ConversationAgentStatusTimelineResponse["default"];
   }
 });
+Object.defineProperty(exports, "ConversationAgentTestSessionJoinRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentTestSessionJoinRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentTestSessionRequest", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentTestSessionRequest["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationAgentTestSessionResponse", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationAgentTestSessionResponse["default"];
+  }
+});
 Object.defineProperty(exports, "ConversationApi", {
   enumerable: true,
   get: function get() {
@@ -1153,6 +1171,12 @@ Object.defineProperty(exports, "ConversationCannedMessagesSearch", {
   enumerable: true,
   get: function get() {
     return _ConversationCannedMessagesSearch["default"];
+  }
+});
+Object.defineProperty(exports, "ConversationCustomerAuth", {
+  enumerable: true,
+  get: function get() {
+    return _ConversationCustomerAuth["default"];
   }
 });
 Object.defineProperty(exports, "ConversationDeleteKnowledgeBaseDocumentResponse", {
@@ -6872,6 +6896,9 @@ var _ConversationAgentStatusRollupSearchRequest = _interopRequireDefault(require
 var _ConversationAgentStatusRollupSearchResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusRollupSearchResponse"));
 var _ConversationAgentStatusSummaryResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusSummaryResponse"));
 var _ConversationAgentStatusTimelineResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentStatusTimelineResponse"));
+var _ConversationAgentTestSessionJoinRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentTestSessionJoinRequest"));
+var _ConversationAgentTestSessionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentTestSessionRequest"));
+var _ConversationAgentTestSessionResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAgentTestSessionResponse"));
 var _ConversationAutocompleteRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteRequest"));
 var _ConversationAutocompleteResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteResponse"));
 var _ConversationAutocompleteValue = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationAutocompleteValue"));
@@ -6879,6 +6906,7 @@ var _ConversationCannedMessage = _interopRequireDefault(require("./com.ultracart
 var _ConversationCannedMessageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessageResponse"));
 var _ConversationCannedMessagesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessagesResponse"));
 var _ConversationCannedMessagesSearch = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCannedMessagesSearch"));
+var _ConversationCustomerAuth = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationCustomerAuth"));
 var _ConversationDeleteKnowledgeBaseDocumentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse"));
 var _ConversationDepartment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartment"));
 var _ConversationDepartmentMember = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ConversationDepartmentMember"));

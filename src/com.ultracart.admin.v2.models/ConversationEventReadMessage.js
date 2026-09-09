@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationEventReadMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationEventReadMessage
- * @version 4.1.151
+ * @version 4.1.152
  */
 class ConversationEventReadMessage {
     /**

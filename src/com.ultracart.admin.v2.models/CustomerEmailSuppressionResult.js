@@ -17,7 +17,7 @@ import EmailSuppressionSurfaces from './EmailSuppressionSurfaces';
 /**
  * The CustomerEmailSuppressionResult model module.
  * @module com.ultracart.admin.v2.models/CustomerEmailSuppressionResult
- * @version 4.1.151
+ * @version 4.1.152
  */
 class CustomerEmailSuppressionResult {
     /**
