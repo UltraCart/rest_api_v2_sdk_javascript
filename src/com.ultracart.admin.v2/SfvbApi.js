@@ -61,7 +61,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.153
+* @version 4.1.154
 */
 export default class SfvbApi {
 
@@ -583,7 +583,8 @@ export default class SfvbApi {
      */
 
     /**
-     * Configuration schema for one element type
+     * Configuration schema and field card for one element type
+     * schema is the draft-07 JSON schema for the element config object and doc is the markdown field card, both as strings.  Either is omitted when none has been published for the element, which is still a 200.  The catalog is published by the visual builder release process, and a republish can take up to an hour to appear here. 
      * @param {String} element_type 
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbElementCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbElementSchemaResponse}

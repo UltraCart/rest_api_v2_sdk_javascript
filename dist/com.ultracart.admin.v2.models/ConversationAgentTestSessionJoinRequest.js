@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentTestSessionJoinRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentTestSessionJoinRequest
- * @version 4.1.152
+ * @version 4.1.153
  */
 var ConversationAgentTestSessionJoinRequest = /*#__PURE__*/function () {
   /**

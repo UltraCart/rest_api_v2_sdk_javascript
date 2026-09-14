@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbElement model module.
  * @module com.ultracart.admin.v2.models/SfvbElement
- * @version 4.1.153
+ * @version 4.1.154
  */
 class SfvbElement {
     /**
@@ -47,6 +47,9 @@ class SfvbElement {
         if (data) {
             obj = obj || new SfvbElement();
 
+            if (data.hasOwnProperty('doc_available')) {
+                obj['doc_available'] = ApiClient.convertToType(data['doc_available'], 'Boolean');
+            }
             if (data.hasOwnProperty('schema_available')) {
                 obj['schema_available'] = ApiClient.convertToType(data['schema_available'], 'Boolean');
             }
@@ -59,6 +62,12 @@ class SfvbElement {
 
 
 }
+
+/**
+ * True when a markdown field card for this element is available from elements/{element_type}.
+ * @member {Boolean} doc_available
+ */
+SfvbElement.prototype['doc_available'] = undefined;
 
 /**
  * True when a per element configuration schema is available from elements/{element_type}.

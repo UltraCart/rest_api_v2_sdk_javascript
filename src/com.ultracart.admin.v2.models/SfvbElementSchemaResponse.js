@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbElementSchemaResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbElementSchemaResponse
- * @version 4.1.153
+ * @version 4.1.154
  */
 class SfvbElementSchemaResponse {
     /**
@@ -47,6 +47,9 @@ class SfvbElementSchemaResponse {
         if (data) {
             obj = obj || new SfvbElementSchemaResponse();
 
+            if (data.hasOwnProperty('doc')) {
+                obj['doc'] = ApiClient.convertToType(data['doc'], 'String');
+            }
             if (data.hasOwnProperty('schema')) {
                 obj['schema'] = ApiClient.convertToType(data['schema'], 'String');
             }
@@ -61,7 +64,13 @@ class SfvbElementSchemaResponse {
 }
 
 /**
- * JSON schema for this element's config object, as a JSON string.  Null when no schema has been published for this element yet.
+ * Markdown field card for this element, as a string.  Omitted when no field card has been published for this element.
+ * @member {String} doc
+ */
+SfvbElementSchemaResponse.prototype['doc'] = undefined;
+
+/**
+ * Draft-07 JSON schema for this element's config object, as a JSON string.  Omitted when no schema has been published for this element.
  * @member {String} schema
  */
 SfvbElementSchemaResponse.prototype['schema'] = undefined;
