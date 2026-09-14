@@ -35,6 +35,9 @@ import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWrit
 import SfvbFilesResponse from '../com.ultracart.admin.v2.models/SfvbFilesResponse';
 import SfvbLibraryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryResponse from '../com.ultracart.admin.v2.models/SfvbLibraryResponse';
+import SfvbPageAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
+import SfvbPageMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
+import SfvbPageResponse from '../com.ultracart.admin.v2.models/SfvbPageResponse';
 import SfvbPreviewSessionRequest from '../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from '../com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
 import SfvbPreviewUrlResponse from '../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
@@ -58,7 +61,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.152
+* @version 4.1.153
 */
 export default class SfvbApi {
 
@@ -206,6 +209,61 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbPageMultimedia operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbPageMultimediaCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Detach an image from a page
+     * Name exactly one of code or default.  Removes the page's copy of the image; the source file in the page folder is left alone.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /catalog/dispensers/
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.code Image code to detach
+     * @param {Boolean} opts._default True to detach the default image
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbPageMultimediaCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+    deleteSfvbPageMultimedia(storefront_oid, path, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbPageMultimedia");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling deleteSfvbPageMultimedia");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'path': path,
+        'code': opts['code'],
+        'default': opts['_default']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbPageResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/pages/multimedia', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -700,6 +758,55 @@ export default class SfvbApi {
       let returnType = SfvbLibraryEntry;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a page's attributes and images
+     * What the pageattribute and pageimage elements render for this page.  These are not in any file, which is why a page folder can be empty and its elements still render something.  Attributes and image codes a template declares but nothing has set are included, so the response describes what the page can show rather than only what has been saved. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /catalog/dispensers/
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+    getSfvbPage(storefront_oid, path, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbPage");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling getSfvbPage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'path': path
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbPageResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/pages', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1459,6 +1566,114 @@ export default class SfvbApi {
       let returnType = SfvbFileWriteResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/content', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbPageAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbPageAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a page's attributes
+     * A partial update.  Only the attributes you name are changed.  Every entry is checked before any is written.  List, slider, item set, page collection and video list attributes are refused - edit those in the page editor.  Always needs sfvb_publish, because a page's attributes are shared by every theme and there is no dormant copy to change instead. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /catalog/dispensers/
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest} page_attribute_update_request Attributes to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbPageAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+    putSfvbPageAttributes(storefront_oid, path, page_attribute_update_request, callback) {
+      let postBody = page_attribute_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbPageAttributes");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling putSfvbPageAttributes");
+      }
+      // verify the required parameter 'page_attribute_update_request' is set
+      if (page_attribute_update_request === undefined || page_attribute_update_request === null) {
+        throw new Error("Missing the required parameter 'page_attribute_update_request' when calling putSfvbPageAttributes");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'path': path
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbPageResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/pages/attributes', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbPageMultimedia operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbPageMultimediaCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Attach an image to a page
+     * Upload the image with files/upload to the page path followed by a filename first, then name that filename here as either the default image or an image code.  The default image is what a pageimage element with no pageImageCode renders, and what a subgroup tile shows.  Replaces whatever that slot held.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /catalog/dispensers/
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageMultimediaRequest} page_multimedia_request Image to attach
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbPageMultimediaCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+    putSfvbPageMultimedia(storefront_oid, path, page_multimedia_request, callback) {
+      let postBody = page_multimedia_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbPageMultimedia");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling putSfvbPageMultimedia");
+      }
+      // verify the required parameter 'page_multimedia_request' is set
+      if (page_multimedia_request === undefined || page_multimedia_request === null) {
+        throw new Error("Missing the required parameter 'page_multimedia_request' when calling putSfvbPageMultimedia");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'path': path
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbPageResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/pages/multimedia', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -17,7 +17,7 @@ import ItemDigitalItemPdfMeta from './ItemDigitalItemPdfMeta';
 /**
  * The ItemDigitalItem model module.
  * @module com.ultracart.admin.v2.models/ItemDigitalItem
- * @version 4.1.152
+ * @version 4.1.153
  */
 class ItemDigitalItem {
     /**

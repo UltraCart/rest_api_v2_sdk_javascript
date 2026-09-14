@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailCustomerLookupResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCustomerLookupResponse
- * @version 4.1.152
+ * @version 4.1.153
  */
 class EmailCustomerLookupResponse {
     /**

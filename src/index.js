@@ -1000,6 +1000,12 @@ import SfvbFilesResponse from './com.ultracart.admin.v2.models/SfvbFilesResponse
 import SfvbLibraryEntry from './com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryFacet from './com.ultracart.admin.v2.models/SfvbLibraryFacet';
 import SfvbLibraryResponse from './com.ultracart.admin.v2.models/SfvbLibraryResponse';
+import SfvbPageAttribute from './com.ultracart.admin.v2.models/SfvbPageAttribute';
+import SfvbPageAttributeUpdate from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdate';
+import SfvbPageAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
+import SfvbPageMultimedia from './com.ultracart.admin.v2.models/SfvbPageMultimedia';
+import SfvbPageMultimediaRequest from './com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
+import SfvbPageResponse from './com.ultracart.admin.v2.models/SfvbPageResponse';
 import SfvbPreviewSessionRequest from './com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from './com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
 import SfvbPreviewUrlResponse from './com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
@@ -1168,7 +1174,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.152
+* @version 4.1.153
 */
 export {
     /**
@@ -7098,6 +7104,42 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbLibraryResponse}
      */
     SfvbLibraryResponse,
+
+    /**
+     * The SfvbPageAttribute model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageAttribute}
+     */
+    SfvbPageAttribute,
+
+    /**
+     * The SfvbPageAttributeUpdate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageAttributeUpdate}
+     */
+    SfvbPageAttributeUpdate,
+
+    /**
+     * The SfvbPageAttributeUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest}
+     */
+    SfvbPageAttributeUpdateRequest,
+
+    /**
+     * The SfvbPageMultimedia model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageMultimedia}
+     */
+    SfvbPageMultimedia,
+
+    /**
+     * The SfvbPageMultimediaRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageMultimediaRequest}
+     */
+    SfvbPageMultimediaRequest,
+
+    /**
+     * The SfvbPageResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+    SfvbPageResponse,
 
     /**
      * The SfvbPreviewSessionRequest model constructor.

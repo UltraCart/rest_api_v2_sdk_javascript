@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationPbxPayConnectorsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPayConnectorsResponse
- * @version 4.1.151
+ * @version 4.1.152
  */
 var ConversationPbxPayConnectorsResponse = /*#__PURE__*/function () {
   /**

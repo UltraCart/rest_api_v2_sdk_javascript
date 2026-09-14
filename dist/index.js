@@ -6087,10 +6087,46 @@ Object.defineProperty(exports, "SfvbTheme", {
     return _SfvbTheme["default"];
   }
 });
+Object.defineProperty(exports, "SfvbThemeAttribute", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbThemeAttribute["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbThemeAttributeUpdate", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbThemeAttributeUpdate["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbThemeAttributeUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbThemeAttributeUpdateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbThemeAttributesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbThemeAttributesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "SfvbThemeDuplicateRequest", {
   enumerable: true,
   get: function get() {
     return _SfvbThemeDuplicateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbThemeFont", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbThemeFont["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbThemeFontFamily", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbThemeFontFamily["default"];
   }
 });
 Object.defineProperty(exports, "SfvbThemeJobResponse", {
@@ -7713,7 +7749,13 @@ var _SfvbRenderResponse = _interopRequireDefault(require("./com.ultracart.admin.
 var _SfvbStorefront = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbStorefront"));
 var _SfvbStorefrontsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbStorefrontsResponse"));
 var _SfvbTheme = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbTheme"));
+var _SfvbThemeAttribute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeAttribute"));
+var _SfvbThemeAttributeUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate"));
+var _SfvbThemeAttributeUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest"));
+var _SfvbThemeAttributesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeAttributesResponse"));
 var _SfvbThemeDuplicateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest"));
+var _SfvbThemeFont = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeFont"));
+var _SfvbThemeFontFamily = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeFontFamily"));
 var _SfvbThemeJobResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeJobResponse"));
 var _SfvbThemesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemesResponse"));
 var _SfvbUpsellOffer = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbUpsellOffer"));

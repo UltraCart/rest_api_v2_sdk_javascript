@@ -34,6 +34,8 @@ var _SfvbRenderRequest = _interopRequireDefault(require("../com.ultracart.admin.
 var _SfvbRenderResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbRenderResponse"));
 var _SfvbStorefrontsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbStorefrontsResponse"));
 var _SfvbTheme = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbTheme"));
+var _SfvbThemeAttributeUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest"));
+var _SfvbThemeAttributesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbThemeAttributesResponse"));
 var _SfvbThemeDuplicateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest"));
 var _SfvbThemeJobResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbThemeJobResponse"));
 var _SfvbThemesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbThemesResponse"));
@@ -65,7 +67,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.151
+* @version 4.1.152
 */
 var SfvbApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -713,6 +715,48 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbThemeAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbThemeAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbThemeAttributesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a theme's colors, fonts and settings
+     * The values theme.css and the compiled containers resolve at render time.  These do NOT live in any file.  settings.json contains a palette and looks like the answer, but it is the theme's factory template - it supplies defaults for slots that have never been set and is ignored for slots that have, so editing it will not change a color and reading it will not tell you the current one.  Slots a template declares but nothing has ever set are included here, carrying the default they will render with, so the response describes the whole theme rather than the rows that happen to exist. 
+     * @param {Number} storefront_oid 
+     * @param {Number} theme_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbThemeAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbThemeAttributesResponse}
+     */
+  }, {
+    key: "getSfvbThemeAttributes",
+    value: function getSfvbThemeAttributes(storefront_oid, theme_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbThemeAttributes");
+      }
+      // verify the required parameter 'theme_oid' is set
+      if (theme_oid === undefined || theme_oid === null) {
+        throw new Error("Missing the required parameter 'theme_oid' when calling getSfvbThemeAttributes");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'theme_oid': theme_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbThemeAttributesResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/attributes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbThemeJob operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbThemeJobCallback
      * @param {String} error Error message, if any.
@@ -1283,6 +1327,53 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbPreviewSessionResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbThemeAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbThemeAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbThemeAttributesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a theme's colors, fonts and settings
+     * A partial update.  Only the slots you name are changed and every other slot on the theme keeps its value, so there is no need to send the whole set back to change one color.  Send a whole palette in one call rather than one call per color - they are applied together, so the storefront never renders half of a change.  Needs sfvb_publish when the theme is the one serving live traffic, because a color is referenced by name from every template that uses it and one write repaints the whole storefront at once.  On a dormant theme sfvb_write is enough, which is what makes duplicate-then-restyle work. 
+     * @param {Number} storefront_oid 
+     * @param {Number} theme_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest} attribute_update_request Slots to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbThemeAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbThemeAttributesResponse}
+     */
+  }, {
+    key: "putSfvbThemeAttributes",
+    value: function putSfvbThemeAttributes(storefront_oid, theme_oid, attribute_update_request, callback) {
+      var postBody = attribute_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbThemeAttributes");
+      }
+      // verify the required parameter 'theme_oid' is set
+      if (theme_oid === undefined || theme_oid === null) {
+        throw new Error("Missing the required parameter 'theme_oid' when calling putSfvbThemeAttributes");
+      }
+      // verify the required parameter 'attribute_update_request' is set
+      if (attribute_update_request === undefined || attribute_update_request === null) {
+        throw new Error("Missing the required parameter 'attribute_update_request' when calling putSfvbThemeAttributes");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'theme_oid': theme_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbThemeAttributesResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/attributes', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

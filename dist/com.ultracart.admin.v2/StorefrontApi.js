@@ -178,7 +178,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.151
+* @version 4.1.152
 */
 var StorefrontApi = exports["default"] = /*#__PURE__*/function () {
   /**

@@ -17,7 +17,7 @@ import ReportDryRunQueryResult from './ReportDryRunQueryResult';
 /**
  * The ReportDryRunQueriesResponse model module.
  * @module com.ultracart.admin.v2.models/ReportDryRunQueriesResponse
- * @version 4.1.152
+ * @version 4.1.153
  */
 class ReportDryRunQueriesResponse {
     /**

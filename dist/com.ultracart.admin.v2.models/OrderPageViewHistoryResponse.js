@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The OrderPageViewHistoryResponse model module.
  * @module com.ultracart.admin.v2.models/OrderPageViewHistoryResponse
- * @version 4.1.151
+ * @version 4.1.152
  */
 var OrderPageViewHistoryResponse = /*#__PURE__*/function () {
   /**
