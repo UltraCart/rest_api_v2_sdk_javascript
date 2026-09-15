@@ -1013,6 +1013,8 @@ docs/SfvbPageAttributeUpdateRequest.md
 docs/SfvbPageMultimedia.md
 docs/SfvbPageMultimediaRequest.md
 docs/SfvbPageResponse.md
+docs/SfvbPreviewAccessRequest.md
+docs/SfvbPreviewAccessResponse.md
 docs/SfvbPreviewSessionRequest.md
 docs/SfvbPreviewSessionResponse.md
 docs/SfvbPreviewUrlResponse.md
@@ -2129,6 +2131,8 @@ src/com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest.js
 src/com.ultracart.admin.v2.models/SfvbPageMultimedia.js
 src/com.ultracart.admin.v2.models/SfvbPageMultimediaRequest.js
 src/com.ultracart.admin.v2.models/SfvbPageResponse.js
+src/com.ultracart.admin.v2.models/SfvbPreviewAccessRequest.js
+src/com.ultracart.admin.v2.models/SfvbPreviewAccessResponse.js
 src/com.ultracart.admin.v2.models/SfvbPreviewSessionRequest.js
 src/com.ultracart.admin.v2.models/SfvbPreviewSessionResponse.js
 src/com.ultracart.admin.v2.models/SfvbPreviewUrlResponse.js

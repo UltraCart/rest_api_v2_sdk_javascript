@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ApiUserApplicationProfile model module.
  * @module com.ultracart.admin.v2.models/ApiUserApplicationProfile
- * @version 4.1.153
+ * @version 4.1.154
  */
 var ApiUserApplicationProfile = /*#__PURE__*/function () {
   /**

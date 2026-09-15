@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ItemContentAssignment model module.
  * @module com.ultracart.admin.v2.models/ItemContentAssignment
- * @version 4.1.153
+ * @version 4.1.154
  */
 var ItemContentAssignment = /*#__PURE__*/function () {
   /**

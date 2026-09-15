@@ -1006,6 +1006,8 @@ import SfvbPageAttributeUpdateRequest from './com.ultracart.admin.v2.models/Sfvb
 import SfvbPageMultimedia from './com.ultracart.admin.v2.models/SfvbPageMultimedia';
 import SfvbPageMultimediaRequest from './com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
 import SfvbPageResponse from './com.ultracart.admin.v2.models/SfvbPageResponse';
+import SfvbPreviewAccessRequest from './com.ultracart.admin.v2.models/SfvbPreviewAccessRequest';
+import SfvbPreviewAccessResponse from './com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from './com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from './com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
 import SfvbPreviewUrlResponse from './com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
@@ -1174,7 +1176,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.154
+* @version 4.1.155
 */
 export {
     /**
@@ -7140,6 +7142,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbPageResponse}
      */
     SfvbPageResponse,
+
+    /**
+     * The SfvbPreviewAccessRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPreviewAccessRequest}
+     */
+    SfvbPreviewAccessRequest,
+
+    /**
+     * The SfvbPreviewAccessResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPreviewAccessResponse}
+     */
+    SfvbPreviewAccessResponse,
 
     /**
      * The SfvbPreviewSessionRequest model constructor.

@@ -139,7 +139,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.153
+* @version 4.1.154
 */
 var ConversationApi = exports["default"] = /*#__PURE__*/function () {
   /**

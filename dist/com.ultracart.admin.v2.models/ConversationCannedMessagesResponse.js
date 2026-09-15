@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationCannedMessagesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationCannedMessagesResponse
- * @version 4.1.153
+ * @version 4.1.154
  */
 var ConversationCannedMessagesResponse = /*#__PURE__*/function () {
   /**

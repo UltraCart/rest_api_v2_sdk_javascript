@@ -38,6 +38,8 @@ import SfvbLibraryResponse from '../com.ultracart.admin.v2.models/SfvbLibraryRes
 import SfvbPageAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
 import SfvbPageMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
 import SfvbPageResponse from '../com.ultracart.admin.v2.models/SfvbPageResponse';
+import SfvbPreviewAccessRequest from '../com.ultracart.admin.v2.models/SfvbPreviewAccessRequest';
+import SfvbPreviewAccessResponse from '../com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from '../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from '../com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
 import SfvbPreviewUrlResponse from '../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
@@ -61,7 +63,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.154
+* @version 4.1.155
 */
 export default class SfvbApi {
 
@@ -114,6 +116,52 @@ export default class SfvbApi {
       let returnType = SfvbCompileResponse;
       return this.apiClient.callApi(
         '/sfvb/cjson/compile', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the createSfvbPreviewAccess operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~createSfvbPreviewAccessCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPreviewAccessResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * One time link that opens a preview in a browser with no UltraCart login
+     * The preview URL only works in a browser already signed in to UltraCart on the storefront's own host, and an agent's built in browser never is.  This returns a single use access_url on the storefront host instead.  Opening it gets past the storefront lock, shows the requested theme and applies the requested preview session for the rest of that browser session, then redirects to path.  It expires two minutes after issue or on first use.  Pages opened afterwards carry an X-UltraCart-Preview header of applied or not-applied.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {module:com.ultracart.admin.v2.models/SfvbPreviewAccessRequest} opts.preview_access What the browser should see
+     * @param {module:com.ultracart.admin.v2/SfvbApi~createSfvbPreviewAccessCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPreviewAccessResponse}
+     */
+    createSfvbPreviewAccess(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['preview_access'];
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling createSfvbPreviewAccess");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbPreviewAccessResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/preview_access', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

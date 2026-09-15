@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbElement model module.
  * @module com.ultracart.admin.v2.models/SfvbElement
- * @version 4.1.153
+ * @version 4.1.154
  */
 var SfvbElement = /*#__PURE__*/function () {
   /**
@@ -59,6 +59,9 @@ var SfvbElement = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new SfvbElement();
+        if (data.hasOwnProperty('doc_available')) {
+          obj['doc_available'] = _ApiClient["default"].convertToType(data['doc_available'], 'Boolean');
+        }
         if (data.hasOwnProperty('schema_available')) {
           obj['schema_available'] = _ApiClient["default"].convertToType(data['schema_available'], 'Boolean');
         }
@@ -70,6 +73,12 @@ var SfvbElement = /*#__PURE__*/function () {
     }
   }]);
 }();
+/**
+ * True when a markdown field card for this element is available from elements/{element_type}.
+ * @member {Boolean} doc_available
+ */
+SfvbElement.prototype['doc_available'] = undefined;
+
 /**
  * True when a per element configuration schema is available from elements/{element_type}.
  * @member {Boolean} schema_available

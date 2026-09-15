@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomDashboardResponse model module.
  * @module com.ultracart.admin.v2.models/CustomDashboardResponse
- * @version 4.1.153
+ * @version 4.1.154
  */
 var CustomDashboardResponse = /*#__PURE__*/function () {
   /**

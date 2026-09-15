@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbStorefront model module.
  * @module com.ultracart.admin.v2.models/SfvbStorefront
- * @version 4.1.153
+ * @version 4.1.154
  */
 var SfvbStorefront = /*#__PURE__*/function () {
   /**

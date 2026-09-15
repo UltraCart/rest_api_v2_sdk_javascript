@@ -17,7 +17,7 @@ import ItemGatedCode from './ItemGatedCode';
 /**
  * The ItemGatedCodesRequest model module.
  * @module com.ultracart.admin.v2.models/ItemGatedCodesRequest
- * @version 4.1.154
+ * @version 4.1.155
  */
 class ItemGatedCodesRequest {
     /**

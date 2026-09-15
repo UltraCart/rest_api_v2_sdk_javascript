@@ -17,7 +17,7 @@ import Order from './Order';
 /**
  * The OrderValidationRequest model module.
  * @module com.ultracart.admin.v2.models/OrderValidationRequest
- * @version 4.1.154
+ * @version 4.1.155
  */
 class OrderValidationRequest {
     /**

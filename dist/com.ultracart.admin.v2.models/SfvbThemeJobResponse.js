@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbThemeJobResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeJobResponse
- * @version 4.1.153
+ * @version 4.1.154
  */
 var SfvbThemeJobResponse = /*#__PURE__*/function () {
   /**
@@ -113,7 +113,7 @@ SfvbThemeJobResponse.prototype['complete'] = undefined;
 SfvbThemeJobResponse.prototype['description'] = undefined;
 
 /**
- * Failure detail.  Populated only when status is error.
+ * What to do next when the job did not produce a theme.  The internal cause is not returned; it is recorded against the job id in the server log.
  * @member {String} error_message
  */
 SfvbThemeJobResponse.prototype['error_message'] = undefined;
