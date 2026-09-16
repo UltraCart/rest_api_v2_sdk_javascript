@@ -1000,6 +1000,10 @@ import SfvbFilesResponse from './com.ultracart.admin.v2.models/SfvbFilesResponse
 import SfvbLibraryEntry from './com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryFacet from './com.ultracart.admin.v2.models/SfvbLibraryFacet';
 import SfvbLibraryResponse from './com.ultracart.admin.v2.models/SfvbLibraryResponse';
+import SfvbMenu from './com.ultracart.admin.v2.models/SfvbMenu';
+import SfvbMenuItem from './com.ultracart.admin.v2.models/SfvbMenuItem';
+import SfvbMenuWriteRequest from './com.ultracart.admin.v2.models/SfvbMenuWriteRequest';
+import SfvbMenusResponse from './com.ultracart.admin.v2.models/SfvbMenusResponse';
 import SfvbPageAttribute from './com.ultracart.admin.v2.models/SfvbPageAttribute';
 import SfvbPageAttributeUpdate from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdate';
 import SfvbPageAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
@@ -1176,7 +1180,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.155
+* @version 4.1.156
 */
 export {
     /**
@@ -7106,6 +7110,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbLibraryResponse}
      */
     SfvbLibraryResponse,
+
+    /**
+     * The SfvbMenu model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbMenu}
+     */
+    SfvbMenu,
+
+    /**
+     * The SfvbMenuItem model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbMenuItem}
+     */
+    SfvbMenuItem,
+
+    /**
+     * The SfvbMenuWriteRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbMenuWriteRequest}
+     */
+    SfvbMenuWriteRequest,
+
+    /**
+     * The SfvbMenusResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbMenusResponse}
+     */
+    SfvbMenusResponse,
 
     /**
      * The SfvbPageAttribute model constructor.

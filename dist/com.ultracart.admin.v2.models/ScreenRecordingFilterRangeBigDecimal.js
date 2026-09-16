@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingFilterRangeBigDecimal model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterRangeBigDecimal
- * @version 4.1.154
+ * @version 4.1.155
  */
 var ScreenRecordingFilterRangeBigDecimal = /*#__PURE__*/function () {
   /**

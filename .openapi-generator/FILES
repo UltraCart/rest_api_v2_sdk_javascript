@@ -1007,6 +1007,10 @@ docs/SfvbFilesResponse.md
 docs/SfvbLibraryEntry.md
 docs/SfvbLibraryFacet.md
 docs/SfvbLibraryResponse.md
+docs/SfvbMenu.md
+docs/SfvbMenuItem.md
+docs/SfvbMenuWriteRequest.md
+docs/SfvbMenusResponse.md
 docs/SfvbPageAttribute.md
 docs/SfvbPageAttributeUpdate.md
 docs/SfvbPageAttributeUpdateRequest.md
@@ -2125,6 +2129,10 @@ src/com.ultracart.admin.v2.models/SfvbFilesResponse.js
 src/com.ultracart.admin.v2.models/SfvbLibraryEntry.js
 src/com.ultracart.admin.v2.models/SfvbLibraryFacet.js
 src/com.ultracart.admin.v2.models/SfvbLibraryResponse.js
+src/com.ultracart.admin.v2.models/SfvbMenu.js
+src/com.ultracart.admin.v2.models/SfvbMenuItem.js
+src/com.ultracart.admin.v2.models/SfvbMenuWriteRequest.js
+src/com.ultracart.admin.v2.models/SfvbMenusResponse.js
 src/com.ultracart.admin.v2.models/SfvbPageAttribute.js
 src/com.ultracart.admin.v2.models/SfvbPageAttributeUpdate.js
 src/com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest.js

@@ -30,6 +30,8 @@ var _SfvbLibraryResponse = _interopRequireDefault(require("../com.ultracart.admi
 var _SfvbPageAttributeUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest"));
 var _SfvbPageMultimediaRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageMultimediaRequest"));
 var _SfvbPageResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageResponse"));
+var _SfvbPreviewAccessRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewAccessRequest"));
+var _SfvbPreviewAccessResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewAccessResponse"));
 var _SfvbPreviewSessionRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest"));
 var _SfvbPreviewSessionResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewSessionResponse"));
 var _SfvbPreviewUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse"));
@@ -70,7 +72,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.154
+* @version 4.1.155
 */
 var SfvbApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -117,6 +119,45 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbCompileResponse["default"];
       return this.apiClient.callApi('/sfvb/cjson/compile', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the createSfvbPreviewAccess operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~createSfvbPreviewAccessCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPreviewAccessResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * One time link that opens a preview in a browser with no UltraCart login
+     * The preview URL only works in a browser already signed in to UltraCart on the storefront's own host, and an agent's built in browser never is.  This returns a single use access_url on the storefront host instead.  Opening it gets past the storefront lock, shows the requested theme and applies the requested preview session for the rest of that browser session, then redirects to path.  It expires two minutes after issue or on first use.  Pages opened afterwards carry an X-UltraCart-Preview header of applied or not-applied.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {module:com.ultracart.admin.v2.models/SfvbPreviewAccessRequest} opts.preview_access What the browser should see
+     * @param {module:com.ultracart.admin.v2/SfvbApi~createSfvbPreviewAccessCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPreviewAccessResponse}
+     */
+  }, {
+    key: "createSfvbPreviewAccess",
+    value: function createSfvbPreviewAccess(storefront_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['preview_access'];
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling createSfvbPreviewAccess");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPreviewAccessResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/preview_access', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

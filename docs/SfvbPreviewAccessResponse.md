@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **expires_in_seconds** | **Number** | Seconds left to open access_url.  It stops working after that, and after its first use. | [optional] 
 **path** | **String** | Storefront path the browser lands on, after reserved preview parameters are removed. | [optional] 
 **preview_session_id** | **String** | The preview session applied, when one was requested. | [optional] 
-**session_lifetime_seconds** | **Number** | How long the browser stays in preview once access_url is opened.  The remaining life of the preview session, or eight hours when none was given.  The user and their storefront permission are checked again on every page, so removing either ends it sooner. | [optional] 
+**session_lifetime_seconds** | **Number** | How long the browser stays in preview once access_url is opened.  The remaining life of the preview session, or eight hours when none was given.  Ending the preview session ends preview in that browser at its next page.  The user and their storefront permission are checked again on every page, so removing either ends it sooner. | [optional] 
 **single_use** | **Boolean** | Always true.  A second open of access_url returns 410. | [optional] 
 **theme_oid** | **Number** | The theme shown, when one was requested. | [optional] 
 **usage_note** | **String** | Plain language instructions, safe to show a user. | [optional] 

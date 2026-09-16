@@ -6075,6 +6075,18 @@ Object.defineProperty(exports, "SfvbPageResponse", {
     return _SfvbPageResponse["default"];
   }
 });
+Object.defineProperty(exports, "SfvbPreviewAccessRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPreviewAccessRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPreviewAccessResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPreviewAccessResponse["default"];
+  }
+});
 Object.defineProperty(exports, "SfvbPreviewSessionRequest", {
   enumerable: true,
   get: function get() {
@@ -7783,6 +7795,8 @@ var _SfvbPageAttributeUpdateRequest = _interopRequireDefault(require("./com.ultr
 var _SfvbPageMultimedia = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageMultimedia"));
 var _SfvbPageMultimediaRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageMultimediaRequest"));
 var _SfvbPageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageResponse"));
+var _SfvbPreviewAccessRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewAccessRequest"));
+var _SfvbPreviewAccessResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewAccessResponse"));
 var _SfvbPreviewSessionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewSessionRequest"));
 var _SfvbPreviewSessionResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewSessionResponse"));
 var _SfvbPreviewUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewUrlResponse"));

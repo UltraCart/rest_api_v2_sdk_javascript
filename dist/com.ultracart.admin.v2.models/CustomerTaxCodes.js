@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The CustomerTaxCodes model module.
  * @module com.ultracart.admin.v2.models/CustomerTaxCodes
- * @version 4.1.154
+ * @version 4.1.155
  */
 var CustomerTaxCodes = /*#__PURE__*/function () {
   /**
