@@ -974,6 +974,8 @@ import ScreenRecordingUserAgentOS from './com.ultracart.admin.v2.models/ScreenRe
 import ScreenRecordingUserProperty from './com.ultracart.admin.v2.models/ScreenRecordingUserProperty';
 import ScreenshotsResponse from './com.ultracart.admin.v2.models/ScreenshotsResponse';
 import SelfConfig from './com.ultracart.admin.v2.models/SelfConfig';
+import SfvbBlogPost from './com.ultracart.admin.v2.models/SfvbBlogPost';
+import SfvbBlogPostsResponse from './com.ultracart.admin.v2.models/SfvbBlogPostsResponse';
 import SfvbCompileRequest from './com.ultracart.admin.v2.models/SfvbCompileRequest';
 import SfvbCompileResponse from './com.ultracart.admin.v2.models/SfvbCompileResponse';
 import SfvbContainerResponse from './com.ultracart.admin.v2.models/SfvbContainerResponse';
@@ -985,6 +987,14 @@ import SfvbElement from './com.ultracart.admin.v2.models/SfvbElement';
 import SfvbElementSchemaResponse from './com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from './com.ultracart.admin.v2.models/SfvbElementsResponse';
 import SfvbErrorDetail from './com.ultracart.admin.v2.models/SfvbErrorDetail';
+import SfvbExperiment from './com.ultracart.admin.v2.models/SfvbExperiment';
+import SfvbExperimentEndRequest from './com.ultracart.admin.v2.models/SfvbExperimentEndRequest';
+import SfvbExperimentObjective from './com.ultracart.admin.v2.models/SfvbExperimentObjective';
+import SfvbExperimentObjectivesResponse from './com.ultracart.admin.v2.models/SfvbExperimentObjectivesResponse';
+import SfvbExperimentStartRequest from './com.ultracart.admin.v2.models/SfvbExperimentStartRequest';
+import SfvbExperimentStartVariation from './com.ultracart.admin.v2.models/SfvbExperimentStartVariation';
+import SfvbExperimentVariationUpdateRequest from './com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest';
+import SfvbExperimentsResponse from './com.ultracart.admin.v2.models/SfvbExperimentsResponse';
 import SfvbFileContentResponse from './com.ultracart.admin.v2.models/SfvbFileContentResponse';
 import SfvbFileEntry from './com.ultracart.admin.v2.models/SfvbFileEntry';
 import SfvbFileRevertRequest from './com.ultracart.admin.v2.models/SfvbFileRevertRequest';
@@ -1007,9 +1017,23 @@ import SfvbMenusResponse from './com.ultracart.admin.v2.models/SfvbMenusResponse
 import SfvbPageAttribute from './com.ultracart.admin.v2.models/SfvbPageAttribute';
 import SfvbPageAttributeUpdate from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdate';
 import SfvbPageAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
+import SfvbPageBlogPostSelector from './com.ultracart.admin.v2.models/SfvbPageBlogPostSelector';
+import SfvbPageBlogPostsRequest from './com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest';
+import SfvbPageBlogPostsResponse from './com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse';
+import SfvbPageCreateRequest from './com.ultracart.admin.v2.models/SfvbPageCreateRequest';
+import SfvbPageDuplicateRequest from './com.ultracart.admin.v2.models/SfvbPageDuplicateRequest';
+import SfvbPageItem from './com.ultracart.admin.v2.models/SfvbPageItem';
+import SfvbPageItemSelector from './com.ultracart.admin.v2.models/SfvbPageItemSelector';
+import SfvbPageItemsAddRequest from './com.ultracart.admin.v2.models/SfvbPageItemsAddRequest';
+import SfvbPageItemsRemoveRequest from './com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest';
+import SfvbPageItemsResponse from './com.ultracart.admin.v2.models/SfvbPageItemsResponse';
+import SfvbPageListResponse from './com.ultracart.admin.v2.models/SfvbPageListResponse';
 import SfvbPageMultimedia from './com.ultracart.admin.v2.models/SfvbPageMultimedia';
 import SfvbPageMultimediaRequest from './com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
 import SfvbPageResponse from './com.ultracart.admin.v2.models/SfvbPageResponse';
+import SfvbPageSelectors from './com.ultracart.admin.v2.models/SfvbPageSelectors';
+import SfvbPageSettingsRequest from './com.ultracart.admin.v2.models/SfvbPageSettingsRequest';
+import SfvbPageSummary from './com.ultracart.admin.v2.models/SfvbPageSummary';
 import SfvbPreviewAccessRequest from './com.ultracart.admin.v2.models/SfvbPreviewAccessRequest';
 import SfvbPreviewAccessResponse from './com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from './com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
@@ -1023,6 +1047,8 @@ import SfvbSiteAttributeUpdateRequest from './com.ultracart.admin.v2.models/Sfvb
 import SfvbSiteAttributesResponse from './com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
 import SfvbStorefront from './com.ultracart.admin.v2.models/SfvbStorefront';
 import SfvbStorefrontsResponse from './com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
+import SfvbTemplate from './com.ultracart.admin.v2.models/SfvbTemplate';
+import SfvbTemplatesResponse from './com.ultracart.admin.v2.models/SfvbTemplatesResponse';
 import SfvbTheme from './com.ultracart.admin.v2.models/SfvbTheme';
 import SfvbThemeAttribute from './com.ultracart.admin.v2.models/SfvbThemeAttribute';
 import SfvbThemeAttributeUpdate from './com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate';
@@ -1184,7 +1210,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.160
+* @version 4.1.161
 */
 export {
     /**
@@ -6960,6 +6986,18 @@ export {
     SelfConfig,
 
     /**
+     * The SfvbBlogPost model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbBlogPost}
+     */
+    SfvbBlogPost,
+
+    /**
+     * The SfvbBlogPostsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbBlogPostsResponse}
+     */
+    SfvbBlogPostsResponse,
+
+    /**
      * The SfvbCompileRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCompileRequest}
      */
@@ -7024,6 +7062,54 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbErrorDetail}
      */
     SfvbErrorDetail,
+
+    /**
+     * The SfvbExperiment model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperiment}
+     */
+    SfvbExperiment,
+
+    /**
+     * The SfvbExperimentEndRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperimentEndRequest}
+     */
+    SfvbExperimentEndRequest,
+
+    /**
+     * The SfvbExperimentObjective model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperimentObjective}
+     */
+    SfvbExperimentObjective,
+
+    /**
+     * The SfvbExperimentObjectivesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperimentObjectivesResponse}
+     */
+    SfvbExperimentObjectivesResponse,
+
+    /**
+     * The SfvbExperimentStartRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperimentStartRequest}
+     */
+    SfvbExperimentStartRequest,
+
+    /**
+     * The SfvbExperimentStartVariation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperimentStartVariation}
+     */
+    SfvbExperimentStartVariation,
+
+    /**
+     * The SfvbExperimentVariationUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest}
+     */
+    SfvbExperimentVariationUpdateRequest,
+
+    /**
+     * The SfvbExperimentsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbExperimentsResponse}
+     */
+    SfvbExperimentsResponse,
 
     /**
      * The SfvbFileContentResponse model constructor.
@@ -7158,6 +7244,72 @@ export {
     SfvbPageAttributeUpdateRequest,
 
     /**
+     * The SfvbPageBlogPostSelector model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageBlogPostSelector}
+     */
+    SfvbPageBlogPostSelector,
+
+    /**
+     * The SfvbPageBlogPostsRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest}
+     */
+    SfvbPageBlogPostsRequest,
+
+    /**
+     * The SfvbPageBlogPostsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse}
+     */
+    SfvbPageBlogPostsResponse,
+
+    /**
+     * The SfvbPageCreateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageCreateRequest}
+     */
+    SfvbPageCreateRequest,
+
+    /**
+     * The SfvbPageDuplicateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageDuplicateRequest}
+     */
+    SfvbPageDuplicateRequest,
+
+    /**
+     * The SfvbPageItem model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageItem}
+     */
+    SfvbPageItem,
+
+    /**
+     * The SfvbPageItemSelector model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageItemSelector}
+     */
+    SfvbPageItemSelector,
+
+    /**
+     * The SfvbPageItemsAddRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageItemsAddRequest}
+     */
+    SfvbPageItemsAddRequest,
+
+    /**
+     * The SfvbPageItemsRemoveRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest}
+     */
+    SfvbPageItemsRemoveRequest,
+
+    /**
+     * The SfvbPageItemsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageItemsResponse}
+     */
+    SfvbPageItemsResponse,
+
+    /**
+     * The SfvbPageListResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageListResponse}
+     */
+    SfvbPageListResponse,
+
+    /**
      * The SfvbPageMultimedia model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbPageMultimedia}
      */
@@ -7174,6 +7326,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbPageResponse}
      */
     SfvbPageResponse,
+
+    /**
+     * The SfvbPageSelectors model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageSelectors}
+     */
+    SfvbPageSelectors,
+
+    /**
+     * The SfvbPageSettingsRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageSettingsRequest}
+     */
+    SfvbPageSettingsRequest,
+
+    /**
+     * The SfvbPageSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageSummary}
+     */
+    SfvbPageSummary,
 
     /**
      * The SfvbPreviewAccessRequest model constructor.
@@ -7252,6 +7422,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbStorefrontsResponse}
      */
     SfvbStorefrontsResponse,
+
+    /**
+     * The SfvbTemplate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTemplate}
+     */
+    SfvbTemplate,
+
+    /**
+     * The SfvbTemplatesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTemplatesResponse}
+     */
+    SfvbTemplatesResponse,
 
     /**
      * The SfvbTheme model constructor.

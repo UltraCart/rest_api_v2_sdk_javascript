@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageMultimedia model module.
  * @module com.ultracart.admin.v2.models/SfvbPageMultimedia
- * @version 4.1.160
+ * @version 4.1.161
  */
 class SfvbPageMultimedia {
     /**

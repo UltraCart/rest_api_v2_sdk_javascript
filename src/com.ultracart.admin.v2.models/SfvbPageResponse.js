@@ -18,7 +18,7 @@ import SfvbPageMultimedia from './SfvbPageMultimedia';
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.160
+ * @version 4.1.161
  */
 class SfvbPageResponse {
     /**
@@ -52,11 +52,29 @@ class SfvbPageResponse {
             if (data.hasOwnProperty('attributes')) {
                 obj['attributes'] = ApiClient.convertToType(data['attributes'], [SfvbPageAttribute]);
             }
+            if (data.hasOwnProperty('exclude_from_sitemap')) {
+                obj['exclude_from_sitemap'] = ApiClient.convertToType(data['exclude_from_sitemap'], 'Boolean');
+            }
+            if (data.hasOwnProperty('group_template')) {
+                obj['group_template'] = ApiClient.convertToType(data['group_template'], 'String');
+            }
+            if (data.hasOwnProperty('item_template')) {
+                obj['item_template'] = ApiClient.convertToType(data['item_template'], 'String');
+            }
             if (data.hasOwnProperty('multimedia')) {
                 obj['multimedia'] = ApiClient.convertToType(data['multimedia'], [SfvbPageMultimedia]);
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('visible')) {
+                obj['visible'] = ApiClient.convertToType(data['visible'], 'Boolean');
+            }
+            if (data.hasOwnProperty('visible_dts')) {
+                obj['visible_dts'] = ApiClient.convertToType(data['visible_dts'], 'String');
             }
         }
         return obj;
@@ -72,6 +90,24 @@ class SfvbPageResponse {
 SfvbPageResponse.prototype['attributes'] = undefined;
 
 /**
+ * True when the page is left out of the sitemap and marked noindex.
+ * @member {Boolean} exclude_from_sitemap
+ */
+SfvbPageResponse.prototype['exclude_from_sitemap'] = undefined;
+
+/**
+ * Template file that renders the page itself, a bare .vm name found anywhere in the active theme.
+ * @member {String} group_template
+ */
+SfvbPageResponse.prototype['group_template'] = undefined;
+
+/**
+ * Template file that renders the item pages under this page.
+ * @member {String} item_template
+ */
+SfvbPageResponse.prototype['item_template'] = undefined;
+
+/**
  * The page's images, including codes a template declares but nothing has attached yet.  These are what the pageimage element renders - the default image when pageImageCode is empty, otherwise the image with that code.  The default image comes first.
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbPageMultimedia>} multimedia
  */
@@ -82,6 +118,24 @@ SfvbPageResponse.prototype['multimedia'] = undefined;
  * @member {String} path
  */
 SfvbPageResponse.prototype['path'] = undefined;
+
+/**
+ * The page title.
+ * @member {String} title
+ */
+SfvbPageResponse.prototype['title'] = undefined;
+
+/**
+ * False when the page is hidden.  A hidden page answers 404 to shoppers.
+ * @member {Boolean} visible
+ */
+SfvbPageResponse.prototype['visible'] = undefined;
+
+/**
+ * When set, the page stays hidden until this time (ISO 8601, UTC).
+ * @member {String} visible_dts
+ */
+SfvbPageResponse.prototype['visible_dts'] = undefined;
 
 
 
