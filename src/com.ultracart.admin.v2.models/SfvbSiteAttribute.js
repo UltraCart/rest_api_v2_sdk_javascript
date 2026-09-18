@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSiteAttribute model module.
  * @module com.ultracart.admin.v2.models/SfvbSiteAttribute
- * @version 4.1.159
+ * @version 4.1.160
  */
 class SfvbSiteAttribute {
     /**

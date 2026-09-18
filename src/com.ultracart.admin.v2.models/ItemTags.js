@@ -17,7 +17,7 @@ import ItemTag from './ItemTag';
 /**
  * The ItemTags model module.
  * @module com.ultracart.admin.v2.models/ItemTags
- * @version 4.1.159
+ * @version 4.1.160
  */
 class ItemTags {
     /**
