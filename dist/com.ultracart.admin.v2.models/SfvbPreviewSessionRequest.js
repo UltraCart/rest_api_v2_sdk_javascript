@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbPreviewSessionRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewSessionRequest
- * @version 4.1.157
+ * @version 4.1.158
  */
 var SfvbPreviewSessionRequest = /*#__PURE__*/function () {
   /**

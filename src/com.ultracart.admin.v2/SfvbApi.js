@@ -48,6 +48,8 @@ import SfvbPreviewSessionResponse from '../com.ultracart.admin.v2.models/SfvbPre
 import SfvbPreviewUrlResponse from '../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
 import SfvbRenderRequest from '../com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
+import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
 import SfvbStorefrontsResponse from '../com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTheme from '../com.ultracart.admin.v2.models/SfvbTheme';
 import SfvbThemeAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest';
@@ -66,7 +68,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.158
+* @version 4.1.159
 */
 export default class SfvbApi {
 
@@ -1010,6 +1012,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbSiteAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a storefront's site attributes
+     * The values the siteattribute element and $site.attr render.  These are not in any file or theme.  Attributes a template declares but nothing has set are included with the template's default, so the response describes what the templates can render rather than only what has been saved.  Credentials stored as site attributes are never included. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse}
+     */
+    getSfvbSiteAttributes(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSiteAttributes");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSiteAttributesResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/attributes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbTheme operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbThemeCallback
      * @param {String} error Error message, if any.
@@ -1935,6 +1980,54 @@ export default class SfvbApi {
       let returnType = SfvbPreviewSessionResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbSiteAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbSiteAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a storefront's site attributes
+     * A partial update.  Only the attributes you name are changed.  Every entry is checked before any is written.  List, video list, mailing list and item set attributes are refused, and so are the General screen settings other than the title, the SEO description and keywords and the social account names.  Credentials are refused.  Always needs sfvb_publish, because every theme reads the same attributes and there is no dormant copy to change instead.  The admin General screen saves the whole storefront, so a merchant with it open can still overwrite a change made here. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest} site_attribute_update_request Attributes to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbSiteAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse}
+     */
+    putSfvbSiteAttributes(storefront_oid, site_attribute_update_request, callback) {
+      let postBody = site_attribute_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbSiteAttributes");
+      }
+      // verify the required parameter 'site_attribute_update_request' is set
+      if (site_attribute_update_request === undefined || site_attribute_update_request === null) {
+        throw new Error("Missing the required parameter 'site_attribute_update_request' when calling putSfvbSiteAttributes");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbSiteAttributesResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/attributes', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

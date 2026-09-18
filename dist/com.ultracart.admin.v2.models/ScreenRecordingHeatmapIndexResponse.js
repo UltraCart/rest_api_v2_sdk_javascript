@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ScreenRecordingHeatmapIndexResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingHeatmapIndexResponse
- * @version 4.1.157
+ * @version 4.1.158
  */
 var ScreenRecordingHeatmapIndexResponse = /*#__PURE__*/function () {
   /**

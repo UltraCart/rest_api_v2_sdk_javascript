@@ -1017,6 +1017,10 @@ import SfvbPreviewSessionResponse from './com.ultracart.admin.v2.models/SfvbPrev
 import SfvbPreviewUrlResponse from './com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbSiteAttribute from './com.ultracart.admin.v2.models/SfvbSiteAttribute';
+import SfvbSiteAttributeUpdate from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate';
+import SfvbSiteAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
+import SfvbSiteAttributesResponse from './com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
 import SfvbStorefront from './com.ultracart.admin.v2.models/SfvbStorefront';
 import SfvbStorefrontsResponse from './com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTheme from './com.ultracart.admin.v2.models/SfvbTheme';
@@ -1180,7 +1184,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.158
+* @version 4.1.159
 */
 export {
     /**
@@ -7212,6 +7216,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbRenderResponse}
      */
     SfvbRenderResponse,
+
+    /**
+     * The SfvbSiteAttribute model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSiteAttribute}
+     */
+    SfvbSiteAttribute,
+
+    /**
+     * The SfvbSiteAttributeUpdate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate}
+     */
+    SfvbSiteAttributeUpdate,
+
+    /**
+     * The SfvbSiteAttributeUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest}
+     */
+    SfvbSiteAttributeUpdateRequest,
+
+    /**
+     * The SfvbSiteAttributesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse}
+     */
+    SfvbSiteAttributesResponse,
 
     /**
      * The SfvbStorefront model constructor.

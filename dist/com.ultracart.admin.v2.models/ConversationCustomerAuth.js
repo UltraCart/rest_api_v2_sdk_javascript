@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationCustomerAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationCustomerAuth
- * @version 4.1.157
+ * @version 4.1.158
  */
 var ConversationCustomerAuth = /*#__PURE__*/function () {
   /**

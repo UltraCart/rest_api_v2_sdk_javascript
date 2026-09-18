@@ -17,7 +17,7 @@ import ConversationPbxHardwarePhone from './ConversationPbxHardwarePhone';
 /**
  * The ConversationPbxHardwarePhonesResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxHardwarePhonesResponse
- * @version 4.1.158
+ * @version 4.1.159
  */
 class ConversationPbxHardwarePhonesResponse {
     /**

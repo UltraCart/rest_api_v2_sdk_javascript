@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The QuickBooksOnlineCustomersResponse model module.
  * @module com.ultracart.admin.v2.models/QuickBooksOnlineCustomersResponse
- * @version 4.1.158
+ * @version 4.1.159
  */
 class QuickBooksOnlineCustomersResponse {
     /**

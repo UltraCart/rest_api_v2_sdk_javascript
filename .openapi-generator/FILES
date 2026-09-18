@@ -1024,6 +1024,10 @@ docs/SfvbPreviewSessionResponse.md
 docs/SfvbPreviewUrlResponse.md
 docs/SfvbRenderRequest.md
 docs/SfvbRenderResponse.md
+docs/SfvbSiteAttribute.md
+docs/SfvbSiteAttributeUpdate.md
+docs/SfvbSiteAttributeUpdateRequest.md
+docs/SfvbSiteAttributesResponse.md
 docs/SfvbStorefront.md
 docs/SfvbStorefrontsResponse.md
 docs/SfvbTheme.md
@@ -2146,6 +2150,10 @@ src/com.ultracart.admin.v2.models/SfvbPreviewSessionResponse.js
 src/com.ultracart.admin.v2.models/SfvbPreviewUrlResponse.js
 src/com.ultracart.admin.v2.models/SfvbRenderRequest.js
 src/com.ultracart.admin.v2.models/SfvbRenderResponse.js
+src/com.ultracart.admin.v2.models/SfvbSiteAttribute.js
+src/com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate.js
+src/com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest.js
+src/com.ultracart.admin.v2.models/SfvbSiteAttributesResponse.js
 src/com.ultracart.admin.v2.models/SfvbStorefront.js
 src/com.ultracart.admin.v2.models/SfvbStorefrontsResponse.js
 src/com.ultracart.admin.v2.models/SfvbTheme.js

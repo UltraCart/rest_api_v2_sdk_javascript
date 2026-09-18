@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentCallEvent model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentCallEvent
- * @version 4.1.157
+ * @version 4.1.158
  */
 var ConversationAgentCallEvent = /*#__PURE__*/function () {
   /**
