@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbContainerResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerResponse
- * @version 4.1.156
+ * @version 4.1.157
  */
 var SfvbContainerResponse = /*#__PURE__*/function () {
   /**
@@ -71,6 +71,9 @@ var SfvbContainerResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('last_modified')) {
           obj['last_modified'] = _ApiClient["default"].convertToType(data['last_modified'], 'String');
         }
+        if (data.hasOwnProperty('merchant_item_id')) {
+          obj['merchant_item_id'] = _ApiClient["default"].convertToType(data['merchant_item_id'], 'String');
+        }
         if (data.hasOwnProperty('owner_object_id')) {
           obj['owner_object_id'] = _ApiClient["default"].convertToType(data['owner_object_id'], 'String');
         }
@@ -105,6 +108,12 @@ SfvbContainerResponse.prototype['hash_sha256'] = undefined;
  * @member {String} last_modified
  */
 SfvbContainerResponse.prototype['last_modified'] = undefined;
+
+/**
+ * The merchant item id of the owning item, for item containers only and absent for every other owner type.  owner_object_id is the item oid, which appears nowhere on a rendered storefront, so this is how a caller confirms which item an oid actually reached.  It is read fresh on every call and so reflects a renamed item.  A container's own id embeds this value, which is what a preview session keys an item container on.
+ * @member {String} merchant_item_id
+ */
+SfvbContainerResponse.prototype['merchant_item_id'] = undefined;
 
 /**
  * Identifier of the owning object within its store.

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbMenuWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbMenuWriteRequest
- * @version 4.1.156
+ * @version 4.1.157
  */
 var SfvbMenuWriteRequest = /*#__PURE__*/function () {
   /**

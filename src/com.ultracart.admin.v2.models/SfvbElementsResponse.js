@@ -17,7 +17,7 @@ import SfvbElement from './SfvbElement';
 /**
  * The SfvbElementsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbElementsResponse
- * @version 4.1.157
+ * @version 4.1.158
  */
 class SfvbElementsResponse {
     /**

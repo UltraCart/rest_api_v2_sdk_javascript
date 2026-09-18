@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationAgentStatusHistorySearchRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchRequest
- * @version 4.1.156
+ * @version 4.1.157
  */
 var ConversationAgentStatusHistorySearchRequest = /*#__PURE__*/function () {
   /**

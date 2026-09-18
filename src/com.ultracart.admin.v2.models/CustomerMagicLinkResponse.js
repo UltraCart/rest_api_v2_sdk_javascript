@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The CustomerMagicLinkResponse model module.
  * @module com.ultracart.admin.v2.models/CustomerMagicLinkResponse
- * @version 4.1.157
+ * @version 4.1.158
  */
 class CustomerMagicLinkResponse {
     /**

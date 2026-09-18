@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentStatusRollup model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusRollup
- * @version 4.1.157
+ * @version 4.1.158
  */
 class ConversationAgentStatusRollup {
     /**

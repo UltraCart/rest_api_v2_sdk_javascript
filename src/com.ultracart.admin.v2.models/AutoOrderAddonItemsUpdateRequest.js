@@ -17,7 +17,7 @@ import AutoOrderAddonItem from './AutoOrderAddonItem';
 /**
  * The AutoOrderAddonItemsUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderAddonItemsUpdateRequest
- * @version 4.1.157
+ * @version 4.1.158
  */
 class AutoOrderAddonItemsUpdateRequest {
     /**

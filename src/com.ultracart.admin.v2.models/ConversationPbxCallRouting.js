@@ -17,7 +17,7 @@ import ConversationPbxCallQueue from './ConversationPbxCallQueue';
 /**
  * The ConversationPbxCallRouting model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallRouting
- * @version 4.1.157
+ * @version 4.1.158
  */
 class ConversationPbxCallRouting {
     /**

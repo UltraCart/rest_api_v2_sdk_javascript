@@ -17,7 +17,7 @@ import SfvbPageAttributeUpdate from './SfvbPageAttributeUpdate';
 /**
  * The SfvbPageAttributeUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest
- * @version 4.1.157
+ * @version 4.1.158
  */
 class SfvbPageAttributeUpdateRequest {
     /**
