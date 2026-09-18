@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbPreviewAccessResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewAccessResponse
- * @version 4.1.155
+ * @version 4.1.156
  */
 var SfvbPreviewAccessResponse = /*#__PURE__*/function () {
   /**
@@ -113,7 +113,7 @@ SfvbPreviewAccessResponse.prototype['path'] = undefined;
 SfvbPreviewAccessResponse.prototype['preview_session_id'] = undefined;
 
 /**
- * How long the browser stays in preview once access_url is opened.  The remaining life of the preview session, or eight hours when none was given.  The user and their storefront permission are checked again on every page, so removing either ends it sooner.
+ * How long the browser stays in preview once access_url is opened.  The remaining life of the preview session, or eight hours when none was given.  Ending the preview session ends preview in that browser at its next page.  The user and their storefront permission are checked again on every page, so removing either ends it sooner.
  * @member {Number} session_lifetime_seconds
  */
 SfvbPreviewAccessResponse.prototype['session_lifetime_seconds'] = undefined;

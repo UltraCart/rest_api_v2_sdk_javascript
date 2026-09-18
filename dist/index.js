@@ -6039,6 +6039,30 @@ Object.defineProperty(exports, "SfvbLibraryResponse", {
     return _SfvbLibraryResponse["default"];
   }
 });
+Object.defineProperty(exports, "SfvbMenu", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbMenu["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbMenuItem", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbMenuItem["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbMenuWriteRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbMenuWriteRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbMenusResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbMenusResponse["default"];
+  }
+});
 Object.defineProperty(exports, "SfvbPageAttribute", {
   enumerable: true,
   get: function get() {
@@ -7789,6 +7813,10 @@ var _SfvbFilesResponse = _interopRequireDefault(require("./com.ultracart.admin.v
 var _SfvbLibraryEntry = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbLibraryEntry"));
 var _SfvbLibraryFacet = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbLibraryFacet"));
 var _SfvbLibraryResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbLibraryResponse"));
+var _SfvbMenu = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbMenu"));
+var _SfvbMenuItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbMenuItem"));
+var _SfvbMenuWriteRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbMenuWriteRequest"));
+var _SfvbMenusResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbMenusResponse"));
 var _SfvbPageAttribute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageAttribute"));
 var _SfvbPageAttributeUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageAttributeUpdate"));
 var _SfvbPageAttributeUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest"));

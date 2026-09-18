@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbVersionResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbVersionResponse
- * @version 4.1.155
+ * @version 4.1.156
  */
 var SfvbVersionResponse = /*#__PURE__*/function () {
   /**
@@ -79,6 +79,12 @@ var SfvbVersionResponse = /*#__PURE__*/function () {
         }
         if (data.hasOwnProperty('max_library_results_per_page')) {
           obj['max_library_results_per_page'] = _ApiClient["default"].convertToType(data['max_library_results_per_page'], 'Number');
+        }
+        if (data.hasOwnProperty('max_menu_depth')) {
+          obj['max_menu_depth'] = _ApiClient["default"].convertToType(data['max_menu_depth'], 'Number');
+        }
+        if (data.hasOwnProperty('max_menu_items')) {
+          obj['max_menu_items'] = _ApiClient["default"].convertToType(data['max_menu_items'], 'Number');
         }
         if (data.hasOwnProperty('max_preview_session_bytes')) {
           obj['max_preview_session_bytes'] = _ApiClient["default"].convertToType(data['max_preview_session_bytes'], 'Number');
@@ -153,6 +159,18 @@ SfvbVersionResponse.prototype['max_directory_entries'] = undefined;
  * @member {Number} max_library_results_per_page
  */
 SfvbVersionResponse.prototype['max_library_results_per_page'] = undefined;
+
+/**
+ * How deeply store menu entries can nest.
+ * @member {Number} max_menu_depth
+ */
+SfvbVersionResponse.prototype['max_menu_depth'] = undefined;
+
+/**
+ * Most entries one store menu can hold, counting every level of the tree.  A menu is navigation that renders on every page, so this is deliberately far below what the storage would physically accept.
+ * @member {Number} max_menu_items
+ */
+SfvbVersionResponse.prototype['max_menu_items'] = undefined;
 
 /**
  * Largest payload one preview session may hold, in bytes.

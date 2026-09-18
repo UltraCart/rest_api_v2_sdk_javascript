@@ -27,6 +27,9 @@ var _SfvbFileWriteResponse = _interopRequireDefault(require("../com.ultracart.ad
 var _SfvbFilesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbFilesResponse"));
 var _SfvbLibraryEntry = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbLibraryEntry"));
 var _SfvbLibraryResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbLibraryResponse"));
+var _SfvbMenu = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbMenu"));
+var _SfvbMenuWriteRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbMenuWriteRequest"));
+var _SfvbMenusResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbMenusResponse"));
 var _SfvbPageAttributeUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest"));
 var _SfvbPageMultimediaRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageMultimediaRequest"));
 var _SfvbPageResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageResponse"));
@@ -72,7 +75,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.155
+* @version 4.1.156
 */
 var SfvbApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -718,6 +721,84 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbLibraryEntry["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbMenu operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbMenuCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbMenu} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one store menu and its entries
+     * The whole tree, in render order.  Page entries carry the page_path they resolve to and item entries the merchant_item_id, rather than the oids the storage keeps.  Menu item oids are not returned at all because a write regenerates every one of them.  Keep hash_sha256 - it is the If-Match a write needs. 
+     * @param {Number} storefront_oid 
+     * @param {String} code Menu code, matched without regard to case
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbMenuCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbMenu}
+     */
+  }, {
+    key: "getSfvbMenu",
+    value: function getSfvbMenu(storefront_oid, code, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbMenu");
+      }
+      // verify the required parameter 'code' is set
+      if (code === undefined || code === null) {
+        throw new Error("Missing the required parameter 'code' when calling getSfvbMenu");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'code': code
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbMenu["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/menus/{code}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbMenus operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbMenusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbMenusResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a storefront's store menus
+     * The menus a menu element's menuName can name, sorted by code and without their entries.  A code the active theme's templates ask for but nothing has created is included with unconfigured true - that code renders an empty list today, and writing it creates it.  A menu no template names is marked undeclared, which usually means a menuName is misspelled. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbMenusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbMenusResponse}
+     */
+  }, {
+    key: "getSfvbMenus",
+    value: function getSfvbMenus(storefront_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbMenus");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbMenusResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/menus', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1412,6 +1493,58 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbFileWriteResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/files/content', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbMenu operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbMenuCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbMenu} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replace a store menu's entries
+     * A whole menu replace, not a merge - what you send is what the menu holds afterwards, so read it, change the tree and send it back.  Omitting items changes only the title; sending an empty array empties the menu.  Writing a code that does not exist creates it.  Every entry is checked before any of it is written, including that a merchant_item_id and a page_path actually resolve, so a tree with one bad entry changes nothing.  Always needs sfvb_publish, because a menu is shared by every theme and there is no dormant copy to change instead. 
+     * @param {Number} storefront_oid 
+     * @param {String} code Menu code, matched without regard to case
+     * @param {module:com.ultracart.admin.v2.models/SfvbMenuWriteRequest} menu_write_request The menu's replacement contents
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.If_Match Content hash from the last read.  Required when the menu already exists; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbMenuCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbMenu}
+     */
+  }, {
+    key: "putSfvbMenu",
+    value: function putSfvbMenu(storefront_oid, code, menu_write_request, opts, callback) {
+      opts = opts || {};
+      var postBody = menu_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbMenu");
+      }
+      // verify the required parameter 'code' is set
+      if (code === undefined || code === null) {
+        throw new Error("Missing the required parameter 'code' when calling putSfvbMenu");
+      }
+      // verify the required parameter 'menu_write_request' is set
+      if (menu_write_request === undefined || menu_write_request === null) {
+        throw new Error("Missing the required parameter 'menu_write_request' when calling putSfvbMenu");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'code': code
+      };
+      var queryParams = {};
+      var headerParams = {
+        'If-Match': opts['If_Match']
+      };
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbMenu["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/menus/{code}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

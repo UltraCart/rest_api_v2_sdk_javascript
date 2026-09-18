@@ -66,7 +66,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.156
+* @version 4.1.157
 */
 export default class SfvbApi {
 
@@ -519,7 +519,7 @@ export default class SfvbApi {
 
     /**
      * Read a container stored outside the file system
-     * owner_type is one of upsell, email, postcardfront, postcardback or item.  Item containers also require container_name.  Theme and page containers are files; read those through files/content. 
+     * owner_type is one of upsell, email, postcardfront, postcardback, item or itemid.  It also says how owner_object_id is read - item and upsell take an oid, itemid takes a merchant item id, and the rest take an esp uuid.  itemid reaches the same containers as item and is the way to address one from a storefront, where data-context-item-id carries the merchant item id and the oid appears nowhere.  Item containers also require container_name.  Theme and page containers are files; read those through files/content. 
      * @param {Number} storefront_oid 
      * @param {String} owner_type 
      * @param {String} owner_object_id 
@@ -578,7 +578,7 @@ export default class SfvbApi {
 
     /**
      * Read the CJSON stored in one container history entry
-     * Inspect or diff an earlier version without reverting to it.  The version is addressed through the container that owns it, so a history oid belonging to some other resource cannot be read through this route. 
+     * Inspect or diff an earlier version without reverting to it.  The version is addressed through the container that owns it, so a history oid belonging to some other resource cannot be read through this route.  owner_type also says how owner_object_id is read, and itemid addresses an item container by merchant item id. 
      * @param {Number} storefront_oid 
      * @param {Number} container_history_oid 
      * @param {Object} opts Optional parameters
@@ -1288,6 +1288,7 @@ export default class SfvbApi {
 
     /**
      * Version history for a container stored outside the file system
+     * Addressed the same way as the container itself, so owner_type also says how owner_object_id is read and itemid lists the history of the item container that merchant item id names. 
      * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.owner_type 
@@ -1597,7 +1598,7 @@ export default class SfvbApi {
 
     /**
      * Write a container stored outside the file system
-     * Validation is mandatory and runs here regardless of whether the caller validated first.  The previous value is snapshotted before the write, so the change can be reverted.  Side effects the visual builder performs on save, such as upsell screenshot regeneration and email content review flagging, are applied too. 
+     * Validation is mandatory and runs here regardless of whether the caller validated first.  The previous value is snapshotted before the write, so the change can be reverted.  Side effects the visual builder performs on save, such as upsell screenshot regeneration and email content review flagging, are applied too.  owner_type also says how owner_object_id is read; send itemid to address an item container by merchant item id rather than by oid.  Either way the history records the one canonical address, so a container written under one spelling is listed and reverted under the other. 
      * @param {Number} storefront_oid 
      * @param {String} owner_type 
      * @param {String} owner_object_id 
@@ -2104,7 +2105,7 @@ export default class SfvbApi {
 
     /**
      * Revert a container stored outside the file system
-     * The restore is itself snapshotted, so a revert can be undone in turn.  Reverting to an entry recorded before the container existed removes it again.  Addressed through the owning container and guarded by If-Match, because a revert overwrites live content just as much as an ordinary write does. 
+     * The restore is itself snapshotted, so a revert can be undone in turn.  Reverting to an entry recorded before the container existed removes it again.  Addressed through the owning container and guarded by If-Match, because a revert overwrites live content just as much as an ordinary write does.  owner_type also says how owner_object_id is read, so a version written by oid can be reverted by merchant item id and the other way round. 
      * @param {Number} storefront_oid 
      * @param {String} owner_type 
      * @param {String} owner_object_id 

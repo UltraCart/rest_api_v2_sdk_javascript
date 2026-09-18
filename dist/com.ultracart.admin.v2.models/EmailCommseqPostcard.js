@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The EmailCommseqPostcard model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqPostcard
- * @version 4.1.155
+ * @version 4.1.156
  */
 var EmailCommseqPostcard = /*#__PURE__*/function () {
   /**
