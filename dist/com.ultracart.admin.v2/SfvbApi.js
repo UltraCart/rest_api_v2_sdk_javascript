@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 var _ErrorResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/ErrorResponse"));
+var _SfvbBlogPostsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbBlogPostsResponse"));
 var _SfvbCompileRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbCompileRequest"));
 var _SfvbCompileResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbCompileResponse"));
 var _SfvbContainerResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbContainerResponse"));
@@ -15,6 +16,12 @@ var _SfvbContainerVersionsResponse = _interopRequireDefault(require("../com.ultr
 var _SfvbContainerWriteRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbContainerWriteRequest"));
 var _SfvbElementSchemaResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbElementSchemaResponse"));
 var _SfvbElementsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbElementsResponse"));
+var _SfvbExperiment = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbExperiment"));
+var _SfvbExperimentEndRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbExperimentEndRequest"));
+var _SfvbExperimentObjectivesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbExperimentObjectivesResponse"));
+var _SfvbExperimentStartRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbExperimentStartRequest"));
+var _SfvbExperimentVariationUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest"));
+var _SfvbExperimentsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbExperimentsResponse"));
 var _SfvbFileContentResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbFileContentResponse"));
 var _SfvbFileRevertRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbFileRevertRequest"));
 var _SfvbFileSearchRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbFileSearchRequest"));
@@ -31,8 +38,18 @@ var _SfvbMenu = _interopRequireDefault(require("../com.ultracart.admin.v2.models
 var _SfvbMenuWriteRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbMenuWriteRequest"));
 var _SfvbMenusResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbMenusResponse"));
 var _SfvbPageAttributeUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest"));
+var _SfvbPageBlogPostsRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest"));
+var _SfvbPageBlogPostsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse"));
+var _SfvbPageCreateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageCreateRequest"));
+var _SfvbPageDuplicateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageDuplicateRequest"));
+var _SfvbPageItemsAddRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageItemsAddRequest"));
+var _SfvbPageItemsRemoveRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest"));
+var _SfvbPageItemsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageItemsResponse"));
+var _SfvbPageListResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageListResponse"));
 var _SfvbPageMultimediaRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageMultimediaRequest"));
 var _SfvbPageResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageResponse"));
+var _SfvbPageSelectors = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageSelectors"));
+var _SfvbPageSettingsRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPageSettingsRequest"));
 var _SfvbPreviewAccessRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewAccessRequest"));
 var _SfvbPreviewAccessResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewAccessResponse"));
 var _SfvbPreviewSessionRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest"));
@@ -40,7 +57,10 @@ var _SfvbPreviewSessionResponse = _interopRequireDefault(require("../com.ultraca
 var _SfvbPreviewUrlResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse"));
 var _SfvbRenderRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbRenderRequest"));
 var _SfvbRenderResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbRenderResponse"));
+var _SfvbSiteAttributeUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest"));
+var _SfvbSiteAttributesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbSiteAttributesResponse"));
 var _SfvbStorefrontsResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbStorefrontsResponse"));
+var _SfvbTemplatesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbTemplatesResponse"));
 var _SfvbTheme = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbTheme"));
 var _SfvbThemeAttributeUpdateRequest = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest"));
 var _SfvbThemeAttributesResponse = _interopRequireDefault(require("../com.ultracart.admin.v2.models/SfvbThemeAttributesResponse"));
@@ -75,7 +95,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.158
+* @version 4.1.161
 */
 var SfvbApi = exports["default"] = /*#__PURE__*/function () {
   /**
@@ -91,21 +111,117 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
   }
 
   /**
-   * Callback function to receive the result of the compileSfvbCjson operation.
-   * @callback module:com.ultracart.admin.v2/SfvbApi~compileSfvbCjsonCallback
+   * Callback function to receive the result of the addSfvbPageBlogPosts operation.
+   * @callback module:com.ultracart.admin.v2/SfvbApi~addSfvbPageBlogPostsCallback
    * @param {String} error Error message, if any.
-   * @param {module:com.ultracart.admin.v2.models/SfvbCompileResponse} data The data returned by the service call.
+   * @param {module:com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse} data The data returned by the service call.
    * @param {String} response The complete HTTP response.
    */
 
   /**
-   * Compile CJSON to Velocity
-   * Compiles a container document to Velocity without storing anything.  Supply theme_oid to compile with the theme's inherit groups applied; omit it to compile standalone. 
-   * @param {module:com.ultracart.admin.v2.models/SfvbCompileRequest} compile_request CJSON to compile
-   * @param {module:com.ultracart.admin.v2/SfvbApi~compileSfvbCjsonCallback} callback The callback function, accepting three arguments: error, data, response
-   * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCompileResponse}
+   * Assign blog posts to a page
+   * Adds posts by blog_post_oid, at most 500 at a time.  Every oid must be a post on this storefront, and one that is not changes nothing.  Refused on a page whose selectors choose its blog posts.  Always needs sfvb_publish. 
+   * @param {Number} storefront_oid 
+   * @param {String} path Page path, for example /blog/
+   * @param {module:com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest} page_blog_posts_request Blog posts to assign
+   * @param {module:com.ultracart.admin.v2/SfvbApi~addSfvbPageBlogPostsCallback} callback The callback function, accepting three arguments: error, data, response
+   * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse}
    */
   return _createClass(SfvbApi, [{
+    key: "addSfvbPageBlogPosts",
+    value: function addSfvbPageBlogPosts(storefront_oid, path, page_blog_posts_request, callback) {
+      var postBody = page_blog_posts_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling addSfvbPageBlogPosts");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling addSfvbPageBlogPosts");
+      }
+      // verify the required parameter 'page_blog_posts_request' is set
+      if (page_blog_posts_request === undefined || page_blog_posts_request === null) {
+        throw new Error("Missing the required parameter 'page_blog_posts_request' when calling addSfvbPageBlogPosts");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageBlogPostsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/blog_posts/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the addSfvbPageItems operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~addSfvbPageItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Assign items to a page
+     * Adds items by item id, at most 500 at a time, or changes the sort order or url part of items already on the page.  Every id is checked first and one unknown id changes nothing.  Refused on a page whose selectors choose its items.  sort_order is refused unless the page sorts its items by a custom order.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /lp/spring-sale/
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageItemsAddRequest} page_items_add_request Items to assign
+     * @param {module:com.ultracart.admin.v2/SfvbApi~addSfvbPageItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageItemsResponse}
+     */
+  }, {
+    key: "addSfvbPageItems",
+    value: function addSfvbPageItems(storefront_oid, path, page_items_add_request, callback) {
+      var postBody = page_items_add_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling addSfvbPageItems");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling addSfvbPageItems");
+      }
+      // verify the required parameter 'page_items_add_request' is set
+      if (page_items_add_request === undefined || page_items_add_request === null) {
+        throw new Error("Missing the required parameter 'page_items_add_request' when calling addSfvbPageItems");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageItemsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/items/add', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the compileSfvbCjson operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~compileSfvbCjsonCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCompileResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Compile CJSON to Velocity
+     * Compiles a container document to Velocity without storing anything.  Supply theme_oid to compile with the theme's inherit groups applied; omit it to compile standalone. 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCompileRequest} compile_request CJSON to compile
+     * @param {module:com.ultracart.admin.v2/SfvbApi~compileSfvbCjsonCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCompileResponse}
+     */
+  }, {
     key: "compileSfvbCjson",
     value: function compileSfvbCjson(compile_request, callback) {
       var postBody = compile_request;
@@ -377,6 +493,47 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the duplicateSfvbPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~duplicateSfvbPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Copy a page to a new path
+     * Copies what the store admin's duplicate copies - settings, items, blog posts, permissions, attributes, selectors, images and the page folder with its body.  The copy goes to the path you choose, under any existing page, with the same path rules as creating a page, and a 409 with the code sfvb.page_exists when that path is taken.  The root page and pages with pages under them cannot be copied.  A page whose folder holds a started experiment is refused, because the copy would share the experiment - end it first.  Translated title and description text is not copied.  Always needs sfvb_publish, because the copy is live as soon as it exists. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageDuplicateRequest} page_duplicate_request The page to copy and where
+     * @param {module:com.ultracart.admin.v2/SfvbApi~duplicateSfvbPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+  }, {
+    key: "duplicateSfvbPage",
+    value: function duplicateSfvbPage(storefront_oid, page_duplicate_request, callback) {
+      var postBody = page_duplicate_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling duplicateSfvbPage");
+      }
+      // verify the required parameter 'page_duplicate_request' is set
+      if (page_duplicate_request === undefined || page_duplicate_request === null) {
+        throw new Error("Missing the required parameter 'page_duplicate_request' when calling duplicateSfvbPage");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/duplicate', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the duplicateSfvbTheme operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~duplicateSfvbThemeCallback
      * @param {String} error Error message, if any.
@@ -421,6 +578,51 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbThemeJobResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/duplicate', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the endSfvbExperiment operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~endSfvbExperimentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperiment} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * End an experiment
+     * Ends a running experiment.  With winner_variation_number the winner gets all new visitors, and a page experiment's winning content is promoted into the page by the completion job on its next run, which also emails the merchant.  Without a winner a page experiment's id is cleared from its page body so the page shows variation 0, and a url experiment sends everyone to variation 0.  Visitors already assigned to a url experiment keep their page for up to 30 days.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} experiment_oid 
+     * @param {Object} opts Optional parameters
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperimentEndRequest} opts.experiment_end_request The winner, if any
+     * @param {module:com.ultracart.admin.v2/SfvbApi~endSfvbExperimentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbExperiment}
+     */
+  }, {
+    key: "endSfvbExperiment",
+    value: function endSfvbExperiment(storefront_oid, experiment_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['experiment_end_request'];
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling endSfvbExperiment");
+      }
+      // verify the required parameter 'experiment_oid' is set
+      if (experiment_oid === undefined || experiment_oid === null) {
+        throw new Error("Missing the required parameter 'experiment_oid' when calling endSfvbExperiment");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'experiment_oid': experiment_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbExperiment["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/experiments/{experiment_oid}/end', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -594,6 +796,89 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbElementSchemaResponse["default"];
       return this.apiClient.callApi('/sfvb/elements/{element_type}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbExperiment operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbExperimentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperiment} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one experiment and its statistics
+     * The experiment, its variations and their statistics, and with daily=true each variation's daily rows.  p95_sessions_needed is estimated only after 1000 sessions, and sessions_needed_computed_dts says when.  For a url experiment, router_url is the address visitors must enter through. 
+     * @param {Number} storefront_oid 
+     * @param {Number} experiment_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.daily Include each variation's daily statistics
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbExperimentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbExperiment}
+     */
+  }, {
+    key: "getSfvbExperiment",
+    value: function getSfvbExperiment(storefront_oid, experiment_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbExperiment");
+      }
+      // verify the required parameter 'experiment_oid' is set
+      if (experiment_oid === undefined || experiment_oid === null) {
+        throw new Error("Missing the required parameter 'experiment_oid' when calling getSfvbExperiment");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'experiment_oid': experiment_oid
+      };
+      var queryParams = {
+        'daily': opts['daily']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbExperiment["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/experiments/{experiment_oid}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbExperimentObjectives operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbExperimentObjectivesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperimentObjectivesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the objectives an experiment can optimize
+     * Each objective with what is measured per session and compared between variations, the usual optimization type, and whether it needs an event name. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbExperimentObjectivesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbExperimentObjectivesResponse}
+     */
+  }, {
+    key: "getSfvbExperimentObjectives",
+    value: function getSfvbExperimentObjectives(storefront_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbExperimentObjectives");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbExperimentObjectivesResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/experiments/objectives', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -845,6 +1130,135 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbPageBlogPosts operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPageBlogPostsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read the blog posts assigned to a page
+     * The posts the page shows.  uses_selectors is true when the page's blog post selectors choose them instead. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /blog/
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbPageBlogPostsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse}
+     */
+  }, {
+    key: "getSfvbPageBlogPosts",
+    value: function getSfvbPageBlogPosts(storefront_oid, path, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbPageBlogPosts");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling getSfvbPageBlogPosts");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageBlogPostsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/blog_posts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbPageItems operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPageItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read the items assigned to a page
+     * The items on the page with their sort order and url part.  uses_selectors is true when the page's selectors choose its items instead. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /lp/spring-sale/
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbPageItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageItemsResponse}
+     */
+  }, {
+    key: "getSfvbPageItems",
+    value: function getSfvbPageItems(storefront_oid, path, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbPageItems");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling getSfvbPageItems");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageItemsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/items', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbPageSelectors operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPageSelectorsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageSelectors} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a page's selectors
+     * The conditions that choose the page's items and blog posts, and whether each set must all match. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /lp/spring-sale/
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbPageSelectorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageSelectors}
+     */
+  }, {
+    key: "getSfvbPageSelectors",
+    value: function getSfvbPageSelectors(storefront_oid, path, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbPageSelectors");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling getSfvbPageSelectors");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageSelectors["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/selectors', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbPreviewUrl operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPreviewUrlCallback
      * @param {String} error Error message, if any.
@@ -889,6 +1303,42 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbPreviewUrlResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}/url', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbSiteAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a storefront's site attributes
+     * The values the siteattribute element and $site.attr render.  These are not in any file or theme.  Attributes a template declares but nothing has set are included with the template's default, so the response describes what the templates can render rather than only what has been saved.  Credentials stored as site attributes are never included. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse}
+     */
+  }, {
+    key: "getSfvbSiteAttributes",
+    value: function getSfvbSiteAttributes(storefront_oid, callback) {
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSiteAttributes");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbSiteAttributesResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/attributes', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1075,6 +1525,47 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the insertSfvbPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a page
+     * Creates the page and its folder, the way the store admin's add page does.  The parent page must already exist, and the last part of the path may only contain letters, digits, hyphens and underscores - it is refused, not cleaned.  A path that already has a page is refused with a 409 and the code sfvb.page_exists.  Without a group_template the page inherits its parent's templates, or catalog_group.vm directly under the root.  Set attributes and images afterwards with the page attribute and image endpoints, and push the body to the page folder.  Always needs sfvb_publish, because the page is live as soon as it exists.  Deleting, moving and renaming pages stay in the store admin. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageCreateRequest} page_create_request The page to create
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+  }, {
+    key: "insertSfvbPage",
+    value: function insertSfvbPage(storefront_oid, page_create_request, callback) {
+      var postBody = page_create_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbPage");
+      }
+      // verify the required parameter 'page_create_request' is set
+      if (page_create_request === undefined || page_create_request === null) {
+        throw new Error("Missing the required parameter 'page_create_request' when calling insertSfvbPage");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the installSfvbLibraryEntry operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~installSfvbLibraryEntryCallback
      * @param {String} error Error message, if any.
@@ -1114,6 +1605,51 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbLibraryEntry["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/library/{library_oid}/install', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbBlogPosts operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbBlogPostsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the storefront's blog posts
+     * One page of blog posts, newest first, without their bodies.  search matches the title, body, excerpt, url part or author, or a tag exactly.  unassigned marks posts no page shows yet.  Use a post's blog_post_oid to assign it to a page. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search Text to search for
+     * @param {Number} opts.page Page number, starting at 1
+     * @param {Number} opts.page_size Posts per page, 1 to 100, default 50
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbBlogPostsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbBlogPostsResponse}
+     */
+  }, {
+    key: "listSfvbBlogPosts",
+    value: function listSfvbBlogPosts(storefront_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbBlogPosts");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'search': opts['search'],
+        'page': opts['page'],
+        'page_size': opts['page_size']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbBlogPostsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/blog_posts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1188,6 +1724,51 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbElementsResponse["default"];
       return this.apiClient.callApi('/sfvb/elements', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbExperiments operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbExperimentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperimentsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the storefront's experiments
+     * Every experiment that is not deleted, with its variations and their statistics - the same numbers the store admin shows.  Filter by status, by type (page, url, theme, openai), or by the page an experiment runs on.  auto_ends_at says when the engine will end an experiment by itself, and p_value is a one-way ANOVA across all variations.  Read one experiment for its daily statistics. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.status Running or Ended
+     * @param {String} opts.type page, url, theme or openai
+     * @param {String} opts.path Only experiments on this page, for example /lp/spring-sale/
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbExperimentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbExperimentsResponse}
+     */
+  }, {
+    key: "listSfvbExperiments",
+    value: function listSfvbExperiments(storefront_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbExperiments");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'status': opts['status'],
+        'type': opts['type'],
+        'path': opts['path']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbExperimentsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/experiments', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1279,6 +1860,47 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the listSfvbPages operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbPagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageListResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the storefront's pages
+     * Every page with its settings, sorted by path with the root first.  Hidden pages are included.  Pass under to list one page and everything below it.  Read from the same cached catalog the admin page tree uses, so a page created a moment ago can take a moment to appear here - read it directly with the single-page read to confirm a write. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.under Only this page and the pages below it, for example /lp/
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbPagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageListResponse}
+     */
+  }, {
+    key: "listSfvbPages",
+    value: function listSfvbPages(storefront_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbPages");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'under': opts['under']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageListResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/list', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the listSfvbStorefronts operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbStorefrontsCallback
      * @param {String} error Error message, if any.
@@ -1304,6 +1926,47 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbStorefrontsResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbTemplates operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbTemplatesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTemplatesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the active theme's templates
+     * Each template with the page type it declares and what it can render - items, sub-pages, blog posts, pagination, visual builder containers.  A page's group_template names one of these.  The storefront's fixed templates, such as checkout and my account, are flagged system and must never be assigned to a page. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.page_type Only templates declaring this page type, for example group
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbTemplatesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTemplatesResponse}
+     */
+  }, {
+    key: "listSfvbTemplates",
+    value: function listSfvbTemplates(storefront_oid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbTemplates");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'page_type': opts['page_type']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _SfvbTemplatesResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/templates', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1441,6 +2104,59 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbContainerResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/containers/{owner_type}/{owner_object_id}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbExperimentVariation operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbExperimentVariationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperiment} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Pause or resume a variation
+     * Stops or resumes sending new visitors to one variation of a running experiment.  Visitors already assigned keep seeing it.  Variation 0 cannot be paused, because the split falls back to it, and the last variation still receiving visitors cannot be paused.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} experiment_oid 
+     * @param {Number} variation_number 
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest} experiment_variation_update_request Pause or resume
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbExperimentVariationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbExperiment}
+     */
+  }, {
+    key: "putSfvbExperimentVariation",
+    value: function putSfvbExperimentVariation(storefront_oid, experiment_oid, variation_number, experiment_variation_update_request, callback) {
+      var postBody = experiment_variation_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbExperimentVariation");
+      }
+      // verify the required parameter 'experiment_oid' is set
+      if (experiment_oid === undefined || experiment_oid === null) {
+        throw new Error("Missing the required parameter 'experiment_oid' when calling putSfvbExperimentVariation");
+      }
+      // verify the required parameter 'variation_number' is set
+      if (variation_number === undefined || variation_number === null) {
+        throw new Error("Missing the required parameter 'variation_number' when calling putSfvbExperimentVariation");
+      }
+      // verify the required parameter 'experiment_variation_update_request' is set
+      if (experiment_variation_update_request === undefined || experiment_variation_update_request === null) {
+        throw new Error("Missing the required parameter 'experiment_variation_update_request' when calling putSfvbExperimentVariation");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid,
+        'experiment_oid': experiment_oid,
+        'variation_number': variation_number
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbExperiment["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/experiments/{experiment_oid}/variations/{variation_number}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -1645,6 +2361,102 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the putSfvbPageSelectors operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbPageSelectorsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageSelectors} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replace a page's selectors
+     * Each list you send replaces that whole set, and an empty list clears it.  A list you leave out is not touched.  The page's items or blog posts are recalculated from the new selectors straight away.  While a page has item selectors its items cannot be assigned by hand.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /lp/spring-sale/
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageSelectors} page_selectors_request The selector sets to replace
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbPageSelectorsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageSelectors}
+     */
+  }, {
+    key: "putSfvbPageSelectors",
+    value: function putSfvbPageSelectors(storefront_oid, path, page_selectors_request, callback) {
+      var postBody = page_selectors_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbPageSelectors");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling putSfvbPageSelectors");
+      }
+      // verify the required parameter 'page_selectors_request' is set
+      if (page_selectors_request === undefined || page_selectors_request === null) {
+        throw new Error("Missing the required parameter 'page_selectors_request' when calling putSfvbPageSelectors");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageSelectors["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/selectors', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbPageSettings operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbPageSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a page's settings
+     * A partial update.  Only the fields you send change - title, description, templates, visibility, sitemap exclusion, sort orders, items per page and page type.  Unlike the store admin's page save, the page's attributes, images, items, selectors and permissions are left exactly as they are.  Fields that would move or rename the page, and fields this endpoint does not know, are refused.  The root page cannot be hidden.  Always needs sfvb_publish, because page settings are live. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /lp/spring-sale/
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageSettingsRequest} page_settings_request The settings to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbPageSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
+     */
+  }, {
+    key: "putSfvbPageSettings",
+    value: function putSfvbPageSettings(storefront_oid, path, page_settings_request, callback) {
+      var postBody = page_settings_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbPageSettings");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling putSfvbPageSettings");
+      }
+      // verify the required parameter 'page_settings_request' is set
+      if (page_settings_request === undefined || page_settings_request === null) {
+        throw new Error("Missing the required parameter 'page_settings_request' when calling putSfvbPageSettings");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/settings', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the putSfvbPreviewSession operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbPreviewSessionCallback
      * @param {String} error Error message, if any.
@@ -1697,6 +2509,47 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
     }
 
     /**
+     * Callback function to receive the result of the putSfvbSiteAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbSiteAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a storefront's site attributes
+     * A partial update.  Only the attributes you name are changed.  Every entry is checked before any is written.  List, video list, mailing list and item set attributes are refused, and so are the General screen settings other than the title, the SEO description and keywords and the social account names.  Credentials are refused.  Always needs sfvb_publish, because every theme reads the same attributes and there is no dormant copy to change instead.  The admin General screen saves the whole storefront, so a merchant with it open can still overwrite a change made here. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest} site_attribute_update_request Attributes to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbSiteAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse}
+     */
+  }, {
+    key: "putSfvbSiteAttributes",
+    value: function putSfvbSiteAttributes(storefront_oid, site_attribute_update_request, callback) {
+      var postBody = site_attribute_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbSiteAttributes");
+      }
+      // verify the required parameter 'site_attribute_update_request' is set
+      if (site_attribute_update_request === undefined || site_attribute_update_request === null) {
+        throw new Error("Missing the required parameter 'site_attribute_update_request' when calling putSfvbSiteAttributes");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbSiteAttributesResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/attributes', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
      * Callback function to receive the result of the putSfvbThemeAttributes operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbThemeAttributesCallback
      * @param {String} error Error message, if any.
@@ -1741,6 +2594,102 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbThemeAttributesResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/attributes', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the removeSfvbPageBlogPosts operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~removeSfvbPageBlogPostsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Take blog posts off a page
+     * Removes posts by blog_post_oid, at most 500 at a time.  Every oid must be on the page, and one that is not changes nothing.  The posts themselves are not touched.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /blog/
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest} page_blog_posts_request Blog posts to take off the page
+     * @param {module:com.ultracart.admin.v2/SfvbApi~removeSfvbPageBlogPostsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse}
+     */
+  }, {
+    key: "removeSfvbPageBlogPosts",
+    value: function removeSfvbPageBlogPosts(storefront_oid, path, page_blog_posts_request, callback) {
+      var postBody = page_blog_posts_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling removeSfvbPageBlogPosts");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling removeSfvbPageBlogPosts");
+      }
+      // verify the required parameter 'page_blog_posts_request' is set
+      if (page_blog_posts_request === undefined || page_blog_posts_request === null) {
+        throw new Error("Missing the required parameter 'page_blog_posts_request' when calling removeSfvbPageBlogPosts");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageBlogPostsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/blog_posts/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the removeSfvbPageItems operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~removeSfvbPageItemsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageItemsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Take items off a page
+     * Removes items by item id, at most 500 at a time.  Every id must be on the page, and one that is not changes nothing.  The items themselves are not touched.  Refused on a page whose selectors choose its items.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} path Page path, for example /lp/spring-sale/
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest} page_items_remove_request Items to take off the page
+     * @param {module:com.ultracart.admin.v2/SfvbApi~removeSfvbPageItemsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageItemsResponse}
+     */
+  }, {
+    key: "removeSfvbPageItems",
+    value: function removeSfvbPageItems(storefront_oid, path, page_items_remove_request, callback) {
+      var postBody = page_items_remove_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling removeSfvbPageItems");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling removeSfvbPageItems");
+      }
+      // verify the required parameter 'page_items_remove_request' is set
+      if (page_items_remove_request === undefined || page_items_remove_request === null) {
+        throw new Error("Missing the required parameter 'page_items_remove_request' when calling removeSfvbPageItems");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {
+        'path': path
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbPageItemsResponse["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/pages/items/remove', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**
@@ -2030,6 +2979,47 @@ var SfvbApi = exports["default"] = /*#__PURE__*/function () {
       var accepts = ['application/json'];
       var returnType = _SfvbLibraryResponse["default"];
       return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/library', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    }
+
+    /**
+     * Callback function to receive the result of the startSfvbExperiment operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~startSfvbExperimentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperiment} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Start an experiment
+     * type page starts an experiment element already saved in a page body - send path, slot and widget_id, and its name, objective, duration and variations are read from the element with the builder's rules (2 to 5 variations numbered 0 up with no gaps, 3 to 90 days, traffic on all or none adding up to 100).  The new id is written into the element and the body is saved, so pull it again before the next edit.  type url splits visitors between existing pages at router_url, and always ends by itself after duration_days.  Always needs sfvb_publish, because visitors are split as soon as it starts. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbExperimentStartRequest} experiment_start_request The experiment to start
+     * @param {module:com.ultracart.admin.v2/SfvbApi~startSfvbExperimentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbExperiment}
+     */
+  }, {
+    key: "startSfvbExperiment",
+    value: function startSfvbExperiment(storefront_oid, experiment_start_request, callback) {
+      var postBody = experiment_start_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling startSfvbExperiment");
+      }
+      // verify the required parameter 'experiment_start_request' is set
+      if (experiment_start_request === undefined || experiment_start_request === null) {
+        throw new Error("Missing the required parameter 'experiment_start_request' when calling startSfvbExperiment");
+      }
+      var pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      var contentTypes = ['application/json; charset=UTF-8'];
+      var accepts = ['application/json'];
+      var returnType = _SfvbExperiment["default"];
+      return this.apiClient.callApi('/sfvb/storefronts/{storefront_oid}/experiments', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
     }
 
     /**

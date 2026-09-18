@@ -5883,6 +5883,18 @@ Object.defineProperty(exports, "SfvbApi", {
     return _SfvbApi["default"];
   }
 });
+Object.defineProperty(exports, "SfvbBlogPost", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbBlogPost["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbBlogPostsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbBlogPostsResponse["default"];
+  }
+});
 Object.defineProperty(exports, "SfvbCompileRequest", {
   enumerable: true,
   get: function get() {
@@ -5947,6 +5959,54 @@ Object.defineProperty(exports, "SfvbErrorDetail", {
   enumerable: true,
   get: function get() {
     return _SfvbErrorDetail["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperiment", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperiment["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperimentEndRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperimentEndRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperimentObjective", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperimentObjective["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperimentObjectivesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperimentObjectivesResponse["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperimentStartRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperimentStartRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperimentStartVariation", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperimentStartVariation["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperimentVariationUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperimentVariationUpdateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbExperimentsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbExperimentsResponse["default"];
   }
 });
 Object.defineProperty(exports, "SfvbFileContentResponse", {
@@ -6081,6 +6141,72 @@ Object.defineProperty(exports, "SfvbPageAttributeUpdateRequest", {
     return _SfvbPageAttributeUpdateRequest["default"];
   }
 });
+Object.defineProperty(exports, "SfvbPageBlogPostSelector", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageBlogPostSelector["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageBlogPostsRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageBlogPostsRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageBlogPostsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageBlogPostsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageCreateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageCreateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageDuplicateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageDuplicateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageItem", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageItem["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageItemSelector", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageItemSelector["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageItemsAddRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageItemsAddRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageItemsRemoveRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageItemsRemoveRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageItemsResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageItemsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageListResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageListResponse["default"];
+  }
+});
 Object.defineProperty(exports, "SfvbPageMultimedia", {
   enumerable: true,
   get: function get() {
@@ -6097,6 +6223,24 @@ Object.defineProperty(exports, "SfvbPageResponse", {
   enumerable: true,
   get: function get() {
     return _SfvbPageResponse["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageSelectors", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageSelectors["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageSettingsRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageSettingsRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbPageSummary", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbPageSummary["default"];
   }
 });
 Object.defineProperty(exports, "SfvbPreviewAccessRequest", {
@@ -6141,6 +6285,30 @@ Object.defineProperty(exports, "SfvbRenderResponse", {
     return _SfvbRenderResponse["default"];
   }
 });
+Object.defineProperty(exports, "SfvbSiteAttribute", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbSiteAttribute["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbSiteAttributeUpdate", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbSiteAttributeUpdate["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbSiteAttributeUpdateRequest", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbSiteAttributeUpdateRequest["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbSiteAttributesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbSiteAttributesResponse["default"];
+  }
+});
 Object.defineProperty(exports, "SfvbStorefront", {
   enumerable: true,
   get: function get() {
@@ -6151,6 +6319,18 @@ Object.defineProperty(exports, "SfvbStorefrontsResponse", {
   enumerable: true,
   get: function get() {
     return _SfvbStorefrontsResponse["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbTemplate", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbTemplate["default"];
+  }
+});
+Object.defineProperty(exports, "SfvbTemplatesResponse", {
+  enumerable: true,
+  get: function get() {
+    return _SfvbTemplatesResponse["default"];
   }
 });
 Object.defineProperty(exports, "SfvbTheme", {
@@ -7787,6 +7967,8 @@ var _ScreenRecordingUserAgentOS = _interopRequireDefault(require("./com.ultracar
 var _ScreenRecordingUserProperty = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ScreenRecordingUserProperty"));
 var _ScreenshotsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/ScreenshotsResponse"));
 var _SelfConfig = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SelfConfig"));
+var _SfvbBlogPost = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbBlogPost"));
+var _SfvbBlogPostsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbBlogPostsResponse"));
 var _SfvbCompileRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbCompileRequest"));
 var _SfvbCompileResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbCompileResponse"));
 var _SfvbContainerResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbContainerResponse"));
@@ -7798,6 +7980,14 @@ var _SfvbElement = _interopRequireDefault(require("./com.ultracart.admin.v2.mode
 var _SfvbElementSchemaResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbElementSchemaResponse"));
 var _SfvbElementsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbElementsResponse"));
 var _SfvbErrorDetail = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbErrorDetail"));
+var _SfvbExperiment = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperiment"));
+var _SfvbExperimentEndRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperimentEndRequest"));
+var _SfvbExperimentObjective = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperimentObjective"));
+var _SfvbExperimentObjectivesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperimentObjectivesResponse"));
+var _SfvbExperimentStartRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperimentStartRequest"));
+var _SfvbExperimentStartVariation = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperimentStartVariation"));
+var _SfvbExperimentVariationUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest"));
+var _SfvbExperimentsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbExperimentsResponse"));
 var _SfvbFileContentResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileContentResponse"));
 var _SfvbFileEntry = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileEntry"));
 var _SfvbFileRevertRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbFileRevertRequest"));
@@ -7820,9 +8010,23 @@ var _SfvbMenusResponse = _interopRequireDefault(require("./com.ultracart.admin.v
 var _SfvbPageAttribute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageAttribute"));
 var _SfvbPageAttributeUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageAttributeUpdate"));
 var _SfvbPageAttributeUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest"));
+var _SfvbPageBlogPostSelector = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageBlogPostSelector"));
+var _SfvbPageBlogPostsRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest"));
+var _SfvbPageBlogPostsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse"));
+var _SfvbPageCreateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageCreateRequest"));
+var _SfvbPageDuplicateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageDuplicateRequest"));
+var _SfvbPageItem = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageItem"));
+var _SfvbPageItemSelector = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageItemSelector"));
+var _SfvbPageItemsAddRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageItemsAddRequest"));
+var _SfvbPageItemsRemoveRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest"));
+var _SfvbPageItemsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageItemsResponse"));
+var _SfvbPageListResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageListResponse"));
 var _SfvbPageMultimedia = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageMultimedia"));
 var _SfvbPageMultimediaRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageMultimediaRequest"));
 var _SfvbPageResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageResponse"));
+var _SfvbPageSelectors = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageSelectors"));
+var _SfvbPageSettingsRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageSettingsRequest"));
+var _SfvbPageSummary = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPageSummary"));
 var _SfvbPreviewAccessRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewAccessRequest"));
 var _SfvbPreviewAccessResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewAccessResponse"));
 var _SfvbPreviewSessionRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewSessionRequest"));
@@ -7830,8 +8034,14 @@ var _SfvbPreviewSessionResponse = _interopRequireDefault(require("./com.ultracar
 var _SfvbPreviewUrlResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbPreviewUrlResponse"));
 var _SfvbRenderRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbRenderRequest"));
 var _SfvbRenderResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbRenderResponse"));
+var _SfvbSiteAttribute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbSiteAttribute"));
+var _SfvbSiteAttributeUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate"));
+var _SfvbSiteAttributeUpdateRequest = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest"));
+var _SfvbSiteAttributesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbSiteAttributesResponse"));
 var _SfvbStorefront = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbStorefront"));
 var _SfvbStorefrontsResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbStorefrontsResponse"));
+var _SfvbTemplate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbTemplate"));
+var _SfvbTemplatesResponse = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbTemplatesResponse"));
 var _SfvbTheme = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbTheme"));
 var _SfvbThemeAttribute = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeAttribute"));
 var _SfvbThemeAttributeUpdate = _interopRequireDefault(require("./com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate"));

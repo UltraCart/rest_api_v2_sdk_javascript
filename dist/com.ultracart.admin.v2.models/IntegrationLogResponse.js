@@ -30,7 +30,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The IntegrationLogResponse model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogResponse
- * @version 4.1.158
+ * @version 4.1.161
  */
 var IntegrationLogResponse = /*#__PURE__*/function () {
   /**

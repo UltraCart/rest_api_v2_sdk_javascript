@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailSendingDomainsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSendingDomainsResponse
- * @version 4.1.161
+ * @version 4.1.162
  */
 class EmailSendingDomainsResponse {
     /**

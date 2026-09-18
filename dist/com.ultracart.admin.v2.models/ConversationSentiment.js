@@ -26,7 +26,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The ConversationSentiment model module.
  * @module com.ultracart.admin.v2.models/ConversationSentiment
- * @version 4.1.158
+ * @version 4.1.161
  */
 var ConversationSentiment = /*#__PURE__*/function () {
   /**

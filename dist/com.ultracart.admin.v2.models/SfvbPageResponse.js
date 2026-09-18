@@ -28,7 +28,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.158
+ * @version 4.1.161
  */
 var SfvbPageResponse = /*#__PURE__*/function () {
   /**
@@ -64,11 +64,29 @@ var SfvbPageResponse = /*#__PURE__*/function () {
         if (data.hasOwnProperty('attributes')) {
           obj['attributes'] = _ApiClient["default"].convertToType(data['attributes'], [_SfvbPageAttribute["default"]]);
         }
+        if (data.hasOwnProperty('exclude_from_sitemap')) {
+          obj['exclude_from_sitemap'] = _ApiClient["default"].convertToType(data['exclude_from_sitemap'], 'Boolean');
+        }
+        if (data.hasOwnProperty('group_template')) {
+          obj['group_template'] = _ApiClient["default"].convertToType(data['group_template'], 'String');
+        }
+        if (data.hasOwnProperty('item_template')) {
+          obj['item_template'] = _ApiClient["default"].convertToType(data['item_template'], 'String');
+        }
         if (data.hasOwnProperty('multimedia')) {
           obj['multimedia'] = _ApiClient["default"].convertToType(data['multimedia'], [_SfvbPageMultimedia["default"]]);
         }
         if (data.hasOwnProperty('path')) {
           obj['path'] = _ApiClient["default"].convertToType(data['path'], 'String');
+        }
+        if (data.hasOwnProperty('title')) {
+          obj['title'] = _ApiClient["default"].convertToType(data['title'], 'String');
+        }
+        if (data.hasOwnProperty('visible')) {
+          obj['visible'] = _ApiClient["default"].convertToType(data['visible'], 'Boolean');
+        }
+        if (data.hasOwnProperty('visible_dts')) {
+          obj['visible_dts'] = _ApiClient["default"].convertToType(data['visible_dts'], 'String');
         }
       }
       return obj;
@@ -82,6 +100,24 @@ var SfvbPageResponse = /*#__PURE__*/function () {
 SfvbPageResponse.prototype['attributes'] = undefined;
 
 /**
+ * True when the page is left out of the sitemap and marked noindex.
+ * @member {Boolean} exclude_from_sitemap
+ */
+SfvbPageResponse.prototype['exclude_from_sitemap'] = undefined;
+
+/**
+ * Template file that renders the page itself, a bare .vm name found anywhere in the active theme.
+ * @member {String} group_template
+ */
+SfvbPageResponse.prototype['group_template'] = undefined;
+
+/**
+ * Template file that renders the item pages under this page.
+ * @member {String} item_template
+ */
+SfvbPageResponse.prototype['item_template'] = undefined;
+
+/**
  * The page's images, including codes a template declares but nothing has attached yet.  These are what the pageimage element renders - the default image when pageImageCode is empty, otherwise the image with that code.  The default image comes first.
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbPageMultimedia>} multimedia
  */
@@ -92,4 +128,22 @@ SfvbPageResponse.prototype['multimedia'] = undefined;
  * @member {String} path
  */
 SfvbPageResponse.prototype['path'] = undefined;
+
+/**
+ * The page title.
+ * @member {String} title
+ */
+SfvbPageResponse.prototype['title'] = undefined;
+
+/**
+ * False when the page is hidden.  A hidden page answers 404 to shoppers.
+ * @member {Boolean} visible
+ */
+SfvbPageResponse.prototype['visible'] = undefined;
+
+/**
+ * When set, the page stays hidden until this time (ISO 8601, UTC).
+ * @member {String} visible_dts
+ */
+SfvbPageResponse.prototype['visible_dts'] = undefined;
 var _default = exports["default"] = SfvbPageResponse;

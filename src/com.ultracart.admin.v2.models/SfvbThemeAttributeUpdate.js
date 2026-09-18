@@ -17,7 +17,7 @@ import SfvbThemeFont from './SfvbThemeFont';
 /**
  * The SfvbThemeAttributeUpdate model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate
- * @version 4.1.161
+ * @version 4.1.162
  */
 class SfvbThemeAttributeUpdate {
     /**

@@ -18,7 +18,7 @@ import ItemAutoOrderStepGrandfatherPricing from './ItemAutoOrderStepGrandfatherP
 /**
  * The ItemAutoOrderStep model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrderStep
- * @version 4.1.161
+ * @version 4.1.162
  */
 class ItemAutoOrderStep {
     /**

@@ -27,7 +27,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 /**
  * The SfvbMenu model module.
  * @module com.ultracart.admin.v2.models/SfvbMenu
- * @version 4.1.158
+ * @version 4.1.161
  */
 var SfvbMenu = /*#__PURE__*/function () {
   /**
