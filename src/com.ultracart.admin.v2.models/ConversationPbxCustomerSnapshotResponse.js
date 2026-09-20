@@ -23,7 +23,7 @@ import ZohoDeskTicketSummary from './ZohoDeskTicketSummary';
 /**
  * The ConversationPbxCustomerSnapshotResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCustomerSnapshotResponse
- * @version 4.1.162
+ * @version 4.1.163
  */
 class ConversationPbxCustomerSnapshotResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentStatusConfig model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusConfig
- * @version 4.1.162
+ * @version 4.1.163
  */
 class ConversationAgentStatusConfig {
     /**
